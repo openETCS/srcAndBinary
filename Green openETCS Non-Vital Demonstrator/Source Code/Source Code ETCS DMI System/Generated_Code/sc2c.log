@@ -1,0 +1,366 @@
+$**************  SCADETOC Version R16.1 (build i4) **************
+** Generation date: 2015-07-31T17:27:00
+** Command: scade -code "D:\GitHub\modeling\model\Scade\System\DMI_Control\DMI_Control.etp" -root DMI_Control_Pkg::DMI_Controller -conf KCG-Release
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+ ~kcg.log
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg.log, line 0, character 0
+ ~kcg_s2c_config.txt
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_s2c_config.txt, line 0, character 0
+ ~kcg_trace.xml
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_trace.xml, line 0, character 0
+ ~kcg_metrics.txt
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_metrics.txt, line 0, character 0
+ ~DMI_Controller_DMI_Control_Pkg.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_Controller_DMI_Control_Pkg.c, line 0, character 0
+ ~CheckDeskStatus_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CheckDeskStatus_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Planning_Area_Speed_Profile_List_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Planning_Area_Speed_Profile_List_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Gradient_from_Track_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Gradient_from_Track_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Gradient_Profile_LIst_Operator_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Gradient_Profile_LIst_Operator_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextSpeedProfiles_Speed_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_Speed_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextSpeedProfiles_Distance_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_Distance_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextSpeedProfiles_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextGradients_Value_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_Value_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextGradients_End_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_End_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextGradients_Start_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_Start_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~NextGradients_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.c, line 0, character 0
+ ~FlashingIconsOperator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FlashingIconsOperator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~StatusPlanningArea_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\StatusPlanningArea_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~D_behavior.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\D_behavior.c, line 0, character 0
+ ~SPDI_ComputeSpeedChangeIndex_SPDI.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\SPDI_ComputeSpeedChangeIndex_SPDI.c, line 0, character 0
+ ~ComputeDistDisplay.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ComputeDistDisplay.c, line 0, character 0
+ ~ZoomLevel.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ZoomLevel.c, line 0, character 0
+ ~AckMsgManager_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AckMsgManager_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~ImpMsgManager_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ImpMsgManager_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~CheckTypeOfText_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CheckTypeOfText_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~Find_Q_Text_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Find_Q_Text_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~TextMessagesDispatcher_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\TextMessagesDispatcher_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~MSGQueue_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\MSGQueue_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~QueueController_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\QueueController_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~FIFO_Insert_Op_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FIFO_Insert_Op_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~InsertStructMSGFIFO_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\InsertStructMSGFIFO_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~FIFO_Delete_Op_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FIFO_Delete_Op_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~DeleteMSGFIFO_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DeleteMSGFIFO_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~MsgDispatcherController_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\MsgDispatcherController_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~Set_level_data_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_level_data_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~LevelListAdapter_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelListAdapter_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~LevelList_Iterator_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelList_Iterator_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~DMI_status_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_status_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~ModeSymbolToIndex_B7_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ModeSymbolToIndex_B7_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~RBC_SymbolsToIndex_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\RBC_SymbolsToIndex_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.c, line 0, character 0
+ ~ConditionDistanceToTargetDigital_DMI_Control_Pkg_Sub_func_DistanceToTarget.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ConditionDistanceToTargetDigital_DMI_Control_Pkg_Sub_func_DistanceToTarget.c, line 0, character 0
+ ~ConditionDistanceToTargetBar_DMI_Control_Pkg_Sub_func_DistanceToTarget.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ConditionDistanceToTargetBar_DMI_Control_Pkg_Sub_func_DistanceToTarget.c, line 0, character 0
+ ~CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget.c, line 0, character 0
+ ~DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed.c, line 0, character 0
+ ~SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed.c, line 0, character 0
+ ~LevelSymbolToIndex_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelSymbolToIndex_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~HourGlassAnimation_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\HourGlassAnimation_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~Counter_pwlinear_int.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Counter_pwlinear_int.c, line 0, character 0
+ ~RisingEdge_digital.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\RisingEdge_digital.c, line 0, character 0
+ ~Set_IconAck_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_IconAck_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~CheckElem_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CheckElem_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~FlashingOperator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FlashingOperator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~countDownTimer_MoRC_Pck_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\countDownTimer_MoRC_Pck_Utils.c, line 0, character 0
+ ~Set_TrainRN_packet_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_TrainRN_packet_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~ArrayOfASCII_to_Integer_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ArrayOfASCII_to_Integer_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~Set_DriverID_packet_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_DriverID_packet_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~ASCII_to_Char_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ASCII_to_Char_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData.c, line 0, character 0
+ ~AirtightManagerInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AirtightManagerInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c, line 0, character 0
+ ~LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c, line 0, character 0
+ ~AxleLoadCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AxleLoadCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c, line 0, character 0
+ ~TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c, line 0, character 0
+ ~DMI_menu_req_To_ButtonEnabler_DMI_Control_Pkg_Sub_func_MenuRequest.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_menu_req_To_ButtonEnabler_DMI_Control_Pkg_Sub_func_MenuRequest.c, line 0, character 0
+ ~ButtonMask_to_buttonIndex_iterator_DMI_Control_Pkg_Sub_func_MenuRequest.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ButtonMask_to_buttonIndex_iterator_DMI_Control_Pkg_Sub_func_MenuRequest.c, line 0, character 0
+ ~DMI_entry_requested_DMI_Control_Pkg_Sub_func_EntryRequest.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_entry_requested_DMI_Control_Pkg_Sub_func_EntryRequest.c, line 0, character 0
+ ~WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest.c, line 0, character 0
+ ~Gen_array_window_mask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Gen_array_window_mask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.c, line 0, character 0
+ ~GenerateIndexForMask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\GenerateIndexForMask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.c, line 0, character 0
+ ~DMI_request_trigger_DMI_Control_Pkg_Sub_func.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_request_trigger_DMI_Control_Pkg_Sub_func.c, line 0, character 0
+ ~LevelAdapter_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelAdapter_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~RmDigit_DMI_Control_Pkg_Sub_func_Keyboard.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\RmDigit_DMI_Control_Pkg_Sub_func_Keyboard.c, line 0, character 0
+ ~ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c, line 0, character 0
+ ~FindIndexEmptyLoc_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FindIndexEmptyLoc_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~FindIndexEmptyLoc_iterator_DMI_Control_Pkg_Utils.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FindIndexEmptyLoc_iterator_DMI_Control_Pkg_Utils.c, line 0, character 0
+ ~AddDigit_DMI_Control_Pkg_Sub_func_Keyboard.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AddDigit_DMI_Control_Pkg_Sub_func_Keyboard.c, line 0, character 0
+ ~AddDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AddDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c, line 0, character 0
+ ~CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.c, line 0, character 0
+ ~CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c, line 0, character 0
+ ~DMI_Controller_DMI_Control_Pkg.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_Controller_DMI_Control_Pkg.h, line 0, character 0
+ ~CheckDeskStatus_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CheckDeskStatus_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Planning_Area_Speed_Profile_List_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Planning_Area_Speed_Profile_List_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Gradient_from_Track_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Gradient_from_Track_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Gradient_Profile_LIst_Operator_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Gradient_Profile_LIst_Operator_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextSpeedProfiles_Speed_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_Speed_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextSpeedProfiles_Distance_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_Distance_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextSpeedProfiles_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextSpeedProfiles_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextGradients_Value_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_Value_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextGradients_End_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_End_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextGradients_Start_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_Start_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~NextGradients_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\NextGradients_Iterator_DMI_Control_Pkg_Sub_func_PlanningArea.h, line 0, character 0
+ ~FlashingIconsOperator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FlashingIconsOperator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~StatusPlanningArea_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\StatusPlanningArea_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~D_behavior.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\D_behavior.h, line 0, character 0
+ ~SPDI_ComputeSpeedChangeIndex_SPDI.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\SPDI_ComputeSpeedChangeIndex_SPDI.h, line 0, character 0
+ ~ComputeDistDisplay.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ComputeDistDisplay.h, line 0, character 0
+ ~ZoomLevel.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ZoomLevel.h, line 0, character 0
+ ~AckMsgManager_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AckMsgManager_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~ImpMsgManager_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ImpMsgManager_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~CheckTypeOfText_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CheckTypeOfText_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~Find_Q_Text_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Find_Q_Text_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~TextMessagesDispatcher_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\TextMessagesDispatcher_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~MSGQueue_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\MSGQueue_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~QueueController_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\QueueController_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~FIFO_Insert_Op_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FIFO_Insert_Op_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~InsertStructMSGFIFO_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\InsertStructMSGFIFO_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~FIFO_Delete_Op_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FIFO_Delete_Op_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~DeleteMSGFIFO_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DeleteMSGFIFO_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~MsgDispatcherController_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\MsgDispatcherController_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~Set_level_data_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_level_data_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~LevelListAdapter_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelListAdapter_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~LevelList_Iterator_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelList_Iterator_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~DMI_status_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_status_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~ModeSymbolToIndex_B7_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ModeSymbolToIndex_B7_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~RBC_SymbolsToIndex_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\RBC_SymbolsToIndex_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.h, line 0, character 0
+ ~ConditionDistanceToTargetDigital_DMI_Control_Pkg_Sub_func_DistanceToTarget.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ConditionDistanceToTargetDigital_DMI_Control_Pkg_Sub_func_DistanceToTarget.h, line 0, character 0
+ ~ConditionDistanceToTargetBar_DMI_Control_Pkg_Sub_func_DistanceToTarget.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ConditionDistanceToTargetBar_DMI_Control_Pkg_Sub_func_DistanceToTarget.h, line 0, character 0
+ ~CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget.h, line 0, character 0
+ ~DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed.h, line 0, character 0
+ ~SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed.h, line 0, character 0
+ ~LevelSymbolToIndex_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelSymbolToIndex_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~HourGlassAnimation_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\HourGlassAnimation_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~Counter_pwlinear_int.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Counter_pwlinear_int.h, line 0, character 0
+ ~RisingEdge_digital.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\RisingEdge_digital.h, line 0, character 0
+ ~Set_IconAck_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_IconAck_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~CheckElem_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CheckElem_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~FlashingOperator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FlashingOperator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~countDownTimer_MoRC_Pck_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\countDownTimer_MoRC_Pck_Utils.h, line 0, character 0
+ ~Set_TrainRN_packet_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_TrainRN_packet_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~ArrayOfASCII_to_Integer_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ArrayOfASCII_to_Integer_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~Set_DriverID_packet_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Set_DriverID_packet_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~ASCII_to_Char_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ASCII_to_Char_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData.h, line 0, character 0
+ ~AirtightManagerInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AirtightManagerInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h, line 0, character 0
+ ~LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h, line 0, character 0
+ ~AxleLoadCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AxleLoadCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h, line 0, character 0
+ ~TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.h, line 0, character 0
+ ~DMI_menu_req_To_ButtonEnabler_DMI_Control_Pkg_Sub_func_MenuRequest.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_menu_req_To_ButtonEnabler_DMI_Control_Pkg_Sub_func_MenuRequest.h, line 0, character 0
+ ~ButtonMask_to_buttonIndex_iterator_DMI_Control_Pkg_Sub_func_MenuRequest.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ButtonMask_to_buttonIndex_iterator_DMI_Control_Pkg_Sub_func_MenuRequest.h, line 0, character 0
+ ~DMI_entry_requested_DMI_Control_Pkg_Sub_func_EntryRequest.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_entry_requested_DMI_Control_Pkg_Sub_func_EntryRequest.h, line 0, character 0
+ ~WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest.h, line 0, character 0
+ ~Gen_array_window_mask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\Gen_array_window_mask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.h, line 0, character 0
+ ~GenerateIndexForMask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\GenerateIndexForMask_iterator_DMI_Control_Pkg_Sub_func_EntryRequest.h, line 0, character 0
+ ~DMI_request_trigger_DMI_Control_Pkg_Sub_func.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\DMI_request_trigger_DMI_Control_Pkg_Sub_func.h, line 0, character 0
+ ~LevelAdapter_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\LevelAdapter_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~RmDigit_DMI_Control_Pkg_Sub_func_Keyboard.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\RmDigit_DMI_Control_Pkg_Sub_func_Keyboard.h, line 0, character 0
+ ~ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h, line 0, character 0
+ ~FindIndexEmptyLoc_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FindIndexEmptyLoc_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~FindIndexEmptyLoc_iterator_DMI_Control_Pkg_Utils.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\FindIndexEmptyLoc_iterator_DMI_Control_Pkg_Utils.h, line 0, character 0
+ ~AddDigit_DMI_Control_Pkg_Sub_func_Keyboard.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AddDigit_DMI_Control_Pkg_Sub_func_Keyboard.h, line 0, character 0
+ ~AddDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\AddDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h, line 0, character 0
+ ~CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.h, line 0, character 0
+ ~CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h, line 0, character 0
+ ~kcg_types.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_types.h, line 0, character 0
+ ~kcg_consts.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_consts.h, line 0, character 0
+ ~kcg_sensors.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_sensors.h, line 0, character 0
+ ~kcg_imported_functions.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_imported_functions.h, line 0, character 0
+ ~kcg_types.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_types.c, line 0, character 0
+ ~kcg_consts.c
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_consts.c, line 0, character 0
+*** Generated Files Information (GENFIL): Code Generator Generated files
+ ~user_macros.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\user_macros.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\kcg_imported_types.h, line 0, character 0
+ ~sc2c.log
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\sc2c.log, line 0, character 0
+ ~sc2c_integration_files.txt
+  at file D:\GitHub\modeling\model\Scade\System\DMI_Control\KCG-Release\sc2c_integration_files.txt, line 0, character 0
+$**************  SCADETOC Version R16.1 (build i4) **************
+** Generation date: 2015-07-31T17:27:04
+** sc2c.log
+*************************************************************$

@@ -1,0 +1,1 @@
+-target C -O 3 -static -name_length 200 -significance_length 200 -user_config ./user_macros.h -node DMI_Control_Pkg::DMI_Controller D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release/scade_model_without_unused.scade -target_dir D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release 
