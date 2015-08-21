@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,9 +28,18 @@ void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
   kcg_copy_BG_Header_T_BG_Types_Pkg(
     &(*passedBG).BG_Header,
     &(*msgFromTrack).BG_Common_Header);
+  /* 1 */
+  DECODE_NID_LRBG_TM_conversions(
+    (*msgFromTrack).Radio_Common_Header.nid_lrbg,
+    &_L305,
+    &_L306);
   _L114 = (*msgFromTrack).source == msrc_Euroradio_Common_Types_Pkg;
   if (_L114) {
-    _L296 = (*msgFromTrack).Radio_Common_Header.nid_lrbg;
+    _L296 = /* 2 */
+      nidC_nidBG_2_NIDLRBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
+        kcg_true,
+        _L305,
+        _L306 % 100000);
   }
   else {
     _L296 = /* 1 */
@@ -63,6 +72,6 @@ void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

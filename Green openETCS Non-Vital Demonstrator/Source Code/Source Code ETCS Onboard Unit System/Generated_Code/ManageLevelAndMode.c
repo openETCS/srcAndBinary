@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 void ManageLevelAndMode_reset(outC_ManageLevelAndMode *outC)
 {
   /* 1 */ ManageModes_reset(&outC->Context_1);
-  /* 1 */ ManageLevels_reset(&outC->_1_Context_1);
+  /* 1 */ ManageLevels_reset_Levels_Pkg(&outC->_1_Context_1);
 }
 
 /* ManageLevelAndMode */
@@ -34,6 +34,8 @@ void ManageLevelAndMode(
   /* ManageLevelAndMode::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
   /* ManageLevelAndMode::Valid_Train_Data_Stored_In */kcg_bool Valid_Train_Data_Stored_In,
   /* ManageLevelAndMode::ERTMS_capabilities_In */T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities_In,
+  /* ManageLevelAndMode::startOfMission */kcg_bool startOfMission,
+  /* ManageLevelAndMode::forLevelTransition */T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg *forLevelTransition,
   outC_ManageLevelAndMode *outC)
 {
   static kcg_bool tmp;
@@ -54,7 +56,7 @@ void ManageLevelAndMode(
   /* ManageLevelAndMode::_L11 */
   static kcg_bool _L11;
   /* ManageLevelAndMode::_L10 */
-  static T_LevelTransition_Level_And_Mode_Types_Pkg _L10;
+  static M_LEVEL _L10;
   /* ManageLevelAndMode::_L9 */
   static kcg_bool _L9;
   /* ManageLevelAndMode::_L8 */
@@ -65,6 +67,8 @@ void ManageLevelAndMode(
   static T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg _L26;
   /* ManageLevelAndMode::_L27 */
   static T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg _L27;
+  /* ManageLevelAndMode::_L28 */
+  static T_LevelTransition_Level_And_Mode_Types_Pkg _L28;
   /* ManageLevelAndMode::_L30 */
   static kcg_int _L30;
   /* ManageLevelAndMode::_L31 */
@@ -95,6 +99,8 @@ void ManageLevelAndMode(
   static kcg_bool _L48;
   /* ManageLevelAndMode::_L49 */
   static kcg_bool _L49;
+  /* ManageLevelAndMode::_L88 */
+  static kcg_bool _L88;
   
   /* 1 */
   Input(
@@ -117,15 +123,18 @@ void ManageLevelAndMode(
     Trip_Order_Given_By_Balise,
     Valid_Train_Data_Stored_In,
     ERTMS_capabilities_In,
+    startOfMission,
+    forLevelTransition,
     &_L3,
     &_L26,
     &_L27,
-    &_L10,
+    &_L28,
     &_L2,
     &_L30,
     &_L31,
-    &_L12,
+    &_L88,
     &_L33,
+    &_L12,
     &_L11,
     &_L9,
     &_L7,
@@ -143,16 +152,17 @@ void ManageLevelAndMode(
     &_L49,
     &tmp);
   /* 1 */
-  ManageLevels(
+  ManageLevels_Levels_Pkg(
     _L3,
     &_L26,
     &_L27,
-    &_L10,
+    &_L28,
     _L2,
     _L30,
     _L31,
-    _L12,
+    _L88,
     &_L33,
+    _L12,
     _L11,
     _L9,
     _L7,
@@ -161,11 +171,10 @@ void ManageLevelAndMode(
   _L7 = outC->_1_Context_1.TripTrain;
   _L8 = outC->_1_Context_1.previous_level;
   _L9 = outC->_1_Context_1.needsAckFromDriver;
-  kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
-    &_L10,
-    &outC->_1_Context_1.announced_level);
+  _L10 = outC->_1_Context_1.requestedLevel;
   _L11 = outC->_1_Context_1.announce_driver_selection;
   _L12 = outC->_1_Context_1.service_brake;
+  _L88 = outC->_1_Context_1.transitionPositionPassed;
   /* 1 */
   ManageModes(
     Loc_Level_To_Apply,
@@ -199,9 +208,10 @@ void ManageLevelAndMode(
     _L7,
     _L8,
     _L9,
-    &_L10,
+    _L10,
     _L11,
     _L12,
+    _L88,
     Loc_Mode_To_Apply,
     _L2,
     _L3,
@@ -212,11 +222,12 @@ void ManageLevelAndMode(
     &outC->Data_To_DMI,
     &outC->Data_To_BG_Management,
     &outC->Service_Brake_Command,
-    &outC->EB_Requested);
+    &outC->EB_Requested,
+    &outC->transitionPositionPassed);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ManageLevelAndMode.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

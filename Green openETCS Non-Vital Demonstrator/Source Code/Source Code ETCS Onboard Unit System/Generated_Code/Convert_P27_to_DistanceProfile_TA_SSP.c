@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,16 +19,16 @@ void Convert_P27_to_DistanceProfile_TA_SSP(
   static SSP_cat_t_TA_MRSP tmp;
   static kcg_int i;
   /* TA_SSP::Convert_P27_to_DistanceProfile::_L84 */
-  static array__77590 _L84;
+  static array__80814 _L84;
   /* TA_SSP::Convert_P27_to_DistanceProfile::_L85 */
-  static array__79426 _L85;
+  static array__82790 _L85;
   
   kcg_copy_P027V1_section_enum_T_TM_baseline2(
     &_L85[0],
     (P027V1_section_enum_T_TM_baseline2 *)
       &DEFAULT_P027v1_OBU_section_TM_baseline2);
-  kcg_copy_array__82684(&_L84[0], (array__82684 *) &(*Packet27_in).sections[1]);
-  kcg_copy_array__79426(&_L84[32], &_L85);
+  kcg_copy_array__86192(&_L84[0], (array__86192 *) &(*Packet27_in).sections[1]);
+  kcg_copy_array__82790(&_L84[32], &_L85);
   /* 3 */
   Convert_P27_to_DistanceProfile_1st_section_TA_SSP(
     (*Packet27_in).q_scale,
@@ -56,6 +56,6 @@ void Convert_P27_to_DistanceProfile_TA_SSP(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Convert_P27_to_DistanceProfile_TA_SSP.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

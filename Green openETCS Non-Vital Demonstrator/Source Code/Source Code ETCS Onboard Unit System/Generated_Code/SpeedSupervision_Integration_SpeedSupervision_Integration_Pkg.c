@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,7 +30,7 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::Emergency_brake_requested_by_modes_and_levels */kcg_bool Emergency_brake_requested_by_modes_and_levels,
   outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg *outC)
 {
-  static struct__78634 tmp;
+  static struct__81954 tmp;
   static t_Brake_t_SDMConversionModelPkg tmp1;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::odometry_internal */
   static Odometry_real_T_SDM_Types_Pkg odometry_internal;
@@ -153,6 +153,6 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

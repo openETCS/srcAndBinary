@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,9 +16,9 @@ void copyTrackDescription_manage_DMI_Output_Pkg(
   static kcg_bool tmp;
   static kcg_int i;
   /* manage_DMI_Output_Pkg::copyTrackDescription::_L7 */
-  static array__78998 _L7;
+  static array__82343 _L7;
   /* manage_DMI_Output_Pkg::copyTrackDescription::_L19 */
-  static array__78990 _L19;
+  static array__82335 _L19;
   /* manage_DMI_Output_Pkg::copyTrackDescription::_L20 */
   static kcg_int _L20;
   /* manage_DMI_Output_Pkg::copyTrackDescription::_L26 */
@@ -104,6 +104,6 @@ void copyTrackDescription_manage_DMI_Output_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** copyTrackDescription_manage_DMI_Output_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

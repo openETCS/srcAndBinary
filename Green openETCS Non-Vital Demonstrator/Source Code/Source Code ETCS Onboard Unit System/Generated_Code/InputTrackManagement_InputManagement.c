@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,6 +14,7 @@ void InputTrackManagement_InputManagement(
   /* InputManagement::InputTrackManagement::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
   /* InputManagement::InputTrackManagement::Error_BG_System_Version */kcg_bool Error_BG_System_Version,
   /* InputManagement::InputTrackManagement::Linking_Reaction_To_Trip */kcg_bool Linking_Reaction_To_Trip,
+  /* InputManagement::InputTrackManagement::forLevelTransition */T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg *forLevelTransition,
   /* InputManagement::InputTrackManagement::Data_From_Track_To_Mode */T_Data_From_Track_Level_And_Mode_Types_Pkg *Data_From_Track_To_Mode,
   /* InputManagement::InputTrackManagement::conditional_transition */T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg *conditional_transition,
   /* InputManagement::InputTrackManagement::level_transition_priority_table */T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg *level_transition_priority_table,
@@ -74,18 +75,20 @@ void InputTrackManagement_InputManagement(
     &Loc_Reversing_Data);
   /* 1 */
   Input_Level_Transition_InputManagement(
-    &(*Data_From_Track_Packets).P_41,
-    &(*Data_From_Track_Packets).P_46,
+    &(*forLevelTransition).P41,
+    &(*forLevelTransition).P46,
+    (*forLevelTransition).LRBG,
+    (*forLevelTransition).referenceLocation,
     conditional_transition,
     level_transition_priority_table,
     ackDistance,
     immediateAck);
   /* 1 */
   Input_MA_SSP_Gradient_InputManagement(
-    (*Data_From_Track_Packets).P_12,
-    &(*Data_From_Track_Packets).P_15,
-    &(*Data_From_Track_Packets).P_21,
-    &(*Data_From_Track_Packets).P_27,
+    (*forLevelTransition).P12_received,
+    (*forLevelTransition).P15_received,
+    (*forLevelTransition).P21_received,
+    (*forLevelTransition).P27_received,
     received_L2_L3_MA,
     received_L1_MA,
     &(*Data_From_Track_To_Mode).MA_SSP_Gradient_Available,
@@ -94,6 +97,6 @@ void InputTrackManagement_InputManagement(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** InputTrackManagement_InputManagement.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

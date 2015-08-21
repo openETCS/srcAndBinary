@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,9 +11,12 @@ void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_I
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC)
 {
   /* 3 */ InformationFilter_reset_InformationFilter_Pkg(&outC->Context_3);
-  /* 2 */ CheckEuroRadioMessage_reset(&outC->Context_2);
+  /* 1 */ calculatePendingState_reset_xdebugSupport_Pkg(&outC->Context_1);
+  /* 1 */ combineForLevelChange_reset_xdebugSupport_Pkg(&outC->_1_Context_1);
   /* 1 */
-  Receive_TrackSide_Msg_reset_Receive_TrackSide_Msg_Pkg(&outC->Context_1);
+  CheckEuroRadioMessage_reset_CheckEuroradioMessage(&outC->_2_Context_1);
+  /* 1 */
+  Receive_TrackSide_Msg_reset_Receive_TrackSide_Msg_Pkg(&outC->_3_Context_1);
 }
 
 /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration */
@@ -34,9 +37,10 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inActiveCab */kcg_bool inActiveCab,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inTrainDataValid */kcg_bool inTrainDataValid,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
+  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::transitionPositionPassed */kcg_bool transitionPositionPassed,
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC)
 {
-  static ReceivedMessage_T_Common_Types_Pkg tmp6;
+  static positionedBG_T_TrainPosition_Types_Pck tmp6;
   static kcg_bool tmp5;
   static kcg_bool tmp4;
   static kcg_bool tmp3;
@@ -51,47 +55,59 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
   static kcg_bool doBaliseBranch;
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::doRadio */
   static kcg_bool doRadio;
-  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::_L21 */
-  static ReceivedMessage_T_Common_Types_Pkg _L21;
+  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::trainPositionTest */
+  static trainPosition_T_TrainPosition_Types_Pck trainPositionTest;
+  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::_L206 */
+  static ReceivedMessage_T_Common_Types_Pkg _L206;
+  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::_L205 */
+  static ReceivedMessage_T_Common_Types_Pkg _L205;
   
   /* 1 */
   Receive_TrackSide_Msg_Receive_TrackSide_Msg_Pkg(
     reset,
     API_trackSide_Message,
     ActualOdometry,
-    &outC->Context_1);
-  doBaliseBranch = outC->Context_1.outTrackMessage_for_check.valid &
+    &outC->_3_Context_1);
+  doBaliseBranch = outC->_3_Context_1.outTrackMessage_for_check.valid &
     (msrc_Eurobalise_Common_Types_Pkg ==
-      outC->Context_1.outTrackMessage_for_check.msg_type);
-  doRadio = outC->Context_1.outTrackMessage_for_check.msg_type ==
+      outC->_3_Context_1.outTrackMessage_for_check.msg_type);
+  kcg_copy_trainPosition_T_TrainPosition_Types_Pck(
+    &trainPositionTest,
+    trainPosition);
+  trainPositionTest.trainPositionIsUnknown = kcg_false;
+  doRadio = outC->_3_Context_1.outTrackMessage_for_check.msg_type ==
     msrc_Euroradio_Common_Types_Pkg;
   if (doRadio) {
-    /* 2 */
-    CheckEuroRadioMessage(
-      &outC->Context_1.outTrackMessage_for_check,
+    /* 1 */
+    CheckEuroRadioMessage_CheckEuroradioMessage(
+      &outC->_3_Context_1.outTrackMessage_for_check,
       tNvContact,
       lastRelevantEventTimestamp,
       connectionStatus,
       fullChecks,
-      &outC->Context_2);
+      &outC->_2_Context_1);
     kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
-      &_L21,
-      &outC->Context_2.checkedMessage);
-    tmp2 = outC->Context_2.radioSequenceError;
-    tmp1 = outC->Context_2.tNvContactError;
-    tmp8 = outC->Context_2.otherTimingError;
-    tmp7 = outC->Context_2.radioMessageConsistencyError;
+      &_L205,
+      &outC->_2_Context_1.checkedMessage);
+    tmp2 = outC->_2_Context_1.radioSequenceError;
+    tmp1 = outC->_2_Context_1.tNvContactError;
+    tmp8 = outC->_2_Context_1.otherTimingError;
+    tmp7 = outC->_2_Context_1.radioMessageConsistencyError;
   }
+  kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
+    &tmp6,
+    &(*trainPosition).LRBG);
+  tmp6.valid = kcg_true;
   if (doBaliseBranch) {
     /* 1 */
     CheckBGConsistency_CheckBGConsistency_Pkg(
       inAnnouncedBGs,
-      trainPosition,
+      &trainPositionTest,
       (*modeAndLevel).Mode,
-      &outC->Context_1.outTrackMessage_for_check,
+      &outC->_3_Context_1.outTrackMessage_for_check,
       q_nvlocacc,
       intrainVersion,
-      &tmp6,
+      &_L206,
       &outC->ApplyServiceBrake,
       &outC->BadBaliseMessageToDMI,
       &outC->outCheckErrors.linkedBGError,
@@ -105,11 +121,11 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
     outC->ApplyServiceBrake = kcg_false;
     outC->BadBaliseMessageToDMI = kcg_false;
     if (doRadio) {
-      kcg_copy_ReceivedMessage_T_Common_Types_Pkg(&tmp6, &_L21);
+      kcg_copy_ReceivedMessage_T_Common_Types_Pkg(&_L206, &_L205);
     }
     else {
       kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
-        &tmp6,
+        &_L206,
         (ReceivedMessage_T_Common_Types_Pkg *) &cDefaultRM_Common_Types_Pkg);
     }
     tmp4 = kcg_false;
@@ -118,14 +134,26 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
   }
   /* 1 */
   validateDataDirection_ValidateDataDirection_Pkg(
+    &_L206,
     &tmp6,
-    &(*trainPosition).LRBG,
     inAnnouncedBGs,
+    &trainPositionTest,
+    &outC->outputMessageForRadioAck);
+  /* 1 */
+  bypassGeneralMessage_xdebugSupport_Pkg(
+    &outC->outputMessageForRadioAck,
+    &_L205,
+    &_L206);
+  /* 1 */
+  combineForLevelChange_xdebugSupport_Pkg(
+    &outC->outputMessageForRadioAck,
+    modeAndLevel,
+    kcg_false,
     trainPosition,
-    &_L21);
-  kcg_copy_BG_Header_T_BG_Types_Pkg(
-    &outC->outBG_MessageForCalcTrainPosition,
-    &_L21.BG_Common_Header);
+    &outC->_1_Context_1);
+  kcg_copy_T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg(
+    &outC->forLevelManagement,
+    &outC->_1_Context_1.forLevelManagement);
   outC->outCheckErrors.unlinkedBGError = tmp5;
   outC->outCheckErrors.BG_versionIncompatible = tmp4;
   if (doRadio) {
@@ -137,7 +165,7 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
     outC->outCheckErrors.radioSequenceError = kcg_false;
   }
   outC->outCheckErrors.tNvContactError = tmp3 | /* 1 */
-    ContinuousTimeoutCheck(
+    ContinuousTimeoutCheck_CheckEuroradioMessage(
       (*ActualOdometry).timestamp,
       tNvContact,
       lastRelevantEventTimestamp,
@@ -160,31 +188,28 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
     tmp = cUnknownBG_BG_Types_Pkg;
   }
   outC->outCheckErrors.nid_errorbg = tmp;
+  /* 1 */
+  calculatePendingState_xdebugSupport_Pkg(
+    &outC->outputMessageForRadioAck,
+    inFilterEvents,
+    &outC->Context_1);
   /* 3 */
   InformationFilter_InformationFilter_Pkg(
-    &_L21,
+    &_L205,
     (*modeAndLevel).level,
     (*modeAndLevel).Mode,
     inSupervisingRbcId,
-    inFilterEvents,
+    &outC->Context_1.outFilterEvents,
     inActiveCab,
     inTrainDataValid,
     &outC->Context_3);
   kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
     &outC->outputMessage,
     &outC->Context_3.outMessage);
-  /* 3 */
-  getRadioManagement_packagesSupport_Pkg(
-    &outC->outputMessage,
-    &outC->outRadioManagement);
-  /* 3 */
-  getParameterPositionReport_packagesSupport_Pkg(
-    &outC->outputMessage,
-    &outC->outPositionParams);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

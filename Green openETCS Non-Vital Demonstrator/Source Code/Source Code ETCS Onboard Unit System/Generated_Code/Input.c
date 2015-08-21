@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,6 +28,8 @@ void Input(
   /* Input::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
   /* Input::Valid_Train_Data_Stored_In */kcg_bool Valid_Train_Data_Stored_In,
   /* Input::ERTMS_capabilities_In */T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities_In,
+  /* Input::startOfMissionEnded */kcg_bool startOfMissionEnded,
+  /* Input::forLevelTransition */T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg *forLevelTransition,
   /* Input::train_standstill */kcg_bool *train_standstill,
   /* Input::conditional_transition */T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg *conditional_transition,
   /* Input::level_transition_priority_table */T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg *level_transition_priority_table,
@@ -40,6 +42,7 @@ void Input(
   /* Input::received_L2_L3_MA */kcg_bool *received_L2_L3_MA,
   /* Input::received_L1_MA */kcg_bool *received_L1_MA,
   /* Input::received_target_speed */kcg_bool *received_target_speed,
+  /* Input::outStartOfMissionEnded */kcg_bool *outStartOfMissionEnded,
   /* Input::Cab */T_Cab_Level_And_Mode_Types_Pkg *Cab,
   /* Input::Continue_Shunting_Function_Active */kcg_bool *Continue_Shunting_Function_Active,
   /* Input::Data_From_DMI_To_Mode */T_Data_From_DMI_Level_And_Mode_Types_Pkg *Data_From_DMI_To_Mode,
@@ -65,6 +68,7 @@ void Input(
     Data_From_TIU);
   *Continue_Shunting_Function_Active = Continue_Shunting_Function_Active_In;
   *Cab = Cab_In;
+  *outStartOfMissionEnded = startOfMissionEnded;
   kcg_copy_T_ERTMS_capabilities_Level_And_Mode_Types_Pkg(
     ERTMS_capabilities,
     ERTMS_capabilities_In);
@@ -75,6 +79,7 @@ void Input(
     Trip_Order_Given_By_Balise,
     Error_BG_System_Version,
     Linking_Reaction_To_Trip,
+    forLevelTransition,
     Data_From_Track_To_Mode,
     conditional_transition,
     level_transition_priority_table,
@@ -104,6 +109,6 @@ void Input(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Input.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

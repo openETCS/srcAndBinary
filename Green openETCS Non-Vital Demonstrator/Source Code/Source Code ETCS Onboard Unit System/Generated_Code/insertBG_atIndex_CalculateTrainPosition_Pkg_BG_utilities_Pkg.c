@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,9 +21,9 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   static kcg_bool tmp;
   static kcg_int i;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::insertBG_atIndex::_L12 */
-  static array__79432 _L12;
+  static array__82796 _L12;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::insertBG_atIndex::_L15 */
-  static array__77197 _L15;
+  static array__80553 _L15;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::insertBG_atIndex::_L16 */
   static kcg_int _L16;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::insertBG_atIndex::_L34 */
@@ -55,8 +55,8 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     kcg_copy_positionedBGs_T_TrainPosition_Types_Pck(&tmp1, BGs_in);
   }
   else {
-    kcg_copy_array__79432(&tmp1[0], &_L12);
-    kcg_copy_array__82782(&tmp1[1], (array__82782 *) &(*BGs_in)[0]);
+    kcg_copy_array__82796(&tmp1[0], &_L12);
+    kcg_copy_array__86322(&tmp1[1], (array__86322 *) &(*BGs_in)[0]);
   }
   if (_L34) {
     for (i = 0; i < 8; i++) {
@@ -98,6 +98,6 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

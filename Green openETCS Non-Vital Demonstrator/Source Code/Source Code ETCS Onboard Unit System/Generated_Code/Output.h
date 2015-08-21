@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _Output_H_
 #define _Output_H_
@@ -19,9 +19,10 @@ extern void Output(
   /* Output::TripTrain */kcg_bool TripTrain,
   /* Output::previous_level */M_LEVEL previous_level,
   /* Output::needsAckFromDriver */kcg_bool needsAckFromDriver,
-  /* Output::announced_level */T_LevelTransition_Level_And_Mode_Types_Pkg *announced_level,
+  /* Output::requestedLevel */M_LEVEL requestedLevel,
   /* Output::announce_driver_selection */kcg_bool announce_driver_selection,
   /* Output::service_brake_from_level */kcg_bool service_brake_from_level,
+  /* Output::LevelsTransitionPositionPassed */kcg_bool LevelsTransitionPositionPassed,
   /* Output::currentMode */T_Mode_Level_And_Mode_Types_Pkg currentMode,
   /* Output::EB_Requested_From_Mode */kcg_bool EB_Requested_From_Mode,
   /* Output::Service_Brake_Command_From_Mode */kcg_bool Service_Brake_Command_From_Mode,
@@ -32,11 +33,12 @@ extern void Output(
   /* Output::Data_To_DMI */DMI_ModesToDMI_T_DMI_Types_Pkg *Data_To_DMI,
   /* Output::Data_To_BG_Management */T_Data_To_BG_Management_Level_And_Mode_Types_Pkg *Data_To_BG_Management,
   /* Output::Service_Brake_Command */kcg_bool *Service_Brake_Command,
-  /* Output::EB_Requested */kcg_bool *EB_Requested);
+  /* Output::EB_Requested */kcg_bool *EB_Requested,
+  /* Output::transitionPositionPassed */kcg_bool *transitionPositionPassed);
 
 #endif /* _Output_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Output.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

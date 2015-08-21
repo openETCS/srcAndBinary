@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _MA_Request_Supervision_MA_Request_H_
 #define _MA_Request_Supervision_MA_Request_H_
@@ -16,6 +16,7 @@
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   kcg_bool /* MA_Request::MA_Request_Supervision::triggerMA */ triggerMA;
+  kcg_bool /* MA_Request::MA_Request_Supervision::exception */ exception;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -24,6 +25,7 @@ typedef struct {
   kcg_bool /* MA_Request::MA_Request_Supervision::pendingReq */ pendingReq;
   kcg_bool /* MA_Request::MA_Request_Supervision::_L23 */ _L23;
   kcg_bool /* MA_Request::MA_Request_Supervision::_L46 */ _L46;
+  kcg_bool /* MA_Request::MA_Request_Supervision::_L73 */ _L73;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_op_RepeatReq_MA_Request /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
@@ -50,6 +52,6 @@ extern void MA_Request_Supervision_reset_MA_Request(
 #endif /* _MA_Request_Supervision_MA_Request_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Request_Supervision_MA_Request.h
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

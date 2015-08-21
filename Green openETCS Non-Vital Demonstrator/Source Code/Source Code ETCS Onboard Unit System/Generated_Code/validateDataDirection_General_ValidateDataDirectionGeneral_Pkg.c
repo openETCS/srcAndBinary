@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ void validateDataDirection_General_ValidateDataDirectionGeneral_Pkg(
   /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::coordinateSystemAssigned */kcg_bool coordinateSystemAssigned,
   /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage)
 {
-  static array__77040 tmp;
+  static array__80396 tmp;
   static kcg_int i;
   /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::trainPositionKnown */
   static kcg_bool trainPositionKnown;
@@ -36,7 +36,8 @@ void validateDataDirection_General_ValidateDataDirectionGeneral_Pkg(
   kcg_copy_RBC_Id_T_Common_Types_Pkg(
     &(*outMessage).sendingRBC,
     &(*inMessage).sendingRBC);
-  trainPositionKnown = !(*trainPosition).trainPositionIsUnknown;
+  trainPositionKnown = (*trainPosition).valid &
+    !(*trainPosition).trainPositionIsUnknown;
   _L55 = (*inMessage).source == msrc_Euroradio_Common_Types_Pkg;
   (*outMessage).valid = ((((*inMessage).Radio_Common_Header.nid_message == 15) &
         ((((*inMessage).Radio_Common_Header.q_dir == Q_DIR_Nominal) &
@@ -69,6 +70,6 @@ void validateDataDirection_General_ValidateDataDirectionGeneral_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** validateDataDirection_General_ValidateDataDirectionGeneral_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

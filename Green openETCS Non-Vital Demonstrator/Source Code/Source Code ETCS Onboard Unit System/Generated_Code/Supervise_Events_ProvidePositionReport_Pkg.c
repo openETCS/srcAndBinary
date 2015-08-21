@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -58,13 +58,13 @@ void Supervise_Events_ProvidePositionReport_Pkg(
     &outC->_1_Context_1);
   /* 1 */
   op_3_6_5_1_4_j_ProvidePositionReport_Pkg(&_L16, trainPos, &outC->Context_1);
-  outC->result = outC->_5_Context_1.b | outC->_4_Context_1.b |
-    outC->_3_Context_1.b | outC->_2_Context_1.b | outC->_1_Context_1.b |
-    outC->Context_1.b;
+  outC->result = outC->_5_Context_1.trigger | outC->_4_Context_1.trigger |
+    outC->_3_Context_1.trigger | outC->_2_Context_1.trigger |
+    outC->_1_Context_1.trigger | outC->Context_1.trigger;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Supervise_Events_ProvidePositionReport_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

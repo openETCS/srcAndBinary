@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -32,12 +32,12 @@ void Supervision_M_Loc_ProvidePositionReport_Pkg(
   op_3_6_5_1_4_j_ProvidePositionReport_Pkg(&_L16, trainPos, &outC->Context_1);
   outC->trigger = (present & (M_LOC_Now == mloc)) |
     ((M_LOC_Do_not_send_position_report_on_passage_of_LRBG_compliant_balise_group ==
-        mloc) & !outC->Context_1.b) | (outC->Context_1.b &
+        mloc) & !outC->Context_1.trigger) | (outC->Context_1.trigger &
       (M_LOC_Every_LRBG_compliant_balise_group == mloc));
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Supervision_M_Loc_ProvidePositionReport_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

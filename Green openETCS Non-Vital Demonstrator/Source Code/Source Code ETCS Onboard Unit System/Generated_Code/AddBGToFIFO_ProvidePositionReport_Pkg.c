@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,15 +11,15 @@
 void AddBGToFIFO_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::AddBGToFIFO::reportedBGs */ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
   /* ProvidePositionReport_Pkg::AddBGToFIFO::reportIsSent */kcg_bool reportIsSent,
-  /* ProvidePositionReport_Pkg::AddBGToFIFO::posBGs */positionedBGs_T_TrainPosition_Types_Pck *posBGs,
-  /* ProvidePositionReport_Pkg::AddBGToFIFO::out_reportedBGs */array__78221 *out_reportedBGs)
+  /* ProvidePositionReport_Pkg::AddBGToFIFO::trainPos */trainPosition_T_TrainPosition_Types_Pck *trainPos,
+  /* ProvidePositionReport_Pkg::AddBGToFIFO::out_reportedBGs */array__81549 *out_reportedBGs)
 {
   if (reportIsSent) {
     (*out_reportedBGs)[0].valid = reportIsSent;
-    (*out_reportedBGs)[0].nidBG = (*posBGs)[7].nid_bg;
+    (*out_reportedBGs)[0].nidBG = (*trainPos).LRBG.nid_bg;
     kcg_copy_LocWithInAcc_T_Obu_BasicTypes_Pkg(
       &(*out_reportedBGs)[0].location,
-      &(*posBGs)[7].location);
+      &(*trainPos).LRBG.location);
     kcg_copy_ReportedBG_T_ProvidePositionReport_Pkg(
       &(*out_reportedBGs)[1],
       &(*reportedBGs)[0]);
@@ -51,6 +51,6 @@ void AddBGToFIFO_ProvidePositionReport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** AddBGToFIFO_ProvidePositionReport_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

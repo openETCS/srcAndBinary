@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
@@ -8,9 +8,7 @@
 #include "kcg_types.h"
 #include "collectRadioMessages_radioOutput_Pkg.h"
 #include "maintainTrainProperties_EVC_Support_Pkg.h"
-#include "trackMsg_toML_EVC_Support_Pkg.h"
 #include "convertCab_EVC_Support_Pkg.h"
-#include "trackPackets_toML_EVC_Support_Pkg.h"
 #include "ManageLevelAndMode.h"
 #include "TIU_OutputIntegration_output_to_TIU_API_Pkg.h"
 #include "DMI_Integrator_manage_DMI_Output_Pkg.h"
@@ -21,9 +19,10 @@
 #include "Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h"
 #include "ProvidePositionReport_ProvidePositionReport_Pkg.h"
 #include "manageTIU_input_input_from_TIU_API_Pkg.h"
+#include "trackPackets_toML_EVC_Support_Pkg.h"
 #include "manageTrainData_trainData_pkg.h"
 #include "checkGeneralMessage_trainData_pkg.h"
-#include "TrackAtlasNextGen_TrackAtlas.h"
+#include "TrackAtlas_TrackAtlas.h"
 #include "calculateTrainPosition_CalculateTrainPosition_Pkg.h"
 
 /* ========================  input structure  ====================== */
@@ -55,7 +54,7 @@ typedef struct {
   M_LEVEL /* EVC::debugCurrentLevel */ debugCurrentLevel;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
-  kcg_bool init12;
+  kcg_bool init13;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   sessionStatus_Type_Radio_Types_Pkg /* EVC::MoRC_sessionStatus */ MoRC_sessionStatus;
@@ -72,21 +71,23 @@ typedef struct {
   T_internal_Type_Obu_BasicTypes_Pkg /* EVC::MSG_lastRadioMsgTimestamp */ MSG_lastRadioMsgTimestamp;
   NID_NTC /* EVC::ML_currentNTC */ ML_currentNTC;
   T_Mode_Level_Level_And_Mode_Types_Pkg /* EVC::ML_ModeAndLevel */ ML_ModeAndLevel;
-  kcg_bool /* EVC::MSG_EmergencyBrakeActive */ MSG_EmergencyBrakeActive;
   ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg /* EVC::EVC_PersistentData */ EVC_PersistentData;
+  kcg_bool /* EVC::ML_levelTransitionBorderPassed */ ML_levelTransitionBorderPassed;
   DMI_TXT_MSGList_status_T_DMI_Types_Pkg /* EVC::EVC_TextMessageStatusList */ EVC_TextMessageStatusList;
+  kcg_bool /* EVC::PROC_start_ack */ PROC_start_ack;
   PT0_PositionReport_T_Packet_TrainTypes_Pkg /* EVC::rep_P0 */ rep_P0;
   trainDataStatus_T_trainData_Types_pkg /* EVC::td_status */ td_status;
   PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg /* EVC::rep_P1 */ rep_P1;
   kcg_bool /* EVC::_L477 */ _L477;
   trainProperties_T_TrainPosition_Types_Pck /* EVC::TIU_trainProperties */ rem_TIU_trainProperties;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 2 */ _11_Context_2;
   outC_manageTIU_input_input_from_TIU_API_Pkg /* 4 */ Context_4;
-  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 1 */ _10_Context_1;
-  outC_manageTrainData_trainData_pkg /* 1 */ _9_Context_1;
-  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 2 */ _8_Context_2;
-  outC_TrackAtlasNextGen_TrackAtlas /* 2 */ Context_2;
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 1 */ _12_Context_1;
+  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 2 */ _11_Context_2;
+  outC_manageTrainData_trainData_pkg /* 1 */ _10_Context_1;
+  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 2 */ Context_2;
+  outC_TrackAtlas_TrackAtlas /* 1 */ _9_Context_1;
+  outC_trackPackets_toML_EVC_Support_Pkg /* 1 */ _8_Context_1;
   outC_ManageLevelAndMode /* 1 */ _7_Context_1;
   outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 1 */ _6_Context_1;
   outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 1 */ _5_Context_1;
@@ -107,6 +108,6 @@ extern void EVC_reset(outC_EVC *outC);
 #endif /* _EVC_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** EVC.h
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

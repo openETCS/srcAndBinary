@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,7 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
   /* TargetManagement_pkg::internalOperators::removeOverpassedMRSPint::TargetsReduced */Target_list_MRSP_real_T_TargetManagement_types *TargetsReduced)
 {
   /* TargetManagement_pkg::internalOperators::removeOverpassedMRSPint::_L21 */
-  static array__79408 _L21;
+  static array__82772 _L21;
   
   kcg_copy_Target_real_T_TargetManagement_types(
     &_L21[0],
@@ -23,10 +23,10 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
   *Cond = (MRSP_TargetManagement_types == (*Targets)[0].targetType) &
     ((*Targets)[0].distance <= d_safe_max_front);
   if (*Cond) {
-    kcg_copy_array__82215(
+    kcg_copy_array__85687(
       &(*TargetsReduced)[0],
-      (array__82215 *) &(*Targets)[1]);
-    kcg_copy_array__79408(&(*TargetsReduced)[199], &_L21);
+      (array__85687 *) &(*Targets)[1]);
+    kcg_copy_array__82772(&(*TargetsReduced)[199], &_L21);
   }
   else {
     kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
@@ -37,6 +37,6 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** removeOverpassedMRSPint_TargetManagement_pkg_internalOperators.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

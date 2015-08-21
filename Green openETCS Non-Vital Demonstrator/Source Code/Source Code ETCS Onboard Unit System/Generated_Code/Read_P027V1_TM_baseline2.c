@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,7 +31,7 @@ void Read_P027V1_TM_baseline2(
   /* TM_baseline2::Read_P027V1::_L166 */
   static P027V1_OBU_body_enum_T_TM_baseline2 _L166;
   /* TM_baseline2::Read_P027V1::_L182 */
-  static array__77590 _L182;
+  static array__80814 _L182;
   /* TM_baseline2::Read_P027V1::_L184 */
   static kcg_int _L184;
   
@@ -118,6 +118,6 @@ void Read_P027V1_TM_baseline2(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Read_P027V1_TM_baseline2.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

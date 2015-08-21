@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _sendAcknowledgementRBC_trainData_pkg_H_
 #define _sendAcknowledgementRBC_trainData_pkg_H_
@@ -23,6 +23,6 @@ extern void sendAcknowledgementRBC_trainData_pkg(
 #endif /* _sendAcknowledgementRBC_trainData_pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** sendAcknowledgementRBC_trainData_pkg.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

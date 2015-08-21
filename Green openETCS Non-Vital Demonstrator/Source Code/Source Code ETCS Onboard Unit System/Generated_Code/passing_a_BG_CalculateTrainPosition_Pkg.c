@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,7 +22,7 @@ void passing_a_BG_CalculateTrainPosition_Pkg(
 {
   static positionedBG_T_TrainPosition_Types_Pck tmp1;
   static kcg_int i;
-  static array__77197 tmp;
+  static array__80553 tmp;
   /* CalculateTrainPosition_Pkg::passing_a_BG::_L16 */
   static positionedBGs_T_TrainPosition_Types_Pck _L16;
   /* CalculateTrainPosition_Pkg::passing_a_BG::_L17 */
@@ -93,6 +93,6 @@ void passing_a_BG_CalculateTrainPosition_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** passing_a_BG_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

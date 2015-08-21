@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 #ifndef _Square_mathext_V_internal_real_Type_H_
 #define _Square_mathext_V_internal_real_Type_H_
@@ -17,6 +17,6 @@ extern kcg_real Square_mathext_V_internal_real_Type(
 #endif /* _Square_mathext_V_internal_real_Type_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Square_mathext_V_internal_real_Type.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 

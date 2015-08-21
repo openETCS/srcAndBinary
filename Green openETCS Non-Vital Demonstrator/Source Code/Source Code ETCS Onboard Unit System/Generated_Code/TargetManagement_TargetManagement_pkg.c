@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,12 +22,12 @@ void TargetManagement_TargetManagement_pkg(
   /* TargetManagement_pkg::TargetManagement::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
   outC_TargetManagement_TargetManagement_pkg *outC)
 {
-  static struct__78796 tmp;
+  static struct__82116 tmp;
   static kcg_int i;
   static Target_list_MRSP_real_T_TargetManagement_types tmp3;
   static extractTargetsMRSPACC_TargetManagement_pkg tmp2;
-  static array__78710 tmp1;
-  static array__78710 tmp4;
+  static array__82030 tmp1;
+  static array__82030 tmp4;
   /* TargetManagement_pkg::TargetManagement::_L88 */
   static kcg_bool _L88;
   
@@ -66,14 +66,14 @@ void TargetManagement_TargetManagement_pkg(
   }
   else {
     if (outC->init) {
-      kcg_copy_array__78710(&tmp1, &tmp4);
+      kcg_copy_array__82030(&tmp1, &tmp4);
     }
     else {
       kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
         &tmp1,
         &outC->rem_MRSPTargetList);
     }
-    kcg_copy_array__78710(&tmp.targetList, &tmp1);
+    kcg_copy_array__82030(&tmp.targetList, &tmp1);
     tmp.lastInsertedTargetIndex = - 1;
     kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
       &tmp3,
@@ -97,6 +97,6 @@ void TargetManagement_TargetManagement_pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TargetManagement_TargetManagement_pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

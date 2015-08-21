@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -69,6 +69,13 @@ typedef enum {
   SN_Level_And_Mode_Types_Pkg,
   RV_Level_And_Mode_Types_Pkg
 } T_Mode_Level_And_Mode_Types_Pkg;
+/* Level_And_Mode_Types_Pkg::T_MA */
+typedef enum {
+  Profile_OS_Level_And_Mode_Types_Pkg,
+  Profile_LS_Level_And_Mode_Types_Pkg,
+  Profile_SH_Level_And_Mode_Types_Pkg,
+  No_Profile_Level_And_Mode_Types_Pkg
+} T_MA_Level_And_Mode_Types_Pkg;
 /* TIU_Types_Pkg::M_Isolation_status_T */
 typedef enum {
   on_board_equipment_is_isolated_TIU_Types_Pkg,
@@ -266,6 +273,16 @@ typedef enum {
   mswc_establishingSession_MoRC_Pck,
   mswc_sessionEstablished_MoRC_Pck
 } mobileSWConnectionStatus_Type_MoRC_Pck;
+/* Q_RBC */
+typedef enum {
+  Q_RBC_Terminate_communication_session = 0,
+  Q_RBC_Establish_communication_session = 1
+} Q_RBC;
+/* Q_SLEEPSESSION */
+typedef enum {
+  Q_SLEEPSESSION_Ignore_session_establishment_order = 0,
+  Q_SLEEPSESSION_Execute_session_establishment_order = 1
+} Q_SLEEPSESSION;
 /* API_RadioCommunication_Pkg::cmdRadioUnit_T */
 typedef enum {
   cmdr_not_relevant_API_RadioCommunication_Pkg,
@@ -430,16 +447,6 @@ typedef enum {
   morc_st_maintaining_Radio_Types_Pkg,
   morc_st_terminating_Radio_Types_Pkg
 } sessionStatus_Type_Radio_Types_Pkg;
-/* Q_RBC */
-typedef enum {
-  Q_RBC_Terminate_communication_session = 0,
-  Q_RBC_Establish_communication_session = 1
-} Q_RBC;
-/* Q_SLEEPSESSION */
-typedef enum {
-  Q_SLEEPSESSION_Ignore_session_establishment_order = 0,
-  Q_SLEEPSESSION_Execute_session_establishment_order = 1
-} Q_SLEEPSESSION;
 /* DataDictionary_Pkg::LevelDecisionTableActionKind */
 typedef enum {
   LD_Invalid_DataDictionary_Pkg,
@@ -587,42 +594,6 @@ typedef enum {
   B_Level_And_Mode_Types_Pkg,
   unknown_Level_And_Mode_Types_Pkg
 } T_Cab_Level_And_Mode_Types_Pkg;
-/* Q_SRSTOP */
-typedef enum {
-  Q_SRSTOP_Stop_if_in_SR_mode = 0,
-  Q_SRSTOP_Go_if_in_SR_mode = 1
-} Q_SRSTOP;
-/* Q_DIFF */
-typedef enum {
-  Q_DIFF_Cant_Deficiency_specific_category = 0,
-  Q_DIFF_Other_specific_category_replaces_the_Cant_Deficiency_SSP = 1,
-  Q_DIFF_Other_specific_category_does_not_replace_the_Cant_Deficiency_SSP = 2
-} Q_DIFF;
-/* NC_CDDIFF */
-typedef enum {
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_80_mm = 0,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_100_mm = 1,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_130_mm = 2,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_150_mm = 3,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_165_mm = 4,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_180_mm = 5,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_210_mm = 6,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_225_mm = 7,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_245_mm = 8,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_275_mm = 9,
-  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_300_mm = 10
-} NC_CDDIFF;
-/* M_MAMODE */
-typedef enum {
-  M_MAMODE_On_Sight = 0,
-  M_MAMODE_Shunting = 1,
-  M_MAMODE_Limited_Supervision = 2
-} M_MAMODE;
-/* Q_MAMODE */
-typedef enum {
-  Q_MAMODE_as_the_EOA = 0,
-  Q_MAMODE_as_both_the_EOA_and_SvL = 1
-} Q_MAMODE;
 /* M_MODE */
 typedef enum {
   M_MODE_Full_Supervision = 0,
@@ -741,45 +712,11 @@ typedef enum {
   Q_EMERGENCYSTOP_Unconditional_Emergency_Stop_accepted = 2,
   Q_EMERGENCYSTOP_Emergency_stop = 3
 } Q_EMERGENCYSTOP;
-/* Q_GDIR */
-typedef enum { Q_GDIR_downhill = 0, Q_GDIR_uphill = 1 } Q_GDIR;
-/* Q_FRONT */
-typedef enum {
-  Q_FRONT_Train_length_delay_on_validity_end_point_of_profile_element = 0,
-  Q_FRONT_No_train_length_delay_on_validity_end_point_of_profile_element = 1
-} Q_FRONT;
 /* TrackAtlasTypes::MA_Level_t */
 typedef enum {
   MA_L1_TrackAtlasTypes,
   MA_L23_TrackAtlasTypes
 } MA_Level_t_TrackAtlasTypes;
-/* Q_ENDTIMER */
-typedef enum {
-  Q_ENDTIMER_No_End_section_timer_information = 0,
-  Q_ENDTIMER_End_section_timer_information_to_follow = 1
-} Q_ENDTIMER;
-/* Q_DANGERPOINT */
-typedef enum {
-  Q_DANGERPOINT_No_danger_point_information = 0,
-  Q_DANGERPOINT_Danger_point_information_to_follow = 1
-} Q_DANGERPOINT;
-/* Q_OVERLAP */
-typedef enum {
-  Q_OVERLAP_No_overlap_information = 0,
-  Q_OVERLAP_Overlap_information_to_follow = 1
-} Q_OVERLAP;
-/* Q_SECTIONTIMER */
-typedef enum {
-  Q_SECTIONTIMER_No_Section_Timer_information = 0,
-  Q_SECTIONTIMER_Section_Timer_information_to_follow = 1
-} Q_SECTIONTIMER;
-/* Level_And_Mode_Types_Pkg::T_MA */
-typedef enum {
-  Profile_OS_Level_And_Mode_Types_Pkg,
-  Profile_LS_Level_And_Mode_Types_Pkg,
-  Profile_SH_Level_And_Mode_Types_Pkg,
-  No_Profile_Level_And_Mode_Types_Pkg
-} T_MA_Level_And_Mode_Types_Pkg;
 /* M_LEVELTR */
 typedef enum {
   M_LEVELTR_Level_0 = 0,
@@ -788,6 +725,69 @@ typedef enum {
   M_LEVELTR_Level_2 = 3,
   M_LEVELTR_Level_3 = 4
 } M_LEVELTR;
+/* Q_DIFF */
+typedef enum {
+  Q_DIFF_Cant_Deficiency_specific_category = 0,
+  Q_DIFF_Other_specific_category_replaces_the_Cant_Deficiency_SSP = 1,
+  Q_DIFF_Other_specific_category_does_not_replace_the_Cant_Deficiency_SSP = 2
+} Q_DIFF;
+/* NC_CDDIFF */
+typedef enum {
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_80_mm = 0,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_100_mm = 1,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_130_mm = 2,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_150_mm = 3,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_165_mm = 4,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_180_mm = 5,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_210_mm = 6,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_225_mm = 7,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_245_mm = 8,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_275_mm = 9,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_300_mm = 10
+} NC_CDDIFF;
+/* Q_FRONT */
+typedef enum {
+  Q_FRONT_Train_length_delay_on_validity_end_point_of_profile_element = 0,
+  Q_FRONT_No_train_length_delay_on_validity_end_point_of_profile_element = 1
+} Q_FRONT;
+/* Q_SRSTOP */
+typedef enum {
+  Q_SRSTOP_Stop_if_in_SR_mode = 0,
+  Q_SRSTOP_Go_if_in_SR_mode = 1
+} Q_SRSTOP;
+/* Q_SECTIONTIMER */
+typedef enum {
+  Q_SECTIONTIMER_No_Section_Timer_information = 0,
+  Q_SECTIONTIMER_Section_Timer_information_to_follow = 1
+} Q_SECTIONTIMER;
+/* Q_OVERLAP */
+typedef enum {
+  Q_OVERLAP_No_overlap_information = 0,
+  Q_OVERLAP_Overlap_information_to_follow = 1
+} Q_OVERLAP;
+/* Q_DANGERPOINT */
+typedef enum {
+  Q_DANGERPOINT_No_danger_point_information = 0,
+  Q_DANGERPOINT_Danger_point_information_to_follow = 1
+} Q_DANGERPOINT;
+/* Q_ENDTIMER */
+typedef enum {
+  Q_ENDTIMER_No_End_section_timer_information = 0,
+  Q_ENDTIMER_End_section_timer_information_to_follow = 1
+} Q_ENDTIMER;
+/* Q_GDIR */
+typedef enum { Q_GDIR_downhill = 0, Q_GDIR_uphill = 1 } Q_GDIR;
+/* M_MAMODE */
+typedef enum {
+  M_MAMODE_On_Sight = 0,
+  M_MAMODE_Shunting = 1,
+  M_MAMODE_Limited_Supervision = 2
+} M_MAMODE;
+/* Q_MAMODE */
+typedef enum {
+  Q_MAMODE_as_the_EOA = 0,
+  Q_MAMODE_as_both_the_EOA_and_SvL = 1
+} Q_MAMODE;
 /* Q_DLRBG */
 typedef enum {
   Q_DLRBG_Reverse = 0,
@@ -1561,7 +1561,7 @@ typedef enum {
   SSM_st_RV_Mode_SM_Train_Reversing,
   SSM_st_Reversing_Data_Available_SM_Train_Reversing
 } SSM_ST_SM_Train_Reversing;
-/* LevelStateMachine::MainLevelOutput */
+/* Levels_Pkg::LevelStateMachine::MainLevelOutput */
 typedef enum {
   SSM_TR_no_trans_MainLevelOutput,
   SSM_TR_Level_L1_1_MainLevelOutput,
@@ -1585,7 +1585,7 @@ typedef enum {
   SSM_TR_Level_NTC_3_MainLevelOutput,
   SSM_TR_Level_NTC_4_MainLevelOutput
 } SSM_TR_MainLevelOutput;
-/* LevelStateMachine::MainLevelOutput */
+/* Levels_Pkg::LevelStateMachine::MainLevelOutput */
 typedef enum {
   SSM_st_Level_L1_MainLevelOutput,
   SSM_st_Level_L2_MainLevelOutput,
@@ -1593,17 +1593,19 @@ typedef enum {
   SSM_st_Level_L0_MainLevelOutput,
   SSM_st_Level_NTC_MainLevelOutput
 } SSM_ST_MainLevelOutput;
-/* DriverAck::DriverAck */
+/* Levels_Pkg::DriverAck::DriverAck */
 typedef enum {
   SSM_TR_no_trans_DriverAck,
   SSM_TR_Idle_1_DriverAck,
-  SSM_TR_Waiting_1_DriverAck,
-  SSM_TR_Waiting_2_DriverAck
+  SSM_TR_WaitingForAck_1_DriverAck,
+  SSM_TR_WaitingForAck_2_DriverAck,
+  SSM_TR_WaitingForPassingComplete_1_DriverAck
 } SSM_TR_DriverAck;
-/* DriverAck::DriverAck */
+/* Levels_Pkg::DriverAck::DriverAck */
 typedef enum {
   SSM_st_Idle_DriverAck,
-  SSM_st_Waiting_DriverAck
+  SSM_st_WaitingForAck_DriverAck,
+  SSM_st_WaitingForPassingComplete_DriverAck
 } SSM_ST_DriverAck;
 /* MA_Request::MA_Request_Supervision::SM1 */
 typedef enum {
@@ -1801,6 +1803,72 @@ typedef kcg_int M_POSITION;
 /* NID_PACKET */
 typedef kcg_int NID_PACKET;
 
+/* D_LEVELTR */
+typedef kcg_int D_LEVELTR;
+
+/* L_ACKLEVELTR */
+typedef kcg_int L_ACKLEVELTR;
+
+/* D_DP */
+typedef kcg_int D_DP;
+
+/* D_OL */
+typedef kcg_int D_OL;
+
+/* V_LOA */
+typedef kcg_int V_LOA;
+
+/* T_ENDTIMER */
+typedef kcg_int T_ENDTIMER;
+
+/* L_SECTION */
+typedef kcg_int L_SECTION;
+
+/* T_SECTIONTIMER */
+typedef kcg_int T_SECTIONTIMER;
+
+/* D_SECTIONTIMERSTOPLOC */
+typedef kcg_int D_SECTIONTIMERSTOPLOC;
+
+/* T_LOA */
+typedef kcg_int T_LOA;
+
+/* L_ENDSECTION */
+typedef kcg_int L_ENDSECTION;
+
+/* D_ENDTIMERSTARTLOC */
+typedef kcg_int D_ENDTIMERSTARTLOC;
+
+/* V_RELEASEDP */
+typedef kcg_int V_RELEASEDP;
+
+/* D_STARTOL */
+typedef kcg_int D_STARTOL;
+
+/* T_OL */
+typedef kcg_int T_OL;
+
+/* V_RELEASEOL */
+typedef kcg_int V_RELEASEOL;
+
+/* D_GRADIENT */
+typedef kcg_int D_GRADIENT;
+
+/* G_A */
+typedef kcg_int G_A;
+
+/* D_STATIC */
+typedef kcg_int D_STATIC;
+
+/* V_STATIC */
+typedef kcg_int V_STATIC;
+
+/* NC_DIFF */
+typedef kcg_int NC_DIFF;
+
+/* V_DIFF */
+typedef kcg_int V_DIFF;
+
 /* L_PACKET */
 typedef kcg_int L_PACKET;
 
@@ -1834,72 +1902,6 @@ typedef kcg_int D_REVERSE;
 /* V_REVERSE */
 typedef kcg_int V_REVERSE;
 
-/* V_LOA */
-typedef kcg_int V_LOA;
-
-/* T_LOA */
-typedef kcg_int T_LOA;
-
-/* L_SECTION */
-typedef kcg_int L_SECTION;
-
-/* T_SECTIONTIMER */
-typedef kcg_int T_SECTIONTIMER;
-
-/* D_SECTIONTIMERSTOPLOC */
-typedef kcg_int D_SECTIONTIMERSTOPLOC;
-
-/* L_ENDSECTION */
-typedef kcg_int L_ENDSECTION;
-
-/* T_ENDTIMER */
-typedef kcg_int T_ENDTIMER;
-
-/* D_ENDTIMERSTARTLOC */
-typedef kcg_int D_ENDTIMERSTARTLOC;
-
-/* D_DP */
-typedef kcg_int D_DP;
-
-/* V_RELEASEDP */
-typedef kcg_int V_RELEASEDP;
-
-/* D_STARTOL */
-typedef kcg_int D_STARTOL;
-
-/* T_OL */
-typedef kcg_int T_OL;
-
-/* D_OL */
-typedef kcg_int D_OL;
-
-/* V_RELEASEOL */
-typedef kcg_int V_RELEASEOL;
-
-/* D_GRADIENT */
-typedef kcg_int D_GRADIENT;
-
-/* G_A */
-typedef kcg_int G_A;
-
-/* D_STATIC */
-typedef kcg_int D_STATIC;
-
-/* V_STATIC */
-typedef kcg_int V_STATIC;
-
-/* NC_DIFF */
-typedef kcg_int NC_DIFF;
-
-/* V_DIFF */
-typedef kcg_int V_DIFF;
-
-/* D_LEVELTR */
-typedef kcg_int D_LEVELTR;
-
-/* L_ACKLEVELTR */
-typedef kcg_int L_ACKLEVELTR;
-
 /* D_MAMODE */
 typedef kcg_int D_MAMODE;
 
@@ -1920,6 +1922,9 @@ typedef kcg_int T_TIMEOUTRQST;
 
 /* T_CYCRQST */
 typedef kcg_int T_CYCRQST;
+
+/* V_MAIN */
+typedef kcg_int V_MAIN;
 
 /* TIU_Types_Pkg::NID_ctraction_T */
 typedef kcg_int NID_ctraction_T_TIU_Types_Pkg;
@@ -1985,42 +1990,42 @@ typedef struct {
   kcg_bool valid;
   L_NVKRINT l_nvkrint_l;
   kcg_real m_nvkrint_l;
-} struct__76855;
+} struct__80211;
 
 /* TM::P003_OBU_l_section_enum_T */
-typedef struct__76855 P003_OBU_l_section_enum_T_TM;
+typedef struct__80211 P003_OBU_l_section_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_l_section_enum_T */
-typedef struct__76855 P203V1_OBU_l_section_enum_T_TM_baseline2;
+typedef struct__80211 P203V1_OBU_l_section_enum_T_TM_baseline2;
 
-typedef struct__76855 array__76861[32];
+typedef struct__80211 array__80217[32];
 
 /* TM::P003_OBU_l_sectionlist_enum_T */
-typedef array__76861 P003_OBU_l_sectionlist_enum_T_TM;
+typedef array__80217 P003_OBU_l_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_l_sectionlist_enum_T */
-typedef array__76861 P203V1_OBU_l_sectionlist_enum_T_TM_baseline2;
+typedef array__80217 P203V1_OBU_l_sectionlist_enum_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
   kcg_int v_nvkvint_k_m;
   kcg_real m_nvkvint_km_12;
   kcg_real m_nvkvint_km_23;
-} struct__76864;
+} struct__80220;
 
 /* TM::P003_OBU_k_m_section_enum_T */
-typedef struct__76864 P003_OBU_k_m_section_enum_T_TM;
+typedef struct__80220 P003_OBU_k_m_section_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_k_m_section_enum_T */
-typedef struct__76864 P203V1_OBU_k_m_section_enum_T_TM_baseline2;
+typedef struct__80220 P203V1_OBU_k_m_section_enum_T_TM_baseline2;
 
-typedef struct__76864 array__76871[32];
+typedef struct__80220 array__80227[32];
 
 /* TM::P003_OBU_k_m_sectionlist_enum_T */
-typedef array__76871 P003_OBU_k_m_sectionlist_enum_T_TM;
+typedef array__80227 P003_OBU_k_m_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_k_m_sectionlist_enum_T */
-typedef array__76871 P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2;
+typedef array__80227 P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
@@ -2031,43 +2036,43 @@ typedef struct {
   kcg_real m_nvkvint_k_12;
   kcg_real m_nvkvint_k_23;
   kcg_int n_iter_k_m;
-  array__76871 n_iter_k_m_list;
-} struct__76874;
+  array__80227 n_iter_k_m_list;
+} struct__80230;
 
 /* TM::P003_OBU_k_section_enum_T */
-typedef struct__76874 P003_OBU_k_section_enum_T_TM;
+typedef struct__80230 P003_OBU_k_section_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_k_section_enum_T */
-typedef struct__76874 P203V1_OBU_k_section_enum_T_TM_baseline2;
+typedef struct__80230 P203V1_OBU_k_section_enum_T_TM_baseline2;
 
-typedef struct__76874 array__76886[32];
+typedef struct__80230 array__80242[32];
 
 /* TM::P003_OBU_k_sectionlist_enum_T */
-typedef array__76886 P003_OBU_k_sectionlist_enum_T_TM;
+typedef array__80242 P003_OBU_k_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_k_sectionlist_enum_T */
-typedef array__76886 P203V1_OBU_k_sectionlist_enum_T_TM_baseline2;
+typedef array__80242 P203V1_OBU_k_sectionlist_enum_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
   kcg_int v_nvkvint_n;
   kcg_real m_nvkvint_n_12;
   kcg_real m_nvkvint_n_23;
-} struct__76889;
+} struct__80245;
 
 /* TM::P003_OBU_n_section_enum_T */
-typedef struct__76889 P003_OBU_n_section_enum_T_TM;
+typedef struct__80245 P003_OBU_n_section_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_n_section_enum_T */
-typedef struct__76889 P203V1_OBU_n_section_enum_T_TM_baseline2;
+typedef struct__80245 P203V1_OBU_n_section_enum_T_TM_baseline2;
 
-typedef struct__76889 array__76896[32];
+typedef struct__80245 array__80252[32];
 
 /* TM::P003_OBU_n_sectionlist_enum_T */
-typedef array__76896 P003_OBU_n_sectionlist_enum_T_TM;
+typedef array__80252 P003_OBU_n_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_n_sectionlist_enum_T */
-typedef array__76896 P203V1_OBU_n_sectionlist_enum_T_TM_baseline2;
+typedef array__80252 P203V1_OBU_n_sectionlist_enum_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
@@ -2098,47 +2103,47 @@ typedef struct {
   N_ITER n_iter_l;
   P203V1_OBU_l_sectionlist_enum_T_TM_baseline2 n_iter_l_list;
   M_NVKTINT m_nvktint;
-} struct__76899;
+} struct__80255;
 
 /* TM_baseline2::P203V1_OBU_T */
-typedef struct__76899 P203V1_OBU_T_TM_baseline2;
+typedef struct__80255 P203V1_OBU_T_TM_baseline2;
 
 typedef struct {
   Q_NVLOCACC q_nvlocacc;
   V_NVLIMSUPERV v_nvlimsuperv;
-} struct__76930;
+} struct__80286;
 
 /* TM_baseline2::P003_permanent_data_T */
-typedef struct__76930 P003_permanent_data_T_TM_baseline2;
+typedef struct__80286 P003_permanent_data_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
   L_NVKRINT l_nvkrint;
   M_NVKRINT m_nvkrint;
-} struct__76935;
+} struct__80291;
 
 /* Packet_Types_Pkg::nvkrint_T */
-typedef struct__76935 nvkrint_T_Packet_Types_Pkg;
+typedef struct__80291 nvkrint_T_Packet_Types_Pkg;
 
-typedef nvkrint_T_Packet_Types_Pkg array__76941[7];
+typedef nvkrint_T_Packet_Types_Pkg array__80297[7];
 
 /* Packet_Types_Pkg::nvkrintArray_T */
-typedef array__76941 nvkrintArray_T_Packet_Types_Pkg;
+typedef array__80297 nvkrintArray_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   V_NVKVINT v_nvkvint;
   M_NVKVINT m_nvkvint12;
   M_NVKVINT m_nvkvint23;
-} struct__76944;
+} struct__80300;
 
 /* Packet_Types_Pkg::nvkvint_T */
-typedef struct__76944 nvkvint_T_Packet_Types_Pkg;
+typedef struct__80300 nvkvint_T_Packet_Types_Pkg;
 
-typedef nvkvint_T_Packet_Types_Pkg array__76951[7];
+typedef nvkvint_T_Packet_Types_Pkg array__80307[7];
 
 /* Packet_Types_Pkg::nvkvintArray_T */
-typedef array__76951 nvkvintArray_T_Packet_Types_Pkg;
+typedef array__80307 nvkvintArray_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2146,31 +2151,31 @@ typedef struct {
   A_NVP12 a_nvp12;
   A_NVP23 a_nvp23;
   nvkvintArray_T_Packet_Types_Pkg nvkintArray;
-} struct__76954;
+} struct__80310;
 
 /* Packet_Types_Pkg::nvkvintset_T */
-typedef struct__76954 nvkvintset_T_Packet_Types_Pkg;
+typedef struct__80310 nvkvintset_T_Packet_Types_Pkg;
 
-typedef nvkvintset_T_Packet_Types_Pkg array__76962[7];
+typedef nvkvintset_T_Packet_Types_Pkg array__80318[7];
 
 /* Packet_Types_Pkg::nvkvintsetArray_T */
-typedef array__76962 nvkvintsetArray_T_Packet_Types_Pkg;
+typedef array__80318 nvkvintsetArray_T_Packet_Types_Pkg;
 
-typedef struct { kcg_bool valid; kcg_int nid_c; } struct__76965;
+typedef struct { kcg_bool valid; kcg_int nid_c; } struct__80321;
 
 /* Packet_Types_Pkg::nidC_T */
-typedef struct__76965 nidC_T_Packet_Types_Pkg;
+typedef struct__80321 nidC_T_Packet_Types_Pkg;
 
 /* TM::P003_OBU_nid_c_section_enum_T */
-typedef struct__76965 P003_OBU_nid_c_section_enum_T_TM;
+typedef struct__80321 P003_OBU_nid_c_section_enum_T_TM;
 
 /* TM_baseline2::P003V1_section_enum_T */
-typedef struct__76965 P003V1_section_enum_T_TM_baseline2;
+typedef struct__80321 P003V1_section_enum_T_TM_baseline2;
 
-typedef nidC_T_Packet_Types_Pkg array__76970[7];
+typedef nidC_T_Packet_Types_Pkg array__80326[7];
 
 /* Packet_Types_Pkg::nidCArray_T */
-typedef array__76970 nidCArray_T_Packet_Types_Pkg;
+typedef array__80326 nidCArray_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2209,10 +2214,10 @@ typedef struct {
   nvkvintsetArray_T_Packet_Types_Pkg nvkvintsetArray;
   nvkrintArray_T_Packet_Types_Pkg nvkrintArray;
   M_NVKTINT m_nvktint;
-} struct__76973;
+} struct__80329;
 
 /* Packet_Types_Pkg::P3_NationalValues_T */
-typedef struct__76973 P3_NationalValues_T_Packet_Types_Pkg;
+typedef struct__80329 P3_NationalValues_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2226,15 +2231,15 @@ typedef struct {
   Q_LINKORIENTATION q_linkorientation;
   Q_LINKREACTION q_linkreaction;
   kcg_int q_locacc;
-} struct__77012;
+} struct__80368;
 
 /* BG_Types_Pkg::LinkedBG_T */
-typedef struct__77012 LinkedBG_T_BG_Types_Pkg;
+typedef struct__80368 LinkedBG_T_BG_Types_Pkg;
 
-typedef struct__77012 array__77026[4];
+typedef struct__80368 array__80382[4];
 
 /* BG_Types_Pkg::LinkedBGs_T */
-typedef array__77026 LinkedBGs_T_BG_Types_Pkg;
+typedef array__80382 LinkedBGs_T_BG_Types_Pkg;
 
 typedef kcg_int array_int_500[500];
 
@@ -2247,23 +2252,23 @@ typedef struct {
   kcg_bool valid;
   kcg_int startAddress;
   kcg_int endAddress;
-} struct__77032;
+} struct__80388;
 
 /* Common_Types_Pkg::MetadataElement_T */
-typedef struct__77032 MetadataElement_T_Common_Types_Pkg;
+typedef struct__80388 MetadataElement_T_Common_Types_Pkg;
 
-typedef struct__77032 array__77040[30];
+typedef struct__80388 array__80396[30];
 
 /* Common_Types_Pkg::Metadata_T */
-typedef array__77040 Metadata_T_Common_Types_Pkg;
+typedef array__80396 Metadata_T_Common_Types_Pkg;
 
 typedef struct {
-  array__77040 PacketHeaders;
+  array__80396 PacketHeaders;
   array_int_500 PacketData;
-} struct__77043;
+} struct__80399;
 
 /* Common_Types_Pkg::CompressedPackets_T */
-typedef struct__77043 CompressedPackets_T_Common_Types_Pkg;
+typedef struct__80399 CompressedPackets_T_Common_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2274,15 +2279,15 @@ typedef struct {
   Q_LINKORIENTATION q_linkorientation;
   Q_LINKREACTION q_linkreaction;
   Q_LOCACC q_locacc;
-} struct__77048;
+} struct__80404;
 
 /* TM::P005_section_enum_T */
-typedef struct__77048 P005_section_enum_T_TM;
+typedef struct__80404 P005_section_enum_T_TM;
 
-typedef P005_section_enum_T_TM array__77059[33];
+typedef P005_section_enum_T_TM array__80415[33];
 
 /* TM::P005_OBU_sectionlist_enum_T */
-typedef array__77059 P005_OBU_sectionlist_enum_T_TM;
+typedef array__80415 P005_OBU_sectionlist_enum_T_TM;
 
 typedef struct {
   kcg_bool valid;
@@ -2291,10 +2296,10 @@ typedef struct {
   Q_SCALE q_scale;
   N_ITER n_iter;
   P005_OBU_sectionlist_enum_T_TM sections;
-} struct__77062;
+} struct__80418;
 
 /* TM::P005_OBU_T */
-typedef struct__77062 P005_OBU_T_TM;
+typedef struct__80418 P005_OBU_T_TM;
 
 typedef kcg_int array_int_231[231];
 
@@ -2325,10 +2330,10 @@ typedef struct {
   Q_DIR q_dir;
   D_EMERGENCYSTOP d_emergencystop;
   M_VERSION m_version;
-} struct__77077;
+} struct__80433;
 
 /* Radio_Types_Pkg::Radio_TrackTrain_Header_T */
-typedef struct__77077 Radio_TrackTrain_Header_T_Radio_Types_Pkg;
+typedef struct__80433 Radio_TrackTrain_Header_T_Radio_Types_Pkg;
 
 typedef struct {
   kcg_bool t_train_reference;
@@ -2340,57 +2345,57 @@ typedef struct {
   kcg_bool q_dir;
   kcg_bool d_emergencystop;
   kcg_bool m_version;
-} struct__77095;
+} struct__80451;
 
 /* Common_Types_Pkg::RadioMetadata_T */
-typedef struct__77095 RadioMetadata_T_Common_Types_Pkg;
+typedef struct__80451 RadioMetadata_T_Common_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   NID_C nid_c;
   NID_RBC rbc_id;
   kcg_int device_id;
-} struct__77107;
+} struct__80463;
 
 /* Common_Types_Pkg::RBC_Id_T */
-typedef struct__77107 RBC_Id_T_Common_Types_Pkg;
+typedef struct__80463 RBC_Id_T_Common_Types_Pkg;
 
 typedef struct {
   kcg_int v_safeNominal;
   kcg_int v_rawNominal;
   kcg_int v_lower;
   kcg_int v_upper;
-} struct__77114;
+} struct__80470;
 
 /* Obu_BasicTypes_Pkg::OdometrySpeeds_T */
-typedef struct__77114 OdometrySpeeds_T_Obu_BasicTypes_Pkg;
+typedef struct__80470 OdometrySpeeds_T_Obu_BasicTypes_Pkg;
 
 typedef struct {
   kcg_int o_nominal;
   kcg_int o_min;
   kcg_int o_max;
-} struct__77121;
+} struct__80477;
 
 /* Obu_BasicTypes_Pkg::OdometryLocations_T */
-typedef struct__77121 OdometryLocations_T_Obu_BasicTypes_Pkg;
+typedef struct__80477 OdometryLocations_T_Obu_BasicTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
   kcg_int timestamp;
-  struct__77121 odo;
-  struct__77114 speed;
+  struct__80477 odo;
+  struct__80470 speed;
   kcg_int acceleration;
   odoMotionState_T_Obu_BasicTypes_Pkg motionState;
   odoMotionDirection_T_Obu_BasicTypes_Pkg motionDirection;
-} struct__77127;
+} struct__80483;
 
 /* Obu_BasicTypes_Pkg::odometry_T */
-typedef struct__77127 odometry_T_Obu_BasicTypes_Pkg;
+typedef struct__80483 odometry_T_Obu_BasicTypes_Pkg;
 
-typedef struct { kcg_int nominal; kcg_int d_min; kcg_int d_max; } struct__77137;
+typedef struct { kcg_int nominal; kcg_int d_min; kcg_int d_max; } struct__80493;
 
 /* Obu_BasicTypes_Pkg::LocWithInAcc_T */
-typedef struct__77137 LocWithInAcc_T_Obu_BasicTypes_Pkg;
+typedef struct__80493 LocWithInAcc_T_Obu_BasicTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2402,16 +2407,16 @@ typedef struct {
   kcg_int nid_c;
   kcg_int nid_bg;
   Q_LINK q_link;
-  struct__77127 bgPosition;
-  struct__77137 BG_centerDetectionInaccuraccuracies;
+  struct__80483 bgPosition;
+  struct__80493 BG_centerDetectionInaccuraccuracies;
   kcg_int q_nvlocacc;
   kcg_bool noCoordinateSystemHasBeenAssigned;
   Q_DIRLRBG trainOrientationToBG;
   Q_DIRTRAIN trainRunningDirectionToBG;
-} struct__77143;
+} struct__80499;
 
 /* BG_Types_Pkg::BG_Header_T */
-typedef struct__77143 BG_Header_T_BG_Types_Pkg;
+typedef struct__80499 BG_Header_T_BG_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2421,59 +2426,62 @@ typedef struct {
   Radio_TrackTrain_Header_T_Radio_Types_Pkg Radio_Common_Header;
   CompressedPackets_T_Common_Types_Pkg packets;
   RBC_Id_T_Common_Types_Pkg sendingRBC;
-} struct__77161;
+} struct__80517;
 
 /* Common_Types_Pkg::ReceivedMessage_T */
-typedef struct__77161 ReceivedMessage_T_Common_Types_Pkg;
+typedef struct__80517 ReceivedMessage_T_Common_Types_Pkg;
+
+/* MoRC_Pck::genMessage_T */
+typedef ReceivedMessage_T_Common_Types_Pkg genMessage_T_MoRC_Pck;
 
 typedef struct {
   kcg_bool valid;
-  struct__77143 BG_Header;
-  array__77026 linkedBGs;
-} struct__77171;
+  struct__80499 BG_Header;
+  array__80382 linkedBGs;
+} struct__80527;
 
 /* BG_Types_Pkg::passedBG_T */
-typedef struct__77171 passedBG_T_BG_Types_Pkg;
+typedef struct__80527 passedBG_T_BG_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   kcg_int nid_bg_fromLinkingBG;
   kcg_int nid_c_fromLinkingBG;
-  struct__77137 expectedLocation;
-  struct__77137 d_link;
-  struct__77012 linkingInfo;
-} struct__77177;
+  struct__80493 expectedLocation;
+  struct__80493 d_link;
+  struct__80368 linkingInfo;
+} struct__80533;
 
 /* TrainPosition_Types_Pck::infoFromLinking_T */
-typedef struct__77177 infoFromLinking_T_TrainPosition_Types_Pck;
+typedef struct__80533 infoFromLinking_T_TrainPosition_Types_Pck;
 
 typedef struct {
   kcg_bool valid;
   kcg_int nid_c;
   kcg_int nid_bg;
   Q_LINK q_link;
-  struct__77137 location;
+  struct__80493 location;
   kcg_int seqNoOnTrack;
-  struct__77177 infoFromLinking;
-  struct__77171 infoFromPassing;
-} struct__77186;
+  struct__80533 infoFromLinking;
+  struct__80527 infoFromPassing;
+} struct__80542;
 
 /* TrainPosition_Types_Pck::positionedBG_T */
-typedef struct__77186 positionedBG_T_TrainPosition_Types_Pck;
+typedef struct__80542 positionedBG_T_TrainPosition_Types_Pck;
 
-typedef positionedBG_T_TrainPosition_Types_Pck array__77197[8];
+typedef positionedBG_T_TrainPosition_Types_Pck array__80553[8];
 
 /* TrainPosition_Types_Pck::positionedBGs_T */
-typedef array__77197 positionedBGs_T_TrainPosition_Types_Pck;
+typedef array__80553 positionedBGs_T_TrainPosition_Types_Pck;
 
 typedef struct {
   kcg_int index;
   kcg_int noOfFoundBGs;
   kcg_bool BGFound;
-} struct__77200;
+} struct__80556;
 
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::BG_find_T */
-typedef struct__77200 BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg;
+typedef struct__80556 BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg;
 
 typedef struct {
   kcg_int unlinkedBGsCount;
@@ -2482,24 +2490,24 @@ typedef struct {
   kcg_int passedUnlinkedBGsCount;
   kcg_int passedLinkedBGsCount;
   kcg_int passedTotalBGsCount;
-} struct__77206;
+} struct__80562;
 
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::BG_counters_T */
-typedef struct__77206 BG_counters_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg;
+typedef struct__80562 BG_counters_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg;
 
 typedef struct {
   kcg_int previousLinkedBG_idx;
   kcg_int currentIndex;
   kcg_int subsequentLinkedBG_idx;
-} struct__77215;
+} struct__80571;
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::linkedBG_index_T */
-typedef struct__77215 linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg;
+typedef struct__80571 linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg;
 
-typedef linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg array__77221[8];
+typedef linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg array__80577[8];
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::linkedBGs_indices_T */
-typedef array__77221 linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg;
+typedef array__80577 linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg;
 
 typedef struct {
   NID_ENGINE nid_engine;
@@ -2509,10 +2517,10 @@ typedef struct {
   LocWithInAcc_T_Obu_BasicTypes_Pkg d_frontend_2_rearend;
   LocWithInAcc_T_Obu_BasicTypes_Pkg locationAccuracy_DefaultValue;
   LocWithInAcc_T_Obu_BasicTypes_Pkg centerDetectionAcc_DefaultValue;
-} struct__77224;
+} struct__80580;
 
 /* TrainPosition_Types_Pck::trainProperties_T */
-typedef struct__77224 trainProperties_T_TrainPosition_Types_Pck;
+typedef struct__80580 trainProperties_T_TrainPosition_Types_Pck;
 
 typedef struct {
   positionedBG_T_TrainPosition_Types_Pck refBG;
@@ -2520,23 +2528,23 @@ typedef struct {
   positionedBG_T_TrainPosition_Types_Pck prevUnlinkedBG;
   kcg_bool recalculate;
   LocWithInAcc_T_Obu_BasicTypes_Pkg sumOfBestDistances;
-} struct__77234;
+} struct__80590;
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::refBGs_T */
-typedef struct__77234 refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg;
+typedef struct__80590 refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg;
 
 typedef struct {
   positionedBGs_T_TrainPosition_Types_Pck BGs;
   kcg_bool overrun;
-} struct__77242;
+} struct__80598;
 
 /* CalculateTrainPosition_Pkg::positionedBGs_w_overrun_T */
-typedef struct__77242 positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg;
+typedef struct__80598 positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg;
 
-typedef positionedBG_T_TrainPosition_Types_Pck array__77247[4];
+typedef positionedBG_T_TrainPosition_Types_Pck array__80603[4];
 
 /* TrainPosition_Types_Pck::linkedBGs_asPositionedBGs_T */
-typedef array__77247 linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck;
+typedef array__80603 linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck;
 
 typedef struct {
   kcg_bool outOfMemSpace;
@@ -2548,10 +2556,10 @@ typedef struct {
   kcg_bool twoConsecutiveLinkedBGs_missed;
   kcg_bool doubleRepositioningError;
   positionedBG_T_TrainPosition_Types_Pck bg;
-} struct__77250;
+} struct__80606;
 
 /* TrainPosition_Types_Pck::positionErrors_T */
-typedef struct__77250 positionErrors_T_TrainPosition_Types_Pck;
+typedef struct__80606 positionErrors_T_TrainPosition_Types_Pck;
 
 typedef struct {
   kcg_bool valid;
@@ -2564,30 +2572,510 @@ typedef struct {
   positionedBG_T_TrainPosition_Types_Pck lastPassedUnlinkedBG;
   Speed_T_Obu_BasicTypes_Pkg speed;
   kcg_bool linkingIsUsedOnboard;
-} struct__77262;
+} struct__80618;
 
 /* TrainPosition_Types_Pck::trainPositionInfo_T */
-typedef struct__77262 trainPositionInfo_T_TrainPosition_Types_Pck;
+typedef struct__80618 trainPositionInfo_T_TrainPosition_Types_Pck;
 
 typedef struct {
   kcg_bool valid;
   kcg_int timestamp;
   kcg_bool trainPositionIsUnknown;
   kcg_bool noCoordinateSystemHasBeenAssigned;
-  struct__77137 trainPosition;
+  struct__80493 trainPosition;
   kcg_int estimatedFrontEndPosition;
   kcg_int minSafeFrontEndPosition;
   kcg_int maxSafeFrontEndPostion;
-  struct__77186 LRBG;
-  struct__77186 prvLRBG;
+  struct__80542 LRBG;
+  struct__80542 prvLRBG;
   Q_DLRBG nominalOrReverseToLRBG;
   Q_DIRLRBG trainOrientationToLRBG;
   Q_DIRTRAIN trainRunningDirectionToLRBG;
   kcg_bool linkingIsUsedOnboard;
-} struct__77275;
+} struct__80631;
 
 /* TrainPosition_Types_Pck::trainPosition_T */
-typedef struct__77275 trainPosition_T_TrainPosition_Types_Pck;
+typedef struct__80631 trainPosition_T_TrainPosition_Types_Pck;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_MAMODE d_mamode;
+  M_MAMODE m_mamode;
+  V_MAMODE v_mamode;
+  L_MAMODE l_mamode;
+  L_ACKMAMODE l_ackmamode;
+  Q_MAMODE q_mamode;
+} struct__80648;
+
+/* Packet_Types_Pkg::P80_ModeProfile_T */
+typedef struct__80648 P80_ModeProfile_T_Packet_Types_Pkg;
+
+typedef P80_ModeProfile_T_Packet_Types_Pkg array__80660[3];
+
+/* Packet_Types_Pkg::P80_ModeProfiles_T */
+typedef array__80660 P80_ModeProfiles_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_GRADIENT d_gradient;
+  Q_GDIR q_gdir;
+  G_A g_a;
+} struct__80663;
+
+/* Packet_Types_Pkg::P21_GradientProfile_T */
+typedef struct__80663 P21_GradientProfile_T_Packet_Types_Pkg;
+
+typedef P21_GradientProfile_T_Packet_Types_Pkg array__80672[7];
+
+/* Packet_Types_Pkg::P21_GradientProfiles_T */
+typedef array__80672 P21_GradientProfiles_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  D_GRADIENT d_gradient;
+  Q_GDIR q_gdir;
+  G_A g_a;
+} struct__80675;
+
+/* TM::P021_section_enum_T */
+typedef struct__80675 P021_section_enum_T_TM;
+
+typedef P021_section_enum_T_TM array__80682[33];
+
+/* TM::P021_OBU_sectionlist_enum_T */
+typedef array__80682 P021_OBU_sectionlist_enum_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  N_ITER n_iter;
+  P021_OBU_sectionlist_enum_T_TM sections;
+} struct__80685;
+
+/* TM::P021_OBU_T */
+typedef struct__80685 P021_OBU_T_TM;
+
+typedef kcg_int array_int_99[99];
+
+/* TM::P041_sections_array_flat_T */
+typedef array_int_99 P041_sections_array_flat_T_TM;
+
+/* TM::P021_sections_array_flat_T */
+typedef array_int_99 P021_sections_array_flat_T_TM;
+
+typedef kcg_int array_int_5[5];
+
+/* TM::Array05 */
+typedef array_int_5 Array05_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  V_LOA v_loa;
+  T_LOA t_loa;
+  L_SECTION l_section;
+  Q_SECTIONTIMER q_sectiontimer_k;
+  T_SECTIONTIMER t_sectiontimer_k;
+  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc_k;
+  L_ENDSECTION l_endsection;
+  Q_SECTIONTIMER q_sectiontimer;
+  T_SECTIONTIMER t_sectiontimer;
+  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
+  Q_ENDTIMER q_endtimer;
+  T_ENDTIMER t_endtimer;
+  D_ENDTIMERSTARTLOC d_endtimerstartloc;
+  Q_DANGERPOINT q_dangerpoint;
+  D_DP d_dp;
+  V_RELEASEDP v_releasedp;
+  Q_OVERLAP q_overlap;
+  D_STARTOL d_startol;
+  T_OL t_ol;
+  D_OL d_ol;
+  V_RELEASEOL v_releaseol;
+} struct__80699;
+
+/* Packet_Types_Pkg::P15_Level23MovementAuthority_T */
+typedef struct__80699 P15_Level23MovementAuthority_T_Packet_Types_Pkg;
+
+typedef P15_Level23MovementAuthority_T_Packet_Types_Pkg array__80726[5];
+
+/* Packet_Types_Pkg::P15_Level23MovementAuthorities_T */
+typedef array__80726 P15_Level23MovementAuthorities_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  L_SECTION l_section;
+  Q_SECTIONTIMER q_sectiontimer;
+  T_SECTIONTIMER t_sectiontimer;
+  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
+} struct__80729;
+
+/* TM::P015_section_enum_T */
+typedef struct__80729 P015_section_enum_T_TM;
+
+/* TM::P012_section_enum_T */
+typedef struct__80729 P012_section_enum_T_TM;
+
+typedef P015_section_enum_T_TM array__80737[32];
+
+/* TM::P015_OBU_sectionlist_enum_T */
+typedef array__80737 P015_OBU_sectionlist_enum_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  V_LOA v_loa;
+  T_LOA t_loa;
+  N_ITER n_iter;
+  P015_OBU_sectionlist_enum_T_TM sections;
+  L_ENDSECTION l_endsection;
+  Q_SECTIONTIMER q_sectiontimer;
+  T_SECTIONTIMER t_sectiontimer;
+  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
+  Q_ENDTIMER q_endtimer;
+  T_ENDTIMER t_endtimer;
+  D_ENDTIMERSTARTLOC d_endtimerstartloc;
+  Q_DANGERPOINT q_dangerpoint;
+  D_DP d_dp;
+  V_RELEASEDP v_releasedp;
+  Q_OVERLAP q_overlap;
+  D_STARTOL d_startol;
+  T_OL t_ol;
+  D_OL d_ol;
+  V_RELEASEOL v_releaseol;
+} struct__80740;
+
+/* TM::P015_OBU_T */
+typedef struct__80740 P015_OBU_T_TM;
+
+typedef kcg_int array_int_128[128];
+
+/* TM::P015_sections_array_flat_T */
+typedef array_int_128 P015_sections_array_flat_T_TM;
+
+/* TM::P012_sections_array_flat_T */
+typedef array_int_128 P012_sections_array_flat_T_TM;
+
+typedef kcg_int array_int_15[15];
+
+/* Packet_TrainTypes_Pkg::telephoneNumber_T */
+typedef array_int_15 telephoneNumber_T_Packet_TrainTypes_Pkg;
+
+/* TM::Array15 */
+typedef array_int_15 Array15_TM;
+
+typedef kcg_int array_int_6[6];
+
+/* TM::Array06 */
+typedef array_int_6 Array06_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_REVERSE d_reverse;
+  V_REVERSE v_reverse;
+} struct__80774;
+
+/* Packet_Types_Pkg::P139_ReversingSupervisionInformation_T */
+typedef struct__80774 P139_ReversingSupervisionInformation_T_Packet_Types_Pkg;
+
+/* TM::P139_OBU_T */
+typedef struct__80774 P139_OBU_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_STARTREVERSE d_startreverse;
+  L_REVERSEAREA l_reversearea;
+} struct__80782;
+
+/* Packet_Types_Pkg::P138_ReversingAreaInformation_T */
+typedef struct__80782 P138_ReversingAreaInformation_T_Packet_Types_Pkg;
+
+/* TM::P138_OBU_T */
+typedef struct__80782 P138_OBU_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SRSTOP q_srstop;
+} struct__80790;
+
+/* Packet_Types_Pkg::P137_StopIfInStaffResponsible_T */
+typedef struct__80790 P137_StopIfInStaffResponsible_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  NC_DIFF nc_diff;
+  V_DIFF v_diff;
+} struct__80796;
+
+/* TM_baseline2::P027V1_section_enum_qdiff_T */
+typedef struct__80796 P027V1_section_enum_qdiff_T_TM_baseline2;
+
+typedef P027V1_section_enum_qdiff_T_TM_baseline2 array__80802[32];
+
+/* TM_baseline2::P027V1_OBU_sectionlist_enum_qdiff_T */
+typedef array__80802 P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2;
+
+typedef struct {
+  kcg_bool valid;
+  D_STATIC d_static;
+  V_STATIC v_static;
+  Q_FRONT q_front;
+  N_ITER n_iter;
+  P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 SECTIONS_q_diff;
+} struct__80805;
+
+/* TM_baseline2::P027V1_section_enum_T */
+typedef struct__80805 P027V1_section_enum_T_TM_baseline2;
+
+typedef P027V1_section_enum_T_TM_baseline2 array__80814[33];
+
+/* TM_baseline2::P027V1_OBU_sectionlist_enum_T */
+typedef array__80814 P027V1_OBU_sectionlist_enum_T_TM_baseline2;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  P027V1_OBU_sectionlist_enum_T_TM_baseline2 sections;
+} struct__80817;
+
+/* TM_baseline2::P027V1_OBU_T */
+typedef struct__80817 P027V1_OBU_T_TM_baseline2;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIFF q_diff;
+  NC_CDDIFF nc_cddiff;
+  NC_DIFF nc_diff;
+  V_DIFF v_diff;
+} struct__80824;
+
+/* Packet_Types_Pkg::Diff_T */
+typedef struct__80824 Diff_T_Packet_Types_Pkg;
+
+typedef Diff_T_Packet_Types_Pkg array__80832[7];
+
+/* Packet_Types_Pkg::DiffArray_T */
+typedef array__80832 DiffArray_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  D_STATIC d_static;
+  V_STATIC v_static;
+  Q_FRONT q_front;
+  DiffArray_T_Packet_Types_Pkg diffArray;
+} struct__80835;
+
+/* Packet_Types_Pkg::SSP_T */
+typedef struct__80835 SSP_T_Packet_Types_Pkg;
+
+typedef SSP_T_Packet_Types_Pkg array__80843[7];
+
+/* Packet_Types_Pkg::SSPArray_T */
+typedef array__80843 SSPArray_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_STATIC d_static;
+  V_STATIC v_static;
+  Q_FRONT q_front;
+  DiffArray_T_Packet_Types_Pkg diffArray;
+  SSPArray_T_Packet_Types_Pkg SSPArray;
+} struct__80846;
+
+/* Packet_Types_Pkg::P27_InternationalStaticSpeedProfile_T */
+typedef struct__80846 P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg;
+
+typedef struct { kcg_bool valid; Q_DIR q_dir; Q_SCALE q_scale; } struct__80857;
+
+/* TM_baseline2::P027V1_OBU_body_enum_T */
+typedef struct__80857 P027V1_OBU_body_enum_T_TM_baseline2;
+
+typedef kcg_int array_int_64[64];
+
+/* TM::P058_sections_array_flat_T */
+typedef array_int_64 P058_sections_array_flat_T_TM;
+
+/* TM_baseline2::P027V1_sections_array_flat_qdiff_T */
+typedef array_int_64 P027V1_sections_array_flat_qdiff_T_TM_baseline2;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  M_LEVELTR m_leveltr;
+  NID_NTC nid_ntc;
+} struct__80866;
+
+/* Packet_Types_Pkg::P46_ConditionalLevelTransitionOrder_T */
+typedef struct__80866 P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg;
+
+typedef P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg array__80873[7];
+
+/* Packet_Types_Pkg::P46_ConditionalLevelTransitionOrders_T */
+typedef array__80873 P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  M_LEVELTR m_leveltr;
+  NID_NTC nid_ntc;
+} struct__80876;
+
+/* TM::P046_section_enum_T */
+typedef struct__80876 P046_section_enum_T_TM;
+
+typedef P046_section_enum_T_TM array__80882[33];
+
+/* TM::P046_OBU_sectionlist_enum_T */
+typedef array__80882 P046_OBU_sectionlist_enum_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  N_ITER n_iter;
+  P046_OBU_sectionlist_enum_T_TM sections;
+} struct__80885;
+
+/* TM::P046_OBU_T */
+typedef struct__80885 P046_OBU_T_TM;
+
+typedef kcg_int array_int_66[66];
+
+/* TM::P046_sections_array_flat_T */
+typedef array_int_66 P046_sections_array_flat_T_TM;
+
+typedef kcg_int array_int_4[4];
+
+/* TM::Array04 */
+typedef array_int_4 Array04_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_LEVELTR d_leveltr;
+  M_LEVELTR m_leveltr;
+  NID_NTC nid_ntc;
+  L_ACKLEVELTR l_ackleveltr;
+} struct__80898;
+
+/* Packet_Types_Pkg::P41_LevelTransitionOrder_T */
+typedef struct__80898 P41_LevelTransitionOrder_T_Packet_Types_Pkg;
+
+typedef P41_LevelTransitionOrder_T_Packet_Types_Pkg array__80908[7];
+
+/* Packet_Types_Pkg::P41_LevelTransistionOrders_T */
+typedef array__80908 P41_LevelTransistionOrders_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  M_LEVELTR m_leveltr;
+  NID_NTC nid_ntc;
+  L_ACKLEVELTR l_ackleveltr;
+} struct__80911;
+
+/* TM::P041_section_enum_T */
+typedef struct__80911 P041_section_enum_T_TM;
+
+typedef P041_section_enum_T_TM array__80918[33];
+
+/* TM::P041_OBU_sectionlist_enum_T */
+typedef array__80918 P041_OBU_sectionlist_enum_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  D_LEVELTR d_leveltr;
+  N_ITER n_iter;
+  P041_OBU_sectionlist_enum_T_TM sections;
+} struct__80921;
+
+/* TM::P041_OBU_T */
+typedef struct__80921 P041_OBU_T_TM;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_SCALE q_scale;
+  V_MAIN v_main;
+  V_LOA v_loa;
+  T_LOA t_loa;
+  N_ITER n_iter;
+  P015_OBU_sectionlist_enum_T_TM sections;
+  L_ENDSECTION l_endsection;
+  Q_SECTIONTIMER q_sectiontimer;
+  T_SECTIONTIMER t_sectiontimer;
+  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
+  Q_ENDTIMER q_endtimer;
+  T_ENDTIMER t_endtimer;
+  D_ENDTIMERSTARTLOC d_endtimerstartloc;
+  Q_DANGERPOINT q_dangerpoint;
+  D_DP d_dp;
+  V_RELEASEDP v_releasedp;
+  Q_OVERLAP q_overlap;
+  D_STARTOL d_startol;
+  T_OL t_ol;
+  D_OL d_ol;
+  V_RELEASEOL v_releaseol;
+} struct__80930;
+
+/* TM::P012_OBU_T */
+typedef struct__80930 P012_OBU_T_TM;
+
+typedef kcg_int array_int_7[7];
+
+/* TM::Array07 */
+typedef array_int_7 Array07_TM;
+
+typedef struct { kcg_bool valid; Q_DIR q_dir; } struct__80959;
+
+/* TM::P135_OBU_T */
+typedef struct__80959 P135_OBU_T_TM;
+
+typedef struct {
+  kcg_bool Mess_15;
+  kcg_bool Mess_16;
+  kcg_bool Mess_2;
+  kcg_bool Mess_27;
+  kcg_bool Mess_28;
+  kcg_bool Mess_6;
+  kcg_bool T_NVCONTACT_Overpass;
+} struct__80964;
+
+/* Level_And_Mode_Types_Pkg::T_Data_From_Track_Mess */
+typedef struct__80964 T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg;
+
+typedef struct {
+  kcg_bool P_12;
+  kcg_bool P_135;
+  P137_StopIfInStaffResponsible_T_Packet_Types_Pkg P_137;
+  P138_ReversingAreaInformation_T_Packet_Types_Pkg P_138;
+  P139_ReversingSupervisionInformation_T_Packet_Types_Pkg P_139;
+  P15_Level23MovementAuthorities_T_Packet_Types_Pkg P_15;
+  P21_GradientProfiles_T_Packet_Types_Pkg P_21;
+  P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg P_27;
+  P41_LevelTransistionOrders_T_Packet_Types_Pkg P_41;
+  P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg P_46;
+  kcg_bool P_63;
+  P80_ModeProfiles_T_Packet_Types_Pkg P_80;
+} struct__80974;
+
+/* Level_And_Mode_Types_Pkg::T_Data_From_Track_Packet */
+typedef struct__80974 T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -2595,140 +3083,41 @@ typedef struct {
   L_internal_Type_Obu_BasicTypes_Pkg Loc_LRBG;
   G_internal_Type_Obu_BasicTypes_Pkg Gradient;
   L_internal_Type_Obu_BasicTypes_Pkg L_Gradient;
-} struct__77292;
+} struct__80989;
 
 /* TrackAtlasTypes::Gradient_section_t */
-typedef struct__77292 Gradient_section_t_TrackAtlasTypes;
+typedef struct__80989 Gradient_section_t_TrackAtlasTypes;
 
 typedef struct {
   kcg_bool valid;
   L_internal_Type_Obu_BasicTypes_Pkg begin_section;
   L_internal_Type_Obu_BasicTypes_Pkg end_section;
   G_internal_Type_Obu_BasicTypes_Pkg gradient;
-} struct__77300;
+} struct__80997;
 
 /* DMI_Types_Pkg::DMI_gradientProfileElement_T */
-typedef struct__77300 DMI_gradientProfileElement_T_DMI_Types_Pkg;
+typedef struct__80997 DMI_gradientProfileElement_T_DMI_Types_Pkg;
 
 /* TrackAtlasTypes::GradientProfile_for_DMI_section_t */
-typedef struct__77300 GradientProfile_for_DMI_section_t_TrackAtlasTypes;
+typedef struct__80997 GradientProfile_for_DMI_section_t_TrackAtlasTypes;
 
-typedef Gradient_section_t_TrackAtlasTypes array__77307[50];
+typedef Gradient_section_t_TrackAtlasTypes array__81004[50];
 
 /* TrackAtlasTypes::GradientProfile_t */
-typedef array__77307 GradientProfile_t_TrackAtlasTypes;
+typedef array__81004 GradientProfile_t_TrackAtlasTypes;
 
-typedef GradientProfile_for_DMI_section_t_TrackAtlasTypes array__77310[50];
+typedef GradientProfile_for_DMI_section_t_TrackAtlasTypes array__81007[50];
 
 /* TrackAtlasTypes::GradientProfile_for_DMI_t */
-typedef array__77310 GradientProfile_for_DMI_t_TrackAtlasTypes;
+typedef array__81007 GradientProfile_for_DMI_t_TrackAtlasTypes;
 
-typedef struct {
-  kcg_bool valid;
-  M_LEVELTR m_leveltr;
-  NID_NTC nid_ntc;
-} struct__77313;
-
-/* TM::P046_section_enum_T */
-typedef struct__77313 P046_section_enum_T_TM;
-
-typedef P046_section_enum_T_TM array__77319[33];
-
-/* TM::P046_OBU_sectionlist_enum_T */
-typedef array__77319 P046_OBU_sectionlist_enum_T_TM;
-
-typedef struct {
-  kcg_bool valid;
-  M_LEVELTR m_leveltr;
-  NID_NTC nid_ntc;
-  L_ACKLEVELTR l_ackleveltr;
-} struct__77322;
-
-/* TM::P041_section_enum_T */
-typedef struct__77322 P041_section_enum_T_TM;
-
-typedef P041_section_enum_T_TM array__77329[33];
-
-/* TM::P041_OBU_sectionlist_enum_T */
-typedef array__77329 P041_OBU_sectionlist_enum_T_TM;
-
-typedef struct {
-  kcg_bool MA_available;
-  kcg_bool MA_L1_available;
-  kcg_bool MA_L23_available;
-  kcg_bool GradientProfile_available;
-  kcg_bool SSP_available;
-  kcg_bool Shunting_Granted;
-  kcg_bool TripOrder_GivenByBalise;
-  kcg_bool StopIfInShunting;
-  kcg_bool StopIfInSR;
-  kcg_bool ER_BG_SystemVersion;
-  kcg_bool LinkingReactToTrip;
-  kcg_bool RBCAck_TR_EB_Revoiked;
-  kcg_bool RBC_Authorized_SR;
-  kcg_bool T_NV_ContactOverpass;
-  kcg_bool Emergency_Stop_Message_Received;
-} struct__77332;
-
-/* TrackAtlasTypes::FlagsForModeAndLevel_t */
-typedef struct__77332 FlagsForModeAndLevel_t_TrackAtlasTypes;
-
-typedef struct {
-  kcg_bool NTC;
-  kcg_bool L0;
-  kcg_bool L1;
-  kcg_bool L2;
-  kcg_bool L3;
-} struct__77350;
-
-/* Level_And_Mode_Types_Pkg::T_ERTMS_capabilities */
-typedef struct__77350 T_ERTMS_capabilities_Level_And_Mode_Types_Pkg;
-
-typedef struct {
-  kcg_bool Available;
-  Location_T_Obu_BasicTypes_Pkg Dist_Start;
-  Location_T_Obu_BasicTypes_Pkg Length;
-  Location_T_Obu_BasicTypes_Pkg Dist_Run;
-  Speed_T_Obu_BasicTypes_Pkg Speed;
-} struct__77358;
-
-/* Level_And_Mode_Types_Pkg::T_Reversing_Data */
-typedef struct__77358 T_Reversing_Data_Level_And_Mode_Types_Pkg;
-
-typedef struct {
-  Location_T_Obu_BasicTypes_Pkg Distance;
-  T_MA_Level_And_Mode_Types_Pkg Mode;
-  Speed_T_Obu_BasicTypes_Pkg Speed;
-  Location_T_Obu_BasicTypes_Pkg Length;
-  Location_T_Obu_BasicTypes_Pkg Length_Ack;
-} struct__77366;
-
-/* Level_And_Mode_Types_Pkg::T_Mode_Profile */
-typedef struct__77366 T_Mode_Profile_Level_And_Mode_Types_Pkg;
-
-typedef struct {
-  FlagsForModeAndLevel_t_TrackAtlasTypes Flags;
-  L_internal_Type_Obu_BasicTypes_Pkg AckDistance;
-  V_internal_Type_Obu_BasicTypes_Pkg ReceivedTargetSpeed;
-  L_internal_Type_Obu_BasicTypes_Pkg Distance;
-  L_internal_Type_Obu_BasicTypes_Pkg Length;
-  T_Mode_Profile_Level_And_Mode_Types_Pkg Mode_Profile_Onboard;
-  T_ERTMS_capabilities_Level_And_Mode_Types_Pkg ERTMS_capabilities;
-  T_Reversing_Data_Level_And_Mode_Types_Pkg Reversing_Data;
-  P041_OBU_sectionlist_enum_T_TM ConditionalTransitionPriorities;
-  P046_OBU_sectionlist_enum_T_TM TransitionPriorities;
-} struct__77374;
-
-/* TrackAtlasTypes::DataForModeAndLevel_t */
-typedef struct__77374 DataForModeAndLevel_t_TrackAtlasTypes;
-
-typedef struct__76965 array__77387[32];
+typedef struct__80321 array__81010[32];
 
 /* TM::P003_OBU_nid_c_sectionlist_enum_T */
-typedef array__77387 P003_OBU_nid_c_sectionlist_enum_T_TM;
+typedef array__81010 P003_OBU_nid_c_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P003V1_sectionlist_enum_T */
-typedef array__77387 P003V1_sectionlist_enum_T_TM_baseline2;
+typedef array__81010 P003V1_sectionlist_enum_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
@@ -2755,10 +3144,10 @@ typedef struct {
   M_NVDERUN m_nvderun;
   D_NVSTFF d_nvstff;
   Q_NVDRIVER_ADHES q_nvdriver_adhes;
-} struct__77390;
+} struct__81013;
 
 /* TM_baseline2::P003V1_OBU_T */
-typedef struct__77390 P003V1_OBU_T_TM_baseline2;
+typedef struct__81013 P003V1_OBU_T_TM_baseline2;
 
 typedef kcg_int array_int_32[32];
 
@@ -2769,6 +3158,150 @@ typedef kcg_int array_int_24[24];
 
 /* TM::Array24 */
 typedef array_int_24 Array24_TM;
+
+typedef struct {
+  kcg_bool valid;
+  kcg_bool q_endsection;
+  L_internal_Type_Obu_BasicTypes_Pkg l_section;
+  kcg_bool q_sectiontimer;
+  T_internal_Type_Obu_BasicTypes_Pkg t_sectiontimer;
+  L_internal_Type_Obu_BasicTypes_Pkg d_sectiontimerstoploc;
+} struct__81046;
+
+/* TrackAtlasTypes::MovementAuthoritySection_t */
+typedef struct__81046 MovementAuthoritySection_t_TrackAtlasTypes;
+
+typedef struct {
+  T_internal_Type_Obu_BasicTypes_Pkg t_endtimer;
+  L_internal_Type_Obu_BasicTypes_Pkg d_endtimerstoploc;
+} struct__81055;
+
+/* TrackAtlasTypes::Endtimer_t */
+typedef struct__81055 Endtimer_t_TrackAtlasTypes;
+
+typedef struct {
+  L_internal_Type_Obu_BasicTypes_Pkg d_DP_or_OL;
+  V_internal_Type_Obu_BasicTypes_Pkg v_release;
+  kcg_bool calc_v_release_onboard;
+} struct__81060;
+
+/* TrackAtlasTypes::DP_or_OL_t */
+typedef struct__81060 DP_or_OL_t_TrackAtlasTypes;
+
+typedef MovementAuthoritySection_t_TrackAtlasTypes array__81066[10];
+
+/* TrackAtlasTypes::MovementAuthoritySectionlist_t */
+typedef array__81066 MovementAuthoritySectionlist_t_TrackAtlasTypes;
+
+typedef struct {
+  kcg_bool valid;
+  MA_Level_t_TrackAtlasTypes Level;
+  Q_DIR q_dir;
+  V_internal_Type_Obu_BasicTypes_Pkg v_main;
+  V_internal_Type_Obu_BasicTypes_Pkg v_loa;
+  kcg_bool t_loa_unlimited;
+  T_internal_Type_Obu_BasicTypes_Pkg t_loa;
+  N_ITER n_iter;
+  MovementAuthoritySectionlist_t_TrackAtlasTypes sections;
+  kcg_bool q_dangerpoint;
+  DP_or_OL_t_TrackAtlasTypes dangerpoint;
+  kcg_bool q_overlap;
+  DP_or_OL_t_TrackAtlasTypes overlap;
+  kcg_bool q_endtimer;
+  Endtimer_t_TrackAtlasTypes endtimer_t;
+} struct__81069;
+
+/* TrackAtlasTypes::MovementAuthority_t */
+typedef struct__81069 MovementAuthority_t_TrackAtlasTypes;
+
+typedef struct {
+  SSP_t_section_t_TA_MRSP target;
+  SSP_s_section_t_TA_MRSP speed;
+} struct__81087;
+
+/* TA_MRSP::SSP_section_t */
+typedef struct__81087 SSP_section_t_TA_MRSP;
+
+typedef SSP_section_t_TA_MRSP array__81092[33];
+
+/* TA_MRSP::SSP_cat_t */
+typedef array__81092 SSP_cat_t_TA_MRSP;
+
+typedef array__81092 array__81095[11];
+
+/* TA_MRSP::SSP_matrix_t */
+typedef array__81095 SSP_matrix_t_TA_MRSP;
+
+typedef struct {
+  kcg_int Category_Index;
+  kcg_int Pos_Index;
+  SSP_target_t_TA_MRSP Loc;
+} struct__81098;
+
+/* TA_MRSP::SSP_t_indexed_matrix_element */
+typedef struct__81098 SSP_t_indexed_matrix_element_TA_MRSP;
+
+typedef SSP_t_indexed_matrix_element_TA_MRSP array__81104[363];
+
+/* TA_MRSP::SSP_t_list_t */
+typedef array__81104 SSP_t_list_t_TA_MRSP;
+
+typedef SSP_t_section_t_TA_MRSP array_int_33[33];
+
+/* TA_MRSP::SSP_t_cat_t */
+typedef array_int_33 SSP_t_cat_t_TA_MRSP;
+
+typedef array_int_33 array_int_33_11[11];
+
+/* TA_MRSP::SSP_t_matrix_t */
+typedef array_int_33_11 SSP_t_matrix_t_TA_MRSP;
+
+typedef struct { kcg_bool Found; kcg_int Index; } struct__81113;
+
+/* TA_MRSP::SSP_Mark_ValidSSPsection */
+typedef struct__81113 SSP_Mark_ValidSSPsection_TA_MRSP;
+
+typedef struct {
+  kcg_bool found;
+  kcg_int index;
+  SSP_t_section_t_TA_MRSP target;
+} struct__81118;
+
+/* TA_MRSP::SSP_valid_section_t */
+typedef struct__81118 SSP_valid_section_t_TA_MRSP;
+
+typedef struct { kcg_int index; SSP_t_section_t_TA_MRSP target; } struct__81124;
+
+/* TA_MRSP::SSP_relevant_target_t */
+typedef struct__81124 SSP_relevant_target_t_TA_MRSP;
+
+typedef struct {
+  kcg_bool valid;
+  L_internal_Type_Obu_BasicTypes_Pkg Loc_Abs;
+  L_internal_Type_Obu_BasicTypes_Pkg Loc_LRBG;
+  V_internal_Type_Obu_BasicTypes_Pkg MRS;
+} struct__81129;
+
+/* DMI_Types_Pkg::DMI_speedProfileElement_T */
+typedef struct__81129 DMI_speedProfileElement_T_DMI_Types_Pkg;
+
+/* TrackAtlasTypes::MRSP_section_t */
+typedef struct__81129 MRSP_section_t_TrackAtlasTypes;
+
+typedef struct { kcg_int Index; SSP_target_t_TA_MRSP Loc; } struct__81136;
+
+/* TA_MRSP::SSP_t_indexed_trgt_t */
+typedef struct__81136 SSP_t_indexed_trgt_t_TA_MRSP;
+
+typedef SSP_t_indexed_trgt_t_TA_MRSP array__81141[11];
+
+/* TA_MRSP::SSP_t_indexed_targets_list_t */
+typedef array__81141 SSP_t_indexed_targets_list_t_TA_MRSP;
+
+typedef MRSP_section_t_TrackAtlasTypes array__81144[200];
+
+/* TrackAtlasTypes::MRSP_Profile_t */
+typedef array__81144 MRSP_Profile_t_TrackAtlasTypes;
 
 typedef struct {
   kcg_bool valid;
@@ -2823,309 +3356,10 @@ typedef struct {
   N_ITER n_iter_l;
   P003_OBU_l_sectionlist_enum_T_TM n_iter_l_list;
   M_NVKTINT m_nvktint;
-} struct__77423;
+} struct__81147;
 
 /* TM::P003_OBU_T */
-typedef struct__77423 P003_OBU_T_TM;
-
-typedef struct {
-  kcg_bool valid;
-  L_SECTION l_section;
-  Q_SECTIONTIMER q_sectiontimer;
-  T_SECTIONTIMER t_sectiontimer;
-  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
-} struct__77478;
-
-/* TM::P015_section_enum_T */
-typedef struct__77478 P015_section_enum_T_TM;
-
-typedef P015_section_enum_T_TM array__77486[32];
-
-/* TM::P015_OBU_sectionlist_enum_T */
-typedef array__77486 P015_OBU_sectionlist_enum_T_TM;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  V_LOA v_loa;
-  T_LOA t_loa;
-  N_ITER n_iter;
-  P015_OBU_sectionlist_enum_T_TM sections;
-  L_ENDSECTION l_endsection;
-  Q_SECTIONTIMER q_sectiontimer;
-  T_SECTIONTIMER t_sectiontimer;
-  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
-  Q_ENDTIMER q_endtimer;
-  T_ENDTIMER t_endtimer;
-  D_ENDTIMERSTARTLOC d_endtimerstartloc;
-  Q_DANGERPOINT q_dangerpoint;
-  D_DP d_dp;
-  V_RELEASEDP v_releasedp;
-  Q_OVERLAP q_overlap;
-  D_STARTOL d_startol;
-  T_OL t_ol;
-  D_OL d_ol;
-  V_RELEASEOL v_releaseol;
-} struct__77489;
-
-/* TM::P015_OBU_T */
-typedef struct__77489 P015_OBU_T_TM;
-
-typedef kcg_int array_int_128[128];
-
-/* TM::P015_sections_array_flat_T */
-typedef array_int_128 P015_sections_array_flat_T_TM;
-
-typedef kcg_int array_int_15[15];
-
-/* Packet_TrainTypes_Pkg::telephoneNumber_T */
-typedef array_int_15 telephoneNumber_T_Packet_TrainTypes_Pkg;
-
-/* TM::Array15 */
-typedef array_int_15 Array15_TM;
-
-typedef kcg_int array_int_6[6];
-
-/* TM::Array06 */
-typedef array_int_6 Array06_TM;
-
-typedef struct {
-  kcg_bool valid;
-  kcg_bool q_endsection;
-  L_internal_Type_Obu_BasicTypes_Pkg l_section;
-  kcg_bool q_sectiontimer;
-  T_internal_Type_Obu_BasicTypes_Pkg t_sectiontimer;
-  L_internal_Type_Obu_BasicTypes_Pkg d_sectiontimerstoploc;
-} struct__77523;
-
-/* TrackAtlasTypes::MovementAuthoritySection_t */
-typedef struct__77523 MovementAuthoritySection_t_TrackAtlasTypes;
-
-typedef struct {
-  T_internal_Type_Obu_BasicTypes_Pkg t_endtimer;
-  L_internal_Type_Obu_BasicTypes_Pkg d_endtimerstoploc;
-} struct__77532;
-
-/* TrackAtlasTypes::Endtimer_t */
-typedef struct__77532 Endtimer_t_TrackAtlasTypes;
-
-typedef struct {
-  L_internal_Type_Obu_BasicTypes_Pkg d_DP_or_OL;
-  V_internal_Type_Obu_BasicTypes_Pkg v_release;
-  kcg_bool calc_v_release_onboard;
-} struct__77537;
-
-/* TrackAtlasTypes::DP_or_OL_t */
-typedef struct__77537 DP_or_OL_t_TrackAtlasTypes;
-
-typedef MovementAuthoritySection_t_TrackAtlasTypes array__77543[10];
-
-/* TrackAtlasTypes::MovementAuthoritySectionlist_t */
-typedef array__77543 MovementAuthoritySectionlist_t_TrackAtlasTypes;
-
-typedef struct {
-  kcg_bool valid;
-  MA_Level_t_TrackAtlasTypes Level;
-  Q_DIR q_dir;
-  V_internal_Type_Obu_BasicTypes_Pkg v_main;
-  V_internal_Type_Obu_BasicTypes_Pkg v_loa;
-  kcg_bool t_loa_unlimited;
-  T_internal_Type_Obu_BasicTypes_Pkg t_loa;
-  N_ITER n_iter;
-  MovementAuthoritySectionlist_t_TrackAtlasTypes sections;
-  kcg_bool q_dangerpoint;
-  DP_or_OL_t_TrackAtlasTypes dangerpoint;
-  kcg_bool q_overlap;
-  DP_or_OL_t_TrackAtlasTypes overlap;
-  kcg_bool q_endtimer;
-  Endtimer_t_TrackAtlasTypes endtimer_t;
-} struct__77546;
-
-/* TrackAtlasTypes::MovementAuthority_t */
-typedef struct__77546 MovementAuthority_t_TrackAtlasTypes;
-
-typedef struct {
-  SSP_t_section_t_TA_MRSP target;
-  SSP_s_section_t_TA_MRSP speed;
-} struct__77564;
-
-/* TA_MRSP::SSP_section_t */
-typedef struct__77564 SSP_section_t_TA_MRSP;
-
-typedef SSP_section_t_TA_MRSP array__77569[33];
-
-/* TA_MRSP::SSP_cat_t */
-typedef array__77569 SSP_cat_t_TA_MRSP;
-
-typedef struct {
-  kcg_bool valid;
-  NC_DIFF nc_diff;
-  V_DIFF v_diff;
-} struct__77572;
-
-/* TM_baseline2::P027V1_section_enum_qdiff_T */
-typedef struct__77572 P027V1_section_enum_qdiff_T_TM_baseline2;
-
-typedef P027V1_section_enum_qdiff_T_TM_baseline2 array__77578[32];
-
-/* TM_baseline2::P027V1_OBU_sectionlist_enum_qdiff_T */
-typedef array__77578 P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2;
-
-typedef struct {
-  kcg_bool valid;
-  D_STATIC d_static;
-  V_STATIC v_static;
-  Q_FRONT q_front;
-  N_ITER n_iter;
-  P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 SECTIONS_q_diff;
-} struct__77581;
-
-/* TM_baseline2::P027V1_section_enum_T */
-typedef struct__77581 P027V1_section_enum_T_TM_baseline2;
-
-typedef P027V1_section_enum_T_TM_baseline2 array__77590[33];
-
-/* TM_baseline2::P027V1_OBU_sectionlist_enum_T */
-typedef array__77590 P027V1_OBU_sectionlist_enum_T_TM_baseline2;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  P027V1_OBU_sectionlist_enum_T_TM_baseline2 sections;
-} struct__77593;
-
-/* TM_baseline2::P027V1_OBU_T */
-typedef struct__77593 P027V1_OBU_T_TM_baseline2;
-
-typedef struct { kcg_bool valid; Q_DIR q_dir; Q_SCALE q_scale; } struct__77600;
-
-/* TM_baseline2::P027V1_OBU_body_enum_T */
-typedef struct__77600 P027V1_OBU_body_enum_T_TM_baseline2;
-
-typedef kcg_int array_int_5[5];
-
-/* TM::Array05 */
-typedef array_int_5 Array05_TM;
-
-typedef kcg_int array_int_64[64];
-
-/* TM::P058_sections_array_flat_T */
-typedef array_int_64 P058_sections_array_flat_T_TM;
-
-/* TM_baseline2::P027V1_sections_array_flat_qdiff_T */
-typedef array_int_64 P027V1_sections_array_flat_qdiff_T_TM_baseline2;
-
-typedef array__77569 array__77612[11];
-
-/* TA_MRSP::SSP_matrix_t */
-typedef array__77612 SSP_matrix_t_TA_MRSP;
-
-typedef struct {
-  kcg_int Category_Index;
-  kcg_int Pos_Index;
-  SSP_target_t_TA_MRSP Loc;
-} struct__77615;
-
-/* TA_MRSP::SSP_t_indexed_matrix_element */
-typedef struct__77615 SSP_t_indexed_matrix_element_TA_MRSP;
-
-typedef SSP_t_indexed_matrix_element_TA_MRSP array__77621[363];
-
-/* TA_MRSP::SSP_t_list_t */
-typedef array__77621 SSP_t_list_t_TA_MRSP;
-
-typedef SSP_t_section_t_TA_MRSP array_int_33[33];
-
-/* TA_MRSP::SSP_t_cat_t */
-typedef array_int_33 SSP_t_cat_t_TA_MRSP;
-
-typedef array_int_33 array_int_33_11[11];
-
-/* TA_MRSP::SSP_t_matrix_t */
-typedef array_int_33_11 SSP_t_matrix_t_TA_MRSP;
-
-typedef struct { kcg_bool Found; kcg_int Index; } struct__77630;
-
-/* TA_MRSP::SSP_Mark_ValidSSPsection */
-typedef struct__77630 SSP_Mark_ValidSSPsection_TA_MRSP;
-
-typedef struct {
-  kcg_bool found;
-  kcg_int index;
-  SSP_t_section_t_TA_MRSP target;
-} struct__77635;
-
-/* TA_MRSP::SSP_valid_section_t */
-typedef struct__77635 SSP_valid_section_t_TA_MRSP;
-
-typedef struct { kcg_int index; SSP_t_section_t_TA_MRSP target; } struct__77641;
-
-/* TA_MRSP::SSP_relevant_target_t */
-typedef struct__77641 SSP_relevant_target_t_TA_MRSP;
-
-typedef struct {
-  kcg_bool valid;
-  L_internal_Type_Obu_BasicTypes_Pkg Loc_Abs;
-  L_internal_Type_Obu_BasicTypes_Pkg Loc_LRBG;
-  V_internal_Type_Obu_BasicTypes_Pkg MRS;
-} struct__77646;
-
-/* DMI_Types_Pkg::DMI_speedProfileElement_T */
-typedef struct__77646 DMI_speedProfileElement_T_DMI_Types_Pkg;
-
-/* TrackAtlasTypes::MRSP_section_t */
-typedef struct__77646 MRSP_section_t_TrackAtlasTypes;
-
-typedef struct { kcg_int Index; SSP_target_t_TA_MRSP Loc; } struct__77653;
-
-/* TA_MRSP::SSP_t_indexed_trgt_t */
-typedef struct__77653 SSP_t_indexed_trgt_t_TA_MRSP;
-
-typedef SSP_t_indexed_trgt_t_TA_MRSP array__77658[11];
-
-/* TA_MRSP::SSP_t_indexed_targets_list_t */
-typedef array__77658 SSP_t_indexed_targets_list_t_TA_MRSP;
-
-typedef MRSP_section_t_TrackAtlasTypes array__77661[200];
-
-/* TrackAtlasTypes::MRSP_Profile_t */
-typedef array__77661 MRSP_Profile_t_TrackAtlasTypes;
-
-typedef struct {
-  kcg_bool valid;
-  D_GRADIENT d_gradient;
-  Q_GDIR q_gdir;
-  G_A g_a;
-} struct__77664;
-
-/* TM::P021_section_enum_T */
-typedef struct__77664 P021_section_enum_T_TM;
-
-typedef P021_section_enum_T_TM array__77671[33];
-
-/* TM::P021_OBU_sectionlist_enum_T */
-typedef array__77671 P021_OBU_sectionlist_enum_T_TM;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  N_ITER n_iter;
-  P021_OBU_sectionlist_enum_T_TM sections;
-} struct__77674;
-
-/* TM::P021_OBU_T */
-typedef struct__77674 P021_OBU_T_TM;
-
-typedef kcg_int array_int_99[99];
-
-/* TM::P021_sections_array_flat_T */
-typedef array_int_99 P021_sections_array_flat_T_TM;
-
-/* TM::P041_sections_array_flat_T */
-typedef array_int_99 P041_sections_array_flat_T_TM;
+typedef struct__81147 P003_OBU_T_TM;
 
 typedef struct {
   kcg_bool present;
@@ -3137,23 +3371,23 @@ typedef struct {
   NID_EM xNID_EM;
   Q_EMERGENCYSTOP xQ_EMERGENCYSTOP;
   NID_TEXTMESSAGE xNID_TEXTMESSAGE;
-} struct__77685;
+} struct__81202;
 
 /* Radio_Types_Pkg::Radio_TrainTrack_Header_T */
-typedef struct__77685 Radio_TrainTrack_Header_T_Radio_Types_Pkg;
+typedef struct__81202 Radio_TrainTrack_Header_T_Radio_Types_Pkg;
 
 typedef struct {
   M_VOLTAGE m_voltage;
   NID_CTRACTION nid_ctraction;
-} struct__77697;
+} struct__81214;
 
 /* Packet_TrainTypes_Pkg::sTractionIdentity_T */
-typedef struct__77697 sTractionIdentity_T_Packet_TrainTypes_Pkg;
+typedef struct__81214 sTractionIdentity_T_Packet_TrainTypes_Pkg;
 
-typedef sTractionIdentity_T_Packet_TrainTypes_Pkg array__77702[3];
+typedef sTractionIdentity_T_Packet_TrainTypes_Pkg array__81219[3];
 
 /* Packet_TrainTypes_Pkg::aTractionIdentity_T */
-typedef array__77702 aTractionIdentity_T_Packet_TrainTypes_Pkg;
+typedef array__81219 aTractionIdentity_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3169,53 +3403,53 @@ typedef struct {
   aTractionIdentity_T_Packet_TrainTypes_Pkg tractionIdentity;
   kcg_int nIter_ntc;
   aNID_NTC_T_Packet_TrainTypes_Pkg nid_ntc;
-} struct__77705;
+} struct__81222;
 
 /* Packet_TrainTypes_Pkg::PT11_ValidatedTrainData_T */
-typedef struct__77705 PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg;
+typedef struct__81222 PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
   NID_LTRBG transitionInformation;
-} struct__77721;
+} struct__81238;
 
 /* Packet_TrainTypes_Pkg::PT9_Level23_TransitionInformation_T */
-typedef struct__77721 PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg;
+typedef struct__81238 PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
   NID_OPERATIONAL TrainRunningNumber;
-} struct__77726;
+} struct__81243;
 
 /* Packet_TrainTypes_Pkg::PT5_TrainRunningNumber */
-typedef struct__77726 PT5_TrainRunningNumber_Packet_TrainTypes_Pkg;
+typedef struct__81243 PT5_TrainRunningNumber_Packet_TrainTypes_Pkg;
 
-typedef struct { kcg_bool valid; M_ERROR M_ERROR; } struct__77731;
+typedef struct { kcg_bool valid; M_ERROR M_ERROR; } struct__81248;
 
 /* Packet_TrainTypes_Pkg::PT4_ErrorReporting_T */
-typedef struct__77731 PT4_ErrorReporting_T_Packet_TrainTypes_Pkg;
+typedef struct__81248 PT4_ErrorReporting_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
   telephoneNumber_T_Packet_TrainTypes_Pkg telephoneNumber;
-} struct__77736;
+} struct__81253;
 
 /* Packet_TrainTypes_Pkg::sNID_RADIO_T */
-typedef struct__77736 sNID_RADIO_T_Packet_TrainTypes_Pkg;
+typedef struct__81253 sNID_RADIO_T_Packet_TrainTypes_Pkg;
 
-typedef sNID_RADIO_T_Packet_TrainTypes_Pkg array__77741[1];
+typedef sNID_RADIO_T_Packet_TrainTypes_Pkg array__81258[1];
 
 /* Packet_TrainTypes_Pkg::aNID_RADIO_T */
-typedef array__77741 aNID_RADIO_T_Packet_TrainTypes_Pkg;
+typedef array__81258 aNID_RADIO_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_bool valid;
   kcg_int number;
   aNID_RADIO_T_Packet_TrainTypes_Pkg aNID_RADIO;
-} struct__77744;
+} struct__81261;
 
 /* Packet_TrainTypes_Pkg::PT3_OnboardTelephoneNumbers_T */
-typedef struct__77744 PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg;
+typedef struct__81261 PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_int NID_PACKET;
@@ -3235,18 +3469,18 @@ typedef struct {
   M_MODE mode;
   M_LEVEL level;
   kcg_int NID_NTC;
-} struct__77750;
+} struct__81267;
 
 /* TrainToTrack::Position_Report_based_on_two_balise_groups */
-typedef struct__77750 Position_Report_based_on_two_balise_groups_TrainToTrack;
+typedef struct__81267 Position_Report_based_on_two_balise_groups_TrainToTrack;
 
 typedef struct {
   kcg_bool valid;
   Position_Report_based_on_two_balise_groups_TrainToTrack packet1;
-} struct__77770;
+} struct__81287;
 
 /* Packet_TrainTypes_Pkg::PT1_PositionReport_2BG_T */
-typedef struct__77770 PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg;
+typedef struct__81287 PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   kcg_int NID_PACKET;
@@ -3265,18 +3499,18 @@ typedef struct {
   M_MODE mode;
   M_LEVEL level;
   kcg_int NID_NTC;
-} struct__77775;
+} struct__81292;
 
 /* TrainToTrack::Position_Report */
-typedef struct__77775 Position_Report_TrainToTrack;
+typedef struct__81292 Position_Report_TrainToTrack;
 
 typedef struct {
   kcg_bool valid;
   Position_Report_TrainToTrack packet0;
-} struct__77794;
+} struct__81311;
 
 /* Packet_TrainTypes_Pkg::PT0_PositionReport_T */
-typedef struct__77794 PT0_PositionReport_T_Packet_TrainTypes_Pkg;
+typedef struct__81311 PT0_PositionReport_T_Packet_TrainTypes_Pkg;
 
 typedef struct {
   PT0_PositionReport_T_Packet_TrainTypes_Pkg p0;
@@ -3286,27 +3520,27 @@ typedef struct {
   PT5_TrainRunningNumber_Packet_TrainTypes_Pkg p5;
   PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg p9;
   PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg p11;
-} struct__77799;
+} struct__81316;
 
 /* Common_Types_Pkg::outPackets_T */
-typedef struct__77799 outPackets_T_Common_Types_Pkg;
+typedef struct__81316 outPackets_T_Common_Types_Pkg;
 
 typedef struct {
   kcg_bool present;
   Radio_TrainTrack_Header_T_Radio_Types_Pkg header;
   outPackets_T_Common_Types_Pkg packets;
-} struct__77809;
+} struct__81326;
 
 /* Radio_Types_Pkg::Radio_TrainTrack_Message_T */
-typedef struct__77809 Radio_TrainTrack_Message_T_Radio_Types_Pkg;
+typedef struct__81326 Radio_TrainTrack_Message_T_Radio_Types_Pkg;
 
 typedef struct {
   kcg_bool trackAheadFree;
   kcg_bool driverSelectsStart;
-} struct__77815;
+} struct__81332;
 
 /* MA_Request::Driver2MAR_T */
-typedef struct__77815 Driver2MAR_T_MA_Request;
+typedef struct__81332 Driver2MAR_T_MA_Request;
 
 typedef struct {
   kcg_bool valid;
@@ -3314,10 +3548,22 @@ typedef struct {
   T_MAR t_mar;
   T_TIMEOUTRQST t_timeoutrqst;
   T_CYCRQST t_cycrqst;
-} struct__77820;
+} struct__81337;
 
 /* Packet_Types_Pkg::P57_MovementAuthorityRequestParameters_T */
-typedef struct__77820 P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg;
+typedef struct__81337 P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg;
+
+typedef struct {
+  T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg train_packets;
+  T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg train_messages;
+  kcg_bool p12;
+  P15_Level23MovementAuthorities_T_Packet_Types_Pkg p15;
+  P21_GradientProfiles_T_Packet_Types_Pkg p21;
+  P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg p27;
+} struct__81345;
+
+/* TrackAtlasTypes::DataForModeAndLevel_t */
+typedef struct__81345 DataForModeAndLevel_t_TrackAtlasTypes;
 
 typedef struct {
   kcg_bool freshMA;
@@ -3326,53 +3572,53 @@ typedef struct {
   GradientProfile_t_TrackAtlasTypes GradientProfile;
   kcg_bool freshMRSP;
   MRSP_Profile_t_TrackAtlasTypes MRSP;
-} struct__77828;
+} struct__81354;
 
 /* TrackAtlasTypes::DataForSupervision_nextGen_t */
-typedef struct__77828 DataForSupervision_nextGen_t_TrackAtlasTypes;
+typedef struct__81354 DataForSupervision_nextGen_t_TrackAtlasTypes;
 
 typedef struct {
   GradientProfile_for_DMI_t_TrackAtlasTypes GradientProfile;
   kcg_bool Gradient_profile_updated;
   MRSP_Profile_t_TrackAtlasTypes MRSP;
   kcg_bool MRSP_updated;
-} struct__77837;
+} struct__81363;
 
 /* TrackAtlasTypes::DataForDMI_t */
-typedef struct__77837 DataForDMI_t_TrackAtlasTypes;
+typedef struct__81363 DataForDMI_t_TrackAtlasTypes;
 
-typedef struct { kcg_bool valid; M_LEVEL level; M_MODE Mode; } struct__77844;
+typedef struct { kcg_bool valid; M_LEVEL level; M_MODE Mode; } struct__81370;
 
 /* Level_And_Mode_Types_Pkg::T_Mode_Level */
-typedef struct__77844 T_Mode_Level_Level_And_Mode_Types_Pkg;
+typedef struct__81370 T_Mode_Level_Level_And_Mode_Types_Pkg;
 
-typedef struct { M_LEVEL level; NID_STM_DMI_Types_Pkg nid_stm; } struct__77850;
+typedef struct { M_LEVEL level; NID_STM_DMI_Types_Pkg nid_stm; } struct__81376;
 
 /* DMI_Types_Pkg::DMI_level_T */
-typedef struct__77850 DMI_level_T_DMI_Types_Pkg;
+typedef struct__81376 DMI_level_T_DMI_Types_Pkg;
 
-typedef DMI_level_T_DMI_Types_Pkg array__77855[32];
+typedef DMI_level_T_DMI_Types_Pkg array__81381[32];
 
 /* DMI_Types_Pkg::DMI_level_array_T */
-typedef array__77855 DMI_level_array_T_DMI_Types_Pkg;
+typedef array__81381 DMI_level_array_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_int number;
   DMI_level_array_T_DMI_Types_Pkg levelList;
-} struct__77858;
+} struct__81384;
 
 /* DMI_Types_Pkg::DMI_LevelList_T */
-typedef struct__77858 DMI_LevelList_T_DMI_Types_Pkg;
+typedef struct__81384 DMI_LevelList_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   M_LEVEL lastActiveLevel;
   NID_NTC lastActiveNTC;
   DMI_LevelList_T_DMI_Types_Pkg availableLevelsList;
-} struct__77863;
+} struct__81389;
 
 /* API_PersistanceStorage_Pkg::ps_dataForStartOfMission_T */
-typedef struct__77863 ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg;
+typedef struct__81389 ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg;
 
 typedef struct {
   kcg_bool trainStandStill;
@@ -3380,10 +3626,11 @@ typedef struct {
   kcg_bool communicationSessionEstablished;
   kcg_bool safeRadioConnectionLost;
   kcg_bool approachingRBCarea;
-} struct__77870;
+  kcg_bool MoRCreadyFlag;
+} struct__81396;
 
 /* trainData_Types_pkg::trainData_Events_T */
-typedef struct__77870 trainData_Events_T_trainData_Types_pkg;
+typedef struct__81396 trainData_Events_T_trainData_Types_pkg;
 
 typedef struct {
   kcg_bool brakeTrigger;
@@ -3391,10 +3638,10 @@ typedef struct {
   kcg_bool shortenLocationBasedInformation;
   kcg_bool deleteMA;
   kcg_bool trainLengthIncreased;
-} struct__77878;
+} struct__81405;
 
 /* trainData_Types_pkg::trainData_Trigger_T */
-typedef struct__77878 trainData_Trigger_T_trainData_Types_pkg;
+typedef struct__81405 trainData_Trigger_T_trainData_Types_pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3403,10 +3650,10 @@ typedef struct {
   kcg_bool watingForRBCResponse;
   kcg_bool driverIsModificationTrainData;
   T_TRAIN timeStampValidateToRBC;
-} struct__77886;
+} struct__81413;
 
 /* trainData_Types_pkg::trainDataStatus_T */
-typedef struct__77886 trainDataStatus_T_trainData_Types_pkg;
+typedef struct__81413 trainDataStatus_T_trainData_Types_pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3424,10 +3671,10 @@ typedef struct {
   aNID_NTC_T_Packet_TrainTypes_Pkg nationSystems;
   kcg_int numberTractionSystems;
   aTractionIdentity_T_Packet_TrainTypes_Pkg tractionSystem;
-} struct__77895;
+} struct__81422;
 
 /* TIU_Types_Pkg::trainData_T */
-typedef struct__77895 trainData_T_TIU_Types_Pkg;
+typedef struct__81422 trainData_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3439,298 +3686,33 @@ typedef struct {
   M_AXLELOADCAT m_axleLoad;
   M_AIRTIGHT m_airTight;
   M_LOADINGGAUGE m_loadingGauge;
-} struct__77913;
+} struct__81440;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Train_Data_T */
-typedef struct__77913 DMI_Train_Data_T_DMI_Messages_Bothways_Pkg;
+typedef struct__81440 DMI_Train_Data_T_DMI_Messages_Bothways_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   kcg_bool acknowledged;
-} struct__77925;
+} struct__81452;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Train_Data_Ack_T */
-typedef struct__77925 DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_MAMODE d_mamode;
-  M_MAMODE m_mamode;
-  V_MAMODE v_mamode;
-  L_MAMODE l_mamode;
-  L_ACKMAMODE l_ackmamode;
-  Q_MAMODE q_mamode;
-} struct__77931;
-
-/* Packet_Types_Pkg::P80_ModeProfile_T */
-typedef struct__77931 P80_ModeProfile_T_Packet_Types_Pkg;
-
-typedef P80_ModeProfile_T_Packet_Types_Pkg array__77943[3];
-
-/* Packet_Types_Pkg::P80_ModeProfiles_T */
-typedef array__77943 P80_ModeProfiles_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  M_LEVELTR m_leveltr;
-  NID_NTC nid_ntc;
-} struct__77946;
-
-/* Packet_Types_Pkg::P46_ConditionalLevelTransitionOrder_T */
-typedef struct__77946 P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg;
-
-typedef P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg array__77953[7];
-
-/* Packet_Types_Pkg::P46_ConditionalLevelTransitionOrders_T */
-typedef array__77953 P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_LEVELTR d_leveltr;
-  M_LEVELTR m_leveltr;
-  NID_NTC nid_ntc;
-  L_ACKLEVELTR l_ackleveltr;
-} struct__77956;
-
-/* Packet_Types_Pkg::P41_LevelTransitionOrder_T */
-typedef struct__77956 P41_LevelTransitionOrder_T_Packet_Types_Pkg;
-
-typedef P41_LevelTransitionOrder_T_Packet_Types_Pkg array__77966[7];
-
-/* Packet_Types_Pkg::P41_LevelTransistionOrders_T */
-typedef array__77966 P41_LevelTransistionOrders_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIFF q_diff;
-  NC_CDDIFF nc_cddiff;
-  NC_DIFF nc_diff;
-  V_DIFF v_diff;
-} struct__77969;
-
-/* Packet_Types_Pkg::Diff_T */
-typedef struct__77969 Diff_T_Packet_Types_Pkg;
-
-typedef Diff_T_Packet_Types_Pkg array__77977[7];
-
-/* Packet_Types_Pkg::DiffArray_T */
-typedef array__77977 DiffArray_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  D_STATIC d_static;
-  V_STATIC v_static;
-  Q_FRONT q_front;
-  DiffArray_T_Packet_Types_Pkg diffArray;
-} struct__77980;
-
-/* Packet_Types_Pkg::SSP_T */
-typedef struct__77980 SSP_T_Packet_Types_Pkg;
-
-typedef SSP_T_Packet_Types_Pkg array__77988[7];
-
-/* Packet_Types_Pkg::SSPArray_T */
-typedef array__77988 SSPArray_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_STATIC d_static;
-  V_STATIC v_static;
-  Q_FRONT q_front;
-  DiffArray_T_Packet_Types_Pkg diffArray;
-  SSPArray_T_Packet_Types_Pkg SSPArray;
-} struct__77991;
-
-/* Packet_Types_Pkg::P27_InternationalStaticSpeedProfile_T */
-typedef struct__77991 P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_GRADIENT d_gradient;
-  Q_GDIR q_gdir;
-  G_A g_a;
-} struct__78002;
-
-/* Packet_Types_Pkg::P21_GradientProfile_T */
-typedef struct__78002 P21_GradientProfile_T_Packet_Types_Pkg;
-
-typedef P21_GradientProfile_T_Packet_Types_Pkg array__78011[7];
-
-/* Packet_Types_Pkg::P21_GradientProfiles_T */
-typedef array__78011 P21_GradientProfiles_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  V_LOA v_loa;
-  T_LOA t_loa;
-  L_SECTION l_section;
-  Q_SECTIONTIMER q_sectiontimer_k;
-  T_SECTIONTIMER t_sectiontimer_k;
-  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc_k;
-  L_ENDSECTION l_endsection;
-  Q_SECTIONTIMER q_sectiontimer;
-  T_SECTIONTIMER t_sectiontimer;
-  D_SECTIONTIMERSTOPLOC d_sectiontimerstoploc;
-  Q_ENDTIMER q_endtimer;
-  T_ENDTIMER t_endtimer;
-  D_ENDTIMERSTARTLOC d_endtimerstartloc;
-  Q_DANGERPOINT q_dangerpoint;
-  D_DP d_dp;
-  V_RELEASEDP v_releasedp;
-  Q_OVERLAP q_overlap;
-  D_STARTOL d_startol;
-  T_OL t_ol;
-  D_OL d_ol;
-  V_RELEASEOL v_releaseol;
-} struct__78014;
-
-/* Packet_Types_Pkg::P15_Level23MovementAuthority_T */
-typedef struct__78014 P15_Level23MovementAuthority_T_Packet_Types_Pkg;
-
-typedef P15_Level23MovementAuthority_T_Packet_Types_Pkg array__78041[5];
-
-/* Packet_Types_Pkg::P15_Level23MovementAuthorities_T */
-typedef array__78041 P15_Level23MovementAuthorities_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_REVERSE d_reverse;
-  V_REVERSE v_reverse;
-} struct__78044;
-
-/* Packet_Types_Pkg::P139_ReversingSupervisionInformation_T */
-typedef struct__78044 P139_ReversingSupervisionInformation_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_STARTREVERSE d_startreverse;
-  L_REVERSEAREA l_reversearea;
-} struct__78052;
-
-/* Packet_Types_Pkg::P138_ReversingAreaInformation_T */
-typedef struct__78052 P138_ReversingAreaInformation_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SRSTOP q_srstop;
-} struct__78060;
-
-/* Packet_Types_Pkg::P137_StopIfInStaffResponsible_T */
-typedef struct__78060 P137_StopIfInStaffResponsible_T_Packet_Types_Pkg;
-
-typedef struct {
-  kcg_bool P_12;
-  kcg_bool P_135;
-  P137_StopIfInStaffResponsible_T_Packet_Types_Pkg P_137;
-  P138_ReversingAreaInformation_T_Packet_Types_Pkg P_138;
-  P139_ReversingSupervisionInformation_T_Packet_Types_Pkg P_139;
-  P15_Level23MovementAuthorities_T_Packet_Types_Pkg P_15;
-  P21_GradientProfiles_T_Packet_Types_Pkg P_21;
-  P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg P_27;
-  P41_LevelTransistionOrders_T_Packet_Types_Pkg P_41;
-  P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg P_46;
-  kcg_bool P_63;
-  P80_ModeProfiles_T_Packet_Types_Pkg P_80;
-} struct__78066;
-
-/* Level_And_Mode_Types_Pkg::T_Data_From_Track_Packet */
-typedef struct__78066 T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  N_ITER n_iter;
-  P046_OBU_sectionlist_enum_T_TM sections;
-} struct__78081;
-
-/* TM::P046_OBU_T */
-typedef struct__78081 P046_OBU_T_TM;
-
-typedef kcg_int array_int_66[66];
-
-/* TM::P046_sections_array_flat_T */
-typedef array_int_66 P046_sections_array_flat_T_TM;
-
-typedef kcg_int array_int_4[4];
-
-/* TM::Array04 */
-typedef array_int_4 Array04_TM;
-
-typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_SCALE q_scale;
-  D_LEVELTR d_leveltr;
-  N_ITER n_iter;
-  P041_OBU_sectionlist_enum_T_TM sections;
-} struct__78094;
-
-/* TM::P041_OBU_T */
-typedef struct__78094 P041_OBU_T_TM;
-
-typedef struct { kcg_bool valid; Q_DIR q_dir; } struct__78103;
-
-/* TM::P135_OBU_T */
-typedef struct__78103 P135_OBU_T_TM;
-
-typedef struct {
-  kcg_bool Mess_15;
-  kcg_bool Mess_16;
-  kcg_bool Mess_2;
-  kcg_bool Mess_27;
-  kcg_bool Mess_28;
-  kcg_bool Mess_6;
-  kcg_bool T_NVCONTACT_Overpass;
-} struct__78108;
-
-/* Level_And_Mode_Types_Pkg::T_Data_From_Track_Mess */
-typedef struct__78108 T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg;
-
-typedef struct {
-  kcg_bool linkedBGError;
-  kcg_bool unlinkedBGError;
-  kcg_bool BG_versionIncompatible;
-  kcg_bool radioSequenceError;
-  kcg_bool tNvContactError;
-  kcg_bool otherTimingError;
-  kcg_bool radioMessageConsistencyError;
-  NID_C nid_c;
-  NID_ERRORBG_BG_Types_Pkg nid_errorbg;
-} struct__78118;
-
-/* Common_Types_Pkg::MSG_Errors_T */
-typedef struct__78118 MSG_Errors_T_Common_Types_Pkg;
+typedef struct__81452 DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   NID_OPERATIONAL trainRunningNumber;
-} struct__78130;
+} struct__81458;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Train_Running_Number_T */
-typedef struct__78130 DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg;
+typedef struct__81458 DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg;
 
-typedef struct { kcg_int now; kcg_int distance; } struct__78136;
+typedef struct { kcg_int now; kcg_int distance; } struct__81464;
 
 /* TIU_Types_Pkg::D_test_distance_T */
-typedef struct__78136 D_test_distance_T_TIU_Types_Pkg;
+typedef struct__81464 D_test_distance_T_TIU_Types_Pkg;
 
 /* TIU_Types_Pkg::D_test_traction_T */
 typedef D_test_distance_T_TIU_Types_Pkg D_test_traction_T_TIU_Types_Pkg;
@@ -3751,24 +3733,24 @@ typedef struct {
   D_test_trackcond_T_TIU_Types_Pkg d_test_trackcond;
   L_test_trackcond_T_TIU_Types_Pkg l_test_trackcond;
   M_trackcond_T_TIU_Types_Pkg m_trackcond;
-} struct__78141;
+} struct__81469;
 
 /* TIU_Types_Pkg::nothing_to_resume_profile_follow_T */
-typedef struct__78141 nothing_to_resume_profile_follow_T_TIU_Types_Pkg;
+typedef struct__81469 nothing_to_resume_profile_follow_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   nothing_to_resume_profile_follow_T_TIU_Types_Pkg nothing_to_resume_profile_follow;
   D_test_trackinit_T_TIU_Types_Pkg empty_profile_initial_state_to_be_resumed;
-} struct__78147;
+} struct__81475;
 
 /* TIU_Types_Pkg::Type_I_train_and_brake_inhibition_with_distance_commands_T */
-typedef struct__78147 Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg;
+typedef struct__81475 Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg;
 
-typedef struct { kcg_bool valid; kcg_int pressure; } struct__78153;
+typedef struct { kcg_bool valid; kcg_int pressure; } struct__81481;
 
 /* TIU_Types_Pkg::Brake_pressure_value_T */
-typedef struct__78153 Brake_pressure_value_T_TIU_Types_Pkg;
+typedef struct__81481 Brake_pressure_value_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3777,10 +3759,10 @@ typedef struct {
   M_brake_status_T_TIU_Types_Pkg m_magneticshoebrake_st;
   M_brake_status_T_TIU_Types_Pkg m_electropneumaticbrake_st;
   M_brake_status_T_TIU_Types_Pkg m_additionalbrake_st;
-} struct__78158;
+} struct__81486;
 
 /* TIU_Types_Pkg::Brake_status_T */
-typedef struct__78158 Brake_status_T_TIU_Types_Pkg;
+typedef struct__81486 Brake_status_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3791,10 +3773,10 @@ typedef struct {
   M_directioncontroller_signal_status_T_TIU_Types_Pkg m_directioncontroller_st;
   M_trainintegrity_signal_status_T_TIU_Types_Pkg m_trainintegrity_st;
   M_traction_signal_status_T_TIU_Types_Pkg m_traction_st;
-} struct__78167;
+} struct__81495;
 
 /* TIU_Types_Pkg::Mode_control_and_train_status_T */
-typedef struct__78167 Mode_control_and_train_status_T_TIU_Types_Pkg;
+typedef struct__81495 Mode_control_and_train_status_T_TIU_Types_Pkg;
 
 typedef struct {
   Mode_control_and_train_status_T_TIU_Types_Pkg train_status;
@@ -3803,84 +3785,84 @@ typedef struct {
   M_train_data_entry_type_T_TIU_Types_Pkg train_data_entry_type;
   trainData_T_TIU_Types_Pkg train_data_info;
   Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg type_I_train_and_brake_inhibition;
-} struct__78178;
+} struct__81506;
 
 /* TIU_Types_Pkg::Message_Train_Interface_to_EVC_T */
-typedef struct__78178 Message_Train_Interface_to_EVC_T_TIU_Types_Pkg;
+typedef struct__81506 Message_Train_Interface_to_EVC_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   kcg_bool deskOpen;
   cab_ID_T_TIU_Types_Pkg ownCab;
   cab_ID_T_TIU_Types_Pkg activeCab;
-} struct__78187;
+} struct__81515;
 
 /* TIU_Types_Pkg::TIU_trainStatus_T */
-typedef struct__78187 TIU_trainStatus_T_TIU_Types_Pkg;
+typedef struct__81515 TIU_trainStatus_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   Message_Train_Interface_to_EVC_T_TIU_Types_Pkg info;
-} struct__78194;
+} struct__81522;
 
 /* API_TIU_Pkg::TIU_Input_msg */
-typedef struct__78194 TIU_Input_msg_API_TIU_Pkg;
+typedef struct__81522 TIU_Input_msg_API_TIU_Pkg;
 
-typedef struct { kcg_bool present; M_ERROR errorType; } struct__78199;
+typedef struct { kcg_bool present; M_ERROR errorType; } struct__81527;
 
 /* ProvidePositionReport_Pkg::ErrorMessage_T */
-typedef struct__78199 ErrorMessage_T_ProvidePositionReport_Pkg;
+typedef struct__81527 ErrorMessage_T_ProvidePositionReport_Pkg;
 
 typedef struct {
   M_MODE currMode;
   M_LEVEL currLevel;
   kcg_bool levelTransitionBorderPassed;
-} struct__78204;
+} struct__81532;
 
 /* ProvidePositionReport_Pkg::ModeLevel2PositionReport_T */
-typedef struct__78204 ModeLevel2PositionReport_T_ProvidePositionReport_Pkg;
+typedef struct__81532 ModeLevel2PositionReport_T_ProvidePositionReport_Pkg;
 
-typedef struct { NID_NTC nid_ntc; Q_LENGTH q_length; } struct__78210;
+typedef struct { NID_NTC nid_ntc; Q_LENGTH q_length; } struct__81538;
 
 /* BG_Types_Pkg::TrainToTrackStatus_T */
-typedef struct__78210 TrainToTrackStatus_T_BG_Types_Pkg;
+typedef struct__81538 TrainToTrackStatus_T_BG_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   NID_BG nidBG;
   LocWithInAcc_T_Obu_BasicTypes_Pkg location;
-} struct__78215;
+} struct__81543;
 
 /* ProvidePositionReport_Pkg::ReportedBG_T */
-typedef struct__78215 ReportedBG_T_ProvidePositionReport_Pkg;
+typedef struct__81543 ReportedBG_T_ProvidePositionReport_Pkg;
 
-typedef ReportedBG_T_ProvidePositionReport_Pkg array__78221[8];
+typedef ReportedBG_T_ProvidePositionReport_Pkg array__81549[8];
 
 /* ProvidePositionReport_Pkg::ReportedBGList_T */
-typedef array__78221 ReportedBGList_T_ProvidePositionReport_Pkg;
+typedef array__81549 ReportedBGList_T_ProvidePositionReport_Pkg;
 
-typedef struct { kcg_bool newSessionEstablished; } struct__78224;
+typedef struct { kcg_bool newSessionEstablished; } struct__81552;
 
 /* ProvidePositionReport_Pkg::RBC_Communication_T */
-typedef struct__78224 RBC_Communication_T_ProvidePositionReport_Pkg;
+typedef struct__81552 RBC_Communication_T_ProvidePositionReport_Pkg;
 
 typedef struct {
   kcg_bool minSafeRearEndPassed;
   kcg_bool maxSafeFrontEndPassed;
-} struct__78228;
+} struct__81556;
 
 /* ProvidePositionReport_Pkg::LocationBasedEvents_T */
-typedef struct__78228 LocationBasedEvents_T_ProvidePositionReport_Pkg;
+typedef struct__81556 LocationBasedEvents_T_ProvidePositionReport_Pkg;
 
-typedef struct { D_LOC d_loc; Q_LGTLOC q_lgtloc; } struct__78233;
+typedef struct { D_LOC d_loc; Q_LGTLOC q_lgtloc; } struct__81561;
 
 /* Packet_Types_Pkg::IterPacket58_T */
-typedef struct__78233 IterPacket58_T_Packet_Types_Pkg;
+typedef struct__81561 IterPacket58_T_Packet_Types_Pkg;
 
-typedef IterPacket58_T_Packet_Types_Pkg array__78238[2];
+typedef IterPacket58_T_Packet_Types_Pkg array__81566[2];
 
 /* Packet_Types_Pkg::IterPacket58List_T */
-typedef array__78238 IterPacket58List_T_Packet_Types_Pkg;
+typedef array__81566 IterPacket58List_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3893,24 +3875,24 @@ typedef struct {
   M_LOC m_loc;
   N_ITER n_iter;
   IterPacket58List_T_Packet_Types_Pkg iterPacket58List;
-} struct__78241;
+} struct__81569;
 
 /* Packet_Types_Pkg::P58_PositionReportParameters_T */
-typedef struct__78241 P58_PositionReportParameters_T_Packet_Types_Pkg;
+typedef struct__81569 P58_PositionReportParameters_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   D_LOC d_loc;
   Q_LGTLOC q_lgtloc;
-} struct__78254;
+} struct__81582;
 
 /* TM::P058_section_enum_T */
-typedef struct__78254 P058_section_enum_T_TM;
+typedef struct__81582 P058_section_enum_T_TM;
 
-typedef P058_section_enum_T_TM array__78260[32];
+typedef P058_section_enum_T_TM array__81588[32];
 
 /* TM::P058_OBU_sectionlist_enum_T */
-typedef array__78260 P058_OBU_sectionlist_enum_T_TM;
+typedef array__81588 P058_OBU_sectionlist_enum_T_TM;
 
 typedef struct {
   kcg_bool valid;
@@ -3921,10 +3903,10 @@ typedef struct {
   M_LOC m_loc;
   N_ITER n_iter;
   P058_OBU_sectionlist_enum_T_TM sections;
-} struct__78263;
+} struct__81591;
 
 /* TM::P058_OBU_T */
-typedef struct__78263 P058_OBU_T_TM;
+typedef struct__81591 P058_OBU_T_TM;
 
 typedef kcg_int array_int_8[8];
 
@@ -3937,10 +3919,10 @@ typedef struct {
   Radio_TrackTrain_Header_T_Radio_Types_Pkg Radio_Common_Header;
   RadioMetadata_T_Common_Types_Pkg Radio_MetaData;
   RBC_Id_T_Common_Types_Pkg sendingRBC_Id;
-} struct__78277;
+} struct__81605;
 
 /* API_Msg_Pkg::API_RadioMsgHeader_T */
-typedef struct__78277 API_RadioMsgHeader_T_API_Msg_Pkg;
+typedef struct__81605 API_RadioMsgHeader_T_API_Msg_Pkg;
 
 typedef struct {
   Q_UPDOWN q_updown;
@@ -3953,18 +3935,18 @@ typedef struct {
   kcg_int nid_c;
   kcg_int nid_bg;
   Q_LINK q_link;
-} struct__78285;
+} struct__81613;
 
 /* BG_Types_Pkg::TelegramHeader_T */
-typedef struct__78285 TelegramHeader_T_BG_Types_Pkg;
+typedef struct__81613 TelegramHeader_T_BG_Types_Pkg;
 
 typedef struct {
   odometry_T_Obu_BasicTypes_Pkg odometerOfBaliseDetection;
   LocWithInAcc_T_Obu_BasicTypes_Pkg BG_centerDetectionInaccuraccuracies;
-} struct__78298;
+} struct__81626;
 
 /* BG_Types_Pkg::centerOfBalisePosition_T */
-typedef struct__78298 centerOfBalisePosition_T_BG_Types_Pkg;
+typedef struct__81626 centerOfBalisePosition_T_BG_Types_Pkg;
 
 typedef struct {
   kcg_bool present;
@@ -3973,10 +3955,10 @@ typedef struct {
   TelegramHeader_T_BG_Types_Pkg api_header;
   centerOfBalisePosition_T_BG_Types_Pkg centerOfBalisePosition;
   RBC_Id_T_Common_Types_Pkg sendingRBC_Id;
-} struct__78303;
+} struct__81631;
 
 /* API_Msg_Pkg::API_TelegramHeader_T */
-typedef struct__78303 API_TelegramHeader_T_API_Msg_Pkg;
+typedef struct__81631 API_TelegramHeader_T_API_Msg_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -3985,24 +3967,24 @@ typedef struct {
   API_TelegramHeader_T_API_Msg_Pkg btm_msg;
   API_RadioMsgHeader_T_API_Msg_Pkg rtm_msg;
   CompressedPackets_T_Common_Types_Pkg packets;
-} struct__78312;
+} struct__81640;
 
 /* API_Msg_Pkg::API_TrackSideInput_T */
-typedef struct__78312 API_TrackSideInput_T_API_Msg_Pkg;
+typedef struct__81640 API_TrackSideInput_T_API_Msg_Pkg;
 
-typedef ModeDecisionTableActionKind_DataDictionary_Pkg array__78321[17];
+typedef struct {
+  P41_LevelTransistionOrders_T_Packet_Types_Pkg P41;
+  P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg P46;
+  NID_LRBG LRBG;
+  L_internal_Type_Obu_BasicTypes_Pkg referenceLocation;
+  kcg_bool P12_received;
+  kcg_bool P15_received;
+  kcg_bool P21_received;
+  kcg_bool P27_received;
+} struct__81649;
 
-typedef array__78321 array__78324[256];
-
-/* DataDictionary_Pkg::ModeDecisionTableType */
-typedef array__78324 ModeDecisionTableType_DataDictionary_Pkg;
-
-typedef LevelDecisionTableActionKind_DataDictionary_Pkg array__78327[5];
-
-typedef array__78327 array__78330[256];
-
-/* DataDictionary_Pkg::LevelDecisionTableType */
-typedef array__78330 LevelDecisionTableType_DataDictionary_Pkg;
+/* Level_And_Mode_Types_Pkg::T_Data_From_TrackForLevelChange */
+typedef struct__81649 T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool pendingL1Transition;
@@ -4013,66 +3995,46 @@ typedef struct {
   kcg_bool pendingNTCTransition;
   kcg_bool SPPAndGradientOnBoard;
   kcg_bool MACoverNotFullLength;
-} struct__78333;
+} struct__81660;
 
 /* Common_Types_Pkg::filterRelatedEvents_T */
-typedef struct__78333 filterRelatedEvents_T_Common_Types_Pkg;
-
-typedef struct { kcg_bool valid; Q_DIR q_dir; NID_MN nid_mn; } struct__78344;
-
-/* Packet_Types_Pkg::P45_RadioNetworkRegistration_T */
-typedef struct__78344 P45_RadioNetworkRegistration_T_Packet_Types_Pkg;
+typedef struct__81660 filterRelatedEvents_T_Common_Types_Pkg;
 
 typedef struct {
-  kcg_bool valid;
-  Q_DIR q_dir;
-  Q_RBC q_rbc;
+  kcg_bool linkedBGError;
+  kcg_bool unlinkedBGError;
+  kcg_bool BG_versionIncompatible;
+  kcg_bool radioSequenceError;
+  kcg_bool tNvContactError;
+  kcg_bool otherTimingError;
+  kcg_bool radioMessageConsistencyError;
   NID_C nid_c;
-  NID_RBC nid_rbc;
-  NID_RADIO nid_radio;
-  Q_SLEEPSESSION q_sleepsession;
-} struct__78350;
+  NID_ERRORBG_BG_Types_Pkg nid_errorbg;
+} struct__81671;
 
-/* Packet_Types_Pkg::P42_SessionManagement_T */
-typedef struct__78350 P42_SessionManagement_T_Packet_Types_Pkg;
+/* Common_Types_Pkg::MSG_Errors_T */
+typedef struct__81671 MSG_Errors_T_Common_Types_Pkg;
 
-typedef struct {
-  kcg_bool valid;
-  MsgSource_T_Common_Types_Pkg messageSource;
-  Radio_TrackTrain_Header_T_Radio_Types_Pkg Radio_Common_Header;
-  P42_SessionManagement_T_Packet_Types_Pkg p42;
-  P45_RadioNetworkRegistration_T_Packet_Types_Pkg p45;
-  RBC_Id_T_Common_Types_Pkg sendingRBC;
-} struct__78360;
+typedef ModeDecisionTableActionKind_DataDictionary_Pkg array__81683[17];
 
-/* Common_Types_Pkg::radioManagementMessage_T */
-typedef struct__78360 radioManagementMessage_T_Common_Types_Pkg;
+typedef array__81683 array__81686[256];
 
-typedef struct {
-  kcg_bool present;
-  NID_BG nidBG;
-  Location_T_Obu_BasicTypes_Pkg bgLocation;
-  P58_PositionReportParameters_T_Packet_Types_Pkg packet58;
-  RBC_Id_T_Common_Types_Pkg sendingRBC;
-} struct__78369;
+/* DataDictionary_Pkg::ModeDecisionTableType */
+typedef array__81686 ModeDecisionTableType_DataDictionary_Pkg;
 
-/* Common_Types_Pkg::PositionReportParameter_T */
-typedef struct__78369 PositionReportParameter_T_Common_Types_Pkg;
+typedef LevelDecisionTableActionKind_DataDictionary_Pkg array__81689[5];
 
-typedef struct {
-  kcg_bool valid;
-  kcg_bool checkResult;
-  TelegramHeader_T_BG_Types_Pkg telegramheader;
-  CompressedPackets_T_Common_Types_Pkg packets;
-} struct__78377;
+typedef array__81689 array__81692[256];
 
-/* BG_Types_Pkg::Telegram_T */
-typedef struct__78377 Telegram_T_BG_Types_Pkg;
+/* DataDictionary_Pkg::LevelDecisionTableType */
+typedef array__81692 LevelDecisionTableType_DataDictionary_Pkg;
 
-typedef Telegram_T_BG_Types_Pkg array__78384[8];
+typedef kcg_bool array_bool_256[256];
 
-/* BG_Types_Pkg::TelegramArray_T */
-typedef array__78384 TelegramArray_T_BG_Types_Pkg;
+typedef array_bool_256 array_bool_256_46[46];
+
+/* CheckEuroradioMessage::MetadataTruthtable_T1 */
+typedef array_bool_256_46 MetadataTruthtable_T1_CheckEuroradioMessage;
 
 typedef struct {
   kcg_bool present;
@@ -4081,20 +4043,35 @@ typedef struct {
   RadioMetadata_T_Common_Types_Pkg radioMetadata;
   CompressedPackets_T_Common_Types_Pkg packets;
   RBC_Id_T_Common_Types_Pkg sendingRBC;
-} struct__78387;
+} struct__81701;
 
 /* Radio_Types_Pkg::RadioMessage_T */
-typedef struct__78387 RadioMessage_T_Radio_Types_Pkg;
+typedef struct__81701 RadioMessage_T_Radio_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  kcg_bool checkResult;
+  TelegramHeader_T_BG_Types_Pkg telegramheader;
+  CompressedPackets_T_Common_Types_Pkg packets;
+} struct__81710;
+
+/* BG_Types_Pkg::Telegram_T */
+typedef struct__81710 Telegram_T_BG_Types_Pkg;
+
+typedef Telegram_T_BG_Types_Pkg array__81717[8];
+
+/* BG_Types_Pkg::TelegramArray_T */
+typedef array__81717 TelegramArray_T_BG_Types_Pkg;
 
 typedef struct {
   kcg_bool present;
   TelegramArray_T_BG_Types_Pkg Telegrams;
   kcg_int numberBalises;
   centerOfBalisePosition_T_BG_Types_Pkg centerOfBalisePosition;
-} struct__78396;
+} struct__81720;
 
 /* BG_Types_Pkg::BG_Message_T */
-typedef struct__78396 BG_Message_T_BG_Types_Pkg;
+typedef struct__81720 BG_Message_T_BG_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4102,10 +4079,10 @@ typedef struct {
   MsgSource_T_Common_Types_Pkg msg_type;
   BG_Message_T_BG_Types_Pkg telegramHeaders;
   RadioMessage_T_Radio_Types_Pkg radio_Msg;
-} struct__78403;
+} struct__81727;
 
 /* Common_Types_Pkg::TrackSide_ForCheck_T */
-typedef struct__78403 TrackSide_ForCheck_T_Common_Types_Pkg;
+typedef struct__81727 TrackSide_ForCheck_T_Common_Types_Pkg;
 
 typedef struct {
   kcg_bool badBaliseFlag;
@@ -4116,58 +4093,56 @@ typedef struct {
   centerOfBalisePosition_T_BG_Types_Pkg positionFirstContact;
   kcg_int collectedTelegrams;
   kcg_int totalTelegrams;
-} struct__78411;
+} struct__81735;
 
 /* Receive_TrackSide_Msg_Pkg::BGCollector_T */
-typedef struct__78411 BGCollector_T_Receive_TrackSide_Msg_Pkg;
+typedef struct__81735 BGCollector_T_Receive_TrackSide_Msg_Pkg;
 
 typedef struct {
   kcg_bool valid;
   Telegram_T_BG_Types_Pkg telegram;
   centerOfBalisePosition_T_BG_Types_Pkg position;
-} struct__78422;
+} struct__81746;
 
 /* Receive_TrackSide_Msg_Pkg::TelegramStore_T */
-typedef struct__78422 TelegramStore_T_Receive_TrackSide_Msg_Pkg;
-
-typedef kcg_bool array_bool_256[256];
-
-typedef array_bool_256 array_bool_256_46[46];
-
-/* MetadataTruthtable_T */
-typedef array_bool_256_46 MetadataTruthtable_T;
+typedef struct__81746 TelegramStore_T_Receive_TrackSide_Msg_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   DMI_Request_T_DMI_Types_Pkg m_request;
-} struct__78434;
+} struct__81752;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Driver_Request_T */
-typedef struct__78434 DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg;
+typedef struct__81752 DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef struct {
   M_LEVEL level;
   kcg_int position;
   T_TransitionType_Level_And_Mode_Types_Pkg transitionType;
-} struct__78440;
+} struct__81758;
 
 /* Level_And_Mode_Types_Pkg::T_LevelTansitionInfo */
-typedef struct__78440 T_LevelTansitionInfo_Level_And_Mode_Types_Pkg;
+typedef struct__81758 T_LevelTansitionInfo_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   DMI_level_T_DMI_Types_Pkg level;
-} struct__78446;
+} struct__81764;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Level_Data_T */
-typedef struct__78446 DMI_Level_Data_T_DMI_Messages_Bothways_Pkg;
+typedef struct__81764 DMI_Level_Data_T_DMI_Messages_Bothways_Pkg;
 
-typedef struct { kcg_bool is_set; struct__78440 transition; } struct__78452;
+typedef struct {
+  kcg_bool is_set;
+  struct__81758 transition;
+  kcg_int LRBG;
+  kcg_int referenceLocation;
+} struct__81770;
 
 /* Level_And_Mode_Types_Pkg::T_LevelTransition */
-typedef struct__78452 T_LevelTransition_Level_And_Mode_Types_Pkg;
+typedef struct__81770 T_LevelTransition_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4177,10 +4152,10 @@ typedef struct {
   kcg_bool Req_SH;
   kcg_bool Req_Start;
   kcg_bool ETCS_Isolated;
-} struct__78457;
+} struct__81777;
 
 /* DMI_Types_Pkg::DMI_DriverRequest_T */
-typedef struct__78457 DMI_DriverRequest_T_DMI_Types_Pkg;
+typedef struct__81777 DMI_DriverRequest_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4191,62 +4166,62 @@ typedef struct {
   NID_TEXTMESSAGE nid_textmessage;
   M_LEVEL whichLevel;
   M_MODE whichMode;
-} struct__78467;
+} struct__81787;
 
 /* DMI_Types_Pkg::DMI_TXT_MSG_status_T */
-typedef struct__78467 DMI_TXT_MSG_status_T_DMI_Types_Pkg;
+typedef struct__81787 DMI_TXT_MSG_status_T_DMI_Types_Pkg;
 
-typedef DMI_TXT_MSG_status_T_DMI_Types_Pkg array__78478[31];
+typedef DMI_TXT_MSG_status_T_DMI_Types_Pkg array__81798[31];
 
 /* DMI_Types_Pkg::DMI_TXT_MSGList_status_T */
-typedef array__78478 DMI_TXT_MSGList_status_T_DMI_Types_Pkg;
+typedef array__81798 DMI_TXT_MSGList_status_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   M_MODE whichMode;
   kcg_bool acknowledgement;
-} struct__78481;
+} struct__81801;
 
 /* DMI_Types_Pkg::DMI_DriverAck_T */
-typedef struct__78481 DMI_DriverAck_T_DMI_Types_Pkg;
+typedef struct__81801 DMI_DriverAck_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   DMI_DriverAck_T_DMI_Types_Pkg DriverAck;
   DMI_DriverRequest_T_DMI_Types_Pkg DriverRequest;
   kcg_bool LevelAck;
-} struct__78487;
+} struct__81807;
 
 /* DMI_Types_Pkg::DMI_To_Modes_T */
-typedef struct__78487 DMI_To_Modes_T_DMI_Types_Pkg;
+typedef struct__81807 DMI_To_Modes_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   DMI_TextMessage_ID_T_DMI_Types_Pkg textMessage_ID;
   kcg_bool acknowledged;
-} struct__78494;
+} struct__81814;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Text_Message_Ack_T */
-typedef struct__78494 DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg;
+typedef struct__81814 DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   kcg_int DMI_nid_icon_identifier;
-} struct__78501;
+} struct__81821;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Icon_Ack_T */
-typedef struct__78501 DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg;
+typedef struct__81821 DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   M_ADHESION adhesionFactor;
-} struct__78507;
+} struct__81827;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Adhesion_Factor_Data_T */
-typedef struct__78507 DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg;
+typedef struct__81827 DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg;
 
 typedef kcg_char array_char_9[9];
 
@@ -4257,28 +4232,28 @@ typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   driverIdentifier_T_DMI_Messages_Bothways_Pkg driverIdentifier;
-} struct__78516;
+} struct__81836;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Driver_Identifier_T */
-typedef struct__78516 DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg;
+typedef struct__81836 DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
-} struct__78522;
+} struct__81842;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Radio_Net_Data_T */
-typedef struct__78522 DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg;
+typedef struct__81842 DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg systemTime;
   DMI_StatusSet_T_DMI_Types_Pkg statusSet;
   kcg_int nAlive;
-} struct__78527;
+} struct__81847;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Status_T */
-typedef struct__78527 DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg;
+typedef struct__81847 DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef kcg_char array_char_255[255];
 
@@ -4293,10 +4268,10 @@ typedef struct {
   L_TEXT l_name;
   DMI_TEXT_DMI_Types_Pkg DMI_name;
   M_VERSION M_VERSION;
-} struct__78537;
+} struct__81857;
 
 /* DMI_Messages_DMI_to_EVC_Pkg::DMI_Identifier_T */
-typedef struct__78537 DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg;
+typedef struct__81857 DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg;
 
 typedef struct {
   kcg_bool present;
@@ -4312,10 +4287,10 @@ typedef struct {
   DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg adhesionFactor;
   DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg iconAck;
   DMI_Level_Data_T_DMI_Messages_Bothways_Pkg selectedLevel;
-} struct__78547;
+} struct__81867;
 
 /* API_DMI_Pkg::DMI_to_EVC_Message_T */
-typedef struct__78547 DMI_to_EVC_Message_T_API_DMI_Pkg;
+typedef struct__81867 DMI_to_EVC_Message_T_API_DMI_Pkg;
 
 typedef struct {
   kcg_bool DMI_Active;
@@ -4327,20 +4302,20 @@ typedef struct {
   kcg_bool DMI_TrainDataValidated;
   kcg_bool DMI_StartReceived;
   DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg DMI_Identifier;
-} struct__78563;
+} struct__81883;
 
 /* DMI_Types_Pkg::DMI_EVC_status_T */
-typedef struct__78563 DMI_EVC_status_T_DMI_Types_Pkg;
+typedef struct__81883 DMI_EVC_status_T_DMI_Types_Pkg;
 
 typedef struct {
   TargetType_T_TargetManagement_types targetType;
   L_internal_Type_Obu_BasicTypes_Pkg distance;
   V_internal_Type_Obu_BasicTypes_Pkg speed;
   kcg_bool valid;
-} struct__78575;
+} struct__81895;
 
 /* TargetManagement_types::Target_T */
-typedef struct__78575 Target_T_TargetManagement_types;
+typedef struct__81895 Target_T_TargetManagement_types;
 
 typedef struct {
   kcg_bool valid;
@@ -4367,10 +4342,10 @@ typedef struct {
   kcg_bool revokedTCO;
   kcg_bool triggeredTCO;
   kcg_bool ebCmd;
-} struct__78582;
+} struct__81902;
 
 /* SDM_Types_Pkg::SDM_Commands_T */
-typedef struct__78582 SDM_Commands_T_SDM_Types_Pkg;
+typedef struct__81902 SDM_Commands_T_SDM_Types_Pkg;
 
 typedef kcg_real array_real_3[3];
 
@@ -4388,18 +4363,18 @@ typedef array_real_2 t_BrakeVt_t_SDMConversionModelPkg;
 typedef struct {
   t_BrakeVt_t_SDMConversionModelPkg emergency;
   t_BrakeVt_t_SDMConversionModelPkg service;
-} struct__78615;
+} struct__81935;
 
 /* SDMConversionModelPkg::t_Brake_t */
-typedef struct__78615 t_Brake_t_SDMConversionModelPkg;
+typedef struct__81935 t_Brake_t_SDMConversionModelPkg;
 
 typedef struct {
   V_internal_real_Type_SDM_Types_Pkg v;
   L_internal_real_Type_SDM_Types_Pkg d;
-} struct__78620;
+} struct__81940;
 
 /* TargetLimits_Pkg::bec_t */
-typedef struct__78620 bec_t_TargetLimits_Pkg;
+typedef struct__81940 bec_t_TargetLimits_Pkg;
 
 typedef struct {
   T_internal_real_Type_SDM_Types_Pkg Traction;
@@ -4408,39 +4383,39 @@ typedef struct {
   T_internal_real_Type_SDM_Types_Pkg bs1;
   T_internal_real_Type_SDM_Types_Pkg bs2;
   kcg_bool inhComp;
-} struct__78625;
+} struct__81945;
 
 /* TargetLimits_Pkg::T_trac_t */
-typedef struct__78625 T_trac_t_TargetLimits_Pkg;
+typedef struct__81945 T_trac_t_TargetLimits_Pkg;
 
 typedef struct {
   kcg_bool isSB_FBAvailable;
   kcg_bool isSB_CmdAvailable;
   kcg_bool isTCOAvailable;
   kcg_real T_traction_cut_off;
-} struct__78634;
+} struct__81954;
 
 /* SDM_Types_Pkg::trainData_internal_t */
-typedef struct__78634 trainData_internal_t_SDM_Types_Pkg;
+typedef struct__81954 trainData_internal_t_SDM_Types_Pkg;
 
 typedef struct {
   V_internal_real_Type_SDM_Types_Pkg v_safeNominal;
   V_internal_real_Type_SDM_Types_Pkg v_rawNominal;
   V_internal_real_Type_SDM_Types_Pkg v_lower;
   V_internal_real_Type_SDM_Types_Pkg v_upper;
-} struct__78641;
+} struct__81961;
 
 /* SDM_Types_Pkg::OdometrySpeeds_real_T */
-typedef struct__78641 OdometrySpeeds_real_T_SDM_Types_Pkg;
+typedef struct__81961 OdometrySpeeds_real_T_SDM_Types_Pkg;
 
 typedef struct {
   L_internal_real_Type_SDM_Types_Pkg o_nominal;
   L_internal_real_Type_SDM_Types_Pkg o_min;
   L_internal_real_Type_SDM_Types_Pkg o_max;
-} struct__78648;
+} struct__81968;
 
 /* SDM_Types_Pkg::OdometryLocations_real_T */
-typedef struct__78648 OdometryLocations_real_T_SDM_Types_Pkg;
+typedef struct__81968 OdometryLocations_real_T_SDM_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4450,19 +4425,19 @@ typedef struct {
   A_internal_real_Type_SDM_Types_Pkg acceleration;
   odoMotionState_T_Obu_BasicTypes_Pkg motionState;
   odoMotionDirection_T_Obu_BasicTypes_Pkg motionDirection;
-} struct__78654;
+} struct__81974;
 
 /* SDM_Types_Pkg::Odometry_real_T */
-typedef struct__78654 Odometry_real_T_SDM_Types_Pkg;
+typedef struct__81974 Odometry_real_T_SDM_Types_Pkg;
 
 typedef struct {
   kcg_real distance;
   kcg_real speed;
   kcg_real acceleration;
-} struct__78664;
+} struct__81984;
 
 /* CalcBrakingCurves_types::ParabolaArc_T */
-typedef struct__78664 ParabolaArc_T_CalcBrakingCurves_types;
+typedef struct__81984 ParabolaArc_T_CalcBrakingCurves_types;
 
 typedef kcg_bool array_bool_25[25];
 
@@ -4485,10 +4460,10 @@ typedef struct {
   ParabolaCurveSpeeds_T_CalcBrakingCurves_types speeds;
   ParabolaCurveAccelerations_T_CalcBrakingCurves_types accelerations;
   ParabolaCurveValid_T_CalcBrakingCurves_types valid;
-} struct__78676;
+} struct__81996;
 
 /* CalcBrakingCurves_types::ParabolaCurve_T */
-typedef struct__78676 ParabolaCurve_T_CalcBrakingCurves_types;
+typedef struct__81996 ParabolaCurve_T_CalcBrakingCurves_types;
 
 typedef struct {
   L_internal_real_Type_SDM_Types_Pkg SBI2;
@@ -4498,24 +4473,24 @@ typedef struct {
   V_internal_real_Type_SDM_Types_Pkg V_est;
   T_trac_t_TargetLimits_Pkg T;
   V_internal_real_Type_SDM_Types_Pkg V_ura;
-} struct__78683;
+} struct__82003;
 
 /* TargetLimits_Pkg::TargetIteratorAkku */
-typedef struct__78683 TargetIteratorAkku_TargetLimits_Pkg;
+typedef struct__82003 TargetIteratorAkku_TargetLimits_Pkg;
 
 typedef struct {
   TargetType_T_TargetManagement_types targetType;
   kcg_real distance;
   kcg_real speed;
-} struct__78693;
+} struct__82013;
 
 /* TargetManagement_types::Target_real_T */
-typedef struct__78693 Target_real_T_TargetManagement_types;
+typedef struct__82013 Target_real_T_TargetManagement_types;
 
-typedef ParabolaCurve_T_CalcBrakingCurves_types array__78699[200];
+typedef ParabolaCurve_T_CalcBrakingCurves_types array__82019[200];
 
 /* CalcBrakingCurves_types::ParabolaCurve_list_MRSP_T */
-typedef array__78699 ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types;
+typedef array__82019 ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types;
 
 typedef struct {
   ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types MRSP_EBD_curves;
@@ -4523,25 +4498,25 @@ typedef struct {
   ParabolaCurve_T_CalcBrakingCurves_types SvL_EBD_curve;
   ParabolaCurve_T_CalcBrakingCurves_types GUI_curve;
   kcg_bool GUI_curve_enabled;
-} struct__78702;
+} struct__82022;
 
 /* CalcBrakingCurves_types::CurveCollection_T */
-typedef struct__78702 CurveCollection_T_CalcBrakingCurves_types;
+typedef struct__82022 CurveCollection_T_CalcBrakingCurves_types;
 
-typedef Target_real_T_TargetManagement_types array__78710[200];
+typedef Target_real_T_TargetManagement_types array__82030[200];
 
 /* TargetManagement_types::Target_list_MRSP_real_T */
-typedef array__78710 Target_list_MRSP_real_T_TargetManagement_types;
+typedef array__82030 Target_list_MRSP_real_T_TargetManagement_types;
 
 typedef struct {
   kcg_bool updatedTargetList;
   Target_list_MRSP_real_T_TargetManagement_types MRSP_targetList;
   Target_real_T_TargetManagement_types EOA_target;
   Target_real_T_TargetManagement_types SvL_target;
-} struct__78713;
+} struct__82033;
 
 /* TargetManagement_types::TargetCollection_T */
-typedef struct__78713 TargetCollection_T_TargetManagement_types;
+typedef struct__82033 TargetCollection_T_TargetManagement_types;
 
 typedef struct {
   kcg_bool trainPositionIsValid;
@@ -4551,18 +4526,18 @@ typedef struct {
   L_internal_real_Type_SDM_Types_Pkg d_antenna2frontend;
   L_internal_real_Type_SDM_Types_Pkg d_LRBG;
   L_internal_real_Type_SDM_Types_Pkg d_accLRBG;
-} struct__78720;
+} struct__82040;
 
 /* SDM_Types_Pkg::TrainLocations_real_T */
-typedef struct__78720 TrainLocations_real_T_SDM_Types_Pkg;
+typedef struct__82040 TrainLocations_real_T_SDM_Types_Pkg;
 
 typedef struct {
   L_internal_real_Type_SDM_Types_Pkg Location;
   V_internal_real_Type_SDM_Types_Pkg TargetSpeed;
-} struct__78730;
+} struct__82050;
 
 /* TargetManagement_types::EOA_real_T */
-typedef struct__78730 EOA_real_T_TargetManagement_types;
+typedef struct__82050 EOA_real_T_TargetManagement_types;
 
 typedef struct {
   kcg_bool valid;
@@ -4575,24 +4550,24 @@ typedef struct {
   kcg_bool q_calculate_release;
   V_internal_real_Type_SDM_Types_Pkg ReleaseSpeed;
   MA_Level_t_TrackAtlasTypes level;
-} struct__78735;
+} struct__82055;
 
 /* TargetManagement_types::MA_section_real_T */
-typedef struct__78735 MA_section_real_T_TargetManagement_types;
+typedef struct__82055 MA_section_real_T_TargetManagement_types;
 
 typedef struct {
   kcg_real Loc_Abs;
   kcg_real MRS;
   kcg_bool valid;
-} struct__78748;
+} struct__82068;
 
 /* TargetManagement_types::MRSP_internal_section_T */
-typedef struct__78748 MRSP_internal_section_T_TargetManagement_types;
+typedef struct__82068 MRSP_internal_section_T_TargetManagement_types;
 
-typedef MRSP_internal_section_T_TargetManagement_types array__78754[200];
+typedef MRSP_internal_section_T_TargetManagement_types array__82074[200];
 
 /* TargetManagement_types::MRSP_internal_T */
-typedef array__78754 MRSP_internal_T_TargetManagement_types;
+typedef array__82074 MRSP_internal_T_TargetManagement_types;
 
 typedef struct {
   V_internal_real_Type_SDM_Types_Pkg V_est;
@@ -4608,10 +4583,10 @@ typedef struct {
   V_internal_real_Type_SDM_Types_Pkg dV_sbi_V_target;
   V_internal_real_Type_SDM_Types_Pkg dV_ebi_V_MRSP;
   V_internal_real_Type_SDM_Types_Pkg dV_ebi_V_target;
-} struct__78757;
+} struct__82077;
 
 /* SDM_Types_Pkg::Speeds_T */
-typedef struct__78757 Speeds_T_SDM_Types_Pkg;
+typedef struct__82077 Speeds_T_SDM_Types_Pkg;
 
 typedef struct {
   L_internal_real_Type_SDM_Types_Pkg SBD_preindication_location;
@@ -4634,18 +4609,18 @@ typedef struct {
   kcg_bool Preindication_SBD_location_valid;
   kcg_bool RSM_start_location_EBD_valid;
   kcg_bool RSM_start_location_SBD_valid;
-} struct__78773;
+} struct__82093;
 
 /* SDM_Types_Pkg::SDM_Locations_T */
-typedef struct__78773 SDM_Locations_T_SDM_Types_Pkg;
+typedef struct__82093 SDM_Locations_T_SDM_Types_Pkg;
 
 typedef struct {
-  array__78710 targetList;
+  array__82030 targetList;
   kcg_int lastInsertedTargetIndex;
-} struct__78796;
+} struct__82116;
 
 /* TargetManagement_pkg::extractTargetsMRSPACC */
-typedef struct__78796 extractTargetsMRSPACC_TargetManagement_pkg;
+typedef struct__82116 extractTargetsMRSPACC_TargetManagement_pkg;
 
 typedef kcg_real array_real_15[15];
 
@@ -4669,10 +4644,10 @@ typedef struct {
   ASafeDistanceDefinition_T_CalcBrakingCurves_types distance_definition;
   ASafeSpeedDefinition_T_CalcBrakingCurves_types speed_definition;
   ASafe_Data_T_CalcBrakingCurves_types data;
-} struct__78810;
+} struct__82130;
 
 /* CalcBrakingCurves_types::ASafe_T */
-typedef struct__78810 ASafe_T_CalcBrakingCurves_types;
+typedef struct__82130 ASafe_T_CalcBrakingCurves_types;
 
 typedef struct {
   L_internal_real_Type_SDM_Types_Pkg distance;
@@ -4680,19 +4655,19 @@ typedef struct {
   kcg_int distanceIndex;
   kcg_int speedIndex;
   ParabolaCurve_T_CalcBrakingCurves_types BC;
-} struct__78816;
+} struct__82136;
 
 /* CalcBrakingCurves_Pkg::BCAccumulator_type */
-typedef struct__78816 BCAccumulator_type_CalcBrakingCurves_Pkg;
+typedef struct__82136 BCAccumulator_type_CalcBrakingCurves_Pkg;
 
 typedef struct {
   kcg_bool valid;
   M_brake_signal_command_T_TIU_Types_Pkg m_servicebrake_cm;
   M_brake_signal_command_T_TIU_Types_Pkg m_emergencybrake_cm;
-} struct__78824;
+} struct__82144;
 
 /* TIU_Types_Pkg::Brake_command_T */
-typedef struct__78824 Brake_command_T_TIU_Types_Pkg;
+typedef struct__82144 Brake_command_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4719,10 +4694,10 @@ typedef struct {
   kcg_bool revokedTCO;
   kcg_bool triggeredTCO;
   kcg_bool ebCmd;
-} struct__78830;
+} struct__82150;
 
 /* SDM_Types_Pkg::SDM_Commands_real_T */
-typedef struct__78830 SDM_Commands_real_T_SDM_Types_Pkg;
+typedef struct__82150 SDM_Commands_real_T_SDM_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4735,10 +4710,10 @@ typedef struct {
   M_SUPERVISION_STATUS_DMI_Types_Pkg sup_status;
   M_SupervisionDisplay_T_DMI_Types_Pkg supervisionDisplay;
   L_internal_Type_Obu_BasicTypes_Pkg distanceIndicationPoint;
-} struct__78857;
+} struct__82177;
 
 /* DMI_Types_Pkg::speedSupervisionForDMI_T */
-typedef struct__78857 speedSupervisionForDMI_T_DMI_Types_Pkg;
+typedef struct__82177 speedSupervisionForDMI_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool t1;
@@ -4755,10 +4730,10 @@ typedef struct {
   kcg_bool t12;
   kcg_bool t13;
   kcg_bool t14;
-} struct__78870;
+} struct__82190;
 
 /* SDM_Commands_Pkg::TSM_triggerCond_T */
-typedef struct__78870 TSM_triggerCond_T_SDM_Commands_Pkg;
+typedef struct__82190 TSM_triggerCond_T_SDM_Commands_Pkg;
 
 typedef kcg_bool array_bool_14[14];
 
@@ -4770,39 +4745,69 @@ typedef struct {
   kcg_bool r1;
   kcg_bool r2;
   kcg_bool r3;
-} struct__78890;
+} struct__82210;
 
 /* SDM_Commands_Pkg::TSM_revokeCond_T */
-typedef struct__78890 TSM_revokeCond_T_SDM_Commands_Pkg;
+typedef struct__82210 TSM_revokeCond_T_SDM_Commands_Pkg;
 
 typedef struct {
   kcg_bool valid;
   mobileHWAction_Type_MoRC_Pck action;
   NID_MN radioNetworkID;
   NID_RADIO nid_radio;
-} struct__78897;
+} struct__82217;
 
 /* MoRC_Pck::mobileHWCmd_Type */
-typedef struct__78897 mobileHWCmd_Type_MoRC_Pck;
+typedef struct__82217 mobileHWCmd_Type_MoRC_Pck;
 
 typedef struct {
   kcg_bool valid;
   cmdRadioUnit_T_API_RadioCommunication_Pkg cmd;
   NID_MN networkID;
-} struct__78904;
+} struct__82224;
 
 /* API_RadioCommunication_Pkg::RadioManagement_T */
-typedef struct__78904 RadioManagement_T_API_RadioCommunication_Pkg;
+typedef struct__82224 RadioManagement_T_API_RadioCommunication_Pkg;
 
 typedef struct {
   Radio_TrainTrack_Message_T_Radio_Types_Pkg firstOutput;
   Radio_TrainTrack_Message_T_Radio_Types_Pkg secondOutput;
   Radio_TrainTrack_Message_T_Radio_Types_Pkg thirdOutput;
   RadioManagement_T_API_RadioCommunication_Pkg radioEVCtoUnit;
-} struct__78910;
+} struct__82230;
 
 /* API_RadioCommunication_Pkg::API_EuroRadioOutput_T */
-typedef struct__78910 API_EuroRadioOutput_T_API_RadioCommunication_Pkg;
+typedef struct__82230 API_EuroRadioOutput_T_API_RadioCommunication_Pkg;
+
+typedef struct { kcg_bool valid; Q_DIR q_dir; NID_MN nid_mn; } struct__82237;
+
+/* Packet_Types_Pkg::P45_RadioNetworkRegistration_T */
+typedef struct__82237 P45_RadioNetworkRegistration_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  Q_DIR q_dir;
+  Q_RBC q_rbc;
+  NID_C nid_c;
+  NID_RBC nid_rbc;
+  NID_RADIO nid_radio;
+  Q_SLEEPSESSION q_sleepsession;
+} struct__82243;
+
+/* Packet_Types_Pkg::P42_SessionManagement_T */
+typedef struct__82243 P42_SessionManagement_T_Packet_Types_Pkg;
+
+typedef struct {
+  kcg_bool valid;
+  MsgSource_T_Common_Types_Pkg messageSource;
+  Radio_TrackTrain_Header_T_Radio_Types_Pkg Radio_Common_Header;
+  P42_SessionManagement_T_Packet_Types_Pkg p42;
+  P45_RadioNetworkRegistration_T_Packet_Types_Pkg p45;
+  RBC_Id_T_Common_Types_Pkg sendingRBC;
+} struct__82253;
+
+/* Common_Types_Pkg::radioManagementMessage_T */
+typedef struct__82253 radioManagementMessage_T_Common_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4810,19 +4815,19 @@ typedef struct {
   mobileSWConnectionStatus_Type_MoRC_Pck connectionStatus;
   kcg_int registeredRadioNetworkID;
   kcg_bool settingUpConnectionHasFailed;
-} struct__78917;
+} struct__82262;
 
 /* MoRC_Pck::mobileSWStatus_Type */
-typedef struct__78917 mobileSWStatus_Type_MoRC_Pck;
+typedef struct__82262 mobileSWStatus_Type_MoRC_Pck;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg system_clock;
   DMI_List_Entry_Request_T_DMI_Types_Pkg entry_request;
-} struct__78925;
+} struct__82270;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Entry_Request_T */
-typedef struct__78925 DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82270 DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4834,46 +4839,46 @@ typedef struct {
   Area_group_T_DMI_Types_Pkg DMI_nid_area_group;
   kcg_int DMI_nid_area_rank;
   kcg_int DMI_nid_icon_identifier;
-} struct__78931;
+} struct__82276;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Icons_T */
-typedef struct__78931 DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82276 DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg system_clock;
   NID_MN nid_mn;
-} struct__78943;
+} struct__82288;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_EVC_Radio_Net_Data_T */
-typedef struct__78943 DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82288 DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg system_clock;
   DMI_LevelList_T_DMI_Types_Pkg levelList;
-} struct__78949;
+} struct__82294;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_EVC_Level_Data_T */
-typedef struct__78949 DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82294 DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
   kcg_bool cab_is_active;
   T_internal_Type_Obu_BasicTypes_Pkg system_clock;
-} struct__78955;
+} struct__82300;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Display_Control_T */
-typedef struct__78955 DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82300 DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg system_clock;
   M_VERSION system_version;
-} struct__78961;
+} struct__82306;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_System_Version_T */
-typedef struct__78961 DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82306 DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4883,57 +4888,57 @@ typedef struct {
   L_TEXT l_name;
   DMI_TEXT_DMI_Types_Pkg x_name;
   L_TEXT l_extra;
-} struct__78967;
+} struct__82312;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Identifier_Request_T */
-typedef struct__78967 DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82312 DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   D_TRACKCOND d_trackcond;
   M_TRACKCOND m_trackcond;
-} struct__78977;
+} struct__82322;
 
 /* DMI_Types_Pkg::DMI_trackConditionElement_T */
-typedef struct__78977 DMI_trackConditionElement_T_DMI_Types_Pkg;
+typedef struct__82322 DMI_trackConditionElement_T_DMI_Types_Pkg;
 
-typedef DMI_trackConditionElement_T_DMI_Types_Pkg array__78982[32];
+typedef DMI_trackConditionElement_T_DMI_Types_Pkg array__82327[32];
 
 /* DMI_Types_Pkg::DMI_trackConditionArray_T */
-typedef array__78982 DMI_trackConditionArray_T_DMI_Types_Pkg;
+typedef array__82327 DMI_trackConditionArray_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_int nIter;
   DMI_trackConditionArray_T_DMI_Types_Pkg trackCondition;
-} struct__78985;
+} struct__82330;
 
 /* DMI_Types_Pkg::DMI_trackCondition_T */
-typedef struct__78985 DMI_trackCondition_T_DMI_Types_Pkg;
+typedef struct__82330 DMI_trackCondition_T_DMI_Types_Pkg;
 
-typedef DMI_gradientProfileElement_T_DMI_Types_Pkg array__78990[32];
+typedef DMI_gradientProfileElement_T_DMI_Types_Pkg array__82335[32];
 
 /* DMI_Types_Pkg::DMI_gradientProfileArray_T */
-typedef array__78990 DMI_gradientProfileArray_T_DMI_Types_Pkg;
+typedef array__82335 DMI_gradientProfileArray_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool profileChanged;
   DMI_gradientProfileArray_T_DMI_Types_Pkg gradientProfiles;
-} struct__78993;
+} struct__82338;
 
 /* DMI_Types_Pkg::DMI_gradientProfile_T */
-typedef struct__78993 DMI_gradientProfile_T_DMI_Types_Pkg;
+typedef struct__82338 DMI_gradientProfile_T_DMI_Types_Pkg;
 
-typedef DMI_speedProfileElement_T_DMI_Types_Pkg array__78998[32];
+typedef DMI_speedProfileElement_T_DMI_Types_Pkg array__82343[32];
 
 /* DMI_Types_Pkg::DMI_SpeedProfileArray_T */
-typedef array__78998 DMI_SpeedProfileArray_T_DMI_Types_Pkg;
+typedef array__82343 DMI_SpeedProfileArray_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool profileChanged;
   DMI_SpeedProfileArray_T_DMI_Types_Pkg speedProfiles;
-} struct__79001;
+} struct__82346;
 
 /* DMI_Types_Pkg::DMI_speedProfile_T */
-typedef struct__79001 DMI_speedProfile_T_DMI_Types_Pkg;
+typedef struct__82346 DMI_speedProfile_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4941,10 +4946,10 @@ typedef struct {
   DMI_speedProfile_T_DMI_Types_Pkg speedProfiles;
   DMI_gradientProfile_T_DMI_Types_Pkg gradientProfiles;
   DMI_trackCondition_T_DMI_Types_Pkg trackConditions;
-} struct__79006;
+} struct__82351;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Track_Description_T */
-typedef struct__79006 DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82351 DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4955,29 +4960,29 @@ typedef struct {
   DMI_TEXT_DMI_Types_Pkg x_text;
   Q_TEXTCLASS q_textClass;
   Q_TEXTCONFIRM q_textConfirm;
-} struct__79014;
+} struct__82359;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Text_Message_T */
-typedef struct__79014 DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82359 DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_int number;
   BCD_DMI_Types_Pkg dig1;
   BCD_DMI_Types_Pkg dig2;
   BCD_DMI_Types_Pkg dig3;
-} struct__79025;
+} struct__82370;
 
 /* DMI_Types_Pkg::DMI_brakeModel_id_T */
-typedef struct__79025 DMI_brakeModel_id_T_DMI_Types_Pkg;
+typedef struct__82370 DMI_brakeModel_id_T_DMI_Types_Pkg;
 
 /* DMI_Types_Pkg::DMI_vMax_id_T */
-typedef struct__79025 DMI_vMax_id_T_DMI_Types_Pkg;
+typedef struct__82370 DMI_vMax_id_T_DMI_Types_Pkg;
 
 /* DMI_Types_Pkg::DMI_airtightSystem_T */
-typedef struct__79025 DMI_airtightSystem_T_DMI_Types_Pkg;
+typedef struct__82370 DMI_airtightSystem_T_DMI_Types_Pkg;
 
 /* DMI_Types_Pkg::DMI_loadingGauge_T */
-typedef struct__79025 DMI_loadingGauge_T_DMI_Types_Pkg;
+typedef struct__82370 DMI_loadingGauge_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_int number;
@@ -4985,10 +4990,10 @@ typedef struct {
   BCD_DMI_Types_Pkg dig2;
   BCD_DMI_Types_Pkg dig3;
   BCD_DMI_Types_Pkg dig4;
-} struct__79032;
+} struct__82377;
 
 /* DMI_Types_Pkg::DMI_train_length_T */
-typedef struct__79032 DMI_train_length_T_DMI_Types_Pkg;
+typedef struct__82377 DMI_train_length_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_int number;
@@ -4997,10 +5002,10 @@ typedef struct {
   BCD_DMI_Types_Pkg dig3;
   BCD_DMI_Types_Pkg dig4;
   BCD_DMI_Types_Pkg dig5;
-} struct__79040;
+} struct__82385;
 
 /* DMI_Types_Pkg::DMI_train_id_T */
-typedef struct__79040 DMI_train_id_T_DMI_Types_Pkg;
+typedef struct__82385 DMI_train_id_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -5012,10 +5017,10 @@ typedef struct {
   M_AXLELOADCAT mAxleLoad;
   DMI_airtightSystem_T_DMI_Types_Pkg airTightSystem;
   DMI_loadingGauge_T_DMI_Types_Pkg mLoadingGauge;
-} struct__79049;
+} struct__82394;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_EVC_Coded_Train_Data_T */
-typedef struct__79049 DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82394 DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool Menu_button_start_of_mission;
@@ -5048,19 +5053,19 @@ typedef struct {
   kcg_bool Fix_train_data_entry;
   kcg_bool Menu_button_Set_VBC;
   kcg_bool Menu_button_Remove_VBC;
-} struct__79061;
+} struct__82406;
 
 /* DMI_Types_Pkg::DMI_Available_Menu_T */
-typedef struct__79061 DMI_Available_Menu_T_DMI_Types_Pkg;
+typedef struct__82406 DMI_Available_Menu_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   T_internal_Type_Obu_BasicTypes_Pkg system_clock;
   DMI_Available_Menu_T_DMI_Types_Pkg available_menu;
-} struct__79094;
+} struct__82439;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Menu_Request_T */
-typedef struct__79094 DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82439 DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -5086,10 +5091,10 @@ typedef struct {
   L_internal_Type_Obu_BasicTypes_Pkg distance_to_TSA;
   connectionStatusRadioUnit_T_API_RadioCommunication_Pkg radioConnectionStatus;
   L_internal_Type_Obu_BasicTypes_Pkg distanceIndicationPoint;
-} struct__79100;
+} struct__82445;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Dynamic_T */
-typedef struct__79100 DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__82445 DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool present;
@@ -5109,19 +5114,10 @@ typedef struct {
   DMI_Train_Data_T_DMI_Messages_Bothways_Pkg trainData;
   DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg adhesionFactor;
   DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg iconRequest;
-} struct__79126;
+} struct__82471;
 
 /* API_DMI_Pkg::EVC_to_DMI_Message_T */
-typedef struct__79126 EVC_to_DMI_Message_T_API_DMI_Pkg;
-
-typedef struct {
-  MsgSource_T_Common_Types_Pkg source;
-  kcg_bool establishOrderDoesNotRequestToContactAnAcceptingRBC;
-  P42_SessionManagement_T_Packet_Types_Pkg p42;
-} struct__79146;
-
-/* MoRC_Pck::Coder_Pkg::p42_order_T */
-typedef struct__79146 p42_order_T_MoRC_Pck_Coder_Pkg;
+typedef struct__82471 EVC_to_DMI_Message_T_API_DMI_Pkg;
 
 typedef struct {
   kcg_bool establish;
@@ -5135,46 +5131,46 @@ typedef struct {
   NID_C nid_c;
   NID_RBC nid_rbc;
   NID_RADIO nid_radio;
-} struct__79152;
+} struct__82491;
 
 /* MoRC_Pck::Coder_Pkg::p42e_SessionManagement_T */
-typedef struct__79152 p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg;
+typedef struct__82491 p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg;
 
 typedef struct {
   kcg_bool valid;
   M_VERSION version;
   kcg_bool systemVersionFromTracksideSupported;
-} struct__79166;
+} struct__82505;
 
 /* MoRC_Pck::Coder_Pkg::m32e_RBC_or_RIU_System_Version_T */
-typedef struct__79166 m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg;
+typedef struct__82505 m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg;
 
 typedef struct {
   kcg_bool valid;
   safeRadioConnectionStatus_Type_MoRC_Pck status;
-} struct__79172;
+} struct__82511;
 
 /* MoRC_Pck::safeRadioConnectionStatusValid_Type */
-typedef struct__79172 safeRadioConnectionStatusValid_Type_MoRC_Pck;
+typedef struct__82511 safeRadioConnectionStatusValid_Type_MoRC_Pck;
 
 typedef struct {
   kcg_bool valid;
   mobileHWConnectionStatus_Type_MoRC_Pck connectionStatus;
   kcg_bool settingUpConnectionHasFailed;
   kcg_bool connectionLost;
-} struct__79177;
+} struct__82516;
 
 /* MoRC_Pck::mobileHWStatus_Type */
-typedef struct__79177 mobileHWStatus_Type_MoRC_Pck;
+typedef struct__82516 mobileHWStatus_Type_MoRC_Pck;
 
 typedef struct {
   kcg_bool valid;
   mobileSWAction_Type_MoRC_Pck action;
   NID_MN radioNetworkID;
-} struct__79184;
+} struct__82523;
 
 /* MoRC_Pck::mobileSWCmd_Type */
-typedef struct__79184 mobileSWCmd_Type_MoRC_Pck;
+typedef struct__82523 mobileSWCmd_Type_MoRC_Pck;
 
 typedef struct {
   kcg_bool atPowerDown;
@@ -5198,19 +5194,20 @@ typedef struct {
   kcg_bool OBU_hasToEstablishANewSession;
   kcg_bool isInCommunicationSessionWithAnRIU;
   kcg_bool errorConditionRequiringTerminationDetected;
-} struct__79190;
+  kcg_bool systemVersionFromTracksideSupported;
+} struct__82529;
 
 /* MoRC_Pck::obuEventsAndPhases_T */
-typedef struct__79190 obuEventsAndPhases_T_MoRC_Pck;
+typedef struct__82529 obuEventsAndPhases_T_MoRC_Pck;
 
 typedef struct {
   P45_RadioNetworkRegistration_T_Packet_Types_Pkg defaultID;
   P45_RadioNetworkRegistration_T_Packet_Types_Pkg memorizedID;
   P45_RadioNetworkRegistration_T_Packet_Types_Pkg ID_fromDriver;
-} struct__79214;
+} struct__82554;
 
 /* MoRC_Pck::radioNetWorkIDs_T */
-typedef struct__79214 radioNetWorkIDs_T_MoRC_Pck;
+typedef struct__82554 radioNetWorkIDs_T_MoRC_Pck;
 
 typedef struct {
   kcg_bool valid;
@@ -5219,58 +5216,69 @@ typedef struct {
   kcg_bool LevelNeedsAck;
   M_LEVEL newLevel;
   M_LEVEL previousLevel;
-} struct__79220;
+} struct__82560;
 
 /* DMI_Types_Pkg::DMI_ModesToDMI_T */
-typedef struct__79220 DMI_ModesToDMI_T_DMI_Types_Pkg;
+typedef struct__82560 DMI_ModesToDMI_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   L_internal_Type_Obu_BasicTypes_Pkg location_LOA;
   V_internal_Type_Obu_BasicTypes_Pkg v_LOA;
-} struct__79229;
+} struct__82569;
 
 /* DMI_Types_Pkg::movementAuthorityForDMI_T */
-typedef struct__79229 movementAuthorityForDMI_T_DMI_Types_Pkg;
+typedef struct__82569 movementAuthorityForDMI_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   NID_C nid_c;
   kcg_bool nid_c_valid;
-} struct__79235;
+} struct__82575;
 
 /* DMI_Types_Pkg::nationValuesForDMI_T */
-typedef struct__79235 nationValuesForDMI_T_DMI_Types_Pkg;
+typedef struct__82575 nationValuesForDMI_T_DMI_Types_Pkg;
 
 typedef struct {
   kcg_bool NO_initrequestSent;
   kcg_bool secondValidationRequested;
-} struct__79241;
+} struct__82581;
 
 /* manage_DMI_Output_Pkg::dmiOutputs_T */
-typedef struct__79241 dmiOutputs_T_manage_DMI_Output_Pkg;
+typedef struct__82581 dmiOutputs_T_manage_DMI_Output_Pkg;
+
+typedef struct {
+  kcg_bool NTC;
+  kcg_bool L0;
+  kcg_bool L1;
+  kcg_bool L2;
+  kcg_bool L3;
+} struct__82586;
+
+/* Level_And_Mode_Types_Pkg::T_ERTMS_capabilities */
+typedef struct__82586 T_ERTMS_capabilities_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool BG_In_List_Expected_BG_In_SR;
   kcg_bool BG_In_List_Expected_BG_In_SH;
   kcg_bool Linked_BG_In_Wrong_Direction;
-  struct__77275 Train_Position;
+  struct__80631 Train_Position;
   kcg_int Train_Speed;
   kcg_bool Train_Standstill;
-} struct__79246;
+} struct__82594;
 
 /* Level_And_Mode_Types_Pkg::T_Data_From_Localisation */
-typedef struct__79246 T_Data_From_Localisation_Level_And_Mode_Types_Pkg;
+typedef struct__82594 T_Data_From_Localisation_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool EoM_Procedure_req;
   kcg_bool Clean_BG_List_SH_Area;
   kcg_bool MA_Req;
   kcg_bool Req_for_SH_from_Driver;
-} struct__79255;
+} struct__82603;
 
 /* Level_And_Mode_Types_Pkg::T_Data_To_BG_Management */
-typedef struct__79255 T_Data_To_BG_Management_Level_And_Mode_Types_Pkg;
+typedef struct__82603 T_Data_To_BG_Management_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool Estim_front_End_overpass_SR_Dist;
@@ -5279,55 +5287,55 @@ typedef struct {
   kcg_bool EOA_Antenna_Overpass;
   kcg_bool EOA_Front_End;
   kcg_bool Train_Speed_Under_Overide_Limit;
-} struct__79262;
+} struct__82610;
 
 /* Level_And_Mode_Types_Pkg::T_Data_From_Speed_Supervision */
-typedef struct__79262 T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg;
+typedef struct__82610 T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   kcg_bool emergencyBrakeActive;
   kcg_bool isolationStatus;
-} struct__79271;
+} struct__82619;
 
 /* TIU_Types_Pkg::TIU_commandStatus_T */
-typedef struct__79271 TIU_commandStatus_T_TIU_Types_Pkg;
+typedef struct__82619 TIU_commandStatus_T_TIU_Types_Pkg;
 
-typedef struct { kcg_bool no_restriction; kcg_int restriction; } struct__79277;
+typedef struct { kcg_bool no_restriction; kcg_int restriction; } struct__82625;
 
 /* TIU_Types_Pkg::M_current_T */
-typedef struct__79277 M_current_T_TIU_Types_Pkg;
+typedef struct__82625 M_current_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   D_test_current_T_TIU_Types_Pkg d_test_current;
   M_current_T_TIU_Types_Pkg m_current;
-} struct__79282;
+} struct__82630;
 
 /* TIU_Types_Pkg::Change_of_allowed_current_consumption_T */
-typedef struct__79282 Change_of_allowed_current_consumption_T_TIU_Types_Pkg;
+typedef struct__82630 Change_of_allowed_current_consumption_T_TIU_Types_Pkg;
 
-typedef struct { kcg_bool valid; kcg_int door_control_info; } struct__79288;
+typedef struct { kcg_bool valid; kcg_int door_control_info; } struct__82636;
 
 /* TIU_Types_Pkg::Passenger_door_control_info_T */
-typedef struct__79288 Passenger_door_control_info_T_TIU_Types_Pkg;
+typedef struct__82636 Passenger_door_control_info_T_TIU_Types_Pkg;
 
 typedef struct {
   M_voltage_types_T_TIU_Types_Pkg voltage_type;
   NID_ctraction_T_TIU_Types_Pkg NID_ctraction;
-} struct__79293;
+} struct__82641;
 
 /* TIU_Types_Pkg::M_voltage_T */
-typedef struct__79293 M_voltage_T_TIU_Types_Pkg;
+typedef struct__82641 M_voltage_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   D_test_traction_T_TIU_Types_Pkg d_test_traction;
   M_voltage_T_TIU_Types_Pkg m_voltage;
-} struct__79298;
+} struct__82646;
 
 /* TIU_Types_Pkg::Change_traction_system_T */
-typedef struct__79298 Change_traction_system_T_TIU_Types_Pkg;
+typedef struct__82646 Change_traction_system_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -5335,28 +5343,28 @@ typedef struct {
   M_airtightness_command_T_TIU_Types_Pkg m_airtightness_cm;
   M_mainpowerswitch_command_T_TIU_Types_Pkg m_mainpowerswitch_cm;
   M_traction_cutoff_command_T_TIU_Types_Pkg m_traction_cutoff_cm;
-} struct__79304;
+} struct__82652;
 
 /* TIU_Types_Pkg::Type_I_train_commands_T */
-typedef struct__79304 Type_I_train_commands_T_TIU_Types_Pkg;
+typedef struct__82652 Type_I_train_commands_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   M_brake_inhibit_command_T_TIU_Types_Pkg m_regenerativebrake_cm;
   M_eddy_current_brake_inhibition_T_TIU_Types_Pkg m_eddycurrentbrake_cm;
   M_brake_inhibit_command_T_TIU_Types_Pkg m_magneticshoebrake_cm;
-} struct__79312;
+} struct__82660;
 
 /* TIU_Types_Pkg::Brake_inhibition_command_T */
-typedef struct__79312 Brake_inhibition_command_T_TIU_Types_Pkg;
+typedef struct__82660 Brake_inhibition_command_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   M_Isolation_status_T_TIU_Types_Pkg isolation_status;
-} struct__79319;
+} struct__82667;
 
 /* TIU_Types_Pkg::Isolation_Status_T */
-typedef struct__79319 Isolation_Status_T_TIU_Types_Pkg;
+typedef struct__82667 Isolation_Status_T_TIU_Types_Pkg;
 
 typedef struct {
   Isolation_Status_T_TIU_Types_Pkg isolation_status;
@@ -5366,23 +5374,28 @@ typedef struct {
   Change_traction_system_T_TIU_Types_Pkg change_traction_system;
   Passenger_door_control_info_T_TIU_Types_Pkg passenger_door_control_info;
   Change_of_allowed_current_consumption_T_TIU_Types_Pkg change_of_allowed_current_consumption;
-} struct__79324;
+} struct__82672;
 
 /* TIU_Types_Pkg::Message_EVC_to_Train_Interface_T */
-typedef struct__79324 Message_EVC_to_Train_Interface_T_TIU_Types_Pkg;
+typedef struct__82672 Message_EVC_to_Train_Interface_T_TIU_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
   Message_EVC_to_Train_Interface_T_TIU_Types_Pkg info;
-} struct__79334;
+} struct__82682;
 
 /* API_TIU_Pkg::TIU_Output_msg */
-typedef struct__79334 TIU_Output_msg_API_TIU_Pkg;
+typedef struct__82682 TIU_Output_msg_API_TIU_Pkg;
 
-typedef T_LevelTransition_Level_And_Mode_Types_Pkg array__79339[5];
+typedef kcg_bool array_bool_20[20];
+
+/* Level_And_Mode_Types_Pkg::T_TransitionConditions */
+typedef array_bool_20 T_TransitionConditions_Level_And_Mode_Types_Pkg;
+
+typedef T_LevelTransition_Level_And_Mode_Types_Pkg array__82690[5];
 
 /* Level_And_Mode_Types_Pkg::T_LevelTransition_PriorityTable */
-typedef array__79339 T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg;
+typedef array__82690 T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool Ack_LS;
@@ -5399,10 +5412,10 @@ typedef struct {
   kcg_bool Req_SH;
   kcg_bool Req_Start;
   kcg_bool ETCS_Isolated;
-} struct__79342;
+} struct__82693;
 
 /* Level_And_Mode_Types_Pkg::T_Data_From_DMI */
-typedef struct__79342 T_Data_From_DMI_Level_And_Mode_Types_Pkg;
+typedef struct__82693 T_Data_From_DMI_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool Ack_LS;
@@ -5414,10 +5427,32 @@ typedef struct {
   kcg_bool Ack_TR;
   kcg_bool Ack_UN;
   kcg_bool SH_Refused_By_RBC;
-} struct__79359;
+} struct__82710;
 
 /* Level_And_Mode_Types_Pkg::T_Data_To_DMI */
-typedef struct__79359 T_Data_To_DMI_Level_And_Mode_Types_Pkg;
+typedef struct__82710 T_Data_To_DMI_Level_And_Mode_Types_Pkg;
+
+typedef struct {
+  kcg_bool Available;
+  Location_T_Obu_BasicTypes_Pkg Dist_Start;
+  Location_T_Obu_BasicTypes_Pkg Length;
+  Location_T_Obu_BasicTypes_Pkg Dist_Run;
+  Speed_T_Obu_BasicTypes_Pkg Speed;
+} struct__82722;
+
+/* Level_And_Mode_Types_Pkg::T_Reversing_Data */
+typedef struct__82722 T_Reversing_Data_Level_And_Mode_Types_Pkg;
+
+typedef struct {
+  Location_T_Obu_BasicTypes_Pkg Distance;
+  T_MA_Level_And_Mode_Types_Pkg Mode;
+  Speed_T_Obu_BasicTypes_Pkg Speed;
+  Location_T_Obu_BasicTypes_Pkg Length;
+  Location_T_Obu_BasicTypes_Pkg Length_Ack;
+} struct__82730;
+
+/* Level_And_Mode_Types_Pkg::T_Mode_Profile */
+typedef struct__82730 T_Mode_Profile_Level_And_Mode_Types_Pkg;
 
 typedef struct {
   kcg_bool MA_SSP_Gradient_Available;
@@ -5434,46 +5469,41 @@ typedef struct {
   T_Reversing_Data_Level_And_Mode_Types_Pkg Reversing_Data;
   kcg_bool T_NVCONTACT_Overpass;
   kcg_bool Emergency_Stop_Message_Received;
-} struct__79371;
+} struct__82738;
 
 /* Level_And_Mode_Types_Pkg::T_Data_From_Track */
-typedef struct__79371 T_Data_From_Track_Level_And_Mode_Types_Pkg;
+typedef struct__82738 T_Data_From_Track_Level_And_Mode_Types_Pkg;
 
-typedef T_Mode_Profile_Level_And_Mode_Types_Pkg array__79388[5];
+typedef T_Mode_Profile_Level_And_Mode_Types_Pkg array__82755[5];
 
 /* Level_And_Mode_Types_Pkg::T_Mode_Profile_Table */
-typedef array__79388 T_Mode_Profile_Table_Level_And_Mode_Types_Pkg;
-
-typedef kcg_bool array_bool_20[20];
-
-/* Level_And_Mode_Types_Pkg::T_TransitionConditions */
-typedef array_bool_20 T_TransitionConditions_Level_And_Mode_Types_Pkg;
+typedef array__82755 T_Mode_Profile_Table_Level_And_Mode_Types_Pkg;
 
 typedef kcg_bool array_bool_4[4];
 
-typedef struct { kcg_int idx; array_bool_4 items; } struct__79397;
+typedef struct { kcg_int idx; array_bool_4 items; } struct__82761;
 
 typedef kcg_bool array_bool_1[1];
 
 typedef kcg_real array_real_1[1];
 
-typedef Target_real_T_TargetManagement_types array__79408[1];
+typedef Target_real_T_TargetManagement_types array__82772[1];
 
 typedef kcg_bool array_bool_8[8];
 
 typedef kcg_bool array_bool_30[30];
 
-typedef ReceivedMessage_T_Common_Types_Pkg array__79417[3];
+typedef ReceivedMessage_T_Common_Types_Pkg array__82781[3];
 
-typedef ErrorMessage_T_ProvidePositionReport_Pkg array__79420[9];
+typedef ErrorMessage_T_ProvidePositionReport_Pkg array__82784[9];
 
-typedef SSP_t_indexed_matrix_element_TA_MRSP array__79423[11];
+typedef SSP_t_indexed_matrix_element_TA_MRSP array__82787[11];
 
-typedef P027V1_section_enum_T_TM_baseline2 array__79426[1];
+typedef P027V1_section_enum_T_TM_baseline2 array__82790[1];
 
-typedef struct__76965 array__79429[1];
+typedef struct__80321 array__82793[1];
 
-typedef positionedBG_T_TrainPosition_Types_Pck array__79432[1];
+typedef positionedBG_T_TrainPosition_Types_Pck array__82796[1];
 
 typedef kcg_int array_int_1[1];
 
@@ -5481,1059 +5511,1055 @@ typedef kcg_real array_real_24[24];
 
 typedef kcg_bool array_bool_24[24];
 
-typedef Target_real_T_TargetManagement_types array__82215[199];
+typedef Target_real_T_TargetManagement_types array__85687[199];
 
-typedef P027V1_section_enum_T_TM_baseline2 array__82684[32];
+typedef P027V1_section_enum_T_TM_baseline2 array__86192[32];
 
-typedef SSP_section_t_TA_MRSP array__82691[32];
+typedef SSP_section_t_TA_MRSP array__86199[32];
 
-typedef P003_OBU_nid_c_section_enum_T_TM array__82748[31];
+typedef P003_OBU_nid_c_section_enum_T_TM array__86240[31];
 
-typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
+typedef positionedBG_T_TrainPosition_Types_Pck array__86322[7];
 
-#ifndef kcg_copy_struct__76855
-#define kcg_copy_struct__76855(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76855)))
-#endif /* kcg_copy_struct__76855 */
+#ifndef kcg_copy_struct__80211
+#define kcg_copy_struct__80211(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80211)))
+#endif /* kcg_copy_struct__80211 */
 
-#ifndef kcg_copy_struct__76864
-#define kcg_copy_struct__76864(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76864)))
-#endif /* kcg_copy_struct__76864 */
+#ifndef kcg_copy_struct__80220
+#define kcg_copy_struct__80220(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80220)))
+#endif /* kcg_copy_struct__80220 */
 
-#ifndef kcg_copy_struct__76874
-#define kcg_copy_struct__76874(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76874)))
-#endif /* kcg_copy_struct__76874 */
+#ifndef kcg_copy_struct__80230
+#define kcg_copy_struct__80230(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80230)))
+#endif /* kcg_copy_struct__80230 */
 
-#ifndef kcg_copy_struct__76889
-#define kcg_copy_struct__76889(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76889)))
-#endif /* kcg_copy_struct__76889 */
+#ifndef kcg_copy_struct__80245
+#define kcg_copy_struct__80245(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80245)))
+#endif /* kcg_copy_struct__80245 */
 
-#ifndef kcg_copy_struct__76899
-#define kcg_copy_struct__76899(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76899)))
-#endif /* kcg_copy_struct__76899 */
+#ifndef kcg_copy_struct__80255
+#define kcg_copy_struct__80255(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80255)))
+#endif /* kcg_copy_struct__80255 */
 
-#ifndef kcg_copy_struct__76930
-#define kcg_copy_struct__76930(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76930)))
-#endif /* kcg_copy_struct__76930 */
+#ifndef kcg_copy_struct__80286
+#define kcg_copy_struct__80286(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80286)))
+#endif /* kcg_copy_struct__80286 */
 
-#ifndef kcg_copy_struct__76935
-#define kcg_copy_struct__76935(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76935)))
-#endif /* kcg_copy_struct__76935 */
+#ifndef kcg_copy_struct__80291
+#define kcg_copy_struct__80291(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80291)))
+#endif /* kcg_copy_struct__80291 */
 
-#ifndef kcg_copy_struct__76944
-#define kcg_copy_struct__76944(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76944)))
-#endif /* kcg_copy_struct__76944 */
+#ifndef kcg_copy_struct__80300
+#define kcg_copy_struct__80300(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80300)))
+#endif /* kcg_copy_struct__80300 */
 
-#ifndef kcg_copy_struct__76954
-#define kcg_copy_struct__76954(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76954)))
-#endif /* kcg_copy_struct__76954 */
+#ifndef kcg_copy_struct__80310
+#define kcg_copy_struct__80310(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80310)))
+#endif /* kcg_copy_struct__80310 */
 
-#ifndef kcg_copy_struct__76965
-#define kcg_copy_struct__76965(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76965)))
-#endif /* kcg_copy_struct__76965 */
+#ifndef kcg_copy_struct__80321
+#define kcg_copy_struct__80321(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80321)))
+#endif /* kcg_copy_struct__80321 */
 
-#ifndef kcg_copy_struct__76973
-#define kcg_copy_struct__76973(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__76973)))
-#endif /* kcg_copy_struct__76973 */
+#ifndef kcg_copy_struct__80329
+#define kcg_copy_struct__80329(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80329)))
+#endif /* kcg_copy_struct__80329 */
 
-#ifndef kcg_copy_struct__77012
-#define kcg_copy_struct__77012(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77012)))
-#endif /* kcg_copy_struct__77012 */
+#ifndef kcg_copy_struct__80368
+#define kcg_copy_struct__80368(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80368)))
+#endif /* kcg_copy_struct__80368 */
 
-#ifndef kcg_copy_struct__77032
-#define kcg_copy_struct__77032(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77032)))
-#endif /* kcg_copy_struct__77032 */
+#ifndef kcg_copy_struct__80388
+#define kcg_copy_struct__80388(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80388)))
+#endif /* kcg_copy_struct__80388 */
 
-#ifndef kcg_copy_struct__77043
-#define kcg_copy_struct__77043(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77043)))
-#endif /* kcg_copy_struct__77043 */
+#ifndef kcg_copy_struct__80399
+#define kcg_copy_struct__80399(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80399)))
+#endif /* kcg_copy_struct__80399 */
 
-#ifndef kcg_copy_struct__77048
-#define kcg_copy_struct__77048(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77048)))
-#endif /* kcg_copy_struct__77048 */
+#ifndef kcg_copy_struct__80404
+#define kcg_copy_struct__80404(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80404)))
+#endif /* kcg_copy_struct__80404 */
 
-#ifndef kcg_copy_struct__77062
-#define kcg_copy_struct__77062(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77062)))
-#endif /* kcg_copy_struct__77062 */
+#ifndef kcg_copy_struct__80418
+#define kcg_copy_struct__80418(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80418)))
+#endif /* kcg_copy_struct__80418 */
 
-#ifndef kcg_copy_struct__77077
-#define kcg_copy_struct__77077(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77077)))
-#endif /* kcg_copy_struct__77077 */
+#ifndef kcg_copy_struct__80433
+#define kcg_copy_struct__80433(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80433)))
+#endif /* kcg_copy_struct__80433 */
 
-#ifndef kcg_copy_struct__77095
-#define kcg_copy_struct__77095(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77095)))
-#endif /* kcg_copy_struct__77095 */
+#ifndef kcg_copy_struct__80451
+#define kcg_copy_struct__80451(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80451)))
+#endif /* kcg_copy_struct__80451 */
 
-#ifndef kcg_copy_struct__77107
-#define kcg_copy_struct__77107(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77107)))
-#endif /* kcg_copy_struct__77107 */
+#ifndef kcg_copy_struct__80463
+#define kcg_copy_struct__80463(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80463)))
+#endif /* kcg_copy_struct__80463 */
 
-#ifndef kcg_copy_struct__77114
-#define kcg_copy_struct__77114(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77114)))
-#endif /* kcg_copy_struct__77114 */
+#ifndef kcg_copy_struct__80470
+#define kcg_copy_struct__80470(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80470)))
+#endif /* kcg_copy_struct__80470 */
 
-#ifndef kcg_copy_struct__77121
-#define kcg_copy_struct__77121(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77121)))
-#endif /* kcg_copy_struct__77121 */
+#ifndef kcg_copy_struct__80477
+#define kcg_copy_struct__80477(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80477)))
+#endif /* kcg_copy_struct__80477 */
 
-#ifndef kcg_copy_struct__77127
-#define kcg_copy_struct__77127(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77127)))
-#endif /* kcg_copy_struct__77127 */
+#ifndef kcg_copy_struct__80483
+#define kcg_copy_struct__80483(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80483)))
+#endif /* kcg_copy_struct__80483 */
 
-#ifndef kcg_copy_struct__77137
-#define kcg_copy_struct__77137(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77137)))
-#endif /* kcg_copy_struct__77137 */
-
-#ifndef kcg_copy_struct__77143
-#define kcg_copy_struct__77143(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77143)))
-#endif /* kcg_copy_struct__77143 */
-
-#ifndef kcg_copy_struct__77161
-#define kcg_copy_struct__77161(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77161)))
-#endif /* kcg_copy_struct__77161 */
-
-#ifndef kcg_copy_struct__77171
-#define kcg_copy_struct__77171(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77171)))
-#endif /* kcg_copy_struct__77171 */
-
-#ifndef kcg_copy_struct__77177
-#define kcg_copy_struct__77177(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77177)))
-#endif /* kcg_copy_struct__77177 */
-
-#ifndef kcg_copy_struct__77186
-#define kcg_copy_struct__77186(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77186)))
-#endif /* kcg_copy_struct__77186 */
-
-#ifndef kcg_copy_struct__77200
-#define kcg_copy_struct__77200(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77200)))
-#endif /* kcg_copy_struct__77200 */
-
-#ifndef kcg_copy_struct__77206
-#define kcg_copy_struct__77206(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77206)))
-#endif /* kcg_copy_struct__77206 */
-
-#ifndef kcg_copy_struct__77215
-#define kcg_copy_struct__77215(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77215)))
-#endif /* kcg_copy_struct__77215 */
-
-#ifndef kcg_copy_struct__77224
-#define kcg_copy_struct__77224(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77224)))
-#endif /* kcg_copy_struct__77224 */
-
-#ifndef kcg_copy_struct__77234
-#define kcg_copy_struct__77234(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77234)))
-#endif /* kcg_copy_struct__77234 */
-
-#ifndef kcg_copy_struct__77242
-#define kcg_copy_struct__77242(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77242)))
-#endif /* kcg_copy_struct__77242 */
-
-#ifndef kcg_copy_struct__77250
-#define kcg_copy_struct__77250(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77250)))
-#endif /* kcg_copy_struct__77250 */
-
-#ifndef kcg_copy_struct__77262
-#define kcg_copy_struct__77262(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77262)))
-#endif /* kcg_copy_struct__77262 */
-
-#ifndef kcg_copy_struct__77275
-#define kcg_copy_struct__77275(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77275)))
-#endif /* kcg_copy_struct__77275 */
-
-#ifndef kcg_copy_struct__77292
-#define kcg_copy_struct__77292(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77292)))
-#endif /* kcg_copy_struct__77292 */
-
-#ifndef kcg_copy_struct__77300
-#define kcg_copy_struct__77300(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77300)))
-#endif /* kcg_copy_struct__77300 */
-
-#ifndef kcg_copy_struct__77313
-#define kcg_copy_struct__77313(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77313)))
-#endif /* kcg_copy_struct__77313 */
-
-#ifndef kcg_copy_struct__77322
-#define kcg_copy_struct__77322(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77322)))
-#endif /* kcg_copy_struct__77322 */
-
-#ifndef kcg_copy_struct__77332
-#define kcg_copy_struct__77332(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77332)))
-#endif /* kcg_copy_struct__77332 */
-
-#ifndef kcg_copy_struct__77350
-#define kcg_copy_struct__77350(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77350)))
-#endif /* kcg_copy_struct__77350 */
-
-#ifndef kcg_copy_struct__77358
-#define kcg_copy_struct__77358(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77358)))
-#endif /* kcg_copy_struct__77358 */
-
-#ifndef kcg_copy_struct__77366
-#define kcg_copy_struct__77366(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77366)))
-#endif /* kcg_copy_struct__77366 */
-
-#ifndef kcg_copy_struct__77374
-#define kcg_copy_struct__77374(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77374)))
-#endif /* kcg_copy_struct__77374 */
-
-#ifndef kcg_copy_struct__77390
-#define kcg_copy_struct__77390(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77390)))
-#endif /* kcg_copy_struct__77390 */
-
-#ifndef kcg_copy_struct__77423
-#define kcg_copy_struct__77423(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77423)))
-#endif /* kcg_copy_struct__77423 */
-
-#ifndef kcg_copy_struct__77478
-#define kcg_copy_struct__77478(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77478)))
-#endif /* kcg_copy_struct__77478 */
-
-#ifndef kcg_copy_struct__77489
-#define kcg_copy_struct__77489(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77489)))
-#endif /* kcg_copy_struct__77489 */
-
-#ifndef kcg_copy_struct__77523
-#define kcg_copy_struct__77523(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77523)))
-#endif /* kcg_copy_struct__77523 */
-
-#ifndef kcg_copy_struct__77532
-#define kcg_copy_struct__77532(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77532)))
-#endif /* kcg_copy_struct__77532 */
-
-#ifndef kcg_copy_struct__77537
-#define kcg_copy_struct__77537(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77537)))
-#endif /* kcg_copy_struct__77537 */
-
-#ifndef kcg_copy_struct__77546
-#define kcg_copy_struct__77546(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77546)))
-#endif /* kcg_copy_struct__77546 */
-
-#ifndef kcg_copy_struct__77564
-#define kcg_copy_struct__77564(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77564)))
-#endif /* kcg_copy_struct__77564 */
-
-#ifndef kcg_copy_struct__77572
-#define kcg_copy_struct__77572(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77572)))
-#endif /* kcg_copy_struct__77572 */
-
-#ifndef kcg_copy_struct__77581
-#define kcg_copy_struct__77581(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77581)))
-#endif /* kcg_copy_struct__77581 */
-
-#ifndef kcg_copy_struct__77593
-#define kcg_copy_struct__77593(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77593)))
-#endif /* kcg_copy_struct__77593 */
-
-#ifndef kcg_copy_struct__77600
-#define kcg_copy_struct__77600(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77600)))
-#endif /* kcg_copy_struct__77600 */
-
-#ifndef kcg_copy_struct__77615
-#define kcg_copy_struct__77615(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77615)))
-#endif /* kcg_copy_struct__77615 */
-
-#ifndef kcg_copy_struct__77630
-#define kcg_copy_struct__77630(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77630)))
-#endif /* kcg_copy_struct__77630 */
-
-#ifndef kcg_copy_struct__77635
-#define kcg_copy_struct__77635(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77635)))
-#endif /* kcg_copy_struct__77635 */
-
-#ifndef kcg_copy_struct__77641
-#define kcg_copy_struct__77641(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77641)))
-#endif /* kcg_copy_struct__77641 */
-
-#ifndef kcg_copy_struct__77646
-#define kcg_copy_struct__77646(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77646)))
-#endif /* kcg_copy_struct__77646 */
-
-#ifndef kcg_copy_struct__77653
-#define kcg_copy_struct__77653(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77653)))
-#endif /* kcg_copy_struct__77653 */
-
-#ifndef kcg_copy_struct__77664
-#define kcg_copy_struct__77664(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77664)))
-#endif /* kcg_copy_struct__77664 */
-
-#ifndef kcg_copy_struct__77674
-#define kcg_copy_struct__77674(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77674)))
-#endif /* kcg_copy_struct__77674 */
-
-#ifndef kcg_copy_struct__77685
-#define kcg_copy_struct__77685(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77685)))
-#endif /* kcg_copy_struct__77685 */
-
-#ifndef kcg_copy_struct__77697
-#define kcg_copy_struct__77697(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77697)))
-#endif /* kcg_copy_struct__77697 */
-
-#ifndef kcg_copy_struct__77705
-#define kcg_copy_struct__77705(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77705)))
-#endif /* kcg_copy_struct__77705 */
-
-#ifndef kcg_copy_struct__77721
-#define kcg_copy_struct__77721(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77721)))
-#endif /* kcg_copy_struct__77721 */
-
-#ifndef kcg_copy_struct__77726
-#define kcg_copy_struct__77726(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77726)))
-#endif /* kcg_copy_struct__77726 */
-
-#ifndef kcg_copy_struct__77731
-#define kcg_copy_struct__77731(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77731)))
-#endif /* kcg_copy_struct__77731 */
-
-#ifndef kcg_copy_struct__77736
-#define kcg_copy_struct__77736(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77736)))
-#endif /* kcg_copy_struct__77736 */
-
-#ifndef kcg_copy_struct__77744
-#define kcg_copy_struct__77744(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77744)))
-#endif /* kcg_copy_struct__77744 */
-
-#ifndef kcg_copy_struct__77750
-#define kcg_copy_struct__77750(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77750)))
-#endif /* kcg_copy_struct__77750 */
-
-#ifndef kcg_copy_struct__77770
-#define kcg_copy_struct__77770(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77770)))
-#endif /* kcg_copy_struct__77770 */
-
-#ifndef kcg_copy_struct__77775
-#define kcg_copy_struct__77775(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77775)))
-#endif /* kcg_copy_struct__77775 */
-
-#ifndef kcg_copy_struct__77794
-#define kcg_copy_struct__77794(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77794)))
-#endif /* kcg_copy_struct__77794 */
-
-#ifndef kcg_copy_struct__77799
-#define kcg_copy_struct__77799(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77799)))
-#endif /* kcg_copy_struct__77799 */
-
-#ifndef kcg_copy_struct__77809
-#define kcg_copy_struct__77809(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77809)))
-#endif /* kcg_copy_struct__77809 */
-
-#ifndef kcg_copy_struct__77815
-#define kcg_copy_struct__77815(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77815)))
-#endif /* kcg_copy_struct__77815 */
-
-#ifndef kcg_copy_struct__77820
-#define kcg_copy_struct__77820(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77820)))
-#endif /* kcg_copy_struct__77820 */
-
-#ifndef kcg_copy_struct__77828
-#define kcg_copy_struct__77828(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77828)))
-#endif /* kcg_copy_struct__77828 */
-
-#ifndef kcg_copy_struct__77837
-#define kcg_copy_struct__77837(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77837)))
-#endif /* kcg_copy_struct__77837 */
-
-#ifndef kcg_copy_struct__77844
-#define kcg_copy_struct__77844(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77844)))
-#endif /* kcg_copy_struct__77844 */
-
-#ifndef kcg_copy_struct__77850
-#define kcg_copy_struct__77850(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77850)))
-#endif /* kcg_copy_struct__77850 */
-
-#ifndef kcg_copy_struct__77858
-#define kcg_copy_struct__77858(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77858)))
-#endif /* kcg_copy_struct__77858 */
-
-#ifndef kcg_copy_struct__77863
-#define kcg_copy_struct__77863(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77863)))
-#endif /* kcg_copy_struct__77863 */
-
-#ifndef kcg_copy_struct__77870
-#define kcg_copy_struct__77870(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77870)))
-#endif /* kcg_copy_struct__77870 */
-
-#ifndef kcg_copy_struct__77878
-#define kcg_copy_struct__77878(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77878)))
-#endif /* kcg_copy_struct__77878 */
-
-#ifndef kcg_copy_struct__77886
-#define kcg_copy_struct__77886(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77886)))
-#endif /* kcg_copy_struct__77886 */
-
-#ifndef kcg_copy_struct__77895
-#define kcg_copy_struct__77895(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77895)))
-#endif /* kcg_copy_struct__77895 */
-
-#ifndef kcg_copy_struct__77913
-#define kcg_copy_struct__77913(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77913)))
-#endif /* kcg_copy_struct__77913 */
-
-#ifndef kcg_copy_struct__77925
-#define kcg_copy_struct__77925(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77925)))
-#endif /* kcg_copy_struct__77925 */
-
-#ifndef kcg_copy_struct__77931
-#define kcg_copy_struct__77931(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77931)))
-#endif /* kcg_copy_struct__77931 */
-
-#ifndef kcg_copy_struct__77946
-#define kcg_copy_struct__77946(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77946)))
-#endif /* kcg_copy_struct__77946 */
-
-#ifndef kcg_copy_struct__77956
-#define kcg_copy_struct__77956(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77956)))
-#endif /* kcg_copy_struct__77956 */
-
-#ifndef kcg_copy_struct__77969
-#define kcg_copy_struct__77969(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77969)))
-#endif /* kcg_copy_struct__77969 */
-
-#ifndef kcg_copy_struct__77980
-#define kcg_copy_struct__77980(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77980)))
-#endif /* kcg_copy_struct__77980 */
-
-#ifndef kcg_copy_struct__77991
-#define kcg_copy_struct__77991(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__77991)))
-#endif /* kcg_copy_struct__77991 */
-
-#ifndef kcg_copy_struct__78002
-#define kcg_copy_struct__78002(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78002)))
-#endif /* kcg_copy_struct__78002 */
-
-#ifndef kcg_copy_struct__78014
-#define kcg_copy_struct__78014(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78014)))
-#endif /* kcg_copy_struct__78014 */
-
-#ifndef kcg_copy_struct__78044
-#define kcg_copy_struct__78044(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78044)))
-#endif /* kcg_copy_struct__78044 */
-
-#ifndef kcg_copy_struct__78052
-#define kcg_copy_struct__78052(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78052)))
-#endif /* kcg_copy_struct__78052 */
-
-#ifndef kcg_copy_struct__78060
-#define kcg_copy_struct__78060(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78060)))
-#endif /* kcg_copy_struct__78060 */
-
-#ifndef kcg_copy_struct__78066
-#define kcg_copy_struct__78066(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78066)))
-#endif /* kcg_copy_struct__78066 */
-
-#ifndef kcg_copy_struct__78081
-#define kcg_copy_struct__78081(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78081)))
-#endif /* kcg_copy_struct__78081 */
-
-#ifndef kcg_copy_struct__78094
-#define kcg_copy_struct__78094(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78094)))
-#endif /* kcg_copy_struct__78094 */
-
-#ifndef kcg_copy_struct__78103
-#define kcg_copy_struct__78103(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78103)))
-#endif /* kcg_copy_struct__78103 */
-
-#ifndef kcg_copy_struct__78108
-#define kcg_copy_struct__78108(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78108)))
-#endif /* kcg_copy_struct__78108 */
-
-#ifndef kcg_copy_struct__78118
-#define kcg_copy_struct__78118(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78118)))
-#endif /* kcg_copy_struct__78118 */
-
-#ifndef kcg_copy_struct__78130
-#define kcg_copy_struct__78130(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78130)))
-#endif /* kcg_copy_struct__78130 */
-
-#ifndef kcg_copy_struct__78136
-#define kcg_copy_struct__78136(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78136)))
-#endif /* kcg_copy_struct__78136 */
-
-#ifndef kcg_copy_struct__78141
-#define kcg_copy_struct__78141(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78141)))
-#endif /* kcg_copy_struct__78141 */
-
-#ifndef kcg_copy_struct__78147
-#define kcg_copy_struct__78147(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78147)))
-#endif /* kcg_copy_struct__78147 */
-
-#ifndef kcg_copy_struct__78153
-#define kcg_copy_struct__78153(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78153)))
-#endif /* kcg_copy_struct__78153 */
-
-#ifndef kcg_copy_struct__78158
-#define kcg_copy_struct__78158(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78158)))
-#endif /* kcg_copy_struct__78158 */
-
-#ifndef kcg_copy_struct__78167
-#define kcg_copy_struct__78167(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78167)))
-#endif /* kcg_copy_struct__78167 */
-
-#ifndef kcg_copy_struct__78178
-#define kcg_copy_struct__78178(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78178)))
-#endif /* kcg_copy_struct__78178 */
-
-#ifndef kcg_copy_struct__78187
-#define kcg_copy_struct__78187(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78187)))
-#endif /* kcg_copy_struct__78187 */
-
-#ifndef kcg_copy_struct__78194
-#define kcg_copy_struct__78194(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78194)))
-#endif /* kcg_copy_struct__78194 */
-
-#ifndef kcg_copy_struct__78199
-#define kcg_copy_struct__78199(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78199)))
-#endif /* kcg_copy_struct__78199 */
-
-#ifndef kcg_copy_struct__78204
-#define kcg_copy_struct__78204(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78204)))
-#endif /* kcg_copy_struct__78204 */
-
-#ifndef kcg_copy_struct__78210
-#define kcg_copy_struct__78210(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78210)))
-#endif /* kcg_copy_struct__78210 */
-
-#ifndef kcg_copy_struct__78215
-#define kcg_copy_struct__78215(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78215)))
-#endif /* kcg_copy_struct__78215 */
-
-#ifndef kcg_copy_struct__78224
-#define kcg_copy_struct__78224(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78224)))
-#endif /* kcg_copy_struct__78224 */
-
-#ifndef kcg_copy_struct__78228
-#define kcg_copy_struct__78228(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78228)))
-#endif /* kcg_copy_struct__78228 */
-
-#ifndef kcg_copy_struct__78233
-#define kcg_copy_struct__78233(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78233)))
-#endif /* kcg_copy_struct__78233 */
-
-#ifndef kcg_copy_struct__78241
-#define kcg_copy_struct__78241(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78241)))
-#endif /* kcg_copy_struct__78241 */
-
-#ifndef kcg_copy_struct__78254
-#define kcg_copy_struct__78254(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78254)))
-#endif /* kcg_copy_struct__78254 */
-
-#ifndef kcg_copy_struct__78263
-#define kcg_copy_struct__78263(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78263)))
-#endif /* kcg_copy_struct__78263 */
-
-#ifndef kcg_copy_struct__78277
-#define kcg_copy_struct__78277(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78277)))
-#endif /* kcg_copy_struct__78277 */
-
-#ifndef kcg_copy_struct__78285
-#define kcg_copy_struct__78285(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78285)))
-#endif /* kcg_copy_struct__78285 */
-
-#ifndef kcg_copy_struct__78298
-#define kcg_copy_struct__78298(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78298)))
-#endif /* kcg_copy_struct__78298 */
-
-#ifndef kcg_copy_struct__78303
-#define kcg_copy_struct__78303(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78303)))
-#endif /* kcg_copy_struct__78303 */
-
-#ifndef kcg_copy_struct__78312
-#define kcg_copy_struct__78312(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78312)))
-#endif /* kcg_copy_struct__78312 */
-
-#ifndef kcg_copy_struct__78333
-#define kcg_copy_struct__78333(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78333)))
-#endif /* kcg_copy_struct__78333 */
-
-#ifndef kcg_copy_struct__78344
-#define kcg_copy_struct__78344(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78344)))
-#endif /* kcg_copy_struct__78344 */
-
-#ifndef kcg_copy_struct__78350
-#define kcg_copy_struct__78350(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78350)))
-#endif /* kcg_copy_struct__78350 */
-
-#ifndef kcg_copy_struct__78360
-#define kcg_copy_struct__78360(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78360)))
-#endif /* kcg_copy_struct__78360 */
-
-#ifndef kcg_copy_struct__78369
-#define kcg_copy_struct__78369(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78369)))
-#endif /* kcg_copy_struct__78369 */
-
-#ifndef kcg_copy_struct__78377
-#define kcg_copy_struct__78377(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78377)))
-#endif /* kcg_copy_struct__78377 */
-
-#ifndef kcg_copy_struct__78387
-#define kcg_copy_struct__78387(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78387)))
-#endif /* kcg_copy_struct__78387 */
-
-#ifndef kcg_copy_struct__78396
-#define kcg_copy_struct__78396(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78396)))
-#endif /* kcg_copy_struct__78396 */
-
-#ifndef kcg_copy_struct__78403
-#define kcg_copy_struct__78403(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78403)))
-#endif /* kcg_copy_struct__78403 */
-
-#ifndef kcg_copy_struct__78411
-#define kcg_copy_struct__78411(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78411)))
-#endif /* kcg_copy_struct__78411 */
-
-#ifndef kcg_copy_struct__78422
-#define kcg_copy_struct__78422(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78422)))
-#endif /* kcg_copy_struct__78422 */
-
-#ifndef kcg_copy_struct__78434
-#define kcg_copy_struct__78434(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78434)))
-#endif /* kcg_copy_struct__78434 */
-
-#ifndef kcg_copy_struct__78440
-#define kcg_copy_struct__78440(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78440)))
-#endif /* kcg_copy_struct__78440 */
-
-#ifndef kcg_copy_struct__78446
-#define kcg_copy_struct__78446(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78446)))
-#endif /* kcg_copy_struct__78446 */
-
-#ifndef kcg_copy_struct__78452
-#define kcg_copy_struct__78452(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78452)))
-#endif /* kcg_copy_struct__78452 */
-
-#ifndef kcg_copy_struct__78457
-#define kcg_copy_struct__78457(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78457)))
-#endif /* kcg_copy_struct__78457 */
-
-#ifndef kcg_copy_struct__78467
-#define kcg_copy_struct__78467(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78467)))
-#endif /* kcg_copy_struct__78467 */
-
-#ifndef kcg_copy_struct__78481
-#define kcg_copy_struct__78481(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78481)))
-#endif /* kcg_copy_struct__78481 */
-
-#ifndef kcg_copy_struct__78487
-#define kcg_copy_struct__78487(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78487)))
-#endif /* kcg_copy_struct__78487 */
-
-#ifndef kcg_copy_struct__78494
-#define kcg_copy_struct__78494(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78494)))
-#endif /* kcg_copy_struct__78494 */
-
-#ifndef kcg_copy_struct__78501
-#define kcg_copy_struct__78501(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78501)))
-#endif /* kcg_copy_struct__78501 */
-
-#ifndef kcg_copy_struct__78507
-#define kcg_copy_struct__78507(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78507)))
-#endif /* kcg_copy_struct__78507 */
-
-#ifndef kcg_copy_struct__78516
-#define kcg_copy_struct__78516(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78516)))
-#endif /* kcg_copy_struct__78516 */
-
-#ifndef kcg_copy_struct__78522
-#define kcg_copy_struct__78522(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78522)))
-#endif /* kcg_copy_struct__78522 */
-
-#ifndef kcg_copy_struct__78527
-#define kcg_copy_struct__78527(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78527)))
-#endif /* kcg_copy_struct__78527 */
-
-#ifndef kcg_copy_struct__78537
-#define kcg_copy_struct__78537(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78537)))
-#endif /* kcg_copy_struct__78537 */
-
-#ifndef kcg_copy_struct__78547
-#define kcg_copy_struct__78547(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78547)))
-#endif /* kcg_copy_struct__78547 */
-
-#ifndef kcg_copy_struct__78563
-#define kcg_copy_struct__78563(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78563)))
-#endif /* kcg_copy_struct__78563 */
-
-#ifndef kcg_copy_struct__78575
-#define kcg_copy_struct__78575(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78575)))
-#endif /* kcg_copy_struct__78575 */
-
-#ifndef kcg_copy_struct__78582
-#define kcg_copy_struct__78582(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78582)))
-#endif /* kcg_copy_struct__78582 */
-
-#ifndef kcg_copy_struct__78615
-#define kcg_copy_struct__78615(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78615)))
-#endif /* kcg_copy_struct__78615 */
-
-#ifndef kcg_copy_struct__78620
-#define kcg_copy_struct__78620(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78620)))
-#endif /* kcg_copy_struct__78620 */
-
-#ifndef kcg_copy_struct__78625
-#define kcg_copy_struct__78625(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78625)))
-#endif /* kcg_copy_struct__78625 */
-
-#ifndef kcg_copy_struct__78634
-#define kcg_copy_struct__78634(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78634)))
-#endif /* kcg_copy_struct__78634 */
-
-#ifndef kcg_copy_struct__78641
-#define kcg_copy_struct__78641(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78641)))
-#endif /* kcg_copy_struct__78641 */
-
-#ifndef kcg_copy_struct__78648
-#define kcg_copy_struct__78648(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78648)))
-#endif /* kcg_copy_struct__78648 */
-
-#ifndef kcg_copy_struct__78654
-#define kcg_copy_struct__78654(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78654)))
-#endif /* kcg_copy_struct__78654 */
-
-#ifndef kcg_copy_struct__78664
-#define kcg_copy_struct__78664(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78664)))
-#endif /* kcg_copy_struct__78664 */
-
-#ifndef kcg_copy_struct__78676
-#define kcg_copy_struct__78676(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78676)))
-#endif /* kcg_copy_struct__78676 */
-
-#ifndef kcg_copy_struct__78683
-#define kcg_copy_struct__78683(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78683)))
-#endif /* kcg_copy_struct__78683 */
-
-#ifndef kcg_copy_struct__78693
-#define kcg_copy_struct__78693(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78693)))
-#endif /* kcg_copy_struct__78693 */
-
-#ifndef kcg_copy_struct__78702
-#define kcg_copy_struct__78702(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78702)))
-#endif /* kcg_copy_struct__78702 */
-
-#ifndef kcg_copy_struct__78713
-#define kcg_copy_struct__78713(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78713)))
-#endif /* kcg_copy_struct__78713 */
-
-#ifndef kcg_copy_struct__78720
-#define kcg_copy_struct__78720(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78720)))
-#endif /* kcg_copy_struct__78720 */
-
-#ifndef kcg_copy_struct__78730
-#define kcg_copy_struct__78730(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78730)))
-#endif /* kcg_copy_struct__78730 */
-
-#ifndef kcg_copy_struct__78735
-#define kcg_copy_struct__78735(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78735)))
-#endif /* kcg_copy_struct__78735 */
-
-#ifndef kcg_copy_struct__78748
-#define kcg_copy_struct__78748(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78748)))
-#endif /* kcg_copy_struct__78748 */
-
-#ifndef kcg_copy_struct__78757
-#define kcg_copy_struct__78757(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78757)))
-#endif /* kcg_copy_struct__78757 */
-
-#ifndef kcg_copy_struct__78773
-#define kcg_copy_struct__78773(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78773)))
-#endif /* kcg_copy_struct__78773 */
-
-#ifndef kcg_copy_struct__78796
-#define kcg_copy_struct__78796(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78796)))
-#endif /* kcg_copy_struct__78796 */
-
-#ifndef kcg_copy_struct__78810
-#define kcg_copy_struct__78810(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78810)))
-#endif /* kcg_copy_struct__78810 */
-
-#ifndef kcg_copy_struct__78816
-#define kcg_copy_struct__78816(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78816)))
-#endif /* kcg_copy_struct__78816 */
-
-#ifndef kcg_copy_struct__78824
-#define kcg_copy_struct__78824(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78824)))
-#endif /* kcg_copy_struct__78824 */
-
-#ifndef kcg_copy_struct__78830
-#define kcg_copy_struct__78830(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78830)))
-#endif /* kcg_copy_struct__78830 */
-
-#ifndef kcg_copy_struct__78857
-#define kcg_copy_struct__78857(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78857)))
-#endif /* kcg_copy_struct__78857 */
-
-#ifndef kcg_copy_struct__78870
-#define kcg_copy_struct__78870(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78870)))
-#endif /* kcg_copy_struct__78870 */
-
-#ifndef kcg_copy_struct__78890
-#define kcg_copy_struct__78890(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78890)))
-#endif /* kcg_copy_struct__78890 */
-
-#ifndef kcg_copy_struct__78897
-#define kcg_copy_struct__78897(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78897)))
-#endif /* kcg_copy_struct__78897 */
-
-#ifndef kcg_copy_struct__78904
-#define kcg_copy_struct__78904(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78904)))
-#endif /* kcg_copy_struct__78904 */
-
-#ifndef kcg_copy_struct__78910
-#define kcg_copy_struct__78910(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78910)))
-#endif /* kcg_copy_struct__78910 */
-
-#ifndef kcg_copy_struct__78917
-#define kcg_copy_struct__78917(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78917)))
-#endif /* kcg_copy_struct__78917 */
-
-#ifndef kcg_copy_struct__78925
-#define kcg_copy_struct__78925(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78925)))
-#endif /* kcg_copy_struct__78925 */
-
-#ifndef kcg_copy_struct__78931
-#define kcg_copy_struct__78931(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78931)))
-#endif /* kcg_copy_struct__78931 */
-
-#ifndef kcg_copy_struct__78943
-#define kcg_copy_struct__78943(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78943)))
-#endif /* kcg_copy_struct__78943 */
-
-#ifndef kcg_copy_struct__78949
-#define kcg_copy_struct__78949(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78949)))
-#endif /* kcg_copy_struct__78949 */
-
-#ifndef kcg_copy_struct__78955
-#define kcg_copy_struct__78955(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78955)))
-#endif /* kcg_copy_struct__78955 */
-
-#ifndef kcg_copy_struct__78961
-#define kcg_copy_struct__78961(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78961)))
-#endif /* kcg_copy_struct__78961 */
-
-#ifndef kcg_copy_struct__78967
-#define kcg_copy_struct__78967(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78967)))
-#endif /* kcg_copy_struct__78967 */
-
-#ifndef kcg_copy_struct__78977
-#define kcg_copy_struct__78977(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78977)))
-#endif /* kcg_copy_struct__78977 */
-
-#ifndef kcg_copy_struct__78985
-#define kcg_copy_struct__78985(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78985)))
-#endif /* kcg_copy_struct__78985 */
-
-#ifndef kcg_copy_struct__78993
-#define kcg_copy_struct__78993(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__78993)))
-#endif /* kcg_copy_struct__78993 */
-
-#ifndef kcg_copy_struct__79001
-#define kcg_copy_struct__79001(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79001)))
-#endif /* kcg_copy_struct__79001 */
-
-#ifndef kcg_copy_struct__79006
-#define kcg_copy_struct__79006(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79006)))
-#endif /* kcg_copy_struct__79006 */
-
-#ifndef kcg_copy_struct__79014
-#define kcg_copy_struct__79014(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79014)))
-#endif /* kcg_copy_struct__79014 */
-
-#ifndef kcg_copy_struct__79025
-#define kcg_copy_struct__79025(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79025)))
-#endif /* kcg_copy_struct__79025 */
-
-#ifndef kcg_copy_struct__79032
-#define kcg_copy_struct__79032(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79032)))
-#endif /* kcg_copy_struct__79032 */
-
-#ifndef kcg_copy_struct__79040
-#define kcg_copy_struct__79040(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79040)))
-#endif /* kcg_copy_struct__79040 */
-
-#ifndef kcg_copy_struct__79049
-#define kcg_copy_struct__79049(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79049)))
-#endif /* kcg_copy_struct__79049 */
-
-#ifndef kcg_copy_struct__79061
-#define kcg_copy_struct__79061(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79061)))
-#endif /* kcg_copy_struct__79061 */
-
-#ifndef kcg_copy_struct__79094
-#define kcg_copy_struct__79094(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79094)))
-#endif /* kcg_copy_struct__79094 */
-
-#ifndef kcg_copy_struct__79100
-#define kcg_copy_struct__79100(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79100)))
-#endif /* kcg_copy_struct__79100 */
-
-#ifndef kcg_copy_struct__79126
-#define kcg_copy_struct__79126(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79126)))
-#endif /* kcg_copy_struct__79126 */
-
-#ifndef kcg_copy_struct__79146
-#define kcg_copy_struct__79146(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79146)))
-#endif /* kcg_copy_struct__79146 */
-
-#ifndef kcg_copy_struct__79152
-#define kcg_copy_struct__79152(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79152)))
-#endif /* kcg_copy_struct__79152 */
-
-#ifndef kcg_copy_struct__79166
-#define kcg_copy_struct__79166(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79166)))
-#endif /* kcg_copy_struct__79166 */
-
-#ifndef kcg_copy_struct__79172
-#define kcg_copy_struct__79172(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79172)))
-#endif /* kcg_copy_struct__79172 */
-
-#ifndef kcg_copy_struct__79177
-#define kcg_copy_struct__79177(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79177)))
-#endif /* kcg_copy_struct__79177 */
-
-#ifndef kcg_copy_struct__79184
-#define kcg_copy_struct__79184(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79184)))
-#endif /* kcg_copy_struct__79184 */
-
-#ifndef kcg_copy_struct__79190
-#define kcg_copy_struct__79190(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79190)))
-#endif /* kcg_copy_struct__79190 */
-
-#ifndef kcg_copy_struct__79214
-#define kcg_copy_struct__79214(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79214)))
-#endif /* kcg_copy_struct__79214 */
-
-#ifndef kcg_copy_struct__79220
-#define kcg_copy_struct__79220(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79220)))
-#endif /* kcg_copy_struct__79220 */
-
-#ifndef kcg_copy_struct__79229
-#define kcg_copy_struct__79229(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79229)))
-#endif /* kcg_copy_struct__79229 */
-
-#ifndef kcg_copy_struct__79235
-#define kcg_copy_struct__79235(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79235)))
-#endif /* kcg_copy_struct__79235 */
-
-#ifndef kcg_copy_struct__79241
-#define kcg_copy_struct__79241(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79241)))
-#endif /* kcg_copy_struct__79241 */
-
-#ifndef kcg_copy_struct__79246
-#define kcg_copy_struct__79246(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79246)))
-#endif /* kcg_copy_struct__79246 */
-
-#ifndef kcg_copy_struct__79255
-#define kcg_copy_struct__79255(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79255)))
-#endif /* kcg_copy_struct__79255 */
-
-#ifndef kcg_copy_struct__79262
-#define kcg_copy_struct__79262(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79262)))
-#endif /* kcg_copy_struct__79262 */
-
-#ifndef kcg_copy_struct__79271
-#define kcg_copy_struct__79271(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79271)))
-#endif /* kcg_copy_struct__79271 */
-
-#ifndef kcg_copy_struct__79277
-#define kcg_copy_struct__79277(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79277)))
-#endif /* kcg_copy_struct__79277 */
-
-#ifndef kcg_copy_struct__79282
-#define kcg_copy_struct__79282(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79282)))
-#endif /* kcg_copy_struct__79282 */
-
-#ifndef kcg_copy_struct__79288
-#define kcg_copy_struct__79288(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79288)))
-#endif /* kcg_copy_struct__79288 */
-
-#ifndef kcg_copy_struct__79293
-#define kcg_copy_struct__79293(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79293)))
-#endif /* kcg_copy_struct__79293 */
-
-#ifndef kcg_copy_struct__79298
-#define kcg_copy_struct__79298(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79298)))
-#endif /* kcg_copy_struct__79298 */
-
-#ifndef kcg_copy_struct__79304
-#define kcg_copy_struct__79304(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79304)))
-#endif /* kcg_copy_struct__79304 */
-
-#ifndef kcg_copy_struct__79312
-#define kcg_copy_struct__79312(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79312)))
-#endif /* kcg_copy_struct__79312 */
-
-#ifndef kcg_copy_struct__79319
-#define kcg_copy_struct__79319(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79319)))
-#endif /* kcg_copy_struct__79319 */
-
-#ifndef kcg_copy_struct__79324
-#define kcg_copy_struct__79324(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79324)))
-#endif /* kcg_copy_struct__79324 */
-
-#ifndef kcg_copy_struct__79334
-#define kcg_copy_struct__79334(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79334)))
-#endif /* kcg_copy_struct__79334 */
-
-#ifndef kcg_copy_struct__79342
-#define kcg_copy_struct__79342(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79342)))
-#endif /* kcg_copy_struct__79342 */
-
-#ifndef kcg_copy_struct__79359
-#define kcg_copy_struct__79359(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79359)))
-#endif /* kcg_copy_struct__79359 */
-
-#ifndef kcg_copy_struct__79371
-#define kcg_copy_struct__79371(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79371)))
-#endif /* kcg_copy_struct__79371 */
-
-#ifndef kcg_copy_struct__79397
-#define kcg_copy_struct__79397(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__79397)))
-#endif /* kcg_copy_struct__79397 */
-
-#ifndef kcg_copy_array__76861
-#define kcg_copy_array__76861(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76861)))
-#endif /* kcg_copy_array__76861 */
-
-#ifndef kcg_copy_array__76871
-#define kcg_copy_array__76871(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76871)))
-#endif /* kcg_copy_array__76871 */
-
-#ifndef kcg_copy_array__76886
-#define kcg_copy_array__76886(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76886)))
-#endif /* kcg_copy_array__76886 */
-
-#ifndef kcg_copy_array__76896
-#define kcg_copy_array__76896(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76896)))
-#endif /* kcg_copy_array__76896 */
-
-#ifndef kcg_copy_array__76941
-#define kcg_copy_array__76941(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76941)))
-#endif /* kcg_copy_array__76941 */
-
-#ifndef kcg_copy_array__76951
-#define kcg_copy_array__76951(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76951)))
-#endif /* kcg_copy_array__76951 */
-
-#ifndef kcg_copy_array__76962
-#define kcg_copy_array__76962(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76962)))
-#endif /* kcg_copy_array__76962 */
-
-#ifndef kcg_copy_array__76970
-#define kcg_copy_array__76970(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__76970)))
-#endif /* kcg_copy_array__76970 */
-
-#ifndef kcg_copy_array__77026
-#define kcg_copy_array__77026(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77026)))
-#endif /* kcg_copy_array__77026 */
+#ifndef kcg_copy_struct__80493
+#define kcg_copy_struct__80493(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80493)))
+#endif /* kcg_copy_struct__80493 */
+
+#ifndef kcg_copy_struct__80499
+#define kcg_copy_struct__80499(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80499)))
+#endif /* kcg_copy_struct__80499 */
+
+#ifndef kcg_copy_struct__80517
+#define kcg_copy_struct__80517(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80517)))
+#endif /* kcg_copy_struct__80517 */
+
+#ifndef kcg_copy_struct__80527
+#define kcg_copy_struct__80527(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80527)))
+#endif /* kcg_copy_struct__80527 */
+
+#ifndef kcg_copy_struct__80533
+#define kcg_copy_struct__80533(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80533)))
+#endif /* kcg_copy_struct__80533 */
+
+#ifndef kcg_copy_struct__80542
+#define kcg_copy_struct__80542(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80542)))
+#endif /* kcg_copy_struct__80542 */
+
+#ifndef kcg_copy_struct__80556
+#define kcg_copy_struct__80556(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80556)))
+#endif /* kcg_copy_struct__80556 */
+
+#ifndef kcg_copy_struct__80562
+#define kcg_copy_struct__80562(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80562)))
+#endif /* kcg_copy_struct__80562 */
+
+#ifndef kcg_copy_struct__80571
+#define kcg_copy_struct__80571(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80571)))
+#endif /* kcg_copy_struct__80571 */
+
+#ifndef kcg_copy_struct__80580
+#define kcg_copy_struct__80580(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80580)))
+#endif /* kcg_copy_struct__80580 */
+
+#ifndef kcg_copy_struct__80590
+#define kcg_copy_struct__80590(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80590)))
+#endif /* kcg_copy_struct__80590 */
+
+#ifndef kcg_copy_struct__80598
+#define kcg_copy_struct__80598(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80598)))
+#endif /* kcg_copy_struct__80598 */
+
+#ifndef kcg_copy_struct__80606
+#define kcg_copy_struct__80606(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80606)))
+#endif /* kcg_copy_struct__80606 */
+
+#ifndef kcg_copy_struct__80618
+#define kcg_copy_struct__80618(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80618)))
+#endif /* kcg_copy_struct__80618 */
+
+#ifndef kcg_copy_struct__80631
+#define kcg_copy_struct__80631(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80631)))
+#endif /* kcg_copy_struct__80631 */
+
+#ifndef kcg_copy_struct__80648
+#define kcg_copy_struct__80648(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80648)))
+#endif /* kcg_copy_struct__80648 */
+
+#ifndef kcg_copy_struct__80663
+#define kcg_copy_struct__80663(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80663)))
+#endif /* kcg_copy_struct__80663 */
+
+#ifndef kcg_copy_struct__80675
+#define kcg_copy_struct__80675(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80675)))
+#endif /* kcg_copy_struct__80675 */
+
+#ifndef kcg_copy_struct__80685
+#define kcg_copy_struct__80685(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80685)))
+#endif /* kcg_copy_struct__80685 */
+
+#ifndef kcg_copy_struct__80699
+#define kcg_copy_struct__80699(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80699)))
+#endif /* kcg_copy_struct__80699 */
+
+#ifndef kcg_copy_struct__80729
+#define kcg_copy_struct__80729(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80729)))
+#endif /* kcg_copy_struct__80729 */
+
+#ifndef kcg_copy_struct__80740
+#define kcg_copy_struct__80740(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80740)))
+#endif /* kcg_copy_struct__80740 */
+
+#ifndef kcg_copy_struct__80774
+#define kcg_copy_struct__80774(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80774)))
+#endif /* kcg_copy_struct__80774 */
+
+#ifndef kcg_copy_struct__80782
+#define kcg_copy_struct__80782(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80782)))
+#endif /* kcg_copy_struct__80782 */
+
+#ifndef kcg_copy_struct__80790
+#define kcg_copy_struct__80790(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80790)))
+#endif /* kcg_copy_struct__80790 */
+
+#ifndef kcg_copy_struct__80796
+#define kcg_copy_struct__80796(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80796)))
+#endif /* kcg_copy_struct__80796 */
+
+#ifndef kcg_copy_struct__80805
+#define kcg_copy_struct__80805(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80805)))
+#endif /* kcg_copy_struct__80805 */
+
+#ifndef kcg_copy_struct__80817
+#define kcg_copy_struct__80817(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80817)))
+#endif /* kcg_copy_struct__80817 */
+
+#ifndef kcg_copy_struct__80824
+#define kcg_copy_struct__80824(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80824)))
+#endif /* kcg_copy_struct__80824 */
+
+#ifndef kcg_copy_struct__80835
+#define kcg_copy_struct__80835(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80835)))
+#endif /* kcg_copy_struct__80835 */
+
+#ifndef kcg_copy_struct__80846
+#define kcg_copy_struct__80846(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80846)))
+#endif /* kcg_copy_struct__80846 */
+
+#ifndef kcg_copy_struct__80857
+#define kcg_copy_struct__80857(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80857)))
+#endif /* kcg_copy_struct__80857 */
+
+#ifndef kcg_copy_struct__80866
+#define kcg_copy_struct__80866(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80866)))
+#endif /* kcg_copy_struct__80866 */
+
+#ifndef kcg_copy_struct__80876
+#define kcg_copy_struct__80876(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80876)))
+#endif /* kcg_copy_struct__80876 */
+
+#ifndef kcg_copy_struct__80885
+#define kcg_copy_struct__80885(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80885)))
+#endif /* kcg_copy_struct__80885 */
+
+#ifndef kcg_copy_struct__80898
+#define kcg_copy_struct__80898(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80898)))
+#endif /* kcg_copy_struct__80898 */
+
+#ifndef kcg_copy_struct__80911
+#define kcg_copy_struct__80911(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80911)))
+#endif /* kcg_copy_struct__80911 */
+
+#ifndef kcg_copy_struct__80921
+#define kcg_copy_struct__80921(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80921)))
+#endif /* kcg_copy_struct__80921 */
+
+#ifndef kcg_copy_struct__80930
+#define kcg_copy_struct__80930(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80930)))
+#endif /* kcg_copy_struct__80930 */
+
+#ifndef kcg_copy_struct__80959
+#define kcg_copy_struct__80959(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80959)))
+#endif /* kcg_copy_struct__80959 */
+
+#ifndef kcg_copy_struct__80964
+#define kcg_copy_struct__80964(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80964)))
+#endif /* kcg_copy_struct__80964 */
+
+#ifndef kcg_copy_struct__80974
+#define kcg_copy_struct__80974(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80974)))
+#endif /* kcg_copy_struct__80974 */
+
+#ifndef kcg_copy_struct__80989
+#define kcg_copy_struct__80989(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80989)))
+#endif /* kcg_copy_struct__80989 */
+
+#ifndef kcg_copy_struct__80997
+#define kcg_copy_struct__80997(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__80997)))
+#endif /* kcg_copy_struct__80997 */
+
+#ifndef kcg_copy_struct__81013
+#define kcg_copy_struct__81013(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81013)))
+#endif /* kcg_copy_struct__81013 */
+
+#ifndef kcg_copy_struct__81046
+#define kcg_copy_struct__81046(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81046)))
+#endif /* kcg_copy_struct__81046 */
+
+#ifndef kcg_copy_struct__81055
+#define kcg_copy_struct__81055(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81055)))
+#endif /* kcg_copy_struct__81055 */
+
+#ifndef kcg_copy_struct__81060
+#define kcg_copy_struct__81060(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81060)))
+#endif /* kcg_copy_struct__81060 */
+
+#ifndef kcg_copy_struct__81069
+#define kcg_copy_struct__81069(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81069)))
+#endif /* kcg_copy_struct__81069 */
+
+#ifndef kcg_copy_struct__81087
+#define kcg_copy_struct__81087(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81087)))
+#endif /* kcg_copy_struct__81087 */
+
+#ifndef kcg_copy_struct__81098
+#define kcg_copy_struct__81098(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81098)))
+#endif /* kcg_copy_struct__81098 */
+
+#ifndef kcg_copy_struct__81113
+#define kcg_copy_struct__81113(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81113)))
+#endif /* kcg_copy_struct__81113 */
+
+#ifndef kcg_copy_struct__81118
+#define kcg_copy_struct__81118(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81118)))
+#endif /* kcg_copy_struct__81118 */
+
+#ifndef kcg_copy_struct__81124
+#define kcg_copy_struct__81124(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81124)))
+#endif /* kcg_copy_struct__81124 */
+
+#ifndef kcg_copy_struct__81129
+#define kcg_copy_struct__81129(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81129)))
+#endif /* kcg_copy_struct__81129 */
+
+#ifndef kcg_copy_struct__81136
+#define kcg_copy_struct__81136(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81136)))
+#endif /* kcg_copy_struct__81136 */
+
+#ifndef kcg_copy_struct__81147
+#define kcg_copy_struct__81147(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81147)))
+#endif /* kcg_copy_struct__81147 */
+
+#ifndef kcg_copy_struct__81202
+#define kcg_copy_struct__81202(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81202)))
+#endif /* kcg_copy_struct__81202 */
+
+#ifndef kcg_copy_struct__81214
+#define kcg_copy_struct__81214(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81214)))
+#endif /* kcg_copy_struct__81214 */
+
+#ifndef kcg_copy_struct__81222
+#define kcg_copy_struct__81222(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81222)))
+#endif /* kcg_copy_struct__81222 */
+
+#ifndef kcg_copy_struct__81238
+#define kcg_copy_struct__81238(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81238)))
+#endif /* kcg_copy_struct__81238 */
+
+#ifndef kcg_copy_struct__81243
+#define kcg_copy_struct__81243(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81243)))
+#endif /* kcg_copy_struct__81243 */
+
+#ifndef kcg_copy_struct__81248
+#define kcg_copy_struct__81248(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81248)))
+#endif /* kcg_copy_struct__81248 */
+
+#ifndef kcg_copy_struct__81253
+#define kcg_copy_struct__81253(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81253)))
+#endif /* kcg_copy_struct__81253 */
+
+#ifndef kcg_copy_struct__81261
+#define kcg_copy_struct__81261(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81261)))
+#endif /* kcg_copy_struct__81261 */
+
+#ifndef kcg_copy_struct__81267
+#define kcg_copy_struct__81267(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81267)))
+#endif /* kcg_copy_struct__81267 */
+
+#ifndef kcg_copy_struct__81287
+#define kcg_copy_struct__81287(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81287)))
+#endif /* kcg_copy_struct__81287 */
+
+#ifndef kcg_copy_struct__81292
+#define kcg_copy_struct__81292(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81292)))
+#endif /* kcg_copy_struct__81292 */
+
+#ifndef kcg_copy_struct__81311
+#define kcg_copy_struct__81311(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81311)))
+#endif /* kcg_copy_struct__81311 */
+
+#ifndef kcg_copy_struct__81316
+#define kcg_copy_struct__81316(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81316)))
+#endif /* kcg_copy_struct__81316 */
+
+#ifndef kcg_copy_struct__81326
+#define kcg_copy_struct__81326(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81326)))
+#endif /* kcg_copy_struct__81326 */
+
+#ifndef kcg_copy_struct__81332
+#define kcg_copy_struct__81332(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81332)))
+#endif /* kcg_copy_struct__81332 */
+
+#ifndef kcg_copy_struct__81337
+#define kcg_copy_struct__81337(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81337)))
+#endif /* kcg_copy_struct__81337 */
+
+#ifndef kcg_copy_struct__81345
+#define kcg_copy_struct__81345(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81345)))
+#endif /* kcg_copy_struct__81345 */
+
+#ifndef kcg_copy_struct__81354
+#define kcg_copy_struct__81354(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81354)))
+#endif /* kcg_copy_struct__81354 */
+
+#ifndef kcg_copy_struct__81363
+#define kcg_copy_struct__81363(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81363)))
+#endif /* kcg_copy_struct__81363 */
+
+#ifndef kcg_copy_struct__81370
+#define kcg_copy_struct__81370(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81370)))
+#endif /* kcg_copy_struct__81370 */
+
+#ifndef kcg_copy_struct__81376
+#define kcg_copy_struct__81376(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81376)))
+#endif /* kcg_copy_struct__81376 */
+
+#ifndef kcg_copy_struct__81384
+#define kcg_copy_struct__81384(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81384)))
+#endif /* kcg_copy_struct__81384 */
+
+#ifndef kcg_copy_struct__81389
+#define kcg_copy_struct__81389(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81389)))
+#endif /* kcg_copy_struct__81389 */
+
+#ifndef kcg_copy_struct__81396
+#define kcg_copy_struct__81396(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81396)))
+#endif /* kcg_copy_struct__81396 */
+
+#ifndef kcg_copy_struct__81405
+#define kcg_copy_struct__81405(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81405)))
+#endif /* kcg_copy_struct__81405 */
+
+#ifndef kcg_copy_struct__81413
+#define kcg_copy_struct__81413(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81413)))
+#endif /* kcg_copy_struct__81413 */
+
+#ifndef kcg_copy_struct__81422
+#define kcg_copy_struct__81422(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81422)))
+#endif /* kcg_copy_struct__81422 */
+
+#ifndef kcg_copy_struct__81440
+#define kcg_copy_struct__81440(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81440)))
+#endif /* kcg_copy_struct__81440 */
+
+#ifndef kcg_copy_struct__81452
+#define kcg_copy_struct__81452(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81452)))
+#endif /* kcg_copy_struct__81452 */
+
+#ifndef kcg_copy_struct__81458
+#define kcg_copy_struct__81458(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81458)))
+#endif /* kcg_copy_struct__81458 */
+
+#ifndef kcg_copy_struct__81464
+#define kcg_copy_struct__81464(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81464)))
+#endif /* kcg_copy_struct__81464 */
+
+#ifndef kcg_copy_struct__81469
+#define kcg_copy_struct__81469(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81469)))
+#endif /* kcg_copy_struct__81469 */
+
+#ifndef kcg_copy_struct__81475
+#define kcg_copy_struct__81475(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81475)))
+#endif /* kcg_copy_struct__81475 */
+
+#ifndef kcg_copy_struct__81481
+#define kcg_copy_struct__81481(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81481)))
+#endif /* kcg_copy_struct__81481 */
+
+#ifndef kcg_copy_struct__81486
+#define kcg_copy_struct__81486(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81486)))
+#endif /* kcg_copy_struct__81486 */
+
+#ifndef kcg_copy_struct__81495
+#define kcg_copy_struct__81495(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81495)))
+#endif /* kcg_copy_struct__81495 */
+
+#ifndef kcg_copy_struct__81506
+#define kcg_copy_struct__81506(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81506)))
+#endif /* kcg_copy_struct__81506 */
+
+#ifndef kcg_copy_struct__81515
+#define kcg_copy_struct__81515(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81515)))
+#endif /* kcg_copy_struct__81515 */
+
+#ifndef kcg_copy_struct__81522
+#define kcg_copy_struct__81522(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81522)))
+#endif /* kcg_copy_struct__81522 */
+
+#ifndef kcg_copy_struct__81527
+#define kcg_copy_struct__81527(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81527)))
+#endif /* kcg_copy_struct__81527 */
+
+#ifndef kcg_copy_struct__81532
+#define kcg_copy_struct__81532(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81532)))
+#endif /* kcg_copy_struct__81532 */
+
+#ifndef kcg_copy_struct__81538
+#define kcg_copy_struct__81538(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81538)))
+#endif /* kcg_copy_struct__81538 */
+
+#ifndef kcg_copy_struct__81543
+#define kcg_copy_struct__81543(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81543)))
+#endif /* kcg_copy_struct__81543 */
+
+#ifndef kcg_copy_struct__81552
+#define kcg_copy_struct__81552(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81552)))
+#endif /* kcg_copy_struct__81552 */
+
+#ifndef kcg_copy_struct__81556
+#define kcg_copy_struct__81556(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81556)))
+#endif /* kcg_copy_struct__81556 */
+
+#ifndef kcg_copy_struct__81561
+#define kcg_copy_struct__81561(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81561)))
+#endif /* kcg_copy_struct__81561 */
+
+#ifndef kcg_copy_struct__81569
+#define kcg_copy_struct__81569(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81569)))
+#endif /* kcg_copy_struct__81569 */
+
+#ifndef kcg_copy_struct__81582
+#define kcg_copy_struct__81582(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81582)))
+#endif /* kcg_copy_struct__81582 */
+
+#ifndef kcg_copy_struct__81591
+#define kcg_copy_struct__81591(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81591)))
+#endif /* kcg_copy_struct__81591 */
+
+#ifndef kcg_copy_struct__81605
+#define kcg_copy_struct__81605(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81605)))
+#endif /* kcg_copy_struct__81605 */
+
+#ifndef kcg_copy_struct__81613
+#define kcg_copy_struct__81613(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81613)))
+#endif /* kcg_copy_struct__81613 */
+
+#ifndef kcg_copy_struct__81626
+#define kcg_copy_struct__81626(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81626)))
+#endif /* kcg_copy_struct__81626 */
+
+#ifndef kcg_copy_struct__81631
+#define kcg_copy_struct__81631(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81631)))
+#endif /* kcg_copy_struct__81631 */
+
+#ifndef kcg_copy_struct__81640
+#define kcg_copy_struct__81640(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81640)))
+#endif /* kcg_copy_struct__81640 */
+
+#ifndef kcg_copy_struct__81649
+#define kcg_copy_struct__81649(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81649)))
+#endif /* kcg_copy_struct__81649 */
+
+#ifndef kcg_copy_struct__81660
+#define kcg_copy_struct__81660(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81660)))
+#endif /* kcg_copy_struct__81660 */
+
+#ifndef kcg_copy_struct__81671
+#define kcg_copy_struct__81671(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81671)))
+#endif /* kcg_copy_struct__81671 */
+
+#ifndef kcg_copy_struct__81701
+#define kcg_copy_struct__81701(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81701)))
+#endif /* kcg_copy_struct__81701 */
+
+#ifndef kcg_copy_struct__81710
+#define kcg_copy_struct__81710(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81710)))
+#endif /* kcg_copy_struct__81710 */
+
+#ifndef kcg_copy_struct__81720
+#define kcg_copy_struct__81720(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81720)))
+#endif /* kcg_copy_struct__81720 */
+
+#ifndef kcg_copy_struct__81727
+#define kcg_copy_struct__81727(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81727)))
+#endif /* kcg_copy_struct__81727 */
+
+#ifndef kcg_copy_struct__81735
+#define kcg_copy_struct__81735(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81735)))
+#endif /* kcg_copy_struct__81735 */
+
+#ifndef kcg_copy_struct__81746
+#define kcg_copy_struct__81746(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81746)))
+#endif /* kcg_copy_struct__81746 */
+
+#ifndef kcg_copy_struct__81752
+#define kcg_copy_struct__81752(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81752)))
+#endif /* kcg_copy_struct__81752 */
+
+#ifndef kcg_copy_struct__81758
+#define kcg_copy_struct__81758(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81758)))
+#endif /* kcg_copy_struct__81758 */
+
+#ifndef kcg_copy_struct__81764
+#define kcg_copy_struct__81764(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81764)))
+#endif /* kcg_copy_struct__81764 */
+
+#ifndef kcg_copy_struct__81770
+#define kcg_copy_struct__81770(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81770)))
+#endif /* kcg_copy_struct__81770 */
+
+#ifndef kcg_copy_struct__81777
+#define kcg_copy_struct__81777(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81777)))
+#endif /* kcg_copy_struct__81777 */
+
+#ifndef kcg_copy_struct__81787
+#define kcg_copy_struct__81787(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81787)))
+#endif /* kcg_copy_struct__81787 */
+
+#ifndef kcg_copy_struct__81801
+#define kcg_copy_struct__81801(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81801)))
+#endif /* kcg_copy_struct__81801 */
+
+#ifndef kcg_copy_struct__81807
+#define kcg_copy_struct__81807(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81807)))
+#endif /* kcg_copy_struct__81807 */
+
+#ifndef kcg_copy_struct__81814
+#define kcg_copy_struct__81814(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81814)))
+#endif /* kcg_copy_struct__81814 */
+
+#ifndef kcg_copy_struct__81821
+#define kcg_copy_struct__81821(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81821)))
+#endif /* kcg_copy_struct__81821 */
+
+#ifndef kcg_copy_struct__81827
+#define kcg_copy_struct__81827(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81827)))
+#endif /* kcg_copy_struct__81827 */
+
+#ifndef kcg_copy_struct__81836
+#define kcg_copy_struct__81836(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81836)))
+#endif /* kcg_copy_struct__81836 */
+
+#ifndef kcg_copy_struct__81842
+#define kcg_copy_struct__81842(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81842)))
+#endif /* kcg_copy_struct__81842 */
+
+#ifndef kcg_copy_struct__81847
+#define kcg_copy_struct__81847(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81847)))
+#endif /* kcg_copy_struct__81847 */
+
+#ifndef kcg_copy_struct__81857
+#define kcg_copy_struct__81857(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81857)))
+#endif /* kcg_copy_struct__81857 */
+
+#ifndef kcg_copy_struct__81867
+#define kcg_copy_struct__81867(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81867)))
+#endif /* kcg_copy_struct__81867 */
+
+#ifndef kcg_copy_struct__81883
+#define kcg_copy_struct__81883(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81883)))
+#endif /* kcg_copy_struct__81883 */
+
+#ifndef kcg_copy_struct__81895
+#define kcg_copy_struct__81895(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81895)))
+#endif /* kcg_copy_struct__81895 */
+
+#ifndef kcg_copy_struct__81902
+#define kcg_copy_struct__81902(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81902)))
+#endif /* kcg_copy_struct__81902 */
+
+#ifndef kcg_copy_struct__81935
+#define kcg_copy_struct__81935(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81935)))
+#endif /* kcg_copy_struct__81935 */
+
+#ifndef kcg_copy_struct__81940
+#define kcg_copy_struct__81940(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81940)))
+#endif /* kcg_copy_struct__81940 */
+
+#ifndef kcg_copy_struct__81945
+#define kcg_copy_struct__81945(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81945)))
+#endif /* kcg_copy_struct__81945 */
+
+#ifndef kcg_copy_struct__81954
+#define kcg_copy_struct__81954(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81954)))
+#endif /* kcg_copy_struct__81954 */
+
+#ifndef kcg_copy_struct__81961
+#define kcg_copy_struct__81961(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81961)))
+#endif /* kcg_copy_struct__81961 */
+
+#ifndef kcg_copy_struct__81968
+#define kcg_copy_struct__81968(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81968)))
+#endif /* kcg_copy_struct__81968 */
+
+#ifndef kcg_copy_struct__81974
+#define kcg_copy_struct__81974(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81974)))
+#endif /* kcg_copy_struct__81974 */
+
+#ifndef kcg_copy_struct__81984
+#define kcg_copy_struct__81984(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81984)))
+#endif /* kcg_copy_struct__81984 */
+
+#ifndef kcg_copy_struct__81996
+#define kcg_copy_struct__81996(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__81996)))
+#endif /* kcg_copy_struct__81996 */
+
+#ifndef kcg_copy_struct__82003
+#define kcg_copy_struct__82003(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82003)))
+#endif /* kcg_copy_struct__82003 */
+
+#ifndef kcg_copy_struct__82013
+#define kcg_copy_struct__82013(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82013)))
+#endif /* kcg_copy_struct__82013 */
+
+#ifndef kcg_copy_struct__82022
+#define kcg_copy_struct__82022(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82022)))
+#endif /* kcg_copy_struct__82022 */
+
+#ifndef kcg_copy_struct__82033
+#define kcg_copy_struct__82033(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82033)))
+#endif /* kcg_copy_struct__82033 */
+
+#ifndef kcg_copy_struct__82040
+#define kcg_copy_struct__82040(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82040)))
+#endif /* kcg_copy_struct__82040 */
+
+#ifndef kcg_copy_struct__82050
+#define kcg_copy_struct__82050(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82050)))
+#endif /* kcg_copy_struct__82050 */
+
+#ifndef kcg_copy_struct__82055
+#define kcg_copy_struct__82055(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82055)))
+#endif /* kcg_copy_struct__82055 */
+
+#ifndef kcg_copy_struct__82068
+#define kcg_copy_struct__82068(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82068)))
+#endif /* kcg_copy_struct__82068 */
+
+#ifndef kcg_copy_struct__82077
+#define kcg_copy_struct__82077(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82077)))
+#endif /* kcg_copy_struct__82077 */
+
+#ifndef kcg_copy_struct__82093
+#define kcg_copy_struct__82093(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82093)))
+#endif /* kcg_copy_struct__82093 */
+
+#ifndef kcg_copy_struct__82116
+#define kcg_copy_struct__82116(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82116)))
+#endif /* kcg_copy_struct__82116 */
+
+#ifndef kcg_copy_struct__82130
+#define kcg_copy_struct__82130(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82130)))
+#endif /* kcg_copy_struct__82130 */
+
+#ifndef kcg_copy_struct__82136
+#define kcg_copy_struct__82136(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82136)))
+#endif /* kcg_copy_struct__82136 */
+
+#ifndef kcg_copy_struct__82144
+#define kcg_copy_struct__82144(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82144)))
+#endif /* kcg_copy_struct__82144 */
+
+#ifndef kcg_copy_struct__82150
+#define kcg_copy_struct__82150(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82150)))
+#endif /* kcg_copy_struct__82150 */
+
+#ifndef kcg_copy_struct__82177
+#define kcg_copy_struct__82177(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82177)))
+#endif /* kcg_copy_struct__82177 */
+
+#ifndef kcg_copy_struct__82190
+#define kcg_copy_struct__82190(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82190)))
+#endif /* kcg_copy_struct__82190 */
+
+#ifndef kcg_copy_struct__82210
+#define kcg_copy_struct__82210(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82210)))
+#endif /* kcg_copy_struct__82210 */
+
+#ifndef kcg_copy_struct__82217
+#define kcg_copy_struct__82217(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82217)))
+#endif /* kcg_copy_struct__82217 */
+
+#ifndef kcg_copy_struct__82224
+#define kcg_copy_struct__82224(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82224)))
+#endif /* kcg_copy_struct__82224 */
+
+#ifndef kcg_copy_struct__82230
+#define kcg_copy_struct__82230(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82230)))
+#endif /* kcg_copy_struct__82230 */
+
+#ifndef kcg_copy_struct__82237
+#define kcg_copy_struct__82237(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82237)))
+#endif /* kcg_copy_struct__82237 */
+
+#ifndef kcg_copy_struct__82243
+#define kcg_copy_struct__82243(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82243)))
+#endif /* kcg_copy_struct__82243 */
+
+#ifndef kcg_copy_struct__82253
+#define kcg_copy_struct__82253(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82253)))
+#endif /* kcg_copy_struct__82253 */
+
+#ifndef kcg_copy_struct__82262
+#define kcg_copy_struct__82262(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82262)))
+#endif /* kcg_copy_struct__82262 */
+
+#ifndef kcg_copy_struct__82270
+#define kcg_copy_struct__82270(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82270)))
+#endif /* kcg_copy_struct__82270 */
+
+#ifndef kcg_copy_struct__82276
+#define kcg_copy_struct__82276(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82276)))
+#endif /* kcg_copy_struct__82276 */
+
+#ifndef kcg_copy_struct__82288
+#define kcg_copy_struct__82288(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82288)))
+#endif /* kcg_copy_struct__82288 */
+
+#ifndef kcg_copy_struct__82294
+#define kcg_copy_struct__82294(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82294)))
+#endif /* kcg_copy_struct__82294 */
+
+#ifndef kcg_copy_struct__82300
+#define kcg_copy_struct__82300(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82300)))
+#endif /* kcg_copy_struct__82300 */
+
+#ifndef kcg_copy_struct__82306
+#define kcg_copy_struct__82306(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82306)))
+#endif /* kcg_copy_struct__82306 */
+
+#ifndef kcg_copy_struct__82312
+#define kcg_copy_struct__82312(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82312)))
+#endif /* kcg_copy_struct__82312 */
+
+#ifndef kcg_copy_struct__82322
+#define kcg_copy_struct__82322(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82322)))
+#endif /* kcg_copy_struct__82322 */
+
+#ifndef kcg_copy_struct__82330
+#define kcg_copy_struct__82330(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82330)))
+#endif /* kcg_copy_struct__82330 */
+
+#ifndef kcg_copy_struct__82338
+#define kcg_copy_struct__82338(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82338)))
+#endif /* kcg_copy_struct__82338 */
+
+#ifndef kcg_copy_struct__82346
+#define kcg_copy_struct__82346(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82346)))
+#endif /* kcg_copy_struct__82346 */
+
+#ifndef kcg_copy_struct__82351
+#define kcg_copy_struct__82351(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82351)))
+#endif /* kcg_copy_struct__82351 */
+
+#ifndef kcg_copy_struct__82359
+#define kcg_copy_struct__82359(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82359)))
+#endif /* kcg_copy_struct__82359 */
+
+#ifndef kcg_copy_struct__82370
+#define kcg_copy_struct__82370(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82370)))
+#endif /* kcg_copy_struct__82370 */
+
+#ifndef kcg_copy_struct__82377
+#define kcg_copy_struct__82377(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82377)))
+#endif /* kcg_copy_struct__82377 */
+
+#ifndef kcg_copy_struct__82385
+#define kcg_copy_struct__82385(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82385)))
+#endif /* kcg_copy_struct__82385 */
+
+#ifndef kcg_copy_struct__82394
+#define kcg_copy_struct__82394(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82394)))
+#endif /* kcg_copy_struct__82394 */
+
+#ifndef kcg_copy_struct__82406
+#define kcg_copy_struct__82406(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82406)))
+#endif /* kcg_copy_struct__82406 */
+
+#ifndef kcg_copy_struct__82439
+#define kcg_copy_struct__82439(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82439)))
+#endif /* kcg_copy_struct__82439 */
+
+#ifndef kcg_copy_struct__82445
+#define kcg_copy_struct__82445(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82445)))
+#endif /* kcg_copy_struct__82445 */
+
+#ifndef kcg_copy_struct__82471
+#define kcg_copy_struct__82471(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82471)))
+#endif /* kcg_copy_struct__82471 */
+
+#ifndef kcg_copy_struct__82491
+#define kcg_copy_struct__82491(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82491)))
+#endif /* kcg_copy_struct__82491 */
+
+#ifndef kcg_copy_struct__82505
+#define kcg_copy_struct__82505(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82505)))
+#endif /* kcg_copy_struct__82505 */
+
+#ifndef kcg_copy_struct__82511
+#define kcg_copy_struct__82511(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82511)))
+#endif /* kcg_copy_struct__82511 */
+
+#ifndef kcg_copy_struct__82516
+#define kcg_copy_struct__82516(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82516)))
+#endif /* kcg_copy_struct__82516 */
+
+#ifndef kcg_copy_struct__82523
+#define kcg_copy_struct__82523(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82523)))
+#endif /* kcg_copy_struct__82523 */
+
+#ifndef kcg_copy_struct__82529
+#define kcg_copy_struct__82529(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82529)))
+#endif /* kcg_copy_struct__82529 */
+
+#ifndef kcg_copy_struct__82554
+#define kcg_copy_struct__82554(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82554)))
+#endif /* kcg_copy_struct__82554 */
+
+#ifndef kcg_copy_struct__82560
+#define kcg_copy_struct__82560(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82560)))
+#endif /* kcg_copy_struct__82560 */
+
+#ifndef kcg_copy_struct__82569
+#define kcg_copy_struct__82569(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82569)))
+#endif /* kcg_copy_struct__82569 */
+
+#ifndef kcg_copy_struct__82575
+#define kcg_copy_struct__82575(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82575)))
+#endif /* kcg_copy_struct__82575 */
+
+#ifndef kcg_copy_struct__82581
+#define kcg_copy_struct__82581(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82581)))
+#endif /* kcg_copy_struct__82581 */
+
+#ifndef kcg_copy_struct__82586
+#define kcg_copy_struct__82586(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82586)))
+#endif /* kcg_copy_struct__82586 */
+
+#ifndef kcg_copy_struct__82594
+#define kcg_copy_struct__82594(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82594)))
+#endif /* kcg_copy_struct__82594 */
+
+#ifndef kcg_copy_struct__82603
+#define kcg_copy_struct__82603(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82603)))
+#endif /* kcg_copy_struct__82603 */
+
+#ifndef kcg_copy_struct__82610
+#define kcg_copy_struct__82610(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82610)))
+#endif /* kcg_copy_struct__82610 */
+
+#ifndef kcg_copy_struct__82619
+#define kcg_copy_struct__82619(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82619)))
+#endif /* kcg_copy_struct__82619 */
+
+#ifndef kcg_copy_struct__82625
+#define kcg_copy_struct__82625(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82625)))
+#endif /* kcg_copy_struct__82625 */
+
+#ifndef kcg_copy_struct__82630
+#define kcg_copy_struct__82630(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82630)))
+#endif /* kcg_copy_struct__82630 */
+
+#ifndef kcg_copy_struct__82636
+#define kcg_copy_struct__82636(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82636)))
+#endif /* kcg_copy_struct__82636 */
+
+#ifndef kcg_copy_struct__82641
+#define kcg_copy_struct__82641(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82641)))
+#endif /* kcg_copy_struct__82641 */
+
+#ifndef kcg_copy_struct__82646
+#define kcg_copy_struct__82646(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82646)))
+#endif /* kcg_copy_struct__82646 */
+
+#ifndef kcg_copy_struct__82652
+#define kcg_copy_struct__82652(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82652)))
+#endif /* kcg_copy_struct__82652 */
+
+#ifndef kcg_copy_struct__82660
+#define kcg_copy_struct__82660(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82660)))
+#endif /* kcg_copy_struct__82660 */
+
+#ifndef kcg_copy_struct__82667
+#define kcg_copy_struct__82667(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82667)))
+#endif /* kcg_copy_struct__82667 */
+
+#ifndef kcg_copy_struct__82672
+#define kcg_copy_struct__82672(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82672)))
+#endif /* kcg_copy_struct__82672 */
+
+#ifndef kcg_copy_struct__82682
+#define kcg_copy_struct__82682(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82682)))
+#endif /* kcg_copy_struct__82682 */
+
+#ifndef kcg_copy_struct__82693
+#define kcg_copy_struct__82693(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82693)))
+#endif /* kcg_copy_struct__82693 */
+
+#ifndef kcg_copy_struct__82710
+#define kcg_copy_struct__82710(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82710)))
+#endif /* kcg_copy_struct__82710 */
+
+#ifndef kcg_copy_struct__82722
+#define kcg_copy_struct__82722(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82722)))
+#endif /* kcg_copy_struct__82722 */
+
+#ifndef kcg_copy_struct__82730
+#define kcg_copy_struct__82730(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82730)))
+#endif /* kcg_copy_struct__82730 */
+
+#ifndef kcg_copy_struct__82738
+#define kcg_copy_struct__82738(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82738)))
+#endif /* kcg_copy_struct__82738 */
+
+#ifndef kcg_copy_struct__82761
+#define kcg_copy_struct__82761(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__82761)))
+#endif /* kcg_copy_struct__82761 */
+
+#ifndef kcg_copy_array__80217
+#define kcg_copy_array__80217(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80217)))
+#endif /* kcg_copy_array__80217 */
+
+#ifndef kcg_copy_array__80227
+#define kcg_copy_array__80227(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80227)))
+#endif /* kcg_copy_array__80227 */
+
+#ifndef kcg_copy_array__80242
+#define kcg_copy_array__80242(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80242)))
+#endif /* kcg_copy_array__80242 */
+
+#ifndef kcg_copy_array__80252
+#define kcg_copy_array__80252(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80252)))
+#endif /* kcg_copy_array__80252 */
+
+#ifndef kcg_copy_array__80297
+#define kcg_copy_array__80297(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80297)))
+#endif /* kcg_copy_array__80297 */
+
+#ifndef kcg_copy_array__80307
+#define kcg_copy_array__80307(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80307)))
+#endif /* kcg_copy_array__80307 */
+
+#ifndef kcg_copy_array__80318
+#define kcg_copy_array__80318(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80318)))
+#endif /* kcg_copy_array__80318 */
+
+#ifndef kcg_copy_array__80326
+#define kcg_copy_array__80326(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80326)))
+#endif /* kcg_copy_array__80326 */
+
+#ifndef kcg_copy_array__80382
+#define kcg_copy_array__80382(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80382)))
+#endif /* kcg_copy_array__80382 */
 
 #ifndef kcg_copy_array_int_500
 #define kcg_copy_array_int_500(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_500)))
 #endif /* kcg_copy_array_int_500 */
 
-#ifndef kcg_copy_array__77040
-#define kcg_copy_array__77040(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77040)))
-#endif /* kcg_copy_array__77040 */
+#ifndef kcg_copy_array__80396
+#define kcg_copy_array__80396(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80396)))
+#endif /* kcg_copy_array__80396 */
 
-#ifndef kcg_copy_array__77059
-#define kcg_copy_array__77059(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77059)))
-#endif /* kcg_copy_array__77059 */
+#ifndef kcg_copy_array__80415
+#define kcg_copy_array__80415(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80415)))
+#endif /* kcg_copy_array__80415 */
 
 #ifndef kcg_copy_array_int_231
 #define kcg_copy_array_int_231(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_231)))
@@ -6543,49 +6569,45 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_int_3(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_3)))
 #endif /* kcg_copy_array_int_3 */
 
-#ifndef kcg_copy_array__77197
-#define kcg_copy_array__77197(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77197)))
-#endif /* kcg_copy_array__77197 */
+#ifndef kcg_copy_array__80553
+#define kcg_copy_array__80553(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80553)))
+#endif /* kcg_copy_array__80553 */
 
-#ifndef kcg_copy_array__77221
-#define kcg_copy_array__77221(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77221)))
-#endif /* kcg_copy_array__77221 */
+#ifndef kcg_copy_array__80577
+#define kcg_copy_array__80577(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80577)))
+#endif /* kcg_copy_array__80577 */
 
-#ifndef kcg_copy_array__77247
-#define kcg_copy_array__77247(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77247)))
-#endif /* kcg_copy_array__77247 */
+#ifndef kcg_copy_array__80603
+#define kcg_copy_array__80603(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80603)))
+#endif /* kcg_copy_array__80603 */
 
-#ifndef kcg_copy_array__77307
-#define kcg_copy_array__77307(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77307)))
-#endif /* kcg_copy_array__77307 */
+#ifndef kcg_copy_array__80660
+#define kcg_copy_array__80660(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80660)))
+#endif /* kcg_copy_array__80660 */
 
-#ifndef kcg_copy_array__77310
-#define kcg_copy_array__77310(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77310)))
-#endif /* kcg_copy_array__77310 */
+#ifndef kcg_copy_array__80672
+#define kcg_copy_array__80672(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80672)))
+#endif /* kcg_copy_array__80672 */
 
-#ifndef kcg_copy_array__77319
-#define kcg_copy_array__77319(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77319)))
-#endif /* kcg_copy_array__77319 */
+#ifndef kcg_copy_array__80682
+#define kcg_copy_array__80682(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80682)))
+#endif /* kcg_copy_array__80682 */
 
-#ifndef kcg_copy_array__77329
-#define kcg_copy_array__77329(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77329)))
-#endif /* kcg_copy_array__77329 */
+#ifndef kcg_copy_array_int_99
+#define kcg_copy_array_int_99(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_99)))
+#endif /* kcg_copy_array_int_99 */
 
-#ifndef kcg_copy_array__77387
-#define kcg_copy_array__77387(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77387)))
-#endif /* kcg_copy_array__77387 */
+#ifndef kcg_copy_array_int_5
+#define kcg_copy_array_int_5(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_5)))
+#endif /* kcg_copy_array_int_5 */
 
-#ifndef kcg_copy_array_int_32
-#define kcg_copy_array_int_32(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_32)))
-#endif /* kcg_copy_array_int_32 */
+#ifndef kcg_copy_array__80726
+#define kcg_copy_array__80726(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80726)))
+#endif /* kcg_copy_array__80726 */
 
-#ifndef kcg_copy_array_int_24
-#define kcg_copy_array_int_24(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_24)))
-#endif /* kcg_copy_array_int_24 */
-
-#ifndef kcg_copy_array__77486
-#define kcg_copy_array__77486(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77486)))
-#endif /* kcg_copy_array__77486 */
+#ifndef kcg_copy_array__80737
+#define kcg_copy_array__80737(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80737)))
+#endif /* kcg_copy_array__80737 */
 
 #ifndef kcg_copy_array_int_128
 #define kcg_copy_array_int_128(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_128)))
@@ -6599,101 +6621,33 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_int_6(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_6)))
 #endif /* kcg_copy_array_int_6 */
 
-#ifndef kcg_copy_array__77543
-#define kcg_copy_array__77543(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77543)))
-#endif /* kcg_copy_array__77543 */
+#ifndef kcg_copy_array__80802
+#define kcg_copy_array__80802(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80802)))
+#endif /* kcg_copy_array__80802 */
 
-#ifndef kcg_copy_array__77569
-#define kcg_copy_array__77569(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77569)))
-#endif /* kcg_copy_array__77569 */
+#ifndef kcg_copy_array__80814
+#define kcg_copy_array__80814(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80814)))
+#endif /* kcg_copy_array__80814 */
 
-#ifndef kcg_copy_array__77578
-#define kcg_copy_array__77578(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77578)))
-#endif /* kcg_copy_array__77578 */
+#ifndef kcg_copy_array__80832
+#define kcg_copy_array__80832(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80832)))
+#endif /* kcg_copy_array__80832 */
 
-#ifndef kcg_copy_array__77590
-#define kcg_copy_array__77590(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77590)))
-#endif /* kcg_copy_array__77590 */
-
-#ifndef kcg_copy_array_int_5
-#define kcg_copy_array_int_5(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_5)))
-#endif /* kcg_copy_array_int_5 */
+#ifndef kcg_copy_array__80843
+#define kcg_copy_array__80843(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80843)))
+#endif /* kcg_copy_array__80843 */
 
 #ifndef kcg_copy_array_int_64
 #define kcg_copy_array_int_64(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_64)))
 #endif /* kcg_copy_array_int_64 */
 
-#ifndef kcg_copy_array__77612
-#define kcg_copy_array__77612(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77612)))
-#endif /* kcg_copy_array__77612 */
+#ifndef kcg_copy_array__80873
+#define kcg_copy_array__80873(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80873)))
+#endif /* kcg_copy_array__80873 */
 
-#ifndef kcg_copy_array__77621
-#define kcg_copy_array__77621(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77621)))
-#endif /* kcg_copy_array__77621 */
-
-#ifndef kcg_copy_array_int_33
-#define kcg_copy_array_int_33(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_33)))
-#endif /* kcg_copy_array_int_33 */
-
-#ifndef kcg_copy_array_int_33_11
-#define kcg_copy_array_int_33_11(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_33_11)))
-#endif /* kcg_copy_array_int_33_11 */
-
-#ifndef kcg_copy_array__77658
-#define kcg_copy_array__77658(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77658)))
-#endif /* kcg_copy_array__77658 */
-
-#ifndef kcg_copy_array__77661
-#define kcg_copy_array__77661(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77661)))
-#endif /* kcg_copy_array__77661 */
-
-#ifndef kcg_copy_array__77671
-#define kcg_copy_array__77671(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77671)))
-#endif /* kcg_copy_array__77671 */
-
-#ifndef kcg_copy_array_int_99
-#define kcg_copy_array_int_99(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_99)))
-#endif /* kcg_copy_array_int_99 */
-
-#ifndef kcg_copy_array__77702
-#define kcg_copy_array__77702(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77702)))
-#endif /* kcg_copy_array__77702 */
-
-#ifndef kcg_copy_array__77741
-#define kcg_copy_array__77741(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77741)))
-#endif /* kcg_copy_array__77741 */
-
-#ifndef kcg_copy_array__77855
-#define kcg_copy_array__77855(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77855)))
-#endif /* kcg_copy_array__77855 */
-
-#ifndef kcg_copy_array__77943
-#define kcg_copy_array__77943(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77943)))
-#endif /* kcg_copy_array__77943 */
-
-#ifndef kcg_copy_array__77953
-#define kcg_copy_array__77953(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77953)))
-#endif /* kcg_copy_array__77953 */
-
-#ifndef kcg_copy_array__77966
-#define kcg_copy_array__77966(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77966)))
-#endif /* kcg_copy_array__77966 */
-
-#ifndef kcg_copy_array__77977
-#define kcg_copy_array__77977(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77977)))
-#endif /* kcg_copy_array__77977 */
-
-#ifndef kcg_copy_array__77988
-#define kcg_copy_array__77988(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__77988)))
-#endif /* kcg_copy_array__77988 */
-
-#ifndef kcg_copy_array__78011
-#define kcg_copy_array__78011(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78011)))
-#endif /* kcg_copy_array__78011 */
-
-#ifndef kcg_copy_array__78041
-#define kcg_copy_array__78041(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78041)))
-#endif /* kcg_copy_array__78041 */
+#ifndef kcg_copy_array__80882
+#define kcg_copy_array__80882(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80882)))
+#endif /* kcg_copy_array__80882 */
 
 #ifndef kcg_copy_array_int_66
 #define kcg_copy_array_int_66(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_66)))
@@ -6703,41 +6657,113 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_int_4(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_4)))
 #endif /* kcg_copy_array_int_4 */
 
-#ifndef kcg_copy_array__78221
-#define kcg_copy_array__78221(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78221)))
-#endif /* kcg_copy_array__78221 */
+#ifndef kcg_copy_array__80908
+#define kcg_copy_array__80908(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80908)))
+#endif /* kcg_copy_array__80908 */
 
-#ifndef kcg_copy_array__78238
-#define kcg_copy_array__78238(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78238)))
-#endif /* kcg_copy_array__78238 */
+#ifndef kcg_copy_array__80918
+#define kcg_copy_array__80918(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__80918)))
+#endif /* kcg_copy_array__80918 */
 
-#ifndef kcg_copy_array__78260
-#define kcg_copy_array__78260(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78260)))
-#endif /* kcg_copy_array__78260 */
+#ifndef kcg_copy_array_int_7
+#define kcg_copy_array_int_7(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_7)))
+#endif /* kcg_copy_array_int_7 */
+
+#ifndef kcg_copy_array__81004
+#define kcg_copy_array__81004(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81004)))
+#endif /* kcg_copy_array__81004 */
+
+#ifndef kcg_copy_array__81007
+#define kcg_copy_array__81007(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81007)))
+#endif /* kcg_copy_array__81007 */
+
+#ifndef kcg_copy_array__81010
+#define kcg_copy_array__81010(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81010)))
+#endif /* kcg_copy_array__81010 */
+
+#ifndef kcg_copy_array_int_32
+#define kcg_copy_array_int_32(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_32)))
+#endif /* kcg_copy_array_int_32 */
+
+#ifndef kcg_copy_array_int_24
+#define kcg_copy_array_int_24(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_24)))
+#endif /* kcg_copy_array_int_24 */
+
+#ifndef kcg_copy_array__81066
+#define kcg_copy_array__81066(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81066)))
+#endif /* kcg_copy_array__81066 */
+
+#ifndef kcg_copy_array__81092
+#define kcg_copy_array__81092(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81092)))
+#endif /* kcg_copy_array__81092 */
+
+#ifndef kcg_copy_array__81095
+#define kcg_copy_array__81095(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81095)))
+#endif /* kcg_copy_array__81095 */
+
+#ifndef kcg_copy_array__81104
+#define kcg_copy_array__81104(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81104)))
+#endif /* kcg_copy_array__81104 */
+
+#ifndef kcg_copy_array_int_33
+#define kcg_copy_array_int_33(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_33)))
+#endif /* kcg_copy_array_int_33 */
+
+#ifndef kcg_copy_array_int_33_11
+#define kcg_copy_array_int_33_11(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_33_11)))
+#endif /* kcg_copy_array_int_33_11 */
+
+#ifndef kcg_copy_array__81141
+#define kcg_copy_array__81141(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81141)))
+#endif /* kcg_copy_array__81141 */
+
+#ifndef kcg_copy_array__81144
+#define kcg_copy_array__81144(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81144)))
+#endif /* kcg_copy_array__81144 */
+
+#ifndef kcg_copy_array__81219
+#define kcg_copy_array__81219(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81219)))
+#endif /* kcg_copy_array__81219 */
+
+#ifndef kcg_copy_array__81258
+#define kcg_copy_array__81258(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81258)))
+#endif /* kcg_copy_array__81258 */
+
+#ifndef kcg_copy_array__81381
+#define kcg_copy_array__81381(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81381)))
+#endif /* kcg_copy_array__81381 */
+
+#ifndef kcg_copy_array__81549
+#define kcg_copy_array__81549(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81549)))
+#endif /* kcg_copy_array__81549 */
+
+#ifndef kcg_copy_array__81566
+#define kcg_copy_array__81566(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81566)))
+#endif /* kcg_copy_array__81566 */
+
+#ifndef kcg_copy_array__81588
+#define kcg_copy_array__81588(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81588)))
+#endif /* kcg_copy_array__81588 */
 
 #ifndef kcg_copy_array_int_8
 #define kcg_copy_array_int_8(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_8)))
 #endif /* kcg_copy_array_int_8 */
 
-#ifndef kcg_copy_array__78321
-#define kcg_copy_array__78321(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78321)))
-#endif /* kcg_copy_array__78321 */
+#ifndef kcg_copy_array__81683
+#define kcg_copy_array__81683(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81683)))
+#endif /* kcg_copy_array__81683 */
 
-#ifndef kcg_copy_array__78324
-#define kcg_copy_array__78324(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78324)))
-#endif /* kcg_copy_array__78324 */
+#ifndef kcg_copy_array__81686
+#define kcg_copy_array__81686(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81686)))
+#endif /* kcg_copy_array__81686 */
 
-#ifndef kcg_copy_array__78327
-#define kcg_copy_array__78327(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78327)))
-#endif /* kcg_copy_array__78327 */
+#ifndef kcg_copy_array__81689
+#define kcg_copy_array__81689(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81689)))
+#endif /* kcg_copy_array__81689 */
 
-#ifndef kcg_copy_array__78330
-#define kcg_copy_array__78330(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78330)))
-#endif /* kcg_copy_array__78330 */
-
-#ifndef kcg_copy_array__78384
-#define kcg_copy_array__78384(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78384)))
-#endif /* kcg_copy_array__78384 */
+#ifndef kcg_copy_array__81692
+#define kcg_copy_array__81692(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81692)))
+#endif /* kcg_copy_array__81692 */
 
 #ifndef kcg_copy_array_bool_256
 #define kcg_copy_array_bool_256(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_256)))
@@ -6747,9 +6773,13 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_bool_256_46(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_256_46)))
 #endif /* kcg_copy_array_bool_256_46 */
 
-#ifndef kcg_copy_array__78478
-#define kcg_copy_array__78478(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78478)))
-#endif /* kcg_copy_array__78478 */
+#ifndef kcg_copy_array__81717
+#define kcg_copy_array__81717(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81717)))
+#endif /* kcg_copy_array__81717 */
+
+#ifndef kcg_copy_array__81798
+#define kcg_copy_array__81798(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__81798)))
+#endif /* kcg_copy_array__81798 */
 
 #ifndef kcg_copy_array_char_9
 #define kcg_copy_array_char_9(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_char_9)))
@@ -6775,17 +6805,17 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_real_25(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_real_25)))
 #endif /* kcg_copy_array_real_25 */
 
-#ifndef kcg_copy_array__78699
-#define kcg_copy_array__78699(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78699)))
-#endif /* kcg_copy_array__78699 */
+#ifndef kcg_copy_array__82019
+#define kcg_copy_array__82019(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82019)))
+#endif /* kcg_copy_array__82019 */
 
-#ifndef kcg_copy_array__78710
-#define kcg_copy_array__78710(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78710)))
-#endif /* kcg_copy_array__78710 */
+#ifndef kcg_copy_array__82030
+#define kcg_copy_array__82030(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82030)))
+#endif /* kcg_copy_array__82030 */
 
-#ifndef kcg_copy_array__78754
-#define kcg_copy_array__78754(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78754)))
-#endif /* kcg_copy_array__78754 */
+#ifndef kcg_copy_array__82074
+#define kcg_copy_array__82074(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82074)))
+#endif /* kcg_copy_array__82074 */
 
 #ifndef kcg_copy_array_real_15
 #define kcg_copy_array_real_15(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_real_15)))
@@ -6803,29 +6833,29 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_bool_14(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_14)))
 #endif /* kcg_copy_array_bool_14 */
 
-#ifndef kcg_copy_array__78982
-#define kcg_copy_array__78982(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78982)))
-#endif /* kcg_copy_array__78982 */
+#ifndef kcg_copy_array__82327
+#define kcg_copy_array__82327(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82327)))
+#endif /* kcg_copy_array__82327 */
 
-#ifndef kcg_copy_array__78990
-#define kcg_copy_array__78990(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78990)))
-#endif /* kcg_copy_array__78990 */
+#ifndef kcg_copy_array__82335
+#define kcg_copy_array__82335(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82335)))
+#endif /* kcg_copy_array__82335 */
 
-#ifndef kcg_copy_array__78998
-#define kcg_copy_array__78998(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__78998)))
-#endif /* kcg_copy_array__78998 */
-
-#ifndef kcg_copy_array__79339
-#define kcg_copy_array__79339(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79339)))
-#endif /* kcg_copy_array__79339 */
-
-#ifndef kcg_copy_array__79388
-#define kcg_copy_array__79388(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79388)))
-#endif /* kcg_copy_array__79388 */
+#ifndef kcg_copy_array__82343
+#define kcg_copy_array__82343(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82343)))
+#endif /* kcg_copy_array__82343 */
 
 #ifndef kcg_copy_array_bool_20
 #define kcg_copy_array_bool_20(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_20)))
 #endif /* kcg_copy_array_bool_20 */
+
+#ifndef kcg_copy_array__82690
+#define kcg_copy_array__82690(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82690)))
+#endif /* kcg_copy_array__82690 */
+
+#ifndef kcg_copy_array__82755
+#define kcg_copy_array__82755(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82755)))
+#endif /* kcg_copy_array__82755 */
 
 #ifndef kcg_copy_array_bool_4
 #define kcg_copy_array_bool_4(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_4)))
@@ -6839,9 +6869,9 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_real_1(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_real_1)))
 #endif /* kcg_copy_array_real_1 */
 
-#ifndef kcg_copy_array__79408
-#define kcg_copy_array__79408(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79408)))
-#endif /* kcg_copy_array__79408 */
+#ifndef kcg_copy_array__82772
+#define kcg_copy_array__82772(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82772)))
+#endif /* kcg_copy_array__82772 */
 
 #ifndef kcg_copy_array_bool_8
 #define kcg_copy_array_bool_8(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_8)))
@@ -6851,29 +6881,29 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_bool_30(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_30)))
 #endif /* kcg_copy_array_bool_30 */
 
-#ifndef kcg_copy_array__79417
-#define kcg_copy_array__79417(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79417)))
-#endif /* kcg_copy_array__79417 */
+#ifndef kcg_copy_array__82781
+#define kcg_copy_array__82781(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82781)))
+#endif /* kcg_copy_array__82781 */
 
-#ifndef kcg_copy_array__79420
-#define kcg_copy_array__79420(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79420)))
-#endif /* kcg_copy_array__79420 */
+#ifndef kcg_copy_array__82784
+#define kcg_copy_array__82784(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82784)))
+#endif /* kcg_copy_array__82784 */
 
-#ifndef kcg_copy_array__79423
-#define kcg_copy_array__79423(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79423)))
-#endif /* kcg_copy_array__79423 */
+#ifndef kcg_copy_array__82787
+#define kcg_copy_array__82787(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82787)))
+#endif /* kcg_copy_array__82787 */
 
-#ifndef kcg_copy_array__79426
-#define kcg_copy_array__79426(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79426)))
-#endif /* kcg_copy_array__79426 */
+#ifndef kcg_copy_array__82790
+#define kcg_copy_array__82790(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82790)))
+#endif /* kcg_copy_array__82790 */
 
-#ifndef kcg_copy_array__79429
-#define kcg_copy_array__79429(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79429)))
-#endif /* kcg_copy_array__79429 */
+#ifndef kcg_copy_array__82793
+#define kcg_copy_array__82793(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82793)))
+#endif /* kcg_copy_array__82793 */
 
-#ifndef kcg_copy_array__79432
-#define kcg_copy_array__79432(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__79432)))
-#endif /* kcg_copy_array__79432 */
+#ifndef kcg_copy_array__82796
+#define kcg_copy_array__82796(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82796)))
+#endif /* kcg_copy_array__82796 */
 
 #ifndef kcg_copy_array_int_1
 #define kcg_copy_array_int_1(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_1)))
@@ -6887,1573 +6917,1567 @@ typedef positionedBG_T_TrainPosition_Types_Pck array__82782[7];
 #define kcg_copy_array_bool_24(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_bool_24)))
 #endif /* kcg_copy_array_bool_24 */
 
-#ifndef kcg_copy_array__82215
-#define kcg_copy_array__82215(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82215)))
-#endif /* kcg_copy_array__82215 */
-
-#ifndef kcg_copy_array__82684
-#define kcg_copy_array__82684(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82684)))
-#endif /* kcg_copy_array__82684 */
-
-#ifndef kcg_copy_array__82691
-#define kcg_copy_array__82691(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82691)))
-#endif /* kcg_copy_array__82691 */
-
-#ifndef kcg_copy_array__82748
-#define kcg_copy_array__82748(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82748)))
-#endif /* kcg_copy_array__82748 */
-
-#ifndef kcg_copy_array__82782
-#define kcg_copy_array__82782(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__82782)))
-#endif /* kcg_copy_array__82782 */
-
-#ifndef kcg_comp_struct__76855
-extern kcg_bool kcg_comp_struct__76855(
-  struct__76855 *kcg_c1,
-  struct__76855 *kcg_c2);
-#endif /* kcg_comp_struct__76855 */
-
-#ifndef kcg_comp_struct__76864
-extern kcg_bool kcg_comp_struct__76864(
-  struct__76864 *kcg_c1,
-  struct__76864 *kcg_c2);
-#endif /* kcg_comp_struct__76864 */
-
-#ifndef kcg_comp_struct__76874
-extern kcg_bool kcg_comp_struct__76874(
-  struct__76874 *kcg_c1,
-  struct__76874 *kcg_c2);
-#endif /* kcg_comp_struct__76874 */
-
-#ifndef kcg_comp_struct__76889
-extern kcg_bool kcg_comp_struct__76889(
-  struct__76889 *kcg_c1,
-  struct__76889 *kcg_c2);
-#endif /* kcg_comp_struct__76889 */
-
-#ifndef kcg_comp_struct__76899
-extern kcg_bool kcg_comp_struct__76899(
-  struct__76899 *kcg_c1,
-  struct__76899 *kcg_c2);
-#endif /* kcg_comp_struct__76899 */
-
-#ifndef kcg_comp_struct__76930
-extern kcg_bool kcg_comp_struct__76930(
-  struct__76930 *kcg_c1,
-  struct__76930 *kcg_c2);
-#endif /* kcg_comp_struct__76930 */
-
-#ifndef kcg_comp_struct__76935
-extern kcg_bool kcg_comp_struct__76935(
-  struct__76935 *kcg_c1,
-  struct__76935 *kcg_c2);
-#endif /* kcg_comp_struct__76935 */
-
-#ifndef kcg_comp_struct__76944
-extern kcg_bool kcg_comp_struct__76944(
-  struct__76944 *kcg_c1,
-  struct__76944 *kcg_c2);
-#endif /* kcg_comp_struct__76944 */
-
-#ifndef kcg_comp_struct__76954
-extern kcg_bool kcg_comp_struct__76954(
-  struct__76954 *kcg_c1,
-  struct__76954 *kcg_c2);
-#endif /* kcg_comp_struct__76954 */
-
-#ifndef kcg_comp_struct__76965
-extern kcg_bool kcg_comp_struct__76965(
-  struct__76965 *kcg_c1,
-  struct__76965 *kcg_c2);
-#endif /* kcg_comp_struct__76965 */
-
-#ifndef kcg_comp_struct__76973
-extern kcg_bool kcg_comp_struct__76973(
-  struct__76973 *kcg_c1,
-  struct__76973 *kcg_c2);
-#endif /* kcg_comp_struct__76973 */
-
-#ifndef kcg_comp_struct__77012
-extern kcg_bool kcg_comp_struct__77012(
-  struct__77012 *kcg_c1,
-  struct__77012 *kcg_c2);
-#endif /* kcg_comp_struct__77012 */
-
-#ifndef kcg_comp_struct__77032
-extern kcg_bool kcg_comp_struct__77032(
-  struct__77032 *kcg_c1,
-  struct__77032 *kcg_c2);
-#endif /* kcg_comp_struct__77032 */
-
-#ifndef kcg_comp_struct__77043
-extern kcg_bool kcg_comp_struct__77043(
-  struct__77043 *kcg_c1,
-  struct__77043 *kcg_c2);
-#endif /* kcg_comp_struct__77043 */
-
-#ifndef kcg_comp_struct__77048
-extern kcg_bool kcg_comp_struct__77048(
-  struct__77048 *kcg_c1,
-  struct__77048 *kcg_c2);
-#endif /* kcg_comp_struct__77048 */
-
-#ifndef kcg_comp_struct__77062
-extern kcg_bool kcg_comp_struct__77062(
-  struct__77062 *kcg_c1,
-  struct__77062 *kcg_c2);
-#endif /* kcg_comp_struct__77062 */
-
-#ifndef kcg_comp_struct__77077
-extern kcg_bool kcg_comp_struct__77077(
-  struct__77077 *kcg_c1,
-  struct__77077 *kcg_c2);
-#endif /* kcg_comp_struct__77077 */
-
-#ifndef kcg_comp_struct__77095
-extern kcg_bool kcg_comp_struct__77095(
-  struct__77095 *kcg_c1,
-  struct__77095 *kcg_c2);
-#endif /* kcg_comp_struct__77095 */
-
-#ifndef kcg_comp_struct__77107
-extern kcg_bool kcg_comp_struct__77107(
-  struct__77107 *kcg_c1,
-  struct__77107 *kcg_c2);
-#endif /* kcg_comp_struct__77107 */
-
-#ifndef kcg_comp_struct__77114
-extern kcg_bool kcg_comp_struct__77114(
-  struct__77114 *kcg_c1,
-  struct__77114 *kcg_c2);
-#endif /* kcg_comp_struct__77114 */
-
-#ifndef kcg_comp_struct__77121
-extern kcg_bool kcg_comp_struct__77121(
-  struct__77121 *kcg_c1,
-  struct__77121 *kcg_c2);
-#endif /* kcg_comp_struct__77121 */
-
-#ifndef kcg_comp_struct__77127
-extern kcg_bool kcg_comp_struct__77127(
-  struct__77127 *kcg_c1,
-  struct__77127 *kcg_c2);
-#endif /* kcg_comp_struct__77127 */
-
-#ifndef kcg_comp_struct__77137
-extern kcg_bool kcg_comp_struct__77137(
-  struct__77137 *kcg_c1,
-  struct__77137 *kcg_c2);
-#endif /* kcg_comp_struct__77137 */
-
-#ifndef kcg_comp_struct__77143
-extern kcg_bool kcg_comp_struct__77143(
-  struct__77143 *kcg_c1,
-  struct__77143 *kcg_c2);
-#endif /* kcg_comp_struct__77143 */
-
-#ifndef kcg_comp_struct__77161
-extern kcg_bool kcg_comp_struct__77161(
-  struct__77161 *kcg_c1,
-  struct__77161 *kcg_c2);
-#endif /* kcg_comp_struct__77161 */
-
-#ifndef kcg_comp_struct__77171
-extern kcg_bool kcg_comp_struct__77171(
-  struct__77171 *kcg_c1,
-  struct__77171 *kcg_c2);
-#endif /* kcg_comp_struct__77171 */
-
-#ifndef kcg_comp_struct__77177
-extern kcg_bool kcg_comp_struct__77177(
-  struct__77177 *kcg_c1,
-  struct__77177 *kcg_c2);
-#endif /* kcg_comp_struct__77177 */
-
-#ifndef kcg_comp_struct__77186
-extern kcg_bool kcg_comp_struct__77186(
-  struct__77186 *kcg_c1,
-  struct__77186 *kcg_c2);
-#endif /* kcg_comp_struct__77186 */
-
-#ifndef kcg_comp_struct__77200
-extern kcg_bool kcg_comp_struct__77200(
-  struct__77200 *kcg_c1,
-  struct__77200 *kcg_c2);
-#endif /* kcg_comp_struct__77200 */
-
-#ifndef kcg_comp_struct__77206
-extern kcg_bool kcg_comp_struct__77206(
-  struct__77206 *kcg_c1,
-  struct__77206 *kcg_c2);
-#endif /* kcg_comp_struct__77206 */
-
-#ifndef kcg_comp_struct__77215
-extern kcg_bool kcg_comp_struct__77215(
-  struct__77215 *kcg_c1,
-  struct__77215 *kcg_c2);
-#endif /* kcg_comp_struct__77215 */
-
-#ifndef kcg_comp_struct__77224
-extern kcg_bool kcg_comp_struct__77224(
-  struct__77224 *kcg_c1,
-  struct__77224 *kcg_c2);
-#endif /* kcg_comp_struct__77224 */
-
-#ifndef kcg_comp_struct__77234
-extern kcg_bool kcg_comp_struct__77234(
-  struct__77234 *kcg_c1,
-  struct__77234 *kcg_c2);
-#endif /* kcg_comp_struct__77234 */
-
-#ifndef kcg_comp_struct__77242
-extern kcg_bool kcg_comp_struct__77242(
-  struct__77242 *kcg_c1,
-  struct__77242 *kcg_c2);
-#endif /* kcg_comp_struct__77242 */
-
-#ifndef kcg_comp_struct__77250
-extern kcg_bool kcg_comp_struct__77250(
-  struct__77250 *kcg_c1,
-  struct__77250 *kcg_c2);
-#endif /* kcg_comp_struct__77250 */
-
-#ifndef kcg_comp_struct__77262
-extern kcg_bool kcg_comp_struct__77262(
-  struct__77262 *kcg_c1,
-  struct__77262 *kcg_c2);
-#endif /* kcg_comp_struct__77262 */
-
-#ifndef kcg_comp_struct__77275
-extern kcg_bool kcg_comp_struct__77275(
-  struct__77275 *kcg_c1,
-  struct__77275 *kcg_c2);
-#endif /* kcg_comp_struct__77275 */
-
-#ifndef kcg_comp_struct__77292
-extern kcg_bool kcg_comp_struct__77292(
-  struct__77292 *kcg_c1,
-  struct__77292 *kcg_c2);
-#endif /* kcg_comp_struct__77292 */
-
-#ifndef kcg_comp_struct__77300
-extern kcg_bool kcg_comp_struct__77300(
-  struct__77300 *kcg_c1,
-  struct__77300 *kcg_c2);
-#endif /* kcg_comp_struct__77300 */
-
-#ifndef kcg_comp_struct__77313
-extern kcg_bool kcg_comp_struct__77313(
-  struct__77313 *kcg_c1,
-  struct__77313 *kcg_c2);
-#endif /* kcg_comp_struct__77313 */
-
-#ifndef kcg_comp_struct__77322
-extern kcg_bool kcg_comp_struct__77322(
-  struct__77322 *kcg_c1,
-  struct__77322 *kcg_c2);
-#endif /* kcg_comp_struct__77322 */
-
-#ifndef kcg_comp_struct__77332
-extern kcg_bool kcg_comp_struct__77332(
-  struct__77332 *kcg_c1,
-  struct__77332 *kcg_c2);
-#endif /* kcg_comp_struct__77332 */
-
-#ifndef kcg_comp_struct__77350
-extern kcg_bool kcg_comp_struct__77350(
-  struct__77350 *kcg_c1,
-  struct__77350 *kcg_c2);
-#endif /* kcg_comp_struct__77350 */
-
-#ifndef kcg_comp_struct__77358
-extern kcg_bool kcg_comp_struct__77358(
-  struct__77358 *kcg_c1,
-  struct__77358 *kcg_c2);
-#endif /* kcg_comp_struct__77358 */
-
-#ifndef kcg_comp_struct__77366
-extern kcg_bool kcg_comp_struct__77366(
-  struct__77366 *kcg_c1,
-  struct__77366 *kcg_c2);
-#endif /* kcg_comp_struct__77366 */
-
-#ifndef kcg_comp_struct__77374
-extern kcg_bool kcg_comp_struct__77374(
-  struct__77374 *kcg_c1,
-  struct__77374 *kcg_c2);
-#endif /* kcg_comp_struct__77374 */
-
-#ifndef kcg_comp_struct__77390
-extern kcg_bool kcg_comp_struct__77390(
-  struct__77390 *kcg_c1,
-  struct__77390 *kcg_c2);
-#endif /* kcg_comp_struct__77390 */
-
-#ifndef kcg_comp_struct__77423
-extern kcg_bool kcg_comp_struct__77423(
-  struct__77423 *kcg_c1,
-  struct__77423 *kcg_c2);
-#endif /* kcg_comp_struct__77423 */
-
-#ifndef kcg_comp_struct__77478
-extern kcg_bool kcg_comp_struct__77478(
-  struct__77478 *kcg_c1,
-  struct__77478 *kcg_c2);
-#endif /* kcg_comp_struct__77478 */
-
-#ifndef kcg_comp_struct__77489
-extern kcg_bool kcg_comp_struct__77489(
-  struct__77489 *kcg_c1,
-  struct__77489 *kcg_c2);
-#endif /* kcg_comp_struct__77489 */
-
-#ifndef kcg_comp_struct__77523
-extern kcg_bool kcg_comp_struct__77523(
-  struct__77523 *kcg_c1,
-  struct__77523 *kcg_c2);
-#endif /* kcg_comp_struct__77523 */
-
-#ifndef kcg_comp_struct__77532
-extern kcg_bool kcg_comp_struct__77532(
-  struct__77532 *kcg_c1,
-  struct__77532 *kcg_c2);
-#endif /* kcg_comp_struct__77532 */
-
-#ifndef kcg_comp_struct__77537
-extern kcg_bool kcg_comp_struct__77537(
-  struct__77537 *kcg_c1,
-  struct__77537 *kcg_c2);
-#endif /* kcg_comp_struct__77537 */
-
-#ifndef kcg_comp_struct__77546
-extern kcg_bool kcg_comp_struct__77546(
-  struct__77546 *kcg_c1,
-  struct__77546 *kcg_c2);
-#endif /* kcg_comp_struct__77546 */
-
-#ifndef kcg_comp_struct__77564
-extern kcg_bool kcg_comp_struct__77564(
-  struct__77564 *kcg_c1,
-  struct__77564 *kcg_c2);
-#endif /* kcg_comp_struct__77564 */
-
-#ifndef kcg_comp_struct__77572
-extern kcg_bool kcg_comp_struct__77572(
-  struct__77572 *kcg_c1,
-  struct__77572 *kcg_c2);
-#endif /* kcg_comp_struct__77572 */
-
-#ifndef kcg_comp_struct__77581
-extern kcg_bool kcg_comp_struct__77581(
-  struct__77581 *kcg_c1,
-  struct__77581 *kcg_c2);
-#endif /* kcg_comp_struct__77581 */
-
-#ifndef kcg_comp_struct__77593
-extern kcg_bool kcg_comp_struct__77593(
-  struct__77593 *kcg_c1,
-  struct__77593 *kcg_c2);
-#endif /* kcg_comp_struct__77593 */
-
-#ifndef kcg_comp_struct__77600
-extern kcg_bool kcg_comp_struct__77600(
-  struct__77600 *kcg_c1,
-  struct__77600 *kcg_c2);
-#endif /* kcg_comp_struct__77600 */
-
-#ifndef kcg_comp_struct__77615
-extern kcg_bool kcg_comp_struct__77615(
-  struct__77615 *kcg_c1,
-  struct__77615 *kcg_c2);
-#endif /* kcg_comp_struct__77615 */
-
-#ifndef kcg_comp_struct__77630
-extern kcg_bool kcg_comp_struct__77630(
-  struct__77630 *kcg_c1,
-  struct__77630 *kcg_c2);
-#endif /* kcg_comp_struct__77630 */
-
-#ifndef kcg_comp_struct__77635
-extern kcg_bool kcg_comp_struct__77635(
-  struct__77635 *kcg_c1,
-  struct__77635 *kcg_c2);
-#endif /* kcg_comp_struct__77635 */
-
-#ifndef kcg_comp_struct__77641
-extern kcg_bool kcg_comp_struct__77641(
-  struct__77641 *kcg_c1,
-  struct__77641 *kcg_c2);
-#endif /* kcg_comp_struct__77641 */
-
-#ifndef kcg_comp_struct__77646
-extern kcg_bool kcg_comp_struct__77646(
-  struct__77646 *kcg_c1,
-  struct__77646 *kcg_c2);
-#endif /* kcg_comp_struct__77646 */
-
-#ifndef kcg_comp_struct__77653
-extern kcg_bool kcg_comp_struct__77653(
-  struct__77653 *kcg_c1,
-  struct__77653 *kcg_c2);
-#endif /* kcg_comp_struct__77653 */
-
-#ifndef kcg_comp_struct__77664
-extern kcg_bool kcg_comp_struct__77664(
-  struct__77664 *kcg_c1,
-  struct__77664 *kcg_c2);
-#endif /* kcg_comp_struct__77664 */
-
-#ifndef kcg_comp_struct__77674
-extern kcg_bool kcg_comp_struct__77674(
-  struct__77674 *kcg_c1,
-  struct__77674 *kcg_c2);
-#endif /* kcg_comp_struct__77674 */
-
-#ifndef kcg_comp_struct__77685
-extern kcg_bool kcg_comp_struct__77685(
-  struct__77685 *kcg_c1,
-  struct__77685 *kcg_c2);
-#endif /* kcg_comp_struct__77685 */
-
-#ifndef kcg_comp_struct__77697
-extern kcg_bool kcg_comp_struct__77697(
-  struct__77697 *kcg_c1,
-  struct__77697 *kcg_c2);
-#endif /* kcg_comp_struct__77697 */
-
-#ifndef kcg_comp_struct__77705
-extern kcg_bool kcg_comp_struct__77705(
-  struct__77705 *kcg_c1,
-  struct__77705 *kcg_c2);
-#endif /* kcg_comp_struct__77705 */
-
-#ifndef kcg_comp_struct__77721
-extern kcg_bool kcg_comp_struct__77721(
-  struct__77721 *kcg_c1,
-  struct__77721 *kcg_c2);
-#endif /* kcg_comp_struct__77721 */
-
-#ifndef kcg_comp_struct__77726
-extern kcg_bool kcg_comp_struct__77726(
-  struct__77726 *kcg_c1,
-  struct__77726 *kcg_c2);
-#endif /* kcg_comp_struct__77726 */
-
-#ifndef kcg_comp_struct__77731
-extern kcg_bool kcg_comp_struct__77731(
-  struct__77731 *kcg_c1,
-  struct__77731 *kcg_c2);
-#endif /* kcg_comp_struct__77731 */
-
-#ifndef kcg_comp_struct__77736
-extern kcg_bool kcg_comp_struct__77736(
-  struct__77736 *kcg_c1,
-  struct__77736 *kcg_c2);
-#endif /* kcg_comp_struct__77736 */
-
-#ifndef kcg_comp_struct__77744
-extern kcg_bool kcg_comp_struct__77744(
-  struct__77744 *kcg_c1,
-  struct__77744 *kcg_c2);
-#endif /* kcg_comp_struct__77744 */
-
-#ifndef kcg_comp_struct__77750
-extern kcg_bool kcg_comp_struct__77750(
-  struct__77750 *kcg_c1,
-  struct__77750 *kcg_c2);
-#endif /* kcg_comp_struct__77750 */
-
-#ifndef kcg_comp_struct__77770
-extern kcg_bool kcg_comp_struct__77770(
-  struct__77770 *kcg_c1,
-  struct__77770 *kcg_c2);
-#endif /* kcg_comp_struct__77770 */
-
-#ifndef kcg_comp_struct__77775
-extern kcg_bool kcg_comp_struct__77775(
-  struct__77775 *kcg_c1,
-  struct__77775 *kcg_c2);
-#endif /* kcg_comp_struct__77775 */
-
-#ifndef kcg_comp_struct__77794
-extern kcg_bool kcg_comp_struct__77794(
-  struct__77794 *kcg_c1,
-  struct__77794 *kcg_c2);
-#endif /* kcg_comp_struct__77794 */
-
-#ifndef kcg_comp_struct__77799
-extern kcg_bool kcg_comp_struct__77799(
-  struct__77799 *kcg_c1,
-  struct__77799 *kcg_c2);
-#endif /* kcg_comp_struct__77799 */
-
-#ifndef kcg_comp_struct__77809
-extern kcg_bool kcg_comp_struct__77809(
-  struct__77809 *kcg_c1,
-  struct__77809 *kcg_c2);
-#endif /* kcg_comp_struct__77809 */
-
-#ifndef kcg_comp_struct__77815
-extern kcg_bool kcg_comp_struct__77815(
-  struct__77815 *kcg_c1,
-  struct__77815 *kcg_c2);
-#endif /* kcg_comp_struct__77815 */
-
-#ifndef kcg_comp_struct__77820
-extern kcg_bool kcg_comp_struct__77820(
-  struct__77820 *kcg_c1,
-  struct__77820 *kcg_c2);
-#endif /* kcg_comp_struct__77820 */
-
-#ifndef kcg_comp_struct__77828
-extern kcg_bool kcg_comp_struct__77828(
-  struct__77828 *kcg_c1,
-  struct__77828 *kcg_c2);
-#endif /* kcg_comp_struct__77828 */
-
-#ifndef kcg_comp_struct__77837
-extern kcg_bool kcg_comp_struct__77837(
-  struct__77837 *kcg_c1,
-  struct__77837 *kcg_c2);
-#endif /* kcg_comp_struct__77837 */
-
-#ifndef kcg_comp_struct__77844
-extern kcg_bool kcg_comp_struct__77844(
-  struct__77844 *kcg_c1,
-  struct__77844 *kcg_c2);
-#endif /* kcg_comp_struct__77844 */
-
-#ifndef kcg_comp_struct__77850
-extern kcg_bool kcg_comp_struct__77850(
-  struct__77850 *kcg_c1,
-  struct__77850 *kcg_c2);
-#endif /* kcg_comp_struct__77850 */
-
-#ifndef kcg_comp_struct__77858
-extern kcg_bool kcg_comp_struct__77858(
-  struct__77858 *kcg_c1,
-  struct__77858 *kcg_c2);
-#endif /* kcg_comp_struct__77858 */
-
-#ifndef kcg_comp_struct__77863
-extern kcg_bool kcg_comp_struct__77863(
-  struct__77863 *kcg_c1,
-  struct__77863 *kcg_c2);
-#endif /* kcg_comp_struct__77863 */
-
-#ifndef kcg_comp_struct__77870
-extern kcg_bool kcg_comp_struct__77870(
-  struct__77870 *kcg_c1,
-  struct__77870 *kcg_c2);
-#endif /* kcg_comp_struct__77870 */
-
-#ifndef kcg_comp_struct__77878
-extern kcg_bool kcg_comp_struct__77878(
-  struct__77878 *kcg_c1,
-  struct__77878 *kcg_c2);
-#endif /* kcg_comp_struct__77878 */
-
-#ifndef kcg_comp_struct__77886
-extern kcg_bool kcg_comp_struct__77886(
-  struct__77886 *kcg_c1,
-  struct__77886 *kcg_c2);
-#endif /* kcg_comp_struct__77886 */
-
-#ifndef kcg_comp_struct__77895
-extern kcg_bool kcg_comp_struct__77895(
-  struct__77895 *kcg_c1,
-  struct__77895 *kcg_c2);
-#endif /* kcg_comp_struct__77895 */
-
-#ifndef kcg_comp_struct__77913
-extern kcg_bool kcg_comp_struct__77913(
-  struct__77913 *kcg_c1,
-  struct__77913 *kcg_c2);
-#endif /* kcg_comp_struct__77913 */
-
-#ifndef kcg_comp_struct__77925
-extern kcg_bool kcg_comp_struct__77925(
-  struct__77925 *kcg_c1,
-  struct__77925 *kcg_c2);
-#endif /* kcg_comp_struct__77925 */
-
-#ifndef kcg_comp_struct__77931
-extern kcg_bool kcg_comp_struct__77931(
-  struct__77931 *kcg_c1,
-  struct__77931 *kcg_c2);
-#endif /* kcg_comp_struct__77931 */
-
-#ifndef kcg_comp_struct__77946
-extern kcg_bool kcg_comp_struct__77946(
-  struct__77946 *kcg_c1,
-  struct__77946 *kcg_c2);
-#endif /* kcg_comp_struct__77946 */
-
-#ifndef kcg_comp_struct__77956
-extern kcg_bool kcg_comp_struct__77956(
-  struct__77956 *kcg_c1,
-  struct__77956 *kcg_c2);
-#endif /* kcg_comp_struct__77956 */
-
-#ifndef kcg_comp_struct__77969
-extern kcg_bool kcg_comp_struct__77969(
-  struct__77969 *kcg_c1,
-  struct__77969 *kcg_c2);
-#endif /* kcg_comp_struct__77969 */
-
-#ifndef kcg_comp_struct__77980
-extern kcg_bool kcg_comp_struct__77980(
-  struct__77980 *kcg_c1,
-  struct__77980 *kcg_c2);
-#endif /* kcg_comp_struct__77980 */
-
-#ifndef kcg_comp_struct__77991
-extern kcg_bool kcg_comp_struct__77991(
-  struct__77991 *kcg_c1,
-  struct__77991 *kcg_c2);
-#endif /* kcg_comp_struct__77991 */
-
-#ifndef kcg_comp_struct__78002
-extern kcg_bool kcg_comp_struct__78002(
-  struct__78002 *kcg_c1,
-  struct__78002 *kcg_c2);
-#endif /* kcg_comp_struct__78002 */
-
-#ifndef kcg_comp_struct__78014
-extern kcg_bool kcg_comp_struct__78014(
-  struct__78014 *kcg_c1,
-  struct__78014 *kcg_c2);
-#endif /* kcg_comp_struct__78014 */
-
-#ifndef kcg_comp_struct__78044
-extern kcg_bool kcg_comp_struct__78044(
-  struct__78044 *kcg_c1,
-  struct__78044 *kcg_c2);
-#endif /* kcg_comp_struct__78044 */
-
-#ifndef kcg_comp_struct__78052
-extern kcg_bool kcg_comp_struct__78052(
-  struct__78052 *kcg_c1,
-  struct__78052 *kcg_c2);
-#endif /* kcg_comp_struct__78052 */
-
-#ifndef kcg_comp_struct__78060
-extern kcg_bool kcg_comp_struct__78060(
-  struct__78060 *kcg_c1,
-  struct__78060 *kcg_c2);
-#endif /* kcg_comp_struct__78060 */
-
-#ifndef kcg_comp_struct__78066
-extern kcg_bool kcg_comp_struct__78066(
-  struct__78066 *kcg_c1,
-  struct__78066 *kcg_c2);
-#endif /* kcg_comp_struct__78066 */
-
-#ifndef kcg_comp_struct__78081
-extern kcg_bool kcg_comp_struct__78081(
-  struct__78081 *kcg_c1,
-  struct__78081 *kcg_c2);
-#endif /* kcg_comp_struct__78081 */
-
-#ifndef kcg_comp_struct__78094
-extern kcg_bool kcg_comp_struct__78094(
-  struct__78094 *kcg_c1,
-  struct__78094 *kcg_c2);
-#endif /* kcg_comp_struct__78094 */
-
-#ifndef kcg_comp_struct__78103
-extern kcg_bool kcg_comp_struct__78103(
-  struct__78103 *kcg_c1,
-  struct__78103 *kcg_c2);
-#endif /* kcg_comp_struct__78103 */
-
-#ifndef kcg_comp_struct__78108
-extern kcg_bool kcg_comp_struct__78108(
-  struct__78108 *kcg_c1,
-  struct__78108 *kcg_c2);
-#endif /* kcg_comp_struct__78108 */
-
-#ifndef kcg_comp_struct__78118
-extern kcg_bool kcg_comp_struct__78118(
-  struct__78118 *kcg_c1,
-  struct__78118 *kcg_c2);
-#endif /* kcg_comp_struct__78118 */
-
-#ifndef kcg_comp_struct__78130
-extern kcg_bool kcg_comp_struct__78130(
-  struct__78130 *kcg_c1,
-  struct__78130 *kcg_c2);
-#endif /* kcg_comp_struct__78130 */
-
-#ifndef kcg_comp_struct__78136
-extern kcg_bool kcg_comp_struct__78136(
-  struct__78136 *kcg_c1,
-  struct__78136 *kcg_c2);
-#endif /* kcg_comp_struct__78136 */
-
-#ifndef kcg_comp_struct__78141
-extern kcg_bool kcg_comp_struct__78141(
-  struct__78141 *kcg_c1,
-  struct__78141 *kcg_c2);
-#endif /* kcg_comp_struct__78141 */
-
-#ifndef kcg_comp_struct__78147
-extern kcg_bool kcg_comp_struct__78147(
-  struct__78147 *kcg_c1,
-  struct__78147 *kcg_c2);
-#endif /* kcg_comp_struct__78147 */
-
-#ifndef kcg_comp_struct__78153
-extern kcg_bool kcg_comp_struct__78153(
-  struct__78153 *kcg_c1,
-  struct__78153 *kcg_c2);
-#endif /* kcg_comp_struct__78153 */
-
-#ifndef kcg_comp_struct__78158
-extern kcg_bool kcg_comp_struct__78158(
-  struct__78158 *kcg_c1,
-  struct__78158 *kcg_c2);
-#endif /* kcg_comp_struct__78158 */
-
-#ifndef kcg_comp_struct__78167
-extern kcg_bool kcg_comp_struct__78167(
-  struct__78167 *kcg_c1,
-  struct__78167 *kcg_c2);
-#endif /* kcg_comp_struct__78167 */
-
-#ifndef kcg_comp_struct__78178
-extern kcg_bool kcg_comp_struct__78178(
-  struct__78178 *kcg_c1,
-  struct__78178 *kcg_c2);
-#endif /* kcg_comp_struct__78178 */
-
-#ifndef kcg_comp_struct__78187
-extern kcg_bool kcg_comp_struct__78187(
-  struct__78187 *kcg_c1,
-  struct__78187 *kcg_c2);
-#endif /* kcg_comp_struct__78187 */
-
-#ifndef kcg_comp_struct__78194
-extern kcg_bool kcg_comp_struct__78194(
-  struct__78194 *kcg_c1,
-  struct__78194 *kcg_c2);
-#endif /* kcg_comp_struct__78194 */
-
-#ifndef kcg_comp_struct__78199
-extern kcg_bool kcg_comp_struct__78199(
-  struct__78199 *kcg_c1,
-  struct__78199 *kcg_c2);
-#endif /* kcg_comp_struct__78199 */
-
-#ifndef kcg_comp_struct__78204
-extern kcg_bool kcg_comp_struct__78204(
-  struct__78204 *kcg_c1,
-  struct__78204 *kcg_c2);
-#endif /* kcg_comp_struct__78204 */
-
-#ifndef kcg_comp_struct__78210
-extern kcg_bool kcg_comp_struct__78210(
-  struct__78210 *kcg_c1,
-  struct__78210 *kcg_c2);
-#endif /* kcg_comp_struct__78210 */
-
-#ifndef kcg_comp_struct__78215
-extern kcg_bool kcg_comp_struct__78215(
-  struct__78215 *kcg_c1,
-  struct__78215 *kcg_c2);
-#endif /* kcg_comp_struct__78215 */
-
-#ifndef kcg_comp_struct__78224
-extern kcg_bool kcg_comp_struct__78224(
-  struct__78224 *kcg_c1,
-  struct__78224 *kcg_c2);
-#endif /* kcg_comp_struct__78224 */
-
-#ifndef kcg_comp_struct__78228
-extern kcg_bool kcg_comp_struct__78228(
-  struct__78228 *kcg_c1,
-  struct__78228 *kcg_c2);
-#endif /* kcg_comp_struct__78228 */
-
-#ifndef kcg_comp_struct__78233
-extern kcg_bool kcg_comp_struct__78233(
-  struct__78233 *kcg_c1,
-  struct__78233 *kcg_c2);
-#endif /* kcg_comp_struct__78233 */
-
-#ifndef kcg_comp_struct__78241
-extern kcg_bool kcg_comp_struct__78241(
-  struct__78241 *kcg_c1,
-  struct__78241 *kcg_c2);
-#endif /* kcg_comp_struct__78241 */
-
-#ifndef kcg_comp_struct__78254
-extern kcg_bool kcg_comp_struct__78254(
-  struct__78254 *kcg_c1,
-  struct__78254 *kcg_c2);
-#endif /* kcg_comp_struct__78254 */
-
-#ifndef kcg_comp_struct__78263
-extern kcg_bool kcg_comp_struct__78263(
-  struct__78263 *kcg_c1,
-  struct__78263 *kcg_c2);
-#endif /* kcg_comp_struct__78263 */
-
-#ifndef kcg_comp_struct__78277
-extern kcg_bool kcg_comp_struct__78277(
-  struct__78277 *kcg_c1,
-  struct__78277 *kcg_c2);
-#endif /* kcg_comp_struct__78277 */
-
-#ifndef kcg_comp_struct__78285
-extern kcg_bool kcg_comp_struct__78285(
-  struct__78285 *kcg_c1,
-  struct__78285 *kcg_c2);
-#endif /* kcg_comp_struct__78285 */
-
-#ifndef kcg_comp_struct__78298
-extern kcg_bool kcg_comp_struct__78298(
-  struct__78298 *kcg_c1,
-  struct__78298 *kcg_c2);
-#endif /* kcg_comp_struct__78298 */
-
-#ifndef kcg_comp_struct__78303
-extern kcg_bool kcg_comp_struct__78303(
-  struct__78303 *kcg_c1,
-  struct__78303 *kcg_c2);
-#endif /* kcg_comp_struct__78303 */
-
-#ifndef kcg_comp_struct__78312
-extern kcg_bool kcg_comp_struct__78312(
-  struct__78312 *kcg_c1,
-  struct__78312 *kcg_c2);
-#endif /* kcg_comp_struct__78312 */
-
-#ifndef kcg_comp_struct__78333
-extern kcg_bool kcg_comp_struct__78333(
-  struct__78333 *kcg_c1,
-  struct__78333 *kcg_c2);
-#endif /* kcg_comp_struct__78333 */
-
-#ifndef kcg_comp_struct__78344
-extern kcg_bool kcg_comp_struct__78344(
-  struct__78344 *kcg_c1,
-  struct__78344 *kcg_c2);
-#endif /* kcg_comp_struct__78344 */
-
-#ifndef kcg_comp_struct__78350
-extern kcg_bool kcg_comp_struct__78350(
-  struct__78350 *kcg_c1,
-  struct__78350 *kcg_c2);
-#endif /* kcg_comp_struct__78350 */
-
-#ifndef kcg_comp_struct__78360
-extern kcg_bool kcg_comp_struct__78360(
-  struct__78360 *kcg_c1,
-  struct__78360 *kcg_c2);
-#endif /* kcg_comp_struct__78360 */
-
-#ifndef kcg_comp_struct__78369
-extern kcg_bool kcg_comp_struct__78369(
-  struct__78369 *kcg_c1,
-  struct__78369 *kcg_c2);
-#endif /* kcg_comp_struct__78369 */
-
-#ifndef kcg_comp_struct__78377
-extern kcg_bool kcg_comp_struct__78377(
-  struct__78377 *kcg_c1,
-  struct__78377 *kcg_c2);
-#endif /* kcg_comp_struct__78377 */
-
-#ifndef kcg_comp_struct__78387
-extern kcg_bool kcg_comp_struct__78387(
-  struct__78387 *kcg_c1,
-  struct__78387 *kcg_c2);
-#endif /* kcg_comp_struct__78387 */
-
-#ifndef kcg_comp_struct__78396
-extern kcg_bool kcg_comp_struct__78396(
-  struct__78396 *kcg_c1,
-  struct__78396 *kcg_c2);
-#endif /* kcg_comp_struct__78396 */
-
-#ifndef kcg_comp_struct__78403
-extern kcg_bool kcg_comp_struct__78403(
-  struct__78403 *kcg_c1,
-  struct__78403 *kcg_c2);
-#endif /* kcg_comp_struct__78403 */
-
-#ifndef kcg_comp_struct__78411
-extern kcg_bool kcg_comp_struct__78411(
-  struct__78411 *kcg_c1,
-  struct__78411 *kcg_c2);
-#endif /* kcg_comp_struct__78411 */
-
-#ifndef kcg_comp_struct__78422
-extern kcg_bool kcg_comp_struct__78422(
-  struct__78422 *kcg_c1,
-  struct__78422 *kcg_c2);
-#endif /* kcg_comp_struct__78422 */
-
-#ifndef kcg_comp_struct__78434
-extern kcg_bool kcg_comp_struct__78434(
-  struct__78434 *kcg_c1,
-  struct__78434 *kcg_c2);
-#endif /* kcg_comp_struct__78434 */
-
-#ifndef kcg_comp_struct__78440
-extern kcg_bool kcg_comp_struct__78440(
-  struct__78440 *kcg_c1,
-  struct__78440 *kcg_c2);
-#endif /* kcg_comp_struct__78440 */
-
-#ifndef kcg_comp_struct__78446
-extern kcg_bool kcg_comp_struct__78446(
-  struct__78446 *kcg_c1,
-  struct__78446 *kcg_c2);
-#endif /* kcg_comp_struct__78446 */
-
-#ifndef kcg_comp_struct__78452
-extern kcg_bool kcg_comp_struct__78452(
-  struct__78452 *kcg_c1,
-  struct__78452 *kcg_c2);
-#endif /* kcg_comp_struct__78452 */
-
-#ifndef kcg_comp_struct__78457
-extern kcg_bool kcg_comp_struct__78457(
-  struct__78457 *kcg_c1,
-  struct__78457 *kcg_c2);
-#endif /* kcg_comp_struct__78457 */
-
-#ifndef kcg_comp_struct__78467
-extern kcg_bool kcg_comp_struct__78467(
-  struct__78467 *kcg_c1,
-  struct__78467 *kcg_c2);
-#endif /* kcg_comp_struct__78467 */
-
-#ifndef kcg_comp_struct__78481
-extern kcg_bool kcg_comp_struct__78481(
-  struct__78481 *kcg_c1,
-  struct__78481 *kcg_c2);
-#endif /* kcg_comp_struct__78481 */
-
-#ifndef kcg_comp_struct__78487
-extern kcg_bool kcg_comp_struct__78487(
-  struct__78487 *kcg_c1,
-  struct__78487 *kcg_c2);
-#endif /* kcg_comp_struct__78487 */
-
-#ifndef kcg_comp_struct__78494
-extern kcg_bool kcg_comp_struct__78494(
-  struct__78494 *kcg_c1,
-  struct__78494 *kcg_c2);
-#endif /* kcg_comp_struct__78494 */
-
-#ifndef kcg_comp_struct__78501
-extern kcg_bool kcg_comp_struct__78501(
-  struct__78501 *kcg_c1,
-  struct__78501 *kcg_c2);
-#endif /* kcg_comp_struct__78501 */
-
-#ifndef kcg_comp_struct__78507
-extern kcg_bool kcg_comp_struct__78507(
-  struct__78507 *kcg_c1,
-  struct__78507 *kcg_c2);
-#endif /* kcg_comp_struct__78507 */
-
-#ifndef kcg_comp_struct__78516
-extern kcg_bool kcg_comp_struct__78516(
-  struct__78516 *kcg_c1,
-  struct__78516 *kcg_c2);
-#endif /* kcg_comp_struct__78516 */
-
-#ifndef kcg_comp_struct__78522
-extern kcg_bool kcg_comp_struct__78522(
-  struct__78522 *kcg_c1,
-  struct__78522 *kcg_c2);
-#endif /* kcg_comp_struct__78522 */
-
-#ifndef kcg_comp_struct__78527
-extern kcg_bool kcg_comp_struct__78527(
-  struct__78527 *kcg_c1,
-  struct__78527 *kcg_c2);
-#endif /* kcg_comp_struct__78527 */
-
-#ifndef kcg_comp_struct__78537
-extern kcg_bool kcg_comp_struct__78537(
-  struct__78537 *kcg_c1,
-  struct__78537 *kcg_c2);
-#endif /* kcg_comp_struct__78537 */
-
-#ifndef kcg_comp_struct__78547
-extern kcg_bool kcg_comp_struct__78547(
-  struct__78547 *kcg_c1,
-  struct__78547 *kcg_c2);
-#endif /* kcg_comp_struct__78547 */
-
-#ifndef kcg_comp_struct__78563
-extern kcg_bool kcg_comp_struct__78563(
-  struct__78563 *kcg_c1,
-  struct__78563 *kcg_c2);
-#endif /* kcg_comp_struct__78563 */
-
-#ifndef kcg_comp_struct__78575
-extern kcg_bool kcg_comp_struct__78575(
-  struct__78575 *kcg_c1,
-  struct__78575 *kcg_c2);
-#endif /* kcg_comp_struct__78575 */
-
-#ifndef kcg_comp_struct__78582
-extern kcg_bool kcg_comp_struct__78582(
-  struct__78582 *kcg_c1,
-  struct__78582 *kcg_c2);
-#endif /* kcg_comp_struct__78582 */
-
-#ifndef kcg_comp_struct__78615
-extern kcg_bool kcg_comp_struct__78615(
-  struct__78615 *kcg_c1,
-  struct__78615 *kcg_c2);
-#endif /* kcg_comp_struct__78615 */
-
-#ifndef kcg_comp_struct__78620
-extern kcg_bool kcg_comp_struct__78620(
-  struct__78620 *kcg_c1,
-  struct__78620 *kcg_c2);
-#endif /* kcg_comp_struct__78620 */
-
-#ifndef kcg_comp_struct__78625
-extern kcg_bool kcg_comp_struct__78625(
-  struct__78625 *kcg_c1,
-  struct__78625 *kcg_c2);
-#endif /* kcg_comp_struct__78625 */
-
-#ifndef kcg_comp_struct__78634
-extern kcg_bool kcg_comp_struct__78634(
-  struct__78634 *kcg_c1,
-  struct__78634 *kcg_c2);
-#endif /* kcg_comp_struct__78634 */
-
-#ifndef kcg_comp_struct__78641
-extern kcg_bool kcg_comp_struct__78641(
-  struct__78641 *kcg_c1,
-  struct__78641 *kcg_c2);
-#endif /* kcg_comp_struct__78641 */
-
-#ifndef kcg_comp_struct__78648
-extern kcg_bool kcg_comp_struct__78648(
-  struct__78648 *kcg_c1,
-  struct__78648 *kcg_c2);
-#endif /* kcg_comp_struct__78648 */
-
-#ifndef kcg_comp_struct__78654
-extern kcg_bool kcg_comp_struct__78654(
-  struct__78654 *kcg_c1,
-  struct__78654 *kcg_c2);
-#endif /* kcg_comp_struct__78654 */
-
-#ifndef kcg_comp_struct__78664
-extern kcg_bool kcg_comp_struct__78664(
-  struct__78664 *kcg_c1,
-  struct__78664 *kcg_c2);
-#endif /* kcg_comp_struct__78664 */
-
-#ifndef kcg_comp_struct__78676
-extern kcg_bool kcg_comp_struct__78676(
-  struct__78676 *kcg_c1,
-  struct__78676 *kcg_c2);
-#endif /* kcg_comp_struct__78676 */
-
-#ifndef kcg_comp_struct__78683
-extern kcg_bool kcg_comp_struct__78683(
-  struct__78683 *kcg_c1,
-  struct__78683 *kcg_c2);
-#endif /* kcg_comp_struct__78683 */
-
-#ifndef kcg_comp_struct__78693
-extern kcg_bool kcg_comp_struct__78693(
-  struct__78693 *kcg_c1,
-  struct__78693 *kcg_c2);
-#endif /* kcg_comp_struct__78693 */
-
-#ifndef kcg_comp_struct__78702
-extern kcg_bool kcg_comp_struct__78702(
-  struct__78702 *kcg_c1,
-  struct__78702 *kcg_c2);
-#endif /* kcg_comp_struct__78702 */
-
-#ifndef kcg_comp_struct__78713
-extern kcg_bool kcg_comp_struct__78713(
-  struct__78713 *kcg_c1,
-  struct__78713 *kcg_c2);
-#endif /* kcg_comp_struct__78713 */
-
-#ifndef kcg_comp_struct__78720
-extern kcg_bool kcg_comp_struct__78720(
-  struct__78720 *kcg_c1,
-  struct__78720 *kcg_c2);
-#endif /* kcg_comp_struct__78720 */
-
-#ifndef kcg_comp_struct__78730
-extern kcg_bool kcg_comp_struct__78730(
-  struct__78730 *kcg_c1,
-  struct__78730 *kcg_c2);
-#endif /* kcg_comp_struct__78730 */
-
-#ifndef kcg_comp_struct__78735
-extern kcg_bool kcg_comp_struct__78735(
-  struct__78735 *kcg_c1,
-  struct__78735 *kcg_c2);
-#endif /* kcg_comp_struct__78735 */
-
-#ifndef kcg_comp_struct__78748
-extern kcg_bool kcg_comp_struct__78748(
-  struct__78748 *kcg_c1,
-  struct__78748 *kcg_c2);
-#endif /* kcg_comp_struct__78748 */
-
-#ifndef kcg_comp_struct__78757
-extern kcg_bool kcg_comp_struct__78757(
-  struct__78757 *kcg_c1,
-  struct__78757 *kcg_c2);
-#endif /* kcg_comp_struct__78757 */
-
-#ifndef kcg_comp_struct__78773
-extern kcg_bool kcg_comp_struct__78773(
-  struct__78773 *kcg_c1,
-  struct__78773 *kcg_c2);
-#endif /* kcg_comp_struct__78773 */
-
-#ifndef kcg_comp_struct__78796
-extern kcg_bool kcg_comp_struct__78796(
-  struct__78796 *kcg_c1,
-  struct__78796 *kcg_c2);
-#endif /* kcg_comp_struct__78796 */
-
-#ifndef kcg_comp_struct__78810
-extern kcg_bool kcg_comp_struct__78810(
-  struct__78810 *kcg_c1,
-  struct__78810 *kcg_c2);
-#endif /* kcg_comp_struct__78810 */
-
-#ifndef kcg_comp_struct__78816
-extern kcg_bool kcg_comp_struct__78816(
-  struct__78816 *kcg_c1,
-  struct__78816 *kcg_c2);
-#endif /* kcg_comp_struct__78816 */
-
-#ifndef kcg_comp_struct__78824
-extern kcg_bool kcg_comp_struct__78824(
-  struct__78824 *kcg_c1,
-  struct__78824 *kcg_c2);
-#endif /* kcg_comp_struct__78824 */
-
-#ifndef kcg_comp_struct__78830
-extern kcg_bool kcg_comp_struct__78830(
-  struct__78830 *kcg_c1,
-  struct__78830 *kcg_c2);
-#endif /* kcg_comp_struct__78830 */
-
-#ifndef kcg_comp_struct__78857
-extern kcg_bool kcg_comp_struct__78857(
-  struct__78857 *kcg_c1,
-  struct__78857 *kcg_c2);
-#endif /* kcg_comp_struct__78857 */
-
-#ifndef kcg_comp_struct__78870
-extern kcg_bool kcg_comp_struct__78870(
-  struct__78870 *kcg_c1,
-  struct__78870 *kcg_c2);
-#endif /* kcg_comp_struct__78870 */
-
-#ifndef kcg_comp_struct__78890
-extern kcg_bool kcg_comp_struct__78890(
-  struct__78890 *kcg_c1,
-  struct__78890 *kcg_c2);
-#endif /* kcg_comp_struct__78890 */
-
-#ifndef kcg_comp_struct__78897
-extern kcg_bool kcg_comp_struct__78897(
-  struct__78897 *kcg_c1,
-  struct__78897 *kcg_c2);
-#endif /* kcg_comp_struct__78897 */
-
-#ifndef kcg_comp_struct__78904
-extern kcg_bool kcg_comp_struct__78904(
-  struct__78904 *kcg_c1,
-  struct__78904 *kcg_c2);
-#endif /* kcg_comp_struct__78904 */
-
-#ifndef kcg_comp_struct__78910
-extern kcg_bool kcg_comp_struct__78910(
-  struct__78910 *kcg_c1,
-  struct__78910 *kcg_c2);
-#endif /* kcg_comp_struct__78910 */
-
-#ifndef kcg_comp_struct__78917
-extern kcg_bool kcg_comp_struct__78917(
-  struct__78917 *kcg_c1,
-  struct__78917 *kcg_c2);
-#endif /* kcg_comp_struct__78917 */
-
-#ifndef kcg_comp_struct__78925
-extern kcg_bool kcg_comp_struct__78925(
-  struct__78925 *kcg_c1,
-  struct__78925 *kcg_c2);
-#endif /* kcg_comp_struct__78925 */
-
-#ifndef kcg_comp_struct__78931
-extern kcg_bool kcg_comp_struct__78931(
-  struct__78931 *kcg_c1,
-  struct__78931 *kcg_c2);
-#endif /* kcg_comp_struct__78931 */
-
-#ifndef kcg_comp_struct__78943
-extern kcg_bool kcg_comp_struct__78943(
-  struct__78943 *kcg_c1,
-  struct__78943 *kcg_c2);
-#endif /* kcg_comp_struct__78943 */
-
-#ifndef kcg_comp_struct__78949
-extern kcg_bool kcg_comp_struct__78949(
-  struct__78949 *kcg_c1,
-  struct__78949 *kcg_c2);
-#endif /* kcg_comp_struct__78949 */
-
-#ifndef kcg_comp_struct__78955
-extern kcg_bool kcg_comp_struct__78955(
-  struct__78955 *kcg_c1,
-  struct__78955 *kcg_c2);
-#endif /* kcg_comp_struct__78955 */
-
-#ifndef kcg_comp_struct__78961
-extern kcg_bool kcg_comp_struct__78961(
-  struct__78961 *kcg_c1,
-  struct__78961 *kcg_c2);
-#endif /* kcg_comp_struct__78961 */
-
-#ifndef kcg_comp_struct__78967
-extern kcg_bool kcg_comp_struct__78967(
-  struct__78967 *kcg_c1,
-  struct__78967 *kcg_c2);
-#endif /* kcg_comp_struct__78967 */
-
-#ifndef kcg_comp_struct__78977
-extern kcg_bool kcg_comp_struct__78977(
-  struct__78977 *kcg_c1,
-  struct__78977 *kcg_c2);
-#endif /* kcg_comp_struct__78977 */
-
-#ifndef kcg_comp_struct__78985
-extern kcg_bool kcg_comp_struct__78985(
-  struct__78985 *kcg_c1,
-  struct__78985 *kcg_c2);
-#endif /* kcg_comp_struct__78985 */
-
-#ifndef kcg_comp_struct__78993
-extern kcg_bool kcg_comp_struct__78993(
-  struct__78993 *kcg_c1,
-  struct__78993 *kcg_c2);
-#endif /* kcg_comp_struct__78993 */
-
-#ifndef kcg_comp_struct__79001
-extern kcg_bool kcg_comp_struct__79001(
-  struct__79001 *kcg_c1,
-  struct__79001 *kcg_c2);
-#endif /* kcg_comp_struct__79001 */
-
-#ifndef kcg_comp_struct__79006
-extern kcg_bool kcg_comp_struct__79006(
-  struct__79006 *kcg_c1,
-  struct__79006 *kcg_c2);
-#endif /* kcg_comp_struct__79006 */
-
-#ifndef kcg_comp_struct__79014
-extern kcg_bool kcg_comp_struct__79014(
-  struct__79014 *kcg_c1,
-  struct__79014 *kcg_c2);
-#endif /* kcg_comp_struct__79014 */
-
-#ifndef kcg_comp_struct__79025
-extern kcg_bool kcg_comp_struct__79025(
-  struct__79025 *kcg_c1,
-  struct__79025 *kcg_c2);
-#endif /* kcg_comp_struct__79025 */
-
-#ifndef kcg_comp_struct__79032
-extern kcg_bool kcg_comp_struct__79032(
-  struct__79032 *kcg_c1,
-  struct__79032 *kcg_c2);
-#endif /* kcg_comp_struct__79032 */
-
-#ifndef kcg_comp_struct__79040
-extern kcg_bool kcg_comp_struct__79040(
-  struct__79040 *kcg_c1,
-  struct__79040 *kcg_c2);
-#endif /* kcg_comp_struct__79040 */
-
-#ifndef kcg_comp_struct__79049
-extern kcg_bool kcg_comp_struct__79049(
-  struct__79049 *kcg_c1,
-  struct__79049 *kcg_c2);
-#endif /* kcg_comp_struct__79049 */
-
-#ifndef kcg_comp_struct__79061
-extern kcg_bool kcg_comp_struct__79061(
-  struct__79061 *kcg_c1,
-  struct__79061 *kcg_c2);
-#endif /* kcg_comp_struct__79061 */
-
-#ifndef kcg_comp_struct__79094
-extern kcg_bool kcg_comp_struct__79094(
-  struct__79094 *kcg_c1,
-  struct__79094 *kcg_c2);
-#endif /* kcg_comp_struct__79094 */
-
-#ifndef kcg_comp_struct__79100
-extern kcg_bool kcg_comp_struct__79100(
-  struct__79100 *kcg_c1,
-  struct__79100 *kcg_c2);
-#endif /* kcg_comp_struct__79100 */
-
-#ifndef kcg_comp_struct__79126
-extern kcg_bool kcg_comp_struct__79126(
-  struct__79126 *kcg_c1,
-  struct__79126 *kcg_c2);
-#endif /* kcg_comp_struct__79126 */
-
-#ifndef kcg_comp_struct__79146
-extern kcg_bool kcg_comp_struct__79146(
-  struct__79146 *kcg_c1,
-  struct__79146 *kcg_c2);
-#endif /* kcg_comp_struct__79146 */
-
-#ifndef kcg_comp_struct__79152
-extern kcg_bool kcg_comp_struct__79152(
-  struct__79152 *kcg_c1,
-  struct__79152 *kcg_c2);
-#endif /* kcg_comp_struct__79152 */
-
-#ifndef kcg_comp_struct__79166
-extern kcg_bool kcg_comp_struct__79166(
-  struct__79166 *kcg_c1,
-  struct__79166 *kcg_c2);
-#endif /* kcg_comp_struct__79166 */
-
-#ifndef kcg_comp_struct__79172
-extern kcg_bool kcg_comp_struct__79172(
-  struct__79172 *kcg_c1,
-  struct__79172 *kcg_c2);
-#endif /* kcg_comp_struct__79172 */
-
-#ifndef kcg_comp_struct__79177
-extern kcg_bool kcg_comp_struct__79177(
-  struct__79177 *kcg_c1,
-  struct__79177 *kcg_c2);
-#endif /* kcg_comp_struct__79177 */
-
-#ifndef kcg_comp_struct__79184
-extern kcg_bool kcg_comp_struct__79184(
-  struct__79184 *kcg_c1,
-  struct__79184 *kcg_c2);
-#endif /* kcg_comp_struct__79184 */
-
-#ifndef kcg_comp_struct__79190
-extern kcg_bool kcg_comp_struct__79190(
-  struct__79190 *kcg_c1,
-  struct__79190 *kcg_c2);
-#endif /* kcg_comp_struct__79190 */
-
-#ifndef kcg_comp_struct__79214
-extern kcg_bool kcg_comp_struct__79214(
-  struct__79214 *kcg_c1,
-  struct__79214 *kcg_c2);
-#endif /* kcg_comp_struct__79214 */
-
-#ifndef kcg_comp_struct__79220
-extern kcg_bool kcg_comp_struct__79220(
-  struct__79220 *kcg_c1,
-  struct__79220 *kcg_c2);
-#endif /* kcg_comp_struct__79220 */
-
-#ifndef kcg_comp_struct__79229
-extern kcg_bool kcg_comp_struct__79229(
-  struct__79229 *kcg_c1,
-  struct__79229 *kcg_c2);
-#endif /* kcg_comp_struct__79229 */
-
-#ifndef kcg_comp_struct__79235
-extern kcg_bool kcg_comp_struct__79235(
-  struct__79235 *kcg_c1,
-  struct__79235 *kcg_c2);
-#endif /* kcg_comp_struct__79235 */
-
-#ifndef kcg_comp_struct__79241
-extern kcg_bool kcg_comp_struct__79241(
-  struct__79241 *kcg_c1,
-  struct__79241 *kcg_c2);
-#endif /* kcg_comp_struct__79241 */
-
-#ifndef kcg_comp_struct__79246
-extern kcg_bool kcg_comp_struct__79246(
-  struct__79246 *kcg_c1,
-  struct__79246 *kcg_c2);
-#endif /* kcg_comp_struct__79246 */
-
-#ifndef kcg_comp_struct__79255
-extern kcg_bool kcg_comp_struct__79255(
-  struct__79255 *kcg_c1,
-  struct__79255 *kcg_c2);
-#endif /* kcg_comp_struct__79255 */
-
-#ifndef kcg_comp_struct__79262
-extern kcg_bool kcg_comp_struct__79262(
-  struct__79262 *kcg_c1,
-  struct__79262 *kcg_c2);
-#endif /* kcg_comp_struct__79262 */
-
-#ifndef kcg_comp_struct__79271
-extern kcg_bool kcg_comp_struct__79271(
-  struct__79271 *kcg_c1,
-  struct__79271 *kcg_c2);
-#endif /* kcg_comp_struct__79271 */
-
-#ifndef kcg_comp_struct__79277
-extern kcg_bool kcg_comp_struct__79277(
-  struct__79277 *kcg_c1,
-  struct__79277 *kcg_c2);
-#endif /* kcg_comp_struct__79277 */
-
-#ifndef kcg_comp_struct__79282
-extern kcg_bool kcg_comp_struct__79282(
-  struct__79282 *kcg_c1,
-  struct__79282 *kcg_c2);
-#endif /* kcg_comp_struct__79282 */
-
-#ifndef kcg_comp_struct__79288
-extern kcg_bool kcg_comp_struct__79288(
-  struct__79288 *kcg_c1,
-  struct__79288 *kcg_c2);
-#endif /* kcg_comp_struct__79288 */
-
-#ifndef kcg_comp_struct__79293
-extern kcg_bool kcg_comp_struct__79293(
-  struct__79293 *kcg_c1,
-  struct__79293 *kcg_c2);
-#endif /* kcg_comp_struct__79293 */
-
-#ifndef kcg_comp_struct__79298
-extern kcg_bool kcg_comp_struct__79298(
-  struct__79298 *kcg_c1,
-  struct__79298 *kcg_c2);
-#endif /* kcg_comp_struct__79298 */
-
-#ifndef kcg_comp_struct__79304
-extern kcg_bool kcg_comp_struct__79304(
-  struct__79304 *kcg_c1,
-  struct__79304 *kcg_c2);
-#endif /* kcg_comp_struct__79304 */
-
-#ifndef kcg_comp_struct__79312
-extern kcg_bool kcg_comp_struct__79312(
-  struct__79312 *kcg_c1,
-  struct__79312 *kcg_c2);
-#endif /* kcg_comp_struct__79312 */
-
-#ifndef kcg_comp_struct__79319
-extern kcg_bool kcg_comp_struct__79319(
-  struct__79319 *kcg_c1,
-  struct__79319 *kcg_c2);
-#endif /* kcg_comp_struct__79319 */
-
-#ifndef kcg_comp_struct__79324
-extern kcg_bool kcg_comp_struct__79324(
-  struct__79324 *kcg_c1,
-  struct__79324 *kcg_c2);
-#endif /* kcg_comp_struct__79324 */
-
-#ifndef kcg_comp_struct__79334
-extern kcg_bool kcg_comp_struct__79334(
-  struct__79334 *kcg_c1,
-  struct__79334 *kcg_c2);
-#endif /* kcg_comp_struct__79334 */
-
-#ifndef kcg_comp_struct__79342
-extern kcg_bool kcg_comp_struct__79342(
-  struct__79342 *kcg_c1,
-  struct__79342 *kcg_c2);
-#endif /* kcg_comp_struct__79342 */
-
-#ifndef kcg_comp_struct__79359
-extern kcg_bool kcg_comp_struct__79359(
-  struct__79359 *kcg_c1,
-  struct__79359 *kcg_c2);
-#endif /* kcg_comp_struct__79359 */
-
-#ifndef kcg_comp_struct__79371
-extern kcg_bool kcg_comp_struct__79371(
-  struct__79371 *kcg_c1,
-  struct__79371 *kcg_c2);
-#endif /* kcg_comp_struct__79371 */
-
-#ifndef kcg_comp_struct__79397
-extern kcg_bool kcg_comp_struct__79397(
-  struct__79397 *kcg_c1,
-  struct__79397 *kcg_c2);
-#endif /* kcg_comp_struct__79397 */
-
-#ifndef kcg_comp_array__76861
-extern kcg_bool kcg_comp_array__76861(
-  array__76861 *kcg_c1,
-  array__76861 *kcg_c2);
-#endif /* kcg_comp_array__76861 */
-
-#ifndef kcg_comp_array__76871
-extern kcg_bool kcg_comp_array__76871(
-  array__76871 *kcg_c1,
-  array__76871 *kcg_c2);
-#endif /* kcg_comp_array__76871 */
-
-#ifndef kcg_comp_array__76886
-extern kcg_bool kcg_comp_array__76886(
-  array__76886 *kcg_c1,
-  array__76886 *kcg_c2);
-#endif /* kcg_comp_array__76886 */
-
-#ifndef kcg_comp_array__76896
-extern kcg_bool kcg_comp_array__76896(
-  array__76896 *kcg_c1,
-  array__76896 *kcg_c2);
-#endif /* kcg_comp_array__76896 */
-
-#ifndef kcg_comp_array__76941
-extern kcg_bool kcg_comp_array__76941(
-  array__76941 *kcg_c1,
-  array__76941 *kcg_c2);
-#endif /* kcg_comp_array__76941 */
-
-#ifndef kcg_comp_array__76951
-extern kcg_bool kcg_comp_array__76951(
-  array__76951 *kcg_c1,
-  array__76951 *kcg_c2);
-#endif /* kcg_comp_array__76951 */
-
-#ifndef kcg_comp_array__76962
-extern kcg_bool kcg_comp_array__76962(
-  array__76962 *kcg_c1,
-  array__76962 *kcg_c2);
-#endif /* kcg_comp_array__76962 */
-
-#ifndef kcg_comp_array__76970
-extern kcg_bool kcg_comp_array__76970(
-  array__76970 *kcg_c1,
-  array__76970 *kcg_c2);
-#endif /* kcg_comp_array__76970 */
-
-#ifndef kcg_comp_array__77026
-extern kcg_bool kcg_comp_array__77026(
-  array__77026 *kcg_c1,
-  array__77026 *kcg_c2);
-#endif /* kcg_comp_array__77026 */
+#ifndef kcg_copy_array__85687
+#define kcg_copy_array__85687(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__85687)))
+#endif /* kcg_copy_array__85687 */
+
+#ifndef kcg_copy_array__86192
+#define kcg_copy_array__86192(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__86192)))
+#endif /* kcg_copy_array__86192 */
+
+#ifndef kcg_copy_array__86199
+#define kcg_copy_array__86199(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__86199)))
+#endif /* kcg_copy_array__86199 */
+
+#ifndef kcg_copy_array__86240
+#define kcg_copy_array__86240(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__86240)))
+#endif /* kcg_copy_array__86240 */
+
+#ifndef kcg_copy_array__86322
+#define kcg_copy_array__86322(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array__86322)))
+#endif /* kcg_copy_array__86322 */
+
+#ifndef kcg_comp_struct__80211
+extern kcg_bool kcg_comp_struct__80211(
+  struct__80211 *kcg_c1,
+  struct__80211 *kcg_c2);
+#endif /* kcg_comp_struct__80211 */
+
+#ifndef kcg_comp_struct__80220
+extern kcg_bool kcg_comp_struct__80220(
+  struct__80220 *kcg_c1,
+  struct__80220 *kcg_c2);
+#endif /* kcg_comp_struct__80220 */
+
+#ifndef kcg_comp_struct__80230
+extern kcg_bool kcg_comp_struct__80230(
+  struct__80230 *kcg_c1,
+  struct__80230 *kcg_c2);
+#endif /* kcg_comp_struct__80230 */
+
+#ifndef kcg_comp_struct__80245
+extern kcg_bool kcg_comp_struct__80245(
+  struct__80245 *kcg_c1,
+  struct__80245 *kcg_c2);
+#endif /* kcg_comp_struct__80245 */
+
+#ifndef kcg_comp_struct__80255
+extern kcg_bool kcg_comp_struct__80255(
+  struct__80255 *kcg_c1,
+  struct__80255 *kcg_c2);
+#endif /* kcg_comp_struct__80255 */
+
+#ifndef kcg_comp_struct__80286
+extern kcg_bool kcg_comp_struct__80286(
+  struct__80286 *kcg_c1,
+  struct__80286 *kcg_c2);
+#endif /* kcg_comp_struct__80286 */
+
+#ifndef kcg_comp_struct__80291
+extern kcg_bool kcg_comp_struct__80291(
+  struct__80291 *kcg_c1,
+  struct__80291 *kcg_c2);
+#endif /* kcg_comp_struct__80291 */
+
+#ifndef kcg_comp_struct__80300
+extern kcg_bool kcg_comp_struct__80300(
+  struct__80300 *kcg_c1,
+  struct__80300 *kcg_c2);
+#endif /* kcg_comp_struct__80300 */
+
+#ifndef kcg_comp_struct__80310
+extern kcg_bool kcg_comp_struct__80310(
+  struct__80310 *kcg_c1,
+  struct__80310 *kcg_c2);
+#endif /* kcg_comp_struct__80310 */
+
+#ifndef kcg_comp_struct__80321
+extern kcg_bool kcg_comp_struct__80321(
+  struct__80321 *kcg_c1,
+  struct__80321 *kcg_c2);
+#endif /* kcg_comp_struct__80321 */
+
+#ifndef kcg_comp_struct__80329
+extern kcg_bool kcg_comp_struct__80329(
+  struct__80329 *kcg_c1,
+  struct__80329 *kcg_c2);
+#endif /* kcg_comp_struct__80329 */
+
+#ifndef kcg_comp_struct__80368
+extern kcg_bool kcg_comp_struct__80368(
+  struct__80368 *kcg_c1,
+  struct__80368 *kcg_c2);
+#endif /* kcg_comp_struct__80368 */
+
+#ifndef kcg_comp_struct__80388
+extern kcg_bool kcg_comp_struct__80388(
+  struct__80388 *kcg_c1,
+  struct__80388 *kcg_c2);
+#endif /* kcg_comp_struct__80388 */
+
+#ifndef kcg_comp_struct__80399
+extern kcg_bool kcg_comp_struct__80399(
+  struct__80399 *kcg_c1,
+  struct__80399 *kcg_c2);
+#endif /* kcg_comp_struct__80399 */
+
+#ifndef kcg_comp_struct__80404
+extern kcg_bool kcg_comp_struct__80404(
+  struct__80404 *kcg_c1,
+  struct__80404 *kcg_c2);
+#endif /* kcg_comp_struct__80404 */
+
+#ifndef kcg_comp_struct__80418
+extern kcg_bool kcg_comp_struct__80418(
+  struct__80418 *kcg_c1,
+  struct__80418 *kcg_c2);
+#endif /* kcg_comp_struct__80418 */
+
+#ifndef kcg_comp_struct__80433
+extern kcg_bool kcg_comp_struct__80433(
+  struct__80433 *kcg_c1,
+  struct__80433 *kcg_c2);
+#endif /* kcg_comp_struct__80433 */
+
+#ifndef kcg_comp_struct__80451
+extern kcg_bool kcg_comp_struct__80451(
+  struct__80451 *kcg_c1,
+  struct__80451 *kcg_c2);
+#endif /* kcg_comp_struct__80451 */
+
+#ifndef kcg_comp_struct__80463
+extern kcg_bool kcg_comp_struct__80463(
+  struct__80463 *kcg_c1,
+  struct__80463 *kcg_c2);
+#endif /* kcg_comp_struct__80463 */
+
+#ifndef kcg_comp_struct__80470
+extern kcg_bool kcg_comp_struct__80470(
+  struct__80470 *kcg_c1,
+  struct__80470 *kcg_c2);
+#endif /* kcg_comp_struct__80470 */
+
+#ifndef kcg_comp_struct__80477
+extern kcg_bool kcg_comp_struct__80477(
+  struct__80477 *kcg_c1,
+  struct__80477 *kcg_c2);
+#endif /* kcg_comp_struct__80477 */
+
+#ifndef kcg_comp_struct__80483
+extern kcg_bool kcg_comp_struct__80483(
+  struct__80483 *kcg_c1,
+  struct__80483 *kcg_c2);
+#endif /* kcg_comp_struct__80483 */
+
+#ifndef kcg_comp_struct__80493
+extern kcg_bool kcg_comp_struct__80493(
+  struct__80493 *kcg_c1,
+  struct__80493 *kcg_c2);
+#endif /* kcg_comp_struct__80493 */
+
+#ifndef kcg_comp_struct__80499
+extern kcg_bool kcg_comp_struct__80499(
+  struct__80499 *kcg_c1,
+  struct__80499 *kcg_c2);
+#endif /* kcg_comp_struct__80499 */
+
+#ifndef kcg_comp_struct__80517
+extern kcg_bool kcg_comp_struct__80517(
+  struct__80517 *kcg_c1,
+  struct__80517 *kcg_c2);
+#endif /* kcg_comp_struct__80517 */
+
+#ifndef kcg_comp_struct__80527
+extern kcg_bool kcg_comp_struct__80527(
+  struct__80527 *kcg_c1,
+  struct__80527 *kcg_c2);
+#endif /* kcg_comp_struct__80527 */
+
+#ifndef kcg_comp_struct__80533
+extern kcg_bool kcg_comp_struct__80533(
+  struct__80533 *kcg_c1,
+  struct__80533 *kcg_c2);
+#endif /* kcg_comp_struct__80533 */
+
+#ifndef kcg_comp_struct__80542
+extern kcg_bool kcg_comp_struct__80542(
+  struct__80542 *kcg_c1,
+  struct__80542 *kcg_c2);
+#endif /* kcg_comp_struct__80542 */
+
+#ifndef kcg_comp_struct__80556
+extern kcg_bool kcg_comp_struct__80556(
+  struct__80556 *kcg_c1,
+  struct__80556 *kcg_c2);
+#endif /* kcg_comp_struct__80556 */
+
+#ifndef kcg_comp_struct__80562
+extern kcg_bool kcg_comp_struct__80562(
+  struct__80562 *kcg_c1,
+  struct__80562 *kcg_c2);
+#endif /* kcg_comp_struct__80562 */
+
+#ifndef kcg_comp_struct__80571
+extern kcg_bool kcg_comp_struct__80571(
+  struct__80571 *kcg_c1,
+  struct__80571 *kcg_c2);
+#endif /* kcg_comp_struct__80571 */
+
+#ifndef kcg_comp_struct__80580
+extern kcg_bool kcg_comp_struct__80580(
+  struct__80580 *kcg_c1,
+  struct__80580 *kcg_c2);
+#endif /* kcg_comp_struct__80580 */
+
+#ifndef kcg_comp_struct__80590
+extern kcg_bool kcg_comp_struct__80590(
+  struct__80590 *kcg_c1,
+  struct__80590 *kcg_c2);
+#endif /* kcg_comp_struct__80590 */
+
+#ifndef kcg_comp_struct__80598
+extern kcg_bool kcg_comp_struct__80598(
+  struct__80598 *kcg_c1,
+  struct__80598 *kcg_c2);
+#endif /* kcg_comp_struct__80598 */
+
+#ifndef kcg_comp_struct__80606
+extern kcg_bool kcg_comp_struct__80606(
+  struct__80606 *kcg_c1,
+  struct__80606 *kcg_c2);
+#endif /* kcg_comp_struct__80606 */
+
+#ifndef kcg_comp_struct__80618
+extern kcg_bool kcg_comp_struct__80618(
+  struct__80618 *kcg_c1,
+  struct__80618 *kcg_c2);
+#endif /* kcg_comp_struct__80618 */
+
+#ifndef kcg_comp_struct__80631
+extern kcg_bool kcg_comp_struct__80631(
+  struct__80631 *kcg_c1,
+  struct__80631 *kcg_c2);
+#endif /* kcg_comp_struct__80631 */
+
+#ifndef kcg_comp_struct__80648
+extern kcg_bool kcg_comp_struct__80648(
+  struct__80648 *kcg_c1,
+  struct__80648 *kcg_c2);
+#endif /* kcg_comp_struct__80648 */
+
+#ifndef kcg_comp_struct__80663
+extern kcg_bool kcg_comp_struct__80663(
+  struct__80663 *kcg_c1,
+  struct__80663 *kcg_c2);
+#endif /* kcg_comp_struct__80663 */
+
+#ifndef kcg_comp_struct__80675
+extern kcg_bool kcg_comp_struct__80675(
+  struct__80675 *kcg_c1,
+  struct__80675 *kcg_c2);
+#endif /* kcg_comp_struct__80675 */
+
+#ifndef kcg_comp_struct__80685
+extern kcg_bool kcg_comp_struct__80685(
+  struct__80685 *kcg_c1,
+  struct__80685 *kcg_c2);
+#endif /* kcg_comp_struct__80685 */
+
+#ifndef kcg_comp_struct__80699
+extern kcg_bool kcg_comp_struct__80699(
+  struct__80699 *kcg_c1,
+  struct__80699 *kcg_c2);
+#endif /* kcg_comp_struct__80699 */
+
+#ifndef kcg_comp_struct__80729
+extern kcg_bool kcg_comp_struct__80729(
+  struct__80729 *kcg_c1,
+  struct__80729 *kcg_c2);
+#endif /* kcg_comp_struct__80729 */
+
+#ifndef kcg_comp_struct__80740
+extern kcg_bool kcg_comp_struct__80740(
+  struct__80740 *kcg_c1,
+  struct__80740 *kcg_c2);
+#endif /* kcg_comp_struct__80740 */
+
+#ifndef kcg_comp_struct__80774
+extern kcg_bool kcg_comp_struct__80774(
+  struct__80774 *kcg_c1,
+  struct__80774 *kcg_c2);
+#endif /* kcg_comp_struct__80774 */
+
+#ifndef kcg_comp_struct__80782
+extern kcg_bool kcg_comp_struct__80782(
+  struct__80782 *kcg_c1,
+  struct__80782 *kcg_c2);
+#endif /* kcg_comp_struct__80782 */
+
+#ifndef kcg_comp_struct__80790
+extern kcg_bool kcg_comp_struct__80790(
+  struct__80790 *kcg_c1,
+  struct__80790 *kcg_c2);
+#endif /* kcg_comp_struct__80790 */
+
+#ifndef kcg_comp_struct__80796
+extern kcg_bool kcg_comp_struct__80796(
+  struct__80796 *kcg_c1,
+  struct__80796 *kcg_c2);
+#endif /* kcg_comp_struct__80796 */
+
+#ifndef kcg_comp_struct__80805
+extern kcg_bool kcg_comp_struct__80805(
+  struct__80805 *kcg_c1,
+  struct__80805 *kcg_c2);
+#endif /* kcg_comp_struct__80805 */
+
+#ifndef kcg_comp_struct__80817
+extern kcg_bool kcg_comp_struct__80817(
+  struct__80817 *kcg_c1,
+  struct__80817 *kcg_c2);
+#endif /* kcg_comp_struct__80817 */
+
+#ifndef kcg_comp_struct__80824
+extern kcg_bool kcg_comp_struct__80824(
+  struct__80824 *kcg_c1,
+  struct__80824 *kcg_c2);
+#endif /* kcg_comp_struct__80824 */
+
+#ifndef kcg_comp_struct__80835
+extern kcg_bool kcg_comp_struct__80835(
+  struct__80835 *kcg_c1,
+  struct__80835 *kcg_c2);
+#endif /* kcg_comp_struct__80835 */
+
+#ifndef kcg_comp_struct__80846
+extern kcg_bool kcg_comp_struct__80846(
+  struct__80846 *kcg_c1,
+  struct__80846 *kcg_c2);
+#endif /* kcg_comp_struct__80846 */
+
+#ifndef kcg_comp_struct__80857
+extern kcg_bool kcg_comp_struct__80857(
+  struct__80857 *kcg_c1,
+  struct__80857 *kcg_c2);
+#endif /* kcg_comp_struct__80857 */
+
+#ifndef kcg_comp_struct__80866
+extern kcg_bool kcg_comp_struct__80866(
+  struct__80866 *kcg_c1,
+  struct__80866 *kcg_c2);
+#endif /* kcg_comp_struct__80866 */
+
+#ifndef kcg_comp_struct__80876
+extern kcg_bool kcg_comp_struct__80876(
+  struct__80876 *kcg_c1,
+  struct__80876 *kcg_c2);
+#endif /* kcg_comp_struct__80876 */
+
+#ifndef kcg_comp_struct__80885
+extern kcg_bool kcg_comp_struct__80885(
+  struct__80885 *kcg_c1,
+  struct__80885 *kcg_c2);
+#endif /* kcg_comp_struct__80885 */
+
+#ifndef kcg_comp_struct__80898
+extern kcg_bool kcg_comp_struct__80898(
+  struct__80898 *kcg_c1,
+  struct__80898 *kcg_c2);
+#endif /* kcg_comp_struct__80898 */
+
+#ifndef kcg_comp_struct__80911
+extern kcg_bool kcg_comp_struct__80911(
+  struct__80911 *kcg_c1,
+  struct__80911 *kcg_c2);
+#endif /* kcg_comp_struct__80911 */
+
+#ifndef kcg_comp_struct__80921
+extern kcg_bool kcg_comp_struct__80921(
+  struct__80921 *kcg_c1,
+  struct__80921 *kcg_c2);
+#endif /* kcg_comp_struct__80921 */
+
+#ifndef kcg_comp_struct__80930
+extern kcg_bool kcg_comp_struct__80930(
+  struct__80930 *kcg_c1,
+  struct__80930 *kcg_c2);
+#endif /* kcg_comp_struct__80930 */
+
+#ifndef kcg_comp_struct__80959
+extern kcg_bool kcg_comp_struct__80959(
+  struct__80959 *kcg_c1,
+  struct__80959 *kcg_c2);
+#endif /* kcg_comp_struct__80959 */
+
+#ifndef kcg_comp_struct__80964
+extern kcg_bool kcg_comp_struct__80964(
+  struct__80964 *kcg_c1,
+  struct__80964 *kcg_c2);
+#endif /* kcg_comp_struct__80964 */
+
+#ifndef kcg_comp_struct__80974
+extern kcg_bool kcg_comp_struct__80974(
+  struct__80974 *kcg_c1,
+  struct__80974 *kcg_c2);
+#endif /* kcg_comp_struct__80974 */
+
+#ifndef kcg_comp_struct__80989
+extern kcg_bool kcg_comp_struct__80989(
+  struct__80989 *kcg_c1,
+  struct__80989 *kcg_c2);
+#endif /* kcg_comp_struct__80989 */
+
+#ifndef kcg_comp_struct__80997
+extern kcg_bool kcg_comp_struct__80997(
+  struct__80997 *kcg_c1,
+  struct__80997 *kcg_c2);
+#endif /* kcg_comp_struct__80997 */
+
+#ifndef kcg_comp_struct__81013
+extern kcg_bool kcg_comp_struct__81013(
+  struct__81013 *kcg_c1,
+  struct__81013 *kcg_c2);
+#endif /* kcg_comp_struct__81013 */
+
+#ifndef kcg_comp_struct__81046
+extern kcg_bool kcg_comp_struct__81046(
+  struct__81046 *kcg_c1,
+  struct__81046 *kcg_c2);
+#endif /* kcg_comp_struct__81046 */
+
+#ifndef kcg_comp_struct__81055
+extern kcg_bool kcg_comp_struct__81055(
+  struct__81055 *kcg_c1,
+  struct__81055 *kcg_c2);
+#endif /* kcg_comp_struct__81055 */
+
+#ifndef kcg_comp_struct__81060
+extern kcg_bool kcg_comp_struct__81060(
+  struct__81060 *kcg_c1,
+  struct__81060 *kcg_c2);
+#endif /* kcg_comp_struct__81060 */
+
+#ifndef kcg_comp_struct__81069
+extern kcg_bool kcg_comp_struct__81069(
+  struct__81069 *kcg_c1,
+  struct__81069 *kcg_c2);
+#endif /* kcg_comp_struct__81069 */
+
+#ifndef kcg_comp_struct__81087
+extern kcg_bool kcg_comp_struct__81087(
+  struct__81087 *kcg_c1,
+  struct__81087 *kcg_c2);
+#endif /* kcg_comp_struct__81087 */
+
+#ifndef kcg_comp_struct__81098
+extern kcg_bool kcg_comp_struct__81098(
+  struct__81098 *kcg_c1,
+  struct__81098 *kcg_c2);
+#endif /* kcg_comp_struct__81098 */
+
+#ifndef kcg_comp_struct__81113
+extern kcg_bool kcg_comp_struct__81113(
+  struct__81113 *kcg_c1,
+  struct__81113 *kcg_c2);
+#endif /* kcg_comp_struct__81113 */
+
+#ifndef kcg_comp_struct__81118
+extern kcg_bool kcg_comp_struct__81118(
+  struct__81118 *kcg_c1,
+  struct__81118 *kcg_c2);
+#endif /* kcg_comp_struct__81118 */
+
+#ifndef kcg_comp_struct__81124
+extern kcg_bool kcg_comp_struct__81124(
+  struct__81124 *kcg_c1,
+  struct__81124 *kcg_c2);
+#endif /* kcg_comp_struct__81124 */
+
+#ifndef kcg_comp_struct__81129
+extern kcg_bool kcg_comp_struct__81129(
+  struct__81129 *kcg_c1,
+  struct__81129 *kcg_c2);
+#endif /* kcg_comp_struct__81129 */
+
+#ifndef kcg_comp_struct__81136
+extern kcg_bool kcg_comp_struct__81136(
+  struct__81136 *kcg_c1,
+  struct__81136 *kcg_c2);
+#endif /* kcg_comp_struct__81136 */
+
+#ifndef kcg_comp_struct__81147
+extern kcg_bool kcg_comp_struct__81147(
+  struct__81147 *kcg_c1,
+  struct__81147 *kcg_c2);
+#endif /* kcg_comp_struct__81147 */
+
+#ifndef kcg_comp_struct__81202
+extern kcg_bool kcg_comp_struct__81202(
+  struct__81202 *kcg_c1,
+  struct__81202 *kcg_c2);
+#endif /* kcg_comp_struct__81202 */
+
+#ifndef kcg_comp_struct__81214
+extern kcg_bool kcg_comp_struct__81214(
+  struct__81214 *kcg_c1,
+  struct__81214 *kcg_c2);
+#endif /* kcg_comp_struct__81214 */
+
+#ifndef kcg_comp_struct__81222
+extern kcg_bool kcg_comp_struct__81222(
+  struct__81222 *kcg_c1,
+  struct__81222 *kcg_c2);
+#endif /* kcg_comp_struct__81222 */
+
+#ifndef kcg_comp_struct__81238
+extern kcg_bool kcg_comp_struct__81238(
+  struct__81238 *kcg_c1,
+  struct__81238 *kcg_c2);
+#endif /* kcg_comp_struct__81238 */
+
+#ifndef kcg_comp_struct__81243
+extern kcg_bool kcg_comp_struct__81243(
+  struct__81243 *kcg_c1,
+  struct__81243 *kcg_c2);
+#endif /* kcg_comp_struct__81243 */
+
+#ifndef kcg_comp_struct__81248
+extern kcg_bool kcg_comp_struct__81248(
+  struct__81248 *kcg_c1,
+  struct__81248 *kcg_c2);
+#endif /* kcg_comp_struct__81248 */
+
+#ifndef kcg_comp_struct__81253
+extern kcg_bool kcg_comp_struct__81253(
+  struct__81253 *kcg_c1,
+  struct__81253 *kcg_c2);
+#endif /* kcg_comp_struct__81253 */
+
+#ifndef kcg_comp_struct__81261
+extern kcg_bool kcg_comp_struct__81261(
+  struct__81261 *kcg_c1,
+  struct__81261 *kcg_c2);
+#endif /* kcg_comp_struct__81261 */
+
+#ifndef kcg_comp_struct__81267
+extern kcg_bool kcg_comp_struct__81267(
+  struct__81267 *kcg_c1,
+  struct__81267 *kcg_c2);
+#endif /* kcg_comp_struct__81267 */
+
+#ifndef kcg_comp_struct__81287
+extern kcg_bool kcg_comp_struct__81287(
+  struct__81287 *kcg_c1,
+  struct__81287 *kcg_c2);
+#endif /* kcg_comp_struct__81287 */
+
+#ifndef kcg_comp_struct__81292
+extern kcg_bool kcg_comp_struct__81292(
+  struct__81292 *kcg_c1,
+  struct__81292 *kcg_c2);
+#endif /* kcg_comp_struct__81292 */
+
+#ifndef kcg_comp_struct__81311
+extern kcg_bool kcg_comp_struct__81311(
+  struct__81311 *kcg_c1,
+  struct__81311 *kcg_c2);
+#endif /* kcg_comp_struct__81311 */
+
+#ifndef kcg_comp_struct__81316
+extern kcg_bool kcg_comp_struct__81316(
+  struct__81316 *kcg_c1,
+  struct__81316 *kcg_c2);
+#endif /* kcg_comp_struct__81316 */
+
+#ifndef kcg_comp_struct__81326
+extern kcg_bool kcg_comp_struct__81326(
+  struct__81326 *kcg_c1,
+  struct__81326 *kcg_c2);
+#endif /* kcg_comp_struct__81326 */
+
+#ifndef kcg_comp_struct__81332
+extern kcg_bool kcg_comp_struct__81332(
+  struct__81332 *kcg_c1,
+  struct__81332 *kcg_c2);
+#endif /* kcg_comp_struct__81332 */
+
+#ifndef kcg_comp_struct__81337
+extern kcg_bool kcg_comp_struct__81337(
+  struct__81337 *kcg_c1,
+  struct__81337 *kcg_c2);
+#endif /* kcg_comp_struct__81337 */
+
+#ifndef kcg_comp_struct__81345
+extern kcg_bool kcg_comp_struct__81345(
+  struct__81345 *kcg_c1,
+  struct__81345 *kcg_c2);
+#endif /* kcg_comp_struct__81345 */
+
+#ifndef kcg_comp_struct__81354
+extern kcg_bool kcg_comp_struct__81354(
+  struct__81354 *kcg_c1,
+  struct__81354 *kcg_c2);
+#endif /* kcg_comp_struct__81354 */
+
+#ifndef kcg_comp_struct__81363
+extern kcg_bool kcg_comp_struct__81363(
+  struct__81363 *kcg_c1,
+  struct__81363 *kcg_c2);
+#endif /* kcg_comp_struct__81363 */
+
+#ifndef kcg_comp_struct__81370
+extern kcg_bool kcg_comp_struct__81370(
+  struct__81370 *kcg_c1,
+  struct__81370 *kcg_c2);
+#endif /* kcg_comp_struct__81370 */
+
+#ifndef kcg_comp_struct__81376
+extern kcg_bool kcg_comp_struct__81376(
+  struct__81376 *kcg_c1,
+  struct__81376 *kcg_c2);
+#endif /* kcg_comp_struct__81376 */
+
+#ifndef kcg_comp_struct__81384
+extern kcg_bool kcg_comp_struct__81384(
+  struct__81384 *kcg_c1,
+  struct__81384 *kcg_c2);
+#endif /* kcg_comp_struct__81384 */
+
+#ifndef kcg_comp_struct__81389
+extern kcg_bool kcg_comp_struct__81389(
+  struct__81389 *kcg_c1,
+  struct__81389 *kcg_c2);
+#endif /* kcg_comp_struct__81389 */
+
+#ifndef kcg_comp_struct__81396
+extern kcg_bool kcg_comp_struct__81396(
+  struct__81396 *kcg_c1,
+  struct__81396 *kcg_c2);
+#endif /* kcg_comp_struct__81396 */
+
+#ifndef kcg_comp_struct__81405
+extern kcg_bool kcg_comp_struct__81405(
+  struct__81405 *kcg_c1,
+  struct__81405 *kcg_c2);
+#endif /* kcg_comp_struct__81405 */
+
+#ifndef kcg_comp_struct__81413
+extern kcg_bool kcg_comp_struct__81413(
+  struct__81413 *kcg_c1,
+  struct__81413 *kcg_c2);
+#endif /* kcg_comp_struct__81413 */
+
+#ifndef kcg_comp_struct__81422
+extern kcg_bool kcg_comp_struct__81422(
+  struct__81422 *kcg_c1,
+  struct__81422 *kcg_c2);
+#endif /* kcg_comp_struct__81422 */
+
+#ifndef kcg_comp_struct__81440
+extern kcg_bool kcg_comp_struct__81440(
+  struct__81440 *kcg_c1,
+  struct__81440 *kcg_c2);
+#endif /* kcg_comp_struct__81440 */
+
+#ifndef kcg_comp_struct__81452
+extern kcg_bool kcg_comp_struct__81452(
+  struct__81452 *kcg_c1,
+  struct__81452 *kcg_c2);
+#endif /* kcg_comp_struct__81452 */
+
+#ifndef kcg_comp_struct__81458
+extern kcg_bool kcg_comp_struct__81458(
+  struct__81458 *kcg_c1,
+  struct__81458 *kcg_c2);
+#endif /* kcg_comp_struct__81458 */
+
+#ifndef kcg_comp_struct__81464
+extern kcg_bool kcg_comp_struct__81464(
+  struct__81464 *kcg_c1,
+  struct__81464 *kcg_c2);
+#endif /* kcg_comp_struct__81464 */
+
+#ifndef kcg_comp_struct__81469
+extern kcg_bool kcg_comp_struct__81469(
+  struct__81469 *kcg_c1,
+  struct__81469 *kcg_c2);
+#endif /* kcg_comp_struct__81469 */
+
+#ifndef kcg_comp_struct__81475
+extern kcg_bool kcg_comp_struct__81475(
+  struct__81475 *kcg_c1,
+  struct__81475 *kcg_c2);
+#endif /* kcg_comp_struct__81475 */
+
+#ifndef kcg_comp_struct__81481
+extern kcg_bool kcg_comp_struct__81481(
+  struct__81481 *kcg_c1,
+  struct__81481 *kcg_c2);
+#endif /* kcg_comp_struct__81481 */
+
+#ifndef kcg_comp_struct__81486
+extern kcg_bool kcg_comp_struct__81486(
+  struct__81486 *kcg_c1,
+  struct__81486 *kcg_c2);
+#endif /* kcg_comp_struct__81486 */
+
+#ifndef kcg_comp_struct__81495
+extern kcg_bool kcg_comp_struct__81495(
+  struct__81495 *kcg_c1,
+  struct__81495 *kcg_c2);
+#endif /* kcg_comp_struct__81495 */
+
+#ifndef kcg_comp_struct__81506
+extern kcg_bool kcg_comp_struct__81506(
+  struct__81506 *kcg_c1,
+  struct__81506 *kcg_c2);
+#endif /* kcg_comp_struct__81506 */
+
+#ifndef kcg_comp_struct__81515
+extern kcg_bool kcg_comp_struct__81515(
+  struct__81515 *kcg_c1,
+  struct__81515 *kcg_c2);
+#endif /* kcg_comp_struct__81515 */
+
+#ifndef kcg_comp_struct__81522
+extern kcg_bool kcg_comp_struct__81522(
+  struct__81522 *kcg_c1,
+  struct__81522 *kcg_c2);
+#endif /* kcg_comp_struct__81522 */
+
+#ifndef kcg_comp_struct__81527
+extern kcg_bool kcg_comp_struct__81527(
+  struct__81527 *kcg_c1,
+  struct__81527 *kcg_c2);
+#endif /* kcg_comp_struct__81527 */
+
+#ifndef kcg_comp_struct__81532
+extern kcg_bool kcg_comp_struct__81532(
+  struct__81532 *kcg_c1,
+  struct__81532 *kcg_c2);
+#endif /* kcg_comp_struct__81532 */
+
+#ifndef kcg_comp_struct__81538
+extern kcg_bool kcg_comp_struct__81538(
+  struct__81538 *kcg_c1,
+  struct__81538 *kcg_c2);
+#endif /* kcg_comp_struct__81538 */
+
+#ifndef kcg_comp_struct__81543
+extern kcg_bool kcg_comp_struct__81543(
+  struct__81543 *kcg_c1,
+  struct__81543 *kcg_c2);
+#endif /* kcg_comp_struct__81543 */
+
+#ifndef kcg_comp_struct__81552
+extern kcg_bool kcg_comp_struct__81552(
+  struct__81552 *kcg_c1,
+  struct__81552 *kcg_c2);
+#endif /* kcg_comp_struct__81552 */
+
+#ifndef kcg_comp_struct__81556
+extern kcg_bool kcg_comp_struct__81556(
+  struct__81556 *kcg_c1,
+  struct__81556 *kcg_c2);
+#endif /* kcg_comp_struct__81556 */
+
+#ifndef kcg_comp_struct__81561
+extern kcg_bool kcg_comp_struct__81561(
+  struct__81561 *kcg_c1,
+  struct__81561 *kcg_c2);
+#endif /* kcg_comp_struct__81561 */
+
+#ifndef kcg_comp_struct__81569
+extern kcg_bool kcg_comp_struct__81569(
+  struct__81569 *kcg_c1,
+  struct__81569 *kcg_c2);
+#endif /* kcg_comp_struct__81569 */
+
+#ifndef kcg_comp_struct__81582
+extern kcg_bool kcg_comp_struct__81582(
+  struct__81582 *kcg_c1,
+  struct__81582 *kcg_c2);
+#endif /* kcg_comp_struct__81582 */
+
+#ifndef kcg_comp_struct__81591
+extern kcg_bool kcg_comp_struct__81591(
+  struct__81591 *kcg_c1,
+  struct__81591 *kcg_c2);
+#endif /* kcg_comp_struct__81591 */
+
+#ifndef kcg_comp_struct__81605
+extern kcg_bool kcg_comp_struct__81605(
+  struct__81605 *kcg_c1,
+  struct__81605 *kcg_c2);
+#endif /* kcg_comp_struct__81605 */
+
+#ifndef kcg_comp_struct__81613
+extern kcg_bool kcg_comp_struct__81613(
+  struct__81613 *kcg_c1,
+  struct__81613 *kcg_c2);
+#endif /* kcg_comp_struct__81613 */
+
+#ifndef kcg_comp_struct__81626
+extern kcg_bool kcg_comp_struct__81626(
+  struct__81626 *kcg_c1,
+  struct__81626 *kcg_c2);
+#endif /* kcg_comp_struct__81626 */
+
+#ifndef kcg_comp_struct__81631
+extern kcg_bool kcg_comp_struct__81631(
+  struct__81631 *kcg_c1,
+  struct__81631 *kcg_c2);
+#endif /* kcg_comp_struct__81631 */
+
+#ifndef kcg_comp_struct__81640
+extern kcg_bool kcg_comp_struct__81640(
+  struct__81640 *kcg_c1,
+  struct__81640 *kcg_c2);
+#endif /* kcg_comp_struct__81640 */
+
+#ifndef kcg_comp_struct__81649
+extern kcg_bool kcg_comp_struct__81649(
+  struct__81649 *kcg_c1,
+  struct__81649 *kcg_c2);
+#endif /* kcg_comp_struct__81649 */
+
+#ifndef kcg_comp_struct__81660
+extern kcg_bool kcg_comp_struct__81660(
+  struct__81660 *kcg_c1,
+  struct__81660 *kcg_c2);
+#endif /* kcg_comp_struct__81660 */
+
+#ifndef kcg_comp_struct__81671
+extern kcg_bool kcg_comp_struct__81671(
+  struct__81671 *kcg_c1,
+  struct__81671 *kcg_c2);
+#endif /* kcg_comp_struct__81671 */
+
+#ifndef kcg_comp_struct__81701
+extern kcg_bool kcg_comp_struct__81701(
+  struct__81701 *kcg_c1,
+  struct__81701 *kcg_c2);
+#endif /* kcg_comp_struct__81701 */
+
+#ifndef kcg_comp_struct__81710
+extern kcg_bool kcg_comp_struct__81710(
+  struct__81710 *kcg_c1,
+  struct__81710 *kcg_c2);
+#endif /* kcg_comp_struct__81710 */
+
+#ifndef kcg_comp_struct__81720
+extern kcg_bool kcg_comp_struct__81720(
+  struct__81720 *kcg_c1,
+  struct__81720 *kcg_c2);
+#endif /* kcg_comp_struct__81720 */
+
+#ifndef kcg_comp_struct__81727
+extern kcg_bool kcg_comp_struct__81727(
+  struct__81727 *kcg_c1,
+  struct__81727 *kcg_c2);
+#endif /* kcg_comp_struct__81727 */
+
+#ifndef kcg_comp_struct__81735
+extern kcg_bool kcg_comp_struct__81735(
+  struct__81735 *kcg_c1,
+  struct__81735 *kcg_c2);
+#endif /* kcg_comp_struct__81735 */
+
+#ifndef kcg_comp_struct__81746
+extern kcg_bool kcg_comp_struct__81746(
+  struct__81746 *kcg_c1,
+  struct__81746 *kcg_c2);
+#endif /* kcg_comp_struct__81746 */
+
+#ifndef kcg_comp_struct__81752
+extern kcg_bool kcg_comp_struct__81752(
+  struct__81752 *kcg_c1,
+  struct__81752 *kcg_c2);
+#endif /* kcg_comp_struct__81752 */
+
+#ifndef kcg_comp_struct__81758
+extern kcg_bool kcg_comp_struct__81758(
+  struct__81758 *kcg_c1,
+  struct__81758 *kcg_c2);
+#endif /* kcg_comp_struct__81758 */
+
+#ifndef kcg_comp_struct__81764
+extern kcg_bool kcg_comp_struct__81764(
+  struct__81764 *kcg_c1,
+  struct__81764 *kcg_c2);
+#endif /* kcg_comp_struct__81764 */
+
+#ifndef kcg_comp_struct__81770
+extern kcg_bool kcg_comp_struct__81770(
+  struct__81770 *kcg_c1,
+  struct__81770 *kcg_c2);
+#endif /* kcg_comp_struct__81770 */
+
+#ifndef kcg_comp_struct__81777
+extern kcg_bool kcg_comp_struct__81777(
+  struct__81777 *kcg_c1,
+  struct__81777 *kcg_c2);
+#endif /* kcg_comp_struct__81777 */
+
+#ifndef kcg_comp_struct__81787
+extern kcg_bool kcg_comp_struct__81787(
+  struct__81787 *kcg_c1,
+  struct__81787 *kcg_c2);
+#endif /* kcg_comp_struct__81787 */
+
+#ifndef kcg_comp_struct__81801
+extern kcg_bool kcg_comp_struct__81801(
+  struct__81801 *kcg_c1,
+  struct__81801 *kcg_c2);
+#endif /* kcg_comp_struct__81801 */
+
+#ifndef kcg_comp_struct__81807
+extern kcg_bool kcg_comp_struct__81807(
+  struct__81807 *kcg_c1,
+  struct__81807 *kcg_c2);
+#endif /* kcg_comp_struct__81807 */
+
+#ifndef kcg_comp_struct__81814
+extern kcg_bool kcg_comp_struct__81814(
+  struct__81814 *kcg_c1,
+  struct__81814 *kcg_c2);
+#endif /* kcg_comp_struct__81814 */
+
+#ifndef kcg_comp_struct__81821
+extern kcg_bool kcg_comp_struct__81821(
+  struct__81821 *kcg_c1,
+  struct__81821 *kcg_c2);
+#endif /* kcg_comp_struct__81821 */
+
+#ifndef kcg_comp_struct__81827
+extern kcg_bool kcg_comp_struct__81827(
+  struct__81827 *kcg_c1,
+  struct__81827 *kcg_c2);
+#endif /* kcg_comp_struct__81827 */
+
+#ifndef kcg_comp_struct__81836
+extern kcg_bool kcg_comp_struct__81836(
+  struct__81836 *kcg_c1,
+  struct__81836 *kcg_c2);
+#endif /* kcg_comp_struct__81836 */
+
+#ifndef kcg_comp_struct__81842
+extern kcg_bool kcg_comp_struct__81842(
+  struct__81842 *kcg_c1,
+  struct__81842 *kcg_c2);
+#endif /* kcg_comp_struct__81842 */
+
+#ifndef kcg_comp_struct__81847
+extern kcg_bool kcg_comp_struct__81847(
+  struct__81847 *kcg_c1,
+  struct__81847 *kcg_c2);
+#endif /* kcg_comp_struct__81847 */
+
+#ifndef kcg_comp_struct__81857
+extern kcg_bool kcg_comp_struct__81857(
+  struct__81857 *kcg_c1,
+  struct__81857 *kcg_c2);
+#endif /* kcg_comp_struct__81857 */
+
+#ifndef kcg_comp_struct__81867
+extern kcg_bool kcg_comp_struct__81867(
+  struct__81867 *kcg_c1,
+  struct__81867 *kcg_c2);
+#endif /* kcg_comp_struct__81867 */
+
+#ifndef kcg_comp_struct__81883
+extern kcg_bool kcg_comp_struct__81883(
+  struct__81883 *kcg_c1,
+  struct__81883 *kcg_c2);
+#endif /* kcg_comp_struct__81883 */
+
+#ifndef kcg_comp_struct__81895
+extern kcg_bool kcg_comp_struct__81895(
+  struct__81895 *kcg_c1,
+  struct__81895 *kcg_c2);
+#endif /* kcg_comp_struct__81895 */
+
+#ifndef kcg_comp_struct__81902
+extern kcg_bool kcg_comp_struct__81902(
+  struct__81902 *kcg_c1,
+  struct__81902 *kcg_c2);
+#endif /* kcg_comp_struct__81902 */
+
+#ifndef kcg_comp_struct__81935
+extern kcg_bool kcg_comp_struct__81935(
+  struct__81935 *kcg_c1,
+  struct__81935 *kcg_c2);
+#endif /* kcg_comp_struct__81935 */
+
+#ifndef kcg_comp_struct__81940
+extern kcg_bool kcg_comp_struct__81940(
+  struct__81940 *kcg_c1,
+  struct__81940 *kcg_c2);
+#endif /* kcg_comp_struct__81940 */
+
+#ifndef kcg_comp_struct__81945
+extern kcg_bool kcg_comp_struct__81945(
+  struct__81945 *kcg_c1,
+  struct__81945 *kcg_c2);
+#endif /* kcg_comp_struct__81945 */
+
+#ifndef kcg_comp_struct__81954
+extern kcg_bool kcg_comp_struct__81954(
+  struct__81954 *kcg_c1,
+  struct__81954 *kcg_c2);
+#endif /* kcg_comp_struct__81954 */
+
+#ifndef kcg_comp_struct__81961
+extern kcg_bool kcg_comp_struct__81961(
+  struct__81961 *kcg_c1,
+  struct__81961 *kcg_c2);
+#endif /* kcg_comp_struct__81961 */
+
+#ifndef kcg_comp_struct__81968
+extern kcg_bool kcg_comp_struct__81968(
+  struct__81968 *kcg_c1,
+  struct__81968 *kcg_c2);
+#endif /* kcg_comp_struct__81968 */
+
+#ifndef kcg_comp_struct__81974
+extern kcg_bool kcg_comp_struct__81974(
+  struct__81974 *kcg_c1,
+  struct__81974 *kcg_c2);
+#endif /* kcg_comp_struct__81974 */
+
+#ifndef kcg_comp_struct__81984
+extern kcg_bool kcg_comp_struct__81984(
+  struct__81984 *kcg_c1,
+  struct__81984 *kcg_c2);
+#endif /* kcg_comp_struct__81984 */
+
+#ifndef kcg_comp_struct__81996
+extern kcg_bool kcg_comp_struct__81996(
+  struct__81996 *kcg_c1,
+  struct__81996 *kcg_c2);
+#endif /* kcg_comp_struct__81996 */
+
+#ifndef kcg_comp_struct__82003
+extern kcg_bool kcg_comp_struct__82003(
+  struct__82003 *kcg_c1,
+  struct__82003 *kcg_c2);
+#endif /* kcg_comp_struct__82003 */
+
+#ifndef kcg_comp_struct__82013
+extern kcg_bool kcg_comp_struct__82013(
+  struct__82013 *kcg_c1,
+  struct__82013 *kcg_c2);
+#endif /* kcg_comp_struct__82013 */
+
+#ifndef kcg_comp_struct__82022
+extern kcg_bool kcg_comp_struct__82022(
+  struct__82022 *kcg_c1,
+  struct__82022 *kcg_c2);
+#endif /* kcg_comp_struct__82022 */
+
+#ifndef kcg_comp_struct__82033
+extern kcg_bool kcg_comp_struct__82033(
+  struct__82033 *kcg_c1,
+  struct__82033 *kcg_c2);
+#endif /* kcg_comp_struct__82033 */
+
+#ifndef kcg_comp_struct__82040
+extern kcg_bool kcg_comp_struct__82040(
+  struct__82040 *kcg_c1,
+  struct__82040 *kcg_c2);
+#endif /* kcg_comp_struct__82040 */
+
+#ifndef kcg_comp_struct__82050
+extern kcg_bool kcg_comp_struct__82050(
+  struct__82050 *kcg_c1,
+  struct__82050 *kcg_c2);
+#endif /* kcg_comp_struct__82050 */
+
+#ifndef kcg_comp_struct__82055
+extern kcg_bool kcg_comp_struct__82055(
+  struct__82055 *kcg_c1,
+  struct__82055 *kcg_c2);
+#endif /* kcg_comp_struct__82055 */
+
+#ifndef kcg_comp_struct__82068
+extern kcg_bool kcg_comp_struct__82068(
+  struct__82068 *kcg_c1,
+  struct__82068 *kcg_c2);
+#endif /* kcg_comp_struct__82068 */
+
+#ifndef kcg_comp_struct__82077
+extern kcg_bool kcg_comp_struct__82077(
+  struct__82077 *kcg_c1,
+  struct__82077 *kcg_c2);
+#endif /* kcg_comp_struct__82077 */
+
+#ifndef kcg_comp_struct__82093
+extern kcg_bool kcg_comp_struct__82093(
+  struct__82093 *kcg_c1,
+  struct__82093 *kcg_c2);
+#endif /* kcg_comp_struct__82093 */
+
+#ifndef kcg_comp_struct__82116
+extern kcg_bool kcg_comp_struct__82116(
+  struct__82116 *kcg_c1,
+  struct__82116 *kcg_c2);
+#endif /* kcg_comp_struct__82116 */
+
+#ifndef kcg_comp_struct__82130
+extern kcg_bool kcg_comp_struct__82130(
+  struct__82130 *kcg_c1,
+  struct__82130 *kcg_c2);
+#endif /* kcg_comp_struct__82130 */
+
+#ifndef kcg_comp_struct__82136
+extern kcg_bool kcg_comp_struct__82136(
+  struct__82136 *kcg_c1,
+  struct__82136 *kcg_c2);
+#endif /* kcg_comp_struct__82136 */
+
+#ifndef kcg_comp_struct__82144
+extern kcg_bool kcg_comp_struct__82144(
+  struct__82144 *kcg_c1,
+  struct__82144 *kcg_c2);
+#endif /* kcg_comp_struct__82144 */
+
+#ifndef kcg_comp_struct__82150
+extern kcg_bool kcg_comp_struct__82150(
+  struct__82150 *kcg_c1,
+  struct__82150 *kcg_c2);
+#endif /* kcg_comp_struct__82150 */
+
+#ifndef kcg_comp_struct__82177
+extern kcg_bool kcg_comp_struct__82177(
+  struct__82177 *kcg_c1,
+  struct__82177 *kcg_c2);
+#endif /* kcg_comp_struct__82177 */
+
+#ifndef kcg_comp_struct__82190
+extern kcg_bool kcg_comp_struct__82190(
+  struct__82190 *kcg_c1,
+  struct__82190 *kcg_c2);
+#endif /* kcg_comp_struct__82190 */
+
+#ifndef kcg_comp_struct__82210
+extern kcg_bool kcg_comp_struct__82210(
+  struct__82210 *kcg_c1,
+  struct__82210 *kcg_c2);
+#endif /* kcg_comp_struct__82210 */
+
+#ifndef kcg_comp_struct__82217
+extern kcg_bool kcg_comp_struct__82217(
+  struct__82217 *kcg_c1,
+  struct__82217 *kcg_c2);
+#endif /* kcg_comp_struct__82217 */
+
+#ifndef kcg_comp_struct__82224
+extern kcg_bool kcg_comp_struct__82224(
+  struct__82224 *kcg_c1,
+  struct__82224 *kcg_c2);
+#endif /* kcg_comp_struct__82224 */
+
+#ifndef kcg_comp_struct__82230
+extern kcg_bool kcg_comp_struct__82230(
+  struct__82230 *kcg_c1,
+  struct__82230 *kcg_c2);
+#endif /* kcg_comp_struct__82230 */
+
+#ifndef kcg_comp_struct__82237
+extern kcg_bool kcg_comp_struct__82237(
+  struct__82237 *kcg_c1,
+  struct__82237 *kcg_c2);
+#endif /* kcg_comp_struct__82237 */
+
+#ifndef kcg_comp_struct__82243
+extern kcg_bool kcg_comp_struct__82243(
+  struct__82243 *kcg_c1,
+  struct__82243 *kcg_c2);
+#endif /* kcg_comp_struct__82243 */
+
+#ifndef kcg_comp_struct__82253
+extern kcg_bool kcg_comp_struct__82253(
+  struct__82253 *kcg_c1,
+  struct__82253 *kcg_c2);
+#endif /* kcg_comp_struct__82253 */
+
+#ifndef kcg_comp_struct__82262
+extern kcg_bool kcg_comp_struct__82262(
+  struct__82262 *kcg_c1,
+  struct__82262 *kcg_c2);
+#endif /* kcg_comp_struct__82262 */
+
+#ifndef kcg_comp_struct__82270
+extern kcg_bool kcg_comp_struct__82270(
+  struct__82270 *kcg_c1,
+  struct__82270 *kcg_c2);
+#endif /* kcg_comp_struct__82270 */
+
+#ifndef kcg_comp_struct__82276
+extern kcg_bool kcg_comp_struct__82276(
+  struct__82276 *kcg_c1,
+  struct__82276 *kcg_c2);
+#endif /* kcg_comp_struct__82276 */
+
+#ifndef kcg_comp_struct__82288
+extern kcg_bool kcg_comp_struct__82288(
+  struct__82288 *kcg_c1,
+  struct__82288 *kcg_c2);
+#endif /* kcg_comp_struct__82288 */
+
+#ifndef kcg_comp_struct__82294
+extern kcg_bool kcg_comp_struct__82294(
+  struct__82294 *kcg_c1,
+  struct__82294 *kcg_c2);
+#endif /* kcg_comp_struct__82294 */
+
+#ifndef kcg_comp_struct__82300
+extern kcg_bool kcg_comp_struct__82300(
+  struct__82300 *kcg_c1,
+  struct__82300 *kcg_c2);
+#endif /* kcg_comp_struct__82300 */
+
+#ifndef kcg_comp_struct__82306
+extern kcg_bool kcg_comp_struct__82306(
+  struct__82306 *kcg_c1,
+  struct__82306 *kcg_c2);
+#endif /* kcg_comp_struct__82306 */
+
+#ifndef kcg_comp_struct__82312
+extern kcg_bool kcg_comp_struct__82312(
+  struct__82312 *kcg_c1,
+  struct__82312 *kcg_c2);
+#endif /* kcg_comp_struct__82312 */
+
+#ifndef kcg_comp_struct__82322
+extern kcg_bool kcg_comp_struct__82322(
+  struct__82322 *kcg_c1,
+  struct__82322 *kcg_c2);
+#endif /* kcg_comp_struct__82322 */
+
+#ifndef kcg_comp_struct__82330
+extern kcg_bool kcg_comp_struct__82330(
+  struct__82330 *kcg_c1,
+  struct__82330 *kcg_c2);
+#endif /* kcg_comp_struct__82330 */
+
+#ifndef kcg_comp_struct__82338
+extern kcg_bool kcg_comp_struct__82338(
+  struct__82338 *kcg_c1,
+  struct__82338 *kcg_c2);
+#endif /* kcg_comp_struct__82338 */
+
+#ifndef kcg_comp_struct__82346
+extern kcg_bool kcg_comp_struct__82346(
+  struct__82346 *kcg_c1,
+  struct__82346 *kcg_c2);
+#endif /* kcg_comp_struct__82346 */
+
+#ifndef kcg_comp_struct__82351
+extern kcg_bool kcg_comp_struct__82351(
+  struct__82351 *kcg_c1,
+  struct__82351 *kcg_c2);
+#endif /* kcg_comp_struct__82351 */
+
+#ifndef kcg_comp_struct__82359
+extern kcg_bool kcg_comp_struct__82359(
+  struct__82359 *kcg_c1,
+  struct__82359 *kcg_c2);
+#endif /* kcg_comp_struct__82359 */
+
+#ifndef kcg_comp_struct__82370
+extern kcg_bool kcg_comp_struct__82370(
+  struct__82370 *kcg_c1,
+  struct__82370 *kcg_c2);
+#endif /* kcg_comp_struct__82370 */
+
+#ifndef kcg_comp_struct__82377
+extern kcg_bool kcg_comp_struct__82377(
+  struct__82377 *kcg_c1,
+  struct__82377 *kcg_c2);
+#endif /* kcg_comp_struct__82377 */
+
+#ifndef kcg_comp_struct__82385
+extern kcg_bool kcg_comp_struct__82385(
+  struct__82385 *kcg_c1,
+  struct__82385 *kcg_c2);
+#endif /* kcg_comp_struct__82385 */
+
+#ifndef kcg_comp_struct__82394
+extern kcg_bool kcg_comp_struct__82394(
+  struct__82394 *kcg_c1,
+  struct__82394 *kcg_c2);
+#endif /* kcg_comp_struct__82394 */
+
+#ifndef kcg_comp_struct__82406
+extern kcg_bool kcg_comp_struct__82406(
+  struct__82406 *kcg_c1,
+  struct__82406 *kcg_c2);
+#endif /* kcg_comp_struct__82406 */
+
+#ifndef kcg_comp_struct__82439
+extern kcg_bool kcg_comp_struct__82439(
+  struct__82439 *kcg_c1,
+  struct__82439 *kcg_c2);
+#endif /* kcg_comp_struct__82439 */
+
+#ifndef kcg_comp_struct__82445
+extern kcg_bool kcg_comp_struct__82445(
+  struct__82445 *kcg_c1,
+  struct__82445 *kcg_c2);
+#endif /* kcg_comp_struct__82445 */
+
+#ifndef kcg_comp_struct__82471
+extern kcg_bool kcg_comp_struct__82471(
+  struct__82471 *kcg_c1,
+  struct__82471 *kcg_c2);
+#endif /* kcg_comp_struct__82471 */
+
+#ifndef kcg_comp_struct__82491
+extern kcg_bool kcg_comp_struct__82491(
+  struct__82491 *kcg_c1,
+  struct__82491 *kcg_c2);
+#endif /* kcg_comp_struct__82491 */
+
+#ifndef kcg_comp_struct__82505
+extern kcg_bool kcg_comp_struct__82505(
+  struct__82505 *kcg_c1,
+  struct__82505 *kcg_c2);
+#endif /* kcg_comp_struct__82505 */
+
+#ifndef kcg_comp_struct__82511
+extern kcg_bool kcg_comp_struct__82511(
+  struct__82511 *kcg_c1,
+  struct__82511 *kcg_c2);
+#endif /* kcg_comp_struct__82511 */
+
+#ifndef kcg_comp_struct__82516
+extern kcg_bool kcg_comp_struct__82516(
+  struct__82516 *kcg_c1,
+  struct__82516 *kcg_c2);
+#endif /* kcg_comp_struct__82516 */
+
+#ifndef kcg_comp_struct__82523
+extern kcg_bool kcg_comp_struct__82523(
+  struct__82523 *kcg_c1,
+  struct__82523 *kcg_c2);
+#endif /* kcg_comp_struct__82523 */
+
+#ifndef kcg_comp_struct__82529
+extern kcg_bool kcg_comp_struct__82529(
+  struct__82529 *kcg_c1,
+  struct__82529 *kcg_c2);
+#endif /* kcg_comp_struct__82529 */
+
+#ifndef kcg_comp_struct__82554
+extern kcg_bool kcg_comp_struct__82554(
+  struct__82554 *kcg_c1,
+  struct__82554 *kcg_c2);
+#endif /* kcg_comp_struct__82554 */
+
+#ifndef kcg_comp_struct__82560
+extern kcg_bool kcg_comp_struct__82560(
+  struct__82560 *kcg_c1,
+  struct__82560 *kcg_c2);
+#endif /* kcg_comp_struct__82560 */
+
+#ifndef kcg_comp_struct__82569
+extern kcg_bool kcg_comp_struct__82569(
+  struct__82569 *kcg_c1,
+  struct__82569 *kcg_c2);
+#endif /* kcg_comp_struct__82569 */
+
+#ifndef kcg_comp_struct__82575
+extern kcg_bool kcg_comp_struct__82575(
+  struct__82575 *kcg_c1,
+  struct__82575 *kcg_c2);
+#endif /* kcg_comp_struct__82575 */
+
+#ifndef kcg_comp_struct__82581
+extern kcg_bool kcg_comp_struct__82581(
+  struct__82581 *kcg_c1,
+  struct__82581 *kcg_c2);
+#endif /* kcg_comp_struct__82581 */
+
+#ifndef kcg_comp_struct__82586
+extern kcg_bool kcg_comp_struct__82586(
+  struct__82586 *kcg_c1,
+  struct__82586 *kcg_c2);
+#endif /* kcg_comp_struct__82586 */
+
+#ifndef kcg_comp_struct__82594
+extern kcg_bool kcg_comp_struct__82594(
+  struct__82594 *kcg_c1,
+  struct__82594 *kcg_c2);
+#endif /* kcg_comp_struct__82594 */
+
+#ifndef kcg_comp_struct__82603
+extern kcg_bool kcg_comp_struct__82603(
+  struct__82603 *kcg_c1,
+  struct__82603 *kcg_c2);
+#endif /* kcg_comp_struct__82603 */
+
+#ifndef kcg_comp_struct__82610
+extern kcg_bool kcg_comp_struct__82610(
+  struct__82610 *kcg_c1,
+  struct__82610 *kcg_c2);
+#endif /* kcg_comp_struct__82610 */
+
+#ifndef kcg_comp_struct__82619
+extern kcg_bool kcg_comp_struct__82619(
+  struct__82619 *kcg_c1,
+  struct__82619 *kcg_c2);
+#endif /* kcg_comp_struct__82619 */
+
+#ifndef kcg_comp_struct__82625
+extern kcg_bool kcg_comp_struct__82625(
+  struct__82625 *kcg_c1,
+  struct__82625 *kcg_c2);
+#endif /* kcg_comp_struct__82625 */
+
+#ifndef kcg_comp_struct__82630
+extern kcg_bool kcg_comp_struct__82630(
+  struct__82630 *kcg_c1,
+  struct__82630 *kcg_c2);
+#endif /* kcg_comp_struct__82630 */
+
+#ifndef kcg_comp_struct__82636
+extern kcg_bool kcg_comp_struct__82636(
+  struct__82636 *kcg_c1,
+  struct__82636 *kcg_c2);
+#endif /* kcg_comp_struct__82636 */
+
+#ifndef kcg_comp_struct__82641
+extern kcg_bool kcg_comp_struct__82641(
+  struct__82641 *kcg_c1,
+  struct__82641 *kcg_c2);
+#endif /* kcg_comp_struct__82641 */
+
+#ifndef kcg_comp_struct__82646
+extern kcg_bool kcg_comp_struct__82646(
+  struct__82646 *kcg_c1,
+  struct__82646 *kcg_c2);
+#endif /* kcg_comp_struct__82646 */
+
+#ifndef kcg_comp_struct__82652
+extern kcg_bool kcg_comp_struct__82652(
+  struct__82652 *kcg_c1,
+  struct__82652 *kcg_c2);
+#endif /* kcg_comp_struct__82652 */
+
+#ifndef kcg_comp_struct__82660
+extern kcg_bool kcg_comp_struct__82660(
+  struct__82660 *kcg_c1,
+  struct__82660 *kcg_c2);
+#endif /* kcg_comp_struct__82660 */
+
+#ifndef kcg_comp_struct__82667
+extern kcg_bool kcg_comp_struct__82667(
+  struct__82667 *kcg_c1,
+  struct__82667 *kcg_c2);
+#endif /* kcg_comp_struct__82667 */
+
+#ifndef kcg_comp_struct__82672
+extern kcg_bool kcg_comp_struct__82672(
+  struct__82672 *kcg_c1,
+  struct__82672 *kcg_c2);
+#endif /* kcg_comp_struct__82672 */
+
+#ifndef kcg_comp_struct__82682
+extern kcg_bool kcg_comp_struct__82682(
+  struct__82682 *kcg_c1,
+  struct__82682 *kcg_c2);
+#endif /* kcg_comp_struct__82682 */
+
+#ifndef kcg_comp_struct__82693
+extern kcg_bool kcg_comp_struct__82693(
+  struct__82693 *kcg_c1,
+  struct__82693 *kcg_c2);
+#endif /* kcg_comp_struct__82693 */
+
+#ifndef kcg_comp_struct__82710
+extern kcg_bool kcg_comp_struct__82710(
+  struct__82710 *kcg_c1,
+  struct__82710 *kcg_c2);
+#endif /* kcg_comp_struct__82710 */
+
+#ifndef kcg_comp_struct__82722
+extern kcg_bool kcg_comp_struct__82722(
+  struct__82722 *kcg_c1,
+  struct__82722 *kcg_c2);
+#endif /* kcg_comp_struct__82722 */
+
+#ifndef kcg_comp_struct__82730
+extern kcg_bool kcg_comp_struct__82730(
+  struct__82730 *kcg_c1,
+  struct__82730 *kcg_c2);
+#endif /* kcg_comp_struct__82730 */
+
+#ifndef kcg_comp_struct__82738
+extern kcg_bool kcg_comp_struct__82738(
+  struct__82738 *kcg_c1,
+  struct__82738 *kcg_c2);
+#endif /* kcg_comp_struct__82738 */
+
+#ifndef kcg_comp_struct__82761
+extern kcg_bool kcg_comp_struct__82761(
+  struct__82761 *kcg_c1,
+  struct__82761 *kcg_c2);
+#endif /* kcg_comp_struct__82761 */
+
+#ifndef kcg_comp_array__80217
+extern kcg_bool kcg_comp_array__80217(
+  array__80217 *kcg_c1,
+  array__80217 *kcg_c2);
+#endif /* kcg_comp_array__80217 */
+
+#ifndef kcg_comp_array__80227
+extern kcg_bool kcg_comp_array__80227(
+  array__80227 *kcg_c1,
+  array__80227 *kcg_c2);
+#endif /* kcg_comp_array__80227 */
+
+#ifndef kcg_comp_array__80242
+extern kcg_bool kcg_comp_array__80242(
+  array__80242 *kcg_c1,
+  array__80242 *kcg_c2);
+#endif /* kcg_comp_array__80242 */
+
+#ifndef kcg_comp_array__80252
+extern kcg_bool kcg_comp_array__80252(
+  array__80252 *kcg_c1,
+  array__80252 *kcg_c2);
+#endif /* kcg_comp_array__80252 */
+
+#ifndef kcg_comp_array__80297
+extern kcg_bool kcg_comp_array__80297(
+  array__80297 *kcg_c1,
+  array__80297 *kcg_c2);
+#endif /* kcg_comp_array__80297 */
+
+#ifndef kcg_comp_array__80307
+extern kcg_bool kcg_comp_array__80307(
+  array__80307 *kcg_c1,
+  array__80307 *kcg_c2);
+#endif /* kcg_comp_array__80307 */
+
+#ifndef kcg_comp_array__80318
+extern kcg_bool kcg_comp_array__80318(
+  array__80318 *kcg_c1,
+  array__80318 *kcg_c2);
+#endif /* kcg_comp_array__80318 */
+
+#ifndef kcg_comp_array__80326
+extern kcg_bool kcg_comp_array__80326(
+  array__80326 *kcg_c1,
+  array__80326 *kcg_c2);
+#endif /* kcg_comp_array__80326 */
+
+#ifndef kcg_comp_array__80382
+extern kcg_bool kcg_comp_array__80382(
+  array__80382 *kcg_c1,
+  array__80382 *kcg_c2);
+#endif /* kcg_comp_array__80382 */
 
 #ifndef kcg_comp_array_int_500
 extern kcg_bool kcg_comp_array_int_500(
@@ -8461,17 +8485,17 @@ extern kcg_bool kcg_comp_array_int_500(
   array_int_500 *kcg_c2);
 #endif /* kcg_comp_array_int_500 */
 
-#ifndef kcg_comp_array__77040
-extern kcg_bool kcg_comp_array__77040(
-  array__77040 *kcg_c1,
-  array__77040 *kcg_c2);
-#endif /* kcg_comp_array__77040 */
+#ifndef kcg_comp_array__80396
+extern kcg_bool kcg_comp_array__80396(
+  array__80396 *kcg_c1,
+  array__80396 *kcg_c2);
+#endif /* kcg_comp_array__80396 */
 
-#ifndef kcg_comp_array__77059
-extern kcg_bool kcg_comp_array__77059(
-  array__77059 *kcg_c1,
-  array__77059 *kcg_c2);
-#endif /* kcg_comp_array__77059 */
+#ifndef kcg_comp_array__80415
+extern kcg_bool kcg_comp_array__80415(
+  array__80415 *kcg_c1,
+  array__80415 *kcg_c2);
+#endif /* kcg_comp_array__80415 */
 
 #ifndef kcg_comp_array_int_231
 extern kcg_bool kcg_comp_array_int_231(
@@ -8483,71 +8507,63 @@ extern kcg_bool kcg_comp_array_int_231(
 extern kcg_bool kcg_comp_array_int_3(array_int_3 *kcg_c1, array_int_3 *kcg_c2);
 #endif /* kcg_comp_array_int_3 */
 
-#ifndef kcg_comp_array__77197
-extern kcg_bool kcg_comp_array__77197(
-  array__77197 *kcg_c1,
-  array__77197 *kcg_c2);
-#endif /* kcg_comp_array__77197 */
+#ifndef kcg_comp_array__80553
+extern kcg_bool kcg_comp_array__80553(
+  array__80553 *kcg_c1,
+  array__80553 *kcg_c2);
+#endif /* kcg_comp_array__80553 */
 
-#ifndef kcg_comp_array__77221
-extern kcg_bool kcg_comp_array__77221(
-  array__77221 *kcg_c1,
-  array__77221 *kcg_c2);
-#endif /* kcg_comp_array__77221 */
+#ifndef kcg_comp_array__80577
+extern kcg_bool kcg_comp_array__80577(
+  array__80577 *kcg_c1,
+  array__80577 *kcg_c2);
+#endif /* kcg_comp_array__80577 */
 
-#ifndef kcg_comp_array__77247
-extern kcg_bool kcg_comp_array__77247(
-  array__77247 *kcg_c1,
-  array__77247 *kcg_c2);
-#endif /* kcg_comp_array__77247 */
+#ifndef kcg_comp_array__80603
+extern kcg_bool kcg_comp_array__80603(
+  array__80603 *kcg_c1,
+  array__80603 *kcg_c2);
+#endif /* kcg_comp_array__80603 */
 
-#ifndef kcg_comp_array__77307
-extern kcg_bool kcg_comp_array__77307(
-  array__77307 *kcg_c1,
-  array__77307 *kcg_c2);
-#endif /* kcg_comp_array__77307 */
+#ifndef kcg_comp_array__80660
+extern kcg_bool kcg_comp_array__80660(
+  array__80660 *kcg_c1,
+  array__80660 *kcg_c2);
+#endif /* kcg_comp_array__80660 */
 
-#ifndef kcg_comp_array__77310
-extern kcg_bool kcg_comp_array__77310(
-  array__77310 *kcg_c1,
-  array__77310 *kcg_c2);
-#endif /* kcg_comp_array__77310 */
+#ifndef kcg_comp_array__80672
+extern kcg_bool kcg_comp_array__80672(
+  array__80672 *kcg_c1,
+  array__80672 *kcg_c2);
+#endif /* kcg_comp_array__80672 */
 
-#ifndef kcg_comp_array__77319
-extern kcg_bool kcg_comp_array__77319(
-  array__77319 *kcg_c1,
-  array__77319 *kcg_c2);
-#endif /* kcg_comp_array__77319 */
+#ifndef kcg_comp_array__80682
+extern kcg_bool kcg_comp_array__80682(
+  array__80682 *kcg_c1,
+  array__80682 *kcg_c2);
+#endif /* kcg_comp_array__80682 */
 
-#ifndef kcg_comp_array__77329
-extern kcg_bool kcg_comp_array__77329(
-  array__77329 *kcg_c1,
-  array__77329 *kcg_c2);
-#endif /* kcg_comp_array__77329 */
+#ifndef kcg_comp_array_int_99
+extern kcg_bool kcg_comp_array_int_99(
+  array_int_99 *kcg_c1,
+  array_int_99 *kcg_c2);
+#endif /* kcg_comp_array_int_99 */
 
-#ifndef kcg_comp_array__77387
-extern kcg_bool kcg_comp_array__77387(
-  array__77387 *kcg_c1,
-  array__77387 *kcg_c2);
-#endif /* kcg_comp_array__77387 */
+#ifndef kcg_comp_array_int_5
+extern kcg_bool kcg_comp_array_int_5(array_int_5 *kcg_c1, array_int_5 *kcg_c2);
+#endif /* kcg_comp_array_int_5 */
 
-#ifndef kcg_comp_array_int_32
-extern kcg_bool kcg_comp_array_int_32(
-  array_int_32 *kcg_c1,
-  array_int_32 *kcg_c2);
-#endif /* kcg_comp_array_int_32 */
+#ifndef kcg_comp_array__80726
+extern kcg_bool kcg_comp_array__80726(
+  array__80726 *kcg_c1,
+  array__80726 *kcg_c2);
+#endif /* kcg_comp_array__80726 */
 
-#ifndef kcg_comp_array_int_24
-extern kcg_bool kcg_comp_array_int_24(
-  array_int_24 *kcg_c1,
-  array_int_24 *kcg_c2);
-#endif /* kcg_comp_array_int_24 */
-
-#ifndef kcg_comp_array__77486
-extern kcg_bool kcg_comp_array__77486(
-  array__77486 *kcg_c1,
-  array__77486 *kcg_c2);
-#endif /* kcg_comp_array__77486 */
+#ifndef kcg_comp_array__80737
+extern kcg_bool kcg_comp_array__80737(
+  array__80737 *kcg_c1,
+  array__80737 *kcg_c2);
+#endif /* kcg_comp_array__80737 */
 
 #ifndef kcg_comp_array_int_128
 extern kcg_bool kcg_comp_array_int_128(
@@ -8565,33 +8581,29 @@ extern kcg_bool kcg_comp_array_int_15(
 extern kcg_bool kcg_comp_array_int_6(array_int_6 *kcg_c1, array_int_6 *kcg_c2);
 #endif /* kcg_comp_array_int_6 */
 
-#ifndef kcg_comp_array__77543
-extern kcg_bool kcg_comp_array__77543(
-  array__77543 *kcg_c1,
-  array__77543 *kcg_c2);
-#endif /* kcg_comp_array__77543 */
+#ifndef kcg_comp_array__80802
+extern kcg_bool kcg_comp_array__80802(
+  array__80802 *kcg_c1,
+  array__80802 *kcg_c2);
+#endif /* kcg_comp_array__80802 */
 
-#ifndef kcg_comp_array__77569
-extern kcg_bool kcg_comp_array__77569(
-  array__77569 *kcg_c1,
-  array__77569 *kcg_c2);
-#endif /* kcg_comp_array__77569 */
+#ifndef kcg_comp_array__80814
+extern kcg_bool kcg_comp_array__80814(
+  array__80814 *kcg_c1,
+  array__80814 *kcg_c2);
+#endif /* kcg_comp_array__80814 */
 
-#ifndef kcg_comp_array__77578
-extern kcg_bool kcg_comp_array__77578(
-  array__77578 *kcg_c1,
-  array__77578 *kcg_c2);
-#endif /* kcg_comp_array__77578 */
+#ifndef kcg_comp_array__80832
+extern kcg_bool kcg_comp_array__80832(
+  array__80832 *kcg_c1,
+  array__80832 *kcg_c2);
+#endif /* kcg_comp_array__80832 */
 
-#ifndef kcg_comp_array__77590
-extern kcg_bool kcg_comp_array__77590(
-  array__77590 *kcg_c1,
-  array__77590 *kcg_c2);
-#endif /* kcg_comp_array__77590 */
-
-#ifndef kcg_comp_array_int_5
-extern kcg_bool kcg_comp_array_int_5(array_int_5 *kcg_c1, array_int_5 *kcg_c2);
-#endif /* kcg_comp_array_int_5 */
+#ifndef kcg_comp_array__80843
+extern kcg_bool kcg_comp_array__80843(
+  array__80843 *kcg_c1,
+  array__80843 *kcg_c2);
+#endif /* kcg_comp_array__80843 */
 
 #ifndef kcg_comp_array_int_64
 extern kcg_bool kcg_comp_array_int_64(
@@ -8599,17 +8611,97 @@ extern kcg_bool kcg_comp_array_int_64(
   array_int_64 *kcg_c2);
 #endif /* kcg_comp_array_int_64 */
 
-#ifndef kcg_comp_array__77612
-extern kcg_bool kcg_comp_array__77612(
-  array__77612 *kcg_c1,
-  array__77612 *kcg_c2);
-#endif /* kcg_comp_array__77612 */
+#ifndef kcg_comp_array__80873
+extern kcg_bool kcg_comp_array__80873(
+  array__80873 *kcg_c1,
+  array__80873 *kcg_c2);
+#endif /* kcg_comp_array__80873 */
 
-#ifndef kcg_comp_array__77621
-extern kcg_bool kcg_comp_array__77621(
-  array__77621 *kcg_c1,
-  array__77621 *kcg_c2);
-#endif /* kcg_comp_array__77621 */
+#ifndef kcg_comp_array__80882
+extern kcg_bool kcg_comp_array__80882(
+  array__80882 *kcg_c1,
+  array__80882 *kcg_c2);
+#endif /* kcg_comp_array__80882 */
+
+#ifndef kcg_comp_array_int_66
+extern kcg_bool kcg_comp_array_int_66(
+  array_int_66 *kcg_c1,
+  array_int_66 *kcg_c2);
+#endif /* kcg_comp_array_int_66 */
+
+#ifndef kcg_comp_array_int_4
+extern kcg_bool kcg_comp_array_int_4(array_int_4 *kcg_c1, array_int_4 *kcg_c2);
+#endif /* kcg_comp_array_int_4 */
+
+#ifndef kcg_comp_array__80908
+extern kcg_bool kcg_comp_array__80908(
+  array__80908 *kcg_c1,
+  array__80908 *kcg_c2);
+#endif /* kcg_comp_array__80908 */
+
+#ifndef kcg_comp_array__80918
+extern kcg_bool kcg_comp_array__80918(
+  array__80918 *kcg_c1,
+  array__80918 *kcg_c2);
+#endif /* kcg_comp_array__80918 */
+
+#ifndef kcg_comp_array_int_7
+extern kcg_bool kcg_comp_array_int_7(array_int_7 *kcg_c1, array_int_7 *kcg_c2);
+#endif /* kcg_comp_array_int_7 */
+
+#ifndef kcg_comp_array__81004
+extern kcg_bool kcg_comp_array__81004(
+  array__81004 *kcg_c1,
+  array__81004 *kcg_c2);
+#endif /* kcg_comp_array__81004 */
+
+#ifndef kcg_comp_array__81007
+extern kcg_bool kcg_comp_array__81007(
+  array__81007 *kcg_c1,
+  array__81007 *kcg_c2);
+#endif /* kcg_comp_array__81007 */
+
+#ifndef kcg_comp_array__81010
+extern kcg_bool kcg_comp_array__81010(
+  array__81010 *kcg_c1,
+  array__81010 *kcg_c2);
+#endif /* kcg_comp_array__81010 */
+
+#ifndef kcg_comp_array_int_32
+extern kcg_bool kcg_comp_array_int_32(
+  array_int_32 *kcg_c1,
+  array_int_32 *kcg_c2);
+#endif /* kcg_comp_array_int_32 */
+
+#ifndef kcg_comp_array_int_24
+extern kcg_bool kcg_comp_array_int_24(
+  array_int_24 *kcg_c1,
+  array_int_24 *kcg_c2);
+#endif /* kcg_comp_array_int_24 */
+
+#ifndef kcg_comp_array__81066
+extern kcg_bool kcg_comp_array__81066(
+  array__81066 *kcg_c1,
+  array__81066 *kcg_c2);
+#endif /* kcg_comp_array__81066 */
+
+#ifndef kcg_comp_array__81092
+extern kcg_bool kcg_comp_array__81092(
+  array__81092 *kcg_c1,
+  array__81092 *kcg_c2);
+#endif /* kcg_comp_array__81092 */
+
+#ifndef kcg_comp_array__81095
+extern kcg_bool kcg_comp_array__81095(
+  array__81095 *kcg_c1,
+  array__81095 *kcg_c2);
+#endif /* kcg_comp_array__81095 */
+
+#ifndef kcg_comp_array__81104
+extern kcg_bool kcg_comp_array__81104(
+  array__81104 *kcg_c1,
+  array__81104 *kcg_c2);
+#endif /* kcg_comp_array__81104 */
 
 #ifndef kcg_comp_array_int_33
 extern kcg_bool kcg_comp_array_int_33(
@@ -8623,151 +8715,81 @@ extern kcg_bool kcg_comp_array_int_33_11(
   array_int_33_11 *kcg_c2);
 #endif /* kcg_comp_array_int_33_11 */
 
-#ifndef kcg_comp_array__77658
-extern kcg_bool kcg_comp_array__77658(
-  array__77658 *kcg_c1,
-  array__77658 *kcg_c2);
-#endif /* kcg_comp_array__77658 */
+#ifndef kcg_comp_array__81141
+extern kcg_bool kcg_comp_array__81141(
+  array__81141 *kcg_c1,
+  array__81141 *kcg_c2);
+#endif /* kcg_comp_array__81141 */
 
-#ifndef kcg_comp_array__77661
-extern kcg_bool kcg_comp_array__77661(
-  array__77661 *kcg_c1,
-  array__77661 *kcg_c2);
-#endif /* kcg_comp_array__77661 */
+#ifndef kcg_comp_array__81144
+extern kcg_bool kcg_comp_array__81144(
+  array__81144 *kcg_c1,
+  array__81144 *kcg_c2);
+#endif /* kcg_comp_array__81144 */
 
-#ifndef kcg_comp_array__77671
-extern kcg_bool kcg_comp_array__77671(
-  array__77671 *kcg_c1,
-  array__77671 *kcg_c2);
-#endif /* kcg_comp_array__77671 */
+#ifndef kcg_comp_array__81219
+extern kcg_bool kcg_comp_array__81219(
+  array__81219 *kcg_c1,
+  array__81219 *kcg_c2);
+#endif /* kcg_comp_array__81219 */
 
-#ifndef kcg_comp_array_int_99
-extern kcg_bool kcg_comp_array_int_99(
-  array_int_99 *kcg_c1,
-  array_int_99 *kcg_c2);
-#endif /* kcg_comp_array_int_99 */
+#ifndef kcg_comp_array__81258
+extern kcg_bool kcg_comp_array__81258(
+  array__81258 *kcg_c1,
+  array__81258 *kcg_c2);
+#endif /* kcg_comp_array__81258 */
 
-#ifndef kcg_comp_array__77702
-extern kcg_bool kcg_comp_array__77702(
-  array__77702 *kcg_c1,
-  array__77702 *kcg_c2);
-#endif /* kcg_comp_array__77702 */
+#ifndef kcg_comp_array__81381
+extern kcg_bool kcg_comp_array__81381(
+  array__81381 *kcg_c1,
+  array__81381 *kcg_c2);
+#endif /* kcg_comp_array__81381 */
 
-#ifndef kcg_comp_array__77741
-extern kcg_bool kcg_comp_array__77741(
-  array__77741 *kcg_c1,
-  array__77741 *kcg_c2);
-#endif /* kcg_comp_array__77741 */
+#ifndef kcg_comp_array__81549
+extern kcg_bool kcg_comp_array__81549(
+  array__81549 *kcg_c1,
+  array__81549 *kcg_c2);
+#endif /* kcg_comp_array__81549 */
 
-#ifndef kcg_comp_array__77855
-extern kcg_bool kcg_comp_array__77855(
-  array__77855 *kcg_c1,
-  array__77855 *kcg_c2);
-#endif /* kcg_comp_array__77855 */
+#ifndef kcg_comp_array__81566
+extern kcg_bool kcg_comp_array__81566(
+  array__81566 *kcg_c1,
+  array__81566 *kcg_c2);
+#endif /* kcg_comp_array__81566 */
 
-#ifndef kcg_comp_array__77943
-extern kcg_bool kcg_comp_array__77943(
-  array__77943 *kcg_c1,
-  array__77943 *kcg_c2);
-#endif /* kcg_comp_array__77943 */
-
-#ifndef kcg_comp_array__77953
-extern kcg_bool kcg_comp_array__77953(
-  array__77953 *kcg_c1,
-  array__77953 *kcg_c2);
-#endif /* kcg_comp_array__77953 */
-
-#ifndef kcg_comp_array__77966
-extern kcg_bool kcg_comp_array__77966(
-  array__77966 *kcg_c1,
-  array__77966 *kcg_c2);
-#endif /* kcg_comp_array__77966 */
-
-#ifndef kcg_comp_array__77977
-extern kcg_bool kcg_comp_array__77977(
-  array__77977 *kcg_c1,
-  array__77977 *kcg_c2);
-#endif /* kcg_comp_array__77977 */
-
-#ifndef kcg_comp_array__77988
-extern kcg_bool kcg_comp_array__77988(
-  array__77988 *kcg_c1,
-  array__77988 *kcg_c2);
-#endif /* kcg_comp_array__77988 */
-
-#ifndef kcg_comp_array__78011
-extern kcg_bool kcg_comp_array__78011(
-  array__78011 *kcg_c1,
-  array__78011 *kcg_c2);
-#endif /* kcg_comp_array__78011 */
-
-#ifndef kcg_comp_array__78041
-extern kcg_bool kcg_comp_array__78041(
-  array__78041 *kcg_c1,
-  array__78041 *kcg_c2);
-#endif /* kcg_comp_array__78041 */
-
-#ifndef kcg_comp_array_int_66
-extern kcg_bool kcg_comp_array_int_66(
-  array_int_66 *kcg_c1,
-  array_int_66 *kcg_c2);
-#endif /* kcg_comp_array_int_66 */
-
-#ifndef kcg_comp_array_int_4
-extern kcg_bool kcg_comp_array_int_4(array_int_4 *kcg_c1, array_int_4 *kcg_c2);
-#endif /* kcg_comp_array_int_4 */
-
-#ifndef kcg_comp_array__78221
-extern kcg_bool kcg_comp_array__78221(
-  array__78221 *kcg_c1,
-  array__78221 *kcg_c2);
-#endif /* kcg_comp_array__78221 */
-
-#ifndef kcg_comp_array__78238
-extern kcg_bool kcg_comp_array__78238(
-  array__78238 *kcg_c1,
-  array__78238 *kcg_c2);
-#endif /* kcg_comp_array__78238 */
-
-#ifndef kcg_comp_array__78260
-extern kcg_bool kcg_comp_array__78260(
-  array__78260 *kcg_c1,
-  array__78260 *kcg_c2);
-#endif /* kcg_comp_array__78260 */
+#ifndef kcg_comp_array__81588
+extern kcg_bool kcg_comp_array__81588(
+  array__81588 *kcg_c1,
+  array__81588 *kcg_c2);
+#endif /* kcg_comp_array__81588 */
 
 #ifndef kcg_comp_array_int_8
 extern kcg_bool kcg_comp_array_int_8(array_int_8 *kcg_c1, array_int_8 *kcg_c2);
 #endif /* kcg_comp_array_int_8 */
 
-#ifndef kcg_comp_array__78321
-extern kcg_bool kcg_comp_array__78321(
-  array__78321 *kcg_c1,
-  array__78321 *kcg_c2);
-#endif /* kcg_comp_array__78321 */
+#ifndef kcg_comp_array__81683
+extern kcg_bool kcg_comp_array__81683(
+  array__81683 *kcg_c1,
+  array__81683 *kcg_c2);
+#endif /* kcg_comp_array__81683 */
 
-#ifndef kcg_comp_array__78324
-extern kcg_bool kcg_comp_array__78324(
-  array__78324 *kcg_c1,
-  array__78324 *kcg_c2);
-#endif /* kcg_comp_array__78324 */
+#ifndef kcg_comp_array__81686
+extern kcg_bool kcg_comp_array__81686(
+  array__81686 *kcg_c1,
+  array__81686 *kcg_c2);
+#endif /* kcg_comp_array__81686 */
 
-#ifndef kcg_comp_array__78327
-extern kcg_bool kcg_comp_array__78327(
-  array__78327 *kcg_c1,
-  array__78327 *kcg_c2);
-#endif /* kcg_comp_array__78327 */
+#ifndef kcg_comp_array__81689
+extern kcg_bool kcg_comp_array__81689(
+  array__81689 *kcg_c1,
+  array__81689 *kcg_c2);
+#endif /* kcg_comp_array__81689 */
 
-#ifndef kcg_comp_array__78330
-extern kcg_bool kcg_comp_array__78330(
-  array__78330 *kcg_c1,
-  array__78330 *kcg_c2);
-#endif /* kcg_comp_array__78330 */
-
-#ifndef kcg_comp_array__78384
-extern kcg_bool kcg_comp_array__78384(
-  array__78384 *kcg_c1,
-  array__78384 *kcg_c2);
-#endif /* kcg_comp_array__78384 */
+#ifndef kcg_comp_array__81692
+extern kcg_bool kcg_comp_array__81692(
+  array__81692 *kcg_c1,
+  array__81692 *kcg_c2);
+#endif /* kcg_comp_array__81692 */
 
 #ifndef kcg_comp_array_bool_256
 extern kcg_bool kcg_comp_array_bool_256(
@@ -8781,11 +8803,17 @@ extern kcg_bool kcg_comp_array_bool_256_46(
   array_bool_256_46 *kcg_c2);
 #endif /* kcg_comp_array_bool_256_46 */
 
-#ifndef kcg_comp_array__78478
-extern kcg_bool kcg_comp_array__78478(
-  array__78478 *kcg_c1,
-  array__78478 *kcg_c2);
-#endif /* kcg_comp_array__78478 */
+#ifndef kcg_comp_array__81717
+extern kcg_bool kcg_comp_array__81717(
+  array__81717 *kcg_c1,
+  array__81717 *kcg_c2);
+#endif /* kcg_comp_array__81717 */
+
+#ifndef kcg_comp_array__81798
+extern kcg_bool kcg_comp_array__81798(
+  array__81798 *kcg_c1,
+  array__81798 *kcg_c2);
+#endif /* kcg_comp_array__81798 */
 
 #ifndef kcg_comp_array_char_9
 extern kcg_bool kcg_comp_array_char_9(
@@ -8823,23 +8851,23 @@ extern kcg_bool kcg_comp_array_real_25(
   array_real_25 *kcg_c2);
 #endif /* kcg_comp_array_real_25 */
 
-#ifndef kcg_comp_array__78699
-extern kcg_bool kcg_comp_array__78699(
-  array__78699 *kcg_c1,
-  array__78699 *kcg_c2);
-#endif /* kcg_comp_array__78699 */
+#ifndef kcg_comp_array__82019
+extern kcg_bool kcg_comp_array__82019(
+  array__82019 *kcg_c1,
+  array__82019 *kcg_c2);
+#endif /* kcg_comp_array__82019 */
 
-#ifndef kcg_comp_array__78710
-extern kcg_bool kcg_comp_array__78710(
-  array__78710 *kcg_c1,
-  array__78710 *kcg_c2);
-#endif /* kcg_comp_array__78710 */
+#ifndef kcg_comp_array__82030
+extern kcg_bool kcg_comp_array__82030(
+  array__82030 *kcg_c1,
+  array__82030 *kcg_c2);
+#endif /* kcg_comp_array__82030 */
 
-#ifndef kcg_comp_array__78754
-extern kcg_bool kcg_comp_array__78754(
-  array__78754 *kcg_c1,
-  array__78754 *kcg_c2);
-#endif /* kcg_comp_array__78754 */
+#ifndef kcg_comp_array__82074
+extern kcg_bool kcg_comp_array__82074(
+  array__82074 *kcg_c1,
+  array__82074 *kcg_c2);
+#endif /* kcg_comp_array__82074 */
 
 #ifndef kcg_comp_array_real_15
 extern kcg_bool kcg_comp_array_real_15(
@@ -8865,41 +8893,41 @@ extern kcg_bool kcg_comp_array_bool_14(
   array_bool_14 *kcg_c2);
 #endif /* kcg_comp_array_bool_14 */
 
-#ifndef kcg_comp_array__78982
-extern kcg_bool kcg_comp_array__78982(
-  array__78982 *kcg_c1,
-  array__78982 *kcg_c2);
-#endif /* kcg_comp_array__78982 */
+#ifndef kcg_comp_array__82327
+extern kcg_bool kcg_comp_array__82327(
+  array__82327 *kcg_c1,
+  array__82327 *kcg_c2);
+#endif /* kcg_comp_array__82327 */
 
-#ifndef kcg_comp_array__78990
-extern kcg_bool kcg_comp_array__78990(
-  array__78990 *kcg_c1,
-  array__78990 *kcg_c2);
-#endif /* kcg_comp_array__78990 */
+#ifndef kcg_comp_array__82335
+extern kcg_bool kcg_comp_array__82335(
+  array__82335 *kcg_c1,
+  array__82335 *kcg_c2);
+#endif /* kcg_comp_array__82335 */
 
-#ifndef kcg_comp_array__78998
-extern kcg_bool kcg_comp_array__78998(
-  array__78998 *kcg_c1,
-  array__78998 *kcg_c2);
-#endif /* kcg_comp_array__78998 */
-
-#ifndef kcg_comp_array__79339
-extern kcg_bool kcg_comp_array__79339(
-  array__79339 *kcg_c1,
-  array__79339 *kcg_c2);
-#endif /* kcg_comp_array__79339 */
-
-#ifndef kcg_comp_array__79388
-extern kcg_bool kcg_comp_array__79388(
-  array__79388 *kcg_c1,
-  array__79388 *kcg_c2);
-#endif /* kcg_comp_array__79388 */
+#ifndef kcg_comp_array__82343
+extern kcg_bool kcg_comp_array__82343(
+  array__82343 *kcg_c1,
+  array__82343 *kcg_c2);
+#endif /* kcg_comp_array__82343 */
 
 #ifndef kcg_comp_array_bool_20
 extern kcg_bool kcg_comp_array_bool_20(
   array_bool_20 *kcg_c1,
   array_bool_20 *kcg_c2);
 #endif /* kcg_comp_array_bool_20 */
+
+#ifndef kcg_comp_array__82690
+extern kcg_bool kcg_comp_array__82690(
+  array__82690 *kcg_c1,
+  array__82690 *kcg_c2);
+#endif /* kcg_comp_array__82690 */
+
+#ifndef kcg_comp_array__82755
+extern kcg_bool kcg_comp_array__82755(
+  array__82755 *kcg_c1,
+  array__82755 *kcg_c2);
+#endif /* kcg_comp_array__82755 */
 
 #ifndef kcg_comp_array_bool_4
 extern kcg_bool kcg_comp_array_bool_4(
@@ -8919,11 +8947,11 @@ extern kcg_bool kcg_comp_array_real_1(
   array_real_1 *kcg_c2);
 #endif /* kcg_comp_array_real_1 */
 
-#ifndef kcg_comp_array__79408
-extern kcg_bool kcg_comp_array__79408(
-  array__79408 *kcg_c1,
-  array__79408 *kcg_c2);
-#endif /* kcg_comp_array__79408 */
+#ifndef kcg_comp_array__82772
+extern kcg_bool kcg_comp_array__82772(
+  array__82772 *kcg_c1,
+  array__82772 *kcg_c2);
+#endif /* kcg_comp_array__82772 */
 
 #ifndef kcg_comp_array_bool_8
 extern kcg_bool kcg_comp_array_bool_8(
@@ -8937,41 +8965,41 @@ extern kcg_bool kcg_comp_array_bool_30(
   array_bool_30 *kcg_c2);
 #endif /* kcg_comp_array_bool_30 */
 
-#ifndef kcg_comp_array__79417
-extern kcg_bool kcg_comp_array__79417(
-  array__79417 *kcg_c1,
-  array__79417 *kcg_c2);
-#endif /* kcg_comp_array__79417 */
+#ifndef kcg_comp_array__82781
+extern kcg_bool kcg_comp_array__82781(
+  array__82781 *kcg_c1,
+  array__82781 *kcg_c2);
+#endif /* kcg_comp_array__82781 */
 
-#ifndef kcg_comp_array__79420
-extern kcg_bool kcg_comp_array__79420(
-  array__79420 *kcg_c1,
-  array__79420 *kcg_c2);
-#endif /* kcg_comp_array__79420 */
+#ifndef kcg_comp_array__82784
+extern kcg_bool kcg_comp_array__82784(
+  array__82784 *kcg_c1,
+  array__82784 *kcg_c2);
+#endif /* kcg_comp_array__82784 */
 
-#ifndef kcg_comp_array__79423
-extern kcg_bool kcg_comp_array__79423(
-  array__79423 *kcg_c1,
-  array__79423 *kcg_c2);
-#endif /* kcg_comp_array__79423 */
+#ifndef kcg_comp_array__82787
+extern kcg_bool kcg_comp_array__82787(
+  array__82787 *kcg_c1,
+  array__82787 *kcg_c2);
+#endif /* kcg_comp_array__82787 */
 
-#ifndef kcg_comp_array__79426
-extern kcg_bool kcg_comp_array__79426(
-  array__79426 *kcg_c1,
-  array__79426 *kcg_c2);
-#endif /* kcg_comp_array__79426 */
+#ifndef kcg_comp_array__82790
+extern kcg_bool kcg_comp_array__82790(
+  array__82790 *kcg_c1,
+  array__82790 *kcg_c2);
+#endif /* kcg_comp_array__82790 */
 
-#ifndef kcg_comp_array__79429
-extern kcg_bool kcg_comp_array__79429(
-  array__79429 *kcg_c1,
-  array__79429 *kcg_c2);
-#endif /* kcg_comp_array__79429 */
+#ifndef kcg_comp_array__82793
+extern kcg_bool kcg_comp_array__82793(
+  array__82793 *kcg_c1,
+  array__82793 *kcg_c2);
+#endif /* kcg_comp_array__82793 */
 
-#ifndef kcg_comp_array__79432
-extern kcg_bool kcg_comp_array__79432(
-  array__79432 *kcg_c1,
-  array__79432 *kcg_c2);
-#endif /* kcg_comp_array__79432 */
+#ifndef kcg_comp_array__82796
+extern kcg_bool kcg_comp_array__82796(
+  array__82796 *kcg_c1,
+  array__82796 *kcg_c2);
+#endif /* kcg_comp_array__82796 */
 
 #ifndef kcg_comp_array_int_1
 extern kcg_bool kcg_comp_array_int_1(array_int_1 *kcg_c1, array_int_1 *kcg_c2);
@@ -8989,959 +9017,831 @@ extern kcg_bool kcg_comp_array_bool_24(
   array_bool_24 *kcg_c2);
 #endif /* kcg_comp_array_bool_24 */
 
-#ifndef kcg_comp_array__82215
-extern kcg_bool kcg_comp_array__82215(
-  array__82215 *kcg_c1,
-  array__82215 *kcg_c2);
-#endif /* kcg_comp_array__82215 */
+#ifndef kcg_comp_array__85687
+extern kcg_bool kcg_comp_array__85687(
+  array__85687 *kcg_c1,
+  array__85687 *kcg_c2);
+#endif /* kcg_comp_array__85687 */
 
-#ifndef kcg_comp_array__82684
-extern kcg_bool kcg_comp_array__82684(
-  array__82684 *kcg_c1,
-  array__82684 *kcg_c2);
-#endif /* kcg_comp_array__82684 */
+#ifndef kcg_comp_array__86192
+extern kcg_bool kcg_comp_array__86192(
+  array__86192 *kcg_c1,
+  array__86192 *kcg_c2);
+#endif /* kcg_comp_array__86192 */
 
-#ifndef kcg_comp_array__82691
-extern kcg_bool kcg_comp_array__82691(
-  array__82691 *kcg_c1,
-  array__82691 *kcg_c2);
-#endif /* kcg_comp_array__82691 */
+#ifndef kcg_comp_array__86199
+extern kcg_bool kcg_comp_array__86199(
+  array__86199 *kcg_c1,
+  array__86199 *kcg_c2);
+#endif /* kcg_comp_array__86199 */
 
-#ifndef kcg_comp_array__82748
-extern kcg_bool kcg_comp_array__82748(
-  array__82748 *kcg_c1,
-  array__82748 *kcg_c2);
-#endif /* kcg_comp_array__82748 */
+#ifndef kcg_comp_array__86240
+extern kcg_bool kcg_comp_array__86240(
+  array__86240 *kcg_c1,
+  array__86240 *kcg_c2);
+#endif /* kcg_comp_array__86240 */
 
-#ifndef kcg_comp_array__82782
-extern kcg_bool kcg_comp_array__82782(
-  array__82782 *kcg_c1,
-  array__82782 *kcg_c2);
-#endif /* kcg_comp_array__82782 */
+#ifndef kcg_comp_array__86322
+extern kcg_bool kcg_comp_array__86322(
+  array__86322 *kcg_c1,
+  array__86322 *kcg_c2);
+#endif /* kcg_comp_array__86322 */
 
-#define kcg_comp_Change_traction_system_T_TIU_Types_Pkg kcg_comp_struct__79298
+#define kcg_comp_trainData_T_TIU_Types_Pkg kcg_comp_struct__81422
 
-#define kcg_copy_Change_traction_system_T_TIU_Types_Pkg kcg_copy_struct__79298
+#define kcg_copy_trainData_T_TIU_Types_Pkg kcg_copy_struct__81422
+
+#define kcg_comp_TIU_trainStatus_T_TIU_Types_Pkg kcg_comp_struct__81515
+
+#define kcg_copy_TIU_trainStatus_T_TIU_Types_Pkg kcg_copy_struct__81515
+
+#define kcg_comp_TIU_commandStatus_T_TIU_Types_Pkg kcg_comp_struct__82619
+
+#define kcg_copy_TIU_commandStatus_T_TIU_Types_Pkg kcg_copy_struct__82619
+
+#define kcg_comp_M_current_T_TIU_Types_Pkg kcg_comp_struct__82625
+
+#define kcg_copy_M_current_T_TIU_Types_Pkg kcg_copy_struct__82625
+
+#define kcg_comp_D_test_current_T_TIU_Types_Pkg kcg_comp_struct__81464
+
+#define kcg_copy_D_test_current_T_TIU_Types_Pkg kcg_copy_struct__81464
+
+#define kcg_comp_Change_of_allowed_current_consumption_T_TIU_Types_Pkg kcg_comp_struct__82630
+
+#define kcg_copy_Change_of_allowed_current_consumption_T_TIU_Types_Pkg kcg_copy_struct__82630
+
+#define kcg_comp_Passenger_door_control_info_T_TIU_Types_Pkg kcg_comp_struct__82636
+
+#define kcg_copy_Passenger_door_control_info_T_TIU_Types_Pkg kcg_copy_struct__82636
+
+#define kcg_comp_M_voltage_T_TIU_Types_Pkg kcg_comp_struct__82641
+
+#define kcg_copy_M_voltage_T_TIU_Types_Pkg kcg_copy_struct__82641
+
+#define kcg_comp_D_test_distance_T_TIU_Types_Pkg kcg_comp_struct__81464
+
+#define kcg_copy_D_test_distance_T_TIU_Types_Pkg kcg_copy_struct__81464
 
 #define kcg_comp_MyArray_SDM_Commands_Pkg kcg_comp_array_bool_14
 
 #define kcg_copy_MyArray_SDM_Commands_Pkg kcg_copy_array_bool_14
 
-#define kcg_comp_TSM_triggerCond_T_SDM_Commands_Pkg kcg_comp_struct__78870
+#define kcg_comp_TSM_triggerCond_T_SDM_Commands_Pkg kcg_comp_struct__82190
 
-#define kcg_copy_TSM_triggerCond_T_SDM_Commands_Pkg kcg_copy_struct__78870
+#define kcg_copy_TSM_triggerCond_T_SDM_Commands_Pkg kcg_copy_struct__82190
 
-#define kcg_comp_TSM_revokeCond_T_SDM_Commands_Pkg kcg_comp_struct__78890
+#define kcg_comp_D_test_traction_T_TIU_Types_Pkg kcg_comp_struct__81464
 
-#define kcg_copy_TSM_revokeCond_T_SDM_Commands_Pkg kcg_copy_struct__78890
+#define kcg_copy_D_test_traction_T_TIU_Types_Pkg kcg_copy_struct__81464
 
-#define kcg_comp_Type_I_train_commands_T_TIU_Types_Pkg kcg_comp_struct__79304
+#define kcg_comp_TSM_revokeCond_T_SDM_Commands_Pkg kcg_comp_struct__82210
 
-#define kcg_copy_Type_I_train_commands_T_TIU_Types_Pkg kcg_copy_struct__79304
+#define kcg_copy_TSM_revokeCond_T_SDM_Commands_Pkg kcg_copy_struct__82210
 
-#define kcg_comp_Position_Report_based_on_two_balise_groups_TrainToTrack kcg_comp_struct__77750
+#define kcg_comp_Change_traction_system_T_TIU_Types_Pkg kcg_comp_struct__82646
 
-#define kcg_copy_Position_Report_based_on_two_balise_groups_TrainToTrack kcg_copy_struct__77750
+#define kcg_copy_Change_traction_system_T_TIU_Types_Pkg kcg_copy_struct__82646
 
-#define kcg_comp_Position_Report_TrainToTrack kcg_comp_struct__77775
+#define kcg_comp_Position_Report_based_on_two_balise_groups_TrainToTrack kcg_comp_struct__81267
 
-#define kcg_copy_Position_Report_TrainToTrack kcg_copy_struct__77775
+#define kcg_copy_Position_Report_based_on_two_balise_groups_TrainToTrack kcg_copy_struct__81267
 
-#define kcg_comp_P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg kcg_comp_struct__77820
+#define kcg_comp_Position_Report_TrainToTrack kcg_comp_struct__81292
 
-#define kcg_copy_P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg kcg_copy_struct__77820
+#define kcg_copy_Position_Report_TrainToTrack kcg_copy_struct__81292
 
-#define kcg_comp_P80_ModeProfile_T_Packet_Types_Pkg kcg_comp_struct__77931
+#define kcg_comp_Type_I_train_commands_T_TIU_Types_Pkg kcg_comp_struct__82652
 
-#define kcg_copy_P80_ModeProfile_T_Packet_Types_Pkg kcg_copy_struct__77931
+#define kcg_copy_Type_I_train_commands_T_TIU_Types_Pkg kcg_copy_struct__82652
 
-#define kcg_comp_P80_ModeProfiles_T_Packet_Types_Pkg kcg_comp_array__77943
+#define kcg_comp_P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg kcg_comp_struct__81337
 
-#define kcg_copy_P80_ModeProfiles_T_Packet_Types_Pkg kcg_copy_array__77943
+#define kcg_copy_P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg kcg_copy_struct__81337
 
-#define kcg_comp_P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg kcg_comp_struct__77946
+#define kcg_comp_P80_ModeProfile_T_Packet_Types_Pkg kcg_comp_struct__80648
 
-#define kcg_copy_P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg kcg_copy_struct__77946
+#define kcg_copy_P80_ModeProfile_T_Packet_Types_Pkg kcg_copy_struct__80648
 
-#define kcg_comp_Brake_inhibition_command_T_TIU_Types_Pkg kcg_comp_struct__79312
+#define kcg_comp_P80_ModeProfiles_T_Packet_Types_Pkg kcg_comp_array__80660
 
-#define kcg_copy_Brake_inhibition_command_T_TIU_Types_Pkg kcg_copy_struct__79312
+#define kcg_copy_P80_ModeProfiles_T_Packet_Types_Pkg kcg_copy_array__80660
 
-#define kcg_comp_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_comp_array__77953
+#define kcg_comp_P21_GradientProfile_T_Packet_Types_Pkg kcg_comp_struct__80663
 
-#define kcg_copy_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_copy_array__77953
+#define kcg_copy_P21_GradientProfile_T_Packet_Types_Pkg kcg_copy_struct__80663
 
-#define kcg_comp_P41_LevelTransitionOrder_T_Packet_Types_Pkg kcg_comp_struct__77956
+#define kcg_comp_P21_GradientProfiles_T_Packet_Types_Pkg kcg_comp_array__80672
 
-#define kcg_copy_P41_LevelTransitionOrder_T_Packet_Types_Pkg kcg_copy_struct__77956
+#define kcg_copy_P21_GradientProfiles_T_Packet_Types_Pkg kcg_copy_array__80672
 
-#define kcg_comp_P41_LevelTransistionOrders_T_Packet_Types_Pkg kcg_comp_array__77966
+#define kcg_comp_P15_Level23MovementAuthority_T_Packet_Types_Pkg kcg_comp_struct__80699
 
-#define kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg kcg_copy_array__77966
+#define kcg_copy_P15_Level23MovementAuthority_T_Packet_Types_Pkg kcg_copy_struct__80699
 
-#define kcg_comp_SSP_T_Packet_Types_Pkg kcg_comp_struct__77980
+#define kcg_comp_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_comp_array__80726
 
-#define kcg_copy_SSP_T_Packet_Types_Pkg kcg_copy_struct__77980
+#define kcg_copy_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_copy_array__80726
 
-#define kcg_comp_SSPArray_T_Packet_Types_Pkg kcg_comp_array__77988
+#define kcg_comp_P139_ReversingSupervisionInformation_T_Packet_Types_Pkg kcg_comp_struct__80774
 
-#define kcg_copy_SSPArray_T_Packet_Types_Pkg kcg_copy_array__77988
+#define kcg_copy_P139_ReversingSupervisionInformation_T_Packet_Types_Pkg kcg_copy_struct__80774
 
-#define kcg_comp_Brake_command_T_TIU_Types_Pkg kcg_comp_struct__78824
+#define kcg_comp_P138_ReversingAreaInformation_T_Packet_Types_Pkg kcg_comp_struct__80782
 
-#define kcg_copy_Brake_command_T_TIU_Types_Pkg kcg_copy_struct__78824
+#define kcg_copy_P138_ReversingAreaInformation_T_Packet_Types_Pkg kcg_copy_struct__80782
 
-#define kcg_comp_Diff_T_Packet_Types_Pkg kcg_comp_struct__77969
+#define kcg_comp_P137_StopIfInStaffResponsible_T_Packet_Types_Pkg kcg_comp_struct__80790
 
-#define kcg_copy_Diff_T_Packet_Types_Pkg kcg_copy_struct__77969
+#define kcg_copy_P137_StopIfInStaffResponsible_T_Packet_Types_Pkg kcg_copy_struct__80790
 
-#define kcg_comp_DiffArray_T_Packet_Types_Pkg kcg_comp_array__77977
+#define kcg_comp_Brake_inhibition_command_T_TIU_Types_Pkg kcg_comp_struct__82660
 
-#define kcg_copy_DiffArray_T_Packet_Types_Pkg kcg_copy_array__77977
+#define kcg_copy_Brake_inhibition_command_T_TIU_Types_Pkg kcg_copy_struct__82660
 
-#define kcg_comp_P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg kcg_comp_struct__77991
+#define kcg_comp_IterPacket58_T_Packet_Types_Pkg kcg_comp_struct__81561
 
-#define kcg_copy_P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg kcg_copy_struct__77991
+#define kcg_copy_IterPacket58_T_Packet_Types_Pkg kcg_copy_struct__81561
 
-#define kcg_comp_P21_GradientProfile_T_Packet_Types_Pkg kcg_comp_struct__78002
+#define kcg_comp_IterPacket58List_T_Packet_Types_Pkg kcg_comp_array__81566
 
-#define kcg_copy_P21_GradientProfile_T_Packet_Types_Pkg kcg_copy_struct__78002
+#define kcg_copy_IterPacket58List_T_Packet_Types_Pkg kcg_copy_array__81566
 
-#define kcg_comp_P21_GradientProfiles_T_Packet_Types_Pkg kcg_comp_array__78011
+#define kcg_comp_P58_PositionReportParameters_T_Packet_Types_Pkg kcg_comp_struct__81569
 
-#define kcg_copy_P21_GradientProfiles_T_Packet_Types_Pkg kcg_copy_array__78011
+#define kcg_copy_P58_PositionReportParameters_T_Packet_Types_Pkg kcg_copy_struct__81569
 
-#define kcg_comp_Isolation_Status_T_TIU_Types_Pkg kcg_comp_struct__79319
+#define kcg_comp_SSP_T_Packet_Types_Pkg kcg_comp_struct__80835
 
-#define kcg_copy_Isolation_Status_T_TIU_Types_Pkg kcg_copy_struct__79319
+#define kcg_copy_SSP_T_Packet_Types_Pkg kcg_copy_struct__80835
 
-#define kcg_comp_P15_Level23MovementAuthority_T_Packet_Types_Pkg kcg_comp_struct__78014
+#define kcg_comp_SSPArray_T_Packet_Types_Pkg kcg_comp_array__80843
 
-#define kcg_copy_P15_Level23MovementAuthority_T_Packet_Types_Pkg kcg_copy_struct__78014
+#define kcg_copy_SSPArray_T_Packet_Types_Pkg kcg_copy_array__80843
 
-#define kcg_comp_Message_EVC_to_Train_Interface_T_TIU_Types_Pkg kcg_comp_struct__79324
+#define kcg_comp_Brake_command_T_TIU_Types_Pkg kcg_comp_struct__82144
 
-#define kcg_copy_Message_EVC_to_Train_Interface_T_TIU_Types_Pkg kcg_copy_struct__79324
+#define kcg_copy_Brake_command_T_TIU_Types_Pkg kcg_copy_struct__82144
 
-#define kcg_comp_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_comp_array__78041
+#define kcg_comp_Diff_T_Packet_Types_Pkg kcg_comp_struct__80824
 
-#define kcg_copy_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_copy_array__78041
+#define kcg_copy_Diff_T_Packet_Types_Pkg kcg_copy_struct__80824
 
-#define kcg_comp_P139_ReversingSupervisionInformation_T_Packet_Types_Pkg kcg_comp_struct__78044
+#define kcg_comp_DiffArray_T_Packet_Types_Pkg kcg_comp_array__80832
 
-#define kcg_copy_P139_ReversingSupervisionInformation_T_Packet_Types_Pkg kcg_copy_struct__78044
+#define kcg_copy_DiffArray_T_Packet_Types_Pkg kcg_copy_array__80832
 
-#define kcg_comp_P138_ReversingAreaInformation_T_Packet_Types_Pkg kcg_comp_struct__78052
+#define kcg_comp_P005_OBU_T_TM kcg_comp_struct__80418
 
-#define kcg_copy_P138_ReversingAreaInformation_T_Packet_Types_Pkg kcg_copy_struct__78052
+#define kcg_copy_P005_OBU_T_TM kcg_copy_struct__80418
 
-#define kcg_comp_TIU_Input_msg_API_TIU_Pkg kcg_comp_struct__78194
+#define kcg_comp_P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg kcg_comp_struct__80846
 
-#define kcg_copy_TIU_Input_msg_API_TIU_Pkg kcg_copy_struct__78194
+#define kcg_copy_P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg kcg_copy_struct__80846
 
-#define kcg_comp_P137_StopIfInStaffResponsible_T_Packet_Types_Pkg kcg_comp_struct__78060
+#define kcg_comp_P005_OBU_sectionlist_enum_T_TM kcg_comp_array__80415
 
-#define kcg_copy_P137_StopIfInStaffResponsible_T_Packet_Types_Pkg kcg_copy_struct__78060
+#define kcg_copy_P005_OBU_sectionlist_enum_T_TM kcg_copy_array__80415
 
-#define kcg_comp_TIU_Output_msg_API_TIU_Pkg kcg_comp_struct__79334
+#define kcg_comp_P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg kcg_comp_struct__80866
 
-#define kcg_copy_TIU_Output_msg_API_TIU_Pkg kcg_copy_struct__79334
-
-#define kcg_comp_IterPacket58_T_Packet_Types_Pkg kcg_comp_struct__78233
-
-#define kcg_copy_IterPacket58_T_Packet_Types_Pkg kcg_copy_struct__78233
-
-#define kcg_comp_IterPacket58List_T_Packet_Types_Pkg kcg_comp_array__78238
-
-#define kcg_copy_IterPacket58List_T_Packet_Types_Pkg kcg_copy_array__78238
-
-#define kcg_comp_P58_PositionReportParameters_T_Packet_Types_Pkg kcg_comp_struct__78241
-
-#define kcg_copy_P58_PositionReportParameters_T_Packet_Types_Pkg kcg_copy_struct__78241
-
-#define kcg_comp_nvkrint_T_Packet_Types_Pkg kcg_comp_struct__76935
-
-#define kcg_copy_nvkrint_T_Packet_Types_Pkg kcg_copy_struct__76935
-
-#define kcg_comp_nvkrintArray_T_Packet_Types_Pkg kcg_comp_array__76941
-
-#define kcg_copy_nvkrintArray_T_Packet_Types_Pkg kcg_copy_array__76941
-
-#define kcg_comp_nvkvint_T_Packet_Types_Pkg kcg_comp_struct__76944
-
-#define kcg_copy_nvkvint_T_Packet_Types_Pkg kcg_copy_struct__76944
-
-#define kcg_comp_nvkvintArray_T_Packet_Types_Pkg kcg_comp_array__76951
-
-#define kcg_copy_nvkvintArray_T_Packet_Types_Pkg kcg_copy_array__76951
-
-#define kcg_comp_nvkvintset_T_Packet_Types_Pkg kcg_comp_struct__76954
-
-#define kcg_copy_nvkvintset_T_Packet_Types_Pkg kcg_copy_struct__76954
-
-#define kcg_comp_nvkvintsetArray_T_Packet_Types_Pkg kcg_comp_array__76962
-
-#define kcg_copy_nvkvintsetArray_T_Packet_Types_Pkg kcg_copy_array__76962
-
-#define kcg_comp_nidC_T_Packet_Types_Pkg kcg_comp_struct__76965
-
-#define kcg_copy_nidC_T_Packet_Types_Pkg kcg_copy_struct__76965
-
-#define kcg_comp_nidCArray_T_Packet_Types_Pkg kcg_comp_array__76970
-
-#define kcg_copy_nidCArray_T_Packet_Types_Pkg kcg_copy_array__76970
-
-#define kcg_comp_P3_NationalValues_T_Packet_Types_Pkg kcg_comp_struct__76973
-
-#define kcg_copy_P3_NationalValues_T_Packet_Types_Pkg kcg_copy_struct__76973
-
-#define kcg_comp_P45_RadioNetworkRegistration_T_Packet_Types_Pkg kcg_comp_struct__78344
-
-#define kcg_copy_P45_RadioNetworkRegistration_T_Packet_Types_Pkg kcg_copy_struct__78344
-
-#define kcg_comp_P42_SessionManagement_T_Packet_Types_Pkg kcg_comp_struct__78350
-
-#define kcg_copy_P42_SessionManagement_T_Packet_Types_Pkg kcg_copy_struct__78350
-
-#define kcg_comp_RadioMessage_T_Radio_Types_Pkg kcg_comp_struct__78387
-
-#define kcg_copy_RadioMessage_T_Radio_Types_Pkg kcg_copy_struct__78387
-
-#define kcg_comp_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_comp_struct__77685
-
-#define kcg_copy_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_copy_struct__77685
-
-#define kcg_comp_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_comp_struct__77809
-
-#define kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_copy_struct__77809
-
-#define kcg_comp_Radio_TrackTrain_Header_T_Radio_Types_Pkg kcg_comp_struct__77077
-
-#define kcg_copy_Radio_TrackTrain_Header_T_Radio_Types_Pkg kcg_copy_struct__77077
-
-#define kcg_comp_MSG_Errors_T_Common_Types_Pkg kcg_comp_struct__78118
-
-#define kcg_copy_MSG_Errors_T_Common_Types_Pkg kcg_copy_struct__78118
-
-#define kcg_comp_filterRelatedEvents_T_Common_Types_Pkg kcg_comp_struct__78333
-
-#define kcg_copy_filterRelatedEvents_T_Common_Types_Pkg kcg_copy_struct__78333
-
-#define kcg_comp_PositionReportParameter_T_Common_Types_Pkg kcg_comp_struct__78369
-
-#define kcg_copy_PositionReportParameter_T_Common_Types_Pkg kcg_copy_struct__78369
-
-#define kcg_comp_ReceivedMessage_T_Common_Types_Pkg kcg_comp_struct__77161
-
-#define kcg_copy_ReceivedMessage_T_Common_Types_Pkg kcg_copy_struct__77161
-
-#define kcg_comp_RadioMetadata_T_Common_Types_Pkg kcg_comp_struct__77095
-
-#define kcg_copy_RadioMetadata_T_Common_Types_Pkg kcg_copy_struct__77095
-
-#define kcg_comp_TrackSide_ForCheck_T_Common_Types_Pkg kcg_comp_struct__78403
-
-#define kcg_copy_TrackSide_ForCheck_T_Common_Types_Pkg kcg_copy_struct__78403
-
-#define kcg_comp_CompressedPacketData_T_Common_Types_Pkg kcg_comp_array_int_500
-
-#define kcg_copy_CompressedPacketData_T_Common_Types_Pkg kcg_copy_array_int_500
-
-#define kcg_comp_MetadataElement_T_Common_Types_Pkg kcg_comp_struct__77032
-
-#define kcg_copy_MetadataElement_T_Common_Types_Pkg kcg_copy_struct__77032
-
-#define kcg_comp_Metadata_T_Common_Types_Pkg kcg_comp_array__77040
-
-#define kcg_copy_Metadata_T_Common_Types_Pkg kcg_copy_array__77040
-
-#define kcg_comp_CompressedPackets_T_Common_Types_Pkg kcg_comp_struct__77043
-
-#define kcg_copy_CompressedPackets_T_Common_Types_Pkg kcg_copy_struct__77043
-
-#define kcg_comp_P135_OBU_T_TM kcg_comp_struct__78103
-
-#define kcg_copy_P135_OBU_T_TM kcg_copy_struct__78103
-
-#define kcg_comp_outPackets_T_Common_Types_Pkg kcg_comp_struct__77799
-
-#define kcg_copy_outPackets_T_Common_Types_Pkg kcg_copy_struct__77799
-
-#define kcg_comp_Array04_TM kcg_comp_array_int_4
-
-#define kcg_copy_Array04_TM kcg_copy_array_int_4
-
-#define kcg_comp_RBC_Id_T_Common_Types_Pkg kcg_comp_struct__77107
-
-#define kcg_copy_RBC_Id_T_Common_Types_Pkg kcg_copy_struct__77107
-
-#define kcg_comp_P046_OBU_T_TM kcg_comp_struct__78081
-
-#define kcg_copy_P046_OBU_T_TM kcg_copy_struct__78081
-
-#define kcg_comp_P046_sections_array_flat_T_TM kcg_comp_array_int_66
-
-#define kcg_copy_P046_sections_array_flat_T_TM kcg_copy_array_int_66
-
-#define kcg_comp_P041_OBU_T_TM kcg_comp_struct__78094
-
-#define kcg_copy_P041_OBU_T_TM kcg_copy_struct__78094
-
-#define kcg_comp_P041_sections_array_flat_T_TM kcg_comp_array_int_99
-
-#define kcg_copy_P041_sections_array_flat_T_TM kcg_copy_array_int_99
-
-#define kcg_comp_P005_OBU_T_TM kcg_comp_struct__77062
-
-#define kcg_copy_P005_OBU_T_TM kcg_copy_struct__77062
-
-#define kcg_comp_P005_OBU_sectionlist_enum_T_TM kcg_comp_array__77059
-
-#define kcg_copy_P005_OBU_sectionlist_enum_T_TM kcg_copy_array__77059
+#define kcg_copy_P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg kcg_copy_struct__80866
 
 #define kcg_comp_P005_sections_array_flat_T_TM kcg_comp_array_int_231
 
 #define kcg_copy_P005_sections_array_flat_T_TM kcg_copy_array_int_231
 
-#define kcg_comp_P005_section_enum_T_TM kcg_comp_struct__77048
+#define kcg_comp_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_comp_array__80873
 
-#define kcg_copy_P005_section_enum_T_TM kcg_copy_struct__77048
+#define kcg_copy_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_copy_array__80873
 
-#define kcg_comp_radioManagementMessage_T_Common_Types_Pkg kcg_comp_struct__78360
+#define kcg_comp_P005_section_enum_T_TM kcg_comp_struct__80404
 
-#define kcg_copy_radioManagementMessage_T_Common_Types_Pkg kcg_copy_struct__78360
+#define kcg_copy_P005_section_enum_T_TM kcg_copy_struct__80404
 
-#define kcg_comp_P003_OBU_l_section_enum_T_TM kcg_comp_struct__76855
+#define kcg_comp_Isolation_Status_T_TIU_Types_Pkg kcg_comp_struct__82667
 
-#define kcg_copy_P003_OBU_l_section_enum_T_TM kcg_copy_struct__76855
+#define kcg_copy_Isolation_Status_T_TIU_Types_Pkg kcg_copy_struct__82667
 
-#define kcg_comp_P003_OBU_l_sectionlist_enum_T_TM kcg_comp_array__76861
+#define kcg_comp_P41_LevelTransitionOrder_T_Packet_Types_Pkg kcg_comp_struct__80898
 
-#define kcg_copy_P003_OBU_l_sectionlist_enum_T_TM kcg_copy_array__76861
+#define kcg_copy_P41_LevelTransitionOrder_T_Packet_Types_Pkg kcg_copy_struct__80898
 
-#define kcg_comp_P003_OBU_k_m_section_enum_T_TM kcg_comp_struct__76864
+#define kcg_comp_P012_OBU_T_TM kcg_comp_struct__80930
 
-#define kcg_copy_P003_OBU_k_m_section_enum_T_TM kcg_copy_struct__76864
+#define kcg_copy_P012_OBU_T_TM kcg_copy_struct__80930
 
-#define kcg_comp_P003_OBU_k_m_sectionlist_enum_T_TM kcg_comp_array__76871
+#define kcg_comp_Message_EVC_to_Train_Interface_T_TIU_Types_Pkg kcg_comp_struct__82672
 
-#define kcg_copy_P003_OBU_k_m_sectionlist_enum_T_TM kcg_copy_array__76871
+#define kcg_copy_Message_EVC_to_Train_Interface_T_TIU_Types_Pkg kcg_copy_struct__82672
 
-#define kcg_comp_P003_OBU_k_section_enum_T_TM kcg_comp_struct__76874
+#define kcg_comp_P41_LevelTransistionOrders_T_Packet_Types_Pkg kcg_comp_array__80908
 
-#define kcg_copy_P003_OBU_k_section_enum_T_TM kcg_copy_struct__76874
+#define kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg kcg_copy_array__80908
 
-#define kcg_comp_P003_OBU_k_sectionlist_enum_T_TM kcg_comp_array__76886
+#define kcg_comp_P012_sections_array_flat_T_TM kcg_comp_array_int_128
 
-#define kcg_copy_P003_OBU_k_sectionlist_enum_T_TM kcg_copy_array__76886
+#define kcg_copy_P012_sections_array_flat_T_TM kcg_copy_array_int_128
 
-#define kcg_comp_P003_OBU_n_section_enum_T_TM kcg_comp_struct__76889
+#define kcg_comp_nvkrint_T_Packet_Types_Pkg kcg_comp_struct__80291
 
-#define kcg_copy_P003_OBU_n_section_enum_T_TM kcg_copy_struct__76889
+#define kcg_copy_nvkrint_T_Packet_Types_Pkg kcg_copy_struct__80291
 
-#define kcg_comp_P003_OBU_n_sectionlist_enum_T_TM kcg_comp_array__76896
+#define kcg_comp_P012_section_enum_T_TM kcg_comp_struct__80729
 
-#define kcg_copy_P003_OBU_n_sectionlist_enum_T_TM kcg_copy_array__76896
+#define kcg_copy_P012_section_enum_T_TM kcg_copy_struct__80729
 
-#define kcg_comp_P003_OBU_nid_c_section_enum_T_TM kcg_comp_struct__76965
+#define kcg_comp_nvkrintArray_T_Packet_Types_Pkg kcg_comp_array__80297
 
-#define kcg_copy_P003_OBU_nid_c_section_enum_T_TM kcg_copy_struct__76965
+#define kcg_copy_nvkrintArray_T_Packet_Types_Pkg kcg_copy_array__80297
 
-#define kcg_comp_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_comp_array__77387
+#define kcg_comp_Array07_TM kcg_comp_array_int_7
 
-#define kcg_copy_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_copy_array__77387
+#define kcg_copy_Array07_TM kcg_copy_array_int_7
 
-#define kcg_comp_P003_OBU_T_TM kcg_comp_struct__77423
+#define kcg_comp_TIU_Input_msg_API_TIU_Pkg kcg_comp_struct__81522
 
-#define kcg_copy_P003_OBU_T_TM kcg_copy_struct__77423
+#define kcg_copy_TIU_Input_msg_API_TIU_Pkg kcg_copy_struct__81522
 
-#define kcg_comp_P046_section_enum_T_TM kcg_comp_struct__77313
+#define kcg_comp_nvkvint_T_Packet_Types_Pkg kcg_comp_struct__80300
 
-#define kcg_copy_P046_section_enum_T_TM kcg_copy_struct__77313
+#define kcg_copy_nvkvint_T_Packet_Types_Pkg kcg_copy_struct__80300
 
-#define kcg_comp_P046_OBU_sectionlist_enum_T_TM kcg_comp_array__77319
+#define kcg_comp_P139_OBU_T_TM kcg_comp_struct__80774
 
-#define kcg_copy_P046_OBU_sectionlist_enum_T_TM kcg_copy_array__77319
+#define kcg_copy_P139_OBU_T_TM kcg_copy_struct__80774
 
-#define kcg_comp_P041_section_enum_T_TM kcg_comp_struct__77322
+#define kcg_comp_TIU_Output_msg_API_TIU_Pkg kcg_comp_struct__82682
 
-#define kcg_copy_P041_section_enum_T_TM kcg_copy_struct__77322
+#define kcg_copy_TIU_Output_msg_API_TIU_Pkg kcg_copy_struct__82682
 
-#define kcg_comp_P041_OBU_sectionlist_enum_T_TM kcg_comp_array__77329
+#define kcg_comp_nvkvintArray_T_Packet_Types_Pkg kcg_comp_array__80307
 
-#define kcg_copy_P041_OBU_sectionlist_enum_T_TM kcg_copy_array__77329
+#define kcg_copy_nvkvintArray_T_Packet_Types_Pkg kcg_copy_array__80307
+
+#define kcg_comp_P138_OBU_T_TM kcg_comp_struct__80782
+
+#define kcg_copy_P138_OBU_T_TM kcg_copy_struct__80782
+
+#define kcg_comp_nvkvintset_T_Packet_Types_Pkg kcg_comp_struct__80310
+
+#define kcg_copy_nvkvintset_T_Packet_Types_Pkg kcg_copy_struct__80310
+
+#define kcg_comp_P135_OBU_T_TM kcg_comp_struct__80959
+
+#define kcg_copy_P135_OBU_T_TM kcg_copy_struct__80959
+
+#define kcg_comp_nvkvintsetArray_T_Packet_Types_Pkg kcg_comp_array__80318
+
+#define kcg_copy_nvkvintsetArray_T_Packet_Types_Pkg kcg_copy_array__80318
+
+#define kcg_comp_P003_OBU_l_section_enum_T_TM kcg_comp_struct__80211
+
+#define kcg_copy_P003_OBU_l_section_enum_T_TM kcg_copy_struct__80211
+
+#define kcg_comp_nidC_T_Packet_Types_Pkg kcg_comp_struct__80321
+
+#define kcg_copy_nidC_T_Packet_Types_Pkg kcg_copy_struct__80321
+
+#define kcg_comp_P003_OBU_l_sectionlist_enum_T_TM kcg_comp_array__80217
+
+#define kcg_copy_P003_OBU_l_sectionlist_enum_T_TM kcg_copy_array__80217
+
+#define kcg_comp_nidCArray_T_Packet_Types_Pkg kcg_comp_array__80326
+
+#define kcg_copy_nidCArray_T_Packet_Types_Pkg kcg_copy_array__80326
+
+#define kcg_comp_P003_OBU_k_m_section_enum_T_TM kcg_comp_struct__80220
+
+#define kcg_copy_P003_OBU_k_m_section_enum_T_TM kcg_copy_struct__80220
+
+#define kcg_comp_P3_NationalValues_T_Packet_Types_Pkg kcg_comp_struct__80329
+
+#define kcg_copy_P3_NationalValues_T_Packet_Types_Pkg kcg_copy_struct__80329
+
+#define kcg_comp_P003_OBU_k_m_sectionlist_enum_T_TM kcg_comp_array__80227
+
+#define kcg_copy_P003_OBU_k_m_sectionlist_enum_T_TM kcg_copy_array__80227
+
+#define kcg_comp_P003_OBU_k_section_enum_T_TM kcg_comp_struct__80230
+
+#define kcg_copy_P003_OBU_k_section_enum_T_TM kcg_copy_struct__80230
+
+#define kcg_comp_P45_RadioNetworkRegistration_T_Packet_Types_Pkg kcg_comp_struct__82237
+
+#define kcg_copy_P45_RadioNetworkRegistration_T_Packet_Types_Pkg kcg_copy_struct__82237
+
+#define kcg_comp_P003_OBU_k_sectionlist_enum_T_TM kcg_comp_array__80242
+
+#define kcg_copy_P003_OBU_k_sectionlist_enum_T_TM kcg_copy_array__80242
+
+#define kcg_comp_P42_SessionManagement_T_Packet_Types_Pkg kcg_comp_struct__82243
+
+#define kcg_copy_P42_SessionManagement_T_Packet_Types_Pkg kcg_copy_struct__82243
+
+#define kcg_comp_P003_OBU_n_section_enum_T_TM kcg_comp_struct__80245
+
+#define kcg_copy_P003_OBU_n_section_enum_T_TM kcg_copy_struct__80245
+
+#define kcg_comp_P003_OBU_n_sectionlist_enum_T_TM kcg_comp_array__80252
+
+#define kcg_copy_P003_OBU_n_sectionlist_enum_T_TM kcg_copy_array__80252
+
+#define kcg_comp_P003_OBU_nid_c_section_enum_T_TM kcg_comp_struct__80321
+
+#define kcg_copy_P003_OBU_nid_c_section_enum_T_TM kcg_copy_struct__80321
+
+#define kcg_comp_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_comp_array__81010
+
+#define kcg_copy_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_copy_array__81010
+
+#define kcg_comp_P003_OBU_T_TM kcg_comp_struct__81147
+
+#define kcg_copy_P003_OBU_T_TM kcg_copy_struct__81147
 
 #define kcg_comp_Array24_TM kcg_comp_array_int_24
 
 #define kcg_copy_Array24_TM kcg_copy_array_int_24
 
-#define kcg_comp_Array03_TM kcg_comp_array_int_3
+#define kcg_comp_RadioMessage_T_Radio_Types_Pkg kcg_comp_struct__81701
 
-#define kcg_copy_Array03_TM kcg_copy_array_int_3
+#define kcg_copy_RadioMessage_T_Radio_Types_Pkg kcg_copy_struct__81701
 
-#define kcg_comp_Array15_TM kcg_comp_array_int_15
+#define kcg_comp_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_comp_struct__81202
 
-#define kcg_copy_Array15_TM kcg_copy_array_int_15
-
-#define kcg_comp_FlagsForModeAndLevel_t_TrackAtlasTypes kcg_comp_struct__77332
-
-#define kcg_copy_FlagsForModeAndLevel_t_TrackAtlasTypes kcg_copy_struct__77332
-
-#define kcg_comp_P015_sections_array_flat_T_TM kcg_comp_array_int_128
-
-#define kcg_copy_P015_sections_array_flat_T_TM kcg_copy_array_int_128
-
-#define kcg_comp_DataForModeAndLevel_t_TrackAtlasTypes kcg_comp_struct__77374
-
-#define kcg_copy_DataForModeAndLevel_t_TrackAtlasTypes kcg_copy_struct__77374
-
-#define kcg_comp_Array06_TM kcg_comp_array_int_6
-
-#define kcg_copy_Array06_TM kcg_copy_array_int_6
-
-#define kcg_comp_Gradient_section_t_TrackAtlasTypes kcg_comp_struct__77292
-
-#define kcg_copy_Gradient_section_t_TrackAtlasTypes kcg_copy_struct__77292
-
-#define kcg_comp_P015_section_enum_T_TM kcg_comp_struct__77478
-
-#define kcg_copy_P015_section_enum_T_TM kcg_copy_struct__77478
-
-#define kcg_comp_GradientProfile_t_TrackAtlasTypes kcg_comp_array__77307
-
-#define kcg_copy_GradientProfile_t_TrackAtlasTypes kcg_copy_array__77307
-
-#define kcg_comp_P015_OBU_sectionlist_enum_T_TM kcg_comp_array__77486
-
-#define kcg_copy_P015_OBU_sectionlist_enum_T_TM kcg_copy_array__77486
-
-#define kcg_comp_DataForSupervision_nextGen_t_TrackAtlasTypes kcg_comp_struct__77828
-
-#define kcg_copy_DataForSupervision_nextGen_t_TrackAtlasTypes kcg_copy_struct__77828
-
-#define kcg_comp_P015_OBU_T_TM kcg_comp_struct__77489
-
-#define kcg_copy_P015_OBU_T_TM kcg_copy_struct__77489
-
-#define kcg_comp_Endtimer_t_TrackAtlasTypes kcg_comp_struct__77532
-
-#define kcg_copy_Endtimer_t_TrackAtlasTypes kcg_copy_struct__77532
-
-#define kcg_comp_Array05_TM kcg_comp_array_int_5
-
-#define kcg_copy_Array05_TM kcg_copy_array_int_5
-
-#define kcg_comp_DP_or_OL_t_TrackAtlasTypes kcg_comp_struct__77537
-
-#define kcg_copy_DP_or_OL_t_TrackAtlasTypes kcg_copy_struct__77537
-
-#define kcg_comp_P021_OBU_T_TM kcg_comp_struct__77674
-
-#define kcg_copy_P021_OBU_T_TM kcg_copy_struct__77674
-
-#define kcg_comp_MovementAuthoritySection_t_TrackAtlasTypes kcg_comp_struct__77523
-
-#define kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes kcg_copy_struct__77523
-
-#define kcg_comp_P021_OBU_sectionlist_enum_T_TM kcg_comp_array__77671
-
-#define kcg_copy_P021_OBU_sectionlist_enum_T_TM kcg_copy_array__77671
-
-#define kcg_comp_MovementAuthoritySectionlist_t_TrackAtlasTypes kcg_comp_array__77543
-
-#define kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes kcg_copy_array__77543
-
-#define kcg_comp_P021_sections_array_flat_T_TM kcg_comp_array_int_99
-
-#define kcg_copy_P021_sections_array_flat_T_TM kcg_copy_array_int_99
-
-#define kcg_comp_MovementAuthority_t_TrackAtlasTypes kcg_comp_struct__77546
-
-#define kcg_copy_MovementAuthority_t_TrackAtlasTypes kcg_copy_struct__77546
-
-#define kcg_comp_P021_section_enum_T_TM kcg_comp_struct__77664
-
-#define kcg_copy_P021_section_enum_T_TM kcg_copy_struct__77664
+#define kcg_copy_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_copy_struct__81202
 
 #define kcg_comp_Array08_TM kcg_comp_array_int_8
 
 #define kcg_copy_Array08_TM kcg_copy_array_int_8
 
-#define kcg_comp_P058_OBU_T_TM kcg_comp_struct__78263
+#define kcg_comp_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_comp_struct__81326
 
-#define kcg_copy_P058_OBU_T_TM kcg_copy_struct__78263
+#define kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_copy_struct__81326
 
-#define kcg_comp_P058_OBU_sectionlist_enum_T_TM kcg_comp_array__78260
+#define kcg_comp_P058_OBU_T_TM kcg_comp_struct__81591
 
-#define kcg_copy_P058_OBU_sectionlist_enum_T_TM kcg_copy_array__78260
+#define kcg_copy_P058_OBU_T_TM kcg_copy_struct__81591
 
-#define kcg_comp_MRSP_Profile_t_TrackAtlasTypes kcg_comp_array__77661
+#define kcg_comp_P058_OBU_sectionlist_enum_T_TM kcg_comp_array__81588
 
-#define kcg_copy_MRSP_Profile_t_TrackAtlasTypes kcg_copy_array__77661
+#define kcg_copy_P058_OBU_sectionlist_enum_T_TM kcg_copy_array__81588
 
 #define kcg_comp_P058_sections_array_flat_T_TM kcg_comp_array_int_64
 
 #define kcg_copy_P058_sections_array_flat_T_TM kcg_copy_array_int_64
 
-#define kcg_comp_GradientProfile_for_DMI_t_TrackAtlasTypes kcg_comp_array__77310
+#define kcg_comp_P058_section_enum_T_TM kcg_comp_struct__81582
 
-#define kcg_copy_GradientProfile_for_DMI_t_TrackAtlasTypes kcg_copy_array__77310
+#define kcg_copy_P058_section_enum_T_TM kcg_copy_struct__81582
 
-#define kcg_comp_P058_section_enum_T_TM kcg_comp_struct__78254
+#define kcg_comp_Array03_TM kcg_comp_array_int_3
 
-#define kcg_copy_P058_section_enum_T_TM kcg_copy_struct__78254
+#define kcg_copy_Array03_TM kcg_copy_array_int_3
 
-#define kcg_comp_DataForDMI_t_TrackAtlasTypes kcg_comp_struct__77837
+#define kcg_comp_Array05_TM kcg_comp_array_int_5
 
-#define kcg_copy_DataForDMI_t_TrackAtlasTypes kcg_copy_struct__77837
+#define kcg_copy_Array05_TM kcg_copy_array_int_5
 
-#define kcg_comp_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_comp_struct__77300
+#define kcg_comp_Radio_TrackTrain_Header_T_Radio_Types_Pkg kcg_comp_struct__80433
 
-#define kcg_copy_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_copy_struct__77300
+#define kcg_copy_Radio_TrackTrain_Header_T_Radio_Types_Pkg kcg_copy_struct__80433
 
-#define kcg_comp_MRSP_section_t_TrackAtlasTypes kcg_comp_struct__77646
+#define kcg_comp_P021_OBU_T_TM kcg_comp_struct__80685
 
-#define kcg_copy_MRSP_section_t_TrackAtlasTypes kcg_copy_struct__77646
+#define kcg_copy_P021_OBU_T_TM kcg_copy_struct__80685
 
-#define kcg_comp_PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg kcg_comp_struct__77705
+#define kcg_comp_P021_OBU_sectionlist_enum_T_TM kcg_comp_array__80682
 
-#define kcg_copy_PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg kcg_copy_struct__77705
+#define kcg_copy_P021_OBU_sectionlist_enum_T_TM kcg_copy_array__80682
 
-#define kcg_comp_PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg kcg_comp_struct__77721
+#define kcg_comp_P021_sections_array_flat_T_TM kcg_comp_array_int_99
 
-#define kcg_copy_PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg kcg_copy_struct__77721
+#define kcg_copy_P021_sections_array_flat_T_TM kcg_copy_array_int_99
 
-#define kcg_comp_PT5_TrainRunningNumber_Packet_TrainTypes_Pkg kcg_comp_struct__77726
+#define kcg_comp_P021_section_enum_T_TM kcg_comp_struct__80675
 
-#define kcg_copy_PT5_TrainRunningNumber_Packet_TrainTypes_Pkg kcg_copy_struct__77726
+#define kcg_copy_P021_section_enum_T_TM kcg_copy_struct__80675
 
-#define kcg_comp_PT4_ErrorReporting_T_Packet_TrainTypes_Pkg kcg_comp_struct__77731
+#define kcg_comp_MSG_Errors_T_Common_Types_Pkg kcg_comp_struct__81671
 
-#define kcg_copy_PT4_ErrorReporting_T_Packet_TrainTypes_Pkg kcg_copy_struct__77731
+#define kcg_copy_MSG_Errors_T_Common_Types_Pkg kcg_copy_struct__81671
+
+#define kcg_comp_Array04_TM kcg_comp_array_int_4
+
+#define kcg_copy_Array04_TM kcg_copy_array_int_4
+
+#define kcg_comp_filterRelatedEvents_T_Common_Types_Pkg kcg_comp_struct__81660
+
+#define kcg_copy_filterRelatedEvents_T_Common_Types_Pkg kcg_copy_struct__81660
+
+#define kcg_comp_ReceivedMessage_T_Common_Types_Pkg kcg_comp_struct__80517
+
+#define kcg_copy_ReceivedMessage_T_Common_Types_Pkg kcg_copy_struct__80517
+
+#define kcg_comp_P046_OBU_T_TM kcg_comp_struct__80885
+
+#define kcg_copy_P046_OBU_T_TM kcg_copy_struct__80885
+
+#define kcg_comp_RadioMetadata_T_Common_Types_Pkg kcg_comp_struct__80451
+
+#define kcg_copy_RadioMetadata_T_Common_Types_Pkg kcg_copy_struct__80451
+
+#define kcg_comp_P046_OBU_sectionlist_enum_T_TM kcg_comp_array__80882
+
+#define kcg_copy_P046_OBU_sectionlist_enum_T_TM kcg_copy_array__80882
+
+#define kcg_comp_P046_sections_array_flat_T_TM kcg_comp_array_int_66
+
+#define kcg_copy_P046_sections_array_flat_T_TM kcg_copy_array_int_66
+
+#define kcg_comp_TrackSide_ForCheck_T_Common_Types_Pkg kcg_comp_struct__81727
+
+#define kcg_copy_TrackSide_ForCheck_T_Common_Types_Pkg kcg_copy_struct__81727
+
+#define kcg_comp_CompressedPacketData_T_Common_Types_Pkg kcg_comp_array_int_500
+
+#define kcg_copy_CompressedPacketData_T_Common_Types_Pkg kcg_copy_array_int_500
+
+#define kcg_comp_P046_section_enum_T_TM kcg_comp_struct__80876
+
+#define kcg_copy_P046_section_enum_T_TM kcg_copy_struct__80876
+
+#define kcg_comp_MetadataElement_T_Common_Types_Pkg kcg_comp_struct__80388
+
+#define kcg_copy_MetadataElement_T_Common_Types_Pkg kcg_copy_struct__80388
+
+#define kcg_comp_P015_OBU_T_TM kcg_comp_struct__80740
+
+#define kcg_copy_P015_OBU_T_TM kcg_copy_struct__80740
+
+#define kcg_comp_Metadata_T_Common_Types_Pkg kcg_comp_array__80396
+
+#define kcg_copy_Metadata_T_Common_Types_Pkg kcg_copy_array__80396
+
+#define kcg_comp_Array15_TM kcg_comp_array_int_15
+
+#define kcg_copy_Array15_TM kcg_copy_array_int_15
+
+#define kcg_comp_CompressedPackets_T_Common_Types_Pkg kcg_comp_struct__80399
+
+#define kcg_copy_CompressedPackets_T_Common_Types_Pkg kcg_copy_struct__80399
+
+#define kcg_comp_P015_OBU_sectionlist_enum_T_TM kcg_comp_array__80737
+
+#define kcg_copy_P015_OBU_sectionlist_enum_T_TM kcg_copy_array__80737
+
+#define kcg_comp_outPackets_T_Common_Types_Pkg kcg_comp_struct__81316
+
+#define kcg_copy_outPackets_T_Common_Types_Pkg kcg_copy_struct__81316
+
+#define kcg_comp_P015_sections_array_flat_T_TM kcg_comp_array_int_128
+
+#define kcg_copy_P015_sections_array_flat_T_TM kcg_copy_array_int_128
+
+#define kcg_comp_RBC_Id_T_Common_Types_Pkg kcg_comp_struct__80463
+
+#define kcg_copy_RBC_Id_T_Common_Types_Pkg kcg_copy_struct__80463
+
+#define kcg_comp_P015_section_enum_T_TM kcg_comp_struct__80729
+
+#define kcg_copy_P015_section_enum_T_TM kcg_copy_struct__80729
+
+#define kcg_comp_Array06_TM kcg_comp_array_int_6
+
+#define kcg_copy_Array06_TM kcg_copy_array_int_6
+
+#define kcg_comp_P041_OBU_T_TM kcg_comp_struct__80921
+
+#define kcg_copy_P041_OBU_T_TM kcg_copy_struct__80921
+
+#define kcg_comp_P041_OBU_sectionlist_enum_T_TM kcg_comp_array__80918
+
+#define kcg_copy_P041_OBU_sectionlist_enum_T_TM kcg_copy_array__80918
+
+#define kcg_comp_P041_sections_array_flat_T_TM kcg_comp_array_int_99
+
+#define kcg_copy_P041_sections_array_flat_T_TM kcg_copy_array_int_99
+
+#define kcg_comp_P041_section_enum_T_TM kcg_comp_struct__80911
+
+#define kcg_copy_P041_section_enum_T_TM kcg_copy_struct__80911
+
+#define kcg_comp_radioManagementMessage_T_Common_Types_Pkg kcg_comp_struct__82253
+
+#define kcg_copy_radioManagementMessage_T_Common_Types_Pkg kcg_copy_struct__82253
+
+#define kcg_comp_DataForModeAndLevel_t_TrackAtlasTypes kcg_comp_struct__81345
+
+#define kcg_copy_DataForModeAndLevel_t_TrackAtlasTypes kcg_copy_struct__81345
+
+#define kcg_comp_Gradient_section_t_TrackAtlasTypes kcg_comp_struct__80989
+
+#define kcg_copy_Gradient_section_t_TrackAtlasTypes kcg_copy_struct__80989
+
+#define kcg_comp_GradientProfile_t_TrackAtlasTypes kcg_comp_array__81004
+
+#define kcg_copy_GradientProfile_t_TrackAtlasTypes kcg_copy_array__81004
+
+#define kcg_comp_DataForSupervision_nextGen_t_TrackAtlasTypes kcg_comp_struct__81354
+
+#define kcg_copy_DataForSupervision_nextGen_t_TrackAtlasTypes kcg_copy_struct__81354
+
+#define kcg_comp_Endtimer_t_TrackAtlasTypes kcg_comp_struct__81055
+
+#define kcg_copy_Endtimer_t_TrackAtlasTypes kcg_copy_struct__81055
+
+#define kcg_comp_DP_or_OL_t_TrackAtlasTypes kcg_comp_struct__81060
+
+#define kcg_copy_DP_or_OL_t_TrackAtlasTypes kcg_copy_struct__81060
+
+#define kcg_comp_MovementAuthoritySection_t_TrackAtlasTypes kcg_comp_struct__81046
+
+#define kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes kcg_copy_struct__81046
+
+#define kcg_comp_MovementAuthoritySectionlist_t_TrackAtlasTypes kcg_comp_array__81066
+
+#define kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes kcg_copy_array__81066
+
+#define kcg_comp_MovementAuthority_t_TrackAtlasTypes kcg_comp_struct__81069
+
+#define kcg_copy_MovementAuthority_t_TrackAtlasTypes kcg_copy_struct__81069
+
+#define kcg_comp_linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_array__80577
+
+#define kcg_copy_linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_array__80577
+
+#define kcg_comp_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_struct__80571
+
+#define kcg_copy_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_struct__80571
+
+#define kcg_comp_MRSP_Profile_t_TrackAtlasTypes kcg_comp_array__81144
+
+#define kcg_copy_MRSP_Profile_t_TrackAtlasTypes kcg_copy_array__81144
+
+#define kcg_comp_refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_struct__80590
+
+#define kcg_copy_refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_struct__80590
+
+#define kcg_comp_GradientProfile_for_DMI_t_TrackAtlasTypes kcg_comp_array__81007
+
+#define kcg_copy_GradientProfile_for_DMI_t_TrackAtlasTypes kcg_copy_array__81007
+
+#define kcg_comp_DataForDMI_t_TrackAtlasTypes kcg_comp_struct__81363
+
+#define kcg_copy_DataForDMI_t_TrackAtlasTypes kcg_copy_struct__81363
+
+#define kcg_comp_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_comp_struct__80997
+
+#define kcg_copy_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_copy_struct__80997
+
+#define kcg_comp_MRSP_section_t_TrackAtlasTypes kcg_comp_struct__81129
+
+#define kcg_copy_MRSP_section_t_TrackAtlasTypes kcg_copy_struct__81129
+
+#define kcg_comp_MetadataTruthtable_T1_CheckEuroradioMessage kcg_comp_array_bool_256_46
+
+#define kcg_copy_MetadataTruthtable_T1_CheckEuroradioMessage kcg_copy_array_bool_256_46
+
+#define kcg_comp_PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg kcg_comp_struct__81222
+
+#define kcg_copy_PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg kcg_copy_struct__81222
+
+#define kcg_comp_PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg kcg_comp_struct__81238
+
+#define kcg_copy_PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg kcg_copy_struct__81238
+
+#define kcg_comp_PT5_TrainRunningNumber_Packet_TrainTypes_Pkg kcg_comp_struct__81243
+
+#define kcg_copy_PT5_TrainRunningNumber_Packet_TrainTypes_Pkg kcg_copy_struct__81243
+
+#define kcg_comp_PT4_ErrorReporting_T_Packet_TrainTypes_Pkg kcg_comp_struct__81248
+
+#define kcg_copy_PT4_ErrorReporting_T_Packet_TrainTypes_Pkg kcg_copy_struct__81248
 
 #define kcg_comp_telephoneNumber_T_Packet_TrainTypes_Pkg kcg_comp_array_int_15
 
 #define kcg_copy_telephoneNumber_T_Packet_TrainTypes_Pkg kcg_copy_array_int_15
 
-#define kcg_comp_sNID_RADIO_T_Packet_TrainTypes_Pkg kcg_comp_struct__77736
+#define kcg_comp_sNID_RADIO_T_Packet_TrainTypes_Pkg kcg_comp_struct__81253
 
-#define kcg_copy_sNID_RADIO_T_Packet_TrainTypes_Pkg kcg_copy_struct__77736
+#define kcg_copy_sNID_RADIO_T_Packet_TrainTypes_Pkg kcg_copy_struct__81253
 
-#define kcg_comp_aNID_RADIO_T_Packet_TrainTypes_Pkg kcg_comp_array__77741
+#define kcg_comp_aNID_RADIO_T_Packet_TrainTypes_Pkg kcg_comp_array__81258
 
-#define kcg_copy_aNID_RADIO_T_Packet_TrainTypes_Pkg kcg_copy_array__77741
+#define kcg_copy_aNID_RADIO_T_Packet_TrainTypes_Pkg kcg_copy_array__81258
 
-#define kcg_comp_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg kcg_comp_struct__77744
+#define kcg_comp_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg kcg_comp_struct__81261
 
-#define kcg_copy_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg kcg_copy_struct__77744
+#define kcg_copy_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg kcg_copy_struct__81261
 
-#define kcg_comp_PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg kcg_comp_struct__77770
+#define kcg_comp_PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg kcg_comp_struct__81287
 
-#define kcg_copy_PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg kcg_copy_struct__77770
+#define kcg_copy_PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg kcg_copy_struct__81287
 
-#define kcg_comp_PT0_PositionReport_T_Packet_TrainTypes_Pkg kcg_comp_struct__77794
+#define kcg_comp_PT0_PositionReport_T_Packet_TrainTypes_Pkg kcg_comp_struct__81311
 
-#define kcg_copy_PT0_PositionReport_T_Packet_TrainTypes_Pkg kcg_copy_struct__77794
+#define kcg_copy_PT0_PositionReport_T_Packet_TrainTypes_Pkg kcg_copy_struct__81311
 
-#define kcg_comp_sTractionIdentity_T_Packet_TrainTypes_Pkg kcg_comp_struct__77697
+#define kcg_comp_sTractionIdentity_T_Packet_TrainTypes_Pkg kcg_comp_struct__81214
 
-#define kcg_copy_sTractionIdentity_T_Packet_TrainTypes_Pkg kcg_copy_struct__77697
+#define kcg_copy_sTractionIdentity_T_Packet_TrainTypes_Pkg kcg_copy_struct__81214
 
-#define kcg_comp_aTractionIdentity_T_Packet_TrainTypes_Pkg kcg_comp_array__77702
+#define kcg_comp_aTractionIdentity_T_Packet_TrainTypes_Pkg kcg_comp_array__81219
 
-#define kcg_copy_aTractionIdentity_T_Packet_TrainTypes_Pkg kcg_copy_array__77702
+#define kcg_copy_aTractionIdentity_T_Packet_TrainTypes_Pkg kcg_copy_array__81219
+
+#define kcg_comp_BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_comp_struct__80556
+
+#define kcg_copy_BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_copy_struct__80556
 
 #define kcg_comp_aNID_NTC_T_Packet_TrainTypes_Pkg kcg_comp_array_int_3
 
 #define kcg_copy_aNID_NTC_T_Packet_TrainTypes_Pkg kcg_copy_array_int_3
 
-#define kcg_comp_MetadataTruthtable_T kcg_comp_array_bool_256_46
+#define kcg_comp_BG_counters_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_comp_struct__80562
 
-#define kcg_copy_MetadataTruthtable_T kcg_copy_array_bool_256_46
+#define kcg_copy_BG_counters_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_copy_struct__80562
 
-#define kcg_comp_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__78446
+#define kcg_comp_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__81764
 
-#define kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__78446
+#define kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__81764
 
-#define kcg_comp_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__78507
+#define kcg_comp_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__81827
 
-#define kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__78507
+#define kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__81827
 
-#define kcg_comp_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__77913
+#define kcg_comp_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__81440
 
-#define kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__77913
+#define kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__81440
 
-#define kcg_comp_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__78130
+#define kcg_comp_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__81458
 
-#define kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__78130
+#define kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__81458
 
 #define kcg_comp_driverIdentifier_T_DMI_Messages_Bothways_Pkg kcg_comp_array_char_9
 
 #define kcg_copy_driverIdentifier_T_DMI_Messages_Bothways_Pkg kcg_copy_array_char_9
 
-#define kcg_comp_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__78516
+#define kcg_comp_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__81836
 
-#define kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__78516
+#define kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__81836
 
-#define kcg_comp_DMI_to_EVC_Message_T_API_DMI_Pkg kcg_comp_struct__78547
+#define kcg_comp_DMI_to_EVC_Message_T_API_DMI_Pkg kcg_comp_struct__81867
 
-#define kcg_copy_DMI_to_EVC_Message_T_API_DMI_Pkg kcg_copy_struct__78547
+#define kcg_copy_DMI_to_EVC_Message_T_API_DMI_Pkg kcg_copy_struct__81867
 
-#define kcg_comp_EVC_to_DMI_Message_T_API_DMI_Pkg kcg_comp_struct__79126
+#define kcg_comp_positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg kcg_comp_struct__80598
 
-#define kcg_copy_EVC_to_DMI_Message_T_API_DMI_Pkg kcg_copy_struct__79126
+#define kcg_copy_positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg kcg_copy_struct__80598
 
-#define kcg_comp_TrainToTrackStatus_T_BG_Types_Pkg kcg_comp_struct__78210
+#define kcg_comp_EVC_to_DMI_Message_T_API_DMI_Pkg kcg_comp_struct__82471
 
-#define kcg_copy_TrainToTrackStatus_T_BG_Types_Pkg kcg_copy_struct__78210
+#define kcg_copy_EVC_to_DMI_Message_T_API_DMI_Pkg kcg_copy_struct__82471
 
-#define kcg_comp_BG_Message_T_BG_Types_Pkg kcg_comp_struct__78396
+#define kcg_comp_TrainToTrackStatus_T_BG_Types_Pkg kcg_comp_struct__81538
 
-#define kcg_copy_BG_Message_T_BG_Types_Pkg kcg_copy_struct__78396
+#define kcg_copy_TrainToTrackStatus_T_BG_Types_Pkg kcg_copy_struct__81538
 
-#define kcg_comp_TelegramHeader_T_BG_Types_Pkg kcg_comp_struct__78285
+#define kcg_comp_BG_Message_T_BG_Types_Pkg kcg_comp_struct__81720
 
-#define kcg_copy_TelegramHeader_T_BG_Types_Pkg kcg_copy_struct__78285
+#define kcg_copy_BG_Message_T_BG_Types_Pkg kcg_copy_struct__81720
 
-#define kcg_comp_Telegram_T_BG_Types_Pkg kcg_comp_struct__78377
+#define kcg_comp_TelegramHeader_T_BG_Types_Pkg kcg_comp_struct__81613
 
-#define kcg_copy_Telegram_T_BG_Types_Pkg kcg_copy_struct__78377
+#define kcg_copy_TelegramHeader_T_BG_Types_Pkg kcg_copy_struct__81613
 
-#define kcg_comp_TelegramArray_T_BG_Types_Pkg kcg_comp_array__78384
+#define kcg_comp_Telegram_T_BG_Types_Pkg kcg_comp_struct__81710
 
-#define kcg_copy_TelegramArray_T_BG_Types_Pkg kcg_copy_array__78384
+#define kcg_copy_Telegram_T_BG_Types_Pkg kcg_copy_struct__81710
 
-#define kcg_comp_centerOfBalisePosition_T_BG_Types_Pkg kcg_comp_struct__78298
+#define kcg_comp_TelegramArray_T_BG_Types_Pkg kcg_comp_array__81717
 
-#define kcg_copy_centerOfBalisePosition_T_BG_Types_Pkg kcg_copy_struct__78298
+#define kcg_copy_TelegramArray_T_BG_Types_Pkg kcg_copy_array__81717
 
-#define kcg_comp_LinkedBGs_T_BG_Types_Pkg kcg_comp_array__77026
+#define kcg_comp_centerOfBalisePosition_T_BG_Types_Pkg kcg_comp_struct__81626
 
-#define kcg_copy_LinkedBGs_T_BG_Types_Pkg kcg_copy_array__77026
+#define kcg_copy_centerOfBalisePosition_T_BG_Types_Pkg kcg_copy_struct__81626
 
-#define kcg_comp_BG_Header_T_BG_Types_Pkg kcg_comp_struct__77143
+#define kcg_comp_LinkedBGs_T_BG_Types_Pkg kcg_comp_array__80382
 
-#define kcg_copy_BG_Header_T_BG_Types_Pkg kcg_copy_struct__77143
+#define kcg_copy_LinkedBGs_T_BG_Types_Pkg kcg_copy_array__80382
 
-#define kcg_comp_passedBG_T_BG_Types_Pkg kcg_comp_struct__77171
+#define kcg_comp_BG_Header_T_BG_Types_Pkg kcg_comp_struct__80499
 
-#define kcg_copy_passedBG_T_BG_Types_Pkg kcg_copy_struct__77171
+#define kcg_copy_BG_Header_T_BG_Types_Pkg kcg_copy_struct__80499
 
-#define kcg_comp_LinkedBG_T_BG_Types_Pkg kcg_comp_struct__77012
+#define kcg_comp_passedBG_T_BG_Types_Pkg kcg_comp_struct__80527
 
-#define kcg_copy_LinkedBG_T_BG_Types_Pkg kcg_copy_struct__77012
+#define kcg_copy_passedBG_T_BG_Types_Pkg kcg_copy_struct__80527
 
-#define kcg_comp_linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_array__77221
+#define kcg_comp_LinkedBG_T_BG_Types_Pkg kcg_comp_struct__80368
 
-#define kcg_copy_linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_array__77221
+#define kcg_copy_LinkedBG_T_BG_Types_Pkg kcg_copy_struct__80368
 
-#define kcg_comp_linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck kcg_comp_array__77247
+#define kcg_comp_linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck kcg_comp_array__80603
 
-#define kcg_copy_linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck kcg_copy_array__77247
+#define kcg_copy_linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck kcg_copy_array__80603
 
-#define kcg_comp_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_struct__77215
+#define kcg_comp_positionErrors_T_TrainPosition_Types_Pck kcg_comp_struct__80606
 
-#define kcg_copy_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_struct__77215
+#define kcg_copy_positionErrors_T_TrainPosition_Types_Pck kcg_copy_struct__80606
 
-#define kcg_comp_positionErrors_T_TrainPosition_Types_Pck kcg_comp_struct__77250
+#define kcg_comp_trainPositionInfo_T_TrainPosition_Types_Pck kcg_comp_struct__80618
 
-#define kcg_copy_positionErrors_T_TrainPosition_Types_Pck kcg_copy_struct__77250
+#define kcg_copy_trainPositionInfo_T_TrainPosition_Types_Pck kcg_copy_struct__80618
 
-#define kcg_comp_refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_struct__77234
+#define kcg_comp_positionedBGs_T_TrainPosition_Types_Pck kcg_comp_array__80553
 
-#define kcg_copy_refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_struct__77234
+#define kcg_copy_positionedBGs_T_TrainPosition_Types_Pck kcg_copy_array__80553
 
-#define kcg_comp_trainPositionInfo_T_TrainPosition_Types_Pck kcg_comp_struct__77262
+#define kcg_comp_trainProperties_T_TrainPosition_Types_Pck kcg_comp_struct__80580
 
-#define kcg_copy_trainPositionInfo_T_TrainPosition_Types_Pck kcg_copy_struct__77262
+#define kcg_copy_trainProperties_T_TrainPosition_Types_Pck kcg_copy_struct__80580
 
-#define kcg_comp_positionedBGs_T_TrainPosition_Types_Pck kcg_comp_array__77197
+#define kcg_comp_infoFromLinking_T_TrainPosition_Types_Pck kcg_comp_struct__80533
 
-#define kcg_copy_positionedBGs_T_TrainPosition_Types_Pck kcg_copy_array__77197
+#define kcg_copy_infoFromLinking_T_TrainPosition_Types_Pck kcg_copy_struct__80533
 
-#define kcg_comp_trainProperties_T_TrainPosition_Types_Pck kcg_comp_struct__77224
+#define kcg_comp_positionedBG_T_TrainPosition_Types_Pck kcg_comp_struct__80542
 
-#define kcg_copy_trainProperties_T_TrainPosition_Types_Pck kcg_copy_struct__77224
+#define kcg_copy_positionedBG_T_TrainPosition_Types_Pck kcg_copy_struct__80542
 
-#define kcg_comp_infoFromLinking_T_TrainPosition_Types_Pck kcg_comp_struct__77177
+#define kcg_comp_trainPosition_T_TrainPosition_Types_Pck kcg_comp_struct__80631
 
-#define kcg_copy_infoFromLinking_T_TrainPosition_Types_Pck kcg_copy_struct__77177
+#define kcg_copy_trainPosition_T_TrainPosition_Types_Pck kcg_copy_struct__80631
 
-#define kcg_comp_positionedBG_T_TrainPosition_Types_Pck kcg_comp_struct__77186
+#define kcg_comp_m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg kcg_comp_struct__82505
 
-#define kcg_copy_positionedBG_T_TrainPosition_Types_Pck kcg_copy_struct__77186
+#define kcg_copy_m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg kcg_copy_struct__82505
 
-#define kcg_comp_trainPosition_T_TrainPosition_Types_Pck kcg_comp_struct__77275
+#define kcg_comp_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg kcg_comp_struct__82491
 
-#define kcg_copy_trainPosition_T_TrainPosition_Types_Pck kcg_copy_struct__77275
+#define kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg kcg_copy_struct__82491
 
-#define kcg_comp_m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg kcg_comp_struct__79166
+#define kcg_comp_obuEventsAndPhases_T_MoRC_Pck kcg_comp_struct__82529
 
-#define kcg_copy_m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg kcg_copy_struct__79166
+#define kcg_copy_obuEventsAndPhases_T_MoRC_Pck kcg_copy_struct__82529
 
-#define kcg_comp_p42_order_T_MoRC_Pck_Coder_Pkg kcg_comp_struct__79146
+#define kcg_comp_radioNetWorkIDs_T_MoRC_Pck kcg_comp_struct__82554
 
-#define kcg_copy_p42_order_T_MoRC_Pck_Coder_Pkg kcg_copy_struct__79146
+#define kcg_copy_radioNetWorkIDs_T_MoRC_Pck kcg_copy_struct__82554
 
-#define kcg_comp_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg kcg_comp_struct__79152
+#define kcg_comp_genMessage_T_MoRC_Pck kcg_comp_struct__80517
 
-#define kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg kcg_copy_struct__79152
+#define kcg_copy_genMessage_T_MoRC_Pck kcg_copy_struct__80517
 
-#define kcg_comp_obuEventsAndPhases_T_MoRC_Pck kcg_comp_struct__79190
+#define kcg_comp_safeRadioConnectionStatusValid_Type_MoRC_Pck kcg_comp_struct__82511
 
-#define kcg_copy_obuEventsAndPhases_T_MoRC_Pck kcg_copy_struct__79190
+#define kcg_copy_safeRadioConnectionStatusValid_Type_MoRC_Pck kcg_copy_struct__82511
 
-#define kcg_comp_radioNetWorkIDs_T_MoRC_Pck kcg_comp_struct__79214
+#define kcg_comp_mobileHWStatus_Type_MoRC_Pck kcg_comp_struct__82516
 
-#define kcg_copy_radioNetWorkIDs_T_MoRC_Pck kcg_copy_struct__79214
+#define kcg_copy_mobileHWStatus_Type_MoRC_Pck kcg_copy_struct__82516
 
-#define kcg_comp_safeRadioConnectionStatusValid_Type_MoRC_Pck kcg_comp_struct__79172
+#define kcg_comp_SSP_matrix_t_TA_MRSP kcg_comp_array__81095
 
-#define kcg_copy_safeRadioConnectionStatusValid_Type_MoRC_Pck kcg_copy_struct__79172
+#define kcg_copy_SSP_matrix_t_TA_MRSP kcg_copy_array__81095
 
-#define kcg_comp_mobileHWStatus_Type_MoRC_Pck kcg_comp_struct__79177
+#define kcg_comp_SSP_cat_t_TA_MRSP kcg_comp_array__81092
 
-#define kcg_copy_mobileHWStatus_Type_MoRC_Pck kcg_copy_struct__79177
+#define kcg_copy_SSP_cat_t_TA_MRSP kcg_copy_array__81092
 
-#define kcg_comp_BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_comp_struct__77200
+#define kcg_comp_SSP_Mark_ValidSSPsection_TA_MRSP kcg_comp_struct__81113
 
-#define kcg_copy_BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_copy_struct__77200
+#define kcg_copy_SSP_Mark_ValidSSPsection_TA_MRSP kcg_copy_struct__81113
 
-#define kcg_comp_BG_counters_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_comp_struct__77206
+#define kcg_comp_SSP_relevant_target_t_TA_MRSP kcg_comp_struct__81124
 
-#define kcg_copy_BG_counters_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg kcg_copy_struct__77206
+#define kcg_copy_SSP_relevant_target_t_TA_MRSP kcg_copy_struct__81124
 
-#define kcg_comp_mobileSWCmd_Type_MoRC_Pck kcg_comp_struct__79184
+#define kcg_comp_mobileSWCmd_Type_MoRC_Pck kcg_comp_struct__82523
 
-#define kcg_copy_mobileSWCmd_Type_MoRC_Pck kcg_copy_struct__79184
+#define kcg_copy_mobileSWCmd_Type_MoRC_Pck kcg_copy_struct__82523
 
-#define kcg_comp_mobileHWCmd_Type_MoRC_Pck kcg_comp_struct__78897
+#define kcg_comp_SSP_section_t_TA_MRSP kcg_comp_struct__81087
 
-#define kcg_copy_mobileHWCmd_Type_MoRC_Pck kcg_copy_struct__78897
+#define kcg_copy_SSP_section_t_TA_MRSP kcg_copy_struct__81087
 
-#define kcg_comp_positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg kcg_comp_struct__77242
+#define kcg_comp_mobileHWCmd_Type_MoRC_Pck kcg_comp_struct__82217
 
-#define kcg_copy_positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg kcg_copy_struct__77242
+#define kcg_copy_mobileHWCmd_Type_MoRC_Pck kcg_copy_struct__82217
 
-#define kcg_comp_mobileSWStatus_Type_MoRC_Pck kcg_comp_struct__78917
+#define kcg_comp_SSP_valid_section_t_TA_MRSP kcg_comp_struct__81118
 
-#define kcg_copy_mobileSWStatus_Type_MoRC_Pck kcg_copy_struct__78917
+#define kcg_copy_SSP_valid_section_t_TA_MRSP kcg_copy_struct__81118
 
-#define kcg_comp_RadioManagement_T_API_RadioCommunication_Pkg kcg_comp_struct__78904
+#define kcg_comp_SSP_t_list_t_TA_MRSP kcg_comp_array__81104
 
-#define kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg kcg_copy_struct__78904
+#define kcg_copy_SSP_t_list_t_TA_MRSP kcg_copy_array__81104
 
-#define kcg_comp_API_EuroRadioOutput_T_API_RadioCommunication_Pkg kcg_comp_struct__78910
+#define kcg_comp_SSP_t_indexed_matrix_element_TA_MRSP kcg_comp_struct__81098
 
-#define kcg_copy_API_EuroRadioOutput_T_API_RadioCommunication_Pkg kcg_copy_struct__78910
+#define kcg_copy_SSP_t_indexed_matrix_element_TA_MRSP kcg_copy_struct__81098
 
-#define kcg_comp_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78931
+#define kcg_comp_SSP_t_indexed_targets_list_t_TA_MRSP kcg_comp_array__81141
 
-#define kcg_copy_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78931
-
-#define kcg_comp_P203V1_OBU_l_section_enum_T_TM_baseline2 kcg_comp_struct__76855
-
-#define kcg_copy_P203V1_OBU_l_section_enum_T_TM_baseline2 kcg_copy_struct__76855
-
-#define kcg_comp_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78943
-
-#define kcg_copy_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78943
-
-#define kcg_comp_P203V1_OBU_l_sectionlist_enum_T_TM_baseline2 kcg_comp_array__76861
-
-#define kcg_copy_P203V1_OBU_l_sectionlist_enum_T_TM_baseline2 kcg_copy_array__76861
-
-#define kcg_comp_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78949
-
-#define kcg_copy_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78949
-
-#define kcg_comp_P203V1_OBU_k_m_section_enum_T_TM_baseline2 kcg_comp_struct__76864
-
-#define kcg_copy_P203V1_OBU_k_m_section_enum_T_TM_baseline2 kcg_copy_struct__76864
-
-#define kcg_comp_DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78955
-
-#define kcg_copy_DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78955
-
-#define kcg_comp_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_comp_array__76871
-
-#define kcg_copy_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_copy_array__76871
-
-#define kcg_comp_DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78961
-
-#define kcg_copy_DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78961
-
-#define kcg_comp_P203V1_OBU_k_section_enum_T_TM_baseline2 kcg_comp_struct__76874
-
-#define kcg_copy_P203V1_OBU_k_section_enum_T_TM_baseline2 kcg_copy_struct__76874
-
-#define kcg_comp_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78967
-
-#define kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78967
-
-#define kcg_comp_P203V1_OBU_k_sectionlist_enum_T_TM_baseline2 kcg_comp_array__76886
-
-#define kcg_copy_P203V1_OBU_k_sectionlist_enum_T_TM_baseline2 kcg_copy_array__76886
-
-#define kcg_comp_DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__79006
-
-#define kcg_copy_DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__79006
-
-#define kcg_comp_P203V1_OBU_n_section_enum_T_TM_baseline2 kcg_comp_struct__76889
-
-#define kcg_copy_P203V1_OBU_n_section_enum_T_TM_baseline2 kcg_copy_struct__76889
-
-#define kcg_comp_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__79014
-
-#define kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__79014
-
-#define kcg_comp_P203V1_OBU_n_sectionlist_enum_T_TM_baseline2 kcg_comp_array__76896
-
-#define kcg_copy_P203V1_OBU_n_sectionlist_enum_T_TM_baseline2 kcg_copy_array__76896
-
-#define kcg_comp_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__79049
-
-#define kcg_copy_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__79049
-
-#define kcg_comp_P203V1_OBU_T_TM_baseline2 kcg_comp_struct__76899
-
-#define kcg_copy_P203V1_OBU_T_TM_baseline2 kcg_copy_struct__76899
-
-#define kcg_comp_DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__78925
-
-#define kcg_copy_DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__78925
-
-#define kcg_comp_P003_permanent_data_T_TM_baseline2 kcg_comp_struct__76930
-
-#define kcg_copy_P003_permanent_data_T_TM_baseline2 kcg_copy_struct__76930
-
-#define kcg_comp_DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__79094
-
-#define kcg_copy_DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__79094
-
-#define kcg_comp_P003V1_OBU_sectionlist_int_T_TM_baseline2 kcg_comp_array_int_32
-
-#define kcg_copy_P003V1_OBU_sectionlist_int_T_TM_baseline2 kcg_copy_array_int_32
-
-#define kcg_comp_DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__79100
-
-#define kcg_copy_DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__79100
-
-#define kcg_comp_P027V1_OBU_sectionlist_enum_T_TM_baseline2 kcg_comp_array__77590
-
-#define kcg_copy_P027V1_OBU_sectionlist_enum_T_TM_baseline2 kcg_copy_array__77590
-
-#define kcg_comp_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__77925
-
-#define kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__77925
-
-#define kcg_comp_P027V1_OBU_T_TM_baseline2 kcg_comp_struct__77593
-
-#define kcg_copy_P027V1_OBU_T_TM_baseline2 kcg_copy_struct__77593
-
-#define kcg_comp_P027V1_sections_array_flat_qdiff_T_TM_baseline2 kcg_comp_array_int_64
-
-#define kcg_copy_P027V1_sections_array_flat_qdiff_T_TM_baseline2 kcg_copy_array_int_64
-
-#define kcg_comp_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__78494
-
-#define kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__78494
-
-#define kcg_comp_P027V1_section_enum_qdiff_T_TM_baseline2 kcg_comp_struct__77572
-
-#define kcg_copy_P027V1_section_enum_qdiff_T_TM_baseline2 kcg_copy_struct__77572
-
-#define kcg_comp_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__78522
-
-#define kcg_copy_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__78522
-
-#define kcg_comp_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_comp_array__77578
-
-#define kcg_copy_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_copy_array__77578
-
-#define kcg_comp_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__78527
-
-#define kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__78527
-
-#define kcg_comp_P027V1_section_enum_T_TM_baseline2 kcg_comp_struct__77581
-
-#define kcg_copy_P027V1_section_enum_T_TM_baseline2 kcg_copy_struct__77581
-
-#define kcg_comp_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__78501
-
-#define kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__78501
-
-#define kcg_comp_P027V1_OBU_body_enum_T_TM_baseline2 kcg_comp_struct__77600
-
-#define kcg_copy_P027V1_OBU_body_enum_T_TM_baseline2 kcg_copy_struct__77600
-
-#define kcg_comp_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__78434
-
-#define kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__78434
-
-#define kcg_comp_P003V1_section_enum_T_TM_baseline2 kcg_comp_struct__76965
-
-#define kcg_copy_P003V1_section_enum_T_TM_baseline2 kcg_copy_struct__76965
-
-#define kcg_comp_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__78537
-
-#define kcg_copy_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__78537
-
-#define kcg_comp_P003V1_sectionlist_enum_T_TM_baseline2 kcg_comp_array__77387
-
-#define kcg_copy_P003V1_sectionlist_enum_T_TM_baseline2 kcg_copy_array__77387
-
-#define kcg_comp_P003V1_OBU_T_TM_baseline2 kcg_comp_struct__77390
-
-#define kcg_copy_P003V1_OBU_T_TM_baseline2 kcg_copy_struct__77390
-
-#define kcg_comp_DMI_DriverRequest_T_DMI_Types_Pkg kcg_comp_struct__78457
-
-#define kcg_copy_DMI_DriverRequest_T_DMI_Types_Pkg kcg_copy_struct__78457
-
-#define kcg_comp_DMI_DriverAck_T_DMI_Types_Pkg kcg_comp_struct__78481
-
-#define kcg_copy_DMI_DriverAck_T_DMI_Types_Pkg kcg_copy_struct__78481
-
-#define kcg_comp_DMI_To_Modes_T_DMI_Types_Pkg kcg_comp_struct__78487
-
-#define kcg_copy_DMI_To_Modes_T_DMI_Types_Pkg kcg_copy_struct__78487
-
-#define kcg_comp_SSP_matrix_t_TA_MRSP kcg_comp_array__77612
-
-#define kcg_copy_SSP_matrix_t_TA_MRSP kcg_copy_array__77612
-
-#define kcg_comp_SSP_cat_t_TA_MRSP kcg_comp_array__77569
-
-#define kcg_copy_SSP_cat_t_TA_MRSP kcg_copy_array__77569
-
-#define kcg_comp_SSP_Mark_ValidSSPsection_TA_MRSP kcg_comp_struct__77630
-
-#define kcg_copy_SSP_Mark_ValidSSPsection_TA_MRSP kcg_copy_struct__77630
-
-#define kcg_comp_SSP_relevant_target_t_TA_MRSP kcg_comp_struct__77641
-
-#define kcg_copy_SSP_relevant_target_t_TA_MRSP kcg_copy_struct__77641
-
-#define kcg_comp_SSP_section_t_TA_MRSP kcg_comp_struct__77564
-
-#define kcg_copy_SSP_section_t_TA_MRSP kcg_copy_struct__77564
-
-#define kcg_comp_SSP_valid_section_t_TA_MRSP kcg_comp_struct__77635
-
-#define kcg_copy_SSP_valid_section_t_TA_MRSP kcg_copy_struct__77635
-
-#define kcg_comp_SSP_t_list_t_TA_MRSP kcg_comp_array__77621
-
-#define kcg_copy_SSP_t_list_t_TA_MRSP kcg_copy_array__77621
-
-#define kcg_comp_SSP_t_indexed_matrix_element_TA_MRSP kcg_comp_struct__77615
-
-#define kcg_copy_SSP_t_indexed_matrix_element_TA_MRSP kcg_copy_struct__77615
-
-#define kcg_comp_SSP_t_indexed_targets_list_t_TA_MRSP kcg_comp_array__77658
-
-#define kcg_copy_SSP_t_indexed_targets_list_t_TA_MRSP kcg_copy_array__77658
+#define kcg_copy_SSP_t_indexed_targets_list_t_TA_MRSP kcg_copy_array__81141
 
 #define kcg_comp_SSP_t_matrix_t_TA_MRSP kcg_comp_array_int_33_11
 
@@ -9951,145 +9851,269 @@ extern kcg_bool kcg_comp_array__82782(
 
 #define kcg_copy_SSP_t_cat_t_TA_MRSP kcg_copy_array_int_33
 
-#define kcg_comp_SSP_t_indexed_trgt_t_TA_MRSP kcg_comp_struct__77653
+#define kcg_comp_SSP_t_indexed_trgt_t_TA_MRSP kcg_comp_struct__81136
 
-#define kcg_copy_SSP_t_indexed_trgt_t_TA_MRSP kcg_copy_struct__77653
+#define kcg_copy_SSP_t_indexed_trgt_t_TA_MRSP kcg_copy_struct__81136
 
-#define kcg_comp_DMI_ModesToDMI_T_DMI_Types_Pkg kcg_comp_struct__79220
+#define kcg_comp_mobileSWStatus_Type_MoRC_Pck kcg_comp_struct__82262
 
-#define kcg_copy_DMI_ModesToDMI_T_DMI_Types_Pkg kcg_copy_struct__79220
+#define kcg_copy_mobileSWStatus_Type_MoRC_Pck kcg_copy_struct__82262
 
-#define kcg_comp_DMI_TXT_MSG_status_T_DMI_Types_Pkg kcg_comp_struct__78467
+#define kcg_comp_RadioManagement_T_API_RadioCommunication_Pkg kcg_comp_struct__82224
 
-#define kcg_copy_DMI_TXT_MSG_status_T_DMI_Types_Pkg kcg_copy_struct__78467
+#define kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg kcg_copy_struct__82224
 
-#define kcg_comp_DMI_TXT_MSGList_status_T_DMI_Types_Pkg kcg_comp_array__78478
+#define kcg_comp_API_EuroRadioOutput_T_API_RadioCommunication_Pkg kcg_comp_struct__82230
 
-#define kcg_copy_DMI_TXT_MSGList_status_T_DMI_Types_Pkg kcg_copy_array__78478
+#define kcg_copy_API_EuroRadioOutput_T_API_RadioCommunication_Pkg kcg_copy_struct__82230
 
-#define kcg_comp_API_RadioMsgHeader_T_API_Msg_Pkg kcg_comp_struct__78277
+#define kcg_comp_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82276
 
-#define kcg_copy_API_RadioMsgHeader_T_API_Msg_Pkg kcg_copy_struct__78277
+#define kcg_copy_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82276
 
-#define kcg_comp_API_TelegramHeader_T_API_Msg_Pkg kcg_comp_struct__78303
+#define kcg_comp_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82288
 
-#define kcg_copy_API_TelegramHeader_T_API_Msg_Pkg kcg_copy_struct__78303
+#define kcg_copy_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82288
 
-#define kcg_comp_API_TrackSideInput_T_API_Msg_Pkg kcg_comp_struct__78312
+#define kcg_comp_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82294
 
-#define kcg_copy_API_TrackSideInput_T_API_Msg_Pkg kcg_copy_struct__78312
+#define kcg_copy_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82294
 
-#define kcg_comp_DMI_level_array_T_DMI_Types_Pkg kcg_comp_array__77855
+#define kcg_comp_DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82300
 
-#define kcg_copy_DMI_level_array_T_DMI_Types_Pkg kcg_copy_array__77855
+#define kcg_copy_DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82300
 
-#define kcg_comp_DMI_LevelList_T_DMI_Types_Pkg kcg_comp_struct__77858
+#define kcg_comp_DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82306
 
-#define kcg_copy_DMI_LevelList_T_DMI_Types_Pkg kcg_copy_struct__77858
+#define kcg_copy_DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82306
 
-#define kcg_comp_DMI_trackConditionElement_T_DMI_Types_Pkg kcg_comp_struct__78977
+#define kcg_comp_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82312
 
-#define kcg_copy_DMI_trackConditionElement_T_DMI_Types_Pkg kcg_copy_struct__78977
+#define kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82312
 
-#define kcg_comp_DMI_trackConditionArray_T_DMI_Types_Pkg kcg_comp_array__78982
+#define kcg_comp_DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82351
 
-#define kcg_copy_DMI_trackConditionArray_T_DMI_Types_Pkg kcg_copy_array__78982
+#define kcg_copy_DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82351
 
-#define kcg_comp_DMI_trackCondition_T_DMI_Types_Pkg kcg_comp_struct__78985
+#define kcg_comp_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82359
 
-#define kcg_copy_DMI_trackCondition_T_DMI_Types_Pkg kcg_copy_struct__78985
+#define kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82359
 
-#define kcg_comp_DMI_gradientProfileElement_T_DMI_Types_Pkg kcg_comp_struct__77300
+#define kcg_comp_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82394
 
-#define kcg_copy_DMI_gradientProfileElement_T_DMI_Types_Pkg kcg_copy_struct__77300
+#define kcg_copy_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82394
 
-#define kcg_comp_DMI_gradientProfileArray_T_DMI_Types_Pkg kcg_comp_array__78990
+#define kcg_comp_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg kcg_comp_struct__81389
 
-#define kcg_copy_DMI_gradientProfileArray_T_DMI_Types_Pkg kcg_copy_array__78990
+#define kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg kcg_copy_struct__81389
 
-#define kcg_comp_DMI_gradientProfile_T_DMI_Types_Pkg kcg_comp_struct__78993
+#define kcg_comp_DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82270
 
-#define kcg_copy_DMI_gradientProfile_T_DMI_Types_Pkg kcg_copy_struct__78993
+#define kcg_copy_DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82270
 
-#define kcg_comp_DMI_speedProfileElement_T_DMI_Types_Pkg kcg_comp_struct__77646
+#define kcg_comp_DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82439
 
-#define kcg_copy_DMI_speedProfileElement_T_DMI_Types_Pkg kcg_copy_struct__77646
+#define kcg_copy_DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82439
 
-#define kcg_comp_DMI_SpeedProfileArray_T_DMI_Types_Pkg kcg_comp_array__78998
+#define kcg_comp_trainData_Events_T_trainData_Types_pkg kcg_comp_struct__81396
 
-#define kcg_copy_DMI_SpeedProfileArray_T_DMI_Types_Pkg kcg_copy_array__78998
+#define kcg_copy_trainData_Events_T_trainData_Types_pkg kcg_copy_struct__81396
 
-#define kcg_comp_DMI_speedProfile_T_DMI_Types_Pkg kcg_comp_struct__79001
+#define kcg_comp_DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__82445
 
-#define kcg_copy_DMI_speedProfile_T_DMI_Types_Pkg kcg_copy_struct__79001
+#define kcg_copy_DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__82445
 
-#define kcg_comp_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg kcg_comp_struct__77863
+#define kcg_comp_trainData_Trigger_T_trainData_Types_pkg kcg_comp_struct__81405
 
-#define kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg kcg_copy_struct__77863
+#define kcg_copy_trainData_Trigger_T_trainData_Types_pkg kcg_copy_struct__81405
 
-#define kcg_comp_trainData_Events_T_trainData_Types_pkg kcg_comp_struct__77870
+#define kcg_comp_trainDataStatus_T_trainData_Types_pkg kcg_comp_struct__81413
 
-#define kcg_copy_trainData_Events_T_trainData_Types_pkg kcg_copy_struct__77870
+#define kcg_copy_trainDataStatus_T_trainData_Types_pkg kcg_copy_struct__81413
 
-#define kcg_comp_trainData_Trigger_T_trainData_Types_pkg kcg_comp_struct__77878
+#define kcg_comp_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81452
 
-#define kcg_copy_trainData_Trigger_T_trainData_Types_pkg kcg_copy_struct__77878
+#define kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81452
 
-#define kcg_comp_TelegramStore_T_Receive_TrackSide_Msg_Pkg kcg_comp_struct__78422
+#define kcg_comp_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81814
 
-#define kcg_copy_TelegramStore_T_Receive_TrackSide_Msg_Pkg kcg_copy_struct__78422
+#define kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81814
 
-#define kcg_comp_trainDataStatus_T_trainData_Types_pkg kcg_comp_struct__77886
+#define kcg_comp_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81842
 
-#define kcg_copy_trainDataStatus_T_trainData_Types_pkg kcg_copy_struct__77886
+#define kcg_copy_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81842
 
-#define kcg_comp_BGCollector_T_Receive_TrackSide_Msg_Pkg kcg_comp_struct__78411
+#define kcg_comp_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81847
 
-#define kcg_copy_BGCollector_T_Receive_TrackSide_Msg_Pkg kcg_copy_struct__78411
+#define kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81847
 
-#define kcg_comp_Driver2MAR_T_MA_Request kcg_comp_struct__77815
+#define kcg_comp_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81821
 
-#define kcg_copy_Driver2MAR_T_MA_Request kcg_copy_struct__77815
+#define kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81821
 
-#define kcg_comp_DMI_loadingGauge_T_DMI_Types_Pkg kcg_comp_struct__79025
+#define kcg_comp_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81752
 
-#define kcg_copy_DMI_loadingGauge_T_DMI_Types_Pkg kcg_copy_struct__79025
+#define kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81752
 
-#define kcg_comp_DMI_airtightSystem_T_DMI_Types_Pkg kcg_comp_struct__79025
+#define kcg_comp_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg kcg_comp_struct__81857
 
-#define kcg_copy_DMI_airtightSystem_T_DMI_Types_Pkg kcg_copy_struct__79025
+#define kcg_copy_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg kcg_copy_struct__81857
 
-#define kcg_comp_DMI_vMax_id_T_DMI_Types_Pkg kcg_comp_struct__79025
+#define kcg_comp_DMI_DriverRequest_T_DMI_Types_Pkg kcg_comp_struct__81777
 
-#define kcg_copy_DMI_vMax_id_T_DMI_Types_Pkg kcg_copy_struct__79025
+#define kcg_copy_DMI_DriverRequest_T_DMI_Types_Pkg kcg_copy_struct__81777
 
-#define kcg_comp_DMI_brakeModel_id_T_DMI_Types_Pkg kcg_comp_struct__79025
+#define kcg_comp_DMI_DriverAck_T_DMI_Types_Pkg kcg_comp_struct__81801
 
-#define kcg_copy_DMI_brakeModel_id_T_DMI_Types_Pkg kcg_copy_struct__79025
+#define kcg_copy_DMI_DriverAck_T_DMI_Types_Pkg kcg_copy_struct__81801
 
-#define kcg_comp_DMI_train_length_T_DMI_Types_Pkg kcg_comp_struct__79032
+#define kcg_comp_DMI_To_Modes_T_DMI_Types_Pkg kcg_comp_struct__81807
 
-#define kcg_copy_DMI_train_length_T_DMI_Types_Pkg kcg_copy_struct__79032
+#define kcg_copy_DMI_To_Modes_T_DMI_Types_Pkg kcg_copy_struct__81807
 
-#define kcg_comp_DMI_train_id_T_DMI_Types_Pkg kcg_comp_struct__79040
+#define kcg_comp_DMI_ModesToDMI_T_DMI_Types_Pkg kcg_comp_struct__82560
 
-#define kcg_copy_DMI_train_id_T_DMI_Types_Pkg kcg_copy_struct__79040
+#define kcg_copy_DMI_ModesToDMI_T_DMI_Types_Pkg kcg_copy_struct__82560
 
-#define kcg_comp_DMI_Available_Menu_T_DMI_Types_Pkg kcg_comp_struct__79061
+#define kcg_comp_DMI_TXT_MSG_status_T_DMI_Types_Pkg kcg_comp_struct__81787
 
-#define kcg_copy_DMI_Available_Menu_T_DMI_Types_Pkg kcg_copy_struct__79061
+#define kcg_copy_DMI_TXT_MSG_status_T_DMI_Types_Pkg kcg_copy_struct__81787
 
-#define kcg_comp_movementAuthorityForDMI_T_DMI_Types_Pkg kcg_comp_struct__79229
+#define kcg_comp_DMI_TXT_MSGList_status_T_DMI_Types_Pkg kcg_comp_array__81798
 
-#define kcg_copy_movementAuthorityForDMI_T_DMI_Types_Pkg kcg_copy_struct__79229
+#define kcg_copy_DMI_TXT_MSGList_status_T_DMI_Types_Pkg kcg_copy_array__81798
 
-#define kcg_comp_nationValuesForDMI_T_DMI_Types_Pkg kcg_comp_struct__79235
+#define kcg_comp_API_RadioMsgHeader_T_API_Msg_Pkg kcg_comp_struct__81605
 
-#define kcg_copy_nationValuesForDMI_T_DMI_Types_Pkg kcg_copy_struct__79235
+#define kcg_copy_API_RadioMsgHeader_T_API_Msg_Pkg kcg_copy_struct__81605
 
-#define kcg_comp_speedSupervisionForDMI_T_DMI_Types_Pkg kcg_comp_struct__78857
+#define kcg_comp_API_TelegramHeader_T_API_Msg_Pkg kcg_comp_struct__81631
 
-#define kcg_copy_speedSupervisionForDMI_T_DMI_Types_Pkg kcg_copy_struct__78857
+#define kcg_copy_API_TelegramHeader_T_API_Msg_Pkg kcg_copy_struct__81631
+
+#define kcg_comp_API_TrackSideInput_T_API_Msg_Pkg kcg_comp_struct__81640
+
+#define kcg_copy_API_TrackSideInput_T_API_Msg_Pkg kcg_copy_struct__81640
+
+#define kcg_comp_DMI_level_array_T_DMI_Types_Pkg kcg_comp_array__81381
+
+#define kcg_copy_DMI_level_array_T_DMI_Types_Pkg kcg_copy_array__81381
+
+#define kcg_comp_DMI_LevelList_T_DMI_Types_Pkg kcg_comp_struct__81384
+
+#define kcg_copy_DMI_LevelList_T_DMI_Types_Pkg kcg_copy_struct__81384
+
+#define kcg_comp_DMI_trackConditionElement_T_DMI_Types_Pkg kcg_comp_struct__82322
+
+#define kcg_copy_DMI_trackConditionElement_T_DMI_Types_Pkg kcg_copy_struct__82322
+
+#define kcg_comp_DMI_trackConditionArray_T_DMI_Types_Pkg kcg_comp_array__82327
+
+#define kcg_copy_DMI_trackConditionArray_T_DMI_Types_Pkg kcg_copy_array__82327
+
+#define kcg_comp_DMI_trackCondition_T_DMI_Types_Pkg kcg_comp_struct__82330
+
+#define kcg_copy_DMI_trackCondition_T_DMI_Types_Pkg kcg_copy_struct__82330
+
+#define kcg_comp_DMI_gradientProfileElement_T_DMI_Types_Pkg kcg_comp_struct__80997
+
+#define kcg_copy_DMI_gradientProfileElement_T_DMI_Types_Pkg kcg_copy_struct__80997
+
+#define kcg_comp_DMI_gradientProfileArray_T_DMI_Types_Pkg kcg_comp_array__82335
+
+#define kcg_copy_DMI_gradientProfileArray_T_DMI_Types_Pkg kcg_copy_array__82335
+
+#define kcg_comp_DMI_gradientProfile_T_DMI_Types_Pkg kcg_comp_struct__82338
+
+#define kcg_copy_DMI_gradientProfile_T_DMI_Types_Pkg kcg_copy_struct__82338
+
+#define kcg_comp_DMI_speedProfileElement_T_DMI_Types_Pkg kcg_comp_struct__81129
+
+#define kcg_copy_DMI_speedProfileElement_T_DMI_Types_Pkg kcg_copy_struct__81129
+
+#define kcg_comp_DMI_SpeedProfileArray_T_DMI_Types_Pkg kcg_comp_array__82343
+
+#define kcg_copy_DMI_SpeedProfileArray_T_DMI_Types_Pkg kcg_copy_array__82343
+
+#define kcg_comp_DMI_speedProfile_T_DMI_Types_Pkg kcg_comp_struct__82346
+
+#define kcg_copy_DMI_speedProfile_T_DMI_Types_Pkg kcg_copy_struct__82346
+
+#define kcg_comp_TelegramStore_T_Receive_TrackSide_Msg_Pkg kcg_comp_struct__81746
+
+#define kcg_copy_TelegramStore_T_Receive_TrackSide_Msg_Pkg kcg_copy_struct__81746
+
+#define kcg_comp_BGCollector_T_Receive_TrackSide_Msg_Pkg kcg_comp_struct__81735
+
+#define kcg_copy_BGCollector_T_Receive_TrackSide_Msg_Pkg kcg_copy_struct__81735
+
+#define kcg_comp_Driver2MAR_T_MA_Request kcg_comp_struct__81332
+
+#define kcg_copy_Driver2MAR_T_MA_Request kcg_copy_struct__81332
+
+#define kcg_comp_DMI_loadingGauge_T_DMI_Types_Pkg kcg_comp_struct__82370
+
+#define kcg_copy_DMI_loadingGauge_T_DMI_Types_Pkg kcg_copy_struct__82370
+
+#define kcg_comp_DMI_airtightSystem_T_DMI_Types_Pkg kcg_comp_struct__82370
+
+#define kcg_copy_DMI_airtightSystem_T_DMI_Types_Pkg kcg_copy_struct__82370
+
+#define kcg_comp_DMI_vMax_id_T_DMI_Types_Pkg kcg_comp_struct__82370
+
+#define kcg_copy_DMI_vMax_id_T_DMI_Types_Pkg kcg_copy_struct__82370
+
+#define kcg_comp_DMI_brakeModel_id_T_DMI_Types_Pkg kcg_comp_struct__82370
+
+#define kcg_copy_DMI_brakeModel_id_T_DMI_Types_Pkg kcg_copy_struct__82370
+
+#define kcg_comp_DMI_train_length_T_DMI_Types_Pkg kcg_comp_struct__82377
+
+#define kcg_copy_DMI_train_length_T_DMI_Types_Pkg kcg_copy_struct__82377
+
+#define kcg_comp_DMI_train_id_T_DMI_Types_Pkg kcg_comp_struct__82385
+
+#define kcg_copy_DMI_train_id_T_DMI_Types_Pkg kcg_copy_struct__82385
+
+#define kcg_comp_DMI_Available_Menu_T_DMI_Types_Pkg kcg_comp_struct__82406
+
+#define kcg_copy_DMI_Available_Menu_T_DMI_Types_Pkg kcg_copy_struct__82406
+
+#define kcg_comp_movementAuthorityForDMI_T_DMI_Types_Pkg kcg_comp_struct__82569
+
+#define kcg_copy_movementAuthorityForDMI_T_DMI_Types_Pkg kcg_copy_struct__82569
+
+#define kcg_comp_nationValuesForDMI_T_DMI_Types_Pkg kcg_comp_struct__82575
+
+#define kcg_copy_nationValuesForDMI_T_DMI_Types_Pkg kcg_copy_struct__82575
+
+#define kcg_comp_speedSupervisionForDMI_T_DMI_Types_Pkg kcg_comp_struct__82177
+
+#define kcg_copy_speedSupervisionForDMI_T_DMI_Types_Pkg kcg_copy_struct__82177
+
+#define kcg_comp_RBC_Communication_T_ProvidePositionReport_Pkg kcg_comp_struct__81552
+
+#define kcg_copy_RBC_Communication_T_ProvidePositionReport_Pkg kcg_copy_struct__81552
+
+#define kcg_comp_LocationBasedEvents_T_ProvidePositionReport_Pkg kcg_comp_struct__81556
+
+#define kcg_copy_LocationBasedEvents_T_ProvidePositionReport_Pkg kcg_copy_struct__81556
+
+#define kcg_comp_ModeLevel2PositionReport_T_ProvidePositionReport_Pkg kcg_comp_struct__81532
+
+#define kcg_copy_ModeLevel2PositionReport_T_ProvidePositionReport_Pkg kcg_copy_struct__81532
+
+#define kcg_comp_ReportedBGList_T_ProvidePositionReport_Pkg kcg_comp_array__81549
+
+#define kcg_copy_ReportedBGList_T_ProvidePositionReport_Pkg kcg_copy_array__81549
+
+#define kcg_comp_ReportedBG_T_ProvidePositionReport_Pkg kcg_comp_struct__81543
+
+#define kcg_copy_ReportedBG_T_ProvidePositionReport_Pkg kcg_copy_struct__81543
+
+#define kcg_comp_ErrorMessage_T_ProvidePositionReport_Pkg kcg_comp_struct__81527
+
+#define kcg_copy_ErrorMessage_T_ProvidePositionReport_Pkg kcg_copy_struct__81527
 
 #define kcg_comp_coeff_BrakeBasic_t_SDMConversionModelPkg kcg_comp_array_real_3
 
@@ -10099,77 +10123,161 @@ extern kcg_bool kcg_comp_array__82782(
 
 #define kcg_copy_t_BrakeVt_t_SDMConversionModelPkg kcg_copy_array_real_2
 
-#define kcg_comp_t_Brake_t_SDMConversionModelPkg kcg_comp_struct__78615
+#define kcg_comp_t_Brake_t_SDMConversionModelPkg kcg_comp_struct__81935
 
-#define kcg_copy_t_Brake_t_SDMConversionModelPkg kcg_copy_struct__78615
+#define kcg_copy_t_Brake_t_SDMConversionModelPkg kcg_copy_struct__81935
 
-#define kcg_comp_DMI_level_T_DMI_Types_Pkg kcg_comp_struct__77850
+#define kcg_comp_DMI_level_T_DMI_Types_Pkg kcg_comp_struct__81376
 
-#define kcg_copy_DMI_level_T_DMI_Types_Pkg kcg_copy_struct__77850
+#define kcg_copy_DMI_level_T_DMI_Types_Pkg kcg_copy_struct__81376
 
 #define kcg_comp_DMI_TEXT_DMI_Types_Pkg kcg_comp_array_char_255
 
 #define kcg_copy_DMI_TEXT_DMI_Types_Pkg kcg_copy_array_char_255
 
-#define kcg_comp_DMI_EVC_status_T_DMI_Types_Pkg kcg_comp_struct__78563
+#define kcg_comp_DMI_EVC_status_T_DMI_Types_Pkg kcg_comp_struct__81883
 
-#define kcg_copy_DMI_EVC_status_T_DMI_Types_Pkg kcg_copy_struct__78563
-
-#define kcg_comp_OdometrySpeeds_T_Obu_BasicTypes_Pkg kcg_comp_struct__77114
-
-#define kcg_copy_OdometrySpeeds_T_Obu_BasicTypes_Pkg kcg_copy_struct__77114
-
-#define kcg_comp_OdometryLocations_T_Obu_BasicTypes_Pkg kcg_comp_struct__77121
-
-#define kcg_copy_OdometryLocations_T_Obu_BasicTypes_Pkg kcg_copy_struct__77121
-
-#define kcg_comp_odometry_T_Obu_BasicTypes_Pkg kcg_comp_struct__77127
-
-#define kcg_copy_odometry_T_Obu_BasicTypes_Pkg kcg_copy_struct__77127
+#define kcg_copy_DMI_EVC_status_T_DMI_Types_Pkg kcg_copy_struct__81883
 
 #define kcg_comp_TractionDeltaTriple_TargetLimits_Pkg kcg_comp_array_real_3
 
 #define kcg_copy_TractionDeltaTriple_TargetLimits_Pkg kcg_copy_array_real_3
 
-#define kcg_comp_LocWithInAcc_T_Obu_BasicTypes_Pkg kcg_comp_struct__77137
+#define kcg_comp_OdometrySpeeds_T_Obu_BasicTypes_Pkg kcg_comp_struct__80470
 
-#define kcg_copy_LocWithInAcc_T_Obu_BasicTypes_Pkg kcg_copy_struct__77137
+#define kcg_copy_OdometrySpeeds_T_Obu_BasicTypes_Pkg kcg_copy_struct__80470
 
-#define kcg_comp_TargetIteratorAkku_TargetLimits_Pkg kcg_comp_struct__78683
+#define kcg_comp_TargetIteratorAkku_TargetLimits_Pkg kcg_comp_struct__82003
 
-#define kcg_copy_TargetIteratorAkku_TargetLimits_Pkg kcg_copy_struct__78683
+#define kcg_copy_TargetIteratorAkku_TargetLimits_Pkg kcg_copy_struct__82003
 
-#define kcg_comp_bec_t_TargetLimits_Pkg kcg_comp_struct__78620
+#define kcg_comp_OdometryLocations_T_Obu_BasicTypes_Pkg kcg_comp_struct__80477
 
-#define kcg_copy_bec_t_TargetLimits_Pkg kcg_copy_struct__78620
+#define kcg_copy_OdometryLocations_T_Obu_BasicTypes_Pkg kcg_copy_struct__80477
 
-#define kcg_comp_T_trac_t_TargetLimits_Pkg kcg_comp_struct__78625
+#define kcg_comp_bec_t_TargetLimits_Pkg kcg_comp_struct__81940
 
-#define kcg_copy_T_trac_t_TargetLimits_Pkg kcg_copy_struct__78625
+#define kcg_copy_bec_t_TargetLimits_Pkg kcg_copy_struct__81940
 
-#define kcg_comp_extractTargetsMRSPACC_TargetManagement_pkg kcg_comp_struct__78796
+#define kcg_comp_odometry_T_Obu_BasicTypes_Pkg kcg_comp_struct__80483
 
-#define kcg_copy_extractTargetsMRSPACC_TargetManagement_pkg kcg_copy_struct__78796
+#define kcg_copy_odometry_T_Obu_BasicTypes_Pkg kcg_copy_struct__80483
 
-#define kcg_comp_dmiOutputs_T_manage_DMI_Output_Pkg kcg_comp_struct__79241
+#define kcg_comp_T_trac_t_TargetLimits_Pkg kcg_comp_struct__81945
 
-#define kcg_copy_dmiOutputs_T_manage_DMI_Output_Pkg kcg_copy_struct__79241
+#define kcg_copy_T_trac_t_TargetLimits_Pkg kcg_copy_struct__81945
 
-#define kcg_comp_ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types kcg_comp_array__78699
+#define kcg_comp_LocWithInAcc_T_Obu_BasicTypes_Pkg kcg_comp_struct__80493
 
-#define kcg_copy_ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types kcg_copy_array__78699
+#define kcg_copy_LocWithInAcc_T_Obu_BasicTypes_Pkg kcg_copy_struct__80493
 
-#define kcg_comp_CurveCollection_T_CalcBrakingCurves_types kcg_comp_struct__78702
+#define kcg_comp_P203V1_OBU_l_section_enum_T_TM_baseline2 kcg_comp_struct__80211
 
-#define kcg_copy_CurveCollection_T_CalcBrakingCurves_types kcg_copy_struct__78702
+#define kcg_copy_P203V1_OBU_l_section_enum_T_TM_baseline2 kcg_copy_struct__80211
+
+#define kcg_comp_P203V1_OBU_l_sectionlist_enum_T_TM_baseline2 kcg_comp_array__80217
+
+#define kcg_copy_P203V1_OBU_l_sectionlist_enum_T_TM_baseline2 kcg_copy_array__80217
+
+#define kcg_comp_P203V1_OBU_k_m_section_enum_T_TM_baseline2 kcg_comp_struct__80220
+
+#define kcg_copy_P203V1_OBU_k_m_section_enum_T_TM_baseline2 kcg_copy_struct__80220
+
+#define kcg_comp_extractTargetsMRSPACC_TargetManagement_pkg kcg_comp_struct__82116
+
+#define kcg_copy_extractTargetsMRSPACC_TargetManagement_pkg kcg_copy_struct__82116
+
+#define kcg_comp_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_comp_array__80227
+
+#define kcg_copy_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_copy_array__80227
+
+#define kcg_comp_P203V1_OBU_k_section_enum_T_TM_baseline2 kcg_comp_struct__80230
+
+#define kcg_copy_P203V1_OBU_k_section_enum_T_TM_baseline2 kcg_copy_struct__80230
+
+#define kcg_comp_P203V1_OBU_k_sectionlist_enum_T_TM_baseline2 kcg_comp_array__80242
+
+#define kcg_copy_P203V1_OBU_k_sectionlist_enum_T_TM_baseline2 kcg_copy_array__80242
+
+#define kcg_comp_P203V1_OBU_n_section_enum_T_TM_baseline2 kcg_comp_struct__80245
+
+#define kcg_copy_P203V1_OBU_n_section_enum_T_TM_baseline2 kcg_copy_struct__80245
+
+#define kcg_comp_P203V1_OBU_n_sectionlist_enum_T_TM_baseline2 kcg_comp_array__80252
+
+#define kcg_copy_P203V1_OBU_n_sectionlist_enum_T_TM_baseline2 kcg_copy_array__80252
+
+#define kcg_comp_P203V1_OBU_T_TM_baseline2 kcg_comp_struct__80255
+
+#define kcg_copy_P203V1_OBU_T_TM_baseline2 kcg_copy_struct__80255
+
+#define kcg_comp_P003_permanent_data_T_TM_baseline2 kcg_comp_struct__80286
+
+#define kcg_copy_P003_permanent_data_T_TM_baseline2 kcg_copy_struct__80286
+
+#define kcg_comp_P003V1_OBU_sectionlist_int_T_TM_baseline2 kcg_comp_array_int_32
+
+#define kcg_copy_P003V1_OBU_sectionlist_int_T_TM_baseline2 kcg_copy_array_int_32
+
+#define kcg_comp_P003V1_section_enum_T_TM_baseline2 kcg_comp_struct__80321
+
+#define kcg_copy_P003V1_section_enum_T_TM_baseline2 kcg_copy_struct__80321
+
+#define kcg_comp_P003V1_sectionlist_enum_T_TM_baseline2 kcg_comp_array__81010
+
+#define kcg_copy_P003V1_sectionlist_enum_T_TM_baseline2 kcg_copy_array__81010
+
+#define kcg_comp_P003V1_OBU_T_TM_baseline2 kcg_comp_struct__81013
+
+#define kcg_copy_P003V1_OBU_T_TM_baseline2 kcg_copy_struct__81013
+
+#define kcg_comp_P027V1_OBU_sectionlist_enum_T_TM_baseline2 kcg_comp_array__80814
+
+#define kcg_copy_P027V1_OBU_sectionlist_enum_T_TM_baseline2 kcg_copy_array__80814
+
+#define kcg_comp_P027V1_OBU_T_TM_baseline2 kcg_comp_struct__80817
+
+#define kcg_copy_P027V1_OBU_T_TM_baseline2 kcg_copy_struct__80817
+
+#define kcg_comp_P027V1_sections_array_flat_qdiff_T_TM_baseline2 kcg_comp_array_int_64
+
+#define kcg_copy_P027V1_sections_array_flat_qdiff_T_TM_baseline2 kcg_copy_array_int_64
+
+#define kcg_comp_ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types kcg_comp_array__82019
+
+#define kcg_copy_ParabolaCurve_list_MRSP_T_CalcBrakingCurves_types kcg_copy_array__82019
+
+#define kcg_comp_P027V1_section_enum_qdiff_T_TM_baseline2 kcg_comp_struct__80796
+
+#define kcg_copy_P027V1_section_enum_qdiff_T_TM_baseline2 kcg_copy_struct__80796
+
+#define kcg_comp_CurveCollection_T_CalcBrakingCurves_types kcg_comp_struct__82022
+
+#define kcg_copy_CurveCollection_T_CalcBrakingCurves_types kcg_copy_struct__82022
+
+#define kcg_comp_dmiOutputs_T_manage_DMI_Output_Pkg kcg_comp_struct__82581
+
+#define kcg_copy_dmiOutputs_T_manage_DMI_Output_Pkg kcg_copy_struct__82581
+
+#define kcg_comp_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_comp_array__80802
+
+#define kcg_copy_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_copy_array__80802
 
 #define kcg_comp_ParabolaCurveValid_T_CalcBrakingCurves_types kcg_comp_array_bool_25
 
 #define kcg_copy_ParabolaCurveValid_T_CalcBrakingCurves_types kcg_copy_array_bool_25
 
+#define kcg_comp_P027V1_section_enum_T_TM_baseline2 kcg_comp_struct__80805
+
+#define kcg_copy_P027V1_section_enum_T_TM_baseline2 kcg_copy_struct__80805
+
 #define kcg_comp_ParabolaCurveAccelerations_T_CalcBrakingCurves_types kcg_comp_array_real_25
 
 #define kcg_copy_ParabolaCurveAccelerations_T_CalcBrakingCurves_types kcg_copy_array_real_25
+
+#define kcg_comp_P027V1_OBU_body_enum_T_TM_baseline2 kcg_comp_struct__80857
+
+#define kcg_copy_P027V1_OBU_body_enum_T_TM_baseline2 kcg_copy_struct__80857
 
 #define kcg_comp_ParabolaCurveSpeeds_T_CalcBrakingCurves_types kcg_comp_array_real_25
 
@@ -10179,13 +10287,13 @@ extern kcg_bool kcg_comp_array__82782(
 
 #define kcg_copy_ParabolaCurveDistances_T_CalcBrakingCurves_types kcg_copy_array_real_25
 
-#define kcg_comp_ParabolaCurve_T_CalcBrakingCurves_types kcg_comp_struct__78676
+#define kcg_comp_ParabolaCurve_T_CalcBrakingCurves_types kcg_comp_struct__81996
 
-#define kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types kcg_copy_struct__78676
+#define kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types kcg_copy_struct__81996
 
-#define kcg_comp_ParabolaArc_T_CalcBrakingCurves_types kcg_comp_struct__78664
+#define kcg_comp_ParabolaArc_T_CalcBrakingCurves_types kcg_comp_struct__81984
 
-#define kcg_copy_ParabolaArc_T_CalcBrakingCurves_types kcg_copy_struct__78664
+#define kcg_copy_ParabolaArc_T_CalcBrakingCurves_types kcg_copy_struct__81984
 
 #define kcg_comp_ASafeRow_T_CalcBrakingCurves_types kcg_comp_array_real_15
 
@@ -10203,261 +10311,201 @@ extern kcg_bool kcg_comp_array__82782(
 
 #define kcg_copy_ASafeDistanceDefinition_T_CalcBrakingCurves_types kcg_copy_array_real_15
 
-#define kcg_comp_ASafe_T_CalcBrakingCurves_types kcg_comp_struct__78810
+#define kcg_comp_ASafe_T_CalcBrakingCurves_types kcg_comp_struct__82130
 
-#define kcg_copy_ASafe_T_CalcBrakingCurves_types kcg_copy_struct__78810
+#define kcg_copy_ASafe_T_CalcBrakingCurves_types kcg_copy_struct__82130
 
-#define kcg_comp_T_Mode_Profile_Table_Level_And_Mode_Types_Pkg kcg_comp_array__79388
+#define kcg_comp_T_Mode_Profile_Table_Level_And_Mode_Types_Pkg kcg_comp_array__82755
 
-#define kcg_copy_T_Mode_Profile_Table_Level_And_Mode_Types_Pkg kcg_copy_array__79388
+#define kcg_copy_T_Mode_Profile_Table_Level_And_Mode_Types_Pkg kcg_copy_array__82755
 
-#define kcg_comp_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg kcg_comp_struct__78108
+#define kcg_comp_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg kcg_comp_struct__80964
 
-#define kcg_copy_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg kcg_copy_struct__78108
+#define kcg_copy_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg kcg_copy_struct__80964
 
-#define kcg_comp_T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg kcg_comp_struct__78066
+#define kcg_comp_T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg kcg_comp_struct__80974
 
-#define kcg_copy_T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg kcg_copy_struct__78066
+#define kcg_copy_T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg kcg_copy_struct__80974
 
 #define kcg_comp_T_TransitionConditions_Level_And_Mode_Types_Pkg kcg_comp_array_bool_20
 
 #define kcg_copy_T_TransitionConditions_Level_And_Mode_Types_Pkg kcg_copy_array_bool_20
 
-#define kcg_comp_T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg kcg_comp_array__79339
+#define kcg_comp_T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg kcg_comp_array__82690
 
-#define kcg_copy_T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg kcg_copy_array__79339
+#define kcg_copy_T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg kcg_copy_array__82690
 
-#define kcg_comp_T_ERTMS_capabilities_Level_And_Mode_Types_Pkg kcg_comp_struct__77350
+#define kcg_comp_T_ERTMS_capabilities_Level_And_Mode_Types_Pkg kcg_comp_struct__82586
 
-#define kcg_copy_T_ERTMS_capabilities_Level_And_Mode_Types_Pkg kcg_copy_struct__77350
+#define kcg_copy_T_ERTMS_capabilities_Level_And_Mode_Types_Pkg kcg_copy_struct__82586
 
-#define kcg_comp_T_Data_From_DMI_Level_And_Mode_Types_Pkg kcg_comp_struct__79342
+#define kcg_comp_T_Data_From_DMI_Level_And_Mode_Types_Pkg kcg_comp_struct__82693
 
-#define kcg_copy_T_Data_From_DMI_Level_And_Mode_Types_Pkg kcg_copy_struct__79342
+#define kcg_copy_T_Data_From_DMI_Level_And_Mode_Types_Pkg kcg_copy_struct__82693
 
-#define kcg_comp_T_Data_From_Localisation_Level_And_Mode_Types_Pkg kcg_comp_struct__79246
+#define kcg_comp_T_Data_From_Localisation_Level_And_Mode_Types_Pkg kcg_comp_struct__82594
 
-#define kcg_copy_T_Data_From_Localisation_Level_And_Mode_Types_Pkg kcg_copy_struct__79246
+#define kcg_copy_T_Data_From_Localisation_Level_And_Mode_Types_Pkg kcg_copy_struct__82594
 
-#define kcg_comp_T_Data_To_BG_Management_Level_And_Mode_Types_Pkg kcg_comp_struct__79255
+#define kcg_comp_T_Data_To_BG_Management_Level_And_Mode_Types_Pkg kcg_comp_struct__82603
 
-#define kcg_copy_T_Data_To_BG_Management_Level_And_Mode_Types_Pkg kcg_copy_struct__79255
+#define kcg_copy_T_Data_To_BG_Management_Level_And_Mode_Types_Pkg kcg_copy_struct__82603
 
-#define kcg_comp_T_Data_To_DMI_Level_And_Mode_Types_Pkg kcg_comp_struct__79359
+#define kcg_comp_T_Data_To_DMI_Level_And_Mode_Types_Pkg kcg_comp_struct__82710
 
-#define kcg_copy_T_Data_To_DMI_Level_And_Mode_Types_Pkg kcg_copy_struct__79359
+#define kcg_copy_T_Data_To_DMI_Level_And_Mode_Types_Pkg kcg_copy_struct__82710
 
-#define kcg_comp_RBC_Communication_T_ProvidePositionReport_Pkg kcg_comp_struct__78224
+#define kcg_comp_T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg kcg_comp_struct__82610
 
-#define kcg_copy_RBC_Communication_T_ProvidePositionReport_Pkg kcg_copy_struct__78224
+#define kcg_copy_T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg kcg_copy_struct__82610
 
-#define kcg_comp_T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg kcg_comp_struct__79262
+#define kcg_comp_T_Data_From_Track_Level_And_Mode_Types_Pkg kcg_comp_struct__82738
 
-#define kcg_copy_T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg kcg_copy_struct__79262
+#define kcg_copy_T_Data_From_Track_Level_And_Mode_Types_Pkg kcg_copy_struct__82738
 
-#define kcg_comp_LocationBasedEvents_T_ProvidePositionReport_Pkg kcg_comp_struct__78228
+#define kcg_comp_T_Reversing_Data_Level_And_Mode_Types_Pkg kcg_comp_struct__82722
 
-#define kcg_copy_LocationBasedEvents_T_ProvidePositionReport_Pkg kcg_copy_struct__78228
+#define kcg_copy_T_Reversing_Data_Level_And_Mode_Types_Pkg kcg_copy_struct__82722
 
-#define kcg_comp_T_Data_From_Track_Level_And_Mode_Types_Pkg kcg_comp_struct__79371
+#define kcg_comp_T_Mode_Profile_Level_And_Mode_Types_Pkg kcg_comp_struct__82730
 
-#define kcg_copy_T_Data_From_Track_Level_And_Mode_Types_Pkg kcg_copy_struct__79371
+#define kcg_copy_T_Mode_Profile_Level_And_Mode_Types_Pkg kcg_copy_struct__82730
 
-#define kcg_comp_ModeLevel2PositionReport_T_ProvidePositionReport_Pkg kcg_comp_struct__78204
+#define kcg_comp_BCAccumulator_type_CalcBrakingCurves_Pkg kcg_comp_struct__82136
 
-#define kcg_copy_ModeLevel2PositionReport_T_ProvidePositionReport_Pkg kcg_copy_struct__78204
+#define kcg_copy_BCAccumulator_type_CalcBrakingCurves_Pkg kcg_copy_struct__82136
 
-#define kcg_comp_ReportedBGList_T_ProvidePositionReport_Pkg kcg_comp_array__78221
+#define kcg_comp_ModeDecisionTableType_DataDictionary_Pkg kcg_comp_array__81686
 
-#define kcg_copy_ReportedBGList_T_ProvidePositionReport_Pkg kcg_copy_array__78221
+#define kcg_copy_ModeDecisionTableType_DataDictionary_Pkg kcg_copy_array__81686
 
-#define kcg_comp_ReportedBG_T_ProvidePositionReport_Pkg kcg_comp_struct__78215
+#define kcg_comp_LevelDecisionTableType_DataDictionary_Pkg kcg_comp_array__81692
 
-#define kcg_copy_ReportedBG_T_ProvidePositionReport_Pkg kcg_copy_struct__78215
+#define kcg_copy_LevelDecisionTableType_DataDictionary_Pkg kcg_copy_array__81692
 
-#define kcg_comp_T_Reversing_Data_Level_And_Mode_Types_Pkg kcg_comp_struct__77358
+#define kcg_comp_T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg kcg_comp_struct__81649
 
-#define kcg_copy_T_Reversing_Data_Level_And_Mode_Types_Pkg kcg_copy_struct__77358
+#define kcg_copy_T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg kcg_copy_struct__81649
 
-#define kcg_comp_ErrorMessage_T_ProvidePositionReport_Pkg kcg_comp_struct__78199
+#define kcg_comp_MRSP_internal_T_TargetManagement_types kcg_comp_array__82074
 
-#define kcg_copy_ErrorMessage_T_ProvidePositionReport_Pkg kcg_copy_struct__78199
+#define kcg_copy_MRSP_internal_T_TargetManagement_types kcg_copy_array__82074
 
-#define kcg_comp_T_Mode_Profile_Level_And_Mode_Types_Pkg kcg_comp_struct__77366
+#define kcg_comp_MA_section_real_T_TargetManagement_types kcg_comp_struct__82055
 
-#define kcg_copy_T_Mode_Profile_Level_And_Mode_Types_Pkg kcg_copy_struct__77366
+#define kcg_copy_MA_section_real_T_TargetManagement_types kcg_copy_struct__82055
 
-#define kcg_comp_BCAccumulator_type_CalcBrakingCurves_Pkg kcg_comp_struct__78816
+#define kcg_comp_EOA_real_T_TargetManagement_types kcg_comp_struct__82050
 
-#define kcg_copy_BCAccumulator_type_CalcBrakingCurves_Pkg kcg_copy_struct__78816
+#define kcg_copy_EOA_real_T_TargetManagement_types kcg_copy_struct__82050
 
-#define kcg_comp_T_LevelTansitionInfo_Level_And_Mode_Types_Pkg kcg_comp_struct__78440
+#define kcg_comp_MRSP_internal_section_T_TargetManagement_types kcg_comp_struct__82068
 
-#define kcg_copy_T_LevelTansitionInfo_Level_And_Mode_Types_Pkg kcg_copy_struct__78440
+#define kcg_copy_MRSP_internal_section_T_TargetManagement_types kcg_copy_struct__82068
 
-#define kcg_comp_MRSP_internal_T_TargetManagement_types kcg_comp_array__78754
+#define kcg_comp_Target_T_TargetManagement_types kcg_comp_struct__81895
 
-#define kcg_copy_MRSP_internal_T_TargetManagement_types kcg_copy_array__78754
+#define kcg_copy_Target_T_TargetManagement_types kcg_copy_struct__81895
 
-#define kcg_comp_T_LevelTransition_Level_And_Mode_Types_Pkg kcg_comp_struct__78452
+#define kcg_comp_T_LevelTansitionInfo_Level_And_Mode_Types_Pkg kcg_comp_struct__81758
 
-#define kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg kcg_copy_struct__78452
+#define kcg_copy_T_LevelTansitionInfo_Level_And_Mode_Types_Pkg kcg_copy_struct__81758
 
-#define kcg_comp_MA_section_real_T_TargetManagement_types kcg_comp_struct__78735
+#define kcg_comp_Target_list_MRSP_real_T_TargetManagement_types kcg_comp_array__82030
 
-#define kcg_copy_MA_section_real_T_TargetManagement_types kcg_copy_struct__78735
+#define kcg_copy_Target_list_MRSP_real_T_TargetManagement_types kcg_copy_array__82030
 
-#define kcg_comp_T_Mode_Level_Level_And_Mode_Types_Pkg kcg_comp_struct__77844
+#define kcg_comp_T_LevelTransition_Level_And_Mode_Types_Pkg kcg_comp_struct__81770
 
-#define kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg kcg_copy_struct__77844
+#define kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg kcg_copy_struct__81770
 
-#define kcg_comp_EOA_real_T_TargetManagement_types kcg_comp_struct__78730
+#define kcg_comp_TargetCollection_T_TargetManagement_types kcg_comp_struct__82033
 
-#define kcg_copy_EOA_real_T_TargetManagement_types kcg_copy_struct__78730
+#define kcg_copy_TargetCollection_T_TargetManagement_types kcg_copy_struct__82033
 
-#define kcg_comp_MRSP_internal_section_T_TargetManagement_types kcg_comp_struct__78748
+#define kcg_comp_T_Mode_Level_Level_And_Mode_Types_Pkg kcg_comp_struct__81370
 
-#define kcg_copy_MRSP_internal_section_T_TargetManagement_types kcg_copy_struct__78748
+#define kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg kcg_copy_struct__81370
 
-#define kcg_comp_Target_T_TargetManagement_types kcg_comp_struct__78575
+#define kcg_comp_Target_real_T_TargetManagement_types kcg_comp_struct__82013
 
-#define kcg_copy_Target_T_TargetManagement_types kcg_copy_struct__78575
+#define kcg_copy_Target_real_T_TargetManagement_types kcg_copy_struct__82013
 
-#define kcg_comp_Target_list_MRSP_real_T_TargetManagement_types kcg_comp_array__78710
+#define kcg_comp_D_test_trackinit_T_TIU_Types_Pkg kcg_comp_struct__81464
 
-#define kcg_copy_Target_list_MRSP_real_T_TargetManagement_types kcg_copy_array__78710
+#define kcg_copy_D_test_trackinit_T_TIU_Types_Pkg kcg_copy_struct__81464
 
-#define kcg_comp_TargetCollection_T_TargetManagement_types kcg_comp_struct__78713
+#define kcg_comp_L_test_trackcond_T_TIU_Types_Pkg kcg_comp_struct__81464
 
-#define kcg_copy_TargetCollection_T_TargetManagement_types kcg_copy_struct__78713
+#define kcg_copy_L_test_trackcond_T_TIU_Types_Pkg kcg_copy_struct__81464
 
-#define kcg_comp_Target_real_T_TargetManagement_types kcg_comp_struct__78693
+#define kcg_comp_D_test_trackcond_T_TIU_Types_Pkg kcg_comp_struct__81464
 
-#define kcg_copy_Target_real_T_TargetManagement_types kcg_copy_struct__78693
+#define kcg_copy_D_test_trackcond_T_TIU_Types_Pkg kcg_copy_struct__81464
 
-#define kcg_comp_D_test_trackinit_T_TIU_Types_Pkg kcg_comp_struct__78136
+#define kcg_comp_nothing_to_resume_profile_follow_T_TIU_Types_Pkg kcg_comp_struct__81469
 
-#define kcg_copy_D_test_trackinit_T_TIU_Types_Pkg kcg_copy_struct__78136
+#define kcg_copy_nothing_to_resume_profile_follow_T_TIU_Types_Pkg kcg_copy_struct__81469
 
-#define kcg_comp_ModeDecisionTableType_DataDictionary_Pkg kcg_comp_array__78324
+#define kcg_comp_Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg kcg_comp_struct__81475
 
-#define kcg_copy_ModeDecisionTableType_DataDictionary_Pkg kcg_copy_array__78324
+#define kcg_copy_Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg kcg_copy_struct__81475
 
-#define kcg_comp_LevelDecisionTableType_DataDictionary_Pkg kcg_comp_array__78330
+#define kcg_comp_trainData_internal_t_SDM_Types_Pkg kcg_comp_struct__81954
 
-#define kcg_copy_LevelDecisionTableType_DataDictionary_Pkg kcg_copy_array__78330
+#define kcg_copy_trainData_internal_t_SDM_Types_Pkg kcg_copy_struct__81954
 
-#define kcg_comp_L_test_trackcond_T_TIU_Types_Pkg kcg_comp_struct__78136
+#define kcg_comp_SDM_Commands_T_SDM_Types_Pkg kcg_comp_struct__81902
 
-#define kcg_copy_L_test_trackcond_T_TIU_Types_Pkg kcg_copy_struct__78136
+#define kcg_copy_SDM_Commands_T_SDM_Types_Pkg kcg_copy_struct__81902
 
-#define kcg_comp_D_test_trackcond_T_TIU_Types_Pkg kcg_comp_struct__78136
+#define kcg_comp_Brake_pressure_value_T_TIU_Types_Pkg kcg_comp_struct__81481
 
-#define kcg_copy_D_test_trackcond_T_TIU_Types_Pkg kcg_copy_struct__78136
+#define kcg_copy_Brake_pressure_value_T_TIU_Types_Pkg kcg_copy_struct__81481
 
-#define kcg_comp_nothing_to_resume_profile_follow_T_TIU_Types_Pkg kcg_comp_struct__78141
+#define kcg_comp_OdometrySpeeds_real_T_SDM_Types_Pkg kcg_comp_struct__81961
 
-#define kcg_copy_nothing_to_resume_profile_follow_T_TIU_Types_Pkg kcg_copy_struct__78141
+#define kcg_copy_OdometrySpeeds_real_T_SDM_Types_Pkg kcg_copy_struct__81961
 
-#define kcg_comp_Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg kcg_comp_struct__78147
+#define kcg_comp_OdometryLocations_real_T_SDM_Types_Pkg kcg_comp_struct__81968
 
-#define kcg_copy_Type_I_train_and_brake_inhibition_with_distance_commands_T_TIU_Types_Pkg kcg_copy_struct__78147
+#define kcg_copy_OdometryLocations_real_T_SDM_Types_Pkg kcg_copy_struct__81968
 
-#define kcg_comp_Brake_pressure_value_T_TIU_Types_Pkg kcg_comp_struct__78153
+#define kcg_comp_Odometry_real_T_SDM_Types_Pkg kcg_comp_struct__81974
 
-#define kcg_copy_Brake_pressure_value_T_TIU_Types_Pkg kcg_copy_struct__78153
+#define kcg_copy_Odometry_real_T_SDM_Types_Pkg kcg_copy_struct__81974
 
-#define kcg_comp_trainData_internal_t_SDM_Types_Pkg kcg_comp_struct__78634
+#define kcg_comp_SDM_Commands_real_T_SDM_Types_Pkg kcg_comp_struct__82150
 
-#define kcg_copy_trainData_internal_t_SDM_Types_Pkg kcg_copy_struct__78634
+#define kcg_copy_SDM_Commands_real_T_SDM_Types_Pkg kcg_copy_struct__82150
 
-#define kcg_comp_SDM_Commands_T_SDM_Types_Pkg kcg_comp_struct__78582
+#define kcg_comp_Brake_status_T_TIU_Types_Pkg kcg_comp_struct__81486
 
-#define kcg_copy_SDM_Commands_T_SDM_Types_Pkg kcg_copy_struct__78582
+#define kcg_copy_Brake_status_T_TIU_Types_Pkg kcg_copy_struct__81486
 
-#define kcg_comp_Brake_status_T_TIU_Types_Pkg kcg_comp_struct__78158
+#define kcg_comp_TrainLocations_real_T_SDM_Types_Pkg kcg_comp_struct__82040
 
-#define kcg_copy_Brake_status_T_TIU_Types_Pkg kcg_copy_struct__78158
+#define kcg_copy_TrainLocations_real_T_SDM_Types_Pkg kcg_copy_struct__82040
 
-#define kcg_comp_OdometrySpeeds_real_T_SDM_Types_Pkg kcg_comp_struct__78641
+#define kcg_comp_SDM_Locations_T_SDM_Types_Pkg kcg_comp_struct__82093
 
-#define kcg_copy_OdometrySpeeds_real_T_SDM_Types_Pkg kcg_copy_struct__78641
+#define kcg_copy_SDM_Locations_T_SDM_Types_Pkg kcg_copy_struct__82093
 
-#define kcg_comp_OdometryLocations_real_T_SDM_Types_Pkg kcg_comp_struct__78648
+#define kcg_comp_Speeds_T_SDM_Types_Pkg kcg_comp_struct__82077
 
-#define kcg_copy_OdometryLocations_real_T_SDM_Types_Pkg kcg_copy_struct__78648
+#define kcg_copy_Speeds_T_SDM_Types_Pkg kcg_copy_struct__82077
 
-#define kcg_comp_Odometry_real_T_SDM_Types_Pkg kcg_comp_struct__78654
+#define kcg_comp_Mode_control_and_train_status_T_TIU_Types_Pkg kcg_comp_struct__81495
 
-#define kcg_copy_Odometry_real_T_SDM_Types_Pkg kcg_copy_struct__78654
+#define kcg_copy_Mode_control_and_train_status_T_TIU_Types_Pkg kcg_copy_struct__81495
 
-#define kcg_comp_SDM_Commands_real_T_SDM_Types_Pkg kcg_comp_struct__78830
+#define kcg_comp_Message_Train_Interface_to_EVC_T_TIU_Types_Pkg kcg_comp_struct__81506
 
-#define kcg_copy_SDM_Commands_real_T_SDM_Types_Pkg kcg_copy_struct__78830
-
-#define kcg_comp_TrainLocations_real_T_SDM_Types_Pkg kcg_comp_struct__78720
-
-#define kcg_copy_TrainLocations_real_T_SDM_Types_Pkg kcg_copy_struct__78720
-
-#define kcg_comp_SDM_Locations_T_SDM_Types_Pkg kcg_comp_struct__78773
-
-#define kcg_copy_SDM_Locations_T_SDM_Types_Pkg kcg_copy_struct__78773
-
-#define kcg_comp_Speeds_T_SDM_Types_Pkg kcg_comp_struct__78757
-
-#define kcg_copy_Speeds_T_SDM_Types_Pkg kcg_copy_struct__78757
-
-#define kcg_comp_Mode_control_and_train_status_T_TIU_Types_Pkg kcg_comp_struct__78167
-
-#define kcg_copy_Mode_control_and_train_status_T_TIU_Types_Pkg kcg_copy_struct__78167
-
-#define kcg_comp_Message_Train_Interface_to_EVC_T_TIU_Types_Pkg kcg_comp_struct__78178
-
-#define kcg_copy_Message_Train_Interface_to_EVC_T_TIU_Types_Pkg kcg_copy_struct__78178
-
-#define kcg_comp_trainData_T_TIU_Types_Pkg kcg_comp_struct__77895
-
-#define kcg_copy_trainData_T_TIU_Types_Pkg kcg_copy_struct__77895
-
-#define kcg_comp_TIU_trainStatus_T_TIU_Types_Pkg kcg_comp_struct__78187
-
-#define kcg_copy_TIU_trainStatus_T_TIU_Types_Pkg kcg_copy_struct__78187
-
-#define kcg_comp_TIU_commandStatus_T_TIU_Types_Pkg kcg_comp_struct__79271
-
-#define kcg_copy_TIU_commandStatus_T_TIU_Types_Pkg kcg_copy_struct__79271
-
-#define kcg_comp_M_current_T_TIU_Types_Pkg kcg_comp_struct__79277
-
-#define kcg_copy_M_current_T_TIU_Types_Pkg kcg_copy_struct__79277
-
-#define kcg_comp_D_test_current_T_TIU_Types_Pkg kcg_comp_struct__78136
-
-#define kcg_copy_D_test_current_T_TIU_Types_Pkg kcg_copy_struct__78136
-
-#define kcg_comp_Change_of_allowed_current_consumption_T_TIU_Types_Pkg kcg_comp_struct__79282
-
-#define kcg_copy_Change_of_allowed_current_consumption_T_TIU_Types_Pkg kcg_copy_struct__79282
-
-#define kcg_comp_Passenger_door_control_info_T_TIU_Types_Pkg kcg_comp_struct__79288
-
-#define kcg_copy_Passenger_door_control_info_T_TIU_Types_Pkg kcg_copy_struct__79288
-
-#define kcg_comp_M_voltage_T_TIU_Types_Pkg kcg_comp_struct__79293
-
-#define kcg_copy_M_voltage_T_TIU_Types_Pkg kcg_copy_struct__79293
-
-#define kcg_comp_D_test_distance_T_TIU_Types_Pkg kcg_comp_struct__78136
-
-#define kcg_copy_D_test_distance_T_TIU_Types_Pkg kcg_copy_struct__78136
-
-#define kcg_comp_D_test_traction_T_TIU_Types_Pkg kcg_comp_struct__78136
-
-#define kcg_copy_D_test_traction_T_TIU_Types_Pkg kcg_copy_struct__78136
+#define kcg_copy_Message_Train_Interface_to_EVC_T_TIU_Types_Pkg kcg_copy_struct__81506
 
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 

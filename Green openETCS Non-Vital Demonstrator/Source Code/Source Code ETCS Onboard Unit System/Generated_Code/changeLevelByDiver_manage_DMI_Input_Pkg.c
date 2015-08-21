@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,6 +15,8 @@ void changeLevelByDiver_manage_DMI_Input_Pkg(
   /* manage_DMI_Input_Pkg::changeLevelByDiver::updatedNTC */NID_STM_DMI_Types_Pkg *updatedNTC)
 {
   (*ML_levelTransition).is_set = (*levelData).valid;
+  (*ML_levelTransition).LRBG = 0;
+  (*ML_levelTransition).referenceLocation = 0;
   if ((*levelData).valid & ((*levelData).level.level ==
       M_LEVEL_Level_NTC_specified_by_NID_NTC)) {
     *updatedNTC = (*levelData).level.nid_stm;
@@ -42,6 +44,6 @@ void changeLevelByDiver_manage_DMI_Input_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** changeLevelByDiver_manage_DMI_Input_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

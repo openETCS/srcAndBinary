@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,7 +22,7 @@ void Update_SP_per_LRBG_TA_Lib_internal(
   /* TA_Lib_internal::Update_SP_per_LRBG::_L1 */
   static kcg_int _L1;
   /* TA_Lib_internal::Update_SP_per_LRBG::_L39 */
-  static array__77569 _L39;
+  static array__81092 _L39;
   
   _L1 = /* 1 */
     FindStartOfNewSpeedProfile_TA_Lib_internal(Last_SpeedProfile_in, new_SP);
@@ -40,7 +40,7 @@ void Update_SP_per_LRBG_TA_Lib_internal(
   else {
     kcg_copy_SSP_section_t_TA_MRSP(&(&_L39[0])[0], section1);
   }
-  kcg_copy_array__82691(&_L39[1], (array__82691 *) &(*new_SP)[1]);
+  kcg_copy_array__86199(&_L39[1], (array__86199 *) &(*new_SP)[1]);
   kcg_copy_SSP_cat_t_TA_MRSP(SpeedProfile_out, Last_SpeedProfile_in);
   for (i = 0; i < 33; i++) {
     kcg_copy_SSP_cat_t_TA_MRSP(&tmp, SpeedProfile_out);
@@ -56,6 +56,6 @@ void Update_SP_per_LRBG_TA_Lib_internal(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Update_SP_per_LRBG_TA_Lib_internal.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

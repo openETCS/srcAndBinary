@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,9 +23,9 @@ void FIFO_InformationFilter_Pkg_Common_3(
 {
   static kcg_int tmp1;
   static kcg_int tmp;
-  static array__79417 tmp2;
+  static array__82781 tmp2;
   /* InformationFilter_Pkg::Common::FIFO::IfBlock1::then::_L19 */
-  static array__79417 _L19_IfBlock1;
+  static array__82781 _L19_IfBlock1;
   /* InformationFilter_Pkg::Common::FIFO::IfBlock1::then::_L9 */
   static kcg_int _L9_IfBlock1;
   /* InformationFilter_Pkg::Common::FIFO::_L44 */
@@ -56,7 +56,7 @@ void FIFO_InformationFilter_Pkg_Common_3(
     }
     if (outC->init) {
       _L9_IfBlock1 = 0;
-      kcg_copy_array__79417(&outC->_L4_IfBlock1, &_L19_IfBlock1);
+      kcg_copy_array__82781(&outC->_L4_IfBlock1, &_L19_IfBlock1);
     }
     else {
       _L9_IfBlock1 = outC->_L20_IfBlock1;
@@ -66,14 +66,14 @@ void FIFO_InformationFilter_Pkg_Common_3(
         &outC->_L4_IfBlock1[_L9_IfBlock1],
         inData);
     }
-    kcg_copy_array__79417(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array__82781(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (_L9_IfBlock1 + 1) % 3;
     tmp1 = 1;
     outC->init = kcg_false;
   }
   else {
     if (outC->init1) {
-      kcg_copy_array__79417(&outC->buffer, &tmp2);
+      kcg_copy_array__82781(&outC->buffer, &tmp2);
     }
     tmp1 = 0;
   }
@@ -121,6 +121,6 @@ void FIFO_InformationFilter_Pkg_Common_3(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FIFO_InformationFilter_Pkg_Common_3.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

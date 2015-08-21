@@ -1,11 +1,12 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg_H_
 #define _msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg_H_
 
 #include "kcg_types.h"
+#include "DECODE_NID_LRBG_TM_conversions.h"
 #include "Read_P005_ForCalcTrainPos_TM_specific.h"
 #include "nidC_nidBG_2_NIDLRBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h"
 #include "NIDLRBG_2_nidC_nidBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h"
@@ -23,6 +24,6 @@ extern void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
 #endif /* _msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg.h
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

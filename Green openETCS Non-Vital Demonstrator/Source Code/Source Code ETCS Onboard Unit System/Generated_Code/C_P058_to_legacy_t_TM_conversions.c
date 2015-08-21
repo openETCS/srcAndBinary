@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void C_P058_to_legacy_t_TM_conversions(
   /* TM_conversions::C_P058_to_legacy_t::P058_in */P058_OBU_T_TM *P058_in,
   /* TM_conversions::C_P058_to_legacy_t::P058_legacy_out */P58_PositionReportParameters_T_Packet_Types_Pkg *P058_legacy_out)
 {
-  static array__78238 tmp;
+  static array__81566 tmp;
   static kcg_int i;
   
   (*P058_legacy_out).valid = (*P058_in).valid;
@@ -35,6 +35,6 @@ void C_P058_to_legacy_t_TM_conversions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P058_to_legacy_t_TM_conversions.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

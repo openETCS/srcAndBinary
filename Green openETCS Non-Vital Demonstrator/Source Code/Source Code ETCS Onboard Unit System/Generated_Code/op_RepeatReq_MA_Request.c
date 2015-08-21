@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,6 +19,9 @@ void op_RepeatReq_MA_Request(
   /* MA_Request::op_RepeatReq::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
   outC_op_RepeatReq_MA_Request *outC)
 {
+  /* MA_Request::op_RepeatReq::_L13 */
+  static kcg_int _L13;
+  
   if (setRepeater) {
     outC->_L6 = systemTime;
   }
@@ -26,11 +29,18 @@ void op_RepeatReq_MA_Request(
     outC->_L6 = 0;
   }
   outC->init = kcg_false;
-  outC->trigger = /* 1 */ Safe_MOD_int(systemTime - outC->_L6, tcycreq) == 0;
+  /* 1 */
+  MOD_XCP_numeric(
+    systemTime - outC->_L6,
+    tcycreq,
+    - 1,
+    &_L13,
+    &outC->exception);
+  outC->trigger = _L13 == 0;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** op_RepeatReq_MA_Request.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

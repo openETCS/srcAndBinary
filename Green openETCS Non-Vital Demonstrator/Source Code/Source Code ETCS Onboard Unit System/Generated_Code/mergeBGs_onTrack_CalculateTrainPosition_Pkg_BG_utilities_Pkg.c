@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void mergeBGs_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBGs_onTrack::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out,
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBGs_onTrack::overrun */kcg_bool *overrun)
 {
-  static struct__77242 tmp;
+  static struct__80598 tmp;
   static kcg_int i;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBGs_onTrack::_L7 */
   static positionedBGs_w_overrun_T_CalculateTrainPosition_Pkg _L7;
@@ -35,6 +35,6 @@ void mergeBGs_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mergeBGs_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

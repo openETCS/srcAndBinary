@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::overrun */kcg_bool *overrun)
 {
   static kcg_int i;
-  static array__77197 tmp1;
+  static array__80553 tmp1;
   static positionedBG_T_TrainPosition_Types_Pck tmp;
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::_L11 */
   static kcg_bool _L11;
@@ -29,7 +29,7 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::_L33 */
   static positionedBGs_T_TrainPosition_Types_Pck _L33;
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::_L26 */
-  static array__77247 _L26;
+  static array__80603 _L26;
   
   _L11 = (*passedBG).valid & (*passedBG).linkedBGs[0].valid;
   /* 1 */
@@ -74,7 +74,7 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
     &(*passedBG).linkedBGs,
     trainProperties,
     (linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck *) &tmp1[0]);
-  kcg_copy_array__77247(&tmp1[4], &_L26);
+  kcg_copy_array__80603(&tmp1[4], &_L26);
   /* 1 */
   mergeBGs_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     BGs_in,
@@ -87,6 +87,6 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** addAnnouncedBGs_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

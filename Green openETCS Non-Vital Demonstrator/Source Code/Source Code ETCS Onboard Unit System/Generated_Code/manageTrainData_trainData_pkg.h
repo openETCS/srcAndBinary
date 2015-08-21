@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _manageTrainData_trainData_pkg_H_
 #define _manageTrainData_trainData_pkg_H_
@@ -9,6 +9,7 @@
 #include "sendValidTrainDataRBC_trainData_pkg.h"
 #include "sendAcknowledgementRBC_trainData_pkg.h"
 #include "checkRadioMessages_trainData_pkg.h"
+#include "checkAcknowledgmentGeneral_trainData_pkg.h"
 #include "trainDataStorage_trainData_pkg.h"
 
 /* =====================  no input structure  ====================== */
@@ -50,6 +51,6 @@ extern void manageTrainData_reset_trainData_pkg(
 #endif /* _manageTrainData_trainData_pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageTrainData_trainData_pkg.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

@@ -1,13 +1,13 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _SP_SSP_TA_SpeedProfiles_H_
 #define _SP_SSP_TA_SpeedProfiles_H_
 
 #include "kcg_types.h"
-#include "Eval_LRBG_TA_Lib_internal.h"
 #include "Read_P027V1_TM_baseline2.h"
+#include "Eval_LRBG_TA_Lib_internal.h"
 #include "Update_LRBG_then_SSP_TA_SSP.h"
 #include "Update_SSP_then_LRBG_TA_SSP.h"
 #include "Update_SSP_only_TA_SSP.h"
@@ -42,6 +42,6 @@ extern void SP_SSP_reset_TA_SpeedProfiles(outC_SP_SSP_TA_SpeedProfiles *outC);
 #endif /* _SP_SSP_TA_SpeedProfiles_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SP_SSP_TA_SpeedProfiles.h
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

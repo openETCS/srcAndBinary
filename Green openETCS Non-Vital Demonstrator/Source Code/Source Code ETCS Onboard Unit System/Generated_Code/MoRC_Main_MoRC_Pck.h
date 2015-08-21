@@ -1,13 +1,17 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _MoRC_Main_MoRC_Pck_H_
 #define _MoRC_Main_MoRC_Pck_H_
 
 #include "kcg_types.h"
-#include "P42_Dec_MoRC_Pck_Coder_Pkg.h"
 #include "genMsgToRBC_MoRC_Pck_Coder_Pkg.h"
+#include "decM32_MoRC_Pck_Coder_Pkg.h"
+#include "decM38_MoRC_Pck_Coder_Pkg.h"
+#include "decM39_MoRC_Pck_Coder_Pkg.h"
+#include "decP42_MoRC_Pck_Coder_Pkg.h"
+#include "decP45_MoRC_Pck_Coder_Pkg.h"
 #include "managementOfRadioCommunication_MoRC_Pck.h"
 
 /* =====================  no input structure  ====================== */
@@ -48,7 +52,7 @@ extern void MoRC_Main_MoRC_Pck(
   /* MoRC_Pck::MoRC_Main::obuEventsAndPhases */obuEventsAndPhases_T_MoRC_Pck *obuEventsAndPhases,
   /* MoRC_Pck::MoRC_Main::radioNetworkIDs */radioNetWorkIDs_T_MoRC_Pck *radioNetworkIDs,
   /* MoRC_Pck::MoRC_Main::statusOfMobile */mobileHWStatus_Type_MoRC_Pck *statusOfMobile,
-  /* MoRC_Pck::MoRC_Main::inMessage */radioManagementMessage_T_Common_Types_Pkg *inMessage,
+  /* MoRC_Pck::MoRC_Main::inMessage_new */genMessage_T_MoRC_Pck *inMessage_new,
   /* MoRC_Pck::MoRC_Main::t_train */T_TRAIN t_train,
   /* MoRC_Pck::MoRC_Main::connectionStatusTimerInterval */time_Type_MoRC_Pck connectionStatusTimerInterval,
   /* MoRC_Pck::MoRC_Main::nid_engine */NID_ENGINE nid_engine,
@@ -60,6 +64,6 @@ extern void MoRC_Main_reset_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC);
 #endif /* _MoRC_Main_MoRC_Pck_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MoRC_Main_MoRC_Pck.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

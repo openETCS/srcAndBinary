@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -134,7 +134,7 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
       &outC->ML_levelTransition,
       (T_LevelTransition_Level_And_Mode_Types_Pkg *)
-        &cNoTransition_manage_DMI_Input_Pkg);
+        &M_Default_Transition_Level_And_Mode_Types_Pkg);
     if (dmiStatusReset) {
       kcg_copy_DMI_TXT_MSGList_status_T_DMI_Types_Pkg(
         &outC->outStatusList,
@@ -172,6 +172,6 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

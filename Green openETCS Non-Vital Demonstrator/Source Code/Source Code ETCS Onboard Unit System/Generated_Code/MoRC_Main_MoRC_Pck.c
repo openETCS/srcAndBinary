@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,80 +20,72 @@ void MoRC_Main_MoRC_Pck(
   /* MoRC_Pck::MoRC_Main::obuEventsAndPhases */obuEventsAndPhases_T_MoRC_Pck *obuEventsAndPhases,
   /* MoRC_Pck::MoRC_Main::radioNetworkIDs */radioNetWorkIDs_T_MoRC_Pck *radioNetworkIDs,
   /* MoRC_Pck::MoRC_Main::statusOfMobile */mobileHWStatus_Type_MoRC_Pck *statusOfMobile,
-  /* MoRC_Pck::MoRC_Main::inMessage */radioManagementMessage_T_Common_Types_Pkg *inMessage,
+  /* MoRC_Pck::MoRC_Main::inMessage_new */genMessage_T_MoRC_Pck *inMessage_new,
   /* MoRC_Pck::MoRC_Main::t_train */T_TRAIN t_train,
   /* MoRC_Pck::MoRC_Main::connectionStatusTimerInterval */time_Type_MoRC_Pck connectionStatusTimerInterval,
   /* MoRC_Pck::MoRC_Main::nid_engine */NID_ENGINE nid_engine,
   /* MoRC_Pck::MoRC_Main::onboardPhoneNumbers */PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg *onboardPhoneNumbers,
   outC_MoRC_Main_MoRC_Pck *outC)
 {
-  static struct__79146 tmp;
-  static P42_SessionManagement_T_Packet_Types_Pkg tmp4;
-  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp3;
-  static P45_RadioNetworkRegistration_T_Packet_Types_Pkg tmp2;
-  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp1;
+  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp2;
+  static P45_RadioNetworkRegistration_T_Packet_Types_Pkg tmp1;
+  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp;
+  /* MoRC_Pck::MoRC_Main::p42_establish_or_terminate */
+  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg p42_establish_or_terminate;
   /* MoRC_Pck::MoRC_Main::m38_initiationOfACommunicationSession */
   static kcg_bool m38_initiationOfACommunicationSession;
   /* MoRC_Pck::MoRC_Main::m32_RBC_or_RIU_System_Version */
   static m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg m32_RBC_or_RIU_System_Version;
-  /* MoRC_Pck::MoRC_Main::_L15 */
-  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg _L15;
-  /* MoRC_Pck::MoRC_Main::_L166 */
-  static kcg_bool _L166;
   /* MoRC_Pck::MoRC_Main::_L194 */
   static kcg_bool _L194;
   
-  m32_RBC_or_RIU_System_Version.version =
-    (*inMessage).Radio_Common_Header.m_version;
-  m32_RBC_or_RIU_System_Version.systemVersionFromTracksideSupported = kcg_true;
-  kcg_copy_P42_SessionManagement_T_Packet_Types_Pkg(&tmp4, &(*inMessage).p42);
-  tmp4.valid = (*inMessage).valid & (*inMessage).p42.valid;
-  tmp.source = (*inMessage).messageSource;
-  tmp.establishOrderDoesNotRequestToContactAnAcceptingRBC = kcg_false;
-  kcg_copy_P42_SessionManagement_T_Packet_Types_Pkg(&tmp.p42, &tmp4);
   /* 1 */
-  P42_Dec_MoRC_Pck_Coder_Pkg(&tmp, (kcg_bool) (mode == M_MODE_Sleeping), &_L15);
-  _L194 = (msrc_OBU_Common_Types_Pkg == _L15.source) | (_L15.source ==
-      msrc_Eurobalise_Common_Types_Pkg);
-  _L166 = (*inMessage).valid & (((*inMessage).messageSource ==
-        msrc_Euroradio_Common_Types_Pkg) | ((*inMessage).messageSource ==
-        msrc_RadioInfillUnit_Common_Types_Pkg));
-  m32_RBC_or_RIU_System_Version.valid = _L166 &
-    ((*inMessage).Radio_Common_Header.nid_message ==
-      cNID_MESSAGE_RBC_RIU_SystemVersion_MoRC_Pck);
-  m38_initiationOfACommunicationSession = _L166 &
-    ((*inMessage).Radio_Common_Header.nid_message ==
-      cm38_Initiation_of_a_Communication_Session_Id_Pkg);
-  kcg_copy_P45_RadioNetworkRegistration_T_Packet_Types_Pkg(
-    &tmp2,
-    &(*inMessage).p45);
-  tmp2.valid = (*inMessage).valid & (*inMessage).p45.valid;
+  decP42_MoRC_Pck_Coder_Pkg(
+    inMessage_new,
+    (kcg_bool) (mode == M_MODE_Sleeping),
+    &p42_establish_or_terminate);
+  m38_initiationOfACommunicationSession = /* 1 */
+    decM38_MoRC_Pck_Coder_Pkg(inMessage_new);
+  /* 1 */
+  decM32_MoRC_Pck_Coder_Pkg(
+    inMessage_new,
+    (*obuEventsAndPhases).systemVersionFromTracksideSupported,
+    &m32_RBC_or_RIU_System_Version);
+  _L194 = (msrc_OBU_Common_Types_Pkg == p42_establish_or_terminate.source) |
+    (p42_establish_or_terminate.source == msrc_Eurobalise_Common_Types_Pkg);
+  /* 1 */ decP45_MoRC_Pck_Coder_Pkg(inMessage_new, &tmp1);
   if (_L194) {
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
-      &tmp3,
+      &tmp2,
       (p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *)
         &cInvalidOrder_MoRC_Pck_Coder_Pkg);
-    kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(&tmp1, &_L15);
+    kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
+      &tmp,
+      &p42_establish_or_terminate);
   }
   else {
-    kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(&tmp3, &_L15);
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
-      &tmp1,
+      &tmp2,
+      &p42_establish_or_terminate);
+    kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
+      &tmp,
       (p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *)
         &cInvalidOrder_MoRC_Pck_Coder_Pkg);
   }
   /* 1 */
   managementOfRadioCommunication_MoRC_Pck(
     currentTime,
+    /* 1 */ decM39_MoRC_Pck_Coder_Pkg(inMessage_new),
+    &tmp2,
     (kcg_bool)
-      (_L166 & ((*inMessage).Radio_Common_Header.nid_message ==
-          cm39_Acknowledgement_of_termination_of_a_communication_session_Id_Pkg)),
-    &tmp3,
-    (kcg_bool)
-      (m38_initiationOfACommunicationSession | (_L15.establish & (_L15.source ==
+      (m38_initiationOfACommunicationSession |
+        (p42_establish_or_terminate.establish &
+          (p42_establish_or_terminate.source ==
             msrc_Euroradio_Common_Types_Pkg))),
     (kcg_bool)
-      (_L15.establish & (_L15.source == msrc_RadioInfillUnit_Common_Types_Pkg)),
+      (p42_establish_or_terminate.establish &
+        (p42_establish_or_terminate.source ==
+          msrc_RadioInfillUnit_Common_Types_Pkg)),
     (kcg_bool)
       ((!m32_RBC_or_RIU_System_Version.systemVersionFromTracksideSupported &
           m32_RBC_or_RIU_System_Version.valid) |
@@ -108,14 +100,14 @@ void MoRC_Main_MoRC_Pck(
     level,
     &(*radioNetworkIDs).memorizedID,
     &(*radioNetworkIDs).ID_fromDriver,
-    &tmp2,
+    &tmp1,
     (*obuEventsAndPhases).afterDriverEntryOfANewRadioNetworkID,
     (*obuEventsAndPhases).triggerDecisionThatNoRadioNetworkIDAvailable,
     statusOfMobile,
     (*obuEventsAndPhases).isPartOfAnOngoingStartOfMissionProcedure,
     (*obuEventsAndPhases).trainPassesALevelTransitionBorder,
-    &tmp1,
-    _L15.establishOrderDoesNotRequestToContactAnAcceptingRBC,
+    &tmp,
+    p42_establish_or_terminate.establishOrderDoesNotRequestToContactAnAcceptingRBC,
     (*obuEventsAndPhases).trainPassesA_RBC_RBC_border_WithItsFrontEnd,
     m32_RBC_or_RIU_System_Version.systemVersionFromTracksideSupported,
     m32_RBC_or_RIU_System_Version.valid,
@@ -215,6 +207,6 @@ void MoRC_Main_MoRC_Pck(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MoRC_Main_MoRC_Pck.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

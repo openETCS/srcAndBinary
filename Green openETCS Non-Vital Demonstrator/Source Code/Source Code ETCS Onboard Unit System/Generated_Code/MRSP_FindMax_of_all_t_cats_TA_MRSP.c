@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void MRSP_FindMax_of_all_t_cats_TA_MRSP(
   /* TA_MRSP::MRSP_FindMax_of_all_t_cats::SSP_indexed_targets_per_cat */SSP_t_indexed_targets_list_t_TA_MRSP *SSP_indexed_targets_per_cat,
   /* TA_MRSP::MRSP_FindMax_of_all_t_cats::SSP_largest_target */SSP_t_indexed_matrix_element_TA_MRSP *SSP_largest_target)
 {
-  static array__79423 tmp2;
+  static array__82787 tmp2;
   static SSP_t_indexed_matrix_element_TA_MRSP tmp1;
   static kcg_bool tmp;
   static kcg_int i;
@@ -43,6 +43,6 @@ void MRSP_FindMax_of_all_t_cats_TA_MRSP(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MRSP_FindMax_of_all_t_cats_TA_MRSP.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

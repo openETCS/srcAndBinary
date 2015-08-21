@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,7 @@ void recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pk
   /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::recalculate_BG_locations_astern::_L3 */
   static refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg _L3;
   /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::recalculate_BG_locations_astern::_L4 */
-  static array__77197 _L4;
+  static array__80553 _L4;
   
   kcg_copy_refBGs_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
     &_L3,
@@ -45,6 +45,6 @@ void recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pk
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

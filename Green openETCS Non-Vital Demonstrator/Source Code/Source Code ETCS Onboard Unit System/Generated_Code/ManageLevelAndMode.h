@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _ManageLevelAndMode_H_
 #define _ManageLevelAndMode_H_
@@ -10,7 +10,7 @@
 #include "Output.h"
 #include "CheckLevelAndMode.h"
 #include "ManageModes.h"
-#include "ManageLevels.h"
+#include "ManageLevels_Levels_Pkg.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -22,11 +22,12 @@ typedef struct {
   T_Data_To_BG_Management_Level_And_Mode_Types_Pkg /* ManageLevelAndMode::Data_To_BG_Management */ Data_To_BG_Management;
   kcg_bool /* ManageLevelAndMode::Service_Brake_Command */ Service_Brake_Command;
   kcg_bool /* ManageLevelAndMode::EB_Requested */ EB_Requested;
+  kcg_bool /* ManageLevelAndMode::transitionPositionPassed */ transitionPositionPassed;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_ManageLevels /* 1 */ _1_Context_1;
+  outC_ManageLevels_Levels_Pkg /* 1 */ _1_Context_1;
   outC_ManageModes /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ManageLevelAndMode;
@@ -53,6 +54,8 @@ extern void ManageLevelAndMode(
   /* ManageLevelAndMode::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
   /* ManageLevelAndMode::Valid_Train_Data_Stored_In */kcg_bool Valid_Train_Data_Stored_In,
   /* ManageLevelAndMode::ERTMS_capabilities_In */T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities_In,
+  /* ManageLevelAndMode::startOfMission */kcg_bool startOfMission,
+  /* ManageLevelAndMode::forLevelTransition */T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg *forLevelTransition,
   outC_ManageLevelAndMode *outC);
 
 extern void ManageLevelAndMode_reset(outC_ManageLevelAndMode *outC);
@@ -60,6 +63,6 @@ extern void ManageLevelAndMode_reset(outC_ManageLevelAndMode *outC);
 #endif /* _ManageLevelAndMode_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ManageLevelAndMode.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

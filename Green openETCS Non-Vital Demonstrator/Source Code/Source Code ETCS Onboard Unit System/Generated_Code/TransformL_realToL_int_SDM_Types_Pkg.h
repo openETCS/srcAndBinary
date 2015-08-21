@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 #ifndef _TransformL_realToL_int_SDM_Types_Pkg_H_
 #define _TransformL_realToL_int_SDM_Types_Pkg_H_
@@ -17,6 +17,6 @@ extern L_internal_Type_Obu_BasicTypes_Pkg TransformL_realToL_int_SDM_Types_Pkg(
 #endif /* _TransformL_realToL_int_SDM_Types_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TransformL_realToL_int_SDM_Types_Pkg.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 

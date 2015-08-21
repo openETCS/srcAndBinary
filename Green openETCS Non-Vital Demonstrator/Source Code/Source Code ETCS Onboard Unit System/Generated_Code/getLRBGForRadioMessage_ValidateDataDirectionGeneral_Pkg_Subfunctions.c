@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,16 @@ void getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions(
 {
   static positionedBG_T_TrainPosition_Types_Pck tmp;
   static kcg_int i;
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::getLRBGForRadioMessage::_L10 */
+  static NID_BG _L10;
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::getLRBGForRadioMessage::_L9 */
+  static NID_C _L9;
   
+  /* 1 */
+  DECODE_NID_LRBG_TM_conversions(
+    (*inMessage).Radio_Common_Header.nid_lrbg,
+    &_L9,
+    &_L10);
   kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
     outLRBG,
     (positionedBG_T_TrainPosition_Types_Pck *)
@@ -25,7 +34,8 @@ void getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions(
     /* 1 */
     getLRBGForRadioMessageIterator_ValidateDataDirectionGeneral_Pkg_Subfunctions(
       &tmp,
-      (*inMessage).Radio_Common_Header.nid_lrbg,
+      _L9,
+      _L10,
       &(*inPositionedBGs)[i],
       outLRBG);
   }
@@ -33,6 +43,6 @@ void getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,6 +18,8 @@ void Build_Packet0_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::Build_Packet0::packet0 */Position_Report_TrainToTrack *packet0)
 {
   static kcg_int tmp;
+  /* ProvidePositionReport_Pkg::Build_Packet0::_L14 */
+  static L_TRAININT _L14;
   
   (*packet0).NID_PACKET = 0;
   (*packet0).L_PACKET = 0;
@@ -26,7 +28,7 @@ void Build_Packet0_ProvidePositionReport_Pkg(
   (*packet0).dirlrbg = (*trainPos).trainOrientationToLRBG;
   (*packet0).dlrbg = (*trainPos).nominalOrReverseToLRBG;
   (*packet0).length = (*train2trackStatus).q_length;
-  (*packet0).V_TRAIN = (*odometry).speed.v_safeNominal / 5;
+  (*packet0).V_TRAIN = (*odometry).speed.v_upper;
   (*packet0).dirtrain = (*trainPos).trainRunningDirectionToLRBG;
   (*packet0).mode = (*modeLevelStatus).currMode;
   (*packet0).level = (*modeLevelStatus).currLevel;
@@ -35,18 +37,28 @@ void Build_Packet0_ProvidePositionReport_Pkg(
   CalculateSafeTrainLength_ProvidePositionReport_Pkg(
     trainProps,
     trainPos,
-    &(*packet0).L_TRAININT,
+    &_L14,
     &tmp);
-  (*packet0).D_LRBG = /* 1 */
-    op_LRBG_ProvidePositionReport_Pkg(posBGs, trainPos);
-  (*packet0).L_DOUBTOVER = /* 1 */
-    op_DOUBTOVER_ProvidePositionReport_Pkg(trainPos);
+  (*packet0).D_LRBG = /* scaleInternalType */
+    scaleInternalType_ProvidePositionReport_Pkg(
+      cQ_SCALE_ProvidePositionReport_Pkg,
+      /* 1 */ op_LRBG_ProvidePositionReport_Pkg(posBGs, trainPos));
+  (*packet0).L_DOUBTOVER = /* 3 */
+    scaleInternalType_ProvidePositionReport_Pkg(
+      cQ_SCALE_ProvidePositionReport_Pkg,
+      /* 1 */ op_DOUBTOVER_ProvidePositionReport_Pkg(trainPos));
   (*packet0).L_DOUBTUNDER = /* 1 */
-    op_DOUBTUNDER_ProvidePositionReport_Pkg(trainPos);
+    scaleInternalType_ProvidePositionReport_Pkg(
+      cQ_SCALE_ProvidePositionReport_Pkg,
+      /* 1 */ op_DOUBTUNDER_ProvidePositionReport_Pkg(trainPos));
+  (*packet0).L_TRAININT = /* 2 */
+    scaleInternalType_ProvidePositionReport_Pkg(
+      cQ_SCALE_ProvidePositionReport_Pkg,
+      _L14);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_Packet0_ProvidePositionReport_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

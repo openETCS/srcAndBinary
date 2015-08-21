@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -44,7 +44,7 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::ProvidePositionReport::t_train */T_TRAIN t_train,
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
-  static array__79420 tmp4;
+  static array__82784 tmp4;
   static PT0_PositionReport_T_Packet_TrainTypes_Pkg tmp3;
   static PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg tmp2;
   static PT4_ErrorReporting_T_Packet_TrainTypes_Pkg tmp1;
@@ -164,7 +164,7 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   AddBGToFIFO_ProvidePositionReport_Pkg(
     &_L328,
     _L312,
-    posBGs,
+    trainPos,
     &outC->out_reportedBGs);
   kcg_copy_ReportedBGList_T_ProvidePositionReport_Pkg(
     &outC->rem_reportedBGs,
@@ -173,6 +173,6 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

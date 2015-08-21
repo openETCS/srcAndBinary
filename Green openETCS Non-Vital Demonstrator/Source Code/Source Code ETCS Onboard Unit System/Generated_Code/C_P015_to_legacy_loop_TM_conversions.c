@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -44,15 +44,20 @@ void C_P015_to_legacy_loop_TM_conversions(
       &_L21,
       (P015_section_enum_T_TM *) &DEFAULT_P015_OBU_section_TM);
   }
-  (*P015_legacy_out).valid = _L21.valid;
   (*P015_legacy_out).l_section = _L21.l_section;
   (*P015_legacy_out).q_sectiontimer_k = _L21.q_sectiontimer;
   (*P015_legacy_out).t_sectiontimer_k = _L21.t_sectiontimer;
   (*P015_legacy_out).d_sectiontimerstoploc_k = _L21.d_sectiontimerstoploc;
+  if (i > 0) {
+    (*P015_legacy_out).valid = _L21.valid;
+  }
+  else {
+    (*P015_legacy_out).valid = (*P015_in).valid;
+  }
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P015_to_legacy_loop_TM_conversions.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

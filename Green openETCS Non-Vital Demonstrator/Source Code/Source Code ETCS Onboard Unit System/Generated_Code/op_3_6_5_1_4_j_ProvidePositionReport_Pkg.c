@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -39,12 +39,12 @@ void op_3_6_5_1_4_j_ProvidePositionReport_Pkg(
   else {
     tmp = outC->rem_LRBG.nid_bg;
   }
-  outC->b = tmp1 & ((*LRBG).nid_bg != tmp);
+  outC->trigger = tmp1 & ((*LRBG).nid_bg != tmp);
   kcg_copy_positionedBG_T_TrainPosition_Types_Pck(&outC->rem_LRBG, LRBG);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** op_3_6_5_1_4_j_ProvidePositionReport_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

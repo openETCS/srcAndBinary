@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -67,6 +67,12 @@ void manageTextMessages_manage_TextMessages_Pkg(
           &tmp1,
           (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
             &cText_Mode_UN_manage_TextMessages_Pkg);
+        break;
+      case M_MODE_Trip :
+        kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
+          &tmp1,
+          (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
+            &cText_Mode_TR_manage_TextMessages_Pkg);
         break;
       
       default :
@@ -149,6 +155,6 @@ void manageTextMessages_manage_TextMessages_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageTextMessages_manage_TextMessages_Pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

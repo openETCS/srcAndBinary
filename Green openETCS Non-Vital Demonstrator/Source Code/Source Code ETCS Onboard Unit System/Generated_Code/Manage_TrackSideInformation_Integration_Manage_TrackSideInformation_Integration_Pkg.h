@@ -1,19 +1,20 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 #ifndef _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
 #define _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
 
 #include "kcg_types.h"
-#include "ContinuousTimeoutCheck.h"
 #include "CheckBGConsistency_CheckBGConsistency_Pkg.h"
 #include "validateDataDirection_ValidateDataDirection_Pkg.h"
-#include "getParameterPositionReport_packagesSupport_Pkg.h"
-#include "getRadioManagement_packagesSupport_Pkg.h"
-#include "CheckEuroRadioMessage.h"
+#include "ContinuousTimeoutCheck_CheckEuroradioMessage.h"
+#include "bypassGeneralMessage_xdebugSupport_Pkg.h"
 #include "Receive_TrackSide_Msg_Receive_TrackSide_Msg_Pkg.h"
+#include "CheckEuroRadioMessage_CheckEuroradioMessage.h"
 #include "InformationFilter_InformationFilter_Pkg.h"
+#include "calculatePendingState_xdebugSupport_Pkg.h"
+#include "combineForLevelChange_xdebugSupport_Pkg.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -23,16 +24,17 @@ typedef struct {
   ReceivedMessage_T_Common_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outputMessage */ outputMessage;
   kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::ApplyServiceBrake */ ApplyServiceBrake;
   kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::BadBaliseMessageToDMI */ BadBaliseMessageToDMI;
-  PositionReportParameter_T_Common_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outPositionParams */ outPositionParams;
-  radioManagementMessage_T_Common_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outRadioManagement */ outRadioManagement;
   MSG_Errors_T_Common_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outCheckErrors */ outCheckErrors;
-  BG_Header_T_BG_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outBG_MessageForCalcTrainPosition */ outBG_MessageForCalcTrainPosition;
+  T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::forLevelManagement */ forLevelManagement;
+  ReceivedMessage_T_Common_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outputMessageForRadioAck */ outputMessageForRadioAck;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Receive_TrackSide_Msg_Receive_TrackSide_Msg_Pkg /* 1 */ Context_1;
-  outC_CheckEuroRadioMessage /* 2 */ Context_2;
+  outC_Receive_TrackSide_Msg_Receive_TrackSide_Msg_Pkg /* 1 */ _3_Context_1;
+  outC_CheckEuroRadioMessage_CheckEuroradioMessage /* 1 */ _2_Context_1;
+  outC_combineForLevelChange_xdebugSupport_Pkg /* 1 */ _1_Context_1;
+  outC_calculatePendingState_xdebugSupport_Pkg /* 1 */ Context_1;
   outC_InformationFilter_InformationFilter_Pkg /* 3 */ Context_3;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg;
@@ -56,6 +58,7 @@ extern void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inActiveCab */kcg_bool inActiveCab,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inTrainDataValid */kcg_bool inTrainDataValid,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
+  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::transitionPositionPassed */kcg_bool transitionPositionPassed,
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC);
 
 extern void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_Integration_Pkg(
@@ -64,6 +67,6 @@ extern void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInform
 #endif /* _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

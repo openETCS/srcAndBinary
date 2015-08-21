@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,7 +13,7 @@ void ThirdFilter_InformationFilter_Pkg_ThirdFilter(
   /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inModus */M_MODE inModus,
   /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage)
 {
-  static array__77040 tmp;
+  static array__80396 tmp;
   static kcg_int i;
   static kcg_bool tmp_1_1;
   
@@ -54,6 +54,6 @@ void ThirdFilter_InformationFilter_Pkg_ThirdFilter(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ThirdFilter_InformationFilter_Pkg_ThirdFilter.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

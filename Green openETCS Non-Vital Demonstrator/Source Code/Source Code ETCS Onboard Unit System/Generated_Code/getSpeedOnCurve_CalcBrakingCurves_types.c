@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void getSpeedOnCurve_CalcBrakingCurves_types(
   /* CalcBrakingCurves_types::getSpeedOnCurve::valid */kcg_bool *valid,
   /* CalcBrakingCurves_types::getSpeedOnCurve::speed */V_internal_real_Type_SDM_Types_Pkg *speed)
 {
-  static struct__78664 tmp;
+  static struct__81984 tmp;
   static kcg_int tmp5;
   static kcg_bool tmp4;
   static kcg_int i;
@@ -73,6 +73,6 @@ void getSpeedOnCurve_CalcBrakingCurves_types(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getSpeedOnCurve_CalcBrakingCurves_types.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

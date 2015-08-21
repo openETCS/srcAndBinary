@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:33
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,10 +28,8 @@ void manageTrainData_trainData_pkg(
   /* trainData_pkg::manageTrainData::p1_positionReport */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *p1_positionReport,
   outC_manageTrainData_trainData_pkg *outC)
 {
-  /* trainData_pkg::manageTrainData::IfBlock1::else */
-  static kcg_bool _1_else_clock_IfBlock1;
-  /* trainData_pkg::manageTrainData::IfBlock1::else::else */
-  static kcg_bool else_clock_IfBlock1;
+  static kcg_bool tmp1;
+  static kcg_bool tmp;
   /* trainData_pkg::manageTrainData::IfBlock1 */
   static kcg_bool IfBlock1_clock;
   /* trainData_pkg::manageTrainData::ackReceived */
@@ -59,13 +57,38 @@ void manageTrainData_trainData_pkg(
     checkRadioMessages_trainData_pkg(
       trackMessages,
       &_L18,
-      &ackReceived,
+      &tmp1,
       &ackRequested);
+    tmp = tmp1;
   }
   else {
-    ackRequested = kcg_false;
-    ackReceived = kcg_false;
+    tmp = kcg_false;
   }
+  if (_L18.validatedbyRBC) {
+    /* 1 */
+    checkAcknowledgmentGeneral_trainData_pkg(
+      trackMessages,
+      &ackReceived,
+      &IfBlock1_clock);
+    tmp1 = ackReceived;
+  }
+  else {
+    tmp1 = kcg_false;
+  }
+  ackReceived = tmp | tmp1;
+  if (_L18.watingForRBCResponse) {
+    tmp1 = ackRequested;
+  }
+  else {
+    tmp1 = kcg_false;
+  }
+  if (_L18.validatedbyRBC) {
+    tmp = IfBlock1_clock;
+  }
+  else {
+    tmp = kcg_false;
+  }
+  ackRequested = tmp1 | tmp;
   IfBlock1_clock = ackReceived & ackRequested;
   /* 1 */
   trainDataStorage_trainData_pkg(
@@ -90,8 +113,8 @@ void manageTrainData_trainData_pkg(
       &outC->updatedStatus);
   }
   else {
-    _1_else_clock_IfBlock1 = ackReceived & !ackRequested;
-    if (_1_else_clock_IfBlock1) {
+    tmp = ackReceived & !ackRequested;
+    if (tmp) {
       kcg_copy_trainDataStatus_T_trainData_Types_pkg(
         &outC->updatedStatus,
         &outC->Context_1.updatedStatus);
@@ -103,10 +126,11 @@ void manageTrainData_trainData_pkg(
           &cNoMessage_trainData_pkg);
     }
     else {
-      else_clock_IfBlock1 = _L18.valid & _L18.validatedByDriver &
-        !_L18.validatedbyRBC & !_L18.watingForRBCResponse &
-        (*eventsForTrainData).communicationSessionEstablished;
-      if (else_clock_IfBlock1) {
+      tmp1 = _L18.valid & _L18.validatedByDriver & !_L18.validatedbyRBC &
+        !_L18.watingForRBCResponse &
+        ((*eventsForTrainData).communicationSessionEstablished &
+          (*eventsForTrainData).MoRCreadyFlag);
+      if (tmp1) {
         /* 1 */
         sendValidTrainDataRBC_trainData_pkg(
           trainDatafromTIU,
@@ -133,6 +157,6 @@ void manageTrainData_trainData_pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageTrainData_trainData_pkg.c
-** Generation date: 2015-07-31T17:20:33
+** Generation date: 2015-08-21T17:26:01
 *************************************************************$ */
 

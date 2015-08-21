@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:20:32
+** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 #ifndef _Exception07RejectIfNoPendingNTCTransition_InformationFilter_Pkg_FirstFilter_H_
 #define _Exception07RejectIfNoPendingNTCTransition_InformationFilter_Pkg_FirstFilter_H_
@@ -19,6 +19,6 @@ extern void Exception07RejectIfNoPendingNTCTransition_InformationFilter_Pkg_Firs
 #endif /* _Exception07RejectIfNoPendingNTCTransition_InformationFilter_Pkg_FirstFilter_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Exception07RejectIfNoPendingNTCTransition_InformationFilter_Pkg_FirstFilter.h
-** Generation date: 2015-07-31T17:20:32
+** Generation date: 2015-08-21T17:26:00
 *************************************************************$ */
 
