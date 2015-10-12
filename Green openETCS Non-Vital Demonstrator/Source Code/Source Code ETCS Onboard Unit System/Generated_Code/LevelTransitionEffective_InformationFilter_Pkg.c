@@ -1,26 +1,40 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "LevelTransitionEffective_InformationFilter_Pkg.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void LevelTransitionEffective_init_InformationFilter_Pkg(
+  outC_LevelTransitionEffective_InformationFilter_Pkg *outC)
+{
+  outC->outLevelTransition = kcg_true;
+  outC->init = kcg_true;
+  outC->rem_inLevel = M_LEVEL_Level_0;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void LevelTransitionEffective_reset_InformationFilter_Pkg(
   outC_LevelTransitionEffective_InformationFilter_Pkg *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* InformationFilter_Pkg::LevelTransitionEffective */
 void LevelTransitionEffective_InformationFilter_Pkg(
-  /* InformationFilter_Pkg::LevelTransitionEffective::inLevel */M_LEVEL inLevel,
+  /* InformationFilter_Pkg::LevelTransitionEffective::inLevel */ M_LEVEL inLevel,
   outC_LevelTransitionEffective_InformationFilter_Pkg *outC)
 {
+  /* InformationFilter_Pkg::LevelTransitionEffective */
   static M_LEVEL tmp;
   
-  if (outC->init) {
+  /* fby_1_init_1 */ if (outC->init) {
     outC->init = kcg_false;
     tmp = M_LEVEL_Level_0;
   }
@@ -31,8 +45,8 @@ void LevelTransitionEffective_InformationFilter_Pkg(
   outC->rem_inLevel = inLevel;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** LevelTransitionEffective_InformationFilter_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

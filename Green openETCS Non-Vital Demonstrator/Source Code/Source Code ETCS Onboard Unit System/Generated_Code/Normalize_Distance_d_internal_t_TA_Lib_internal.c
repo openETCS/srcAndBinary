@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TA_Lib_internal::Normalize_Distance_d_internal_t */
 L_internal_Type_Obu_BasicTypes_Pkg Normalize_Distance_d_internal_t_TA_Lib_internal(
-  /* TA_Lib_internal::Normalize_Distance_d_internal_t::q_scale */Q_SCALE q_scale,
-  /* TA_Lib_internal::Normalize_Distance_d_internal_t::d */kcg_int d)
+  /* TA_Lib_internal::Normalize_Distance_d_internal_t::q_scale */ Q_SCALE q_scale,
+  /* TA_Lib_internal::Normalize_Distance_d_internal_t::d */ kcg_int d)
 {
   /* TA_Lib_internal::Normalize_Distance_d_internal_t::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -20,12 +20,12 @@ L_internal_Type_Obu_BasicTypes_Pkg Normalize_Distance_d_internal_t_TA_Lib_intern
   static L_internal_Type_Obu_BasicTypes_Pkg d_internal;
   
   IfBlock1_clock = q_scale == ENUM_Q_SCALE_10cm_TM_conversions;
-  if (IfBlock1_clock) {
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     d_internal = d * 10;
   }
   else {
     else_clock_IfBlock1 = q_scale == ENUM_Q_SCALE_1m_TM_conversions;
-    if (else_clock_IfBlock1) {
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
       d_internal = d * 100;
     }
     else {
@@ -35,8 +35,8 @@ L_internal_Type_Obu_BasicTypes_Pkg Normalize_Distance_d_internal_t_TA_Lib_intern
   return d_internal;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_Distance_d_internal_t_TA_Lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

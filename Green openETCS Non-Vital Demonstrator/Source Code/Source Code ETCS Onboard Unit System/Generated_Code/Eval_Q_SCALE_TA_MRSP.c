@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,18 @@
 
 /* TA_MRSP::Eval_Q_SCALE */
 L_internal_Type_Obu_BasicTypes_Pkg Eval_Q_SCALE_TA_MRSP(
-  /* TA_MRSP::Eval_Q_SCALE::q_scale_in */Q_SCALE q_scale_in,
-  /* TA_MRSP::Eval_Q_SCALE::d_in */kcg_int d_in)
+  /* TA_MRSP::Eval_Q_SCALE::q_scale_in */ Q_SCALE q_scale_in,
+  /* TA_MRSP::Eval_Q_SCALE::d_in */ kcg_int d_in)
 {
+  /* TA_MRSP::Eval_Q_SCALE */
   static kcg_int tmp;
   /* TA_MRSP::Eval_Q_SCALE::d_out */
   static L_internal_Type_Obu_BasicTypes_Pkg d_out;
   
-  if (q_scale_in == ENUM_Q_SCALE_10cm_QSCALE_TM) {
+  /* 1 */ if (q_scale_in == ENUM_Q_SCALE_10cm_QSCALE_TM) {
     tmp = 10;
   }
-  else if (q_scale_in == ENUM_Q_SCALE_10m_QSCALE_TM) {
+  else /* 2 */ if (q_scale_in == ENUM_Q_SCALE_10m_QSCALE_TM) {
     tmp = 10 * 100;
   }
   else {
@@ -29,8 +30,8 @@ L_internal_Type_Obu_BasicTypes_Pkg Eval_Q_SCALE_TA_MRSP(
   return d_out;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Eval_Q_SCALE_TA_MRSP.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::convNTotal */
 kcg_int convNTotal_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::convNTotal::inNTotal */N_TOTAL inNTotal)
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::convNTotal::inNTotal */ N_TOTAL inNTotal)
 {
   /* Receive_TrackSide_Msg_Pkg::BaliseSupport::convNTotal::IfBlock1::else */
   static kcg_bool _6_else_clock_IfBlock1;
@@ -31,44 +31,44 @@ kcg_int convNTotal_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   static kcg_int outTotal;
   
   IfBlock1_clock = inNTotal == N_TOTAL_1_balise_in_the_group;
-  if (IfBlock1_clock) {
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     outTotal = 1;
   }
   else {
     _6_else_clock_IfBlock1 = inNTotal == N_TOTAL_2_balises_in_the_group;
-    if (_6_else_clock_IfBlock1) {
+    /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
       outTotal = 2;
     }
     else {
       _5_else_clock_IfBlock1 = inNTotal == N_TOTAL_3_balises_in_the_group;
-      if (_5_else_clock_IfBlock1) {
+      /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
         outTotal = 3;
       }
       else {
         _4_else_clock_IfBlock1 = inNTotal == N_TOTAL_4_balises_in_the_group;
-        if (_4_else_clock_IfBlock1) {
+        /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
           outTotal = 4;
         }
         else {
           _3_else_clock_IfBlock1 = inNTotal == N_TOTAL_5_balises_in_the_group;
-          if (_3_else_clock_IfBlock1) {
+          /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
             outTotal = 5;
           }
           else {
             _2_else_clock_IfBlock1 = inNTotal == N_TOTAL_6_balises_in_the_group;
-            if (_2_else_clock_IfBlock1) {
+            /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
               outTotal = 6;
             }
             else {
               _1_else_clock_IfBlock1 = inNTotal ==
                 N_TOTAL_7_balises_in_the_group;
-              if (_1_else_clock_IfBlock1) {
+              /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
                 outTotal = 7;
               }
               else {
                 else_clock_IfBlock1 = inNTotal ==
                   N_TOTAL_8_balises_in_the_group;
-                if (else_clock_IfBlock1) {
+                /* ck_anon_activ */ if (else_clock_IfBlock1) {
                   outTotal = 8;
                 }
                 else {
@@ -84,8 +84,8 @@ kcg_int convNTotal_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   return outTotal;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** convNTotal_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

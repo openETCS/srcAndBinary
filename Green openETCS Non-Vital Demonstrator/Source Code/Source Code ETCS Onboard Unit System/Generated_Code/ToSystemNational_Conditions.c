@@ -1,25 +1,38 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "ToSystemNational_Conditions.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void ToSystemNational_init_Conditions(outC_ToSystemNational_Conditions *outC)
+{
+  outC->Condition56 = kcg_true;
+  outC->init = kcg_true;
+  outC->rem_Current_Level = M_LEVEL_Level_0;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void ToSystemNational_reset_Conditions(outC_ToSystemNational_Conditions *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* Conditions::ToSystemNational */
 void ToSystemNational_Conditions(
-  /* Conditions::ToSystemNational::Current_Level */M_LEVEL Current_Level,
+  /* Conditions::ToSystemNational::Current_Level */ M_LEVEL Current_Level,
   outC_ToSystemNational_Conditions *outC)
 {
+  /* Conditions::ToSystemNational */
   static M_LEVEL tmp;
   
-  if (outC->init) {
+  /* last_init_ck_Current_Level */ if (outC->init) {
     outC->init = kcg_false;
     tmp = M_LEVEL_Level_0;
   }
@@ -31,8 +44,8 @@ void ToSystemNational_Conditions(
   outC->rem_Current_Level = Current_Level;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ToSystemNational_Conditions.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

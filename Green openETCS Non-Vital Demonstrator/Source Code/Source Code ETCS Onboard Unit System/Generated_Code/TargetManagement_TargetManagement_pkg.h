@@ -1,16 +1,18 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _TargetManagement_TargetManagement_pkg_H_
 #define _TargetManagement_TargetManagement_pkg_H_
 
 #include "kcg_types.h"
 #include "extractTargetsFromMRSP_TargetManagement_pkg_internalOperators.h"
-#include "extractEOASvLTargetFromMA_TargetManagement_pkg_internalOperators.h"
+#include "calcMATargets_TargetManagement_pkg_internalOperators.h"
 #include "removeOverpassedMRSP_TargetManagement_pkg_internalOperators.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -30,19 +32,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TargetManagement_pkg::TargetManagement */
 extern void TargetManagement_TargetManagement_pkg(
-  /* TargetManagement_pkg::TargetManagement::MRSP */MRSP_internal_T_TargetManagement_types *MRSP,
-  /* TargetManagement_pkg::TargetManagement::MRSP_updated */kcg_bool MRSP_updated,
-  /* TargetManagement_pkg::TargetManagement::MA */MA_section_real_T_TargetManagement_types *MA,
-  /* TargetManagement_pkg::TargetManagement::MA_updated */kcg_bool MA_updated,
-  /* TargetManagement_pkg::TargetManagement::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* TargetManagement_pkg::TargetManagement::MRSP */ MRSP_internal_T_TargetManagement_types *MRSP,
+  /* TargetManagement_pkg::TargetManagement::MRSP_updated */ kcg_bool MRSP_updated,
+  /* TargetManagement_pkg::TargetManagement::MA */ MA_section_real_T_TargetManagement_types *MA,
+  /* TargetManagement_pkg::TargetManagement::MA_updated */ kcg_bool MA_updated,
+  /* TargetManagement_pkg::TargetManagement::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
   outC_TargetManagement_TargetManagement_pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void TargetManagement_reset_TargetManagement_pkg(
   outC_TargetManagement_TargetManagement_pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void TargetManagement_init_TargetManagement_pkg(
+  outC_TargetManagement_TargetManagement_pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _TargetManagement_TargetManagement_pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** TargetManagement_TargetManagement_pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

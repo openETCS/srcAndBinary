@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,27 +8,26 @@
 #include "Eval_Q_Front_TA_Lib_internal.h"
 
 /* TA_Lib_internal::Eval_Q_Front */
-L_internal_Type_Obu_BasicTypes_Pkg Eval_Q_Front_TA_Lib_internal(
-  /* TA_Lib_internal::Eval_Q_Front::q_front */Q_FRONT q_front,
-  /* TA_Lib_internal::Eval_Q_Front::train_length_in */L_internal_Type_Obu_BasicTypes_Pkg train_length_in)
+kcg_bool Eval_Q_Front_TA_Lib_internal(
+  /* TA_Lib_internal::Eval_Q_Front::q_front */ Q_FRONT q_front)
 {
   /* TA_Lib_internal::Eval_Q_Front::IfBlock1 */
   static kcg_bool IfBlock1_clock;
-  /* TA_Lib_internal::Eval_Q_Front::added_train_length */
-  static L_internal_Type_Obu_BasicTypes_Pkg added_train_length;
+  /* TA_Lib_internal::Eval_Q_Front::add_train_length */
+  static kcg_bool add_train_length;
   
   IfBlock1_clock = q_front == ENUM_Q_FRONT_train_length_delay_TM_conversions;
-  if (IfBlock1_clock) {
-    added_train_length = train_length_in;
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+    add_train_length = kcg_true;
   }
   else {
-    added_train_length = 0;
+    add_train_length = kcg_false;
   }
-  return added_train_length;
+  return add_train_length;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Eval_Q_Front_TA_Lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

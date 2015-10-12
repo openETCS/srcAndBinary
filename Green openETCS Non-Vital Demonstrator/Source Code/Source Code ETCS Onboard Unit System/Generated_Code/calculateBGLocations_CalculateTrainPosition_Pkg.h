@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _calculateBGLocations_CalculateTrainPosition_Pkg_H_
 #define _calculateBGLocations_CalculateTrainPosition_Pkg_H_
@@ -13,6 +13,8 @@
 #include "genPassedBG_SeqNo_CalculateTrainPosition_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -31,18 +33,25 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* CalculateTrainPosition_Pkg::calculateBGLocations */
 extern void calculateBGLocations_CalculateTrainPosition_Pkg(
-  /* CalculateTrainPosition_Pkg::calculateBGLocations::passedBG */passedBG_T_BG_Types_Pkg *passedBG,
-  /* CalculateTrainPosition_Pkg::calculateBGLocations::lastBGs */positionedBGs_T_TrainPosition_Types_Pck *lastBGs,
-  /* CalculateTrainPosition_Pkg::calculateBGLocations::reset */kcg_bool reset,
-  /* CalculateTrainPosition_Pkg::calculateBGLocations::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
+  /* CalculateTrainPosition_Pkg::calculateBGLocations::passedBG */ passedBG_T_BG_Types_Pkg *passedBG,
+  /* CalculateTrainPosition_Pkg::calculateBGLocations::lastBGs */ positionedBGs_T_TrainPosition_Types_Pck *lastBGs,
+  /* CalculateTrainPosition_Pkg::calculateBGLocations::reset */ kcg_bool reset,
+  /* CalculateTrainPosition_Pkg::calculateBGLocations::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
   outC_calculateBGLocations_CalculateTrainPosition_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void calculateBGLocations_reset_CalculateTrainPosition_Pkg(
   outC_calculateBGLocations_CalculateTrainPosition_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void calculateBGLocations_init_CalculateTrainPosition_Pkg(
+  outC_calculateBGLocations_CalculateTrainPosition_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _calculateBGLocations_CalculateTrainPosition_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** calculateBGLocations_CalculateTrainPosition_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

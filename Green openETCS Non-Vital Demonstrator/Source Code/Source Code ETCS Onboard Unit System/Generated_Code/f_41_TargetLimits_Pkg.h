@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _f_41_TargetLimits_Pkg_H_
 #define _f_41_TargetLimits_Pkg_H_
@@ -10,14 +10,16 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TargetLimits_Pkg::f_41 */
 extern V_internal_real_Type_SDM_Types_Pkg f_41_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::f_41::v_in */V_internal_real_Type_SDM_Types_Pkg v_in);
+  /* TargetLimits_Pkg::f_41::v_in */ V_internal_real_Type_SDM_Types_Pkg v_in);
 
 #endif /* _f_41_TargetLimits_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** f_41_TargetLimits_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

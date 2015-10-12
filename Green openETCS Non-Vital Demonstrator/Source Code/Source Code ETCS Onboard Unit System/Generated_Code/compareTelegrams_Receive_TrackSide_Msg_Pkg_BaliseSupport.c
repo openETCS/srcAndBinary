@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::compareTelegrams */
 kcg_bool compareTelegrams_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::compareTelegrams::inTelegram1 */Telegram_T_BG_Types_Pkg *inTelegram1,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::compareTelegrams::inTelegram2 */Telegram_T_BG_Types_Pkg *inTelegram2)
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::compareTelegrams::inTelegram1 */ Telegram_T_BG_Types_Pkg *inTelegram1,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::compareTelegrams::inTelegram2 */ Telegram_T_BG_Types_Pkg *inTelegram2)
 {
   /* Receive_TrackSide_Msg_Pkg::BaliseSupport::compareTelegrams::HeaderIsEqual */
   static kcg_bool HeaderIsEqual;
@@ -20,7 +20,7 @@ kcg_bool compareTelegrams_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   HeaderIsEqual = kcg_comp_TelegramHeader_T_BG_Types_Pkg(
       &(*inTelegram1).telegramheader,
       &(*inTelegram2).telegramheader);
-  if (HeaderIsEqual) {
+  /* ck_HeaderIsEqual */ if (HeaderIsEqual) {
     isEqual = kcg_comp_CompressedPackets_T_Common_Types_Pkg(
         &(*inTelegram1).packets,
         &(*inTelegram2).packets);
@@ -31,8 +31,8 @@ kcg_bool compareTelegrams_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   return isEqual;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** compareTelegrams_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

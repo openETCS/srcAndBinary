@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _ReceiveReportParameters_ProvidePositionReport_Pkg_H_
 #define _ReceiveReportParameters_ProvidePositionReport_Pkg_H_
@@ -10,6 +10,8 @@
 #include "CheckValidityPacket58_ProvidePositionReport_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,16 +30,23 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* ProvidePositionReport_Pkg::ReceiveReportParameters */
 extern void ReceiveReportParameters_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::ReceiveReportParameters::reportedBGs */ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
-  /* ProvidePositionReport_Pkg::ReceiveReportParameters::inMessage */ReceivedMessage_T_Common_Types_Pkg *inMessage,
+  /* ProvidePositionReport_Pkg::ReceiveReportParameters::reportedBGs */ ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
+  /* ProvidePositionReport_Pkg::ReceiveReportParameters::inMessage */ ReceivedMessage_T_Common_Types_Pkg *inMessage,
   outC_ReceiveReportParameters_ProvidePositionReport_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void ReceiveReportParameters_reset_ProvidePositionReport_Pkg(
   outC_ReceiveReportParameters_ProvidePositionReport_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void ReceiveReportParameters_init_ProvidePositionReport_Pkg(
+  outC_ReceiveReportParameters_ProvidePositionReport_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _ReceiveReportParameters_ProvidePositionReport_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ReceiveReportParameters_ProvidePositionReport_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

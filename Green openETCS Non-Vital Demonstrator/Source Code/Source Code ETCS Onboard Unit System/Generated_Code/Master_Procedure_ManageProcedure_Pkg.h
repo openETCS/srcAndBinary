@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Master_Procedure_ManageProcedure_Pkg_H_
 #define _Master_Procedure_ManageProcedure_Pkg_H_
@@ -10,6 +10,8 @@
 #include "SoM_NTC_SN_SoMProcedure_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,40 +29,47 @@ typedef struct {
   kcg_bool init3;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  struct__82761 _2_fby_tmp;
-  struct__82761 fby_tmp;
+  struct_76665 /* ManageProcedure_Pkg::Master_Procedure */ _2_fby_ck_fby;
+  struct_76665 /* ManageProcedure_Pkg::Master_Procedure */ fby_ck_fby;
   SSM_ST_SM3_SM1_Awakness_of_Train /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */ SM3_state_nxt_SM1_Awakness_of_Train;
-  _4_SSM_ST_SM1 /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_state_nxt;
+  _11_SSM_ST_SM1 /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_state_nxt;
   kcg_bool /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_reset_nxt;
   kcg_bool /* ManageProcedure_Pkg::Master_Procedure::sendingPositionReport_to_RBC */ sendingPositionReport_to_RBC;
   kcg_bool /* ManageProcedure_Pkg::Master_Procedure::sendingTrainData_to_RBC */ sendingTrainData_to_RBC;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg /* 1 */ _1_Context_1;
-  outC_SoM_NTC_SN_SoMProcedure_Pkg /* 1 */ Context_1;
+  outC_SoM_NTC_SN_SoMProcedure_Pkg /* 1 */ _1_Context_1;
+  outC_SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_Master_Procedure_ManageProcedure_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* ManageProcedure_Pkg::Master_Procedure */
 extern void Master_Procedure_ManageProcedure_Pkg(
-  /* ManageProcedure_Pkg::Master_Procedure::statusDMI_from_DMI */DMI_EVC_status_T_DMI_Types_Pkg *statusDMI_from_DMI,
-  /* ManageProcedure_Pkg::Master_Procedure::Status_MA_FS_SR_OS_LS_SH_from_MA_L2_Management */kcg_bool Status_MA_FS_SR_OS_LS_SH_from_MA_L2_Management,
-  /* ManageProcedure_Pkg::Master_Procedure::systemtime */T_internal_Type_Obu_BasicTypes_Pkg systemtime,
-  /* ManageProcedure_Pkg::Master_Procedure::StatusModeandLevel_from_Level_and_Mode_Management */T_Mode_Level_Level_And_Mode_Types_Pkg *StatusModeandLevel_from_Level_and_Mode_Management,
-  /* ManageProcedure_Pkg::Master_Procedure::mobileSwStatus_p_from_MoRC */mobileSWStatus_Type_MoRC_Pck *mobileSwStatus_p_from_MoRC,
-  /* ManageProcedure_Pkg::Master_Procedure::statusRBCSessioneEstabilished_status_from_MoRC */sessionStatus_Type_Radio_Types_Pkg statusRBCSessioneEstabilished_status_from_MoRC,
-  /* ManageProcedure_Pkg::Master_Procedure::cabStatus_from_TIU */TIU_trainStatus_T_TIU_Types_Pkg *cabStatus_from_TIU,
-  /* ManageProcedure_Pkg::Master_Procedure::statusValid_Position_from_Position_Calculation */kcg_bool statusValid_Position_from_Position_Calculation,
-  /* ManageProcedure_Pkg::Master_Procedure::status_DMIlevel_from_DMI */DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg *status_DMIlevel_from_DMI,
-  /* ManageProcedure_Pkg::Master_Procedure::LevelValid_from_Level_and_Mode_Management */kcg_bool LevelValid_from_Level_and_Mode_Management,
+  /* ManageProcedure_Pkg::Master_Procedure::statusDMI_from_DMI */ DMI_EVC_status_T_DMI_Types_Pkg *statusDMI_from_DMI,
+  /* ManageProcedure_Pkg::Master_Procedure::Status_MA_FS_SR_OS_LS_SH_from_MA_L2_Management */ kcg_bool Status_MA_FS_SR_OS_LS_SH_from_MA_L2_Management,
+  /* ManageProcedure_Pkg::Master_Procedure::systemtime */ T_internal_Type_Obu_BasicTypes_Pkg systemtime,
+  /* ManageProcedure_Pkg::Master_Procedure::StatusModeandLevel_from_Level_and_Mode_Management */ T_Mode_Level_Level_And_Mode_Types_Pkg *StatusModeandLevel_from_Level_and_Mode_Management,
+  /* ManageProcedure_Pkg::Master_Procedure::mobileSwStatus_p_from_MoRC */ mobileSWStatus_Type_MoRC_Pck *mobileSwStatus_p_from_MoRC,
+  /* ManageProcedure_Pkg::Master_Procedure::statusRBCSessioneEstabilished_status_from_MoRC */ sessionStatus_Type_Radio_Types_Pkg statusRBCSessioneEstabilished_status_from_MoRC,
+  /* ManageProcedure_Pkg::Master_Procedure::cabStatus_from_TIU */ TIU_trainStatus_T_TIU_Types_Pkg *cabStatus_from_TIU,
+  /* ManageProcedure_Pkg::Master_Procedure::statusValid_Position_from_Position_Calculation */ kcg_bool statusValid_Position_from_Position_Calculation,
+  /* ManageProcedure_Pkg::Master_Procedure::status_DMIlevel_from_DMI */ DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg *status_DMIlevel_from_DMI,
+  /* ManageProcedure_Pkg::Master_Procedure::LevelValid_from_Level_and_Mode_Management */ kcg_bool LevelValid_from_Level_and_Mode_Management,
   outC_Master_Procedure_ManageProcedure_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Master_Procedure_reset_ManageProcedure_Pkg(
   outC_Master_Procedure_ManageProcedure_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void Master_Procedure_init_ManageProcedure_Pkg(
+  outC_Master_Procedure_ManageProcedure_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Master_Procedure_ManageProcedure_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Master_Procedure_ManageProcedure_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

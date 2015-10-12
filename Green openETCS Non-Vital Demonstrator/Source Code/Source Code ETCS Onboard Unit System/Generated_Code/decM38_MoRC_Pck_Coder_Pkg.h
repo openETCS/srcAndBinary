@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _decM38_MoRC_Pck_Coder_Pkg_H_
 #define _decM38_MoRC_Pck_Coder_Pkg_H_
@@ -9,14 +9,16 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* MoRC_Pck::Coder_Pkg::decM38 */
 extern kcg_bool decM38_MoRC_Pck_Coder_Pkg(
-  /* MoRC_Pck::Coder_Pkg::decM38::inMessage */genMessage_T_MoRC_Pck *inMessage);
+  /* MoRC_Pck::Coder_Pkg::decM38::inMessage */ msgFromTrack_T_RCM_MsgTypes_Pkg *inMessage);
 
 #endif /* _decM38_MoRC_Pck_Coder_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** decM38_MoRC_Pck_Coder_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

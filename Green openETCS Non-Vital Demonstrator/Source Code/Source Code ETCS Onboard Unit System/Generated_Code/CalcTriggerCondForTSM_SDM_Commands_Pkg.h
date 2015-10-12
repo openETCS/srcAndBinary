@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _CalcTriggerCondForTSM_SDM_Commands_Pkg_H_
 #define _CalcTriggerCondForTSM_SDM_Commands_Pkg_H_
@@ -12,19 +12,21 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* SDM_Commands_Pkg::CalcTriggerCondForTSM */
 extern void CalcTriggerCondForTSM_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::speeds */Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::mrdt */Target_real_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::floiIsSB1 */kcg_bool floiIsSB1,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::triggerConds */TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds);
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::mrdt */ Target_T_TargetManagement_types *mrdt,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::floiIsSB1 */ kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::triggerConds */ TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds);
 
 #endif /* _CalcTriggerCondForTSM_SDM_Commands_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcTriggerCondForTSM_SDM_Commands_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

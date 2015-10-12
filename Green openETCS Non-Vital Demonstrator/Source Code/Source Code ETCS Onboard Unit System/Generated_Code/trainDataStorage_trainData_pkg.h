@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _trainDataStorage_trainData_pkg_H_
 #define _trainDataStorage_trainData_pkg_H_
@@ -10,6 +10,8 @@
 #include "storeTIUData_trainData_pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,20 +29,27 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* trainData_pkg::trainDataStorage */
 extern void trainDataStorage_trainData_pkg(
-  /* trainData_pkg::trainDataStorage::reset */kcg_bool reset,
-  /* trainData_pkg::trainDataStorage::trainDatafromTIU */trainData_T_TIU_Types_Pkg *trainDatafromTIU,
-  /* trainData_pkg::trainDataStorage::trainDatafromDriver */DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *trainDatafromDriver,
-  /* trainData_pkg::trainDataStorage::trainDataAckfromDriver */DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *trainDataAckfromDriver,
-  /* trainData_pkg::trainDataStorage::actualStatus */trainDataStatus_T_trainData_Types_pkg *actualStatus,
-  /* trainData_pkg::trainDataStorage::eventsForTrainData */trainData_Events_T_trainData_Types_pkg *eventsForTrainData,
+  /* trainData_pkg::trainDataStorage::reset */ kcg_bool reset,
+  /* trainData_pkg::trainDataStorage::trainDatafromTIU */ trainData_T_TIU_Types_Pkg *trainDatafromTIU,
+  /* trainData_pkg::trainDataStorage::trainDatafromDriver */ DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *trainDatafromDriver,
+  /* trainData_pkg::trainDataStorage::trainDataAckfromDriver */ DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *trainDataAckfromDriver,
+  /* trainData_pkg::trainDataStorage::actualStatus */ trainDataStatus_T_trainData_Types_pkg *actualStatus,
+  /* trainData_pkg::trainDataStorage::eventsForTrainData */ trainData_Events_T_trainData_Types_pkg *eventsForTrainData,
   outC_trainDataStorage_trainData_pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void trainDataStorage_reset_trainData_pkg(
   outC_trainDataStorage_trainData_pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void trainDataStorage_init_trainData_pkg(
+  outC_trainDataStorage_trainData_pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _trainDataStorage_trainData_pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** trainDataStorage_trainData_pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

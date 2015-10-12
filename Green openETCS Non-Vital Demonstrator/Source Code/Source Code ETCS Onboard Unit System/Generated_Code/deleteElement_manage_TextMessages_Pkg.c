@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,18 @@
 
 /* manage_TextMessages_Pkg::deleteElement */
 void deleteElement_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::deleteElement::indexMAPwi */kcg_int indexMAPwi,
-  /* manage_TextMessages_Pkg::deleteElement::fromStore */DMI_TXT_MSG_status_T_DMI_Types_Pkg *fromStore,
-  /* manage_TextMessages_Pkg::deleteElement::inMessageID */DMI_TextMessage_ID_T_DMI_Types_Pkg inMessageID,
-  /* manage_TextMessages_Pkg::deleteElement::continue */kcg_bool *_1_continue,
-  /* manage_TextMessages_Pkg::deleteElement::toStore */DMI_TXT_MSG_status_T_DMI_Types_Pkg *toStore)
+  /* manage_TextMessages_Pkg::deleteElement::indexMAPwi */ kcg_int indexMAPwi,
+  /* manage_TextMessages_Pkg::deleteElement::fromStore */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *fromStore,
+  /* manage_TextMessages_Pkg::deleteElement::inMessageID */ DMI_TextMessage_ID_T_DMI_Types_Pkg inMessageID,
+  /* manage_TextMessages_Pkg::deleteElement::continue */ kcg_bool *_1_continue,
+  /* manage_TextMessages_Pkg::deleteElement::toStore */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *toStore)
 {
   /* manage_TextMessages_Pkg::deleteElement::deleteIt */
   static kcg_bool deleteIt;
   
   deleteIt = (*fromStore).valid & ((*fromStore).dmi_textMessageID ==
       inMessageID);
-  if (deleteIt) {
+  /* ck_deleteIt */ if (deleteIt) {
     *_1_continue = kcg_false;
     kcg_copy_DMI_TXT_MSG_status_T_DMI_Types_Pkg(
       toStore,
@@ -33,8 +33,8 @@ void deleteElement_manage_TextMessages_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** deleteElement_manage_TextMessages_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

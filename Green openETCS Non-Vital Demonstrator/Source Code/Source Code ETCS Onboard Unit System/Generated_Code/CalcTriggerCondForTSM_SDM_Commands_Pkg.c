@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,24 @@
 
 /* SDM_Commands_Pkg::CalcTriggerCondForTSM */
 void CalcTriggerCondForTSM_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::speeds */Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::mrdt */Target_real_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::floiIsSB1 */kcg_bool floiIsSB1,
-  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::triggerConds */TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::mrdt */ Target_T_TargetManagement_types *mrdt,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::floiIsSB1 */ kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM::triggerConds */ TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
 {
-  static array_bool_14 tmp1;
-  static array_bool_14 tmp;
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM */
+  static MyArray_SDM_Commands_Pkg tmp1;
+  /* SDM_Commands_Pkg::CalcTriggerCondForTSM */
+  static MyArray_SDM_Commands_Pkg tmp;
   static kcg_int i;
   /* SDM_Commands_Pkg::CalcTriggerCondForTSM::_L12 */
   static TSM_triggerCond_T_SDM_Commands_Pkg _L12;
   /* SDM_Commands_Pkg::CalcTriggerCondForTSM::_L13 */
-  static array_bool_14 _L13;
+  static MyArray_SDM_Commands_Pkg _L13;
   
-  if ((EoA_TargetManagement_types == (*mrdt).targetType) |
+  /* 1 */ if ((EoA_TargetManagement_types == (*mrdt).targetType) |
     ((*mrdt).targetType == SvL_TargetManagement_types)) {
     /* 1 */ TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg(speeds, &_L12);
   }
@@ -84,8 +86,8 @@ void CalcTriggerCondForTSM_SDM_Commands_Pkg(
   (*triggerConds).t14 = _L13[13];
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcTriggerCondForTSM_SDM_Commands_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

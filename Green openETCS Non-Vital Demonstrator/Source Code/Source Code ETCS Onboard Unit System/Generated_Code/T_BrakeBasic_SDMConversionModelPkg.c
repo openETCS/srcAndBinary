@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,26 @@
 
 /* SDMConversionModelPkg::T_BrakeBasic */
 T_internal_real_Type_SDM_Types_Pkg T_BrakeBasic_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::T_BrakeBasic::coeff */coeff_BrakeBasic_t_SDMConversionModelPkg *coeff,
-  /* SDMConversionModelPkg::T_BrakeBasic::trainLength */L_internal_real_Type_SDM_Types_Pkg trainLength)
+  /* SDMConversionModelPkg::T_BrakeBasic::coeff */ coeff_BrakeBasic_t_SDMConversionModelPkg *coeff,
+  /* SDMConversionModelPkg::T_BrakeBasic::trainLength */ L_internal_real_Type_SDM_Types_Pkg trainLength)
 {
-  static L_internal_real_Type_SDM_Types_Pkg tmp;
   /* SDMConversionModelPkg::T_BrakeBasic::_L13 */
   static kcg_real _L13;
   /* SDMConversionModelPkg::T_BrakeBasic::T_BB */
   static T_internal_real_Type_SDM_Types_Pkg T_BB;
   
-  if (trainLength < cBrakePositionLengthMin_SDMConversionModelPkg) {
-    tmp = cBrakePositionLengthMin_SDMConversionModelPkg;
+  /* 1 */ if (trainLength < cBrakePositionLengthMin_SDMConversionModelPkg) {
+    _L13 = cBrakePositionLengthMin_SDMConversionModelPkg / 100.0;
   }
   else {
-    tmp = trainLength;
+    _L13 = trainLength / 100.0;
   }
-  _L13 = tmp / 100.0;
   T_BB = (*coeff)[0] + _L13 * (*coeff)[1] + _L13 * _L13 * (*coeff)[2];
   return T_BB;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** T_BrakeBasic_SDMConversionModelPkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

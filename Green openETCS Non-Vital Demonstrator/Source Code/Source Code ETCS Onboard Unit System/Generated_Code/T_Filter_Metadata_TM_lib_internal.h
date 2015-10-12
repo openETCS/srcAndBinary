@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _T_Filter_Metadata_TM_lib_internal_H_
 #define _T_Filter_Metadata_TM_lib_internal_H_
@@ -11,17 +11,19 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TM_lib_internal::T_Filter_Metadata */
 extern kcg_bool T_Filter_Metadata_TM_lib_internal(
-  /* TM_lib_internal::T_Filter_Metadata::Metadata_from_track */kcg_int Metadata_from_track,
-  /* TM_lib_internal::T_Filter_Metadata::Metadata_looked_for */kcg_int Metadata_looked_for,
-  /* TM_lib_internal::T_Filter_Metadata::F_version */kcg_bool F_version,
-  /* TM_lib_internal::T_Filter_Metadata::F_id */kcg_bool F_id);
+  /* TM_lib_internal::T_Filter_Metadata::Metadata_from_track */ kcg_int Metadata_from_track,
+  /* TM_lib_internal::T_Filter_Metadata::Metadata_looked_for */ kcg_int Metadata_looked_for,
+  /* TM_lib_internal::T_Filter_Metadata::F_version */ kcg_bool F_version,
+  /* TM_lib_internal::T_Filter_Metadata::F_id */ kcg_bool F_id);
 
 #endif /* _T_Filter_Metadata_TM_lib_internal_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** T_Filter_Metadata_TM_lib_internal.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

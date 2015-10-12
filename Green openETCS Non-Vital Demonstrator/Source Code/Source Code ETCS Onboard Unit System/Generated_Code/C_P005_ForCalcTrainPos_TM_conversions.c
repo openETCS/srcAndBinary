@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* TM_conversions::C_P005_ForCalcTrainPos */
 void C_P005_ForCalcTrainPos_TM_conversions(
-  /* TM_conversions::C_P005_ForCalcTrainPos::P005_in */P005_OBU_T_TM *P005_in,
-  /* TM_conversions::C_P005_ForCalcTrainPos::LRBG */NID_LRBG LRBG,
-  /* TM_conversions::C_P005_ForCalcTrainPos::NID_C_onboard */NID_C NID_C_onboard,
-  /* TM_conversions::C_P005_ForCalcTrainPos::LinkedBGsOUT */LinkedBGs_T_BG_Types_Pkg *LinkedBGsOUT)
+  /* TM_conversions::C_P005_ForCalcTrainPos::P005_in */ P005_OBU_T_TM *P005_in,
+  /* TM_conversions::C_P005_ForCalcTrainPos::LRBG */ NID_LRBG LRBG,
+  /* TM_conversions::C_P005_ForCalcTrainPos::NID_C_onboard */ NID_C NID_C_onboard,
+  /* TM_conversions::C_P005_ForCalcTrainPos::LinkedBGsOUT */ LinkedBGs_T_BG_Types_Pkg *LinkedBGsOUT)
 {
   static kcg_int i;
   
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < 33; i++) {
     /* 1 */
     C_P005_LinkedBGs_TM_conversions(
       LRBG,
@@ -28,8 +28,8 @@ void C_P005_ForCalcTrainPos_TM_conversions(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P005_ForCalcTrainPos_TM_conversions.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,17 @@
 
 /* trainData_pkg::packetsFor129 */
 void packetsFor129_trainData_pkg(
-  /* trainData_pkg::packetsFor129::trainData */trainData_T_TIU_Types_Pkg *trainData,
-  /* trainData_pkg::packetsFor129::p0_positionReport */PT0_PositionReport_T_Packet_TrainTypes_Pkg *p0_positionReport,
-  /* trainData_pkg::packetsFor129::p1_positionReport */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *p1_positionReport,
-  /* trainData_pkg::packetsFor129::packetsForRBC */outPackets_T_Common_Types_Pkg *packetsForRBC)
+  /* trainData_pkg::packetsFor129::trainData */ trainData_T_TIU_Types_Pkg *trainData,
+  /* trainData_pkg::packetsFor129::p0_positionReport */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *p0_positionReport,
+  /* trainData_pkg::packetsFor129::p1_positionReport */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *p1_positionReport,
+  /* trainData_pkg::packetsFor129::packetsForRBC */ outPackets_T_Common_Types_Pkg *packetsForRBC)
 {
   kcg_copy_outPackets_T_Common_Types_Pkg(
     packetsForRBC,
     (outPackets_T_Common_Types_Pkg *) &cNoPackets_trainData_pkg);
   (*packetsForRBC).p11.valid = kcg_true;
-  (*packetsForRBC).p11.NC_CDTRAIN = (*trainData).cantDeficientcy;
-  (*packetsForRBC).p11.NC_TRAIN = (*trainData).trainCategory;
+  (*packetsForRBC).p11.nc_cdtrain = (*trainData).cantDeficientcy;
+  (*packetsForRBC).p11.nc_train = (*trainData).trainCategory;
   (*packetsForRBC).p11.l_train = (*trainData).trainLength;
   (*packetsForRBC).p11.v_maxtrain = (*trainData).maxTrainSpeed;
   (*packetsForRBC).p11.m_loadinggoage = (*trainData).loadingGauge;
@@ -43,8 +43,8 @@ void packetsFor129_trainData_pkg(
     p1_positionReport);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** packetsFor129_trainData_pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

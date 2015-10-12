@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _count_down_digital_H_
 #define _count_down_digital_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -25,15 +27,21 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* digital::count_down */
 extern void count_down_digital(
-  /* digital::count_down::Reset */kcg_bool Reset,
-  /* digital::count_down::N */kcg_int N,
+  /* digital::count_down::Reset */ kcg_bool Reset,
+  /* digital::count_down::N */ kcg_int N,
   outC_count_down_digital *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void count_down_reset_digital(outC_count_down_digital *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void count_down_init_digital(outC_count_down_digital *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _count_down_digital_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** count_down_digital.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

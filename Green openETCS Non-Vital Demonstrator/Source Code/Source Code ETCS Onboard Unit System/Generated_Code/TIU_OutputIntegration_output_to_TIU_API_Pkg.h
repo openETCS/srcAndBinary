@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _TIU_OutputIntegration_output_to_TIU_API_Pkg_H_
 #define _TIU_OutputIntegration_output_to_TIU_API_Pkg_H_
@@ -10,6 +10,8 @@
 #include "handleTraction_output_to_TIU_API_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,22 +29,29 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* output_to_TIU_API_Pkg::TIU_OutputIntegration */
 extern void TIU_OutputIntegration_output_to_TIU_API_Pkg(
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_IsolationStatus */Isolation_Status_T_TIU_Types_Pkg *in_IsolationStatus,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::SpeedSup_brakeCommand */Brake_command_T_TIU_Types_Pkg *SpeedSup_brakeCommand,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_brake_inhibition */Brake_inhibition_command_T_TIU_Types_Pkg *in_brake_inhibition,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_train_commands */Type_I_train_commands_T_TIU_Types_Pkg *in_train_commands,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_change_traction_system */Change_traction_system_T_TIU_Types_Pkg *in_change_traction_system,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_passenger_door_control_info */Passenger_door_control_info_T_TIU_Types_Pkg *in_passenger_door_control_info,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_change_of_allowed_current_consumption */Change_of_allowed_current_consumption_T_TIU_Types_Pkg *in_change_of_allowed_current_consumption,
-  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::inModeAndLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_IsolationStatus */ Isolation_Status_T_TIU_Types_Pkg *in_IsolationStatus,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::SpeedSup_brakeCommand */ Brake_command_T_TIU_Types_Pkg *SpeedSup_brakeCommand,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_brake_inhibition */ Brake_inhibition_command_T_TIU_Types_Pkg *in_brake_inhibition,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_train_commands */ Type_I_train_commands_T_TIU_Types_Pkg *in_train_commands,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_change_traction_system */ Change_traction_system_T_TIU_Types_Pkg *in_change_traction_system,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_passenger_door_control_info */ Passenger_door_control_info_T_TIU_Types_Pkg *in_passenger_door_control_info,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::in_change_of_allowed_current_consumption */ Change_of_allowed_current_consumption_T_TIU_Types_Pkg *in_change_of_allowed_current_consumption,
+  /* output_to_TIU_API_Pkg::TIU_OutputIntegration::inModeAndLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
   outC_TIU_OutputIntegration_output_to_TIU_API_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void TIU_OutputIntegration_reset_output_to_TIU_API_Pkg(
   outC_TIU_OutputIntegration_output_to_TIU_API_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void TIU_OutputIntegration_init_output_to_TIU_API_Pkg(
+  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _TIU_OutputIntegration_output_to_TIU_API_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** TIU_OutputIntegration_output_to_TIU_API_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,33 +1,37 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _surplusTractionDeltas_TargetLimits_Pkg_H_
 #define _surplusTractionDeltas_TargetLimits_Pkg_H_
 
 #include "kcg_types.h"
+#include "TransformV_intToV_real_SDM_Types_Pkg.h"
 #include "limitPositive_SDM_Types_Pkg.h"
+#include "TransformA_intToA_real_SDM_Types_Pkg.h"
 #include "splitT_bs_TargetLimits_Pkg.h"
 #include "calcBec_TargetLimits_Pkg.h"
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TargetLimits_Pkg::surplusTractionDeltas */
 extern void surplusTractionDeltas_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::surplusTractionDeltas::trainData_int */trainData_internal_t_SDM_Types_Pkg *trainData_int,
-  /* TargetLimits_Pkg::surplusTractionDeltas::odometry */Odometry_real_T_SDM_Types_Pkg *odometry,
-  /* TargetLimits_Pkg::surplusTractionDeltas::T_b */t_Brake_t_SDMConversionModelPkg *T_b,
-  /* TargetLimits_Pkg::surplusTractionDeltas::V_target */V_internal_real_Type_SDM_Types_Pkg V_target,
-  /* TargetLimits_Pkg::surplusTractionDeltas::T_part */T_trac_t_TargetLimits_Pkg *T_part,
-  /* TargetLimits_Pkg::surplusTractionDeltas::bec */bec_t_TargetLimits_Pkg *bec,
-  /* TargetLimits_Pkg::surplusTractionDeltas::V_est */V_internal_real_Type_SDM_Types_Pkg *V_est,
-  /* TargetLimits_Pkg::surplusTractionDeltas::T */T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::surplusTractionDeltas::V_ura */V_internal_real_Type_SDM_Types_Pkg *V_ura);
+  /* TargetLimits_Pkg::surplusTractionDeltas::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int,
+  /* TargetLimits_Pkg::surplusTractionDeltas::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TargetLimits_Pkg::surplusTractionDeltas::T_b */ t_Brake_t_SDMModelPkg *T_b,
+  /* TargetLimits_Pkg::surplusTractionDeltas::V_target */ V_internal_real_Type_SDM_Types_Pkg V_target,
+  /* TargetLimits_Pkg::surplusTractionDeltas::T_part */ T_trac_t_TargetLimits_Pkg *T_part,
+  /* TargetLimits_Pkg::surplusTractionDeltas::bec */ bec_t_TargetLimits_Pkg *bec,
+  /* TargetLimits_Pkg::surplusTractionDeltas::V_est */ V_internal_real_Type_SDM_Types_Pkg *V_est,
+  /* TargetLimits_Pkg::surplusTractionDeltas::T */ T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::surplusTractionDeltas::V_ura */ V_internal_real_Type_SDM_Types_Pkg *V_ura);
 
 #endif /* _surplusTractionDeltas_TargetLimits_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** surplusTractionDeltas_TargetLimits_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

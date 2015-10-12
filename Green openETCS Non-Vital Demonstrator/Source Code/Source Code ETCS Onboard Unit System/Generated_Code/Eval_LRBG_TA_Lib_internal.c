@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TA_Lib_internal::Eval_LRBG */
 kcg_int Eval_LRBG_TA_Lib_internal(
-  /* TA_Lib_internal::Eval_LRBG::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn)
+  /* TA_Lib_internal::Eval_LRBG::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn)
 {
   /* TA_Lib_internal::Eval_LRBG::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -19,13 +19,13 @@ kcg_int Eval_LRBG_TA_Lib_internal(
   static kcg_int LRBG;
   
   IfBlock1_clock = (*MessageIn).source == ENUM_MsgSource_Balise_TA_Lib_internal;
-  if (IfBlock1_clock) {
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     LRBG = (*MessageIn).BG_Common_Header.nid_bg;
   }
   else {
     else_clock_IfBlock1 = (*MessageIn).source ==
       ENUM_MsgSource_Euroradio_TA_Lib_internal;
-    if (else_clock_IfBlock1) {
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
       LRBG = (*MessageIn).Radio_Common_Header.nid_lrbg;
     }
     else {
@@ -35,8 +35,8 @@ kcg_int Eval_LRBG_TA_Lib_internal(
   return LRBG;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Eval_LRBG_TA_Lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

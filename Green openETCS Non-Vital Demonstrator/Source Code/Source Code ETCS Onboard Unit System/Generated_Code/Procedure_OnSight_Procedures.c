@@ -1,27 +1,45 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Procedure_OnSight_Procedures.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void Procedure_OnSight_init_Procedures(outC_Procedure_OnSight_Procedures *outC)
+{
+  outC->Condition15 = kcg_true;
+  outC->Condition34 = kcg_true;
+  outC->Condition40 = kcg_true;
+  outC->Condition73 = kcg_true;
+  outC->Ack_OS_Req_To_Driver = kcg_true;
+  outC->Service_Brake_Command = kcg_true;
+  /* 1 */ Procedure_With_Mode_Profile_init_Procedures(&outC->Context_1);
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Procedure_OnSight_reset_Procedures(outC_Procedure_OnSight_Procedures *outC)
 {
   /* 1 */ Procedure_With_Mode_Profile_reset_Procedures(&outC->Context_1);
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* Procedures::Procedure_OnSight */
 void Procedure_OnSight_Procedures(
-  /* Procedures::Procedure_OnSight::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
-  /* Procedures::Procedure_OnSight::Driver_Ack_OS */kcg_bool Driver_Ack_OS,
-  /* Procedures::Procedure_OnSight::Mode_Profile_On_Board */T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
-  /* Procedures::Procedure_OnSight::Train_Position */trainPosition_T_TrainPosition_Types_Pck *Train_Position,
-  /* Procedures::Procedure_OnSight::Train_Speed */Speed_T_Obu_BasicTypes_Pkg Train_Speed,
+  /* Procedures::Procedure_OnSight::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
+  /* Procedures::Procedure_OnSight::Driver_Ack_OS */ kcg_bool Driver_Ack_OS,
+  /* Procedures::Procedure_OnSight::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Procedures::Procedure_OnSight::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Procedures::Procedure_OnSight::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
   outC_Procedure_OnSight_Procedures *outC)
 {
+  /* Procedures::Procedure_OnSight */
   static kcg_bool tmp1;
+  /* Procedures::Procedure_OnSight */
   static kcg_bool tmp;
   /* Procedures::Procedure_OnSight::_L529 */
   static kcg_bool _L529;
@@ -35,43 +53,46 @@ void Procedure_OnSight_Procedures(
     Profile_LS_Level_And_Mode_Types_Pkg,
     Train_Speed,
     Train_Position,
-    &tmp,
     &tmp1,
+    &tmp,
     &_L529,
     &_L537);
   switch (Current_Mode) {
-    case SN_Level_And_Mode_Types_Pkg :
-      tmp = kcg_false;
-      tmp1 = kcg_true;
-      break;
-    case PT_Level_And_Mode_Types_Pkg :
-      tmp = kcg_false;
-      tmp1 = kcg_false;
-      break;
-    case UN_Level_And_Mode_Types_Pkg :
-      tmp = kcg_false;
-      tmp1 = kcg_true;
-      break;
-    case SR_Level_And_Mode_Types_Pkg :
-      tmp = kcg_false;
+    case FS_Level_And_Mode_Types_Pkg :
       tmp1 = kcg_true;
       break;
     case LS_Level_And_Mode_Types_Pkg :
-      tmp = kcg_true;
       tmp1 = kcg_true;
       break;
-    case FS_Level_And_Mode_Types_Pkg :
-      tmp = kcg_true;
+    case SR_Level_And_Mode_Types_Pkg :
       tmp1 = kcg_true;
+      break;
+    case SN_Level_And_Mode_Types_Pkg :
+      tmp1 = kcg_true;
+      break;
+    case UN_Level_And_Mode_Types_Pkg :
+      tmp1 = kcg_true;
+      break;
+    case PT_Level_And_Mode_Types_Pkg :
+      tmp1 = kcg_false;
       break;
     case SB_Level_And_Mode_Types_Pkg :
-      tmp = kcg_false;
       tmp1 = kcg_false;
       break;
     
     default :
-      tmp = kcg_false;
       tmp1 = kcg_false;
+  }
+  switch (Current_Mode) {
+    case FS_Level_And_Mode_Types_Pkg :
+      tmp = kcg_true;
+      break;
+    case LS_Level_And_Mode_Types_Pkg :
+      tmp = kcg_true;
+      break;
+    
+    default :
+      tmp = kcg_false;
   }
   /* 1 */
   Procedure_With_Mode_Profile_Procedures(
@@ -93,8 +114,8 @@ void Procedure_OnSight_Procedures(
   outC->Condition73 = !_L537 & outC->Context_1.Condition_73_74;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_OnSight_Procedures.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* InformationFilter_Pkg::Common::SetValidFlag */
 void SetValidFlag_InformationFilter_Pkg_Common(
-  /* InformationFilter_Pkg::Common::SetValidFlag::inValidFlag */kcg_bool inValidFlag,
-  /* InformationFilter_Pkg::Common::SetValidFlag::inPacket */MetadataElement_T_Common_Types_Pkg *inPacket,
-  /* InformationFilter_Pkg::Common::SetValidFlag::outPacket */MetadataElement_T_Common_Types_Pkg *outPacket)
+  /* InformationFilter_Pkg::Common::SetValidFlag::inValidFlag */ kcg_bool inValidFlag,
+  /* InformationFilter_Pkg::Common::SetValidFlag::inPacket */ MetadataElement_T_Common_Types_Pkg *inPacket,
+  /* InformationFilter_Pkg::Common::SetValidFlag::outPacket */ MetadataElement_T_Common_Types_Pkg *outPacket)
 {
   (*outPacket).nid_packet = (*inPacket).nid_packet;
   (*outPacket).q_dir = (*inPacket).q_dir;
@@ -20,8 +20,8 @@ void SetValidFlag_InformationFilter_Pkg_Common(
   (*outPacket).endAddress = (*inPacket).endAddress;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** SetValidFlag_InformationFilter_Pkg_Common.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

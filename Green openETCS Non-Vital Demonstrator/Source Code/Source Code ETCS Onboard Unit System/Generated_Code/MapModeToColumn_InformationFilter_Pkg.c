@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* InformationFilter_Pkg::MapModeToColumn */
 kcg_int MapModeToColumn_InformationFilter_Pkg(
-  /* InformationFilter_Pkg::MapModeToColumn::inMode */M_MODE inMode)
+  /* InformationFilter_Pkg::MapModeToColumn::inMode */ M_MODE inMode)
 {
   /* InformationFilter_Pkg::MapModeToColumn::outColumn */
   static kcg_int outColumn;
@@ -71,8 +71,8 @@ kcg_int MapModeToColumn_InformationFilter_Pkg(
   return outColumn;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** MapModeToColumn_InformationFilter_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

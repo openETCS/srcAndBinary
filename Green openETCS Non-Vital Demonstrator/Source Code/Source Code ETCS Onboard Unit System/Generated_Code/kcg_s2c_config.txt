@@ -1,1 +1,0 @@
--target C -O 3 -static -name_length 200 -significance_length 200 -user_config ./user_macros.h -node EVC D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/scade_model_without_unused.scade -target_dir D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases 

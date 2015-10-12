@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
 #define _Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
@@ -10,16 +10,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration */
 extern void Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration::metaData */Metadata_T_Common_Types_Pkg *metaData,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration::telegram */Telegram_T_BG_Types_Pkg *telegram,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration::mergedMetaData */Metadata_T_Common_Types_Pkg *mergedMetaData);
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration::metaData */ Metadata_T_Common_Types_Pkg *metaData,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration::telegram */ Telegram_T_BG_Types_Pkg *telegram,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaDataIteration::mergedMetaData */ Metadata_T_Common_Types_Pkg *mergedMetaData);
 
 #endif /* _Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

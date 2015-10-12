@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Procedure_With_Mode_Profile_Procedures_H_
 #define _Procedure_With_Mode_Profile_Procedures_H_
@@ -10,6 +10,8 @@
 #include "Counter_pwlinear_int.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -39,23 +41,30 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::Procedure_With_Mode_Profile */
 extern void Procedure_With_Mode_Profile_Procedures(
-  /* Procedures::Procedure_With_Mode_Profile::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
-  /* Procedures::Procedure_With_Mode_Profile::Driver_Ack_Mode_Profile */kcg_bool Driver_Ack_Mode_Profile,
-  /* Procedures::Procedure_With_Mode_Profile::Mode_Profile_On_Board */T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
-  /* Procedures::Procedure_With_Mode_Profile::Procedure_Possible */kcg_bool Procedure_Possible,
-  /* Procedures::Procedure_With_Mode_Profile::Profile_Mode */T_MA_Level_And_Mode_Types_Pkg Profile_Mode,
-  /* Procedures::Procedure_With_Mode_Profile::Selected_Mode */T_Mode_Level_And_Mode_Types_Pkg Selected_Mode,
-  /* Procedures::Procedure_With_Mode_Profile::Supervision_Modes */kcg_bool Supervision_Modes,
-  /* Procedures::Procedure_With_Mode_Profile::Train_Position */trainPosition_T_TrainPosition_Types_Pck *Train_Position,
-  /* Procedures::Procedure_With_Mode_Profile::Train_Speed */Speed_T_Obu_BasicTypes_Pkg Train_Speed,
+  /* Procedures::Procedure_With_Mode_Profile::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
+  /* Procedures::Procedure_With_Mode_Profile::Driver_Ack_Mode_Profile */ kcg_bool Driver_Ack_Mode_Profile,
+  /* Procedures::Procedure_With_Mode_Profile::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Procedures::Procedure_With_Mode_Profile::Procedure_Possible */ kcg_bool Procedure_Possible,
+  /* Procedures::Procedure_With_Mode_Profile::Profile_Mode */ T_MA_Level_And_Mode_Types_Pkg Profile_Mode,
+  /* Procedures::Procedure_With_Mode_Profile::Selected_Mode */ T_Mode_Level_And_Mode_Types_Pkg Selected_Mode,
+  /* Procedures::Procedure_With_Mode_Profile::Supervision_Modes */ kcg_bool Supervision_Modes,
+  /* Procedures::Procedure_With_Mode_Profile::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Procedures::Procedure_With_Mode_Profile::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
   outC_Procedure_With_Mode_Profile_Procedures *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Procedure_With_Mode_Profile_reset_Procedures(
   outC_Procedure_With_Mode_Profile_Procedures *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void Procedure_With_Mode_Profile_init_Procedures(
+  outC_Procedure_With_Mode_Profile_Procedures *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Procedure_With_Mode_Profile_Procedures_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_With_Mode_Profile_Procedures.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

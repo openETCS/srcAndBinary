@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -70,8 +70,8 @@ extern const passedBG_T_BG_Types_Pkg cEmptyPassedBG;
 /* cEmtpyIsolationStatus */
 extern const Isolation_Status_T_TIU_Types_Pkg cEmtpyIsolationStatus;
 
-/* cReleaseBrakeCommand */
-extern const Brake_command_T_TIU_Types_Pkg cReleaseBrakeCommand;
+/* cEmptyData_From_STM */
+extern const T_Data_From_STM_Level_And_Mode_Types_Pkg cEmptyData_From_STM;
 
 /* cNoRadioCmd */
 extern const radioManagementMessage_T_Common_Types_Pkg cNoRadioCmd;
@@ -103,6 +103,9 @@ extern const PT0_PositionReport_T_Packet_TrainTypes_Pkg cNoP0;
 /* cNoP1 */
 extern const PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg cNoP1;
 
+/* cNoPacketsForML */
+extern const T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg cNoPacketsForML;
+
 /* Level_And_Mode_Types_Pkg::C_Cycle_Duration */
 #define C_Cycle_Duration_Level_And_Mode_Types_Pkg 300
 
@@ -112,11 +115,11 @@ extern const PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg cNoP1;
 /* InputManagement::cImmediateAck_Distance */
 #define cImmediateAck_Distance_InputManagement 32767
 
-/* Level_And_Mode_Types_Pkg::M_Max_TransitionInPriorityTable */
-#define M_Max_TransitionInPriorityTable_Level_And_Mode_Types_Pkg 5
+/* Level_And_Mode_Types_Pkg::M_Max_ModeProfile */
+#define M_Max_ModeProfile_Level_And_Mode_Types_Pkg 3
 
-/* Level_And_Mode_Types_Pkg::C_Immediate_transition_order_position */
-#define C_Immediate_transition_order_position_Level_And_Mode_Types_Pkg 32767
+/* Level_And_Mode_Types_Pkg::M_Max_TransitionInPriorityTable */
+#define M_Max_TransitionInPriorityTable_Level_And_Mode_Types_Pkg 7
 
 /* manage_DMI_Output_Pkg::cDefaultTrainData */
 extern const DMI_Train_Data_T_DMI_Messages_Bothways_Pkg cDefaultTrainData_manage_DMI_Output_Pkg;
@@ -361,41 +364,11 @@ extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cInitOutputToRadioAPI_AP
 /* DMI_Types_Pkg::cDMIUnknownSpeed */
 #define cDMIUnknownSpeed_DMI_Types_Pkg (- 1)
 
-/* CalcBrakingCurves_Pkg::TestcaseA_safe */
-extern const ASafe_T_CalcBrakingCurves_types TestcaseA_safe_CalcBrakingCurves_Pkg;
-
-/* CalcBrakingCurves_Pkg::TestcaseA_safe_data */
-extern const ASafe_Data_T_CalcBrakingCurves_types TestcaseA_safe_data_CalcBrakingCurves_Pkg;
-
-/* CalcBrakingCurves_Pkg::TestcaseBrakeService */
-extern const ASafe_T_CalcBrakingCurves_types TestcaseBrakeService_CalcBrakingCurves_Pkg;
-
-/* CalcBrakingCurves_Pkg::TestcaseA_safe_dist */
-extern const ASafeDistanceDefinition_T_CalcBrakingCurves_types TestcaseA_safe_dist_CalcBrakingCurves_Pkg;
-
-/* CalcBrakingCurves_Pkg::TestcaseA_safe_speed */
-extern const ASafeSpeedDefinition_T_CalcBrakingCurves_types TestcaseA_safe_speed_CalcBrakingCurves_Pkg;
-
-/* CalcBrakingCurves_Pkg::TestcaseA_BreakServiceData */
-extern const ASafe_Data_T_CalcBrakingCurves_types TestcaseA_BreakServiceData_CalcBrakingCurves_Pkg;
-
 /* TargetManagement_pkg::emptyMRSPSection */
 extern const MRSP_internal_section_T_TargetManagement_types emptyMRSPSection_TargetManagement_pkg;
 
 /* TargetManagement_pkg::emptyTarget */
 extern const Target_real_T_TargetManagement_types emptyTarget_TargetManagement_pkg;
-
-/* SDM_Types_Pkg::V_sbi_min */
-#define V_sbi_min_SDM_Types_Pkg 30.555555556
-
-/* SDM_Types_Pkg::dV_sbi_min */
-#define dV_sbi_min_SDM_Types_Pkg 1.527777778
-
-/* SDM_Types_Pkg::dV_sbi_max */
-#define dV_sbi_max_SDM_Types_Pkg 2.777777778
-
-/* SDM_Types_Pkg::V_sbi_max */
-#define V_sbi_max_SDM_Types_Pkg 58.333333333
 
 /* SDM_Types_Pkg::V_ebi_min */
 #define V_ebi_min_SDM_Types_Pkg 30.555555556
@@ -421,26 +394,32 @@ extern const Target_real_T_TargetManagement_types emptyTarget_TargetManagement_p
 /* SDM_Types_Pkg::V_warning_max */
 #define V_warning_max_SDM_Types_Pkg 38.888888889
 
+/* SDM_Types_Pkg::V_sbi_min */
+#define V_sbi_min_SDM_Types_Pkg 30.555555556
+
+/* SDM_Types_Pkg::dV_sbi_min */
+#define dV_sbi_min_SDM_Types_Pkg 1.527777778
+
+/* SDM_Types_Pkg::dV_sbi_max */
+#define dV_sbi_max_SDM_Types_Pkg 2.777777778
+
+/* SDM_Types_Pkg::V_sbi_max */
+#define V_sbi_max_SDM_Types_Pkg 58.333333333
+
 /* SDM_Types_Pkg::T_preindication */
 #define T_preindication_SDM_Types_Pkg 7.0
-
-/* SDM_Types_Pkg::T_driver */
-#define T_driver_SDM_Types_Pkg 4.0
 
 /* TargetLimits_Pkg::cMAX_Onboard_V_Release_Iterations */
 #define cMAX_Onboard_V_Release_Iterations_TargetLimits_Pkg 10
 
-/* CalcBrakingCurves_types::cMAX_BC_ARCS */
-#define cMAX_BC_ARCS_CalcBrakingCurves_types (cMAX_DISTANCE_STEPS_CalcBrakingCurves_types + cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types)
-
-/* CalcBrakingCurves_types::cMAX_DISTANCE_STEPS */
-#define cMAX_DISTANCE_STEPS_CalcBrakingCurves_types 15
-
-/* CalcBrakingCurves_types::cMAX_SPEED_VALUE_STEP */
-#define cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types 10
-
 /* SDM_Types_Pkg::T_warning */
 #define T_warning_SDM_Types_Pkg 2.0
+
+/* SDM_Types_Pkg::T_driver */
+#define T_driver_SDM_Types_Pkg 4.0
+
+/* CalcBrakingCurves_types::cMAX_BC_ARCS */
+#define cMAX_BC_ARCS_CalcBrakingCurves_types (cMAX_DISTANCE_STEPS_CalcBrakingCurves_types + cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types)
 
 /* SDMConversionModelPkg::cBrakePositionGCt */
 #define cBrakePositionGCt_SDMConversionModelPkg 0.16
@@ -471,6 +450,63 @@ extern const coeff_BrakeBasic_t_SDMConversionModelPkg cBrakePositionPECoeff_SDMC
 
 /* SDMConversionModelPkg::cBrakePositionLengthMin */
 #define cBrakePositionLengthMin_SDMConversionModelPkg 400.0
+
+/* SDMConversionModelPkg::cLKrIntLookUp */
+extern const array_int_32 cLKrIntLookUp_SDMConversionModelPkg;
+
+/* SDMConversionModelPkg::cKvIntSetLength */
+#define cKvIntSetLength_SDMConversionModelPkg cNIterMax_Packet_Types_Pkg
+
+/* SDMConversionModelPkg::cEmptyKvIntSet */
+extern const nvkvintset_T_Packet_Types_Pkg cEmptyKvIntSet_SDMConversionModelPkg;
+
+/* SDMConversionModelPkg::cBrakePercentServiceMax */
+#define cBrakePercentServiceMax_SDMConversionModelPkg 135
+
+/* SDMConversionModelPkg::cBrakePercentALookup */
+extern const array_int_6_221 cBrakePercentALookup_SDMConversionModelPkg;
+
+/* SDMConversionModelPkg::cBrakePercentV_lim */
+extern const Array04_TM cBrakePercentV_lim_SDMConversionModelPkg;
+
+/* SDMConversionModelPkg::cBrakePercentSpeedLookup */
+extern const array_int_221 cBrakePercentSpeedLookup_SDMConversionModelPkg;
+
+/* SDMConversionModelPkg::cBrakePercentSteps */
+#define cBrakePercentSteps_SDMConversionModelPkg (cBrakePercentStepsMax_SDMConversionModelPkg - cBrakePercentStepsMin_SDMConversionModelPkg + 1)
+
+/* SDMConversionModelPkg::cBrakePercentStepsMax */
+#define cBrakePercentStepsMax_SDMConversionModelPkg 250
+
+/* SDMConversionModelPkg::cBrakePercentStepsMin */
+#define cBrakePercentStepsMin_SDMConversionModelPkg 30
+
+/* SDMConversionModelPkg::cKvMergedLength */
+#define cKvMergedLength_SDMConversionModelPkg (cBrakePercentSpeedSteps_SDMConversionModelPkg + cKvIntLength_SDMConversionModelPkg)
+
+/* SDMConversionModelPkg::cKvIntLength */
+#define cKvIntLength_SDMConversionModelPkg cNIterMax_Packet_Types_Pkg
+
+/* SDMConversionModelPkg::cBrakePercentSpeedSteps */
+#define cBrakePercentSpeedSteps_SDMConversionModelPkg 6
+
+/* CalcBrakingCurves_types::cMAX_SPEED_VALUE_STEP */
+#define cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types (cNIterMax_Packet_Types_Pkg + 6 + 1)
+
+/* CalcBrakingCurves_types::cMAX_DISTANCE_STEPS */
+#define cMAX_DISTANCE_STEPS_CalcBrakingCurves_types GradientMaxSectionsTrainlengthCompensated_SDM_GradientAcceleration_types
+
+/* SDM_GradientAcceleration_types::GradientMaxSectionsTrainlengthCompensated */
+#define GradientMaxSectionsTrainlengthCompensated_SDM_GradientAcceleration_types (GradientMaxSections_TrackAtlasTypes * 2)
+
+/* SDM_Types_Pkg::A_gravity */
+#define A_gravity_SDM_Types_Pkg 981
+
+/* SDM_Types_Pkg::M_rotating_max */
+#define M_rotating_max_SDM_Types_Pkg 15
+
+/* SDM_Types_Pkg::M_rotating_min */
+#define M_rotating_min_SDM_Types_Pkg 2
 
 /* Level_And_Mode_Types_Pkg::M_Default_Transition */
 extern const T_LevelTransition_Level_And_Mode_Types_Pkg M_Default_Transition_Level_And_Mode_Types_Pkg;
@@ -679,20 +715,35 @@ extern const ModeDecisionTableType_DataDictionary_Pkg ModeDecisionTable_DataDict
 /* Common_Types_Pkg::cNoMetaDataElement */
 extern const MetadataElement_T_Common_Types_Pkg cNoMetaDataElement_Common_Types_Pkg;
 
-/* xdebugSupport_Pkg::cNoP41 */
-extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_xdebugSupport_Pkg;
+/* xdebugSupport_Pkg::cNoML */
+extern const dataCollectionForLevelTransition_T_xdebugSupport_Pkg cNoML_xdebugSupport_Pkg;
 
-/* Level_And_Mode_Types_Pkg::C_NoTrackLevelTransition */
-extern const T_Data_From_TrackForLevelChange_Level_And_Mode_Types_Pkg C_NoTrackLevelTransition_Level_And_Mode_Types_Pkg;
+/* xdebugSupport_Pkg::Default_P80_legacy */
+extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_xdebugSupport_Pkg;
+
+/* xdebugSupport_Pkg::Default_P135_legacy */
+extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_xdebugSupport_Pkg;
+
+/* xdebugSupport_Pkg::Default_P63_legacy */
+extern const P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg Default_P63_legacy_xdebugSupport_Pkg;
+
+/* xdebugSupport_Pkg::Default_P12_legacy */
+extern const P12_Level1MovementAuthorities_T_Packet_Types_Pkg Default_P12_legacy_xdebugSupport_Pkg;
 
 /* xdebugSupport_Pkg::cNoP41Element */
 extern const P41_LevelTransitionOrder_T_Packet_Types_Pkg cNoP41Element_xdebugSupport_Pkg;
 
-/* xdebugSupport_Pkg::cNoP46Element */
-extern const P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg cNoP46Element_xdebugSupport_Pkg;
+/* Id_Pkg::cp041_Level_Transition_Order */
+#define cp041_Level_Transition_Order_Id_Pkg 41
+
+/* Id_Pkg::cp046_Conditional_Level_Transition_Order */
+#define cp046_Conditional_Level_Transition_Order_Id_Pkg 46
 
 /* Common_Types_Pkg::cDefaultRM */
 extern const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg;
+
+/* xdebugSupport_Pkg::cNoPro */
+extern const probesBalises_T_xdebugSupport_Pkg cNoPro_xdebugSupport_Pkg;
 
 /* TM_conversions::INT_M_LOC_every_LRBG */
 #define INT_M_LOC_every_LRBG_TM_conversions 1
@@ -832,12 +883,6 @@ extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cD_FE2RE;
 /* cLocationAccuracyDefault */
 extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocationAccuracyDefault;
 
-/* EVC_Support_Pkg::cP41element */
-extern const P41_LevelTransitionOrder_T_Packet_Types_Pkg cP41element_EVC_Support_Pkg;
-
-/* EVC_Support_Pkg::cNoPacketsForML */
-extern const T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg cNoPacketsForML_EVC_Support_Pkg;
-
 /* trainData_pkg::cNoMessage */
 extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cNoMessage_trainData_pkg;
 
@@ -874,6 +919,30 @@ extern const trainData_T_TIU_Types_Pkg cEmptyTrainData_trainData_Types_pkg;
 /* DMI_Types_Pkg::cDMI_maxLevels */
 #define cDMI_maxLevels_DMI_Types_Pkg 32
 
+/* TrackAtlasTypes::DEFAULT_P003 */
+extern const P003_OBU_T_TM DEFAULT_P003_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DEFAULT_to_Mode_and_Level */
+extern const DataForModeAndLevel_t_TrackAtlasTypes DEFAULT_to_Mode_and_Level_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DEFAULT_to_DMI */
+extern const DataForDMI_t_TrackAtlasTypes DEFAULT_to_DMI_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DEFAULT_MovementAuthority */
+extern const MovementAuthority_t_TrackAtlasTypes DEFAULT_MovementAuthority_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DEFAULT_TrainTrack */
+extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg DEFAULT_TrainTrack_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DEFAULT_to_Supervision */
+extern const DataForSupervision_nextGen_t_TrackAtlasTypes DEFAULT_to_Supervision_TrackAtlasTypes;
+
+/* TrackAtlas::Mode_NTC */
+#define Mode_NTC_TrackAtlas M_MODE_National_System
+
+/* TrackAtlas::NTC_values_to_supervision */
+extern const DataForSupervision_nextGen_t_TrackAtlasTypes NTC_values_to_supervision_TrackAtlas;
+
 /* MA_Request::cPacket132 */
 extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cPacket132_MA_Request;
 
@@ -889,95 +958,11 @@ extern const P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg cMA_Reque
 /* MA_Request::cNidTextMessage */
 #define cNidTextMessage_MA_Request 0
 
-/* MA_Request::cPT11_ValidateTrainData */
-extern const PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg cPT11_ValidateTrainData_MA_Request;
-
-/* MA_Request::cPT3_OBUTelephoneNumber */
-extern const PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg cPT3_OBUTelephoneNumber_MA_Request;
-
-/* MA_Request::cPT4_ErrorReporting */
-extern const PT4_ErrorReporting_T_Packet_TrainTypes_Pkg cPT4_ErrorReporting_MA_Request;
-
-/* MA_Request::cPT5_TrainRunningNumber */
-extern const PT5_TrainRunningNumber_Packet_TrainTypes_Pkg cPT5_TrainRunningNumber_MA_Request;
-
-/* MA_Request::cPT9_Level23 */
-extern const PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg cPT9_Level23_MA_Request;
-
 /* XCP_numeric::ZERO_real */
 #define ZERO_real_XCP_numeric 0.0
 
 /* XCP_numeric::ZERO_int */
 #define ZERO_int_XCP_numeric 0
-
-/* Packet_TrainTypes_Pkg::cmaxNumberTelephoneNumbers */
-#define cmaxNumberTelephoneNumbers_Packet_TrainTypes_Pkg 1
-
-/* Packet_TrainTypes_Pkg::cDigitsInTelephoneNumber */
-#define cDigitsInTelephoneNumber_Packet_TrainTypes_Pkg 15
-
-/* Packet_TrainTypes_Pkg::cMaxNationalSystem */
-#define cMaxNationalSystem_Packet_TrainTypes_Pkg 3
-
-/* Packet_TrainTypes_Pkg::cMaxTractionIdentity */
-#define cMaxTractionIdentity_Packet_TrainTypes_Pkg 3
-
-/* TrackAtlasTypes::DEFAULT_GradientProfile */
-extern const GradientProfile_t_TrackAtlasTypes DEFAULT_GradientProfile_TrackAtlasTypes;
-
-/* TrackAtlasTypes::DEFAULT_GradientSection */
-extern const Gradient_section_t_TrackAtlasTypes DEFAULT_GradientSection_TrackAtlasTypes;
-
-/* TA_MRSP::DEFAULT_MRSP_Profile */
-extern const MRSP_Profile_t_TrackAtlasTypes DEFAULT_MRSP_Profile_TA_MRSP;
-
-/* TrackAtlasTypes::MRSPMaxSections */
-#define MRSPMaxSections_TrackAtlasTypes 200
-
-/* TA_MRSP::DEFAULT_MRSP_section */
-extern const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_MRSP;
-
-/* TA_MRSP::DEFAULT_SSP_targets */
-extern const SSP_t_list_t_TA_MRSP DEFAULT_SSP_targets_TA_MRSP;
-
-/* TA_MRSP::DEFAULT_indexed_target */
-extern const SSP_t_indexed_matrix_element_TA_MRSP DEFAULT_indexed_target_TA_MRSP;
-
-/* TA_MRSP::DEFAULT_relevant_target */
-extern const SSP_relevant_target_t_TA_MRSP DEFAULT_relevant_target_TA_MRSP;
-
-/* TA_MRSP::DEFAULT_SSP_Init_ValidSSPsection */
-extern const SSP_Mark_ValidSSPsection_TA_MRSP DEFAULT_SSP_Init_ValidSSPsection_TA_MRSP;
-
-/* TA_MRSP::DIM_SSP */
-#define DIM_SSP_TA_MRSP (DIM_n_categories_TA_MRSP * DIM_maxSSP_individual_sections_TA_MRSP)
-
-/* TA_MRSP::DIM_n_categories */
-#define DIM_n_categories_TA_MRSP 11
-
-/* TA_MRSP::int_ZERO */
-#define int_ZERO_TA_MRSP 0
-
-/* TA_Lib_internal::ENUM_MsgSource_Balise */
-#define ENUM_MsgSource_Balise_TA_Lib_internal msrc_Eurobalise_Common_Types_Pkg
-
-/* TA_Lib_internal::ENUM_MsgSource_Euroradio */
-#define ENUM_MsgSource_Euroradio_TA_Lib_internal msrc_Euroradio_Common_Types_Pkg
-
-/* TM_baseline2::DEFAULT_P027v1_OBU_section */
-extern const P027V1_section_enum_T_TM_baseline2 DEFAULT_P027v1_OBU_section_TM_baseline2;
-
-/* TA_MRSP::DEFAULT_SSP_cat */
-extern const SSP_cat_t_TA_MRSP DEFAULT_SSP_cat_TA_MRSP;
-
-/* TA_MRSP::DEFAULT_SSP_section */
-extern const SSP_section_t_TA_MRSP DEFAULT_SSP_section_TA_MRSP;
-
-/* TA_MRSP::TOP_SSP_cat */
-extern const SSP_cat_t_TA_MRSP TOP_SSP_cat_TA_MRSP;
-
-/* TA_MRSP::DIM_maxSSP_individual_sections */
-#define DIM_maxSSP_individual_sections_TA_MRSP 33
 
 /* TrackAtlasTypes::DEFAULT_MA_level_23 */
 #define DEFAULT_MA_level_23_TrackAtlasTypes MA_L23_TrackAtlasTypes
@@ -997,11 +982,59 @@ extern const MovementAuthoritySectionlist_t_TrackAtlasTypes DEFAULT_MA_sectionli
 /* TM::ENUM_Q_SCALE_10m_QSCALE */
 #define ENUM_Q_SCALE_10m_QSCALE_TM Q_SCALE_10_m_scale
 
-/* TA_MA::DefaultMA_section */
-extern const MovementAuthoritySection_t_TrackAtlasTypes DefaultMA_section_TA_MA;
-
 /* TA_MA::INIT_P15_OBU */
 extern const P015_OBU_T_TM INIT_P15_OBU_TA_MA;
+
+/* TA_MRSP::DEFAULT_MRSP_Profile */
+extern const MRSP_Profile_t_TrackAtlasTypes DEFAULT_MRSP_Profile_TA_MRSP;
+
+/* TA_MRSP::XSSPold */
+extern const SSP_cat_t_TA_MRSP XSSPold_TA_MRSP;
+
+/* TA_MRSP::DEFAULT_MRSP_section */
+extern const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_MRSP;
+
+/* TA_MRSP::DEFAULT_SSP_targets */
+extern const SSP_t_list_t_TA_MRSP DEFAULT_SSP_targets_TA_MRSP;
+
+/* TA_MRSP::DEFAULT_indexed_target */
+extern const SSP_t_indexed_matrix_element_TA_MRSP DEFAULT_indexed_target_TA_MRSP;
+
+/* TA_MRSP::DEFAULT_relevant_target */
+extern const SSP_relevant_target_t_TA_MRSP DEFAULT_relevant_target_TA_MRSP;
+
+/* TA_MRSP::DEFAULT_SSP_section */
+extern const SSP_section_t_TA_MRSP DEFAULT_SSP_section_TA_MRSP;
+
+/* TA_MRSP::DEFAULT_SSP_Init_ValidSSPsection */
+extern const SSP_Mark_ValidSSPsection_TA_MRSP DEFAULT_SSP_Init_ValidSSPsection_TA_MRSP;
+
+/* TA_MRSP::DIM_SSP */
+#define DIM_SSP_TA_MRSP (DIM_n_categories_TA_MRSP * DIM_maxSSP_individual_sections_TA_MRSP)
+
+/* TA_MRSP::DIM_n_categories */
+#define DIM_n_categories_TA_MRSP 11
+
+/* TA_MRSP::int_ZERO */
+#define int_ZERO_TA_MRSP 0
+
+/* TA_MRSP::SP_NTC */
+extern const SSP_cat_t_TA_MRSP SP_NTC_TA_MRSP;
+
+/* TA_MRSP::TOP_SSP_cat */
+extern const SSP_cat_t_TA_MRSP TOP_SSP_cat_TA_MRSP;
+
+/* TM_baseline2::DEFAULT_P027v1_OBU_section */
+extern const P027V1_section_enum_T_TM_baseline2 DEFAULT_P027v1_OBU_section_TM_baseline2;
+
+/* TA_SSP::DEFAULT_SSP_section */
+extern const StaticSpeedSection_t_TrackAtlasTypes DEFAULT_SSP_section_TA_SSP;
+
+/* TrackAtlasTypes::DEFAULT_StaticSpeedProfile */
+extern const StaticSpeedProfile_t_TrackAtlasTypes DEFAULT_StaticSpeedProfile_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DIM_SSP */
+#define DIM_SSP_TrackAtlasTypes 50
 
 /* TM_conversions::INT_Q_NVSBTSMPERM_Yes */
 #define INT_Q_NVSBTSMPERM_Yes_TM_conversions 1
@@ -1039,11 +1072,11 @@ extern const P015_OBU_T_TM INIT_P15_OBU_TA_MA;
 /* TM_conversions::ENUM_M_NVCONTACT_Train_trip */
 #define ENUM_M_NVCONTACT_Train_trip_TM_conversions M_NVCONTACT_Train_trip
 
-/* TM_conversions::ENUM_M_NVCONTACT_Apply_service_brake */
-#define ENUM_M_NVCONTACT_Apply_service_brake_TM_conversions M_NVCONTACT_Apply_service_brake
-
 /* TM_conversions::ENUM_M_NVCONTACT_No_Reaction */
 #define ENUM_M_NVCONTACT_No_Reaction_TM_conversions M_NVCONTACT_No_Reaction
+
+/* TM_conversions::ENUM_M_NVCONTACT_Apply_service_brake */
+#define ENUM_M_NVCONTACT_Apply_service_brake_TM_conversions M_NVCONTACT_Apply_service_brake
 
 /* TM_conversions::INT_M_NVDERUN_no */
 #define INT_M_NVDERUN_no_TM_conversions 0
@@ -1078,17 +1111,35 @@ extern const P003V1_section_enum_T_TM_baseline2 DEFAULT_P003V1_OBU_section_TM_ba
 /* TA_Storage::INIT_P3V1 */
 extern const P003V1_OBU_T_TM_baseline2 INIT_P3V1_TA_Storage;
 
-/* TrackAtlasTypes::GradientMaxSections */
-#define GradientMaxSections_TrackAtlasTypes 50
+/* TA_Export::DEFAULT_MRSP_section */
+extern const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_Export;
 
-/* TM::DIM_MaxElementsPacket135 */
-#define DIM_MaxElementsPacket135_TM 3
+/* TrackAtlasTypes::DEFAULT_LRBG */
+#define DEFAULT_LRBG_TrackAtlasTypes 354
+
+/* TrackAtlasTypes::DEFAULT_Location_T */
+#define DEFAULT_Location_T_TrackAtlasTypes 0
 
 /* TM::DIM_MaxElementsPacket012 */
 #define DIM_MaxElementsPacket012_TM (DIM_N_ITER_TM * 4 + 15 + 1 + 7)
 
 /* TM_lib_internal::DIM_P012_n_sections */
 #define DIM_P012_n_sections_TM_lib_internal 4
+
+/* TM::DIM_MaxElementsPacket135 */
+#define DIM_MaxElementsPacket135_TM 3
+
+/* TM::DIM_MaxElementsPacket046 */
+#define DIM_MaxElementsPacket046_TM ((DIM_N_ITER_TM + 1) * 2 + 4)
+
+/* TM::DEFAULT_P046_OBU_section */
+extern const P046_section_enum_T_TM DEFAULT_P046_OBU_section_TM;
+
+/* TM_lib_internal::DIM_P046_n_sections */
+#define DIM_P046_n_sections_TM_lib_internal 2
+
+/* TM_specific::DEFAULT_P046_legacy */
+extern const P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg DEFAULT_P046_legacy_TM_specific;
 
 /* TM::DEFAULT_P041_OBU_section */
 extern const P041_section_enum_T_TM DEFAULT_P041_OBU_section_TM;
@@ -1098,18 +1149,6 @@ extern const P041_section_enum_T_TM DEFAULT_P041_OBU_section_TM;
 
 /* TM_lib_internal::DEFAULT_P041_OBU_section */
 extern const P041_section_enum_T_TM DEFAULT_P041_OBU_section_TM_lib_internal;
-
-/* TM_lib_internal::DIM_P041_n_sections */
-#define DIM_P041_n_sections_TM_lib_internal 3
-
-/* TM_specific::DEFAULT_P041_legacy */
-extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg DEFAULT_P041_legacy_TM_specific;
-
-/* TM::DIM_MaxElementsPacket046 */
-#define DIM_MaxElementsPacket046_TM ((DIM_N_ITER_TM + 1) * 2 + 4)
-
-/* TM::DEFAULT_P046_OBU_section */
-extern const P046_section_enum_T_TM DEFAULT_P046_OBU_section_TM;
 
 /* TM_conversions::INT_M_LEVELTR_Level_0 */
 #define INT_M_LEVELTR_Level_0_TM_conversions 0
@@ -1141,11 +1180,11 @@ extern const P046_section_enum_T_TM DEFAULT_P046_OBU_section_TM;
 /* TM_conversions::ENUM_M_LEVELTR_Level_0 */
 #define ENUM_M_LEVELTR_Level_0_TM_conversions M_LEVELTR_Level_0
 
-/* TM_lib_internal::DIM_P046_n_sections */
-#define DIM_P046_n_sections_TM_lib_internal 2
+/* TM_lib_internal::DIM_P041_n_sections */
+#define DIM_P041_n_sections_TM_lib_internal 3
 
-/* TM_specific::DEFAULT_P046_legacy */
-extern const P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg DEFAULT_P046_legacy_TM_specific;
+/* TM_specific::DEFAULT_P041_legacy */
+extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg DEFAULT_P041_legacy_TM_specific;
 
 /* TM_baseline2::NID_META_P027V1_body */
 #define NID_META_P027V1_body_TM_baseline2 27016000
@@ -1189,17 +1228,8 @@ extern const P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg DEFAULT_P027
 /* TM_conversions::ENUM_Q_SRSTOP_go */
 #define ENUM_Q_SRSTOP_go_TM_conversions Q_SRSTOP_Go_if_in_SR_mode
 
-/* TM::DEFAULT_P138_legacy */
-extern const P138_ReversingAreaInformation_T_Packet_Types_Pkg DEFAULT_P138_legacy_TM;
-
-/* TM::DIM_MaxElementsPacket138 */
-#define DIM_MaxElementsPacket138_TM 6
-
 /* TM::DEFAULT_P139_legacy */
 extern const P139_ReversingSupervisionInformation_T_Packet_Types_Pkg DEFAULT_P139_legacy_TM;
-
-/* TM::DIM_MaxElementsPacket136 */
-#define DIM_MaxElementsPacket136_TM 6
 
 /* TM::DIM_MaxElementsPacket139 */
 #define DIM_MaxElementsPacket139_TM 6
@@ -1246,12 +1276,6 @@ extern const P139_ReversingSupervisionInformation_T_Packet_Types_Pkg DEFAULT_P13
 /* TM::DEFAULT_P015_OBU_section */
 extern const P015_section_enum_T_TM DEFAULT_P015_OBU_section_TM;
 
-/* TM_conversions::DIM_L_max */
-#define DIM_L_max_TM_conversions 32767
-
-/* TM_conversions::DIM_L_min */
-#define DIM_L_min_TM_conversions 0
-
 /* TM_conversions::INT_Q_SECTIONTIMER_sectiontimer */
 #define INT_Q_SECTIONTIMER_sectiontimer_TM_conversions 1
 
@@ -1270,44 +1294,41 @@ extern const P015_section_enum_T_TM DEFAULT_P015_OBU_section_TM;
 /* TM_specific::DEFAULT_P015_legacy */
 extern const P15_Level23MovementAuthorities_T_Packet_Types_Pkg DEFAULT_P015_legacy_TM_specific;
 
-/* Packet_Types_Pkg::cNIterMaxMA */
-#define cNIterMaxMA_Packet_Types_Pkg 5
+/* TM::DEFAULT_P138_legacy */
+extern const P138_ReversingAreaInformation_T_Packet_Types_Pkg DEFAULT_P138_legacy_TM;
 
-/* TM::DIM_MaxElementsPacket021 */
-#define DIM_MaxElementsPacket021_TM ((DIM_N_ITER_TM + 1) * 3 + 4 + 1)
+/* TM_conversions::DIM_L_max */
+#define DIM_L_max_TM_conversions 32767
 
-/* TM::DEFAULT_P021_OBU_section */
-extern const P021_section_enum_T_TM DEFAULT_P021_OBU_section_TM;
+/* TM_conversions::DIM_L_min */
+#define DIM_L_min_TM_conversions 0
 
-/* TM_conversions::DIM_G_max */
-#define DIM_G_max_TM_conversions 255
+/* TM::DIM_MaxElementsPacket136 */
+#define DIM_MaxElementsPacket136_TM 6
 
-/* TM_conversions::DIM_G_min */
-#define DIM_G_min_TM_conversions 0
-
-/* TM_conversions::INT_Q_GDIR_downhill */
-#define INT_Q_GDIR_downhill_TM_conversions 0
-
-/* TM_conversions::INT_Q_GDIR_uphill */
-#define INT_Q_GDIR_uphill_TM_conversions 1
-
-/* TM_conversions::ENUM_Q_GDIR_downhill */
-#define ENUM_Q_GDIR_downhill_TM_conversions Q_GDIR_downhill
-
-/* TM_conversions::ENUM_Q_GDIR_uphill */
-#define ENUM_Q_GDIR_uphill_TM_conversions Q_GDIR_uphill
-
-/* TM_lib_internal::DIM_P021_n_sections */
-#define DIM_P021_n_sections_TM_lib_internal 3
+/* TM::DIM_MaxElementsPacket138 */
+#define DIM_MaxElementsPacket138_TM 6
 
 /* TM_specific::DEFAULT_P021_legacy */
 extern const P21_GradientProfiles_T_Packet_Types_Pkg DEFAULT_P021_legacy_TM_specific;
+
+/* TA_Export::Default_P63_legacy */
+extern const P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg Default_P63_legacy_TA_Export;
 
 /* TA_Export::Default_P80_legacy */
 extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_TA_Export;
 
 /* Packet_Types_Pkg::cNIterMaxModeProfiles */
 #define cNIterMaxModeProfiles_Packet_Types_Pkg 3
+
+/* TA_Export::Default_P12_legacy */
+extern const P12_Level1MovementAuthorities_T_Packet_Types_Pkg Default_P12_legacy_TA_Export;
+
+/* Packet_Types_Pkg::cNIterMaxMA */
+#define cNIterMaxMA_Packet_Types_Pkg 5
+
+/* TA_Export::Default_P135_legacy */
+extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_TA_Export;
 
 /* TM_radio_messages::nid_message_TrackTrain_015 */
 #define nid_message_TrackTrain_015_TM_radio_messages 15
@@ -1326,6 +1347,126 @@ extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_TA_Export;
 
 /* TM_radio_messages::nid_message_TrackTrain_006 */
 #define nid_message_TrackTrain_006_TM_radio_messages 6
+
+/* TrackAtlasTypes::DEFAULT_StaticSpeedSection */
+extern const StaticSpeedSection_t_TrackAtlasTypes DEFAULT_StaticSpeedSection_TrackAtlasTypes;
+
+/* TrackAtlasTypes::MRSPMaxSections */
+#define MRSPMaxSections_TrackAtlasTypes 200
+
+/* TA_Export::END_OF_SSP */
+#define END_OF_SSP_TA_Export 635
+
+/* TA_Export::END_OF_SSP_encoding */
+#define END_OF_SSP_encoding_TA_Export (- 1)
+
+/* TA_EmergencyStop::cMSG147_NONE */
+extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cMSG147_NONE_TA_EmergencyStop;
+
+/* Id_Pkg::cm15_Conditional_Emergency_Stop */
+#define cm15_Conditional_Emergency_Stop_Id_Pkg 15
+
+/* Id_Pkg::cm16_Unconditional_Emergency_Stop */
+#define cm16_Unconditional_Emergency_Stop_Id_Pkg 16
+
+/* Id_Pkg::cm18_Revocation_of_Emergency_Stop */
+#define cm18_Revocation_of_Emergency_Stop_Id_Pkg 18
+
+/* TA_EmergencyStop::cNID_EM_NONE */
+#define cNID_EM_NONE_TA_EmergencyStop 0
+
+/* MA_Request::cPT11_ValidateTrainData */
+extern const PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg cPT11_ValidateTrainData_MA_Request;
+
+/* Packet_TrainTypes_Pkg::cMaxNationalSystem */
+#define cMaxNationalSystem_Packet_TrainTypes_Pkg 3
+
+/* Packet_TrainTypes_Pkg::cMaxTractionIdentity */
+#define cMaxTractionIdentity_Packet_TrainTypes_Pkg 3
+
+/* MA_Request::cPT3_OBUTelephoneNumber */
+extern const PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg cPT3_OBUTelephoneNumber_MA_Request;
+
+/* Packet_TrainTypes_Pkg::cmaxNumberTelephoneNumbers */
+#define cmaxNumberTelephoneNumbers_Packet_TrainTypes_Pkg 1
+
+/* Packet_TrainTypes_Pkg::cDigitsInTelephoneNumber */
+#define cDigitsInTelephoneNumber_Packet_TrainTypes_Pkg 15
+
+/* MA_Request::cPT4_ErrorReporting */
+extern const PT4_ErrorReporting_T_Packet_TrainTypes_Pkg cPT4_ErrorReporting_MA_Request;
+
+/* MA_Request::cPT5_TrainRunningNumber */
+extern const PT5_TrainRunningNumber_Packet_TrainTypes_Pkg cPT5_TrainRunningNumber_MA_Request;
+
+/* MA_Request::cPT9_Level23 */
+extern const PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg cPT9_Level23_MA_Request;
+
+/* TA_EmergencyStop::cQ_MARQSREASON_NONE */
+#define cQ_MARQSREASON_NONE_TA_EmergencyStop Q_MARQSTREASON_Start_selected_by_driver
+
+/* TA_EmergencyStop::cNID_TEXTMESSAGE_NONE */
+#define cNID_TEXTMESSAGE_NONE_TA_EmergencyStop 0
+
+/* TA_EmergencyStop::cEOA_NONE */
+#define cEOA_NONE_TA_EmergencyStop 0
+
+/* TA_EmergencyStop::NID_EM_Store::cNID_EM_STORE_EMPTY */
+extern const NID_EM_Store_T_TA_EmergencyStop_NID_EM_Store cNID_EM_STORE_EMPTY_TA_EmergencyStop_NID_EM_Store;
+
+/* TA_EmergencyStop::NID_EM_Store::cNID_EM_STORE_SIZE */
+#define cNID_EM_STORE_SIZE_TA_EmergencyStop_NID_EM_Store 8
+
+/* TM::DIM_MaxElementsPacket021 */
+#define DIM_MaxElementsPacket021_TM ((DIM_N_ITER_TM + 1) * 3 + 4 + 1)
+
+/* TM_conversions::DIM_G_max */
+#define DIM_G_max_TM_conversions 255
+
+/* TM_conversions::DIM_G_min */
+#define DIM_G_min_TM_conversions 0
+
+/* TM_conversions::INT_Q_GDIR_downhill */
+#define INT_Q_GDIR_downhill_TM_conversions 0
+
+/* TM_conversions::INT_Q_GDIR_uphill */
+#define INT_Q_GDIR_uphill_TM_conversions 1
+
+/* TM_conversions::ENUM_Q_GDIR_downhill */
+#define ENUM_Q_GDIR_downhill_TM_conversions Q_GDIR_downhill
+
+/* TM_lib_internal::DIM_P021_n_sections */
+#define DIM_P021_n_sections_TM_lib_internal 3
+
+/* TA_Lib_internal::ENUM_MsgSource_Balise */
+#define ENUM_MsgSource_Balise_TA_Lib_internal msrc_Eurobalise_Common_Types_Pkg
+
+/* TA_Lib_internal::ENUM_MsgSource_Euroradio */
+#define ENUM_MsgSource_Euroradio_TA_Lib_internal msrc_Euroradio_Common_Types_Pkg
+
+/* TA_MRSP::DIM_maxSSP_individual_sections */
+#define DIM_maxSSP_individual_sections_TA_MRSP 33
+
+/* TM::DEFAULT_P021_OBU_section */
+extern const P021_section_enum_T_TM DEFAULT_P021_OBU_section_TM;
+
+/* TM_conversions::ENUM_Q_GDIR_uphill */
+#define ENUM_Q_GDIR_uphill_TM_conversions Q_GDIR_uphill
+
+/* TrackAtlasTypes::DEFAULT_GradientSection */
+extern const Gradient_section_t_TrackAtlasTypes DEFAULT_GradientSection_TrackAtlasTypes;
+
+/* TrackAtlasTypes::DEFAULT_GradientProfile */
+extern const GradientProfile_t_TrackAtlasTypes DEFAULT_GradientProfile_TrackAtlasTypes;
+
+/* TA_Gradient::DEFAULT_GP_Section */
+extern const Gradient_section_t_TrackAtlasTypes DEFAULT_GP_Section_TA_Gradient;
+
+/* TrackAtlasTypes::GradientMaxSections */
+#define GradientMaxSections_TrackAtlasTypes DIM_GP_TrackAtlasTypes
+
+/* TrackAtlasTypes::DIM_GP */
+#define DIM_GP_TrackAtlasTypes 50
 
 /* CalculateTrainPosition_Pkg::cNoPositionErrors */
 extern const positionErrors_T_TrainPosition_Types_Pck cNoPositionErrors_CalculateTrainPosition_Pkg;
@@ -1382,7 +1523,7 @@ extern const positionedBG_T_TrainPosition_Types_Pck cEmptyPositionedBG_Calculate
 extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocWithInAcc_0_Obu_BasicTypes_Pkg;
 
 /* TrainPosition_Types_Pck::cMaxNoOfStoredBGs */
-#define cMaxNoOfStoredBGs_TrainPosition_Types_Pck (2 * cMaxNoOfLinkedBGs_BG_Types_Pkg)
+#define cMaxNoOfStoredBGs_TrainPosition_Types_Pck (1 * cMaxNoOfLinkedBGs_BG_Types_Pkg + 8)
 
 /* CalculateTrainPosition_Pkg::cNoValidIndex */
 #define cNoValidIndex_CalculateTrainPosition_Pkg (- 1)
@@ -1475,7 +1616,7 @@ extern const P005_section_enum_T_TM DEFAULT_P005_OBU_section_TM_lib_internal;
 #define INT_Q_LINKORIENTATION_reverse_TM_conversions 0
 
 /* TM_conversions::ENUM_Q_LINKORIENTATION_reverse */
-#define ENUM_Q_LINKORIENTATION_reverse_TM_conversions Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_nominal_direction
+#define ENUM_Q_LINKORIENTATION_reverse_TM_conversions Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction
 
 /* TM_conversions::ENUM_Q_LINKORIENTATION_nominal */
 #define ENUM_Q_LINKORIENTATION_nominal_TM_conversions Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_nominal_direction
@@ -1517,7 +1658,7 @@ extern const MetadataElement_T_Common_Types_Pkg DEFAULT_PHeader_TM;
 extern const LinkedBGs_T_BG_Types_Pkg DEFAULT_LinkedBGs_T_TM_specific;
 
 /* BG_Types_Pkg::cMaxNoOfLinkedBGs */
-#define cMaxNoOfLinkedBGs_BG_Types_Pkg 4
+#define cMaxNoOfLinkedBGs_BG_Types_Pkg 33
 
 /* BG_Types_Pkg::cNID_LRBG_unknown */
 #define cNID_LRBG_unknown_BG_Types_Pkg 16777215
@@ -1544,8 +1685,8 @@ extern const P203V1_OBU_T_TM_baseline2 cP203_PermanentData_EVC_PermanentData_Pkg
 #define DIM_N_ITER_TM 32
 
 #endif /* _KCG_CONSTS_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

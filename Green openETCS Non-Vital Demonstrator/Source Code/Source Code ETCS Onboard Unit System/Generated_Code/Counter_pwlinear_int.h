@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Counter_pwlinear_int_H_
 #define _Counter_pwlinear_int_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -24,15 +26,19 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* pwlinear::Counter */
 extern void Counter_pwlinear_int(
-  /* pwlinear::Counter::Incr */kcg_int Incr,
-  /* pwlinear::Counter::Reset */kcg_bool Reset,
+  /* pwlinear::Counter::Incr */ kcg_int Incr,
+  /* pwlinear::Counter::Reset */ kcg_bool Reset,
   outC_Counter_pwlinear_int *outC);
 
 extern void Counter_reset_pwlinear_int(outC_Counter_pwlinear_int *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void Counter_init_pwlinear_int(outC_Counter_pwlinear_int *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _Counter_pwlinear_int_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Counter_pwlinear_int.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

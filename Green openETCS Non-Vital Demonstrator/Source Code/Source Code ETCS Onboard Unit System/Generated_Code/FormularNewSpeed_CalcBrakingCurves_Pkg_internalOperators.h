@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _FormularNewSpeed_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _FormularNewSpeed_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -11,19 +11,21 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed */
 extern void FormularNewSpeed_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inAcceleration */A_internal_real_Type_SDM_Types_Pkg inAcceleration,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inD0 */L_internal_real_Type_SDM_Types_Pkg inD0,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inD1 */L_internal_real_Type_SDM_Types_Pkg inD1,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inBeginSpeed */V_internal_real_Type_SDM_Types_Pkg inBeginSpeed,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::outSpeedAtD1 */V_internal_real_Type_SDM_Types_Pkg *outSpeedAtD1,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::valid */kcg_bool *valid);
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inAcceleration */ A_internal_real_Type_SDM_Types_Pkg inAcceleration,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inD0 */ L_internal_real_Type_SDM_Types_Pkg inD0,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inD1 */ L_internal_real_Type_SDM_Types_Pkg inD1,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::inBeginSpeed */ V_internal_real_Type_SDM_Types_Pkg inBeginSpeed,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::outSpeedAtD1 */ V_internal_real_Type_SDM_Types_Pkg *outSpeedAtD1,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewSpeed::valid */ kcg_bool *valid);
 
 #endif /* _FormularNewSpeed_CalcBrakingCurves_Pkg_internalOperators_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** FormularNewSpeed_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

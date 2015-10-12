@@ -1,84 +1,131 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "SDM_InputWrapper_SDM_Input_Wrappers.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void SDM_InputWrapper_init_SDM_Input_Wrappers(
+  outC_SDM_InputWrapper_SDM_Input_Wrappers *outC)
+{
+  static kcg_int i;
+  
+  outC->mrsp_update_out = kcg_true;
+  outC->ma_update_out = kcg_true;
+  outC->gp_update_out = kcg_true;
+  outC->init = kcg_true;
+  for (i = 0; i < 50; i++) {
+    outC->gp_out[i].location = 0.0;
+    outC->gp_out[i].gradient = 0.0;
+    outC->gp_out[i].valid = kcg_true;
+  }
+  outC->trainLocations.trainPositionIsValid = kcg_true;
+  outC->trainLocations.d_est_frontendPos = 0.0;
+  outC->trainLocations.d_minSafeFrontEndPos = 0.0;
+  outC->trainLocations.d_maxSafeFrontEndPos = 0.0;
+  outC->trainLocations.d_cond_L1_antenna2frontend = 0.0;
+  outC->trainLocations.d_LRBG = 0.0;
+  outC->trainLocations.d_accLRBG = 0.0;
+  outC->ma_out.valid = kcg_true;
+  outC->ma_out.v_main = 0.0;
+  outC->ma_out.EOA.Location = 0.0;
+  outC->ma_out.EOA.TargetSpeed = 0.0;
+  outC->ma_out.DP_valid = kcg_true;
+  outC->ma_out.DangerPoint = 0.0;
+  outC->ma_out.OL_valid = kcg_true;
+  outC->ma_out.Overlap = 0.0;
+  outC->ma_out.q_calculate_release = kcg_true;
+  outC->ma_out.ReleaseSpeed = 0.0;
+  outC->ma_out.level = MA_L1_TrackAtlasTypes;
+  for (i = 0; i < 200; i++) {
+    outC->mrsp_out[i].Loc_Abs = 0.0;
+    outC->mrsp_out[i].MRS = 0.0;
+    outC->mrsp_out[i].valid = kcg_true;
+  }
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
+void SDM_InputWrapper_reset_SDM_Input_Wrappers(
+  outC_SDM_InputWrapper_SDM_Input_Wrappers *outC)
+{
+  outC->init = kcg_true;
+}
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
 /* SDM_Input_Wrappers::SDM_InputWrapper */
 void SDM_InputWrapper_SDM_Input_Wrappers(
-  /* SDM_Input_Wrappers::SDM_InputWrapper::TrainPosition */trainPosition_T_TrainPosition_Types_Pck *TrainPosition,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::ODO_to_SDM */odometry_T_Obu_BasicTypes_Pkg *ODO_to_SDM,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::trainProps */trainProperties_T_TrainPosition_Types_Pck *trainProps,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::dataFromTrackAtlas */DataForSupervision_nextGen_t_TrackAtlasTypes *dataFromTrackAtlas,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::mrsp_out */MRSP_internal_T_TargetManagement_types *mrsp_out,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::mrsp_update_out */kcg_bool *mrsp_update_out,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::ma_out */MA_section_real_T_TargetManagement_types *ma_out,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::ma_update_out */kcg_bool *ma_update_out,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::gp_update_out */kcg_bool *gp_update_out,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::odo_out */Odometry_real_T_SDM_Types_Pkg *odo_out,
-  /* SDM_Input_Wrappers::SDM_InputWrapper::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations)
+  /* SDM_Input_Wrappers::SDM_InputWrapper::TrainPosition */ trainPosition_T_TrainPosition_Types_Pck *TrainPosition,
+  /* SDM_Input_Wrappers::SDM_InputWrapper::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
+  /* SDM_Input_Wrappers::SDM_InputWrapper::dataFromTrackAtlas */ DataForSupervision_nextGen_t_TrackAtlasTypes *dataFromTrackAtlas,
+  outC_SDM_InputWrapper_SDM_Input_Wrappers *outC)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
+  /* SDM_Input_Wrappers::SDM_InputWrapper */
+  static L_internal_Type_Obu_BasicTypes_Pkg tmp;
   static kcg_int i;
-  /* SDM_Input_Wrappers::SDM_InputWrapper::_L256 */
-  static L_internal_Type_Obu_BasicTypes_Pkg _L256;
   
-  (*trainLocations).trainPositionIsValid =
+  outC->trainLocations.trainPositionIsValid =
     !(*TrainPosition).trainPositionIsUnknown & (*TrainPosition).valid;
-  *mrsp_update_out = (*dataFromTrackAtlas).freshMRSP;
-  *gp_update_out = (*dataFromTrackAtlas).freshGradientProfile;
-  *ma_update_out = (*dataFromTrackAtlas).freshMA;
-  _L256 = 0;
-  if ((*dataFromTrackAtlas).MA.valid) {
-    for (i = 0; i < 10; i++) {
-      tmp1 = _L256;
-      /* 1 */
-      SummarizeSections_SDM_Input_Wrappers(
-        tmp1,
-        &(*dataFromTrackAtlas).MA.sections[i],
-        &tmp,
-        &_L256);
-      if (!tmp) {
-        break;
-      }
-    }
+  outC->trainLocations.d_est_frontendPos = /* 9 */
+    TransformL_intToL_real_SDM_Types_Pkg(
+      (*TrainPosition).estimatedFrontEndPosition);
+  outC->trainLocations.d_minSafeFrontEndPos = /* 4 */
+    TransformL_intToL_real_SDM_Types_Pkg(
+      (*TrainPosition).minSafeFrontEndPosition);
+  outC->trainLocations.d_maxSafeFrontEndPos = /* 11 */
+    TransformL_intToL_real_SDM_Types_Pkg(
+      (*TrainPosition).maxSafeFrontEndPostion);
+  switch ((*dataFromTrackAtlas).MA.Level) {
+    case MA_L1_TrackAtlasTypes :
+      tmp = (*trainProps).d_baliseAntenna_2_frontend.nominal;
+      break;
+    
+    default :
+      tmp = 0;
   }
-  /* 2 */
-  ConvertMA_SDM_Input_Wrappers(_L256, &(*dataFromTrackAtlas).MA, ma_out);
+  outC->trainLocations.d_cond_L1_antenna2frontend = /* 5 */
+    TransformL_intToL_real_SDM_Types_Pkg(tmp);
+  outC->trainLocations.d_LRBG = /* 12 */
+    TransformL_intToL_real_SDM_Types_Pkg(
+      (*TrainPosition).LRBG.location.nominal);
+  outC->trainLocations.d_accLRBG = /* 16 */
+    TransformL_intToL_real_SDM_Types_Pkg(
+      ((*TrainPosition).LRBG.location.d_max -
+        (*TrainPosition).LRBG.location.d_min) / 2);
   for (i = 0; i < 200; i++) {
     /* ConvertMRSP_section */
     ConvertMRSP_section_SDM_Input_Wrappers(
       &(*dataFromTrackAtlas).MRSP[i],
-      &(*mrsp_out)[i]);
+      &outC->mrsp_out[i]);
   }
-  (*trainLocations).d_est_frontendPos = /* 9 */
-    TransformL_intToL_real_SDM_Types_Pkg(
-      (*TrainPosition).estimatedFrontEndPosition);
-  (*trainLocations).d_minSafeFrontEndPos = /* 4 */
-    TransformL_intToL_real_SDM_Types_Pkg(
-      (*TrainPosition).minSafeFrontEndPosition);
-  (*trainLocations).d_maxSafeFrontEndPos = /* 11 */
-    TransformL_intToL_real_SDM_Types_Pkg(
-      (*TrainPosition).maxSafeFrontEndPostion);
-  (*trainLocations).d_antenna2frontend = /* 5 */
-    TransformL_intToL_real_SDM_Types_Pkg(
-      (*trainProps).d_baliseAntenna_2_frontend.nominal);
-  (*trainLocations).d_LRBG = /* 12 */
-    TransformL_intToL_real_SDM_Types_Pkg(
-      (*TrainPosition).LRBG.location.nominal);
-  (*trainLocations).d_accLRBG = /* 16 */
-    TransformL_intToL_real_SDM_Types_Pkg(
-      ((*TrainPosition).LRBG.location.d_max -
-        (*TrainPosition).LRBG.location.d_min) / 2);
-  /* 1 */ ConvertOdometry_SDM_Input_Wrappers(ODO_to_SDM, odo_out);
+  outC->ma_update_out = (*dataFromTrackAtlas).freshMA;
+  /* ck_ma_update_out */ if (outC->ma_update_out) {
+    /* 2 */
+    ConvertMA_SDM_Input_Wrappers(
+      &(*TrainPosition).LRBG.location,
+      &(*dataFromTrackAtlas).MA,
+      &outC->ma_out);
+  }
+  else if (outC->init) {
+    /* 1 */ defaultMA_SDM_Input_Wrappers(&outC->ma_out);
+  }
+  outC->init = kcg_false;
+  outC->mrsp_update_out = (*dataFromTrackAtlas).freshMRSP;
+  outC->gp_update_out = (*dataFromTrackAtlas).freshGradientProfile;
+  /* 2 */ for (i = 0; i < 50; i++) {
+    /* 1 */
+    ConvertGradient_section_SDM_Input_Wrappers(
+      &(*dataFromTrackAtlas).GradientProfile[i],
+      &outC->gp_out[i]);
+  }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_InputWrapper_SDM_Input_Wrappers.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

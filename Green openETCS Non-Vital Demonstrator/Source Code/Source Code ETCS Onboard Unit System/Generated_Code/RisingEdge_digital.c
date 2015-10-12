@@ -1,25 +1,38 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "RisingEdge_digital.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void RisingEdge_init_digital(outC_RisingEdge_digital *outC)
+{
+  outC->RE_Output = kcg_true;
+  outC->rem_RE_Input = kcg_true;
+  outC->init = kcg_true;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void RisingEdge_reset_digital(outC_RisingEdge_digital *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* digital::RisingEdge */
 void RisingEdge_digital(
-  /* digital::RisingEdge::RE_Input */kcg_bool RE_Input,
+  /* digital::RisingEdge::RE_Input */ kcg_bool RE_Input,
   outC_RisingEdge_digital *outC)
 {
+  /* digital::RisingEdge */
   static kcg_bool tmp;
   
-  if (outC->init) {
+  /* fby_1_init_1 */ if (outC->init) {
     outC->init = kcg_false;
     tmp = !RE_Input;
   }
@@ -30,8 +43,8 @@ void RisingEdge_digital(
   outC->rem_RE_Input = RE_Input;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** RisingEdge_digital.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* trainData_pkg::checkRadioMessages */
 void checkRadioMessages_trainData_pkg(
-  /* trainData_pkg::checkRadioMessages::trackMessages */ReceivedMessage_T_Common_Types_Pkg *trackMessages,
-  /* trainData_pkg::checkRadioMessages::actualStatus */trainDataStatus_T_trainData_Types_pkg *actualStatus,
-  /* trainData_pkg::checkRadioMessages::ackReceived */kcg_bool *ackReceived,
-  /* trainData_pkg::checkRadioMessages::ackRequested */kcg_bool *ackRequested)
+  /* trainData_pkg::checkRadioMessages::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
+  /* trainData_pkg::checkRadioMessages::actualStatus */ trainDataStatus_T_trainData_Types_pkg *actualStatus,
+  /* trainData_pkg::checkRadioMessages::ackReceived */ kcg_bool *ackReceived,
+  /* trainData_pkg::checkRadioMessages::ackRequested */ kcg_bool *ackRequested)
 {
   *ackReceived = (*trackMessages).valid & ((*trackMessages).source ==
       msrc_Euroradio_Common_Types_Pkg) &
@@ -20,7 +20,7 @@ void checkRadioMessages_trainData_pkg(
         cm08_Acknowledgement_of_Train_Data_Id_Pkg) &
       ((*trackMessages).Radio_Common_Header.t_train_reference ==
         (*actualStatus).timeStampValidateToRBC));
-  if (*ackReceived) {
+  /* 1 */ if (*ackReceived) {
     *ackRequested = (*trackMessages).Radio_Common_Header.m_ack ==
       M_ACK_Acknowledgement_required;
   }
@@ -29,8 +29,8 @@ void checkRadioMessages_trainData_pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** checkRadioMessages_trainData_pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

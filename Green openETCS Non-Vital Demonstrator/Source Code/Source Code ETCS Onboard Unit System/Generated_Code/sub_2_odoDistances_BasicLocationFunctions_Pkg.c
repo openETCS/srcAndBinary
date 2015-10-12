@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* BasicLocationFunctions_Pkg::sub_2_odoDistances */
 void sub_2_odoDistances_BasicLocationFunctions_Pkg(
-  /* BasicLocationFunctions_Pkg::sub_2_odoDistances::odo_2 */OdometryLocations_T_Obu_BasicTypes_Pkg *odo_2,
-  /* BasicLocationFunctions_Pkg::sub_2_odoDistances::odo_1 */OdometryLocations_T_Obu_BasicTypes_Pkg *odo_1,
-  /* BasicLocationFunctions_Pkg::sub_2_odoDistances::distance */LocWithInAcc_T_Obu_BasicTypes_Pkg *distance)
+  /* BasicLocationFunctions_Pkg::sub_2_odoDistances::odo_2 */ OdometryLocations_T_Obu_BasicTypes_Pkg *odo_2,
+  /* BasicLocationFunctions_Pkg::sub_2_odoDistances::odo_1 */ OdometryLocations_T_Obu_BasicTypes_Pkg *odo_1,
+  /* BasicLocationFunctions_Pkg::sub_2_odoDistances::distance */ LocWithInAcc_T_Obu_BasicTypes_Pkg *distance)
 {
   /* BasicLocationFunctions_Pkg::sub_2_odoDistances::_L5 */
   static kcg_int _L5;
@@ -22,8 +22,8 @@ void sub_2_odoDistances_BasicLocationFunctions_Pkg(
   (*distance).d_max = (*odo_2).o_max - (*odo_1).o_max - _L5;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** sub_2_odoDistances_BasicLocationFunctions_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

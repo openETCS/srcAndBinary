@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* SDM_Types_Pkg::limitPositive */
 kcg_real limitPositive_SDM_Types_Pkg(
-  /* SDM_Types_Pkg::limitPositive::in */kcg_real in)
+  /* SDM_Types_Pkg::limitPositive::in */ kcg_real in)
 {
   /* SDM_Types_Pkg::limitPositive::limited */
   static kcg_real limited;
   
-  if (in >= 0.0) {
+  /* 2 */ if (in >= 0.0) {
     limited = in;
   }
   else {
@@ -23,8 +23,8 @@ kcg_real limitPositive_SDM_Types_Pkg(
   return limited;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** limitPositive_SDM_Types_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

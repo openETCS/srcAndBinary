@@ -1,11 +1,24 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "waitAndRepeatTimer_MoRC_Pck_Utils.h"
+
+#ifndef KCG_USER_DEFINED_INIT
+void waitAndRepeatTimer_init_MoRC_Pck_Utils(
+  outC_waitAndRepeatTimer_MoRC_Pck_Utils *outC)
+{
+  outC->triggerAction = kcg_true;
+  outC->elapsed = kcg_true;
+  outC->init = kcg_true;
+  outC->_L22 = 0;
+  /* 1 */ countDownTimer_init_MoRC_Pck_Utils(&outC->Context_1);
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
 
 void waitAndRepeatTimer_reset_MoRC_Pck_Utils(
   outC_waitAndRepeatTimer_MoRC_Pck_Utils *outC)
@@ -16,11 +29,11 @@ void waitAndRepeatTimer_reset_MoRC_Pck_Utils(
 
 /* MoRC_Pck::Utils::waitAndRepeatTimer */
 void waitAndRepeatTimer_MoRC_Pck_Utils(
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::actualTime */time_Type_MoRC_Pck actualTime,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::re_start */kcg_bool re_start,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::stop */kcg_bool stop,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::repeatInterval */time_Type_MoRC_Pck repeatInterval,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::maxNoOfRepetitions */kcg_int maxNoOfRepetitions,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::actualTime */ time_Type_MoRC_Pck actualTime,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::re_start */ kcg_bool re_start,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::stop */ kcg_bool stop,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::repeatInterval */ time_Type_MoRC_Pck repeatInterval,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::maxNoOfRepetitions */ kcg_int maxNoOfRepetitions,
   outC_waitAndRepeatTimer_MoRC_Pck_Utils *outC)
 {
   /* MoRC_Pck::Utils::waitAndRepeatTimer::_L9 */
@@ -28,15 +41,6 @@ void waitAndRepeatTimer_MoRC_Pck_Utils(
   /* MoRC_Pck::Utils::waitAndRepeatTimer::_L14 */
   static kcg_bool _L14;
   
-  if (outC->init) {
-    outC->init = kcg_false;
-    _L9 = 0;
-  }
-  else {
-    _L9 = outC->_L22;
-  }
-  outC->elapsed = _L9 >= maxNoOfRepetitions;
-  _L14 = !outC->elapsed;
   /* 1 */
   countDownTimer_MoRC_Pck_Utils(
     re_start,
@@ -45,21 +49,30 @@ void waitAndRepeatTimer_MoRC_Pck_Utils(
     kcg_true,
     repeatInterval,
     &outC->Context_1);
-  outC->triggerAction = (_L14 & outC->Context_1.expired) | (_L14 &
-      outC->Context_1.started);
-  if (re_start) {
+  /* fby_1_init_1 */ if (outC->init) {
+    outC->init = kcg_false;
+    _L9 = 0;
+  }
+  else {
+    _L9 = outC->_L22;
+  }
+  outC->elapsed = _L9 >= maxNoOfRepetitions;
+  _L14 = !outC->elapsed;
+  /* 2 */ if (re_start) {
     outC->_L22 = 0;
   }
-  else if (outC->Context_1.expired) {
+  else /* 1 */ if (outC->Context_1.expired) {
     outC->_L22 = 1 + _L9;
   }
   else {
     outC->_L22 = _L9;
   }
+  outC->triggerAction = (_L14 & outC->Context_1.expired) | (_L14 &
+      outC->Context_1.started);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** waitAndRepeatTimer_MoRC_Pck_Utils.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

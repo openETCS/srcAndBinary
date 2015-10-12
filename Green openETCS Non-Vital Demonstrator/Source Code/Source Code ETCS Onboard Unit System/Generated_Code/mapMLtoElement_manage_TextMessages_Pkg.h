@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _mapMLtoElement_manage_TextMessages_Pkg_H_
 #define _mapMLtoElement_manage_TextMessages_Pkg_H_
@@ -9,15 +9,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* manage_TextMessages_Pkg::mapMLtoElement */
 extern void mapMLtoElement_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::mapMLtoElement::dmi_FromML_Change */DMI_ModesToDMI_T_DMI_Types_Pkg *dmi_FromML_Change,
-  /* manage_TextMessages_Pkg::mapMLtoElement::outDerivedElement */DMI_TXT_MSG_status_T_DMI_Types_Pkg *outDerivedElement);
+  /* manage_TextMessages_Pkg::mapMLtoElement::inModeLevel_Ack */ T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
+  /* manage_TextMessages_Pkg::mapMLtoElement::announcedLevel */ M_LEVEL announcedLevel,
+  /* manage_TextMessages_Pkg::mapMLtoElement::outDerivedElement */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *outDerivedElement);
 
 #endif /* _mapMLtoElement_manage_TextMessages_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** mapMLtoElement_manage_TextMessages_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

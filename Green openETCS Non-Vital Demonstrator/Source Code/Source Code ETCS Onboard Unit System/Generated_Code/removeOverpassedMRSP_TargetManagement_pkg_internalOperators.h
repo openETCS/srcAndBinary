@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _removeOverpassedMRSP_TargetManagement_pkg_internalOperators_H_
 #define _removeOverpassedMRSP_TargetManagement_pkg_internalOperators_H_
@@ -10,17 +10,19 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP */
 extern void removeOverpassedMRSP_TargetManagement_pkg_internalOperators(
-  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::Targets */Target_list_MRSP_real_T_TargetManagement_types *Targets,
-  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::d_max_safe_front */L_internal_real_Type_SDM_Types_Pkg d_max_safe_front,
-  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::TargetsOut */Target_list_MRSP_real_T_TargetManagement_types *TargetsOut,
-  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::updated */kcg_bool *updated);
+  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::Targets */ Target_list_MRSP_real_T_TargetManagement_types *Targets,
+  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::d_max_safe_front */ L_internal_real_Type_SDM_Types_Pkg d_max_safe_front,
+  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::TargetsOut */ Target_list_MRSP_real_T_TargetManagement_types *TargetsOut,
+  /* TargetManagement_pkg::internalOperators::removeOverpassedMRSP::updated */ kcg_bool *updated);
 
 #endif /* _removeOverpassedMRSP_TargetManagement_pkg_internalOperators_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** removeOverpassedMRSP_TargetManagement_pkg_internalOperators.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

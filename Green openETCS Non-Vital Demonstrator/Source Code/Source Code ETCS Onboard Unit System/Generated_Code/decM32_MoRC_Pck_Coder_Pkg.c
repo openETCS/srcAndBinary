@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* MoRC_Pck::Coder_Pkg::decM32 */
 void decM32_MoRC_Pck_Coder_Pkg(
-  /* MoRC_Pck::Coder_Pkg::decM32::inMessage */genMessage_T_MoRC_Pck *inMessage,
-  /* MoRC_Pck::Coder_Pkg::decM32::systemVersionFromTracksideSupported */kcg_bool systemVersionFromTracksideSupported,
-  /* MoRC_Pck::Coder_Pkg::decM32::m32_RBC_or_RIU_System_Version */m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg *m32_RBC_or_RIU_System_Version)
+  /* MoRC_Pck::Coder_Pkg::decM32::inMessage */ msgFromTrack_T_RCM_MsgTypes_Pkg *inMessage,
+  /* MoRC_Pck::Coder_Pkg::decM32::systemVersionFromTracksideSupported */ kcg_bool systemVersionFromTracksideSupported,
+  /* MoRC_Pck::Coder_Pkg::decM32::m32_RBC_or_RIU_System_Version */ m32e_RBC_or_RIU_System_Version_T_MoRC_Pck_Coder_Pkg *m32_RBC_or_RIU_System_Version)
 {
   (*m32_RBC_or_RIU_System_Version).valid = (*inMessage).valid &
     (((*inMessage).source == msrc_Euroradio_Common_Types_Pkg) |
@@ -24,8 +24,8 @@ void decM32_MoRC_Pck_Coder_Pkg(
     systemVersionFromTracksideSupported;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** decM32_MoRC_Pck_Coder_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

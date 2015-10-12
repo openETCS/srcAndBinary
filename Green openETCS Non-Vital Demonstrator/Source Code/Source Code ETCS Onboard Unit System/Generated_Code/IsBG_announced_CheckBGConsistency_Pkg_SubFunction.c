@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,12 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced */
 void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::recivedBG_header */BG_Header_T_BG_Types_Pkg *recivedBG_header,
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::storedBGs */positionedBGs_T_TrainPosition_Types_Pck *storedBGs,
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::isAnnounced */kcg_bool *isAnnounced,
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::q_linkorintation */Q_LINKORIENTATION *q_linkorintation)
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::recivedBG_header */ BG_Header_T_BG_Types_Pkg *recivedBG_header,
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::storedBGs */ positionedBGs_T_TrainPosition_Types_Pck *storedBGs,
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::isAnnounced */ kcg_bool *isAnnounced,
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::q_linkorintation */ Q_LINKORIENTATION *q_linkorintation)
 {
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced */
   static positionedBG_T_TrainPosition_Types_Pck tmp;
   /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::IfBlock1::then::_L2 */
   static positionedBG_T_TrainPosition_Types_Pck _L2_IfBlock1;
@@ -28,8 +29,8 @@ void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
     recivedBG_header,
     &indexLocal,
     &isStored);
-  if (isStored) {
-    if ((0 <= indexLocal) & (indexLocal < 8)) {
+  /* ck_isStored */ if (isStored) {
+    if ((0 <= indexLocal) & (indexLocal < 41)) {
       kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
         &_L2_IfBlock1,
         &(*storedBGs)[indexLocal]);
@@ -46,7 +47,7 @@ void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
   }
   else {
     *isAnnounced = kcg_false;
-    if ((0 <= indexLocal) & (indexLocal < 8)) {
+    if ((0 <= indexLocal) & (indexLocal < 41)) {
       kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
         &tmp,
         &(*storedBGs)[indexLocal]);
@@ -61,8 +62,8 @@ void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** IsBG_announced_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

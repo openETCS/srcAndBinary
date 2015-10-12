@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,16 @@
 
 /* TA_Lib_internal::EVAL_V_Release */
 void EVAL_V_Release_TA_Lib_internal(
-  /* TA_Lib_internal::EVAL_V_Release::V_NV_in */kcg_int V_NV_in,
-  /* TA_Lib_internal::EVAL_V_Release::V_in */kcg_int V_in,
-  /* TA_Lib_internal::EVAL_V_Release::V_out */V_internal_Type_Obu_BasicTypes_Pkg *V_out,
-  /* TA_Lib_internal::EVAL_V_Release::calc_onboard */kcg_bool *calc_onboard)
+  /* TA_Lib_internal::EVAL_V_Release::V_NV_in */ kcg_int V_NV_in,
+  /* TA_Lib_internal::EVAL_V_Release::V_in */ kcg_int V_in,
+  /* TA_Lib_internal::EVAL_V_Release::V_out */ V_internal_Type_Obu_BasicTypes_Pkg *V_out,
+  /* TA_Lib_internal::EVAL_V_Release::calc_onboard */ kcg_bool *calc_onboard)
 {
   *calc_onboard = V_in == 126 * 5;
-  if (*calc_onboard) {
+  /* 2 */ if (*calc_onboard) {
     *V_out = 0;
   }
-  else if (V_in == 127 * 5) {
+  else /* 1 */ if (V_in == 127 * 5) {
     *V_out = V_NV_in;
   }
   else {
@@ -26,8 +26,8 @@ void EVAL_V_Release_TA_Lib_internal(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_V_Release_TA_Lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

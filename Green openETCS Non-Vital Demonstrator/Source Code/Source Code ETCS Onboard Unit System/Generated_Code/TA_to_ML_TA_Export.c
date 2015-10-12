@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,60 +9,75 @@
 
 /* TA_Export::TA_to_ML */
 void TA_to_ML_TA_Export(
-  /* TA_Export::TA_to_ML::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TA_Export::TA_to_ML::t_nvcontact_overpass */kcg_bool t_nvcontact_overpass,
-  /* TA_Export::TA_to_ML::Data_to_From_Track_Packets_at_ML */T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg *Data_to_From_Track_Packets_at_ML,
-  /* TA_Export::TA_to_ML::Data_to_From_Track_Messages_at_ML */T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg *Data_to_From_Track_Messages_at_ML,
-  /* TA_Export::TA_to_ML::P_12_to_Input_MA_SSP_Gradient_at_ML */kcg_bool *P_12_to_Input_MA_SSP_Gradient_at_ML,
-  /* TA_Export::TA_to_ML::P_15_to_Input_MA_SSP_Gradient_at_ML */P15_Level23MovementAuthorities_T_Packet_Types_Pkg *P_15_to_Input_MA_SSP_Gradient_at_ML,
-  /* TA_Export::TA_to_ML::P_21_to_Input_MA_SSP_Gradient_at_ML */P21_GradientProfiles_T_Packet_Types_Pkg *P_21_to_Input_MA_SSP_Gradient_at_ML,
-  /* TA_Export::TA_to_ML::P_27_to_Input_MA_SSP_Gradient_at_ML */P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg *P_27_to_Input_MA_SSP_Gradient_at_ML)
+  /* TA_Export::TA_to_ML::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_Export::TA_to_ML::t_nvcontact_overpass */ kcg_bool t_nvcontact_overpass,
+  /* TA_Export::TA_to_ML::valid_GP */ kcg_bool valid_GP,
+  /* TA_Export::TA_to_ML::valid_MA */ kcg_bool valid_MA,
+  /* TA_Export::TA_to_ML::valid_SSP */ kcg_bool valid_SSP,
+  /* TA_Export::TA_to_ML::Data_to_From_Track_Packets_at_ML */ T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg *Data_to_From_Track_Packets_at_ML,
+  /* TA_Export::TA_to_ML::Data_to_From_Track_Messages_at_ML */ T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg *Data_to_From_Track_Messages_at_ML,
+  /* TA_Export::TA_to_ML::P_12_to_Input_MA_SSP_Gradient_at_ML */ kcg_bool *P_12_to_Input_MA_SSP_Gradient_at_ML,
+  /* TA_Export::TA_to_ML::P_15_to_Input_MA_SSP_Gradient_at_ML */ kcg_bool *P_15_to_Input_MA_SSP_Gradient_at_ML,
+  /* TA_Export::TA_to_ML::P_21_to_Input_MA_SSP_Gradient_at_ML */ kcg_bool *P_21_to_Input_MA_SSP_Gradient_at_ML,
+  /* TA_Export::TA_to_ML::P_27_to_Input_MA_SSP_Gradient_at_ML */ kcg_bool *P_27_to_Input_MA_SSP_Gradient_at_ML)
 {
   /* TA_Export::TA_to_ML::_L20 */
   static kcg_int _L20;
-  /* TA_Export::TA_to_ML::_L68 */
-  static P135_OBU_T_TM _L68;
-  /* TA_Export::TA_to_ML::_L108 */
-  static P012_OBU_T_TM _L108;
   
   *P_12_to_Input_MA_SSP_Gradient_at_ML = kcg_false;
-  (*Data_to_From_Track_Packets_at_ML).P_63 = kcg_false;
+  kcg_copy_P12_Level1MovementAuthorities_T_Packet_Types_Pkg(
+    &(*Data_to_From_Track_Packets_at_ML).P_12,
+    (P12_Level1MovementAuthorities_T_Packet_Types_Pkg *)
+      &Default_P12_legacy_TA_Export);
+  kcg_copy_P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg(
+    &(*Data_to_From_Track_Packets_at_ML).P_135,
+    (P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg *)
+      &Default_P135_legacy_TA_Export);
+  kcg_copy_P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg(
+    &(*Data_to_From_Track_Packets_at_ML).P_63,
+    (P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg *)
+      &Default_P63_legacy_TA_Export);
   kcg_copy_P80_ModeProfiles_T_Packet_Types_Pkg(
     &(*Data_to_From_Track_Packets_at_ML).P_80,
     (P80_ModeProfiles_T_Packet_Types_Pkg *) &Default_P80_legacy_TA_Export);
-  (*Data_to_From_Track_Messages_at_ML).T_NVCONTACT_Overpass =
-    t_nvcontact_overpass;
+  (*Data_to_From_Track_Packets_at_ML).LRBG = DEFAULT_LRBG_TrackAtlasTypes;
+  (*Data_to_From_Track_Packets_at_ML).referenceLocation =
+    DEFAULT_Location_T_TrackAtlasTypes;
+  *P_27_to_Input_MA_SSP_Gradient_at_ML = valid_SSP;
+  *P_21_to_Input_MA_SSP_Gradient_at_ML = valid_GP;
+  *P_15_to_Input_MA_SSP_Gradient_at_ML = valid_MA;
   /* 1 */
-  Read_P012_TM(
+  Read_P137_Legacy_TM_specific(
     &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_12,
-    &_L108);
+    &(*Data_to_From_Track_Packets_at_ML).P_137);
   /* 1 */
-  Read_P027V1_Legacy_for_ML_TM_specific(
+  Read_P138_Legacy_TM_specific(
     &(*MessageIn).packets,
-    P_27_to_Input_MA_SSP_Gradient_at_ML);
-  kcg_copy_P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg(
-    &(*Data_to_From_Track_Packets_at_ML).P_27,
-    P_27_to_Input_MA_SSP_Gradient_at_ML);
+    &(*Data_to_From_Track_Packets_at_ML).P_138);
   /* 1 */
-  Read_P021_Legacy_TM_specific(
+  Read_P139_Legacy_TM_specific(
     &(*MessageIn).packets,
-    P_21_to_Input_MA_SSP_Gradient_at_ML);
-  kcg_copy_P21_GradientProfiles_T_Packet_Types_Pkg(
-    &(*Data_to_From_Track_Packets_at_ML).P_21,
-    P_21_to_Input_MA_SSP_Gradient_at_ML);
+    &(*Data_to_From_Track_Packets_at_ML).P_139);
   /* 1 */
   Read_P015_Legacy_TM_specific(
     &(*MessageIn).packets,
-    P_15_to_Input_MA_SSP_Gradient_at_ML);
-  kcg_copy_P15_Level23MovementAuthorities_T_Packet_Types_Pkg(
-    &(*Data_to_From_Track_Packets_at_ML).P_15,
-    P_15_to_Input_MA_SSP_Gradient_at_ML);
+    &(*Data_to_From_Track_Packets_at_ML).P_15);
   /* 1 */
-  Read_P135_TM(
+  Read_P021_Legacy_TM_specific(
     &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_135,
-    &_L68);
+    &(*Data_to_From_Track_Packets_at_ML).P_21);
+  /* 1 */
+  Read_P027V1_Legacy_for_ML_TM_specific(
+    &(*MessageIn).packets,
+    &(*Data_to_From_Track_Packets_at_ML).P_27);
+  /* 1 */
+  Read_P041_Legacy_TM_specific(
+    &(*MessageIn).packets,
+    &(*Data_to_From_Track_Packets_at_ML).P_41);
+  /* 1 */
+  Read_P046_Legacy_TM_specific(
+    &(*MessageIn).packets,
+    &(*Data_to_From_Track_Packets_at_ML).P_46);
   _L20 = /* 2 */
     CAST_NID_MESSAGE_to_int_TM_conversions(
       (*MessageIn).Radio_Common_Header.nid_message);
@@ -78,30 +93,10 @@ void TA_to_ML_TA_Export(
     nid_message_TrackTrain_028_TM_radio_messages;
   (*Data_to_From_Track_Messages_at_ML).Mess_6 = _L20 ==
     nid_message_TrackTrain_006_TM_radio_messages;
-  /* 1 */
-  Read_P137_Legacy_TM_specific(
-    &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_137);
-  /* 1 */
-  Read_P138_Legacy_TM_specific(
-    &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_138);
-  /* 1 */
-  Read_P139_Legacy_TM_specific(
-    &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_139);
-  /* 1 */
-  Read_P041_Legacy_TM_specific(
-    &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_41);
-  /* 1 */
-  Read_P046_Legacy_TM_specific(
-    &(*MessageIn).packets,
-    &(*Data_to_From_Track_Packets_at_ML).P_46);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** TA_to_ML_TA_Export.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

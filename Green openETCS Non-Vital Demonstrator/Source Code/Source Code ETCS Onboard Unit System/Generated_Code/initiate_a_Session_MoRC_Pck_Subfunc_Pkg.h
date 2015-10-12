@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _initiate_a_Session_MoRC_Pck_Subfunc_Pkg_H_
 #define _initiate_a_Session_MoRC_Pck_Subfunc_Pkg_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,29 +29,34 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session */
 extern void initiate_a_Session_MoRC_Pck_Subfunc_Pkg(
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateRequest_fromOnboardEquipment */kcg_bool initiateRequest_fromOnboardEquipment,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateRequest_fromRBC */kcg_bool initiateRequest_fromRBC,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateRequest_fromRadio_InfillUnit */kcg_bool initiateRequest_fromRadio_InfillUnit,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::m38_initiationOfACommunicationSession */kcg_bool m38_initiationOfACommunicationSession,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::level */M_LEVEL level,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::atStartOfMission */kcg_bool atStartOfMission,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::establishSessionOrderedFromTrackside */kcg_bool establishSessionOrderedFromTrackside,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::mode */M_MODE mode,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::modeChangeHasToBeReportedToRBC */kcg_bool modeChangeHasToBeReportedToRBC,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::driverHasManuallyChangedLevel */kcg_bool driverHasManuallyChangedLevel,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::trainFrontReachesEndOfAnnouncedRadioHole */kcg_bool trainFrontReachesEndOfAnnouncedRadioHole,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::prevSessionTerminatedDueToLossOfSafeRadioConnection */kcg_bool prevSessionTerminatedDueToLossOfSafeRadioConnection,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::startOfMissionProcedureCompleted */kcg_bool startOfMissionProcedureCompleted,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::NoCommunicationSessionEstablished */kcg_bool NoCommunicationSessionEstablished,
-  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateEstablishingNewSessionRequest */kcg_bool initiateEstablishingNewSessionRequest,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateRequest_fromOnboardEquipment */ kcg_bool initiateRequest_fromOnboardEquipment,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateRequest_fromRBC */ kcg_bool initiateRequest_fromRBC,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateRequest_fromRadio_InfillUnit */ kcg_bool initiateRequest_fromRadio_InfillUnit,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::m38_initiationOfACommunicationSession */ kcg_bool m38_initiationOfACommunicationSession,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::level */ M_LEVEL level,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::atStartOfMission */ kcg_bool atStartOfMission,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::establishSessionOrderedFromTrackside */ kcg_bool establishSessionOrderedFromTrackside,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::mode */ M_MODE mode,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::modeChangeHasToBeReportedToRBC */ kcg_bool modeChangeHasToBeReportedToRBC,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::driverHasManuallyChangedLevel */ kcg_bool driverHasManuallyChangedLevel,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::trainFrontReachesEndOfAnnouncedRadioHole */ kcg_bool trainFrontReachesEndOfAnnouncedRadioHole,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::prevSessionTerminatedDueToLossOfSafeRadioConnection */ kcg_bool prevSessionTerminatedDueToLossOfSafeRadioConnection,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::startOfMissionProcedureCompleted */ kcg_bool startOfMissionProcedureCompleted,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::NoCommunicationSessionEstablished */ kcg_bool NoCommunicationSessionEstablished,
+  /* MoRC_Pck::Subfunc_Pkg::initiate_a_Session::initiateEstablishingNewSessionRequest */ kcg_bool initiateEstablishingNewSessionRequest,
   outC_initiate_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
 
 extern void initiate_a_Session_reset_MoRC_Pck_Subfunc_Pkg(
   outC_initiate_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void initiate_a_Session_init_MoRC_Pck_Subfunc_Pkg(
+  outC_initiate_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _initiate_a_Session_MoRC_Pck_Subfunc_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** initiate_a_Session_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

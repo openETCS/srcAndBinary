@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _countDownTimer_MoRC_Pck_Utils_H_
 #define _countDownTimer_MoRC_Pck_Utils_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -29,19 +31,24 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Utils::countDownTimer */
 extern void countDownTimer_MoRC_Pck_Utils(
-  /* MoRC_Pck::Utils::countDownTimer::re_start */kcg_bool re_start,
-  /* MoRC_Pck::Utils::countDownTimer::stop */kcg_bool stop,
-  /* MoRC_Pck::Utils::countDownTimer::actualTime */time_Type_MoRC_Pck actualTime,
-  /* MoRC_Pck::Utils::countDownTimer::autoretrigger */kcg_bool autoretrigger,
-  /* MoRC_Pck::Utils::countDownTimer::interval */time_Type_MoRC_Pck interval,
+  /* MoRC_Pck::Utils::countDownTimer::re_start */ kcg_bool re_start,
+  /* MoRC_Pck::Utils::countDownTimer::stop */ kcg_bool stop,
+  /* MoRC_Pck::Utils::countDownTimer::actualTime */ time_Type_MoRC_Pck actualTime,
+  /* MoRC_Pck::Utils::countDownTimer::autoretrigger */ kcg_bool autoretrigger,
+  /* MoRC_Pck::Utils::countDownTimer::interval */ time_Type_MoRC_Pck interval,
   outC_countDownTimer_MoRC_Pck_Utils *outC);
 
 extern void countDownTimer_reset_MoRC_Pck_Utils(
   outC_countDownTimer_MoRC_Pck_Utils *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void countDownTimer_init_MoRC_Pck_Utils(
+  outC_countDownTimer_MoRC_Pck_Utils *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _countDownTimer_MoRC_Pck_Utils_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** countDownTimer_MoRC_Pck_Utils.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* MA_Request::Send_MA */
 void Send_MA_MA_Request(
-  /* MA_Request::Send_MA::msg132 */Radio_TrainTrack_Message_T_Radio_Types_Pkg *msg132,
-  /* MA_Request::Send_MA::message_out */Radio_TrainTrack_Message_T_Radio_Types_Pkg *message_out)
+  /* MA_Request::Send_MA::msg132 */ Radio_TrainTrack_Message_T_Radio_Types_Pkg *msg132,
+  /* MA_Request::Send_MA::message_out */ Radio_TrainTrack_Message_T_Radio_Types_Pkg *message_out)
 {
   kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(message_out, msg132);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_MA_MA_Request.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

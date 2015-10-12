@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* CheckEuroradioMessage::CheckAllowedPacketsRadio */
 kcg_bool CheckAllowedPacketsRadio_CheckEuroradioMessage(
-  /* CheckEuroradioMessage::CheckAllowedPacketsRadio::rtmMessage */ReceivedMessage_T_Common_Types_Pkg *rtmMessage)
+  /* CheckEuroradioMessage::CheckAllowedPacketsRadio::rtmMessage */ ReceivedMessage_T_Common_Types_Pkg *rtmMessage)
 {
   static kcg_int i;
   /* CheckEuroradioMessage::CheckAllowedPacketsRadio::valid */
   static kcg_bool valid;
   
   valid = kcg_true;
-  for (i = 0; i < 30; i++) {
+  /* 1 */ for (i = 0; i < 30; i++) {
     valid = /* 1 */
       CheckIfSinglePacketIsAllowedForRadioMessage_CheckEuroradioMessage_SubFunctions(
         valid,
@@ -28,8 +28,8 @@ kcg_bool CheckAllowedPacketsRadio_CheckEuroradioMessage(
   return valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckAllowedPacketsRadio_CheckEuroradioMessage.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

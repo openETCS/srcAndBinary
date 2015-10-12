@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _calculateTrainPosition_CalculateTrainPosition_Pkg_H_
 #define _calculateTrainPosition_CalculateTrainPosition_Pkg_H_
@@ -17,6 +17,8 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
@@ -28,29 +30,36 @@ typedef struct {
   kcg_bool init;
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_calculateBGLocations_CalculateTrainPosition_Pkg /* 6 */ Context_6;
-  outC_calculateTrainPositionInfo_CalculateTrainPosition_Pkg /* 1 */ _1_Context_1;
+  outC_twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg /* 1 */ _1_Context_1;
   outC_linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg /* 2 */ Context_2;
-  outC_twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg /* 1 */ Context_1;
+  outC_calculateTrainPositionInfo_CalculateTrainPosition_Pkg /* 1 */ Context_1;
+  outC_calculateBGLocations_CalculateTrainPosition_Pkg /* 6 */ Context_6;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_calculateTrainPosition_CalculateTrainPosition_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* CalculateTrainPosition_Pkg::calculateTrainPosition */
 extern void calculateTrainPosition_CalculateTrainPosition_Pkg(
-  /* CalculateTrainPosition_Pkg::calculateTrainPosition::currentOdometry */odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
-  /* CalculateTrainPosition_Pkg::calculateTrainPosition::passedBG */passedBG_T_BG_Types_Pkg *passedBG,
-  /* CalculateTrainPosition_Pkg::calculateTrainPosition::msgFromTrack */ReceivedMessage_T_Common_Types_Pkg *msgFromTrack,
-  /* CalculateTrainPosition_Pkg::calculateTrainPosition::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
-  /* CalculateTrainPosition_Pkg::calculateTrainPosition::reset */kcg_bool reset,
+  /* CalculateTrainPosition_Pkg::calculateTrainPosition::currentOdometry */ odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
+  /* CalculateTrainPosition_Pkg::calculateTrainPosition::passedBG */ passedBG_T_BG_Types_Pkg *passedBG,
+  /* CalculateTrainPosition_Pkg::calculateTrainPosition::msgFromTrack */ ReceivedMessage_T_Common_Types_Pkg *msgFromTrack,
+  /* CalculateTrainPosition_Pkg::calculateTrainPosition::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
+  /* CalculateTrainPosition_Pkg::calculateTrainPosition::reset */ kcg_bool reset,
   outC_calculateTrainPosition_CalculateTrainPosition_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void calculateTrainPosition_reset_CalculateTrainPosition_Pkg(
   outC_calculateTrainPosition_CalculateTrainPosition_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void calculateTrainPosition_init_CalculateTrainPosition_Pkg(
+  outC_calculateTrainPosition_CalculateTrainPosition_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _calculateTrainPosition_CalculateTrainPosition_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** calculateTrainPosition_CalculateTrainPosition_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

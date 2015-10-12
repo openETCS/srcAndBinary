@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _NV_storage_TA_Storage_H_
 #define _NV_storage_TA_Storage_H_
@@ -9,16 +9,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TA_Storage::NV_storage */
 extern void NV_storage_TA_Storage(
-  /* TA_Storage::NV_storage::Packet3_in */P003V1_OBU_T_TM_baseline2 *Packet3_in,
-  /* TA_Storage::NV_storage::P3_received */kcg_bool *P3_received,
-  /* TA_Storage::NV_storage::Packet3_out */P003V1_OBU_T_TM_baseline2 *Packet3_out);
+  /* TA_Storage::NV_storage::Packet3_in */ P003V1_OBU_T_TM_baseline2 *Packet3_in,
+  /* TA_Storage::NV_storage::P3_received */ kcg_bool *P3_received,
+  /* TA_Storage::NV_storage::Packet3_out */ P003V1_OBU_T_TM_baseline2 *Packet3_out);
 
 #endif /* _NV_storage_TA_Storage_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** NV_storage_TA_Storage.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

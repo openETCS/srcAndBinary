@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Read_P058_TM_H_
 #define _Read_P058_TM_H_
@@ -11,16 +11,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TM::Read_P058 */
 extern void Read_P058_TM(
-  /* TM::Read_P058::Message_IN */CompressedPackets_T_Common_Types_Pkg *Message_IN,
-  /* TM::Read_P058::received */kcg_bool *received,
-  /* TM::Read_P058::P058_OBU_out */P058_OBU_T_TM *P058_OBU_out);
+  /* TM::Read_P058::Message_IN */ CompressedPackets_T_Common_Types_Pkg *Message_IN,
+  /* TM::Read_P058::received */ kcg_bool *received,
+  /* TM::Read_P058::P058_OBU_out */ P058_OBU_T_TM *P058_OBU_out);
 
 #endif /* _Read_P058_TM_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P058_TM.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

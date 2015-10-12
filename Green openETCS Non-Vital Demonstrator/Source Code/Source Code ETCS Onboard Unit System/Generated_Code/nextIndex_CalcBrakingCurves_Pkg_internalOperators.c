@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::nextIndex */
 kcg_int nextIndex_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::upwards */kcg_bool upwards,
-  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::currentIndex */kcg_int currentIndex,
-  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::limit */kcg_int limit)
+  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::upwards */ kcg_bool upwards,
+  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::currentIndex */ kcg_int currentIndex,
+  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::limit */ kcg_int limit)
 {
   /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::_L6 */
   static kcg_int _L6;
@@ -25,15 +25,15 @@ kcg_int nextIndex_CalcBrakingCurves_Pkg_internalOperators(
   _L21 = limit - 1;
   _L16 = 1 + currentIndex;
   _L6 = currentIndex - 1;
-  if (upwards) {
-    if (_L21 <= _L16) {
+  /* 1 */ if (upwards) {
+    /* 1 */ if (_L21 <= _L16) {
       nextIndex = _L21;
     }
     else {
       nextIndex = _L16;
     }
   }
-  else if (_L6 >= 0) {
+  else /* 2 */ if (_L6 >= 0) {
     nextIndex = _L6;
   }
   else {
@@ -42,8 +42,8 @@ kcg_int nextIndex_CalcBrakingCurves_Pkg_internalOperators(
   return nextIndex;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** nextIndex_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* TA_Export::GradientProfile_to_DMI */
 void GradientProfile_to_DMI_TA_Export(
-  /* TA_Export::GradientProfile_to_DMI::Gradient_Profile_in */GradientProfile_t_TrackAtlasTypes *Gradient_Profile_in,
-  /* TA_Export::GradientProfile_to_DMI::Gradient_Profile_for_DMI_out */GradientProfile_for_DMI_t_TrackAtlasTypes *Gradient_Profile_for_DMI_out)
+  /* TA_Export::GradientProfile_to_DMI::Gradient_Profile_in */ GradientProfile_t_TrackAtlasTypes *Gradient_Profile_in,
+  /* TA_Export::GradientProfile_to_DMI::Gradient_Profile_for_DMI_out */ GradientProfile_for_DMI_t_TrackAtlasTypes *Gradient_Profile_for_DMI_out)
 {
   static kcg_int i;
   
-  for (i = 0; i < 50; i++) {
+  /* 1 */ for (i = 0; i < 50; i++) {
     /* 1 */
     GradientProfile_to_DMI_loop_TA_Export(
       &(*Gradient_Profile_in)[i],
@@ -22,8 +22,8 @@ void GradientProfile_to_DMI_TA_Export(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** GradientProfile_to_DMI_TA_Export.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

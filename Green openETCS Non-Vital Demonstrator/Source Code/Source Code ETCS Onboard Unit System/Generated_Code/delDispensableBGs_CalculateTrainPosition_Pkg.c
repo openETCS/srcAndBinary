@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* CalculateTrainPosition_Pkg::delDispensableBGs */
 void delDispensableBGs_CalculateTrainPosition_Pkg(
-  /* CalculateTrainPosition_Pkg::delDispensableBGs::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::delDispensableBGs::delete */kcg_bool delete,
-  /* CalculateTrainPosition_Pkg::delDispensableBGs::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
+  /* CalculateTrainPosition_Pkg::delDispensableBGs::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::delDispensableBGs::deleteBG */ kcg_bool deleteBG,
+  /* CalculateTrainPosition_Pkg::delDispensableBGs::BGs_out */ positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
 {
   /* CalculateTrainPosition_Pkg::delDispensableBGs::IfBlock1::then::_L6 */
   static kcg_int _L6_IfBlock1;
@@ -29,26 +29,26 @@ void delDispensableBGs_CalculateTrainPosition_Pkg(
   /* 1 */
   countBGs_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     BGs_in,
-    delete,
+    deleteBG,
     &IfBlock1_clock,
     &_L7_IfBlock1,
     &_L3);
   IfBlock1_clock = _L3.passedLinkedBGsCount > 0;
-  if (IfBlock1_clock) {
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     /* 2 */
     indexOf_nthPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       kcg_true,
       _L3.passedLinkedBGsCount -
       cNoOfAtLeast_8_LRBGs_CalculateTrainPosition_Pkg + 1,
       BGs_in,
-      delete,
+      deleteBG,
       &_L6_IfBlock1,
       &_L7_IfBlock1);
     /* 2 */
     deleteBGs_beforeIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       BGs_in,
       _L6_IfBlock1,
-      (kcg_bool) (_L7_IfBlock1 & delete),
+      (kcg_bool) (_L7_IfBlock1 & deleteBG),
       BGs_out);
   }
   else {
@@ -58,20 +58,20 @@ void delDispensableBGs_CalculateTrainPosition_Pkg(
       _L3.passedUnlinkedBGsCount -
       cNoOfAtLeast_x_unlinkedBGs_CalculateTrainPosition_Pkg + 1,
       BGs_in,
-      delete,
+      deleteBG,
       &_L54_IfBlock1,
       &_L55_IfBlock1);
     /* 9 */
     deleteBGs_beforeIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       BGs_in,
       _L54_IfBlock1,
-      (kcg_bool) (_L55_IfBlock1 & delete),
+      (kcg_bool) (_L55_IfBlock1 & deleteBG),
       BGs_out);
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** delDispensableBGs_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

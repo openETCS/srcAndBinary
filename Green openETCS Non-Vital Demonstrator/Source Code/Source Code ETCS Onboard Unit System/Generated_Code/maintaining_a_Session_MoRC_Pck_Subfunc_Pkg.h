@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _maintaining_a_Session_MoRC_Pck_Subfunc_Pkg_H_
 #define _maintaining_a_Session_MoRC_Pck_Subfunc_Pkg_H_
@@ -9,6 +9,8 @@
 #include "countDownTimer_MoRC_Pck_Utils.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -33,20 +35,25 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session */
 extern void maintaining_a_Session_MoRC_Pck_Subfunc_Pkg(
-  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::communicationSessionEstablished */kcg_bool communicationSessionEstablished,
-  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::safeRadioConnectionReestablished */kcg_bool safeRadioConnectionReestablished,
-  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::lossOfTheSafeRadioConnection */kcg_bool lossOfTheSafeRadioConnection,
-  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::disconnectionHasNotBeenOrdered */kcg_bool disconnectionHasNotBeenOrdered,
-  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::trainFrontInsideInAnAnnouncedRadioHole */kcg_bool trainFrontInsideInAnAnnouncedRadioHole,
-  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::actualTime */time_Type_MoRC_Pck actualTime,
+  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::communicationSessionEstablished */ kcg_bool communicationSessionEstablished,
+  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::safeRadioConnectionReestablished */ kcg_bool safeRadioConnectionReestablished,
+  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::lossOfTheSafeRadioConnection */ kcg_bool lossOfTheSafeRadioConnection,
+  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::disconnectionHasNotBeenOrdered */ kcg_bool disconnectionHasNotBeenOrdered,
+  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::trainFrontInsideInAnAnnouncedRadioHole */ kcg_bool trainFrontInsideInAnAnnouncedRadioHole,
+  /* MoRC_Pck::Subfunc_Pkg::maintaining_a_Session::actualTime */ time_Type_MoRC_Pck actualTime,
   outC_maintaining_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
 
 extern void maintaining_a_Session_reset_MoRC_Pck_Subfunc_Pkg(
   outC_maintaining_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void maintaining_a_Session_init_MoRC_Pck_Subfunc_Pkg(
+  outC_maintaining_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _maintaining_a_Session_MoRC_Pck_Subfunc_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** maintaining_a_Session_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

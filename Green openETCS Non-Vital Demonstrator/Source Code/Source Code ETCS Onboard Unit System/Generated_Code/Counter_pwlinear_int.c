@@ -1,11 +1,20 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Counter_pwlinear_int.h"
+
+#ifndef KCG_USER_DEFINED_INIT
+void Counter_init_pwlinear_int(outC_Counter_pwlinear_int *outC)
+{
+  outC->init = kcg_true;
+  outC->Count = 0;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
 
 void Counter_reset_pwlinear_int(outC_Counter_pwlinear_int *outC)
 {
@@ -14,16 +23,17 @@ void Counter_reset_pwlinear_int(outC_Counter_pwlinear_int *outC)
 
 /* pwlinear::Counter */
 void Counter_pwlinear_int(
-  /* pwlinear::Counter::Incr */kcg_int Incr,
-  /* pwlinear::Counter::Reset */kcg_bool Reset,
+  /* pwlinear::Counter::Incr */ kcg_int Incr,
+  /* pwlinear::Counter::Reset */ kcg_bool Reset,
   outC_Counter_pwlinear_int *outC)
 {
+  /* pwlinear::Counter */
   static kcg_int tmp;
   
-  if (Reset) {
+  /* 1 */ if (Reset) {
     tmp = 0;
   }
-  else if (outC->init) {
+  else /* fby_1_init_5 */ if (outC->init) {
     tmp = 0;
   }
   else {
@@ -33,8 +43,8 @@ void Counter_pwlinear_int(
   outC->Count = tmp + Incr;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Counter_pwlinear_int.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

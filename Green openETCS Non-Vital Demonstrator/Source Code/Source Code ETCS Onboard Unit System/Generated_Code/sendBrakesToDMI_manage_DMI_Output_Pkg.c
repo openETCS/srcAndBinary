@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* manage_DMI_Output_Pkg::sendBrakesToDMI */
 void sendBrakesToDMI_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::sendBrakesToDMI::brakeCommand */Brake_command_T_TIU_Types_Pkg *brakeCommand,
-  /* manage_DMI_Output_Pkg::sendBrakesToDMI::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_DMI_Output_Pkg::sendBrakesToDMI::dmi_iconRequest */DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_iconRequest)
+  /* manage_DMI_Output_Pkg::sendBrakesToDMI::brakeCommand */ Brake_command_T_TIU_Types_Pkg *brakeCommand,
+  /* manage_DMI_Output_Pkg::sendBrakesToDMI::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_DMI_Output_Pkg::sendBrakesToDMI::dmi_iconRequest */ DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_iconRequest)
 {
   /* manage_DMI_Output_Pkg::sendBrakesToDMI::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -20,7 +20,7 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
   
   applyBrake = (apply_brake_TIU_Types_Pkg ==
       (*brakeCommand).m_emergencybrake_cm) & (*brakeCommand).valid;
-  if (applyBrake) {
+  /* ck_applyBrake */ if (applyBrake) {
     kcg_copy_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg(
       dmi_iconRequest,
       (DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg *)
@@ -30,7 +30,7 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
   else {
     else_clock_IfBlock1 = (*brakeCommand).valid &
       ((*brakeCommand).m_emergencybrake_cm == release_brake_TIU_Types_Pkg);
-    if (else_clock_IfBlock1) {
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
       kcg_copy_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg(
         dmi_iconRequest,
         (DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg *)
@@ -46,8 +46,8 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** sendBrakesToDMI_manage_DMI_Output_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

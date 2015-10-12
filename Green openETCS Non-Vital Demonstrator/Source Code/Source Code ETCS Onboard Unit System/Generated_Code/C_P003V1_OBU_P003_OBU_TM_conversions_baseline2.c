@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU */
 void C_P003V1_OBU_P003_OBU_TM_conversions_baseline2(
-  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P003V1_onboard */P003V1_OBU_T_TM_baseline2 *P003V1_onboard,
-  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P203V1_onboard */P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
-  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::PermanentDataP003 */P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
-  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P003_onbaord_out */P003_OBU_T_TM *P003_onbaord_out)
+  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P003V1_onboard */ P003V1_OBU_T_TM_baseline2 *P003V1_onboard,
+  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P203V1_onboard */ P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
+  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::PermanentDataP003 */ P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
+  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P003_onbaord_out */ P003_OBU_T_TM *P003_onbaord_out)
 {
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::_L59 */
   static P003_OBU_nid_c_sectionlist_enum_T_TM _L59;
@@ -86,8 +86,8 @@ void C_P003V1_OBU_P003_OBU_TM_conversions_baseline2(
     &_L59);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_OBU_P003_OBU_TM_conversions_baseline2.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

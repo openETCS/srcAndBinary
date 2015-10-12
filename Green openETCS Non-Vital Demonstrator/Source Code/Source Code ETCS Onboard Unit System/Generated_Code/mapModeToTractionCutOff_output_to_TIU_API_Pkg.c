@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* output_to_TIU_API_Pkg::mapModeToTractionCutOff */
 M_traction_cutoff_command_T_TIU_Types_Pkg mapModeToTractionCutOff_output_to_TIU_API_Pkg(
-  /* output_to_TIU_API_Pkg::mapModeToTractionCutOff::inModeLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *inModeLevel)
+  /* output_to_TIU_API_Pkg::mapModeToTractionCutOff::inModeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *inModeLevel)
 {
   /* output_to_TIU_API_Pkg::mapModeToTractionCutOff::tractionCutOff */
   static M_traction_cutoff_command_T_TIU_Types_Pkg tractionCutOff;
@@ -52,8 +52,8 @@ M_traction_cutoff_command_T_TIU_Types_Pkg mapModeToTractionCutOff_output_to_TIU_
   return tractionCutOff;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** mapModeToTractionCutOff_output_to_TIU_API_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

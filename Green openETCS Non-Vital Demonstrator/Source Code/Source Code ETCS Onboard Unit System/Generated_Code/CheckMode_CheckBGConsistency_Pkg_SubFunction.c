@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::CheckMode */
 kcg_bool CheckMode_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::currentMode */M_MODE currentMode)
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::currentMode */ M_MODE currentMode)
 {
   /* CheckBGConsistency_Pkg::SubFunction::CheckMode::_L35 */
   static kcg_bool _L35;
@@ -28,8 +28,8 @@ kcg_bool CheckMode_CheckBGConsistency_Pkg_SubFunction(
   return bgConsistansyIsActive;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckMode_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

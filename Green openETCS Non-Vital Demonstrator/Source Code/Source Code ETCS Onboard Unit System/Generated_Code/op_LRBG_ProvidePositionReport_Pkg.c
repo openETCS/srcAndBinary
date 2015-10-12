@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* ProvidePositionReport_Pkg::op_LRBG */
 kcg_int op_LRBG_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::op_LRBG::posBGs */positionedBGs_T_TrainPosition_Types_Pck *posBGs,
-  /* ProvidePositionReport_Pkg::op_LRBG::trainPos */trainPosition_T_TrainPosition_Types_Pck *trainPos)
+  /* ProvidePositionReport_Pkg::op_LRBG::posBGs */ positionedBGs_T_TrainPosition_Types_Pck *posBGs,
+  /* ProvidePositionReport_Pkg::op_LRBG::trainPos */ trainPosition_T_TrainPosition_Types_Pck *trainPos)
 {
   /* ProvidePositionReport_Pkg::op_LRBG::_L31 */
   static LocWithInAcc_T_Obu_BasicTypes_Pkg _L31;
@@ -28,8 +28,8 @@ kcg_int op_LRBG_ProvidePositionReport_Pkg(
     &(*trainPos).trainPosition,
     &_L39.location,
     &_L31);
-  if ((*trainPos).valid & !(*trainPos).trainPositionIsUnknown & _L38) {
-    if (0 <= _L31.nominal) {
+  /* 5 */ if ((*trainPos).valid & !(*trainPos).trainPositionIsUnknown & _L38) {
+    /* 2 */ if (0 <= _L31.nominal) {
       d_lrbg = _L31.nominal;
     }
     else {
@@ -42,8 +42,8 @@ kcg_int op_LRBG_ProvidePositionReport_Pkg(
   return d_lrbg;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** op_LRBG_ProvidePositionReport_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

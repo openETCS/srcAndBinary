@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Procedure_SH_Initiated_By_Driver_Procedures_H_
 #define _Procedure_SH_Initiated_By_Driver_Procedures_H_
@@ -9,6 +9,8 @@
 #include "SH_Initiated_By_Driver_On_Procedures.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -32,20 +34,27 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::Procedure_SH_Initiated_By_Driver */
 extern void Procedure_SH_Initiated_By_Driver_Procedures(
-  /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Level */M_LEVEL Current_Level,
-  /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
-  /* Procedures::Procedure_SH_Initiated_By_Driver::Driver_Req_SH */kcg_bool Driver_Req_SH,
-  /* Procedures::Procedure_SH_Initiated_By_Driver::On_Going_Mission */kcg_bool On_Going_Mission,
-  /* Procedures::Procedure_SH_Initiated_By_Driver::Shunting_Granted_By_RBC */kcg_bool Shunting_Granted_By_RBC,
-  /* Procedures::Procedure_SH_Initiated_By_Driver::Train_Standstill */kcg_bool Train_Standstill,
+  /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Level */ M_LEVEL Current_Level,
+  /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
+  /* Procedures::Procedure_SH_Initiated_By_Driver::Driver_Req_SH */ kcg_bool Driver_Req_SH,
+  /* Procedures::Procedure_SH_Initiated_By_Driver::On_Going_Mission */ kcg_bool On_Going_Mission,
+  /* Procedures::Procedure_SH_Initiated_By_Driver::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
+  /* Procedures::Procedure_SH_Initiated_By_Driver::Train_Standstill */ kcg_bool Train_Standstill,
   outC_Procedure_SH_Initiated_By_Driver_Procedures *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Procedure_SH_Initiated_By_Driver_reset_Procedures(
   outC_Procedure_SH_Initiated_By_Driver_Procedures *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void Procedure_SH_Initiated_By_Driver_init_Procedures(
+  outC_Procedure_SH_Initiated_By_Driver_Procedures *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Procedure_SH_Initiated_By_Driver_Procedures_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_SH_Initiated_By_Driver_Procedures.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

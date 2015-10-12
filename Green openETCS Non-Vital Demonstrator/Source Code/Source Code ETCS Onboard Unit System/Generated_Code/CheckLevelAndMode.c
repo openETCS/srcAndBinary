@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* CheckLevelAndMode */
 kcg_bool CheckLevelAndMode(
-  /* CheckLevelAndMode::Level */M_LEVEL Level,
-  /* CheckLevelAndMode::Mode */T_Mode_Level_And_Mode_Types_Pkg Mode)
+  /* CheckLevelAndMode::Level */ M_LEVEL Level,
+  /* CheckLevelAndMode::Mode */ T_Mode_Level_And_Mode_Types_Pkg Mode)
 {
   /* CheckLevelAndMode::_L7 */
   static kcg_bool _L7;
@@ -51,8 +51,8 @@ kcg_bool CheckLevelAndMode(
   return Level_Mode_Compatible;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckLevelAndMode.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

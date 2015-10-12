@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,17 @@
 
 /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes */
 void calculateTrainpositionAttributes_CalculateTrainPosition_Pkg(
-  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::trainPositionInfo */trainPositionInfo_T_TrainPosition_Types_Pck *trainPositionInfo,
-  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::currentOdometry */odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
-  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
-  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition)
+  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::trainPositionInfo */ trainPositionInfo_T_TrainPosition_Types_Pck *trainPositionInfo,
+  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::currentOdometry */ odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
+  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
+  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition)
 {
   /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::_L243 */
   static LocWithInAcc_T_Obu_BasicTypes_Pkg _L243;
   /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::_L266 */
   static kcg_bool _L266;
+  /* CalculateTrainPosition_Pkg::calculateTrainpositionAttributes::_L366 */
+  static LocWithInAcc_T_Obu_BasicTypes_Pkg _L366;
   
   (*trainPosition).valid = (*trainPositionInfo).valid;
   (*trainPosition).timestamp = (*trainPositionInfo).timestamp;
@@ -43,6 +45,14 @@ void calculateTrainpositionAttributes_CalculateTrainPosition_Pkg(
   (*trainPosition).estimatedFrontEndPosition = _L243.nominal;
   (*trainPosition).minSafeFrontEndPosition = _L243.nominal + _L243.d_min;
   (*trainPosition).maxSafeFrontEndPostion = _L243.nominal + _L243.d_max;
+  /* 1 */
+  sub_2_distances_BasicLocationFunctions_Pkg(
+    &_L243,
+    &(*trainProperties).d_frontend_2_rearend,
+    &_L366);
+  (*trainPosition).estimatedRearEndPosition = _L366.nominal;
+  (*trainPosition).minSafeRearEndPosition = _L366.nominal + _L366.d_min;
+  (*trainPosition).maxSafeRearEndPosition = _L366.nominal + _L366.d_max;
   (*trainPosition).trainPositionIsUnknown = _L266 | (/* nidC_nidBG_2_NIDLRBG */
       nidC_nidBG_2_NIDLRBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
         (*trainPositionInfo).lastPassedLinkedBG.valid,
@@ -54,7 +64,7 @@ void calculateTrainpositionAttributes_CalculateTrainPosition_Pkg(
       &(*trainPositionInfo).lastPassedLinkedBG,
       trainPositionInfo,
       trainProperties);
-  if (_L266) {
+  /* 1 */ if (_L266) {
     (*trainPosition).trainOrientationToLRBG = Q_DIRLRBG_Unknown;
   }
   else {
@@ -67,8 +77,8 @@ void calculateTrainpositionAttributes_CalculateTrainPosition_Pkg(
       &(*trainPositionInfo).lastPassedLinkedBG);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** calculateTrainpositionAttributes_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

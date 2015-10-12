@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _TimingChecker_CheckEuroradioMessage_H_
 #define _TimingChecker_CheckEuroradioMessage_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,19 +30,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* CheckEuroradioMessage::TimingChecker */
 extern void TimingChecker_CheckEuroradioMessage(
-  /* CheckEuroradioMessage::TimingChecker::tNvContact */T_internal_Type_Obu_BasicTypes_Pkg tNvContact,
-  /* CheckEuroradioMessage::TimingChecker::lastRelevantEventTimestamp */T_internal_Type_Obu_BasicTypes_Pkg lastRelevantEventTimestamp,
-  /* CheckEuroradioMessage::TimingChecker::rtmMessage */ReceivedMessage_T_Common_Types_Pkg *rtmMessage,
-  /* CheckEuroradioMessage::TimingChecker::connectionStatus */sessionStatus_Type_Radio_Types_Pkg connectionStatus,
-  /* CheckEuroradioMessage::TimingChecker::messageTimestamp */T_internal_Type_Obu_BasicTypes_Pkg messageTimestamp,
+  /* CheckEuroradioMessage::TimingChecker::tNvContact */ T_internal_Type_Obu_BasicTypes_Pkg tNvContact,
+  /* CheckEuroradioMessage::TimingChecker::lastRelevantEventTimestamp */ T_internal_Type_Obu_BasicTypes_Pkg lastRelevantEventTimestamp,
+  /* CheckEuroradioMessage::TimingChecker::rtmMessage */ ReceivedMessage_T_Common_Types_Pkg *rtmMessage,
+  /* CheckEuroradioMessage::TimingChecker::connectionStatus */ sessionStatus_Type_Radio_Types_Pkg connectionStatus,
+  /* CheckEuroradioMessage::TimingChecker::messageTimestamp */ T_internal_Type_Obu_BasicTypes_Pkg messageTimestamp,
   outC_TimingChecker_CheckEuroradioMessage *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void TimingChecker_reset_CheckEuroradioMessage(
   outC_TimingChecker_CheckEuroradioMessage *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void TimingChecker_init_CheckEuroradioMessage(
+  outC_TimingChecker_CheckEuroradioMessage *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _TimingChecker_CheckEuroradioMessage_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** TimingChecker_CheckEuroradioMessage.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

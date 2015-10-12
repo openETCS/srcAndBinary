@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _manageDMI_Input_manage_DMI_Input_Pkg_H_
 #define _manageDMI_Input_manage_DMI_Input_Pkg_H_
@@ -12,6 +12,8 @@
 #include "triggerForMA_manage_DMI_Input_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -43,19 +45,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* manage_DMI_Input_Pkg::manageDMI_Input */
 extern void manageDMI_Input_manage_DMI_Input_Pkg(
-  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */DMI_to_EVC_Message_T_API_DMI_Pkg *fromDMI,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::dmiStatusReset */kcg_bool dmiStatusReset,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::inStatusList */DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::lasttNTC */NID_STM_DMI_Types_Pkg lasttNTC,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */ DMI_to_EVC_Message_T_API_DMI_Pkg *fromDMI,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::dmiStatusReset */ kcg_bool dmiStatusReset,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::lasttNTC */ NID_STM_DMI_Types_Pkg lasttNTC,
   outC_manageDMI_Input_manage_DMI_Input_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void manageDMI_Input_reset_manage_DMI_Input_Pkg(
   outC_manageDMI_Input_manage_DMI_Input_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void manageDMI_Input_init_manage_DMI_Input_Pkg(
+  outC_manageDMI_Input_manage_DMI_Input_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _manageDMI_Input_manage_DMI_Input_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,15 @@
 
 /* output_to_TIU_API_Pkg::manageTIU_output */
 void manageTIU_output_output_to_TIU_API_Pkg(
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_IsolationStatus */Isolation_Status_T_TIU_Types_Pkg *in_IsolationStatus,
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_brake_command */Brake_command_T_TIU_Types_Pkg *in_brake_command,
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_brake_inhibition */Brake_inhibition_command_T_TIU_Types_Pkg *in_brake_inhibition,
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_train_commands */Type_I_train_commands_T_TIU_Types_Pkg *in_train_commands,
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_change_traction_system */Change_traction_system_T_TIU_Types_Pkg *in_change_traction_system,
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_passenger_door_control_info */Passenger_door_control_info_T_TIU_Types_Pkg *in_passenger_door_control_info,
-  /* output_to_TIU_API_Pkg::manageTIU_output::in_change_of_allowed_current_consumption */Change_of_allowed_current_consumption_T_TIU_Types_Pkg *in_change_of_allowed_current_consumption,
-  /* output_to_TIU_API_Pkg::manageTIU_output::outTIU_to_API */TIU_Output_msg_API_TIU_Pkg *outTIU_to_API,
-  /* output_to_TIU_API_Pkg::manageTIU_output::outCommandStatusforEVC */TIU_commandStatus_T_TIU_Types_Pkg *outCommandStatusforEVC)
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_IsolationStatus */ Isolation_Status_T_TIU_Types_Pkg *in_IsolationStatus,
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_brake_command */ Brake_command_T_TIU_Types_Pkg *in_brake_command,
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_brake_inhibition */ Brake_inhibition_command_T_TIU_Types_Pkg *in_brake_inhibition,
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_train_commands */ Type_I_train_commands_T_TIU_Types_Pkg *in_train_commands,
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_change_traction_system */ Change_traction_system_T_TIU_Types_Pkg *in_change_traction_system,
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_passenger_door_control_info */ Passenger_door_control_info_T_TIU_Types_Pkg *in_passenger_door_control_info,
+  /* output_to_TIU_API_Pkg::manageTIU_output::in_change_of_allowed_current_consumption */ Change_of_allowed_current_consumption_T_TIU_Types_Pkg *in_change_of_allowed_current_consumption,
+  /* output_to_TIU_API_Pkg::manageTIU_output::outTIU_to_API */ TIU_Output_msg_API_TIU_Pkg *outTIU_to_API,
+  /* output_to_TIU_API_Pkg::manageTIU_output::outCommandStatusforEVC */ TIU_commandStatus_T_TIU_Types_Pkg *outCommandStatusforEVC)
 {
   (*outTIU_to_API).valid = (*in_IsolationStatus).valid |
     (*in_brake_command).valid | (*in_brake_inhibition).valid |
@@ -52,8 +52,8 @@ void manageTIU_output_output_to_TIU_API_Pkg(
     outCommandStatusforEVC);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTIU_output_output_to_TIU_API_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

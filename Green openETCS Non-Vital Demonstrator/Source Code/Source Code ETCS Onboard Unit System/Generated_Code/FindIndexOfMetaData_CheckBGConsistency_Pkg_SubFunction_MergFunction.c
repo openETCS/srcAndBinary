@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData */
 void FindIndexOfMetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::acc */MetadataElement_T_Common_Types_Pkg *acc,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::acc1 */MetadataElement_T_Common_Types_Pkg *acc1,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::go_on */kcg_bool *go_on,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::metadata */MetadataElement_T_Common_Types_Pkg *metadata)
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::acc */ MetadataElement_T_Common_Types_Pkg *acc,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::acc1 */ MetadataElement_T_Common_Types_Pkg *acc1,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::go_on */ kcg_bool *go_on,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaData::metadata */ MetadataElement_T_Common_Types_Pkg *metadata)
 {
   *go_on = (*acc).valid & (*acc1).valid;
-  if (*go_on) {
-    if ((*acc).endAddress < (*acc1).endAddress) {
+  /* 2 */ if (*go_on) {
+    /* 1 */ if ((*acc).endAddress < (*acc1).endAddress) {
       kcg_copy_MetadataElement_T_Common_Types_Pkg(metadata, acc1);
     }
     else {
@@ -29,8 +29,8 @@ void FindIndexOfMetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** FindIndexOfMetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

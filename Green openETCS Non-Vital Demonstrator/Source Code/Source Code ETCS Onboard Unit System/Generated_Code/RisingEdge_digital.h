@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _RisingEdge_digital_H_
 #define _RisingEdge_digital_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -25,14 +27,20 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* digital::RisingEdge */
 extern void RisingEdge_digital(
-  /* digital::RisingEdge::RE_Input */kcg_bool RE_Input,
+  /* digital::RisingEdge::RE_Input */ kcg_bool RE_Input,
   outC_RisingEdge_digital *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void RisingEdge_reset_digital(outC_RisingEdge_digital *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void RisingEdge_init_digital(outC_RisingEdge_digital *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _RisingEdge_digital_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** RisingEdge_digital.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

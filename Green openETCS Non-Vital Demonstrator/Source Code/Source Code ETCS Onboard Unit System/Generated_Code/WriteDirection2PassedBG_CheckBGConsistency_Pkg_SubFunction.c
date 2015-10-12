@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG */
 void WriteDirection2PassedBG_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG::isNominal */kcg_bool isNominal,
-  /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG::passedBG_in */ReceivedMessage_T_Common_Types_Pkg *passedBG_in,
-  /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG::passedBG_out */ReceivedMessage_T_Common_Types_Pkg *passedBG_out)
+  /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG::isNominal */ kcg_bool isNominal,
+  /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG::passedBG_in */ ReceivedMessage_T_Common_Types_Pkg *passedBG_in,
+  /* CheckBGConsistency_Pkg::SubFunction::WriteDirection2PassedBG::passedBG_out */ ReceivedMessage_T_Common_Types_Pkg *passedBG_out)
 {
-  if (isNominal) {
+  /* 1 */ if (isNominal) {
     kcg_copy_ReceivedMessage_T_Common_Types_Pkg(passedBG_out, passedBG_in);
     (*passedBG_out).BG_Common_Header.trainOrientationToBG =
       cQDirLrbgNominal_CheckBGConsistency_Pkg;
@@ -29,8 +29,8 @@ void WriteDirection2PassedBG_CheckBGConsistency_Pkg_SubFunction(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** WriteDirection2PassedBG_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

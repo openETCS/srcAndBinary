@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _T_Decode_metadata_new_TM_lib_internal_H_
 #define _T_Decode_metadata_new_TM_lib_internal_H_
@@ -9,17 +9,19 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TM_lib_internal::T_Decode_metadata_new */
 extern void T_Decode_metadata_new_TM_lib_internal(
-  /* TM_lib_internal::T_Decode_metadata_new::Metadata_in */kcg_int Metadata_in,
-  /* TM_lib_internal::T_Decode_metadata_new::nid_packet */kcg_int *nid_packet,
-  /* TM_lib_internal::T_Decode_metadata_new::id */kcg_int *id,
-  /* TM_lib_internal::T_Decode_metadata_new::m_version */kcg_int *m_version);
+  /* TM_lib_internal::T_Decode_metadata_new::Metadata_in */ kcg_int Metadata_in,
+  /* TM_lib_internal::T_Decode_metadata_new::nid_packet */ kcg_int *nid_packet,
+  /* TM_lib_internal::T_Decode_metadata_new::id */ kcg_int *id,
+  /* TM_lib_internal::T_Decode_metadata_new::m_version */ kcg_int *m_version);
 
 #endif /* _T_Decode_metadata_new_TM_lib_internal_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** T_Decode_metadata_new_TM_lib_internal.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

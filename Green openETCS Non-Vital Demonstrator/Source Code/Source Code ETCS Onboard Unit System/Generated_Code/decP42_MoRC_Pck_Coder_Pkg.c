@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* MoRC_Pck::Coder_Pkg::decP42 */
 void decP42_MoRC_Pck_Coder_Pkg(
-  /* MoRC_Pck::Coder_Pkg::decP42::inMessage */genMessage_T_MoRC_Pck *inMessage,
-  /* MoRC_Pck::Coder_Pkg::decP42::onboardEquipmentIsSleeping */kcg_bool onboardEquipmentIsSleeping,
-  /* MoRC_Pck::Coder_Pkg::decP42::p42_EstablishOrTerminate */p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *p42_EstablishOrTerminate)
+  /* MoRC_Pck::Coder_Pkg::decP42::inMessage */ msgFromTrack_T_RCM_MsgTypes_Pkg *inMessage,
+  /* MoRC_Pck::Coder_Pkg::decP42::onboardEquipmentIsSleeping */ kcg_bool onboardEquipmentIsSleeping,
+  /* MoRC_Pck::Coder_Pkg::decP42::p42_EstablishOrTerminate */ p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *p42_EstablishOrTerminate)
 {
   /* MoRC_Pck::Coder_Pkg::decP42::_L26 */
   static kcg_bool _L26;
@@ -44,8 +44,8 @@ void decP42_MoRC_Pck_Coder_Pkg(
     (Q_RBC_Terminate_communication_session == _L29.q_rbc) & _L26 & _L65;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** decP42_MoRC_Pck_Coder_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

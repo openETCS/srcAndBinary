@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,19 +9,18 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::OneCycle */
 void OneCycle_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentDistance */L_internal_real_Type_SDM_Types_Pkg currentDistance,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentSpeed */V_internal_real_Type_SDM_Types_Pkg currentSpeed,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentDistanceIndex */kcg_int currentDistanceIndex,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentSpeedIndex */kcg_int currentSpeedIndex,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::backwardCalculation */kcg_bool backwardCalculation,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::inAsafe */ASafe_T_CalcBrakingCurves_types *inAsafe,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newDistance */L_internal_real_Type_SDM_Types_Pkg *newDistance,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newSpeed */V_internal_real_Type_SDM_Types_Pkg *newSpeed,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newDistanceIndex */kcg_int *newDistanceIndex,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newSpeedIndex */kcg_int *newSpeedIndex,
-  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newArc */ParabolaArc_T_CalcBrakingCurves_types *newArc)
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentDistance */ L_internal_real_Type_SDM_Types_Pkg currentDistance,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentSpeed */ V_internal_real_Type_SDM_Types_Pkg currentSpeed,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentDistanceIndex */ kcg_int currentDistanceIndex,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currentSpeedIndex */ kcg_int currentSpeedIndex,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::backwardCalculation */ kcg_bool backwardCalculation,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::inAsafe */ ASafe_T_CalcBrakingCurves_types *inAsafe,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newDistance */ L_internal_real_Type_SDM_Types_Pkg *newDistance,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newSpeed */ V_internal_real_Type_SDM_Types_Pkg *newSpeed,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newDistanceIndex */ kcg_int *newDistanceIndex,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newSpeedIndex */ kcg_int *newSpeedIndex,
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newArc */ ParabolaArc_T_CalcBrakingCurves_types *newArc)
 {
-  static A_internal_real_Type_SDM_Types_Pkg tmp;
   /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::currAcceleration */
   static kcg_real currAcceleration;
   /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::newSpeedValid */
@@ -30,6 +29,8 @@ void OneCycle_CalcBrakingCurves_Pkg_internalOperators(
   static V_internal_real_Type_SDM_Types_Pkg _L1;
   /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::_L30 */
   static kcg_real _L30;
+  /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::_L34 */
+  static kcg_real _L34;
   /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::_L87 */
   static kcg_int _L87;
   /* CalcBrakingCurves_Pkg::internalOperators::OneCycle::_L88 */
@@ -47,7 +48,7 @@ void OneCycle_CalcBrakingCurves_Pkg_internalOperators(
       (kcg_bool) !backwardCalculation,
       currentDistanceIndex,
       cMAX_DISTANCE_STEPS_CalcBrakingCurves_types);
-  if ((0 <= _L87) & (_L87 < 15)) {
+  if ((0 <= _L87) & (_L87 < 100)) {
     _L30 = (*inAsafe).distance_definition[_L87];
   }
   else {
@@ -66,29 +67,29 @@ void OneCycle_CalcBrakingCurves_Pkg_internalOperators(
       backwardCalculation,
       currentSpeedIndex,
       cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types);
-  if ((0 <= _L88) & (_L88 < 10)) {
-    tmp = (*inAsafe).speed_definition[_L88];
+  if ((0 <= _L88) & (_L88 < 14)) {
+    _L34 = (*inAsafe).speed_definition[_L88];
   }
   else {
-    tmp = 0.0;
+    _L34 = 0.0;
   }
-  newSpeedValid = _L98 & (_L1 <= tmp);
-  if (newSpeedValid) {
+  newSpeedValid = _L98 & (_L1 <= _L34);
+  /* 3 */ if (newSpeedValid) {
+    *newSpeed = _L1;
+    *newDistance = _L30;
     *newDistanceIndex = _L87;
     *newSpeedIndex = currentSpeedIndex;
-    *newDistance = _L30;
-    *newSpeed = _L1;
   }
   else {
-    *newDistanceIndex = currentDistanceIndex;
-    *newSpeedIndex = _L88;
+    *newSpeed = _L34;
     *newDistance = /* 1 */
       FormularNewPosition_CalcBrakingCurves_Pkg_internalOperators(
         currentDistance,
-        tmp,
+        _L34,
         currentSpeed,
         currAcceleration);
-    *newSpeed = tmp;
+    *newDistanceIndex = currentDistanceIndex;
+    *newSpeedIndex = _L88;
   }
   (*newArc).distance = *newDistance;
   (*newArc).speed = *newSpeed;
@@ -99,8 +100,8 @@ void OneCycle_CalcBrakingCurves_Pkg_internalOperators(
       &(*inAsafe).data);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** OneCycle_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,11 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage */
 void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::trackSideForCheck */TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::q_nvlocacc */Q_NVLOCACC q_nvlocacc,
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::checkedMessage */ReceivedMessage_T_Common_Types_Pkg *checkedMessage)
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::trackSideForCheck */ TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::q_nvlocacc */ Q_NVLOCACC q_nvlocacc,
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::checkedMessage */ ReceivedMessage_T_Common_Types_Pkg *checkedMessage)
 {
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage */
   static Telegram_T_BG_Types_Pkg tmp;
   
   (*checkedMessage).valid = (*trackSideForCheck).telegramHeaders.present;
@@ -42,8 +43,8 @@ void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
     &tmp.packets);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

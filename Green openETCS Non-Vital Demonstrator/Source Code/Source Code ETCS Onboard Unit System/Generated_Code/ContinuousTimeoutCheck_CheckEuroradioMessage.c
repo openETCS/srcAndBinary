@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,15 @@
 
 /* CheckEuroradioMessage::ContinuousTimeoutCheck */
 kcg_bool ContinuousTimeoutCheck_CheckEuroradioMessage(
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContact */T_NVCONTACT tNvContact,
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::lastRelevantEventTimestamp */T_internal_Type_Obu_BasicTypes_Pkg lastRelevantEventTimestamp,
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::activateCheck */kcg_bool activateCheck)
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContact */ T_NVCONTACT tNvContact,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::lastRelevantEventTimestamp */ T_internal_Type_Obu_BasicTypes_Pkg lastRelevantEventTimestamp,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::activateCheck */ kcg_bool activateCheck)
 {
   /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContactError */
   static kcg_bool tNvContactError;
   
-  if (activateCheck) {
+  /* ck_activateCheck */ if (activateCheck) {
     tNvContactError = systemTime - lastRelevantEventTimestamp > tNvContact *
       1000;
   }
@@ -27,8 +27,8 @@ kcg_bool ContinuousTimeoutCheck_CheckEuroradioMessage(
   return tNvContactError;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ContinuousTimeoutCheck_CheckEuroradioMessage.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

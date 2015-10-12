@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _CAST_Int_to_NC_DIFF_TM_conversions_H_
 #define _CAST_Int_to_NC_DIFF_TM_conversions_H_
@@ -9,14 +9,16 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TM_conversions::CAST_Int_to_NC_DIFF */
 extern NC_DIFF CAST_Int_to_NC_DIFF_TM_conversions(
-  /* TM_conversions::CAST_Int_to_NC_DIFF::nc_diff_int */kcg_int nc_diff_int);
+  /* TM_conversions::CAST_Int_to_NC_DIFF::nc_diff_int */ kcg_int nc_diff_int);
 
 #endif /* _CAST_Int_to_NC_DIFF_TM_conversions_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Int_to_NC_DIFF_TM_conversions.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

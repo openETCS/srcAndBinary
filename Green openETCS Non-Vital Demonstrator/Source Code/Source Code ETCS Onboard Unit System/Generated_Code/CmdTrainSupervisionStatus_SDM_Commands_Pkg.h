@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _CmdTrainSupervisionStatus_SDM_Commands_Pkg_H_
 #define _CmdTrainSupervisionStatus_SDM_Commands_Pkg_H_
@@ -12,6 +12,8 @@
 #include "CommandTripBraking_SDM_Commands_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -45,23 +47,27 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* SDM_Commands_Pkg::CmdTrainSupervisionStatus */
 extern void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::SupervisedTargetsListUpdated */kcg_bool SupervisedTargetsListUpdated,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::TrainAtStandstill */odoMotionState_T_Obu_BasicTypes_Pkg TrainAtStandstill,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::speeds */Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::mrdt */Target_real_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::noSupervisedReleaseSpeed */kcg_bool noSupervisedReleaseSpeed,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::q_level */MA_Level_t_TrackAtlasTypes q_level,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::floiIsSB1 */kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::SupervisedTargetsListUpdated */ kcg_bool SupervisedTargetsListUpdated,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::mrdt */ Target_T_TargetManagement_types *mrdt,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::floiIsSB1 */ kcg_bool floiIsSB1,
   outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void CmdTrainSupervisionStatus_reset_SDM_Commands_Pkg(
   outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void CmdTrainSupervisionStatus_init_SDM_Commands_Pkg(
+  outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _CmdTrainSupervisionStatus_SDM_Commands_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CmdTrainSupervisionStatus_SDM_Commands_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

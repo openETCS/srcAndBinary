@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _Procedure_Train_Reversing_Procedures_H_
 #define _Procedure_Train_Reversing_Procedures_H_
@@ -9,6 +9,8 @@
 #include "Reversing_Calculations_Librairies.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,19 +29,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::Procedure_Train_Reversing */
 extern void Procedure_Train_Reversing_Procedures(
-  /* Procedures::Procedure_Train_Reversing::Driver_Ack_RV */kcg_bool Driver_Ack_RV,
-  /* Procedures::Procedure_Train_Reversing::Train_Standstill */kcg_bool Train_Standstill,
-  /* Procedures::Procedure_Train_Reversing::Train_Position */trainPosition_T_TrainPosition_Types_Pck *Train_Position,
-  /* Procedures::Procedure_Train_Reversing::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
-  /* Procedures::Procedure_Train_Reversing::Reversing_Data */T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
+  /* Procedures::Procedure_Train_Reversing::Driver_Ack_RV */ kcg_bool Driver_Ack_RV,
+  /* Procedures::Procedure_Train_Reversing::Train_Standstill */ kcg_bool Train_Standstill,
+  /* Procedures::Procedure_Train_Reversing::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Procedures::Procedure_Train_Reversing::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
+  /* Procedures::Procedure_Train_Reversing::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
   outC_Procedure_Train_Reversing_Procedures *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Procedure_Train_Reversing_reset_Procedures(
   outC_Procedure_Train_Reversing_Procedures *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void Procedure_Train_Reversing_init_Procedures(
+  outC_Procedure_Train_Reversing_Procedures *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Procedure_Train_Reversing_Procedures_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_Train_Reversing_Procedures.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

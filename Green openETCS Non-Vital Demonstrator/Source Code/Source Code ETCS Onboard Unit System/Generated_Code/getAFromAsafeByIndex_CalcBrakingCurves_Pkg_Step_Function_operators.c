@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,30 @@
 
 /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex */
 A_internal_real_Type_SDM_Types_Pkg getAFromAsafeByIndex_CalcBrakingCurves_Pkg_Step_Function_operators(
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::DistanceIndex */kcg_int DistanceIndex,
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::SpeedIndex */kcg_int SpeedIndex,
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::Asafe */ASafe_Data_T_CalcBrakingCurves_types *Asafe)
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::DistanceIndex */ kcg_int DistanceIndex,
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::SpeedIndex */ kcg_int SpeedIndex,
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::Asafe */ ASafe_Data_T_CalcBrakingCurves_types *Asafe)
 {
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex */
   static kcg_int tmp1;
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex */
   static kcg_int tmp;
   /* CalcBrakingCurves_Pkg::Step_Function_operators::getAFromAsafeByIndex::outA */
   static A_internal_real_Type_SDM_Types_Pkg outA;
   
-  if (SpeedIndex <= cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types) {
+  /* 1 */ if (SpeedIndex <= cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types) {
     tmp1 = SpeedIndex;
   }
   else {
     tmp1 = cMAX_SPEED_VALUE_STEP_CalcBrakingCurves_types;
   }
-  if (DistanceIndex <= cMAX_DISTANCE_STEPS_CalcBrakingCurves_types) {
+  /* 1 */ if (DistanceIndex <= cMAX_DISTANCE_STEPS_CalcBrakingCurves_types) {
     tmp = DistanceIndex;
   }
   else {
     tmp = cMAX_DISTANCE_STEPS_CalcBrakingCurves_types;
   }
-  if ((0 <= tmp1) & (tmp1 < 10) & ((0 <= tmp) & (tmp < 15))) {
+  if ((0 <= tmp1) & (tmp1 < 14) & ((0 <= tmp) & (tmp < 100))) {
     outA = (*Asafe)[tmp1][tmp];
   }
   else {
@@ -39,8 +41,8 @@ A_internal_real_Type_SDM_Types_Pkg getAFromAsafeByIndex_CalcBrakingCurves_Pkg_St
   return outA;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** getAFromAsafeByIndex_CalcBrakingCurves_Pkg_Step_Function_operators.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

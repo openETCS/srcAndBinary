@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* MoRC_Pck::Coder_Pkg::genMsgToRBC */
 void genMsgToRBC_MoRC_Pck_Coder_Pkg(
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::present */kcg_bool present,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_message */NID_MESSAGE nid_message,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::t_train */T_TRAIN t_train,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::xt_train */T_TRAIN xt_train,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_engine */NID_ENGINE nid_engine,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage)
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::present */ kcg_bool present,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_message */ NID_MESSAGE nid_message,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::t_train */ T_TRAIN t_train,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::xt_train */ T_TRAIN xt_train,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_engine */ NID_ENGINE nid_engine,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */ Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage)
 {
   (*radioMessage).present = present;
   (*radioMessage).header.present = present;
@@ -33,8 +33,8 @@ void genMsgToRBC_MoRC_Pck_Coder_Pkg(
     (outPackets_T_Common_Types_Pkg *) &cEmptyOutPackets_MoRC_Pck_Coder_Pkg);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** genMsgToRBC_MoRC_Pck_Coder_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

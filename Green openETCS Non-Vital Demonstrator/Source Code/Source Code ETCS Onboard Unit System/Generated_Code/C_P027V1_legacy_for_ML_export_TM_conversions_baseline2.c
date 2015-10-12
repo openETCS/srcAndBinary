@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_conversions_baseline2::C_P027V1_legacy_for_ML_export */
 void C_P027V1_legacy_for_ML_export_TM_conversions_baseline2(
-  /* TM_conversions_baseline2::C_P027V1_legacy_for_ML_export::P027_in */P027V1_OBU_T_TM_baseline2 *P027_in,
-  /* TM_conversions_baseline2::C_P027V1_legacy_for_ML_export::P027_legacy_out */P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg *P027_legacy_out)
+  /* TM_conversions_baseline2::C_P027V1_legacy_for_ML_export::P027_in */ P027V1_OBU_T_TM_baseline2 *P027_in,
+  /* TM_conversions_baseline2::C_P027V1_legacy_for_ML_export::P027_legacy_out */ P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg *P027_legacy_out)
 {
   kcg_copy_P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg(
     P027_legacy_out,
@@ -19,8 +19,8 @@ void C_P027V1_legacy_for_ML_export_TM_conversions_baseline2(
   (*P027_legacy_out).valid = (*P027_in).valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P027V1_legacy_for_ML_export_TM_conversions_baseline2.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

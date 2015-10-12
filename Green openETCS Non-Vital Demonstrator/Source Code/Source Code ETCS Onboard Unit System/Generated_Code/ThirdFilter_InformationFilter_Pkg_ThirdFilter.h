@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _ThirdFilter_InformationFilter_Pkg_ThirdFilter_H_
 #define _ThirdFilter_InformationFilter_Pkg_ThirdFilter_H_
@@ -12,16 +12,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* InformationFilter_Pkg::ThirdFilter::ThirdFilter */
 extern void ThirdFilter_InformationFilter_Pkg_ThirdFilter(
-  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inMessage */ReceivedMessage_T_Common_Types_Pkg *inMessage,
-  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inModus */M_MODE inModus,
-  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage);
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inMessage */ ReceivedMessage_T_Common_Types_Pkg *inMessage,
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inModus */ M_MODE inModus,
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::outMessage */ ReceivedMessage_T_Common_Types_Pkg *outMessage);
 
 #endif /* _ThirdFilter_InformationFilter_Pkg_ThirdFilter_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ThirdFilter_InformationFilter_Pkg_ThirdFilter.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

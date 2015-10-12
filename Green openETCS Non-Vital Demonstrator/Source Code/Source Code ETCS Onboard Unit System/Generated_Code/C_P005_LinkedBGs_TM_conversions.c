@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* TM_conversions::C_P005_LinkedBGs */
 void C_P005_LinkedBGs_TM_conversions(
-  /* TM_conversions::C_P005_LinkedBGs::LRBG */NID_LRBG LRBG,
-  /* TM_conversions::C_P005_LinkedBGs::q_dir */Q_DIR q_dir,
-  /* TM_conversions::C_P005_LinkedBGs::q_scale */Q_SCALE q_scale,
-  /* TM_conversions::C_P005_LinkedBGs::SectionsIn */P005_section_enum_T_TM *SectionsIn,
-  /* TM_conversions::C_P005_LinkedBGs::NID_C_onboard */NID_C NID_C_onboard,
-  /* TM_conversions::C_P005_LinkedBGs::LinkedBGsOUT */LinkedBG_T_BG_Types_Pkg *LinkedBGsOUT)
+  /* TM_conversions::C_P005_LinkedBGs::LRBG */ NID_LRBG LRBG,
+  /* TM_conversions::C_P005_LinkedBGs::q_dir */ Q_DIR q_dir,
+  /* TM_conversions::C_P005_LinkedBGs::q_scale */ Q_SCALE q_scale,
+  /* TM_conversions::C_P005_LinkedBGs::SectionsIn */ P005_section_enum_T_TM *SectionsIn,
+  /* TM_conversions::C_P005_LinkedBGs::NID_C_onboard */ NID_C NID_C_onboard,
+  /* TM_conversions::C_P005_LinkedBGs::LinkedBGsOUT */ LinkedBG_T_BG_Types_Pkg *LinkedBGsOUT)
 {
   (*LinkedBGsOUT).valid = (*SectionsIn).valid;
   (*LinkedBGsOUT).nid_LRBG = LRBG;
@@ -26,7 +26,8 @@ void C_P005_LinkedBGs_TM_conversions(
   (*LinkedBGsOUT).q_linkorientation = (*SectionsIn).q_linkorientation;
   (*LinkedBGsOUT).q_linkreaction = (*SectionsIn).q_linkreaction;
   (*LinkedBGsOUT).q_locacc = (*SectionsIn).q_locacc;
-  if ((*SectionsIn).q_newcountry == ENUM_Q_NEWCOUNTRY_same_TM_conversions) {
+  /* 1 */ if ((*SectionsIn).q_newcountry ==
+    ENUM_Q_NEWCOUNTRY_same_TM_conversions) {
     (*LinkedBGsOUT).nid_c = NID_C_onboard;
   }
   else {
@@ -34,8 +35,8 @@ void C_P005_LinkedBGs_TM_conversions(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P005_LinkedBGs_TM_conversions.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

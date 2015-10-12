@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _From_NL_PriorityManagement_H_
 #define _From_NL_PriorityManagement_H_
@@ -9,18 +9,20 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* PriorityManagement::From_NL */
 extern T_Mode_Level_And_Mode_Types_Pkg From_NL_PriorityManagement(
-  /* PriorityManagement::From_NL::Condition1 */kcg_bool Condition1,
-  /* PriorityManagement::From_NL::Condition28 */kcg_bool Condition28,
-  /* PriorityManagement::From_NL::Condition29 */kcg_bool Condition29,
-  /* PriorityManagement::From_NL::Condition47 */kcg_bool Condition47,
-  /* PriorityManagement::From_NL::previousMode_Loc */T_Mode_Level_And_Mode_Types_Pkg previousMode_Loc);
+  /* PriorityManagement::From_NL::Condition1 */ kcg_bool Condition1,
+  /* PriorityManagement::From_NL::Condition28 */ kcg_bool Condition28,
+  /* PriorityManagement::From_NL::Condition29 */ kcg_bool Condition29,
+  /* PriorityManagement::From_NL::Condition47 */ kcg_bool Condition47,
+  /* PriorityManagement::From_NL::previousMode_Loc */ T_Mode_Level_And_Mode_Types_Pkg previousMode_Loc);
 
 #endif /* _From_NL_PriorityManagement_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** From_NL_PriorityManagement.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _setNew_manage_TextMessages_Pkg_H_
 #define _setNew_manage_TextMessages_Pkg_H_
@@ -9,18 +9,20 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* manage_TextMessages_Pkg::setNew */
 extern void setNew_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::setNew::indexMAPwi */kcg_int indexMAPwi,
-  /* manage_TextMessages_Pkg::setNew::fromStore */DMI_TXT_MSG_status_T_DMI_Types_Pkg *fromStore,
-  /* manage_TextMessages_Pkg::setNew::actualTextMsg */DMI_TXT_MSG_status_T_DMI_Types_Pkg *actualTextMsg,
-  /* manage_TextMessages_Pkg::setNew::continue */kcg_bool *_1_continue,
-  /* manage_TextMessages_Pkg::setNew::toStore */DMI_TXT_MSG_status_T_DMI_Types_Pkg *toStore);
+  /* manage_TextMessages_Pkg::setNew::indexMAPwi */ kcg_int indexMAPwi,
+  /* manage_TextMessages_Pkg::setNew::fromStore */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *fromStore,
+  /* manage_TextMessages_Pkg::setNew::actualTextMsg */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *actualTextMsg,
+  /* manage_TextMessages_Pkg::setNew::continue */ kcg_bool *_1_continue,
+  /* manage_TextMessages_Pkg::setNew::toStore */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *toStore);
 
 #endif /* _setNew_manage_TextMessages_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** setNew_manage_TextMessages_Pkg.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

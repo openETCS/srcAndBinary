@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,28 @@
 
 /* TM_lib_internal::C_P003V1_unflatten_sections */
 void C_P003V1_unflatten_sections_TM_lib_internal(
-  /* TM_lib_internal::C_P003V1_unflatten_sections::nid_packet_ok */kcg_bool nid_packet_ok,
-  /* TM_lib_internal::C_P003V1_unflatten_sections::n_iter */kcg_int n_iter,
-  /* TM_lib_internal::C_P003V1_unflatten_sections::flat */P003V1_OBU_sectionlist_int_T_TM_baseline2 *flat,
-  /* TM_lib_internal::C_P003V1_unflatten_sections::sections */P003V1_sectionlist_enum_T_TM_baseline2 *sections)
+  /* TM_lib_internal::C_P003V1_unflatten_sections::nid_packet_ok */ kcg_bool nid_packet_ok,
+  /* TM_lib_internal::C_P003V1_unflatten_sections::n_iter */ kcg_int n_iter,
+  /* TM_lib_internal::C_P003V1_unflatten_sections::flat */ P003V1_OBU_sectionlist_int_T_TM_baseline2 *flat,
+  /* TM_lib_internal::C_P003V1_unflatten_sections::sections */ P003V1_sectionlist_enum_T_TM_baseline2 *sections)
 {
-  static kcg_bool tmp;
+  /* TM_lib_internal::C_P003V1_unflatten_sections */
+  static kcg_bool cond_iterw;
   static kcg_int i;
   /* TM_lib_internal::C_P003V1_unflatten_sections::_L7 */
   static kcg_int _L7;
   
-  if (nid_packet_ok) {
-    for (i = 0; i < 32; i++) {
+  /* 1 */ if (nid_packet_ok) {
+    /* 1 */ for (i = 0; i < 32; i++) {
       /* 1 */
-      C_P003V1_us_array_TM_lib_internal(i, n_iter, flat, &tmp, &(*sections)[i]);
+      C_P003V1_us_array_TM_lib_internal(
+        i,
+        n_iter,
+        flat,
+        &cond_iterw,
+        &(*sections)[i]);
       _L7 = i + 1;
-      if (!tmp) {
+      /* 1 */ if (!cond_iterw) {
         break;
       }
     }
@@ -34,7 +40,7 @@ void C_P003V1_unflatten_sections_TM_lib_internal(
   }
 #ifdef KCG_MAPW_CPY
   
-  for (i = _L7; i < 32; i++) {
+  /* 1 */ for (i = _L7; i < 32; i++) {
     kcg_copy_P003V1_section_enum_T_TM_baseline2(
       &(*sections)[i],
       (P003V1_section_enum_T_TM_baseline2 *)
@@ -44,8 +50,8 @@ void C_P003V1_unflatten_sections_TM_lib_internal(
   
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_unflatten_sections_TM_lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

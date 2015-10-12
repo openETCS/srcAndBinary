@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,30 +9,32 @@
 
 /* InputManagement::InputLocalisation */
 void InputLocalisation_InputManagement(
-  /* InputManagement::InputLocalisation::Data_From_Localisation */T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
-  /* InputManagement::InputLocalisation::train_standstill */kcg_bool *train_standstill,
-  /* InputManagement::InputLocalisation::currentDistance */kcg_int *currentDistance,
-  /* InputManagement::InputLocalisation::Data_From_Localisation_To_Mode */T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation_To_Mode)
+  /* InputManagement::InputLocalisation::Data_From_Localisation */ T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
+  /* InputManagement::InputLocalisation::train_standstill */ kcg_bool *train_standstill,
+  /* InputManagement::InputLocalisation::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* InputManagement::InputLocalisation::Data_From_Localisation_To_Mode */ T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation_To_Mode)
 {
   (*Data_From_Localisation_To_Mode).BG_In_List_Expected_BG_In_SR =
     (*Data_From_Localisation).BG_In_List_Expected_BG_In_SH;
   (*Data_From_Localisation_To_Mode).BG_In_List_Expected_BG_In_SH =
     (*Data_From_Localisation).BG_In_List_Expected_BG_In_SR;
-  (*Data_From_Localisation_To_Mode).Linked_BG_In_Wrong_Direction =
-    (*Data_From_Localisation).Linked_BG_In_Wrong_Direction;
-  kcg_copy_trainPosition_T_TrainPosition_Types_Pck(
-    &(*Data_From_Localisation_To_Mode).Train_Position,
-    &(*Data_From_Localisation).Train_Position);
+  kcg_copy_positionErrors_T_TrainPosition_Types_Pck(
+    &(*Data_From_Localisation_To_Mode).PositionErrors,
+    &(*Data_From_Localisation).PositionErrors);
   (*Data_From_Localisation_To_Mode).Train_Speed =
     (*Data_From_Localisation).Train_Speed;
   *train_standstill = (*Data_From_Localisation).Train_Standstill;
   (*Data_From_Localisation_To_Mode).Train_Standstill = *train_standstill;
-  *currentDistance =
-    (*Data_From_Localisation).Train_Position.maxSafeFrontEndPostion;
+  kcg_copy_trainPosition_T_TrainPosition_Types_Pck(
+    trainPosition,
+    &(*Data_From_Localisation).Train_Position);
+  kcg_copy_trainPosition_T_TrainPosition_Types_Pck(
+    &(*Data_From_Localisation_To_Mode).Train_Position,
+    trainPosition);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** InputLocalisation_InputManagement.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,35 +9,37 @@
 
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG */
 void posInRangeOfBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::position */LocWithInAcc_T_Obu_BasicTypes_Pkg *position,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::BGs */positionedBGs_T_TrainPosition_Types_Pck *BGs,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::enable */kcg_bool enable,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::isInRange */kcg_bool *isInRange,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::indexOfBG */kcg_int *indexOfBG,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::BG */positionedBG_T_TrainPosition_Types_Pck *BG)
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::position */ LocWithInAcc_T_Obu_BasicTypes_Pkg *position,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::BGs */ positionedBGs_T_TrainPosition_Types_Pck *BGs,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::enable */ kcg_bool enable,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::isInRange */ kcg_bool *isInRange,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::indexOfBG */ kcg_int *indexOfBG,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG::BG */ positionedBG_T_TrainPosition_Types_Pck *BG)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG */
+  static kcg_int acc;
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::posInRangeOfBG */
+  static kcg_bool cond_iterw;
   static kcg_int i;
   
   *indexOfBG = cNoValidIndex_CalculateTrainPosition_Pkg;
   if (enable) {
-    for (i = 0; i < 8; i++) {
-      tmp1 = *indexOfBG;
+    for (i = 0; i < 41; i++) {
+      acc = *indexOfBG;
       /* 1 */
       posInRangeOfBG_itr_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
         i,
-        tmp1,
+        acc,
         position,
         &(*BGs)[i],
-        &tmp,
+        &cond_iterw,
         indexOfBG);
-      if (!tmp) {
+      if (!cond_iterw) {
         break;
       }
     }
   }
-  if ((0 <= *indexOfBG) & (*indexOfBG < 8)) {
+  if ((0 <= *indexOfBG) & (*indexOfBG < 41)) {
     kcg_copy_positionedBG_T_TrainPosition_Types_Pck(BG, &(*BGs)[*indexOfBG]);
   }
   else {
@@ -49,8 +51,8 @@ void posInRangeOfBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   *isInRange = (*BG).valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** posInRangeOfBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

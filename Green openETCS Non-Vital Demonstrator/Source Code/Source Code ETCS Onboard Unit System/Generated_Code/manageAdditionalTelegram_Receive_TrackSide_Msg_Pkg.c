@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,35 +9,35 @@
 
 /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram */
 void manageAdditionalTelegram_Receive_TrackSide_Msg_Pkg(
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::inDecodedTelegram */Telegram_T_BG_Types_Pkg *inDecodedTelegram,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::incenterOfBalisePosition */centerOfBalisePosition_T_BG_Types_Pkg *incenterOfBalisePosition,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::inTelegramStore */TelegramStore_T_Receive_TrackSide_Msg_Pkg *inTelegramStore,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::inputTelegramPresent */kcg_bool inputTelegramPresent,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outputPresent */kcg_bool *outputPresent,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outDecodedTelegram */Telegram_T_BG_Types_Pkg *outDecodedTelegram,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outcenterOfBalisePosition */centerOfBalisePosition_T_BG_Types_Pkg *outcenterOfBalisePosition,
-  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outNeedStore */kcg_bool *outNeedStore)
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::inDecodedTelegram */ Telegram_T_BG_Types_Pkg *inDecodedTelegram,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::incenterOfBalisePosition */ centerOfBalisePosition_T_BG_Types_Pkg *incenterOfBalisePosition,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::inTelegramStore */ TelegramStore_T_Receive_TrackSide_Msg_Pkg *inTelegramStore,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::inputTelegramPresent */ kcg_bool inputTelegramPresent,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outputPresent */ kcg_bool *outputPresent,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outDecodedTelegram */ Telegram_T_BG_Types_Pkg *outDecodedTelegram,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outcenterOfBalisePosition */ centerOfBalisePosition_T_BG_Types_Pkg *outcenterOfBalisePosition,
+  /* Receive_TrackSide_Msg_Pkg::manageAdditionalTelegram::outNeedStore */ kcg_bool *outNeedStore)
 {
-  *outputPresent = inputTelegramPresent | (*inTelegramStore).valid;
-  if ((*inTelegramStore).valid) {
-    kcg_copy_Telegram_T_BG_Types_Pkg(
-      outDecodedTelegram,
-      &(*inTelegramStore).telegram);
+  *outNeedStore = (*inTelegramStore).valid & inputTelegramPresent;
+  /* 1 */ if ((*inTelegramStore).valid) {
     kcg_copy_centerOfBalisePosition_T_BG_Types_Pkg(
       outcenterOfBalisePosition,
       &(*inTelegramStore).position);
+    kcg_copy_Telegram_T_BG_Types_Pkg(
+      outDecodedTelegram,
+      &(*inTelegramStore).telegram);
   }
   else {
-    kcg_copy_Telegram_T_BG_Types_Pkg(outDecodedTelegram, inDecodedTelegram);
     kcg_copy_centerOfBalisePosition_T_BG_Types_Pkg(
       outcenterOfBalisePosition,
       incenterOfBalisePosition);
+    kcg_copy_Telegram_T_BG_Types_Pkg(outDecodedTelegram, inDecodedTelegram);
   }
-  *outNeedStore = (*inTelegramStore).valid & inputTelegramPresent;
+  *outputPresent = inputTelegramPresent | (*inTelegramStore).valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** manageAdditionalTelegram_Receive_TrackSide_Msg_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

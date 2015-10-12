@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,12 @@
 
 /* xdebugSupport_Pkg::countPackets */
 kcg_int countPackets_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::countPackets::msg */API_TrackSideInput_T_API_Msg_Pkg *msg)
+  /* xdebugSupport_Pkg::countPackets::msg */ API_TrackSideInput_T_API_Msg_Pkg *msg)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
+  /* xdebugSupport_Pkg::countPackets */
+  static kcg_int acc;
+  /* xdebugSupport_Pkg::countPackets */
+  static kcg_bool cond_iterw;
   static kcg_int i;
   /* xdebugSupport_Pkg::countPackets::_L3 */
   static kcg_int _L3;
@@ -20,15 +22,15 @@ kcg_int countPackets_xdebugSupport_Pkg(
   static kcg_int count;
   
   _L3 = 0;
-  for (i = 0; i < 30; i++) {
-    tmp1 = _L3;
+  /* 1 */ for (i = 0; i < 30; i++) {
+    acc = _L3;
     /* 1 */
     countBasics_xdebugSupport_Pkg(
-      tmp1,
+      acc,
       &(*msg).packets.PacketHeaders[i],
-      &tmp,
+      &cond_iterw,
       &_L3);
-    if (!tmp) {
+    /* 1 */ if (!cond_iterw) {
       break;
     }
   }
@@ -36,8 +38,8 @@ kcg_int countPackets_xdebugSupport_Pkg(
   return count;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** countPackets_xdebugSupport_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

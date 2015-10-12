@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward */
 void BCFoldOperatorForward_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::Index */kcg_int Index,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::BC_acc */BCAccumulator_type_CalcBrakingCurves_Pkg *BC_acc,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::Asafe */ASafe_T_CalcBrakingCurves_types *Asafe,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::LOA_MRSP_Target_speed */V_internal_real_Type_SDM_Types_Pkg LOA_MRSP_Target_speed,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::exitCond */kcg_bool *exitCond,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::BC */BCAccumulator_type_CalcBrakingCurves_Pkg *BC)
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::Index */ kcg_int Index,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::BC_acc */ BCAccumulator_type_CalcBrakingCurves_Pkg *BC_acc,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::Asafe */ ASafe_T_CalcBrakingCurves_types *Asafe,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::LOA_MRSP_Target_speed */ V_internal_real_Type_SDM_Types_Pkg LOA_MRSP_Target_speed,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::exitCond */ kcg_bool *exitCond,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::BC */ BCAccumulator_type_CalcBrakingCurves_Pkg *BC)
 {
   /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorForward::_L4 */
   static ParabolaArc_T_CalcBrakingCurves_types _L4;
@@ -41,17 +41,17 @@ void BCFoldOperatorForward_CalcBrakingCurves_Pkg_internalOperators(
   (*BC).speed = _L2;
   (*BC).distanceIndex = _L1;
   (*BC).speedIndex = _L18;
+  *exitCond = LOA_MRSP_Target_speed <= _L2;
   /* 1 */
   setArc_CalcBrakingCurves_Pkg_internalOperators(
     &_L4,
     &(*BC_acc).BC,
     Index,
     &(*BC).BC);
-  *exitCond = LOA_MRSP_Target_speed <= _L2;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BCFoldOperatorForward_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

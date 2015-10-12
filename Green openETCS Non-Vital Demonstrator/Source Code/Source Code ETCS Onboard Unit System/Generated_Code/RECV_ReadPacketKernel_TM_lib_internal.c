@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,12 @@
 
 /* TM_lib_internal::RECV_ReadPacketKernel */
 void RECV_ReadPacketKernel_TM_lib_internal(
-  /* TM_lib_internal::RECV_ReadPacketKernel::Header */MetadataElement_T_Common_Types_Pkg *Header,
-  /* TM_lib_internal::RECV_ReadPacketKernel::PacketData */CompressedPacketData_T_Common_Types_Pkg *PacketData,
-  /* TM_lib_internal::RECV_ReadPacketKernel::PacketOut */array_int_500 *PacketOut)
+  /* TM_lib_internal::RECV_ReadPacketKernel::Header */ MetadataElement_T_Common_Types_Pkg *Header,
+  /* TM_lib_internal::RECV_ReadPacketKernel::PacketData */ CompressedPacketData_T_Common_Types_Pkg *PacketData,
+  /* TM_lib_internal::RECV_ReadPacketKernel::PacketOut */ CompressedPacketData_T_Common_Types_Pkg *PacketOut)
 {
-  static kcg_bool tmp;
+  /* TM_lib_internal::RECV_ReadPacketKernel */
+  static kcg_bool cond_iterw;
   static kcg_int i;
   /* TM_lib_internal::RECV_ReadPacketKernel::_L22 */
   static kcg_int _L22;
@@ -25,10 +26,10 @@ void RECV_ReadPacketKernel_TM_lib_internal(
       PacketData,
       (*Header).startAddress,
       (*Header).endAddress,
-      &tmp,
+      &cond_iterw,
       &(*PacketOut)[i]);
     _L22 = i + 1;
-    if (!tmp) {
+    if (!cond_iterw) {
       break;
     }
   }
@@ -41,8 +42,8 @@ void RECV_ReadPacketKernel_TM_lib_internal(
   
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** RECV_ReadPacketKernel_TM_lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

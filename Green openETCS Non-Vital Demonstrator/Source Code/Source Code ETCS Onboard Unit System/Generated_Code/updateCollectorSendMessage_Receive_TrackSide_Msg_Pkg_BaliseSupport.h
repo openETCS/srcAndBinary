@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:00
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _updateCollectorSendMessage_Receive_TrackSide_Msg_Pkg_BaliseSupport_H_
 #define _updateCollectorSendMessage_Receive_TrackSide_Msg_Pkg_BaliseSupport_H_
@@ -9,15 +9,17 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSendMessage */
 extern void updateCollectorSendMessage_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSendMessage::inCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *inCollector,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSendMessage::outCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector);
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSendMessage::inCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *inCollector,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSendMessage::outCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector);
 
 #endif /* _updateCollectorSendMessage_Receive_TrackSide_Msg_Pkg_BaliseSupport_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** updateCollectorSendMessage_Receive_TrackSide_Msg_Pkg_BaliseSupport.h
-** Generation date: 2015-08-21T17:26:00
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

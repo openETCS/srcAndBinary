@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,20 +9,20 @@
 
 /* CalculateTrainPosition_Pkg::Pos_Pkg::trainMoveDir_vs_refBG */
 Q_DIRTRAIN trainMoveDir_vs_refBG_CalculateTrainPosition_Pkg_Pos_Pkg(
-  /* CalculateTrainPosition_Pkg::Pos_Pkg::trainMoveDir_vs_refBG::currentOdometry */odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
-  /* CalculateTrainPosition_Pkg::Pos_Pkg::trainMoveDir_vs_refBG::refBG */positionedBG_T_TrainPosition_Types_Pck *refBG)
+  /* CalculateTrainPosition_Pkg::Pos_Pkg::trainMoveDir_vs_refBG::currentOdometry */ odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
+  /* CalculateTrainPosition_Pkg::Pos_Pkg::trainMoveDir_vs_refBG::refBG */ positionedBG_T_TrainPosition_Types_Pck *refBG)
 {
   /* CalculateTrainPosition_Pkg::Pos_Pkg::trainMoveDir_vs_refBG::direction */
   static Q_DIRTRAIN direction;
   
-  if (((*currentOdometry).motionDirection ==
+  /* 2 */ if (((*currentOdometry).motionDirection ==
       unknownDirection_Obu_BasicTypes_Pkg) | !(*currentOdometry).valid |
     !(*refBG).valid | !(*refBG).infoFromPassing.valid |
     !(*refBG).infoFromPassing.BG_Header.valid |
     !(*refBG).infoFromPassing.BG_Header.bgPosition.valid) {
     direction = Q_DIRTRAIN_Unknown;
   }
-  else if ((*currentOdometry).motionDirection ==
+  else /* 1 */ if ((*currentOdometry).motionDirection ==
     (*refBG).infoFromPassing.BG_Header.bgPosition.motionDirection) {
     direction = (*refBG).infoFromPassing.BG_Header.trainRunningDirectionToBG;
   }
@@ -34,8 +34,8 @@ Q_DIRTRAIN trainMoveDir_vs_refBG_CalculateTrainPosition_Pkg_Pos_Pkg(
   return direction;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** trainMoveDir_vs_refBG_CalculateTrainPosition_Pkg_Pos_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,17 @@
 
 /* PriorityManagement::From_NP */
 T_Mode_Level_And_Mode_Types_Pkg From_NP_PriorityManagement(
-  /* PriorityManagement::From_NP::Condition1 */kcg_bool Condition1,
-  /* PriorityManagement::From_NP::Condition4 */kcg_bool Condition4,
-  /* PriorityManagement::From_NP::previousMode_Loc */T_Mode_Level_And_Mode_Types_Pkg previousMode_Loc)
+  /* PriorityManagement::From_NP::Condition1 */ kcg_bool Condition1,
+  /* PriorityManagement::From_NP::Condition4 */ kcg_bool Condition4,
+  /* PriorityManagement::From_NP::previousMode_Loc */ T_Mode_Level_And_Mode_Types_Pkg previousMode_Loc)
 {
   /* PriorityManagement::From_NP::FromNP_To_NewMode */
   static T_Mode_Level_And_Mode_Types_Pkg FromNP_To_NewMode;
   
-  if (Condition1) {
+  /* ck_Condition1 */ if (Condition1) {
     FromNP_To_NewMode = IS_Level_And_Mode_Types_Pkg;
   }
-  else if (Condition4) {
+  else /* ck_anon_activ */ if (Condition4) {
     FromNP_To_NewMode = SB_Level_And_Mode_Types_Pkg;
   }
   else {
@@ -28,8 +28,8 @@ T_Mode_Level_And_Mode_Types_Pkg From_NP_PriorityManagement(
   return FromNP_To_NewMode;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** From_NP_PriorityManagement.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* TM_lib_internal::RECV_ReadPackets */
 void RECV_ReadPackets_TM_lib_internal(
-  /* TM_lib_internal::RECV_ReadPackets::Packets */CompressedPackets_T_Common_Types_Pkg *Packets,
-  /* TM_lib_internal::RECV_ReadPackets::PacketID */kcg_int PacketID,
-  /* TM_lib_internal::RECV_ReadPackets::F_version */kcg_bool F_version,
-  /* TM_lib_internal::RECV_ReadPackets::F_id */kcg_bool F_id,
-  /* TM_lib_internal::RECV_ReadPackets::Data */array_int_500 *Data,
-  /* TM_lib_internal::RECV_ReadPackets::Metadata */MetadataElement_T_Common_Types_Pkg *Metadata,
-  /* TM_lib_internal::RECV_ReadPackets::received */kcg_bool *received)
+  /* TM_lib_internal::RECV_ReadPackets::Packets */ CompressedPackets_T_Common_Types_Pkg *Packets,
+  /* TM_lib_internal::RECV_ReadPackets::PacketID */ kcg_int PacketID,
+  /* TM_lib_internal::RECV_ReadPackets::F_version */ kcg_bool F_version,
+  /* TM_lib_internal::RECV_ReadPackets::F_id */ kcg_bool F_id,
+  /* TM_lib_internal::RECV_ReadPackets::Data */ CompressedPacketData_T_Common_Types_Pkg *Data,
+  /* TM_lib_internal::RECV_ReadPackets::Metadata */ MetadataElement_T_Common_Types_Pkg *Metadata,
+  /* TM_lib_internal::RECV_ReadPackets::received */ kcg_bool *received)
 {
   /* TM_lib_internal::RECV_ReadPackets::_L2 */
   static kcg_int _L2;
@@ -29,7 +29,7 @@ void RECV_ReadPackets_TM_lib_internal(
     received,
     &_L2,
     Metadata);
-  if (*received) {
+  /* ck_received */ if (*received) {
     /* 1 */
     RECV_ReadPacketKernel_TM_lib_internal(
       Metadata,
@@ -39,12 +39,13 @@ void RECV_ReadPackets_TM_lib_internal(
   else {
     kcg_copy_CompressedPacketData_T_Common_Types_Pkg(
       Data,
-      (array_int_500 *) &DEFAULT_CompressedPackets_TM);
+      (CompressedPacketData_T_Common_Types_Pkg *)
+        &DEFAULT_CompressedPackets_TM);
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** RECV_ReadPackets_TM_lib_internal.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

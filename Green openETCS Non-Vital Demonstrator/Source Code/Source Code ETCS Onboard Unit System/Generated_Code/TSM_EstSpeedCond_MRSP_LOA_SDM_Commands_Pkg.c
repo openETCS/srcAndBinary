@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA */
 void TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::speeds */Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::triggerConds */TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
+  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::triggerConds */ TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
 {
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::_L10 */
   static kcg_bool _L10;
@@ -26,8 +26,8 @@ void TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg(
   _L22 = (*speeds).V_MRSP + (*speeds).dV_sbi_V_MRSP;
   _L20 = (*speeds).V_est <= _L22;
   _L10 = (*speeds).V_est <= (*speeds).V_MRSP + (*speeds).dV_ebi_V_MRSP;
-  (*triggerConds).t13 = _L10 & ((*speeds).V_est < (*speeds).V_target +
-      (*speeds).dV_ebi_V_target);
+  (*triggerConds).t13 = _L10 & ((*speeds).V_target + (*speeds).dV_ebi_V_target <
+      (*speeds).V_est);
   (*triggerConds).t14 = !_L10;
   (*triggerConds).t11 = (_L22 < (*speeds).V_est) & _L10;
   (*triggerConds).t12 = (*triggerConds).t11;
@@ -48,8 +48,8 @@ void TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg(
       (*speeds).V_est);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

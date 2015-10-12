@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,11 @@
 
 /* TM_conversions::C_P058_to_legacy_t */
 void C_P058_to_legacy_t_TM_conversions(
-  /* TM_conversions::C_P058_to_legacy_t::P058_in */P058_OBU_T_TM *P058_in,
-  /* TM_conversions::C_P058_to_legacy_t::P058_legacy_out */P58_PositionReportParameters_T_Packet_Types_Pkg *P058_legacy_out)
+  /* TM_conversions::C_P058_to_legacy_t::P058_in */ P058_OBU_T_TM *P058_in,
+  /* TM_conversions::C_P058_to_legacy_t::P058_legacy_out */ P58_PositionReportParameters_T_Packet_Types_Pkg *P058_legacy_out)
 {
-  static array__81566 tmp;
+  /* TM_conversions::C_P058_to_legacy_t */
+  static IterPacket58List_T_Packet_Types_Pkg tmp;
   static kcg_int i;
   
   (*P058_legacy_out).valid = (*P058_in).valid;
@@ -24,7 +25,7 @@ void C_P058_to_legacy_t_TM_conversions(
   (*P058_legacy_out).d_cycloc = (*P058_in).d_cycloc;
   (*P058_legacy_out).m_loc = (*P058_in).m_loc;
   (*P058_legacy_out).n_iter = (*P058_in).n_iter;
-  for (i = 0; i < 2; i++) {
+  /* 1 */ for (i = 0; i < 2; i++) {
     /* 1 */
     C_P058_to_legacy_loop_TM_conversions(i, &(*P058_in).sections, &tmp[i]);
   }
@@ -33,8 +34,8 @@ void C_P058_to_legacy_t_TM_conversions(
     &tmp);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P058_to_legacy_t_TM_conversions.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

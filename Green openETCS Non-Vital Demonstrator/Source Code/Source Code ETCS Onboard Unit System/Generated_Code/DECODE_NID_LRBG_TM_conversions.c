@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* TM_conversions::DECODE_NID_LRBG */
 void DECODE_NID_LRBG_TM_conversions(
-  /* TM_conversions::DECODE_NID_LRBG::nid_lrbg */NID_LRBG nid_lrbg,
-  /* TM_conversions::DECODE_NID_LRBG::nid_c */NID_C *nid_c,
-  /* TM_conversions::DECODE_NID_LRBG::nid_bg */NID_BG *nid_bg)
+  /* TM_conversions::DECODE_NID_LRBG::nid_lrbg */ NID_LRBG nid_lrbg,
+  /* TM_conversions::DECODE_NID_LRBG::nid_c */ NID_C *nid_c,
+  /* TM_conversions::DECODE_NID_LRBG::nid_bg */ NID_BG *nid_bg)
 {
   *nid_bg = nid_lrbg;
-  if (*nid_bg == 0) {
+  /* 1 */ if (nid_lrbg == 0) {
     *nid_c = 0;
   }
   else {
@@ -22,8 +22,8 @@ void DECODE_NID_LRBG_TM_conversions(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** DECODE_NID_LRBG_TM_conversions.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

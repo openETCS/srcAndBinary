@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 #ifndef _establish_a_Session_MoRC_Pck_Subfunc_Pkg_H_
 #define _establish_a_Session_MoRC_Pck_Subfunc_Pkg_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -42,28 +44,33 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::establish_a_Session */
 extern void establish_a_Session_MoRC_Pck_Subfunc_Pkg(
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::isPartOfAnOngoingStartOfMissionProcedure */kcg_bool isPartOfAnOngoingStartOfMissionProcedure,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::connectionSuccessfullyEstablished */kcg_bool connectionSuccessfullyEstablished,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::settingUpSafeConnectionHasFailed */kcg_bool settingUpSafeConnectionHasFailed,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::endOfMissionIsPerformed */kcg_bool endOfMissionIsPerformed,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::trainPassesALevelTransitionBorder */kcg_bool trainPassesALevelTransitionBorder,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::orderToEstablishACommunicationSession_fromTrackside */p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *orderToEstablishACommunicationSession_fromTrackside,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::orderToEstablishACommunicationSession_fromOBU */p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *orderToEstablishACommunicationSession_fromOBU,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::orderDoesNotRequestToContactAnAcceptingRBC */kcg_bool orderDoesNotRequestToContactAnAcceptingRBC,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::trainPassesA_RBC_RBC_border_WithItsFrontEnd */kcg_bool trainPassesA_RBC_RBC_border_WithItsFrontEnd,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::systemVersionFromTracksideSupported */kcg_bool systemVersionFromTracksideSupported,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::systemVersionReceived */kcg_bool systemVersionReceived,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::m38_initiationOfACommunicationSession */kcg_bool m38_initiationOfACommunicationSession,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::communicationSessionInitiatedByOBU_ */kcg_bool communicationSessionInitiatedByOBU_,
-  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::communicationSessionInitiatedFromTrackside_ */kcg_bool communicationSessionInitiatedFromTrackside_,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::isPartOfAnOngoingStartOfMissionProcedure */ kcg_bool isPartOfAnOngoingStartOfMissionProcedure,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::connectionSuccessfullyEstablished */ kcg_bool connectionSuccessfullyEstablished,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::settingUpSafeConnectionHasFailed */ kcg_bool settingUpSafeConnectionHasFailed,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::endOfMissionIsPerformed */ kcg_bool endOfMissionIsPerformed,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::trainPassesALevelTransitionBorder */ kcg_bool trainPassesALevelTransitionBorder,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::orderToEstablishACommunicationSession_fromTrackside */ p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *orderToEstablishACommunicationSession_fromTrackside,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::orderToEstablishACommunicationSession_fromOBU */ p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *orderToEstablishACommunicationSession_fromOBU,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::orderDoesNotRequestToContactAnAcceptingRBC */ kcg_bool orderDoesNotRequestToContactAnAcceptingRBC,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::trainPassesA_RBC_RBC_border_WithItsFrontEnd */ kcg_bool trainPassesA_RBC_RBC_border_WithItsFrontEnd,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::systemVersionFromTracksideSupported */ kcg_bool systemVersionFromTracksideSupported,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::systemVersionReceived */ kcg_bool systemVersionReceived,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::m38_initiationOfACommunicationSession */ kcg_bool m38_initiationOfACommunicationSession,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::communicationSessionInitiatedByOBU_ */ kcg_bool communicationSessionInitiatedByOBU_,
+  /* MoRC_Pck::Subfunc_Pkg::establish_a_Session::communicationSessionInitiatedFromTrackside_ */ kcg_bool communicationSessionInitiatedFromTrackside_,
   outC_establish_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
 
 extern void establish_a_Session_reset_MoRC_Pck_Subfunc_Pkg(
   outC_establish_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void establish_a_Session_init_MoRC_Pck_Subfunc_Pkg(
+  outC_establish_a_Session_MoRC_Pck_Subfunc_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _establish_a_Session_MoRC_Pck_Subfunc_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** establish_a_Session_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

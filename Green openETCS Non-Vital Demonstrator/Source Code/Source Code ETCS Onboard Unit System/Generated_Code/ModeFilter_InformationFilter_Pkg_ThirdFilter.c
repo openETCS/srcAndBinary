@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,14 @@
 
 /* InformationFilter_Pkg::ThirdFilter::ModeFilter */
 kcg_bool ModeFilter_InformationFilter_Pkg_ThirdFilter(
-  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inOperationModus */M_MODE inOperationModus,
-  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inPacketId */kcg_int inPacketId)
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inOperationModus */ M_MODE inOperationModus,
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inPacketId */ kcg_int inPacketId)
 {
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter */
   static ModeDecisionTableActionKind_DataDictionary_Pkg tmp2;
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter */
   static kcg_int tmp1;
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter */
   static kcg_int tmp;
   /* InformationFilter_Pkg::ThirdFilter::ModeFilter::outPacketAccept */
   static kcg_bool outPacketAccept;
@@ -30,8 +33,8 @@ kcg_bool ModeFilter_InformationFilter_Pkg_ThirdFilter(
   return outPacketAccept;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ModeFilter_InformationFilter_Pkg_ThirdFilter.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

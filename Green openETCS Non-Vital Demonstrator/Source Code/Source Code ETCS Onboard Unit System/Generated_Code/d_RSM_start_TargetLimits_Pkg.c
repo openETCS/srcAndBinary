@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,19 @@
 
 /* TargetLimits_Pkg::d_RSM_start */
 void d_RSM_start_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::d_RSM_start::V_release */V_internal_real_Type_SDM_Types_Pkg V_release,
-  /* TargetLimits_Pkg::d_RSM_start::EBDcurve */ParabolaCurve_T_CalcBrakingCurves_types *EBDcurve,
-  /* TargetLimits_Pkg::d_RSM_start::SBDcurve */ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
-  /* TargetLimits_Pkg::d_RSM_start::d_maxsafefront */L_internal_real_Type_SDM_Types_Pkg d_maxsafefront,
-  /* TargetLimits_Pkg::d_RSM_start::d_est */L_internal_real_Type_SDM_Types_Pkg d_est,
-  /* TargetLimits_Pkg::d_RSM_start::T */T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::d_RSM_start::D_FLOI */L_internal_real_Type_SDM_Types_Pkg *D_FLOI,
-  /* TargetLimits_Pkg::d_RSM_start::D_SBI2 */L_internal_real_Type_SDM_Types_Pkg *D_SBI2,
-  /* TargetLimits_Pkg::d_RSM_start::D_SBI1 */L_internal_real_Type_SDM_Types_Pkg *D_SBI1,
-  /* TargetLimits_Pkg::d_RSM_start::valid_SBI2 */kcg_bool *valid_SBI2,
-  /* TargetLimits_Pkg::d_RSM_start::valid_SBI1 */kcg_bool *valid_SBI1)
+  /* TargetLimits_Pkg::d_RSM_start::V_release */ V_internal_real_Type_SDM_Types_Pkg V_release,
+  /* TargetLimits_Pkg::d_RSM_start::EBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *EBDcurve,
+  /* TargetLimits_Pkg::d_RSM_start::SBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
+  /* TargetLimits_Pkg::d_RSM_start::d_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg d_maxsafefront,
+  /* TargetLimits_Pkg::d_RSM_start::d_est */ L_internal_real_Type_SDM_Types_Pkg d_est,
+  /* TargetLimits_Pkg::d_RSM_start::T */ T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::d_RSM_start::D_FLOI */ L_internal_real_Type_SDM_Types_Pkg *D_FLOI,
+  /* TargetLimits_Pkg::d_RSM_start::D_SBI2 */ L_internal_real_Type_SDM_Types_Pkg *D_SBI2,
+  /* TargetLimits_Pkg::d_RSM_start::D_SBI1 */ L_internal_real_Type_SDM_Types_Pkg *D_SBI1,
+  /* TargetLimits_Pkg::d_RSM_start::valid_SBI2 */ kcg_bool *valid_SBI2,
+  /* TargetLimits_Pkg::d_RSM_start::valid_SBI1 */ kcg_bool *valid_SBI1)
 {
+  /* TargetLimits_Pkg::d_RSM_start */
   static kcg_bool tmp;
   
   /* 2 */
@@ -32,7 +33,7 @@ void d_RSM_start_TargetLimits_Pkg(
       d_maxsafefront - d_est,
       *valid_SBI1,
       *D_SBI2 - *D_SBI1);
-  if (tmp) {
+  /* 1 */ if (tmp) {
     *D_FLOI = *D_SBI1;
   }
   else {
@@ -40,8 +41,8 @@ void d_RSM_start_TargetLimits_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** d_RSM_start_TargetLimits_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 

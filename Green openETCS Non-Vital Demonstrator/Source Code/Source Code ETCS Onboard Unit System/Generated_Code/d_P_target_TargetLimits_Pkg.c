@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg_s2c_config.txt
-** Generation date: 2015-08-21T17:26:01
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* TargetLimits_Pkg::d_P_target */
 void d_P_target_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::d_P_target::EBDcurve */ParabolaCurve_T_CalcBrakingCurves_types *EBDcurve,
-  /* TargetLimits_Pkg::d_P_target::V_target */V_internal_real_Type_SDM_Types_Pkg V_target,
-  /* TargetLimits_Pkg::d_P_target::T */T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::d_P_target::valid */kcg_bool *valid,
-  /* TargetLimits_Pkg::d_P_target::D_P_target */L_internal_real_Type_SDM_Types_Pkg *D_P_target)
+  /* TargetLimits_Pkg::d_P_target::EBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *EBDcurve,
+  /* TargetLimits_Pkg::d_P_target::V_target */ V_internal_real_Type_SDM_Types_Pkg V_target,
+  /* TargetLimits_Pkg::d_P_target::T */ T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::d_P_target::valid */ kcg_bool *valid,
+  /* TargetLimits_Pkg::d_P_target::D_P_target */ L_internal_real_Type_SDM_Types_Pkg *D_P_target)
 {
   /* TargetLimits_Pkg::d_P_target::_L13 */
   static L_internal_real_Type_SDM_Types_Pkg _L13;
@@ -22,8 +22,8 @@ void d_P_target_TargetLimits_Pkg(
   *D_P_target = _L13 - V_target * T_driver_SDM_Types_Pkg;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** d_P_target_TargetLimits_Pkg.c
-** Generation date: 2015-08-21T17:26:01
+** Generation date: 2015-10-12T08:09:21
 *************************************************************$ */
 
