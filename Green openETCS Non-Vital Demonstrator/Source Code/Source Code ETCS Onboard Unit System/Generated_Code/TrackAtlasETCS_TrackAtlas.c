@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,11 +22,11 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->message147.present = kcg_true;
   outC->message147.header.present = kcg_true;
   outC->message147.header.nid_message = 0;
-  outC->message147.header.t_train = 0.0;
+  outC->message147.header.t_train = 0;
   outC->message147.header.nid_engine = 0;
   outC->message147.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->message147.header.xT_TRAIN = 0.0;
+  outC->message147.header.xT_TRAIN = 0;
   outC->message147.header.xNID_EM = 0;
   outC->message147.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -93,23 +93,34 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->message147.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->message147.packets.p11.n_axle = 0;
   outC->message147.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->message147.packets.p11.tractionIdentity[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->message147.packets.p11.tractionIdentity[i].nid_ctraction = 0;
   }
   outC->message147.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->message147.packets.p11.nid_ntc[i] = 0;
+    outC->bus_out[i].Message.valid = kcg_true;
+    outC->bus_out[i].Message.nid_message = 0;
+    outC->bus_out[i].Message.l_message = 0;
+    outC->bus_out[i].Message.t_train = 0;
+    outC->bus_out[i].Message.nid_engine = 0;
+    outC->bus_out[i].Message.field1 = 0;
+    outC->bus_out[i].Message.field2 = 0;
+    outC->bus_out[i].Message.field3 = 0;
+    for (i1 = 0; i1 < 50; i1++) {
+      outC->bus_out[i].OptionalPackets[i1] = 0;
+    }
   }
   outC->MA_request_out.present = kcg_true;
   outC->MA_request_out.header.present = kcg_true;
   outC->MA_request_out.header.nid_message = 0;
-  outC->MA_request_out.header.t_train = 0.0;
+  outC->MA_request_out.header.t_train = 0;
   outC->MA_request_out.header.nid_engine = 0;
   outC->MA_request_out.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->MA_request_out.header.xT_TRAIN = 0.0;
+  outC->MA_request_out.header.xT_TRAIN = 0;
   outC->MA_request_out.header.xNID_EM = 0;
   outC->MA_request_out.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -177,13 +188,13 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->MA_request_out.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->MA_request_out.packets.p11.n_axle = 0;
   outC->MA_request_out.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->MA_request_out.packets.p11.tractionIdentity[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->MA_request_out.packets.p11.tractionIdentity[i].nid_ctraction = 0;
   }
   outC->MA_request_out.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->MA_request_out.packets.p11.nid_ntc[i] = 0;
   }
   outC->MA_onboard_out.valid = kcg_true;
@@ -559,6 +570,7 @@ void TrackAtlasETCS_TrackAtlas(
   /* TrackAtlas::TrackAtlasETCS::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
   /* TrackAtlas::TrackAtlasETCS::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
   /* TrackAtlas::TrackAtlasETCS::t_train */ T_TRAIN t_train,
+  /* TrackAtlas::TrackAtlasETCS::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
   /* TrackAtlas::TrackAtlasETCS::P203V1_onboard */ P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
   /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */ P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
   outC_TrackAtlasETCS_TrackAtlas *outC)
@@ -605,8 +617,9 @@ void TrackAtlasETCS_TrackAtlas(
     packet1,
     TrainPositionIn,
     i,
+    bus_in,
     &outC->Context_1);
-  kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
+  kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
     &outC->message147,
     &outC->Context_1.message147);
   outC->trip_train = outC->Context_1.tripTrain;
@@ -718,11 +731,14 @@ void TrackAtlasETCS_TrackAtlas(
     packet0,
     packet1,
     t_train,
-    ModeAndLevel_in,
+    &outC->Context_1.bus_out,
     &outC->_5_Context_1);
-  kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
+  kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
     &outC->MA_request_out,
     &outC->_5_Context_1.message_out);
+  kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+    &outC->bus_out,
+    &outC->_5_Context_1.bus_out);
   /* 1 */
   TA_to_ML_TA_Export(
     MessageIn,
@@ -747,6 +763,6 @@ void TrackAtlasETCS_TrackAtlas(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

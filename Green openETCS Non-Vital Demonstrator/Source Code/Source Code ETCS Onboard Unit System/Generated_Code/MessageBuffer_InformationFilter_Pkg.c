@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -64,15 +64,15 @@ void MessageBuffer_init_InformationFilter_Pkg(
   outC->outMessage.Radio_Common_Header.radioDevice = 0;
   outC->outMessage.Radio_Common_Header.receivedSystemTime = 0;
   outC->outMessage.Radio_Common_Header.nid_message = 0;
-  outC->outMessage.Radio_Common_Header.t_train = 0.0;
+  outC->outMessage.Radio_Common_Header.t_train = 0;
   outC->outMessage.Radio_Common_Header.m_ack =
     M_ACK_No_acknowledgement_required;
   outC->outMessage.Radio_Common_Header.nid_lrbg = 0;
-  outC->outMessage.Radio_Common_Header.t_train_reference = 0.0;
+  outC->outMessage.Radio_Common_Header.t_train_reference = 0;
   outC->outMessage.Radio_Common_Header.nid_em = 0;
   outC->outMessage.Radio_Common_Header.q_scale = Q_SCALE_10_cm_scale;
   outC->outMessage.Radio_Common_Header.d_sr = 0;
-  outC->outMessage.Radio_Common_Header.t_sh_rqst = 0.0;
+  outC->outMessage.Radio_Common_Header.t_sh_rqst = 0;
   outC->outMessage.Radio_Common_Header.d_ref = 0;
   outC->outMessage.Radio_Common_Header.q_dir = Q_DIR_Reverse;
   outC->outMessage.Radio_Common_Header.d_emergencystop = 0;
@@ -152,6 +152,6 @@ void MessageBuffer_InformationFilter_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MessageBuffer_InformationFilter_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

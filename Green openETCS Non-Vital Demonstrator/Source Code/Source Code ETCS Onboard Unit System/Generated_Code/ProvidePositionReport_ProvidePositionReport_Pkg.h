@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 #ifndef _ProvidePositionReport_ProvidePositionReport_Pkg_H_
 #define _ProvidePositionReport_ProvidePositionReport_Pkg_H_
@@ -10,6 +10,7 @@
 #include "AddBGToFIFO_ProvidePositionReport_Pkg.h"
 #include "AggregatePackets_ProvidePositionReport_Pkg.h"
 #include "ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.h"
+#include "nextGen_Msg136_radioOutput_Pkg.h"
 #include "ReceiveReportParameters_ProvidePositionReport_Pkg.h"
 #include "PosReport_Supervision_ProvidePositionReport_Pkg.h"
 #include "Build_Packets0_1_ProvidePositionReport_Pkg.h"
@@ -25,12 +26,14 @@ typedef struct {
   ReportedBGList_T_ProvidePositionReport_Pkg /* ProvidePositionReport_Pkg::ProvidePositionReport::out_reportedBGs */ out_reportedBGs;
   PT0_PositionReport_T_Packet_TrainTypes_Pkg /* ProvidePositionReport_Pkg::ProvidePositionReport::packet0 */ packet0;
   PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg /* ProvidePositionReport_Pkg::ProvidePositionReport::packet1 */ packet1;
+  M_TrainTrackMessageBus_t_TM_TrainTrack_Bus /* ProvidePositionReport_Pkg::ProvidePositionReport::posReport_ng */ posReport_ng;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   ReportedBGList_T_ProvidePositionReport_Pkg /* ProvidePositionReport_Pkg::ProvidePositionReport::reportedBGs */ rem_reportedBGs;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_nextGen_Msg136_radioOutput_Pkg /* 1 */ _3_Context_1;
   outC_Build_Packets0_1_ProvidePositionReport_Pkg /* 1 */ _2_Context_1;
   outC_PosReport_Supervision_ProvidePositionReport_Pkg /* 1 */ _1_Context_1;
   outC_ReceiveReportParameters_ProvidePositionReport_Pkg /* 1 */ Context_1;
@@ -61,6 +64,8 @@ extern void ProvidePositionReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::ProvidePositionReport::DoubleRepositioningError */ kcg_bool DoubleRepositioningError,
   /* ProvidePositionReport_Pkg::ProvidePositionReport::modeLevelStatus */ ModeLevel2PositionReport_T_ProvidePositionReport_Pkg *modeLevelStatus,
   /* ProvidePositionReport_Pkg::ProvidePositionReport::reportedBGs */ ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
+  /* ProvidePositionReport_Pkg::ProvidePositionReport::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* ProvidePositionReport_Pkg::ProvidePositionReport::inVersion */ M_VERSION inVersion,
   /* ProvidePositionReport_Pkg::ProvidePositionReport::t_train */ T_TRAIN t_train,
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC);
 
@@ -77,6 +82,6 @@ extern void ProvidePositionReport_init_ProvidePositionReport_Pkg(
 #endif /* _ProvidePositionReport_ProvidePositionReport_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 

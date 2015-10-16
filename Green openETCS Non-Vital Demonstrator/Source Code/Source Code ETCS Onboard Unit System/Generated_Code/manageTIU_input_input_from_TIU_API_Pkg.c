@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -60,11 +60,11 @@ void manageTIU_input_init_input_from_TIU_API_Pkg(
     M_AIRTIGHT_Not_fitted;
   outC->outTIUCurrentInfo.train_data_info.axleNumber = 0;
   outC->outTIUCurrentInfo.train_data_info.numberNationalSystems = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->outTIUCurrentInfo.train_data_info.nationSystems[i] = 0;
   }
   outC->outTIUCurrentInfo.train_data_info.numberTractionSystems = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->outTIUCurrentInfo.train_data_info.tractionSystem[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->outTIUCurrentInfo.train_data_info.tractionSystem[i].nid_ctraction = 0;
@@ -142,6 +142,6 @@ void manageTIU_input_input_from_TIU_API_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTIU_input_input_from_TIU_API_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

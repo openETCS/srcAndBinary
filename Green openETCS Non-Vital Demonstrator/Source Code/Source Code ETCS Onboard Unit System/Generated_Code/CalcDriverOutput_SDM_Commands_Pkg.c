@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,15 +14,15 @@ void CalcDriverOutput_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CalcDriverOutput::mrdt */ Target_T_TargetManagement_types *mrdt,
   /* SDM_Commands_Pkg::CalcDriverOutput::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
   /* SDM_Commands_Pkg::CalcDriverOutput::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::CalcDriverOutput::v_est */ V_internal_Type_Obu_BasicTypes_Pkg *v_est,
+  /* SDM_Commands_Pkg::CalcDriverOutput::v_est */ V_odometry_Type_Obu_BasicTypes_Pkg *v_est,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_v_est */ kcg_bool *valid_v_est,
-  /* SDM_Commands_Pkg::CalcDriverOutput::v_permitted */ V_internal_Type_Obu_BasicTypes_Pkg *v_permitted,
+  /* SDM_Commands_Pkg::CalcDriverOutput::v_permitted */ V_odometry_Type_Obu_BasicTypes_Pkg *v_permitted,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_v_permitted */ kcg_bool *valid_v_permitted,
-  /* SDM_Commands_Pkg::CalcDriverOutput::v_release */ V_internal_Type_Obu_BasicTypes_Pkg *v_release,
+  /* SDM_Commands_Pkg::CalcDriverOutput::v_release */ V_odometry_Type_Obu_BasicTypes_Pkg *v_release,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_v_release */ kcg_bool *valid_v_release,
-  /* SDM_Commands_Pkg::CalcDriverOutput::v_mrdt */ V_internal_Type_Obu_BasicTypes_Pkg *v_mrdt,
+  /* SDM_Commands_Pkg::CalcDriverOutput::v_mrdt */ V_odometry_Type_Obu_BasicTypes_Pkg *v_mrdt,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_v_mrdt */ kcg_bool *valid_v_mrdt,
-  /* SDM_Commands_Pkg::CalcDriverOutput::v_floi */ V_internal_Type_Obu_BasicTypes_Pkg *v_floi,
+  /* SDM_Commands_Pkg::CalcDriverOutput::v_floi */ V_odometry_Type_Obu_BasicTypes_Pkg *v_floi,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_v_floi */ kcg_bool *valid_v_floi,
   /* SDM_Commands_Pkg::CalcDriverOutput::targetDistance */ L_internal_Type_Obu_BasicTypes_Pkg *targetDistance,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_targetDistance */ kcg_bool *valid_targetDistance)
@@ -57,34 +57,30 @@ void CalcDriverOutput_SDM_Commands_Pkg(
   owi = (Overspeed_Supervision_SDM_Types_Pkg == supVisStatus) | (supVisStatus ==
       Warning_Supervision_SDM_Types_Pkg) | (supVisStatus ==
       Intervention_Supervision_SDM_Types_Pkg);
+  *v_est = (*speeds).V_est;
+  *v_release = (*speeds).V_release;
   /* ck_sdmType */ switch (sdmType) {
     case CSM_SDM_Types_Pkg :
       *valid_v_release = kcg_false;
       *valid_v_permitted = kcg_true;
       *valid_v_est = kcg_true;
-      *v_permitted = /* 3 */
-        TransformV_realToV_int_SDM_Types_Pkg((*speeds).V_MRSP);
+      *v_permitted = (*speeds).V_MRSP;
       *v_mrdt = 0;
-      *v_floi = /* 4 */
-        TransformV_realToV_int_SDM_Types_Pkg((*speeds).v_FLOI_dmi);
+      *v_floi = (*speeds).v_FLOI_dmi;
       *valid_v_floi = owi;
       *targetDistance = 0;
       break;
     case TSM_SDM_Types_Pkg :
       *valid_v_est = _L3_WhenBlock1_TSM;
-      *v_permitted = /* 6 */
-        TransformV_realToV_int_SDM_Types_Pkg((*speeds).v_p_dmi);
+      *v_permitted = (*speeds).v_p_dmi;
       *valid_v_permitted = _L3_WhenBlock1_TSM;
       *valid_v_release = _L3_WhenBlock1_TSM & ((SvL_TargetManagement_types ==
             (*mrdt).targetType) | ((*mrdt).targetType ==
             EoA_TargetManagement_types));
-      *v_mrdt = /* 5 */
-        TransformV_realToV_int_SDM_Types_Pkg((*speeds).V_target);
-      *v_floi = /* 7 */
-        TransformV_realToV_int_SDM_Types_Pkg((*speeds).v_FLOI_dmi);
+      *v_mrdt = (*speeds).V_target;
+      *v_floi = (*speeds).v_FLOI_dmi;
       *valid_v_floi = owi;
-      *targetDistance = /* 1 */
-        TransformL_realToL_int_SDM_Types_Pkg((*locations).d_target);
+      *targetDistance = (*locations).d_target;
       break;
     case RSM_SDM_Types_Pkg :
       *valid_v_floi = kcg_false;
@@ -92,11 +88,9 @@ void CalcDriverOutput_SDM_Commands_Pkg(
       *valid_v_est = _L5_WhenBlock1_RSM;
       *v_permitted = 0;
       *valid_v_release = _L5_WhenBlock1_RSM;
-      *v_mrdt = /* 9 */
-        TransformV_realToV_int_SDM_Types_Pkg((*speeds).v_p_mrdt);
+      *v_mrdt = (*speeds).v_p_mrdt;
       *v_floi = 0;
-      *targetDistance = /* 2 */
-        TransformL_realToL_int_SDM_Types_Pkg((*locations).d_target);
+      *targetDistance = (*locations).d_target;
       break;
     case No_SDM_Type_SDM_Types_Pkg :
       *valid_v_floi = kcg_false;
@@ -110,13 +104,10 @@ void CalcDriverOutput_SDM_Commands_Pkg(
       break;
     
   }
-  *v_est = /* 1 */ TransformV_realToV_int_SDM_Types_Pkg((*speeds).V_est);
-  *v_release = /* 2 */
-    TransformV_realToV_int_SDM_Types_Pkg((*speeds).V_release);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcDriverOutput_SDM_Commands_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

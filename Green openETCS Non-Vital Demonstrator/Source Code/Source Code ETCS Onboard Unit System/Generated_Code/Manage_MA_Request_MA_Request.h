@@ -1,14 +1,14 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _Manage_MA_Request_MA_Request_H_
 #define _Manage_MA_Request_MA_Request_H_
 
 #include "kcg_types.h"
-#include "Build_MA_request_MA_Request.h"
 #include "Send_MA_MA_Request.h"
 #include "Receive_MA_RequestParameters_MA_Request.h"
+#include "Build_MA_request_MA_Request.h"
 #include "MA_Request_Supervision_MA_Request.h"
 
 /* =====================  no input structure  ====================== */
@@ -18,7 +18,8 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  Radio_TrainTrack_Message_T_Radio_Types_Pkg /* MA_Request::Manage_MA_Request::message_out */ message_out;
+  Radio_TrainTrack_Message_T_TM_transitional /* MA_Request::Manage_MA_Request::message_out */ message_out;
+  M_TrainTrackMessageBus_t_TM_TrainTrack_Bus /* MA_Request::Manage_MA_Request::bus_out */ bus_out;
   /* -----------------------   local probes  ------------------------- */
   kcg_bool /* MA_Request::Manage_MA_Request::exception */ exception;
   /* -------------------- initialization variables  ------------------ */
@@ -26,6 +27,7 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   kcg_bool /* MA_Request::Manage_MA_Request::triggerMA */ triggerMA;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_Build_MA_request_MA_Request /* 1 */ _2_Context_1;
   outC_MA_Request_Supervision_MA_Request /* 1 */ _1_Context_1;
   outC_Receive_MA_RequestParameters_MA_Request /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
@@ -46,7 +48,7 @@ extern void Manage_MA_Request_MA_Request(
   /* MA_Request::Manage_MA_Request::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
   /* MA_Request::Manage_MA_Request::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
   /* MA_Request::Manage_MA_Request::t_train */ T_TRAIN t_train,
-  /* MA_Request::Manage_MA_Request::ModeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeLevel,
+  /* MA_Request::Manage_MA_Request::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
   outC_Manage_MA_Request_MA_Request *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -62,6 +64,6 @@ extern void Manage_MA_Request_init_MA_Request(
 #endif /* _Manage_MA_Request_MA_Request_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_MA_Request_MA_Request.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

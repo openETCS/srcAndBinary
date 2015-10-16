@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -37,7 +37,8 @@ void Output_init(outC_Output *outC)
   outC->Compatible_Mode_And_Level.newLevel = kcg_true;
   outC->Compatible_Mode_And_Level.Mode = M_MODE_Full_Supervision;
   outC->Compatible_Mode_And_Level.newMode = kcg_true;
-  /* 1 */ Output_Mode_Level_To_Use_init_OutputManagement(&outC->Context_1);
+  /* 1 */ Output_Mode_Level_To_Use_init_OutputManagement(&outC->_1_Context_1);
+  /* 1 */ Output_To_DMI_init_OutputManagement(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -45,7 +46,8 @@ void Output_init(outC_Output *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Output_reset(outC_Output *outC)
 {
-  /* 1 */ Output_Mode_Level_To_Use_reset_OutputManagement(&outC->Context_1);
+  /* 1 */ Output_Mode_Level_To_Use_reset_OutputManagement(&outC->_1_Context_1);
+  /* 1 */ Output_To_DMI_reset_OutputManagement(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
@@ -73,11 +75,15 @@ void Output(
     Level_Mode_Compatible,
     needsAckFromDriver,
     Data_To_DMI_From_Mode,
-    isNewLevel,
     announcedLevelTransition,
     isAvailableForUse,
+    &outC->Context_1);
+  kcg_copy_T_AnnouncedLevel_Level_And_Mode_Types_Pkg(
     &outC->announcedLevel,
-    &outC->Data_To_DMI_Ack);
+    &outC->Context_1.announcedLevel);
+  kcg_copy_T_AcknoledgementRequest_Level_And_Mode_Types_Pkg(
+    &outC->Data_To_DMI_Ack,
+    &outC->Context_1.Data_To_DMI_Ack);
   /* 1 */
   Output_To_BG_Management_OutputManagement(
     Data_To_BG_Management_From_Mode,
@@ -90,16 +96,16 @@ void Output(
     currentMode,
     Level_Mode_Compatible,
     isNewLevel,
-    &outC->Context_1);
+    &outC->_1_Context_1);
   kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
     &outC->Compatible_Mode_And_Level,
-    &outC->Context_1.Compatible_Mode_And_Level);
+    &outC->_1_Context_1.Compatible_Mode_And_Level);
   outC->Service_Brake_Command = service_brake_from_level |
     Service_Brake_Command_From_Mode;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Output.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,7 +28,7 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   
   _L8 = del & (indexOfBG >= 0) & (indexOfBG <
       cMaxNoOfStoredBGs_TrainPosition_Types_Pck);
-  kcg_copy_array_76502(&tmp[0], (array_76502 *) &(*BGs_in)[1]);
+  kcg_copy_array_83053(&tmp[0], (array_83053 *) &(*BGs_in)[1]);
   kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
     &(&tmp[40])[0],
     (positionedBG_T_TrainPosition_Types_Pck *)
@@ -72,6 +72,6 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

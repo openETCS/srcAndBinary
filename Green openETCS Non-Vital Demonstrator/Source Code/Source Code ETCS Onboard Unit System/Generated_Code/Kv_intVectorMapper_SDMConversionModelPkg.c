@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,11 +14,11 @@ void Kv_intVectorMapper_SDMConversionModelPkg(
   /* SDMConversionModelPkg::Kv_intVectorMapper::A_brake_safe */ av_MergedMap_t_SDMConversionModelPkg *A_brake_safe)
 {
   /* SDMConversionModelPkg::Kv_intVectorMapper */
-  static array_int_2 acc;
+  static P011_voltage_section_array_T_TM_TrainToTrack acc;
   /* SDMConversionModelPkg::Kv_intVectorMapper::_L19 */
   static array_int_13 _L19;
   /* SDMConversionModelPkg::Kv_intVectorMapper::_L12 */
-  static array_int_2 _L12;
+  static P011_voltage_section_array_T_TM_TrainToTrack _L12;
   /* SDMConversionModelPkg::Kv_intVectorMapper::_L13 */
   static array_int_13 _L13;
   static kcg_int i;
@@ -27,7 +27,7 @@ void Kv_intVectorMapper_SDMConversionModelPkg(
     _L12[i] = 0;
   }
   /* 1 */ for (i = 0; i < 13; i++) {
-    kcg_copy_array_int_2(&acc, &_L12);
+    kcg_copy_P011_voltage_section_array_T_TM_TrainToTrack(&acc, &_L12);
     /* 1 */
     Kv_intVectorMerger_SDMConversionModelPkg(
       &acc,
@@ -43,6 +43,6 @@ void Kv_intVectorMapper_SDMConversionModelPkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Kv_intVectorMapper_SDMConversionModelPkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void Build_PosReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::Build_PosReport::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *in_packet0,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *in_packet1,
-  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */ array_76498 *errorVector,
+  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */ array_82697 *errorVector,
   /* ProvidePositionReport_Pkg::Build_PosReport::t_train */ T_TRAIN t_train,
   /* ProvidePositionReport_Pkg::Build_PosReport::posRepHeader */ Radio_TrainTrack_Header_T_Radio_Types_Pkg *posRepHeader,
   /* ProvidePositionReport_Pkg::Build_PosReport::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
@@ -36,6 +36,6 @@ void Build_PosReport_ProvidePositionReport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_PosReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

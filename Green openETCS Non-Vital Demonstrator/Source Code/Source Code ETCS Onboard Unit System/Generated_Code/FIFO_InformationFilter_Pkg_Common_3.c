@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -70,15 +70,15 @@ void FIFO_init_InformationFilter_Pkg_Common_3(
     outC->buffer[i1].Radio_Common_Header.radioDevice = 0;
     outC->buffer[i1].Radio_Common_Header.receivedSystemTime = 0;
     outC->buffer[i1].Radio_Common_Header.nid_message = 0;
-    outC->buffer[i1].Radio_Common_Header.t_train = 0.0;
+    outC->buffer[i1].Radio_Common_Header.t_train = 0;
     outC->buffer[i1].Radio_Common_Header.m_ack =
       M_ACK_No_acknowledgement_required;
     outC->buffer[i1].Radio_Common_Header.nid_lrbg = 0;
-    outC->buffer[i1].Radio_Common_Header.t_train_reference = 0.0;
+    outC->buffer[i1].Radio_Common_Header.t_train_reference = 0;
     outC->buffer[i1].Radio_Common_Header.nid_em = 0;
     outC->buffer[i1].Radio_Common_Header.q_scale = Q_SCALE_10_cm_scale;
     outC->buffer[i1].Radio_Common_Header.d_sr = 0;
-    outC->buffer[i1].Radio_Common_Header.t_sh_rqst = 0.0;
+    outC->buffer[i1].Radio_Common_Header.t_sh_rqst = 0;
     outC->buffer[i1].Radio_Common_Header.d_ref = 0;
     outC->buffer[i1].Radio_Common_Header.q_dir = Q_DIR_Reverse;
     outC->buffer[i1].Radio_Common_Header.d_emergencystop = 0;
@@ -151,15 +151,15 @@ void FIFO_init_InformationFilter_Pkg_Common_3(
     outC->_L4_IfBlock1[i1].Radio_Common_Header.radioDevice = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.receivedSystemTime = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.nid_message = 0;
-    outC->_L4_IfBlock1[i1].Radio_Common_Header.t_train = 0.0;
+    outC->_L4_IfBlock1[i1].Radio_Common_Header.t_train = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.m_ack =
       M_ACK_No_acknowledgement_required;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.nid_lrbg = 0;
-    outC->_L4_IfBlock1[i1].Radio_Common_Header.t_train_reference = 0.0;
+    outC->_L4_IfBlock1[i1].Radio_Common_Header.t_train_reference = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.nid_em = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.q_scale = Q_SCALE_10_cm_scale;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.d_sr = 0;
-    outC->_L4_IfBlock1[i1].Radio_Common_Header.t_sh_rqst = 0.0;
+    outC->_L4_IfBlock1[i1].Radio_Common_Header.t_sh_rqst = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.d_ref = 0;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.q_dir = Q_DIR_Reverse;
     outC->_L4_IfBlock1[i1].Radio_Common_Header.d_emergencystop = 0;
@@ -228,14 +228,14 @@ void FIFO_init_InformationFilter_Pkg_Common_3(
   outC->outData.Radio_Common_Header.radioDevice = 0;
   outC->outData.Radio_Common_Header.receivedSystemTime = 0;
   outC->outData.Radio_Common_Header.nid_message = 0;
-  outC->outData.Radio_Common_Header.t_train = 0.0;
+  outC->outData.Radio_Common_Header.t_train = 0;
   outC->outData.Radio_Common_Header.m_ack = M_ACK_No_acknowledgement_required;
   outC->outData.Radio_Common_Header.nid_lrbg = 0;
-  outC->outData.Radio_Common_Header.t_train_reference = 0.0;
+  outC->outData.Radio_Common_Header.t_train_reference = 0;
   outC->outData.Radio_Common_Header.nid_em = 0;
   outC->outData.Radio_Common_Header.q_scale = Q_SCALE_10_cm_scale;
   outC->outData.Radio_Common_Header.d_sr = 0;
-  outC->outData.Radio_Common_Header.t_sh_rqst = 0.0;
+  outC->outData.Radio_Common_Header.t_sh_rqst = 0;
   outC->outData.Radio_Common_Header.d_ref = 0;
   outC->outData.Radio_Common_Header.q_dir = Q_DIR_Reverse;
   outC->outData.Radio_Common_Header.d_emergencystop = 0;
@@ -303,7 +303,7 @@ void FIFO_InformationFilter_Pkg_Common_3(
         &outC->_L4_IfBlock1[entry],
         inData);
     }
-    kcg_copy_array_76969(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array_83505(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (entry + 1) % 3;
     tmp1 = 1;
     outC->init1 = kcg_false;
@@ -366,6 +366,6 @@ void FIFO_InformationFilter_Pkg_Common_3(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FIFO_InformationFilter_Pkg_Common_3.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _SelectNormalTransition_LevelTransitionSelection_H_
 #define _SelectNormalTransition_LevelTransitionSelection_H_
@@ -24,6 +24,6 @@ extern void SelectNormalTransition_LevelTransitionSelection(
 #endif /* _SelectNormalTransition_LevelTransitionSelection_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SelectNormalTransition_LevelTransitionSelection.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,6 +11,7 @@
 void Manage_EmergencyStop_init_TA_EmergencyStop(
   outC_Manage_EmergencyStop_TA_EmergencyStop *outC)
 {
+  static kcg_int i1;
   static kcg_int i;
   
   outC->rejectNewMA = kcg_true;
@@ -18,15 +19,28 @@ void Manage_EmergencyStop_init_TA_EmergencyStop(
   outC->cesAccepted = kcg_true;
   outC->updateEOA = kcg_true;
   outC->cesRevoked = kcg_true;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->bus_out[i1].Message.valid = kcg_true;
+    outC->bus_out[i1].Message.nid_message = 0;
+    outC->bus_out[i1].Message.l_message = 0;
+    outC->bus_out[i1].Message.t_train = 0;
+    outC->bus_out[i1].Message.nid_engine = 0;
+    outC->bus_out[i1].Message.field1 = 0;
+    outC->bus_out[i1].Message.field2 = 0;
+    outC->bus_out[i1].Message.field3 = 0;
+    for (i = 0; i < 50; i++) {
+      outC->bus_out[i1].OptionalPackets[i] = 0;
+    }
+  }
   outC->newEOA = 0;
   outC->message147.present = kcg_true;
   outC->message147.header.present = kcg_true;
   outC->message147.header.nid_message = 0;
-  outC->message147.header.t_train = 0.0;
+  outC->message147.header.t_train = 0;
   outC->message147.header.nid_engine = 0;
   outC->message147.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->message147.header.xT_TRAIN = 0.0;
+  outC->message147.header.xT_TRAIN = 0;
   outC->message147.header.xNID_EM = 0;
   outC->message147.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -71,8 +85,8 @@ void Manage_EmergencyStop_init_TA_EmergencyStop(
   outC->message147.packets.p3.valid = kcg_true;
   outC->message147.packets.p3.number = 0;
   outC->message147.packets.p3.aNID_RADIO[0].valid = kcg_true;
-  for (i = 0; i < 15; i++) {
-    outC->message147.packets.p3.aNID_RADIO[0].telephoneNumber[i] = 0;
+  for (i1 = 0; i1 < 15; i1++) {
+    outC->message147.packets.p3.aNID_RADIO[0].telephoneNumber[i1] = 0;
   }
   outC->message147.packets.p4.valid = kcg_true;
   outC->message147.packets.p4.m_error =
@@ -93,15 +107,16 @@ void Manage_EmergencyStop_init_TA_EmergencyStop(
   outC->message147.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->message147.packets.p11.n_axle = 0;
   outC->message147.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
-    outC->message147.packets.p11.tractionIdentity[i].m_voltage =
+  for (i1 = 0; i1 < 4; i1++) {
+    outC->message147.packets.p11.tractionIdentity[i1].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
-    outC->message147.packets.p11.tractionIdentity[i].nid_ctraction = 0;
+    outC->message147.packets.p11.tractionIdentity[i1].nid_ctraction = 0;
   }
   outC->message147.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
-    outC->message147.packets.p11.nid_ntc[i] = 0;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->message147.packets.p11.nid_ntc[i1] = 0;
   }
+  /* 2 */ Send_M147_init_TM_radio_messages(&outC->Context_2);
   /* 1 */ ES_Process_Conditional_init_TA_EmergencyStop(&outC->_1_Context_1);
   /* 1 */ ES_Process_Unconditional_init_TA_EmergencyStop(&outC->Context_1);
 }
@@ -112,6 +127,7 @@ void Manage_EmergencyStop_init_TA_EmergencyStop(
 void Manage_EmergencyStop_reset_TA_EmergencyStop(
   outC_Manage_EmergencyStop_TA_EmergencyStop *outC)
 {
+  /* 2 */ Send_M147_reset_TM_radio_messages(&outC->Context_2);
   /* 1 */ ES_Process_Conditional_reset_TA_EmergencyStop(&outC->_1_Context_1);
   /* 1 */ ES_Process_Unconditional_reset_TA_EmergencyStop(&outC->Context_1);
 }
@@ -126,8 +142,15 @@ void Manage_EmergencyStop_TA_EmergencyStop(
   /* TA_EmergencyStop::Manage_EmergencyStop::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
   /* TA_EmergencyStop::Manage_EmergencyStop::TrainPositionIn */ trainPosition_T_TrainPosition_Types_Pck *TrainPositionIn,
   /* TA_EmergencyStop::Manage_EmergencyStop::currentEOA */ L_internal_Type_Obu_BasicTypes_Pkg currentEOA,
+  /* TA_EmergencyStop::Manage_EmergencyStop::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
   outC_Manage_EmergencyStop_TA_EmergencyStop *outC)
 {
+  /* TA_EmergencyStop::Manage_EmergencyStop */
+  static M_147_T_TM_radio_messages tmp2;
+  /* TA_EmergencyStop::Manage_EmergencyStop */
+  static P000_TM_TrainToTrack tmp1;
+  /* TA_EmergencyStop::Manage_EmergencyStop */
+  static P001_TM_TrainToTrack tmp;
   /* TA_EmergencyStop::Manage_EmergencyStop::receivedMsg16 */
   static kcg_bool receivedMsg16;
   /* TA_EmergencyStop::Manage_EmergencyStop::receivedMsg15 */
@@ -186,6 +209,7 @@ void Manage_EmergencyStop_TA_EmergencyStop(
   outC->updateEOA = outC->_1_Context_1.updateEOA;
   outC->newEOA = outC->_1_Context_1.newEOA;
   outC->cesRevoked = outC->_1_Context_1.cesRevoked;
+  outC->rejectNewMA = outC->tripTrain | outC->_1_Context_1.cesActive;
   /* ck_sendMsg147 */ if (sendMsg147) {
     /* 2 */
     ES_Build_Acknowledgement_TA_EmergencyStop(
@@ -198,18 +222,43 @@ void Manage_EmergencyStop_TA_EmergencyStop(
       outC->cesAccepted,
       outC->updateEOA,
       &outC->message147);
+    /* 1 */
+    ES_Build_AcknowledgementNew_TA_EmergencyStop(
+      nid_em,
+      t_train,
+      trainProps,
+      receivedMsg16,
+      outC->cesAccepted,
+      outC->updateEOA,
+      &tmp2);
   }
   else {
-    kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
+    kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
       &outC->message147,
-      (Radio_TrainTrack_Message_T_Radio_Types_Pkg *)
+      (Radio_TrainTrack_Message_T_TM_transitional *)
         &cMSG147_NONE_TA_EmergencyStop);
+    kcg_copy_M_147_T_TM_radio_messages(
+      &tmp2,
+      (M_147_T_TM_radio_messages *) &DEFAULT_M147_TA_EmergencyStop);
   }
-  outC->rejectNewMA = outC->tripTrain | outC->_1_Context_1.cesActive;
+  /* 1 */ C_legacy_P000_TM_conversions_TrainToTrack(packet0, &tmp1);
+  /* 1 */ C_legacy_P001_TM_conversions_TrainToTrack(packet1, &tmp);
+  /* 2 */
+  Send_M147_TM_radio_messages(
+    t_train,
+    bus_in,
+    &tmp2,
+    &tmp1,
+    &tmp,
+    cM_version_MA_Request,
+    &outC->Context_2);
+  kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+    &outC->bus_out,
+    &outC->Context_2.MessageBus_out);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_EmergencyStop_TA_EmergencyStop.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

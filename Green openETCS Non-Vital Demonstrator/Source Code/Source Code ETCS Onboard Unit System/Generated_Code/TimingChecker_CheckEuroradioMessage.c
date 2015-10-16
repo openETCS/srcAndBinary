@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ void TimingChecker_init_CheckEuroradioMessage(
   outC->otherTimingError = kcg_true;
   outC->ignoreTimestamp = kcg_true;
   outC->init = kcg_true;
-  outC->lastKnownTTrain = 0.0;
+  outC->lastKnownTTrain = 0;
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -114,7 +114,7 @@ void TimingChecker_CheckEuroradioMessage(
         outC->otherTimingError = kcg_false;
         outC->sequenceError = kcg_false;
         outC->ignoreTimestamp = kcg_true;
-        outC->lastKnownTTrain = 0.0;
+        outC->lastKnownTTrain = 0;
       }
       else {
         outC->otherTimingError = kcg_false;
@@ -131,7 +131,7 @@ void TimingChecker_CheckEuroradioMessage(
         outC->otherTimingError = kcg_false;
         outC->sequenceError = kcg_false;
         outC->ignoreTimestamp = kcg_true;
-        outC->lastKnownTTrain = 0.0;
+        outC->lastKnownTTrain = 0;
       }
       else {
         outC->otherTimingError = kcg_false;
@@ -146,6 +146,6 @@ void TimingChecker_CheckEuroradioMessage(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TimingChecker_CheckEuroradioMessage.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

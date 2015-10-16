@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 #ifndef _SDM_Commands_SDM_Commands_Pkg_H_
 #define _SDM_Commands_SDM_Commands_Pkg_H_
@@ -39,7 +39,7 @@ typedef struct {
 /* SDM_Commands_Pkg::SDM_Commands */
 extern void SDM_Commands_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::SDM_Commands::allTargets */ TargetCollection_T_TargetManagement_types *allTargets,
-  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
   /* SDM_Commands_Pkg::SDM_Commands::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
   /* SDM_Commands_Pkg::SDM_Commands::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
   /* SDM_Commands_Pkg::SDM_Commands::mrdt */ Target_T_TargetManagement_types *mrdt,
@@ -63,6 +63,6 @@ extern void SDM_Commands_init_SDM_Commands_Pkg(
 #endif /* _SDM_Commands_SDM_Commands_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_Commands_SDM_Commands_Pkg.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 

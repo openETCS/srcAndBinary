@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _add_odo_2_Location_BasicLocationFunctions_Pkg_H_
 #define _add_odo_2_Location_BasicLocationFunctions_Pkg_H_
@@ -24,6 +24,6 @@ extern void add_odo_2_Location_BasicLocationFunctions_Pkg(
 #endif /* _add_odo_2_Location_BasicLocationFunctions_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** add_odo_2_Location_BasicLocationFunctions_Pkg.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,8 @@
 /* TargetLimits_Pkg::d_tripEOA */
 L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
   /* TargetLimits_Pkg::d_tripEOA::D_EOA */ L_internal_real_Type_SDM_Types_Pkg D_EOA,
-  /* TargetLimits_Pkg::d_tripEOA::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations)
+  /* TargetLimits_Pkg::d_tripEOA::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* TargetLimits_Pkg::d_tripEOA::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int)
 {
   /* TargetLimits_Pkg::d_tripEOA */
   static kcg_real tmp;
@@ -40,12 +41,14 @@ L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
   else {
     tmp = _L12;
   }
-  D_tripEOA = (*trainLocations).d_cond_L1_antenna2frontend + tmp + _L29;
+  D_tripEOA = /* 1 */
+    TransformL_intToL_real_SDM_Types_Pkg((*trainData_int).offsetAntennaL1) +
+    tmp + _L29;
   return D_tripEOA;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** d_tripEOA_TargetLimits_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

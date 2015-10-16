@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,7 @@ void trainDataStorage_init_trainData_pkg(
   outC->updatedStatus.validatedbyRBC = kcg_true;
   outC->updatedStatus.waitingForRBCResponse = kcg_true;
   outC->updatedStatus.driverIsModificationTrainData = kcg_true;
-  outC->updatedStatus.timeStampValidateToRBC = 0.0;
+  outC->updatedStatus.timeStampValidateToRBC = 0;
   outC->actualTrainData.valid = kcg_true;
   outC->actualTrainData.acknowledgedByDriver = kcg_true;
   outC->actualTrainData.trainCategory =
@@ -34,11 +34,11 @@ void trainDataStorage_init_trainData_pkg(
   outC->actualTrainData.airtightSystem = M_AIRTIGHT_Not_fitted;
   outC->actualTrainData.axleNumber = 0;
   outC->actualTrainData.numberNationalSystems = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->actualTrainData.nationSystems[i] = 0;
   }
   outC->actualTrainData.numberTractionSystems = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->actualTrainData.tractionSystem[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->actualTrainData.tractionSystem[i].nid_ctraction = 0;
@@ -126,6 +126,6 @@ void trainDataStorage_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainDataStorage_trainData_pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

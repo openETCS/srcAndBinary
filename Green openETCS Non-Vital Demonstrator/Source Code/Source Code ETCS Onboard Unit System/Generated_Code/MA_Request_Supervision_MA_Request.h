@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _MA_Request_Supervision_MA_Request_H_
 #define _MA_Request_Supervision_MA_Request_H_
@@ -43,7 +43,6 @@ extern void MA_Request_Supervision_MA_Request(
   /* MA_Request::MA_Request_Supervision::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
   /* MA_Request::MA_Request_Supervision::fromDriver */ Driver2MAR_T_MA_Request *fromDriver,
   /* MA_Request::MA_Request_Supervision::trackDescrDeleted */ kcg_bool trackDescrDeleted,
-  /* MA_Request::MA_Request_Supervision::ModeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeLevel,
   outC_MA_Request_Supervision_MA_Request *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -59,6 +58,6 @@ extern void MA_Request_Supervision_init_MA_Request(
 #endif /* _MA_Request_Supervision_MA_Request_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Request_Supervision_MA_Request.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

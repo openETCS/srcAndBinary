@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,6 +15,7 @@ void v_release_TargetLimits_Pkg(
   /* TargetLimits_Pkg::v_release::MA */ MA_section_real_T_TargetManagement_types *MA,
   /* TargetLimits_Pkg::v_release::V_ura */ V_internal_real_Type_SDM_Types_Pkg V_ura,
   /* TargetLimits_Pkg::v_release::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* TargetLimits_Pkg::v_release::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int,
   /* TargetLimits_Pkg::v_release::T */ T_trac_t_TargetLimits_Pkg *T,
   /* TargetLimits_Pkg::v_release::V_release */ V_internal_real_Type_SDM_Types_Pkg *V_release,
   /* TargetLimits_Pkg::v_release::valid */ kcg_bool *valid)
@@ -31,7 +32,8 @@ void v_release_TargetLimits_Pkg(
   
   _L9 = V_target;
   /* 1 */ if ((*MA).q_calculate_release) {
-    _L21 = /* 1 */ d_tripEOA_TargetLimits_Pkg(D_EOA, trainLocations);
+    _L21 = /* 1 */
+      d_tripEOA_TargetLimits_Pkg(D_EOA, trainLocations, trainData_int);
     for (i = 0; i < 10; i++) {
       acc = _L9;
       /* 1 */
@@ -58,6 +60,6 @@ void v_release_TargetLimits_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** v_release_TargetLimits_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,11 +17,11 @@ void TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::_L20 */
   static kcg_bool _L20;
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::_L22 */
-  static kcg_real _L22;
+  static kcg_int _L22;
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::_L40 */
   static kcg_bool _L40;
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::_L41 */
-  static kcg_real _L41;
+  static kcg_int _L41;
   
   _L40 = ((*speeds).V_release < (*speeds).V_est) & ((*speeds).V_est <=
       (*speeds).V_MRSP);
@@ -50,6 +50,6 @@ void TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

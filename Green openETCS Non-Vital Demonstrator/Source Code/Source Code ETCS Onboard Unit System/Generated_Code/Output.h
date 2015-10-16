@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _Output_H_
 #define _Output_H_
 
 #include "kcg_types.h"
-#include "Output_To_DMI_OutputManagement.h"
 #include "Output_To_BG_Management_OutputManagement.h"
+#include "Output_To_DMI_OutputManagement.h"
 #include "Output_Mode_Level_To_Use_OutputManagement.h"
 
 /* =====================  no input structure  ====================== */
@@ -27,7 +27,8 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Output_Mode_Level_To_Use_OutputManagement /* 1 */ Context_1;
+  outC_Output_Mode_Level_To_Use_OutputManagement /* 1 */ _1_Context_1;
+  outC_Output_To_DMI_OutputManagement /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_Output;
 
@@ -61,6 +62,6 @@ extern void Output_init(outC_Output *outC);
 #endif /* _Output_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Output.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

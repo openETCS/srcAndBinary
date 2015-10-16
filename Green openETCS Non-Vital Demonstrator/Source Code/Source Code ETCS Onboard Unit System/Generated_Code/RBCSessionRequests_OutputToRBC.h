@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _RBCSessionRequests_OutputToRBC_H_
 #define _RBCSessionRequests_OutputToRBC_H_
@@ -20,6 +20,6 @@ extern kcg_bool RBCSessionRequests_OutputToRBC(
 #endif /* _RBCSessionRequests_OutputToRBC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RBCSessionRequests_OutputToRBC.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

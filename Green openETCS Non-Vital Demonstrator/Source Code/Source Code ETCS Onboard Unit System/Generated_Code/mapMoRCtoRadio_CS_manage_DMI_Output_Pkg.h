@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 #ifndef _mapMoRCtoRadio_CS_manage_DMI_Output_Pkg_H_
 #define _mapMoRCtoRadio_CS_manage_DMI_Output_Pkg_H_
@@ -19,6 +19,6 @@ extern connectionStatusRadioUnit_T_API_RadioCommunication_Pkg mapMoRCtoRadio_CS_
 #endif /* _mapMoRCtoRadio_CS_manage_DMI_Output_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapMoRCtoRadio_CS_manage_DMI_Output_Pkg.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,11 +24,13 @@ void C_P005_compr_onboard_TM_conversions(
   /* TM_conversions::C_P005_compr_onboard::_L6 */
   static array_int_3 _L6;
   /* TM_conversions::C_P005_compr_onboard::_L2 */
-  static array_int_1 _L2;
+  static P044_other_data_TM_TrainToTrack _L2;
   /* TM_conversions::C_P005_compr_onboard::_L22 */
   static kcg_bool _L22;
   
-  kcg_copy_array_int_1(&_L2, (array_int_1 *) &(*PacketData)[4]);
+  kcg_copy_P044_other_data_TM_TrainToTrack(
+    &_L2,
+    (P044_other_data_TM_TrainToTrack *) &(*PacketData)[4]);
   (*P005_onboard).n_iter = _L2[0];
   kcg_copy_array_int_3(&_L6, (array_int_3 *) &(*PacketData)[1]);
   (*P005_onboard).l_packet = _L6[1];
@@ -82,6 +84,6 @@ void C_P005_compr_onboard_TM_conversions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P005_compr_onboard_TM_conversions.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

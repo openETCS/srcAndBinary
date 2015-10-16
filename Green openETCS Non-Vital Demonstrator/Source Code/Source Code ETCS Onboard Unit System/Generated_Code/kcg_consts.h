@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -72,6 +72,9 @@ extern const Isolation_Status_T_TIU_Types_Pkg cEmtpyIsolationStatus;
 
 /* cEmptyData_From_STM */
 extern const T_Data_From_STM_Level_And_Mode_Types_Pkg cEmptyData_From_STM;
+
+/* cBusStart */
+extern const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus cBusStart;
 
 /* cNoRadioCmd */
 extern const radioManagementMessage_T_Common_Types_Pkg cNoRadioCmd;
@@ -321,6 +324,9 @@ extern const outPackets_T_Common_Types_Pkg cEmptyOutPackets_MoRC_Pck_Coder_Pkg;
 
 /* Id_Pkg::co155_Initiation_of_a_communication_session */
 #define co155_Initiation_of_a_communication_session_Id_Pkg 155
+
+/* TM_TrainToTrack::DIM_max_elements_P003 */
+#define DIM_max_elements_P003_TM_TrainToTrack (3 + DIM_nid_radio_list_TM_TrainToTrack)
 
 /* DMI_Types_Pkg::cDMI_maxSpeedProfile */
 #define cDMI_maxSpeedProfile_DMI_Types_Pkg 32
@@ -695,7 +701,7 @@ extern const BG_Header_T_BG_Types_Pkg cEmptyBG_Header_BG_Types_Pkg;
 extern const MetadataTruthtable_T1_CheckEuroradioMessage cPermittedRadioPackets1_CheckEuroradioMessage;
 
 /* CheckEuroradioMessage::cTTrainUnknown1 */
-#define cTTrainUnknown1_CheckEuroradioMessage 4294967295.0
+#define cTTrainUnknown1_CheckEuroradioMessage 4294967295
 
 /* CheckEuroradioMessage::cRadioSessionConnecting1 */
 #define cRadioSessionConnecting1_CheckEuroradioMessage morc_st_establishing_Radio_Types_Pkg
@@ -744,6 +750,87 @@ extern const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg;
 
 /* xdebugSupport_Pkg::cNoPro */
 extern const probesBalises_T_xdebugSupport_Pkg cNoPro_xdebugSupport_Pkg;
+
+/* radioOutput_Pkg::noP000 */
+extern const P000_TM_TrainToTrack noP000_radioOutput_Pkg;
+
+/* radioOutput_Pkg::noP001 */
+extern const P001_TM_TrainToTrack noP001_radioOutput_Pkg;
+
+/* radioOutput_Pkg::noP044 */
+extern const P044_TM_TrainToTrack noP044_radioOutput_Pkg;
+
+/* ids::cp004_ErrorReporting */
+#define cp004_ErrorReporting_ids 4
+
+/* ids::cp005_TrainRunningNumber */
+#define cp005_TrainRunningNumber_ids 5
+
+/* TM_conversions::ENUM_M_ERROR_balise_group_linking_conistency */
+#define ENUM_M_ERROR_balise_group_linking_conistency_TM_conversions M_ERROR_Balise_group_linking_consistency_error
+
+/* TM_conversions::ENUM_M_ERROR_Double_linking_error */
+#define ENUM_M_ERROR_Double_linking_error_TM_conversions M_ERROR_Double_linking_error
+
+/* TM_conversions::ENUM_M_ERROR_Double_repositioning_error */
+#define ENUM_M_ERROR_Double_repositioning_error_TM_conversions M_ERROR_Double_repositioning_error
+
+/* TM_conversions::ENUM_M_ERROR_Linked_balise_group_message_consistency_erro */
+#define ENUM_M_ERROR_Linked_balise_group_message_consistency_erro_TM_conversions M_ERROR_Linked_balise_group_message_consistency_erro
+
+/* TM_conversions::ENUM_M_ERROR_Radio_message_consistency_error */
+#define ENUM_M_ERROR_Radio_message_consistency_error_TM_conversions M_ERROR_Radio_message_consistency_error
+
+/* TM_conversions::ENUM_M_ERROR_Radio_safe_radio_connection_error */
+#define ENUM_M_ERROR_Radio_safe_radio_connection_error_TM_conversions M_ERROR_Radio_safe_radio_connection_error
+
+/* TM_conversions::ENUM_M_ERROR_Radio_sequence_error */
+#define ENUM_M_ERROR_Radio_sequence_error_TM_conversions M_ERROR_Radio_sequence_error
+
+/* TM_conversions::ENUM_M_ERROR_Safety_critical_failure */
+#define ENUM_M_ERROR_Safety_critical_failure_TM_conversions M_ERROR_Safety_critical_failure
+
+/* TM_conversions::ENUM_M_ERROR_Unlinked_balise_group_message_consistency_error */
+#define ENUM_M_ERROR_Unlinked_balise_group_message_consistency_error_TM_conversions M_ERROR_Unlinked_balise_group_message_consistency_error
+
+/* TM_conversions::INT_M_ERROR_Safety_critical_failure */
+#define INT_M_ERROR_Safety_critical_failure_TM_conversions 6
+
+/* TM_conversions::INT_M_ERROR_Unlinked_balise_group_message_consistency_error */
+#define INT_M_ERROR_Unlinked_balise_group_message_consistency_error_TM_conversions 2
+
+/* TM_conversions::INT_M_ERROR_Radio_sequence_error */
+#define INT_M_ERROR_Radio_sequence_error_TM_conversions 4
+
+/* TM_conversions::INT_M_ERROR_Radio_safe_radio_connection_error */
+#define INT_M_ERROR_Radio_safe_radio_connection_error_TM_conversions 5
+
+/* TM_conversions::INT_M_ERROR_Radio_message_consistency_error */
+#define INT_M_ERROR_Radio_message_consistency_error_TM_conversions 3
+
+/* TM_conversions::INT_M_ERROR_Linked_balise_group_message_consistency_error */
+#define INT_M_ERROR_Linked_balise_group_message_consistency_error_TM_conversions 1
+
+/* TM_conversions::INT_M_ERROR_Double_repositioning_error */
+#define INT_M_ERROR_Double_repositioning_error_TM_conversions 8
+
+/* TM_conversions::INT_M_ERROR_Double_linking_error */
+#define INT_M_ERROR_Double_linking_error_TM_conversions 7
+
+/* TM_conversions::INT_M_ERROR_balise_group_linking_conistency */
+#define INT_M_ERROR_balise_group_linking_conistency_TM_conversions 0
+
+/* TM_TrainToTrack::DIM_max_elements_P004 */
+#define DIM_max_elements_P004_TM_TrainToTrack 3
+
+/* TM_TrainToTrack::DIM_max_elements_P005 */
+#define DIM_max_elements_P005_TM_TrainToTrack 3
+
+/* TM_TrainToTrack::DEFAULT_P044_int */
+extern const P044_TrainTrack_int_TM_TrainToTrack DEFAULT_P044_int_TM_TrainToTrack;
+
+/* TM_TrainToTrack::DIM_max_elements_P044 */
+#define DIM_max_elements_P044_TM_TrainToTrack (11 + DIM_voltage_list_TM_TrainToTrack * 2 + 1 + DIM_nid_ntc_list_TM_TrainToTrack)
 
 /* TM_conversions::INT_M_LOC_every_LRBG */
 #define INT_M_LOC_every_LRBG_TM_conversions 1
@@ -803,7 +890,7 @@ extern const PT5_TrainRunningNumber_Packet_TrainTypes_Pkg emptyPacket5_ProvidePo
 extern const PT4_ErrorReporting_T_Packet_TrainTypes_Pkg emptyPacket4_ProvidePositionReport_Pkg;
 
 /* ProvidePositionReport_Pkg::cxT_TRAIN */
-#define cxT_TRAIN_ProvidePositionReport_Pkg 0.0
+#define cxT_TRAIN_ProvidePositionReport_Pkg 0
 
 /* ProvidePositionReport_Pkg::cxQ_MARQSTREASON */
 #define cxQ_MARQSTREASON_ProvidePositionReport_Pkg Q_MARQSTREASON_Start_selected_by_driver
@@ -886,17 +973,281 @@ extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocationAccuracyDefault;
 /* trainData_pkg::cNoMessage */
 extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cNoMessage_trainData_pkg;
 
+/* TM_conversions::ENUM_NC_CDTRAIN_080mm */
+#define ENUM_NC_CDTRAIN_080mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_80_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_100mm */
+#define ENUM_NC_CDTRAIN_100mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_100_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_130mm */
+#define ENUM_NC_CDTRAIN_130mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_130_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_150mm */
+#define ENUM_NC_CDTRAIN_150mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_150_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_165mm */
+#define ENUM_NC_CDTRAIN_165mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_165_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_180mm */
+#define ENUM_NC_CDTRAIN_180mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_180_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_210mm */
+#define ENUM_NC_CDTRAIN_210mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_210_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_225mm */
+#define ENUM_NC_CDTRAIN_225mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_225_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_245mm */
+#define ENUM_NC_CDTRAIN_245mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_245_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_275mm */
+#define ENUM_NC_CDTRAIN_275mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_275_mm
+
+/* TM_conversions::ENUM_NC_CDTRAIN_300mm */
+#define ENUM_NC_CDTRAIN_300mm_TM_conversions NC_CDTRAIN_Cant_Deficiency_300_mm
+
+/* TM_conversions::INT_NC_CDTRAIN_300mm */
+#define INT_NC_CDTRAIN_300mm_TM_conversions 10
+
+/* TM_conversions::INT_NC_CDTRAIN_275mm */
+#define INT_NC_CDTRAIN_275mm_TM_conversions 9
+
+/* TM_conversions::INT_NC_CDTRAIN_245mm */
+#define INT_NC_CDTRAIN_245mm_TM_conversions 8
+
+/* TM_conversions::INT_NC_CDTRAIN_225mm */
+#define INT_NC_CDTRAIN_225mm_TM_conversions 7
+
+/* TM_conversions::INT_NC_CDTRAIN_210mm */
+#define INT_NC_CDTRAIN_210mm_TM_conversions 6
+
+/* TM_conversions::INT_NC_CDTRAIN_180mm */
+#define INT_NC_CDTRAIN_180mm_TM_conversions 5
+
+/* TM_conversions::INT_NC_CDTRAIN_165mm */
+#define INT_NC_CDTRAIN_165mm_TM_conversions 4
+
+/* TM_conversions::INT_NC_CDTRAIN_150mm */
+#define INT_NC_CDTRAIN_150mm_TM_conversions 3
+
+/* TM_conversions::INT_NC_CDTRAIN_130mm */
+#define INT_NC_CDTRAIN_130mm_TM_conversions 2
+
+/* TM_conversions::INT_NC_CDTRAIN_100mm */
+#define INT_NC_CDTRAIN_100mm_TM_conversions 1
+
+/* TM_conversions::INT_NC_CDTRAIN_080mm */
+#define INT_NC_CDTRAIN_080mm_TM_conversions 0
+
+/* TM_conversions::ENUM_NC_TRAIN_no_train_categroy */
+#define ENUM_NC_TRAIN_no_train_categroy_TM_conversions NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category
+
+/* TM_conversions::ENUM_NC_TRAIN_freight_P */
+#define ENUM_NC_TRAIN_freight_P_TM_conversions NC_TRAIN_Freight_train_braked_in_P_position
+
+/* TM_conversions::ENUM_NC_TRAIN_freight_G */
+#define ENUM_NC_TRAIN_freight_G_TM_conversions NC_TRAIN_Freight_train_braked_in_G_position
+
+/* TM_conversions::ENUM_NC_TRAIN_passenger */
+#define ENUM_NC_TRAIN_passenger_TM_conversions NC_TRAIN_Passenger_train
+
+/* TM_conversions::INT_NC_TRAIN_no_train_categroy */
+#define INT_NC_TRAIN_no_train_categroy_TM_conversions 0
+
+/* TM_conversions::INT_NC_TRAIN_passenger */
+#define INT_NC_TRAIN_passenger_TM_conversions 3
+
+/* TM_conversions::INT_NC_TRAIN_freight_G */
+#define INT_NC_TRAIN_freight_G_TM_conversions 2
+
+/* TM_conversions::INT_NC_TRAIN_freight_P */
+#define INT_NC_TRAIN_freight_P_TM_conversions 1
+
+/* TM_conversions::DIM_L_TRAIN_max */
+#define DIM_L_TRAIN_max_TM_conversions 4095
+
+/* TM_conversions::DIM_L_TRAIN_min */
+#define DIM_L_TRAIN_min_TM_conversions 0
+
+/* TM_conversions::ENUM_M_LOADINGGAUGE_G1 */
+#define ENUM_M_LOADINGGAUGE_G1_TM_conversions M_LOADINGGAUGE_G1
+
+/* TM_conversions::ENUM_M_LOADINGGAUGE_GA */
+#define ENUM_M_LOADINGGAUGE_GA_TM_conversions M_LOADINGGAUGE_GA
+
+/* TM_conversions::ENUM_M_LOADINGGAUGE_GB */
+#define ENUM_M_LOADINGGAUGE_GB_TM_conversions M_LOADINGGAUGE_GB
+
+/* TM_conversions::ENUM_M_LOADINGGAUGE_GC */
+#define ENUM_M_LOADINGGAUGE_GC_TM_conversions M_LOADINGGAUGE_GC
+
+/* TM_conversions::ENUM_M_LOADINGGAUGE_does_not_fit */
+#define ENUM_M_LOADINGGAUGE_does_not_fit_TM_conversions M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles
+
+/* TM_conversions::INT_M_LOADINGGAUGE_does_not_fit */
+#define INT_M_LOADINGGAUGE_does_not_fit_TM_conversions 0
+
+/* TM_conversions::INT_M_LOADINGGAUGE_GC */
+#define INT_M_LOADINGGAUGE_GC_TM_conversions 4
+
+/* TM_conversions::INT_M_LOADINGGAUGE_GB */
+#define INT_M_LOADINGGAUGE_GB_TM_conversions 3
+
+/* TM_conversions::INT_M_LOADINGGAUGE_GA */
+#define INT_M_LOADINGGAUGE_GA_TM_conversions 2
+
+/* TM_conversions::INT_M_LOADINGGAUGE_G1 */
+#define INT_M_LOADINGGAUGE_G1_TM_conversions 1
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_A */
+#define ENUM_M_AXLELOADCAT_A_TM_conversions M_AXLELOADCAT_A
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_B1 */
+#define ENUM_M_AXLELOADCAT_B1_TM_conversions M_AXLELOADCAT_B1
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_B2 */
+#define ENUM_M_AXLELOADCAT_B2_TM_conversions M_AXLELOADCAT_B2
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_C2 */
+#define ENUM_M_AXLELOADCAT_C2_TM_conversions M_AXLELOADCAT_C2
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_C3 */
+#define ENUM_M_AXLELOADCAT_C3_TM_conversions M_AXLELOADCAT_C3
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_D2 */
+#define ENUM_M_AXLELOADCAT_D2_TM_conversions M_AXLELOADCAT_D2
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_D3 */
+#define ENUM_M_AXLELOADCAT_D3_TM_conversions M_AXLELOADCAT_D3
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_D4 */
+#define ENUM_M_AXLELOADCAT_D4_TM_conversions M_AXLELOADCAT_D4
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_D4XL */
+#define ENUM_M_AXLELOADCAT_D4XL_TM_conversions M_AXLELOADCAT_D4XL
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_E4 */
+#define ENUM_M_AXLELOADCAT_E4_TM_conversions M_AXLELOADCAT_E4
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_E5 */
+#define ENUM_M_AXLELOADCAT_E5_TM_conversions M_AXLELOADCAT_E5
+
+/* TM_conversions::ENUM_M_AXLELOADCAT_HS17 */
+#define ENUM_M_AXLELOADCAT_HS17_TM_conversions M_AXLELOADCAT_HS17
+
+/* TM_conversions::INT_M_AXLELOADCAT_E5 */
+#define INT_M_AXLELOADCAT_E5_TM_conversions 12
+
+/* TM_conversions::INT_M_AXLELOADCAT_HS17 */
+#define INT_M_AXLELOADCAT_HS17_TM_conversions 1
+
+/* TM_conversions::INT_M_AXLELOADCAT_E4 */
+#define INT_M_AXLELOADCAT_E4_TM_conversions 11
+
+/* TM_conversions::INT_M_AXLELOADCAT_D4XL */
+#define INT_M_AXLELOADCAT_D4XL_TM_conversions 10
+
+/* TM_conversions::INT_M_AXLELOADCAT_D4 */
+#define INT_M_AXLELOADCAT_D4_TM_conversions 9
+
+/* TM_conversions::INT_M_AXLELOADCAT_D3 */
+#define INT_M_AXLELOADCAT_D3_TM_conversions 8
+
+/* TM_conversions::INT_M_AXLELOADCAT_D2 */
+#define INT_M_AXLELOADCAT_D2_TM_conversions 7
+
+/* TM_conversions::INT_M_AXLELOADCAT_C4 */
+#define INT_M_AXLELOADCAT_C4_TM_conversions 6
+
+/* TM_conversions::INT_M_AXLELOADCAT_C3 */
+#define INT_M_AXLELOADCAT_C3_TM_conversions 5
+
+/* TM_conversions::INT_M_AXLELOADCAT_C2 */
+#define INT_M_AXLELOADCAT_C2_TM_conversions 4
+
+/* TM_conversions::INT_M_AXLELOADCAT_B2 */
+#define INT_M_AXLELOADCAT_B2_TM_conversions 3
+
+/* TM_conversions::INT_M_AXLELOADCAT_B1 */
+#define INT_M_AXLELOADCAT_B1_TM_conversions 2
+
+/* TM_conversions::INT_M_AXLELOADCAT_A */
+#define INT_M_AXLELOADCAT_A_TM_conversions 0
+
+/* TM_conversions::ENUM_M_AIRTIGHT_fitted */
+#define ENUM_M_AIRTIGHT_fitted_TM_conversions M_AIRTIGHT_Fitted
+
+/* TM_conversions::ENUM_M_AIRTIGHT_not_fitted */
+#define ENUM_M_AIRTIGHT_not_fitted_TM_conversions M_AIRTIGHT_Not_fitted
+
+/* TM_conversions::INT_M_AIRTIGHT_not_fitted */
+#define INT_M_AIRTIGHT_not_fitted_TM_conversions 0
+
+/* TM_conversions::INT_M_AIRTIGHT_fitted */
+#define INT_M_AIRTIGHT_fitted_TM_conversions 1
+
+/* TM_TrainToTrack::DIM_max_elements_P011 */
+#define DIM_max_elements_P011_TM_TrainToTrack (11 + DIM_voltage_list_TM_TrainToTrack * 2 + 1 + DIM_nid_ntc_list_TM_TrainToTrack)
+
+/* TM_TrainToTrack::DEFAULT_P011_voltage_sections_array_flat */
+extern const P011_voltage_sections_array_flat_t_TM_TrainToTrack DEFAULT_P011_voltage_sections_array_flat_TM_TrainToTrack;
+
+/* TM_conversions::ENUM_M_VOLTAGE_Line_not_fitted */
+#define ENUM_M_VOLTAGE_Line_not_fitted_TM_conversions M_VOLTAGE_Line_not_fitted_with_any_traction_system
+
+/* TM_conversions::ENUM_M_VOLTAGE_AC_25_kV_50_Hz */
+#define ENUM_M_VOLTAGE_AC_25_kV_50_Hz_TM_conversions M_VOLTAGE_AC_25_kV_50_Hz
+
+/* TM_conversions::ENUM_M_VOLTAGE_AC_15_kV_16_7_Hz */
+#define ENUM_M_VOLTAGE_AC_15_kV_16_7_Hz_TM_conversions M_VOLTAGE_AC_15_kV_16_7_Hz
+
+/* TM_conversions::ENUM_M_VOLTAGE_DC_3_kV */
+#define ENUM_M_VOLTAGE_DC_3_kV_TM_conversions M_VOLTAGE_DC_3_kV
+
+/* TM_conversions::ENUM_M_VOLTAGE_DC_1_5_kV */
+#define ENUM_M_VOLTAGE_DC_1_5_kV_TM_conversions M_VOLTAGE_DC_1_5_kV
+
+/* TM_conversions::ENUM_M_VOLTAGE_DC_600_or_750_V */
+#define ENUM_M_VOLTAGE_DC_600_or_750_V_TM_conversions M_VOLTAGE_DC_600_or_750_V
+
+/* TM_conversions::INT_M_VOLTAGE_Line_not_fitted */
+#define INT_M_VOLTAGE_Line_not_fitted_TM_conversions 0
+
+/* TM_conversions::INT_M_VOLTAGE_DC_600_or_750_V */
+#define INT_M_VOLTAGE_DC_600_or_750_V_TM_conversions 5
+
+/* TM_conversions::INT_M_VOLTAGE_DC_1_5_kV */
+#define INT_M_VOLTAGE_DC_1_5_kV_TM_conversions 4
+
+/* TM_conversions::INT_M_VOLTAGE_DC_3_kV */
+#define INT_M_VOLTAGE_DC_3_kV_TM_conversions 3
+
+/* TM_conversions::INT_M_VOLTAGE_AC_15_kV_16_7_Hz */
+#define INT_M_VOLTAGE_AC_15_kV_16_7_Hz_TM_conversions 2
+
+/* TM_conversions::INT_M_VOLTAGE_AC_25_kV_50_Hz */
+#define INT_M_VOLTAGE_AC_25_kV_50_Hz_TM_conversions 1
+
 /* Id_Pkg::co129_Validated_Train_Data */
 #define co129_Validated_Train_Data_Id_Pkg 129
+
+/* TM_TrainToTrack::DIM_voltage_list */
+#define DIM_voltage_list_TM_TrainToTrack 4
+
+/* TM_TrainToTrack::DIM_nid_ntc_list */
+#define DIM_nid_ntc_list_TM_TrainToTrack 5
+
+/* ids::cp011_ValidatedTrainData */
+#define cp011_ValidatedTrainData_ids 11
 
 /* trainData_pkg::cNoPackets */
 extern const outPackets_T_Common_Types_Pkg cNoPackets_trainData_pkg;
 
-/* Id_Pkg::co146_Acknowledgement */
-#define co146_Acknowledgement_Id_Pkg 146
-
 /* trainData_pkg::cMsgBasicHeader */
 extern const Radio_TrainTrack_Header_T_Radio_Types_Pkg cMsgBasicHeader_trainData_pkg;
+
+/* Id_Pkg::co146_Acknowledgement */
+#define co146_Acknowledgement_Id_Pkg 146
 
 /* Id_Pkg::cm08_Acknowledgement_of_Train_Data */
 #define cm08_Acknowledgement_of_Train_Data_Id_Pkg 8
@@ -915,6 +1266,9 @@ extern const trainDataStatus_T_trainData_Types_pkg cNoStates_trainData_Types_pkg
 
 /* trainData_Types_pkg::cEmptyTrainData */
 extern const trainData_T_TIU_Types_Pkg cEmptyTrainData_trainData_Types_pkg;
+
+/* RadioSupport_Pkg::cEmptyMsg */
+extern const M_TrainTrack_Message_T_TM_radio_messages cEmptyMsg_RadioSupport_Pkg;
 
 /* DMI_Types_Pkg::cDMI_maxLevels */
 #define cDMI_maxLevels_DMI_Types_Pkg 32
@@ -958,11 +1312,47 @@ extern const P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg cMA_Reque
 /* MA_Request::cNidTextMessage */
 #define cNidTextMessage_MA_Request 0
 
+/* MA_Request::DEFAULT_P009 */
+extern const P009_TM_TrainToTrack DEFAULT_P009_MA_Request;
+
+/* TM_TrainToTrack::DIM_max_elements_P009 */
+#define DIM_max_elements_P009_TM_TrainToTrack 3
+
+/* TM_conversions::ENUM_Q_MARQSTREASON_driver */
+#define ENUM_Q_MARQSTREASON_driver_TM_conversions Q_MARQSTREASON_Start_selected_by_driver
+
+/* TM_conversions::ENUM_Q_MARQSTREASON_timer_preindication_LOA */
+#define ENUM_Q_MARQSTREASON_timer_preindication_LOA_TM_conversions Q_MARQSTREASON_Time_before_reaching_preindication_location_for_the_EOA_or_LOA_reached
+
+/* TM_conversions::ENUM_Q_MARQSTREASON_section_timer */
+#define ENUM_Q_MARQSTREASON_section_timer_TM_conversions Q_MARQSTREASON_Time_before_a_section_timer_or_LOA_speed_timer_expires_reached
+
+/* TM_conversions::ENUM_Q_MARQSTREASON_track_description_deleted */
+#define ENUM_Q_MARQSTREASON_track_description_deleted_TM_conversions Q_MARQSTREASON_Track_description_deleted
+
+/* TM_conversions::ENUM_Q_MARQSTREASON_TAF */
+#define ENUM_Q_MARQSTREASON_TAF_TM_conversions Q_MARQSTREASON_TAF_up_to_level_2_or_3_transition_location
+
+/* TM_conversions::INT_Q_MARQSTREASON_driver */
+#define INT_Q_MARQSTREASON_driver_TM_conversions 0
+
+/* TM_conversions::INT_Q_MARQSTREASON_track_description_deleted */
+#define INT_Q_MARQSTREASON_track_description_deleted_TM_conversions 3
+
+/* TM_conversions::INT_Q_MARQSTREASON_section_timer */
+#define INT_Q_MARQSTREASON_section_timer_TM_conversions 2
+
+/* TM_conversions::INT_Q_MARQSTREASON_timer_preindication_LOA */
+#define INT_Q_MARQSTREASON_timer_preindication_LOA_TM_conversions 1
+
 /* XCP_numeric::ZERO_real */
 #define ZERO_real_XCP_numeric 0.0
 
 /* XCP_numeric::ZERO_int */
 #define ZERO_int_XCP_numeric 0
+
+/* TM_lib_internal::DEFAULT_TrainTrackBus_m */
+extern const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus DEFAULT_TrainTrackBus_m_TM_lib_internal;
 
 /* TrackAtlasTypes::DEFAULT_MA_level_23 */
 #define DEFAULT_MA_level_23_TrackAtlasTypes MA_L23_TrackAtlasTypes
@@ -1297,12 +1687,6 @@ extern const P15_Level23MovementAuthorities_T_Packet_Types_Pkg DEFAULT_P015_lega
 /* TM::DEFAULT_P138_legacy */
 extern const P138_ReversingAreaInformation_T_Packet_Types_Pkg DEFAULT_P138_legacy_TM;
 
-/* TM_conversions::DIM_L_max */
-#define DIM_L_max_TM_conversions 32767
-
-/* TM_conversions::DIM_L_min */
-#define DIM_L_min_TM_conversions 0
-
 /* TM::DIM_MaxElementsPacket136 */
 #define DIM_MaxElementsPacket136_TM 6
 
@@ -1311,24 +1695,6 @@ extern const P138_ReversingAreaInformation_T_Packet_Types_Pkg DEFAULT_P138_legac
 
 /* TM_specific::DEFAULT_P021_legacy */
 extern const P21_GradientProfiles_T_Packet_Types_Pkg DEFAULT_P021_legacy_TM_specific;
-
-/* TA_Export::Default_P63_legacy */
-extern const P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg Default_P63_legacy_TA_Export;
-
-/* TA_Export::Default_P80_legacy */
-extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_TA_Export;
-
-/* Packet_Types_Pkg::cNIterMaxModeProfiles */
-#define cNIterMaxModeProfiles_Packet_Types_Pkg 3
-
-/* TA_Export::Default_P12_legacy */
-extern const P12_Level1MovementAuthorities_T_Packet_Types_Pkg Default_P12_legacy_TA_Export;
-
-/* Packet_Types_Pkg::cNIterMaxMA */
-#define cNIterMaxMA_Packet_Types_Pkg 5
-
-/* TA_Export::Default_P135_legacy */
-extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_TA_Export;
 
 /* TM_radio_messages::nid_message_TrackTrain_015 */
 #define nid_message_TrackTrain_015_TM_radio_messages 15
@@ -1348,6 +1714,24 @@ extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_lega
 /* TM_radio_messages::nid_message_TrackTrain_006 */
 #define nid_message_TrackTrain_006_TM_radio_messages 6
 
+/* TA_Export::Default_P63_legacy */
+extern const P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg Default_P63_legacy_TA_Export;
+
+/* TA_Export::Default_P80_legacy */
+extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_TA_Export;
+
+/* Packet_Types_Pkg::cNIterMaxModeProfiles */
+#define cNIterMaxModeProfiles_Packet_Types_Pkg 3
+
+/* TA_Export::Default_P12_legacy */
+extern const P12_Level1MovementAuthorities_T_Packet_Types_Pkg Default_P12_legacy_TA_Export;
+
+/* Packet_Types_Pkg::cNIterMaxMA */
+#define cNIterMaxMA_Packet_Types_Pkg 5
+
+/* TA_Export::Default_P135_legacy */
+extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_TA_Export;
+
 /* TrackAtlasTypes::DEFAULT_StaticSpeedSection */
 extern const StaticSpeedSection_t_TrackAtlasTypes DEFAULT_StaticSpeedSection_TrackAtlasTypes;
 
@@ -1360,8 +1744,290 @@ extern const StaticSpeedSection_t_TrackAtlasTypes DEFAULT_StaticSpeedSection_Tra
 /* TA_Export::END_OF_SSP_encoding */
 #define END_OF_SSP_encoding_TA_Export (- 1)
 
+/* MA_Request::cM_version */
+#define cM_version_MA_Request M_VERSION_Version_1_1_introduced_in_SRS_3_3_0
+
+/* TM_lib_internal::DEFAULT_M_TrainTrackMessage_buffer */
+extern const M_TrainTrackMessage_buffer_t_TM_lib_internal DEFAULT_M_TrainTrackMessage_buffer_TM_lib_internal;
+
+/* TM_lib_internal::DIM_FIFO_demo */
+#define DIM_FIFO_demo_TM_lib_internal 5
+
+/* TM_lib_internal::EMPTY_TrainTrackMessage */
+extern const M_TrainTrack_Message_T_TM_radio_messages EMPTY_TrainTrackMessage_TM_lib_internal;
+
+/* TM_lib_internal::DIM_FIFO_TrainTrackMessage */
+#define DIM_FIFO_TrainTrackMessage_TM_lib_internal 5
+
+/* TM_TrainTrack_Bus::BusWidth */
+#define BusWidth_TM_TrainTrack_Bus (CycleTime_TM_TrainTrack_Bus / Time_10ms_TM_TrainTrack_Bus)
+
+/* TM_TrainTrack_Bus::CycleTime */
+#define CycleTime_TM_TrainTrack_Bus 50
+
+/* TM_TrainTrack_Bus::Time_10ms */
+#define Time_10ms_TM_TrainTrack_Bus 10
+
+/* TM_radio_messages::DEFAULT_TrainToTrackMessage */
+extern const M_TrainTrack_Message_T_TM_radio_messages DEFAULT_TrainToTrackMessage_TM_radio_messages;
+
+/* TM_TrainToTrack::DIM_max_elements_P001 */
+#define DIM_max_elements_P001_TM_TrainToTrack 17
+
+/* TM_conversions::ENUM_Q_DIRLRBG_nominal */
+#define ENUM_Q_DIRLRBG_nominal_TM_conversions Q_DIRLRBG_Nominal
+
+/* TM_conversions::ENUM_Q_DIRLRBG_reverse */
+#define ENUM_Q_DIRLRBG_reverse_TM_conversions Q_DIRLRBG_Reverse
+
+/* TM_conversions::ENUM_Q_DIRLRBG_unknown */
+#define ENUM_Q_DIRLRBG_unknown_TM_conversions Q_DIRLRBG_Unknown
+
+/* TM_conversions::INT_Q_DIRLRBG_unknown */
+#define INT_Q_DIRLRBG_unknown_TM_conversions 2
+
+/* TM_conversions::INT_Q_DIRLRBG_reverse */
+#define INT_Q_DIRLRBG_reverse_TM_conversions 0
+
+/* TM_conversions::INT_Q_DIRLRBG_nominal */
+#define INT_Q_DIRLRBG_nominal_TM_conversions 1
+
+/* TM_conversions::ENUM_Q_DLRBG_nominal */
+#define ENUM_Q_DLRBG_nominal_TM_conversions Q_DLRBG_Nominal
+
+/* TM_conversions::ENUM_Q_DLRBG_reverse */
+#define ENUM_Q_DLRBG_reverse_TM_conversions Q_DLRBG_Reverse
+
+/* TM_conversions::ENUM_Q_DLRBG_unknown */
+#define ENUM_Q_DLRBG_unknown_TM_conversions Q_DLRBG_Unknown
+
+/* TM_conversions::INT_Q_DLRBG_unknown */
+#define INT_Q_DLRBG_unknown_TM_conversions 2
+
+/* TM_conversions::INT_Q_DLRBG_reverse */
+#define INT_Q_DLRBG_reverse_TM_conversions 0
+
+/* TM_conversions::INT_Q_DLRBG_nominal */
+#define INT_Q_DLRBG_nominal_TM_conversions 1
+
+/* TM_conversions::DIM_L_max */
+#define DIM_L_max_TM_conversions 32767
+
+/* TM_conversions::DIM_L_min */
+#define DIM_L_min_TM_conversions 0
+
+/* TM_conversions::ENUM_Q_LENGTH_no_info_available */
+#define ENUM_Q_LENGTH_no_info_available_TM_conversions Q_LENGTH_No_train_integrity_information_available
+
+/* TM_conversions::ENUM_Q_LENGTH_confimed_by_device */
+#define ENUM_Q_LENGTH_confimed_by_device_TM_conversions Q_LENGTH_Train_integrity_confirmed_by_integrity_monitoring_device
+
+/* TM_conversions::ENUM_Q_LENGTH_confimed_by_driver */
+#define ENUM_Q_LENGTH_confimed_by_driver_TM_conversions Q_LENGTH_Train_integrity_confirmed_by_driver
+
+/* TM_conversions::ENUM_Q_LENGTH_integrity_lost */
+#define ENUM_Q_LENGTH_integrity_lost_TM_conversions Q_LENGTH_Train_integrity_lost
+
+/* TM_conversions::INT_Q_LENGTH_integrity_lost */
+#define INT_Q_LENGTH_integrity_lost_TM_conversions 3
+
+/* TM_conversions::INT_Q_LENGTH_confimed_by_driver */
+#define INT_Q_LENGTH_confimed_by_driver_TM_conversions 2
+
+/* TM_conversions::INT_Q_LENGTH_confimed_by_device */
+#define INT_Q_LENGTH_confimed_by_device_TM_conversions 1
+
+/* TM_conversions::INT_Q_LENGTH_no_info_available */
+#define INT_Q_LENGTH_no_info_available_TM_conversions 0
+
+/* TM_conversions::DIM_L_TRAININT_min */
+#define DIM_L_TRAININT_min_TM_conversions 0
+
+/* TM_conversions::DIM_L_TRAININT_max */
+#define DIM_L_TRAININT_max_TM_conversions 32767
+
+/* TM_conversions::ENUM_Q_DIRTRAIN_nominal */
+#define ENUM_Q_DIRTRAIN_nominal_TM_conversions Q_DIRTRAIN_Nominal
+
+/* TM_conversions::ENUM_Q_DIRTRAIN_reverse */
+#define ENUM_Q_DIRTRAIN_reverse_TM_conversions Q_DIRTRAIN_Reverse
+
+/* TM_conversions::ENUM_Q_DIRTRAIN_unknown */
+#define ENUM_Q_DIRTRAIN_unknown_TM_conversions Q_DIRTRAIN_Unknown
+
+/* TM_conversions::INT_Q_DIRTRAIN_unknown */
+#define INT_Q_DIRTRAIN_unknown_TM_conversions 2
+
+/* TM_conversions::INT_Q_DIRTRAIN_reverse */
+#define INT_Q_DIRTRAIN_reverse_TM_conversions 0
+
+/* TM_conversions::INT_Q_DIRTRAIN_nominal */
+#define INT_Q_DIRTRAIN_nominal_TM_conversions 1
+
+/* TM_conversions::ENUM_M_MODE_Full_Supervision */
+#define ENUM_M_MODE_Full_Supervision_TM_conversions M_MODE_Full_Supervision
+
+/* TM_conversions::ENUM_M_MODE_Isolation */
+#define ENUM_M_MODE_Isolation_TM_conversions M_MODE_Isolation
+
+/* TM_conversions::ENUM_M_MODE_Limited_Supervision */
+#define ENUM_M_MODE_Limited_Supervision_TM_conversions M_MODE_Limited_Supervision
+
+/* TM_conversions::ENUM_M_MODE_National_System */
+#define ENUM_M_MODE_National_System_TM_conversions M_MODE_National_System
+
+/* TM_conversions::ENUM_M_MODE_Non_Leading */
+#define ENUM_M_MODE_Non_Leading_TM_conversions M_MODE_Non_Leading
+
+/* TM_conversions::ENUM_M_MODE_On_Sight */
+#define ENUM_M_MODE_On_Sight_TM_conversions M_MODE_On_Sight
+
+/* TM_conversions::ENUM_M_MODE_Passive_Shunting */
+#define ENUM_M_MODE_Passive_Shunting_TM_conversions M_MODE_No_Power
+
+/* TM_conversions::ENUM_M_MODE_Post_Trip */
+#define ENUM_M_MODE_Post_Trip_TM_conversions M_MODE_Post_Trip
+
+/* TM_conversions::ENUM_M_MODE_Reversing */
+#define ENUM_M_MODE_Reversing_TM_conversions M_MODE_Reversing
+
+/* TM_conversions::ENUM_M_MODE_Shunting */
+#define ENUM_M_MODE_Shunting_TM_conversions M_MODE_Shunting
+
+/* TM_conversions::ENUM_M_MODE_Sleeping */
+#define ENUM_M_MODE_Sleeping_TM_conversions M_MODE_Sleeping
+
+/* TM_conversions::ENUM_M_MODE_Staff_Responsible */
+#define ENUM_M_MODE_Staff_Responsible_TM_conversions M_MODE_Staff_Responsible
+
+/* TM_conversions::ENUM_M_MODE_Stand_By */
+#define ENUM_M_MODE_Stand_By_TM_conversions M_MODE_Stand_By
+
+/* TM_conversions::ENUM_M_MODE_System_Failure */
+#define ENUM_M_MODE_System_Failure_TM_conversions M_MODE_System_Failure
+
+/* TM_conversions::ENUM_M_MODE_Trip */
+#define ENUM_M_MODE_Trip_TM_conversions M_MODE_Trip
+
+/* TM_conversions::ENUM_M_MODE_Unfitted */
+#define ENUM_M_MODE_Unfitted_TM_conversions M_MODE_Unfitted
+
+/* TM_conversions::INT_M_MODE_System_Failure */
+#define INT_M_MODE_System_Failure_TM_conversions 9
+
+/* TM_conversions::INT_M_MODE_Unfitted */
+#define INT_M_MODE_Unfitted_TM_conversions 4
+
+/* TM_conversions::INT_M_MODE_Trip */
+#define INT_M_MODE_Trip_TM_conversions 7
+
+/* TM_conversions::INT_M_MODE_Stand_By */
+#define INT_M_MODE_Stand_By_TM_conversions 6
+
+/* TM_conversions::INT_M_MODE_Staff_Responsible */
+#define INT_M_MODE_Staff_Responsible_TM_conversions 2
+
+/* TM_conversions::INT_M_MODE_Sleeping */
+#define INT_M_MODE_Sleeping_TM_conversions 5
+
+/* TM_conversions::INT_M_MODE_Shunting */
+#define INT_M_MODE_Shunting_TM_conversions 3
+
+/* TM_conversions::INT_M_MODE_Reversing */
+#define INT_M_MODE_Reversing_TM_conversions 14
+
+/* TM_conversions::INT_M_MODE_Post_Trip */
+#define INT_M_MODE_Post_Trip_TM_conversions 8
+
+/* TM_conversions::INT_M_MODE_Passive_Shunting */
+#define INT_M_MODE_Passive_Shunting_TM_conversions 15
+
+/* TM_conversions::INT_M_MODE_On_Sight */
+#define INT_M_MODE_On_Sight_TM_conversions 1
+
+/* TM_conversions::INT_M_MODE_Non_Leading */
+#define INT_M_MODE_Non_Leading_TM_conversions 11
+
+/* TM_conversions::INT_M_MODE_National_System */
+#define INT_M_MODE_National_System_TM_conversions 13
+
+/* TM_conversions::INT_M_MODE_Limited_Supervision */
+#define INT_M_MODE_Limited_Supervision_TM_conversions 12
+
+/* TM_conversions::INT_M_MODE_Isolation */
+#define INT_M_MODE_Isolation_TM_conversions 10
+
+/* TM_conversions::INT_M_MODE_Full_Supervision */
+#define INT_M_MODE_Full_Supervision_TM_conversions 0
+
+/* TM_conversions::ENUM_M_LEVEL_Level_0 */
+#define ENUM_M_LEVEL_Level_0_TM_conversions M_LEVEL_Level_0
+
+/* TM_conversions::ENUM_M_LEVEL_Level_1 */
+#define ENUM_M_LEVEL_Level_1_TM_conversions M_LEVEL_Level_1
+
+/* TM_conversions::ENUM_M_LEVEL_Level_2 */
+#define ENUM_M_LEVEL_Level_2_TM_conversions M_LEVEL_Level_2
+
+/* TM_conversions::ENUM_M_LEVEL_Level_3 */
+#define ENUM_M_LEVEL_Level_3_TM_conversions M_LEVEL_Level_3
+
+/* TM_conversions::ENUM_M_LEVEL_Level_NTC */
+#define ENUM_M_LEVEL_Level_NTC_TM_conversions M_LEVEL_Level_NTC_specified_by_NID_NTC
+
+/* TM_conversions::INT_M_LEVEL_Level_NTC */
+#define INT_M_LEVEL_Level_NTC_TM_conversions 1
+
+/* TM_conversions::INT_M_LEVEL_Level_3 */
+#define INT_M_LEVEL_Level_3_TM_conversions 4
+
+/* TM_conversions::INT_M_LEVEL_Level_2 */
+#define INT_M_LEVEL_Level_2_TM_conversions 3
+
+/* TM_conversions::INT_M_LEVEL_Level_1 */
+#define INT_M_LEVEL_Level_1_TM_conversions 2
+
+/* TM_conversions::INT_M_LEVEL_Level_0 */
+#define INT_M_LEVEL_Level_0_TM_conversions 0
+
+/* TM_TrainToTrack::DIM_max_elements_P000 */
+#define DIM_max_elements_P000_TM_TrainToTrack 17
+
+/* TM_TrainToTrack::INVALID_NID_PACKET */
+#define INVALID_NID_PACKET_TM_TrainToTrack 999
+
+/* TM_radio_messages::DIM_max_payload */
+#define DIM_max_payload_TM_radio_messages 50
+
+/* TM_conversions::ENUM_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update */
+#define ENUM_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA
+
+/* TM_conversions::ENUM_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update */
+#define ENUM_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_no_update_of_EOA
+
+/* TM_conversions::ENUM_Q_EMERGENCYSTOP_uncond_accepted */
+#define ENUM_Q_EMERGENCYSTOP_uncond_accepted_TM_conversions Q_EMERGENCYSTOP_Unconditional_Emergency_Stop_accepted
+
+/* TM_conversions::ENUM_Q_EMERGENCYSTOP_rejected */
+#define ENUM_Q_EMERGENCYSTOP_rejected_TM_conversions Q_EMERGENCYSTOP_Emergency_stop
+
+/* TM_conversions::INT_Q_EMERGENCYSTOP_rejected */
+#define INT_Q_EMERGENCYSTOP_rejected_TM_conversions 3
+
+/* TM_conversions::INT_Q_EMERGENCYSTOP_uncond_accepted */
+#define INT_Q_EMERGENCYSTOP_uncond_accepted_TM_conversions 2
+
+/* TM_conversions::INT_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update */
+#define INT_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions 1
+
+/* TM_conversions::INT_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update */
+#define INT_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions 0
+
 /* TA_EmergencyStop::cMSG147_NONE */
 extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cMSG147_NONE_TA_EmergencyStop;
+
+/* TA_EmergencyStop::DEFAULT_M147 */
+extern const M_147_T_TM_radio_messages DEFAULT_M147_TA_EmergencyStop;
 
 /* Id_Pkg::cm15_Conditional_Emergency_Stop */
 #define cm15_Conditional_Emergency_Stop_Id_Pkg 15
@@ -1378,20 +2044,8 @@ extern const Radio_TrainTrack_Message_T_Radio_Types_Pkg cMSG147_NONE_TA_Emergenc
 /* MA_Request::cPT11_ValidateTrainData */
 extern const PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg cPT11_ValidateTrainData_MA_Request;
 
-/* Packet_TrainTypes_Pkg::cMaxNationalSystem */
-#define cMaxNationalSystem_Packet_TrainTypes_Pkg 3
-
-/* Packet_TrainTypes_Pkg::cMaxTractionIdentity */
-#define cMaxTractionIdentity_Packet_TrainTypes_Pkg 3
-
 /* MA_Request::cPT3_OBUTelephoneNumber */
 extern const PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg cPT3_OBUTelephoneNumber_MA_Request;
-
-/* Packet_TrainTypes_Pkg::cmaxNumberTelephoneNumbers */
-#define cmaxNumberTelephoneNumbers_Packet_TrainTypes_Pkg 1
-
-/* Packet_TrainTypes_Pkg::cDigitsInTelephoneNumber */
-#define cDigitsInTelephoneNumber_Packet_TrainTypes_Pkg 15
 
 /* MA_Request::cPT4_ErrorReporting */
 extern const PT4_ErrorReporting_T_Packet_TrainTypes_Pkg cPT4_ErrorReporting_MA_Request;
@@ -1467,6 +2121,18 @@ extern const Gradient_section_t_TrackAtlasTypes DEFAULT_GP_Section_TA_Gradient;
 
 /* TrackAtlasTypes::DIM_GP */
 #define DIM_GP_TrackAtlasTypes 50
+
+/* Packet_TrainTypes_Pkg::cmaxNumberTelephoneNumbers */
+#define cmaxNumberTelephoneNumbers_Packet_TrainTypes_Pkg 1
+
+/* Packet_TrainTypes_Pkg::cDigitsInTelephoneNumber */
+#define cDigitsInTelephoneNumber_Packet_TrainTypes_Pkg 15
+
+/* Packet_TrainTypes_Pkg::cMaxNationalSystem */
+#define cMaxNationalSystem_Packet_TrainTypes_Pkg 5
+
+/* Packet_TrainTypes_Pkg::cMaxTractionIdentity */
+#define cMaxTractionIdentity_Packet_TrainTypes_Pkg 4
 
 /* CalculateTrainPosition_Pkg::cNoPositionErrors */
 extern const positionErrors_T_TrainPosition_Types_Pck cNoPositionErrors_CalculateTrainPosition_Pkg;
@@ -1591,11 +2257,11 @@ extern const P005_section_enum_T_TM DEFAULT_P005_OBU_section_TM_lib_internal;
 /* TM_conversions::ENUM_Q_NEWCOUNTRY_same */
 #define ENUM_Q_NEWCOUNTRY_same_TM_conversions Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows
 
-/* TM_conversions::INT_Q_LINKREACTION_Train_trip */
-#define INT_Q_LINKREACTION_Train_trip_TM_conversions 0
-
 /* TM_conversions::INT_Q_LINKREACTION_Apply_servicebrake */
 #define INT_Q_LINKREACTION_Apply_servicebrake_TM_conversions 1
+
+/* TM_conversions::INT_Q_LINKREACTION_Train_trip */
+#define INT_Q_LINKREACTION_Train_trip_TM_conversions 0
 
 /* TM_conversions::INT_Q_LINKREACTION_No_Reaction */
 #define INT_Q_LINKREACTION_No_Reaction_TM_conversions 2
@@ -1684,9 +2350,15 @@ extern const P203V1_OBU_T_TM_baseline2 cP203_PermanentData_EVC_PermanentData_Pkg
 /* TM::DIM_N_ITER */
 #define DIM_N_ITER_TM 32
 
+/* EVC_PermanentData_Pkg::cMoRC_own_P3ng */
+extern const P003_TM_TrainToTrack cMoRC_own_P3ng_EVC_PermanentData_Pkg;
+
+/* TM_TrainToTrack::DIM_nid_radio_list */
+#define DIM_nid_radio_list_TM_TrainToTrack 5
+
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 

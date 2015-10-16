@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,9 +11,30 @@
 void ProvidePositionReport_init_ProvidePositionReport_Pkg(
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
+  static kcg_int i1;
   static kcg_int i;
   
   outC->init = kcg_true;
+  for (i = 0; i < 8; i++) {
+    outC->rem_reportedBGs[i].valid = kcg_true;
+    outC->rem_reportedBGs[i].nidBG = 0;
+    outC->rem_reportedBGs[i].location.nominal = 0;
+    outC->rem_reportedBGs[i].location.d_min = 0;
+    outC->rem_reportedBGs[i].location.d_max = 0;
+  }
+  for (i = 0; i < 5; i++) {
+    outC->posReport_ng[i].Message.valid = kcg_true;
+    outC->posReport_ng[i].Message.nid_message = 0;
+    outC->posReport_ng[i].Message.l_message = 0;
+    outC->posReport_ng[i].Message.t_train = 0;
+    outC->posReport_ng[i].Message.nid_engine = 0;
+    outC->posReport_ng[i].Message.field1 = 0;
+    outC->posReport_ng[i].Message.field2 = 0;
+    outC->posReport_ng[i].Message.field3 = 0;
+    for (i1 = 0; i1 < 50; i1++) {
+      outC->posReport_ng[i].OptionalPackets[i1] = 0;
+    }
+  }
   outC->packet1.valid = kcg_true;
   outC->packet1.packet1.NID_PACKET = 0;
   outC->packet1.packet1.L_PACKET = 0;
@@ -52,11 +73,6 @@ void ProvidePositionReport_init_ProvidePositionReport_Pkg(
   outC->packet0.packet0.level = M_LEVEL_Level_0;
   outC->packet0.packet0.NID_NTC = 0;
   for (i = 0; i < 8; i++) {
-    outC->rem_reportedBGs[i].valid = kcg_true;
-    outC->rem_reportedBGs[i].nidBG = 0;
-    outC->rem_reportedBGs[i].location.nominal = 0;
-    outC->rem_reportedBGs[i].location.d_min = 0;
-    outC->rem_reportedBGs[i].location.d_max = 0;
     outC->out_reportedBGs[i].valid = kcg_true;
     outC->out_reportedBGs[i].nidBG = 0;
     outC->out_reportedBGs[i].location.nominal = 0;
@@ -66,10 +82,10 @@ void ProvidePositionReport_init_ProvidePositionReport_Pkg(
   outC->posRep.present = kcg_true;
   outC->posRep.header.present = kcg_true;
   outC->posRep.header.nid_message = 0;
-  outC->posRep.header.t_train = 0.0;
+  outC->posRep.header.t_train = 0;
   outC->posRep.header.nid_engine = 0;
   outC->posRep.header.xQ_MARQSTREASON = Q_MARQSTREASON_Start_selected_by_driver;
-  outC->posRep.header.xT_TRAIN = 0.0;
+  outC->posRep.header.xT_TRAIN = 0;
   outC->posRep.header.xNID_EM = 0;
   outC->posRep.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -136,15 +152,16 @@ void ProvidePositionReport_init_ProvidePositionReport_Pkg(
   outC->posRep.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->posRep.packets.p11.n_axle = 0;
   outC->posRep.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->posRep.packets.p11.tractionIdentity[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->posRep.packets.p11.tractionIdentity[i].nid_ctraction = 0;
   }
   outC->posRep.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->posRep.packets.p11.nid_ntc[i] = 0;
   }
+  /* 1 */ nextGen_Msg136_init_radioOutput_Pkg(&outC->_3_Context_1);
   /* 1 */ Build_Packets0_1_init_ProvidePositionReport_Pkg(&outC->_2_Context_1);
   /* 1 */
   PosReport_Supervision_init_ProvidePositionReport_Pkg(&outC->_1_Context_1);
@@ -159,6 +176,7 @@ void ProvidePositionReport_reset_ProvidePositionReport_Pkg(
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
   outC->init = kcg_true;
+  /* 1 */ nextGen_Msg136_reset_radioOutput_Pkg(&outC->_3_Context_1);
   /* 1 */ Build_Packets0_1_reset_ProvidePositionReport_Pkg(&outC->_2_Context_1);
   /* 1 */
   PosReport_Supervision_reset_ProvidePositionReport_Pkg(&outC->_1_Context_1);
@@ -190,11 +208,13 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::ProvidePositionReport::DoubleRepositioningError */ kcg_bool DoubleRepositioningError,
   /* ProvidePositionReport_Pkg::ProvidePositionReport::modeLevelStatus */ ModeLevel2PositionReport_T_ProvidePositionReport_Pkg *modeLevelStatus,
   /* ProvidePositionReport_Pkg::ProvidePositionReport::reportedBGs */ ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
+  /* ProvidePositionReport_Pkg::ProvidePositionReport::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* ProvidePositionReport_Pkg::ProvidePositionReport::inVersion */ M_VERSION inVersion,
   /* ProvidePositionReport_Pkg::ProvidePositionReport::t_train */ T_TRAIN t_train,
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static array_76498 tmp4;
+  static array_82697 tmp4;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
   static PT0_PositionReport_T_Packet_TrainTypes_Pkg tmp3;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
@@ -320,6 +340,16 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
     &tmp1,
     &tmp,
     &outC->posRep.packets);
+  /* 1 */
+  nextGen_Msg136_radioOutput_Pkg(
+    MessageBus,
+    &outC->posRep,
+    inVersion,
+    t_train,
+    &outC->_3_Context_1);
+  kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+    &outC->posReport_ng,
+    &outC->_3_Context_1.MessageBus_out);
   kcg_copy_ReportedBGList_T_ProvidePositionReport_Pkg(
     &outC->rem_reportedBGs,
     reportedBGs);
@@ -327,6 +357,6 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

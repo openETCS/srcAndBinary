@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 #ifndef _FallingEdge_digital_H_
 #define _FallingEdge_digital_H_
@@ -41,6 +41,6 @@ extern void FallingEdge_init_digital(outC_FallingEdge_digital *outC);
 #endif /* _FallingEdge_digital_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FallingEdge_digital.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 

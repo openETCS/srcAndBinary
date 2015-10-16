@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _TrackAtlasETCS_TrackAtlas_H_
 #define _TrackAtlasETCS_TrackAtlas_H_
@@ -31,8 +31,9 @@ typedef struct {
   DataForDMI_t_TrackAtlasTypes /* TrackAtlas::TrackAtlasETCS::to_DMI */ to_DMI;
   DataForSupervision_nextGen_t_TrackAtlasTypes /* TrackAtlas::TrackAtlasETCS::to_Supervision */ to_Supervision;
   MovementAuthority_t_TrackAtlasTypes /* TrackAtlas::TrackAtlasETCS::MA_onboard_out */ MA_onboard_out;
-  Radio_TrainTrack_Message_T_Radio_Types_Pkg /* TrackAtlas::TrackAtlasETCS::MA_request_out */ MA_request_out;
-  Radio_TrainTrack_Message_T_Radio_Types_Pkg /* TrackAtlas::TrackAtlasETCS::message147 */ message147;
+  Radio_TrainTrack_Message_T_TM_transitional /* TrackAtlas::TrackAtlasETCS::MA_request_out */ MA_request_out;
+  M_TrainTrackMessageBus_t_TM_TrainTrack_Bus /* TrackAtlas::TrackAtlasETCS::bus_out */ bus_out;
+  Radio_TrainTrack_Message_T_TM_transitional /* TrackAtlas::TrackAtlasETCS::message147 */ message147;
   kcg_bool /* TrackAtlas::TrackAtlasETCS::ces_accepted */ ces_accepted;
   kcg_bool /* TrackAtlas::TrackAtlasETCS::ces_revoked */ ces_revoked;
   kcg_bool /* TrackAtlas::TrackAtlasETCS::trip_train */ trip_train;
@@ -67,6 +68,7 @@ extern void TrackAtlasETCS_TrackAtlas(
   /* TrackAtlas::TrackAtlasETCS::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
   /* TrackAtlas::TrackAtlasETCS::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
   /* TrackAtlas::TrackAtlasETCS::t_train */ T_TRAIN t_train,
+  /* TrackAtlas::TrackAtlasETCS::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
   /* TrackAtlas::TrackAtlasETCS::P203V1_onboard */ P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
   /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */ P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
   outC_TrackAtlasETCS_TrackAtlas *outC);
@@ -84,6 +86,6 @@ extern void TrackAtlasETCS_init_TrackAtlas(
 #endif /* _TrackAtlasETCS_TrackAtlas_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

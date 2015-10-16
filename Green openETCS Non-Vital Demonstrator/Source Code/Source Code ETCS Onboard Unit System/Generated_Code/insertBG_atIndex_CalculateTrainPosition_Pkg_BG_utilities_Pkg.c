@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -56,7 +56,7 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       &(&tmp[0])[0],
       (positionedBG_T_TrainPosition_Types_Pck *)
         &cNoPositionedBG_CalculateTrainPosition_Pkg);
-    kcg_copy_array_76502(&tmp[1], (array_76502 *) &(*BGs_in)[0]);
+    kcg_copy_array_83053(&tmp[1], (array_83053 *) &(*BGs_in)[0]);
   }
   if (_L34) {
     for (i = 0; i < 41; i++) {
@@ -98,6 +98,6 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

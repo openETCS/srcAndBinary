@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,19 +10,33 @@
 #ifndef KCG_USER_DEFINED_INIT
 void Manage_MA_Request_init_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
 {
+  static kcg_int i1;
   static kcg_int i;
   
   outC->triggerMA = kcg_true;
   outC->init = kcg_true;
   outC->exception = kcg_true;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->bus_out[i1].Message.valid = kcg_true;
+    outC->bus_out[i1].Message.nid_message = 0;
+    outC->bus_out[i1].Message.l_message = 0;
+    outC->bus_out[i1].Message.t_train = 0;
+    outC->bus_out[i1].Message.nid_engine = 0;
+    outC->bus_out[i1].Message.field1 = 0;
+    outC->bus_out[i1].Message.field2 = 0;
+    outC->bus_out[i1].Message.field3 = 0;
+    for (i = 0; i < 50; i++) {
+      outC->bus_out[i1].OptionalPackets[i] = 0;
+    }
+  }
   outC->message_out.present = kcg_true;
   outC->message_out.header.present = kcg_true;
   outC->message_out.header.nid_message = 0;
-  outC->message_out.header.t_train = 0.0;
+  outC->message_out.header.t_train = 0;
   outC->message_out.header.nid_engine = 0;
   outC->message_out.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->message_out.header.xT_TRAIN = 0.0;
+  outC->message_out.header.xT_TRAIN = 0;
   outC->message_out.header.xNID_EM = 0;
   outC->message_out.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -67,8 +81,8 @@ void Manage_MA_Request_init_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
   outC->message_out.packets.p3.valid = kcg_true;
   outC->message_out.packets.p3.number = 0;
   outC->message_out.packets.p3.aNID_RADIO[0].valid = kcg_true;
-  for (i = 0; i < 15; i++) {
-    outC->message_out.packets.p3.aNID_RADIO[0].telephoneNumber[i] = 0;
+  for (i1 = 0; i1 < 15; i1++) {
+    outC->message_out.packets.p3.aNID_RADIO[0].telephoneNumber[i1] = 0;
   }
   outC->message_out.packets.p4.valid = kcg_true;
   outC->message_out.packets.p4.m_error =
@@ -89,15 +103,16 @@ void Manage_MA_Request_init_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
   outC->message_out.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->message_out.packets.p11.n_axle = 0;
   outC->message_out.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
-    outC->message_out.packets.p11.tractionIdentity[i].m_voltage =
+  for (i1 = 0; i1 < 4; i1++) {
+    outC->message_out.packets.p11.tractionIdentity[i1].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
-    outC->message_out.packets.p11.tractionIdentity[i].nid_ctraction = 0;
+    outC->message_out.packets.p11.tractionIdentity[i1].nid_ctraction = 0;
   }
   outC->message_out.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
-    outC->message_out.packets.p11.nid_ntc[i] = 0;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->message_out.packets.p11.nid_ntc[i1] = 0;
   }
+  /* 1 */ Build_MA_request_init_MA_Request(&outC->_2_Context_1);
   /* 1 */ MA_Request_Supervision_init_MA_Request(&outC->_1_Context_1);
   /* 1 */ Receive_MA_RequestParameters_init_MA_Request(&outC->Context_1);
 }
@@ -108,6 +123,7 @@ void Manage_MA_Request_init_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
 void Manage_MA_Request_reset_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
 {
   outC->init = kcg_true;
+  /* 1 */ Build_MA_request_reset_MA_Request(&outC->_2_Context_1);
   /* 1 */ MA_Request_Supervision_reset_MA_Request(&outC->_1_Context_1);
   /* 1 */ Receive_MA_RequestParameters_reset_MA_Request(&outC->Context_1);
 }
@@ -127,47 +143,37 @@ void Manage_MA_Request_MA_Request(
   /* MA_Request::Manage_MA_Request::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
   /* MA_Request::Manage_MA_Request::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
   /* MA_Request::Manage_MA_Request::t_train */ T_TRAIN t_train,
-  /* MA_Request::Manage_MA_Request::ModeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeLevel,
+  /* MA_Request::Manage_MA_Request::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
   outC_Manage_MA_Request_MA_Request *outC)
 {
   /* MA_Request::Manage_MA_Request */
   static kcg_bool tmp1;
   /* MA_Request::Manage_MA_Request */
-  static Radio_TrainTrack_Message_T_Radio_Types_Pkg tmp;
-  /* MA_Request::Manage_MA_Request::_L34 */
-  static kcg_bool _L34;
+  static Radio_TrainTrack_Message_T_TM_transitional tmp;
   
-  _L34 = (*ModeLevel).level == M_LEVEL_Level_2;
   /* 1 */ Receive_MA_RequestParameters_MA_Request(message_in, &outC->Context_1);
-  /* ck__L34 */ if (_L34) {
-    /* last_init_ck_triggerMA */ if (outC->init) {
-      tmp1 = kcg_false;
-    }
-    else {
-      tmp1 = outC->triggerMA;
-    }
-    /* 1 */
-    MA_Request_Supervision_MA_Request(
-      &outC->Context_1.MA_RequestParams,
-      outC->Context_1.ma_received,
-      tmp1,
-      trainPosition,
-      systemTime,
-      preindicationLocation,
-      odometry,
-      MAs,
-      fromDriver,
-      trackDescrDeleted,
-      ModeLevel,
-      &outC->_1_Context_1);
-    outC->exception = outC->_1_Context_1.exception;
-    outC->triggerMA = outC->_1_Context_1.triggerMA;
+  /* last_init_ck_triggerMA */ if (outC->init) {
+    outC->init = kcg_false;
+    tmp1 = kcg_false;
   }
   else {
-    outC->triggerMA = kcg_false;
-    outC->exception = kcg_false;
+    tmp1 = outC->triggerMA;
   }
-  outC->init = kcg_false;
+  /* 1 */
+  MA_Request_Supervision_MA_Request(
+    &outC->Context_1.MA_RequestParams,
+    outC->Context_1.ma_received,
+    tmp1,
+    trainPosition,
+    systemTime,
+    preindicationLocation,
+    odometry,
+    MAs,
+    fromDriver,
+    trackDescrDeleted,
+    &outC->_1_Context_1);
+  outC->triggerMA = outC->_1_Context_1.triggerMA;
+  outC->exception = outC->_1_Context_1.exception;
   /* ck_triggerMA */ if (outC->triggerMA) {
     /* 1 */
     Build_MA_request_MA_Request(
@@ -176,18 +182,29 @@ void Manage_MA_Request_MA_Request(
       packet0,
       packet1,
       t_train,
-      &tmp);
+      bus_in,
+      &outC->_2_Context_1);
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->bus_out,
+      &outC->_2_Context_1.bus_out);
+    kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
+      &tmp,
+      &outC->_2_Context_1.message132);
   }
   else {
-    kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->bus_out,
+      (M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *)
+        &DEFAULT_TrainTrackBus_m_TM_lib_internal);
+    kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
       &tmp,
-      (Radio_TrainTrack_Message_T_Radio_Types_Pkg *) &cPacket132_MA_Request);
+      (Radio_TrainTrack_Message_T_TM_transitional *) &cPacket132_MA_Request);
   }
   /* 1 */ Send_MA_MA_Request(&tmp, &outC->message_out);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_MA_Request_MA_Request.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

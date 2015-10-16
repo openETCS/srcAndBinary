@@ -1,13 +1,15 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef __1_EVC_H_
 #define __1_EVC_H_
 
 #include "kcg_types.h"
+#include "nextGenRadioOutput_radioOutput_Pkg.h"
 #include "maintainTrainProperties_EVC_Support_Pkg.h"
 #include "patchEmergencyBrakeMsg_EVC_Support_Pkg.h"
+#include "probe_RadioOutput_RadioSupport_Pkg.h"
 #include "ManageLevelAndMode.h"
 #include "TIU_OutputIntegration_output_to_TIU_API_Pkg.h"
 #include "manageDMI_Output_manage_DMI_Output_Pkg.h"
@@ -41,6 +43,14 @@ typedef struct {
   NID_MESSAGE /* EVC::probe_MSG */ probe_MSG;
   NID_LRBG /* EVC::probe_LRBG */ probe_LRBG;
   NID_BG /* EVC::probe_BG */ probe_BG;
+  NID_MESSAGE /* EVC::probe_Msg_1 */ probe_Msg_1;
+  NID_MESSAGE /* EVC::probe_Msg_2 */ probe_Msg_2;
+  NID_MESSAGE /* EVC::probe_Msg_3 */ probe_Msg_3;
+  NID_MESSAGE /* EVC::probe_Msg_4 */ probe_Msg_4;
+  NID_MESSAGE /* EVC::probe_Msg_5 */ probe_Msg_5;
+  NID_MESSAGE /* EVC::probe_Msg_1o */ probe_Msg_1o;
+  NID_MESSAGE /* EVC::probe_Msg_3o */ probe_Msg_3o;
+  NID_MESSAGE /* EVC::probe_Msg_2o */ probe_Msg_2o;
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init16;
   kcg_bool init;
@@ -55,6 +65,7 @@ typedef struct {
   speedSupervisionForDMI_T_DMI_Types_Pkg /* EVC::DMI_sdmToDMI */ DMI_sdmToDMI;
   trainData_T_TIU_Types_Pkg /* EVC::td_trainData */ td_trainData;
   positionedBGs_T_TrainPosition_Types_Pck /* EVC::CALC_BGs */ CALC_BGs;
+  trainProperties_T_TrainPosition_Types_Pck /* EVC::TIU_trainProperties */ TIU_trainProperties;
   kcg_bool /* EVC::MoRC_newSessionEstablished */ MoRC_newSessionEstablished;
   T_internal_Type_Obu_BasicTypes_Pkg /* EVC::MSG_lastRadioMsgTimestamp */ MSG_lastRadioMsgTimestamp;
   NID_NTC /* EVC::EVC_currentNTC */ EVC_currentNTC;
@@ -65,7 +76,6 @@ typedef struct {
   trainDataStatus_T_trainData_Types_pkg /* EVC::td_status */ td_status;
   PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg /* EVC::rep_P1 */ rep_P1;
   kcg_bool /* EVC::_L477 */ _L477;
-  trainProperties_T_TrainPosition_Types_Pck /* EVC::TIU_trainProperties */ rem_TIU_trainProperties;
   kcg_bool /* EVC::EVC_ready */ EVC_ready;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_distanceLastMSG_xdebugSupport_Pkg /* 1 */ _15_Context_1;
@@ -80,10 +90,10 @@ typedef struct {
   outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 1 */ _6_Context_1;
   outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 1 */ _5_Context_1;
   outC_ManageLevelAndMode /* 1 */ _4_Context_1;
-  outC_TrackAtlas_TrackAtlas /* 1 */ _3_Context_1;
-  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 2 */ _2_Context_2;
-  outC_trainData_trainData_pkg /* 1 */ _1_Context_1;
-  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 2 */ Context_2;
+  outC_trainData_trainData_pkg /* 1 */ _3_Context_1;
+  outC_TrackAtlas_TrackAtlas /* 1 */ _2_Context_1;
+  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 2 */ _1_Context_2;
+  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 2 */ Context_2;
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 1 */ Context_1;
   outC_manageTIU_input_input_from_TIU_API_Pkg /* 4 */ Context_4;
   /* ----------------- no clocks of observable data ------------------ */
@@ -140,14 +150,16 @@ extern kcg_bool EVC_ready;
 extern TIU_Output_msg_API_TIU_Pkg API_toTIU;
 /* EVC::API_toDMI */
 extern EVC_to_DMI_Message_T_API_DMI_Pkg API_toDMI;
-/* EVC::API_toEuroradio */
-extern API_EuroRadioOutput_T_API_RadioCommunication_Pkg API_toEuroradio;
+/* EVC::API_RTM_management */
+extern RadioManagement_T_API_RadioCommunication_Pkg API_RTM_management;
+/* EVC::toRTM */
+extern M_TrainTrackMessageBus_t_TM_TrainTrack_Bus toRTM;
 /* EVC::resetOut */
 extern kcg_bool resetOut;
 
 #endif /* __1_EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** _1_EVC.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -42,7 +42,6 @@ void MA_Request_Supervision_MA_Request(
   /* MA_Request::MA_Request_Supervision::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
   /* MA_Request::MA_Request_Supervision::fromDriver */ Driver2MAR_T_MA_Request *fromDriver,
   /* MA_Request::MA_Request_Supervision::trackDescrDeleted */ kcg_bool trackDescrDeleted,
-  /* MA_Request::MA_Request_Supervision::ModeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeLevel,
   outC_MA_Request_Supervision_MA_Request *outC)
 {
   /* MA_Request::MA_Request_Supervision */
@@ -60,8 +59,8 @@ void MA_Request_Supervision_MA_Request(
   /* MA_Request::MA_Request_Supervision::_L42 */
   static kcg_bool _L42;
   
-  _L42 = 255 != (*ma_RequestParams).t_mar;
-  tmp1 = 1023 != (*ma_RequestParams).t_timeoutrqst;
+  _L42 = 255 == (*ma_RequestParams).t_mar;
+  tmp1 = 1023 == (*ma_RequestParams).t_timeoutrqst;
   /* init_SM1 */ if (outC->init) {
     SM1_state_sel = SSM_st_init_SM1;
   }
@@ -148,6 +147,6 @@ void MA_Request_Supervision_MA_Request(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Request_Supervision_MA_Request.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

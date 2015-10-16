@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 #ifndef _SP_PBD_SR_TA_SpeedProfiles_H_
 #define _SP_PBD_SR_TA_SpeedProfiles_H_
@@ -21,6 +21,6 @@ extern void SP_PBD_SR_TA_SpeedProfiles(
 #endif /* _SP_PBD_SR_TA_SpeedProfiles_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SP_PBD_SR_TA_SpeedProfiles.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

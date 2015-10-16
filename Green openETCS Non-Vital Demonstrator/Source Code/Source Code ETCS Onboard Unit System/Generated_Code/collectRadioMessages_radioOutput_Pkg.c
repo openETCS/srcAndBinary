@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,11 +19,11 @@ void collectRadioMessages_init_radioOutput_Pkg(
   outC->outRadioToAPI.firstOutput.present = kcg_true;
   outC->outRadioToAPI.firstOutput.header.present = kcg_true;
   outC->outRadioToAPI.firstOutput.header.nid_message = 0;
-  outC->outRadioToAPI.firstOutput.header.t_train = 0.0;
+  outC->outRadioToAPI.firstOutput.header.t_train = 0;
   outC->outRadioToAPI.firstOutput.header.nid_engine = 0;
   outC->outRadioToAPI.firstOutput.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->outRadioToAPI.firstOutput.header.xT_TRAIN = 0.0;
+  outC->outRadioToAPI.firstOutput.header.xT_TRAIN = 0;
   outC->outRadioToAPI.firstOutput.header.xNID_EM = 0;
   outC->outRadioToAPI.firstOutput.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -101,24 +101,24 @@ void collectRadioMessages_init_radioOutput_Pkg(
     M_AIRTIGHT_Not_fitted;
   outC->outRadioToAPI.firstOutput.packets.p11.n_axle = 0;
   outC->outRadioToAPI.firstOutput.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->outRadioToAPI.firstOutput.packets.p11.tractionIdentity[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->outRadioToAPI.firstOutput.packets.p11.tractionIdentity[i].nid_ctraction =
       0;
   }
   outC->outRadioToAPI.firstOutput.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->outRadioToAPI.firstOutput.packets.p11.nid_ntc[i] = 0;
   }
   outC->outRadioToAPI.secondOutput.present = kcg_true;
   outC->outRadioToAPI.secondOutput.header.present = kcg_true;
   outC->outRadioToAPI.secondOutput.header.nid_message = 0;
-  outC->outRadioToAPI.secondOutput.header.t_train = 0.0;
+  outC->outRadioToAPI.secondOutput.header.t_train = 0;
   outC->outRadioToAPI.secondOutput.header.nid_engine = 0;
   outC->outRadioToAPI.secondOutput.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->outRadioToAPI.secondOutput.header.xT_TRAIN = 0.0;
+  outC->outRadioToAPI.secondOutput.header.xT_TRAIN = 0;
   outC->outRadioToAPI.secondOutput.header.xNID_EM = 0;
   outC->outRadioToAPI.secondOutput.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -196,24 +196,24 @@ void collectRadioMessages_init_radioOutput_Pkg(
     M_AIRTIGHT_Not_fitted;
   outC->outRadioToAPI.secondOutput.packets.p11.n_axle = 0;
   outC->outRadioToAPI.secondOutput.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->outRadioToAPI.secondOutput.packets.p11.tractionIdentity[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->outRadioToAPI.secondOutput.packets.p11.tractionIdentity[i].nid_ctraction =
       0;
   }
   outC->outRadioToAPI.secondOutput.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->outRadioToAPI.secondOutput.packets.p11.nid_ntc[i] = 0;
   }
   outC->outRadioToAPI.thirdOutput.present = kcg_true;
   outC->outRadioToAPI.thirdOutput.header.present = kcg_true;
   outC->outRadioToAPI.thirdOutput.header.nid_message = 0;
-  outC->outRadioToAPI.thirdOutput.header.t_train = 0.0;
+  outC->outRadioToAPI.thirdOutput.header.t_train = 0;
   outC->outRadioToAPI.thirdOutput.header.nid_engine = 0;
   outC->outRadioToAPI.thirdOutput.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->outRadioToAPI.thirdOutput.header.xT_TRAIN = 0.0;
+  outC->outRadioToAPI.thirdOutput.header.xT_TRAIN = 0;
   outC->outRadioToAPI.thirdOutput.header.xNID_EM = 0;
   outC->outRadioToAPI.thirdOutput.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -291,14 +291,14 @@ void collectRadioMessages_init_radioOutput_Pkg(
     M_AIRTIGHT_Not_fitted;
   outC->outRadioToAPI.thirdOutput.packets.p11.n_axle = 0;
   outC->outRadioToAPI.thirdOutput.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     outC->outRadioToAPI.thirdOutput.packets.p11.tractionIdentity[i].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
     outC->outRadioToAPI.thirdOutput.packets.p11.tractionIdentity[i].nid_ctraction =
       0;
   }
   outC->outRadioToAPI.thirdOutput.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     outC->outRadioToAPI.thirdOutput.packets.p11.nid_ntc[i] = 0;
   }
   outC->outRadioToAPI.radioEVCtoUnit.valid = kcg_true;
@@ -444,6 +444,6 @@ void collectRadioMessages_radioOutput_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** collectRadioMessages_radioOutput_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

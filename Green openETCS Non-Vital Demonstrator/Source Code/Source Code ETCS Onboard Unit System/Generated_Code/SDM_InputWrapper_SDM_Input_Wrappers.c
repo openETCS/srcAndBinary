@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,6 +17,7 @@ void SDM_InputWrapper_init_SDM_Input_Wrappers(
   outC->ma_update_out = kcg_true;
   outC->gp_update_out = kcg_true;
   outC->init = kcg_true;
+  outC->offsetAntennaL1 = 0;
   for (i = 0; i < 50; i++) {
     outC->gp_out[i].location = 0.0;
     outC->gp_out[i].gradient = 0.0;
@@ -26,7 +27,6 @@ void SDM_InputWrapper_init_SDM_Input_Wrappers(
   outC->trainLocations.d_est_frontendPos = 0.0;
   outC->trainLocations.d_minSafeFrontEndPos = 0.0;
   outC->trainLocations.d_maxSafeFrontEndPos = 0.0;
-  outC->trainLocations.d_cond_L1_antenna2frontend = 0.0;
   outC->trainLocations.d_LRBG = 0.0;
   outC->trainLocations.d_accLRBG = 0.0;
   outC->ma_out.valid = kcg_true;
@@ -64,8 +64,6 @@ void SDM_InputWrapper_SDM_Input_Wrappers(
   /* SDM_Input_Wrappers::SDM_InputWrapper::dataFromTrackAtlas */ DataForSupervision_nextGen_t_TrackAtlasTypes *dataFromTrackAtlas,
   outC_SDM_InputWrapper_SDM_Input_Wrappers *outC)
 {
-  /* SDM_Input_Wrappers::SDM_InputWrapper */
-  static L_internal_Type_Obu_BasicTypes_Pkg tmp;
   static kcg_int i;
   
   outC->trainLocations.trainPositionIsValid =
@@ -79,16 +77,6 @@ void SDM_InputWrapper_SDM_Input_Wrappers(
   outC->trainLocations.d_maxSafeFrontEndPos = /* 11 */
     TransformL_intToL_real_SDM_Types_Pkg(
       (*TrainPosition).maxSafeFrontEndPostion);
-  switch ((*dataFromTrackAtlas).MA.Level) {
-    case MA_L1_TrackAtlasTypes :
-      tmp = (*trainProps).d_baliseAntenna_2_frontend.nominal;
-      break;
-    
-    default :
-      tmp = 0;
-  }
-  outC->trainLocations.d_cond_L1_antenna2frontend = /* 5 */
-    TransformL_intToL_real_SDM_Types_Pkg(tmp);
   outC->trainLocations.d_LRBG = /* 12 */
     TransformL_intToL_real_SDM_Types_Pkg(
       (*TrainPosition).LRBG.location.nominal);
@@ -122,10 +110,18 @@ void SDM_InputWrapper_SDM_Input_Wrappers(
       &(*dataFromTrackAtlas).GradientProfile[i],
       &outC->gp_out[i]);
   }
+  switch ((*dataFromTrackAtlas).MA.Level) {
+    case MA_L1_TrackAtlasTypes :
+      outC->offsetAntennaL1 = (*trainProps).d_baliseAntenna_2_frontend.nominal;
+      break;
+    
+    default :
+      outC->offsetAntennaL1 = 0;
+  }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_InputWrapper_SDM_Input_Wrappers.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -122,13 +122,14 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
   
   trainData_extras.isSB_CmdAvailable = kcg_true;
   trainData_extras.isTCOAvailable = kcg_true;
-  trainData_extras.T_traction_cut_off = 0.8;
+  trainData_extras.T_traction_cut_off = 800;
   /* 1 */
   SDM_InputWrapper_SDM_Input_Wrappers(
     TrainPosition,
     trainProps,
     dataFromTrackAtlas,
     &outC->Context_1);
+  trainData_extras.offsetAntennaL1 = outC->Context_1.offsetAntennaL1;
   kcg_copy_MRSP_internal_T_TargetManagement_types(
     &MRSP_internal,
     &outC->Context_1.mrsp_out);
@@ -197,7 +198,7 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
   /* 1 */
   SDM_Commands_SDM_Commands_Pkg(
     &targetCollection,
-    &Trainlocations_internal,
+    TrainPosition,
     &_L111,
     &_L112,
     &outC->target,
@@ -222,6 +223,6 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

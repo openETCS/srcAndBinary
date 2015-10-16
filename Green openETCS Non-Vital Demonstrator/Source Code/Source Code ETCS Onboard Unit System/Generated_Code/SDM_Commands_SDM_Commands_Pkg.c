@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -72,7 +72,7 @@ void SDM_Commands_reset_SDM_Commands_Pkg(
 /* SDM_Commands_Pkg::SDM_Commands */
 void SDM_Commands_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::SDM_Commands::allTargets */ TargetCollection_T_TargetManagement_types *allTargets,
-  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
   /* SDM_Commands_Pkg::SDM_Commands::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
   /* SDM_Commands_Pkg::SDM_Commands::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
   /* SDM_Commands_Pkg::SDM_Commands::mrdt */ Target_T_TargetManagement_types *mrdt,
@@ -102,13 +102,13 @@ void SDM_Commands_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::SDM_Commands::_L67 */
   static L_internal_Type_Obu_BasicTypes_Pkg _L67;
   /* SDM_Commands_Pkg::SDM_Commands::_L68 */
-  static V_internal_Type_Obu_BasicTypes_Pkg _L68;
+  static V_odometry_Type_Obu_BasicTypes_Pkg _L68;
   /* SDM_Commands_Pkg::SDM_Commands::_L69 */
-  static V_internal_Type_Obu_BasicTypes_Pkg _L69;
+  static V_odometry_Type_Obu_BasicTypes_Pkg _L69;
   /* SDM_Commands_Pkg::SDM_Commands::_L70 */
-  static V_internal_Type_Obu_BasicTypes_Pkg _L70;
+  static V_odometry_Type_Obu_BasicTypes_Pkg _L70;
   /* SDM_Commands_Pkg::SDM_Commands::_L71 */
-  static V_internal_Type_Obu_BasicTypes_Pkg _L71;
+  static V_odometry_Type_Obu_BasicTypes_Pkg _L71;
   
   outC->sdmCmd.valid = kcg_true;
   /* 1 */
@@ -119,6 +119,7 @@ void SDM_Commands_SDM_Commands_Pkg(
     mrdt,
     trainLocations,
     floiIsSB1,
+    TrainData_int,
     &outC->Context_1);
   outC->sdmCmd.revokedSupervisionStatus =
     outC->Context_1.revokedSupervisionStatus;
@@ -176,6 +177,7 @@ void SDM_Commands_SDM_Commands_Pkg(
     trainLocations,
     locations,
     speeds,
+    TrainData_int,
     &outC->eoaOverpassed,
     &outC->targetSpeedReached);
   /* 1 */
@@ -194,6 +196,6 @@ void SDM_Commands_SDM_Commands_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_Commands_SDM_Commands_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

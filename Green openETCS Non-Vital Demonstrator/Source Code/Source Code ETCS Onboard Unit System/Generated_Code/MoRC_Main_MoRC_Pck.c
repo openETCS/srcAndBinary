@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,6 +10,7 @@
 #ifndef KCG_USER_DEFINED_INIT
 void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
 {
+  static kcg_int i1;
   static kcg_int i;
   
   outC->ignoreMessagesFromRBC_except_m39_AckOfTerminationOfCommunicationSession =
@@ -23,14 +24,27 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
   outC->requestReleaseOfSafeRadioConnectionWithTrackside = kcg_true;
   outC->sessionSuccessfullyEstablished = kcg_true;
   outC->ready = kcg_true;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->msgBus_out[i1].Message.valid = kcg_true;
+    outC->msgBus_out[i1].Message.nid_message = 0;
+    outC->msgBus_out[i1].Message.l_message = 0;
+    outC->msgBus_out[i1].Message.t_train = 0;
+    outC->msgBus_out[i1].Message.nid_engine = 0;
+    outC->msgBus_out[i1].Message.field1 = 0;
+    outC->msgBus_out[i1].Message.field2 = 0;
+    outC->msgBus_out[i1].Message.field3 = 0;
+    for (i = 0; i < 50; i++) {
+      outC->msgBus_out[i1].OptionalPackets[i] = 0;
+    }
+  }
   outC->MessageToRBC.present = kcg_true;
   outC->MessageToRBC.header.present = kcg_true;
   outC->MessageToRBC.header.nid_message = 0;
-  outC->MessageToRBC.header.t_train = 0.0;
+  outC->MessageToRBC.header.t_train = 0;
   outC->MessageToRBC.header.nid_engine = 0;
   outC->MessageToRBC.header.xQ_MARQSTREASON =
     Q_MARQSTREASON_Start_selected_by_driver;
-  outC->MessageToRBC.header.xT_TRAIN = 0.0;
+  outC->MessageToRBC.header.xT_TRAIN = 0;
   outC->MessageToRBC.header.xNID_EM = 0;
   outC->MessageToRBC.header.xQ_EMERGENCYSTOP =
     Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
@@ -75,8 +89,8 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
   outC->MessageToRBC.packets.p3.valid = kcg_true;
   outC->MessageToRBC.packets.p3.number = 0;
   outC->MessageToRBC.packets.p3.aNID_RADIO[0].valid = kcg_true;
-  for (i = 0; i < 15; i++) {
-    outC->MessageToRBC.packets.p3.aNID_RADIO[0].telephoneNumber[i] = 0;
+  for (i1 = 0; i1 < 15; i1++) {
+    outC->MessageToRBC.packets.p3.aNID_RADIO[0].telephoneNumber[i1] = 0;
   }
   outC->MessageToRBC.packets.p4.valid = kcg_true;
   outC->MessageToRBC.packets.p4.m_error =
@@ -97,14 +111,14 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
   outC->MessageToRBC.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->MessageToRBC.packets.p11.n_axle = 0;
   outC->MessageToRBC.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 3; i++) {
-    outC->MessageToRBC.packets.p11.tractionIdentity[i].m_voltage =
+  for (i1 = 0; i1 < 4; i1++) {
+    outC->MessageToRBC.packets.p11.tractionIdentity[i1].m_voltage =
       M_VOLTAGE_Line_not_fitted_with_any_traction_system;
-    outC->MessageToRBC.packets.p11.tractionIdentity[i].nid_ctraction = 0;
+    outC->MessageToRBC.packets.p11.tractionIdentity[i1].nid_ctraction = 0;
   }
   outC->MessageToRBC.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 3; i++) {
-    outC->MessageToRBC.packets.p11.nid_ntc[i] = 0;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->MessageToRBC.packets.p11.nid_ntc[i1] = 0;
   }
   outC->sessionStatus = morc_st_inactive_Radio_Types_Pkg;
   outC->mobileSWStatus.valid = kcg_true;
@@ -121,7 +135,11 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
   outC->cmdsToMobile.action = mhwa_nop_MoRC_Pck;
   outC->cmdsToMobile.radioNetworkID = 0;
   outC->cmdsToMobile.nid_radio = 0;
-  /* 1 */ managementOfRadioCommunication_init_MoRC_Pck(&outC->Context_1);
+  /* 1 */ Send_M155_init_TM_radio_messages(&outC->_3_Context_1);
+  /* 1 */ Send_M156_init_TM_radio_messages(&outC->_2_Context_1);
+  /* 1 */ Send_M159_init_TM_radio_messages(&outC->_1_Context_1);
+  /* 1 */ Send_M154_init_TM_radio_messages(&outC->Context_1);
+  /* 2 */ managementOfRadioCommunication_init_MoRC_Pck(&outC->Context_2);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -129,7 +147,11 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void MoRC_Main_reset_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
 {
-  /* 1 */ managementOfRadioCommunication_reset_MoRC_Pck(&outC->Context_1);
+  /* 1 */ Send_M155_reset_TM_radio_messages(&outC->_3_Context_1);
+  /* 1 */ Send_M156_reset_TM_radio_messages(&outC->_2_Context_1);
+  /* 1 */ Send_M159_reset_TM_radio_messages(&outC->_1_Context_1);
+  /* 1 */ Send_M154_reset_TM_radio_messages(&outC->Context_1);
+  /* 2 */ managementOfRadioCommunication_reset_MoRC_Pck(&outC->Context_2);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
@@ -143,15 +165,27 @@ void MoRC_Main_MoRC_Pck(
   /* MoRC_Pck::MoRC_Main::statusOfMobile */ mobileHWStatus_Type_MoRC_Pck *statusOfMobile,
   /* MoRC_Pck::MoRC_Main::inMessage_new */ msgFromTrack_T_RCM_MsgTypes_Pkg *inMessage_new,
   /* MoRC_Pck::MoRC_Main::t_train */ T_TRAIN t_train,
+  /* MoRC_Pck::MoRC_Main::t_train_global */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
+  /* MoRC_Pck::MoRC_Main::msgBus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *msgBus_in,
   /* MoRC_Pck::MoRC_Main::connectionStatusTimerInterval */ time_Type_MoRC_Pck connectionStatusTimerInterval,
   /* MoRC_Pck::MoRC_Main::nid_engine */ NID_ENGINE nid_engine,
   /* MoRC_Pck::MoRC_Main::onboardPhoneNumbers */ PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg *onboardPhoneNumbers,
+  /* MoRC_Pck::MoRC_Main::onboardPhoneNumbers_b */ P003_TM_TrainToTrack *onboardPhoneNumbers_b,
+  /* MoRC_Pck::MoRC_Main::m_version */ M_VERSION m_version,
   outC_MoRC_Main_MoRC_Pck *outC)
 {
   /* MoRC_Pck::MoRC_Main */
-  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp2;
+  static struct_83518 mk_struct;
   /* MoRC_Pck::MoRC_Main */
-  static P45_RadioNetworkRegistration_T_Packet_Types_Pkg tmp1;
+  static struct_83518 _1_mk_struct;
+  /* MoRC_Pck::MoRC_Main */
+  static struct_83518 _2_mk_struct;
+  /* MoRC_Pck::MoRC_Main */
+  static struct_83518 _3_mk_struct;
+  /* MoRC_Pck::MoRC_Main */
+  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp5;
+  /* MoRC_Pck::MoRC_Main */
+  static P45_RadioNetworkRegistration_T_Packet_Types_Pkg tmp4;
   /* MoRC_Pck::MoRC_Main */
   static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp;
   /* MoRC_Pck::MoRC_Main::p42_establish_or_terminate */
@@ -163,24 +197,24 @@ void MoRC_Main_MoRC_Pck(
   /* MoRC_Pck::MoRC_Main::_L194 */
   static kcg_bool _L194;
   
-  /* 1 */
+  /* 2 */
   decP42_MoRC_Pck_Coder_Pkg(
     inMessage_new,
     (kcg_bool) (mode == M_MODE_Sleeping),
     &p42_establish_or_terminate);
   _L194 = (msrc_OBU_Common_Types_Pkg == p42_establish_or_terminate.source) |
     (p42_establish_or_terminate.source == msrc_Eurobalise_Common_Types_Pkg);
-  m38_initiationOfACommunicationSession = /* 1 */
+  m38_initiationOfACommunicationSession = /* 2 */
     decM38_MoRC_Pck_Coder_Pkg(inMessage_new);
-  /* 1 */
+  /* 2 */
   decM32_MoRC_Pck_Coder_Pkg(
     inMessage_new,
     (*obuEventsAndPhases).systemVersionFromTracksideSupported,
     &m32_RBC_or_RIU_System_Version);
-  /* 1 */ decP45_MoRC_Pck_Coder_Pkg(inMessage_new, &tmp1);
-  /* 1 */ if (_L194) {
+  /* 2 */ decP45_MoRC_Pck_Coder_Pkg(inMessage_new, &tmp4);
+  /* 3 */ if (_L194) {
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
-      &tmp2,
+      &tmp5,
       (p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *)
         &cInvalidOrder_MoRC_Pck_Coder_Pkg);
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
@@ -189,18 +223,18 @@ void MoRC_Main_MoRC_Pck(
   }
   else {
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
-      &tmp2,
+      &tmp5,
       &p42_establish_or_terminate);
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
       &tmp,
       (p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *)
         &cInvalidOrder_MoRC_Pck_Coder_Pkg);
   }
-  /* 1 */
+  /* 2 */
   managementOfRadioCommunication_MoRC_Pck(
     currentTime,
-    /* 1 */ decM39_MoRC_Pck_Coder_Pkg(inMessage_new),
-    &tmp2,
+    /* 2 */ decM39_MoRC_Pck_Coder_Pkg(inMessage_new),
+    &tmp5,
     (kcg_bool)
       (m38_initiationOfACommunicationSession |
         (p42_establish_or_terminate.establish &
@@ -224,7 +258,7 @@ void MoRC_Main_MoRC_Pck(
     level,
     &(*radioNetworkIDs).memorizedID,
     &(*radioNetworkIDs).ID_fromDriver,
-    &tmp1,
+    &tmp4,
     (*obuEventsAndPhases).afterDriverEntryOfANewRadioNetworkID,
     (*obuEventsAndPhases).triggerDecisionThatNoRadioNetworkIDAvailable,
     statusOfMobile,
@@ -247,90 +281,156 @@ void MoRC_Main_MoRC_Pck(
     m38_initiationOfACommunicationSession,
     &(*radioNetworkIDs).defaultID,
     connectionStatusTimerInterval,
-    &outC->Context_1);
-  outC->sendAPositionReport = outC->Context_1.sendAPositionReport;
+    &outC->Context_2);
+  outC->sendAPositionReport = outC->Context_2.sendAPositionReport;
   kcg_copy_mobileHWCmd_Type_MoRC_Pck(
     &outC->cmdsToMobile,
-    &outC->Context_1.mobileHWCmd);
+    &outC->Context_2.mobileHWCmd);
   outC->memorizeTheLastRadioNetworkID =
-    outC->Context_1.memorizeTheLastRadioNetworkID;
+    outC->Context_2.memorizeTheLastRadioNetworkID;
   kcg_copy_P45_RadioNetworkRegistration_T_Packet_Types_Pkg(
     &outC->currentRadioNetworkID,
-    &outC->Context_1.currentRadioNetworkID);
+    &outC->Context_2.currentRadioNetworkID);
   outC->orderTheRegistrationOfItsConnectedMobiles =
-    outC->Context_1.orderTheRegistrationOfItsConnectedMobiles;
+    outC->Context_2.orderTheRegistrationOfItsConnectedMobiles;
   outC->rejectOrderToContactRBC_or_RIU =
-    outC->Context_1.rejectOrderToContactRBC_or_RIU;
+    outC->Context_2.rejectOrderToContactRBC_or_RIU;
   outC->InformTheDriverThatNoConnectionWasSetup =
-    outC->Context_1.InformTheDriverThatNoConnectionWasSetup;
+    outC->Context_2.InformTheDriverThatNoConnectionWasSetup;
   outC->ignoreMessagesFromRBC_except_m39_AckOfTerminationOfCommunicationSession =
-    outC->Context_1.ignoreMessagesFromRBC_except_m39_AckOfTerminationOfCommunicationSession;
+    outC->Context_2.ignoreMessagesFromRBC_except_m39_AckOfTerminationOfCommunicationSession;
   kcg_copy_safeRadioConnectionStatusValid_Type_MoRC_Pck(
     &outC->safeRadioConnectionStatus_toDriver,
-    &outC->Context_1.safeRadioConnectionStatus_toDriver);
+    &outC->Context_2.safeRadioConnectionStatus_toDriver);
   outC->sessionSuccessfullyEstablished =
-    outC->Context_1.sessionSuccessfullyEstablished;
+    outC->Context_2.sessionSuccessfullyEstablished;
   kcg_copy_mobileSWStatus_Type_MoRC_Pck(
     &outC->mobileSWStatus,
-    &outC->Context_1.mobileSWStatus);
+    &outC->Context_2.mobileSWStatus);
   outC->requestTheSetupOfASafeRadioConnection =
-    outC->Context_1.requestTheSetupOfASafeRadioConnection;
+    outC->Context_2.requestTheSetupOfASafeRadioConnection;
   outC->requestReleaseOfSafeRadioConnectionWithTrackside =
-    outC->Context_1.requestReleaseOfSafeRadioConnectionWithTrackside;
-  outC->sessionStatus = outC->Context_1.sessionStatus;
-  outC->ready = outC->Context_1.ready;
-  /* ck_m155_initiationOfACommunicationSession */ if (outC->Context_1.sendTheMessageInitiationOfCommunicationSessionToTrackside) {
+    outC->Context_2.requestReleaseOfSafeRadioConnectionWithTrackside;
+  outC->sessionStatus = outC->Context_2.sessionStatus;
+  outC->ready = outC->Context_2.ready;
+  /* ck_m155_initiationOfACommunicationSession */ if (outC->Context_2.sendTheMessageInitiationOfCommunicationSessionToTrackside) {
     /* 6 */
     genMsgToRBC_MoRC_Pck_Coder_Pkg(
       kcg_true,
       co155_Initiation_of_a_communication_session_Id_Pkg,
       t_train,
-      0.0,
+      0,
       nid_engine,
       &outC->MessageToRBC);
+    _3_mk_struct.valid = kcg_true;
+    _3_mk_struct.nid_message =
+      co155_Initiation_of_a_communication_session_Id_Pkg;
+    _3_mk_struct.l_message = 0;
+    _3_mk_struct.t_train = t_train;
+    _3_mk_struct.nid_engine = nid_engine;
+    /* 1 */
+    Send_M155_TM_radio_messages(
+      t_train_global,
+      msgBus_in,
+      &_3_mk_struct,
+      m_version,
+      &outC->_3_Context_1);
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->msgBus_out,
+      &outC->_3_Context_1.MessageBus_out);
   }
-  else /* ck_anon_activ */ if (outC->Context_1.sendATerminationOfCommunicationMessage) {
+  else /* ck_anon_activ */ if (outC->Context_2.sendATerminationOfCommunicationMessage) {
     /* 8 */
     genMsgToRBC_MoRC_Pck_Coder_Pkg(
       kcg_true,
       co156_Termination_of_a_communication_session_Id_Pkg,
       t_train,
-      0.0,
+      0,
       nid_engine,
       &outC->MessageToRBC);
+    _2_mk_struct.valid = kcg_true;
+    _2_mk_struct.nid_message =
+      co156_Termination_of_a_communication_session_Id_Pkg;
+    _2_mk_struct.l_message = 0;
+    _2_mk_struct.t_train = t_train;
+    _2_mk_struct.nid_engine = nid_engine;
+    /* 1 */
+    Send_M156_TM_radio_messages(
+      t_train_global,
+      msgBus_in,
+      &_2_mk_struct,
+      m_version,
+      &outC->_2_Context_1);
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->msgBus_out,
+      &outC->_2_Context_1.MessageBus_out);
   }
-  else /* ck_anon_activ */ if (outC->Context_1.sendASessionEstablishedReportToTrackside) {
+  else /* ck_anon_activ */ if (outC->Context_2.sendASessionEstablishedReportToTrackside) {
     /* 11 */
     genMsgToRBC_MoRC_Pck_Coder_Pkg(
       kcg_true,
       co159_Session_established_Id_Pkg,
       t_train,
-      0.0,
+      0,
       nid_engine,
       &outC->MessageToRBC);
     kcg_copy_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg(
       &outC->MessageToRBC.packets.p3,
       onboardPhoneNumbers);
+    _1_mk_struct.valid = kcg_true;
+    _1_mk_struct.nid_message = co159_Session_established_Id_Pkg;
+    _1_mk_struct.l_message = 0;
+    _1_mk_struct.t_train = t_train;
+    _1_mk_struct.nid_engine = nid_engine;
+    /* 1 */
+    Send_M159_TM_radio_messages(
+      t_train_global,
+      msgBus_in,
+      &_1_mk_struct,
+      onboardPhoneNumbers_b,
+      m_version,
+      &outC->_1_Context_1);
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->msgBus_out,
+      &outC->_1_Context_1.MessageBus_out);
   }
-  else /* ck_anon_activ */ if (outC->Context_1.sendMessage_NoCompatibleVersionSupported) {
+  else /* ck_anon_activ */ if (outC->Context_2.sendMessage_NoCompatibleVersionSupported) {
     /* 13 */
     genMsgToRBC_MoRC_Pck_Coder_Pkg(
       kcg_true,
       co154_No_Compatible_Version_Support_Id_Pkg,
       t_train,
-      0.0,
+      0,
       nid_engine,
       &outC->MessageToRBC);
+    mk_struct.valid = kcg_true;
+    mk_struct.nid_message = co154_No_Compatible_Version_Support_Id_Pkg;
+    mk_struct.l_message = 0;
+    mk_struct.t_train = t_train;
+    mk_struct.nid_engine = nid_engine;
+    /* 1 */
+    Send_M154_TM_radio_messages(
+      t_train_global,
+      msgBus_in,
+      &mk_struct,
+      m_version,
+      &outC->Context_1);
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->msgBus_out,
+      &outC->Context_1.MessageBus_out);
   }
   else {
     kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
       &outC->MessageToRBC,
       (Radio_TrainTrack_Message_T_Radio_Types_Pkg *) &cNoMessageToRBC_MoRC_Pck);
+    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+      &outC->msgBus_out,
+      msgBus_in);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_Main_MoRC_Pck.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

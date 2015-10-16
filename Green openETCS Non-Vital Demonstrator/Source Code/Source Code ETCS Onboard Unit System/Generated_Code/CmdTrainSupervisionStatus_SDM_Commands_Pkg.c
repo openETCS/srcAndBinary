@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -51,8 +51,9 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::mrdt */ Target_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::floiIsSB1 */ kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::TrainData_int */ trainData_internal_t_SDM_Types_Pkg *TrainData_int,
   outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg *outC)
 {
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::CSM::_L102 */
@@ -242,7 +243,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
     
   }
   outC->ebCmd = /* 1 */
-    CommandTripBraking_SDM_Commands_Pkg(trainLocations, mrdt);
+    CommandTripBraking_SDM_Commands_Pkg(trainLocations, mrdt, TrainData_int);
   /* act_modeInterplay */ switch (modeInterplay_state_act) {
     case SSM_st_RSM_modeInterplay :
       if (modeInterplay_reset_act) {
@@ -1228,6 +1229,6 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CmdTrainSupervisionStatus_SDM_Commands_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

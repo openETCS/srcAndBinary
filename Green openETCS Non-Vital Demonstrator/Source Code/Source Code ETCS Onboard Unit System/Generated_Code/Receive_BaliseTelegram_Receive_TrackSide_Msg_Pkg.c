@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -96,16 +96,16 @@ void Receive_BaliseTelegram_init_Receive_TrackSide_Msg_Pkg(
   outC->outTrackMessage_for_check.radio_Msg.header.radioDevice = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.receivedSystemTime = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.nid_message = 0;
-  outC->outTrackMessage_for_check.radio_Msg.header.t_train = 0.0;
+  outC->outTrackMessage_for_check.radio_Msg.header.t_train = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.m_ack =
     M_ACK_No_acknowledgement_required;
   outC->outTrackMessage_for_check.radio_Msg.header.nid_lrbg = 0;
-  outC->outTrackMessage_for_check.radio_Msg.header.t_train_reference = 0.0;
+  outC->outTrackMessage_for_check.radio_Msg.header.t_train_reference = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.nid_em = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.q_scale =
     Q_SCALE_10_cm_scale;
   outC->outTrackMessage_for_check.radio_Msg.header.d_sr = 0;
-  outC->outTrackMessage_for_check.radio_Msg.header.t_sh_rqst = 0.0;
+  outC->outTrackMessage_for_check.radio_Msg.header.t_sh_rqst = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.d_ref = 0;
   outC->outTrackMessage_for_check.radio_Msg.header.q_dir = Q_DIR_Reverse;
   outC->outTrackMessage_for_check.radio_Msg.header.d_emergencystop = 0;
@@ -198,6 +198,6 @@ void Receive_BaliseTelegram_Receive_TrackSide_Msg_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Receive_BaliseTelegram_Receive_TrackSide_Msg_Pkg.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 

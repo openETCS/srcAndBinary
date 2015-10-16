@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 #ifndef _ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg_H_
 #define _ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg_H_
@@ -23,11 +23,11 @@ extern void ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pk
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::SafetyCriticalFailure */ kcg_bool SafetyCriticalFailure,
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::DoubleLinkingError */ kcg_bool DoubleLinkingError,
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::DoubleRepositioningError */ kcg_bool DoubleRepositioningError,
-  /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::errorVector */ array_76498 *errorVector);
+  /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::errorVector */ array_82697 *errorVector);
 
 #endif /* _ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.h
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:06
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-12T08:09:21
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,7 @@ void Read_P027V1_TM_baseline2(
 {
   static kcg_int i;
   /* TM_conversions_baseline2::C_P027V1_compr_onboard_body::_L6 */
-  static Array05_TM _L6_1;
+  static array_int_5 _L6_1;
   /* TM_conversions::CAST_Int_to_Q_DIR::IfBlock1::else::else */
   static kcg_bool else_clock_1_1_IfBlock1;
   /* TM_conversions::CAST_Int_to_Q_DIR::IfBlock1 */
@@ -45,7 +45,7 @@ void Read_P027V1_TM_baseline2(
     &_L30,
     received);
   _L166.valid = _L5[0] == 27;
-  kcg_copy_Array05_TM(&_L6_1, (Array05_TM *) &_L5[1]);
+  kcg_copy_array_int_5(&_L6_1, (array_int_5 *) &_L5[1]);
   for (i = 0; i < 33; i++) {
     /* 1 */
     Read_P027V1_sections_TM_baseline2(
@@ -118,6 +118,6 @@ void Read_P027V1_TM_baseline2(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P027V1_TM_baseline2.c
-** Generation date: 2015-10-12T08:09:21
+** Generation date: 2015-10-16T18:56:07
 *************************************************************$ */
 
