@@ -1,20 +1,21 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:06
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 #ifndef _manageDMI_Output_manage_DMI_Output_Pkg_H_
 #define _manageDMI_Output_manage_DMI_Output_Pkg_H_
 
 #include "kcg_types.h"
 #include "doEntryRequest_manage_DMI_Output_Pkg.h"
-#include "sendBrakesToDMI_manage_DMI_Output_Pkg.h"
 #include "sendTrainData_manage_DMI_Output_Pkg.h"
 #include "sendLevelListPkg_manage_DMI_Output_Pkg.h"
 #include "copyTrackDescription_manage_DMI_Output_Pkg.h"
 #include "manageTextMessages_manage_TextMessages_Pkg.h"
 #include "cyclicReportToDMI_manage_DMI_Output_Pkg.h"
 #include "collectDMIPackets_manage_DMI_Output_Pkg.h"
+#include "sendBrakesToDMI_manage_DMI_Output_Pkg.h"
 #include "sendVersion_manage_DMI_Output_Pkg.h"
+#include "doIdentifierRequest_manage_DMI_Output_Pkg.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -29,8 +30,10 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_collectDMIPackets_manage_DMI_Output_Pkg /* 1 */ _2_Context_1;
-  outC_sendVersion_manage_DMI_Output_Pkg /* 1 */ _1_Context_1;
+  outC_collectDMIPackets_manage_DMI_Output_Pkg /* 1 */ _3_Context_1;
+  outC_sendBrakesToDMI_manage_DMI_Output_Pkg /* 2 */ Context_2;
+  outC_sendVersion_manage_DMI_Output_Pkg /* 1 */ _2_Context_1;
+  outC_doIdentifierRequest_manage_DMI_Output_Pkg /* 1 */ _1_Context_1;
   outC_cyclicReportToDMI_manage_DMI_Output_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_manageDMI_Output_manage_DMI_Output_Pkg;
@@ -53,7 +56,6 @@ extern void manageDMI_Output_manage_DMI_Output_Pkg(
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_entryRequest */ DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_entryRequest,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_evc_coded_train_data */ DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_evc_coded_train_data,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_trackDescription */ DataForDMI_t_TrackAtlasTypes *dmi_trackDescription,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_identifierRequest */ DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_identifierRequest,
   /* manage_DMI_Output_Pkg::manageDMI_Output::evc_systemVersion */ M_VERSION evc_systemVersion,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_displayControl */ DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_displayControl,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_EVC_levelList */ DMI_LevelList_T_DMI_Types_Pkg *dmi_EVC_levelList,
@@ -82,6 +84,6 @@ extern void manageDMI_Output_init_manage_DMI_Output_Pkg(
 #endif /* _manageDMI_Output_manage_DMI_Output_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Output_manage_DMI_Output_Pkg.h
-** Generation date: 2015-10-16T18:56:06
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 

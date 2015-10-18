@@ -1,11 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 #ifndef _Build_MRSP_TA_MRSP_H_
 #define _Build_MRSP_TA_MRSP_H_
 
 #include "kcg_types.h"
+#include "Calculate_MRSP1_TA_MRSP.h"
 #include "Build_SSP_Matrix_TA_SpeedProfiles.h"
 #include "SP_ASP_TA_SpeedProfiles.h"
 #include "SP_LX_SR_TA_SpeedProfiles.h"
@@ -60,6 +61,6 @@ extern void Build_MRSP_init_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC);
 #endif /* _Build_MRSP_TA_MRSP_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MRSP_TA_MRSP.h
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 

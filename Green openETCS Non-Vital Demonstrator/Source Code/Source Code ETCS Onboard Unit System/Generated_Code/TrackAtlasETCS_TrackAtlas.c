@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -532,7 +532,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->NV_raw_out.n_iter_l_list[i].m_nvkrint_l = 0.0;
   }
   outC->NV_raw_out.m_nvktint = 0.0;
-  /* 1 */ Manage_MA_Request_init_MA_Request(&outC->_5_Context_1);
+  /* 1 */ Manage_MA_Request_init_TA_MA_Request(&outC->_5_Context_1);
   /* 1 */ Build_GradientProfile_init_TA_Gradient(&outC->_4_Context_1);
   /* 1 */ Build_MRSP_init_TA_MRSP(&outC->_3_Context_1);
   /* 1 */ Build_MA_init_TA_MA(&outC->_2_Context_1);
@@ -546,7 +546,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
 void TrackAtlasETCS_reset_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Manage_MA_Request_reset_MA_Request(&outC->_5_Context_1);
+  /* 1 */ Manage_MA_Request_reset_TA_MA_Request(&outC->_5_Context_1);
   /* 1 */ Build_GradientProfile_reset_TA_Gradient(&outC->_4_Context_1);
   /* 1 */ Build_MRSP_reset_TA_MRSP(&outC->_3_Context_1);
   /* 1 */ Build_MA_reset_TA_MA(&outC->_2_Context_1);
@@ -718,7 +718,27 @@ void TrackAtlasETCS_TrackAtlas(
     PermanentDataP003,
     &outC->NV_raw_out);
   /* 1 */
-  Manage_MA_Request_MA_Request(
+  TA_to_ML_TA_Export(
+    MessageIn,
+    kcg_false,
+    valid_GP,
+    valid_MA,
+    outC->SSP_available,
+    &outC->To_ModeAndLevel.train_packets,
+    &_L78,
+    &cond_iterw,
+    &_L84,
+    &_L83,
+    &_L82);
+  kcg_copy_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg(
+    &outC->To_ModeAndLevel.train_messages,
+    &_L78);
+  outC->To_ModeAndLevel.p12 = cond_iterw;
+  outC->To_ModeAndLevel.p15 = _L84;
+  outC->To_ModeAndLevel.p21 = _L83;
+  outC->To_ModeAndLevel.p27 = _L82;
+  /* 1 */
+  Manage_MA_Request_TA_MA_Request(
     TrainPositionIn,
     SystemTime,
     MessageIn,
@@ -739,30 +759,10 @@ void TrackAtlasETCS_TrackAtlas(
   kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
     &outC->bus_out,
     &outC->_5_Context_1.bus_out);
-  /* 1 */
-  TA_to_ML_TA_Export(
-    MessageIn,
-    kcg_false,
-    valid_GP,
-    valid_MA,
-    outC->SSP_available,
-    &outC->To_ModeAndLevel.train_packets,
-    &_L78,
-    &cond_iterw,
-    &_L84,
-    &_L83,
-    &_L82);
-  kcg_copy_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg(
-    &outC->To_ModeAndLevel.train_messages,
-    &_L78);
-  outC->To_ModeAndLevel.p12 = cond_iterw;
-  outC->To_ModeAndLevel.p15 = _L84;
-  outC->To_ModeAndLevel.p21 = _L83;
-  outC->To_ModeAndLevel.p27 = _L82;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

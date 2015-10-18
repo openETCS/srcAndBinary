@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 #ifndef _checkGeneralMessage_trainData_pkg_H_
 #define _checkGeneralMessage_trainData_pkg_H_
@@ -43,6 +43,6 @@ extern void checkGeneralMessage_init_trainData_pkg(
 #endif /* _checkGeneralMessage_trainData_pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** checkGeneralMessage_trainData_pkg.h
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -54,11 +54,12 @@ void Send_M147_TM_radio_messages(
   static M_TrainTrack_compressed_packets_T_TM_radio_messages tmp1;
   /* TM_radio_messages::Send_M147 */
   static M_TrainTrack_MessageHd_T_TM_radio_messages tmp;
-  /* TM_radio_messages::Send_M147::_L98 */
-  static kcg_bool _L98;
   /* TM_radio_messages::Send_M147::_L99 */
   static kcg_int _L99;
-  static kcg_int i;
+  /* TM_radio_messages::Send_M147::_L98 */
+  static kcg_bool _L98;
+  /* TM_radio_messages::Send_M147::_L106 */
+  static kcg_int _L106;
   
   /* 1 */ CheckSpace_TM_TrainTrack_Bus(MessageBus, &_L98, &_L99);
   /* 5 */ if ((*P000).valid) {
@@ -73,23 +74,24 @@ void Send_M147_TM_radio_messages(
       P001,
       (P001_TrainTrack_int_TM_TrainToTrack *) &tmp1[0]);
   }
-  for (i = 0; i < 33; i++) {
-    (&tmp1[17])[i] = 0;
+  for (_L106 = 0; _L106 < 33; _L106++) {
+    (&tmp1[17])[_L106] = 0;
   }
   /* 1 */ C_M147_to_header_TM_RBC_conversions(Message_147_in, &tmp);
   /* 1 */ Merge_PacketsToMessage_TM_TrainToTrack(&tmp1, &tmp, &tmp2);
-  /* 1 */ BufferMsg_TM_lib_internal(&tmp2, _L98, &outC->Context_1);
+  /* 1 */ BufferMsg_TM_lib_internal(&tmp2, (kcg_bool) !_L98, &outC->Context_1);
   /* 1 */
   MergeMessageToBus_TM_TrainTrack_Bus(
     &outC->Context_1.Out,
     _L99,
     MessageBus,
     t_train_global,
-    &outC->MessageBus_out);
+    &outC->MessageBus_out,
+    &_L106);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M147_TM_radio_messages.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

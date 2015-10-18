@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,13 +24,13 @@ void Manage_NID_EM_Store_TA_EmergencyStop_NID_EM_Store(
   static NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store acc;
   static kcg_int i;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::then::_L2 */
-  static array_83675 _L2_IfBlock1;
+  static array_84224 _L2_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::then::_L1 */
   static NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store _L1_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::else::then::_L2 */
-  static array_83675 _L24_IfBlock1;
+  static array_84224 _L24_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::else::then::_L1 */
   static NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store _L13_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1 */
@@ -63,7 +63,7 @@ void Manage_NID_EM_Store_TA_EmergencyStop_NID_EM_Store(
         &_L2_IfBlock1[i]);
     }
     (*outStore).nfree = _L1_IfBlock1.nfree;
-    kcg_copy_array_83675(&(*outStore).items, &_L2_IfBlock1);
+    kcg_copy_array_84224(&(*outStore).items, &_L2_IfBlock1);
     *handled = _L1_IfBlock1.handled;
   }
   else {
@@ -85,7 +85,7 @@ void Manage_NID_EM_Store_TA_EmergencyStop_NID_EM_Store(
           &_L24_IfBlock1[i]);
       }
       (*outStore).nfree = _L13_IfBlock1.nfree;
-      kcg_copy_array_83675(&(*outStore).items, &_L24_IfBlock1);
+      kcg_copy_array_84224(&(*outStore).items, &_L24_IfBlock1);
       *handled = _L13_IfBlock1.handled;
     }
     else {
@@ -97,6 +97,6 @@ void Manage_NID_EM_Store_TA_EmergencyStop_NID_EM_Store(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_NID_EM_Store_TA_EmergencyStop_NID_EM_Store.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

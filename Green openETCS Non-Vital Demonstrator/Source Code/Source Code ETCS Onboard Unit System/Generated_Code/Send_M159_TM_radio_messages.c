@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -53,34 +53,36 @@ void Send_M159_TM_radio_messages(
   static M_TrainTrack_compressed_packets_T_TM_radio_messages tmp1;
   /* TM_radio_messages::Send_M159 */
   static M_TrainTrack_MessageHd_T_TM_radio_messages tmp;
-  /* TM_radio_messages::Send_M159::_L16 */
-  static kcg_bool _L16;
   /* TM_radio_messages::Send_M159::_L17 */
   static kcg_int _L17;
-  static kcg_int i;
+  /* TM_radio_messages::Send_M159::_L16 */
+  static kcg_bool _L16;
+  /* TM_radio_messages::Send_M159::_L23 */
+  static kcg_int _L23;
   
   /* 1 */ CheckSpace_TM_TrainTrack_Bus(MessageBus, &_L16, &_L17);
   /* 1 */
   C_P003_train_compr_TM_TrainToTrack(
     P003,
     (P003_TrainTrack_int_TM_TrainToTrack *) &tmp1[0]);
-  for (i = 0; i < 42; i++) {
-    (&tmp1[8])[i] = 0;
+  for (_L23 = 0; _L23 < 42; _L23++) {
+    (&tmp1[8])[_L23] = 0;
   }
   /* 1 */ C_M159_to_header_TM_RBC_conversions(Message_159_in, &tmp);
   /* 1 */ Merge_PacketsToMessage_TM_TrainToTrack(&tmp1, &tmp, &tmp2);
-  /* 1 */ BufferMsg_TM_lib_internal(&tmp2, _L16, &outC->Context_1);
+  /* 1 */ BufferMsg_TM_lib_internal(&tmp2, (kcg_bool) !_L16, &outC->Context_1);
   /* 1 */
   MergeMessageToBus_TM_TrainTrack_Bus(
     &outC->Context_1.Out,
     _L17,
     MessageBus,
     t_train_global,
-    &outC->MessageBus_out);
+    &outC->MessageBus_out,
+    &_L23);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M159_TM_radio_messages.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

@@ -1,62 +1,62 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "MA_Request_Supervision_MA_Request.h"
+#include "MA_Request_Supervision_TA_MA_Request.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void MA_Request_Supervision_init_MA_Request(
-  outC_MA_Request_Supervision_MA_Request *outC)
+void MA_Request_Supervision_init_TA_MA_Request(
+  outC_MA_Request_Supervision_TA_MA_Request *outC)
 {
   outC->triggerMA = kcg_true;
   outC->exception = kcg_true;
   outC->pendingReq = kcg_true;
   outC->init = kcg_true;
   outC->SM1_state_nxt = SSM_st_init_SM1;
-  /* 1 */ op_RepeatReq_init_MA_Request(&outC->Context_1);
+  /* 1 */ op_RepeatReq_init_TA_MA_Request(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void MA_Request_Supervision_reset_MA_Request(
-  outC_MA_Request_Supervision_MA_Request *outC)
+void MA_Request_Supervision_reset_TA_MA_Request(
+  outC_MA_Request_Supervision_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ op_RepeatReq_reset_MA_Request(&outC->Context_1);
+  /* 1 */ op_RepeatReq_reset_TA_MA_Request(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
-/* MA_Request::MA_Request_Supervision */
-void MA_Request_Supervision_MA_Request(
-  /* MA_Request::MA_Request_Supervision::ma_RequestParams */ P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg *ma_RequestParams,
-  /* MA_Request::MA_Request_Supervision::ma_received */ kcg_bool ma_received,
-  /* MA_Request::MA_Request_Supervision::in_triggerMA */ kcg_bool in_triggerMA,
-  /* MA_Request::MA_Request_Supervision::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* MA_Request::MA_Request_Supervision::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  /* MA_Request::MA_Request_Supervision::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
-  /* MA_Request::MA_Request_Supervision::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* MA_Request::MA_Request_Supervision::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
-  /* MA_Request::MA_Request_Supervision::fromDriver */ Driver2MAR_T_MA_Request *fromDriver,
-  /* MA_Request::MA_Request_Supervision::trackDescrDeleted */ kcg_bool trackDescrDeleted,
-  outC_MA_Request_Supervision_MA_Request *outC)
+/* TA_MA_Request::MA_Request_Supervision */
+void MA_Request_Supervision_TA_MA_Request(
+  /* TA_MA_Request::MA_Request_Supervision::ma_RequestParams */ P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg *ma_RequestParams,
+  /* TA_MA_Request::MA_Request_Supervision::ma_received */ kcg_bool ma_received,
+  /* TA_MA_Request::MA_Request_Supervision::in_triggerMA */ kcg_bool in_triggerMA,
+  /* TA_MA_Request::MA_Request_Supervision::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* TA_MA_Request::MA_Request_Supervision::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* TA_MA_Request::MA_Request_Supervision::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
+  /* TA_MA_Request::MA_Request_Supervision::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TA_MA_Request::MA_Request_Supervision::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
+  /* TA_MA_Request::MA_Request_Supervision::fromDriver */ Driver2MAR_T_TA_MA_Request *fromDriver,
+  /* TA_MA_Request::MA_Request_Supervision::trackDescrDeleted */ kcg_bool trackDescrDeleted,
+  outC_MA_Request_Supervision_TA_MA_Request *outC)
 {
-  /* MA_Request::MA_Request_Supervision */
+  /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp3;
-  /* MA_Request::MA_Request_Supervision */
+  /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp2;
-  /* MA_Request::MA_Request_Supervision */
+  /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp1;
-  /* MA_Request::MA_Request_Supervision */
+  /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp;
-  /* MA_Request::MA_Request_Supervision::SM1 */
+  /* TA_MA_Request::MA_Request_Supervision::SM1 */
   static SSM_ST_SM1 SM1_state_sel;
-  /* MA_Request::MA_Request_Supervision::SM1 */
+  /* TA_MA_Request::MA_Request_Supervision::SM1 */
   static SSM_ST_SM1 SM1_state_act;
-  /* MA_Request::MA_Request_Supervision::_L42 */
+  /* TA_MA_Request::MA_Request_Supervision::_L42 */
   static kcg_bool _L42;
   
   _L42 = 255 == (*ma_RequestParams).t_mar;
@@ -108,14 +108,14 @@ void MA_Request_Supervision_MA_Request(
   }
   outC->init = kcg_false;
   /* 1 */
-  op_RepeatReq_MA_Request(
+  op_RepeatReq_TA_MA_Request(
     (*ma_RequestParams).t_cycrqst,
     in_triggerMA,
     systemTime,
     &outC->Context_1);
   /* ck__L37 */ if (tmp1) {
     tmp2 = /* op_3_8_2_3_b */
-      op_3_8_2_3_b_MA_Request((*ma_RequestParams).t_timeoutrqst, MAs);
+      op_3_8_2_3_b_TA_MA_Request((*ma_RequestParams).t_timeoutrqst, MAs);
   }
   else {
     tmp2 = kcg_false;
@@ -128,7 +128,7 @@ void MA_Request_Supervision_MA_Request(
   }
   /* ck__L42 */ if (_L42) {
     /* op_3_8_2_3_a */
-    op_3_8_2_3_a_MA_Request(
+    op_3_8_2_3_a_TA_MA_Request(
       (*ma_RequestParams).t_mar,
       trainPosition,
       preindicationLocation,
@@ -146,7 +146,7 @@ void MA_Request_Supervision_MA_Request(
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
-** MA_Request_Supervision_MA_Request.c
-** Generation date: 2015-10-16T18:56:07
+** MA_Request_Supervision_TA_MA_Request.c
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

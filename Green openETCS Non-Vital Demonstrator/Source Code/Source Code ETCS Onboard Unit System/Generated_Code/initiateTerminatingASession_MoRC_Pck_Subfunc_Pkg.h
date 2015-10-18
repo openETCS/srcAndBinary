@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:06
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 #ifndef _initiateTerminatingASession_MoRC_Pck_Subfunc_Pkg_H_
 #define _initiateTerminatingASession_MoRC_Pck_Subfunc_Pkg_H_
@@ -55,6 +55,6 @@ extern void initiateTerminatingASession_init_MoRC_Pck_Subfunc_Pkg(
 #endif /* _initiateTerminatingASession_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** initiateTerminatingASession_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-10-16T18:56:06
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 

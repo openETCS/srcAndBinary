@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -55,11 +55,12 @@ void Send_M132_TM_radio_messages(
   static M_TrainTrack_compressed_packets_T_TM_radio_messages tmp1;
   /* TM_radio_messages::Send_M132 */
   static M_TrainTrack_MessageHd_T_TM_radio_messages tmp;
-  /* TM_radio_messages::Send_M132::_L53 */
-  static kcg_bool _L53;
   /* TM_radio_messages::Send_M132::_L54 */
   static kcg_int _L54;
-  static kcg_int i;
+  /* TM_radio_messages::Send_M132::_L53 */
+  static kcg_bool _L53;
+  /* TM_radio_messages::Send_M132::_L60 */
+  static kcg_int _L60;
   
   /* 1 */ CheckSpace_TM_TrainTrack_Bus(MessageBus, &_L53, &_L54);
   /* 3 */ if ((*P000).valid) {
@@ -78,23 +79,24 @@ void Send_M132_TM_radio_messages(
   C_P009_train_compr_TM_TrainToTrack(
     P009,
     (P009_TrainTrack_int_TM_TrainToTrack *) &(&tmp1[0])[17]);
-  for (i = 0; i < 30; i++) {
-    (&tmp1[20])[i] = 0;
+  for (_L60 = 0; _L60 < 30; _L60++) {
+    (&tmp1[20])[_L60] = 0;
   }
   /* 2 */ C_M132_to_header_TM_RBC_conversions(Message_132_in, &tmp);
   /* 1 */ Merge_PacketsToMessage_TM_TrainToTrack(&tmp1, &tmp, &tmp2);
-  /* 1 */ BufferMsg_TM_lib_internal(&tmp2, _L53, &outC->Context_1);
+  /* 1 */ BufferMsg_TM_lib_internal(&tmp2, (kcg_bool) !_L53, &outC->Context_1);
   /* 1 */
   MergeMessageToBus_TM_TrainTrack_Bus(
     &outC->Context_1.Out,
     _L54,
     MessageBus,
     t_train_global,
-    &outC->MessageBus_out);
+    &outC->MessageBus_out,
+    &_L60);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M132_TM_radio_messages.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

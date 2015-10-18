@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -214,7 +214,7 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static array_82697 tmp4;
+  static array_83579 tmp4;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
   static PT0_PositionReport_T_Packet_TrainTypes_Pkg tmp3;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
@@ -357,6 +357,6 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

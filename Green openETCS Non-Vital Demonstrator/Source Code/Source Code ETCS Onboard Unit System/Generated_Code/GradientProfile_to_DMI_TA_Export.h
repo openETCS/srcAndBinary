@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 #ifndef _GradientProfile_to_DMI_TA_Export_H_
 #define _GradientProfile_to_DMI_TA_Export_H_
@@ -21,6 +21,6 @@ extern void GradientProfile_to_DMI_TA_Export(
 #endif /* _GradientProfile_to_DMI_TA_Export_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GradientProfile_to_DMI_TA_Export.h
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

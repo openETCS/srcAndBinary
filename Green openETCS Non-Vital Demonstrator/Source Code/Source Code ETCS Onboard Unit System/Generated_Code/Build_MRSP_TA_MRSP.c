@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -119,16 +119,19 @@ void Build_MRSP_TA_MRSP(
     &tmp,
     &outC->newMRSP,
     &_L2);
-  if (outC->init) {
-    outC->init = kcg_false;
+  /* ck_newMRSP */ if (outC->newMRSP) {
+    /* 1 */ Calculate_MRSP1_TA_MRSP(&_L2, &outC->MRSP);
+  }
+  else if (outC->init) {
     kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
       &outC->MRSP,
       (MRSP_Profile_t_TrackAtlasTypes *) &DEFAULT_MRSP_Profile_TA_MRSP);
   }
+  outC->init = kcg_false;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MRSP_TA_MRSP.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

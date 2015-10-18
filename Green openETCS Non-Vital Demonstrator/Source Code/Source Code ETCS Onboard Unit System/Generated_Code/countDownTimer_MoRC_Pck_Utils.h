@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:06
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 #ifndef _countDownTimer_MoRC_Pck_Utils_H_
 #define _countDownTimer_MoRC_Pck_Utils_H_
@@ -49,6 +49,6 @@ extern void countDownTimer_init_MoRC_Pck_Utils(
 #endif /* _countDownTimer_MoRC_Pck_Utils_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** countDownTimer_MoRC_Pck_Utils.h
-** Generation date: 2015-10-16T18:56:06
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 

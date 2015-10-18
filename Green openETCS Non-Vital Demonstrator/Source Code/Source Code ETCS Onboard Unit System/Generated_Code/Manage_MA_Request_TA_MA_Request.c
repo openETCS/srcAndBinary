@@ -1,14 +1,15 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "Manage_MA_Request_MA_Request.h"
+#include "Manage_MA_Request_TA_MA_Request.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void Manage_MA_Request_init_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
+void Manage_MA_Request_init_TA_MA_Request(
+  outC_Manage_MA_Request_TA_MA_Request *outC)
 {
   static kcg_int i1;
   static kcg_int i;
@@ -112,58 +113,58 @@ void Manage_MA_Request_init_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
   for (i1 = 0; i1 < 5; i1++) {
     outC->message_out.packets.p11.nid_ntc[i1] = 0;
   }
-  /* 1 */ Build_MA_request_init_MA_Request(&outC->_2_Context_1);
-  /* 1 */ MA_Request_Supervision_init_MA_Request(&outC->_1_Context_1);
-  /* 1 */ Receive_MA_RequestParameters_init_MA_Request(&outC->Context_1);
+  /* 1 */ Build_MA_request_init_TA_MA_Request(&outC->_2_Context_1);
+  /* 1 */ MA_Request_Supervision_init_TA_MA_Request(&outC->_1_Context_1);
+  /* 1 */ Receive_MA_RequestParameters_init_TA_MA_Request(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void Manage_MA_Request_reset_MA_Request(outC_Manage_MA_Request_MA_Request *outC)
+void Manage_MA_Request_reset_TA_MA_Request(
+  outC_Manage_MA_Request_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Build_MA_request_reset_MA_Request(&outC->_2_Context_1);
-  /* 1 */ MA_Request_Supervision_reset_MA_Request(&outC->_1_Context_1);
-  /* 1 */ Receive_MA_RequestParameters_reset_MA_Request(&outC->Context_1);
+  /* 1 */ Build_MA_request_reset_TA_MA_Request(&outC->_2_Context_1);
+  /* 1 */ MA_Request_Supervision_reset_TA_MA_Request(&outC->_1_Context_1);
+  /* 1 */ Receive_MA_RequestParameters_reset_TA_MA_Request(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
-/* MA_Request::Manage_MA_Request */
-void Manage_MA_Request_MA_Request(
-  /* MA_Request::Manage_MA_Request::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* MA_Request::Manage_MA_Request::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  /* MA_Request::Manage_MA_Request::message_in */ ReceivedMessage_T_Common_Types_Pkg *message_in,
-  /* MA_Request::Manage_MA_Request::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
-  /* MA_Request::Manage_MA_Request::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* MA_Request::Manage_MA_Request::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
-  /* MA_Request::Manage_MA_Request::fromDriver */ Driver2MAR_T_MA_Request *fromDriver,
-  /* MA_Request::Manage_MA_Request::trackDescrDeleted */ kcg_bool trackDescrDeleted,
-  /* MA_Request::Manage_MA_Request::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
-  /* MA_Request::Manage_MA_Request::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
-  /* MA_Request::Manage_MA_Request::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
-  /* MA_Request::Manage_MA_Request::t_train */ T_TRAIN t_train,
-  /* MA_Request::Manage_MA_Request::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
-  outC_Manage_MA_Request_MA_Request *outC)
+/* TA_MA_Request::Manage_MA_Request */
+void Manage_MA_Request_TA_MA_Request(
+  /* TA_MA_Request::Manage_MA_Request::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* TA_MA_Request::Manage_MA_Request::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* TA_MA_Request::Manage_MA_Request::message_in */ ReceivedMessage_T_Common_Types_Pkg *message_in,
+  /* TA_MA_Request::Manage_MA_Request::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
+  /* TA_MA_Request::Manage_MA_Request::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TA_MA_Request::Manage_MA_Request::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
+  /* TA_MA_Request::Manage_MA_Request::fromDriver */ Driver2MAR_T_TA_MA_Request *fromDriver,
+  /* TA_MA_Request::Manage_MA_Request::trackDescrDeleted */ kcg_bool trackDescrDeleted,
+  /* TA_MA_Request::Manage_MA_Request::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
+  /* TA_MA_Request::Manage_MA_Request::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
+  /* TA_MA_Request::Manage_MA_Request::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
+  /* TA_MA_Request::Manage_MA_Request::t_train */ T_TRAIN t_train,
+  /* TA_MA_Request::Manage_MA_Request::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
+  outC_Manage_MA_Request_TA_MA_Request *outC)
 {
-  /* MA_Request::Manage_MA_Request */
-  static kcg_bool tmp1;
-  /* MA_Request::Manage_MA_Request */
-  static Radio_TrainTrack_Message_T_TM_transitional tmp;
+  /* TA_MA_Request::Manage_MA_Request */
+  static kcg_bool tmp;
   
-  /* 1 */ Receive_MA_RequestParameters_MA_Request(message_in, &outC->Context_1);
+  /* 1 */
+  Receive_MA_RequestParameters_TA_MA_Request(message_in, &outC->Context_1);
   /* last_init_ck_triggerMA */ if (outC->init) {
     outC->init = kcg_false;
-    tmp1 = kcg_false;
+    tmp = kcg_false;
   }
   else {
-    tmp1 = outC->triggerMA;
+    tmp = outC->triggerMA;
   }
   /* 1 */
-  MA_Request_Supervision_MA_Request(
+  MA_Request_Supervision_TA_MA_Request(
     &outC->Context_1.MA_RequestParams,
     outC->Context_1.ma_received,
-    tmp1,
+    tmp,
     trainPosition,
     systemTime,
     preindicationLocation,
@@ -176,7 +177,7 @@ void Manage_MA_Request_MA_Request(
   outC->exception = outC->_1_Context_1.exception;
   /* ck_triggerMA */ if (outC->triggerMA) {
     /* 1 */
-    Build_MA_request_MA_Request(
+    Build_MA_request_TA_MA_Request(
       trackDescrDeleted,
       trainProps,
       packet0,
@@ -188,7 +189,7 @@ void Manage_MA_Request_MA_Request(
       &outC->bus_out,
       &outC->_2_Context_1.bus_out);
     kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
-      &tmp,
+      &outC->message_out,
       &outC->_2_Context_1.message132);
   }
   else {
@@ -197,14 +198,13 @@ void Manage_MA_Request_MA_Request(
       (M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *)
         &DEFAULT_TrainTrackBus_m_TM_lib_internal);
     kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
-      &tmp,
-      (Radio_TrainTrack_Message_T_TM_transitional *) &cPacket132_MA_Request);
+      &outC->message_out,
+      (Radio_TrainTrack_Message_T_TM_transitional *) &cPacket132_TA_MA_Request);
   }
-  /* 1 */ Send_MA_MA_Request(&tmp, &outC->message_out);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Manage_MA_Request_MA_Request.c
-** Generation date: 2015-10-16T18:56:07
+** Manage_MA_Request_TA_MA_Request.c
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

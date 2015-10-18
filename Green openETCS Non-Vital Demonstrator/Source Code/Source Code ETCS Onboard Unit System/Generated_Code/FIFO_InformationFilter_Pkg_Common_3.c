@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -303,7 +303,7 @@ void FIFO_InformationFilter_Pkg_Common_3(
         &outC->_L4_IfBlock1[entry],
         inData);
     }
-    kcg_copy_array_83505(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array_84066(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (entry + 1) % 3;
     tmp1 = 1;
     outC->init1 = kcg_false;
@@ -366,6 +366,6 @@ void FIFO_InformationFilter_Pkg_Common_3(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FIFO_InformationFilter_Pkg_Common_3.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

@@ -1,14 +1,14 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "op_RepeatReq_MA_Request.h"
+#include "op_RepeatReq_TA_MA_Request.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void op_RepeatReq_init_MA_Request(outC_op_RepeatReq_MA_Request *outC)
+void op_RepeatReq_init_TA_MA_Request(outC_op_RepeatReq_TA_MA_Request *outC)
 {
   outC->trigger = kcg_true;
   outC->exception = kcg_true;
@@ -19,20 +19,20 @@ void op_RepeatReq_init_MA_Request(outC_op_RepeatReq_MA_Request *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void op_RepeatReq_reset_MA_Request(outC_op_RepeatReq_MA_Request *outC)
+void op_RepeatReq_reset_TA_MA_Request(outC_op_RepeatReq_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
-/* MA_Request::op_RepeatReq */
-void op_RepeatReq_MA_Request(
-  /* MA_Request::op_RepeatReq::tcycreq */ T_CYCLOC tcycreq,
-  /* MA_Request::op_RepeatReq::setRepeater */ kcg_bool setRepeater,
-  /* MA_Request::op_RepeatReq::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  outC_op_RepeatReq_MA_Request *outC)
+/* TA_MA_Request::op_RepeatReq */
+void op_RepeatReq_TA_MA_Request(
+  /* TA_MA_Request::op_RepeatReq::tcycreq */ T_CYCLOC tcycreq,
+  /* TA_MA_Request::op_RepeatReq::setRepeater */ kcg_bool setRepeater,
+  /* TA_MA_Request::op_RepeatReq::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  outC_op_RepeatReq_TA_MA_Request *outC)
 {
-  /* MA_Request::op_RepeatReq::_L13 */
+  /* TA_MA_Request::op_RepeatReq::_L13 */
   static kcg_int _L13;
   
   /* 1 */ if (setRepeater) {
@@ -53,7 +53,7 @@ void op_RepeatReq_MA_Request(
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
-** op_RepeatReq_MA_Request.c
-** Generation date: 2015-10-16T18:56:07
+** op_RepeatReq_TA_MA_Request.c
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

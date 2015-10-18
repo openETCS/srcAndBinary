@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -202,17 +202,6 @@ void trainData_trainData_pkg(
   else {
     kcg_copy_trainDataStatus_T_trainData_Types_pkg(&_L18, &outC->updatedStatus);
   }
-  /* ck__L21 */ if (_L18.validatedbyRBC) {
-    /* 1 */
-    checkAcknowledgmentGeneral_trainData_pkg(
-      trackMessages,
-      &ackRequested,
-      &else_clock_IfBlock1);
-  }
-  else {
-    ackRequested = kcg_false;
-    else_clock_IfBlock1 = kcg_false;
-  }
   /* ck__L24 */ if (_L18.waitingForRBCResponse) {
     /* 1 */
     checkRadioMessages_trainData_pkg(
@@ -224,6 +213,17 @@ void trainData_trainData_pkg(
   else {
     IfBlock1_clock = kcg_false;
     _1_else_clock_IfBlock1 = kcg_false;
+  }
+  /* ck__L21 */ if (_L18.validatedbyRBC) {
+    /* 1 */
+    checkAcknowledgmentGeneral_trainData_pkg(
+      trackMessages,
+      &ackRequested,
+      &else_clock_IfBlock1);
+  }
+  else {
+    ackRequested = kcg_false;
+    else_clock_IfBlock1 = kcg_false;
   }
   ackReceived = IfBlock1_clock | ackRequested;
   ackRequested = _1_else_clock_IfBlock1 | else_clock_IfBlock1;
@@ -321,6 +321,6 @@ void trainData_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainData_trainData_pkg.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

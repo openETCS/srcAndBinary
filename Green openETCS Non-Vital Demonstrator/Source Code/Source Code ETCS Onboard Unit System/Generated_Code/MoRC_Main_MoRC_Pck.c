@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -175,13 +175,13 @@ void MoRC_Main_MoRC_Pck(
   outC_MoRC_Main_MoRC_Pck *outC)
 {
   /* MoRC_Pck::MoRC_Main */
-  static struct_83518 mk_struct;
+  static struct_84087 mk_struct;
   /* MoRC_Pck::MoRC_Main */
-  static struct_83518 _1_mk_struct;
+  static struct_84087 _1_mk_struct;
   /* MoRC_Pck::MoRC_Main */
-  static struct_83518 _2_mk_struct;
+  static struct_84087 _2_mk_struct;
   /* MoRC_Pck::MoRC_Main */
-  static struct_83518 _3_mk_struct;
+  static struct_84087 _3_mk_struct;
   /* MoRC_Pck::MoRC_Main */
   static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp5;
   /* MoRC_Pck::MoRC_Main */
@@ -431,6 +431,6 @@ void MoRC_Main_MoRC_Pck(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_Main_MoRC_Pck.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

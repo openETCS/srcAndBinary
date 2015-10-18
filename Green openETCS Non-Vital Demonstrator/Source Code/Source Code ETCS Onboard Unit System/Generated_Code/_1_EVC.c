@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:08
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,7 @@ void _1_EVC_init(void)
   Ctxt__1_EVC.MoRC_newSessionEstablished = kcg_true;
   Ctxt__1_EVC._L477 = kcg_true;
   Ctxt__1_EVC.EVC_ready = kcg_true;
-  Ctxt__1_EVC.init16 = kcg_true;
+  Ctxt__1_EVC.init17 = kcg_true;
   Ctxt__1_EVC.init = kcg_true;
   Ctxt__1_EVC.probe_Msg_2o = 0;
   Ctxt__1_EVC.probe_Msg_3o = 0;
@@ -592,6 +592,7 @@ void _1_EVC_init(void)
   Ctxt__1_EVC.PROC_radioCmdFromProcedures.sendingRBC.rbc_id = 0;
   Ctxt__1_EVC.PROC_radioCmdFromProcedures.sendingRBC.device_id = 0;
   Ctxt__1_EVC.MoRC_sessionStatus = morc_st_inactive_Radio_Types_Pkg;
+  /* 1 */ nextGenRadioOutput_init_radioOutput_Pkg(&Ctxt__1_EVC._16_Context_1);
   /* 1 */ distanceLastMSG_init_xdebugSupport_Pkg(&Ctxt__1_EVC._15_Context_1);
   /* 1 */ distanceLastBG_init_xdebugSupport_Pkg(&Ctxt__1_EVC._14_Context_1);
   /* 1 */ setProbesBalises_init_xdebugSupport_Pkg(&Ctxt__1_EVC._13_Context_1);
@@ -627,8 +628,9 @@ void _1_EVC_init(void)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void _1_EVC_reset(void)
 {
-  Ctxt__1_EVC.init16 = kcg_true;
+  Ctxt__1_EVC.init17 = kcg_true;
   Ctxt__1_EVC.init = kcg_true;
+  /* 1 */ nextGenRadioOutput_reset_radioOutput_Pkg(&Ctxt__1_EVC._16_Context_1);
   /* 1 */ distanceLastMSG_reset_xdebugSupport_Pkg(&Ctxt__1_EVC._15_Context_1);
   /* 1 */ distanceLastBG_reset_xdebugSupport_Pkg(&Ctxt__1_EVC._14_Context_1);
   /* 1 */ setProbesBalises_reset_xdebugSupport_Pkg(&Ctxt__1_EVC._13_Context_1);
@@ -718,12 +720,12 @@ void _1_EVC(void)
   static DMI_LevelList_T_DMI_Types_Pkg tmp;
   /* EVC::EVC_PersistentData */
   static ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg last_EVC_PersistentData;
-  /* EVC::MoRC_cmdsToMobile */
-  static mobileHWCmd_Type_MoRC_Pck MoRC_cmdsToMobile;
   /* EVC::DMI_trainRunningNumber */
   static DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg DMI_trainRunningNumber;
   /* EVC::EVC_cabIsOpen */
   static kcg_bool EVC_cabIsOpen;
+  /* EVC::TM_to_MsgOut */
+  static M_TrainTrackMessageBus_t_TM_TrainTrack_Bus TM_to_MsgOut;
   /* EVC::_L523 */
   static DMI_EVC_status_T_DMI_Types_Pkg _L523;
   /* EVC::_L938 */
@@ -740,14 +742,12 @@ void _1_EVC(void)
   static trainDataStatus_T_trainData_Types_pkg _L1230;
   /* EVC::_L1321 */
   static PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg _L1321;
-  /* EVC::_L1541 */
-  static M_TrainTrackMessageBus_t_TM_TrainTrack_Bus _L1541;
   
   kcg_copy_odometry_T_Obu_BasicTypes_Pkg(
     &Ctxt__1_EVC.probe_Odometry,
     &API_Odometry);
   resetOut = EVC_reset;
-  /* last_init_ck_EVC_PersistentData */ if (Ctxt__1_EVC.init16) {
+  /* last_init_ck_EVC_PersistentData */ if (Ctxt__1_EVC.init17) {
     kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
       &_L993,
       (T_Mode_Level_Level_And_Mode_Types_Pkg *) &cMLInitialModesAndLevel);
@@ -791,7 +791,7 @@ void _1_EVC(void)
     tmp16 = kcg_false;
     tmp13 = cNoRadioCmd.valid;
     tmp12 = kcg_false;
-    Ctxt__1_EVC.init16 = kcg_false;
+    Ctxt__1_EVC.init17 = kcg_false;
     kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
       &last_EVC_PersistentData,
       (ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *)
@@ -1082,9 +1082,6 @@ void _1_EVC(void)
     (P003_TM_TrainToTrack *) &cMoRC_own_P3ng_EVC_PermanentData_Pkg,
     cOwnVersion,
     &Ctxt__1_EVC._7_Context_1);
-  kcg_copy_mobileHWCmd_Type_MoRC_Pck(
-    &MoRC_cmdsToMobile,
-    &Ctxt__1_EVC._7_Context_1.cmdsToMobile);
   Ctxt__1_EVC.MoRC_newSessionEstablished =
     Ctxt__1_EVC._7_Context_1.sessionSuccessfullyEstablished;
   Ctxt__1_EVC.MoRC_sessionStatus = Ctxt__1_EVC._7_Context_1.sessionStatus;
@@ -1165,8 +1162,6 @@ void _1_EVC(void)
     (DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
       &cEmptyDMIEVCcodedTrainData,
     &Ctxt__1_EVC._2_Context_1.to_DMI,
-    (DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
-      &cDMIIdentifierRequest,
     cOwnVersion,
     (DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg *)
       &cEmptyDMIDisplayControl,
@@ -1236,7 +1231,7 @@ void _1_EVC(void)
     &Ctxt__1_EVC.rep_P1,
     &Ctxt__1_EVC._10_Context_1.packet1);
   kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-    &_L1541,
+    &TM_to_MsgOut,
     &Ctxt__1_EVC._10_Context_1.posReport_ng);
   /* 1 */
   checkGeneralMessage_trainData_pkg(
@@ -1247,7 +1242,7 @@ void _1_EVC(void)
     &Ctxt__1_EVC._10_Context_1.posRep,
     &Ctxt__1_EVC._7_Context_1.MessageToRBC,
     &Ctxt__1_EVC._3_Context_1.trainDataToRBC,
-    &MoRC_cmdsToMobile,
+    &Ctxt__1_EVC._7_Context_1.cmdsToMobile,
     &Ctxt__1_EVC._2_Context_1.MA_request_out,
     &Ctxt__1_EVC.ML_ModeAndLevel,
     Ctxt__1_EVC._11_Context_1.genMessageReceived,
@@ -1301,15 +1296,23 @@ void _1_EVC(void)
   Ctxt__1_EVC.probe_LRBG = Ctxt__1_EVC._15_Context_1.lastLRBG;
   /* 1 */
   nextGenRadioOutput_radioOutput_Pkg(
-    &_L1541,
-    &MoRC_cmdsToMobile,
+    &TM_to_MsgOut,
+    &Ctxt__1_EVC._7_Context_1.cmdsToMobile,
+    Ctxt__1_EVC._11_Context_1.genMessageReceived,
+    &Ctxt__1_EVC.ML_ModeAndLevel,
+    &API_mobileHWStatus,
     cOwnVersion,
     API_SystemTime,
-    &toRTM,
-    &API_RTM_management);
+    &Ctxt__1_EVC._16_Context_1);
+  kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
+    &API_toRBC,
+    &Ctxt__1_EVC._16_Context_1.toRBC);
+  kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg(
+    &API_RTM_management,
+    &Ctxt__1_EVC._16_Context_1.API_RTM_management);
   /* 1 */
   probe_RadioOutput_RadioSupport_Pkg(
-    &toRTM,
+    &TM_to_MsgOut,
     &Ctxt__1_EVC.probe_Msg_1,
     &Ctxt__1_EVC.probe_Msg_2,
     &Ctxt__1_EVC.probe_Msg_3,
@@ -1326,6 +1329,6 @@ void _1_EVC(void)
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** _1_EVC.c
-** Generation date: 2015-10-16T18:56:08
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

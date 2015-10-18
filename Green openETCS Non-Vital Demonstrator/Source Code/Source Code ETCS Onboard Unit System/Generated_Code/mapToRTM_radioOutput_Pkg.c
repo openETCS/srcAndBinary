@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,16 +10,15 @@
 /* radioOutput_Pkg::mapToRTM */
 void mapToRTM_radioOutput_Pkg(
   /* radioOutput_Pkg::mapToRTM::cmdsToMobile */ mobileHWCmd_Type_MoRC_Pck *cmdsToMobile,
-  /* radioOutput_Pkg::mapToRTM::toRTM */ RadioManagement_T_API_RadioCommunication_Pkg *toRTM1)
+  /* radioOutput_Pkg::mapToRTM::toRTM */ RadioManagement_T_API_RadioCommunication_Pkg *toRTM)
 {
-  (*toRTM1).valid = (*cmdsToMobile).valid;
-  (*toRTM1).networkID = (*cmdsToMobile).radioNetworkID;
-  (*toRTM1).cmd = /* 1 */
-    mapActionToCmd_radioOutput_Pkg((*cmdsToMobile).action);
+  (*toRTM).valid = (*cmdsToMobile).valid;
+  (*toRTM).networkID = (*cmdsToMobile).radioNetworkID;
+  (*toRTM).cmd = /* 1 */ mapActionToCmd_radioOutput_Pkg((*cmdsToMobile).action);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapToRTM_radioOutput_Pkg.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

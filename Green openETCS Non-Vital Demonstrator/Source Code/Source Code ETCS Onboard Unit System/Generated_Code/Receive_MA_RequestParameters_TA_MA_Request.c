@@ -1,15 +1,15 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "Receive_MA_RequestParameters_MA_Request.h"
+#include "Receive_MA_RequestParameters_TA_MA_Request.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void Receive_MA_RequestParameters_init_MA_Request(
-  outC_Receive_MA_RequestParameters_MA_Request *outC)
+void Receive_MA_RequestParameters_init_TA_MA_Request(
+  outC_Receive_MA_RequestParameters_TA_MA_Request *outC)
 {
   outC->IsNew = kcg_true;
   outC->ma_received = kcg_true;
@@ -24,21 +24,21 @@ void Receive_MA_RequestParameters_init_MA_Request(
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void Receive_MA_RequestParameters_reset_MA_Request(
-  outC_Receive_MA_RequestParameters_MA_Request *outC)
+void Receive_MA_RequestParameters_reset_TA_MA_Request(
+  outC_Receive_MA_RequestParameters_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
-/* MA_Request::Receive_MA_RequestParameters */
-void Receive_MA_RequestParameters_MA_Request(
-  /* MA_Request::Receive_MA_RequestParameters::message_in */ ReceivedMessage_T_Common_Types_Pkg *message_in,
-  outC_Receive_MA_RequestParameters_MA_Request *outC)
+/* TA_MA_Request::Receive_MA_RequestParameters */
+void Receive_MA_RequestParameters_TA_MA_Request(
+  /* TA_MA_Request::Receive_MA_RequestParameters::message_in */ ReceivedMessage_T_Common_Types_Pkg *message_in,
+  outC_Receive_MA_RequestParameters_TA_MA_Request *outC)
 {
-  /* MA_Request::Receive_MA_RequestParameters::_L8 */
+  /* TA_MA_Request::Receive_MA_RequestParameters::_L8 */
   static P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg _L8;
-  /* MA_Request::Receive_MA_RequestParameters::_L11 */
+  /* TA_MA_Request::Receive_MA_RequestParameters::_L11 */
   static P015_OBU_T_TM _L11;
   
   /* 1 */ Read_P057_TM(&(*message_in).packets, &outC->IsNew, &_L8);
@@ -52,13 +52,13 @@ void Receive_MA_RequestParameters_MA_Request(
     kcg_copy_P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg(
       &outC->MA_RequestParams,
       (P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg *)
-        &cMA_RequestParam_MA_Request);
+        &cMA_RequestParam_TA_MA_Request);
   }
   outC->init = kcg_false;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Receive_MA_RequestParameters_MA_Request.c
-** Generation date: 2015-10-16T18:56:07
+** Receive_MA_RequestParameters_TA_MA_Request.c
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

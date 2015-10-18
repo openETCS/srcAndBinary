@@ -1,12 +1,11 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 #ifndef __1_EVC_H_
 #define __1_EVC_H_
 
 #include "kcg_types.h"
-#include "nextGenRadioOutput_radioOutput_Pkg.h"
 #include "maintainTrainProperties_EVC_Support_Pkg.h"
 #include "patchEmergencyBrakeMsg_EVC_Support_Pkg.h"
 #include "probe_RadioOutput_RadioSupport_Pkg.h"
@@ -16,6 +15,7 @@
 #include "MoRC_Main_MoRC_Pck.h"
 #include "Master_Procedure_ManageProcedure_Pkg.h"
 #include "collectRadioMessages_radioOutput_Pkg.h"
+#include "nextGenRadioOutput_radioOutput_Pkg.h"
 #include "SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.h"
 #include "manageDMI_Input_manage_DMI_Input_Pkg.h"
 #include "Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h"
@@ -52,7 +52,7 @@ typedef struct {
   NID_MESSAGE /* EVC::probe_Msg_3o */ probe_Msg_3o;
   NID_MESSAGE /* EVC::probe_Msg_2o */ probe_Msg_2o;
   /* -------------------- initialization variables  ------------------ */
-  kcg_bool init16;
+  kcg_bool init17;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   sessionStatus_Type_Radio_Types_Pkg /* EVC::MoRC_sessionStatus */ MoRC_sessionStatus;
@@ -78,6 +78,7 @@ typedef struct {
   kcg_bool /* EVC::_L477 */ _L477;
   kcg_bool /* EVC::EVC_ready */ EVC_ready;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_nextGenRadioOutput_radioOutput_Pkg /* 1 */ _16_Context_1;
   outC_distanceLastMSG_xdebugSupport_Pkg /* 1 */ _15_Context_1;
   outC_distanceLastBG_xdebugSupport_Pkg /* 1 */ _14_Context_1;
   outC_setProbesBalises_xdebugSupport_Pkg /* 1 */ _13_Context_1;
@@ -152,14 +153,14 @@ extern TIU_Output_msg_API_TIU_Pkg API_toTIU;
 extern EVC_to_DMI_Message_T_API_DMI_Pkg API_toDMI;
 /* EVC::API_RTM_management */
 extern RadioManagement_T_API_RadioCommunication_Pkg API_RTM_management;
-/* EVC::toRTM */
-extern M_TrainTrackMessageBus_t_TM_TrainTrack_Bus toRTM;
+/* EVC::API_toRBC */
+extern M_TrainTrack_Message_T_TM_radio_messages API_toRBC;
 /* EVC::resetOut */
 extern kcg_bool resetOut;
 
 #endif /* __1_EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** _1_EVC.h
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

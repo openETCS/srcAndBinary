@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -50,32 +50,34 @@ void Send_M156_TM_radio_messages(
   static M_TrainTrack_Message_T_TM_radio_messages tmp1;
   /* TM_radio_messages::Send_M156 */
   static M_TrainTrack_MessageHd_T_TM_radio_messages tmp;
-  /* TM_radio_messages::Send_M156::_L8 */
-  static kcg_bool _L8;
-  /* TM_radio_messages::Send_M156::_L9 */
-  static kcg_int _L9;
   /* TM_radio_messages::Send_M156::_L17 */
   static M_TrainTrack_compressed_packets_T_TM_radio_messages _L17;
-  static kcg_int i;
+  /* TM_radio_messages::Send_M156::_L9 */
+  static kcg_int _L9;
+  /* TM_radio_messages::Send_M156::_L8 */
+  static kcg_bool _L8;
+  /* TM_radio_messages::Send_M156::_L19 */
+  static kcg_int _L19;
   
   /* 1 */ CheckSpace_TM_TrainTrack_Bus(MessageBus, &_L8, &_L9);
   /* 1 */ C_M156_to_header_TM_RBC_conversions(Message_156_in, &tmp);
-  for (i = 0; i < 50; i++) {
-    _L17[i] = 0;
+  for (_L19 = 0; _L19 < 50; _L19++) {
+    _L17[_L19] = 0;
   }
   /* 1 */ Merge_PacketsToMessage_TM_TrainToTrack(&_L17, &tmp, &tmp1);
-  /* 1 */ BufferMsg_TM_lib_internal(&tmp1, _L8, &outC->Context_1);
+  /* 1 */ BufferMsg_TM_lib_internal(&tmp1, (kcg_bool) !_L8, &outC->Context_1);
   /* 1 */
   MergeMessageToBus_TM_TrainTrack_Bus(
     &outC->Context_1.Out,
     _L9,
     MessageBus,
     t_train_global,
-    &outC->MessageBus_out);
+    &outC->MessageBus_out,
+    &_L19);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M156_TM_radio_messages.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

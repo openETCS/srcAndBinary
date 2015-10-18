@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:06
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 #ifndef _getLocationOnCurve_CalcBrakingCurves_types_H_
 #define _getLocationOnCurve_CalcBrakingCurves_types_H_
@@ -23,6 +23,6 @@ extern void getLocationOnCurve_CalcBrakingCurves_types(
 #endif /* _getLocationOnCurve_CalcBrakingCurves_types_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getLocationOnCurve_CalcBrakingCurves_types.h
-** Generation date: 2015-10-16T18:56:06
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 

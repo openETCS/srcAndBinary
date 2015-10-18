@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 #ifndef _ManageLevelAndMode_H_
 #define _ManageLevelAndMode_H_
@@ -64,6 +64,6 @@ extern void ManageLevelAndMode_init(outC_ManageLevelAndMode *outC);
 #endif /* _ManageLevelAndMode_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageLevelAndMode.h
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:11
 *************************************************************$ */
 

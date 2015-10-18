@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -232,8 +232,10 @@ void manageDMI_Output_init_manage_DMI_Output_Pkg(
   outC->to_DMI.iconRequest.DMI_nid_area_group = A_DMI_Types_Pkg;
   outC->to_DMI.iconRequest.DMI_nid_area_rank = 0;
   outC->to_DMI.iconRequest.DMI_nid_icon_identifier = 0;
-  /* 1 */ collectDMIPackets_init_manage_DMI_Output_Pkg(&outC->_2_Context_1);
-  /* 1 */ sendVersion_init_manage_DMI_Output_Pkg(&outC->_1_Context_1);
+  /* 1 */ collectDMIPackets_init_manage_DMI_Output_Pkg(&outC->_3_Context_1);
+  /* 2 */ sendBrakesToDMI_init_manage_DMI_Output_Pkg(&outC->Context_2);
+  /* 1 */ sendVersion_init_manage_DMI_Output_Pkg(&outC->_2_Context_1);
+  /* 1 */ doIdentifierRequest_init_manage_DMI_Output_Pkg(&outC->_1_Context_1);
   /* 1 */ cyclicReportToDMI_init_manage_DMI_Output_Pkg(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
@@ -243,8 +245,10 @@ void manageDMI_Output_init_manage_DMI_Output_Pkg(
 void manageDMI_Output_reset_manage_DMI_Output_Pkg(
   outC_manageDMI_Output_manage_DMI_Output_Pkg *outC)
 {
-  /* 1 */ collectDMIPackets_reset_manage_DMI_Output_Pkg(&outC->_2_Context_1);
-  /* 1 */ sendVersion_reset_manage_DMI_Output_Pkg(&outC->_1_Context_1);
+  /* 1 */ collectDMIPackets_reset_manage_DMI_Output_Pkg(&outC->_3_Context_1);
+  /* 2 */ sendBrakesToDMI_reset_manage_DMI_Output_Pkg(&outC->Context_2);
+  /* 1 */ sendVersion_reset_manage_DMI_Output_Pkg(&outC->_2_Context_1);
+  /* 1 */ doIdentifierRequest_reset_manage_DMI_Output_Pkg(&outC->_1_Context_1);
   /* 1 */ cyclicReportToDMI_reset_manage_DMI_Output_Pkg(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
@@ -266,7 +270,6 @@ void manageDMI_Output_manage_DMI_Output_Pkg(
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_entryRequest */ DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_entryRequest,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_evc_coded_train_data */ DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_evc_coded_train_data,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_trackDescription */ DataForDMI_t_TrackAtlasTypes *dmi_trackDescription,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_identifierRequest */ DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_identifierRequest,
   /* manage_DMI_Output_Pkg::manageDMI_Output::evc_systemVersion */ M_VERSION evc_systemVersion,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_displayControl */ DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_displayControl,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_EVC_levelList */ DMI_LevelList_T_DMI_Types_Pkg *dmi_EVC_levelList,
@@ -283,13 +286,11 @@ void manageDMI_Output_manage_DMI_Output_Pkg(
   outC_manageDMI_Output_manage_DMI_Output_Pkg *outC)
 {
   /* manage_DMI_Output_Pkg::manageDMI_Output */
-  static DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg tmp3;
+  static DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg tmp2;
   /* manage_DMI_Output_Pkg::manageDMI_Output */
-  static DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg tmp2;
+  static DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg tmp1;
   /* manage_DMI_Output_Pkg::manageDMI_Output */
-  static DMI_Train_Data_T_DMI_Messages_Bothways_Pkg tmp1;
-  /* manage_DMI_Output_Pkg::manageDMI_Output */
-  static DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg tmp;
+  static DMI_Train_Data_T_DMI_Messages_Bothways_Pkg tmp;
   /* manage_DMI_Output_Pkg::manageDMI_Output::doTrainData */
   static kcg_bool doTrainData;
   /* manage_DMI_Output_Pkg::manageDMI_Output::levelUpdate */
@@ -335,31 +336,40 @@ void manageDMI_Output_manage_DMI_Output_Pkg(
   copyTrackDescription_manage_DMI_Output_Pkg(
     dmi_trackDescription,
     inSystemTime,
-    &tmp3);
+    &tmp2);
+  /* 1 */
+  doIdentifierRequest_manage_DMI_Output_Pkg(
+    TIU_TrainStatus,
+    inSystemTime,
+    evc_systemVersion,
+    &outC->_1_Context_1);
   /* 1 */
   sendVersion_manage_DMI_Output_Pkg(
     evc_systemVersion,
     incurrentDMIStatus,
     inSystemTime,
-    &outC->_1_Context_1);
+    &outC->_2_Context_1);
   /* 1 */
   sendLevelListPkg_manage_DMI_Output_Pkg(
     dmi_EVC_levelList,
     (kcg_bool) (levelUpdate | dmiUpdateLevelsDMI),
     inSystemTime,
-    &tmp2);
+    &tmp1);
   /* ck_doTrainData */ if (doTrainData) {
     /* 2 */
-    sendTrainData_manage_DMI_Output_Pkg(inSystemTime, trainDataFromEVC, &tmp1);
+    sendTrainData_manage_DMI_Output_Pkg(inSystemTime, trainDataFromEVC, &tmp);
   }
   else {
     kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
-      &tmp1,
+      &tmp,
       (DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *)
         &cDefaultTrainData_manage_DMI_Output_Pkg);
   }
   /* 2 */
-  sendBrakesToDMI_manage_DMI_Output_Pkg(inBrakeCommand, inSystemTime, &tmp);
+  sendBrakesToDMI_manage_DMI_Output_Pkg(
+    inBrakeCommand,
+    inSystemTime,
+    &outC->Context_2);
   /* 1 */
   collectDMIPackets_manage_DMI_Output_Pkg(
     TIU_TrainStatus,
@@ -368,26 +378,26 @@ void manageDMI_Output_manage_DMI_Output_Pkg(
     &_L30,
     dmi_evc_coded_train_data,
     &_L77,
-    &tmp3,
-    dmi_identifierRequest,
-    &outC->_1_Context_1.VersionPkg,
-    dmi_displayControl,
     &tmp2,
+    &outC->_1_Context_1.identifierRequest,
+    &outC->_2_Context_1.VersionPkg,
+    dmi_displayControl,
+    &tmp1,
     dmi_EVC_radioNet,
     dmi_driverIdentifier,
     dmi_trainRunningNumber,
-    &tmp1,
-    dmi_adhesionFactor,
     &tmp,
+    dmi_adhesionFactor,
+    &outC->Context_2.dmi_iconRequest,
     inSystemTime,
-    &outC->_2_Context_1);
+    &outC->_3_Context_1);
   kcg_copy_EVC_to_DMI_Message_T_API_DMI_Pkg(
     &outC->to_DMI,
-    &outC->_2_Context_1.to_DMI);
+    &outC->_3_Context_1.to_DMI);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Output_manage_DMI_Output_Pkg.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

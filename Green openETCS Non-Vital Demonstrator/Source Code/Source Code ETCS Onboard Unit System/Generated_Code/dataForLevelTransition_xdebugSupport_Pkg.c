@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -42,12 +42,6 @@ void dataForLevelTransition_xdebugSupport_Pkg(
       &(*actualMessage).packets.PacketHeaders,
       cp041_Level_Transition_Order_Id_Pkg);
   _L71 = positionNeeded | tmp1;
-  /* ck_p41Valid */ if (tmp1) {
-    _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pkg(actualMessage);
-  }
-  else {
-    _L116 = (*storedData).LRBG;
-  }
   /* 1 */ Read_P015_TM(&(*actualMessage).packets, &_L3, &_L4);
   /* 1 */ Read_P041_Legacy_TM_specific(&(*actualMessage).packets, &_L18);
   /* 1 */ Read_P021_TM(&(*actualMessage).packets, &_L20, &_L21);
@@ -55,12 +49,14 @@ void dataForLevelTransition_xdebugSupport_Pkg(
     outstoredData,
     storedData);
   /* 2 */ if (tmp1) {
+    _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pkg(actualMessage);
     ntcRequested = /* 2 */ checkNTCPriority_xdebugSupport_Pkg(&_L18);
     kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg(
       &(*outstoredData).p41,
       &_L18);
   }
   else {
+    _L116 = (*storedData).LRBG;
     ntcRequested = kcg_false;
     kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg(
       &(*outstoredData).p41,
@@ -106,6 +102,6 @@ void dataForLevelTransition_xdebugSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** dataForLevelTransition_xdebugSupport_Pkg.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

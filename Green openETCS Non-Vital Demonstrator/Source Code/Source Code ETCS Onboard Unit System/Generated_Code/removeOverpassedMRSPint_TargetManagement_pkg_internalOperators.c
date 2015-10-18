@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
   *Cond = (MRSP_TargetManagement_types == (*Targets)[0].targetType) &
     ((*Targets)[0].distance <= d_safe_max_front);
   /* 1 */ if (*Cond) {
-    kcg_copy_array_82780(&(*TargetsReduced)[0], (array_82780 *) &(*Targets)[1]);
+    kcg_copy_array_83314(&(*TargetsReduced)[0], (array_83314 *) &(*Targets)[1]);
     kcg_copy_Target_real_T_TargetManagement_types(
       &(&(*TargetsReduced)[199])[0],
       (Target_real_T_TargetManagement_types *)
@@ -32,6 +32,6 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** removeOverpassedMRSPint_TargetManagement_pkg_internalOperators.c
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 #ifndef _TrackAtlasETCS_TrackAtlas_H_
 #define _TrackAtlasETCS_TrackAtlas_H_
@@ -11,12 +11,12 @@
 #include "TA_to_ML_TA_Export.h"
 #include "SSP_to_MRSP_TA_Export.h"
 #include "MRSP_to_MRSP_to_DMI_TA_Export.h"
-#include "Manage_MA_Request_MA_Request.h"
 #include "Build_MA_TA_MA.h"
 #include "Build_MRSP_TA_MRSP.h"
 #include "StoreRaw_NV_TA_Storage.h"
 #include "Manage_EmergencyStop_TA_EmergencyStop.h"
 #include "Build_GradientProfile_TA_Gradient.h"
+#include "Manage_MA_Request_TA_MA_Request.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -43,7 +43,7 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   L_internal_Type_Obu_BasicTypes_Pkg /* TrackAtlas::TrackAtlasETCS::_L94 */ _L94;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Manage_MA_Request_MA_Request /* 1 */ _5_Context_1;
+  outC_Manage_MA_Request_TA_MA_Request /* 1 */ _5_Context_1;
   outC_Build_GradientProfile_TA_Gradient /* 1 */ _4_Context_1;
   outC_Build_MRSP_TA_MRSP /* 1 */ _3_Context_1;
   outC_Build_MA_TA_MA /* 1 */ _2_Context_1;
@@ -86,6 +86,6 @@ extern void TrackAtlasETCS_init_TrackAtlas(
 #endif /* _TrackAtlasETCS_TrackAtlas_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.h
-** Generation date: 2015-10-16T18:56:07
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 

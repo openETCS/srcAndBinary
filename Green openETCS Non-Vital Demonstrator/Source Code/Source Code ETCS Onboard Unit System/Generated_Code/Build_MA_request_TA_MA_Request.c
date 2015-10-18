@@ -1,14 +1,15 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-16T18:56:07
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "Build_MA_request_MA_Request.h"
+#include "Build_MA_request_TA_MA_Request.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void Build_MA_request_init_MA_Request(outC_Build_MA_request_MA_Request *outC)
+void Build_MA_request_init_TA_MA_Request(
+  outC_Build_MA_request_TA_MA_Request *outC)
 {
   static kcg_int i1;
   static kcg_int i;
@@ -115,29 +116,30 @@ void Build_MA_request_init_MA_Request(outC_Build_MA_request_MA_Request *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void Build_MA_request_reset_MA_Request(outC_Build_MA_request_MA_Request *outC)
+void Build_MA_request_reset_TA_MA_Request(
+  outC_Build_MA_request_TA_MA_Request *outC)
 {
   /* 1 */ Send_M132_reset_TM_radio_messages(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
-/* MA_Request::Build_MA_request */
-void Build_MA_request_MA_Request(
-  /* MA_Request::Build_MA_request::trackDescrDeleted */ kcg_bool trackDescrDeleted,
-  /* MA_Request::Build_MA_request::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
-  /* MA_Request::Build_MA_request::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
-  /* MA_Request::Build_MA_request::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
-  /* MA_Request::Build_MA_request::t_train */ T_TRAIN t_train,
-  /* MA_Request::Build_MA_request::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
-  outC_Build_MA_request_MA_Request *outC)
+/* TA_MA_Request::Build_MA_request */
+void Build_MA_request_TA_MA_Request(
+  /* TA_MA_Request::Build_MA_request::trackDescrDeleted */ kcg_bool trackDescrDeleted,
+  /* TA_MA_Request::Build_MA_request::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
+  /* TA_MA_Request::Build_MA_request::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
+  /* TA_MA_Request::Build_MA_request::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
+  /* TA_MA_Request::Build_MA_request::t_train */ T_TRAIN t_train,
+  /* TA_MA_Request::Build_MA_request::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
+  outC_Build_MA_request_TA_MA_Request *outC)
 {
-  /* MA_Request::Build_MA_request */
+  /* TA_MA_Request::Build_MA_request */
   static M_132_T_TM_radio_messages mk_struct;
-  /* MA_Request::Build_MA_request */
+  /* TA_MA_Request::Build_MA_request */
   static P000_TM_TrainToTrack tmp1;
-  /* MA_Request::Build_MA_request */
+  /* TA_MA_Request::Build_MA_request */
   static P001_TM_TrainToTrack tmp;
-  /* MA_Request::Build_MA_request::q_marqrstreason_local */
+  /* TA_MA_Request::Build_MA_request::q_marqrstreason_local */
   static Q_MARQSTREASON q_marqrstreason_local;
   
   outC->message132.present = kcg_true;
@@ -150,31 +152,31 @@ void Build_MA_request_MA_Request(
   kcg_copy_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg(
     &outC->message132.packets.p3,
     (PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg *)
-      &cPT3_OBUTelephoneNumber_MA_Request);
+      &cPT3_OBUTelephoneNumber_TA_MA_Request);
   kcg_copy_PT4_ErrorReporting_T_Packet_TrainTypes_Pkg(
     &outC->message132.packets.p4,
     (PT4_ErrorReporting_T_Packet_TrainTypes_Pkg *)
-      &cPT4_ErrorReporting_MA_Request);
+      &cPT4_ErrorReporting_TA_MA_Request);
   kcg_copy_PT5_TrainRunningNumber_Packet_TrainTypes_Pkg(
     &outC->message132.packets.p5,
     (PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *)
-      &cPT5_TrainRunningNumber_MA_Request);
+      &cPT5_TrainRunningNumber_TA_MA_Request);
   kcg_copy_PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg(
     &outC->message132.packets.p9,
     (PT9_Level23_TransitionInformation_T_Packet_TrainTypes_Pkg *)
-      &cPT9_Level23_MA_Request);
+      &cPT9_Level23_TA_MA_Request);
   kcg_copy_PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg(
     &outC->message132.packets.p11,
     (PT11_ValidatedTrainData_T_Packet_TrainTypes_Pkg *)
-      &cPT11_ValidateTrainData_MA_Request);
+      &cPT11_ValidateTrainData_TA_MA_Request);
   outC->message132.header.t_train = t_train;
   outC->message132.header.nid_engine = (*trainProps).nid_engine;
   outC->message132.header.xT_TRAIN = outC->message132.header.t_train;
   outC->message132.header.present = kcg_true;
   outC->message132.header.nid_message = 132;
-  outC->message132.header.xNID_EM = cNid_em_MA_Request;
-  outC->message132.header.xQ_EMERGENCYSTOP = cQemergencyStop_MA_Request;
-  outC->message132.header.xNID_TEXTMESSAGE = cNidTextMessage_MA_Request;
+  outC->message132.header.xNID_EM = cNid_em_TA_MA_Request;
+  outC->message132.header.xQ_EMERGENCYSTOP = cQemergencyStop_TA_MA_Request;
+  outC->message132.header.xNID_TEXTMESSAGE = cNidTextMessage_TA_MA_Request;
   /* 1 */ if (trackDescrDeleted) {
     q_marqrstreason_local = Q_MARQSTREASON_Track_description_deleted;
   }
@@ -197,8 +199,8 @@ void Build_MA_request_MA_Request(
     &mk_struct,
     &tmp1,
     &tmp,
-    (P009_TM_TrainToTrack *) &DEFAULT_P009_MA_Request,
-    cM_version_MA_Request,
+    (P009_TM_TrainToTrack *) &DEFAULT_P009_TA_MA_Request,
+    cM_version_TA_MA_Request,
     &outC->Context_1);
   kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
     &outC->bus_out,
@@ -206,7 +208,7 @@ void Build_MA_request_MA_Request(
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Build_MA_request_MA_Request.c
-** Generation date: 2015-10-16T18:56:07
+** Build_MA_request_TA_MA_Request.c
+** Generation date: 2015-10-18T22:42:12
 *************************************************************$ */
 
