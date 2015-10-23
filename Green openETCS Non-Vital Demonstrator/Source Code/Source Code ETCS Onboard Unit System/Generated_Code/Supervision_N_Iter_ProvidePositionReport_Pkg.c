@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,6 +21,6 @@ kcg_bool Supervision_N_Iter_ProvidePositionReport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Supervision_N_Iter_ProvidePositionReport_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -204,7 +204,14 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
     &outC->target,
     _L114,
     Service_brake_requested_by_modes_and_levels,
-    Emergency_brake_requested_by_modes_and_levels,
+    (kcg_bool)
+      (Emergency_brake_requested_by_modes_and_levels | /* 1 */
+        SimpleValidityCheck_SDM_Input_Wrappers(
+          NationalValues,
+          odometry,
+          TrainPosition,
+          trainData,
+          dataFromTrackAtlas)),
     NationalValues,
     &trainData_extras,
     &outC->_3_Context_1);
@@ -223,6 +230,6 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

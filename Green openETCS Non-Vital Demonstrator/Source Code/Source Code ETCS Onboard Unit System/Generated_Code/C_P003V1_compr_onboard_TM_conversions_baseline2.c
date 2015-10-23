@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,11 +22,11 @@ void C_P003V1_compr_onboard_TM_conversions_baseline2(
   /* TM_conversions::CAST_Int_to_Q_DIR::IfBlock1::else */
   static kcg_bool else_clock_1_IfBlock1;
   /* TM_conversions_baseline2::C_P003V1_compr_onboard::_L1 */
-  static Array24_TM _L1;
+  static array_int_24 _L1;
   /* TM_conversions_baseline2::C_P003V1_compr_onboard::_L22 */
   static kcg_bool _L22;
   
-  kcg_copy_Array24_TM(&_L1, (Array24_TM *) &(*PacketData)[0]);
+  kcg_copy_array_int_24(&_L1, (array_int_24 *) &(*PacketData)[0]);
   (*P003V1_onboard).n_iter = _L1[5];
   _L22 = _L1[0] == 3;
   (*P003V1_onboard).valid = _L22;
@@ -116,6 +116,6 @@ void C_P003V1_compr_onboard_TM_conversions_baseline2(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_compr_onboard_TM_conversions_baseline2.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

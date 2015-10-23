@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef __1_EVC_H_
 #define __1_EVC_H_
@@ -22,10 +22,12 @@
 #include "setProbesBalises_xdebugSupport_Pkg.h"
 #include "distanceLastBG_xdebugSupport_Pkg.h"
 #include "distanceLastMSG_xdebugSupport_Pkg.h"
+#include "setProbes_xdebugSupport_Pkg.h"
 #include "ProvidePositionReport_ProvidePositionReport_Pkg.h"
 #include "manageTIU_input_input_from_TIU_API_Pkg.h"
 #include "trainData_trainData_pkg.h"
 #include "checkGeneralMessage_trainData_pkg.h"
+#include "probe_MsgOut_RadioSupport_Pkg.h"
 #include "TrackAtlas_TrackAtlas.h"
 #include "calculateTrainPosition_CalculateTrainPosition_Pkg.h"
 
@@ -40,9 +42,9 @@ typedef struct {
   probesBalises_T_xdebugSupport_Pkg /* EVC::probe_Balises */ probe_Balises;
   kcg_real /* EVC::probe_distMsg */ probe_distMsg;
   kcg_real /* EVC::probe_distBG */ probe_distBG;
-  NID_MESSAGE /* EVC::probe_MSG */ probe_MSG;
+  NID_MESSAGE /* EVC::probe_MSGinAfterFilter */ probe_MSGinAfterFilter;
   NID_LRBG /* EVC::probe_LRBG */ probe_LRBG;
-  NID_BG /* EVC::probe_BG */ probe_BG;
+  NID_BG /* EVC::probe_BG_afterCheck */ probe_BG_afterCheck;
   NID_MESSAGE /* EVC::probe_Msg_1 */ probe_Msg_1;
   NID_MESSAGE /* EVC::probe_Msg_2 */ probe_Msg_2;
   NID_MESSAGE /* EVC::probe_Msg_3 */ probe_Msg_3;
@@ -51,8 +53,17 @@ typedef struct {
   NID_MESSAGE /* EVC::probe_Msg_1o */ probe_Msg_1o;
   NID_MESSAGE /* EVC::probe_Msg_3o */ probe_Msg_3o;
   NID_MESSAGE /* EVC::probe_Msg_2o */ probe_Msg_2o;
+  NID_MESSAGE /* EVC::probe_MSGout */ probe_MSGout;
+  T_TRAIN /* EVC::probe_TTrain */ probe_TTrain;
+  NID_PACKET /* EVC::probe_nid_packet2 */ probe_nid_packet2;
+  NID_PACKET /* EVC::probe_nid_packet1 */ probe_nid_packet1;
+  kcg_bool /* EVC::probe_newInput */ probe_newInput;
+  NID_MESSAGE /* EVC::probe_MSG_in */ probe_MSG_in;
+  NID_BG /* EVC::probe_BG_ID */ probe_BG_ID;
+  NID_MESSAGE /* EVC::probe_lastMSG_in */ probe_lastMSG_in;
+  NID_BG /* EVC::probe_lastBG_ID */ probe_lastBG_ID;
   /* -------------------- initialization variables  ------------------ */
-  kcg_bool init17;
+  kcg_bool init19;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   sessionStatus_Type_Radio_Types_Pkg /* EVC::MoRC_sessionStatus */ MoRC_sessionStatus;
@@ -66,7 +77,6 @@ typedef struct {
   trainData_T_TIU_Types_Pkg /* EVC::td_trainData */ td_trainData;
   positionedBGs_T_TrainPosition_Types_Pck /* EVC::CALC_BGs */ CALC_BGs;
   trainProperties_T_TrainPosition_Types_Pck /* EVC::TIU_trainProperties */ TIU_trainProperties;
-  kcg_bool /* EVC::MoRC_newSessionEstablished */ MoRC_newSessionEstablished;
   T_internal_Type_Obu_BasicTypes_Pkg /* EVC::MSG_lastRadioMsgTimestamp */ MSG_lastRadioMsgTimestamp;
   NID_NTC /* EVC::EVC_currentNTC */ EVC_currentNTC;
   T_Mode_Level_Level_And_Mode_Types_Pkg /* EVC::ML_ModeAndLevel */ ML_ModeAndLevel;
@@ -76,8 +86,11 @@ typedef struct {
   trainDataStatus_T_trainData_Types_pkg /* EVC::td_status */ td_status;
   PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg /* EVC::rep_P1 */ rep_P1;
   kcg_bool /* EVC::_L477 */ _L477;
-  kcg_bool /* EVC::EVC_ready */ EVC_ready;
+  kcg_bool /* EVC::MoRC_newSessionEstablished */ rem_MoRC_newSessionEstablished;
+  kcg_bool /* EVC::EVC_ready */ rem_EVC_ready;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_setProbes_xdebugSupport_Pkg /* 1 */ _18_Context_1;
+  outC_probe_MsgOut_RadioSupport_Pkg /* 1 */ _17_Context_1;
   outC_nextGenRadioOutput_radioOutput_Pkg /* 1 */ _16_Context_1;
   outC_distanceLastMSG_xdebugSupport_Pkg /* 1 */ _15_Context_1;
   outC_distanceLastBG_xdebugSupport_Pkg /* 1 */ _14_Context_1;
@@ -87,12 +100,12 @@ typedef struct {
   outC_ProvidePositionReport_ProvidePositionReport_Pkg /* 1 */ _10_Context_1;
   outC_manageDMI_Output_manage_DMI_Output_Pkg /* 1 */ _9_Context_1;
   outC_Master_Procedure_ManageProcedure_Pkg /* 1 */ _8_Context_1;
-  outC_MoRC_Main_MoRC_Pck /* 1 */ _7_Context_1;
-  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 1 */ _6_Context_1;
-  outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 1 */ _5_Context_1;
-  outC_ManageLevelAndMode /* 1 */ _4_Context_1;
+  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 1 */ _7_Context_1;
+  outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 1 */ _6_Context_1;
+  outC_ManageLevelAndMode /* 1 */ _5_Context_1;
+  outC_TrackAtlas_TrackAtlas /* 1 */ _4_Context_1;
   outC_trainData_trainData_pkg /* 1 */ _3_Context_1;
-  outC_TrackAtlas_TrackAtlas /* 1 */ _2_Context_1;
+  outC_MoRC_Main_MoRC_Pck /* 1 */ _2_Context_1;
   outC_manageDMI_Input_manage_DMI_Input_Pkg /* 2 */ _1_Context_2;
   outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 2 */ Context_2;
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 1 */ Context_1;
@@ -123,7 +136,7 @@ extern T_internal_Type_Obu_BasicTypes_Pkg API_SystemTime;
 /* EVC::API_fromTrack */
 extern API_TrackSideInput_T_API_Msg_Pkg API_fromTrack;
 /* EVC::API_fromDMI */
-extern DMI_to_EVC_Message_T_API_DMI_Pkg API_fromDMI;
+extern DMI_to_EVC_Message_int_T_API_DMI_Pkg API_fromDMI;
 /* EVC::API_fromTIU */
 extern TIU_Input_msg_API_TIU_Pkg API_fromTIU;
 /* EVC::API_mobileHWStatus */
@@ -150,7 +163,7 @@ extern kcg_bool EVC_ready;
 /* EVC::API_toTIU */
 extern TIU_Output_msg_API_TIU_Pkg API_toTIU;
 /* EVC::API_toDMI */
-extern EVC_to_DMI_Message_T_API_DMI_Pkg API_toDMI;
+extern EVC_to_DMI_Message_int_T_API_DMI_Pkg API_toDMI;
 /* EVC::API_RTM_management */
 extern RadioManagement_T_API_RadioCommunication_Pkg API_RTM_management;
 /* EVC::API_toRBC */
@@ -161,6 +174,6 @@ extern kcg_bool resetOut;
 #endif /* __1_EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** _1_EVC.h
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

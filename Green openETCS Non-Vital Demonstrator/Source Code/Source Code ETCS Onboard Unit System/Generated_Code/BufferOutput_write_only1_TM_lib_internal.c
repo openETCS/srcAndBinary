@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,8 +23,8 @@ void BufferOutput_write_only1_TM_lib_internal(
     Message_out,
     (M_TrainTrack_Message_T_TM_radio_messages *)
       &EMPTY_TrainTrackMessage_TM_lib_internal);
-  kcg_copy_array_85855(&(*Buffer_Out)[0], (array_85855 *) &(*Message_In)[0]);
-  kcg_copy_array_83389(&(*Buffer_Out)[1], (array_83389 *) &(*Buffer_In)[0]);
+  kcg_copy_array_94514(&(*Buffer_Out)[0], (array_94514 *) &(*Message_In)[0]);
+  kcg_copy_array_91982(&(*Buffer_Out)[1], (array_91982 *) &(*Buffer_In)[0]);
   _L7 = Stacksize_old + 1;
   /* 1 */ if (_L7 > DIM_FIFO_TrainTrackOutput_TM_lib_internal) {
     *Stacksize_new = DIM_FIFO_TrainTrackOutput_TM_lib_internal;
@@ -36,6 +36,6 @@ void BufferOutput_write_only1_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_write_only1_TM_lib_internal.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

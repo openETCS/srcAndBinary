@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,12 @@ kcg_int Encode_NID_PACKET_TM_TrainToTrack(
   static kcg_int meta;
   
   /* 1 */ if (valid) {
-    meta = nid_packet;
+    /* 2 */ if (nid_packet == 0) {
+      meta = nid_meta_p000_TM_radio_messages;
+    }
+    else {
+      meta = nid_packet;
+    }
   }
   else {
     meta = INVALID_NID_PACKET_TM_TrainToTrack;
@@ -26,6 +31,6 @@ kcg_int Encode_NID_PACKET_TM_TrainToTrack(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Encode_NID_PACKET_TM_TrainToTrack.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

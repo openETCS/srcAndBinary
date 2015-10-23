@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,6 +21,8 @@ void SSP_Normalize_Profile_loop_TA_SSP(
   static StaticSpeedSection_t_TrackAtlasTypes _L4;
   /* TA_SSP::SSP_Normalize_Profile_loop::_L10 */
   static kcg_int _L10;
+  /* TA_SSP::SSP_Normalize_Profile_loop::_L49 */
+  static kcg_bool _L49;
   
   if ((0 <= i) & (i < 50)) {
     kcg_copy_StaticSpeedSection_t_TrackAtlasTypes(&_L4, &(*ProfileIn)[i]);
@@ -36,11 +38,13 @@ void SSP_Normalize_Profile_loop_TA_SSP(
   else {
     _L10 = 0;
   }
+  _L49 = _L4.q_train_length_corr & _L4.valid;
   kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(
     ProfileNormalized_LRBG,
     ProfileIn);
   kcg_copy_StaticSpeedSection_t_TrackAtlasTypes(&tmp, &_L4);
-  /* ck__L44 */ if (_L4.q_train_length_corr) {
+  tmp.q_train_length_corr = _L49;
+  /* ck__L49 */ if (_L49) {
     tmp.d_static_LRBG = /* 1 */
       TrainLength_Correction_TA_Lib_internal(
         ProfileIn,
@@ -61,6 +65,6 @@ void SSP_Normalize_Profile_loop_TA_SSP(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Normalize_Profile_loop_TA_SSP.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

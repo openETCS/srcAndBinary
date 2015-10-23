@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -57,17 +57,19 @@ void Build_StaticSpeedProfile_TA_SSP(
   static kcg_int _L108;
   /* TA_SSP::Build_StaticSpeedProfile::_L240 */
   static kcg_bool _L240;
+  /* TA_SSP::Build_StaticSpeedProfile::_L244 */
+  static kcg_int _L244;
   
   /* 1 */
   Read_P027V1_TM_baseline2(&(*MessageIn).packets, &outC->updated, &_L60);
   /* fby_1_init_1 */ if (outC->init) {
-    _L108 = 0;
+    _L244 = 0;
   }
   else {
-    _L108 = outC->rem__L111;
+    _L244 = outC->rem__L111;
   }
-  _L240 = outC->updated | (_L108 != (*train_position).LRBG.nid_bg);
-  _L108 = /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn);
+  _L240 = outC->updated | (_L244 != (*train_position).LRBG.nid_bg);
+  /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn, &_L108, &_L244);
   /* ck_updated */ if (outC->updated) {
     /* 1 */
     SSP_Preprocessing_TA_SSP(
@@ -112,6 +114,6 @@ void Build_StaticSpeedProfile_TA_SSP(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_StaticSpeedProfile_TA_SSP.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

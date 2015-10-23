@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,9 +16,9 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
 {
   *n_iter_out = (*P003V1_onboard).n_iter;
   *nid_c1 = (*P003V1_onboard).SECTIONS[0].nid_c;
-  kcg_copy_array_83368(
+  kcg_copy_array_91960(
     &(*nid_c_list)[0],
-    (array_83368 *) &(*P003V1_onboard).SECTIONS[1]);
+    (array_91960 *) &(*P003V1_onboard).SECTIONS[1]);
   kcg_copy_P003_OBU_nid_c_section_enum_T_TM(
     &(&(*nid_c_list)[31])[0],
     (P003_OBU_nid_c_section_enum_T_TM *)
@@ -27,6 +27,6 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

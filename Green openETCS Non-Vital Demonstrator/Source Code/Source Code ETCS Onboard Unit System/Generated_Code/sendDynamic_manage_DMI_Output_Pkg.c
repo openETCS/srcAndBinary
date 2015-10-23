@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -27,17 +27,12 @@ void sendDynamic_manage_DMI_Output_Pkg(
   
   (*packetDynamic).valid = kcg_true;
   (*packetDynamic).system_clock = inSystemTime;
-  (*packetDynamic).v_train = (*inOdometry).speed.v_safeNominal;
   (*packetDynamic).location_front_train =
     (*inTrainPosition).estimatedFrontEndPosition;
   (*packetDynamic).location_brake_target =
     (*inSpeedSupervision).locationBrakeTarget;
-  (*packetDynamic).v_target = (*inSpeedSupervision).targetSpeed;
-  (*packetDynamic).v_permitted = (*inSpeedSupervision).permittedSpeed;
-  (*packetDynamic).v_release = (*inSpeedSupervision).releaseSpeed;
   (*packetDynamic).location_brake_curve_starting_point =
     (*inSpeedSupervision).location_brake_curve_starting_point;
-  (*packetDynamic).v_intervention = (*inSpeedSupervision).interventionSpeed;
   (*packetDynamic).mode = (*inModeAndLevel).Mode;
   (*packetDynamic).level.level = (*inModeAndLevel).level;
   (*packetDynamic).level.nid_stm = inNTC;
@@ -57,12 +52,24 @@ void sendDynamic_manage_DMI_Output_Pkg(
     &_L48);
   (*packetDynamic).distance_KP_Balise = _L47;
   (*packetDynamic).distance_to_TSA = _L48;
+  (*packetDynamic).v_train = /* 1 */
+    convert_cm_s_km_h_manage_DMI_Output_Pkg((*inOdometry).speed.v_safeNominal);
+  (*packetDynamic).v_target = /* 2 */
+    convert_cm_s_km_h_manage_DMI_Output_Pkg((*inSpeedSupervision).targetSpeed);
+  (*packetDynamic).v_permitted = /* 3 */
+    convert_cm_s_km_h_manage_DMI_Output_Pkg(
+      (*inSpeedSupervision).permittedSpeed);
+  (*packetDynamic).v_release = /* 7 */
+    convert_cm_s_km_h_manage_DMI_Output_Pkg((*inSpeedSupervision).releaseSpeed);
+  (*packetDynamic).v_intervention = /* 4 */
+    convert_cm_s_km_h_manage_DMI_Output_Pkg(
+      (*inSpeedSupervision).interventionSpeed);
   (*packetDynamic).radioConnectionStatus = /* 1 */
     mapMoRCtoRadio_CS_manage_DMI_Output_Pkg(inRadioConnectionStatus);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendDynamic_manage_DMI_Output_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

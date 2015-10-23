@@ -1,11 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _manageDMI_Input_manage_DMI_Input_Pkg_H_
 #define _manageDMI_Input_manage_DMI_Input_Pkg_H_
 
 #include "kcg_types.h"
+#include "Write_int_to_DMI_to_EVC_Messages.h"
 #include "updateDMIStatus_manage_DMI_Input_Pkg.h"
 #include "receiveRequestsModesAndLevel_manage_DMI_Input_Pkg.h"
 #include "changeLevelByDiver_manage_DMI_Input_Pkg.h"
@@ -45,7 +46,7 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* manage_DMI_Input_Pkg::manageDMI_Input */
 extern void manageDMI_Input_manage_DMI_Input_Pkg(
-  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */ DMI_to_EVC_Message_T_API_DMI_Pkg *fromDMI,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */ DMI_to_EVC_Message_int_T_API_DMI_Pkg *fromDMI,
   /* manage_DMI_Input_Pkg::manageDMI_Input::dmiStatusReset */ kcg_bool dmiStatusReset,
   /* manage_DMI_Input_Pkg::manageDMI_Input::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
   /* manage_DMI_Input_Pkg::manageDMI_Input::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
@@ -65,6 +66,6 @@ extern void manageDMI_Input_init_manage_DMI_Input_Pkg(
 #endif /* _manageDMI_Input_manage_DMI_Input_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

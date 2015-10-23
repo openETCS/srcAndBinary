@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,15 +18,10 @@ void Manage_TrackSideInformation_Integration_init_Manage_TrackSideInformation_In
   outC->BadBaliseMessageToDMI = kcg_true;
   outC->rem_transitionPositionPassed = kcg_true;
   outC->init = kcg_true;
-  outC->newInput = kcg_true;
   outC->debug_ErrorMSG = kcg_true;
   outC->errorBG = kcg_true;
   outC->countPackets = 0;
-  outC->nid_packet2 = 0;
-  outC->nid_packet1 = 0;
   outC->positionM = 0.0;
-  outC->BG_ID = 0;
-  outC->MSG_ID = 0;
   for (i = 0; i < 5; i++) {
     outC->Data_to_From_Track_Packets_at_ML.P_12[i].valid = kcg_true;
     outC->Data_to_From_Track_Packets_at_ML.P_12[i].q_dir = Q_DIR_Reverse;
@@ -369,7 +364,6 @@ void Manage_TrackSideInformation_Integration_init_Manage_TrackSideInformation_In
   outC->outputMessage.sendingRBC.nid_c = 0;
   outC->outputMessage.sendingRBC.rbc_id = 0;
   outC->outputMessage.sendingRBC.device_id = 0;
-  /* 2 */ setProbes_init_xdebugSupport_Pkg(&outC->Context_2);
   /* 3 */ InformationFilter_init_InformationFilter_Pkg(&outC->Context_3);
   /* 1 */ combineForLevelChange_init_xdebugSupport_Pkg(&outC->_2_Context_1);
   /* 1 */ CheckEuroRadioMessage_init_CheckEuroradioMessage(&outC->_1_Context_1);
@@ -384,7 +378,6 @@ void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_I
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC)
 {
   outC->init = kcg_true;
-  /* 2 */ setProbes_reset_xdebugSupport_Pkg(&outC->Context_2);
   /* 3 */ InformationFilter_reset_InformationFilter_Pkg(&outC->Context_3);
   /* 1 */ combineForLevelChange_reset_xdebugSupport_Pkg(&outC->_2_Context_1);
   /* 1 */
@@ -598,12 +591,6 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
   }
   outC->outCheckErrors.nid_errorbg = tmp;
   outC->positionM = (kcg_real) (*ActualOdometry).odo.o_nominal / 100.0;
-  /* 2 */ setProbes_xdebugSupport_Pkg(API_trackSide_Message, &outC->Context_2);
-  outC->newInput = outC->Context_2.isChanged;
-  outC->MSG_ID = outC->Context_2.radioMSG;
-  outC->BG_ID = outC->Context_2.BG_ID;
-  outC->nid_packet1 = outC->Context_2.packet_id1;
-  outC->nid_packet2 = outC->Context_2.packet_id2;
   /* 1 */
   checkOnErrors_xdebugSupport_Pkg(
     &outC->outCheckErrors,
@@ -616,6 +603,6 @@ void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integra
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

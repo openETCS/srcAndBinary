@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,6 +13,7 @@ void Send_M147_init_TM_radio_messages(outC_Send_M147_TM_radio_messages *outC)
   static kcg_int i1;
   static kcg_int i;
   
+  outC->t_train_assigned = 0;
   for (i1 = 0; i1 < 5; i1++) {
     outC->MessageBus_out[i1].Message.valid = kcg_true;
     outC->MessageBus_out[i1].Message.nid_message = 0;
@@ -58,8 +59,7 @@ void Send_M147_TM_radio_messages(
   static kcg_int _L99;
   /* TM_radio_messages::Send_M147::_L98 */
   static kcg_bool _L98;
-  /* TM_radio_messages::Send_M147::_L106 */
-  static kcg_int _L106;
+  static kcg_int i;
   
   /* 1 */ CheckSpace_TM_TrainTrack_Bus(MessageBus, &_L98, &_L99);
   /* 5 */ if ((*P000).valid) {
@@ -74,8 +74,8 @@ void Send_M147_TM_radio_messages(
       P001,
       (P001_TrainTrack_int_TM_TrainToTrack *) &tmp1[0]);
   }
-  for (_L106 = 0; _L106 < 33; _L106++) {
-    (&tmp1[17])[_L106] = 0;
+  for (i = 0; i < 33; i++) {
+    (&tmp1[17])[i] = 0;
   }
   /* 1 */ C_M147_to_header_TM_RBC_conversions(Message_147_in, &tmp);
   /* 1 */ Merge_PacketsToMessage_TM_TrainToTrack(&tmp1, &tmp, &tmp2);
@@ -87,11 +87,11 @@ void Send_M147_TM_radio_messages(
     MessageBus,
     t_train_global,
     &outC->MessageBus_out,
-    &_L106);
+    &outC->t_train_assigned);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M147_TM_radio_messages.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

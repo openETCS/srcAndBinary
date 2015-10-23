@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -56,16 +56,18 @@ void Build_GradientProfile_TA_Gradient(
   static kcg_int _L108;
   /* TA_Gradient::Build_GradientProfile::_L240 */
   static kcg_bool _L240;
+  /* TA_Gradient::Build_GradientProfile::_L243 */
+  static kcg_int _L243;
   
   /* 1 */ Read_P021_TM(&(*MessageIn).packets, &outC->updated, &_L60);
   /* fby_1_init_1 */ if (outC->init) {
-    _L108 = 0;
+    _L243 = 0;
   }
   else {
-    _L108 = outC->rem__L111;
+    _L243 = outC->rem__L111;
   }
-  _L240 = outC->updated | (_L108 != (*train_position).LRBG.nid_bg);
-  _L108 = /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn);
+  _L240 = outC->updated | (_L243 != (*train_position).LRBG.nid_bg);
+  /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn, &_L108, &_L243);
   /* ck_updated */ if (outC->updated) {
     /* 1 */
     GP_Preprocessing_TA_Gradient(
@@ -107,6 +109,6 @@ void Build_GradientProfile_TA_Gradient(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_GradientProfile_TA_Gradient.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

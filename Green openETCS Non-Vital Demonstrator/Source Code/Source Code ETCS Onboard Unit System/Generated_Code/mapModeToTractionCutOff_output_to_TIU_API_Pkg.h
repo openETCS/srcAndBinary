@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 #ifndef _mapModeToTractionCutOff_output_to_TIU_API_Pkg_H_
 #define _mapModeToTractionCutOff_output_to_TIU_API_Pkg_H_
@@ -19,6 +19,6 @@ extern M_traction_cutoff_command_T_TIU_Types_Pkg mapModeToTractionCutOff_output_
 #endif /* _mapModeToTractionCutOff_output_to_TIU_API_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapModeToTractionCutOff_output_to_TIU_API_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 

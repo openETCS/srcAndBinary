@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal_H_
 #define _C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal_H_
@@ -21,6 +21,6 @@ extern void C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal(
 #endif /* _C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

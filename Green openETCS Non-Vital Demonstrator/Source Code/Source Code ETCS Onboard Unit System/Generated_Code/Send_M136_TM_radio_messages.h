@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _Send_M136_TM_radio_messages_H_
 #define _Send_M136_TM_radio_messages_H_
@@ -25,6 +25,7 @@
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   M_TrainTrackMessageBus_t_TM_TrainTrack_Bus /* TM_radio_messages::Send_M136::MessageBus_out */ MessageBus_out;
+  kcg_int /* TM_radio_messages::Send_M136::t_train_assigned */ t_train_assigned;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
@@ -60,6 +61,6 @@ extern void Send_M136_init_TM_radio_messages(
 #endif /* _Send_M136_TM_radio_messages_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M136_TM_radio_messages.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

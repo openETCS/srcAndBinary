@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 #ifndef _ABrakeFactory_SDMModelPkg_H_
 #define _ABrakeFactory_SDMModelPkg_H_
@@ -29,6 +29,6 @@ extern void ABrakeFactory_SDMModelPkg(
 #endif /* _ABrakeFactory_SDMModelPkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ABrakeFactory_SDMModelPkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,10 +22,7 @@ void getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions(
   static NID_C _L9;
   
   /* 1 */
-  DECODE_NID_LRBG_TM_conversions(
-    (*inMessage).Radio_Common_Header.nid_lrbg,
-    &_L9,
-    &_L10);
+  Decode_NID_LRBG_TM((*inMessage).Radio_Common_Header.nid_lrbg, &_L9, &_L10);
   kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
     outLRBG,
     (positionedBG_T_TrainPosition_Types_Pck *)
@@ -44,6 +41,6 @@ void getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getLRBGForRadioMessage_ValidateDataDirectionGeneral_Pkg_Subfunctions.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

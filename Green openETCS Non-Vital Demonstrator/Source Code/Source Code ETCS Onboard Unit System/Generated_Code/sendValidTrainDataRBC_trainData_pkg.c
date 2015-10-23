@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,6 +29,7 @@ void sendValidTrainDataRBC_init_trainData_pkg(
   }
   outC->updatedStatus.valid = kcg_true;
   outC->updatedStatus.validatedByDriver = kcg_true;
+  outC->updatedStatus.RBCsystemVersionOnboard = kcg_true;
   outC->updatedStatus.validatedbyRBC = kcg_true;
   outC->updatedStatus.waitingForRBCResponse = kcg_true;
   outC->updatedStatus.driverIsModificationTrainData = kcg_true;
@@ -163,12 +164,6 @@ void sendValidTrainDataRBC_trainData_pkg(
     p0_positionReport,
     p1_positionReport,
     &outC->trainDataToRBC.packets);
-  kcg_copy_trainDataStatus_T_trainData_Types_pkg(
-    &outC->updatedStatus,
-    actualStatus);
-  outC->updatedStatus.timeStampValidateToRBC = evc_t_train;
-  outC->updatedStatus.waitingForRBCResponse = kcg_true;
-  outC->updatedStatus.timeStampValidateToRBC = evc_t_train;
   /* 1 */ headerMsg129_ng_trainData_pkg(nidEngine, evc_t_train, &tmp3);
   /* 1 */ nextGen_P00_radioOutput_Pkg(p0_positionReport, &tmp2);
   /* 1 */ nextGen_P01_radioOutput_Pkg(p1_positionReport, &tmp1);
@@ -186,10 +181,16 @@ void sendValidTrainDataRBC_trainData_pkg(
   kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
     &outC->outMessageBus,
     &outC->Context_1.MessageBus_out);
+  kcg_copy_trainDataStatus_T_trainData_Types_pkg(
+    &outC->updatedStatus,
+    actualStatus);
+  outC->updatedStatus.timeStampValidateToRBC = evc_t_train;
+  outC->updatedStatus.waitingForRBCResponse = kcg_true;
+  outC->updatedStatus.timeStampValidateToRBC = outC->Context_1.t_train_assigned;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendValidTrainDataRBC_trainData_pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

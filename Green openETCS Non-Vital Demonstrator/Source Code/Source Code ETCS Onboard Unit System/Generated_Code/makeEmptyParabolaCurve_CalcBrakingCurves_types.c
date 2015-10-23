@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -34,6 +34,6 @@ void makeEmptyParabolaCurve_CalcBrakingCurves_types(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** makeEmptyParabolaCurve_CalcBrakingCurves_types.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

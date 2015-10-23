@@ -1,15 +1,15 @@
 $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:04
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:17
 *************************************************************$
 *** Code Generation Warning (WAR_604): Renaming interface identifier
-  at file D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/scade_model_without_unused.scade, line 10032, character 0
+  at file D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/scade_model_without_unused.scade, line 11345, character 0
   at path EVC/
  Interface element EVC has been renamed because it collides
 1 warning was found
 No error was found
 No failure occurred
 $**************** KCG Version 6.4 (build i21) ****************
-** D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg.log
-** Generation date: 2015-10-18T22:42:18
+** D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases\kcg.log
+** Generation date: 2015-10-23T15:36:52
 *************************************************************$

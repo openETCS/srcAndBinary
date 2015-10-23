@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -40,7 +40,7 @@ void BufferOutput_read_write_TM_lib_internal(
   else {
     _2_else_clock_IfBlock1 = Bus_Size == 2;
     /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
-      /* 3 */
+      /* 4 */
       BufferOutput_read_write2_TM_lib_internal(
         Buffer_In,
         Stacksize_old,
@@ -52,7 +52,7 @@ void BufferOutput_read_write_TM_lib_internal(
     else {
       _1_else_clock_IfBlock1 = Bus_Size == 3;
       /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
-        /* 2 */
+        /* 3 */
         BufferOutput_read_write3_TM_lib_internal(
           Buffer_In,
           Stacksize_old,
@@ -64,7 +64,7 @@ void BufferOutput_read_write_TM_lib_internal(
       else {
         else_clock_IfBlock1 = Bus_Size == 4;
         /* ck_anon_activ */ if (else_clock_IfBlock1) {
-          /* 2 */
+          /* 3 */
           BufferOutput_read_write4_TM_lib_internal(
             Buffer_In,
             Stacksize_old,
@@ -74,7 +74,7 @@ void BufferOutput_read_write_TM_lib_internal(
             Message_out);
         }
         else {
-          /* 2 */
+          /* 3 */
           BufferOutput_read_write5_TM_lib_internal(
             Buffer_In,
             Stacksize_old,
@@ -90,6 +90,6 @@ void BufferOutput_read_write_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_read_write_TM_lib_internal.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

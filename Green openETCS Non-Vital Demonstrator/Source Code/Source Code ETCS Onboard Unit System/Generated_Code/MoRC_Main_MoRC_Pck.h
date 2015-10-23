@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _MoRC_Main_MoRC_Pck_H_
 #define _MoRC_Main_MoRC_Pck_H_
@@ -13,10 +13,7 @@
 #include "decP42_MoRC_Pck_Coder_Pkg.h"
 #include "decP45_MoRC_Pck_Coder_Pkg.h"
 #include "managementOfRadioCommunication_MoRC_Pck.h"
-#include "Send_M154_TM_radio_messages.h"
-#include "Send_M159_TM_radio_messages.h"
-#include "Send_M156_TM_radio_messages.h"
-#include "Send_M155_TM_radio_messages.h"
+#include "genMsgToBus_RCM_Utils_Pkg_encoders.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -46,10 +43,7 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Send_M155_TM_radio_messages /* 1 */ _3_Context_1;
-  outC_Send_M156_TM_radio_messages /* 1 */ _2_Context_1;
-  outC_Send_M159_TM_radio_messages /* 1 */ _1_Context_1;
-  outC_Send_M154_TM_radio_messages /* 1 */ Context_1;
+  outC_genMsgToBus_RCM_Utils_Pkg_encoders /* 1 */ Context_1;
   outC_managementOfRadioCommunication_MoRC_Pck /* 2 */ Context_2;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_MoRC_Main_MoRC_Pck;
@@ -85,6 +79,6 @@ extern void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC);
 #endif /* _MoRC_Main_MoRC_Pck_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_Main_MoRC_Pck.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

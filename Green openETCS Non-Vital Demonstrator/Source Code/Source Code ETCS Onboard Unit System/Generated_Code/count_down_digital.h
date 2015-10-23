@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _count_down_digital_H_
 #define _count_down_digital_H_
@@ -42,6 +42,6 @@ extern void count_down_init_digital(outC_count_down_digital *outC);
 #endif /* _count_down_digital_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** count_down_digital.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _setProbes_xdebugSupport_Pkg_H_
 #define _setProbes_xdebugSupport_Pkg_H_
@@ -19,6 +19,8 @@ typedef struct {
   NID_BG /* xdebugSupport_Pkg::setProbes::BG_ID */ BG_ID;
   NID_PACKET /* xdebugSupport_Pkg::setProbes::packet_id1 */ packet_id1;
   NID_PACKET /* xdebugSupport_Pkg::setProbes::packet_id2 */ packet_id2;
+  NID_MESSAGE /* xdebugSupport_Pkg::setProbes::lastRadioMSG */ lastRadioMSG;
+  NID_BG /* xdebugSupport_Pkg::setProbes::lastBG_ID */ lastBG_ID;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -33,6 +35,7 @@ typedef struct {
 /* xdebugSupport_Pkg::setProbes */
 extern void setProbes_xdebugSupport_Pkg(
   /* xdebugSupport_Pkg::setProbes::inMsg */ API_TrackSideInput_T_API_Msg_Pkg *inMsg,
+  /* xdebugSupport_Pkg::setProbes::show24 */ kcg_bool show24,
   outC_setProbes_xdebugSupport_Pkg *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -48,6 +51,6 @@ extern void setProbes_init_xdebugSupport_Pkg(
 #endif /* _setProbes_xdebugSupport_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** setProbes_xdebugSupport_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

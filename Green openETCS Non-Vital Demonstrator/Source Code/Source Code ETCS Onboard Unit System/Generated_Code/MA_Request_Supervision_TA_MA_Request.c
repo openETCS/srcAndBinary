@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,6 +16,8 @@ void MA_Request_Supervision_init_TA_MA_Request(
   outC->pendingReq = kcg_true;
   outC->init = kcg_true;
   outC->SM1_state_nxt = SSM_st_init_SM1;
+  /* 2 */ RisingEdge_init_digital(&outC->Context_2);
+  /* 1 */ RisingEdge_init_digital(&outC->_1_Context_1);
   /* 1 */ op_RepeatReq_init_TA_MA_Request(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
@@ -26,6 +28,8 @@ void MA_Request_Supervision_reset_TA_MA_Request(
   outC_MA_Request_Supervision_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
+  /* 2 */ RisingEdge_reset_digital(&outC->Context_2);
+  /* 1 */ RisingEdge_reset_digital(&outC->_1_Context_1);
   /* 1 */ op_RepeatReq_reset_TA_MA_Request(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
@@ -45,8 +49,6 @@ void MA_Request_Supervision_TA_MA_Request(
   outC_MA_Request_Supervision_TA_MA_Request *outC)
 {
   /* TA_MA_Request::MA_Request_Supervision */
-  static kcg_bool tmp3;
-  /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp2;
   /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp1;
@@ -56,11 +58,11 @@ void MA_Request_Supervision_TA_MA_Request(
   static SSM_ST_SM1 SM1_state_sel;
   /* TA_MA_Request::MA_Request_Supervision::SM1 */
   static SSM_ST_SM1 SM1_state_act;
-  /* TA_MA_Request::MA_Request_Supervision::_L42 */
-  static kcg_bool _L42;
+  /* TA_MA_Request::MA_Request_Supervision::_L81 */
+  static kcg_bool _L81;
   
-  _L42 = 255 == (*ma_RequestParams).t_mar;
-  tmp1 = 1023 == (*ma_RequestParams).t_timeoutrqst;
+  tmp2 = 255 != (*ma_RequestParams).t_mar;
+  _L81 = 1023 != (*ma_RequestParams).t_timeoutrqst;
   /* init_SM1 */ if (outC->init) {
     SM1_state_sel = SSM_st_init_SM1;
   }
@@ -113,40 +115,43 @@ void MA_Request_Supervision_TA_MA_Request(
     in_triggerMA,
     systemTime,
     &outC->Context_1);
-  /* ck__L37 */ if (tmp1) {
-    tmp2 = /* op_3_8_2_3_b */
-      op_3_8_2_3_b_TA_MA_Request((*ma_RequestParams).t_timeoutrqst, MAs);
-  }
-  else {
-    tmp2 = kcg_false;
-  }
-  /* 2 */ if (outC->pendingReq & (255 == (*ma_RequestParams).t_cycrqst)) {
-    tmp1 = kcg_false;
-  }
-  else {
-    tmp1 = outC->Context_1.trigger;
-  }
-  /* ck__L42 */ if (_L42) {
+  /* ck__L80 */ if (tmp2) {
     /* op_3_8_2_3_a */
     op_3_8_2_3_a_TA_MA_Request(
       (*ma_RequestParams).t_mar,
       trainPosition,
       preindicationLocation,
       odometry,
-      &tmp3,
-      &tmp);
+      &tmp,
+      &tmp1);
   }
   else {
-    tmp3 = kcg_false;
+    tmp1 = kcg_false;
     tmp = kcg_false;
   }
-  outC->triggerMA = tmp3 | tmp2 | tmp1 | trackDescrDeleted |
-    (*fromDriver).trackAheadFree | (*fromDriver).driverSelectsStart;
+  /* 1 */ RisingEdge_digital(tmp1, &outC->_1_Context_1);
+  /* ck__L81 */ if (_L81) {
+    tmp2 = /* op_3_8_2_3_b */
+      op_3_8_2_3_b_TA_MA_Request((*ma_RequestParams).t_timeoutrqst, MAs);
+  }
+  else {
+    tmp2 = kcg_false;
+  }
+  /* 2 */ RisingEdge_digital(tmp2, &outC->Context_2);
+  /* 2 */ if (outC->pendingReq & (255 != (*ma_RequestParams).t_cycrqst)) {
+    tmp1 = outC->Context_1.trigger;
+  }
+  else {
+    tmp1 = kcg_false;
+  }
+  outC->triggerMA = outC->_1_Context_1.RE_Output | outC->Context_2.RE_Output |
+    tmp1 | trackDescrDeleted | (*fromDriver).trackAheadFree |
+    (*fromDriver).driverSelectsStart;
   outC->exception = tmp | outC->Context_1.exception;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Request_Supervision_TA_MA_Request.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

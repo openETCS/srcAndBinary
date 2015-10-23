@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _FIFO_InformationFilter_Pkg_Common_3_H_
 #define _FIFO_InformationFilter_Pkg_Common_3_H_
@@ -23,8 +23,8 @@ typedef struct {
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   kcg_int /* InformationFilter_Pkg::Common::FIFO::IfBlock1::then::_L20 */ _L20_IfBlock1;
-  array_84066 /* InformationFilter_Pkg::Common::FIFO::IfBlock1::then::_L4 */ _L4_IfBlock1;
-  array_84066 /* InformationFilter_Pkg::Common::FIFO::buffer */ buffer;
+  array_92678 /* InformationFilter_Pkg::Common::FIFO::IfBlock1::then::_L4 */ _L4_IfBlock1;
+  array_92678 /* InformationFilter_Pkg::Common::FIFO::buffer */ buffer;
   kcg_int /* InformationFilter_Pkg::Common::FIFO::_L32 */ _L32;
   kcg_int /* InformationFilter_Pkg::Common::FIFO::_L50 */ _L50;
   /* -------------------- no sub nodes' contexts  -------------------- */
@@ -52,6 +52,6 @@ extern void FIFO_init_InformationFilter_Pkg_Common_3(
 #endif /* _FIFO_InformationFilter_Pkg_Common_3_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FIFO_InformationFilter_Pkg_Common_3.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

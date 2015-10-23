@@ -1,11 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 #ifndef _SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg_H_
 #define _SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg_H_
 
 #include "kcg_types.h"
+#include "SimpleValidityCheck_SDM_Input_Wrappers.h"
 #include "SDMLimitLocations_TargetLimits_Pkg.h"
 #include "ABrakeFactory_SDMModelPkg.h"
 #include "addGradient_SDMModelPkg.h"
@@ -66,6 +67,6 @@ extern void SpeedSupervision_Integration_init_SpeedSupervision_Integration_Pkg(
 #endif /* _SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 

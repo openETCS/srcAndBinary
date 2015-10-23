@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 #ifndef _sendDynamic_manage_DMI_Output_Pkg_H_
 #define _sendDynamic_manage_DMI_Output_Pkg_H_
@@ -8,6 +8,7 @@
 #include "kcg_types.h"
 #include "mapMoRCtoRadio_CS_manage_DMI_Output_Pkg.h"
 #include "calcDistances_manage_DMI_Output_Pkg.h"
+#include "convert_cm_s_km_h_manage_DMI_Output_Pkg.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -30,6 +31,6 @@ extern void sendDynamic_manage_DMI_Output_Pkg(
 #endif /* _sendDynamic_manage_DMI_Output_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendDynamic_manage_DMI_Output_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 

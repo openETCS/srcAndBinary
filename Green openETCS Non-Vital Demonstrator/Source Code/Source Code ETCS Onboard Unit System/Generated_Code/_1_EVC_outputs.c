@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #include "_1_EVC.h"
 
@@ -23,7 +23,7 @@ kcg_bool EVC_ready;
 /* EVC::API_toTIU */
 TIU_Output_msg_API_TIU_Pkg API_toTIU;
 /* EVC::API_toDMI */
-EVC_to_DMI_Message_T_API_DMI_Pkg API_toDMI;
+EVC_to_DMI_Message_int_T_API_DMI_Pkg API_toDMI;
 /* EVC::API_RTM_management */
 RadioManagement_T_API_RadioCommunication_Pkg API_RTM_management;
 /* EVC::API_toRBC */
@@ -33,6 +33,6 @@ kcg_bool resetOut;
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** _1_EVC_outputs.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

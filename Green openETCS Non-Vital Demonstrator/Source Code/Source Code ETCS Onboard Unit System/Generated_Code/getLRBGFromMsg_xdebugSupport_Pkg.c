@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,8 @@ NID_LRBG getLRBGFromMsg_xdebugSupport_Pkg(
   }
   else /* 2 */ if ((*actualMessage).source ==
     msrc_Eurobalise_Common_Types_Pkg) {
-    LRBG = (*actualMessage).BG_Common_Header.nid_bg;
+    LRBG = (*actualMessage).BG_Common_Header.nid_bg +
+      (*actualMessage).BG_Common_Header.nid_c * 100000;
   }
   else {
     LRBG = 0;
@@ -29,6 +30,6 @@ NID_LRBG getLRBGFromMsg_xdebugSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getLRBGFromMsg_xdebugSupport_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

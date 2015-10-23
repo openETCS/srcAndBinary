@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -243,6 +243,8 @@ void combineForLevelChange_xdebugSupport_Pkg(
   static kcg_bool tmp1;
   /* xdebugSupport_Pkg::combineForLevelChange */
   static kcg_bool tmp;
+  /* xdebugSupport_Pkg::combineForLevelChange::_L108 */
+  static kcg_bool _L108;
   /* xdebugSupport_Pkg::combineForLevelChange::infoForLevelTransition */
   static dataCollectionForLevelTransition_T_xdebugSupport_Pkg last_infoForLevelTransition;
   
@@ -328,9 +330,6 @@ void combineForLevelChange_xdebugSupport_Pkg(
     outC->infoForLevelTransition.p21_received;
   outC->forLevelManagement.P27_received =
     outC->infoForLevelTransition.p27_received;
-  kcg_copy_filterRelatedEvents_T_Common_Types_Pkg(
-    &outC->outFilterEvents,
-    inFilterEvents);
   /* 6 */ if (outC->infoForLevelTransition.p41[0].valid) {
     tmp1 = outC->infoForLevelTransition.p41[0].m_leveltr == M_LEVELTR_Level_2;
     tmp = outC->infoForLevelTransition.p41[0].m_leveltr == M_LEVELTR_Level_3;
@@ -339,7 +338,12 @@ void combineForLevelChange_xdebugSupport_Pkg(
     tmp = kcg_false;
     tmp1 = kcg_false;
   }
-  outC->outFilterEvents.pendingL12L3Transition = tmp1 | tmp;
+  _L108 = tmp1 | tmp;
+  kcg_copy_filterRelatedEvents_T_Common_Types_Pkg(
+    &outC->outFilterEvents,
+    inFilterEvents);
+  outC->outFilterEvents.pendingL12L3Transition = _L108;
+  outC->outFilterEvents.SPPAndGradientOnBoard = _L108;
   /* 5 */ if (outC->infoForLevelTransition.p41[0].valid) {
     outC->outFilterEvents.pendingL1Transition =
       outC->infoForLevelTransition.p41[0].m_leveltr == M_LEVELTR_Level_1;
@@ -376,6 +380,6 @@ void combineForLevelChange_xdebugSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** combineForLevelChange_xdebugSupport_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

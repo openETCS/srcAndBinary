@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 #ifndef _manageDMI_Output_manage_DMI_Output_Pkg_H_
 #define _manageDMI_Output_manage_DMI_Output_Pkg_H_
@@ -11,6 +11,7 @@
 #include "sendLevelListPkg_manage_DMI_Output_Pkg.h"
 #include "copyTrackDescription_manage_DMI_Output_Pkg.h"
 #include "manageTextMessages_manage_TextMessages_Pkg.h"
+#include "Write_EVC_to_DMI_to_int_Messages.h"
 #include "cyclicReportToDMI_manage_DMI_Output_Pkg.h"
 #include "collectDMIPackets_manage_DMI_Output_Pkg.h"
 #include "sendBrakesToDMI_manage_DMI_Output_Pkg.h"
@@ -24,7 +25,7 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  EVC_to_DMI_Message_T_API_DMI_Pkg /* manage_DMI_Output_Pkg::manageDMI_Output::to_DMI */ to_DMI;
+  EVC_to_DMI_Message_int_T_API_DMI_Pkg /* manage_DMI_Output_Pkg::manageDMI_Output::to_DMI */ to_DMI;
   DMI_TXT_MSGList_status_T_DMI_Types_Pkg /* manage_DMI_Output_Pkg::manageDMI_Output::outStatusList */ outStatusList;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------  no initialization variables  ----------------- */
@@ -84,6 +85,6 @@ extern void manageDMI_Output_init_manage_DMI_Output_Pkg(
 #endif /* _manageDMI_Output_manage_DMI_Output_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Output_manage_DMI_Output_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 

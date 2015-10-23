@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,6 +29,7 @@ void sendAcknowledgementRBC_init_trainData_pkg(
   }
   outC->updatedStatus.valid = kcg_true;
   outC->updatedStatus.validatedByDriver = kcg_true;
+  outC->updatedStatus.RBCsystemVersionOnboard = kcg_true;
   outC->updatedStatus.validatedbyRBC = kcg_true;
   outC->updatedStatus.waitingForRBCResponse = kcg_true;
   outC->updatedStatus.driverIsModificationTrainData = kcg_true;
@@ -174,6 +175,6 @@ void sendAcknowledgementRBC_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendAcknowledgementRBC_trainData_pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

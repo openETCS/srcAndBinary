@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -126,7 +126,7 @@ void manageDMI_Input_reset_manage_DMI_Input_Pkg(
 
 /* manage_DMI_Input_Pkg::manageDMI_Input */
 void manageDMI_Input_manage_DMI_Input_Pkg(
-  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */ DMI_to_EVC_Message_T_API_DMI_Pkg *fromDMI,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */ DMI_to_EVC_Message_int_T_API_DMI_Pkg *fromDMI,
   /* manage_DMI_Input_Pkg::manageDMI_Input::dmiStatusReset */ kcg_bool dmiStatusReset,
   /* manage_DMI_Input_Pkg::manageDMI_Input::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
   /* manage_DMI_Input_Pkg::manageDMI_Input::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
@@ -137,8 +137,10 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
   static DMI_EVC_status_T_DMI_Types_Pkg _L14;
   /* manage_DMI_Input_Pkg::manageDMI_Input::IfBlock1 */
   static kcg_bool IfBlock1_clock;
+  /* manage_DMI_Input_Pkg::manageDMI_Input::IfBlock1::then::_L54 */
+  static DMI_to_EVC_Message_T_API_DMI_Pkg _L54_IfBlock1;
   
-  IfBlock1_clock = (*fromDMI).present & !dmiStatusReset;
+  IfBlock1_clock = (1 == (*fromDMI)[0]) & !dmiStatusReset;
   /* last_init_ck_DMI_Status_inEVC */ if (outC->init) {
     outC->init = kcg_false;
     kcg_copy_DMI_EVC_status_T_DMI_Types_Pkg(
@@ -150,20 +152,21 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
     kcg_copy_DMI_EVC_status_T_DMI_Types_Pkg(&_L14, &outC->currentDMIStatus);
   }
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
+    /* 2 */ Write_int_to_DMI_to_EVC_Messages(fromDMI, &_L54_IfBlock1);
     /* 2 */
     updateDMIStatus_manage_DMI_Input_Pkg(
       &_L14,
-      fromDMI,
+      &_L54_IfBlock1,
       _L14.DMI_TrainRunningNumberFirstValidation,
       &outC->currentDMIStatus);
     kcg_copy_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_Identifier,
-      &(*fromDMI).identifier);
+      &_L54_IfBlock1.identifier);
     /* 1 */
     receiveRequestsModesAndLevel_manage_DMI_Input_Pkg(
-      &(*fromDMI).driverRequest,
-      &(*fromDMI).iconAck,
-      &(*fromDMI).textMessageAck,
+      &_L54_IfBlock1.driverRequest,
+      &_L54_IfBlock1.iconAck,
+      &_L54_IfBlock1.textMessageAck,
       inSystemTime,
       inStatusList,
       &outC->forModesAndLevel,
@@ -171,38 +174,38 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
       &outC->outUpdateLevelsDMI);
     kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_DriverIdentifier,
-      &(*fromDMI).driverIdentifier);
+      &_L54_IfBlock1.driverIdentifier);
     kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_TrainRunningNumber,
-      &(*fromDMI).trainRunningNumber);
+      &_L54_IfBlock1.trainRunningNumber);
     kcg_copy_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_RadioNetData,
-      &(*fromDMI).radioNetData);
+      &_L54_IfBlock1.radioNetData);
     kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_Icon_Ack,
-      &(*fromDMI).iconAck);
+      &_L54_IfBlock1.iconAck);
     kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_TrainData,
-      &(*fromDMI).trainData);
+      &_L54_IfBlock1.trainData);
     kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_TrainDataAck,
-      &(*fromDMI).trainDataAck);
+      &_L54_IfBlock1.trainDataAck);
     kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_AdhesionFactor,
-      &(*fromDMI).adhesionFactor);
+      &_L54_IfBlock1.adhesionFactor);
     /* 1 */
     changeLevelByDiver_manage_DMI_Input_Pkg(
-      &(*fromDMI).selectedLevel,
+      &_L54_IfBlock1.selectedLevel,
       lasttNTC,
       &outC->ML_levelTransition,
       &outC->updatedNTC);
     /* 1 */
     triggerForMA_manage_DMI_Input_Pkg(
-      &(*fromDMI).driverRequest,
+      &_L54_IfBlock1.driverRequest,
       &outC->outForMA);
     kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->outDriverRequest,
-      &(*fromDMI).driverRequest);
+      &_L54_IfBlock1.driverRequest);
   }
   else {
     outC->outUpdateLevelsDMI = kcg_false;
@@ -283,6 +286,6 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

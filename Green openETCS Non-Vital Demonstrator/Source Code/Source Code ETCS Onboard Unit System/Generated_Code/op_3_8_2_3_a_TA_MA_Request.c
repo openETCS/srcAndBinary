@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,8 +13,8 @@ void op_3_8_2_3_a_TA_MA_Request(
   /* TA_MA_Request::op_3_8_2_3_a::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
   /* TA_MA_Request::op_3_8_2_3_a::preindicationLoc */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLoc,
   /* TA_MA_Request::op_3_8_2_3_a::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* TA_MA_Request::op_3_8_2_3_a::triggerMA */ kcg_bool *triggerMA,
-  /* TA_MA_Request::op_3_8_2_3_a::exception */ kcg_bool *exception)
+  /* TA_MA_Request::op_3_8_2_3_a::exception */ kcg_bool *exception,
+  /* TA_MA_Request::op_3_8_2_3_a::triggerMA */ kcg_bool *triggerMA)
 {
   /* TA_MA_Request::op_3_8_2_3_a::_L21 */
   static kcg_bool _L21;
@@ -48,6 +48,6 @@ void op_3_8_2_3_a_TA_MA_Request(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_8_2_3_a_TA_MA_Request.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

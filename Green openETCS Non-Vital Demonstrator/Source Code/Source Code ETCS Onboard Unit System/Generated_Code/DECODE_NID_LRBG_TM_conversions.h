@@ -1,11 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _DECODE_NID_LRBG_TM_conversions_H_
 #define _DECODE_NID_LRBG_TM_conversions_H_
 
 #include "kcg_types.h"
+#include "CAST_Int_to_NID_C_TM_conversions.h"
+#include "CAST_Int_to_NID_BG_TM_conversions.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -21,6 +23,6 @@ extern void DECODE_NID_LRBG_TM_conversions(
 #endif /* _DECODE_NID_LRBG_TM_conversions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** DECODE_NID_LRBG_TM_conversions.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

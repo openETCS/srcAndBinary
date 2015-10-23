@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _Build_GradientProfile_TA_Gradient_H_
 #define _Build_GradientProfile_TA_Gradient_H_
@@ -53,6 +53,6 @@ extern void Build_GradientProfile_init_TA_Gradient(
 #endif /* _Build_GradientProfile_TA_Gradient_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_GradientProfile_TA_Gradient.h
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

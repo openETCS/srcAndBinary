@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8729,6 +8729,68 @@ const DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg cDefaultText_manage_DMI_Out
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
   Q_TEXTCLASS_Auxiliary_Information, Q_TEXTCONFIRM_No_confirmation_required };
 
+/* Messages::cEVC_DMI_int_array */
+const EVC_to_DMI_Message_int_T_API_DMI_Pkg cEVC_DMI_int_array_Messages = { 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+/* DATA::Packets::EVC_to_DMI::cDMI_Track_Description_in */
+const DMI_Track_Description_int_array_T cDMI_Track_Description_in_DATA_Packets_EVC_to_DMI = {
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+/* DATA::Packets::Bothways::cDMI_Driver_Identifier_int */
+const DMI_Driver_Identifier_int_array_T_DATA cDMI_Driver_Identifier_int_DATA_Packets_Bothways = {
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
 /* MoRC_Pck::cNoMessageToRBC */
 const Radio_TrainTrack_Message_T_Radio_Types_Pkg cNoMessageToRBC_MoRC_Pck = {
   kcg_false, { kcg_false, 0, 0, 0, Q_MARQSTREASON_Start_selected_by_driver, 0,
@@ -9271,7 +9333,7 @@ const array_int_6_221 cBrakePercentALookup_SDMConversionModelPkg = { { 30, 25,
     148, 0, 0, 0 } };
 
 /* SDMConversionModelPkg::cBrakePercentV_lim */
-const Array04_TM cBrakePercentV_lim_SDMConversionModelPkg = { 100, 120, 150,
+const array_int_4 cBrakePercentV_lim_SDMConversionModelPkg = { 100, 120, 150,
   180 };
 
 /* SDMConversionModelPkg::cBrakePercentSpeedLookup */
@@ -9386,6 +9448,88 @@ const DMI_TXT_MSGList_status_T_DMI_Types_Pkg cEmptyTestStatusList_DMI_Types_Pkg 
   { kcg_false, 0, 0, Q_TEXTREPORT_No_driver_acknowledgement_report_required,
     con_undefined_DMI_Types_Pkg, 0, M_LEVEL_Level_0,
     M_MODE_Full_Supervision } };
+
+/* Messages::cDMI_EVC_CT */
+const DMI_to_EVC_Message_T_API_DMI_Pkg cDMI_EVC_CT_Messages = { kcg_false, {
+    kcg_false, 0, Running_state_DMI_Types_Pkg, 0 }, { kcg_false, 0,
+    DMI_1_DMI_Types_Pkg, cabin_A_DMI_Types_Pkg, 0, { ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS }, {
+    kcg_false, 0, Start_of_mission_DMI_Types_Pkg }, { kcg_false, 0, { ' ', ' ',
+      ' ', ' ', ' ', ' ', ' ', ' ', ' ' } }, { kcg_false, 0, 0 }, { kcg_false,
+    0 }, { kcg_false, 0, 0, kcg_false }, { kcg_false, 0, kcg_false }, {
+    kcg_false, 0,
+    NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category,
+    0, 0, 0, M_AXLELOADCAT_A, M_AIRTIGHT_Not_fitted,
+    M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles },
+  { kcg_false, 0, M_ADHESION_Slippery_rail }, { kcg_false, 0, 0 }, { kcg_false,
+    0, { M_LEVEL_Level_0, 0 } } };
+
+/* DATA::Packets::Bothways::cDMI_Driver_Identifier */
+const DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg cDMI_Driver_Identifier_DATA_Packets_Bothways = {
+  kcg_false, 0, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Status */
+const DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Status_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0, Running_state_DMI_Types_Pkg, 0 };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Identifier */
+const DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Identifier_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0, DMI_1_DMI_Types_Pkg, cabin_A_DMI_Types_Pkg, 0, { ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+  M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Driver_Request */
+const DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Driver_Request_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0, Start_of_mission_DMI_Types_Pkg };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Radio_Net_Data */
+const DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Radio_Net_Data_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0 };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Text_Message_Ack */
+const DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Text_Message_Ack_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0, 0, kcg_false };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Train_Data_Ack */
+const DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Train_Data_Ack_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0, kcg_false };
+
+/* DATA::Packets::DMI_to_EVC::cDMI_Icon_Ack */
+const DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Icon_Ack_DATA_Packets_DMI_to_EVC = {
+  kcg_false, 0, 0 };
 
 /* manage_DMI_Input_Pkg::cDMIIconAckDefault */
 const DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg cDMIIconAckDefault_manage_DMI_Input_Pkg = {
@@ -16166,10 +16310,6 @@ const ModeDecisionTableType_DataDictionary_Pkg ModeDecisionTable_DataDictionary_
     MD_Invalid_DataDictionary_Pkg, MD_Invalid_DataDictionary_Pkg,
     MD_Invalid_DataDictionary_Pkg, MD_Invalid_DataDictionary_Pkg } };
 
-/* Common_Types_Pkg::cNoMetaDataElement */
-const MetadataElement_T_Common_Types_Pkg cNoMetaDataElement_Common_Types_Pkg = {
-  0, Q_DIR_Reverse, kcg_false, 0, 0 };
-
 /* xdebugSupport_Pkg::cNoML */
 const dataCollectionForLevelTransition_T_xdebugSupport_Pkg cNoML_xdebugSupport_Pkg = {
   { { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0,
@@ -16311,6 +16451,10 @@ const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg = {
 const probesBalises_T_xdebugSupport_Pkg cNoPro_xdebugSupport_Pkg = { kcg_false,
   0, 0, { kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false,
     kcg_false, 0, 0 } };
+
+/* Common_Types_Pkg::cNoMetaDataElement */
+const MetadataElement_T_Common_Types_Pkg cNoMetaDataElement_Common_Types_Pkg = {
+  0, Q_DIR_Reverse, kcg_false, 0, 0 };
 
 /* radioOutput_Pkg::noP000 */
 const P000_TM_TrainToTrack noP000_radioOutput_Pkg = { kcg_false, 0, 0,
@@ -16894,7 +17038,7 @@ const trainData_Trigger_T_trainData_Types_pkg cNoTrigger_trainData_Types_pkg = {
 
 /* trainData_Types_pkg::cNoStates */
 const trainDataStatus_T_trainData_Types_pkg cNoStates_trainData_Types_pkg = {
-  kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, 0 };
+  kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, 0 };
 
 /* trainData_Types_pkg::cEmptyTrainData */
 const trainData_T_TIU_Types_Pkg cEmptyTrainData_trainData_Types_pkg = {
@@ -17016,55 +17160,43 @@ const DataForSupervision_nextGen_t_TrackAtlasTypes NTC_values_to_supervision_Tra
 /* TrackAtlasTypes::DEFAULT_Endtimer */
 const Endtimer_t_TrackAtlasTypes DEFAULT_Endtimer_TrackAtlasTypes = { 0, 0 };
 
-/* TrackAtlasTypes::DEFAULT_MA_sectionlist */
-const MovementAuthoritySectionlist_t_TrackAtlasTypes DEFAULT_MA_sectionlist_TrackAtlasTypes = {
-  { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
-    kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
-    kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
-    kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
-    kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
-    kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
-    kcg_false, kcg_false, 0, kcg_false, 0, 0 } };
+/* TA_MA::DEFAULT_AccuDistanceProfileMA */
+const AccuDistanceProfileMA_TA_MA DEFAULT_AccuDistanceProfileMA_TA_MA = { { {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
+      kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
+      kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
+      kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 } }, 0 };
 
-/* TA_MA::INIT_P15_OBU */
-const P015_OBU_T_TM INIT_P15_OBU_TA_MA = { kcg_false, Q_DIR_Reverse,
-  Q_SCALE_10_cm_scale, 0, 0, 0, { { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 }, { kcg_false, 0,
-      Q_SECTIONTIMER_No_Section_Timer_information, 0, 0 } }, 0,
-  Q_SECTIONTIMER_No_Section_Timer_information, 0, 0,
-  Q_ENDTIMER_No_End_section_timer_information, 0, 0,
-  Q_DANGERPOINT_No_danger_point_information, 0, 0,
-  Q_OVERLAP_No_overlap_information, 0, 0, 0, 0 };
+/* TrackAtlasTypes::DEFAULT_OL */
+const DP_or_OL_t_TrackAtlasTypes DEFAULT_OL_TrackAtlasTypes = { 0, 0,
+  kcg_false };
+
+/* TrackAtlasTypes::DEFAULT_DP */
+const DP_or_OL_t_TrackAtlasTypes DEFAULT_DP_TrackAtlasTypes = { 0, 0,
+  kcg_false };
+
+/* TrackAtlasTypes::DEFAULT_MA_section */
+const MovementAuthoritySection_t_TrackAtlasTypes DEFAULT_MA_section_TrackAtlasTypes = {
+  kcg_false, kcg_false, 0, kcg_false, 0, 0 };
+
+/* TrackAtlasTypes::DEFAULT_MovementAuthority */
+const MovementAuthority_t_TrackAtlasTypes DEFAULT_MovementAuthority_TrackAtlasTypes = {
+  kcg_false, MA_L1_TrackAtlasTypes, Q_DIR_Reverse, 0, 0, kcg_false, 0, 0, { {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
+      kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
+      kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 }, { kcg_false, kcg_false, 0,
+      kcg_false, 0, 0 }, { kcg_false, kcg_false, 0, kcg_false, 0, 0 }, {
+      kcg_false, kcg_false, 0, kcg_false, 0, 0 } }, kcg_false, { 0, 0,
+    kcg_false }, kcg_false, { 0, 0, kcg_false }, kcg_false, { 0, 0 } };
+
+/* TA_MA::DefaultMA_section */
+const MovementAuthoritySection_t_TrackAtlasTypes DefaultMA_section_TA_MA = {
+  kcg_false, kcg_false, 0, kcg_false, 0, 0 };
 
 /* TA_MRSP::XSSPold */
 const SSP_cat_t_TA_MRSP XSSPold_TA_MRSP = { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0,
@@ -17623,23 +17755,6 @@ const GradientProfile_t_TrackAtlasTypes DEFAULT_GradientProfile_TrackAtlasTypes 
 /* TA_Gradient::DEFAULT_GP_Section */
 const Gradient_section_t_TrackAtlasTypes DEFAULT_GP_Section_TA_Gradient = {
   kcg_false, 0, 0, 0, 0 };
-
-/* TM_lib_internal::DEFAULT_TrainTrackBus_m */
-const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus DEFAULT_TrainTrackBus_m_TM_lib_internal = {
-  { { kcg_false, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }, { { kcg_false, 0, 0, 0, 0, 0, 0,
-      0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0 } }, { { kcg_false, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }, { { kcg_false,
-      0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0 } }, { { kcg_false, 0, 0, 0, 0, 0, 0, 0 }, { 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0 } } };
 
 /* TA_MA_Request::cPacket132 */
 const Radio_TrainTrack_Message_T_Radio_Types_Pkg cPacket132_TA_MA_Request = {
@@ -27017,6 +27132,6 @@ const P003_TM_TrainToTrack cMoRC_own_P3ng_EVC_PermanentData_Pkg = { kcg_true, 3,
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.c
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:32
 *************************************************************$ */
 

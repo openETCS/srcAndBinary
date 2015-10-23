@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,6 +29,7 @@ void trainData_init_trainData_pkg(outC_trainData_trainData_pkg *outC)
   }
   outC->updatedStatus.valid = kcg_true;
   outC->updatedStatus.validatedByDriver = kcg_true;
+  outC->updatedStatus.RBCsystemVersionOnboard = kcg_true;
   outC->updatedStatus.validatedbyRBC = kcg_true;
   outC->updatedStatus.waitingForRBCResponse = kcg_true;
   outC->updatedStatus.driverIsModificationTrainData = kcg_true;
@@ -176,9 +177,9 @@ void trainData_trainData_pkg(
   /* trainData_pkg::trainData::t_train */ T_TRAIN t_train,
   outC_trainData_trainData_pkg *outC)
 {
+  /* trainData_pkg::trainData */
+  static kcg_bool tmp;
   /* trainData_pkg::trainData::IfBlock1::else */
-  static kcg_bool _1_else_clock_IfBlock1;
-  /* trainData_pkg::trainData::IfBlock1::else::else */
   static kcg_bool else_clock_IfBlock1;
   /* trainData_pkg::trainData::IfBlock1 */
   static kcg_bool IfBlock1_clock;
@@ -186,8 +187,10 @@ void trainData_trainData_pkg(
   static kcg_bool ackReceived;
   /* trainData_pkg::trainData::ackRequested */
   static kcg_bool ackRequested;
-  /* trainData_pkg::trainData::_L18 */
-  static trainDataStatus_T_trainData_Types_pkg _L18;
+  /* trainData_pkg::trainData::statusAfterCheck */
+  static trainDataStatus_T_trainData_Types_pkg statusAfterCheck;
+  /* trainData_pkg::trainData::_L45 */
+  static trainDataStatus_T_trainData_Types_pkg _L45;
   
   kcg_copy_trainData_Trigger_T_trainData_Types_pkg(
     &outC->triggerFromTrainData,
@@ -196,37 +199,48 @@ void trainData_trainData_pkg(
   /* last_init_ck_trainDataStatus */ if (outC->init) {
     outC->init = kcg_false;
     kcg_copy_trainDataStatus_T_trainData_Types_pkg(
-      &_L18,
+      &_L45,
       (trainDataStatus_T_trainData_Types_pkg *) &cNoStates_trainData_Types_pkg);
   }
   else {
-    kcg_copy_trainDataStatus_T_trainData_Types_pkg(&_L18, &outC->updatedStatus);
+    kcg_copy_trainDataStatus_T_trainData_Types_pkg(&_L45, &outC->updatedStatus);
   }
-  /* ck__L24 */ if (_L18.waitingForRBCResponse) {
+  tmp = !_L45.RBCsystemVersionOnboard;
+  /* ck__L66 */ if (tmp) {
     /* 1 */
-    checkRadioMessages_trainData_pkg(
+    checkRBCSystemVersion_trainData_pkg(
       trackMessages,
-      &_L18,
-      &IfBlock1_clock,
-      &_1_else_clock_IfBlock1);
+      &_L45,
+      &statusAfterCheck);
   }
   else {
-    IfBlock1_clock = kcg_false;
-    _1_else_clock_IfBlock1 = kcg_false;
+    kcg_copy_trainDataStatus_T_trainData_Types_pkg(&statusAfterCheck, &_L45);
   }
-  /* ck__L21 */ if (_L18.validatedbyRBC) {
+  /* ck__L21 */ if (statusAfterCheck.validatedbyRBC) {
     /* 1 */
     checkAcknowledgmentGeneral_trainData_pkg(
       trackMessages,
       &ackRequested,
-      &else_clock_IfBlock1);
+      &tmp);
   }
   else {
     ackRequested = kcg_false;
+    tmp = kcg_false;
+  }
+  /* ck__L46 */ if (_L45.waitingForRBCResponse) {
+    /* 1 */
+    checkRadioMessages_trainData_pkg(
+      trackMessages,
+      &statusAfterCheck,
+      &IfBlock1_clock,
+      &else_clock_IfBlock1);
+  }
+  else {
+    IfBlock1_clock = kcg_false;
     else_clock_IfBlock1 = kcg_false;
   }
   ackReceived = IfBlock1_clock | ackRequested;
-  ackRequested = _1_else_clock_IfBlock1 | else_clock_IfBlock1;
+  ackRequested = else_clock_IfBlock1 | tmp;
   IfBlock1_clock = ackReceived & ackRequested;
   /* 1 */
   trainDataStorage_trainData_pkg(
@@ -234,7 +248,7 @@ void trainData_trainData_pkg(
     trainDatafromTIU,
     trainDatafromDriver,
     trainDataAckfromDriver,
-    &_L18,
+    &statusAfterCheck,
     eventsForTrainData,
     &outC->Context_1);
   kcg_copy_trainData_T_TIU_Types_Pkg(
@@ -261,8 +275,8 @@ void trainData_trainData_pkg(
       &outC->_2_Context_1.updatedStatus);
   }
   else {
-    _1_else_clock_IfBlock1 = ackReceived & !ackRequested;
-    /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+    else_clock_IfBlock1 = ackReceived & !ackRequested;
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
       kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
         &outC->trainDataToRBC,
         (Radio_TrainTrack_Message_T_Radio_Types_Pkg *)
@@ -277,11 +291,13 @@ void trainData_trainData_pkg(
       outC->updatedStatus.waitingForRBCResponse = kcg_false;
     }
     else {
-      else_clock_IfBlock1 = _L18.valid & _L18.validatedByDriver &
-        !_L18.validatedbyRBC & !_L18.waitingForRBCResponse &
+      tmp = statusAfterCheck.valid & statusAfterCheck.validatedByDriver &
+        !statusAfterCheck.validatedbyRBC &
+        !statusAfterCheck.waitingForRBCResponse &
+        statusAfterCheck.RBCsystemVersionOnboard &
         ((*eventsForTrainData).communicationSessionEstablished &
           (*eventsForTrainData).MoRCreadyFlag);
-      /* ck_anon_activ */ if (else_clock_IfBlock1) {
+      /* ck_anon_activ */ if (tmp) {
         /* 1 */
         sendValidTrainDataRBC_trainData_pkg(
           trainDatafromTIU,
@@ -321,6 +337,6 @@ void trainData_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainData_trainData_pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

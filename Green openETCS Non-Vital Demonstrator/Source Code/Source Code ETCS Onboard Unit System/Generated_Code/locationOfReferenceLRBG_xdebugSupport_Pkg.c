@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,14 @@ void locationOfReferenceLRBG_xdebugSupport_Pkg(
   /* xdebugSupport_Pkg::locationOfReferenceLRBG::position */ L_internal_Type_Obu_BasicTypes_Pkg *position,
   /* xdebugSupport_Pkg::locationOfReferenceLRBG::passed */ kcg_bool *passed)
 {
-  *passed = LRBG == (*trainPosition).LRBG.nid_bg;
+  /* xdebugSupport_Pkg::locationOfReferenceLRBG::_L14 */
+  static NID_BG _L14;
+  /* xdebugSupport_Pkg::locationOfReferenceLRBG::_L13 */
+  static NID_C _L13;
+  
+  /* 1 */ Decode_NID_LRBG_TM(LRBG, &_L13, &_L14);
+  *passed = (_L13 == (*trainPosition).LRBG.nid_c) & (_L14 ==
+      (*trainPosition).LRBG.nid_bg);
   /* 1 */ if (*passed) {
     *position = (*trainPosition).LRBG.location.nominal;
   }
@@ -25,6 +32,6 @@ void locationOfReferenceLRBG_xdebugSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** locationOfReferenceLRBG_xdebugSupport_Pkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

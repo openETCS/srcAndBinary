@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -36,7 +36,7 @@ void BufferMsg_read_write_TM_lib_internal(
       &(&(*Buffer_Out)[0])[0],
       Message_In);
   }
-  kcg_copy_array_83628(&(*Buffer_Out)[1], (array_83628 *) &(*Buffer_In)[0]);
+  kcg_copy_array_92220(&(*Buffer_Out)[1], (array_92220 *) &(*Buffer_In)[0]);
   _L31 = Stacksize_old - 1;
   /* 2 */ if (_L40) {
     kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(Message_out, Message_In);
@@ -64,6 +64,6 @@ void BufferMsg_read_write_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_read_write_TM_lib_internal.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

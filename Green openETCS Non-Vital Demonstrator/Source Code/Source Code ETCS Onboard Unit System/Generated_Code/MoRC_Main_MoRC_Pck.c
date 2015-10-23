@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -135,10 +135,7 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
   outC->cmdsToMobile.action = mhwa_nop_MoRC_Pck;
   outC->cmdsToMobile.radioNetworkID = 0;
   outC->cmdsToMobile.nid_radio = 0;
-  /* 1 */ Send_M155_init_TM_radio_messages(&outC->_3_Context_1);
-  /* 1 */ Send_M156_init_TM_radio_messages(&outC->_2_Context_1);
-  /* 1 */ Send_M159_init_TM_radio_messages(&outC->_1_Context_1);
-  /* 1 */ Send_M154_init_TM_radio_messages(&outC->Context_1);
+  /* 1 */ genMsgToBus_init_RCM_Utils_Pkg_encoders(&outC->Context_1);
   /* 2 */ managementOfRadioCommunication_init_MoRC_Pck(&outC->Context_2);
 }
 #endif /* KCG_USER_DEFINED_INIT */
@@ -147,10 +144,7 @@ void MoRC_Main_init_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void MoRC_Main_reset_MoRC_Pck(outC_MoRC_Main_MoRC_Pck *outC)
 {
-  /* 1 */ Send_M155_reset_TM_radio_messages(&outC->_3_Context_1);
-  /* 1 */ Send_M156_reset_TM_radio_messages(&outC->_2_Context_1);
-  /* 1 */ Send_M159_reset_TM_radio_messages(&outC->_1_Context_1);
-  /* 1 */ Send_M154_reset_TM_radio_messages(&outC->Context_1);
+  /* 1 */ genMsgToBus_reset_RCM_Utils_Pkg_encoders(&outC->Context_1);
   /* 2 */ managementOfRadioCommunication_reset_MoRC_Pck(&outC->Context_2);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
@@ -175,17 +169,11 @@ void MoRC_Main_MoRC_Pck(
   outC_MoRC_Main_MoRC_Pck *outC)
 {
   /* MoRC_Pck::MoRC_Main */
-  static struct_84087 mk_struct;
+  static msgToTrackTriggers_T_RCM_MsgTypes_Pkg mk_struct;
   /* MoRC_Pck::MoRC_Main */
-  static struct_84087 _1_mk_struct;
+  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp2;
   /* MoRC_Pck::MoRC_Main */
-  static struct_84087 _2_mk_struct;
-  /* MoRC_Pck::MoRC_Main */
-  static struct_84087 _3_mk_struct;
-  /* MoRC_Pck::MoRC_Main */
-  static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp5;
-  /* MoRC_Pck::MoRC_Main */
-  static P45_RadioNetworkRegistration_T_Packet_Types_Pkg tmp4;
+  static P45_RadioNetworkRegistration_T_Packet_Types_Pkg tmp1;
   /* MoRC_Pck::MoRC_Main */
   static p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg tmp;
   /* MoRC_Pck::MoRC_Main::p42_establish_or_terminate */
@@ -211,10 +199,10 @@ void MoRC_Main_MoRC_Pck(
     inMessage_new,
     (*obuEventsAndPhases).systemVersionFromTracksideSupported,
     &m32_RBC_or_RIU_System_Version);
-  /* 2 */ decP45_MoRC_Pck_Coder_Pkg(inMessage_new, &tmp4);
+  /* 2 */ decP45_MoRC_Pck_Coder_Pkg(inMessage_new, &tmp1);
   /* 3 */ if (_L194) {
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
-      &tmp5,
+      &tmp2,
       (p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg *)
         &cInvalidOrder_MoRC_Pck_Coder_Pkg);
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
@@ -223,7 +211,7 @@ void MoRC_Main_MoRC_Pck(
   }
   else {
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
-      &tmp5,
+      &tmp2,
       &p42_establish_or_terminate);
     kcg_copy_p42e_SessionManagement_T_MoRC_Pck_Coder_Pkg(
       &tmp,
@@ -234,7 +222,7 @@ void MoRC_Main_MoRC_Pck(
   managementOfRadioCommunication_MoRC_Pck(
     currentTime,
     /* 2 */ decM39_MoRC_Pck_Coder_Pkg(inMessage_new),
-    &tmp5,
+    &tmp2,
     (kcg_bool)
       (m38_initiationOfACommunicationSession |
         (p42_establish_or_terminate.establish &
@@ -258,7 +246,7 @@ void MoRC_Main_MoRC_Pck(
     level,
     &(*radioNetworkIDs).memorizedID,
     &(*radioNetworkIDs).ID_fromDriver,
-    &tmp4,
+    &tmp1,
     (*obuEventsAndPhases).afterDriverEntryOfANewRadioNetworkID,
     (*obuEventsAndPhases).triggerDecisionThatNoRadioNetworkIDAvailable,
     statusOfMobile,
@@ -322,22 +310,6 @@ void MoRC_Main_MoRC_Pck(
       0,
       nid_engine,
       &outC->MessageToRBC);
-    _3_mk_struct.valid = kcg_true;
-    _3_mk_struct.nid_message =
-      co155_Initiation_of_a_communication_session_Id_Pkg;
-    _3_mk_struct.l_message = 0;
-    _3_mk_struct.t_train = t_train;
-    _3_mk_struct.nid_engine = nid_engine;
-    /* 1 */
-    Send_M155_TM_radio_messages(
-      t_train_global,
-      msgBus_in,
-      &_3_mk_struct,
-      m_version,
-      &outC->_3_Context_1);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-      &outC->msgBus_out,
-      &outC->_3_Context_1.MessageBus_out);
   }
   else /* ck_anon_activ */ if (outC->Context_2.sendATerminationOfCommunicationMessage) {
     /* 8 */
@@ -348,22 +320,6 @@ void MoRC_Main_MoRC_Pck(
       0,
       nid_engine,
       &outC->MessageToRBC);
-    _2_mk_struct.valid = kcg_true;
-    _2_mk_struct.nid_message =
-      co156_Termination_of_a_communication_session_Id_Pkg;
-    _2_mk_struct.l_message = 0;
-    _2_mk_struct.t_train = t_train;
-    _2_mk_struct.nid_engine = nid_engine;
-    /* 1 */
-    Send_M156_TM_radio_messages(
-      t_train_global,
-      msgBus_in,
-      &_2_mk_struct,
-      m_version,
-      &outC->_2_Context_1);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-      &outC->msgBus_out,
-      &outC->_2_Context_1.MessageBus_out);
   }
   else /* ck_anon_activ */ if (outC->Context_2.sendASessionEstablishedReportToTrackside) {
     /* 11 */
@@ -377,22 +333,6 @@ void MoRC_Main_MoRC_Pck(
     kcg_copy_PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg(
       &outC->MessageToRBC.packets.p3,
       onboardPhoneNumbers);
-    _1_mk_struct.valid = kcg_true;
-    _1_mk_struct.nid_message = co159_Session_established_Id_Pkg;
-    _1_mk_struct.l_message = 0;
-    _1_mk_struct.t_train = t_train;
-    _1_mk_struct.nid_engine = nid_engine;
-    /* 1 */
-    Send_M159_TM_radio_messages(
-      t_train_global,
-      msgBus_in,
-      &_1_mk_struct,
-      onboardPhoneNumbers_b,
-      m_version,
-      &outC->_1_Context_1);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-      &outC->msgBus_out,
-      &outC->_1_Context_1.MessageBus_out);
   }
   else /* ck_anon_activ */ if (outC->Context_2.sendMessage_NoCompatibleVersionSupported) {
     /* 13 */
@@ -403,34 +343,37 @@ void MoRC_Main_MoRC_Pck(
       0,
       nid_engine,
       &outC->MessageToRBC);
-    mk_struct.valid = kcg_true;
-    mk_struct.nid_message = co154_No_Compatible_Version_Support_Id_Pkg;
-    mk_struct.l_message = 0;
-    mk_struct.t_train = t_train;
-    mk_struct.nid_engine = nid_engine;
-    /* 1 */
-    Send_M154_TM_radio_messages(
-      t_train_global,
-      msgBus_in,
-      &mk_struct,
-      m_version,
-      &outC->Context_1);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-      &outC->msgBus_out,
-      &outC->Context_1.MessageBus_out);
   }
   else {
     kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
       &outC->MessageToRBC,
       (Radio_TrainTrack_Message_T_Radio_Types_Pkg *) &cNoMessageToRBC_MoRC_Pck);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-      &outC->msgBus_out,
-      msgBus_in);
   }
+  mk_struct.m155_initiationOfACommunicationSession =
+    outC->Context_2.sendTheMessageInitiationOfCommunicationSessionToTrackside;
+  mk_struct.m156_terminationOfACommunicationSession =
+    outC->Context_2.sendATerminationOfCommunicationMessage;
+  mk_struct.m159_sessionEstablished =
+    outC->Context_2.sendASessionEstablishedReportToTrackside;
+  mk_struct.m154_noCompatibleVersionSupported =
+    outC->Context_2.sendMessage_NoCompatibleVersionSupported;
+  /* 1 */
+  genMsgToBus_RCM_Utils_Pkg_encoders(
+    &mk_struct,
+    t_train,
+    t_train_global,
+    msgBus_in,
+    nid_engine,
+    onboardPhoneNumbers_b,
+    m_version,
+    &outC->Context_1);
+  kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+    &outC->msgBus_out,
+    &outC->Context_1.msgBus_out);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_Main_MoRC_Pck.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

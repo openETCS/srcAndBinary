@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,24 +16,41 @@ void BufferOutput_read_write1_TM_lib_internal(
   /* TM_lib_internal::BufferOutput_read_write1::Stacksize_new */ kcg_int *Stacksize_new,
   /* TM_lib_internal::BufferOutput_read_write1::Message_out */ M_TrainTrack_Message_T_TM_radio_messages *Message_out)
 {
+  /* TM_lib_internal::BufferOutput_read_write1::_L35 */
+  static kcg_bool _L35;
+  
   *Stacksize_new = Stacksize_old;
-  if ((0 <= Stacksize_old - 1) & (Stacksize_old - 1 < 100)) {
+  _L35 = Stacksize_old == 0;
+  /* 2 */ if (_L35) {
+    kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
+      &(&(*Buffer_Out)[0])[0],
+      (M_TrainTrack_Message_T_TM_radio_messages *)
+        &EMPTY_TrainTrackMessage_TM_lib_internal);
     kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
       Message_out,
-      &(*Buffer_In)[Stacksize_old - 1]);
+      &(*Message_In)[0]);
   }
   else {
     kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
-      Message_out,
-      (M_TrainTrack_Message_T_TM_radio_messages *)
-        &EMPTY_TrainTrackMessage_TM_lib_internal);
+      &(&(*Buffer_Out)[0])[0],
+      &(*Message_In)[0]);
+    if ((0 <= Stacksize_old - 1) & (Stacksize_old - 1 < 100)) {
+      kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
+        Message_out,
+        &(*Buffer_In)[Stacksize_old - 1]);
+    }
+    else {
+      kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
+        Message_out,
+        (M_TrainTrack_Message_T_TM_radio_messages *)
+          &EMPTY_TrainTrackMessage_TM_lib_internal);
+    }
   }
-  kcg_copy_array_85855(&(*Buffer_Out)[0], (array_85855 *) &(*Message_In)[0]);
-  kcg_copy_array_83389(&(*Buffer_Out)[1], (array_83389 *) &(*Buffer_In)[0]);
+  kcg_copy_array_91982(&(*Buffer_Out)[1], (array_91982 *) &(*Buffer_In)[0]);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_read_write1_TM_lib_internal.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

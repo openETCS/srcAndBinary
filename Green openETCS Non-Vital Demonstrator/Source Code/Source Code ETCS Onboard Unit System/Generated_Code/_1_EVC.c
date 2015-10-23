@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,11 +16,20 @@ void _1_EVC_init(void)
   Ctxt__1_EVC.PROC_powerUp_to_MoRC = kcg_true;
   Ctxt__1_EVC.PROC_statusstartofmissionongoing_to_MoRC = kcg_true;
   Ctxt__1_EVC.PROC_powerOff_to_MoRC = kcg_true;
-  Ctxt__1_EVC.MoRC_newSessionEstablished = kcg_true;
   Ctxt__1_EVC._L477 = kcg_true;
-  Ctxt__1_EVC.EVC_ready = kcg_true;
-  Ctxt__1_EVC.init17 = kcg_true;
+  Ctxt__1_EVC.rem_MoRC_newSessionEstablished = kcg_true;
+  Ctxt__1_EVC.rem_EVC_ready = kcg_true;
+  Ctxt__1_EVC.init19 = kcg_true;
   Ctxt__1_EVC.init = kcg_true;
+  Ctxt__1_EVC.probe_newInput = kcg_true;
+  Ctxt__1_EVC.probe_lastBG_ID = 0;
+  Ctxt__1_EVC.probe_lastMSG_in = 0;
+  Ctxt__1_EVC.probe_BG_ID = 0;
+  Ctxt__1_EVC.probe_MSG_in = 0;
+  Ctxt__1_EVC.probe_nid_packet1 = 0;
+  Ctxt__1_EVC.probe_nid_packet2 = 0;
+  Ctxt__1_EVC.probe_TTrain = 0;
+  Ctxt__1_EVC.probe_MSGout = 0;
   Ctxt__1_EVC.probe_Msg_2o = 0;
   Ctxt__1_EVC.probe_Msg_3o = 0;
   Ctxt__1_EVC.probe_Msg_1o = 0;
@@ -29,9 +38,9 @@ void _1_EVC_init(void)
   Ctxt__1_EVC.probe_Msg_3 = 0;
   Ctxt__1_EVC.probe_Msg_2 = 0;
   Ctxt__1_EVC.probe_Msg_1 = 0;
-  Ctxt__1_EVC.probe_BG = 0;
+  Ctxt__1_EVC.probe_BG_afterCheck = 0;
   Ctxt__1_EVC.probe_LRBG = 0;
-  Ctxt__1_EVC.probe_MSG = 0;
+  Ctxt__1_EVC.probe_MSGinAfterFilter = 0;
   Ctxt__1_EVC.probe_distBG = 0.0;
   Ctxt__1_EVC.probe_distMsg = 0.0;
   Ctxt__1_EVC.probe_Balises.isChanged = kcg_true;
@@ -80,6 +89,7 @@ void _1_EVC_init(void)
   Ctxt__1_EVC.rep_P1.packet1.NID_NTC = 0;
   Ctxt__1_EVC.td_status.valid = kcg_true;
   Ctxt__1_EVC.td_status.validatedByDriver = kcg_true;
+  Ctxt__1_EVC.td_status.RBCsystemVersionOnboard = kcg_true;
   Ctxt__1_EVC.td_status.validatedbyRBC = kcg_true;
   Ctxt__1_EVC.td_status.waitingForRBCResponse = kcg_true;
   Ctxt__1_EVC.td_status.driverIsModificationTrainData = kcg_true;
@@ -592,6 +602,8 @@ void _1_EVC_init(void)
   Ctxt__1_EVC.PROC_radioCmdFromProcedures.sendingRBC.rbc_id = 0;
   Ctxt__1_EVC.PROC_radioCmdFromProcedures.sendingRBC.device_id = 0;
   Ctxt__1_EVC.MoRC_sessionStatus = morc_st_inactive_Radio_Types_Pkg;
+  /* 1 */ setProbes_init_xdebugSupport_Pkg(&Ctxt__1_EVC._18_Context_1);
+  /* 1 */ probe_MsgOut_init_RadioSupport_Pkg(&Ctxt__1_EVC._17_Context_1);
   /* 1 */ nextGenRadioOutput_init_radioOutput_Pkg(&Ctxt__1_EVC._16_Context_1);
   /* 1 */ distanceLastMSG_init_xdebugSupport_Pkg(&Ctxt__1_EVC._15_Context_1);
   /* 1 */ distanceLastBG_init_xdebugSupport_Pkg(&Ctxt__1_EVC._14_Context_1);
@@ -604,15 +616,15 @@ void _1_EVC_init(void)
   /* 1 */
   manageDMI_Output_init_manage_DMI_Output_Pkg(&Ctxt__1_EVC._9_Context_1);
   /* 1 */ Master_Procedure_init_ManageProcedure_Pkg(&Ctxt__1_EVC._8_Context_1);
-  /* 1 */ MoRC_Main_init_MoRC_Pck(&Ctxt__1_EVC._7_Context_1);
   /* 1 */
-  TIU_OutputIntegration_init_output_to_TIU_API_Pkg(&Ctxt__1_EVC._6_Context_1);
+  TIU_OutputIntegration_init_output_to_TIU_API_Pkg(&Ctxt__1_EVC._7_Context_1);
   /* 1 */
   SpeedSupervision_Integration_init_SpeedSupervision_Integration_Pkg(
-    &Ctxt__1_EVC._5_Context_1);
-  /* 1 */ ManageLevelAndMode_init(&Ctxt__1_EVC._4_Context_1);
+    &Ctxt__1_EVC._6_Context_1);
+  /* 1 */ ManageLevelAndMode_init(&Ctxt__1_EVC._5_Context_1);
+  /* 1 */ TrackAtlas_init_TrackAtlas(&Ctxt__1_EVC._4_Context_1);
   /* 1 */ trainData_init_trainData_pkg(&Ctxt__1_EVC._3_Context_1);
-  /* 1 */ TrackAtlas_init_TrackAtlas(&Ctxt__1_EVC._2_Context_1);
+  /* 1 */ MoRC_Main_init_MoRC_Pck(&Ctxt__1_EVC._2_Context_1);
   /* 2 */ manageDMI_Input_init_manage_DMI_Input_Pkg(&Ctxt__1_EVC._1_Context_2);
   /* 2 */
   calculateTrainPosition_init_CalculateTrainPosition_Pkg(
@@ -628,8 +640,10 @@ void _1_EVC_init(void)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void _1_EVC_reset(void)
 {
-  Ctxt__1_EVC.init17 = kcg_true;
+  Ctxt__1_EVC.init19 = kcg_true;
   Ctxt__1_EVC.init = kcg_true;
+  /* 1 */ setProbes_reset_xdebugSupport_Pkg(&Ctxt__1_EVC._18_Context_1);
+  /* 1 */ probe_MsgOut_reset_RadioSupport_Pkg(&Ctxt__1_EVC._17_Context_1);
   /* 1 */ nextGenRadioOutput_reset_radioOutput_Pkg(&Ctxt__1_EVC._16_Context_1);
   /* 1 */ distanceLastMSG_reset_xdebugSupport_Pkg(&Ctxt__1_EVC._15_Context_1);
   /* 1 */ distanceLastBG_reset_xdebugSupport_Pkg(&Ctxt__1_EVC._14_Context_1);
@@ -643,15 +657,15 @@ void _1_EVC_reset(void)
   /* 1 */
   manageDMI_Output_reset_manage_DMI_Output_Pkg(&Ctxt__1_EVC._9_Context_1);
   /* 1 */ Master_Procedure_reset_ManageProcedure_Pkg(&Ctxt__1_EVC._8_Context_1);
-  /* 1 */ MoRC_Main_reset_MoRC_Pck(&Ctxt__1_EVC._7_Context_1);
   /* 1 */
-  TIU_OutputIntegration_reset_output_to_TIU_API_Pkg(&Ctxt__1_EVC._6_Context_1);
+  TIU_OutputIntegration_reset_output_to_TIU_API_Pkg(&Ctxt__1_EVC._7_Context_1);
   /* 1 */
   SpeedSupervision_Integration_reset_SpeedSupervision_Integration_Pkg(
-    &Ctxt__1_EVC._5_Context_1);
-  /* 1 */ ManageLevelAndMode_reset(&Ctxt__1_EVC._4_Context_1);
+    &Ctxt__1_EVC._6_Context_1);
+  /* 1 */ ManageLevelAndMode_reset(&Ctxt__1_EVC._5_Context_1);
+  /* 1 */ TrackAtlas_reset_TrackAtlas(&Ctxt__1_EVC._4_Context_1);
   /* 1 */ trainData_reset_trainData_pkg(&Ctxt__1_EVC._3_Context_1);
-  /* 1 */ TrackAtlas_reset_TrackAtlas(&Ctxt__1_EVC._2_Context_1);
+  /* 1 */ MoRC_Main_reset_MoRC_Pck(&Ctxt__1_EVC._2_Context_1);
   /* 2 */ manageDMI_Input_reset_manage_DMI_Input_Pkg(&Ctxt__1_EVC._1_Context_2);
   /* 2 */
   calculateTrainPosition_reset_CalculateTrainPosition_Pkg(
@@ -675,17 +689,17 @@ void _1_EVC(void)
   /* EVC */
   static nationValuesForDMI_T_DMI_Types_Pkg _3_mk_struct;
   /* EVC */
-  static obuEventsAndPhases_T_MoRC_Pck _4_mk_struct;
+  static T_Data_From_Localisation_Level_And_Mode_Types_Pkg _4_mk_struct;
   /* EVC */
-  static T_Data_From_Localisation_Level_And_Mode_Types_Pkg _5_mk_struct;
+  static T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg _5_mk_struct;
   /* EVC */
-  static T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg _6_mk_struct;
+  static T_ERTMS_capabilities_Level_And_Mode_Types_Pkg _6_mk_struct;
   /* EVC */
-  static T_ERTMS_capabilities_Level_And_Mode_Types_Pkg _7_mk_struct;
+  static T_Data_From_F2_functions_Level_And_Mode_Types_Pkg _7_mk_struct;
   /* EVC */
-  static T_Data_From_F2_functions_Level_And_Mode_Types_Pkg _8_mk_struct;
+  static trainData_Events_T_trainData_Types_pkg _8_mk_struct;
   /* EVC */
-  static trainData_Events_T_trainData_Types_pkg _9_mk_struct;
+  static obuEventsAndPhases_T_MoRC_Pck _9_mk_struct;
   /* EVC */
   static filterRelatedEvents_T_Common_Types_Pkg _10_mk_struct;
   /* EVC */
@@ -699,19 +713,19 @@ void _1_EVC(void)
   /* EVC */
   static NID_STM_DMI_Types_Pkg tmp20;
   /* EVC */
-  static L_internal_Type_Obu_BasicTypes_Pkg tmp19;
+  static kcg_bool tmp19;
   /* EVC */
   static kcg_bool tmp18;
   /* EVC */
-  static DataForModeAndLevel_t_TrackAtlasTypes tmp17;
+  static kcg_bool tmp17;
   /* EVC */
   static kcg_bool tmp16;
   /* EVC */
   static kcg_bool tmp15;
   /* EVC */
-  static kcg_bool tmp14;
+  static L_internal_Type_Obu_BasicTypes_Pkg tmp14;
   /* EVC */
-  static kcg_bool tmp13;
+  static DataForModeAndLevel_t_TrackAtlasTypes tmp13;
   /* EVC */
   static kcg_bool tmp12;
   /* EVC */
@@ -732,12 +746,12 @@ void _1_EVC(void)
   static T_internal_Type_Obu_BasicTypes_Pkg _L938;
   /* EVC::_L950 */
   static trainProperties_T_TrainPosition_Types_Pck _L950;
+  /* EVC::_L952 */
+  static trainData_T_TIU_Types_Pkg _L952;
   /* EVC::_L993 */
   static T_Mode_Level_Level_And_Mode_Types_Pkg _L993;
   /* EVC::_L1219 */
   static PT0_PositionReport_T_Packet_TrainTypes_Pkg _L1219;
-  /* EVC::_L1223 */
-  static trainData_T_TIU_Types_Pkg _L1223;
   /* EVC::_L1230 */
   static trainDataStatus_T_trainData_Types_pkg _L1230;
   /* EVC::_L1321 */
@@ -747,13 +761,13 @@ void _1_EVC(void)
     &Ctxt__1_EVC.probe_Odometry,
     &API_Odometry);
   resetOut = EVC_reset;
-  /* last_init_ck_EVC_PersistentData */ if (Ctxt__1_EVC.init17) {
+  /* last_init_ck_EVC_PersistentData */ if (Ctxt__1_EVC.init19) {
     kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
       &_L993,
       (T_Mode_Level_Level_And_Mode_Types_Pkg *) &cMLInitialModesAndLevel);
-    _L938 = 0;
+    _L938 = cTTrainUnknown1_CheckEuroradioMessage;
     kcg_copy_trainData_T_TIU_Types_Pkg(
-      &_L1223,
+      &_L952,
       (trainData_T_TIU_Types_Pkg *) &cEmptyTrainData_trainData_Types_pkg);
     kcg_copy_trainDataStatus_T_trainData_Types_pkg(
       &_L1230,
@@ -783,15 +797,15 @@ void _1_EVC(void)
     kcg_copy_PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg(
       &_L1321,
       (PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *) &cNoP1);
-    tmp19 = cEmptySpeedForDMI.location_brake_curve_starting_point;
-    EVC_cabIsOpen = kcg_false;
+    tmp17 = kcg_false;
     tmp18 = kcg_false;
-    tmp14 = kcg_false;
+    tmp19 = kcg_false;
+    EVC_cabIsOpen = cNoRadioCmd.valid;
     tmp15 = kcg_false;
     tmp16 = kcg_false;
-    tmp13 = cNoRadioCmd.valid;
+    tmp14 = cEmptySpeedForDMI.location_brake_curve_starting_point;
     tmp12 = kcg_false;
-    Ctxt__1_EVC.init17 = kcg_false;
+    Ctxt__1_EVC.init19 = kcg_false;
     kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
       &last_EVC_PersistentData,
       (ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *)
@@ -802,7 +816,7 @@ void _1_EVC(void)
       &_L993,
       &Ctxt__1_EVC.ML_ModeAndLevel);
     _L938 = Ctxt__1_EVC.MSG_lastRadioMsgTimestamp;
-    kcg_copy_trainData_T_TIU_Types_Pkg(&_L1223, &Ctxt__1_EVC.td_trainData);
+    kcg_copy_trainData_T_TIU_Types_Pkg(&_L952, &Ctxt__1_EVC.td_trainData);
     kcg_copy_trainDataStatus_T_trainData_Types_pkg(
       &_L1230,
       &Ctxt__1_EVC.td_status);
@@ -829,13 +843,13 @@ void _1_EVC(void)
     kcg_copy_PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg(
       &_L1321,
       &Ctxt__1_EVC.rep_P1);
-    tmp19 = Ctxt__1_EVC.DMI_sdmToDMI.location_brake_curve_starting_point;
-    tmp18 = Ctxt__1_EVC.MoRC_newSessionEstablished;
-    EVC_cabIsOpen = Ctxt__1_EVC.EVC_ready;
-    tmp16 = Ctxt__1_EVC.PROC_powerOff_to_MoRC;
-    tmp15 = Ctxt__1_EVC.PROC_powerUp_to_MoRC;
-    tmp14 = Ctxt__1_EVC.PROC_statusstartofmissionongoing_to_MoRC;
-    tmp13 = Ctxt__1_EVC.PROC_radioCmdFromProcedures.valid;
+    tmp19 = Ctxt__1_EVC.PROC_powerOff_to_MoRC;
+    tmp18 = Ctxt__1_EVC.PROC_powerUp_to_MoRC;
+    tmp17 = Ctxt__1_EVC.PROC_statusstartofmissionongoing_to_MoRC;
+    EVC_cabIsOpen = Ctxt__1_EVC.PROC_radioCmdFromProcedures.valid;
+    tmp16 = Ctxt__1_EVC.rem_MoRC_newSessionEstablished;
+    tmp15 = Ctxt__1_EVC.rem_EVC_ready;
+    tmp14 = Ctxt__1_EVC.DMI_sdmToDMI.location_brake_curve_starting_point;
     tmp12 = Ctxt__1_EVC._L477;
     kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
       &last_EVC_PersistentData,
@@ -844,7 +858,7 @@ void _1_EVC(void)
   /* 4 */
   manageTIU_input_input_from_TIU_API_Pkg(
     &API_fromTIU,
-    &_L1223,
+    &_L952,
     &Ctxt__1_EVC.Context_4);
   _10_mk_struct.pendingL1Transition = kcg_false;
   _10_mk_struct.pendingL12L3Transition = kcg_false;
@@ -903,33 +917,63 @@ void _1_EVC(void)
     &DMI_trainRunningNumber,
     &Ctxt__1_EVC._1_Context_2.fromDMI_TrainRunningNumber);
   Ctxt__1_EVC.EVC_currentNTC = Ctxt__1_EVC._1_Context_2.updatedNTC;
-  /* 1 */
-  TrackAtlas_TrackAtlas(
-    &Ctxt__1_EVC.Context_1.outputMessage,
-    &_L993,
-    _L1223.valid,
-    &Ctxt__1_EVC.CALC_TrainPosition,
-    _L1223.trainLength,
-    API_SystemTime,
-    tmp19,
-    &API_Odometry,
-    &Ctxt__1_EVC._1_Context_2.outForMA,
+  /* maintainTrainProperties */
+  maintainTrainProperties_EVC_Support_Pkg(
     &_L950,
-    &_L1219,
-    &_L1321,
+    &DMI_trainRunningNumber,
+    &_L952,
+    4065801,
+    &Ctxt__1_EVC.TIU_trainProperties);
+  _9_mk_struct.atPowerDown = tmp19;
+  _9_mk_struct.atPowerUp = tmp18;
+  _9_mk_struct.atStartOfMission = kcg_false;
+  _9_mk_struct.startOfMissionProcedureIsGoingOn = tmp17;
+  _9_mk_struct.startOfMissionProcedureCompleted = kcg_false;
+  _9_mk_struct.trainIsRejectedByRBC_duringStartOfMission = kcg_false;
+  _9_mk_struct.endOfMissionIsExecuted = kcg_false;
+  _9_mk_struct.driverClosesTheDeskduringStartOfMission = kcg_false;
+  _9_mk_struct.driverHasManuallyChangedLevel = kcg_false;
+  _9_mk_struct.afterDriverEntryOfANewRadioNetworkID = kcg_false;
+  _9_mk_struct.triggerDecisionThatNoRadioNetworkIDAvailable = kcg_false;
+  _9_mk_struct.isPartOfAnOngoingStartOfMissionProcedure = EVC_cabIsOpen;
+  _9_mk_struct.trainPassesALevelTransitionBorder = kcg_false;
+  _9_mk_struct.trainPassesA_RBC_RBC_border_WithItsFrontEnd = kcg_false;
+  _9_mk_struct.trainExitedFromAnRBCArea = kcg_false;
+  _9_mk_struct.modeChangeHasToBeReportedToRBC = kcg_false;
+  _9_mk_struct.trainFrontInsideInAnAnnouncedRadioHole = kcg_false;
+  _9_mk_struct.trainFrontReachesEndOfAnnouncedRadioHole = kcg_false;
+  _9_mk_struct.OBU_hasToEstablishANewSession = kcg_false;
+  _9_mk_struct.isInCommunicationSessionWithAnRIU = kcg_false;
+  _9_mk_struct.errorConditionRequiringTerminationDetected = kcg_false;
+  _9_mk_struct.systemVersionFromTracksideSupported = kcg_true;
+  /* 1 */
+  MoRC_Main_MoRC_Pck(
     API_SystemTime,
-    (P203V1_OBU_T_TM_baseline2 *) &cP203_PermanentData_EVC_PermanentData_Pkg,
-    (P003_permanent_data_T_TM_baseline2 *)
-      &cP003_PermanentData_EVC_PermanentData_Pkg,
+    _L993.Mode,
+    _L993.level,
+    &_9_mk_struct,
+    (radioNetWorkIDs_T_MoRC_Pck *) &cEmptyRadioNetworkIds,
+    &API_mobileHWStatus,
+    &Ctxt__1_EVC.Context_1.outputMessage,
+    API_SystemTime,
+    API_SystemTime,
     (M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *) &cBusStart,
+    cMoRCConnectionStatusTimerInterval,
+    Ctxt__1_EVC.TIU_trainProperties.nid_engine,
+    (PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg *)
+      &cEmptyMoRC_OnboardTelefonNumbers,
+    (P003_TM_TrainToTrack *) &cMoRC_own_P3ng_EVC_PermanentData_Pkg,
+    cOwnVersion,
     &Ctxt__1_EVC._2_Context_1);
-  _9_mk_struct.trainStandStill = API_Odometry.valid &
+  Ctxt__1_EVC.MoRC_sessionStatus = Ctxt__1_EVC._2_Context_1.sessionStatus;
+  EVC_ready = Ctxt__1_EVC._2_Context_1.ready;
+  _8_mk_struct.trainStandStill = API_Odometry.valid &
     (API_Odometry.motionState == noMotion_Obu_BasicTypes_Pkg);
-  _9_mk_struct.driverRequestModify = kcg_false;
-  _9_mk_struct.communicationSessionEstablished = tmp18;
-  _9_mk_struct.safeRadioConnectionLost = kcg_false;
-  _9_mk_struct.approachingRBCarea = kcg_false;
-  _9_mk_struct.MoRCreadyFlag = EVC_cabIsOpen;
+  _8_mk_struct.driverRequestModify = kcg_false;
+  _8_mk_struct.communicationSessionEstablished = tmp16;
+  _8_mk_struct.safeRadioConnectionLost = kcg_false;
+  _8_mk_struct.approachingRBCarea = kcg_false;
+  _8_mk_struct.MoRCreadyFlag = tmp15;
   /* 1 */
   trainData_trainData_pkg(
     EVC_reset,
@@ -937,11 +981,11 @@ void _1_EVC(void)
     &Ctxt__1_EVC._1_Context_2.fromDMI_TrainData,
     &Ctxt__1_EVC._1_Context_2.fromDMI_TrainDataAck,
     &Ctxt__1_EVC.Context_1.outputMessageForRadioAck,
-    &_9_mk_struct,
+    &_8_mk_struct,
     4065801,
     &_L1219,
     &_L1321,
-    &Ctxt__1_EVC._2_Context_1.bus_out,
+    &Ctxt__1_EVC._2_Context_1.msgBus_out,
     cOwnVersion,
     API_SystemTime,
     &Ctxt__1_EVC._3_Context_1);
@@ -951,64 +995,77 @@ void _1_EVC(void)
   kcg_copy_trainDataStatus_T_trainData_Types_pkg(
     &Ctxt__1_EVC.td_status,
     &Ctxt__1_EVC._3_Context_1.updatedStatus);
-  /* maintainTrainProperties */
-  maintainTrainProperties_EVC_Support_Pkg(
+  /* 1 */
+  TrackAtlas_TrackAtlas(
+    &Ctxt__1_EVC.Context_1.outputMessage,
+    &_L993,
+    _L952.valid,
+    &Ctxt__1_EVC.CALC_TrainPosition,
+    _L952.trainLength,
+    API_SystemTime,
+    tmp14,
+    &API_Odometry,
+    &Ctxt__1_EVC._1_Context_2.outForMA,
     &_L950,
-    &DMI_trainRunningNumber,
-    &Ctxt__1_EVC.td_trainData,
-    4065801,
-    &Ctxt__1_EVC.TIU_trainProperties);
+    &_L1219,
+    &_L1321,
+    API_SystemTime,
+    (P203V1_OBU_T_TM_baseline2 *) &cP203_PermanentData_EVC_PermanentData_Pkg,
+    (P003_permanent_data_T_TM_baseline2 *)
+      &cP003_PermanentData_EVC_PermanentData_Pkg,
+    &Ctxt__1_EVC._3_Context_1.outMessageBus,
+    &Ctxt__1_EVC._4_Context_1);
   /* 1 */
   patchEmergencyBrakeMsg_EVC_Support_Pkg(
-    &Ctxt__1_EVC._2_Context_1.To_ModeAndLevel,
-    &tmp17);
+    &Ctxt__1_EVC._4_Context_1.To_ModeAndLevel,
+    &tmp13);
   kcg_copy_MSG_Errors_T_Common_Types_Pkg(
-    &_8_mk_struct.Common_Errors,
+    &_7_mk_struct.Common_Errors,
     &Ctxt__1_EVC.Context_1.outCheckErrors);
-  _8_mk_struct.Failure_Occured = kcg_false;
-  _8_mk_struct.Continue_Shunting_Active = kcg_false;
-  _8_mk_struct.Stop_Shunting_Stored = kcg_false;
-  _7_mk_struct.NTC = kcg_true;
-  _7_mk_struct.L0 = kcg_true;
-  _7_mk_struct.L1 = kcg_true;
-  _7_mk_struct.L2 = kcg_true;
-  _7_mk_struct.L3 = kcg_false;
-  _6_mk_struct.Estim_front_End_overpass_SR_Dist = kcg_false;
-  _6_mk_struct.Estim_Front_End_Rear_SSP = kcg_false;
-  _6_mk_struct.Override_Function_Active = kcg_false;
-  _6_mk_struct.EOA_Antenna_Overpass = kcg_false;
-  _6_mk_struct.EOA_Front_End = kcg_false;
-  _6_mk_struct.Train_Speed_Under_Overide_Limit = kcg_false;
-  _5_mk_struct.BG_In_List_Expected_BG_In_SR = kcg_false;
-  _5_mk_struct.BG_In_List_Expected_BG_In_SH = kcg_false;
+  _7_mk_struct.Failure_Occured = kcg_false;
+  _7_mk_struct.Continue_Shunting_Active = kcg_false;
+  _7_mk_struct.Stop_Shunting_Stored = kcg_false;
+  _6_mk_struct.NTC = kcg_true;
+  _6_mk_struct.L0 = kcg_true;
+  _6_mk_struct.L1 = kcg_true;
+  _6_mk_struct.L2 = kcg_true;
+  _6_mk_struct.L3 = kcg_false;
+  _5_mk_struct.Estim_front_End_overpass_SR_Dist = kcg_false;
+  _5_mk_struct.Estim_Front_End_Rear_SSP = kcg_false;
+  _5_mk_struct.Override_Function_Active = kcg_false;
+  _5_mk_struct.EOA_Antenna_Overpass = kcg_false;
+  _5_mk_struct.EOA_Front_End = kcg_false;
+  _5_mk_struct.Train_Speed_Under_Overide_Limit = kcg_false;
+  _4_mk_struct.BG_In_List_Expected_BG_In_SR = kcg_false;
+  _4_mk_struct.BG_In_List_Expected_BG_In_SH = kcg_false;
   kcg_copy_positionErrors_T_TrainPosition_Types_Pck(
-    &_5_mk_struct.PositionErrors,
+    &_4_mk_struct.PositionErrors,
     &Ctxt__1_EVC.Context_2.errors);
   kcg_copy_trainPosition_T_TrainPosition_Types_Pck(
-    &_5_mk_struct.Train_Position,
+    &_4_mk_struct.Train_Position,
     &Ctxt__1_EVC.CALC_TrainPosition);
-  _5_mk_struct.Train_Speed = API_Odometry.speed.v_safeNominal;
-  _5_mk_struct.Train_Standstill = API_Odometry.motionState ==
+  _4_mk_struct.Train_Speed = API_Odometry.speed.v_safeNominal;
+  _4_mk_struct.Train_Standstill = API_Odometry.motionState ==
     noMotion_Obu_BasicTypes_Pkg;
   /* 1 */
   ManageLevelAndMode(
     &Ctxt__1_EVC._1_Context_2.forModesAndLevel,
-    &_5_mk_struct,
+    &_4_mk_struct,
     &Ctxt__1_EVC.Context_4.outTIUCurrentInfo,
-    &tmp17.train_messages,
+    &tmp13.train_messages,
     &Ctxt__1_EVC.Context_1.Data_to_From_Track_Packets_at_ML,
-    &_6_mk_struct,
+    &_5_mk_struct,
     Ctxt__1_EVC.Context_4.outTIUStatus.ownCab,
     &Ctxt__1_EVC._1_Context_2.ML_levelTransition,
-    &_7_mk_struct,
+    &_6_mk_struct,
     &Ctxt__1_EVC.Context_1.forLevelManagement,
-    &_8_mk_struct,
+    &_7_mk_struct,
     (T_Data_From_STM_Level_And_Mode_Types_Pkg *) &cEmptyData_From_STM,
     _L993.level,
-    &Ctxt__1_EVC._4_Context_1);
+    &Ctxt__1_EVC._5_Context_1);
   kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
     &Ctxt__1_EVC.ML_ModeAndLevel,
-    &Ctxt__1_EVC._4_Context_1.Compatible_Mode_And_Level);
+    &Ctxt__1_EVC._5_Context_1.Compatible_Mode_And_Level);
   /* 1 */
   SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
     (P3_NationalValues_T_Packet_Types_Pkg *)
@@ -1017,19 +1074,19 @@ void _1_EVC(void)
     &API_Odometry,
     &Ctxt__1_EVC.TIU_trainProperties,
     &Ctxt__1_EVC.td_trainData,
-    &Ctxt__1_EVC._2_Context_1.to_Supervision,
+    &Ctxt__1_EVC._4_Context_1.to_Supervision,
     (kcg_bool)
-      (Ctxt__1_EVC._4_Context_1.Service_Brake_Command |
+      (Ctxt__1_EVC._5_Context_1.Service_Brake_Command |
         Ctxt__1_EVC.Context_1.ApplyServiceBrake),
-    Ctxt__1_EVC._4_Context_1.EB_Requested,
-    &Ctxt__1_EVC._5_Context_1);
+    Ctxt__1_EVC._5_Context_1.EB_Requested,
+    &Ctxt__1_EVC._6_Context_1);
   kcg_copy_speedSupervisionForDMI_T_DMI_Types_Pkg(
     &Ctxt__1_EVC.DMI_sdmToDMI,
-    &Ctxt__1_EVC._5_Context_1.sdmToDMI);
+    &Ctxt__1_EVC._6_Context_1.sdmToDMI);
   /* 1 */
   TIU_OutputIntegration_output_to_TIU_API_Pkg(
     (Isolation_Status_T_TIU_Types_Pkg *) &cEmtpyIsolationStatus,
-    &Ctxt__1_EVC._5_Context_1.brakeCmd,
+    &Ctxt__1_EVC._6_Context_1.brakeCmd,
     (Brake_inhibition_command_T_TIU_Types_Pkg *) &cEmptyBrakeInhibitionCommand,
     (Type_I_train_commands_T_TIU_Types_Pkg *) &cEmptyTrainCommand,
     (Change_traction_system_T_TIU_Types_Pkg *) &cEmptyChangeTractionSystem,
@@ -1037,62 +1094,17 @@ void _1_EVC(void)
     (Change_of_allowed_current_consumption_T_TIU_Types_Pkg *)
       &cEmptyChangeOfAllowedCurrentConsumption,
     &Ctxt__1_EVC.ML_ModeAndLevel,
-    &Ctxt__1_EVC._6_Context_1);
+    &Ctxt__1_EVC._7_Context_1);
   kcg_copy_TIU_Output_msg_API_TIU_Pkg(
     &API_toTIU,
-    &Ctxt__1_EVC._6_Context_1.outTIU_to_API);
-  _4_mk_struct.atPowerDown = tmp16;
-  _4_mk_struct.atPowerUp = tmp15;
-  _4_mk_struct.atStartOfMission = kcg_false;
-  _4_mk_struct.startOfMissionProcedureIsGoingOn = tmp14;
-  _4_mk_struct.startOfMissionProcedureCompleted = kcg_false;
-  _4_mk_struct.trainIsRejectedByRBC_duringStartOfMission = kcg_false;
-  _4_mk_struct.endOfMissionIsExecuted = kcg_false;
-  _4_mk_struct.driverClosesTheDeskduringStartOfMission = kcg_false;
-  _4_mk_struct.driverHasManuallyChangedLevel = kcg_false;
-  _4_mk_struct.afterDriverEntryOfANewRadioNetworkID = kcg_false;
-  _4_mk_struct.triggerDecisionThatNoRadioNetworkIDAvailable = kcg_false;
-  _4_mk_struct.isPartOfAnOngoingStartOfMissionProcedure = tmp13;
-  _4_mk_struct.trainPassesALevelTransitionBorder = kcg_false;
-  _4_mk_struct.trainPassesA_RBC_RBC_border_WithItsFrontEnd = kcg_false;
-  _4_mk_struct.trainExitedFromAnRBCArea = kcg_false;
-  _4_mk_struct.modeChangeHasToBeReportedToRBC = kcg_false;
-  _4_mk_struct.trainFrontInsideInAnAnnouncedRadioHole = kcg_false;
-  _4_mk_struct.trainFrontReachesEndOfAnnouncedRadioHole = kcg_false;
-  _4_mk_struct.OBU_hasToEstablishANewSession = kcg_false;
-  _4_mk_struct.isInCommunicationSessionWithAnRIU = kcg_false;
-  _4_mk_struct.errorConditionRequiringTerminationDetected = kcg_false;
-  _4_mk_struct.systemVersionFromTracksideSupported = kcg_true;
-  /* 1 */
-  MoRC_Main_MoRC_Pck(
-    API_SystemTime,
-    _L993.Mode,
-    _L993.level,
-    &_4_mk_struct,
-    (radioNetWorkIDs_T_MoRC_Pck *) &cEmptyRadioNetworkIds,
-    &API_mobileHWStatus,
-    &Ctxt__1_EVC.Context_1.outputMessage,
-    API_SystemTime,
-    API_SystemTime,
-    &Ctxt__1_EVC._2_Context_1.bus_out,
-    cMoRCConnectionStatusTimerInterval,
-    Ctxt__1_EVC.TIU_trainProperties.nid_engine,
-    (PT3_OnboardTelephoneNumbers_T_Packet_TrainTypes_Pkg *)
-      &cEmptyMoRC_OnboardTelefonNumbers,
-    (P003_TM_TrainToTrack *) &cMoRC_own_P3ng_EVC_PermanentData_Pkg,
-    cOwnVersion,
-    &Ctxt__1_EVC._7_Context_1);
-  Ctxt__1_EVC.MoRC_newSessionEstablished =
-    Ctxt__1_EVC._7_Context_1.sessionSuccessfullyEstablished;
-  Ctxt__1_EVC.MoRC_sessionStatus = Ctxt__1_EVC._7_Context_1.sessionStatus;
-  Ctxt__1_EVC.EVC_ready = Ctxt__1_EVC._7_Context_1.ready;
+    &Ctxt__1_EVC._7_Context_1.outTIU_to_API);
   /* 1 */
   Master_Procedure_ManageProcedure_Pkg(
     &_L523,
     tmp12,
     API_SystemTime,
     &Ctxt__1_EVC.ML_ModeAndLevel,
-    &Ctxt__1_EVC._7_Context_1.mobileSWStatus,
+    &Ctxt__1_EVC._2_Context_1.mobileSWStatus,
     Ctxt__1_EVC.MoRC_sessionStatus,
     &Ctxt__1_EVC.Context_4.outTIUStatus,
     Ctxt__1_EVC.CALC_TrainPosition.LRBG.valid,
@@ -1110,7 +1122,7 @@ void _1_EVC(void)
     Ctxt__1_EVC._8_Context_1.request_MA_FS_SR_OS_LS_SH_to_MA_L2_Management;
   EVC_cabIsOpen = Ctxt__1_EVC.Context_4.outTIUStatus.valid &
     Ctxt__1_EVC.Context_4.outTIUStatus.deskOpen;
-  /* 4 */ if (Ctxt__1_EVC.MoRC_newSessionEstablished) {
+  /* 4 */ if (Ctxt__1_EVC._2_Context_1.sessionSuccessfullyEstablished) {
     tmp11 = srcs_ConnectionUp_MoRC_Pck;
   }
   else {
@@ -1151,7 +1163,7 @@ void _1_EVC(void)
     &Ctxt__1_EVC.Context_4.outTIUStatus,
     &API_Odometry,
     &Ctxt__1_EVC.CALC_TrainPosition,
-    &Ctxt__1_EVC._5_Context_1.brakeCmd,
+    &Ctxt__1_EVC._6_Context_1.brakeCmd,
     &Ctxt__1_EVC.DMI_sdmToDMI,
     &Ctxt__1_EVC.ML_ModeAndLevel,
     &_3_mk_struct,
@@ -1161,7 +1173,7 @@ void _1_EVC(void)
     &Ctxt__1_EVC._8_Context_1.DMI_Entry_Request_to_DMI,
     (DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
       &cEmptyDMIEVCcodedTrainData,
-    &Ctxt__1_EVC._2_Context_1.to_DMI,
+    &Ctxt__1_EVC._4_Context_1.to_DMI,
     cOwnVersion,
     (DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg *)
       &cEmptyDMIDisplayControl,
@@ -1175,12 +1187,12 @@ void _1_EVC(void)
     (DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *)
       &cEmptyDMIAdhesionFactorData,
     Ctxt__1_EVC.Context_1.BadBaliseMessageToDMI,
-    &Ctxt__1_EVC._4_Context_1.Data_To_DMI_Ack,
-    &Ctxt__1_EVC._4_Context_1.announcedLevel,
+    &Ctxt__1_EVC._5_Context_1.Data_To_DMI_Ack,
+    &Ctxt__1_EVC._5_Context_1.announcedLevel,
     Ctxt__1_EVC.EVC_currentNTC,
     &Ctxt__1_EVC._1_Context_2.outStatusList,
     &Ctxt__1_EVC._9_Context_1);
-  kcg_copy_EVC_to_DMI_Message_T_API_DMI_Pkg(
+  kcg_copy_EVC_to_DMI_Message_int_T_API_DMI_Pkg(
     &API_toDMI,
     &Ctxt__1_EVC._9_Context_1.to_DMI);
   kcg_copy_DMI_TXT_MSGList_status_T_DMI_Types_Pkg(
@@ -1194,7 +1206,8 @@ void _1_EVC(void)
     Ctxt__1_EVC.ML_ModeAndLevel.newLevel;
   _1_mk_struct.nid_ntc = Ctxt__1_EVC.EVC_currentNTC;
   _1_mk_struct.q_length = Q_LENGTH_No_train_integrity_information_available;
-  mk_struct.newSessionEstablished = Ctxt__1_EVC.MoRC_newSessionEstablished;
+  mk_struct.newSessionEstablished =
+    Ctxt__1_EVC._2_Context_1.sessionSuccessfullyEstablished;
   /* 1 */
   ProvidePositionReport_ProvidePositionReport_Pkg(
     &Ctxt__1_EVC.CALC_BGs,
@@ -1220,7 +1233,7 @@ void _1_EVC(void)
     &_2_mk_struct,
     (ReportedBGList_T_ProvidePositionReport_Pkg *)
       &cReportedBGList_ProvidePositionReport_Pkg,
-    &Ctxt__1_EVC._7_Context_1.msgBus_out,
+    &Ctxt__1_EVC._3_Context_1.outMessageBus,
     cOwnVersion,
     API_SystemTime,
     &Ctxt__1_EVC._10_Context_1);
@@ -1240,10 +1253,10 @@ void _1_EVC(void)
   /* 1 */
   collectRadioMessages_radioOutput_Pkg(
     &Ctxt__1_EVC._10_Context_1.posRep,
-    &Ctxt__1_EVC._7_Context_1.MessageToRBC,
+    &Ctxt__1_EVC._2_Context_1.MessageToRBC,
     &Ctxt__1_EVC._3_Context_1.trainDataToRBC,
-    &Ctxt__1_EVC._7_Context_1.cmdsToMobile,
-    &Ctxt__1_EVC._2_Context_1.MA_request_out,
+    &Ctxt__1_EVC._2_Context_1.cmdsToMobile,
+    &Ctxt__1_EVC._4_Context_1.MA_request_out,
     &Ctxt__1_EVC.ML_ModeAndLevel,
     Ctxt__1_EVC._11_Context_1.genMessageReceived,
     &Ctxt__1_EVC._12_Context_1);
@@ -1284,7 +1297,7 @@ void _1_EVC(void)
     &Ctxt__1_EVC.Context_1.outputMessage,
     &Ctxt__1_EVC._14_Context_1);
   Ctxt__1_EVC.probe_distBG = Ctxt__1_EVC._14_Context_1.distance;
-  Ctxt__1_EVC.probe_BG = Ctxt__1_EVC._14_Context_1.lastBG;
+  Ctxt__1_EVC.probe_BG_afterCheck = Ctxt__1_EVC._14_Context_1.lastBG;
   /* 1 */
   distanceLastMSG_xdebugSupport_Pkg(
     &API_Odometry,
@@ -1292,12 +1305,12 @@ void _1_EVC(void)
     kcg_false,
     &Ctxt__1_EVC._15_Context_1);
   Ctxt__1_EVC.probe_distMsg = Ctxt__1_EVC._15_Context_1.distance;
-  Ctxt__1_EVC.probe_MSG = Ctxt__1_EVC._15_Context_1.lastMSG;
+  Ctxt__1_EVC.probe_MSGinAfterFilter = Ctxt__1_EVC._15_Context_1.lastMSG;
   Ctxt__1_EVC.probe_LRBG = Ctxt__1_EVC._15_Context_1.lastLRBG;
   /* 1 */
   nextGenRadioOutput_radioOutput_Pkg(
     &TM_to_MsgOut,
-    &Ctxt__1_EVC._7_Context_1.cmdsToMobile,
+    &Ctxt__1_EVC._2_Context_1.cmdsToMobile,
     Ctxt__1_EVC._11_Context_1.genMessageReceived,
     &Ctxt__1_EVC.ML_ModeAndLevel,
     &API_mobileHWStatus,
@@ -1324,11 +1337,32 @@ void _1_EVC(void)
     Ctxt__1_EVC._12_Context_1.outRadioToAPI.secondOutput.header.nid_message;
   Ctxt__1_EVC.probe_Msg_3o =
     Ctxt__1_EVC._12_Context_1.outRadioToAPI.thirdOutput.header.nid_message;
-  EVC_ready = Ctxt__1_EVC.EVC_ready;
+  /* 1 */
+  probe_MsgOut_RadioSupport_Pkg(
+    &API_toRBC,
+    kcg_true,
+    &Ctxt__1_EVC._17_Context_1);
+  Ctxt__1_EVC.probe_MSGout = Ctxt__1_EVC._17_Context_1.Msg_0ut;
+  Ctxt__1_EVC.probe_TTrain = Ctxt__1_EVC._17_Context_1.outTTrain;
+  /* 1 */
+  setProbes_xdebugSupport_Pkg(
+    &API_fromTrack,
+    kcg_false,
+    &Ctxt__1_EVC._18_Context_1);
+  Ctxt__1_EVC.probe_newInput = Ctxt__1_EVC._18_Context_1.isChanged;
+  Ctxt__1_EVC.probe_MSG_in = Ctxt__1_EVC._18_Context_1.radioMSG;
+  Ctxt__1_EVC.probe_BG_ID = Ctxt__1_EVC._18_Context_1.BG_ID;
+  Ctxt__1_EVC.probe_nid_packet1 = Ctxt__1_EVC._18_Context_1.packet_id1;
+  Ctxt__1_EVC.probe_nid_packet2 = Ctxt__1_EVC._18_Context_1.packet_id2;
+  Ctxt__1_EVC.probe_lastMSG_in = Ctxt__1_EVC._18_Context_1.lastRadioMSG;
+  Ctxt__1_EVC.probe_lastBG_ID = Ctxt__1_EVC._18_Context_1.lastBG_ID;
+  Ctxt__1_EVC.rem_EVC_ready = EVC_ready;
+  Ctxt__1_EVC.rem_MoRC_newSessionEstablished =
+    Ctxt__1_EVC._2_Context_1.sessionSuccessfullyEstablished;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** _1_EVC.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

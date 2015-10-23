@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _SSP_to_MRSP_TA_Export_H_
 #define _SSP_to_MRSP_TA_Export_H_
@@ -23,6 +23,6 @@ extern void SSP_to_MRSP_TA_Export(
 #endif /* _SSP_to_MRSP_TA_Export_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_to_MRSP_TA_Export.h
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

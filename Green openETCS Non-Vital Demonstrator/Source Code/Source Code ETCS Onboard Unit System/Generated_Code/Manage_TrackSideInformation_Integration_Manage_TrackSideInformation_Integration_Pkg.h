@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:11
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
 #define _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
@@ -15,7 +15,6 @@
 #include "Receive_TrackSide_Msg_Receive_TrackSide_Msg_Pkg.h"
 #include "CheckEuroRadioMessage_CheckEuroradioMessage.h"
 #include "InformationFilter_InformationFilter_Pkg.h"
-#include "setProbes_xdebugSupport_Pkg.h"
 #include "combineForLevelChange_xdebugSupport_Pkg.h"
 
 /* =====================  no input structure  ====================== */
@@ -33,12 +32,7 @@ typedef struct {
   ReceivedMessage_T_Common_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outputMessageForRadioAck */ outputMessageForRadioAck;
   T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::Data_to_From_Track_Packets_at_ML */ Data_to_From_Track_Packets_at_ML;
   /* -----------------------   local probes  ------------------------- */
-  NID_MESSAGE /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::MSG_ID */ MSG_ID;
-  NID_BG /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::BG_ID */ BG_ID;
   kcg_real /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::positionM */ positionM;
-  NID_PACKET /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::nid_packet1 */ nid_packet1;
-  NID_PACKET /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::nid_packet2 */ nid_packet2;
-  kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::newInput */ newInput;
   kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::debug_ErrorMSG */ debug_ErrorMSG;
   kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::errorBG */ errorBG;
   kcg_int /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::countPackets */ countPackets;
@@ -47,7 +41,6 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::transitionPositionPassed */ rem_transitionPositionPassed;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_setProbes_xdebugSupport_Pkg /* 2 */ Context_2;
   outC_InformationFilter_InformationFilter_Pkg /* 3 */ Context_3;
   outC_combineForLevelChange_xdebugSupport_Pkg /* 1 */ _2_Context_1;
   outC_CheckEuroRadioMessage_CheckEuroradioMessage /* 1 */ _1_Context_1;
@@ -90,6 +83,6 @@ extern void Manage_TrackSideInformation_Integration_init_Manage_TrackSideInforma
 #endif /* _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h
-** Generation date: 2015-10-18T22:42:11
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

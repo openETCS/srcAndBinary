@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* SDMConversionModelPkg::Kv_intVectorMerger */
 void Kv_intVectorMerger_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_in */ P011_voltage_section_array_T_TM_TrainToTrack *indices_in,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_in */ array_int_2 *indices_in,
   /* SDMConversionModelPkg::Kv_intVectorMerger::Kv */ mv_Map_t_SDMConversionModelPkg *Kv,
   /* SDMConversionModelPkg::Kv_intVectorMerger::Abrake */ av_Map_t_SDMConversionModelPkg *Abrake,
-  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_out */ P011_voltage_section_array_T_TM_TrainToTrack *indices_out,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_out */ array_int_2 *indices_out,
   /* SDMConversionModelPkg::Kv_intVectorMerger::a */ A_internal_Type_Obu_BasicTypes_Pkg *a,
   /* SDMConversionModelPkg::Kv_intVectorMerger::v */ V_internal_Type_Obu_BasicTypes_Pkg *v)
 {
@@ -88,6 +88,6 @@ void Kv_intVectorMerger_SDMConversionModelPkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Kv_intVectorMerger_SDMConversionModelPkg.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 

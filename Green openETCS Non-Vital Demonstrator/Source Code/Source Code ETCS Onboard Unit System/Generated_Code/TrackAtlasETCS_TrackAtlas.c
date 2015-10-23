@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -532,10 +532,10 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->NV_raw_out.n_iter_l_list[i].m_nvkrint_l = 0.0;
   }
   outC->NV_raw_out.m_nvktint = 0.0;
-  /* 1 */ Manage_MA_Request_init_TA_MA_Request(&outC->_5_Context_1);
-  /* 1 */ Build_GradientProfile_init_TA_Gradient(&outC->_4_Context_1);
-  /* 1 */ Build_MRSP_init_TA_MRSP(&outC->_3_Context_1);
-  /* 1 */ Build_MA_init_TA_MA(&outC->_2_Context_1);
+  /* 1 */ Manage_MA_Request_init_TA_MA_Request(&outC->_4_Context_1);
+  /* 1 */ Build_GradientProfile_init_TA_Gradient(&outC->_3_Context_1);
+  /* 1 */ Build_MRSP_init_TA_MRSP(&outC->_2_Context_1);
+  /* 6 */ Build_MA_L23_init_TA_MA(&outC->Context_6);
   /* 1 */ StoreRaw_NV_init_TA_Storage(&outC->_1_Context_1);
   /* 1 */ Manage_EmergencyStop_init_TA_EmergencyStop(&outC->Context_1);
 }
@@ -546,10 +546,10 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
 void TrackAtlasETCS_reset_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Manage_MA_Request_reset_TA_MA_Request(&outC->_5_Context_1);
-  /* 1 */ Build_GradientProfile_reset_TA_Gradient(&outC->_4_Context_1);
-  /* 1 */ Build_MRSP_reset_TA_MRSP(&outC->_3_Context_1);
-  /* 1 */ Build_MA_reset_TA_MA(&outC->_2_Context_1);
+  /* 1 */ Manage_MA_Request_reset_TA_MA_Request(&outC->_4_Context_1);
+  /* 1 */ Build_GradientProfile_reset_TA_Gradient(&outC->_3_Context_1);
+  /* 1 */ Build_MRSP_reset_TA_MRSP(&outC->_2_Context_1);
+  /* 6 */ Build_MA_L23_reset_TA_MA(&outC->Context_6);
   /* 1 */ StoreRaw_NV_reset_TA_Storage(&outC->_1_Context_1);
   /* 1 */ Manage_EmergencyStop_reset_TA_EmergencyStop(&outC->Context_1);
 }
@@ -627,23 +627,25 @@ void TrackAtlasETCS_TrackAtlas(
   outC->ces_revoked = outC->Context_1.cesRevoked;
   /* 1 */ StoreRaw_NV_TA_Storage(MessageIn, &outC->_1_Context_1);
   kcg_copy_P003V1_OBU_T_TM_baseline2(&_L21, &outC->_1_Context_1.NV_onboard_out);
-  /* 1 */
-  Build_MA_TA_MA(
+  /* 6 */
+  Build_MA_L23_TA_MA(
+    kcg_false,
     MessageIn,
     &_L21,
+    TrainPositionIn,
     outC->Context_1.rejectNewMA,
     outC->Context_1.updateEOA,
     outC->Context_1.newEOA,
-    &outC->_2_Context_1);
-  outC->to_Supervision.freshMA = outC->_2_Context_1.new_MA;
-  valid_MA = outC->_2_Context_1.vald_MA;
+    &outC->Context_6);
+  outC->to_Supervision.freshMA = outC->Context_6.updated;
+  valid_MA = outC->Context_6.available;
   kcg_copy_MovementAuthority_t_TrackAtlasTypes(
     &outC->MA_onboard_out,
-    &outC->_2_Context_1.MA_onboard_out);
+    &outC->Context_6.MA_absolute);
   kcg_copy_MovementAuthority_t_TrackAtlasTypes(
     &outC->to_Supervision.MA,
     &outC->MA_onboard_out);
-  outC->_L94 = outC->_2_Context_1.currentEOA;
+  outC->_L94 = outC->Context_6.currentEOA;
   /* 1 */
   Build_MRSP_TA_MRSP(
     MessageIn,
@@ -651,23 +653,23 @@ void TrackAtlasETCS_TrackAtlas(
     ModeAndLevel_in,
     train_length,
     TrainPositionIn,
-    &outC->_3_Context_1);
-  outC->to_DMI.MRSP_updated = outC->_3_Context_1.newMRSP;
-  outC->to_Supervision.freshMRSP = outC->_3_Context_1.newMRSP;
-  outC->SSP_available = outC->_3_Context_1.SSP_available;
+    &outC->_2_Context_1);
+  outC->to_DMI.MRSP_updated = outC->_2_Context_1.newMRSP;
+  outC->to_Supervision.freshMRSP = outC->_2_Context_1.newMRSP;
+  outC->SSP_available = outC->_2_Context_1.SSP_available;
   /* 1 */
   Build_GradientProfile_TA_Gradient(
     kcg_false,
     MessageIn,
     TrainPositionIn,
-    &outC->_4_Context_1);
-  outC->to_DMI.Gradient_profile_updated = outC->_4_Context_1.updated;
-  outC->to_Supervision.freshGradientProfile = outC->_4_Context_1.updated;
-  kcg_copy_GradientProfile_t_TrackAtlasTypes(&_L101, &outC->_4_Context_1.GP);
+    &outC->_3_Context_1);
+  outC->to_DMI.Gradient_profile_updated = outC->_3_Context_1.updated;
+  outC->to_Supervision.freshGradientProfile = outC->_3_Context_1.updated;
+  kcg_copy_GradientProfile_t_TrackAtlasTypes(&_L101, &outC->_3_Context_1.GP);
   kcg_copy_GradientProfile_t_TrackAtlasTypes(
     &outC->to_Supervision.GradientProfile,
     &_L101);
-  valid_GP = outC->_4_Context_1.available;
+  valid_GP = outC->_3_Context_1.available;
   kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
     &MRSP_export,
     (MRSP_Profile_t_TrackAtlasTypes *) &DEFAULT_MRSP_Profile_TA_MRSP);
@@ -677,7 +679,7 @@ void TrackAtlasETCS_TrackAtlas(
     SSP_to_MRSP_TA_Export(
       i,
       &MRSP_to_DMI,
-      &outC->_3_Context_1.SSP,
+      &outC->_2_Context_1.SSP,
       &cond_iterw,
       &MRSP_export);
     /* 1 */ if (!cond_iterw) {
@@ -752,17 +754,17 @@ void TrackAtlasETCS_TrackAtlas(
     packet1,
     t_train,
     &outC->Context_1.bus_out,
-    &outC->_5_Context_1);
+    &outC->_4_Context_1);
   kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
     &outC->MA_request_out,
-    &outC->_5_Context_1.message_out);
+    &outC->_4_Context_1.message_out);
   kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
     &outC->bus_out,
-    &outC->_5_Context_1.bus_out);
+    &outC->_4_Context_1.bus_out);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.c
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:34
 *************************************************************$ */
 

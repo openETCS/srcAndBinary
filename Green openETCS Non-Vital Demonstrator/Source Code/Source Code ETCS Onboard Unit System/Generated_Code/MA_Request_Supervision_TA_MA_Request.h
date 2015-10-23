@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-18T22:42:12
+** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 #ifndef _MA_Request_Supervision_TA_MA_Request_H_
 #define _MA_Request_Supervision_TA_MA_Request_H_
@@ -8,6 +8,7 @@
 #include "kcg_types.h"
 #include "op_3_8_2_3_a_TA_MA_Request.h"
 #include "op_3_8_2_3_b_TA_MA_Request.h"
+#include "RisingEdge_digital.h"
 #include "op_RepeatReq_TA_MA_Request.h"
 
 /* =====================  no input structure  ====================== */
@@ -26,6 +27,8 @@ typedef struct {
   SSM_ST_SM1 /* TA_MA_Request::MA_Request_Supervision::SM1 */ SM1_state_nxt;
   kcg_bool /* TA_MA_Request::MA_Request_Supervision::pendingReq */ pendingReq;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_RisingEdge_digital /* 2 */ Context_2;
+  outC_RisingEdge_digital /* 1 */ _1_Context_1;
   outC_op_RepeatReq_TA_MA_Request /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_MA_Request_Supervision_TA_MA_Request;
@@ -58,6 +61,6 @@ extern void MA_Request_Supervision_init_TA_MA_Request(
 #endif /* _MA_Request_Supervision_TA_MA_Request_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Request_Supervision_TA_MA_Request.h
-** Generation date: 2015-10-18T22:42:12
+** Generation date: 2015-10-23T15:36:33
 *************************************************************$ */
 
