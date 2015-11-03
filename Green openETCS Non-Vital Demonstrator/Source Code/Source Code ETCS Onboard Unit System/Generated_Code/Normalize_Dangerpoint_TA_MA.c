@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,19 +9,19 @@
 
 /* TA_MA::Normalize_Dangerpoint */
 void Normalize_Dangerpoint_TA_MA(
-  /* TA_MA::Normalize_Dangerpoint::d_endsection */ L_internal_Type_Obu_BasicTypes_Pkg d_endsection,
+  /* TA_MA::Normalize_Dangerpoint::d_endsection */ L_internal_Type_Obu_BasicTypes_ d_endsection,
   /* TA_MA::Normalize_Dangerpoint::Packet15_in */ P015_OBU_T_TM *Packet15_in,
   /* TA_MA::Normalize_Dangerpoint::NV_in */ P003V1_OBU_T_TM_baseline2 *NV_in,
   /* TA_MA::Normalize_Dangerpoint::q_dangerpoint */ kcg_bool *q_dangerpoint,
   /* TA_MA::Normalize_Dangerpoint::dangerpoint */ DP_or_OL_t_TrackAtlasTypes *dangerpoint)
 {
   /* TA_MA::Normalize_Dangerpoint::_L3 */
-  static V_internal_Type_Obu_BasicTypes_Pkg _L3;
+  static V_internal_Type_Obu_BasicTypes_ _L3;
   /* TA_MA::Normalize_Dangerpoint::_L4 */
   static kcg_bool _L4;
   
   *q_dangerpoint = /* 1 */
-    EVAL_Q_DANGERPOINT_TA_Lib_internal((*Packet15_in).q_dangerpoint);
+    EVAL_Q_DANGERPOINT_TA_Lib_inter((*Packet15_in).q_dangerpoint);
   /* 1 */
   EVAL_V_Release_TA_Lib_internal(
     (*Packet15_in).v_releasedp,
@@ -36,7 +36,7 @@ void Normalize_Dangerpoint_TA_MA(
       d_endsection;
   }
   else {
-    kcg_copy_DP_or_OL_t_TrackAtlasTypes(
+    kcg_copy_DP_or_OL_t_TrackAtlasT(
       dangerpoint,
       (DP_or_OL_t_TrackAtlasTypes *) &DEFAULT_DP_TrackAtlasTypes);
   }
@@ -44,6 +44,6 @@ void Normalize_Dangerpoint_TA_MA(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_Dangerpoint_TA_MA.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,11 +23,11 @@ void packet_11_trainData_pkg(
   (*p11).m_airtight = (*trainData).airtightSystem;
   (*p11).n_axle = (*trainData).axleNumber;
   (*p11).n_iter_voltage = (*trainData).numberTractionSystems - 1;
-  kcg_copy_P011_voltage_list_TM_TrainToTrack(
+  kcg_copy_P011_voltage_list_TM_T(
     &(*p11).voltage_list,
     &(*trainData).tractionSystem);
   (*p11).n_iter_nid_ntc = (*trainData).numberNationalSystems - 1;
-  kcg_copy_P011_ntc_list_TM_TrainToTrack(
+  kcg_copy_P011_ntc_list_TM_Train(
     &(*p11).nid_ntc_list,
     &(*trainData).nationSystems);
   (*p11).v_maxtrain = /* 1 */
@@ -36,6 +36,6 @@ void packet_11_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** packet_11_trainData_pkg.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

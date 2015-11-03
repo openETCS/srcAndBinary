@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,12 +8,12 @@
 #include "TargetDistance_TargetLimits_Pkg.h"
 
 /* TargetLimits_Pkg::TargetDistance */
-L_internal_real_Type_SDM_Types_Pkg TargetDistance_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::TargetDistance::d_P_of_V_target */ L_internal_real_Type_SDM_Types_Pkg d_P_of_V_target,
-  /* TargetLimits_Pkg::TargetDistance::d_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg d_maxsafefront,
-  /* TargetLimits_Pkg::TargetDistance::d_estfront */ L_internal_real_Type_SDM_Types_Pkg d_estfront,
-  /* TargetLimits_Pkg::TargetDistance::d_svl */ L_internal_real_Type_SDM_Types_Pkg d_svl,
-  /* TargetLimits_Pkg::TargetDistance::d_eoa */ L_internal_real_Type_SDM_Types_Pkg d_eoa,
+L_internal_real_Type_SDM_Types_ TargetDistance_TargetLimits_Pkg(
+  /* TargetLimits_Pkg::TargetDistance::d_P_of_V_target */ L_internal_real_Type_SDM_Types_ d_P_of_V_target,
+  /* TargetLimits_Pkg::TargetDistance::d_maxsafefront */ L_internal_real_Type_SDM_Types_ d_maxsafefront,
+  /* TargetLimits_Pkg::TargetDistance::d_estfront */ L_internal_real_Type_SDM_Types_ d_estfront,
+  /* TargetLimits_Pkg::TargetDistance::d_svl */ L_internal_real_Type_SDM_Types_ d_svl,
+  /* TargetLimits_Pkg::TargetDistance::d_eoa */ L_internal_real_Type_SDM_Types_ d_eoa,
   /* TargetLimits_Pkg::TargetDistance::isEoAorSvL */ kcg_bool isEoAorSvL)
 {
   /* TargetLimits_Pkg::TargetDistance */
@@ -23,7 +23,7 @@ L_internal_real_Type_SDM_Types_Pkg TargetDistance_TargetLimits_Pkg(
   /* TargetLimits_Pkg::TargetDistance::_L28 */
   static kcg_real _L28;
   /* TargetLimits_Pkg::TargetDistance::targetDistance */
-  static L_internal_real_Type_SDM_Types_Pkg targetDistance;
+  static L_internal_real_Type_SDM_Types_ targetDistance;
   
   _L28 = d_eoa - d_estfront;
   _L30 = d_svl - d_maxsafefront;
@@ -44,6 +44,6 @@ L_internal_real_Type_SDM_Types_Pkg TargetDistance_TargetLimits_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TargetDistance_TargetLimits_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

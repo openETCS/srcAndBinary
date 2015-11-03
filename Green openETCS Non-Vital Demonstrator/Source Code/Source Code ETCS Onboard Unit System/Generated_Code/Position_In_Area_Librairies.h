@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _Position_In_Area_Librairies_H_
 #define _Position_In_Area_Librairies_H_
@@ -21,6 +21,6 @@ extern kcg_bool Position_In_Area_Librairies(
 #endif /* _Position_In_Area_Librairies_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Position_In_Area_Librairies.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

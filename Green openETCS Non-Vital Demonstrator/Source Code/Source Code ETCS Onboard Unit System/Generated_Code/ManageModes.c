@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -48,13 +48,13 @@ void ManageModes_reset(outC_ManageModes *outC)
 void ManageModes(
   /* ManageModes::Current_Level */ M_LEVEL Current_Level,
   /* ManageModes::Cab */ cab_ID_T_TIU_Types_Pkg Cab,
-  /* ManageModes::Data_From_DMI */ T_Data_From_DMI_Level_And_Mode_Types_Pkg *Data_From_DMI,
-  /* ManageModes::Data_From_F2_Functions */ T_Data_From_F2_functions_Level_And_Mode_Types_Pkg *Data_From_F2_Functions,
-  /* ManageModes::Data_From_Localisation */ T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
-  /* ManageModes::Data_From_Speed_and_Supervision */ T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
-  /* ManageModes::Data_From_STM */ T_Data_From_STM_Level_And_Mode_Types_Pkg *Data_From_STM,
-  /* ManageModes::Data_From_TIU */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *Data_From_TIU,
-  /* ManageModes::Data_From_Track */ T_Data_From_Track_To_Mode_Level_And_Mode_Types_Pkg *Data_From_Track,
+  /* ManageModes::Data_From_DMI */ T_Data_From_DMI_Level_And_Mode_ *Data_From_DMI,
+  /* ManageModes::Data_From_F2_Functions */ T_Data_From_F2_functions_Level_ *Data_From_F2_Functions,
+  /* ManageModes::Data_From_Localisation */ T_Data_From_Localisation_Level_ *Data_From_Localisation,
+  /* ManageModes::Data_From_Speed_and_Supervision */ T_Data_From_Speed_Supervision_L *Data_From_Speed_and_Supervision,
+  /* ManageModes::Data_From_STM */ T_Data_From_STM_Level_And_Mode_ *Data_From_STM,
+  /* ManageModes::Data_From_TIU */ Message_Train_Interface_to_EVC_ *Data_From_TIU,
+  /* ManageModes::Data_From_Track */ T_Data_From_Track_To_Mode_Level *Data_From_Track,
   /* ManageModes::TripModeFromLevel */ kcg_bool TripModeFromLevel,
   outC_ManageModes *outC)
 {
@@ -103,7 +103,7 @@ void ManageModes(
   /* ManageModes::_L210 */
   static kcg_bool _L210;
   /* ManageModes::_L212 */
-  static T_Mode_Profile_Level_And_Mode_Types_Pkg _L212;
+  static T_Mode_Profile_Level_And_Mode_T _L212;
   /* ManageModes::_L213 */
   static kcg_bool _L213;
   /* ManageModes::_L214 */
@@ -119,7 +119,7 @@ void ManageModes(
   /* ManageModes::_L222 */
   static kcg_bool _L222;
   /* ManageModes::_L223 */
-  static T_Reversing_Data_Level_And_Mode_Types_Pkg _L223;
+  static T_Reversing_Data_Level_And_Mode _L223;
   /* ManageModes::_L235 */
   static kcg_bool _L235;
   /* ManageModes::_L231 */
@@ -137,7 +137,7 @@ void ManageModes(
   /* ManageModes::_L260 */
   static Speed_T_Obu_BasicTypes_Pkg _L260;
   /* ManageModes::_L259 */
-  static trainPosition_T_TrainPosition_Types_Pck _L259;
+  static trainPosition_T_TrainPosition_T _L259;
   /* ManageModes::_L258 */
   static kcg_bool _L258;
   /* ManageModes::_L257 */
@@ -208,7 +208,7 @@ void ManageModes(
     &_L223,
     &_L254);
   /* 1 */
-  InputSpeedAndSupervision_Interfaces(
+  InputSpeedAndSupervision_Interf(
     Data_From_Speed_and_Supervision,
     &_L226,
     &_L227,
@@ -392,6 +392,6 @@ void ManageModes(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageModes.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

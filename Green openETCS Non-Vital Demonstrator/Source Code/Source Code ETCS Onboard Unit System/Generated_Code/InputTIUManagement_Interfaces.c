@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* Interfaces::InputTIUManagement */
 void InputTIUManagement_Interfaces(
-  /* Interfaces::InputTIUManagement::Data_from_TIU */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *Data_from_TIU,
+  /* Interfaces::InputTIUManagement::Data_from_TIU */ Message_Train_Interface_to_EVC_ *Data_from_TIU,
   /* Interfaces::InputTIUManagement::Cab */ cab_ID_T_TIU_Types_Pkg Cab,
   /* Interfaces::InputTIUManagement::Train_Permitted_NL */ kcg_bool *Train_Permitted_NL,
   /* Interfaces::InputTIUManagement::Train_Permitted_PS */ kcg_bool *Train_Permitted_PS,
@@ -20,10 +20,10 @@ void InputTIUManagement_Interfaces(
   /* Interfaces::InputTIUManagement::Valid_Train_Data_Stored */ kcg_bool *Valid_Train_Data_Stored)
 {
   switch ((*Data_from_TIU).train_status.m_nonleading_st) {
-    case non_leading_permitted_TIU_Types_Pkg :
+    case non_leading_permitted_TIU_Types :
       *Train_Permitted_NL = kcg_true;
       break;
-    case non_leading_not_permitted_TIU_Types_Pkg :
+    case non_leading_not_permitted_TIU_T :
       *Train_Permitted_NL = kcg_false;
       break;
     
@@ -40,20 +40,20 @@ void InputTIUManagement_Interfaces(
     
   }
   switch ((*Data_from_TIU).train_status.m_passiveshunting_st) {
-    case passive_shunting_permitted_TIU_Types_Pkg :
+    case passive_shunting_permitted_TIU_ :
       *Train_Permitted_PS = kcg_true;
       break;
-    case passive_shunting_not_permitted_TIU_Types_Pkg :
+    case passive_shunting_not_permitted_ :
       *Train_Permitted_PS = kcg_false;
       break;
     
   }
   *All_Desks_Closed = (*Data_from_TIU).train_status.m_cab_st ==
-    both_desks_are_closed_TIU_Types_Pkg;
+    both_desks_are_closed_TIU_Types;
   *Valid_Train_Data_Stored =
     (*Data_from_TIU).train_data_info.acknowledgedByDriver;
   switch ((*Data_from_TIU).train_status.m_cab_st) {
-    case both_desks_are_open_TIU_Types_Pkg :
+    case both_desks_are_open_TIU_Types_P :
       *Desk_Open = kcg_true;
       *OnBoard_Powered = kcg_true;
       break;
@@ -65,7 +65,7 @@ void InputTIUManagement_Interfaces(
       *Desk_Open = Cab == CabA_TIU_Types_Pkg;
       *OnBoard_Powered = kcg_true;
       break;
-    case both_desks_are_closed_TIU_Types_Pkg :
+    case both_desks_are_closed_TIU_Types :
       *Desk_Open = kcg_false;
       *OnBoard_Powered = kcg_false;
       break;
@@ -78,6 +78,6 @@ void InputTIUManagement_Interfaces(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputTIUManagement_Interfaces.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

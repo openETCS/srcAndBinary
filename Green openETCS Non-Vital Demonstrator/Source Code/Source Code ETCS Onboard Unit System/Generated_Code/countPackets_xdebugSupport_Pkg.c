@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* xdebugSupport_Pkg::countPackets */
 kcg_int countPackets_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::countPackets::msg */ API_TrackSideInput_T_API_Msg_Pkg *msg)
+  /* xdebugSupport_Pkg::countPackets::msg */ API_TrackSideInput_T_API_Msg_Pk *msg)
 {
   /* xdebugSupport_Pkg::countPackets */
   static kcg_int acc;
@@ -40,6 +40,6 @@ kcg_int countPackets_xdebugSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** countPackets_xdebugSupport_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

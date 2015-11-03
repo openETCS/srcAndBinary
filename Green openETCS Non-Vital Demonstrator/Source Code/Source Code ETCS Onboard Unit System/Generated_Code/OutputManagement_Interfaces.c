@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -25,8 +25,8 @@ void OutputManagement_Interfaces(
   /* Interfaces::OutputManagement::Request_For_SH_To_RBC */ kcg_bool Request_For_SH_To_RBC,
   /* Interfaces::OutputManagement::service_brake_Command */ kcg_bool service_brake_Command,
   /* Interfaces::OutputManagement::SH_Refused_by_RBC_To_DMI */ kcg_bool SH_Refused_by_RBC_To_DMI,
-  /* Interfaces::OutputManagement::Data_To_DMI */ T_Data_To_DMI_Level_And_Mode_Types_Pkg *Data_To_DMI,
-  /* Interfaces::OutputManagement::Data_To_BG_Management */ T_Data_To_BG_Management_Level_And_Mode_Types_Pkg *Data_To_BG_Management,
+  /* Interfaces::OutputManagement::Data_To_DMI */ T_Data_To_DMI_Level_And_Mode_Ty *Data_To_DMI,
+  /* Interfaces::OutputManagement::Data_To_BG_Management */ T_Data_To_BG_Management_Level_A *Data_To_BG_Management,
   /* Interfaces::OutputManagement::EB_Requested */ kcg_bool *EB_Requested,
   /* Interfaces::OutputManagement::Service_Brake_Command */ kcg_bool *Service_Brake_Command,
   /* Interfaces::OutputManagement::newMode */ T_Mode_Level_And_Mode_Types_Pkg *newMode)
@@ -47,7 +47,7 @@ void OutputManagement_Interfaces(
     SH_Refused_by_RBC_To_DMI,
     Data_To_DMI);
   /* 1 */
-  Output_To_BG_Management_Interfaces(
+  Output_To_BG_Management_Interfa(
     (kcg_bool)
       ((current_Mode == SB_Level_And_Mode_Types_Pkg) &
         End_Of_Mission_Procedure_Req),
@@ -59,6 +59,6 @@ void OutputManagement_Interfaces(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** OutputManagement_Interfaces.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void Output_init(outC_Output *outC)
   outC->announcedLevel.LevelTransition.transition.level = M_LEVEL_Level_0;
   outC->announcedLevel.LevelTransition.transition.position = 0;
   outC->announcedLevel.LevelTransition.transition.transitionType =
-    M_TransitionType_Conditional_Level_And_Mode_Types_Pkg;
+    M_TransitionType_Conditional_Le;
   outC->announcedLevel.LevelTransition.transition.immediateAck = kcg_true;
   outC->announcedLevel.LevelTransition.transition.AckLength = 0;
   outC->announcedLevel.LevelTransition.LRBG = 0;
@@ -37,8 +37,8 @@ void Output_init(outC_Output *outC)
   outC->Compatible_Mode_And_Level.newLevel = kcg_true;
   outC->Compatible_Mode_And_Level.Mode = M_MODE_Full_Supervision;
   outC->Compatible_Mode_And_Level.newMode = kcg_true;
-  /* 1 */ Output_Mode_Level_To_Use_init_OutputManagement(&outC->_1_Context_1);
-  /* 1 */ Output_To_DMI_init_OutputManagement(&outC->Context_1);
+  /* 1 */ Output_Mode_Level_To_Use_init_O(&outC->_1_Context_1);
+  /* 1 */ Output_To_DMI_init_OutputManage(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -46,8 +46,8 @@ void Output_init(outC_Output *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Output_reset(outC_Output *outC)
 {
-  /* 1 */ Output_Mode_Level_To_Use_reset_OutputManagement(&outC->_1_Context_1);
-  /* 1 */ Output_To_DMI_reset_OutputManagement(&outC->Context_1);
+  /* 1 */ Output_Mode_Level_To_Use_reset_(&outC->_1_Context_1);
+  /* 1 */ Output_To_DMI_reset_OutputManag(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
@@ -55,7 +55,7 @@ void Output_reset(outC_Output *outC)
 void Output(
   /* Output::next_level */ M_LEVEL next_level,
   /* Output::needsAckFromDriver */ kcg_bool needsAckFromDriver,
-  /* Output::announcedLevelTransition */ T_LevelTransition_Level_And_Mode_Types_Pkg *announcedLevelTransition,
+  /* Output::announcedLevelTransition */ T_LevelTransition_Level_And_Mod *announcedLevelTransition,
   /* Output::service_brake_from_level */ kcg_bool service_brake_from_level,
   /* Output::Connection_to_RBC_Requested */ kcg_bool Connection_to_RBC_Requested,
   /* Output::PositionReportNeeded */ kcg_bool PositionReportNeeded,
@@ -64,8 +64,8 @@ void Output(
   /* Output::currentMode */ T_Mode_Level_And_Mode_Types_Pkg currentMode,
   /* Output::EB_Requested_From_Mode */ kcg_bool EB_Requested_From_Mode,
   /* Output::Service_Brake_Command_From_Mode */ kcg_bool Service_Brake_Command_From_Mode,
-  /* Output::Data_To_DMI_From_Mode */ T_Data_To_DMI_Level_And_Mode_Types_Pkg *Data_To_DMI_From_Mode,
-  /* Output::Data_To_BG_Management_From_Mode */ T_Data_To_BG_Management_Level_And_Mode_Types_Pkg *Data_To_BG_Management_From_Mode,
+  /* Output::Data_To_DMI_From_Mode */ T_Data_To_DMI_Level_And_Mode_Ty *Data_To_DMI_From_Mode,
+  /* Output::Data_To_BG_Management_From_Mode */ T_Data_To_BG_Management_Level_A *Data_To_BG_Management_From_Mode,
   /* Output::Level_Mode_Compatible */ kcg_bool Level_Mode_Compatible,
   outC_Output *outC)
 {
@@ -78,26 +78,26 @@ void Output(
     announcedLevelTransition,
     isAvailableForUse,
     &outC->Context_1);
-  kcg_copy_T_AnnouncedLevel_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_AnnouncedLevel_Level(
     &outC->announcedLevel,
     &outC->Context_1.announcedLevel);
-  kcg_copy_T_AcknoledgementRequest_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_AcknoledgementReques(
     &outC->Data_To_DMI_Ack,
     &outC->Context_1.Data_To_DMI_Ack);
   /* 1 */
-  Output_To_BG_Management_OutputManagement(
+  Output_To_BG_Management_OutputM(
     Data_To_BG_Management_From_Mode,
     Connection_to_RBC_Requested,
     PositionReportNeeded,
     &outC->Data_To_BG_Management);
   /* 1 */
-  Output_Mode_Level_To_Use_OutputManagement(
+  Output_Mode_Level_To_Use_Output(
     next_level,
     currentMode,
     Level_Mode_Compatible,
     isNewLevel,
     &outC->_1_Context_1);
-  kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_Mode_Level_Level_And(
     &outC->Compatible_Mode_And_Level,
     &outC->_1_Context_1.Compatible_Mode_And_Level);
   outC->Service_Brake_Command = service_brake_from_level |
@@ -106,6 +106,6 @@ void Output(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Output.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

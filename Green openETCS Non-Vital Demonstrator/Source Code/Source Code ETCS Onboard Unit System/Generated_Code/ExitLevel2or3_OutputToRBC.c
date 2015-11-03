@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,8 +29,8 @@ void ExitLevel2or3_reset_OutputToRBC(outC_ExitLevel2or3_OutputToRBC *outC)
 void ExitLevel2or3_OutputToRBC(
   /* OutputToRBC::ExitLevel2or3::new_level */ M_LEVEL new_level,
   /* OutputToRBC::ExitLevel2or3::last_level */ M_LEVEL last_level,
-  /* OutputToRBC::ExitLevel2or3::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* OutputToRBC::ExitLevel2or3::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* OutputToRBC::ExitLevel2or3::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition,
+  /* OutputToRBC::ExitLevel2or3::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
   outC_ExitLevel2or3_OutputToRBC *outC)
 {
   /* OutputToRBC::ExitLevel2or3::SM1::State2 */
@@ -38,7 +38,7 @@ void ExitLevel2or3_OutputToRBC(
   /* OutputToRBC::ExitLevel2or3::Loc_Position */
   static M_POSITION last_Loc_Position;
   /* OutputToRBC::ExitLevel2or3::SM1 */
-  static _5_SSM_ST_SM1 SM1_state_act;
+  static _173_SSM_ST_SM1 SM1_state_act;
   
   /* last_init_ck_Loc_Position */ if (outC->init) {
     outC->init = kcg_false;
@@ -56,7 +56,7 @@ void ExitLevel2or3_OutputToRBC(
       if ((last_level != new_level) & ((last_level == M_LEVEL_Level_2) |
           (last_level == M_LEVEL_Level_3)) & ((new_level == M_LEVEL_Level_0) |
           (new_level == M_LEVEL_Level_1) | (new_level ==
-            M_LEVEL_Level_NTC_specified_by_NID_NTC))) {
+            M_LEVEL_Level_NTC_specified_by_))) {
         outC->SM1_state_nxt = SSM_st_State2_SM1;
       }
       else {
@@ -82,6 +82,6 @@ void ExitLevel2or3_OutputToRBC(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ExitLevel2or3_OutputToRBC.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

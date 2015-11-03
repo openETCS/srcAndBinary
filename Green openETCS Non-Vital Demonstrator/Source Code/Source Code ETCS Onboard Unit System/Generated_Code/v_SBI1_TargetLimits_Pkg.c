@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,25 +9,25 @@
 
 /* TargetLimits_Pkg::v_SBI1 */
 void v_SBI1_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::v_SBI1::SBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
-  /* TargetLimits_Pkg::v_SBI1::V_est */ V_internal_real_Type_SDM_Types_Pkg V_est,
-  /* TargetLimits_Pkg::v_SBI1::D_estfront */ L_internal_real_Type_SDM_Types_Pkg D_estfront,
-  /* TargetLimits_Pkg::v_SBI1::D_EOA */ L_internal_real_Type_SDM_Types_Pkg D_EOA,
-  /* TargetLimits_Pkg::v_SBI1::t_driver */ T_internal_real_Type_SDM_Types_Pkg t_driver,
+  /* TargetLimits_Pkg::v_SBI1::SBDcurve */ ParabolaCurve_T_CalcBrakingCurv *SBDcurve,
+  /* TargetLimits_Pkg::v_SBI1::V_est */ V_internal_real_Type_SDM_Types_ V_est,
+  /* TargetLimits_Pkg::v_SBI1::D_estfront */ L_internal_real_Type_SDM_Types_ D_estfront,
+  /* TargetLimits_Pkg::v_SBI1::D_EOA */ L_internal_real_Type_SDM_Types_ D_EOA,
+  /* TargetLimits_Pkg::v_SBI1::t_driver */ T_internal_real_Type_SDM_Types_ t_driver,
   /* TargetLimits_Pkg::v_SBI1::guiCurveEnabled */ kcg_bool guiCurveEnabled,
-  /* TargetLimits_Pkg::v_SBI1::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
+  /* TargetLimits_Pkg::v_SBI1::GUIcurve */ ParabolaCurve_T_CalcBrakingCurv *GUIcurve,
   /* TargetLimits_Pkg::v_SBI1::T */ T_trac_t_TargetLimits_Pkg *T,
   /* TargetLimits_Pkg::v_SBI1::valid */ kcg_bool *valid,
-  /* TargetLimits_Pkg::v_SBI1::V_SBI1 */ V_internal_real_Type_SDM_Types_Pkg *V_SBI1)
+  /* TargetLimits_Pkg::v_SBI1::V_SBI1 */ V_internal_real_Type_SDM_Types_ *V_SBI1)
 {
   /* TargetLimits_Pkg::v_SBI1 */
   static kcg_bool tmp3;
   /* TargetLimits_Pkg::v_SBI1 */
-  static V_internal_real_Type_SDM_Types_Pkg tmp2;
+  static V_internal_real_Type_SDM_Types_ tmp2;
   /* TargetLimits_Pkg::v_SBI1 */
   static kcg_bool tmp1;
   /* TargetLimits_Pkg::v_SBI1 */
-  static V_internal_real_Type_SDM_Types_Pkg tmp;
+  static V_internal_real_Type_SDM_Types_ tmp;
   /* TargetLimits_Pkg::v_SBI1::_L8 */
   static kcg_real _L8;
   /* TargetLimits_Pkg::v_SBI1::_L16 */
@@ -36,16 +36,14 @@ void v_SBI1_TargetLimits_Pkg(
   _L8 = D_estfront + (t_driver + (*T).bs1) * V_est;
   tmp1 = D_EOA > _L8;
   /* ck__L12 */ if (tmp1) {
-    /* 1 */
-    getSpeedOnCurve_CalcBrakingCurves_types(SBDcurve, _L8, &tmp3, &tmp2);
+    /* 1 */ getSpeedOnCurve_CalcBrakingCurv(SBDcurve, _L8, &tmp3, &tmp2);
   }
   else {
     tmp3 = kcg_false;
     tmp2 = 0.0;
   }
   /* ck_guiCurveEnabled */ if (guiCurveEnabled) {
-    /* 2 */
-    getSpeedOnCurve_CalcBrakingCurves_types(GUIcurve, D_estfront, &tmp1, &tmp);
+    /* 2 */ getSpeedOnCurve_CalcBrakingCurv(GUIcurve, D_estfront, &tmp1, &tmp);
   }
   else {
     tmp1 = kcg_false;
@@ -57,6 +55,6 @@ void v_SBI1_TargetLimits_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** v_SBI1_TargetLimits_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

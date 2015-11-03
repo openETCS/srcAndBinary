@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,7 @@ void RequestAck_init_Acknowledgement(outC_RequestAck_Acknowledgement *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void RequestAck_reset_Acknowledgement(outC_RequestAck_Acknowledgement *outC)
+void RequestAck_reset_Acknowledgemen(outC_RequestAck_Acknowledgement *outC)
 {
   outC->init = kcg_true;
 }
@@ -28,16 +28,16 @@ void RequestAck_reset_Acknowledgement(outC_RequestAck_Acknowledgement *outC)
 /* Acknowledgement::RequestAck */
 void RequestAck_Acknowledgement(
   /* Acknowledgement::RequestAck::isAckNeeded */ kcg_bool isAckNeeded,
-  /* Acknowledgement::RequestAck::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* Acknowledgement::RequestAck::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* Acknowledgement::RequestAck::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition,
+  /* Acknowledgement::RequestAck::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
   /* Acknowledgement::RequestAck::levelAck */ kcg_bool levelAck,
   /* Acknowledgement::RequestAck::IsNewLevel */ kcg_bool IsNewLevel,
   outC_RequestAck_Acknowledgement *outC)
 {
   /* Acknowledgement::RequestAck::SM1 */
-  static _2_SSM_ST_SM1 SM1_state_sel;
+  static _170_SSM_ST_SM1 SM1_state_sel;
   /* Acknowledgement::RequestAck::SM1 */
-  static _2_SSM_ST_SM1 SM1_state_act;
+  static _170_SSM_ST_SM1 SM1_state_act;
   /* Acknowledgement::RequestAck::Loc_PositionInAckArea */
   static kcg_bool Loc_PositionInAckArea;
   
@@ -49,7 +49,7 @@ void RequestAck_Acknowledgement(
     SM1_state_sel = outC->SM1_state_nxt;
   }
   Loc_PositionInAckArea = /* 1 */
-    Position_In_Ack_Area_Acknowledgement(
+    Position_In_Ack_Area_Acknowledg(
       (*trainPosition).maxSafeFrontEndPostion,
       (*selected_level_transition).transition.position,
       (*selected_level_transition).transition.AckLength);
@@ -107,6 +107,6 @@ void RequestAck_Acknowledgement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RequestAck_Acknowledgement.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

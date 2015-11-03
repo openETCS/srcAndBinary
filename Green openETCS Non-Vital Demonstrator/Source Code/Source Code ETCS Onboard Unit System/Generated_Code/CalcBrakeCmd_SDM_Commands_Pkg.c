@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,24 +8,20 @@
 #include "CalcBrakeCmd_SDM_Commands_Pkg.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void CalcBrakeCmd_init_SDM_Commands_Pkg(
-  outC_CalcBrakeCmd_SDM_Commands_Pkg *outC)
+void CalcBrakeCmd_init_SDM_Commands_(outC_CalcBrakeCmd_SDM_Commands_ *outC)
 {
   outC->trigEB = kcg_true;
   outC->trigSB = kcg_true;
   outC->init = kcg_true;
   outC->brakeCmd.valid = kcg_true;
-  outC->brakeCmd.m_servicebrake_cm =
-    brake_signal_command_not_defined_TIU_Types_Pkg;
-  outC->brakeCmd.m_emergencybrake_cm =
-    brake_signal_command_not_defined_TIU_Types_Pkg;
+  outC->brakeCmd.m_servicebrake_cm = brake_signal_command_not_define;
+  outC->brakeCmd.m_emergencybrake_cm = brake_signal_command_not_define;
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void CalcBrakeCmd_reset_SDM_Commands_Pkg(
-  outC_CalcBrakeCmd_SDM_Commands_Pkg *outC)
+void CalcBrakeCmd_reset_SDM_Commands(outC_CalcBrakeCmd_SDM_Commands_ *outC)
 {
   outC->init = kcg_true;
 }
@@ -35,9 +31,9 @@ void CalcBrakeCmd_reset_SDM_Commands_Pkg(
 void CalcBrakeCmd_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CalcBrakeCmd::in_sdmCmd */ SDM_Commands_T_SDM_Types_Pkg *in_sdmCmd,
   /* SDM_Commands_Pkg::CalcBrakeCmd::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::CalcBrakeCmd::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDM_Commands_Pkg::CalcBrakeCmd::TrainData_int */ trainData_internal_t_SDM_Types_Pkg *TrainData_int,
-  outC_CalcBrakeCmd_SDM_Commands_Pkg *outC)
+  /* SDM_Commands_Pkg::CalcBrakeCmd::NationalValues */ P3_NationalValues_T_Packet_Type *NationalValues,
+  /* SDM_Commands_Pkg::CalcBrakeCmd::TrainData_int */ trainData_internal_t_SDM_Types_ *TrainData_int,
+  outC_CalcBrakeCmd_SDM_Commands_ *outC)
 {
   /* SDM_Commands_Pkg::CalcBrakeCmd */
   static kcg_bool tmp1;
@@ -57,8 +53,7 @@ void CalcBrakeCmd_SDM_Commands_Pkg(
   revSB = (*in_sdmCmd).sdmType == TSM_SDM_Types_Pkg;
   SB2EB = !(*TrainData_int).isSB_CmdAvailable | (tmp & revSB);
   revEB = ((*in_sdmCmd).revokedEB | (SB2EB & (*in_sdmCmd).revokedSB)) &
-    (((*NationalValues).q_nvemrrls ==
-        Q_NVEMRRLS_Revoke_emergency_brake_command_when_permitted_speed_supervision_limit_is_no_longer_exceeded) |
+    (((*NationalValues).q_nvemrrls == Q_NVEMRRLS_Revoke_emergency_bra) |
       (*speeds).OdoStandStill);
   SB2SB = ((!tmp & revSB) | !revSB) & (*TrainData_int).isSB_CmdAvailable;
   revSB = (*in_sdmCmd).revokedSB & SB2SB;
@@ -81,8 +76,7 @@ void CalcBrakeCmd_SDM_Commands_Pkg(
     outC->brakeCmd.m_servicebrake_cm = release_brake_TIU_Types_Pkg;
   }
   else {
-    outC->brakeCmd.m_servicebrake_cm =
-      brake_signal_command_not_defined_TIU_Types_Pkg;
+    outC->brakeCmd.m_servicebrake_cm = brake_signal_command_not_define;
   }
   /* 3 */ if (outC->trigEB) {
     outC->brakeCmd.m_emergencybrake_cm = apply_brake_TIU_Types_Pkg;
@@ -91,13 +85,12 @@ void CalcBrakeCmd_SDM_Commands_Pkg(
     outC->brakeCmd.m_emergencybrake_cm = release_brake_TIU_Types_Pkg;
   }
   else {
-    outC->brakeCmd.m_emergencybrake_cm =
-      brake_signal_command_not_defined_TIU_Types_Pkg;
+    outC->brakeCmd.m_emergencybrake_cm = brake_signal_command_not_define;
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcBrakeCmd_SDM_Commands_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

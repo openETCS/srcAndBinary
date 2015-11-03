@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -52,7 +52,7 @@ void BufferMsg_reset_TM_lib_internal(outC_BufferMsg_TM_lib_internal *outC)
 
 /* TM_lib_internal::BufferMsg */
 void BufferMsg_TM_lib_internal(
-  /* TM_lib_internal::BufferMsg::In */ M_TrainTrack_Message_T_TM_radio_messages *In,
+  /* TM_lib_internal::BufferMsg::In */ M_TrainTrack_Message_T_TM_radio *In,
   /* TM_lib_internal::BufferMsg::Write */ kcg_bool Write,
   outC_BufferMsg_TM_lib_internal *outC)
 {
@@ -63,28 +63,25 @@ void BufferMsg_TM_lib_internal(
   /* TM_lib_internal::BufferMsg::stacksize */
   static kcg_int last_stacksize;
   /* TM_lib_internal::BufferMsg::buffer */
-  static M_TrainTrackMessage_buffer_t_TM_lib_internal last_buffer;
+  static M_TrainTrackMessage_buffer_t_TM last_buffer;
   /* TM_lib_internal::BufferMsg::c_r */
   static kcg_bool c_r;
   
   c_r = !(*In).Message.valid & Write;
   /* last_init_ck_stacksize */ if (outC->init) {
     outC->init = kcg_false;
-    kcg_copy_M_TrainTrackMessage_buffer_t_TM_lib_internal(
+    kcg_copy_M_TrainTrackMessage_bu(
       &last_buffer,
-      (M_TrainTrackMessage_buffer_t_TM_lib_internal *)
-        &DEFAULT_M_TrainTrackMessage_buffer_TM_lib_internal);
+      (M_TrainTrackMessage_buffer_t_TM *) &DEFAULT_M_TrainTrackMessage_buf);
     last_stacksize = 0;
   }
   else {
-    kcg_copy_M_TrainTrackMessage_buffer_t_TM_lib_internal(
-      &last_buffer,
-      &outC->buffer);
+    kcg_copy_M_TrainTrackMessage_bu(&last_buffer, &outC->buffer);
     last_stacksize = outC->stacksize;
   }
   /* ck_c_r */ if (c_r) {
     /* 1 */
-    BufferMsg_read_only_TM_lib_internal(
+    BufferMsg_read_only_TM_lib_inte(
       &last_buffer,
       last_stacksize,
       In,
@@ -96,7 +93,7 @@ void BufferMsg_TM_lib_internal(
     _1_else_clock_IfBlock1 = (*In).Message.valid & Write;
     /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
       /* 1 */
-      BufferMsg_read_write_TM_lib_internal(
+      BufferMsg_read_write_TM_lib_int(
         &last_buffer,
         last_stacksize,
         In,
@@ -108,7 +105,7 @@ void BufferMsg_TM_lib_internal(
       else_clock_IfBlock1 = !Write & (*In).Message.valid;
       /* ck_anon_activ */ if (else_clock_IfBlock1) {
         /* 1 */
-        BufferMsg_write_only_TM_lib_internal(
+        BufferMsg_write_only_TM_lib_int(
           &last_buffer,
           last_stacksize,
           In,
@@ -117,10 +114,8 @@ void BufferMsg_TM_lib_internal(
           &outC->Out);
       }
       else {
-        kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(&outC->Out, In);
-        kcg_copy_M_TrainTrackMessage_buffer_t_TM_lib_internal(
-          &outC->buffer,
-          &last_buffer);
+        kcg_copy_M_TrainTrack_Message_T(&outC->Out, In);
+        kcg_copy_M_TrainTrackMessage_bu(&outC->buffer, &last_buffer);
         outC->stacksize = last_stacksize;
       }
     }
@@ -129,6 +124,6 @@ void BufferMsg_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_TM_lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

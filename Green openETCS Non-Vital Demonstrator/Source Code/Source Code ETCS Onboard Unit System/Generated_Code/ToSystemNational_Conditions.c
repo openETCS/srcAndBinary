@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "ToSystemNational_Conditions.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void ToSystemNational_init_Conditions(outC_ToSystemNational_Conditions *outC)
+void ToSystemNational_init_Condition(outC_ToSystemNational_Condition *outC)
 {
   outC->Condition56 = kcg_true;
   outC->init = kcg_true;
@@ -18,7 +18,7 @@ void ToSystemNational_init_Conditions(outC_ToSystemNational_Conditions *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void ToSystemNational_reset_Conditions(outC_ToSystemNational_Conditions *outC)
+void ToSystemNational_reset_Conditio(outC_ToSystemNational_Condition *outC)
 {
   outC->init = kcg_true;
 }
@@ -27,7 +27,7 @@ void ToSystemNational_reset_Conditions(outC_ToSystemNational_Conditions *outC)
 /* Conditions::ToSystemNational */
 void ToSystemNational_Conditions(
   /* Conditions::ToSystemNational::Current_Level */ M_LEVEL Current_Level,
-  outC_ToSystemNational_Conditions *outC)
+  outC_ToSystemNational_Condition *outC)
 {
   /* Conditions::ToSystemNational */
   static M_LEVEL tmp;
@@ -39,13 +39,13 @@ void ToSystemNational_Conditions(
   else {
     tmp = outC->rem_Current_Level;
   }
-  outC->Condition56 = (Current_Level ==
-      M_LEVEL_Level_NTC_specified_by_NID_NTC) & (Current_Level != tmp);
+  outC->Condition56 = (Current_Level == M_LEVEL_Level_NTC_specified_by_) &
+    (Current_Level != tmp);
   outC->rem_Current_Level = Current_Level;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToSystemNational_Conditions.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

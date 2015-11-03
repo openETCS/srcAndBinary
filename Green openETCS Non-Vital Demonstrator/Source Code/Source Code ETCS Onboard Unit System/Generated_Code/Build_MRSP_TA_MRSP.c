@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,7 +28,7 @@ void Build_MRSP_init_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC)
     outC->MRSP[i].Loc_LRBG = 0;
     outC->MRSP[i].MRS = 0;
   }
-  /* 1 */ Build_StaticSpeedProfile_init_TA_SSP(&outC->Context_1);
+  /* 1 */ Build_StaticSpeedProfile_init_T(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -37,17 +37,17 @@ void Build_MRSP_init_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC)
 void Build_MRSP_reset_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Build_StaticSpeedProfile_reset_TA_SSP(&outC->Context_1);
+  /* 1 */ Build_StaticSpeedProfile_reset_(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_MRSP::Build_MRSP */
 void Build_MRSP_TA_MRSP(
-  /* TA_MRSP::Build_MRSP::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_MRSP::Build_MRSP::MessageIn */ ReceivedMessage_T_Common_Types_ *MessageIn,
   /* TA_MRSP::Build_MRSP::TrainDataIn */ FromTIU_t_TrackAtlasTypes TrainDataIn,
-  /* TA_MRSP::Build_MRSP::ModeAndLevel_in */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeAndLevel_in,
-  /* TA_MRSP::Build_MRSP::train_length */ L_internal_Type_Obu_BasicTypes_Pkg train_length,
-  /* TA_MRSP::Build_MRSP::train_position */ trainPosition_T_TrainPosition_Types_Pck *train_position,
+  /* TA_MRSP::Build_MRSP::ModeAndLevel_in */ T_Mode_Level_Level_And_Mode_Typ *ModeAndLevel_in,
+  /* TA_MRSP::Build_MRSP::train_length */ L_internal_Type_Obu_BasicTypes_ train_length,
+  /* TA_MRSP::Build_MRSP::train_position */ trainPosition_T_TrainPosition_T *train_position,
   outC_Build_MRSP_TA_MRSP *outC)
 {
   /* TA_MRSP::Build_MRSP */
@@ -82,14 +82,12 @@ void Build_MRSP_TA_MRSP(
     train_position,
     train_length,
     &outC->Context_1);
-  kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(
-    &outC->SSP,
-    &outC->Context_1.SSP);
+  kcg_copy_StaticSpeedProfile_t_T(&outC->SSP, &outC->Context_1.SSP);
   _L21 = outC->Context_1.updated;
   outC->SSP_available = outC->Context_1.available;
   /* 1 */ SP_ASP_TA_SpeedProfiles(kcg_false, MessageIn, &tmp9);
   /* 1 */ SP_LX_SR_TA_SpeedProfiles(kcg_false, MessageIn, &tmp8);
-  /* 1 */ SP_MaxTrainSpeed_TA_SpeedProfiles(kcg_false, 0, &tmp7);
+  /* 1 */ SP_MaxTrainSpeed_TA_SpeedProfil(kcg_false, 0, &tmp7);
   /* 1 */
   SP_ModeRelated_TA_SpeedProfiles(
     kcg_false,
@@ -97,14 +95,14 @@ void Build_MRSP_TA_MRSP(
     MessageIn,
     ModeAndLevel_in,
     &tmp6);
-  /* 1 */ SP_OverrideRelated_TA_SpeedProfiles(kcg_false, MessageIn, &tmp5);
+  /* 1 */ SP_OverrideRelated_TA_SpeedProf(kcg_false, MessageIn, &tmp5);
   /* 1 */ SP_PBD_SR_TA_SpeedProfiles(kcg_false, MessageIn, &tmp4);
-  /* 1 */ SP_SignalingRelated_TA_SpeedProfiles(kcg_false, MessageIn, &tmp3);
-  /* 1 */ SP_STM_MaxSpeed_TA_SpeedProfiles(kcg_false, MessageIn, &tmp2);
-  /* 1 */ SP_STM_SystemSpeed_TA_SpeedProfiles(kcg_false, MessageIn, &tmp1);
+  /* 1 */ SP_SignalingRelated_TA_SpeedPro(kcg_false, MessageIn, &tmp3);
+  /* 1 */ SP_STM_MaxSpeed_TA_SpeedProfile(kcg_false, MessageIn, &tmp2);
+  /* 1 */ SP_STM_SystemSpeed_TA_SpeedProf(kcg_false, MessageIn, &tmp1);
   /* 1 */ SP_TSR_TA_SpeedProfiles(kcg_false, MessageIn, &tmp);
   /* 1 */
-  Build_SSP_Matrix_TA_SpeedProfiles(
+  Build_SSP_Matrix_TA_SpeedProfil(
     &tmp9,
     &tmp8,
     &tmp7,
@@ -123,7 +121,7 @@ void Build_MRSP_TA_MRSP(
     /* 1 */ Calculate_MRSP1_TA_MRSP(&_L2, &outC->MRSP);
   }
   else if (outC->init) {
-    kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
+    kcg_copy_MRSP_Profile_t_TrackAt(
       &outC->MRSP,
       (MRSP_Profile_t_TrackAtlasTypes *) &DEFAULT_MRSP_Profile_TA_MRSP);
   }
@@ -132,6 +130,6 @@ void Build_MRSP_TA_MRSP(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MRSP_TA_MRSP.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "ToFullSupervision_Conditions.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void ToFullSupervision_init_Conditions(outC_ToFullSupervision_Conditions *outC)
+void ToFullSupervision_init_Conditio(outC_ToFullSupervision_Conditio *outC)
 {
   outC->Condition25 = kcg_true;
   outC->Condition31 = kcg_true;
@@ -20,7 +20,7 @@ void ToFullSupervision_init_Conditions(outC_ToFullSupervision_Conditions *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void ToFullSupervision_reset_Conditions(outC_ToFullSupervision_Conditions *outC)
+void ToFullSupervision_reset_Conditi(outC_ToFullSupervision_Conditio *outC)
 {
   outC->init = kcg_true;
 }
@@ -30,9 +30,9 @@ void ToFullSupervision_reset_Conditions(outC_ToFullSupervision_Conditions *outC)
 void ToFullSupervision_Conditions(
   /* Conditions::ToFullSupervision::Current_Level */ M_LEVEL Current_Level,
   /* Conditions::ToFullSupervision::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
-  /* Conditions::ToFullSupervision::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Conditions::ToFullSupervision::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
   /* Conditions::ToFullSupervision::MA_SSP_Gradiant_Available */ kcg_bool MA_SSP_Gradiant_Available,
-  outC_ToFullSupervision_Conditions *outC)
+  outC_ToFullSupervision_Conditio *outC)
 {
   /* Conditions::ToFullSupervision */
   static kcg_bool tmp2;
@@ -44,7 +44,7 @@ void ToFullSupervision_Conditions(
   static kcg_bool FS_Data_Condition;
   
   FS_Data_Condition = ((*Mode_Profile_On_Board).Mode ==
-      No_Profile_Level_And_Mode_Types_Pkg) & MA_SSP_Gradiant_Available;
+      No_Profile_Level_And_Mode_Types) & MA_SSP_Gradiant_Available;
   switch (Current_Level) {
     case M_LEVEL_Level_2 :
       tmp2 = kcg_true;
@@ -84,7 +84,7 @@ void ToFullSupervision_Conditions(
     case M_LEVEL_Level_0 :
       tmp1 = kcg_true;
       break;
-    case M_LEVEL_Level_NTC_specified_by_NID_NTC :
+    case M_LEVEL_Level_NTC_specified_by_ :
       tmp1 = kcg_true;
       break;
     
@@ -97,6 +97,6 @@ void ToFullSupervision_Conditions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToFullSupervision_Conditions.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,7 +11,7 @@
 void EVAL_T_LOA_TA_Lib_internal(
   /* TA_Lib_internal::EVAL_T_LOA::t_loa */ P015_OBU_T_TM *t_loa,
   /* TA_Lib_internal::EVAL_T_LOA::t_loa_unlimited */ kcg_bool *t_loa_unlimited,
-  /* TA_Lib_internal::EVAL_T_LOA::t_loa_out */ T_internal_Type_Obu_BasicTypes_Pkg *t_loa_out)
+  /* TA_Lib_internal::EVAL_T_LOA::t_loa_out */ T_internal_Type_Obu_BasicTypes_ *t_loa_out)
 {
   /* TA_Lib_internal::EVAL_T_LOA */
   static kcg_int tmp;
@@ -28,6 +28,6 @@ void EVAL_T_LOA_TA_Lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_T_LOA_TA_Lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

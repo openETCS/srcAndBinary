@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,25 +9,25 @@
 
 /* TargetLimits_Pkg::d_limits */
 void d_limits_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::d_limits::V_est */ V_internal_real_Type_SDM_Types_Pkg V_est,
-  /* TargetLimits_Pkg::d_limits::SBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
+  /* TargetLimits_Pkg::d_limits::V_est */ V_internal_real_Type_SDM_Types_ V_est,
+  /* TargetLimits_Pkg::d_limits::SBDcurve */ ParabolaCurve_T_CalcBrakingCurv *SBDcurve,
   /* TargetLimits_Pkg::d_limits::SBI2valid */ kcg_bool SBI2valid,
-  /* TargetLimits_Pkg::d_limits::D_SBI2_V_est */ L_internal_real_Type_SDM_Types_Pkg D_SBI2_V_est,
-  /* TargetLimits_Pkg::d_limits::D_estfront */ L_internal_real_Type_SDM_Types_Pkg D_estfront,
-  /* TargetLimits_Pkg::d_limits::D_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg D_maxsafefront,
+  /* TargetLimits_Pkg::d_limits::D_SBI2_V_est */ L_internal_real_Type_SDM_Types_ D_SBI2_V_est,
+  /* TargetLimits_Pkg::d_limits::D_estfront */ L_internal_real_Type_SDM_Types_ D_estfront,
+  /* TargetLimits_Pkg::d_limits::D_maxsafefront */ L_internal_real_Type_SDM_Types_ D_maxsafefront,
   /* TargetLimits_Pkg::d_limits::T */ T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::d_limits::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
+  /* TargetLimits_Pkg::d_limits::GUIcurve */ ParabolaCurve_T_CalcBrakingCurv *GUIcurve,
   /* TargetLimits_Pkg::d_limits::guiCurveEnabled */ kcg_bool guiCurveEnabled,
-  /* TargetLimits_Pkg::d_limits::D_I */ L_internal_real_Type_SDM_Types_Pkg *D_I,
-  /* TargetLimits_Pkg::d_limits::D_P */ L_internal_real_Type_SDM_Types_Pkg *D_P,
-  /* TargetLimits_Pkg::d_limits::D_W */ L_internal_real_Type_SDM_Types_Pkg *D_W,
-  /* TargetLimits_Pkg::d_limits::D_FLOI */ L_internal_real_Type_SDM_Types_Pkg *D_FLOI,
+  /* TargetLimits_Pkg::d_limits::D_I */ L_internal_real_Type_SDM_Types_ *D_I,
+  /* TargetLimits_Pkg::d_limits::D_P */ L_internal_real_Type_SDM_Types_ *D_P,
+  /* TargetLimits_Pkg::d_limits::D_W */ L_internal_real_Type_SDM_Types_ *D_W,
+  /* TargetLimits_Pkg::d_limits::D_FLOI */ L_internal_real_Type_SDM_Types_ *D_FLOI,
   /* TargetLimits_Pkg::d_limits::FLOIisSBI1 */ kcg_bool *FLOIisSBI1)
 {
   /* TargetLimits_Pkg::d_limits */
   static kcg_bool tmp1;
   /* TargetLimits_Pkg::d_limits */
-  static L_internal_real_Type_SDM_Types_Pkg tmp;
+  static L_internal_real_Type_SDM_Types_ tmp;
   /* TargetLimits_Pkg::d_limits::_L31 */
   static kcg_bool _L31;
   /* TargetLimits_Pkg::d_limits::_L37 */
@@ -48,8 +48,7 @@ void d_limits_TargetLimits_Pkg(
   }
   *D_W = *D_FLOI - T_warning_SDM_Types_Pkg * V_est;
   /* ck_guiCurveEnabled */ if (guiCurveEnabled) {
-    /* 1 */
-    getLocationOnCurve_CalcBrakingCurves_types(GUIcurve, V_est, &tmp1, &tmp);
+    /* 1 */ getLocationOnCurve_CalcBrakingC(GUIcurve, V_est, &tmp1, &tmp);
   }
   else {
     tmp1 = kcg_false;
@@ -69,6 +68,6 @@ void d_limits_TargetLimits_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** d_limits_TargetLimits_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

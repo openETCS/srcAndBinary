@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _RisingEdge_digital_H_
 #define _RisingEdge_digital_H_
@@ -30,9 +30,7 @@ extern void RisingEdge_digital(
   /* digital::RisingEdge::RE_Input */ kcg_bool RE_Input,
   outC_RisingEdge_digital *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void RisingEdge_reset_digital(outC_RisingEdge_digital *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
 extern void RisingEdge_init_digital(outC_RisingEdge_digital *outC);
@@ -41,6 +39,6 @@ extern void RisingEdge_init_digital(outC_RisingEdge_digital *outC);
 #endif /* _RisingEdge_digital_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RisingEdge_digital.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

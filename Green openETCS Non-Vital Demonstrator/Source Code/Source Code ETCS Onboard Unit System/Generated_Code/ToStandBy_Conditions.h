@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ToStandBy_Conditions_H_
 #define _ToStandBy_Conditions_H_
@@ -21,7 +21,7 @@ extern void ToStandBy_Conditions(
   /* Conditions::ToStandBy::OnBoard_Powered */ kcg_bool OnBoard_Powered,
   /* Conditions::ToStandBy::Train_Permitted_PS */ kcg_bool Train_Permitted_PS,
   /* Conditions::ToStandBy::Train_Permitted_NL */ kcg_bool Train_Permitted_NL,
-  /* Conditions::ToStandBy::Continue_Shunting_function_Active */ kcg_bool Continue_Shunting_function_Active,
+  /* Conditions::ToStandBy::Continue_Shunting_function_Active */ kcg_bool Continue_Shunting_function_Acti,
   /* Conditions::ToStandBy::Driver_Req_Exit_SH */ kcg_bool Driver_Req_Exit_SH,
   /* Conditions::ToStandBy::Stop_Shunting_Stored */ kcg_bool Stop_Shunting_Stored,
   /* Conditions::ToStandBy::On_Going_Mission */ kcg_bool On_Going_Mission,
@@ -39,6 +39,6 @@ extern void ToStandBy_Conditions(
 #endif /* _ToStandBy_Conditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToStandBy_Conditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

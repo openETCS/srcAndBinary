@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _StoreRaw_NV_TA_Storage_H_
 #define _StoreRaw_NV_TA_Storage_H_
@@ -30,7 +30,7 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TA_Storage::StoreRaw_NV */
 extern void StoreRaw_NV_TA_Storage(
-  /* TA_Storage::StoreRaw_NV::mesaage_in */ ReceivedMessage_T_Common_Types_Pkg *mesaage_in,
+  /* TA_Storage::StoreRaw_NV::mesaage_in */ ReceivedMessage_T_Common_Types_ *mesaage_in,
   outC_StoreRaw_NV_TA_Storage *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -44,6 +44,6 @@ extern void StoreRaw_NV_init_TA_Storage(outC_StoreRaw_NV_TA_Storage *outC);
 #endif /* _StoreRaw_NV_TA_Storage_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** StoreRaw_NV_TA_Storage.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

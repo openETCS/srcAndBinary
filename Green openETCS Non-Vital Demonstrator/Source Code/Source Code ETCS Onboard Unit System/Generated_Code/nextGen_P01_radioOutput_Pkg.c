@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* radioOutput_Pkg::nextGen_P01 */
 void nextGen_P01_radioOutput_Pkg(
-  /* radioOutput_Pkg::nextGen_P01::inP1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *inP1,
+  /* radioOutput_Pkg::nextGen_P01::inP1 */ PT1_PositionReport_2BG_T_Packet *inP1,
   /* radioOutput_Pkg::nextGen_P01::outP1 */ P001_TM_TrainToTrack *outP1)
 {
   (*outP1).valid = (*inP1).valid;
@@ -34,6 +34,6 @@ void nextGen_P01_radioOutput_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** nextGen_P01_radioOutput_Pkg.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

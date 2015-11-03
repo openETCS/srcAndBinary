@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,7 +11,7 @@
 kcg_bool TripRequests_LevelChangement(
   /* LevelChangement::TripRequests::last_level */ M_LEVEL last_level,
   /* LevelChangement::TripRequests::new_level */ M_LEVEL new_level,
-  /* LevelChangement::TripRequests::Data_From_Track_to_Level */ T_Data_From_Track_To_Level_Level_And_Mode_Types_Pkg *Data_From_Track_to_Level)
+  /* LevelChangement::TripRequests::Data_From_Track_to_Level */ T_Data_From_Track_To_Level_Leve *Data_From_Track_to_Level)
 {
   /* LevelChangement::TripRequests::IfBlock1::then::IfBlock2 */
   static kcg_bool IfBlock2_clock_IfBlock1;
@@ -23,7 +23,7 @@ kcg_bool TripRequests_LevelChangement(
   static kcg_bool Trip_Requested;
   
   IfBlock1_clock = (last_level == M_LEVEL_Level_0) | (last_level ==
-      M_LEVEL_Level_NTC_specified_by_NID_NTC);
+      M_LEVEL_Level_NTC_specified_by_);
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     IfBlock2_clock_IfBlock1 = new_level == M_LEVEL_Level_1;
     /* ck_IfBlock2 */ if (IfBlock2_clock_IfBlock1) {
@@ -48,6 +48,6 @@ kcg_bool TripRequests_LevelChangement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TripRequests_LevelChangement.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

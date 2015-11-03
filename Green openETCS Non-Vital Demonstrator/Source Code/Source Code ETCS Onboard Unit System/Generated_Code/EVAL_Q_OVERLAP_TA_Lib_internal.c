@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,12 +14,12 @@ kcg_bool EVAL_Q_OVERLAP_TA_Lib_internal(
   /* TA_Lib_internal::EVAL_Q_OVERLAP::q_dp_bool */
   static kcg_bool q_dp_bool;
   
-  q_dp_bool = ENUM_Q_OVERLAP_overlap_info_TM_conversions == q_overlap;
+  q_dp_bool = ENUM_Q_OVERLAP_overlap_info_TM_ == q_overlap;
   return q_dp_bool;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_Q_OVERLAP_TA_Lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

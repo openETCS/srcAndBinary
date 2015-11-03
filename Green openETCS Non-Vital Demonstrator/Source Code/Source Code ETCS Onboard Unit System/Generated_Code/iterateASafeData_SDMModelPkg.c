@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,15 @@
 
 /* SDMModelPkg::iterateASafeData */
 void iterateASafeData_SDMModelPkg(
-  /* SDMModelPkg::iterateASafeData::ASafeRows */ ASafeRow_T_CalcBrakingCurves_types *ASafeRows,
-  /* SDMModelPkg::iterateASafeData::AGradient */ A_gradient_t_SDM_GradientAcceleration_types *AGradient,
-  /* SDMModelPkg::iterateASafeData::ASafeRows_graded */ ASafeRow_T_CalcBrakingCurves_types *ASafeRows_graded)
+  /* SDMModelPkg::iterateASafeData::ASafeRows */ ASafeRow_T_CalcBrakingCurves_ty *ASafeRows,
+  /* SDMModelPkg::iterateASafeData::AGradient */ A_gradient_t_SDM_GradientAccele *AGradient,
+  /* SDMModelPkg::iterateASafeData::ASafeRows_graded */ ASafeRow_T_CalcBrakingCurves_ty *ASafeRows_graded)
 {
   /* SDMModelPkg::iterateASafeData */
   static kcg_real acc;
   static kcg_int i;
   /* SDMModelPkg::iterateASafeData::_L5 */
-  static A_internal_real_Type_SDM_Types_Pkg _L5;
+  static A_internal_real_Type_SDM_Types_ _L5;
   
   _L5 = 0.0;
   /* 1 */ for (i = 0; i < 100; i++) {
@@ -34,6 +34,6 @@ void iterateASafeData_SDMModelPkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** iterateASafeData_SDMModelPkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

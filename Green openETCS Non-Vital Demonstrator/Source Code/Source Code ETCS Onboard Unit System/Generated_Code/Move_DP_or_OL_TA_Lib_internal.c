@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,8 +12,8 @@ void Move_DP_or_OL_TA_Lib_internal(
   /* TA_Lib_internal::Move_DP_or_OL::DP_or_OL_in */ DP_or_OL_t_TrackAtlasTypes *DP_or_OL_in,
   /* TA_Lib_internal::Move_DP_or_OL::msg_prvLRBG */ kcg_bool msg_prvLRBG,
   /* TA_Lib_internal::Move_DP_or_OL::msg_LRBG */ kcg_bool msg_LRBG,
-  /* TA_Lib_internal::Move_DP_or_OL::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  /* TA_Lib_internal::Move_DP_or_OL::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
+  /* TA_Lib_internal::Move_DP_or_OL::pos_LRBG */ L_internal_Type_Obu_BasicTypes_ pos_LRBG,
+  /* TA_Lib_internal::Move_DP_or_OL::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_ pos_prvLRBG,
   /* TA_Lib_internal::Move_DP_or_OL::DP_or_OL_out */ DP_or_OL_t_TrackAtlasTypes *DP_or_OL_out)
 {
   /* TA_Lib_internal::Move_DP_or_OL */
@@ -24,7 +24,7 @@ void Move_DP_or_OL_TA_Lib_internal(
   static kcg_bool IfBlock1_clock;
   
   IfBlock1_clock = msg_LRBG & !msg_prvLRBG;
-  kcg_copy_DP_or_OL_t_TrackAtlasTypes(DP_or_OL_out, DP_or_OL_in);
+  kcg_copy_DP_or_OL_t_TrackAtlasT(DP_or_OL_out, DP_or_OL_in);
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     tmp = pos_LRBG;
   }
@@ -42,6 +42,6 @@ void Move_DP_or_OL_TA_Lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Move_DP_or_OL_TA_Lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

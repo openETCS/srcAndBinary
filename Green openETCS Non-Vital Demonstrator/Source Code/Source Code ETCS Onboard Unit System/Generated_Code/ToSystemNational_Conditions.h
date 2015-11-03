@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ToSystemNational_Conditions_H_
 #define _ToSystemNational_Conditions_H_
@@ -22,27 +22,27 @@ typedef struct {
   M_LEVEL /* Conditions::ToSystemNational::Current_Level */ rem_Current_Level;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-} outC_ToSystemNational_Conditions;
+} outC_ToSystemNational_Condition;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Conditions::ToSystemNational */
 extern void ToSystemNational_Conditions(
   /* Conditions::ToSystemNational::Current_Level */ M_LEVEL Current_Level,
-  outC_ToSystemNational_Conditions *outC);
+  outC_ToSystemNational_Condition *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void ToSystemNational_reset_Conditions(
-  outC_ToSystemNational_Conditions *outC);
+extern void ToSystemNational_reset_Conditio(
+  outC_ToSystemNational_Condition *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void ToSystemNational_init_Conditions(
-  outC_ToSystemNational_Conditions *outC);
+extern void ToSystemNational_init_Condition(
+  outC_ToSystemNational_Condition *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _ToSystemNational_Conditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToSystemNational_Conditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

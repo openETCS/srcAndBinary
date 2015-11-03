@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _Normalize_Overlap_TA_MA_H_
 #define _Normalize_Overlap_TA_MA_H_
@@ -17,7 +17,7 @@
 
 /* TA_MA::Normalize_Overlap */
 extern void Normalize_Overlap_TA_MA(
-  /* TA_MA::Normalize_Overlap::d_endsection */ L_internal_Type_Obu_BasicTypes_Pkg d_endsection,
+  /* TA_MA::Normalize_Overlap::d_endsection */ L_internal_Type_Obu_BasicTypes_ d_endsection,
   /* TA_MA::Normalize_Overlap::Packet15_in */ P015_OBU_T_TM *Packet15_in,
   /* TA_MA::Normalize_Overlap::NV_in */ P003V1_OBU_T_TM_baseline2 *NV_in,
   /* TA_MA::Normalize_Overlap::q_overlap */ kcg_bool *q_overlap,
@@ -26,6 +26,6 @@ extern void Normalize_Overlap_TA_MA(
 #endif /* _Normalize_Overlap_TA_MA_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_Overlap_TA_MA.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _DIV_real_XCP_numeric_H_
 #define _DIV_real_XCP_numeric_H_
@@ -23,6 +23,6 @@ extern void DIV_real_XCP_numeric(
 #endif /* _DIV_real_XCP_numeric_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** DIV_real_XCP_numeric.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

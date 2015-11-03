@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ToShunting_Conditions_H_
 #define _ToShunting_Conditions_H_
 
 #include "kcg_types.h"
-#include "Procedure_SH_Initiated_By_Driver_Procedures.h"
-#include "Procedure_SH_Ordered_By_Track_Procedures.h"
+#include "Procedure_SH_Initiated_By_Proce.h"
+#include "Procedure_SH_Ordered_By_Track_P.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -32,8 +32,8 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Procedure_SH_Ordered_By_Track_Procedures /* 1 */ _1_Context_1;
-  outC_Procedure_SH_Initiated_By_Driver_Procedures /* 1 */ Context_1;
+  outC_Procedure_SH_Ordered_By_Tr /* 1 */ _1_Context_1;
+  outC_Procedure_SH_Initiated_By_ /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ToShunting_Conditions;
 
@@ -45,11 +45,11 @@ extern void ToShunting_Conditions(
   /* Conditions::ToShunting::Desk_Open */ kcg_bool Desk_Open,
   /* Conditions::ToShunting::Driver_Ack_SH */ kcg_bool Driver_Ack_SH,
   /* Conditions::ToShunting::Driver_Req_SH */ kcg_bool Driver_Req_SH,
-  /* Conditions::ToShunting::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Conditions::ToShunting::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
   /* Conditions::ToShunting::On_Going_Mission */ kcg_bool On_Going_Mission,
   /* Conditions::ToShunting::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
   /* Conditions::ToShunting::Stop_Shunting_Stored */ kcg_bool Stop_Shunting_Stored,
-  /* Conditions::ToShunting::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Conditions::ToShunting::Train_Position */ trainPosition_T_TrainPosition_T *Train_Position,
   /* Conditions::ToShunting::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
   /* Conditions::ToShunting::Train_Standstill */ kcg_bool Train_Standstill,
   outC_ToShunting_Conditions *outC);
@@ -65,6 +65,6 @@ extern void ToShunting_init_Conditions(outC_ToShunting_Conditions *outC);
 #endif /* _ToShunting_Conditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToShunting_Conditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

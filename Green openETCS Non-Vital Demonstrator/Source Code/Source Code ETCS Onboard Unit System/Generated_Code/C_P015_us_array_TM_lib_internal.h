@@ -1,16 +1,16 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _C_P015_us_array_TM_lib_internal_H_
-#define _C_P015_us_array_TM_lib_internal_H_
+#ifndef _C_P015_us_array_TM_lib_interna
+#define _C_P015_us_array_TM_lib_interna
 
 #include "kcg_types.h"
-#include "CAST_Int_to_L_SECTION_TM_conversions.h"
-#include "CAST_Int_to_T_SECTIONTIMER_TM_conversions.h"
-#include "CAST_Int_to_Q_SECTIONTIMER_TM_conversions.h"
-#include "CAST_Int_to_D_SECTIONTIMERSTOPLOC_TM_conversions.h"
-#include "C_P015_extract_el_section_TM_lib_internal.h"
+#include "CAST_Int_to_L_SECTION_TM_conver.h"
+#include "CAST_Int_to_T_SECTIONTIMER_TM_c.h"
+#include "CAST_Int_to_Q_SECTIONTIMER_TM_c.h"
+#include "CAST_Int_to_D_SECTIONTIMERSTOPL.h"
+#include "C_P015_extract_el_section_TM_li.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -25,9 +25,9 @@ extern void C_P015_us_array_TM_lib_internal(
   /* TM_lib_internal::C_P015_us_array::cont */ kcg_bool *cont,
   /* TM_lib_internal::C_P015_us_array::sections */ P015_section_enum_T_TM *sections);
 
-#endif /* _C_P015_us_array_TM_lib_internal_H_ */
+#endif /* _C_P015_us_array_TM_lib_interna */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P015_us_array_TM_lib_internal.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

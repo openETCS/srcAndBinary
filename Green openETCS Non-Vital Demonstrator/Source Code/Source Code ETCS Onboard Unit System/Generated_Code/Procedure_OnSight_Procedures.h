@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _Procedure_OnSight_Procedures_H_
-#define _Procedure_OnSight_Procedures_H_
+#ifndef _Procedure_OnSight_Procedures_H
+#define _Procedure_OnSight_Procedures_H
 
 #include "kcg_types.h"
-#include "Mode_Profile_Calculations_Librairies.h"
-#include "Procedure_With_Mode_Profile_Procedures.h"
+#include "Mode_Profile_Calculations_Libra.h"
+#include "Procedure_With_Mode_Profile_Pro.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -26,33 +26,33 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Procedure_With_Mode_Profile_Procedures /* 1 */ Context_1;
+  outC_Procedure_With_Mode_Profil /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
-} outC_Procedure_OnSight_Procedures;
+} outC_Procedure_OnSight_Procedur;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::Procedure_OnSight */
 extern void Procedure_OnSight_Procedures(
   /* Procedures::Procedure_OnSight::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
   /* Procedures::Procedure_OnSight::Driver_Ack_OS */ kcg_bool Driver_Ack_OS,
-  /* Procedures::Procedure_OnSight::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
-  /* Procedures::Procedure_OnSight::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Procedures::Procedure_OnSight::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
+  /* Procedures::Procedure_OnSight::Train_Position */ trainPosition_T_TrainPosition_T *Train_Position,
   /* Procedures::Procedure_OnSight::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
-  outC_Procedure_OnSight_Procedures *outC);
+  outC_Procedure_OnSight_Procedur *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void Procedure_OnSight_reset_Procedures(
-  outC_Procedure_OnSight_Procedures *outC);
+extern void Procedure_OnSight_reset_Procedu(
+  outC_Procedure_OnSight_Procedur *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void Procedure_OnSight_init_Procedures(
-  outC_Procedure_OnSight_Procedures *outC);
+extern void Procedure_OnSight_init_Procedur(
+  outC_Procedure_OnSight_Procedur *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
-#endif /* _Procedure_OnSight_Procedures_H_ */
+#endif /* _Procedure_OnSight_Procedures_H */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_OnSight_Procedures.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

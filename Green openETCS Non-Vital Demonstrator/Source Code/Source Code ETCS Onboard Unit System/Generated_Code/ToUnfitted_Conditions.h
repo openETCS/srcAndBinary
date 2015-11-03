@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ToUnfitted_Conditions_H_
 #define _ToUnfitted_Conditions_H_
@@ -41,6 +41,6 @@ extern void ToUnfitted_init_Conditions(outC_ToUnfitted_Conditions *outC);
 #endif /* _ToUnfitted_Conditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToUnfitted_Conditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

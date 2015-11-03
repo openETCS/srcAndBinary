@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,8 +8,7 @@
 #include "ToStaffResponsible_Conditions.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void ToStaffResponsible_init_Conditions(
-  outC_ToStaffResponsible_Conditions *outC)
+void ToStaffResponsible_init_Conditi(outC_ToStaffResponsible_Conditi *outC)
 {
   outC->Condition44 = kcg_true;
   outC->Condition45 = kcg_true;
@@ -21,8 +20,7 @@ void ToStaffResponsible_init_Conditions(
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void ToStaffResponsible_reset_Conditions(
-  outC_ToStaffResponsible_Conditions *outC)
+void ToStaffResponsible_reset_Condit(outC_ToStaffResponsible_Conditi *outC)
 {
   outC->init = kcg_true;
 }
@@ -32,10 +30,10 @@ void ToStaffResponsible_reset_Conditions(
 void ToStaffResponsible_Conditions(
   /* Conditions::ToStaffResponsible::Current_Level */ M_LEVEL Current_Level,
   /* Conditions::ToStaffResponsible::Driver_Req_Override */ kcg_bool Driver_Req_Override,
-  /* Conditions::ToStaffResponsible::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limit,
+  /* Conditions::ToStaffResponsible::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limi,
   /* Conditions::ToStaffResponsible::Override_Function_Active */ kcg_bool Override_Function_Active,
   /* Conditions::ToStaffResponsible::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
-  outC_ToStaffResponsible_Conditions *outC)
+  outC_ToStaffResponsible_Conditi *outC)
 {
   /* Conditions::ToStaffResponsible::Current_Level */
   static M_LEVEL last_Current_Level;
@@ -50,11 +48,11 @@ void ToStaffResponsible_Conditions(
     last_Current_Level = outC->rem_Current_Level;
   }
   Level_prev_L0_LNTC = (last_Current_Level == M_LEVEL_Level_0) |
-    (last_Current_Level == M_LEVEL_Level_NTC_specified_by_NID_NTC);
+    (last_Current_Level == M_LEVEL_Level_NTC_specified_by_);
   outC->Condition45 = ((Current_Level == M_LEVEL_Level_2) | (Current_Level ==
         M_LEVEL_Level_3)) & Level_prev_L0_LNTC & Override_Function_Active &
     !Emergency_Stop_Message_Received;
-  outC->Condition37 = Driver_Req_Override & Train_Speed_Under_Override_Limit;
+  outC->Condition37 = Driver_Req_Override & Train_Speed_Under_Override_Limi;
   outC->Condition44 = (Current_Level == M_LEVEL_Level_1) & Level_prev_L0_LNTC &
     Override_Function_Active;
   outC->rem_Current_Level = Current_Level;
@@ -62,6 +60,6 @@ void ToStaffResponsible_Conditions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToStaffResponsible_Conditions.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

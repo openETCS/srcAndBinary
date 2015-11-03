@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,10 +8,10 @@
 #include "d_tripEOA_TargetLimits_Pkg.h"
 
 /* TargetLimits_Pkg::d_tripEOA */
-L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::d_tripEOA::D_EOA */ L_internal_real_Type_SDM_Types_Pkg D_EOA,
-  /* TargetLimits_Pkg::d_tripEOA::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
-  /* TargetLimits_Pkg::d_tripEOA::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int)
+L_internal_real_Type_SDM_Types_ d_tripEOA_TargetLimits_Pkg(
+  /* TargetLimits_Pkg::d_tripEOA::D_EOA */ L_internal_real_Type_SDM_Types_ D_EOA,
+  /* TargetLimits_Pkg::d_tripEOA::trainLocations */ TrainLocations_real_T_SDM_Types *trainLocations,
+  /* TargetLimits_Pkg::d_tripEOA::trainData_int */ trainData_internal_t_SDM_Types_ *trainData_int)
 {
   /* TargetLimits_Pkg::d_tripEOA */
   static kcg_real tmp;
@@ -22,7 +22,7 @@ L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
   /* TargetLimits_Pkg::d_tripEOA::_L29 */
   static kcg_real _L29;
   /* TargetLimits_Pkg::d_tripEOA::D_tripEOA */
-  static L_internal_real_Type_SDM_Types_Pkg D_tripEOA;
+  static L_internal_real_Type_SDM_Types_ D_tripEOA;
   
   _L10 = (*trainLocations).d_maxSafeFrontEndPos -
     (*trainLocations).d_minSafeFrontEndPos;
@@ -42,13 +42,13 @@ L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
     tmp = _L12;
   }
   D_tripEOA = /* 1 */
-    TransformL_intToL_real_SDM_Types_Pkg((*trainData_int).offsetAntennaL1) +
-    tmp + _L29;
+    TransformL_intToL_real_SDM_Type((*trainData_int).offsetAntennaL1) + tmp +
+    _L29;
   return D_tripEOA;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** d_tripEOA_TargetLimits_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

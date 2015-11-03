@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ kcg_bool Eval_Q_Front_TA_Lib_internal(
   /* TA_Lib_internal::Eval_Q_Front::add_train_length */
   static kcg_bool add_train_length;
   
-  IfBlock1_clock = q_front == ENUM_Q_FRONT_train_length_delay_TM_conversions;
+  IfBlock1_clock = q_front == ENUM_Q_FRONT_train_length_delay;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     add_train_length = kcg_true;
   }
@@ -28,6 +28,6 @@ kcg_bool Eval_Q_Front_TA_Lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Eval_Q_Front_TA_Lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

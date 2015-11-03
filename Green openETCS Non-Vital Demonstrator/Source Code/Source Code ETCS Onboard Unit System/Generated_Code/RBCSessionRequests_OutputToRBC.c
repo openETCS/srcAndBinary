@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* OutputToRBC::RBCSessionRequests */
 kcg_bool RBCSessionRequests_OutputToRBC(
   /* OutputToRBC::RBCSessionRequests::last_level */ M_LEVEL last_level,
-  /* OutputToRBC::RBCSessionRequests::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition)
+  /* OutputToRBC::RBCSessionRequests::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition)
 {
   /* OutputToRBC::RBCSessionRequests::Loc_new_level */
   static M_LEVEL Loc_new_level;
@@ -26,12 +26,12 @@ kcg_bool RBCSessionRequests_OutputToRBC(
   Connection_to_RBC_Requested = (last_level != Loc_new_level) &
     ((Loc_new_level == M_LEVEL_Level_2) | (Loc_new_level == M_LEVEL_Level_3)) &
     ((last_level == M_LEVEL_Level_0) | (last_level == M_LEVEL_Level_1) |
-      (last_level == M_LEVEL_Level_NTC_specified_by_NID_NTC));
+      (last_level == M_LEVEL_Level_NTC_specified_by_));
   return Connection_to_RBC_Requested;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RBCSessionRequests_OutputToRBC.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

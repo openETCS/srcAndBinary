@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ToTrip_Conditions_H_
 #define _ToTrip_Conditions_H_
@@ -34,10 +34,10 @@ extern void ToTrip_Conditions(
   /* Conditions::ToTrip::Driver_Select_SH */ kcg_bool Driver_Select_SH,
   /* Conditions::ToTrip::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
   /* Conditions::ToTrip::Error_BG_System_Version */ kcg_bool Error_BG_System_Version,
-  /* Conditions::ToTrip::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR_Distance,
-  /* Conditions::ToTrip::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+  /* Conditions::ToTrip::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR,
+  /* Conditions::ToTrip::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Locati,
   /* Conditions::ToTrip::Interface_To_National_System */ kcg_bool Interface_To_National_System,
-  /* Conditions::ToTrip::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direction,
+  /* Conditions::ToTrip::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direct,
   /* Conditions::ToTrip::Linking_Reaction_To_Trip */ kcg_bool Linking_Reaction_To_Trip,
   /* Conditions::ToTrip::List_BG_Related_To_SR_Empty */ kcg_bool List_BG_Related_To_SR_Empty,
   /* Conditions::ToTrip::MA_Available */ kcg_bool MA_Available,
@@ -49,7 +49,7 @@ extern void ToTrip_Conditions(
   /* Conditions::ToTrip::T_NVCONTACT_Overpass */ kcg_bool T_NVCONTACT_Overpass,
   /* Conditions::ToTrip::Train_Overpass_EOA_Antenna */ kcg_bool Train_Overpass_EOA_Antenna,
   /* Conditions::ToTrip::Train_Overpass_EOA_Front_End */ kcg_bool Train_Overpass_EOA_Front_End,
-  /* Conditions::ToTrip::Train_Overpass_Former_EOA_Antenna */ kcg_bool Train_Overpass_Former_EOA_Antenna,
+  /* Conditions::ToTrip::Train_Overpass_Former_EOA_Antenna */ kcg_bool Train_Overpass_Former_EOA_Anten,
   /* Conditions::ToTrip::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
   /* Conditions::ToTrip::TripModeFromLevel */ kcg_bool TripModeFromLevel,
   outC_ToTrip_Conditions *outC);
@@ -65,6 +65,6 @@ extern void ToTrip_init_Conditions(outC_ToTrip_Conditions *outC);
 #endif /* _ToTrip_Conditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToTrip_Conditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

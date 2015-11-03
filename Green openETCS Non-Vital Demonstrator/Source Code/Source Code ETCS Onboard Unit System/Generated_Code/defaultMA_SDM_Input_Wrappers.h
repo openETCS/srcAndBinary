@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:32
+** Generation date: 2015-11-03T13:50:12
 *************************************************************$ */
-#ifndef _defaultMA_SDM_Input_Wrappers_H_
-#define _defaultMA_SDM_Input_Wrappers_H_
+#ifndef _defaultMA_SDM_Input_Wrappers_H
+#define _defaultMA_SDM_Input_Wrappers_H
 
 #include "kcg_types.h"
 
@@ -14,11 +14,11 @@
 
 /* SDM_Input_Wrappers::defaultMA */
 extern void defaultMA_SDM_Input_Wrappers(
-  /* SDM_Input_Wrappers::defaultMA::Ma_out */ MA_section_real_T_TargetManagement_types *Ma_out);
+  /* SDM_Input_Wrappers::defaultMA::Ma_out */ MA_section_real_T_TargetManagem *Ma_out);
 
-#endif /* _defaultMA_SDM_Input_Wrappers_H_ */
+#endif /* _defaultMA_SDM_Input_Wrappers_H */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** defaultMA_SDM_Input_Wrappers.h
-** Generation date: 2015-10-23T15:36:32
+** Generation date: 2015-11-03T13:50:12
 *************************************************************$ */
 

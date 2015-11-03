@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,16 @@
 
 /* TargetLimits_Pkg::calcBec */
 void calcBec_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::calcBec::V_dt */ TractionDeltaTriple_TargetLimits_Pkg *V_dt,
-  /* TargetLimits_Pkg::calcBec::V_target */ V_internal_real_Type_SDM_Types_Pkg V_target,
-  /* TargetLimits_Pkg::calcBec::V_est */ V_internal_real_Type_SDM_Types_Pkg V_est,
+  /* TargetLimits_Pkg::calcBec::V_dt */ TractionDeltaTriple_TargetLimit *V_dt,
+  /* TargetLimits_Pkg::calcBec::V_target */ V_internal_real_Type_SDM_Types_ V_target,
+  /* TargetLimits_Pkg::calcBec::V_est */ V_internal_real_Type_SDM_Types_ V_est,
   /* TargetLimits_Pkg::calcBec::T */ T_trac_t_TargetLimits_Pkg *T,
   /* TargetLimits_Pkg::calcBec::bec */ bec_t_TargetLimits_Pkg *bec)
 {
   /* TargetLimits_Pkg::calcBec */
-  static V_internal_real_Type_SDM_Types_Pkg tmp;
+  static V_internal_real_Type_SDM_Types_ tmp;
   /* TargetLimits_Pkg::calcBec::v_bec */
-  static V_internal_real_Type_SDM_Types_Pkg v_bec;
+  static V_internal_real_Type_SDM_Types_ v_bec;
   /* TargetLimits_Pkg::calcBec::_L39 */
   static kcg_real _L39;
   
@@ -43,6 +43,6 @@ void calcBec_TargetLimits_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** calcBec_TargetLimits_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

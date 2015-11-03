@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ManageAck_Acknowledgement_H_
 #define _ManageAck_Acknowledgement_H_
@@ -29,8 +29,8 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Acknowledgement::ManageAck */
 extern void ManageAck_Acknowledgement(
-  /* Acknowledgement::ManageAck::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* Acknowledgement::ManageAck::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* Acknowledgement::ManageAck::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition,
+  /* Acknowledgement::ManageAck::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
   /* Acknowledgement::ManageAck::last_level */ M_LEVEL last_level,
   /* Acknowledgement::ManageAck::levelAck */ kcg_bool levelAck,
   /* Acknowledgement::ManageAck::IsNewLevel */ kcg_bool IsNewLevel,
@@ -49,6 +49,6 @@ extern void ManageAck_init_Acknowledgement(
 #endif /* _ManageAck_Acknowledgement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageAck_Acknowledgement.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

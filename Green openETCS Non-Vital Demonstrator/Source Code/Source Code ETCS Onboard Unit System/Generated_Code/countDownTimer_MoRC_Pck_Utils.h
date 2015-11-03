@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _countDownTimer_MoRC_Pck_Utils_H_
-#define _countDownTimer_MoRC_Pck_Utils_H_
+#ifndef _countDownTimer_MoRC_Pck_Utils_
+#define _countDownTimer_MoRC_Pck_Utils_
 
 #include "kcg_types.h"
 
@@ -26,7 +26,7 @@ typedef struct {
   kcg_bool /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */ TimerStatus_SM_reset_nxt;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-} outC_countDownTimer_MoRC_Pck_Utils;
+} outC_countDownTimer_MoRC_Pck_Ut;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Utils::countDownTimer */
@@ -36,19 +36,19 @@ extern void countDownTimer_MoRC_Pck_Utils(
   /* MoRC_Pck::Utils::countDownTimer::actualTime */ time_Type_MoRC_Pck actualTime,
   /* MoRC_Pck::Utils::countDownTimer::autoretrigger */ kcg_bool autoretrigger,
   /* MoRC_Pck::Utils::countDownTimer::interval */ time_Type_MoRC_Pck interval,
-  outC_countDownTimer_MoRC_Pck_Utils *outC);
+  outC_countDownTimer_MoRC_Pck_Ut *outC);
 
-extern void countDownTimer_reset_MoRC_Pck_Utils(
-  outC_countDownTimer_MoRC_Pck_Utils *outC);
+extern void countDownTimer_reset_MoRC_Pck_U(
+  outC_countDownTimer_MoRC_Pck_Ut *outC);
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void countDownTimer_init_MoRC_Pck_Utils(
-  outC_countDownTimer_MoRC_Pck_Utils *outC);
+extern void countDownTimer_init_MoRC_Pck_Ut(
+  outC_countDownTimer_MoRC_Pck_Ut *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
-#endif /* _countDownTimer_MoRC_Pck_Utils_H_ */
+#endif /* _countDownTimer_MoRC_Pck_Utils_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** countDownTimer_MoRC_Pck_Utils.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

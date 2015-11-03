@@ -1,12 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _RequestAck_Acknowledgement_H_
 #define _RequestAck_Acknowledgement_H_
 
 #include "kcg_types.h"
-#include "Position_In_Ack_Area_Acknowledgement.h"
+#include "Position_In_Ack_Area_Acknowledg.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -21,7 +21,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _2_SSM_ST_SM1 /* Acknowledgement::RequestAck::SM1 */ SM1_state_nxt;
+  _170_SSM_ST_SM1 /* Acknowledgement::RequestAck::SM1 */ SM1_state_nxt;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
 } outC_RequestAck_Acknowledgement;
@@ -30,14 +30,14 @@ typedef struct {
 /* Acknowledgement::RequestAck */
 extern void RequestAck_Acknowledgement(
   /* Acknowledgement::RequestAck::isAckNeeded */ kcg_bool isAckNeeded,
-  /* Acknowledgement::RequestAck::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* Acknowledgement::RequestAck::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* Acknowledgement::RequestAck::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition,
+  /* Acknowledgement::RequestAck::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
   /* Acknowledgement::RequestAck::levelAck */ kcg_bool levelAck,
   /* Acknowledgement::RequestAck::IsNewLevel */ kcg_bool IsNewLevel,
   outC_RequestAck_Acknowledgement *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void RequestAck_reset_Acknowledgement(
+extern void RequestAck_reset_Acknowledgemen(
   outC_RequestAck_Acknowledgement *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
@@ -49,6 +49,6 @@ extern void RequestAck_init_Acknowledgement(
 #endif /* _RequestAck_Acknowledgement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RequestAck_Acknowledgement.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

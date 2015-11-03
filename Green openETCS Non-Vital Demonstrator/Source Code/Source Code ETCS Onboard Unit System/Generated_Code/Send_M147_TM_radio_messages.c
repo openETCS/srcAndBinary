@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "Send_M147_TM_radio_messages.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void Send_M147_init_TM_radio_messages(outC_Send_M147_TM_radio_messages *outC)
+void Send_M147_init_TM_radio_message(outC_Send_M147_TM_radio_message *outC)
 {
   static kcg_int i1;
   static kcg_int i;
@@ -33,7 +33,7 @@ void Send_M147_init_TM_radio_messages(outC_Send_M147_TM_radio_messages *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void Send_M147_reset_TM_radio_messages(outC_Send_M147_TM_radio_messages *outC)
+void Send_M147_reset_TM_radio_messag(outC_Send_M147_TM_radio_message *outC)
 {
   /* 1 */ BufferMsg_reset_TM_lib_internal(&outC->Context_1);
 }
@@ -41,20 +41,20 @@ void Send_M147_reset_TM_radio_messages(outC_Send_M147_TM_radio_messages *outC)
 
 /* TM_radio_messages::Send_M147 */
 void Send_M147_TM_radio_messages(
-  /* TM_radio_messages::Send_M147::t_train_global */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
-  /* TM_radio_messages::Send_M147::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* TM_radio_messages::Send_M147::t_train_global */ T_internal_Type_Obu_BasicTypes_ t_train_global,
+  /* TM_radio_messages::Send_M147::MessageBus */ M_TrainTrackMessageBus_t_TM_Tra *MessageBus,
   /* TM_radio_messages::Send_M147::Message_147_in */ M_147_T_TM_radio_messages *Message_147_in,
   /* TM_radio_messages::Send_M147::P000 */ P000_TM_TrainToTrack *P000,
   /* TM_radio_messages::Send_M147::P001 */ P001_TM_TrainToTrack *P001,
   /* TM_radio_messages::Send_M147::m_version */ M_VERSION m_version,
-  outC_Send_M147_TM_radio_messages *outC)
+  outC_Send_M147_TM_radio_message *outC)
 {
   /* TM_radio_messages::Send_M147 */
-  static M_TrainTrack_Message_T_TM_radio_messages tmp2;
+  static M_TrainTrack_Message_T_TM_radio tmp2;
   /* TM_radio_messages::Send_M147 */
-  static M_TrainTrack_compressed_packets_T_TM_radio_messages tmp1;
+  static M_TrainTrack_compressed_packets tmp1;
   /* TM_radio_messages::Send_M147 */
-  static M_TrainTrack_MessageHd_T_TM_radio_messages tmp;
+  static M_TrainTrack_MessageHd_T_TM_rad tmp;
   /* TM_radio_messages::Send_M147::_L99 */
   static kcg_int _L99;
   /* TM_radio_messages::Send_M147::_L98 */
@@ -64,24 +64,24 @@ void Send_M147_TM_radio_messages(
   /* 1 */ CheckSpace_TM_TrainTrack_Bus(MessageBus, &_L98, &_L99);
   /* 5 */ if ((*P000).valid) {
     /* 6 */
-    C_P000_train_compr_TM_TrainToTrack(
+    C_P000_train_compr_TM_TrainToTr(
       P000,
-      (P000_TrainTrack_int_TM_TrainToTrack *) &tmp1[0]);
+      (P000_TrainTrack_int_TM_TrainToT *) &tmp1[0]);
   }
   else {
     /* 6 */
-    C_P001_train_compr_TM_TrainToTrack(
+    C_P001_train_compr_TM_TrainToTr(
       P001,
-      (P001_TrainTrack_int_TM_TrainToTrack *) &tmp1[0]);
+      (P001_TrainTrack_int_TM_TrainToT *) &tmp1[0]);
   }
   for (i = 0; i < 33; i++) {
     (&tmp1[17])[i] = 0;
   }
-  /* 1 */ C_M147_to_header_TM_RBC_conversions(Message_147_in, &tmp);
-  /* 1 */ Merge_PacketsToMessage_TM_TrainToTrack(&tmp1, &tmp, &tmp2);
+  /* 1 */ C_M147_to_header_TM_RBC_convers(Message_147_in, &tmp);
+  /* 1 */ Merge_PacketsToMessage_TM_Train(&tmp1, &tmp, &tmp2);
   /* 1 */ BufferMsg_TM_lib_internal(&tmp2, (kcg_bool) !_L98, &outC->Context_1);
   /* 1 */
-  MergeMessageToBus_TM_TrainTrack_Bus(
+  MergeMessageToBus_TM_TrainTrack(
     &outC->Context_1.Out,
     _L99,
     MessageBus,
@@ -92,6 +92,6 @@ void Send_M147_TM_radio_messages(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M147_TM_radio_messages.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "BufferOutput_TM_lib_internal.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void BufferOutput_init_TM_lib_internal(outC_BufferOutput_TM_lib_internal *outC)
+void BufferOutput_init_TM_lib_intern(outC_BufferOutput_TM_lib_intern *outC)
 {
   static kcg_int i1;
   static kcg_int i;
@@ -44,7 +44,7 @@ void BufferOutput_init_TM_lib_internal(outC_BufferOutput_TM_lib_internal *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void BufferOutput_reset_TM_lib_internal(outC_BufferOutput_TM_lib_internal *outC)
+void BufferOutput_reset_TM_lib_inter(outC_BufferOutput_TM_lib_intern *outC)
 {
   outC->init = kcg_true;
 }
@@ -52,9 +52,9 @@ void BufferOutput_reset_TM_lib_internal(outC_BufferOutput_TM_lib_internal *outC)
 
 /* TM_lib_internal::BufferOutput */
 void BufferOutput_TM_lib_internal(
-  /* TM_lib_internal::BufferOutput::In */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *In,
+  /* TM_lib_internal::BufferOutput::In */ M_TrainTrackMessageBus_t_TM_Tra *In,
   /* TM_lib_internal::BufferOutput::Write */ kcg_bool Write,
-  outC_BufferOutput_TM_lib_internal *outC)
+  outC_BufferOutput_TM_lib_intern *outC)
 {
   /* TM_lib_internal::BufferOutput::IfBlock1::else */
   static kcg_bool _1_else_clock_IfBlock1;
@@ -63,7 +63,7 @@ void BufferOutput_TM_lib_internal(
   /* TM_lib_internal::BufferOutput::stacksize */
   static kcg_int last_stacksize;
   /* TM_lib_internal::BufferOutput::buffer */
-  static M_TrainTrackRadioOutputBuffer_t_TM_lib_internal last_buffer;
+  static M_TrainTrackRadioOutputBuffer_t last_buffer;
   /* TM_lib_internal::BufferOutput::c_r */
   static kcg_bool c_r;
   /* TM_lib_internal::BufferOutput::bussize */
@@ -76,21 +76,18 @@ void BufferOutput_TM_lib_internal(
   c_r = !_L19 & Write;
   /* last_init_ck_stacksize */ if (outC->init) {
     outC->init = kcg_false;
-    kcg_copy_M_TrainTrackRadioOutputBuffer_t_TM_lib_internal(
+    kcg_copy_M_TrainTrackRadioOutpu(
       &last_buffer,
-      (M_TrainTrackRadioOutputBuffer_t_TM_lib_internal *)
-        &DEFAULT_output_buffer_TM_lib_internal);
+      (M_TrainTrackRadioOutputBuffer_t *) &DEFAULT_output_buffer_TM_lib_in);
     last_stacksize = 0;
   }
   else {
-    kcg_copy_M_TrainTrackRadioOutputBuffer_t_TM_lib_internal(
-      &last_buffer,
-      &outC->buffer);
+    kcg_copy_M_TrainTrackRadioOutpu(&last_buffer, &outC->buffer);
     last_stacksize = outC->stacksize;
   }
   /* ck_c_r */ if (c_r) {
     /* 1 */
-    BufferOutput_read_only_TM_lib_internal(
+    BufferOutput_read_only_TM_lib_i(
       &last_buffer,
       last_stacksize,
       In,
@@ -102,7 +99,7 @@ void BufferOutput_TM_lib_internal(
     _1_else_clock_IfBlock1 = Write & _L19;
     /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
       /* 1 */
-      BufferOutput_read_write_TM_lib_internal(
+      BufferOutput_read_write_TM_lib_(
         &last_buffer,
         last_stacksize,
         In,
@@ -115,7 +112,7 @@ void BufferOutput_TM_lib_internal(
       else_clock_IfBlock1 = !Write & _L19;
       /* ck_anon_activ */ if (else_clock_IfBlock1) {
         /* 1 */
-        BufferOutput_write_only_TM_lib_internal(
+        BufferOutput_write_only_TM_lib_(
           &last_buffer,
           last_stacksize,
           In,
@@ -125,13 +122,10 @@ void BufferOutput_TM_lib_internal(
           &outC->Out);
       }
       else {
-        kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
+        kcg_copy_M_TrainTrack_Message_T(
           &outC->Out,
-          (M_TrainTrack_Message_T_TM_radio_messages *)
-            &EMPTY_TrainTrackMessage_TM_lib_internal);
-        kcg_copy_M_TrainTrackRadioOutputBuffer_t_TM_lib_internal(
-          &outC->buffer,
-          &last_buffer);
+          (M_TrainTrack_Message_T_TM_radio *) &EMPTY_TrainTrackMessage_TM_lib_);
+        kcg_copy_M_TrainTrackRadioOutpu(&outC->buffer, &last_buffer);
         outC->stacksize = last_stacksize;
       }
     }
@@ -140,6 +134,6 @@ void BufferOutput_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_TM_lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

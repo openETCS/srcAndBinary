@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,8 +26,7 @@ void C_P005_LinkedBGs_TM_conversions(
   (*LinkedBGsOUT).q_linkorientation = (*SectionsIn).q_linkorientation;
   (*LinkedBGsOUT).q_linkreaction = (*SectionsIn).q_linkreaction;
   (*LinkedBGsOUT).q_locacc = (*SectionsIn).q_locacc;
-  /* 1 */ if ((*SectionsIn).q_newcountry ==
-    ENUM_Q_NEWCOUNTRY_same_TM_conversions) {
+  /* 1 */ if ((*SectionsIn).q_newcountry == ENUM_Q_NEWCOUNTRY_same_TM_conve) {
     (*LinkedBGsOUT).nid_c = NID_C_onboard;
   }
   else {
@@ -37,6 +36,6 @@ void C_P005_LinkedBGs_TM_conversions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P005_LinkedBGs_TM_conversions.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,7 +24,7 @@ kcg_bool packetValid_xdebugSupport_Pkg(
   /* 1 */ for (i = 0; i < 30; i++) {
     acc = isValid;
     /* 1 */
-    packetValidBasics_xdebugSupport_Pkg(
+    packetValidBasics_xdebugSupport(
       acc,
       &(*packetHeader)[i],
       which_ID,
@@ -39,6 +39,6 @@ kcg_bool packetValid_xdebugSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** packetValid_xdebugSupport_Pkg.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

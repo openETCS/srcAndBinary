@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _InputDMI_Interfaces_H_
 #define _InputDMI_Interfaces_H_
@@ -14,7 +14,7 @@
 
 /* Interfaces::InputDMI */
 extern void InputDMI_Interfaces(
-  /* Interfaces::InputDMI::Data_From_DMI */ T_Data_From_DMI_Level_And_Mode_Types_Pkg *Data_From_DMI,
+  /* Interfaces::InputDMI::Data_From_DMI */ T_Data_From_DMI_Level_And_Mode_ *Data_From_DMI,
   /* Interfaces::InputDMI::Driver_Ack_LS */ kcg_bool *Driver_Ack_LS,
   /* Interfaces::InputDMI::Driver_Ack_OS */ kcg_bool *Driver_Ack_OS,
   /* Interfaces::InputDMI::Driver_Ack_RV */ kcg_bool *Driver_Ack_RV,
@@ -33,6 +33,6 @@ extern void InputDMI_Interfaces(
 #endif /* _InputDMI_Interfaces_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputDMI_Interfaces.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

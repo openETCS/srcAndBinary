@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _Pack_Endsection_TA_MA_H_
 #define _Pack_Endsection_TA_MA_H_
@@ -20,6 +20,6 @@ extern void Pack_Endsection_TA_MA(
 #endif /* _Pack_Endsection_TA_MA_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Pack_Endsection_TA_MA.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

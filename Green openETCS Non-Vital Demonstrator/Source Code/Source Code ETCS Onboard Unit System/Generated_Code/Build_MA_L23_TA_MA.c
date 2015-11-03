@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -71,7 +71,7 @@ void Build_MA_L23_init_TA_MA(outC_Build_MA_L23_TA_MA *outC)
   outC->MA_absolute.q_endtimer = kcg_true;
   outC->MA_absolute.endtimer_t.t_endtimer = 0;
   outC->MA_absolute.endtimer_t.d_endtimerstoploc = 0;
-  /* 1 */ MA_L23_Postprocessing_init_TA_MA(&outC->Context_1);
+  /* 1 */ MA_L23_Postprocessing_init_TA_M(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -80,19 +80,19 @@ void Build_MA_L23_init_TA_MA(outC_Build_MA_L23_TA_MA *outC)
 void Build_MA_L23_reset_TA_MA(outC_Build_MA_L23_TA_MA *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ MA_L23_Postprocessing_reset_TA_MA(&outC->Context_1);
+  /* 1 */ MA_L23_Postprocessing_reset_TA_(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_MA::Build_MA_L23 */
 void Build_MA_L23_TA_MA(
   /* TA_MA::Build_MA_L23::reset */ kcg_bool reset,
-  /* TA_MA::Build_MA_L23::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_MA::Build_MA_L23::MessageIn */ ReceivedMessage_T_Common_Types_ *MessageIn,
   /* TA_MA::Build_MA_L23::NV_in */ P003V1_OBU_T_TM_baseline2 *NV_in,
-  /* TA_MA::Build_MA_L23::train_position */ trainPosition_T_TrainPosition_Types_Pck *train_position,
+  /* TA_MA::Build_MA_L23::train_position */ trainPosition_T_TrainPosition_T *train_position,
   /* TA_MA::Build_MA_L23::reject_new_MA */ kcg_bool reject_new_MA,
   /* TA_MA::Build_MA_L23::updatedEOA_from_EM */ kcg_bool updatedEOA_from_EM,
-  /* TA_MA::Build_MA_L23::newEOA_from_EM */ L_internal_Type_Obu_BasicTypes_Pkg newEOA_from_EM,
+  /* TA_MA::Build_MA_L23::newEOA_from_EM */ L_internal_Type_Obu_BasicTypes_ newEOA_from_EM,
   outC_Build_MA_L23_TA_MA *outC)
 {
   /* TA_MA::Build_MA_L23::_L60 */
@@ -103,6 +103,8 @@ void Build_MA_L23_TA_MA(
   static kcg_bool _L240;
   /* TA_MA::Build_MA_L23::_L252 */
   static kcg_int _L252;
+  /* TA_MA::Build_MA_L23::_L253 */
+  static kcg_bool _L253;
   
   /* 1 */ Read_P015_TM(&(*MessageIn).packets, &outC->updated, &_L60);
   /* fby_1_init_1 */ if (outC->init) {
@@ -112,7 +114,7 @@ void Build_MA_L23_TA_MA(
     _L252 = outC->rem__L111;
   }
   _L240 = outC->updated | (_L252 != (*train_position).LRBG.nid_bg);
-  /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn, &_L108, &_L252);
+  /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn, &_L253, &_L252, &_L108);
   /* ck_updated */ if (outC->updated) {
     /* 1 */
     MA_L23_Preprocessing_TA_MA(
@@ -126,10 +128,9 @@ void Build_MA_L23_TA_MA(
       &outC->_L237);
   }
   else if (outC->init) {
-    kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthority_t_Tr(
       &outC->_L237,
-      (MovementAuthority_t_TrackAtlasTypes *)
-        &DEFAULT_MovementAuthority_TrackAtlasTypes);
+      (MovementAuthority_t_TrackAtlasT *) &DEFAULT_MovementAuthority_Track);
   }
   /* ck__L240 */ if (_L240) {
     /* 1 */
@@ -138,16 +139,15 @@ void Build_MA_L23_TA_MA(
       (*train_position).LRBG.location.nominal,
       &outC->Context_1);
     outC->available = outC->Context_1.MA_available;
-    kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthority_t_Tr(
       &outC->MA_absolute,
       &outC->Context_1.MA_absolute);
   }
   else if (outC->init) {
     outC->available = kcg_false;
-    kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthority_t_Tr(
       &outC->MA_absolute,
-      (MovementAuthority_t_TrackAtlasTypes *)
-        &DEFAULT_MovementAuthority_TrackAtlasTypes);
+      (MovementAuthority_t_TrackAtlasT *) &DEFAULT_MovementAuthority_Track);
   }
   outC->init = kcg_false;
   outC->currentEOA = 0;
@@ -156,6 +156,6 @@ void Build_MA_L23_TA_MA(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MA_L23_TA_MA.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

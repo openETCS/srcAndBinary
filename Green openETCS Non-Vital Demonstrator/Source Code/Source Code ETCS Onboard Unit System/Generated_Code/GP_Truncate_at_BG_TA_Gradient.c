@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* TA_Gradient::GP_Truncate_at_BG */
 void GP_Truncate_at_BG_TA_Gradient(
-  /* TA_Gradient::GP_Truncate_at_BG::Profile_in */ GradientProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_Gradient::GP_Truncate_at_BG::Profile_out */ GradientProfile_t_TrackAtlasTypes *Profile_out)
+  /* TA_Gradient::GP_Truncate_at_BG::Profile_in */ GradientProfile_t_TrackAtlasTyp *Profile_in,
+  /* TA_Gradient::GP_Truncate_at_BG::Profile_out */ GradientProfile_t_TrackAtlasTyp *Profile_out)
 {
   /* TA_Gradient::GP_Truncate_at_BG */
   static kcg_int acc1;
   /* TA_Gradient::GP_Truncate_at_BG */
-  static GradientProfile_t_TrackAtlasTypes acc;
+  static GradientProfile_t_TrackAtlasTyp acc;
   /* TA_Gradient::GP_Truncate_at_BG */
   static kcg_bool cond_iterw;
   static kcg_int i;
@@ -26,24 +26,18 @@ void GP_Truncate_at_BG_TA_Gradient(
   /* 2 */ for (i = 0; i < 50; i++) {
     acc1 = _L5;
     /* 1 */
-    GP_Find_First_Gsection_After_BG_loop_TA_Gradient(
-      i,
-      acc1,
-      Profile_in,
-      &cond_iterw,
-      &_L5);
+    GP_Find_First_Gsection_After_BG(i, acc1, Profile_in, &cond_iterw, &_L5);
     /* 2 */ if (!cond_iterw) {
       break;
     }
   }
-  kcg_copy_GradientProfile_t_TrackAtlasTypes(
+  kcg_copy_GradientProfile_t_Trac(
     Profile_out,
-    (GradientProfile_t_TrackAtlasTypes *)
-      &DEFAULT_GradientProfile_TrackAtlasTypes);
+    (GradientProfile_t_TrackAtlasTyp *) &DEFAULT_GradientProfile_TrackAt);
   /* 3 */ for (i = 0; i < 50; i++) {
-    kcg_copy_GradientProfile_t_TrackAtlasTypes(&acc, Profile_out);
+    kcg_copy_GradientProfile_t_Trac(&acc, Profile_out);
     /* 1 */
-    GP_Truncate_at_BG_loop_TA_Gradient(
+    GP_Truncate_at_BG_loop_TA_Gradi(
       i,
       &acc,
       Profile_in,
@@ -58,6 +52,6 @@ void GP_Truncate_at_BG_TA_Gradient(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GP_Truncate_at_BG_TA_Gradient.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

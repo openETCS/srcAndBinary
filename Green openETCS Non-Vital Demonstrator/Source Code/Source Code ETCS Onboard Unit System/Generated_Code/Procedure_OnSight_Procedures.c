@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "Procedure_OnSight_Procedures.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void Procedure_OnSight_init_Procedures(outC_Procedure_OnSight_Procedures *outC)
+void Procedure_OnSight_init_Procedur(outC_Procedure_OnSight_Procedur *outC)
 {
   outC->Condition15 = kcg_true;
   outC->Condition34 = kcg_true;
@@ -16,15 +16,15 @@ void Procedure_OnSight_init_Procedures(outC_Procedure_OnSight_Procedures *outC)
   outC->Condition73 = kcg_true;
   outC->Ack_OS_Req_To_Driver = kcg_true;
   outC->Service_Brake_Command = kcg_true;
-  /* 1 */ Procedure_With_Mode_Profile_init_Procedures(&outC->Context_1);
+  /* 1 */ Procedure_With_Mode_Profile_ini(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void Procedure_OnSight_reset_Procedures(outC_Procedure_OnSight_Procedures *outC)
+void Procedure_OnSight_reset_Procedu(outC_Procedure_OnSight_Procedur *outC)
 {
-  /* 1 */ Procedure_With_Mode_Profile_reset_Procedures(&outC->Context_1);
+  /* 1 */ Procedure_With_Mode_Profile_res(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
@@ -32,10 +32,10 @@ void Procedure_OnSight_reset_Procedures(outC_Procedure_OnSight_Procedures *outC)
 void Procedure_OnSight_Procedures(
   /* Procedures::Procedure_OnSight::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
   /* Procedures::Procedure_OnSight::Driver_Ack_OS */ kcg_bool Driver_Ack_OS,
-  /* Procedures::Procedure_OnSight::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
-  /* Procedures::Procedure_OnSight::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Procedures::Procedure_OnSight::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
+  /* Procedures::Procedure_OnSight::Train_Position */ trainPosition_T_TrainPosition_T *Train_Position,
   /* Procedures::Procedure_OnSight::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
-  outC_Procedure_OnSight_Procedures *outC)
+  outC_Procedure_OnSight_Procedur *outC)
 {
   /* Procedures::Procedure_OnSight */
   static kcg_bool tmp1;
@@ -47,10 +47,10 @@ void Procedure_OnSight_Procedures(
   static kcg_bool _L537;
   
   /* 1 */
-  Mode_Profile_Calculations_Librairies(
+  Mode_Profile_Calculations_Libra(
     LS_Level_And_Mode_Types_Pkg,
     Mode_Profile_On_Board,
-    Profile_LS_Level_And_Mode_Types_Pkg,
+    Profile_LS_Level_And_Mode_Types,
     Train_Speed,
     Train_Position,
     &tmp1,
@@ -95,12 +95,12 @@ void Procedure_OnSight_Procedures(
       tmp = kcg_false;
   }
   /* 1 */
-  Procedure_With_Mode_Profile_Procedures(
+  Procedure_With_Mode_Profile_Pro(
     Current_Mode,
     Driver_Ack_OS,
     Mode_Profile_On_Board,
     tmp1,
-    Profile_OS_Level_And_Mode_Types_Pkg,
+    Profile_OS_Level_And_Mode_Types,
     OS_Level_And_Mode_Types_Pkg,
     tmp,
     Train_Position,
@@ -116,6 +116,6 @@ void Procedure_OnSight_Procedures(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_OnSight_Procedures.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

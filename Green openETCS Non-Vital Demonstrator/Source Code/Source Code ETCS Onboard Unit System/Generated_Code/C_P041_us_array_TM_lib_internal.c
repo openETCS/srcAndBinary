@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,21 +19,21 @@ void C_P041_us_array_TM_lib_internal(
   static kcg_int _L16;
   
   (*sections).valid = kcg_true;
-  _L16 = i * DIM_P041_n_sections_TM_lib_internal;
+  _L16 = i * DIM_P041_n_sections_TM_lib_inte;
   (*sections).m_leveltr = /* 1 */
-    CAST_Int_to_M_LEVELTR_TM_conversions(
-      /* 3 */ C_P041_extract_el_section_TM_lib_internal(_L16, flat, 0));
+    CAST_Int_to_M_LEVELTR_TM_conver(
+      /* 3 */ C_P041_extract_el_section_TM_li(_L16, flat, 0));
   (*sections).nid_ntc = /* 1 */
-    CAST_Int_to_NID_NTC_TM_conversions(
-      /* 2 */ C_P041_extract_el_section_TM_lib_internal(_L16, flat, 1));
+    CAST_Int_to_NID_NTC_TM_conversi(
+      /* 2 */ C_P041_extract_el_section_TM_li(_L16, flat, 1));
   (*sections).l_ackleveltr = /* 1 */
-    CAST_Int_to_L_ACKLEVELTR_TM_conversions(
-      /* 1 */ C_P041_extract_el_section_TM_lib_internal(_L16, flat, 2));
+    CAST_Int_to_L_ACKLEVELTR_TM_con(
+      /* 1 */ C_P041_extract_el_section_TM_li(_L16, flat, 2));
   *cont = n_iter_int > i;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P041_us_array_TM_lib_internal.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

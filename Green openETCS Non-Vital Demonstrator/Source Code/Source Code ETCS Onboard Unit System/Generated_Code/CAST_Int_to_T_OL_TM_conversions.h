@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _CAST_Int_to_T_OL_TM_conversions_H_
-#define _CAST_Int_to_T_OL_TM_conversions_H_
+#ifndef _CAST_Int_to_T_OL_TM_conversion
+#define _CAST_Int_to_T_OL_TM_conversion
 
 #include "kcg_types.h"
 
@@ -16,9 +16,9 @@
 extern T_OL CAST_Int_to_T_OL_TM_conversions(
   /* TM_conversions::CAST_Int_to_T_OL::t_ol_int */ kcg_int t_ol_int);
 
-#endif /* _CAST_Int_to_T_OL_TM_conversions_H_ */
+#endif /* _CAST_Int_to_T_OL_TM_conversion */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Int_to_T_OL_TM_conversions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

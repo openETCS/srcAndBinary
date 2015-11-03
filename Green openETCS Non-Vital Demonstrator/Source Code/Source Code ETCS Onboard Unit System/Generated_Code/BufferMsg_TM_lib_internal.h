@@ -1,14 +1,14 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _BufferMsg_TM_lib_internal_H_
 #define _BufferMsg_TM_lib_internal_H_
 
 #include "kcg_types.h"
-#include "BufferMsg_write_only_TM_lib_internal.h"
-#include "BufferMsg_read_write_TM_lib_internal.h"
-#include "BufferMsg_read_only_TM_lib_internal.h"
+#include "BufferMsg_write_only_TM_lib_int.h"
+#include "BufferMsg_read_write_TM_lib_int.h"
+#include "BufferMsg_read_only_TM_lib_inte.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -17,12 +17,12 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  M_TrainTrack_Message_T_TM_radio_messages /* TM_lib_internal::BufferMsg::Out */ Out;
+  M_TrainTrack_Message_T_TM_radio /* TM_lib_internal::BufferMsg::Out */ Out;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  M_TrainTrackMessage_buffer_t_TM_lib_internal /* TM_lib_internal::BufferMsg::buffer */ buffer;
+  M_TrainTrackMessage_buffer_t_TM /* TM_lib_internal::BufferMsg::buffer */ buffer;
   kcg_int /* TM_lib_internal::BufferMsg::stacksize */ stacksize;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
@@ -31,7 +31,7 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TM_lib_internal::BufferMsg */
 extern void BufferMsg_TM_lib_internal(
-  /* TM_lib_internal::BufferMsg::In */ M_TrainTrack_Message_T_TM_radio_messages *In,
+  /* TM_lib_internal::BufferMsg::In */ M_TrainTrack_Message_T_TM_radio *In,
   /* TM_lib_internal::BufferMsg::Write */ kcg_bool Write,
   outC_BufferMsg_TM_lib_internal *outC);
 
@@ -48,6 +48,6 @@ extern void BufferMsg_init_TM_lib_internal(
 #endif /* _BufferMsg_TM_lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_TM_lib_internal.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

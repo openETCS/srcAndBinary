@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _GP_Truncate_at_BG_TA_Gradient_H_
-#define _GP_Truncate_at_BG_TA_Gradient_H_
+#ifndef _GP_Truncate_at_BG_TA_Gradient_
+#define _GP_Truncate_at_BG_TA_Gradient_
 
 #include "kcg_types.h"
-#include "GP_Truncate_at_BG_loop_TA_Gradient.h"
-#include "GP_Find_First_Gsection_After_BG_loop_TA_Gradient.h"
+#include "GP_Truncate_at_BG_loop_TA_Gradi.h"
+#include "GP_Find_First_Gsection_After_BG.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -16,12 +16,12 @@
 
 /* TA_Gradient::GP_Truncate_at_BG */
 extern void GP_Truncate_at_BG_TA_Gradient(
-  /* TA_Gradient::GP_Truncate_at_BG::Profile_in */ GradientProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_Gradient::GP_Truncate_at_BG::Profile_out */ GradientProfile_t_TrackAtlasTypes *Profile_out);
+  /* TA_Gradient::GP_Truncate_at_BG::Profile_in */ GradientProfile_t_TrackAtlasTyp *Profile_in,
+  /* TA_Gradient::GP_Truncate_at_BG::Profile_out */ GradientProfile_t_TrackAtlasTyp *Profile_out);
 
-#endif /* _GP_Truncate_at_BG_TA_Gradient_H_ */
+#endif /* _GP_Truncate_at_BG_TA_Gradient_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GP_Truncate_at_BG_TA_Gradient.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

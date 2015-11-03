@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _RBCSessionRequests_OutputToRBC_H_
-#define _RBCSessionRequests_OutputToRBC_H_
+#ifndef _RBCSessionRequests_OutputToRBC
+#define _RBCSessionRequests_OutputToRBC
 
 #include "kcg_types.h"
 
@@ -15,11 +15,11 @@
 /* OutputToRBC::RBCSessionRequests */
 extern kcg_bool RBCSessionRequests_OutputToRBC(
   /* OutputToRBC::RBCSessionRequests::last_level */ M_LEVEL last_level,
-  /* OutputToRBC::RBCSessionRequests::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition);
+  /* OutputToRBC::RBCSessionRequests::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition);
 
-#endif /* _RBCSessionRequests_OutputToRBC_H_ */
+#endif /* _RBCSessionRequests_OutputToRBC */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RBCSessionRequests_OutputToRBC.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

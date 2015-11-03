@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,7 +11,7 @@
 void EVAL_V_Release_TA_Lib_internal(
   /* TA_Lib_internal::EVAL_V_Release::V_in */ kcg_int V_in,
   /* TA_Lib_internal::EVAL_V_Release::V_NV_in */ kcg_int V_NV_in,
-  /* TA_Lib_internal::EVAL_V_Release::V_out */ V_internal_Type_Obu_BasicTypes_Pkg *V_out,
+  /* TA_Lib_internal::EVAL_V_Release::V_out */ V_internal_Type_Obu_BasicTypes_ *V_out,
   /* TA_Lib_internal::EVAL_V_Release::calc_onboard */ kcg_bool *calc_onboard)
 {
   *calc_onboard = V_in == 126 * 5;
@@ -28,6 +28,6 @@ void EVAL_V_Release_TA_Lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_V_Release_TA_Lib_internal.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

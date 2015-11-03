@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ManageLevels_H_
 #define _ManageLevels_H_
 
 #include "kcg_types.h"
-#include "ProceedOnLevelChange_LevelChangement.h"
-#include "SelectLevelTransition_LevelTransitionSelection.h"
+#include "ProceedOnLevelChange_LevelChang.h"
+#include "SelectLevelTransition_LevelTran.h"
 #include "BuildOutputToRBC_OutputToRBC.h"
 #include "ManageAck_Acknowledgement.h"
 
@@ -21,7 +21,7 @@ typedef struct {
   M_LEVEL /* ManageLevels::nextLevel */ nextLevel;
   kcg_bool /* ManageLevels::TripTrainRequested */ TripTrainRequested;
   kcg_bool /* ManageLevels::needsAckFromDriver */ needsAckFromDriver;
-  T_LevelTransition_Level_And_Mode_Types_Pkg /* ManageLevels::announcedLevelTransition */ announcedLevelTransition;
+  T_LevelTransition_Level_And_Mod /* ManageLevels::announcedLevelTransition */ announcedLevelTransition;
   kcg_bool /* ManageLevels::serviceBrakeRequested */ serviceBrakeRequested;
   kcg_bool /* ManageLevels::connectionToRBCRequested */ connectionToRBCRequested;
   kcg_bool /* ManageLevels::positionReportNeeded */ positionReportNeeded;
@@ -32,8 +32,8 @@ typedef struct {
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_ManageAck_Acknowledgement /* 1 */ _2_Context_1;
-  outC_BuildOutputToRBC_OutputToRBC /* 1 */ _1_Context_1;
-  outC_SelectLevelTransition_LevelTransitionSelection /* 1 */ Context_1;
+  outC_BuildOutputToRBC_OutputToR /* 1 */ _1_Context_1;
+  outC_SelectLevelTransition_Leve /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ManageLevels;
 
@@ -41,11 +41,11 @@ typedef struct {
 /* ManageLevels */
 extern void ManageLevels(
   /* ManageLevels::trainStandstill */ kcg_bool trainStandstill,
-  /* ManageLevels::driverLevelTransition */ T_LevelTransition_Level_And_Mode_Types_Pkg *driverLevelTransition,
+  /* ManageLevels::driverLevelTransition */ T_LevelTransition_Level_And_Mod *driverLevelTransition,
   /* ManageLevels::levelAck */ kcg_bool levelAck,
-  /* ManageLevels::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* ManageLevels::ERTMScapabilities */ T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMScapabilities,
-  /* ManageLevels::DataFromTrackToLevel */ T_Data_From_Track_To_Level_Level_And_Mode_Types_Pkg *DataFromTrackToLevel,
+  /* ManageLevels::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
+  /* ManageLevels::ERTMScapabilities */ T_ERTMS_capabilities_Level_And_ *ERTMScapabilities,
+  /* ManageLevels::DataFromTrackToLevel */ T_Data_From_Track_To_Level_Leve *DataFromTrackToLevel,
   /* ManageLevels::MemorizedLevelIn */ M_LEVEL MemorizedLevelIn,
   outC_ManageLevels *outC);
 
@@ -60,6 +60,6 @@ extern void ManageLevels_init(outC_ManageLevels *outC);
 #endif /* _ManageLevels_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageLevels.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _NV_storage_TA_Storage_H_
 #define _NV_storage_TA_Storage_H_
@@ -21,6 +21,6 @@ extern void NV_storage_TA_Storage(
 #endif /* _NV_storage_TA_Storage_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** NV_storage_TA_Storage.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

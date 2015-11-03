@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _checkOnErrors_xdebugSupport_Pkg_H_
-#define _checkOnErrors_xdebugSupport_Pkg_H_
+#ifndef _checkOnErrors_xdebugSupport_Pk
+#define _checkOnErrors_xdebugSupport_Pk
 
 #include "kcg_types.h"
 
@@ -18,9 +18,9 @@ extern void checkOnErrors_xdebugSupport_Pkg(
   /* xdebugSupport_Pkg::checkOnErrors::radioMsgError */ kcg_bool *radioMsgError,
   /* xdebugSupport_Pkg::checkOnErrors::baliseError */ kcg_bool *baliseError);
 
-#endif /* _checkOnErrors_xdebugSupport_Pkg_H_ */
+#endif /* _checkOnErrors_xdebugSupport_Pk */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** checkOnErrors_xdebugSupport_Pkg.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

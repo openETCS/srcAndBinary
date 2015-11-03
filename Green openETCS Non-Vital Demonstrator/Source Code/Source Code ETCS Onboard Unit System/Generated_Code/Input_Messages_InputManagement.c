@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* InputManagement::Input_Messages */
 void Input_Messages_InputManagement(
-  /* InputManagement::Input_Messages::Data_From_Track_Messages */ T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg *Data_From_Track_Messages,
+  /* InputManagement::Input_Messages::Data_From_Track_Messages */ T_Data_From_Track_Mess_Level_An *Data_From_Track_Messages,
   /* InputManagement::Input_Messages::Emergency_Stop_Message_Received */ kcg_bool *Emergency_Stop_Message_Received,
   /* InputManagement::Input_Messages::Shunting_Granted_By_RBC */ kcg_bool *Shunting_Granted_By_RBC,
   /* InputManagement::Input_Messages::RCB_Ack_And_EB_Revocked */ kcg_bool *RCB_Ack_And_EB_Revocked,
@@ -25,6 +25,6 @@ void Input_Messages_InputManagement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Input_Messages_InputManagement.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

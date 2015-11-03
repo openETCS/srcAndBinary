@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void ManageLevelAndMode_init(outC_ManageLevelAndMode *outC)
   outC->announcedLevel.LevelTransition.transition.level = M_LEVEL_Level_0;
   outC->announcedLevel.LevelTransition.transition.position = 0;
   outC->announcedLevel.LevelTransition.transition.transitionType =
-    M_TransitionType_Conditional_Level_And_Mode_Types_Pkg;
+    M_TransitionType_Conditional_Le;
   outC->announcedLevel.LevelTransition.transition.immediateAck = kcg_true;
   outC->announcedLevel.LevelTransition.transition.AckLength = 0;
   outC->announcedLevel.LevelTransition.LRBG = 0;
@@ -56,48 +56,48 @@ void ManageLevelAndMode_reset(outC_ManageLevelAndMode *outC)
 /* ManageLevelAndMode */
 void ManageLevelAndMode(
   /* ManageLevelAndMode::Data_From_DMI */ DMI_To_Modes_T_DMI_Types_Pkg *Data_From_DMI,
-  /* ManageLevelAndMode::Data_From_Localisation */ T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
-  /* ManageLevelAndMode::Data_From_TIU */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *Data_From_TIU,
-  /* ManageLevelAndMode::Data_From_Track_Messages */ T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg *Data_From_Track_Messages,
-  /* ManageLevelAndMode::Data_From_Track_Packets */ T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg *Data_From_Track_Packets,
-  /* ManageLevelAndMode::Data_From_Speed_and_Supervision */ T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
+  /* ManageLevelAndMode::Data_From_Localisation */ T_Data_From_Localisation_Level_ *Data_From_Localisation,
+  /* ManageLevelAndMode::Data_From_TIU */ Message_Train_Interface_to_EVC_ *Data_From_TIU,
+  /* ManageLevelAndMode::Data_From_Track_Messages */ T_Data_From_Track_Mess_Level_An *Data_From_Track_Messages,
+  /* ManageLevelAndMode::Data_From_Track_Packets */ T_Data_From_Track_Packet_Level_ *Data_From_Track_Packets,
+  /* ManageLevelAndMode::Data_From_Speed_and_Supervision */ T_Data_From_Speed_Supervision_L *Data_From_Speed_and_Supervision,
   /* ManageLevelAndMode::Cab_In */ cab_ID_T_TIU_Types_Pkg Cab_In,
-  /* ManageLevelAndMode::driver_level_transition_In */ T_LevelTransition_Level_And_Mode_Types_Pkg *driver_level_transition_In,
-  /* ManageLevelAndMode::ERTMS_capabilities_In */ T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities_In,
-  /* ManageLevelAndMode::Data_from_Track_MASSPGradient */ T_Data_From_Track_MASSPGradient_Available_Level_And_Mode_Types_Pkg *Data_from_Track_MASSPGradient,
-  /* ManageLevelAndMode::Data_From_F2_Functions */ T_Data_From_F2_functions_Level_And_Mode_Types_Pkg *Data_From_F2_Functions,
-  /* ManageLevelAndMode::Data_From_STM */ T_Data_From_STM_Level_And_Mode_Types_Pkg *Data_From_STM,
+  /* ManageLevelAndMode::driver_level_transition_In */ T_LevelTransition_Level_And_Mod *driver_level_transition_In,
+  /* ManageLevelAndMode::ERTMS_capabilities_In */ T_ERTMS_capabilities_Level_And_ *ERTMS_capabilities_In,
+  /* ManageLevelAndMode::Data_from_Track_MASSPGradient */ T_Data_From_Track_MASSPGradient *Data_from_Track_MASSPGradient,
+  /* ManageLevelAndMode::Data_From_F2_Functions */ T_Data_From_F2_functions_Level_ *Data_From_F2_Functions,
+  /* ManageLevelAndMode::Data_From_STM */ T_Data_From_STM_Level_And_Mode_ *Data_From_STM,
   /* ManageLevelAndMode::MemorizedLevelIn */ M_LEVEL MemorizedLevelIn,
   outC_ManageLevelAndMode *outC)
 {
   /* ManageLevelAndMode::_L25 */
   static kcg_bool _L25;
   /* ManageLevelAndMode::_L28 */
-  static T_LevelTransition_Level_And_Mode_Types_Pkg _L28;
+  static T_LevelTransition_Level_And_Mod _L28;
   /* ManageLevelAndMode::_L29 */
   static kcg_bool _L29;
   /* ManageLevelAndMode::_L30 */
-  static trainPosition_T_TrainPosition_Types_Pck _L30;
+  static trainPosition_T_TrainPosition_T _L30;
   /* ManageLevelAndMode::_L33 */
-  static T_ERTMS_capabilities_Level_And_Mode_Types_Pkg _L33;
+  static T_ERTMS_capabilities_Level_And_ _L33;
   /* ManageLevelAndMode::_L37 */
   static cab_ID_T_TIU_Types_Pkg _L37;
   /* ManageLevelAndMode::_L40 */
-  static T_Data_From_DMI_Level_And_Mode_Types_Pkg _L40;
+  static T_Data_From_DMI_Level_And_Mode_ _L40;
   /* ManageLevelAndMode::_L41 */
-  static T_Data_From_Localisation_Level_And_Mode_Types_Pkg _L41;
+  static T_Data_From_Localisation_Level_ _L41;
   /* ManageLevelAndMode::_L42 */
-  static T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg _L42;
+  static T_Data_From_Speed_Supervision_L _L42;
   /* ManageLevelAndMode::_L43 */
-  static Message_Train_Interface_to_EVC_T_TIU_Types_Pkg _L43;
+  static Message_Train_Interface_to_EVC_ _L43;
   /* ManageLevelAndMode::_L44 */
-  static T_Data_From_Track_To_Mode_Level_And_Mode_Types_Pkg _L44;
+  static T_Data_From_Track_To_Mode_Level _L44;
   /* ManageLevelAndMode::_L94 */
-  static T_Data_From_STM_Level_And_Mode_Types_Pkg _L94;
+  static T_Data_From_STM_Level_And_Mode_ _L94;
   /* ManageLevelAndMode::_L95 */
-  static T_Data_From_F2_functions_Level_And_Mode_Types_Pkg _L95;
+  static T_Data_From_F2_functions_Level_ _L95;
   /* ManageLevelAndMode::_L96 */
-  static T_Data_From_Track_To_Level_Level_And_Mode_Types_Pkg _L96;
+  static T_Data_From_Track_To_Level_Leve _L96;
   /* ManageLevelAndMode::_L108 */
   static M_LEVEL _L108;
   
@@ -166,24 +166,24 @@ void ManageLevelAndMode(
       outC->Context_1.nextLevel,
       outC->_1_Context_1.currentMode),
     &outC->_2_Context_1);
-  kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_Mode_Level_Level_And(
     &outC->Compatible_Mode_And_Level,
     &outC->_2_Context_1.Compatible_Mode_And_Level);
-  kcg_copy_T_Data_To_BG_Management_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_Data_To_BG_Managemen(
     &outC->Data_To_BG_Management,
     &outC->_2_Context_1.Data_To_BG_Management);
   outC->Service_Brake_Command = outC->_2_Context_1.Service_Brake_Command;
   outC->EB_Requested = outC->_2_Context_1.EB_Requested;
-  kcg_copy_T_AnnouncedLevel_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_AnnouncedLevel_Level(
     &outC->announcedLevel,
     &outC->_2_Context_1.announcedLevel);
-  kcg_copy_T_AcknoledgementRequest_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_AcknoledgementReques(
     &outC->Data_To_DMI_Ack,
     &outC->_2_Context_1.Data_To_DMI_Ack);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageLevelAndMode.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

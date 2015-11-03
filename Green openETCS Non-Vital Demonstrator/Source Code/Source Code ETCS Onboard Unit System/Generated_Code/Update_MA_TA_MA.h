@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _Update_MA_TA_MA_H_
 #define _Update_MA_TA_MA_H_
@@ -14,7 +14,7 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  MovementAuthority_t_TrackAtlasTypes /* TA_MA::Update_MA::MA_in_force */ MA_in_force;
+  MovementAuthority_t_TrackAtlasT /* TA_MA::Update_MA::MA_in_force */ MA_in_force;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -26,7 +26,7 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TA_MA::Update_MA */
 extern void Update_MA_TA_MA(
-  /* TA_MA::Update_MA::ProfileIn */ MovementAuthority_t_TrackAtlasTypes *ProfileIn,
+  /* TA_MA::Update_MA::ProfileIn */ MovementAuthority_t_TrackAtlasT *ProfileIn,
   outC_Update_MA_TA_MA *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -40,6 +40,6 @@ extern void Update_MA_init_TA_MA(outC_Update_MA_TA_MA *outC);
 #endif /* _Update_MA_TA_MA_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Update_MA_TA_MA.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

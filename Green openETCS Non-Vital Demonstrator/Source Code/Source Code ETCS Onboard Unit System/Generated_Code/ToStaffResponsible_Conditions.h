@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _ToStaffResponsible_Conditions_H_
-#define _ToStaffResponsible_Conditions_H_
+#ifndef _ToStaffResponsible_Conditions_
+#define _ToStaffResponsible_Conditions_
 
 #include "kcg_types.h"
 
@@ -24,31 +24,31 @@ typedef struct {
   M_LEVEL /* Conditions::ToStaffResponsible::Current_Level */ rem_Current_Level;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-} outC_ToStaffResponsible_Conditions;
+} outC_ToStaffResponsible_Conditi;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Conditions::ToStaffResponsible */
 extern void ToStaffResponsible_Conditions(
   /* Conditions::ToStaffResponsible::Current_Level */ M_LEVEL Current_Level,
   /* Conditions::ToStaffResponsible::Driver_Req_Override */ kcg_bool Driver_Req_Override,
-  /* Conditions::ToStaffResponsible::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limit,
+  /* Conditions::ToStaffResponsible::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limi,
   /* Conditions::ToStaffResponsible::Override_Function_Active */ kcg_bool Override_Function_Active,
   /* Conditions::ToStaffResponsible::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
-  outC_ToStaffResponsible_Conditions *outC);
+  outC_ToStaffResponsible_Conditi *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void ToStaffResponsible_reset_Conditions(
-  outC_ToStaffResponsible_Conditions *outC);
+extern void ToStaffResponsible_reset_Condit(
+  outC_ToStaffResponsible_Conditi *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void ToStaffResponsible_init_Conditions(
-  outC_ToStaffResponsible_Conditions *outC);
+extern void ToStaffResponsible_init_Conditi(
+  outC_ToStaffResponsible_Conditi *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
-#endif /* _ToStaffResponsible_Conditions_H_ */
+#endif /* _ToStaffResponsible_Conditions_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToStaffResponsible_Conditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

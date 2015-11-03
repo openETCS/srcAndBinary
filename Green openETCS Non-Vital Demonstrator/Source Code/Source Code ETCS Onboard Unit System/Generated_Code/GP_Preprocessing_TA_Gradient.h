@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _GP_Preprocessing_TA_Gradient_H_
-#define _GP_Preprocessing_TA_Gradient_H_
+#ifndef _GP_Preprocessing_TA_Gradient_H
+#define _GP_Preprocessing_TA_Gradient_H
 
 #include "kcg_types.h"
-#include "MoveGPSectionsAbsolute_TA_Lib_internal.h"
-#include "GP_Convert_P21_to_DistanceProfile_TA_Gradient.h"
+#include "MoveGPSectionsAbsolute_TA_Lib_i.h"
+#include "_201_GP_Convert_P21_to_Distance.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -20,13 +20,13 @@ extern void GP_Preprocessing_TA_Gradient(
   /* TA_Gradient::GP_Preprocessing::reset */ kcg_bool reset,
   /* TA_Gradient::GP_Preprocessing::msg_LRBG */ kcg_bool msg_LRBG,
   /* TA_Gradient::GP_Preprocessing::msg_prvLRBG */ kcg_bool msg_prvLRBG,
-  /* TA_Gradient::GP_Preprocessing::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  /* TA_Gradient::GP_Preprocessing::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
-  /* TA_Gradient::GP_Preprocessing::GP */ GradientProfile_t_TrackAtlasTypes *GP);
+  /* TA_Gradient::GP_Preprocessing::pos_LRBG */ L_internal_Type_Obu_BasicTypes_ pos_LRBG,
+  /* TA_Gradient::GP_Preprocessing::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_ pos_prvLRBG,
+  /* TA_Gradient::GP_Preprocessing::GP */ GradientProfile_t_TrackAtlasTyp *GP);
 
-#endif /* _GP_Preprocessing_TA_Gradient_H_ */
+#endif /* _GP_Preprocessing_TA_Gradient_H */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GP_Preprocessing_TA_Gradient.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

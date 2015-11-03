@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* Interfaces::InputTrackManagement */
 void InputTrackManagement_Interfaces(
-  /* Interfaces::InputTrackManagement::Data_From_Track */ T_Data_From_Track_To_Mode_Level_And_Mode_Types_Pkg *Data_From_Track,
+  /* Interfaces::InputTrackManagement::Data_From_Track */ T_Data_From_Track_To_Mode_Level *Data_From_Track,
   /* Interfaces::InputTrackManagement::MA_SSP_Gradient_Available */ kcg_bool *MA_SSP_Gradient_Available,
-  /* Interfaces::InputTrackManagement::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Interfaces::InputTrackManagement::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
   /* Interfaces::InputTrackManagement::Shunting_Granted_By_RBC */ kcg_bool *Shunting_Granted_By_RBC,
   /* Interfaces::InputTrackManagement::Trip_Order_Given_By_Balise */ kcg_bool *Trip_Order_Given_By_Balise,
   /* Interfaces::InputTrackManagement::List_BG_Related_To_SR_Empty */ kcg_bool *List_BG_Related_To_SR_Empty,
@@ -19,12 +19,12 @@ void InputTrackManagement_Interfaces(
   /* Interfaces::InputTrackManagement::Stop_If_In_SR */ kcg_bool *Stop_If_In_SR,
   /* Interfaces::InputTrackManagement::RCB_Ack_And_EB_Revocked */ kcg_bool *RCB_Ack_And_EB_Revocked,
   /* Interfaces::InputTrackManagement::RBC_Authorized_SR */ kcg_bool *RBC_Authorized_SR,
-  /* Interfaces::InputTrackManagement::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
+  /* Interfaces::InputTrackManagement::Reversing_Data */ T_Reversing_Data_Level_And_Mode *Reversing_Data,
   /* Interfaces::InputTrackManagement::Emergency_Stop_Message_Received */ kcg_bool *Emergency_Stop_Message_Received)
 {
   *Emergency_Stop_Message_Received =
     (*Data_From_Track).Emergency_Stop_Message_Received;
-  kcg_copy_T_Reversing_Data_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_Reversing_Data_Level(
     Reversing_Data,
     &(*Data_From_Track).Reversing_Data);
   *RBC_Authorized_SR = (*Data_From_Track).RBC_Authorized_SR;
@@ -35,13 +35,13 @@ void InputTrackManagement_Interfaces(
   *Trip_Order_Given_By_Balise = (*Data_From_Track).Trip_Order_Given_By_Balise;
   *Shunting_Granted_By_RBC = (*Data_From_Track).Shunting_granted_By_RBC;
   *MA_SSP_Gradient_Available = (*Data_From_Track).MA_SSP_Gradient_Available;
-  kcg_copy_T_Mode_Profile_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_Mode_Profile_Level_A(
     Mode_Profile_On_Board,
     &(*Data_From_Track).Mode_Profile_On_Board[1]);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputTrackManagement_Interfaces.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

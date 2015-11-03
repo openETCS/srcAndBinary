@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,8 +8,7 @@
 #include "probe_MsgOut_RadioSupport_Pkg.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void probe_MsgOut_init_RadioSupport_Pkg(
-  outC_probe_MsgOut_RadioSupport_Pkg *outC)
+void probe_MsgOut_init_RadioSupport_(outC_probe_MsgOut_RadioSupport_ *outC)
 {
   outC->init = kcg_true;
   outC->outTTrain = 0;
@@ -19,8 +18,7 @@ void probe_MsgOut_init_RadioSupport_Pkg(
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void probe_MsgOut_reset_RadioSupport_Pkg(
-  outC_probe_MsgOut_RadioSupport_Pkg *outC)
+void probe_MsgOut_reset_RadioSupport(outC_probe_MsgOut_RadioSupport_ *outC)
 {
   outC->init = kcg_true;
 }
@@ -28,9 +26,9 @@ void probe_MsgOut_reset_RadioSupport_Pkg(
 
 /* RadioSupport_Pkg::probe_MsgOut */
 void probe_MsgOut_RadioSupport_Pkg(
-  /* RadioSupport_Pkg::probe_MsgOut::fromEVC */ M_TrainTrack_Message_T_TM_radio_messages *fromEVC,
+  /* RadioSupport_Pkg::probe_MsgOut::fromEVC */ M_TrainTrack_Message_T_TM_radio *fromEVC,
   /* RadioSupport_Pkg::probe_MsgOut::show136 */ kcg_bool show136,
-  outC_probe_MsgOut_RadioSupport_Pkg *outC)
+  outC_probe_MsgOut_RadioSupport_ *outC)
 {
   /* RadioSupport_Pkg::probe_MsgOut::IfBlock1::then::_L7 */
   static kcg_bool _L7_IfBlock1;
@@ -50,7 +48,7 @@ void probe_MsgOut_RadioSupport_Pkg(
   }
   /* ck_isValid */ if ((*fromEVC).Message.valid) {
     _L7_IfBlock1 = ((*fromEVC).Message.nid_message !=
-        co136_Train_Position_Report_Id_Pkg) | show136;
+        co136_Train_Position_Report_Id_) | show136;
     /* 5 */ if (_L7_IfBlock1) {
       outC->Msg_0ut = (*fromEVC).Message.nid_message;
       outC->outTTrain = (*fromEVC).Message.t_train;
@@ -68,6 +66,6 @@ void probe_MsgOut_RadioSupport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** probe_MsgOut_RadioSupport_Pkg.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

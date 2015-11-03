@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _C_P005_LinkedBGs_TM_conversions_H_
-#define _C_P005_LinkedBGs_TM_conversions_H_
+#ifndef _C_P005_LinkedBGs_TM_conversion
+#define _C_P005_LinkedBGs_TM_conversion
 
 #include "kcg_types.h"
 
@@ -21,9 +21,9 @@ extern void C_P005_LinkedBGs_TM_conversions(
   /* TM_conversions::C_P005_LinkedBGs::NID_C_onboard */ NID_C NID_C_onboard,
   /* TM_conversions::C_P005_LinkedBGs::LinkedBGsOUT */ LinkedBG_T_BG_Types_Pkg *LinkedBGsOUT);
 
-#endif /* _C_P005_LinkedBGs_TM_conversions_H_ */
+#endif /* _C_P005_LinkedBGs_TM_conversion */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P005_LinkedBGs_TM_conversions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

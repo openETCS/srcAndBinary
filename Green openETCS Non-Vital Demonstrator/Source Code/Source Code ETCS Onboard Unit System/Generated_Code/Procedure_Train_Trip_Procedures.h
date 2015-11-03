@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _Procedure_Train_Trip_Procedures_H_
-#define _Procedure_Train_Trip_Procedures_H_
+#ifndef _Procedure_Train_Trip_Procedure
+#define _Procedure_Train_Trip_Procedure
 
 #include "kcg_types.h"
-#include "SH_Initiated_By_Driver_On_Procedures.h"
-#include "Procedure_Start_L1_L2_L3_Procedures.h"
+#include "SH_Initiated_By_Driver_On_Proce.h"
+#include "Procedure_Start_L1_L2_L3_Proced.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -44,10 +44,10 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   SSM_ST_SM_Train_Trip /* Procedures::Procedure_Train_Trip::SM_Train_Trip */ SM_Train_Trip_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_SH_Initiated_By_Driver_On_Procedures /* 1 */ _1_Context_1;
-  outC_Procedure_Start_L1_L2_L3_Procedures /* 1 */ Context_1;
+  outC_SH_Initiated_By_Driver_On_ /* 1 */ _1_Context_1;
+  outC_Procedure_Start_L1_L2_L3_P /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
-} outC_Procedure_Train_Trip_Procedures;
+} outC_Procedure_Train_Trip_Proce;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::Procedure_Train_Trip */
@@ -63,28 +63,28 @@ extern void Procedure_Train_Trip_Procedures(
   /* Procedures::Procedure_Train_Trip::Driver_Req_SH */ kcg_bool Driver_Req_SH,
   /* Procedures::Procedure_Train_Trip::Driver_Req_Start */ kcg_bool Driver_Req_Start,
   /* Procedures::Procedure_Train_Trip::MA_SSP_Gradiant_Available */ kcg_bool MA_SSP_Gradiant_Available,
-  /* Procedures::Procedure_Train_Trip::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Procedures::Procedure_Train_Trip::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
   /* Procedures::Procedure_Train_Trip::On_Going_Mission */ kcg_bool On_Going_Mission,
   /* Procedures::Procedure_Train_Trip::RCB_Ack_And_EB_Revocked */ kcg_bool RCB_Ack_And_EB_Revocked,
   /* Procedures::Procedure_Train_Trip::RBC_Authorizes_SR */ kcg_bool RBC_Authorizes_SR,
   /* Procedures::Procedure_Train_Trip::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
   /* Procedures::Procedure_Train_Trip::Train_Standstill */ kcg_bool Train_Standstill,
   /* Procedures::Procedure_Train_Trip::Valid_Train_Data_Stored */ kcg_bool Valid_Train_Data_Stored,
-  outC_Procedure_Train_Trip_Procedures *outC);
+  outC_Procedure_Train_Trip_Proce *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void Procedure_Train_Trip_reset_Procedures(
-  outC_Procedure_Train_Trip_Procedures *outC);
+extern void Procedure_Train_Trip_reset_Proc(
+  outC_Procedure_Train_Trip_Proce *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void Procedure_Train_Trip_init_Procedures(
-  outC_Procedure_Train_Trip_Procedures *outC);
+extern void Procedure_Train_Trip_init_Proce(
+  outC_Procedure_Train_Trip_Proce *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
-#endif /* _Procedure_Train_Trip_Procedures_H_ */
+#endif /* _Procedure_Train_Trip_Procedure */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_Train_Trip_Procedures.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

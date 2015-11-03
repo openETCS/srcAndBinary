@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -53,7 +53,7 @@ void Update_MA_reset_TA_MA(outC_Update_MA_TA_MA *outC)
 
 /* TA_MA::Update_MA */
 void Update_MA_TA_MA(
-  /* TA_MA::Update_MA::ProfileIn */ MovementAuthority_t_TrackAtlasTypes *ProfileIn,
+  /* TA_MA::Update_MA::ProfileIn */ MovementAuthority_t_TrackAtlasT *ProfileIn,
   outC_Update_MA_TA_MA *outC)
 {
   /* TA_MA::Update_MA::IfBlock1::else */
@@ -71,21 +71,19 @@ void Update_MA_TA_MA(
   }
   IfBlock1_clock = action == replace_MA_TA_MA;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    kcg_copy_MovementAuthority_t_TrackAtlasTypes(&outC->MA_in_force, ProfileIn);
+    kcg_copy_MovementAuthority_t_Tr(&outC->MA_in_force, ProfileIn);
   }
   else {
     else_clock_IfBlock1 = action == delete_MA_TA_MA;
     /* ck_anon_activ */ if (else_clock_IfBlock1) {
-      kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+      kcg_copy_MovementAuthority_t_Tr(
         &outC->MA_in_force,
-        (MovementAuthority_t_TrackAtlasTypes *)
-          &DEFAULT_MovementAuthority_TrackAtlasTypes);
+        (MovementAuthority_t_TrackAtlasT *) &DEFAULT_MovementAuthority_Track);
     }
     else /* last_init_ck_MA_in_force */ if (outC->init) {
-      kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+      kcg_copy_MovementAuthority_t_Tr(
         &outC->MA_in_force,
-        (MovementAuthority_t_TrackAtlasTypes *)
-          &DEFAULT_MovementAuthority_TrackAtlasTypes);
+        (MovementAuthority_t_TrackAtlasT *) &DEFAULT_MovementAuthority_Track);
     }
   }
   outC->init = kcg_false;
@@ -93,6 +91,6 @@ void Update_MA_TA_MA(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Update_MA_TA_MA.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

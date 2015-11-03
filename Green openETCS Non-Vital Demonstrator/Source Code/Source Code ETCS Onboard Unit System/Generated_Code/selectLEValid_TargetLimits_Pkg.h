@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:32
+** Generation date: 2015-11-03T13:50:12
 *************************************************************$ */
-#ifndef _selectLEValid_TargetLimits_Pkg_H_
-#define _selectLEValid_TargetLimits_Pkg_H_
+#ifndef _selectLEValid_TargetLimits_Pkg
+#define _selectLEValid_TargetLimits_Pkg
 
 #include "kcg_types.h"
 #include "isLEValid_TargetLimits_Pkg.h"
@@ -23,9 +23,9 @@ extern void selectLEValid_TargetLimits_Pkg(
   /* TargetLimits_Pkg::selectLEValid::valid */ kcg_bool *valid,
   /* TargetLimits_Pkg::selectLEValid::o */ kcg_real *o);
 
-#endif /* _selectLEValid_TargetLimits_Pkg_H_ */
+#endif /* _selectLEValid_TargetLimits_Pkg */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** selectLEValid_TargetLimits_Pkg.h
-** Generation date: 2015-10-23T15:36:32
+** Generation date: 2015-11-03T13:50:12
 *************************************************************$ */
 

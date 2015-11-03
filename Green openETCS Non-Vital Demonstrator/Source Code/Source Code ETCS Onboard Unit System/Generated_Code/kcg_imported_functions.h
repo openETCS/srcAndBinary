@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:32
+** Generation date: 2015-11-03T13:50:12
 *************************************************************$ */
 #ifndef _KCG_IMPORTED_FUNCTIONS_H_
 #define _KCG_IMPORTED_FUNCTIONS_H_
@@ -27,6 +27,6 @@ extern kcg_int Char_to_Int_Utilities(
 #endif /* _KCG_IMPORTED_FUNCTIONS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_imported_functions.h
-** Generation date: 2015-10-23T15:36:32
+** Generation date: 2015-11-03T13:50:12
 *************************************************************$ */
 

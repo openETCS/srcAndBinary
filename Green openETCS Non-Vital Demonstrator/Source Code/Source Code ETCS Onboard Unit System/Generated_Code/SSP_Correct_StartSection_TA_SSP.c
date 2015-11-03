@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,16 @@
 
 /* TA_SSP::SSP_Correct_StartSection */
 void SSP_Correct_StartSection_TA_SSP(
-  /* TA_SSP::SSP_Correct_StartSection::Profile_in */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_SSP::SSP_Correct_StartSection::Profile_out */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_out)
+  /* TA_SSP::SSP_Correct_StartSection::Profile_in */ StaticSpeedProfile_t_TrackAtlas *Profile_in,
+  /* TA_SSP::SSP_Correct_StartSection::Profile_out */ StaticSpeedProfile_t_TrackAtlas *Profile_out)
 {
-  kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(Profile_out, Profile_in);
-  kcg_copy_StaticSpeedSection_t_TrackAtlasTypes(
-    &(*Profile_out)[0],
-    &(*Profile_in)[0]);
+  kcg_copy_StaticSpeedProfile_t_T(Profile_out, Profile_in);
+  kcg_copy_StaticSpeedSection_t_T(&(*Profile_out)[0], &(*Profile_in)[0]);
   (*Profile_out)[0].d_static_LRBG = 0;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Correct_StartSection_TA_SSP.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

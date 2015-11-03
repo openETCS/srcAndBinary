@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "MA_L23_Postprocessing_TA_MA.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void MA_L23_Postprocessing_init_TA_MA(outC_MA_L23_Postprocessing_TA_MA *outC)
+void MA_L23_Postprocessing_init_TA_M(outC_MA_L23_Postprocessing_TA_M *outC)
 {
   static kcg_int i;
   
@@ -73,7 +73,7 @@ void MA_L23_Postprocessing_init_TA_MA(outC_MA_L23_Postprocessing_TA_MA *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void MA_L23_Postprocessing_reset_TA_MA(outC_MA_L23_Postprocessing_TA_MA *outC)
+void MA_L23_Postprocessing_reset_TA_(outC_MA_L23_Postprocessing_TA_M *outC)
 {
   /* 1 */ Update_MA_reset_TA_MA(&outC->Context_1);
 }
@@ -81,12 +81,12 @@ void MA_L23_Postprocessing_reset_TA_MA(outC_MA_L23_Postprocessing_TA_MA *outC)
 
 /* TA_MA::MA_L23_Postprocessing */
 void MA_L23_Postprocessing_TA_MA(
-  /* TA_MA::MA_L23_Postprocessing::Profile_in */ MovementAuthority_t_TrackAtlasTypes *Profile_in,
-  /* TA_MA::MA_L23_Postprocessing::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  outC_MA_L23_Postprocessing_TA_MA *outC)
+  /* TA_MA::MA_L23_Postprocessing::Profile_in */ MovementAuthority_t_TrackAtlasT *Profile_in,
+  /* TA_MA::MA_L23_Postprocessing::pos_LRBG */ L_internal_Type_Obu_BasicTypes_ pos_LRBG,
+  outC_MA_L23_Postprocessing_TA_M *outC)
 {
   /* 1 */ Update_MA_TA_MA(Profile_in, &outC->Context_1);
-  kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+  kcg_copy_MovementAuthority_t_Tr(
     &outC->MA_absolute,
     &outC->Context_1.MA_in_force);
   /* 1 */
@@ -96,6 +96,6 @@ void MA_L23_Postprocessing_TA_MA(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_L23_Postprocessing_TA_MA.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

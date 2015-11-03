@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -76,16 +76,16 @@ void ComputeModesConditions_init(outC_ComputeModesConditions *outC)
   outC->rem_Train_Overpass_EOA_Antenna = kcg_true;
   outC->rem_Override_Function_Active = kcg_true;
   outC->init = kcg_true;
-  /* 1 */ Procedure_Train_Reversing_init_Procedures(&outC->_10_Context_1);
-  /* 1 */ Procedure_Train_Trip_init_Procedures(&outC->_9_Context_1);
+  /* 1 */ Procedure_Train_Reversing_init_(&outC->_10_Context_1);
+  /* 1 */ Procedure_Train_Trip_init_Proce(&outC->_9_Context_1);
   /* 1 */ ToTrip_init_Conditions(&outC->_8_Context_1);
-  /* 1 */ Procedure_StartOfMission_init_Procedures(&outC->_7_Context_1);
-  /* 1 */ ToSystemNational_init_Conditions(&outC->_6_Context_1);
+  /* 1 */ Procedure_StartOfMission_init_P(&outC->_7_Context_1);
+  /* 1 */ ToSystemNational_init_Condition(&outC->_6_Context_1);
   /* 1 */ ToUnfitted_init_Conditions(&outC->_5_Context_1);
-  /* 1 */ ToStaffResponsible_init_Conditions(&outC->_4_Context_1);
-  /* 1 */ Procedure_OnSight_init_Procedures(&outC->_3_Context_1);
-  /* 1 */ Procedure_LimitedSupervision_init_Procedures(&outC->_2_Context_1);
-  /* 1 */ ToFullSupervision_init_Conditions(&outC->_1_Context_1);
+  /* 1 */ ToStaffResponsible_init_Conditi(&outC->_4_Context_1);
+  /* 1 */ Procedure_OnSight_init_Procedur(&outC->_3_Context_1);
+  /* 1 */ Procedure_LimitedSupervision_in(&outC->_2_Context_1);
+  /* 1 */ ToFullSupervision_init_Conditio(&outC->_1_Context_1);
   /* 1 */ ToShunting_init_Conditions(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
@@ -95,16 +95,16 @@ void ComputeModesConditions_init(outC_ComputeModesConditions *outC)
 void ComputeModesConditions_reset(outC_ComputeModesConditions *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Procedure_Train_Reversing_reset_Procedures(&outC->_10_Context_1);
-  /* 1 */ Procedure_Train_Trip_reset_Procedures(&outC->_9_Context_1);
+  /* 1 */ Procedure_Train_Reversing_reset(&outC->_10_Context_1);
+  /* 1 */ Procedure_Train_Trip_reset_Proc(&outC->_9_Context_1);
   /* 1 */ ToTrip_reset_Conditions(&outC->_8_Context_1);
-  /* 1 */ Procedure_StartOfMission_reset_Procedures(&outC->_7_Context_1);
-  /* 1 */ ToSystemNational_reset_Conditions(&outC->_6_Context_1);
+  /* 1 */ Procedure_StartOfMission_reset_(&outC->_7_Context_1);
+  /* 1 */ ToSystemNational_reset_Conditio(&outC->_6_Context_1);
   /* 1 */ ToUnfitted_reset_Conditions(&outC->_5_Context_1);
-  /* 1 */ ToStaffResponsible_reset_Conditions(&outC->_4_Context_1);
-  /* 1 */ Procedure_OnSight_reset_Procedures(&outC->_3_Context_1);
-  /* 1 */ Procedure_LimitedSupervision_reset_Procedures(&outC->_2_Context_1);
-  /* 1 */ ToFullSupervision_reset_Conditions(&outC->_1_Context_1);
+  /* 1 */ ToStaffResponsible_reset_Condit(&outC->_4_Context_1);
+  /* 1 */ Procedure_OnSight_reset_Procedu(&outC->_3_Context_1);
+  /* 1 */ Procedure_LimitedSupervision_re(&outC->_2_Context_1);
+  /* 1 */ ToFullSupervision_reset_Conditi(&outC->_1_Context_1);
   /* 1 */ ToShunting_reset_Conditions(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
@@ -135,7 +135,7 @@ void ComputeModesConditions(
   /* ComputeModesConditions::Driver_Req_Start */ kcg_bool Driver_Req_Start,
   /* ComputeModesConditions::ETCS_Isolated */ kcg_bool ETCS_Isolated,
   /* ComputeModesConditions::MA_SSP_Gradiant_Available */ kcg_bool MA_SSP_Gradiant_Available,
-  /* ComputeModesConditions::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* ComputeModesConditions::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
   /* ComputeModesConditions::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
   /* ComputeModesConditions::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
   /* ComputeModesConditions::List_BG_Related_To_SR_Empty */ kcg_bool List_BG_Related_To_SR_Empty,
@@ -143,18 +143,18 @@ void ComputeModesConditions(
   /* ComputeModesConditions::Stop_If_In_SR */ kcg_bool Stop_If_In_SR,
   /* ComputeModesConditions::RBC_Ack_And_EB_Revocked */ kcg_bool RBC_Ack_And_EB_Revocked,
   /* ComputeModesConditions::RBC_Authorized_SR */ kcg_bool RBC_Authorized_SR,
-  /* ComputeModesConditions::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
+  /* ComputeModesConditions::Reversing_Data */ T_Reversing_Data_Level_And_Mode *Reversing_Data,
   /* ComputeModesConditions::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
-  /* ComputeModesConditions::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR_Distance,
-  /* ComputeModesConditions::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+  /* ComputeModesConditions::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR,
+  /* ComputeModesConditions::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Locati,
   /* ComputeModesConditions::Override_Function_Active */ kcg_bool Override_Function_Active,
   /* ComputeModesConditions::Train_Overpass_EOA_Antenna */ kcg_bool Train_Overpass_EOA_Antenna,
   /* ComputeModesConditions::Train_Overpass_EOA_Front_End */ kcg_bool Train_Overpass_EOA_Front_End,
-  /* ComputeModesConditions::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limit,
+  /* ComputeModesConditions::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limi,
   /* ComputeModesConditions::BG_In_Expected_List_In_SR */ kcg_bool BG_In_Expected_List_In_SR,
   /* ComputeModesConditions::BG_In_Expected_List_In_SH */ kcg_bool BG_In_Expected_List_In_SH,
-  /* ComputeModesConditions::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direction,
-  /* ComputeModesConditions::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* ComputeModesConditions::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direct,
+  /* ComputeModesConditions::Train_Position */ trainPosition_T_TrainPosition_T *Train_Position,
   /* ComputeModesConditions::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
   /* ComputeModesConditions::Train_Standstill */ kcg_bool Train_Standstill,
   /* ComputeModesConditions::Interface_To_National_System */ kcg_bool Interface_To_National_System,
@@ -162,7 +162,7 @@ void ComputeModesConditions(
   /* ComputeModesConditions::T_NVCONTACT_Overpass */ kcg_bool T_NVCONTACT_Overpass,
   /* ComputeModesConditions::Error_BG_System_Version */ kcg_bool Error_BG_System_Version,
   /* ComputeModesConditions::Failure_Occured */ kcg_bool Failure_Occured,
-  /* ComputeModesConditions::Continue_Shunting_Function_Active */ kcg_bool Continue_Shunting_Function_Active,
+  /* ComputeModesConditions::Continue_Shunting_Function_Active */ kcg_bool Continue_Shunting_Function_Acti,
   /* ComputeModesConditions::Stop_Shunting_Stored */ kcg_bool Stop_Shunting_Stored,
   /* ComputeModesConditions::Linking_Reaction_To_Trip */ kcg_bool Linking_Reaction_To_Trip,
   /* ComputeModesConditions::TripModeFromLevel */ kcg_bool TripModeFromLevel,
@@ -181,15 +181,15 @@ void ComputeModesConditions(
   /* ComputeModesConditions::Loc_Clean_BG_List_Of_SoM */
   static kcg_bool Loc_Clean_BG_List_Of_SoM;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_SH */
-  static kcg_bool Loc_End_Of_Mission_Procedure_Req_SH;
+  static kcg_bool _3_Loc_End_Of_Mission_Procedure;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_SB */
-  static kcg_bool Loc_End_Of_Mission_Procedure_Req_SB;
+  static kcg_bool _2_Loc_End_Of_Mission_Procedure;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_TR */
-  static kcg_bool Loc_End_Of_Mission_Procedure_Req_TR;
+  static kcg_bool _1_Loc_End_Of_Mission_Procedure;
   /* ComputeModesConditions::Loc_Clean_BG_List_SH_Area_TR */
   static kcg_bool Loc_Clean_BG_List_SH_Area_TR;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_SoM */
-  static kcg_bool Loc_End_Of_Mission_Procedure_Req_SoM;
+  static kcg_bool Loc_End_Of_Mission_Procedure_Re;
   /* ComputeModesConditions::Loc_Request_For_SH_To_RBC_SH */
   static kcg_bool Loc_Request_For_SH_To_RBC_SH;
   /* ComputeModesConditions::Loc_SH_Refused_By_RBC_To_DMI_SH */
@@ -199,7 +199,7 @@ void ComputeModesConditions(
   /* ComputeModesConditions::Loc_SH_Refused_By_RBC_To_DMI_TR */
   static kcg_bool Loc_SH_Refused_By_RBC_To_DMI_TR;
   /* ComputeModesConditions::Loc_SH_Refused_By_RBC_To_DMI_SoM */
-  static kcg_bool Loc_SH_Refused_By_RBC_To_DMI_SoM;
+  static kcg_bool Loc_SH_Refused_By_RBC_To_DMI_So;
   /* ComputeModesConditions::Loc_Request_For_SH_To_RBC_SoM */
   static kcg_bool Loc_Request_For_SH_To_RBC_SoM;
   /* ComputeModesConditions::Loc_Cond_5_SH */
@@ -301,7 +301,7 @@ void ComputeModesConditions(
       Loc_Cond_6_SH = kcg_false;
   }
   /* last_init_ck_Train_Overpass_EOA_Antenna */ if (outC->init) {
-    Loc_End_Of_Mission_Procedure_Req_SB = kcg_true;
+    _2_Loc_End_Of_Mission_Procedure = kcg_true;
     Loc_Cond_5_SH = kcg_false;
     outC->init = kcg_false;
     Loc_Ack_LS_Req_To_Driver_TR = kcg_false;
@@ -309,12 +309,12 @@ void ComputeModesConditions(
   }
   else {
     Loc_Cond_5_SH = outC->On_Going_Mission;
-    Loc_End_Of_Mission_Procedure_Req_SB = outC->End_Of_Mission_Procedure_Req;
+    _2_Loc_End_Of_Mission_Procedure = outC->End_Of_Mission_Procedure_Req;
     Loc_Ack_OS_Req_To_Driver_TR = outC->rem_Override_Function_Active;
     Loc_Ack_LS_Req_To_Driver_TR = outC->rem_Train_Overpass_EOA_Antenna;
   }
   outC->On_Going_Mission = Loc_Cond_6_SH | (Loc_Cond_5_SH &
-      Loc_End_Of_Mission_Procedure_Req_SB);
+      _2_Loc_End_Of_Mission_Procedure);
   /* 1 */
   ToStandBy_Conditions(
     Desk_Open,
@@ -324,7 +324,7 @@ void ComputeModesConditions(
     OnBoard_Powered,
     Train_Permitted_PS,
     Train_Permitted_NL,
-    Continue_Shunting_Function_Active,
+    Continue_Shunting_Function_Acti,
     Driver_Req_Exit_SH,
     Stop_Shunting_Stored,
     outC->On_Going_Mission,
@@ -337,7 +337,7 @@ void ComputeModesConditions(
     &outC->Condition28,
     &outC->Condition30,
     &outC->Condition47,
-    &Loc_End_Of_Mission_Procedure_Req_SB);
+    &_2_Loc_End_Of_Mission_Procedure);
   /* 1 */
   ToShunting_Conditions(
     Current_Level,
@@ -361,7 +361,7 @@ void ComputeModesConditions(
   outC->Condition61 = outC->Context_1.Condition61;
   Loc_Ack_SH_Req_To_Driver_SH = outC->Context_1.Ack_SH_Req_To_Driver;
   Loc_Clean_BG_List_SH_Area_SH = outC->Context_1.Clean_BG_List_SH_Area;
-  Loc_End_Of_Mission_Procedure_Req_SH =
+  _3_Loc_End_Of_Mission_Procedure =
     outC->Context_1.End_Of_Mission_Procedure_Req;
   Loc_Request_For_SH_To_RBC_SH = outC->Context_1.Request_For_SH_To_RBC;
   Loc_Service_Brake_Command_SH = outC->Context_1.Service_Brake_Command;
@@ -377,7 +377,7 @@ void ComputeModesConditions(
   Loc_Cond_31_FS = outC->_1_Context_1.Condition31;
   outC->Condition32 = outC->_1_Context_1.Condition32;
   /* 1 */
-  Procedure_LimitedSupervision_Procedures(
+  Procedure_LimitedSupervision_Pr(
     Current_Mode,
     Driver_Ack_LS,
     Mode_Profile_On_Board,
@@ -407,13 +407,13 @@ void ComputeModesConditions(
   outC->Condition26 = /* 1 */
     ToPassiveShunting_Conditions(
       Train_Permitted_PS,
-      Continue_Shunting_Function_Active,
+      Continue_Shunting_Function_Acti,
       All_Desks_Closed);
   /* 1 */
   ToStaffResponsible_Conditions(
     Current_Level,
     Driver_Req_Override,
-    Train_Speed_Under_Override_Limit,
+    Train_Speed_Under_Override_Limi,
     Override_Function_Active,
     Emergency_Stop_Message_Received,
     &outC->_4_Context_1);
@@ -425,7 +425,7 @@ void ComputeModesConditions(
   /* 1 */ ToSystemNational_Conditions(Current_Level, &outC->_6_Context_1);
   outC->Condition56 = outC->_6_Context_1.Condition56;
   /* 1 */
-  Procedure_StartOfMission_Procedures(
+  Procedure_StartOfMission_Proced(
     Current_Level,
     Current_Mode,
     Desk_Open,
@@ -464,12 +464,11 @@ void ComputeModesConditions(
   outC->Condition60 = outC->_7_Context_1.Condition_60;
   Loc_Cond_70_SoM = outC->_7_Context_1.Condition_70;
   outC->EB_Requested = outC->_7_Context_1.EB_Requested;
-  Loc_End_Of_Mission_Procedure_Req_SoM =
+  Loc_End_Of_Mission_Procedure_Re =
     outC->_7_Context_1.End_Of_Mission_Procedure_Req;
   Loc_MA_Req_To_RBC_SoM = outC->_7_Context_1.MA_Req_To_RBC;
   Loc_Request_For_SH_To_RBC_SoM = outC->_7_Context_1.Request_For_SH_To_RBC;
-  Loc_SH_Refused_By_RBC_To_DMI_SoM =
-    outC->_7_Context_1.SH_Refused_By_RBC_To_DMI;
+  Loc_SH_Refused_By_RBC_To_DMI_So = outC->_7_Context_1.SH_Refused_By_RBC_To_DMI;
   /* 1 */
   ToTrip_Conditions(
     BG_In_Expected_List_In_SH,
@@ -479,10 +478,10 @@ void ComputeModesConditions(
     Driver_Req_SH,
     Emergency_Stop_Message_Received,
     Error_BG_System_Version,
-    Estimated_Front_End_Overpass_SR_Distance,
-    Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+    Estimated_Front_End_Overpass_SR,
+    Estimated_Front_End_Rear_Locati,
     Interface_To_National_System,
-    Linked_BG_Pased_In_Wrong_Direction,
+    Linked_BG_Pased_In_Wrong_Direct,
     Linking_Reaction_To_Trip,
     List_BG_Related_To_SR_Empty,
     MA_SSP_Gradiant_Available,
@@ -537,13 +536,13 @@ void ComputeModesConditions(
   outC->Condition63 = outC->_9_Context_1.Condition_63;
   outC->Condition68 = outC->_9_Context_1.Condition_68;
   Loc_Cond_70_TR = outC->_9_Context_1.Condition_70;
-  Loc_End_Of_Mission_Procedure_Req_TR =
+  _1_Loc_End_Of_Mission_Procedure =
     outC->_9_Context_1.End_Of_Mission_Procedure_Req;
   Loc_MA_Req_To_RBC_TR = outC->_9_Context_1.MA_Req_To_RBC;
   Loc_Request_For_SH_To_RBC_TR = outC->_9_Context_1.Request_For_SH_To_RBC;
   Loc_SH_Refused_By_RBC_To_DMI_TR = outC->_9_Context_1.SH_Refused_By_RBC_To_DMI;
   /* 1 */
-  Procedure_Train_Reversing_Procedures(
+  Procedure_Train_Reversing_Proce(
     Driver_Ack_RV,
     Train_Standstill,
     Train_Position,
@@ -560,7 +559,7 @@ void ComputeModesConditions(
   /* 1 */
   Merge_Conditions(
     Loc_SH_Refused_By_RBC_To_DMI_SH,
-    Loc_SH_Refused_By_RBC_To_DMI_SoM,
+    Loc_SH_Refused_By_RBC_To_DMI_So,
     Loc_SH_Refused_By_RBC_To_DMI_TR,
     Loc_Ack_LS_Req_To_Driver_LS,
     Loc_Ack_LS_Req_To_Driver_SoM,
@@ -576,10 +575,10 @@ void ComputeModesConditions(
     Loc_Clean_BG_List_Of_SoM,
     Loc_Clean_BG_List_SH_Area_SH,
     Loc_Clean_BG_List_SH_Area_TR,
-    Loc_End_Of_Mission_Procedure_Req_SB,
-    Loc_End_Of_Mission_Procedure_Req_SH,
-    Loc_End_Of_Mission_Procedure_Req_SoM,
-    Loc_End_Of_Mission_Procedure_Req_TR,
+    _2_Loc_End_Of_Mission_Procedure,
+    _3_Loc_End_Of_Mission_Procedure,
+    Loc_End_Of_Mission_Procedure_Re,
+    _1_Loc_End_Of_Mission_Procedure,
     Loc_MA_Req_To_RBC_SoM,
     Loc_MA_Req_To_RBC_TR,
     Loc_Request_For_SH_To_RBC_SH,
@@ -633,6 +632,6 @@ void ComputeModesConditions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ComputeModesConditions.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

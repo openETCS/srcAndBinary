@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _probe_MsgOut_RadioSupport_Pkg_H_
-#define _probe_MsgOut_RadioSupport_Pkg_H_
+#ifndef _probe_MsgOut_RadioSupport_Pkg_
+#define _probe_MsgOut_RadioSupport_Pkg_
 
 #include "kcg_types.h"
 
@@ -22,28 +22,28 @@ typedef struct {
   /* -----------------------  no local memory  ----------------------- */
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-} outC_probe_MsgOut_RadioSupport_Pkg;
+} outC_probe_MsgOut_RadioSupport_;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* RadioSupport_Pkg::probe_MsgOut */
 extern void probe_MsgOut_RadioSupport_Pkg(
-  /* RadioSupport_Pkg::probe_MsgOut::fromEVC */ M_TrainTrack_Message_T_TM_radio_messages *fromEVC,
+  /* RadioSupport_Pkg::probe_MsgOut::fromEVC */ M_TrainTrack_Message_T_TM_radio *fromEVC,
   /* RadioSupport_Pkg::probe_MsgOut::show136 */ kcg_bool show136,
-  outC_probe_MsgOut_RadioSupport_Pkg *outC);
+  outC_probe_MsgOut_RadioSupport_ *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void probe_MsgOut_reset_RadioSupport_Pkg(
-  outC_probe_MsgOut_RadioSupport_Pkg *outC);
+extern void probe_MsgOut_reset_RadioSupport(
+  outC_probe_MsgOut_RadioSupport_ *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void probe_MsgOut_init_RadioSupport_Pkg(
-  outC_probe_MsgOut_RadioSupport_Pkg *outC);
+extern void probe_MsgOut_init_RadioSupport_(
+  outC_probe_MsgOut_RadioSupport_ *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
-#endif /* _probe_MsgOut_RadioSupport_Pkg_H_ */
+#endif /* _probe_MsgOut_RadioSupport_Pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** probe_MsgOut_RadioSupport_Pkg.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

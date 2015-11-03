@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _LevelTR2Level_InputManagement_H_
-#define _LevelTR2Level_InputManagement_H_
+#ifndef _LevelTR2Level_InputManagement_
+#define _LevelTR2Level_InputManagement_
 
 #include "kcg_types.h"
 
@@ -16,9 +16,9 @@
 extern M_LEVEL LevelTR2Level_InputManagement(
   /* InputManagement::LevelTR2Level::InLevelTR */ M_LEVELTR InLevelTR);
 
-#endif /* _LevelTR2Level_InputManagement_H_ */
+#endif /* _LevelTR2Level_InputManagement_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** LevelTR2Level_InputManagement.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

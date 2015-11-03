@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,7 @@ void MRSP_to_MRSP_to_DMI_TA_Export(
   /* TA_Export::MRSP_to_MRSP_to_DMI::MRSP_to_DMI */ MRSP_section_t_TrackAtlasTypes *MRSP_to_DMI)
 {
   *cont = (*MRSP_in).valid;
-  kcg_copy_MRSP_section_t_TrackAtlasTypes(MRSP_to_DMI, MRSP_in);
+  kcg_copy_MRSP_section_t_TrackAt(MRSP_to_DMI, MRSP_in);
   /* 2 */ if (END_OF_SSP_TA_Export == (*MRSP_in).MRS) {
     (*MRSP_to_DMI).MRS = END_OF_SSP_encoding_TA_Export;
   }
@@ -26,6 +26,6 @@ void MRSP_to_MRSP_to_DMI_TA_Export(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MRSP_to_MRSP_to_DMI_TA_Export.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

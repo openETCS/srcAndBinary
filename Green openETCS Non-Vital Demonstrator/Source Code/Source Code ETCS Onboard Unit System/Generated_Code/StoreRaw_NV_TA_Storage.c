@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,8 +31,7 @@ void StoreRaw_NV_init_TA_Storage(outC_StoreRaw_NV_TA_Storage *outC)
   outC->NV_onboard_out.v_nvrel = 0;
   outC->NV_onboard_out.d_nvroll = 0;
   outC->NV_onboard_out.q_nvsbtsmperm = Q_NVSBTSMPERM_No;
-  outC->NV_onboard_out.q_nvemrrls =
-    Q_NVEMRRLS_Revoke_emergency_brake_command_at_standstill;
+  outC->NV_onboard_out.q_nvemrrls = _49_Q_NVEMRRLS_Revoke_emergency;
   outC->NV_onboard_out.v_nvallowovtrp = 0;
   outC->NV_onboard_out.v_nvsopovtrp = 0;
   outC->NV_onboard_out.d_nvovtrp = 0;
@@ -56,7 +55,7 @@ void StoreRaw_NV_reset_TA_Storage(outC_StoreRaw_NV_TA_Storage *outC)
 
 /* TA_Storage::StoreRaw_NV */
 void StoreRaw_NV_TA_Storage(
-  /* TA_Storage::StoreRaw_NV::mesaage_in */ ReceivedMessage_T_Common_Types_Pkg *mesaage_in,
+  /* TA_Storage::StoreRaw_NV::mesaage_in */ ReceivedMessage_T_Common_Types_ *mesaage_in,
   outC_StoreRaw_NV_TA_Storage *outC)
 {
   /* TA_Storage::StoreRaw_NV::_L22 */
@@ -69,7 +68,7 @@ void StoreRaw_NV_TA_Storage(
   }
   else if (outC->init) {
     outC->vald_NV = kcg_false;
-    kcg_copy_P003V1_OBU_T_TM_baseline2(
+    kcg_copy_P003V1_OBU_T_TM_baseli(
       &outC->NV_onboard_out,
       (P003V1_OBU_T_TM_baseline2 *) &INIT_P3V1_TA_Storage);
   }
@@ -78,6 +77,6 @@ void StoreRaw_NV_TA_Storage(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** StoreRaw_NV_TA_Storage.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,8 +8,7 @@
 #include "Output_To_DMI_OutputManagement.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void Output_To_DMI_init_OutputManagement(
-  outC_Output_To_DMI_OutputManagement *outC)
+void Output_To_DMI_init_OutputManage(outC_Output_To_DMI_OutputManage *outC)
 {
   outC->rem_needsAckFromDriver = kcg_true;
   outC->init = kcg_true;
@@ -21,7 +20,7 @@ void Output_To_DMI_init_OutputManagement(
   outC->announcedLevel.LevelTransition.transition.level = M_LEVEL_Level_0;
   outC->announcedLevel.LevelTransition.transition.position = 0;
   outC->announcedLevel.LevelTransition.transition.transitionType =
-    M_TransitionType_Conditional_Level_And_Mode_Types_Pkg;
+    M_TransitionType_Conditional_Le;
   outC->announcedLevel.LevelTransition.transition.immediateAck = kcg_true;
   outC->announcedLevel.LevelTransition.transition.AckLength = 0;
   outC->announcedLevel.LevelTransition.LRBG = 0;
@@ -32,8 +31,7 @@ void Output_To_DMI_init_OutputManagement(
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void Output_To_DMI_reset_OutputManagement(
-  outC_Output_To_DMI_OutputManagement *outC)
+void Output_To_DMI_reset_OutputManag(outC_Output_To_DMI_OutputManage *outC)
 {
   outC->init = kcg_true;
 }
@@ -43,10 +41,10 @@ void Output_To_DMI_reset_OutputManagement(
 void Output_To_DMI_OutputManagement(
   /* OutputManagement::Output_To_DMI::Level_Mode_Compatible */ kcg_bool Level_Mode_Compatible,
   /* OutputManagement::Output_To_DMI::needsAckFromDriver */ kcg_bool needsAckFromDriver,
-  /* OutputManagement::Output_To_DMI::Data_To_DMI_From_Mode */ T_Data_To_DMI_Level_And_Mode_Types_Pkg *Data_To_DMI_From_Mode,
-  /* OutputManagement::Output_To_DMI::announcedLevelTransition */ T_LevelTransition_Level_And_Mode_Types_Pkg *announcedLevelTransition,
+  /* OutputManagement::Output_To_DMI::Data_To_DMI_From_Mode */ T_Data_To_DMI_Level_And_Mode_Ty *Data_To_DMI_From_Mode,
+  /* OutputManagement::Output_To_DMI::announcedLevelTransition */ T_LevelTransition_Level_And_Mod *announcedLevelTransition,
   /* OutputManagement::Output_To_DMI::isAvailableForUse */ kcg_bool isAvailableForUse,
-  outC_Output_To_DMI_OutputManagement *outC)
+  outC_Output_To_DMI_OutputManage *outC)
 {
   /* OutputManagement::Output_To_DMI */
   static kcg_bool tmp1;
@@ -67,7 +65,7 @@ void Output_To_DMI_OutputManagement(
   /* OutputManagement::Output_To_DMI::IfBlock1::else::else */
   static kcg_bool _6_else_clock_IfBlock1;
   
-  kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
+  kcg_copy_T_LevelTransition_Leve(
     &outC->announcedLevel.LevelTransition,
     announcedLevelTransition);
   outC->announcedLevel.IsAvailableForUse = isAvailableForUse;
@@ -163,6 +161,6 @@ void Output_To_DMI_OutputManagement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Output_To_DMI_OutputManagement.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

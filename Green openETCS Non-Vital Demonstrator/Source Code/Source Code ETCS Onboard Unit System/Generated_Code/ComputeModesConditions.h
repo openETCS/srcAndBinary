@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ComputeModesConditions_H_
 #define _ComputeModesConditions_H_
@@ -20,11 +20,11 @@
 #include "ToUnfitted_Conditions.h"
 #include "ToSystemNational_Conditions.h"
 #include "ToTrip_Conditions.h"
-#include "Procedure_LimitedSupervision_Procedures.h"
+#include "Procedure_LimitedSupervision_Pr.h"
 #include "Procedure_OnSight_Procedures.h"
-#include "Procedure_StartOfMission_Procedures.h"
+#include "Procedure_StartOfMission_Proced.h"
 #include "Procedure_Train_Trip_Procedures.h"
-#include "Procedure_Train_Reversing_Procedures.h"
+#include "Procedure_Train_Reversing_Proce.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -103,16 +103,16 @@ typedef struct {
   kcg_bool /* ComputeModesConditions::Train_Overpass_EOA_Antenna */ rem_Train_Overpass_EOA_Antenna;
   kcg_bool /* ComputeModesConditions::Override_Function_Active */ rem_Override_Function_Active;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Procedure_Train_Reversing_Procedures /* 1 */ _10_Context_1;
-  outC_Procedure_Train_Trip_Procedures /* 1 */ _9_Context_1;
+  outC_Procedure_Train_Reversing_ /* 1 */ _10_Context_1;
+  outC_Procedure_Train_Trip_Proce /* 1 */ _9_Context_1;
   outC_ToTrip_Conditions /* 1 */ _8_Context_1;
-  outC_Procedure_StartOfMission_Procedures /* 1 */ _7_Context_1;
-  outC_ToSystemNational_Conditions /* 1 */ _6_Context_1;
+  outC_Procedure_StartOfMission_P /* 1 */ _7_Context_1;
+  outC_ToSystemNational_Condition /* 1 */ _6_Context_1;
   outC_ToUnfitted_Conditions /* 1 */ _5_Context_1;
-  outC_ToStaffResponsible_Conditions /* 1 */ _4_Context_1;
-  outC_Procedure_OnSight_Procedures /* 1 */ _3_Context_1;
-  outC_Procedure_LimitedSupervision_Procedures /* 1 */ _2_Context_1;
-  outC_ToFullSupervision_Conditions /* 1 */ _1_Context_1;
+  outC_ToStaffResponsible_Conditi /* 1 */ _4_Context_1;
+  outC_Procedure_OnSight_Procedur /* 1 */ _3_Context_1;
+  outC_Procedure_LimitedSupervisi /* 1 */ _2_Context_1;
+  outC_ToFullSupervision_Conditio /* 1 */ _1_Context_1;
   outC_ToShunting_Conditions /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ComputeModesConditions;
@@ -144,7 +144,7 @@ extern void ComputeModesConditions(
   /* ComputeModesConditions::Driver_Req_Start */ kcg_bool Driver_Req_Start,
   /* ComputeModesConditions::ETCS_Isolated */ kcg_bool ETCS_Isolated,
   /* ComputeModesConditions::MA_SSP_Gradiant_Available */ kcg_bool MA_SSP_Gradiant_Available,
-  /* ComputeModesConditions::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* ComputeModesConditions::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_T *Mode_Profile_On_Board,
   /* ComputeModesConditions::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
   /* ComputeModesConditions::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
   /* ComputeModesConditions::List_BG_Related_To_SR_Empty */ kcg_bool List_BG_Related_To_SR_Empty,
@@ -152,18 +152,18 @@ extern void ComputeModesConditions(
   /* ComputeModesConditions::Stop_If_In_SR */ kcg_bool Stop_If_In_SR,
   /* ComputeModesConditions::RBC_Ack_And_EB_Revocked */ kcg_bool RBC_Ack_And_EB_Revocked,
   /* ComputeModesConditions::RBC_Authorized_SR */ kcg_bool RBC_Authorized_SR,
-  /* ComputeModesConditions::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
+  /* ComputeModesConditions::Reversing_Data */ T_Reversing_Data_Level_And_Mode *Reversing_Data,
   /* ComputeModesConditions::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
-  /* ComputeModesConditions::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR_Distance,
-  /* ComputeModesConditions::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+  /* ComputeModesConditions::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR,
+  /* ComputeModesConditions::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Locati,
   /* ComputeModesConditions::Override_Function_Active */ kcg_bool Override_Function_Active,
   /* ComputeModesConditions::Train_Overpass_EOA_Antenna */ kcg_bool Train_Overpass_EOA_Antenna,
   /* ComputeModesConditions::Train_Overpass_EOA_Front_End */ kcg_bool Train_Overpass_EOA_Front_End,
-  /* ComputeModesConditions::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limit,
+  /* ComputeModesConditions::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limi,
   /* ComputeModesConditions::BG_In_Expected_List_In_SR */ kcg_bool BG_In_Expected_List_In_SR,
   /* ComputeModesConditions::BG_In_Expected_List_In_SH */ kcg_bool BG_In_Expected_List_In_SH,
-  /* ComputeModesConditions::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direction,
-  /* ComputeModesConditions::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* ComputeModesConditions::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direct,
+  /* ComputeModesConditions::Train_Position */ trainPosition_T_TrainPosition_T *Train_Position,
   /* ComputeModesConditions::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
   /* ComputeModesConditions::Train_Standstill */ kcg_bool Train_Standstill,
   /* ComputeModesConditions::Interface_To_National_System */ kcg_bool Interface_To_National_System,
@@ -171,7 +171,7 @@ extern void ComputeModesConditions(
   /* ComputeModesConditions::T_NVCONTACT_Overpass */ kcg_bool T_NVCONTACT_Overpass,
   /* ComputeModesConditions::Error_BG_System_Version */ kcg_bool Error_BG_System_Version,
   /* ComputeModesConditions::Failure_Occured */ kcg_bool Failure_Occured,
-  /* ComputeModesConditions::Continue_Shunting_Function_Active */ kcg_bool Continue_Shunting_Function_Active,
+  /* ComputeModesConditions::Continue_Shunting_Function_Active */ kcg_bool Continue_Shunting_Function_Acti,
   /* ComputeModesConditions::Stop_Shunting_Stored */ kcg_bool Stop_Shunting_Stored,
   /* ComputeModesConditions::Linking_Reaction_To_Trip */ kcg_bool Linking_Reaction_To_Trip,
   /* ComputeModesConditions::TripModeFromLevel */ kcg_bool TripModeFromLevel,
@@ -188,6 +188,6 @@ extern void ComputeModesConditions_init(outC_ComputeModesConditions *outC);
 #endif /* _ComputeModesConditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ComputeModesConditions.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

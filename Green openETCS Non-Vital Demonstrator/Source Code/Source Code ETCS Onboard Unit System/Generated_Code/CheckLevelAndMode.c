@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,7 +24,7 @@ kcg_bool CheckLevelAndMode(
       Level_Mode_Compatible = Level == M_LEVEL_Level_0;
       break;
     case SN_Level_And_Mode_Types_Pkg :
-      Level_Mode_Compatible = Level == M_LEVEL_Level_NTC_specified_by_NID_NTC;
+      Level_Mode_Compatible = Level == M_LEVEL_Level_NTC_specified_by_;
       break;
     case FS_Level_And_Mode_Types_Pkg :
       Level_Mode_Compatible = _L7;
@@ -53,6 +53,6 @@ kcg_bool CheckLevelAndMode(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckLevelAndMode.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

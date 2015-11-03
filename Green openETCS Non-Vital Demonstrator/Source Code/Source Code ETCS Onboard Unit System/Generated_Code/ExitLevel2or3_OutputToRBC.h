@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 #ifndef _ExitLevel2or3_OutputToRBC_H_
 #define _ExitLevel2or3_OutputToRBC_H_
@@ -19,7 +19,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _5_SSM_ST_SM1 /* OutputToRBC::ExitLevel2or3::SM1 */ SM1_state_nxt;
+  _173_SSM_ST_SM1 /* OutputToRBC::ExitLevel2or3::SM1 */ SM1_state_nxt;
   M_POSITION /* OutputToRBC::ExitLevel2or3::Loc_Position */ Loc_Position;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
@@ -30,8 +30,8 @@ typedef struct {
 extern void ExitLevel2or3_OutputToRBC(
   /* OutputToRBC::ExitLevel2or3::new_level */ M_LEVEL new_level,
   /* OutputToRBC::ExitLevel2or3::last_level */ M_LEVEL last_level,
-  /* OutputToRBC::ExitLevel2or3::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* OutputToRBC::ExitLevel2or3::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* OutputToRBC::ExitLevel2or3::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition,
+  /* OutputToRBC::ExitLevel2or3::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
   outC_ExitLevel2or3_OutputToRBC *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -47,6 +47,6 @@ extern void ExitLevel2or3_init_OutputToRBC(
 #endif /* _ExitLevel2or3_OutputToRBC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ExitLevel2or3_OutputToRBC.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

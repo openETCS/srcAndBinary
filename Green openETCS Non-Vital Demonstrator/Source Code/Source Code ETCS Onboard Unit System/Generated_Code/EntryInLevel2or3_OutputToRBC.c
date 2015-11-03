@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,12 +18,12 @@ kcg_bool EntryInLevel2or3_OutputToRBC(
   PositionReportNeeded = (last_level != new_level) & ((new_level ==
         M_LEVEL_Level_2) | (new_level == M_LEVEL_Level_3)) & ((last_level ==
         M_LEVEL_Level_0) | (last_level == M_LEVEL_Level_1) | (last_level ==
-        M_LEVEL_Level_NTC_specified_by_NID_NTC));
+        M_LEVEL_Level_NTC_specified_by_));
   return PositionReportNeeded;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EntryInLevel2or3_OutputToRBC.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

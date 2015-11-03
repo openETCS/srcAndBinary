@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _SSP_Truncate_at_BG_loop_TA_SSP_H_
-#define _SSP_Truncate_at_BG_loop_TA_SSP_H_
+#ifndef _SSP_Truncate_at_BG_loop_TA_SSP
+#define _SSP_Truncate_at_BG_loop_TA_SSP
 
 #include "kcg_types.h"
 
@@ -15,15 +15,15 @@
 /* TA_SSP::SSP_Truncate_at_BG_loop */
 extern void SSP_Truncate_at_BG_loop_TA_SSP(
   /* TA_SSP::SSP_Truncate_at_BG_loop::i */ kcg_int i,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Acc */ StaticSpeedProfile_t_TrackAtlasTypes *Acc,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_in */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Acc */ StaticSpeedProfile_t_TrackAtlas *Acc,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_in */ StaticSpeedProfile_t_TrackAtlas *Profile_in,
   /* TA_SSP::SSP_Truncate_at_BG_loop::Pointer */ kcg_int Pointer,
   /* TA_SSP::SSP_Truncate_at_BG_loop::cont */ kcg_bool *cont,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_out */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_out);
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_out */ StaticSpeedProfile_t_TrackAtlas *Profile_out);
 
-#endif /* _SSP_Truncate_at_BG_loop_TA_SSP_H_ */
+#endif /* _SSP_Truncate_at_BG_loop_TA_SSP */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Truncate_at_BG_loop_TA_SSP.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

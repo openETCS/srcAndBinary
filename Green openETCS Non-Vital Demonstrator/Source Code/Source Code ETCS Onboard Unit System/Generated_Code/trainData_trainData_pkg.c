@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,19 +14,6 @@ void trainData_init_trainData_pkg(outC_trainData_trainData_pkg *outC)
   static kcg_int i;
   
   outC->init = kcg_true;
-  for (i1 = 0; i1 < 5; i1++) {
-    outC->outMessageBus[i1].Message.valid = kcg_true;
-    outC->outMessageBus[i1].Message.nid_message = 0;
-    outC->outMessageBus[i1].Message.l_message = 0;
-    outC->outMessageBus[i1].Message.t_train = 0;
-    outC->outMessageBus[i1].Message.nid_engine = 0;
-    outC->outMessageBus[i1].Message.field1 = 0;
-    outC->outMessageBus[i1].Message.field2 = 0;
-    outC->outMessageBus[i1].Message.field3 = 0;
-    for (i = 0; i < 50; i++) {
-      outC->outMessageBus[i1].OptionalPackets[i] = 0;
-    }
-  }
   outC->updatedStatus.valid = kcg_true;
   outC->updatedStatus.validatedByDriver = kcg_true;
   outC->updatedStatus.RBCsystemVersionOnboard = kcg_true;
@@ -39,114 +26,41 @@ void trainData_init_trainData_pkg(outC_trainData_trainData_pkg *outC)
   outC->triggerFromTrainData.shortenLocationBasedInformation = kcg_true;
   outC->triggerFromTrainData.deleteMA = kcg_true;
   outC->triggerFromTrainData.trainLengthIncreased = kcg_true;
-  outC->trainDataToRBC.present = kcg_true;
-  outC->trainDataToRBC.header.present = kcg_true;
-  outC->trainDataToRBC.header.nid_message = 0;
-  outC->trainDataToRBC.header.t_train = 0;
-  outC->trainDataToRBC.header.nid_engine = 0;
-  outC->trainDataToRBC.header.xQ_MARQSTREASON =
-    Q_MARQSTREASON_Start_selected_by_driver;
-  outC->trainDataToRBC.header.xT_TRAIN = 0;
-  outC->trainDataToRBC.header.xNID_EM = 0;
-  outC->trainDataToRBC.header.xQ_EMERGENCYSTOP =
-    Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
-  outC->trainDataToRBC.header.xNID_TEXTMESSAGE = 0;
-  outC->trainDataToRBC.packets.p0.valid = kcg_true;
-  outC->trainDataToRBC.packets.p0.packet0.NID_PACKET = 0;
-  outC->trainDataToRBC.packets.p0.packet0.L_PACKET = 0;
-  outC->trainDataToRBC.packets.p0.packet0.qscale = Q_SCALE_10_cm_scale;
-  outC->trainDataToRBC.packets.p0.packet0.NID_LRBG = 0;
-  outC->trainDataToRBC.packets.p0.packet0.D_LRBG = 0;
-  outC->trainDataToRBC.packets.p0.packet0.dirlrbg = Q_DIRLRBG_Reverse;
-  outC->trainDataToRBC.packets.p0.packet0.dlrbg = Q_DLRBG_Reverse;
-  outC->trainDataToRBC.packets.p0.packet0.L_DOUBTOVER = 0;
-  outC->trainDataToRBC.packets.p0.packet0.L_DOUBTUNDER = 0;
-  outC->trainDataToRBC.packets.p0.packet0.length =
-    Q_LENGTH_No_train_integrity_information_available;
-  outC->trainDataToRBC.packets.p0.packet0.L_TRAININT = 0;
-  outC->trainDataToRBC.packets.p0.packet0.V_TRAIN = 0;
-  outC->trainDataToRBC.packets.p0.packet0.dirtrain = Q_DIRTRAIN_Reverse;
-  outC->trainDataToRBC.packets.p0.packet0.mode = M_MODE_Full_Supervision;
-  outC->trainDataToRBC.packets.p0.packet0.level = M_LEVEL_Level_0;
-  outC->trainDataToRBC.packets.p0.packet0.NID_NTC = 0;
-  outC->trainDataToRBC.packets.p1.valid = kcg_true;
-  outC->trainDataToRBC.packets.p1.packet1.NID_PACKET = 0;
-  outC->trainDataToRBC.packets.p1.packet1.L_PACKET = 0;
-  outC->trainDataToRBC.packets.p1.packet1.qscale = Q_SCALE_10_cm_scale;
-  outC->trainDataToRBC.packets.p1.packet1.NID_LRBG = 0;
-  outC->trainDataToRBC.packets.p1.packet1.NID_PRVLRBG = 0;
-  outC->trainDataToRBC.packets.p1.packet1.D_LRBG = 0;
-  outC->trainDataToRBC.packets.p1.packet1.dirlrbg = Q_DIRLRBG_Reverse;
-  outC->trainDataToRBC.packets.p1.packet1.dlrbg = Q_DLRBG_Reverse;
-  outC->trainDataToRBC.packets.p1.packet1.L_DOUBTOVER = 0;
-  outC->trainDataToRBC.packets.p1.packet1.L_DOUBTUNDER = 0;
-  outC->trainDataToRBC.packets.p1.packet1.length =
-    Q_LENGTH_No_train_integrity_information_available;
-  outC->trainDataToRBC.packets.p1.packet1.L_TRAININT = 0;
-  outC->trainDataToRBC.packets.p1.packet1.V_TRAIN = 0;
-  outC->trainDataToRBC.packets.p1.packet1.dirtrain = Q_DIRTRAIN_Reverse;
-  outC->trainDataToRBC.packets.p1.packet1.mode = M_MODE_Full_Supervision;
-  outC->trainDataToRBC.packets.p1.packet1.level = M_LEVEL_Level_0;
-  outC->trainDataToRBC.packets.p1.packet1.NID_NTC = 0;
-  outC->trainDataToRBC.packets.p3.valid = kcg_true;
-  outC->trainDataToRBC.packets.p3.number = 0;
-  outC->trainDataToRBC.packets.p3.aNID_RADIO[0].valid = kcg_true;
-  for (i1 = 0; i1 < 15; i1++) {
-    outC->trainDataToRBC.packets.p3.aNID_RADIO[0].telephoneNumber[i1] = 0;
-  }
-  outC->trainDataToRBC.packets.p4.valid = kcg_true;
-  outC->trainDataToRBC.packets.p4.m_error =
-    M_ERROR_Balise_group_linking_consistency_error;
-  outC->trainDataToRBC.packets.p5.valid = kcg_true;
-  outC->trainDataToRBC.packets.p5.TrainRunningNumber = 0;
-  outC->trainDataToRBC.packets.p9.valid = kcg_true;
-  outC->trainDataToRBC.packets.p9.transitionInformation = 0;
-  outC->trainDataToRBC.packets.p11.valid = kcg_true;
-  outC->trainDataToRBC.packets.p11.nc_cdtrain =
-    NC_CDTRAIN_Cant_Deficiency_80_mm;
-  outC->trainDataToRBC.packets.p11.nc_train =
-    NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category;
-  outC->trainDataToRBC.packets.p11.l_train = 0;
-  outC->trainDataToRBC.packets.p11.v_maxtrain = 0;
-  outC->trainDataToRBC.packets.p11.m_loadinggoage =
-    M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles;
-  outC->trainDataToRBC.packets.p11.m_axleloadcat = M_AXLELOADCAT_A;
-  outC->trainDataToRBC.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
-  outC->trainDataToRBC.packets.p11.n_axle = 0;
-  outC->trainDataToRBC.packets.p11.nIter_tractionIdentity = 0;
-  for (i1 = 0; i1 < 4; i1++) {
-    outC->trainDataToRBC.packets.p11.tractionIdentity[i1].m_voltage =
-      M_VOLTAGE_Line_not_fitted_with_any_traction_system;
-    outC->trainDataToRBC.packets.p11.tractionIdentity[i1].nid_ctraction = 0;
-  }
-  outC->trainDataToRBC.packets.p11.nIter_ntc = 0;
   outC->actualTrainData.valid = kcg_true;
   outC->actualTrainData.acknowledgedByDriver = kcg_true;
-  outC->actualTrainData.trainCategory =
-    NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category;
-  outC->actualTrainData.cantDeficientcy = NC_CDTRAIN_Cant_Deficiency_80_mm;
+  outC->actualTrainData.trainCategory = NC_TRAIN_Train_does_not_belong_;
+  outC->actualTrainData.cantDeficientcy = NC_CDTRAIN_Cant_Deficiency_80_m;
   outC->actualTrainData.trainLength = 0;
   outC->actualTrainData.brakePerctage = 0;
   outC->actualTrainData.maxTrainSpeed = 0;
-  outC->actualTrainData.loadingGauge =
-    M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles;
+  outC->actualTrainData.loadingGauge = M_LOADINGGAUGE_The_train_does_n;
   outC->actualTrainData.axleLoadCategory = M_AXLELOADCAT_A;
   outC->actualTrainData.airtightSystem = M_AIRTIGHT_Not_fitted;
   outC->actualTrainData.axleNumber = 0;
   outC->actualTrainData.numberNationalSystems = 0;
   for (i1 = 0; i1 < 5; i1++) {
-    outC->trainDataToRBC.packets.p11.nid_ntc[i1] = 0;
+    outC->outMessageBus[i1].Message.valid = kcg_true;
+    outC->outMessageBus[i1].Message.nid_message = 0;
+    outC->outMessageBus[i1].Message.l_message = 0;
+    outC->outMessageBus[i1].Message.t_train = 0;
+    outC->outMessageBus[i1].Message.nid_engine = 0;
+    outC->outMessageBus[i1].Message.field1 = 0;
+    outC->outMessageBus[i1].Message.field2 = 0;
+    outC->outMessageBus[i1].Message.field3 = 0;
+    for (i = 0; i < 50; i++) {
+      outC->outMessageBus[i1].OptionalPackets[i] = 0;
+    }
     outC->actualTrainData.nationSystems[i1] = 0;
   }
   outC->actualTrainData.numberTractionSystems = 0;
   for (i1 = 0; i1 < 4; i1++) {
     outC->actualTrainData.tractionSystem[i1].m_voltage =
-      M_VOLTAGE_Line_not_fitted_with_any_traction_system;
+      M_VOLTAGE_Line_not_fitted_with_;
     outC->actualTrainData.tractionSystem[i1].nid_ctraction = 0;
   }
-  /* 1 */ sendAcknowledgementRBC_init_trainData_pkg(&outC->_2_Context_1);
-  /* 1 */ sendValidTrainDataRBC_init_trainData_pkg(&outC->_1_Context_1);
-  /* 1 */ trainDataStorage_init_trainData_pkg(&outC->Context_1);
+  /* 1 */ sendAcknowledgementRBC_init_tra(&outC->_2_Context_1);
+  /* 1 */ sendValidTrainDataRBC_init_trai(&outC->_1_Context_1);
+  /* 1 */ trainDataStorage_init_trainData(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -155,9 +69,9 @@ void trainData_init_trainData_pkg(outC_trainData_trainData_pkg *outC)
 void trainData_reset_trainData_pkg(outC_trainData_trainData_pkg *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ sendAcknowledgementRBC_reset_trainData_pkg(&outC->_2_Context_1);
-  /* 1 */ sendValidTrainDataRBC_reset_trainData_pkg(&outC->_1_Context_1);
-  /* 1 */ trainDataStorage_reset_trainData_pkg(&outC->Context_1);
+  /* 1 */ sendAcknowledgementRBC_reset_tr(&outC->_2_Context_1);
+  /* 1 */ sendValidTrainDataRBC_reset_tra(&outC->_1_Context_1);
+  /* 1 */ trainDataStorage_reset_trainDat(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
@@ -165,14 +79,14 @@ void trainData_reset_trainData_pkg(outC_trainData_trainData_pkg *outC)
 void trainData_trainData_pkg(
   /* trainData_pkg::trainData::reset */ kcg_bool reset,
   /* trainData_pkg::trainData::trainDatafromTIU */ trainData_T_TIU_Types_Pkg *trainDatafromTIU,
-  /* trainData_pkg::trainData::trainDatafromDriver */ DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *trainDatafromDriver,
-  /* trainData_pkg::trainData::trainDataAckfromDriver */ DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *trainDataAckfromDriver,
-  /* trainData_pkg::trainData::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
-  /* trainData_pkg::trainData::eventsForTrainData */ trainData_Events_T_trainData_Types_pkg *eventsForTrainData,
+  /* trainData_pkg::trainData::trainDatafromDriver */ DMI_Train_Data_T_DMI_Messages_B *trainDatafromDriver,
+  /* trainData_pkg::trainData::trainDataAckfromDriver */ DMI_Train_Data_Ack_T_DMI_Messag *trainDataAckfromDriver,
+  /* trainData_pkg::trainData::trackMessages */ ReceivedMessage_T_Common_Types_ *trackMessages,
+  /* trainData_pkg::trainData::eventsForTrainData */ trainData_Events_T_trainData_Ty *eventsForTrainData,
   /* trainData_pkg::trainData::nidEngine */ NID_ENGINE nidEngine,
-  /* trainData_pkg::trainData::p0_positionReport */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *p0_positionReport,
-  /* trainData_pkg::trainData::p1_positionReport */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *p1_positionReport,
-  /* trainData_pkg::trainData::inMessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *inMessageBus,
+  /* trainData_pkg::trainData::p0_positionReport */ PT0_PositionReport_T_Packet_Tra *p0_positionReport,
+  /* trainData_pkg::trainData::p1_positionReport */ PT1_PositionReport_2BG_T_Packet *p1_positionReport,
+  /* trainData_pkg::trainData::inMessageBus */ M_TrainTrackMessageBus_t_TM_Tra *inMessageBus,
   /* trainData_pkg::trainData::inVersion */ M_VERSION inVersion,
   /* trainData_pkg::trainData::t_train */ T_TRAIN t_train,
   outC_trainData_trainData_pkg *outC)
@@ -188,40 +102,32 @@ void trainData_trainData_pkg(
   /* trainData_pkg::trainData::ackRequested */
   static kcg_bool ackRequested;
   /* trainData_pkg::trainData::statusAfterCheck */
-  static trainDataStatus_T_trainData_Types_pkg statusAfterCheck;
+  static trainDataStatus_T_trainData_Typ statusAfterCheck;
   /* trainData_pkg::trainData::_L45 */
-  static trainDataStatus_T_trainData_Types_pkg _L45;
+  static trainDataStatus_T_trainData_Typ _L45;
   
-  kcg_copy_trainData_Trigger_T_trainData_Types_pkg(
+  kcg_copy_trainData_Trigger_T_tr(
     &outC->triggerFromTrainData,
-    (trainData_Trigger_T_trainData_Types_pkg *)
-      &cNoTrigger_trainData_Types_pkg);
+    (trainData_Trigger_T_trainData_T *) &cNoTrigger_trainData_Types_pkg);
   /* last_init_ck_trainDataStatus */ if (outC->init) {
     outC->init = kcg_false;
-    kcg_copy_trainDataStatus_T_trainData_Types_pkg(
+    kcg_copy_trainDataStatus_T_trai(
       &_L45,
-      (trainDataStatus_T_trainData_Types_pkg *) &cNoStates_trainData_Types_pkg);
+      (trainDataStatus_T_trainData_Typ *) &cNoStates_trainData_Types_pkg);
   }
   else {
-    kcg_copy_trainDataStatus_T_trainData_Types_pkg(&_L45, &outC->updatedStatus);
+    kcg_copy_trainDataStatus_T_trai(&_L45, &outC->updatedStatus);
   }
   tmp = !_L45.RBCsystemVersionOnboard;
   /* ck__L66 */ if (tmp) {
     /* 1 */
-    checkRBCSystemVersion_trainData_pkg(
-      trackMessages,
-      &_L45,
-      &statusAfterCheck);
+    checkRBCSystemVersion_trainData(trackMessages, &_L45, &statusAfterCheck);
   }
   else {
-    kcg_copy_trainDataStatus_T_trainData_Types_pkg(&statusAfterCheck, &_L45);
+    kcg_copy_trainDataStatus_T_trai(&statusAfterCheck, &_L45);
   }
   /* ck__L21 */ if (statusAfterCheck.validatedbyRBC) {
-    /* 1 */
-    checkAcknowledgmentGeneral_trainData_pkg(
-      trackMessages,
-      &ackRequested,
-      &tmp);
+    /* 1 */ checkAcknowledgmentGeneral_trai(trackMessages, &ackRequested, &tmp);
   }
   else {
     ackRequested = kcg_false;
@@ -229,7 +135,7 @@ void trainData_trainData_pkg(
   }
   /* ck__L46 */ if (_L45.waitingForRBCResponse) {
     /* 1 */
-    checkRadioMessages_trainData_pkg(
+    checkRadioMessages_trainData_pk(
       trackMessages,
       &statusAfterCheck,
       &IfBlock1_clock,
@@ -251,12 +157,12 @@ void trainData_trainData_pkg(
     &statusAfterCheck,
     eventsForTrainData,
     &outC->Context_1);
-  kcg_copy_trainData_T_TIU_Types_Pkg(
+  kcg_copy_trainData_T_TIU_Types_(
     &outC->actualTrainData,
     &outC->Context_1.actualTrainData);
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     /* 1 */
-    sendAcknowledgementRBC_trainData_pkg(
+    sendAcknowledgementRBC_trainDat(
       t_train,
       nidEngine,
       (*trackMessages).Radio_Common_Header.t_train,
@@ -264,27 +170,18 @@ void trainData_trainData_pkg(
       inMessageBus,
       inVersion,
       &outC->_2_Context_1);
-    kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
-      &outC->trainDataToRBC,
-      &outC->_2_Context_1.trainDataToRBC);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+    kcg_copy_M_TrainTrackMessageBus(
       &outC->outMessageBus,
       &outC->_2_Context_1.outMessageBus);
-    kcg_copy_trainDataStatus_T_trainData_Types_pkg(
+    kcg_copy_trainDataStatus_T_trai(
       &outC->updatedStatus,
       &outC->_2_Context_1.updatedStatus);
   }
   else {
     else_clock_IfBlock1 = ackReceived & !ackRequested;
     /* ck_anon_activ */ if (else_clock_IfBlock1) {
-      kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
-        &outC->trainDataToRBC,
-        (Radio_TrainTrack_Message_T_Radio_Types_Pkg *)
-          &cNoMessage_trainData_pkg);
-      kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-        &outC->outMessageBus,
-        inMessageBus);
-      kcg_copy_trainDataStatus_T_trainData_Types_pkg(
+      kcg_copy_M_TrainTrackMessageBus(&outC->outMessageBus, inMessageBus);
+      kcg_copy_trainDataStatus_T_trai(
         &outC->updatedStatus,
         &outC->Context_1.updatedStatus);
       outC->updatedStatus.validatedbyRBC = kcg_true;
@@ -299,7 +196,7 @@ void trainData_trainData_pkg(
           (*eventsForTrainData).MoRCreadyFlag);
       /* ck_anon_activ */ if (tmp) {
         /* 1 */
-        sendValidTrainDataRBC_trainData_pkg(
+        sendValidTrainDataRBC_trainData(
           trainDatafromTIU,
           t_train,
           nidEngine,
@@ -309,25 +206,16 @@ void trainData_trainData_pkg(
           inMessageBus,
           inVersion,
           &outC->_1_Context_1);
-        kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
-          &outC->trainDataToRBC,
-          &outC->_1_Context_1.trainDataToRBC);
-        kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+        kcg_copy_M_TrainTrackMessageBus(
           &outC->outMessageBus,
           &outC->_1_Context_1.outMessageBus);
-        kcg_copy_trainDataStatus_T_trainData_Types_pkg(
+        kcg_copy_trainDataStatus_T_trai(
           &outC->updatedStatus,
           &outC->_1_Context_1.updatedStatus);
       }
       else {
-        kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg(
-          &outC->trainDataToRBC,
-          (Radio_TrainTrack_Message_T_Radio_Types_Pkg *)
-            &cNoMessage_trainData_pkg);
-        kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-          &outC->outMessageBus,
-          inMessageBus);
-        kcg_copy_trainDataStatus_T_trainData_Types_pkg(
+        kcg_copy_M_TrainTrackMessageBus(&outC->outMessageBus, inMessageBus);
+        kcg_copy_trainDataStatus_T_trai(
           &outC->updatedStatus,
           &outC->Context_1.updatedStatus);
       }
@@ -337,6 +225,6 @@ void trainData_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainData_trainData_pkg.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

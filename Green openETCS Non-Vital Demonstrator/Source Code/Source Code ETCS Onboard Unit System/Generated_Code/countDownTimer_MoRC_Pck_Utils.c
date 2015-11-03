@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,8 +8,7 @@
 #include "countDownTimer_MoRC_Pck_Utils.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void countDownTimer_init_MoRC_Pck_Utils(
-  outC_countDownTimer_MoRC_Pck_Utils *outC)
+void countDownTimer_init_MoRC_Pck_Ut(outC_countDownTimer_MoRC_Pck_Ut *outC)
 {
   outC->expired = kcg_true;
   outC->started = kcg_true;
@@ -22,8 +21,7 @@ void countDownTimer_init_MoRC_Pck_Utils(
 #endif /* KCG_USER_DEFINED_INIT */
 
 
-void countDownTimer_reset_MoRC_Pck_Utils(
-  outC_countDownTimer_MoRC_Pck_Utils *outC)
+void countDownTimer_reset_MoRC_Pck_U(outC_countDownTimer_MoRC_Pck_Ut *outC)
 {
   outC->init1 = kcg_true;
   outC->init = kcg_true;
@@ -36,7 +34,7 @@ void countDownTimer_MoRC_Pck_Utils(
   /* MoRC_Pck::Utils::countDownTimer::actualTime */ time_Type_MoRC_Pck actualTime,
   /* MoRC_Pck::Utils::countDownTimer::autoretrigger */ kcg_bool autoretrigger,
   /* MoRC_Pck::Utils::countDownTimer::interval */ time_Type_MoRC_Pck interval,
-  outC_countDownTimer_MoRC_Pck_Utils *outC)
+  outC_countDownTimer_MoRC_Pck_Ut *outC)
 {
   /* MoRC_Pck::Utils::countDownTimer */
   static kcg_bool tmp1;
@@ -45,9 +43,9 @@ void countDownTimer_MoRC_Pck_Utils(
   /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting::_L7 */
   static kcg_bool _L7_TimerStatus_SM_Counting;
   /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting */
-  static kcg_bool Counting_weakb_clock_TimerStatus_SM;
+  static kcg_bool Counting_weakb_clock_TimerStatu;
   /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting */
-  static kcg_bool br_3_guard_TimerStatus_SM_Counting;
+  static kcg_bool br_3_guard_TimerStatus_SM_Count;
   /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */
   static SSM_ST_TimerStatus_SM TimerStatus_SM_state_sel;
   /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */
@@ -60,11 +58,11 @@ void countDownTimer_MoRC_Pck_Utils(
   /* init_TimerStatus_SM */ if (outC->init1) {
     TimerStatus_SM_state_sel = SSM_st_Stopped_TimerStatus_SM;
     outC->init1 = kcg_false;
-    Counting_weakb_clock_TimerStatus_SM = kcg_false;
+    Counting_weakb_clock_TimerStatu = kcg_false;
   }
   else {
     TimerStatus_SM_state_sel = outC->TimerStatus_SM_state_nxt;
-    Counting_weakb_clock_TimerStatus_SM = outC->TimerStatus_SM_reset_nxt;
+    Counting_weakb_clock_TimerStatu = outC->TimerStatus_SM_reset_nxt;
   }
   /* sel_TimerStatus_SM */ switch (TimerStatus_SM_state_sel) {
     case SSM_st_Expired_TimerStatus_SM :
@@ -82,13 +80,13 @@ void countDownTimer_MoRC_Pck_Utils(
     case SSM_st_Counting_TimerStatus_SM :
       if (stop) {
         TimerStatus_SM_state_act = SSM_st_Stopped_TimerStatus_SM;
-        TimerStatus_SM_fired_strong = SSM_TR_Counting_1_TimerStatus_SM;
+        TimerStatus_SM_fired_strong = SSM_TR_Counting_1_TimerStatus_S;
       }
       else {
         TimerStatus_SM_state_act = SSM_st_Counting_TimerStatus_SM;
         TimerStatus_SM_fired_strong = SSM_TR_no_trans_TimerStatus_SM;
       }
-      if (Counting_weakb_clock_TimerStatus_SM) {
+      if (Counting_weakb_clock_TimerStatu) {
         outC->init = kcg_true;
       }
       TimerStatus_SM_reset_act = stop;
@@ -136,7 +134,7 @@ void countDownTimer_MoRC_Pck_Utils(
       }
       break;
     case SSM_st_Counting_TimerStatus_SM :
-      Counting_weakb_clock_TimerStatus_SM = TimerStatus_SM_fired_strong !=
+      Counting_weakb_clock_TimerStatu = TimerStatus_SM_fired_strong !=
         SSM_TR_no_trans_TimerStatus_SM;
       if (TimerStatus_SM_reset_act) {
         outC->init = kcg_true;
@@ -148,13 +146,13 @@ void countDownTimer_MoRC_Pck_Utils(
         outC->_L4_TimerStatus_SM_Counting;
       outC->init = kcg_false;
       outC->expired = _L7_TimerStatus_SM_Counting;
-      /* strong_fired_Counting */ if (Counting_weakb_clock_TimerStatus_SM) {
+      /* strong_fired_Counting */ if (Counting_weakb_clock_TimerStatu) {
         tmp = kcg_false;
         outC->TimerStatus_SM_reset_nxt = kcg_false;
         outC->TimerStatus_SM_state_nxt = SSM_st_Counting_TimerStatus_SM;
       }
       else {
-        br_3_guard_TimerStatus_SM_Counting = _L7_TimerStatus_SM_Counting &
+        br_3_guard_TimerStatus_SM_Count = _L7_TimerStatus_SM_Counting &
           autoretrigger;
         if (re_start) {
           tmp = kcg_true;
@@ -162,13 +160,13 @@ void countDownTimer_MoRC_Pck_Utils(
           outC->TimerStatus_SM_state_nxt = SSM_st_Counting_TimerStatus_SM;
         }
         else {
-          /* cb_anon_sm */ if (br_3_guard_TimerStatus_SM_Counting) {
+          /* cb_anon_sm */ if (br_3_guard_TimerStatus_SM_Count) {
             tmp = kcg_true;
           }
           else {
             tmp = kcg_false;
           }
-          if (br_3_guard_TimerStatus_SM_Counting) {
+          if (br_3_guard_TimerStatus_SM_Count) {
             outC->TimerStatus_SM_reset_nxt = kcg_true;
             outC->TimerStatus_SM_state_nxt = SSM_st_Counting_TimerStatus_SM;
           }
@@ -197,6 +195,6 @@ void countDownTimer_MoRC_Pck_Utils(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** countDownTimer_MoRC_Pck_Utils.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

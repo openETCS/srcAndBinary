@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,8 +8,7 @@
 #include "nextGen_Msg136_radioOutput_Pkg.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void nextGen_Msg136_init_radioOutput_Pkg(
-  outC_nextGen_Msg136_radioOutput_Pkg *outC)
+void nextGen_Msg136_init_radioOutput(outC_nextGen_Msg136_radioOutput *outC)
 {
   static kcg_int i1;
   static kcg_int i;
@@ -27,26 +26,25 @@ void nextGen_Msg136_init_radioOutput_Pkg(
       outC->MessageBus_out[i1].OptionalPackets[i] = 0;
     }
   }
-  /* 2 */ Send_M136_init_TM_radio_messages(&outC->Context_2);
+  /* 2 */ Send_M136_init_TM_radio_message(&outC->Context_2);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void nextGen_Msg136_reset_radioOutput_Pkg(
-  outC_nextGen_Msg136_radioOutput_Pkg *outC)
+void nextGen_Msg136_reset_radioOutpu(outC_nextGen_Msg136_radioOutput *outC)
 {
-  /* 2 */ Send_M136_reset_TM_radio_messages(&outC->Context_2);
+  /* 2 */ Send_M136_reset_TM_radio_messag(&outC->Context_2);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* radioOutput_Pkg::nextGen_Msg136 */
 void nextGen_Msg136_radioOutput_Pkg(
-  /* radioOutput_Pkg::nextGen_Msg136::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
-  /* radioOutput_Pkg::nextGen_Msg136::inFromPositionReport */ Radio_TrainTrack_Message_T_Radio_Types_Pkg *inFromPositionReport,
+  /* radioOutput_Pkg::nextGen_Msg136::MessageBus */ M_TrainTrackMessageBus_t_TM_Tra *MessageBus,
+  /* radioOutput_Pkg::nextGen_Msg136::inFromPositionReport */ _8_Radio_TrainTrack_Message_T_R *inFromPositionReport,
   /* radioOutput_Pkg::nextGen_Msg136::inVersion */ M_VERSION inVersion,
   /* radioOutput_Pkg::nextGen_Msg136::inT_TRAIN */ T_TRAIN inT_TRAIN,
-  outC_nextGen_Msg136_radioOutput_Pkg *outC)
+  outC_nextGen_Msg136_radioOutput *outC)
 {
   /* radioOutput_Pkg::nextGen_Msg136 */
   static M_136_T_TM_radio_messages tmp4;
@@ -61,7 +59,7 @@ void nextGen_Msg136_radioOutput_Pkg(
   
   /* ck_isPresent */ if ((*inFromPositionReport).present) {
     /* 2 */
-    nextGen_MsgHdr136_radioOutput_Pkg(&(*inFromPositionReport).header, &tmp4);
+    nextGen_MsgHdr136_radioOutput_P(&(*inFromPositionReport).header, &tmp4);
     /* ck__L11 */ if ((*inFromPositionReport).packets.p0.valid) {
       /* 1 */
       nextGen_P00_radioOutput_Pkg(&(*inFromPositionReport).packets.p0, &tmp3);
@@ -96,19 +94,17 @@ void nextGen_Msg136_radioOutput_Pkg(
       (P044_TM_TrainToTrack *) &noP044_radioOutput_Pkg,
       inVersion,
       &outC->Context_2);
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
+    kcg_copy_M_TrainTrackMessageBus(
       &outC->MessageBus_out,
       &outC->Context_2.MessageBus_out);
   }
   else {
-    kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-      &outC->MessageBus_out,
-      MessageBus);
+    kcg_copy_M_TrainTrackMessageBus(&outC->MessageBus_out, MessageBus);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** nextGen_Msg136_radioOutput_Pkg.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_specific::Read_P137_Legacy */
 void Read_P137_Legacy_TM_specific(
-  /* TM_specific::Read_P137_Legacy::Message_IN */ CompressedPackets_T_Common_Types_Pkg *Message_IN,
-  /* TM_specific::Read_P137_Legacy::P137_legacy_out */ P137_StopIfInStaffResponsible_T_Packet_Types_Pkg *P137_legacy_out)
+  /* TM_specific::Read_P137_Legacy::Message_IN */ CompressedPackets_T_Common_Type *Message_IN,
+  /* TM_specific::Read_P137_Legacy::P137_legacy_out */ P137_StopIfInStaffResponsible_T *P137_legacy_out)
 {
   /* TM_specific::Read_P137_Legacy::_L1 */
   static kcg_bool _L1;
@@ -20,6 +20,6 @@ void Read_P137_Legacy_TM_specific(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P137_Legacy_TM_specific.c
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,12 +24,10 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->message147.header.nid_message = 0;
   outC->message147.header.t_train = 0;
   outC->message147.header.nid_engine = 0;
-  outC->message147.header.xQ_MARQSTREASON =
-    Q_MARQSTREASON_Start_selected_by_driver;
+  outC->message147.header.xQ_MARQSTREASON = Q_MARQSTREASON_Start_selected_b;
   outC->message147.header.xT_TRAIN = 0;
   outC->message147.header.xNID_EM = 0;
-  outC->message147.header.xQ_EMERGENCYSTOP =
-    Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
+  outC->message147.header.xQ_EMERGENCYSTOP = _31_Q_EMERGENCYSTOP_Conditional;
   outC->message147.header.xNID_TEXTMESSAGE = 0;
   outC->message147.packets.p0.valid = kcg_true;
   outC->message147.packets.p0.packet0.NID_PACKET = 0;
@@ -41,8 +39,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->message147.packets.p0.packet0.dlrbg = Q_DLRBG_Reverse;
   outC->message147.packets.p0.packet0.L_DOUBTOVER = 0;
   outC->message147.packets.p0.packet0.L_DOUBTUNDER = 0;
-  outC->message147.packets.p0.packet0.length =
-    Q_LENGTH_No_train_integrity_information_available;
+  outC->message147.packets.p0.packet0.length = Q_LENGTH_No_train_integrity_inf;
   outC->message147.packets.p0.packet0.L_TRAININT = 0;
   outC->message147.packets.p0.packet0.V_TRAIN = 0;
   outC->message147.packets.p0.packet0.dirtrain = Q_DIRTRAIN_Reverse;
@@ -60,8 +57,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->message147.packets.p1.packet1.dlrbg = Q_DLRBG_Reverse;
   outC->message147.packets.p1.packet1.L_DOUBTOVER = 0;
   outC->message147.packets.p1.packet1.L_DOUBTUNDER = 0;
-  outC->message147.packets.p1.packet1.length =
-    Q_LENGTH_No_train_integrity_information_available;
+  outC->message147.packets.p1.packet1.length = Q_LENGTH_No_train_integrity_inf;
   outC->message147.packets.p1.packet1.L_TRAININT = 0;
   outC->message147.packets.p1.packet1.V_TRAIN = 0;
   outC->message147.packets.p1.packet1.dirtrain = Q_DIRTRAIN_Reverse;
@@ -75,27 +71,24 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->message147.packets.p3.aNID_RADIO[0].telephoneNumber[i] = 0;
   }
   outC->message147.packets.p4.valid = kcg_true;
-  outC->message147.packets.p4.m_error =
-    M_ERROR_Balise_group_linking_consistency_error;
+  outC->message147.packets.p4.m_error = M_ERROR_Balise_group_linking_co;
   outC->message147.packets.p5.valid = kcg_true;
   outC->message147.packets.p5.TrainRunningNumber = 0;
   outC->message147.packets.p9.valid = kcg_true;
   outC->message147.packets.p9.transitionInformation = 0;
   outC->message147.packets.p11.valid = kcg_true;
-  outC->message147.packets.p11.nc_cdtrain = NC_CDTRAIN_Cant_Deficiency_80_mm;
-  outC->message147.packets.p11.nc_train =
-    NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category;
+  outC->message147.packets.p11.nc_cdtrain = NC_CDTRAIN_Cant_Deficiency_80_m;
+  outC->message147.packets.p11.nc_train = NC_TRAIN_Train_does_not_belong_;
   outC->message147.packets.p11.l_train = 0;
   outC->message147.packets.p11.v_maxtrain = 0;
-  outC->message147.packets.p11.m_loadinggoage =
-    M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles;
+  outC->message147.packets.p11.m_loadinggoage = M_LOADINGGAUGE_The_train_does_n;
   outC->message147.packets.p11.m_axleloadcat = M_AXLELOADCAT_A;
   outC->message147.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
   outC->message147.packets.p11.n_axle = 0;
   outC->message147.packets.p11.nIter_tractionIdentity = 0;
   for (i = 0; i < 4; i++) {
     outC->message147.packets.p11.tractionIdentity[i].m_voltage =
-      M_VOLTAGE_Line_not_fitted_with_any_traction_system;
+      M_VOLTAGE_Line_not_fitted_with_;
     outC->message147.packets.p11.tractionIdentity[i].nid_ctraction = 0;
   }
   outC->message147.packets.p11.nIter_ntc = 0;
@@ -112,90 +105,6 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     for (i1 = 0; i1 < 50; i1++) {
       outC->bus_out[i].OptionalPackets[i1] = 0;
     }
-  }
-  outC->MA_request_out.present = kcg_true;
-  outC->MA_request_out.header.present = kcg_true;
-  outC->MA_request_out.header.nid_message = 0;
-  outC->MA_request_out.header.t_train = 0;
-  outC->MA_request_out.header.nid_engine = 0;
-  outC->MA_request_out.header.xQ_MARQSTREASON =
-    Q_MARQSTREASON_Start_selected_by_driver;
-  outC->MA_request_out.header.xT_TRAIN = 0;
-  outC->MA_request_out.header.xNID_EM = 0;
-  outC->MA_request_out.header.xQ_EMERGENCYSTOP =
-    Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
-  outC->MA_request_out.header.xNID_TEXTMESSAGE = 0;
-  outC->MA_request_out.packets.p0.valid = kcg_true;
-  outC->MA_request_out.packets.p0.packet0.NID_PACKET = 0;
-  outC->MA_request_out.packets.p0.packet0.L_PACKET = 0;
-  outC->MA_request_out.packets.p0.packet0.qscale = Q_SCALE_10_cm_scale;
-  outC->MA_request_out.packets.p0.packet0.NID_LRBG = 0;
-  outC->MA_request_out.packets.p0.packet0.D_LRBG = 0;
-  outC->MA_request_out.packets.p0.packet0.dirlrbg = Q_DIRLRBG_Reverse;
-  outC->MA_request_out.packets.p0.packet0.dlrbg = Q_DLRBG_Reverse;
-  outC->MA_request_out.packets.p0.packet0.L_DOUBTOVER = 0;
-  outC->MA_request_out.packets.p0.packet0.L_DOUBTUNDER = 0;
-  outC->MA_request_out.packets.p0.packet0.length =
-    Q_LENGTH_No_train_integrity_information_available;
-  outC->MA_request_out.packets.p0.packet0.L_TRAININT = 0;
-  outC->MA_request_out.packets.p0.packet0.V_TRAIN = 0;
-  outC->MA_request_out.packets.p0.packet0.dirtrain = Q_DIRTRAIN_Reverse;
-  outC->MA_request_out.packets.p0.packet0.mode = M_MODE_Full_Supervision;
-  outC->MA_request_out.packets.p0.packet0.level = M_LEVEL_Level_0;
-  outC->MA_request_out.packets.p0.packet0.NID_NTC = 0;
-  outC->MA_request_out.packets.p1.valid = kcg_true;
-  outC->MA_request_out.packets.p1.packet1.NID_PACKET = 0;
-  outC->MA_request_out.packets.p1.packet1.L_PACKET = 0;
-  outC->MA_request_out.packets.p1.packet1.qscale = Q_SCALE_10_cm_scale;
-  outC->MA_request_out.packets.p1.packet1.NID_LRBG = 0;
-  outC->MA_request_out.packets.p1.packet1.NID_PRVLRBG = 0;
-  outC->MA_request_out.packets.p1.packet1.D_LRBG = 0;
-  outC->MA_request_out.packets.p1.packet1.dirlrbg = Q_DIRLRBG_Reverse;
-  outC->MA_request_out.packets.p1.packet1.dlrbg = Q_DLRBG_Reverse;
-  outC->MA_request_out.packets.p1.packet1.L_DOUBTOVER = 0;
-  outC->MA_request_out.packets.p1.packet1.L_DOUBTUNDER = 0;
-  outC->MA_request_out.packets.p1.packet1.length =
-    Q_LENGTH_No_train_integrity_information_available;
-  outC->MA_request_out.packets.p1.packet1.L_TRAININT = 0;
-  outC->MA_request_out.packets.p1.packet1.V_TRAIN = 0;
-  outC->MA_request_out.packets.p1.packet1.dirtrain = Q_DIRTRAIN_Reverse;
-  outC->MA_request_out.packets.p1.packet1.mode = M_MODE_Full_Supervision;
-  outC->MA_request_out.packets.p1.packet1.level = M_LEVEL_Level_0;
-  outC->MA_request_out.packets.p1.packet1.NID_NTC = 0;
-  outC->MA_request_out.packets.p3.valid = kcg_true;
-  outC->MA_request_out.packets.p3.number = 0;
-  outC->MA_request_out.packets.p3.aNID_RADIO[0].valid = kcg_true;
-  for (i = 0; i < 15; i++) {
-    outC->MA_request_out.packets.p3.aNID_RADIO[0].telephoneNumber[i] = 0;
-  }
-  outC->MA_request_out.packets.p4.valid = kcg_true;
-  outC->MA_request_out.packets.p4.m_error =
-    M_ERROR_Balise_group_linking_consistency_error;
-  outC->MA_request_out.packets.p5.valid = kcg_true;
-  outC->MA_request_out.packets.p5.TrainRunningNumber = 0;
-  outC->MA_request_out.packets.p9.valid = kcg_true;
-  outC->MA_request_out.packets.p9.transitionInformation = 0;
-  outC->MA_request_out.packets.p11.valid = kcg_true;
-  outC->MA_request_out.packets.p11.nc_cdtrain =
-    NC_CDTRAIN_Cant_Deficiency_80_mm;
-  outC->MA_request_out.packets.p11.nc_train =
-    NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category;
-  outC->MA_request_out.packets.p11.l_train = 0;
-  outC->MA_request_out.packets.p11.v_maxtrain = 0;
-  outC->MA_request_out.packets.p11.m_loadinggoage =
-    M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles;
-  outC->MA_request_out.packets.p11.m_axleloadcat = M_AXLELOADCAT_A;
-  outC->MA_request_out.packets.p11.m_airtight = M_AIRTIGHT_Not_fitted;
-  outC->MA_request_out.packets.p11.n_axle = 0;
-  outC->MA_request_out.packets.p11.nIter_tractionIdentity = 0;
-  for (i = 0; i < 4; i++) {
-    outC->MA_request_out.packets.p11.tractionIdentity[i].m_voltage =
-      M_VOLTAGE_Line_not_fitted_with_any_traction_system;
-    outC->MA_request_out.packets.p11.tractionIdentity[i].nid_ctraction = 0;
-  }
-  outC->MA_request_out.packets.p11.nIter_ntc = 0;
-  for (i = 0; i < 5; i++) {
-    outC->MA_request_out.packets.p11.nid_ntc[i] = 0;
   }
   outC->MA_onboard_out.valid = kcg_true;
   outC->MA_onboard_out.Level = MA_L1_TrackAtlasTypes;
@@ -290,24 +199,24 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->To_ModeAndLevel.train_packets.P_12[i].t_loa = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].l_section = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].q_sectiontimer_k =
-      Q_SECTIONTIMER_No_Section_Timer_information;
+      Q_SECTIONTIMER_No_Section_Timer;
     outC->To_ModeAndLevel.train_packets.P_12[i].t_sectiontimer_k = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].d_sectiontimerstoploc_k = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].l_endsection = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].q_sectiontimer =
-      Q_SECTIONTIMER_No_Section_Timer_information;
+      Q_SECTIONTIMER_No_Section_Timer;
     outC->To_ModeAndLevel.train_packets.P_12[i].t_sectiontimer = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].d_sectiontimerstoploc = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].q_endtimer =
-      Q_ENDTIMER_No_End_section_timer_information;
+      Q_ENDTIMER_No_End_section_timer;
     outC->To_ModeAndLevel.train_packets.P_12[i].t_endtimer = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].d_endtimerstartloc = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].q_dangerpoint =
-      Q_DANGERPOINT_No_danger_point_information;
+      Q_DANGERPOINT_No_danger_point_i;
     outC->To_ModeAndLevel.train_packets.P_12[i].d_dp = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].v_releasedp = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].q_overlap =
-      Q_OVERLAP_No_overlap_information;
+      Q_OVERLAP_No_overlap_informatio;
     outC->To_ModeAndLevel.train_packets.P_12[i].d_startol = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].t_ol = 0;
     outC->To_ModeAndLevel.train_packets.P_12[i].d_ol = 0;
@@ -337,24 +246,24 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->To_ModeAndLevel.train_packets.P_15[i].t_loa = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].l_section = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].q_sectiontimer_k =
-      Q_SECTIONTIMER_No_Section_Timer_information;
+      Q_SECTIONTIMER_No_Section_Timer;
     outC->To_ModeAndLevel.train_packets.P_15[i].t_sectiontimer_k = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].d_sectiontimerstoploc_k = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].l_endsection = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].q_sectiontimer =
-      Q_SECTIONTIMER_No_Section_Timer_information;
+      Q_SECTIONTIMER_No_Section_Timer;
     outC->To_ModeAndLevel.train_packets.P_15[i].t_sectiontimer = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].d_sectiontimerstoploc = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].q_endtimer =
-      Q_ENDTIMER_No_End_section_timer_information;
+      Q_ENDTIMER_No_End_section_timer;
     outC->To_ModeAndLevel.train_packets.P_15[i].t_endtimer = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].d_endtimerstartloc = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].q_dangerpoint =
-      Q_DANGERPOINT_No_danger_point_information;
+      Q_DANGERPOINT_No_danger_point_i;
     outC->To_ModeAndLevel.train_packets.P_15[i].d_dp = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].v_releasedp = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].q_overlap =
-      Q_OVERLAP_No_overlap_information;
+      Q_OVERLAP_No_overlap_informatio;
     outC->To_ModeAndLevel.train_packets.P_15[i].d_startol = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].t_ol = 0;
     outC->To_ModeAndLevel.train_packets.P_15[i].d_ol = 0;
@@ -374,13 +283,13 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->To_ModeAndLevel.train_packets.P_27.d_static = 0;
   outC->To_ModeAndLevel.train_packets.P_27.v_static = 0;
   outC->To_ModeAndLevel.train_packets.P_27.q_front =
-    Q_FRONT_Train_length_delay_on_validity_end_point_of_profile_element;
+    Q_FRONT_Train_length_delay_on_v;
   for (i = 0; i < 7; i++) {
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i].valid = kcg_true;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i].q_diff =
-      Q_DIFF_Cant_Deficiency_specific_category;
+      Q_DIFF_Cant_Deficiency_specific;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i].nc_cddiff =
-      NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_80_mm;
+      _41_NC_CDDIFF_Specific_SSP_appl;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i].nc_diff = 0;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i].v_diff = 0;
   }
@@ -389,14 +298,14 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].d_static = 0;
     outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].v_static = 0;
     outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].q_front =
-      Q_FRONT_Train_length_delay_on_validity_end_point_of_profile_element;
+      Q_FRONT_Train_length_delay_on_v;
     for (i1 = 0; i1 < 7; i1++) {
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].diffArray[i1].valid =
         kcg_true;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].diffArray[i1].q_diff =
-        Q_DIFF_Cant_Deficiency_specific_category;
+        Q_DIFF_Cant_Deficiency_specific;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].diffArray[i1].nc_cddiff =
-        NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_80_mm;
+        _41_NC_CDDIFF_Specific_SSP_appl;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].diffArray[i1].nc_diff =
         0;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i].diffArray[i1].v_diff =
@@ -422,7 +331,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->To_ModeAndLevel.train_packets.P_63[i].valid = kcg_true;
     outC->To_ModeAndLevel.train_packets.P_63[i].q_dir = Q_DIR_Reverse;
     outC->To_ModeAndLevel.train_packets.P_63[i].q_newcountry =
-      Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows;
+      Q_NEWCOUNTRY_Same_country__or__;
     outC->To_ModeAndLevel.train_packets.P_63[i].nid_c = 0;
     outC->To_ModeAndLevel.train_packets.P_63[i].nid_bg = 0;
   }
@@ -468,8 +377,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->NV_raw_out.v_nvrel = 0;
   outC->NV_raw_out.d_nvroll = 0;
   outC->NV_raw_out.q_nvsbtsmperm = Q_NVSBTSMPERM_No;
-  outC->NV_raw_out.q_nvemrrls =
-    Q_NVEMRRLS_Revoke_emergency_brake_command_at_standstill;
+  outC->NV_raw_out.q_nvemrrls = _49_Q_NVEMRRLS_Revoke_emergency;
   outC->NV_raw_out.q_nvguiperm = Q_NVGUIPERM_No;
   outC->NV_raw_out.q_nvsbfbperm = Q_NVSBFBPERM_No;
   outC->NV_raw_out.q_nvinhsnicperm = Q_NVINHSMICPERM_No;
@@ -489,7 +397,7 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
   outC->NV_raw_out.q_nvlocacc = 0;
   outC->NV_raw_out.m_nvavadh = 0.0;
   outC->NV_raw_out.m_nvebcl = M_NVEBCL_Confidence_level_50;
-  outC->NV_raw_out.q_nvkint = Q_NVKINT_No_integrated_correction_factors_follow;
+  outC->NV_raw_out.q_nvkint = Q_NVKINT_No_integrated_correcti;
   outC->NV_raw_out.q_nvkvintset = Q_NVKVINTSET_Freight_trains;
   outC->NV_raw_out.a_nvp12 = 0.0;
   outC->NV_raw_out.a_nvp23 = 0.0;
@@ -532,12 +440,12 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
     outC->NV_raw_out.n_iter_l_list[i].m_nvkrint_l = 0.0;
   }
   outC->NV_raw_out.m_nvktint = 0.0;
-  /* 1 */ Manage_MA_Request_init_TA_MA_Request(&outC->_4_Context_1);
-  /* 1 */ Build_GradientProfile_init_TA_Gradient(&outC->_3_Context_1);
+  /* 1 */ Manage_MA_Request_init_TA_MA_Re(&outC->_4_Context_1);
+  /* 1 */ Build_GradientProfile_init_TA_G(&outC->_3_Context_1);
   /* 1 */ Build_MRSP_init_TA_MRSP(&outC->_2_Context_1);
   /* 6 */ Build_MA_L23_init_TA_MA(&outC->Context_6);
   /* 1 */ StoreRaw_NV_init_TA_Storage(&outC->_1_Context_1);
-  /* 1 */ Manage_EmergencyStop_init_TA_EmergencyStop(&outC->Context_1);
+  /* 1 */ Manage_EmergencyStop_init_TA_Em(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
 
@@ -546,33 +454,33 @@ void TrackAtlasETCS_init_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
 void TrackAtlasETCS_reset_TrackAtlas(outC_TrackAtlasETCS_TrackAtlas *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Manage_MA_Request_reset_TA_MA_Request(&outC->_4_Context_1);
-  /* 1 */ Build_GradientProfile_reset_TA_Gradient(&outC->_3_Context_1);
+  /* 1 */ Manage_MA_Request_reset_TA_MA_R(&outC->_4_Context_1);
+  /* 1 */ Build_GradientProfile_reset_TA_(&outC->_3_Context_1);
   /* 1 */ Build_MRSP_reset_TA_MRSP(&outC->_2_Context_1);
   /* 6 */ Build_MA_L23_reset_TA_MA(&outC->Context_6);
   /* 1 */ StoreRaw_NV_reset_TA_Storage(&outC->_1_Context_1);
-  /* 1 */ Manage_EmergencyStop_reset_TA_EmergencyStop(&outC->Context_1);
+  /* 1 */ Manage_EmergencyStop_reset_TA_E(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TrackAtlas::TrackAtlasETCS */
 void TrackAtlasETCS_TrackAtlas(
-  /* TrackAtlas::TrackAtlasETCS::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TrackAtlas::TrackAtlasETCS::ModeAndLevel_in */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeAndLevel_in,
+  /* TrackAtlas::TrackAtlasETCS::MessageIn */ ReceivedMessage_T_Common_Types_ *MessageIn,
+  /* TrackAtlas::TrackAtlasETCS::ModeAndLevel_in */ T_Mode_Level_Level_And_Mode_Typ *ModeAndLevel_in,
   /* TrackAtlas::TrackAtlasETCS::TrainData_in */ FromTIU_t_TrackAtlasTypes TrainData_in,
-  /* TrackAtlas::TrackAtlasETCS::TrainPositionIn */ trainPosition_T_TrainPosition_Types_Pck *TrainPositionIn,
-  /* TrackAtlas::TrackAtlasETCS::train_length */ L_internal_Type_Obu_BasicTypes_Pkg train_length,
-  /* TrackAtlas::TrackAtlasETCS::SystemTime */ T_internal_Type_Obu_BasicTypes_Pkg SystemTime,
-  /* TrackAtlas::TrackAtlasETCS::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
+  /* TrackAtlas::TrackAtlasETCS::TrainPositionIn */ trainPosition_T_TrainPosition_T *TrainPositionIn,
+  /* TrackAtlas::TrackAtlasETCS::train_length */ L_internal_Type_Obu_BasicTypes_ train_length,
+  /* TrackAtlas::TrackAtlasETCS::SystemTime */ T_internal_Type_Obu_BasicTypes_ SystemTime,
+  /* TrackAtlas::TrackAtlasETCS::preindicationLocation */ L_internal_Type_Obu_BasicTypes_ preindicationLocation,
   /* TrackAtlas::TrackAtlasETCS::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
   /* TrackAtlas::TrackAtlasETCS::fromDriverToMA_R */ Driver2MAR_T_MA_Request *fromDriverToMA_R,
-  /* TrackAtlas::TrackAtlasETCS::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
-  /* TrackAtlas::TrackAtlasETCS::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
-  /* TrackAtlas::TrackAtlasETCS::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
+  /* TrackAtlas::TrackAtlasETCS::trainProps */ trainProperties_T_TrainPosition *trainProps,
+  /* TrackAtlas::TrackAtlasETCS::packet0 */ PT0_PositionReport_T_Packet_Tra *packet0,
+  /* TrackAtlas::TrackAtlasETCS::packet1 */ PT1_PositionReport_2BG_T_Packet *packet1,
   /* TrackAtlas::TrackAtlasETCS::t_train */ T_TRAIN t_train,
-  /* TrackAtlas::TrackAtlasETCS::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
+  /* TrackAtlas::TrackAtlasETCS::bus_in */ M_TrainTrackMessageBus_t_TM_Tra *bus_in,
   /* TrackAtlas::TrackAtlasETCS::P203V1_onboard */ P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
-  /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */ P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
+  /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */ P003_permanent_data_T_TM_baseli *PermanentDataP003,
   outC_TrackAtlasETCS_TrackAtlas *outC)
 {
   /* TrackAtlas::TrackAtlasETCS */
@@ -589,7 +497,7 @@ void TrackAtlasETCS_TrackAtlas(
   /* TrackAtlas::TrackAtlasETCS::_L21 */
   static P003V1_OBU_T_TM_baseline2 _L21;
   /* TrackAtlas::TrackAtlasETCS::_L78 */
-  static T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg _L78;
+  static T_Data_From_Track_Mess_Level_An _L78;
   /* TrackAtlas::TrackAtlasETCS::_L82 */
   static kcg_bool _L82;
   /* TrackAtlas::TrackAtlasETCS::_L83 */
@@ -597,7 +505,7 @@ void TrackAtlasETCS_TrackAtlas(
   /* TrackAtlas::TrackAtlasETCS::_L84 */
   static kcg_bool _L84;
   /* TrackAtlas::TrackAtlasETCS::_L101 */
-  static GradientProfile_t_TrackAtlasTypes _L101;
+  static GradientProfile_t_TrackAtlasTyp _L101;
   /* TrackAtlas::TrackAtlasETCS::_L126 */
   static kcg_int _L126;
   
@@ -609,7 +517,7 @@ void TrackAtlasETCS_TrackAtlas(
     i = outC->_L94;
   }
   /* 1 */
-  Manage_EmergencyStop_TA_EmergencyStop(
+  Manage_EmergencyStop_TA_Emergen(
     MessageIn,
     t_train,
     trainProps,
@@ -619,14 +527,14 @@ void TrackAtlasETCS_TrackAtlas(
     i,
     bus_in,
     &outC->Context_1);
-  kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
+  kcg_copy_Radio_TrainTrack_Messa(
     &outC->message147,
     &outC->Context_1.message147);
   outC->trip_train = outC->Context_1.tripTrain;
   outC->ces_accepted = outC->Context_1.cesAccepted;
   outC->ces_revoked = outC->Context_1.cesRevoked;
   /* 1 */ StoreRaw_NV_TA_Storage(MessageIn, &outC->_1_Context_1);
-  kcg_copy_P003V1_OBU_T_TM_baseline2(&_L21, &outC->_1_Context_1.NV_onboard_out);
+  kcg_copy_P003V1_OBU_T_TM_baseli(&_L21, &outC->_1_Context_1.NV_onboard_out);
   /* 6 */
   Build_MA_L23_TA_MA(
     kcg_false,
@@ -639,10 +547,10 @@ void TrackAtlasETCS_TrackAtlas(
     &outC->Context_6);
   outC->to_Supervision.freshMA = outC->Context_6.updated;
   valid_MA = outC->Context_6.available;
-  kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+  kcg_copy_MovementAuthority_t_Tr(
     &outC->MA_onboard_out,
     &outC->Context_6.MA_absolute);
-  kcg_copy_MovementAuthority_t_TrackAtlasTypes(
+  kcg_copy_MovementAuthority_t_Tr(
     &outC->to_Supervision.MA,
     &outC->MA_onboard_out);
   outC->_L94 = outC->Context_6.currentEOA;
@@ -658,23 +566,23 @@ void TrackAtlasETCS_TrackAtlas(
   outC->to_Supervision.freshMRSP = outC->_2_Context_1.newMRSP;
   outC->SSP_available = outC->_2_Context_1.SSP_available;
   /* 1 */
-  Build_GradientProfile_TA_Gradient(
+  Build_GradientProfile_TA_Gradie(
     kcg_false,
     MessageIn,
     TrainPositionIn,
     &outC->_3_Context_1);
   outC->to_DMI.Gradient_profile_updated = outC->_3_Context_1.updated;
   outC->to_Supervision.freshGradientProfile = outC->_3_Context_1.updated;
-  kcg_copy_GradientProfile_t_TrackAtlasTypes(&_L101, &outC->_3_Context_1.GP);
-  kcg_copy_GradientProfile_t_TrackAtlasTypes(
+  kcg_copy_GradientProfile_t_Trac(&_L101, &outC->_3_Context_1.GP);
+  kcg_copy_GradientProfile_t_Trac(
     &outC->to_Supervision.GradientProfile,
     &_L101);
   valid_GP = outC->_3_Context_1.available;
-  kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
+  kcg_copy_MRSP_Profile_t_TrackAt(
     &MRSP_export,
     (MRSP_Profile_t_TrackAtlasTypes *) &DEFAULT_MRSP_Profile_TA_MRSP);
   /* 1 */ for (i = 0; i < 200; i++) {
-    kcg_copy_MRSP_Profile_t_TrackAtlasTypes(&MRSP_to_DMI, &MRSP_export);
+    kcg_copy_MRSP_Profile_t_TrackAt(&MRSP_to_DMI, &MRSP_export);
     /* 1 */
     SSP_to_MRSP_TA_Export(
       i,
@@ -686,9 +594,7 @@ void TrackAtlasETCS_TrackAtlas(
       break;
     }
   }
-  kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
-    &outC->to_Supervision.MRSP,
-    &MRSP_export);
+  kcg_copy_MRSP_Profile_t_TrackAt(&outC->to_Supervision.MRSP, &MRSP_export);
   /* 2 */ for (i = 0; i < 200; i++) {
     /* 1 */
     MRSP_to_MRSP_to_DMI_TA_Export(
@@ -704,17 +610,17 @@ void TrackAtlasETCS_TrackAtlas(
 #ifdef KCG_MAPW_CPY
   
   /* 2 */ for (i = _L126; i < 200; i++) {
-    kcg_copy_MRSP_section_t_TrackAtlasTypes(
+    kcg_copy_MRSP_section_t_TrackAt(
       &MRSP_to_DMI[i],
       (MRSP_section_t_TrackAtlasTypes *) &DEFAULT_MRSP_section_TA_Export);
   }
 #endif /* KCG_MAPW_CPY */
   
-  kcg_copy_MRSP_Profile_t_TrackAtlasTypes(&outC->to_DMI.MRSP, &MRSP_to_DMI);
+  kcg_copy_MRSP_Profile_t_TrackAt(&outC->to_DMI.MRSP, &MRSP_to_DMI);
   /* 1 */
-  GradientProfile_to_DMI_TA_Export(&_L101, &outC->to_DMI.GradientProfile);
+  GradientProfile_to_DMI_TA_Expor(&_L101, &outC->to_DMI.GradientProfile);
   /* 1 */
-  C_P003V1_OBU_P003_OBU_TM_conversions_baseline2(
+  C_P003V1_OBU_P003_OBU_TM_conver(
     &_L21,
     P203V1_onboard,
     PermanentDataP003,
@@ -732,9 +638,7 @@ void TrackAtlasETCS_TrackAtlas(
     &_L84,
     &_L83,
     &_L82);
-  kcg_copy_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg(
-    &outC->To_ModeAndLevel.train_messages,
-    &_L78);
+  kcg_copy_T_Data_From_Track_Mess(&outC->To_ModeAndLevel.train_messages, &_L78);
   outC->To_ModeAndLevel.p12 = cond_iterw;
   outC->To_ModeAndLevel.p15 = _L84;
   outC->To_ModeAndLevel.p21 = _L83;
@@ -754,17 +658,13 @@ void TrackAtlasETCS_TrackAtlas(
     packet1,
     t_train,
     &outC->Context_1.bus_out,
+    ModeAndLevel_in,
     &outC->_4_Context_1);
-  kcg_copy_Radio_TrainTrack_Message_T_TM_transitional(
-    &outC->MA_request_out,
-    &outC->_4_Context_1.message_out);
-  kcg_copy_M_TrainTrackMessageBus_t_TM_TrainTrack_Bus(
-    &outC->bus_out,
-    &outC->_4_Context_1.bus_out);
+  kcg_copy_M_TrainTrackMessageBus(&outC->bus_out, &outC->_4_Context_1.bus_out);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:15
 *************************************************************$ */
 

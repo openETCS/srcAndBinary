@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void headerMsg129_ng_trainData_pkg(
   /* trainData_pkg::headerMsg129_ng::header */ M_129_T_TM_radio_messages *header)
 {
   (*header).valid = kcg_true;
-  (*header).nid_message = co129_Validated_Train_Data_Id_Pkg;
+  (*header).nid_message = co129_Validated_Train_Data_Id_P;
   (*header).l_message = 0;
   (*header).t_train = t_train;
   (*header).nid_engine = nidEngine;
@@ -22,6 +22,6 @@ void headerMsg129_ng_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** headerMsg129_ng_trainData_pkg.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 

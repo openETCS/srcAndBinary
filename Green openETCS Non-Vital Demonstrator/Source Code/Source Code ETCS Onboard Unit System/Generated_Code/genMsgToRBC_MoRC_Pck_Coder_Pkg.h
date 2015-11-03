@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
-#ifndef _genMsgToRBC_MoRC_Pck_Coder_Pkg_H_
-#define _genMsgToRBC_MoRC_Pck_Coder_Pkg_H_
+#ifndef _genMsgToRBC_MoRC_Pck_Coder_Pkg
+#define _genMsgToRBC_MoRC_Pck_Coder_Pkg
 
 #include "kcg_types.h"
 
@@ -19,11 +19,11 @@ extern void genMsgToRBC_MoRC_Pck_Coder_Pkg(
   /* MoRC_Pck::Coder_Pkg::genMsgToRBC::t_train */ T_TRAIN t_train,
   /* MoRC_Pck::Coder_Pkg::genMsgToRBC::xt_train */ T_TRAIN xt_train,
   /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_engine */ NID_ENGINE nid_engine,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */ Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage);
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */ _8_Radio_TrainTrack_Message_T_R *radioMessage);
 
-#endif /* _genMsgToRBC_MoRC_Pck_Coder_Pkg_H_ */
+#endif /* _genMsgToRBC_MoRC_Pck_Coder_Pkg */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** genMsgToRBC_MoRC_Pck_Coder_Pkg.h
-** Generation date: 2015-10-23T15:36:33
+** Generation date: 2015-11-03T13:50:13
 *************************************************************$ */
 

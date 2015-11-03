@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG-Releases/config.txt
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -8,7 +8,7 @@
 #include "BuildOutputToRBC_OutputToRBC.h"
 
 #ifndef KCG_USER_DEFINED_INIT
-void BuildOutputToRBC_init_OutputToRBC(outC_BuildOutputToRBC_OutputToRBC *outC)
+void BuildOutputToRBC_init_OutputToR(outC_BuildOutputToRBC_OutputToR *outC)
 {
   outC->Connection_to_RBC_Requested = kcg_true;
   outC->PositionReportNeeded = kcg_true;
@@ -18,7 +18,7 @@ void BuildOutputToRBC_init_OutputToRBC(outC_BuildOutputToRBC_OutputToRBC *outC)
 
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-void BuildOutputToRBC_reset_OutputToRBC(outC_BuildOutputToRBC_OutputToRBC *outC)
+void BuildOutputToRBC_reset_OutputTo(outC_BuildOutputToRBC_OutputToR *outC)
 {
   /* 1 */ ExitLevel2or3_reset_OutputToRBC(&outC->Context_1);
 }
@@ -26,11 +26,11 @@ void BuildOutputToRBC_reset_OutputToRBC(outC_BuildOutputToRBC_OutputToRBC *outC)
 
 /* OutputToRBC::BuildOutputToRBC */
 void BuildOutputToRBC_OutputToRBC(
-  /* OutputToRBC::BuildOutputToRBC::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
+  /* OutputToRBC::BuildOutputToRBC::selected_level_transition */ T_LevelTransition_Level_And_Mod *selected_level_transition,
   /* OutputToRBC::BuildOutputToRBC::last_level */ M_LEVEL last_level,
   /* OutputToRBC::BuildOutputToRBC::new_level */ M_LEVEL new_level,
-  /* OutputToRBC::BuildOutputToRBC::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  outC_BuildOutputToRBC_OutputToRBC *outC)
+  /* OutputToRBC::BuildOutputToRBC::trainPosition */ trainPosition_T_TrainPosition_T *trainPosition,
+  outC_BuildOutputToRBC_OutputToR *outC)
 {
   outC->Connection_to_RBC_Requested = /* 2 */
     RBCSessionRequests_OutputToRBC(last_level, selected_level_transition);
@@ -48,6 +48,6 @@ void BuildOutputToRBC_OutputToRBC(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BuildOutputToRBC_OutputToRBC.c
-** Generation date: 2015-10-23T15:36:34
+** Generation date: 2015-11-03T13:50:14
 *************************************************************$ */
 
