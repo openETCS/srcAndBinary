@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+** Command: kcg64.exe -config S:/modeling/test/EnvSim/Scade/Simulation/config.txt
+** Generation date: 2015-10-19T20:52:26
 *************************************************************$ */
 #ifndef _RemoteDMIBus_EnvSim_H_
 #define _RemoteDMIBus_EnvSim_H_
@@ -34,6 +34,6 @@ extern void RemoteDMIBus_init_EnvSim(outC_RemoteDMIBus_EnvSim *outC);
 #endif /* _RemoteDMIBus_EnvSim_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RemoteDMIBus_EnvSim.dh
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-10-19T20:52:26
 *************************************************************$ */
 
