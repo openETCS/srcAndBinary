@@ -1,0 +1,28 @@
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
+** Generation date: 2015-11-05T15:01:43
+*************************************************************$ */
+#ifndef _CheckMVersion_CheckBGConsistency_Pkg_SubFunction_H_
+#define _CheckMVersion_CheckBGConsistency_Pkg_SubFunction_H_
+
+#include "kcg_types.h"
+#include "CAST_M_VERSION_to_int_TM_conversions.h"
+
+/* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
+
+
+/* CheckBGConsistency_Pkg::SubFunction::CheckMVersion */
+extern void CheckMVersion_CheckBGConsistency_Pkg_SubFunction(
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMVersion::trackVersion */ M_VERSION trackVersion,
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMVersion::trainVersion */ M_VERSION trainVersion,
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMVersion::isSameVersion */ kcg_bool *isSameVersion,
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMVersion::compatibleVersion */ kcg_bool *compatibleVersion);
+
+#endif /* _CheckMVersion_CheckBGConsistency_Pkg_SubFunction_H_ */
+/* $**************** KCG Version 6.4 (build i21) ****************
+** CheckMVersion_CheckBGConsistency_Pkg_SubFunction.h
+** Generation date: 2015-11-05T15:01:43
+*************************************************************$ */
+

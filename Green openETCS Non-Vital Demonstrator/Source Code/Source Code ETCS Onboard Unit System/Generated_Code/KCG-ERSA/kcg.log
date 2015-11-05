@@ -1,0 +1,47 @@
+$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
+** Generation date: 2015-11-05T15:01:27
+*************************************************************$
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/scade_model_without_unused.scade, line 1730, character 29
+  at path Q_NVEMRRLS/Q_NVEMRRLS_Revoke_emergency_brake_command_when_permitted_speed_supervision_limit_is_no_longer_exceeded/
+ Interface element
+ Q_NVEMRRLS_Revoke_emergency_brake_command_when_permitted_speed_supervision_limit_is_no_longer_exceeded
+ has been renamed because it is too long
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/scade_model_without_unused.scade, line 1547, character 30
+  at path M_TRACKCOND/M_TRACKCOND_Switch_off_eddy_current_brake_for_emergency_brake_Initial_state_is_eddy_current_brake_for_emergency_brake_on/
+ Interface element
+ M_TRACKCOND_Switch_off_eddy_current_brake_for_emergency_brake_Initial_state_is_eddy_current_brake_for_emergency_brake_on
+ has been renamed because it is too long
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/scade_model_without_unused.scade, line 1545, character 29
+  at path M_TRACKCOND/M_TRACKCOND_Powerless_section_switch_off_the_main_power_switch_Initial_state_is_not_powerless_section/
+ Interface element
+ M_TRACKCOND_Powerless_section_switch_off_the_main_power_switch_Initial_state_is_not_powerless_section
+ has been renamed because it is too long
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/scade_model_without_unused.scade, line 1541, character 29
+  at path M_TRACKCOND/M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_Initial_state_is_eddy_current_brake_for_service_brake_on/
+ Interface element
+ M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_Initial_state_is_eddy_current_brake_for_service_brake_on
+ has been renamed because it is too long
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/scade_model_without_unused.scade, line 1517, character 29
+  at path Q_TEXTCONFIRM/Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_emergency_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver/
+ Interface element
+ Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_emergency_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver
+ has been renamed because it is too long
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/scade_model_without_unused.scade, line 1515, character 29
+  at path Q_TEXTCONFIRM/Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_service_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver/
+ Interface element
+ Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_service_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver
+ has been renamed because it is too long
+6 warnings were found
+No error was found
+No failure occurred
+$**************** KCG Version 6.4 (build i21) ****************
+** R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG\kcg.log
+** Generation date: 2015-11-05T15:02:03
+*************************************************************$
