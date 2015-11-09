@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,20 @@
 
 /* TargetLimits_Pkg::TargetIterator */
 void TargetIterator_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::TargetIterator::index */ kcg_int index,
-  /* TargetLimits_Pkg::TargetIterator::Akku_in */ TargetIteratorAkku_TargetLimits_Pkg *Akku_in,
-  /* TargetLimits_Pkg::TargetIterator::target */ Target_real_T_TargetManagement_types *target,
-  /* TargetLimits_Pkg::TargetIterator::targetCurve */ ParabolaCurve_T_CalcBrakingCurves_types *targetCurve,
-  /* TargetLimits_Pkg::TargetIterator::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int,
-  /* TargetLimits_Pkg::TargetIterator::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* TargetLimits_Pkg::TargetIterator::T_b */ t_Brake_t_SDMModelPkg *T_b,
-  /* TargetLimits_Pkg::TargetIterator::D_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg D_maxsafefront,
-  /* TargetLimits_Pkg::TargetIterator::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
-  /* TargetLimits_Pkg::TargetIterator::guiCurveEnabled */ kcg_bool guiCurveEnabled,
-  /* TargetLimits_Pkg::TargetIterator::goOn */ kcg_bool *goOn,
-  /* TargetLimits_Pkg::TargetIterator::Akku_out */ TargetIteratorAkku_TargetLimits_Pkg *Akku_out)
+  /* TargetLimits_Pkg::TargetIterator::index */kcg_int index,
+  /* TargetLimits_Pkg::TargetIterator::Akku_in */TargetIteratorAkku_TargetLimits_Pkg *Akku_in,
+  /* TargetLimits_Pkg::TargetIterator::target */Target_real_T_TargetManagement_types *target,
+  /* TargetLimits_Pkg::TargetIterator::targetCurve */ParabolaCurve_T_CalcBrakingCurves_types *targetCurve,
+  /* TargetLimits_Pkg::TargetIterator::trainData_int */trainData_internal_t_SDM_Types_Pkg *trainData_int,
+  /* TargetLimits_Pkg::TargetIterator::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TargetLimits_Pkg::TargetIterator::T_b */t_Brake_t_SDMModelPkg *T_b,
+  /* TargetLimits_Pkg::TargetIterator::D_maxsafefront */L_internal_real_Type_SDM_Types_Pkg D_maxsafefront,
+  /* TargetLimits_Pkg::TargetIterator::GUIcurve */ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
+  /* TargetLimits_Pkg::TargetIterator::guiCurveEnabled */kcg_bool guiCurveEnabled,
+  /* TargetLimits_Pkg::TargetIterator::goOn */kcg_bool *goOn,
+  /* TargetLimits_Pkg::TargetIterator::Akku_out */TargetIteratorAkku_TargetLimits_Pkg *Akku_out)
 {
-  /* TargetLimits_Pkg::TargetIterator */
   static V_internal_real_Type_SDM_Types_Pkg tmp1;
-  /* TargetLimits_Pkg::TargetIterator */
   static kcg_bool tmp;
   /* TargetLimits_Pkg::TargetIterator::_L2 */
   static L_internal_real_Type_SDM_Types_Pkg _L2;
@@ -57,7 +55,9 @@ void TargetIterator_TargetLimits_Pkg(
     &_L71,
     &_L73,
     &_L72);
-  /* ck_goOn */ if (*goOn) {
+  if (*goOn) {
+    /* 1 */
+    d_SBI2_TargetLimits_Pkg(targetCurve, &_L74, _L71, &_L73, &_L1, &_L2);
     /* 1 */
     v_SBI2_TargetLimits_Pkg(
       targetCurve,
@@ -71,8 +71,6 @@ void TargetIterator_TargetLimits_Pkg(
       &_L73,
       &tmp,
       &tmp1);
-    /* 1 */
-    d_SBI2_TargetLimits_Pkg(targetCurve, &_L74, _L71, &_L73, &_L1, &_L2);
   }
   else {
     tmp = kcg_false;
@@ -95,7 +93,7 @@ void TargetIterator_TargetLimits_Pkg(
       (*Akku_in).SBI2,
       _L1,
       _L2);
-  /* 1 */ if (tmp) {
+  if (tmp) {
     kcg_copy_TargetIteratorAkku_TargetLimits_Pkg(Akku_out, Akku_in);
   }
   else {
@@ -107,14 +105,14 @@ void TargetIterator_TargetLimits_Pkg(
     (*Akku_out).V_ura = _L72;
     (*Akku_out).V_P_MRDT_ebd = (*Akku_in).V_P_MRDT_ebd;
     (*Akku_out).V_P_MRDT_index = (*Akku_in).V_P_MRDT_index;
-    /* 2 */ if (_L1) {
+    if (_L1) {
       (*Akku_out).ttype = (*target).targetType;
     }
     else {
       (*Akku_out).ttype = invalid_TargetManagement_types;
     }
   }
-  /* 3 */ if (_L102 | !_L110) {
+  if (_L102 | !_L110) {
     (*Akku_out).V_P_MRDT_index = (*Akku_in).V_P_MRDT_index;
   }
   else {
@@ -123,8 +121,8 @@ void TargetIterator_TargetLimits_Pkg(
   (*Akku_out).V_P_MRDT_ebd = _L111;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TargetIterator_TargetLimits_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,27 @@
 
 /* SDMConversionModelPkg::Kv_intVectorMapper */
 void Kv_intVectorMapper_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kv_intVectorMapper::Kv_int */ mv_Map_t_SDMConversionModelPkg *Kv_int,
-  /* SDMConversionModelPkg::Kv_intVectorMapper::A_brake_em */ av_Map_t_SDMConversionModelPkg *A_brake_em,
-  /* SDMConversionModelPkg::Kv_intVectorMapper::A_brake_safe */ av_MergedMap_t_SDMConversionModelPkg *A_brake_safe)
+  /* SDMConversionModelPkg::Kv_intVectorMapper::Kv_int */mv_Map_t_SDMConversionModelPkg *Kv_int,
+  /* SDMConversionModelPkg::Kv_intVectorMapper::A_brake_em */av_Map_t_SDMConversionModelPkg *A_brake_em,
+  /* SDMConversionModelPkg::Kv_intVectorMapper::A_brake_safe */av_MergedMap_t_SDMConversionModelPkg *A_brake_safe)
 {
-  /* SDMConversionModelPkg::Kv_intVectorMapper */
-  static array_int_2 acc;
-  /* SDMConversionModelPkg::Kv_intVectorMapper::_L19 */
-  static array_int_13 _L19;
-  /* SDMConversionModelPkg::Kv_intVectorMapper::_L12 */
-  static array_int_2 _L12;
+  static array_int_2 tmp;
+  static kcg_int i;
   /* SDMConversionModelPkg::Kv_intVectorMapper::_L13 */
   static array_int_13 _L13;
-  static kcg_int i;
+  /* SDMConversionModelPkg::Kv_intVectorMapper::_L12 */
+  static array_int_2 _L12;
+  /* SDMConversionModelPkg::Kv_intVectorMapper::_L19 */
+  static array_int_13 _L19;
   
   for (i = 0; i < 2; i++) {
     _L12[i] = 0;
   }
-  /* 1 */ for (i = 0; i < 13; i++) {
-    kcg_copy_array_int_2(&acc, &_L12);
+  for (i = 0; i < 13; i++) {
+    kcg_copy_array_int_2(&tmp, &_L12);
     /* 1 */
     Kv_intVectorMerger_SDMConversionModelPkg(
-      &acc,
+      &tmp,
       Kv_int,
       A_brake_em,
       &_L12,
@@ -41,8 +40,8 @@ void Kv_intVectorMapper_SDMConversionModelPkg(
   kcg_copy_v_MergedSteps_t_SDMConversionModelPkg(&(*A_brake_safe).v, &_L13);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Kv_intVectorMapper_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

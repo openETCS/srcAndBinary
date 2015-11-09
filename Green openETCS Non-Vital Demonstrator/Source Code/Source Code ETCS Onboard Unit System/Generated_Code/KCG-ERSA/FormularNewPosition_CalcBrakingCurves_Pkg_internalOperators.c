@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,11 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition */
 L_internal_real_Type_SDM_Types_Pkg FormularNewPosition_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inBeginDistance */ L_internal_real_Type_SDM_Types_Pkg inBeginDistance,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inEndSpeed */ V_internal_real_Type_SDM_Types_Pkg inEndSpeed,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inBeginSpeed */ V_internal_real_Type_SDM_Types_Pkg inBeginSpeed,
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inAcceleration */ A_internal_real_Type_SDM_Types_Pkg inAcceleration)
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inBeginDistance */L_internal_real_Type_SDM_Types_Pkg inBeginDistance,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inEndSpeed */V_internal_real_Type_SDM_Types_Pkg inEndSpeed,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inBeginSpeed */V_internal_real_Type_SDM_Types_Pkg inBeginSpeed,
+  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::inAcceleration */A_internal_real_Type_SDM_Types_Pkg inAcceleration)
 {
-  /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition */
   static kcg_real tmp;
   /* CalcBrakingCurves_Pkg::internalOperators::FormularNewPosition::_L20 */
   static kcg_bool _L20;
@@ -22,7 +21,7 @@ L_internal_real_Type_SDM_Types_Pkg FormularNewPosition_CalcBrakingCurves_Pkg_int
   static L_internal_real_Type_SDM_Types_Pkg outD1;
   
   _L20 = inAcceleration != 0.0;
-  /* ck__L20 */ if (_L20) {
+  if (_L20) {
     tmp = (/* 2 */ Square_mathext_V_internal_real_Type(inEndSpeed) - /* 1 */
         Square_mathext_V_internal_real_Type(inBeginSpeed)) / (2.0 *
         inAcceleration);
@@ -34,8 +33,8 @@ L_internal_real_Type_SDM_Types_Pkg FormularNewPosition_CalcBrakingCurves_Pkg_int
   return outD1;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FormularNewPosition_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,54 +9,55 @@
 
 /* SDMConversionModelPkg::InflateABrakeSafe */
 void InflateABrakeSafe_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::InflateABrakeSafe::aBrakeSafe_cm */ av_MergedMap_t_SDMConversionModelPkg *aBrakeSafe_cm,
-  /* SDMConversionModelPkg::InflateABrakeSafe::aBrakeSafe */ ASafe_T_CalcBrakingCurves_types *aBrakeSafe)
+  /* SDMConversionModelPkg::InflateABrakeSafe::aBrakeSafe_cm */av_MergedMap_t_SDMConversionModelPkg *aBrakeSafe_cm,
+  /* SDMConversionModelPkg::InflateABrakeSafe::aBrakeSafe */ASafe_T_CalcBrakingCurves_types *aBrakeSafe)
 {
-  /* SDMConversionModelPkg::InflateABrakeSafe */
-  static kcg_int acc1;
-  /* SDMConversionModelPkg::InflateABrakeSafe */
-  static kcg_int acc;
-  /* SDMConversionModelPkg::InflateABrakeSafe::_L9 */
-  static V_internal_Type_Obu_BasicTypes_Pkg _L9;
+  static kcg_int tmp;
+  static kcg_int i;
+  /* SDMConversionModelPkg::InflateABrakeSafe::_L10 */
+  static array_real_100_1 _L10;
+  /* SDMConversionModelPkg::InflateABrakeSafe::_L4 */
+  static array_real_1 _L4;
   /* SDMConversionModelPkg::InflateABrakeSafe::_L31 */
   static array_real_100_13 _L31;
   /* SDMConversionModelPkg::InflateABrakeSafe::_L35 */
   static A_internal_Type_Obu_BasicTypes_Pkg _L35;
   /* SDMConversionModelPkg::InflateABrakeSafe::_L37 */
   static array_real_13 _L37;
-  static kcg_int i;
   
-  _L9 = 0;
-  _L35 = 0;
-  /* 2 */ for (i = 0; i < 13; i++) {
-    acc1 = _L9;
+  tmp = 0;
+  for (i = 0; i < 13; i++) {
+    _L35 = tmp;
     /* 1 */
     InflateABrakeSpeeds_SDMConversionModelPkg(
-      acc1,
+      _L35,
       (*aBrakeSafe_cm).v[i],
-      &_L9,
+      &tmp,
       &_L37[i]);
-    acc = _L35;
+  }
+  _L35 = 0;
+  for (i = 0; i < 13; i++) {
+    tmp = _L35;
     /* InflateABrakeRow */
     InflateABrakeRow_SDMConversionModelPkg(
-      acc,
+      tmp,
       (*aBrakeSafe_cm).a[i],
       &_L35,
       &_L31[i]);
   }
-  kcg_copy_array_real_13(&(*aBrakeSafe).speed_definition[0], &_L37);
-  (&(*aBrakeSafe).speed_definition[13])[0] = _L37[12];
-  kcg_copy_array_real_100_13(&(*aBrakeSafe).data[0], &_L31);
-  kcg_copy_ASafeRow_T_CalcBrakingCurves_types(
-    &(&(*aBrakeSafe).data[13])[0],
-    &_L31[12]);
   for (i = 0; i < 100; i++) {
     (*aBrakeSafe).distance_definition[i] = 0.0;
   }
+  _L4[0] = _L37[12];
+  kcg_copy_ASafeRow_T_CalcBrakingCurves_types(&_L10[0], &_L31[12]);
+  kcg_copy_array_real_13(&(*aBrakeSafe).speed_definition[0], &_L37);
+  kcg_copy_array_real_1(&(*aBrakeSafe).speed_definition[13], &_L4);
+  kcg_copy_array_real_100_13(&(*aBrakeSafe).data[0], &_L31);
+  kcg_copy_array_real_100_1(&(*aBrakeSafe).data[13], &_L10);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** InflateABrakeSafe_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

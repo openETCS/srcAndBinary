@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _mergeTIU_Info_input_from_TIU_API_Pkg_H_
 #define _mergeTIU_Info_input_from_TIU_API_Pkg_H_
@@ -10,19 +10,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* input_from_TIU_API_Pkg::mergeTIU_Info */
 extern void mergeTIU_Info_input_from_TIU_API_Pkg(
-  /* input_from_TIU_API_Pkg::mergeTIU_Info::newInfo */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *newInfo,
-  /* input_from_TIU_API_Pkg::mergeTIU_Info::storedInfo */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *storedInfo,
-  /* input_from_TIU_API_Pkg::mergeTIU_Info::EVC_trainData */ trainData_T_TIU_Types_Pkg *EVC_trainData,
-  /* input_from_TIU_API_Pkg::mergeTIU_Info::updatedInfo */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *updatedInfo);
+  /* input_from_TIU_API_Pkg::mergeTIU_Info::newInfo */Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *newInfo,
+  /* input_from_TIU_API_Pkg::mergeTIU_Info::storedInfo */Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *storedInfo,
+  /* input_from_TIU_API_Pkg::mergeTIU_Info::EVC_trainData */trainData_T_TIU_Types_Pkg *EVC_trainData,
+  /* input_from_TIU_API_Pkg::mergeTIU_Info::updatedInfo */Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *updatedInfo);
 
 #endif /* _mergeTIU_Info_input_from_TIU_API_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mergeTIU_Info_input_from_TIU_API_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* SDM_GradientAcceleration_Pkg::DetermineNewIndices */
 void DetermineNewIndices_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::Accu */ ACC_SDM_GradientAcceleration_Pkg *Accu,
-  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::IncFrontIdx */ kcg_bool IncFrontIdx,
-  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::frontIndex */ kcg_int *frontIndex,
-  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::rearIndex */ kcg_int *rearIndex)
+  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::Accu */ACC_SDM_GradientAcceleration_Pkg *Accu,
+  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::IncFrontIdx */kcg_bool IncFrontIdx,
+  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::frontIndex */kcg_int *frontIndex,
+  /* SDM_GradientAcceleration_Pkg::DetermineNewIndices::rearIndex */kcg_int *rearIndex)
 {
-  /* 3 */ if (IncFrontIdx) {
+  if (IncFrontIdx) {
     *rearIndex = (*Accu).rearIndex;
     *frontIndex = (*Accu).frontIndex + 1;
   }
@@ -24,8 +24,8 @@ void DetermineNewIndices_SDM_GradientAcceleration_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DetermineNewIndices_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

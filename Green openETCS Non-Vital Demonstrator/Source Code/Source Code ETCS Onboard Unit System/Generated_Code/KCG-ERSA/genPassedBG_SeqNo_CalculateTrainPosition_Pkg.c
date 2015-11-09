@@ -1,37 +1,24 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "genPassedBG_SeqNo_CalculateTrainPosition_Pkg.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void genPassedBG_SeqNo_init_CalculateTrainPosition_Pkg(
-  outC_genPassedBG_SeqNo_CalculateTrainPosition_Pkg *outC)
-{
-  outC->seqNo = 0;
-  /* 1 */
-  countUp_init_CalculateTrainPosition_Pkg_gp_functions_Pkg(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void genPassedBG_SeqNo_reset_CalculateTrainPosition_Pkg(
   outC_genPassedBG_SeqNo_CalculateTrainPosition_Pkg *outC)
 {
   /* 1 */
   countUp_reset_CalculateTrainPosition_Pkg_gp_functions_Pkg(&outC->Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo */
 void genPassedBG_SeqNo_CalculateTrainPosition_Pkg(
-  /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::passedBG */ passedBG_T_BG_Types_Pkg *passedBG,
-  /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::BGs */ positionedBGs_T_TrainPosition_Types_Pck *BGs,
-  /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::reset */ kcg_bool reset,
+  /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::passedBG */passedBG_T_BG_Types_Pkg *passedBG,
+  /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::BGs */positionedBGs_T_TrainPosition_Types_Pck *BGs,
+  /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::reset */kcg_bool reset,
   outC_genPassedBG_SeqNo_CalculateTrainPosition_Pkg *outC)
 {
   /* CalculateTrainPosition_Pkg::genPassedBG_SeqNo::keepPassedBGSeqNo */
@@ -66,7 +53,7 @@ void genPassedBG_SeqNo_CalculateTrainPosition_Pkg(
     (kcg_bool) (!keepPassedBGSeqNo & (*passedBG).valid),
     reset,
     &outC->Context_1);
-  /* 1 */ if (keepPassedBGSeqNo) {
+  if (keepPassedBGSeqNo) {
     outC->seqNo = _L8.seqNoOnTrack;
   }
   else {
@@ -74,8 +61,8 @@ void genPassedBG_SeqNo_CalculateTrainPosition_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** genPassedBG_SeqNo_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

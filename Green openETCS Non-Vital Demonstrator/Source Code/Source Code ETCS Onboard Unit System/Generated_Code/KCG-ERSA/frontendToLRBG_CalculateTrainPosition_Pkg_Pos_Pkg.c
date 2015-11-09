@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG */
 Q_DLRBG frontendToLRBG_CalculateTrainPosition_Pkg_Pos_Pkg(
-  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::LRBG */ positionedBG_T_TrainPosition_Types_Pck *LRBG,
-  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::trainPositionInfo */ trainPositionInfo_T_TrainPosition_Types_Pck *trainPositionInfo,
-  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties)
+  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::LRBG */positionedBG_T_TrainPosition_Types_Pck *LRBG,
+  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::trainPositionInfo */trainPositionInfo_T_TrainPosition_Types_Pck *trainPositionInfo,
+  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties)
 {
-  /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG */
   static LocWithInAcc_T_Obu_BasicTypes_Pkg tmp;
   /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -26,14 +25,7 @@ Q_DLRBG frontendToLRBG_CalculateTrainPosition_Pkg_Pos_Pkg(
   /* CalculateTrainPosition_Pkg::Pos_Pkg::frontendToLRBG::nominalOrReverseToLRBG */
   static Q_DLRBG nominalOrReverseToLRBG;
   
-  /* 1 */
-  add_2_Distances_BasicLocationFunctions_Pkg(
-    &(*trainPositionInfo).trainPosition,
-    &(*trainProperties).d_baliseAntenna_2_frontend,
-    &tmp);
-  /* 1 */
-  sub_2_distances_BasicLocationFunctions_Pkg(&tmp, &(*LRBG).location, &_L10);
-  /* 1 */ if ((*trainPositionInfo).valid & (*LRBG).valid &
+  if ((*trainPositionInfo).valid & (*LRBG).valid &
     (*LRBG).infoFromPassing.valid) {
     trainOrientationToLRBG =
       (*LRBG).infoFromPassing.BG_Header.trainOrientationToBG;
@@ -42,8 +34,15 @@ Q_DLRBG frontendToLRBG_CalculateTrainPosition_Pkg_Pos_Pkg(
     trainOrientationToLRBG = Q_DIRLRBG_Unknown;
   }
   IfBlock1_clock = trainOrientationToLRBG == Q_DIRLRBG_Nominal;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    /* 2 */ if (_L10.nominal > 0) {
+  /* 1 */
+  add_2_Distances_BasicLocationFunctions_Pkg(
+    &(*trainPositionInfo).trainPosition,
+    &(*trainProperties).d_baliseAntenna_2_frontend,
+    &tmp);
+  /* 1 */
+  sub_2_distances_BasicLocationFunctions_Pkg(&tmp, &(*LRBG).location, &_L10);
+  if (IfBlock1_clock) {
+    if (_L10.nominal > 0) {
       nominalOrReverseToLRBG = Q_DLRBG_Nominal;
     }
     else {
@@ -52,8 +51,8 @@ Q_DLRBG frontendToLRBG_CalculateTrainPosition_Pkg_Pos_Pkg(
   }
   else {
     else_clock_IfBlock1 = trainOrientationToLRBG == Q_DIRLRBG_Reverse;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
-      /* 4 */ if (_L10.nominal > 0) {
+    if (else_clock_IfBlock1) {
+      if (_L10.nominal > 0) {
         nominalOrReverseToLRBG = Q_DLRBG_Reverse;
       }
       else {
@@ -67,8 +66,8 @@ Q_DLRBG frontendToLRBG_CalculateTrainPosition_Pkg_Pos_Pkg(
   return nominalOrReverseToLRBG;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** frontendToLRBG_CalculateTrainPosition_Pkg_Pos_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

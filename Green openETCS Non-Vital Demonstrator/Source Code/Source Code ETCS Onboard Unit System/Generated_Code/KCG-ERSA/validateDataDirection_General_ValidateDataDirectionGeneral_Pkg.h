@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _validateDataDirection_General_ValidateDataDirectionGeneral_Pkg_H_
 #define _validateDataDirection_General_ValidateDataDirectionGeneral_Pkg_H_
@@ -10,21 +10,19 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General */
 extern void validateDataDirection_General_ValidateDataDirectionGeneral_Pkg(
-  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::inMessage */ ReceivedMessage_T_Common_Types_Pkg *inMessage,
-  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::trainRunningDirectionFromBG */ Q_DIRTRAIN trainRunningDirectionFromBG,
-  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::LRBGKnown */ kcg_bool LRBGKnown,
-  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::coordinateSystemAssigned */ kcg_bool coordinateSystemAssigned,
-  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::outMessage */ ReceivedMessage_T_Common_Types_Pkg *outMessage);
+  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::inMessage */ReceivedMessage_T_Common_Types_Pkg *inMessage,
+  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::trainRunningDirectionFromBG */Q_DIRTRAIN trainRunningDirectionFromBG,
+  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::LRBGKnown */kcg_bool LRBGKnown,
+  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::coordinateSystemAssigned */kcg_bool coordinateSystemAssigned,
+  /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage);
 
 #endif /* _validateDataDirection_General_ValidateDataDirectionGeneral_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** validateDataDirection_General_ValidateDataDirectionGeneral_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

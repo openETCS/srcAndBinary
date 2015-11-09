@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,17 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::InitalValues */
 void InitalValues_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::target */ Target_real_T_TargetManagement_types *target,
-  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::aSafe */ ASafe_T_CalcBrakingCurves_types *aSafe,
-  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::BCAcc */ BCAccumulator_type_CalcBrakingCurves_Pkg *BCAcc)
+  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::target */Target_real_T_TargetManagement_types *target,
+  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::aSafe */ASafe_T_CalcBrakingCurves_types *aSafe,
+  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::BCAcc */BCAccumulator_type_CalcBrakingCurves_Pkg *BCAcc)
 {
-  /* CalcBrakingCurves_Pkg::internalOperators::InitalValues */
   static L_internal_real_Type_SDM_Types_Pkg tmp;
   /* CalcBrakingCurves_Pkg::internalOperators::InitalValues::targetIsMRSPorLOA */
   static kcg_bool targetIsMRSPorLOA;
   
   targetIsMRSPorLOA = /* isMRSPorLOATarget */
     isMRSPorLOATarget_CalcBrakingCurves_Pkg_internalOperators(target);
-  /* 4 */ if (targetIsMRSPorLOA) {
+  if (targetIsMRSPorLOA) {
     tmp = /* CalculateEBDFootForMRSPorLOA */
       CalculateEBDFootForMRSPorLOA_CalcBrakingCurves_Pkg_internalOperators(
         targetIsMRSPorLOA,
@@ -38,8 +37,8 @@ void InitalValues_CalcBrakingCurves_Pkg_internalOperators(
     BCAcc);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** InitalValues_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

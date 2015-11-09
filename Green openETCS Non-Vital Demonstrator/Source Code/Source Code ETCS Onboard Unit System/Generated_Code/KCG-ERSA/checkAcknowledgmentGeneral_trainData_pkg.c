@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* trainData_pkg::checkAcknowledgmentGeneral */
 void checkAcknowledgmentGeneral_trainData_pkg(
-  /* trainData_pkg::checkAcknowledgmentGeneral::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
-  /* trainData_pkg::checkAcknowledgmentGeneral::ackReceived */ kcg_bool *ackReceived,
-  /* trainData_pkg::checkAcknowledgmentGeneral::ackRequested */ kcg_bool *ackRequested)
+  /* trainData_pkg::checkAcknowledgmentGeneral::trackMessages */ReceivedMessage_T_Common_Types_Pkg *trackMessages,
+  /* trainData_pkg::checkAcknowledgmentGeneral::ackReceived */kcg_bool *ackReceived,
+  /* trainData_pkg::checkAcknowledgmentGeneral::ackRequested */kcg_bool *ackRequested)
 {
   *ackReceived = (*trackMessages).valid & ((*trackMessages).source ==
       msrc_Euroradio_Common_Types_Pkg) &
@@ -26,8 +26,8 @@ void checkAcknowledgmentGeneral_trainData_pkg(
   *ackRequested = *ackReceived;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkAcknowledgmentGeneral_trainData_pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

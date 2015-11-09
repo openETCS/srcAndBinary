@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* xdebugSupport_Pkg::checkNTCPriority */
 kcg_bool checkNTCPriority_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::checkNTCPriority::p41 */ P41_LevelTransistionOrders_T_Packet_Types_Pkg *p41)
+  /* xdebugSupport_Pkg::checkNTCPriority::p41 */P41_LevelTransistionOrders_T_Packet_Types_Pkg *p41)
 {
   /* xdebugSupport_Pkg::checkNTCPriority::isNTC */
   static kcg_bool isNTC;
@@ -18,8 +18,8 @@ kcg_bool checkNTCPriority_xdebugSupport_Pkg(
   return isNTC;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkNTCPriority_xdebugSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

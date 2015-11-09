@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG */
 void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::msgFromTrack */ ReceivedMessage_T_Common_Types_Pkg *msgFromTrack,
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::passedBG */ passedBG_T_BG_Types_Pkg *passedBG,
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::BG_passed */ kcg_bool *BG_passed,
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::onlyBGsAnnouncedViaRadio */ kcg_bool *onlyBGsAnnouncedViaRadio)
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::msgFromTrack */ReceivedMessage_T_Common_Types_Pkg *msgFromTrack,
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::passedBG */passedBG_T_BG_Types_Pkg *passedBG,
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::BG_passed */kcg_bool *BG_passed,
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::onlyBGsAnnouncedViaRadio */kcg_bool *onlyBGsAnnouncedViaRadio)
 {
   /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L114 */
   static kcg_bool _L114;
@@ -29,7 +29,7 @@ void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
     &(*passedBG).BG_Header,
     &(*msgFromTrack).BG_Common_Header);
   _L114 = (*msgFromTrack).source == msrc_Euroradio_Common_Types_Pkg;
-  /* 1 */ if (_L114) {
+  if (_L114) {
     _L296 = (*msgFromTrack).Radio_Common_Header.nid_lrbg;
   }
   else {
@@ -55,14 +55,14 @@ void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
       (*msgFromTrack).BG_Common_Header.valid) | ((*msgFromTrack).valid &
       _L295[0].valid);
   kcg_copy_LinkedBGs_T_BG_Types_Pkg(&(*passedBG).linkedBGs, &_L295);
-  *BG_passed = (*msgFromTrack).valid & (msrc_Eurobalise_Common_Types_Pkg ==
-      (*msgFromTrack).source) & (*msgFromTrack).BG_Common_Header.valid;
   *onlyBGsAnnouncedViaRadio = (*msgFromTrack).valid &
     !(*msgFromTrack).BG_Common_Header.valid & _L114 & _L295[0].valid;
+  *BG_passed = (*msgFromTrack).valid & (msrc_Eurobalise_Common_Types_Pkg ==
+      (*msgFromTrack).source) & (*msgFromTrack).BG_Common_Header.valid;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

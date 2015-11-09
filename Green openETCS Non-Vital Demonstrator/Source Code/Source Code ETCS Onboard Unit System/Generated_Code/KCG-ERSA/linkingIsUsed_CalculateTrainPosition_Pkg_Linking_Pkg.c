@@ -1,61 +1,33 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void linkingIsUsed_init_CalculateTrainPosition_Pkg_Linking_Pkg(
-  outC_linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg *outC)
-{
-  outC->linkingIsUsed = kcg_true;
-  outC->_L7 = kcg_true;
-  outC->_L10 = kcg_true;
-  outC->init = kcg_true;
-  outC->_L9 = 0;
-  outC->_L6 = 0;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void linkingIsUsed_reset_CalculateTrainPosition_Pkg_Linking_Pkg(
   outC_linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed */
 void linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg(
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::currentOdometry */ odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::BGs */ positionedBGs_T_TrainPosition_Types_Pck *BGs,
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::recalculateBGs */ kcg_bool recalculateBGs,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::currentOdometry */odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::BGs */positionedBGs_T_TrainPosition_Types_Pck *BGs,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::recalculateBGs */kcg_bool recalculateBGs,
   outC_linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg *outC)
 {
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed */
-  static positionedBG_T_TrainPosition_Types_Pck tmp;
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed */
-  static kcg_bool _1_op_call;
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed */
-  static kcg_bool op_call;
+  static kcg_bool tmp1;
+  static kcg_bool tmp;
   /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::lastLinkedBG */
   static positionedBG_T_TrainPosition_Types_Pck lastLinkedBG;
   /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::_L28 */
   static LocWithInAcc_T_Obu_BasicTypes_Pkg _L28;
   
-  /* ck_recalculateBGs */ if (recalculateBGs) {
-    /* 1 */
-    indexOfLastBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-      kcg_true,
-      BGs,
-      recalculateBGs,
-      &outC->_L9,
-      &outC->_L10,
-      &_1_op_call);
+  if (recalculateBGs) {
     /* 1 */
     indexOfLastPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       kcg_true,
@@ -63,7 +35,15 @@ void linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg(
       recalculateBGs,
       &outC->_L6,
       &outC->_L7,
-      &op_call);
+      &tmp1);
+    /* 1 */
+    indexOfLastBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
+      kcg_true,
+      BGs,
+      recalculateBGs,
+      &outC->_L9,
+      &outC->_L10,
+      &tmp);
   }
   else if (outC->init) {
     outC->_L10 = kcg_false;
@@ -71,6 +51,22 @@ void linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg(
     outC->_L6 = cNoValidIndex_CalculateTrainPosition_Pkg;
     outC->_L9 = cNoValidIndex_CalculateTrainPosition_Pkg;
   }
+  if ((0 <= outC->_L6) & (outC->_L6 < 41)) {
+    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
+      &lastLinkedBG,
+      &(*BGs)[outC->_L6]);
+  }
+  else {
+    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
+      &lastLinkedBG,
+      (positionedBG_T_TrainPosition_Types_Pck *)
+        &cNoPositionedBG_CalculateTrainPosition_Pkg);
+  }
+  /* 1 */
+  positionDerivedFromPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
+    &(*currentOdometry).odo,
+    &lastLinkedBG,
+    &_L28);
   outC->init = kcg_false;
   if ((0 <= outC->_L9) & (outC->_L9 < 41)) {
     kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
@@ -83,27 +79,13 @@ void linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg(
       (positionedBG_T_TrainPosition_Types_Pck *)
         &cNoPositionedBG_CalculateTrainPosition_Pkg);
   }
-  if ((0 <= outC->_L6) & (outC->_L6 < 41)) {
-    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(&tmp, &(*BGs)[outC->_L6]);
-  }
-  else {
-    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
-      &tmp,
-      (positionedBG_T_TrainPosition_Types_Pck *)
-        &cNoPositionedBG_CalculateTrainPosition_Pkg);
-  }
-  /* 1 */
-  positionDerivedFromPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-    &(*currentOdometry).odo,
-    &tmp,
-    &_L28);
   outC->linkingIsUsed = !(_L28.nominal + _L28.d_min >
       lastLinkedBG.location.nominal + lastLinkedBG.location.d_max) &
     (outC->_L7 & (outC->_L6 < outC->_L9) & outC->_L10);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

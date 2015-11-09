@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
 #define _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
@@ -13,8 +13,6 @@
 #include "FallingEdge_digital.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -38,24 +36,17 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed */
 extern void linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg(
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::position */ LocWithInAcc_T_Obu_BasicTypes_Pkg *position,
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::enable */ kcg_bool enable,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::position */LocWithInAcc_T_Obu_BasicTypes_Pkg *position,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::enable */kcg_bool enable,
   outC_linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void linkedBG_missed_reset_CalculateTrainPosition_Pkg_Linking_Pkg(
   outC_linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void linkedBG_missed_init_CalculateTrainPosition_Pkg_Linking_Pkg(
-  outC_linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

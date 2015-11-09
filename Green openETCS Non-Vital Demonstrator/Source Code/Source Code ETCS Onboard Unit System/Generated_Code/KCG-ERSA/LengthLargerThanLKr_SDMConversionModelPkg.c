@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,9 @@
 
 /* SDMConversionModelPkg::LengthLargerThanLKr */
 kcg_bool LengthLargerThanLKr_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::LengthLargerThanLKr::L */ L_internal_Type_Obu_BasicTypes_Pkg L,
-  /* SDMConversionModelPkg::LengthLargerThanLKr::LnvKrInt */ L_NVKRINT LnvKrInt)
+  /* SDMConversionModelPkg::LengthLargerThanLKr::L */L_internal_Type_Obu_BasicTypes_Pkg L,
+  /* SDMConversionModelPkg::LengthLargerThanLKr::LnvKrInt */L_NVKRINT LnvKrInt)
 {
-  /* SDMConversionModelPkg::LengthLargerThanLKr */
   static kcg_int tmp;
   /* SDMConversionModelPkg::LengthLargerThanLKr::isLarger */
   static kcg_bool isLarger;
@@ -120,8 +119,8 @@ kcg_bool LengthLargerThanLKr_SDMConversionModelPkg(
   return isLarger;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** LengthLargerThanLKr_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

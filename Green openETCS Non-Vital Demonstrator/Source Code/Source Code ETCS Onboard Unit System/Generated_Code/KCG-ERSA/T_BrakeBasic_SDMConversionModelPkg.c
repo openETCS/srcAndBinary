@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* SDMConversionModelPkg::T_BrakeBasic */
 T_internal_real_Type_SDM_Types_Pkg T_BrakeBasic_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::T_BrakeBasic::coeff */ coeff_BrakeBasic_t_SDMConversionModelPkg *coeff,
-  /* SDMConversionModelPkg::T_BrakeBasic::trainLength */ L_internal_real_Type_SDM_Types_Pkg trainLength)
+  /* SDMConversionModelPkg::T_BrakeBasic::coeff */coeff_BrakeBasic_t_SDMConversionModelPkg *coeff,
+  /* SDMConversionModelPkg::T_BrakeBasic::trainLength */L_internal_real_Type_SDM_Types_Pkg trainLength)
 {
   /* SDMConversionModelPkg::T_BrakeBasic::_L13 */
   static kcg_real _L13;
@@ -22,8 +22,8 @@ T_internal_real_Type_SDM_Types_Pkg T_BrakeBasic_SDMConversionModelPkg(
   return T_BB;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** T_BrakeBasic_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

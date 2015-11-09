@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_Icon_control_flag_to_int */
 Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_Icon_control_flag_to_int::Input1 */ Icon_control_flag_T_DMI_Types_Pkg Input1)
+  /* DATA::Variables::CAST_Icon_control_flag_to_int::Input1 */Icon_control_flag_T_DMI_Types_Pkg Input1)
 {
   /* DATA::Variables::CAST_Icon_control_flag_to_int::IfBlock1::else */
   static kcg_bool _2_else_clock_IfBlock1;
@@ -22,30 +22,30 @@ Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_DATA_Variables(
   /* DATA::Variables::CAST_Icon_control_flag_to_int::Output1 */
   static Icon_control_flag_INT_T_DATA Output1;
   
-  IfBlock1_clock = Input1 == ENUM_Icon_control_flag_T_show_icon_in_area;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    Output1 = INT_Icon_control_flag_T_show_icon_in_area;
+  IfBlock1_clock = Input1 == _73_ENUM_Icon_control_flag_T_show_icon_in_area;
+  if (IfBlock1_clock) {
+    Output1 = _71_INT_Icon_control_flag_T_show_icon_in_area;
   }
   else {
     _2_else_clock_IfBlock1 = Input1 == ENUM_Icon_control_flag_T_clear_area;
-    /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+    if (_2_else_clock_IfBlock1) {
       Output1 = INT_Icon_control_flag_T_clear_area;
     }
     else {
       _1_else_clock_IfBlock1 = Input1 ==
-        ENUM_Icon_control_flag_T_show_icon_flashing_in_area;
-      /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+        _72_ENUM_Icon_control_flag_T_show_icon_flashing_in_area;
+      if (_1_else_clock_IfBlock1) {
         Output1 = INT_Icon_control_flag_T_show_icon_flashing_in_area;
       }
       else {
         else_clock_IfBlock1 = Input1 ==
           ENUM_Icon_control_flag_T_show_icon_with_yellow_flashing_frame_in_area;
-        /* ck_anon_activ */ if (else_clock_IfBlock1) {
+        if (else_clock_IfBlock1) {
           Output1 =
-            INT_Icon_control_flag_T_show_icon_with_yellow_flashing_frame_in_area;
+            _70_INT_Icon_control_flag_T_show_icon_with_yellow_flashing_frame_in_area;
         }
         else {
-          Output1 = INT_Icon_control_flag_T_show_icon_in_area;
+          Output1 = _71_INT_Icon_control_flag_T_show_icon_in_area;
         }
       }
     }
@@ -53,8 +53,8 @@ Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_DATA_Variables(
   return Output1;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Icon_control_flag_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

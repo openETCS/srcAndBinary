@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* DATA::Packets::Bothways::C_int_to_DMI_Train_Data */
 void C_int_to_DMI_Train_Data_DATA_Packets_Bothways(
-  /* DATA::Packets::Bothways::C_int_to_DMI_Train_Data::dmi_train_data_int */ DMI_Train_Data_int_array_T_DATA *dmi_train_data_int,
-  /* DATA::Packets::Bothways::C_int_to_DMI_Train_Data::dmi_train_data_ct */ DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *dmi_train_data_ct)
+  /* DATA::Packets::Bothways::C_int_to_DMI_Train_Data::dmi_train_data_int */DMI_Train_Data_int_array_T_DATA *dmi_train_data_int,
+  /* DATA::Packets::Bothways::C_int_to_DMI_Train_Data::dmi_train_data_ct */DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *dmi_train_data_ct)
 {
   (*dmi_train_data_ct).systemTime = (*dmi_train_data_int)[1];
   (*dmi_train_data_ct).l_train = (*dmi_train_data_int)[3];
@@ -28,8 +28,8 @@ void C_int_to_DMI_Train_Data_DATA_Packets_Bothways(
     CAST_Int_to_M_LOADINGGAUGE_TM_conversions((*dmi_train_data_int)[8]);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_int_to_DMI_Train_Data_DATA_Packets_Bothways.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

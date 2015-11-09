@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* CheckEuroradioMessage::CheckMandatoryVariablesAndMA */
 kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
-  /* CheckEuroradioMessage::CheckMandatoryVariablesAndMA::rtmMessage */ ReceivedMessage_T_Common_Types_Pkg *rtmMessage)
+  /* CheckEuroradioMessage::CheckMandatoryVariablesAndMA::rtmMessage */ReceivedMessage_T_Common_Types_Pkg *rtmMessage)
 {
   /* CheckEuroradioMessage::CheckMandatoryVariablesAndMA::IfBlock1::else */
   static kcg_bool _9_else_clock_IfBlock1;
@@ -37,7 +37,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
   static kcg_bool valid;
   
   IfBlock1_clock = (*rtmMessage).Radio_Common_Header.nid_message == 3;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     valid = !((*rtmMessage).radioMetadata.t_train_reference |
         (*rtmMessage).radioMetadata.nid_em |
         (*rtmMessage).radioMetadata.q_scale | (*rtmMessage).radioMetadata.d_sr |
@@ -49,7 +49,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
   }
   else {
     _9_else_clock_IfBlock1 = (*rtmMessage).Radio_Common_Header.nid_message == 8;
-    /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
+    if (_9_else_clock_IfBlock1) {
       valid = !(!(*rtmMessage).radioMetadata.t_train_reference |
           (*rtmMessage).radioMetadata.nid_em |
           (*rtmMessage).radioMetadata.q_scale |
@@ -63,7 +63,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
     else {
       _8_else_clock_IfBlock1 = (*rtmMessage).Radio_Common_Header.nid_message ==
         9;
-      /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
+      if (_8_else_clock_IfBlock1) {
         valid = !((*rtmMessage).radioMetadata.t_train_reference |
             (*rtmMessage).radioMetadata.nid_em |
             (*rtmMessage).radioMetadata.q_scale |
@@ -79,7 +79,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
       else {
         _7_else_clock_IfBlock1 =
           (*rtmMessage).Radio_Common_Header.nid_message == 15;
-        /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
+        if (_7_else_clock_IfBlock1) {
           valid = !((*rtmMessage).radioMetadata.t_train_reference |
               !(*rtmMessage).radioMetadata.nid_em |
               !(*rtmMessage).radioMetadata.q_scale |
@@ -93,7 +93,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
         else {
           _6_else_clock_IfBlock1 =
             (*rtmMessage).Radio_Common_Header.nid_message == 16;
-          /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
+          if (_6_else_clock_IfBlock1) {
             valid = !((*rtmMessage).radioMetadata.t_train_reference |
                 !(*rtmMessage).radioMetadata.nid_em |
                 (*rtmMessage).radioMetadata.q_scale |
@@ -107,7 +107,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
           else {
             _5_else_clock_IfBlock1 =
               (*rtmMessage).Radio_Common_Header.nid_message == 18;
-            /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
+            if (_5_else_clock_IfBlock1) {
               valid = !((*rtmMessage).radioMetadata.t_train_reference |
                   !(*rtmMessage).radioMetadata.nid_em |
                   (*rtmMessage).radioMetadata.q_scale |
@@ -121,7 +121,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
             else {
               _4_else_clock_IfBlock1 =
                 (*rtmMessage).Radio_Common_Header.nid_message == 24;
-              /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+              if (_4_else_clock_IfBlock1) {
                 valid = !((*rtmMessage).radioMetadata.t_train_reference |
                     (*rtmMessage).radioMetadata.nid_em |
                     (*rtmMessage).radioMetadata.q_scale |
@@ -135,7 +135,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
               else {
                 _3_else_clock_IfBlock1 =
                   (*rtmMessage).Radio_Common_Header.nid_message == 32;
-                /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+                if (_3_else_clock_IfBlock1) {
                   valid = !((*rtmMessage).radioMetadata.t_train_reference |
                       (*rtmMessage).radioMetadata.nid_em |
                       (*rtmMessage).radioMetadata.q_scale |
@@ -149,7 +149,7 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
                 else {
                   _2_else_clock_IfBlock1 =
                     (*rtmMessage).Radio_Common_Header.nid_message == 33;
-                  /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+                  if (_2_else_clock_IfBlock1) {
                     valid = !((*rtmMessage).radioMetadata.t_train_reference |
                         (*rtmMessage).radioMetadata.nid_em |
                         !(*rtmMessage).radioMetadata.q_scale |
@@ -165,14 +165,14 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
                   else {
                     _1_else_clock_IfBlock1 =
                       (*rtmMessage).Radio_Common_Header.nid_message == 39;
-                    /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+                    if (_1_else_clock_IfBlock1) {
                       valid = (*rtmMessage).Radio_Common_Header.m_ack ==
                         M_ACK_No_acknowledgement_required;
                     }
                     else {
                       else_clock_IfBlock1 =
                         (*rtmMessage).Radio_Common_Header.nid_message == 41;
-                      /* ck_anon_activ */ if (else_clock_IfBlock1) {
+                      if (else_clock_IfBlock1) {
                         valid =
                           !((*rtmMessage).radioMetadata.t_train_reference |
                             (*rtmMessage).radioMetadata.nid_em |
@@ -200,8 +200,8 @@ kcg_bool CheckMandatoryVariablesAndMA_CheckEuroradioMessage(
   return valid;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckMandatoryVariablesAndMA_CheckEuroradioMessage.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

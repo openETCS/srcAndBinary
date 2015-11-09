@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,12 @@
 
 /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop */
 void SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP(
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::i */ kcg_int i,
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::SP */ StaticSpeedProfile_t_TrackAtlasTypes *SP,
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::First_Section_To_Replace */ kcg_int First_Section_To_Replace,
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::new_SP_received */ StaticSpeedProfile_t_TrackAtlasTypes *new_SP_received,
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::SSP */ StaticSpeedProfile_t_TrackAtlasTypes *SSP)
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::i */kcg_int i,
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::SP */StaticSpeedProfile_t_TrackAtlasTypes *SP,
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::First_Section_To_Replace */kcg_int First_Section_To_Replace,
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::new_SP_received */StaticSpeedProfile_t_TrackAtlasTypes *new_SP_received,
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop::SSP */StaticSpeedProfile_t_TrackAtlasTypes *SSP)
 {
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile_loop */
   static StaticSpeedSection_t_TrackAtlasTypes tmp;
   
   kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(SSP, SP);
@@ -36,8 +35,8 @@ void SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

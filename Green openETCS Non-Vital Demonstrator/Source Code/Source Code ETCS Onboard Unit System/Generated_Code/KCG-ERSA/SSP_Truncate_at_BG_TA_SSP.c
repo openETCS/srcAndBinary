@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,30 +9,27 @@
 
 /* TA_SSP::SSP_Truncate_at_BG */
 void SSP_Truncate_at_BG_TA_SSP(
-  /* TA_SSP::SSP_Truncate_at_BG::Profile_in */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_SSP::SSP_Truncate_at_BG::Profile_out */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_out)
+  /* TA_SSP::SSP_Truncate_at_BG::Profile_in */StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
+  /* TA_SSP::SSP_Truncate_at_BG::Profile_out */StaticSpeedProfile_t_TrackAtlasTypes *Profile_out)
 {
-  /* TA_SSP::SSP_Truncate_at_BG */
-  static kcg_int acc1;
-  /* TA_SSP::SSP_Truncate_at_BG */
-  static StaticSpeedProfile_t_TrackAtlasTypes acc;
-  /* TA_SSP::SSP_Truncate_at_BG */
-  static kcg_bool cond_iterw;
+  static kcg_int tmp2;
+  static StaticSpeedProfile_t_TrackAtlasTypes tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   /* TA_SSP::SSP_Truncate_at_BG::_L5 */
   static kcg_int _L5;
   
   _L5 = 0;
-  /* 2 */ for (i = 0; i < 50; i++) {
-    acc1 = _L5;
+  for (i = 0; i < 50; i++) {
+    tmp2 = _L5;
     /* 1 */
     SSP_Find_First_Speed_Section_After_BG_loop_TA_SSP(
       i,
-      acc1,
+      tmp2,
       Profile_in,
-      &cond_iterw,
+      &tmp,
       &_L5);
-    /* 2 */ if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
@@ -40,24 +37,24 @@ void SSP_Truncate_at_BG_TA_SSP(
     Profile_out,
     (StaticSpeedProfile_t_TrackAtlasTypes *)
       &DEFAULT_StaticSpeedProfile_TrackAtlasTypes);
-  /* 1 */ for (i = 0; i < 50; i++) {
-    kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(&acc, Profile_out);
+  for (i = 0; i < 50; i++) {
+    kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(&tmp1, Profile_out);
     /* 1 */
     SSP_Truncate_at_BG_loop_TA_SSP(
       i,
-      &acc,
+      &tmp1,
       Profile_in,
       _L5,
-      &cond_iterw,
+      &tmp,
       Profile_out);
-    /* 1 */ if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_Truncate_at_BG_TA_SSP.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

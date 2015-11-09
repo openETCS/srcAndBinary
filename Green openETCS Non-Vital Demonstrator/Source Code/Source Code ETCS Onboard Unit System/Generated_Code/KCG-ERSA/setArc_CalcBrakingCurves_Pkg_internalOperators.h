@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _setArc_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _setArc_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -9,19 +9,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* CalcBrakingCurves_Pkg::internalOperators::setArc */
 extern void setArc_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::Arc */ ParabolaArc_T_CalcBrakingCurves_types *Arc,
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::oldBC */ ParabolaCurve_T_CalcBrakingCurves_types *oldBC,
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::index */ kcg_int index,
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::newBC */ ParabolaCurve_T_CalcBrakingCurves_types *newBC);
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::Arc */ParabolaArc_T_CalcBrakingCurves_types *Arc,
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::oldBC */ParabolaCurve_T_CalcBrakingCurves_types *oldBC,
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::index */kcg_int index,
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::newBC */ParabolaCurve_T_CalcBrakingCurves_types *newBC);
 
 #endif /* _setArc_CalcBrakingCurves_Pkg_internalOperators_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** setArc_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

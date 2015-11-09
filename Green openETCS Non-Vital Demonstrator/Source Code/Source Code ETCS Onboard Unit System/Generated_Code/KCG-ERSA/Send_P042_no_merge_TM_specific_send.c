@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,9 @@
 
 /* TM_specific_send::Send_P042_no_merge */
 void Send_P042_no_merge_TM_specific_send(
-  /* TM_specific_send::Send_P042_no_merge::Packet42 */ P42_SessionManagement_T_Packet_Types_Pkg *Packet42,
-  /* TM_specific_send::Send_P042_no_merge::RadioPacketsOut */ CompressedPackets_T_Common_Types_Pkg *RadioPacketsOut)
+  /* TM_specific_send::Send_P042_no_merge::Packet42 */P42_SessionManagement_T_Packet_Types_Pkg *Packet42,
+  /* TM_specific_send::Send_P042_no_merge::RadioPacketsOut */CompressedPackets_T_Common_Types_Pkg *RadioPacketsOut)
 {
-  /* TM_specific_send::Send_P042_no_merge */
   static P042_trackside_int_T_TM tmp;
   /* TM_specific_send::Send_P042_no_merge::_L1 */
   static kcg_bool _L1;
@@ -26,8 +25,8 @@ void Send_P042_no_merge_TM_specific_send(
     RadioPacketsOut);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Send_P042_no_merge_TM_specific_send.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

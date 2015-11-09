@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,21 @@
 
 /* InformationFilter_Pkg::FirstFilter::Exception030405Reject */
 void Exception030405Reject_InformationFilter_Pkg_FirstFilter(
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inPendingAckOfTrainData */ kcg_bool inPendingAckOfTrainData,
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inSPPAndGradientOnBoard */ kcg_bool inSPPAndGradientOnBoard,
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inMACoverNotFullLength */ kcg_bool inMACoverNotFullLength,
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inEmergencyStopAccepted */ kcg_bool inEmergencyStopAccepted,
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::outAcceptMessage */ kcg_bool *outAcceptMessage,
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::outStoreInTransitionBuffer */ kcg_bool *outStoreInTransitionBuffer)
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inPendingAckOfTrainData */kcg_bool inPendingAckOfTrainData,
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inSPPAndGradientOnBoard */kcg_bool inSPPAndGradientOnBoard,
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inMACoverNotFullLength */kcg_bool inMACoverNotFullLength,
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::inEmergencyStopAccepted */kcg_bool inEmergencyStopAccepted,
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::outAcceptMessage */kcg_bool *outAcceptMessage,
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::outStoreInTransitionBuffer */kcg_bool *outStoreInTransitionBuffer)
 {
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L5 */
-  static kcg_bool _L5;
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L6 */
-  static kcg_bool _L6;
-  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L3 */
-  static kcg_bool _L3;
   /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L1 */
   static kcg_bool _L1;
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L3 */
+  static kcg_bool _L3;
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L6 */
+  static kcg_bool _L6;
+  /* InformationFilter_Pkg::FirstFilter::Exception030405Reject::_L5 */
+  static kcg_bool _L5;
   
   *outStoreInTransitionBuffer = kcg_false;
   /* 1 */
@@ -45,8 +45,8 @@ void Exception030405Reject_InformationFilter_Pkg_FirstFilter(
   *outAcceptMessage = _L1 | _L3 | _L5;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Exception030405Reject_InformationFilter_Pkg_FirstFilter.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

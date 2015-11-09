@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* trainData_pkg::checkRBCSystemVersion */
 void checkRBCSystemVersion_trainData_pkg(
-  /* trainData_pkg::checkRBCSystemVersion::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
-  /* trainData_pkg::checkRBCSystemVersion::lastStatus */ trainDataStatus_T_trainData_Types_pkg *lastStatus,
-  /* trainData_pkg::checkRBCSystemVersion::updatedStatus */ trainDataStatus_T_trainData_Types_pkg *updatedStatus)
+  /* trainData_pkg::checkRBCSystemVersion::trackMessages */ReceivedMessage_T_Common_Types_Pkg *trackMessages,
+  /* trainData_pkg::checkRBCSystemVersion::lastStatus */trainDataStatus_T_trainData_Types_pkg *lastStatus,
+  /* trainData_pkg::checkRBCSystemVersion::updatedStatus */trainDataStatus_T_trainData_Types_pkg *updatedStatus)
 {
   kcg_copy_trainDataStatus_T_trainData_Types_pkg(updatedStatus, lastStatus);
   (*updatedStatus).RBCsystemVersionOnboard = ((*trackMessages).valid &
@@ -21,8 +21,8 @@ void checkRBCSystemVersion_trainData_pkg(
     (*lastStatus).RBCsystemVersionOnboard;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkRBCSystemVersion_trainData_pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

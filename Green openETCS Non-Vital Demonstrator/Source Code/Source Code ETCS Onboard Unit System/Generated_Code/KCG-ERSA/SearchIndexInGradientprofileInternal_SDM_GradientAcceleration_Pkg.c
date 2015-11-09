@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal */
 void SearchIndexInGradientprofileInternal_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::index */ kcg_int index,
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::indexOfPosition */ kcg_int indexOfPosition,
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::position */ L_internal_real_Type_SDM_Types_Pkg position,
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::cond */ kcg_bool *cond,
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::indexOfPositionOut */ kcg_int *indexOfPositionOut)
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::index */kcg_int index,
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::indexOfPosition */kcg_int indexOfPosition,
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::position */L_internal_real_Type_SDM_Types_Pkg position,
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::cond */kcg_bool *cond,
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::indexOfPositionOut */kcg_int *indexOfPositionOut)
 {
   /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientprofileInternal::_L5 */
   static Gradient_section_real_t_SDM_GradientAcceleration_types _L5;
@@ -30,7 +30,7 @@ void SearchIndexInGradientprofileInternal_SDM_GradientAcceleration_Pkg(
     _L5.valid = kcg_false;
   }
   *cond = (position >= _L5.location) & _L5.valid;
-  /* 1 */ if (*cond) {
+  if (*cond) {
     *indexOfPositionOut = index;
   }
   else {
@@ -38,8 +38,8 @@ void SearchIndexInGradientprofileInternal_SDM_GradientAcceleration_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SearchIndexInGradientprofileInternal_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

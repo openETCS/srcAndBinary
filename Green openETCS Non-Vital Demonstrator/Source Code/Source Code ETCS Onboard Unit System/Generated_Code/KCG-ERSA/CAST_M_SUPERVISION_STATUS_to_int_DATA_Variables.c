@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_M_SUPERVISION_STATUS_to_int */
 M_SUPERVISION_STATUS_INT_T_DATA CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_M_SUPERVISION_STATUS_to_int::m_supervision_status_ct */ M_SUPERVISION_STATUS_DMI_Types_Pkg m_supervision_status_ct)
+  /* DATA::Variables::CAST_M_SUPERVISION_STATUS_to_int::m_supervision_status_ct */M_SUPERVISION_STATUS_DMI_Types_Pkg m_supervision_status_ct)
 {
   /* DATA::Variables::CAST_M_SUPERVISION_STATUS_to_int::IfBlock1::else */
   static kcg_bool _3_else_clock_IfBlock1;
@@ -25,31 +25,31 @@ M_SUPERVISION_STATUS_INT_T_DATA CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables(
   static M_SUPERVISION_STATUS_INT_T_DATA m_supervision_status_int;
   
   IfBlock1_clock = m_supervision_status_ct == ENUM_M_SUPERVISION_STATUS_CSM;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     m_supervision_status_int = INT_M_SUPERVISION_STATUS_CSM;
   }
   else {
     _3_else_clock_IfBlock1 = m_supervision_status_ct ==
       ENUM_M_SUPERVISION_STATUS_PIM;
-    /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+    if (_3_else_clock_IfBlock1) {
       m_supervision_status_int = INT_M_SUPERVISION_STATUS_PIM;
     }
     else {
       _2_else_clock_IfBlock1 = m_supervision_status_ct ==
         ENUM_M_SUPERVISION_STATUS_TSM;
-      /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+      if (_2_else_clock_IfBlock1) {
         m_supervision_status_int = INT_M_SUPERVISION_STATUS_TSM;
       }
       else {
         _1_else_clock_IfBlock1 = m_supervision_status_ct ==
           ENUM_M_SUPERVISION_STATUS_RSM;
-        /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+        if (_1_else_clock_IfBlock1) {
           m_supervision_status_int = INT_M_SUPERVISION_STATUS_RSM;
         }
         else {
           else_clock_IfBlock1 = m_supervision_status_ct ==
             ENUM_M_SUPERVISION_STATUS_supervision_status_unknown;
-          /* ck_anon_activ */ if (else_clock_IfBlock1) {
+          if (else_clock_IfBlock1) {
             m_supervision_status_int =
               INT_M_SUPERVISION_STATUS_supervision_status_unknown;
           }
@@ -63,8 +63,8 @@ M_SUPERVISION_STATUS_INT_T_DATA CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables(
   return m_supervision_status_int;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

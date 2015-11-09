@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,16 @@
 
 /* TM_conversions::DECODE_NID_LRBG */
 void DECODE_NID_LRBG_TM_conversions(
-  /* TM_conversions::DECODE_NID_LRBG::nid_lrbg */ NID_LRBG nid_lrbg,
-  /* TM_conversions::DECODE_NID_LRBG::nid_c */ NID_C *nid_c,
-  /* TM_conversions::DECODE_NID_LRBG::nid_bg */ NID_BG *nid_bg)
+  /* TM_conversions::DECODE_NID_LRBG::nid_lrbg */NID_LRBG nid_lrbg,
+  /* TM_conversions::DECODE_NID_LRBG::nid_c */NID_C *nid_c,
+  /* TM_conversions::DECODE_NID_LRBG::nid_bg */NID_BG *nid_bg)
 {
-  *nid_c = /* 1 */ CAST_Int_to_NID_C_TM_conversions(nid_lrbg / 100000);
   *nid_bg = /* 1 */ CAST_Int_to_NID_BG_TM_conversions(nid_lrbg % 100000);
+  *nid_c = /* 1 */ CAST_Int_to_NID_C_TM_conversions(nid_lrbg / 100000);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DECODE_NID_LRBG_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

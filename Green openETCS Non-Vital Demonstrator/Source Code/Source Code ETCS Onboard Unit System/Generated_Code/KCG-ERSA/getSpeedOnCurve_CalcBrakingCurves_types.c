@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,24 +9,17 @@
 
 /* CalcBrakingCurves_types::getSpeedOnCurve */
 void getSpeedOnCurve_CalcBrakingCurves_types(
-  /* CalcBrakingCurves_types::getSpeedOnCurve::curve */ ParabolaCurve_T_CalcBrakingCurves_types *curve,
-  /* CalcBrakingCurves_types::getSpeedOnCurve::position */ L_internal_real_Type_SDM_Types_Pkg position,
-  /* CalcBrakingCurves_types::getSpeedOnCurve::valid */ kcg_bool *valid,
-  /* CalcBrakingCurves_types::getSpeedOnCurve::speed */ V_internal_real_Type_SDM_Types_Pkg *speed)
+  /* CalcBrakingCurves_types::getSpeedOnCurve::curve */ParabolaCurve_T_CalcBrakingCurves_types *curve,
+  /* CalcBrakingCurves_types::getSpeedOnCurve::position */L_internal_real_Type_SDM_Types_Pkg position,
+  /* CalcBrakingCurves_types::getSpeedOnCurve::valid */kcg_bool *valid,
+  /* CalcBrakingCurves_types::getSpeedOnCurve::speed */V_internal_real_Type_SDM_Types_Pkg *speed)
 {
-  /* CalcBrakingCurves_types::getSpeedOnCurve */
-  static ParabolaArc_T_CalcBrakingCurves_types mk_struct;
-  /* CalcBrakingCurves_types::getSpeedOnCurve */
-  static kcg_int acc;
+  static struct__107742 tmp;
+  static kcg_int tmp4;
   static kcg_int i;
-  /* CalcBrakingCurves_types::searchIdxFloor */
-  static L_internal_real_Type_SDM_Types_Pkg tmp_1;
-  /* CalcBrakingCurves_types::getSpeedOnCurve */
-  static kcg_bool tmp2;
-  /* CalcBrakingCurves_types::getSpeedOnCurve */
+  static kcg_bool tmp3;
+  static kcg_real tmp2;
   static kcg_real tmp1;
-  /* CalcBrakingCurves_types::getSpeedOnCurve */
-  static kcg_real tmp;
   /* CalcBrakingCurves_types::getSpeedOnCurve::idx */
   static kcg_int idx;
   /* CalcBrakingCurves_types::getSpeedOnCurve::_L6 */
@@ -34,55 +27,54 @@ void getSpeedOnCurve_CalcBrakingCurves_types(
   
   idx = - 1;
   for (i = 0; i < 114; i++) {
-    acc = idx;
-    /* 2 */ if ((*curve).valid[i]) {
-      tmp_1 = (*curve).distances[i];
+    tmp4 = idx;
+    if ((*curve).valid[i]) {
+      _L6 = (*curve).distances[i];
     }
     else {
-      tmp_1 = 0.0;
+      _L6 = 0.0;
     }
-    tmp2 = !(position <= tmp_1);
-    /* 1 */ if (tmp2) {
-      idx = acc;
+    tmp3 = !(position <= _L6);
+    if (tmp3) {
+      idx = tmp4;
     }
     else {
       idx = i;
     }
-    if (!tmp2) {
+    if (!tmp3) {
       break;
     }
   }
   if ((0 <= idx) & (idx < 114)) {
     _L6 = (*curve).accelerations[idx];
-    tmp2 = (*curve).valid[idx];
+    tmp3 = (*curve).valid[idx];
   }
   else {
-    tmp2 = kcg_false;
+    tmp3 = kcg_false;
     _L6 = 0.0;
   }
-  *valid = (_L6 >= 0.0) & tmp2;
-  /* ck_valid */ if (*valid) {
+  *valid = (_L6 >= 0.0) & tmp3;
+  if (*valid) {
     if ((0 <= idx) & (idx < 114)) {
-      tmp1 = (*curve).distances[idx];
-      tmp = (*curve).speeds[idx];
+      tmp2 = (*curve).distances[idx];
+      tmp1 = (*curve).speeds[idx];
     }
     else {
+      tmp2 = 0.0;
       tmp1 = 0.0;
-      tmp = 0.0;
     }
-    mk_struct.distance = tmp1;
-    mk_struct.speed = tmp;
-    mk_struct.acceleration = _L6;
-    *speed = /* 1 */
-      getSpeedOnCurveArc_CalcBrakingCurves_types(&mk_struct, position);
+    tmp.distance = tmp2;
+    tmp.speed = tmp1;
+    tmp.acceleration = _L6;
+    *speed = /* 1 */ getSpeedOnCurveArc_CalcBrakingCurves_types(&tmp, position);
   }
   else {
     *speed = 0.0;
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getSpeedOnCurve_CalcBrakingCurves_types.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

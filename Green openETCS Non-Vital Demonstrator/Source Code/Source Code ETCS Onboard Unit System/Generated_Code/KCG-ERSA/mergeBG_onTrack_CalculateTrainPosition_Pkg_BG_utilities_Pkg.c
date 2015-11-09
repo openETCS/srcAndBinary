@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,11 @@
 
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack */
 void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BG */ positionedBG_T_TrainPosition_Types_Pck *BG,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BGs_out */ positionedBGs_T_TrainPosition_Types_Pck *BGs_out,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::overrun */ kcg_bool *overrun)
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BG */positionedBG_T_TrainPosition_Types_Pck *BG,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::overrun */kcg_bool *overrun)
 {
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack */
   static positionedBGs_T_TrainPosition_Types_Pck tmp;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::indexOfBGInBGs */
   static kcg_int indexOfBGInBGs;
@@ -52,7 +51,7 @@ void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       (positionedBG_T_TrainPosition_Types_Pck *)
         &cNoPositionedBG_CalculateTrainPosition_Pkg);
   }
-  /* 2 */ if (bgFound & (_L61.missed | _L61.infoFromPassing.valid) &
+  if (bgFound & (_L61.missed | _L61.infoFromPassing.valid) &
     (!(*BG).infoFromPassing.valid & (*BG).valid &
       (*BG).infoFromLinking.valid)) {
     kcg_copy_positionedBG_T_TrainPosition_Types_Pck(&bg_loc, &_L61);
@@ -87,8 +86,8 @@ void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     overrun);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

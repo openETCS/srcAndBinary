@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,21 @@
 
 /* InformationFilter_Pkg::FirstFilter::FirstFilter */
 void FirstFilter_InformationFilter_Pkg_FirstFilter(
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMessage */ ReceivedMessage_T_Common_Types_Pkg *inMessage,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLevel */ M_LEVEL inLevel,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingL1Transition */ kcg_bool inPendingL1Transition,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingL2L3Transition */ kcg_bool inPendingL2L3Transition,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingAckOfTrainData */ kcg_bool inPendingAckOfTrainData,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inEmergencyStopAccepted */ kcg_bool inEmergencyStopAccepted,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLastAckTextMessageId */ kcg_int inLastAckTextMessageId,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingNTCTransition */ kcg_bool inPendingNTCTransition,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inSPPAndGradientOnBoard */ kcg_bool inSPPAndGradientOnBoard,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMACoverNotFullLength */ kcg_bool inMACoverNotFullLength,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::outMessage */ ReceivedMessage_T_Common_Types_Pkg *outMessage,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::outStoreInTransitionBuffer */ kcg_bool *outStoreInTransitionBuffer)
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMessage */ReceivedMessage_T_Common_Types_Pkg *inMessage,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLevel */M_LEVEL inLevel,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingL1Transition */kcg_bool inPendingL1Transition,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingL2L3Transition */kcg_bool inPendingL2L3Transition,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingAckOfTrainData */kcg_bool inPendingAckOfTrainData,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inEmergencyStopAccepted */kcg_bool inEmergencyStopAccepted,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLastAckTextMessageId */kcg_int inLastAckTextMessageId,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingNTCTransition */kcg_bool inPendingNTCTransition,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inSPPAndGradientOnBoard */kcg_bool inSPPAndGradientOnBoard,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMACoverNotFullLength */kcg_bool inMACoverNotFullLength,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::outStoreInTransitionBuffer */kcg_bool *outStoreInTransitionBuffer)
 {
   static kcg_int tmp_1;
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter */
-  static Metadata_T_Common_Types_Pkg tmp;
+  static array__105500 tmp;
   static kcg_int i;
   /* InformationFilter_Pkg::FirstFilter::FirstFilter::_L1 */
   static array_bool_30 _L1;
@@ -70,20 +69,20 @@ void FirstFilter_InformationFilter_Pkg_FirstFilter(
     &(*outMessage).packets,
     &(*inMessage).packets);
   for (i = 0; i < 30; i++) {
+    *outStoreInTransitionBuffer = *outStoreInTransitionBuffer | _L114[i];
     /* SetValidFlag */
     SetValidFlag_InformationFilter_Pkg_Common(
       _L1[i],
       &(*inMessage).packets.PacketHeaders[i],
       &tmp[i]);
-    *outStoreInTransitionBuffer = *outStoreInTransitionBuffer | _L114[i];
   }
   kcg_copy_Metadata_T_Common_Types_Pkg(
     &(*outMessage).packets.PacketHeaders,
     &tmp);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FirstFilter_InformationFilter_Pkg_FirstFilter.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

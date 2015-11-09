@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* RCM_Utils_Pkg::decoders::dec_m32 */
 void dec_m32_RCM_Utils_Pkg_decoders(
-  /* RCM_Utils_Pkg::decoders::dec_m32::msg_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *msg_in,
-  /* RCM_Utils_Pkg::decoders::dec_m32::systemVersionFromTracksideSupported */ kcg_bool systemVersionFromTracksideSupported,
-  /* RCM_Utils_Pkg::decoders::dec_m32::m32_RBC_or_RIU_System_Version */ m32_RBC_RIU_SystemVersion_T_RCM_MsgTypes_Pkg *m32_RBC_or_RIU_System_Version)
+  /* RCM_Utils_Pkg::decoders::dec_m32::msg_in */msgFromTrack_T_RCM_MsgTypes_Pkg *msg_in,
+  /* RCM_Utils_Pkg::decoders::dec_m32::systemVersionFromTracksideSupported */kcg_bool systemVersionFromTracksideSupported,
+  /* RCM_Utils_Pkg::decoders::dec_m32::m32_RBC_or_RIU_System_Version */m32_RBC_RIU_SystemVersion_T_RCM_MsgTypes_Pkg *m32_RBC_or_RIU_System_Version)
 {
   (*m32_RBC_or_RIU_System_Version).valid = (*msg_in).valid &
     (((*msg_in).source == msrc_Euroradio_Common_Types_Pkg) |
@@ -28,8 +28,8 @@ void dec_m32_RCM_Utils_Pkg_decoders(
     (*msg_in).Radio_Common_Header.m_version;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** dec_m32_RCM_Utils_Pkg_decoders.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

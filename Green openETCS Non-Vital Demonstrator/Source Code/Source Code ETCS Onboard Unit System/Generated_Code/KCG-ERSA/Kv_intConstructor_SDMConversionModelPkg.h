@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _Kv_intConstructor_SDMConversionModelPkg_H_
 #define _Kv_intConstructor_SDMConversionModelPkg_H_
@@ -13,20 +13,18 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* SDMConversionModelPkg::Kv_intConstructor */
 extern void Kv_intConstructor_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kv_intConstructor::trainData */ trainData_T_TIU_Types_Pkg *trainData,
-  /* SDMConversionModelPkg::Kv_intConstructor::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDMConversionModelPkg::Kv_intConstructor::A_ebmax */ A_internal_Type_Obu_BasicTypes_Pkg A_ebmax,
-  /* SDMConversionModelPkg::Kv_intConstructor::A_brake_em */ av_Map_t_SDMConversionModelPkg *A_brake_em,
-  /* SDMConversionModelPkg::Kv_intConstructor::A_brake_safe */ av_MergedMap_t_SDMConversionModelPkg *A_brake_safe);
+  /* SDMConversionModelPkg::Kv_intConstructor::trainData */trainData_T_TIU_Types_Pkg *trainData,
+  /* SDMConversionModelPkg::Kv_intConstructor::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDMConversionModelPkg::Kv_intConstructor::A_ebmax */A_internal_Type_Obu_BasicTypes_Pkg A_ebmax,
+  /* SDMConversionModelPkg::Kv_intConstructor::A_brake_em */av_Map_t_SDMConversionModelPkg *A_brake_em,
+  /* SDMConversionModelPkg::Kv_intConstructor::A_brake_safe */av_MergedMap_t_SDMConversionModelPkg *A_brake_safe);
 
 #endif /* _Kv_intConstructor_SDMConversionModelPkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Kv_intConstructor_SDMConversionModelPkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

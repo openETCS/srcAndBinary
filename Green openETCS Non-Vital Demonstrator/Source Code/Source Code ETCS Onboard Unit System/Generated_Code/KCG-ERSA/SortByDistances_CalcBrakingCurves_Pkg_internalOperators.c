@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,51 +9,46 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances */
 void SortByDistances_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances::reverseBC */ ParabolaCurve_T_CalcBrakingCurves_types *reverseBC,
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances::sortedBC */ ParabolaCurve_T_CalcBrakingCurves_types *sortedBC)
+  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances::reverseBC */ParabolaCurve_T_CalcBrakingCurves_types *reverseBC,
+  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances::sortedBC */ParabolaCurve_T_CalcBrakingCurves_types *sortedBC)
 {
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances */
-  static ParabolaCurveSpeeds_T_CalcBrakingCurves_types tmp2;
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances */
-  static ParabolaCurveAccelerations_T_CalcBrakingCurves_types tmp1;
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances */
-  static ParabolaCurveValid_T_CalcBrakingCurves_types tmp;
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances */
-  static ParabolaCurve_T_CalcBrakingCurves_types acc;
-  /* CalcBrakingCurves_Pkg::internalOperators::SortByDistances */
-  static kcg_bool cond_iterw;
+  static ParabolaCurveSpeeds_T_CalcBrakingCurves_types tmp4;
+  static ParabolaCurveAccelerations_T_CalcBrakingCurves_types tmp3;
+  static ParabolaCurveValid_T_CalcBrakingCurves_types tmp2;
+  static struct__107605 tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   
   for (i = 0; i < 114; i++) {
     (*sortedBC).distances[i] = (*reverseBC).distances[113 - i];
-    tmp2[i] = (*reverseBC).speeds[113 - i];
-    tmp1[i] = (*reverseBC).accelerations[113 - i];
-    tmp[i] = (*reverseBC).valid[113 - i];
+    tmp4[i] = (*reverseBC).speeds[113 - i];
+    tmp3[i] = (*reverseBC).accelerations[113 - i];
+    tmp2[i] = (*reverseBC).valid[113 - i];
   }
   kcg_copy_ParabolaCurveSpeeds_T_CalcBrakingCurves_types(
     &(*sortedBC).speeds,
-    &tmp2);
+    &tmp4);
   kcg_copy_ParabolaCurveAccelerations_T_CalcBrakingCurves_types(
     &(*sortedBC).accelerations,
-    &tmp1);
+    &tmp3);
   kcg_copy_ParabolaCurveValid_T_CalcBrakingCurves_types(
     &(*sortedBC).valid,
-    &tmp);
+    &tmp2);
   for (i = 0; i < 114; i++) {
-    kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types(&acc, sortedBC);
+    kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types(&tmp1, sortedBC);
     /* 1 */
     deleteLeadingUndefinedElements_CalcBrakingCurves_Pkg_internalOperators(
-      &acc,
-      &cond_iterw,
+      &tmp1,
+      &tmp,
       sortedBC);
-    if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SortByDistances_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

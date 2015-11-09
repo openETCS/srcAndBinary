@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _Merg2PacketsList_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
 #define _Merg2PacketsList_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
@@ -9,20 +9,18 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList */
 extern void Merg2PacketsList_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::ind */ kcg_int ind,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::acc */ CompressedPacketData_T_Common_Types_Pkg *acc,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::lastvalidAddress */ CompressedPacketData_T_Common_Types_Pkg *lastvalidAddress,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::compressedPacketIn */ CompressedPacketData_T_Common_Types_Pkg *compressedPacketIn,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::mergedPackets */ CompressedPacketData_T_Common_Types_Pkg *mergedPackets);
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::ind */kcg_int ind,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::acc */CompressedPacketData_T_Common_Types_Pkg *acc,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::lastvalidAddress */CompressedPacketData_T_Common_Types_Pkg *lastvalidAddress,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::compressedPacketIn */CompressedPacketData_T_Common_Types_Pkg *compressedPacketIn,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2PacketsList::mergedPackets */CompressedPacketData_T_Common_Types_Pkg *mergedPackets);
 
 #endif /* _Merg2PacketsList_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Merg2PacketsList_CheckBGConsistency_Pkg_SubFunction_MergFunction.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

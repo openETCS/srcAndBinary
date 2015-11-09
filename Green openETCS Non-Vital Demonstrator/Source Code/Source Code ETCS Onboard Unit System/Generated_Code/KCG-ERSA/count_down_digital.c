@@ -1,39 +1,27 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "count_down_digital.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void count_down_init_digital(outC_count_down_digital *outC)
-{
-  outC->init = kcg_true;
-  outC->_L4 = 0;
-  outC->cpt = 0;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void count_down_reset_digital(outC_count_down_digital *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* digital::count_down */
 void count_down_digital(
-  /* digital::count_down::Reset */ kcg_bool Reset,
-  /* digital::count_down::N */ kcg_int N,
+  /* digital::count_down::Reset */kcg_bool Reset,
+  /* digital::count_down::N */kcg_int N,
   outC_count_down_digital *outC)
 {
-  /* 1 */ if (Reset) {
+  if (Reset) {
     outC->cpt = N;
   }
-  else /* 5 */ if (outC->init) {
+  else if (outC->init) {
     outC->cpt = N;
   }
   else {
@@ -43,8 +31,8 @@ void count_down_digital(
   outC->_L4 = outC->cpt - 1;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** count_down_digital.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

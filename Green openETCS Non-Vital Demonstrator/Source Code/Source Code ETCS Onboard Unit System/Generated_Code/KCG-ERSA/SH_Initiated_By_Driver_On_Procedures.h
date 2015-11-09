@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _SH_Initiated_By_Driver_On_Procedures_H_
 #define _SH_Initiated_By_Driver_On_Procedures_H_
@@ -8,8 +8,6 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -32,23 +30,18 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::SH_Initiated_By_Driver_On */
 extern void SH_Initiated_By_Driver_On_Procedures(
-  /* Procedures::SH_Initiated_By_Driver_On::Current_Level */ M_LEVEL Current_Level,
-  /* Procedures::SH_Initiated_By_Driver_On::Driver_Req_SH */ kcg_bool Driver_Req_SH,
-  /* Procedures::SH_Initiated_By_Driver_On::On_Going_Mission */ kcg_bool On_Going_Mission,
-  /* Procedures::SH_Initiated_By_Driver_On::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
+  /* Procedures::SH_Initiated_By_Driver_On::Current_Level */M_LEVEL Current_Level,
+  /* Procedures::SH_Initiated_By_Driver_On::Driver_Req_SH */kcg_bool Driver_Req_SH,
+  /* Procedures::SH_Initiated_By_Driver_On::On_Going_Mission */kcg_bool On_Going_Mission,
+  /* Procedures::SH_Initiated_By_Driver_On::Shunting_Granted_By_RBC */kcg_bool Shunting_Granted_By_RBC,
   outC_SH_Initiated_By_Driver_On_Procedures *outC);
 
 extern void SH_Initiated_By_Driver_On_reset_Procedures(
   outC_SH_Initiated_By_Driver_On_Procedures *outC);
 
-#ifndef KCG_USER_DEFINED_INIT
-extern void SH_Initiated_By_Driver_On_init_Procedures(
-  outC_SH_Initiated_By_Driver_On_Procedures *outC);
-#endif /* KCG_USER_DEFINED_INIT */
-
 #endif /* _SH_Initiated_By_Driver_On_Procedures_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SH_Initiated_By_Driver_On_Procedures.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

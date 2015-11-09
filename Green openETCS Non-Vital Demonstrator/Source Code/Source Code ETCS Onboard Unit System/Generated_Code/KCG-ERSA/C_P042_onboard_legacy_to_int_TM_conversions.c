@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_conversions::C_P042_onboard_legacy_to_int */
 void C_P042_onboard_legacy_to_int_TM_conversions(
-  /* TM_conversions::C_P042_onboard_legacy_to_int::PacketData */ P42_SessionManagement_T_Packet_Types_Pkg *PacketData,
-  /* TM_conversions::C_P042_onboard_legacy_to_int::P042_int */ P042_trackside_int_T_TM *P042_int)
+  /* TM_conversions::C_P042_onboard_legacy_to_int::PacketData */P42_SessionManagement_T_Packet_Types_Pkg *PacketData,
+  /* TM_conversions::C_P042_onboard_legacy_to_int::P042_int */P042_trackside_int_T_TM *P042_int)
 {
   (*P042_int).valid = (*PacketData).valid;
   (*P042_int).NID_PACKET = 42;
@@ -29,8 +29,8 @@ void C_P042_onboard_legacy_to_int_TM_conversions(
     CAST_Q_SLEEPSESSION_to_int_TM_conversions((*PacketData).q_sleepsession);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P042_onboard_legacy_to_int_TM_conversions.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

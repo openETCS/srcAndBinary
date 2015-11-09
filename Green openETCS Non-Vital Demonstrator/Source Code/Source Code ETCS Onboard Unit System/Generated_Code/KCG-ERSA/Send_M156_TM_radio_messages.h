@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _Send_M156_TM_radio_messages_H_
 #define _Send_M156_TM_radio_messages_H_
@@ -13,8 +13,6 @@
 #include "BufferMsg_TM_lib_internal.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -32,25 +30,18 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TM_radio_messages::Send_M156 */
 extern void Send_M156_TM_radio_messages(
-  /* TM_radio_messages::Send_M156::t_train_global */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
-  /* TM_radio_messages::Send_M156::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
-  /* TM_radio_messages::Send_M156::Message_156_in */ M_156_T_TM_radio_messages *Message_156_in,
-  /* TM_radio_messages::Send_M156::m_version */ M_VERSION m_version,
+  /* TM_radio_messages::Send_M156::t_train_global */T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
+  /* TM_radio_messages::Send_M156::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* TM_radio_messages::Send_M156::Message_156_in */M_156_T_TM_radio_messages *Message_156_in,
+  /* TM_radio_messages::Send_M156::m_version */M_VERSION m_version,
   outC_Send_M156_TM_radio_messages *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Send_M156_reset_TM_radio_messages(
   outC_Send_M156_TM_radio_messages *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void Send_M156_init_TM_radio_messages(
-  outC_Send_M156_TM_radio_messages *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Send_M156_TM_radio_messages_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Send_M156_TM_radio_messages.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

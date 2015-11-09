@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _MA_Request_Supervision_TA_MA_Request_H_
 #define _MA_Request_Supervision_TA_MA_Request_H_
@@ -13,8 +13,6 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
@@ -24,45 +22,38 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _24_SSM_ST_SM1 /* TA_MA_Request::MA_Request_Supervision::SM1 */ SM1_state_nxt;
+  _166_SSM_ST_SM1 /* TA_MA_Request::MA_Request_Supervision::SM1 */ SM1_state_nxt;
   kcg_bool /* TA_MA_Request::MA_Request_Supervision::pendingReq */ pendingReq;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_RisingEdge_digital /* 2 */ Context_2;
-  outC_RisingEdge_digital /* 1 */ _1_Context_1;
-  outC_op_RepeatReq_TA_MA_Request /* 1 */ Context_1;
   outC_op_3_8_2_3_a_TA_MA_Request /* op_3_8_2_3_a */ Context_op_3_8_2_3_a;
+  outC_op_RepeatReq_TA_MA_Request /* 1 */ _1_Context_1;
+  outC_RisingEdge_digital /* 1 */ Context_1;
+  outC_RisingEdge_digital /* 2 */ Context_2;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_MA_Request_Supervision_TA_MA_Request;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* TA_MA_Request::MA_Request_Supervision */
 extern void MA_Request_Supervision_TA_MA_Request(
-  /* TA_MA_Request::MA_Request_Supervision::ma_RequestParams */ P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg *ma_RequestParams,
-  /* TA_MA_Request::MA_Request_Supervision::ma_received */ kcg_bool ma_received,
-  /* TA_MA_Request::MA_Request_Supervision::in_triggerMA */ kcg_bool in_triggerMA,
-  /* TA_MA_Request::MA_Request_Supervision::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* TA_MA_Request::MA_Request_Supervision::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  /* TA_MA_Request::MA_Request_Supervision::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
-  /* TA_MA_Request::MA_Request_Supervision::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* TA_MA_Request::MA_Request_Supervision::MAs */ MovementAuthority_t_TrackAtlasTypes *MAs,
-  /* TA_MA_Request::MA_Request_Supervision::fromDriver */ Driver2MAR_T_TA_MA_Request *fromDriver,
-  /* TA_MA_Request::MA_Request_Supervision::trackDescrDeleted */ kcg_bool trackDescrDeleted,
-  /* TA_MA_Request::MA_Request_Supervision::modeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *modeLevel,
+  /* TA_MA_Request::MA_Request_Supervision::ma_RequestParams */P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg *ma_RequestParams,
+  /* TA_MA_Request::MA_Request_Supervision::ma_received */kcg_bool ma_received,
+  /* TA_MA_Request::MA_Request_Supervision::in_triggerMA */kcg_bool in_triggerMA,
+  /* TA_MA_Request::MA_Request_Supervision::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* TA_MA_Request::MA_Request_Supervision::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* TA_MA_Request::MA_Request_Supervision::preindicationLocation */L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
+  /* TA_MA_Request::MA_Request_Supervision::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TA_MA_Request::MA_Request_Supervision::MAs */MovementAuthority_t_TrackAtlasTypes *MAs,
+  /* TA_MA_Request::MA_Request_Supervision::fromDriver */Driver2MAR_T_TA_MA_Request *fromDriver,
+  /* TA_MA_Request::MA_Request_Supervision::trackDescrDeleted */kcg_bool trackDescrDeleted,
+  /* TA_MA_Request::MA_Request_Supervision::modeLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *modeLevel,
   outC_MA_Request_Supervision_TA_MA_Request *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void MA_Request_Supervision_reset_TA_MA_Request(
   outC_MA_Request_Supervision_TA_MA_Request *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void MA_Request_Supervision_init_TA_MA_Request(
-  outC_MA_Request_Supervision_TA_MA_Request *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _MA_Request_Supervision_TA_MA_Request_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Request_Supervision_TA_MA_Request.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

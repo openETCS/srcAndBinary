@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _CheckLevelExceptions_InformationFilter_Pkg_FirstFilter_H_
 #define _CheckLevelExceptions_InformationFilter_Pkg_FirstFilter_H_
@@ -22,26 +22,24 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions */
 extern void CheckLevelExceptions_InformationFilter_Pkg_FirstFilter(
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inAction */ LevelDecisionTableActionKind_DataDictionary_Pkg inAction,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingL1Transition */ kcg_bool inPendingL1Transition,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingL2L3Transition */ kcg_bool inPendingL2L3Transition,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingAckOfTrainData */ kcg_bool inPendingAckOfTrainData,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inEmergencyBrakeActive */ kcg_bool inEmergencyBrakeActive,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inLastAckTextMessageId */ kcg_int inLastAckTextMessageId,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingNTCTransition */ kcg_bool inPendingNTCTransition,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inSPPAndGradientOnBoard */ kcg_bool inSPPAndGradientOnBoard,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::MACoverNotFullLength */ kcg_bool MACoverNotFullLength,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::outAccept */ kcg_bool *outAccept,
-  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::outStoreInTransitionBuffer */ kcg_bool *outStoreInTransitionBuffer);
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inAction */LevelDecisionTableActionKind_DataDictionary_Pkg inAction,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingL1Transition */kcg_bool inPendingL1Transition,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingL2L3Transition */kcg_bool inPendingL2L3Transition,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingAckOfTrainData */kcg_bool inPendingAckOfTrainData,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inEmergencyBrakeActive */kcg_bool inEmergencyBrakeActive,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inLastAckTextMessageId */kcg_int inLastAckTextMessageId,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inPendingNTCTransition */kcg_bool inPendingNTCTransition,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::inSPPAndGradientOnBoard */kcg_bool inSPPAndGradientOnBoard,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::MACoverNotFullLength */kcg_bool MACoverNotFullLength,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::outAccept */kcg_bool *outAccept,
+  /* InformationFilter_Pkg::FirstFilter::CheckLevelExceptions::outStoreInTransitionBuffer */kcg_bool *outStoreInTransitionBuffer);
 
 #endif /* _CheckLevelExceptions_InformationFilter_Pkg_FirstFilter_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckLevelExceptions_InformationFilter_Pkg_FirstFilter.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

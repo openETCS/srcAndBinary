@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,15 @@
 
 /* SDM_GradientAcceleration_Pkg::calcAccFromGradient */
 void calcAccFromGradient_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient::GradientSection */ Gradient_section_real_t_SDM_GradientAcceleration_types *GradientSection,
-  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient::trainData */ trainData_T_TIU_Types_Pkg *trainData,
-  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient::A_gradient_section */ A_gradient_element_t_SDM_GradientAcceleration_types *A_gradient_section)
+  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient::GradientSection */Gradient_section_real_t_SDM_GradientAcceleration_types *GradientSection,
+  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient::trainData */trainData_T_TIU_Types_Pkg *trainData,
+  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient::A_gradient_section */A_gradient_element_t_SDM_GradientAcceleration_types *A_gradient_section)
 {
-  /* SDM_GradientAcceleration_Pkg::calcAccFromGradient */
-  static Percentage_T_SDM_Types_Pkg tmp;
+  static kcg_int tmp;
   
   (*A_gradient_section).position = (*GradientSection).location;
   (*A_gradient_section).valid = (*GradientSection).valid;
-  /* 1 */ if ((*GradientSection).gradient <= 0.0) {
+  if ((*GradientSection).gradient <= 0.0) {
     tmp = M_rotating_min_SDM_Types_Pkg;
   }
   else {
@@ -29,8 +28,8 @@ void calcAccFromGradient_SDM_GradientAcceleration_Pkg(
     (*GradientSection).gradient / (kcg_real) (1000 + tmp * 10);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** calcAccFromGradient_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

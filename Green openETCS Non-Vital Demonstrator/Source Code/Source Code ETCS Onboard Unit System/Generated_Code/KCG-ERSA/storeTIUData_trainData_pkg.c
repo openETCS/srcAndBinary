@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* trainData_pkg::storeTIUData */
 void storeTIUData_trainData_pkg(
-  /* trainData_pkg::storeTIUData::trainDatafromTIU */ trainData_T_TIU_Types_Pkg *trainDatafromTIU,
-  /* trainData_pkg::storeTIUData::originalTrainData */ trainData_T_TIU_Types_Pkg *originalTrainData,
-  /* trainData_pkg::storeTIUData::actualStatus */ trainDataStatus_T_trainData_Types_pkg *actualStatus,
-  /* trainData_pkg::storeTIUData::actualTrainData */ trainData_T_TIU_Types_Pkg *actualTrainData,
-  /* trainData_pkg::storeTIUData::updatedStatus */ trainDataStatus_T_trainData_Types_pkg *updatedStatus)
+  /* trainData_pkg::storeTIUData::trainDatafromTIU */trainData_T_TIU_Types_Pkg *trainDatafromTIU,
+  /* trainData_pkg::storeTIUData::originalTrainData */trainData_T_TIU_Types_Pkg *originalTrainData,
+  /* trainData_pkg::storeTIUData::actualStatus */trainDataStatus_T_trainData_Types_pkg *actualStatus,
+  /* trainData_pkg::storeTIUData::actualTrainData */trainData_T_TIU_Types_Pkg *actualTrainData,
+  /* trainData_pkg::storeTIUData::updatedStatus */trainDataStatus_T_trainData_Types_pkg *updatedStatus)
 {
   kcg_copy_trainData_T_TIU_Types_Pkg(actualTrainData, trainDatafromTIU);
   kcg_copy_trainDataStatus_T_trainData_Types_pkg(
@@ -22,8 +22,8 @@ void storeTIUData_trainData_pkg(
   (*updatedStatus).valid = kcg_true;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** storeTIUData_trainData_pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

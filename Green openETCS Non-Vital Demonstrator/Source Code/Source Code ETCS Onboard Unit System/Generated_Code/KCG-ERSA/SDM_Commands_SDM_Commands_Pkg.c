@@ -1,92 +1,34 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "SDM_Commands_SDM_Commands_Pkg.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void SDM_Commands_init_SDM_Commands_Pkg(
-  outC_SDM_Commands_SDM_Commands_Pkg *outC)
-{
-  outC->targetSpeedReached = kcg_true;
-  outC->eoaOverpassed = kcg_true;
-  outC->brakeCmd.valid = kcg_true;
-  outC->brakeCmd.m_servicebrake_cm =
-    brake_signal_command_not_defined_TIU_Types_Pkg;
-  outC->brakeCmd.m_emergencybrake_cm =
-    brake_signal_command_not_defined_TIU_Types_Pkg;
-  outC->sdmCmd.valid = kcg_true;
-  outC->sdmCmd.estimatedSpeed = 0;
-  outC->sdmCmd.valid_v_est = kcg_true;
-  outC->sdmCmd.permittedSpeed = 0;
-  outC->sdmCmd.valid_v_permitted = kcg_true;
-  outC->sdmCmd.releaseSpeed = 0;
-  outC->sdmCmd.valid_v_release = kcg_true;
-  outC->sdmCmd.mrdtSpeed = 0;
-  outC->sdmCmd.valid_v_mrdt = kcg_true;
-  outC->sdmCmd.sbiSpeed = 0;
-  outC->sdmCmd.valid_v_sbi = kcg_true;
-  outC->sdmCmd.targetDistance = 0;
-  outC->sdmCmd.valid_targetDistance = kcg_true;
-  outC->sdmCmd.supervisionStatus = Normal_Supervision_SDM_Types_Pkg;
-  outC->sdmCmd.sdmType = CSM_SDM_Types_Pkg;
-  outC->sdmCmd.revokedSupervisionStatus = Normal_Supervision_SDM_Types_Pkg;
-  outC->sdmCmd.triggeredSupervisionStatus = Normal_Supervision_SDM_Types_Pkg;
-  outC->sdmCmd.revokedSB = kcg_true;
-  outC->sdmCmd.triggeredSB = kcg_true;
-  outC->sdmCmd.revokedEB = kcg_true;
-  outC->sdmCmd.triggeredEB = kcg_true;
-  outC->sdmCmd.revokedTCO = kcg_true;
-  outC->sdmCmd.triggeredTCO = kcg_true;
-  outC->sdmCmd.ebCmd = kcg_true;
-  outC->sdmToDMI.valid = kcg_true;
-  outC->sdmToDMI.targetSpeed = 0;
-  outC->sdmToDMI.permittedSpeed = 0;
-  outC->sdmToDMI.releaseSpeed = 0;
-  outC->sdmToDMI.locationBrakeTarget = 0;
-  outC->sdmToDMI.location_brake_curve_starting_point = 0;
-  outC->sdmToDMI.interventionSpeed = 0;
-  outC->sdmToDMI.sup_status = CSM_DMI_Types_Pkg;
-  outC->sdmToDMI.supervisionDisplay = supDis_normal_DMI_Types_Pkg;
-  outC->sdmToDMI.distanceIndicationPoint = 0;
-  /* 1 */ CalcBrakeCmd_init_SDM_Commands_Pkg(&outC->_1_Context_1);
-  /* 2 */ MergeMLRequests_init_SDM_Commands_Pkg(&outC->Context_2);
-  /* 1 */ CmdTrainSupervisionStatus_init_SDM_Commands_Pkg(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void SDM_Commands_reset_SDM_Commands_Pkg(
   outC_SDM_Commands_SDM_Commands_Pkg *outC)
 {
-  /* 1 */ CalcBrakeCmd_reset_SDM_Commands_Pkg(&outC->_1_Context_1);
+  /* 1 */ CalcBrakeCmd_reset_SDM_Commands_Pkg(&outC->Context_1);
   /* 2 */ MergeMLRequests_reset_SDM_Commands_Pkg(&outC->Context_2);
-  /* 1 */ CmdTrainSupervisionStatus_reset_SDM_Commands_Pkg(&outC->Context_1);
+  /* 1 */ CmdTrainSupervisionStatus_reset_SDM_Commands_Pkg(&outC->_1_Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* SDM_Commands_Pkg::SDM_Commands */
 void SDM_Commands_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::SDM_Commands::allTargets */ TargetCollection_T_TargetManagement_types *allTargets,
-  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
-  /* SDM_Commands_Pkg::SDM_Commands::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::SDM_Commands::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::SDM_Commands::mrdt */ Target_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::SDM_Commands::floiIsSB1 */ kcg_bool floiIsSB1,
-  /* SDM_Commands_Pkg::SDM_Commands::MLrequestSB */ kcg_bool MLrequestSB,
-  /* SDM_Commands_Pkg::SDM_Commands::MLrequestEB */ kcg_bool MLrequestEB,
-  /* SDM_Commands_Pkg::SDM_Commands::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDM_Commands_Pkg::SDM_Commands::TrainData_int */ trainData_internal_t_SDM_Types_Pkg *TrainData_int,
+  /* SDM_Commands_Pkg::SDM_Commands::allTargets */TargetCollection_T_TargetManagement_types *allTargets,
+  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */trainPosition_T_TrainPosition_Types_Pck *trainLocations,
+  /* SDM_Commands_Pkg::SDM_Commands::speeds */Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::SDM_Commands::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::SDM_Commands::mrdt */Target_T_TargetManagement_types *mrdt,
+  /* SDM_Commands_Pkg::SDM_Commands::floiIsSB1 */kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::SDM_Commands::MLrequestSB */kcg_bool MLrequestSB,
+  /* SDM_Commands_Pkg::SDM_Commands::MLrequestEB */kcg_bool MLrequestEB,
+  /* SDM_Commands_Pkg::SDM_Commands::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDM_Commands_Pkg::SDM_Commands::TrainData_int */trainData_internal_t_SDM_Types_Pkg *TrainData_int,
   outC_SDM_Commands_SDM_Commands_Pkg *outC)
 {
-  /* SDM_Commands_Pkg::SDM_Commands::_L11 */
-  static SupervisionStatus_T_SDM_Types_Pkg _L11;
-  /* SDM_Commands_Pkg::SDM_Commands::_L7 */
-  static SDM_Types_T_SDM_Types_Pkg _L7;
   /* SDM_Commands_Pkg::SDM_Commands::_L27 */
   static kcg_bool _L27;
   /* SDM_Commands_Pkg::SDM_Commands::_L26 */
@@ -120,24 +62,22 @@ void SDM_Commands_SDM_Commands_Pkg(
     trainLocations,
     floiIsSB1,
     TrainData_int,
-    &outC->Context_1);
+    &outC->_1_Context_1);
+  outC->sdmCmd.supervisionStatus = outC->_1_Context_1.supVisStatus;
+  outC->sdmCmd.sdmType = outC->_1_Context_1.sdmType;
   outC->sdmCmd.revokedSupervisionStatus =
-    outC->Context_1.revokedSupervisionStatus;
+    outC->_1_Context_1.revokedSupervisionStatus;
   outC->sdmCmd.triggeredSupervisionStatus =
-    outC->Context_1.triggeredSupervisionStatus;
-  outC->sdmCmd.revokedEB = outC->Context_1.revokedEB;
-  outC->sdmCmd.triggeredEB = outC->Context_1.triggeredEB;
-  outC->sdmCmd.revokedTCO = outC->Context_1.revokedTCO;
-  outC->sdmCmd.triggeredTCO = outC->Context_1.triggeredTCO;
-  outC->sdmCmd.ebCmd = outC->Context_1.ebCmd | MLrequestEB;
-  _L11 = outC->Context_1.supVisStatus;
-  outC->sdmCmd.supervisionStatus = _L11;
-  _L7 = outC->Context_1.sdmType;
-  outC->sdmCmd.sdmType = _L7;
+    outC->_1_Context_1.triggeredSupervisionStatus;
+  outC->sdmCmd.revokedEB = outC->_1_Context_1.revokedEB;
+  outC->sdmCmd.triggeredEB = outC->_1_Context_1.triggeredEB;
+  outC->sdmCmd.revokedTCO = outC->_1_Context_1.revokedTCO;
+  outC->sdmCmd.triggeredTCO = outC->_1_Context_1.triggeredTCO;
+  outC->sdmCmd.ebCmd = outC->_1_Context_1.ebCmd | MLrequestEB;
   /* 1 */
   CalcDriverOutput_SDM_Commands_Pkg(
-    _L7,
-    _L11,
+    outC->_1_Context_1.sdmType,
+    outC->_1_Context_1.supVisStatus,
     mrdt,
     speeds,
     locations,
@@ -166,12 +106,28 @@ void SDM_Commands_SDM_Commands_Pkg(
   outC->sdmCmd.valid_targetDistance = _L27;
   /* 2 */
   MergeMLRequests_SDM_Commands_Pkg(
-    outC->Context_1.revokedSB,
+    outC->_1_Context_1.revokedSB,
     MLrequestSB,
-    outC->Context_1.triggeredSB,
+    outC->_1_Context_1.triggeredSB,
     &outC->Context_2);
   outC->sdmCmd.revokedSB = outC->Context_2.revokedSB;
   outC->sdmCmd.triggeredSB = outC->Context_2.triggeredSB;
+  /* 1 */
+  CalcBrakeCmd_SDM_Commands_Pkg(
+    &outC->sdmCmd,
+    speeds,
+    NationalValues,
+    TrainData_int,
+    &outC->Context_1);
+  kcg_copy_Brake_command_T_TIU_Types_Pkg(
+    &outC->brakeCmd,
+    &outC->Context_1.brakeCmd);
+  /* 1 */
+  CalcDMI_output_SDM_Commands_Pkg(
+    &outC->sdmCmd,
+    locations,
+    trainLocations,
+    &outC->sdmToDMI);
   /* CalcModeTransOutput */
   CalcModeTransOutput_SDM_Commands_Pkg(
     trainLocations,
@@ -180,26 +136,10 @@ void SDM_Commands_SDM_Commands_Pkg(
     TrainData_int,
     &outC->eoaOverpassed,
     &outC->targetSpeedReached);
-  /* 1 */
-  CalcDMI_output_SDM_Commands_Pkg(
-    &outC->sdmCmd,
-    locations,
-    trainLocations,
-    &outC->sdmToDMI);
-  /* 1 */
-  CalcBrakeCmd_SDM_Commands_Pkg(
-    &outC->sdmCmd,
-    speeds,
-    NationalValues,
-    TrainData_int,
-    &outC->_1_Context_1);
-  kcg_copy_Brake_command_T_TIU_Types_Pkg(
-    &outC->brakeCmd,
-    &outC->_1_Context_1.brakeCmd);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SDM_Commands_SDM_Commands_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

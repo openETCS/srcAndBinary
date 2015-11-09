@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _BuildOutputToRBC_OutputToRBC_H_
 #define _BuildOutputToRBC_OutputToRBC_H_
@@ -11,8 +11,6 @@
 #include "ExitLevel2or3_OutputToRBC.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -30,25 +28,18 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* OutputToRBC::BuildOutputToRBC */
 extern void BuildOutputToRBC_OutputToRBC(
-  /* OutputToRBC::BuildOutputToRBC::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* OutputToRBC::BuildOutputToRBC::last_level */ M_LEVEL last_level,
-  /* OutputToRBC::BuildOutputToRBC::new_level */ M_LEVEL new_level,
-  /* OutputToRBC::BuildOutputToRBC::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* OutputToRBC::BuildOutputToRBC::selected_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
+  /* OutputToRBC::BuildOutputToRBC::last_level */M_LEVEL last_level,
+  /* OutputToRBC::BuildOutputToRBC::new_level */M_LEVEL new_level,
+  /* OutputToRBC::BuildOutputToRBC::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
   outC_BuildOutputToRBC_OutputToRBC *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void BuildOutputToRBC_reset_OutputToRBC(
   outC_BuildOutputToRBC_OutputToRBC *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void BuildOutputToRBC_init_OutputToRBC(
-  outC_BuildOutputToRBC_OutputToRBC *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _BuildOutputToRBC_OutputToRBC_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** BuildOutputToRBC_OutputToRBC.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

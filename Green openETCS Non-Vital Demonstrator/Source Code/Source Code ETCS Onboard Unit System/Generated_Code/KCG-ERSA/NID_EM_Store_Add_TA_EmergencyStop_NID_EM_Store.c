@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,16 @@
 
 /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add */
 void NID_EM_Store_Add_TA_EmergencyStop_NID_EM_Store(
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::inAcc */ NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *inAcc,
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::inEntry */ NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *inEntry,
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::outAcc */ NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *outAcc,
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::outEntry */ NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *outEntry)
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::inAcc */NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *inAcc,
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::inEntry */NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *inEntry,
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::outAcc */NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *outAcc,
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::outEntry */NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *outEntry)
 {
   /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add::_L7 */
   static kcg_bool _L7;
   
   _L7 = !(*inAcc).handled & !(*inEntry).valid;
-  /* 1 */ if (_L7) {
+  if (_L7) {
     (*outEntry).nid_em = (*inAcc).nid_em;
     (*outEntry).valid = kcg_true;
     (*outAcc).handled = kcg_true;
@@ -33,8 +33,8 @@ void NID_EM_Store_Add_TA_EmergencyStop_NID_EM_Store(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** NID_EM_Store_Add_TA_EmergencyStop_NID_EM_Store.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _RECV_ReadPacketKernelLoop_TM_lib_internal_H_
 #define _RECV_ReadPacketKernelLoop_TM_lib_internal_H_
@@ -9,21 +9,19 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TM_lib_internal::RECV_ReadPacketKernelLoop */
 extern void RECV_ReadPacketKernelLoop_TM_lib_internal(
-  /* TM_lib_internal::RECV_ReadPacketKernelLoop::Index */ kcg_int Index,
-  /* TM_lib_internal::RECV_ReadPacketKernelLoop::PacketData */ CompressedPacketData_T_Common_Types_Pkg *PacketData,
-  /* TM_lib_internal::RECV_ReadPacketKernelLoop::AddressStart */ kcg_int AddressStart,
-  /* TM_lib_internal::RECV_ReadPacketKernelLoop::AddressEnd */ kcg_int AddressEnd,
-  /* TM_lib_internal::RECV_ReadPacketKernelLoop::Cont */ kcg_bool *Cont,
-  /* TM_lib_internal::RECV_ReadPacketKernelLoop::PacketOut */ kcg_int *PacketOut);
+  /* TM_lib_internal::RECV_ReadPacketKernelLoop::Index */kcg_int Index,
+  /* TM_lib_internal::RECV_ReadPacketKernelLoop::PacketData */CompressedPacketData_T_Common_Types_Pkg *PacketData,
+  /* TM_lib_internal::RECV_ReadPacketKernelLoop::AddressStart */kcg_int AddressStart,
+  /* TM_lib_internal::RECV_ReadPacketKernelLoop::AddressEnd */kcg_int AddressEnd,
+  /* TM_lib_internal::RECV_ReadPacketKernelLoop::Cont */kcg_bool *Cont,
+  /* TM_lib_internal::RECV_ReadPacketKernelLoop::PacketOut */kcg_int *PacketOut);
 
 #endif /* _RECV_ReadPacketKernelLoop_TM_lib_internal_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RECV_ReadPacketKernelLoop_TM_lib_internal.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

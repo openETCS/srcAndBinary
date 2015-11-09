@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,15 @@
 
 /* xdebugSupport_Pkg::bypassGeneralMessage */
 void bypassGeneralMessage_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::bypassGeneralMessage::Message */ ReceivedMessage_T_Common_Types_Pkg *Message,
-  /* xdebugSupport_Pkg::bypassGeneralMessage::outputMessageForInformationFilter */ ReceivedMessage_T_Common_Types_Pkg *outputMessageForInformationFilter,
-  /* xdebugSupport_Pkg::bypassGeneralMessage::outputMessageByPass */ ReceivedMessage_T_Common_Types_Pkg *outputMessageByPass)
+  /* xdebugSupport_Pkg::bypassGeneralMessage::Message */ReceivedMessage_T_Common_Types_Pkg *Message,
+  /* xdebugSupport_Pkg::bypassGeneralMessage::outputMessageForInformationFilter */ReceivedMessage_T_Common_Types_Pkg *outputMessageForInformationFilter,
+  /* xdebugSupport_Pkg::bypassGeneralMessage::outputMessageByPass */ReceivedMessage_T_Common_Types_Pkg *outputMessageByPass)
 {
-  /* xdebugSupport_Pkg::bypassGeneralMessage */
   static kcg_int tmp;
   /* xdebugSupport_Pkg::bypassGeneralMessage::byPass */
   static kcg_bool byPass;
   
-  /* ck__L5 */ if ((*Message).valid) {
+  if ((*Message).valid) {
     tmp = /* 1 */ countPacketsMsg_xdebugSupport_Pkg(Message);
   }
   else {
@@ -29,7 +28,7 @@ void bypassGeneralMessage_xdebugSupport_Pkg(
     ((*Message).Radio_Common_Header.nid_message ==
       cm24_General_Message_Id_Pkg) & ((*Message).Radio_Common_Header.m_ack !=
       M_ACK_Acknowledgement_required);
-  /* ck_byPass */ if (byPass) {
+  if (byPass) {
     kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
       outputMessageForInformationFilter,
       (ReceivedMessage_T_Common_Types_Pkg *) &cDefaultRM_Common_Types_Pkg);
@@ -45,8 +44,8 @@ void bypassGeneralMessage_xdebugSupport_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** bypassGeneralMessage_xdebugSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

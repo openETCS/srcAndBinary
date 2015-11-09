@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* Utilities::Int_to_Bool */
 kcg_bool Int_to_Bool_Utilities(
-  /* Utilities::Int_to_Bool::int_in */ kcg_int int_in)
+  /* Utilities::Int_to_Bool::int_in */kcg_int int_in)
 {
   /* Utilities::Int_to_Bool::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -19,12 +19,12 @@ kcg_bool Int_to_Bool_Utilities(
   static kcg_bool bool_out;
   
   IfBlock1_clock = int_in == 0;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     bool_out = kcg_false;
   }
   else {
     else_clock_IfBlock1 = int_in == 1;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       bool_out = kcg_true;
     }
     else {
@@ -34,8 +34,8 @@ kcg_bool Int_to_Bool_Utilities(
   return bool_out;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Int_to_Bool_Utilities.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

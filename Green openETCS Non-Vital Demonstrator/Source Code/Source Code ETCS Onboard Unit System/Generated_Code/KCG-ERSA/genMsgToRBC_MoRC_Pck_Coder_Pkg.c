@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* MoRC_Pck::Coder_Pkg::genMsgToRBC */
 void genMsgToRBC_MoRC_Pck_Coder_Pkg(
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::present */ kcg_bool present,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_message */ NID_MESSAGE nid_message,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::t_train */ T_TRAIN t_train,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::xt_train */ T_TRAIN xt_train,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_engine */ NID_ENGINE nid_engine,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */ Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage)
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::present */kcg_bool present,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_message */NID_MESSAGE nid_message,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::t_train */T_TRAIN t_train,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::xt_train */T_TRAIN xt_train,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_engine */NID_ENGINE nid_engine,
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */_8_Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage)
 {
   (*radioMessage).present = present;
   (*radioMessage).header.present = present;
@@ -26,15 +26,15 @@ void genMsgToRBC_MoRC_Pck_Coder_Pkg(
   (*radioMessage).header.xT_TRAIN = xt_train;
   (*radioMessage).header.xNID_EM = 0;
   (*radioMessage).header.xQ_EMERGENCYSTOP =
-    Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
+    _30_Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
   (*radioMessage).header.xNID_TEXTMESSAGE = 0;
   kcg_copy_outPackets_T_Common_Types_Pkg(
     &(*radioMessage).packets,
     (outPackets_T_Common_Types_Pkg *) &cEmptyOutPackets_MoRC_Pck_Coder_Pkg);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** genMsgToRBC_MoRC_Pck_Coder_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

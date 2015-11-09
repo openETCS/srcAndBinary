@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport_H_
 #define _updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport_H_
@@ -9,18 +9,16 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB */
 extern void updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inSingleBadBalise */ kcg_bool inSingleBadBalise,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *inCollector,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::outCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector);
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inSingleBadBalise */kcg_bool inSingleBadBalise,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *inCollector,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::outCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector);
 
 #endif /* _updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

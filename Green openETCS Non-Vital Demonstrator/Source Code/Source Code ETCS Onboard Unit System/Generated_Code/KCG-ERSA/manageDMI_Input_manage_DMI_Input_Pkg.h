@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _manageDMI_Input_manage_DMI_Input_Pkg_H_
 #define _manageDMI_Input_manage_DMI_Input_Pkg_H_
@@ -14,21 +14,19 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   DMI_EVC_status_T_DMI_Types_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::currentDMIStatus */ currentDMIStatus;
   DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_Identifier */ fromDMI_Identifier;
   kcg_bool /* manage_DMI_Input_Pkg::manageDMI_Input::outUpdateLevelsDMI */ outUpdateLevelsDMI;
-  DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_DriverIdentifier */ fromDMI_DriverIdentifier;
-  DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainRunningNumber */ fromDMI_TrainRunningNumber;
+  _24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_DriverIdentifier */ fromDMI_DriverIdentifier;
+  _23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainRunningNumber */ fromDMI_TrainRunningNumber;
   DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_RadioNetData */ fromDMI_RadioNetData;
   DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_Icon_Ack */ fromDMI_Icon_Ack;
   DMI_Train_Data_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainData */ fromDMI_TrainData;
   DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainDataAck */ fromDMI_TrainDataAck;
-  DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_AdhesionFactor */ fromDMI_AdhesionFactor;
+  _22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_AdhesionFactor */ fromDMI_AdhesionFactor;
   DMI_To_Modes_T_DMI_Types_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::forModesAndLevel */ forModesAndLevel;
   T_LevelTransition_Level_And_Mode_Types_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::ML_levelTransition */ ML_levelTransition;
   DMI_TXT_MSGList_status_T_DMI_Types_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::outStatusList */ outStatusList;
@@ -46,26 +44,19 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* manage_DMI_Input_Pkg::manageDMI_Input */
 extern void manageDMI_Input_manage_DMI_Input_Pkg(
-  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */ DMI_to_EVC_Message_int_T_API_DMI_Pkg *fromDMI,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::dmiStatusReset */ kcg_bool dmiStatusReset,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_DMI_Input_Pkg::manageDMI_Input::lasttNTC */ NID_STM_DMI_Types_Pkg lasttNTC,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI */DMI_to_EVC_Message_int_T_API_DMI_Pkg *fromDMI,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::dmiStatusReset */kcg_bool dmiStatusReset,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::inStatusList */DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_DMI_Input_Pkg::manageDMI_Input::lasttNTC */NID_STM_DMI_Types_Pkg lasttNTC,
   outC_manageDMI_Input_manage_DMI_Input_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void manageDMI_Input_reset_manage_DMI_Input_Pkg(
   outC_manageDMI_Input_manage_DMI_Input_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void manageDMI_Input_init_manage_DMI_Input_Pkg(
-  outC_manageDMI_Input_manage_DMI_Input_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _manageDMI_Input_manage_DMI_Input_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

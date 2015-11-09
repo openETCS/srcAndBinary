@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,11 @@
 
 /* TA_Gradient::GP_Normalize_Profile_loop */
 void GP_Normalize_Profile_loop_TA_Gradient(
-  /* TA_Gradient::GP_Normalize_Profile_loop::i */ kcg_int i,
-  /* TA_Gradient::GP_Normalize_Profile_loop::ProfileIn */ GradientProfile_t_TrackAtlasTypes *ProfileIn,
-  /* TA_Gradient::GP_Normalize_Profile_loop::pos_BG */ L_internal_Type_Obu_BasicTypes_Pkg pos_BG,
-  /* TA_Gradient::GP_Normalize_Profile_loop::ProfileNormalized_LRBG */ GradientProfile_t_TrackAtlasTypes *ProfileNormalized_LRBG)
+  /* TA_Gradient::GP_Normalize_Profile_loop::i */kcg_int i,
+  /* TA_Gradient::GP_Normalize_Profile_loop::ProfileIn */GradientProfile_t_TrackAtlasTypes *ProfileIn,
+  /* TA_Gradient::GP_Normalize_Profile_loop::pos_BG */L_internal_Type_Obu_BasicTypes_Pkg pos_BG,
+  /* TA_Gradient::GP_Normalize_Profile_loop::ProfileNormalized_LRBG */GradientProfile_t_TrackAtlasTypes *ProfileNormalized_LRBG)
 {
-  /* TA_Gradient::GP_Normalize_Profile_loop */
   static Gradient_section_t_TrackAtlasTypes tmp;
   /* TA_Gradient::GP_Normalize_Profile_loop::_L4 */
   static Gradient_section_t_TrackAtlasTypes _L4;
@@ -40,13 +39,13 @@ void GP_Normalize_Profile_loop_TA_Gradient(
   _L26 = tmp.Loc_Absolute - _L4.Loc_Absolute;
   kcg_copy_GradientProfile_t_TrackAtlasTypes(ProfileNormalized_LRBG, ProfileIn);
   kcg_copy_Gradient_section_t_TrackAtlasTypes(&tmp, &_L4);
-  /* 2 */ if (_L4.valid) {
+  if (_L4.valid) {
     tmp.Loc_LRBG = _L4.Loc_Absolute - pos_BG;
   }
   else {
     tmp.Loc_LRBG = 0;
   }
-  /* 3 */ if (_L26 > 0) {
+  if (_L26 > 0) {
     tmp.L_Gradient = _L26;
   }
   else {
@@ -59,8 +58,8 @@ void GP_Normalize_Profile_loop_TA_Gradient(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** GP_Normalize_Profile_loop_TA_Gradient.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

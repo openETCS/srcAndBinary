@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,13 @@
 
 /* TM_lib_internal::SEND_MessageData */
 void SEND_MessageData_TM_lib_internal(
-  /* TM_lib_internal::SEND_MessageData::StartAddress */ kcg_int StartAddress,
-  /* TM_lib_internal::SEND_MessageData::EndAddress */ kcg_int EndAddress,
-  /* TM_lib_internal::SEND_MessageData::DataIn */ CompressedPacketData_T_Common_Types_Pkg *DataIn,
-  /* TM_lib_internal::SEND_MessageData::DataElementIn */ CompressedPacketData_T_Common_Types_Pkg *DataElementIn,
-  /* TM_lib_internal::SEND_MessageData::DataOut */ CompressedPacketData_T_Common_Types_Pkg *DataOut)
+  /* TM_lib_internal::SEND_MessageData::StartAddress */kcg_int StartAddress,
+  /* TM_lib_internal::SEND_MessageData::EndAddress */kcg_int EndAddress,
+  /* TM_lib_internal::SEND_MessageData::DataIn */CompressedPacketData_T_Common_Types_Pkg *DataIn,
+  /* TM_lib_internal::SEND_MessageData::DataElementIn */CompressedPacketData_T_Common_Types_Pkg *DataElementIn,
+  /* TM_lib_internal::SEND_MessageData::DataOut */CompressedPacketData_T_Common_Types_Pkg *DataOut)
 {
-  /* TM_lib_internal::SEND_MessageData */
-  static kcg_bool cond_iterw;
+  static kcg_bool tmp;
   static kcg_int i;
   /* TM_lib_internal::SEND_MessageData::_L402 */
   static kcg_int _L402;
@@ -29,10 +28,10 @@ void SEND_MessageData_TM_lib_internal(
       DataElementIn,
       StartAddress,
       EndAddress,
-      &cond_iterw,
+      &tmp,
       &(*DataOut)[i]);
     _L402 = i + 1;
-    if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
@@ -45,8 +44,8 @@ void SEND_MessageData_TM_lib_internal(
   
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SEND_MessageData_TM_lib_internal.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

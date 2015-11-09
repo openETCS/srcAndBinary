@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,12 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA */
 L_internal_real_Type_SDM_Types_Pkg CalculateEBDFootForMRSPorLOA_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::IsMRSPorLOATarget */ kcg_bool IsMRSPorLOATarget,
-  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::target */ Target_real_T_TargetManagement_types *target,
-  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::aSafe */ ASafe_T_CalcBrakingCurves_types *aSafe)
+  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::IsMRSPorLOATarget */kcg_bool IsMRSPorLOATarget,
+  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::target */Target_real_T_TargetManagement_types *target,
+  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::aSafe */ASafe_T_CalcBrakingCurves_types *aSafe)
 {
-  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA */
-  static BCAccumulator_type_CalcBrakingCurves_Pkg acc;
+  static BCAccumulator_type_CalcBrakingCurves_Pkg tmp1;
   static kcg_int i;
-  /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA */
   static ParabolaCurve_T_CalcBrakingCurves_types tmp;
   /* CalcBrakingCurves_Pkg::internalOperators::CalculateEBDFootForMRSPorLOA::_L5 */
   static BCAccumulator_type_CalcBrakingCurves_Pkg _L5;
@@ -32,11 +30,11 @@ L_internal_real_Type_SDM_Types_Pkg CalculateEBDFootForMRSPorLOA_CalcBrakingCurve
     &_L5);
   if (IsMRSPorLOATarget) {
     for (i = 0; i < 113; i++) {
-      kcg_copy_BCAccumulator_type_CalcBrakingCurves_Pkg(&acc, &_L5);
+      kcg_copy_BCAccumulator_type_CalcBrakingCurves_Pkg(&tmp1, &_L5);
       /* 1 */
       BCFoldOperatorForward_CalcBrakingCurves_Pkg_internalOperators(
         i,
-        &acc,
+        &tmp1,
         aSafe,
         (*target).speed,
         &_L10,
@@ -57,8 +55,8 @@ L_internal_real_Type_SDM_Types_Pkg CalculateEBDFootForMRSPorLOA_CalcBrakingCurve
   return EBDfoot;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CalculateEBDFootForMRSPorLOA_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

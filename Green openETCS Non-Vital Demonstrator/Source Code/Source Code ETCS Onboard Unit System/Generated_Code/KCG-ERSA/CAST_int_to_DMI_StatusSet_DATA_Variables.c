@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_int_to_DMI_StatusSet */
 DMI_StatusSet_T_DMI_Types_Pkg CAST_int_to_DMI_StatusSet_DATA_Variables(
-  /* DATA::Variables::CAST_int_to_DMI_StatusSet::dmi_statusSet_int */ kcg_int dmi_statusSet_int)
+  /* DATA::Variables::CAST_int_to_DMI_StatusSet::dmi_statusSet_int */kcg_int dmi_statusSet_int)
 {
   /* DATA::Variables::CAST_int_to_DMI_StatusSet::IfBlock1::else */
   static kcg_bool _14_else_clock_IfBlock1;
@@ -47,105 +47,105 @@ DMI_StatusSet_T_DMI_Types_Pkg CAST_int_to_DMI_StatusSet_DATA_Variables(
   static DMI_StatusSet_T_DMI_Types_Pkg dmi_statusSet_ct;
   
   IfBlock1_clock = dmi_statusSet_int == INT_DMI_StatusSet_T_Running_state;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Running_state;
   }
   else {
     _14_else_clock_IfBlock1 = dmi_statusSet_int ==
       INT_DMI_StatusSet_T_Starting_state;
-    /* ck_anon_activ */ if (_14_else_clock_IfBlock1) {
+    if (_14_else_clock_IfBlock1) {
       dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Starting_state;
     }
     else {
       _13_else_clock_IfBlock1 = dmi_statusSet_int ==
         INT_DMI_StatusSet_T_Failure_state;
-      /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
+      if (_13_else_clock_IfBlock1) {
         dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Failure_state;
       }
       else {
         _12_else_clock_IfBlock1 = dmi_statusSet_int ==
           INT_DMI_StatusSet_T_Running_not_active_state;
-        /* ck_anon_activ */ if (_12_else_clock_IfBlock1) {
+        if (_12_else_clock_IfBlock1) {
           dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Running_not_active_state;
         }
         else {
           _11_else_clock_IfBlock1 = dmi_statusSet_int ==
             INT_DMI_StatusSet_T_Train_Speed_Overflow;
-          /* ck_anon_activ */ if (_11_else_clock_IfBlock1) {
+          if (_11_else_clock_IfBlock1) {
             dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Train_Speed_Overflow;
           }
           else {
             _10_else_clock_IfBlock1 = dmi_statusSet_int ==
               INT_DMI_StatusSet_T_Invalid_track_condition;
-            /* ck_anon_activ */ if (_10_else_clock_IfBlock1) {
+            if (_10_else_clock_IfBlock1) {
               dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Invalid_track_condition;
             }
             else {
               _9_else_clock_IfBlock1 = dmi_statusSet_int ==
                 INT_DMI_StatusSet_T_Invalid_predefined_text_message;
-              /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
+              if (_9_else_clock_IfBlock1) {
                 dmi_statusSet_ct =
                   ENUM_DMI_StatusSet_T_Invalid_predefined_text_message;
               }
               else {
                 _8_else_clock_IfBlock1 = dmi_statusSet_int ==
                   INT_DMI_StatusSet_T_Invalid_text_message;
-                /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
+                if (_8_else_clock_IfBlock1) {
                   dmi_statusSet_ct = ENUM_DMI_StatusSet_T_Invalid_text_message;
                 }
                 else {
                   _7_else_clock_IfBlock1 = dmi_statusSet_int ==
                     INT_DMI_StatusSet_T_HW_warning_temp_reached;
-                  /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
+                  if (_7_else_clock_IfBlock1) {
                     dmi_statusSet_ct =
                       ENUM_DMI_StatusSet_T_HW_warning_temp_reached;
                   }
                   else {
                     _6_else_clock_IfBlock1 = dmi_statusSet_int ==
                       INT_DMI_StatusSet_T_TFT_OFF_temp_reached;
-                    /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
+                    if (_6_else_clock_IfBlock1) {
                       dmi_statusSet_ct =
                         ENUM_DMI_StatusSet_T_TFT_OFF_temp_reached;
                     }
                     else {
                       _5_else_clock_IfBlock1 = dmi_statusSet_int ==
                         INT_DMI_StatusSet_T_Device_OFF_temp_reached;
-                      /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
+                      if (_5_else_clock_IfBlock1) {
                         dmi_statusSet_ct =
                           ENUM_DMI_StatusSet_T_Device_OFF_temp_reached;
                       }
                       else {
                         _4_else_clock_IfBlock1 = dmi_statusSet_int ==
                           INT_DMI_StatusSet_T_Over_temperature;
-                        /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+                        if (_4_else_clock_IfBlock1) {
                           dmi_statusSet_ct =
                             ENUM_DMI_StatusSet_T_Over_temperature;
                         }
                         else {
                           _3_else_clock_IfBlock1 = dmi_statusSet_int ==
                             INT_DMI_StatusSet_T_Backlight_on_off;
-                          /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+                          if (_3_else_clock_IfBlock1) {
                             dmi_statusSet_ct =
                               ENUM_DMI_StatusSet_T_Backlight_on_off;
                           }
                           else {
                             _2_else_clock_IfBlock1 = dmi_statusSet_int ==
                               INT_DMI_StatusSet_T_FAN_blocked;
-                            /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+                            if (_2_else_clock_IfBlock1) {
                               dmi_statusSet_ct =
                                 ENUM_DMI_StatusSet_T_FAN_blocked;
                             }
                             else {
                               _1_else_clock_IfBlock1 = dmi_statusSet_int ==
                                 INT_DMI_StatusSet_T_Power_supply_key_switch_off;
-                              /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+                              if (_1_else_clock_IfBlock1) {
                                 dmi_statusSet_ct =
                                   ENUM_DMI_StatusSet_T_Power_supply_key_switch_off;
                               }
                               else {
                                 else_clock_IfBlock1 = dmi_statusSet_int ==
                                   INT_DMI_StatusSet_T_Watchdog_not_running;
-                                /* ck_anon_activ */ if (else_clock_IfBlock1) {
+                                if (else_clock_IfBlock1) {
                                   dmi_statusSet_ct =
                                     ENUM_DMI_StatusSet_T_Watchdog_not_running;
                                 }
@@ -171,8 +171,8 @@ DMI_StatusSet_T_DMI_Types_Pkg CAST_int_to_DMI_StatusSet_DATA_Variables(
   return dmi_statusSet_ct;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_DMI_StatusSet_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

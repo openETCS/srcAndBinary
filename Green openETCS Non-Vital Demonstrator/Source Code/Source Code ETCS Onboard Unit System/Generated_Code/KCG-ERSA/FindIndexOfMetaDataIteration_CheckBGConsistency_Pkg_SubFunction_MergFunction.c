@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,37 +9,35 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration */
 void FindIndexOfMetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::metadata */ Metadata_T_Common_Types_Pkg *metadata,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::index */ kcg_int *index,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::endAddress */ kcg_int *endAddress)
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::metadata */Metadata_T_Common_Types_Pkg *metadata,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::index */kcg_int *index,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::endAddress */kcg_int *endAddress)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration */
-  static MetadataElement_T_Common_Types_Pkg acc;
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration */
-  static kcg_bool cond_iterw;
+  static MetadataElement_T_Common_Types_Pkg tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   /* CheckBGConsistency_Pkg::SubFunction::MergFunction::FindIndexOfMetaDataIteration::_L12 */
   static MetadataElement_T_Common_Types_Pkg _L12;
   
   kcg_copy_MetadataElement_T_Common_Types_Pkg(&_L12, &(*metadata)[0]);
   for (i = 0; i < 29; i++) {
-    kcg_copy_MetadataElement_T_Common_Types_Pkg(&acc, &_L12);
+    kcg_copy_MetadataElement_T_Common_Types_Pkg(&tmp1, &_L12);
     /* 1 */
     FindIndexOfMetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-      &acc,
+      &tmp1,
       &(*metadata)[i + 1],
-      &cond_iterw,
+      &tmp,
       &_L12);
     *index = i + 1;
-    if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
   *endAddress = _L12.endAddress;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FindIndexOfMetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _collectDMIPackets_manage_DMI_Output_Pkg_H_
 #define _collectDMIPackets_manage_DMI_Output_Pkg_H_
@@ -9,8 +9,6 @@
 #include "synchWithDMI_manage_DMI_Output_Pkg.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,39 +26,32 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* manage_DMI_Output_Pkg::collectDMIPackets */
 extern void collectDMIPackets_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::collectDMIPackets::TIU_TrainStatus */ TIU_trainStatus_T_TIU_Types_Pkg *TIU_TrainStatus,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_dynamic */ DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_dynamic,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_menuRequest */ DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_menuRequest,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_entryRequest */ DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_entryRequest,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_evc_coded_train_data */ DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_evc_coded_train_data,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_text_message */ DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_text_message,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trackDescription */ DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_trackDescription,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_identifierRequest */ DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_identifierRequest,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_systemVersion */ DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_systemVersion,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_displayControl */ DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_displayControl,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_levelData */ DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_EVC_levelData,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_radioNet */ DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_EVC_radioNet,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_driverIdentifier */ DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *dmi_driverIdentifier,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainRunningNumber */ DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg *dmi_trainRunningNumber,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainData */ DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *dmi_trainData,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_adhesionFactor */ DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *dmi_adhesionFactor,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_iconRequest */ DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_iconRequest,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::TIU_TrainStatus */TIU_trainStatus_T_TIU_Types_Pkg *TIU_TrainStatus,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_dynamic */DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_dynamic,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_menuRequest */DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_menuRequest,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_entryRequest */DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_entryRequest,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_evc_coded_train_data */_27_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_evc_coded_train_data,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_text_message */DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_text_message,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trackDescription */DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_trackDescription,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_identifierRequest */_26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_identifierRequest,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_systemVersion */DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_systemVersion,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_displayControl */DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_displayControl,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_levelData */DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_EVC_levelData,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_radioNet */_25_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_EVC_radioNet,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_driverIdentifier */_24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *dmi_driverIdentifier,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainRunningNumber */_23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg *dmi_trainRunningNumber,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainData */DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *dmi_trainData,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_adhesionFactor */_22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *dmi_adhesionFactor,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_iconRequest */DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_iconRequest,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
   outC_collectDMIPackets_manage_DMI_Output_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void collectDMIPackets_reset_manage_DMI_Output_Pkg(
   outC_collectDMIPackets_manage_DMI_Output_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void collectDMIPackets_init_manage_DMI_Output_Pkg(
-  outC_collectDMIPackets_manage_DMI_Output_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _collectDMIPackets_manage_DMI_Output_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** collectDMIPackets_manage_DMI_Output_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _ComputeModesConditions_H_
 #define _ComputeModesConditions_H_
@@ -27,8 +27,6 @@
 #include "Procedure_Train_Reversing_Procedures.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -103,91 +101,85 @@ typedef struct {
   kcg_bool /* ComputeModesConditions::Train_Overpass_EOA_Antenna */ rem_Train_Overpass_EOA_Antenna;
   kcg_bool /* ComputeModesConditions::Override_Function_Active */ rem_Override_Function_Active;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Procedure_Train_Reversing_Procedures /* 1 */ _10_Context_1;
-  outC_Procedure_Train_Trip_Procedures /* 1 */ _9_Context_1;
+  outC_ToShunting_Conditions /* 1 */ _10_Context_1;
+  outC_Procedure_StartOfMission_Procedures /* 1 */ _9_Context_1;
   outC_ToTrip_Conditions /* 1 */ _8_Context_1;
-  outC_Procedure_StartOfMission_Procedures /* 1 */ _7_Context_1;
-  outC_ToSystemNational_Conditions /* 1 */ _6_Context_1;
-  outC_ToUnfitted_Conditions /* 1 */ _5_Context_1;
-  outC_ToStaffResponsible_Conditions /* 1 */ _4_Context_1;
-  outC_Procedure_OnSight_Procedures /* 1 */ _3_Context_1;
-  outC_Procedure_LimitedSupervision_Procedures /* 1 */ _2_Context_1;
-  outC_ToFullSupervision_Conditions /* 1 */ _1_Context_1;
-  outC_ToShunting_Conditions /* 1 */ Context_1;
+  outC_Procedure_Train_Trip_Procedures /* 1 */ _7_Context_1;
+  outC_Procedure_LimitedSupervision_Procedures /* 1 */ _6_Context_1;
+  outC_Procedure_OnSight_Procedures /* 1 */ _5_Context_1;
+  outC_ToFullSupervision_Conditions /* 1 */ _4_Context_1;
+  outC_Procedure_Train_Reversing_Procedures /* 1 */ _3_Context_1;
+  outC_ToSystemNational_Conditions /* 1 */ _2_Context_1;
+  outC_ToUnfitted_Conditions /* 1 */ _1_Context_1;
+  outC_ToStaffResponsible_Conditions /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ComputeModesConditions;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* ComputeModesConditions */
 extern void ComputeModesConditions(
-  /* ComputeModesConditions::Current_Level */ M_LEVEL Current_Level,
-  /* ComputeModesConditions::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
-  /* ComputeModesConditions::Train_Permitted_NL */ kcg_bool Train_Permitted_NL,
-  /* ComputeModesConditions::Train_Permitted_PS */ kcg_bool Train_Permitted_PS,
-  /* ComputeModesConditions::Train_Req_SL */ kcg_bool Train_Req_SL,
-  /* ComputeModesConditions::All_Desks_Closed */ kcg_bool All_Desks_Closed,
-  /* ComputeModesConditions::Desk_Open */ kcg_bool Desk_Open,
-  /* ComputeModesConditions::OnBoard_Powered */ kcg_bool OnBoard_Powered,
-  /* ComputeModesConditions::Valid_Train_Data_Stored */ kcg_bool Valid_Train_Data_Stored,
-  /* ComputeModesConditions::Driver_Ack_LS */ kcg_bool Driver_Ack_LS,
-  /* ComputeModesConditions::Driver_Ack_OS */ kcg_bool Driver_Ack_OS,
-  /* ComputeModesConditions::Driver_Ack_RV */ kcg_bool Driver_Ack_RV,
-  /* ComputeModesConditions::Driver_Ack_SH */ kcg_bool Driver_Ack_SH,
-  /* ComputeModesConditions::Driver_Ack_SN */ kcg_bool Driver_Ack_SN,
-  /* ComputeModesConditions::Driver_Ack_SR */ kcg_bool Driver_Ack_SR,
-  /* ComputeModesConditions::Driver_Ack_TR */ kcg_bool Driver_Ack_TR,
-  /* ComputeModesConditions::Driver_Ack_UN */ kcg_bool Driver_Ack_UN,
-  /* ComputeModesConditions::Driver_Req_Exit_SH */ kcg_bool Driver_Req_Exit_SH,
-  /* ComputeModesConditions::Driver_Req_NL */ kcg_bool Driver_Req_NL,
-  /* ComputeModesConditions::Driver_Req_Override */ kcg_bool Driver_Req_Override,
-  /* ComputeModesConditions::Driver_Req_SH */ kcg_bool Driver_Req_SH,
-  /* ComputeModesConditions::Driver_Req_Start */ kcg_bool Driver_Req_Start,
-  /* ComputeModesConditions::ETCS_Isolated */ kcg_bool ETCS_Isolated,
-  /* ComputeModesConditions::MA_SSP_Gradiant_Available */ kcg_bool MA_SSP_Gradiant_Available,
-  /* ComputeModesConditions::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
-  /* ComputeModesConditions::Shunting_Granted_By_RBC */ kcg_bool Shunting_Granted_By_RBC,
-  /* ComputeModesConditions::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
-  /* ComputeModesConditions::List_BG_Related_To_SR_Empty */ kcg_bool List_BG_Related_To_SR_Empty,
-  /* ComputeModesConditions::Stop_If_In_Shunting */ kcg_bool Stop_If_In_Shunting,
-  /* ComputeModesConditions::Stop_If_In_SR */ kcg_bool Stop_If_In_SR,
-  /* ComputeModesConditions::RBC_Ack_And_EB_Revocked */ kcg_bool RBC_Ack_And_EB_Revocked,
-  /* ComputeModesConditions::RBC_Authorized_SR */ kcg_bool RBC_Authorized_SR,
-  /* ComputeModesConditions::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
-  /* ComputeModesConditions::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
-  /* ComputeModesConditions::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR_Distance,
-  /* ComputeModesConditions::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
-  /* ComputeModesConditions::Override_Function_Active */ kcg_bool Override_Function_Active,
-  /* ComputeModesConditions::Train_Overpass_EOA_Antenna */ kcg_bool Train_Overpass_EOA_Antenna,
-  /* ComputeModesConditions::Train_Overpass_EOA_Front_End */ kcg_bool Train_Overpass_EOA_Front_End,
-  /* ComputeModesConditions::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limit,
-  /* ComputeModesConditions::BG_In_Expected_List_In_SR */ kcg_bool BG_In_Expected_List_In_SR,
-  /* ComputeModesConditions::BG_In_Expected_List_In_SH */ kcg_bool BG_In_Expected_List_In_SH,
-  /* ComputeModesConditions::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direction,
-  /* ComputeModesConditions::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
-  /* ComputeModesConditions::Train_Speed */ Speed_T_Obu_BasicTypes_Pkg Train_Speed,
-  /* ComputeModesConditions::Train_Standstill */ kcg_bool Train_Standstill,
-  /* ComputeModesConditions::Interface_To_National_System */ kcg_bool Interface_To_National_System,
-  /* ComputeModesConditions::National_Trip_Order */ kcg_bool National_Trip_Order,
-  /* ComputeModesConditions::T_NVCONTACT_Overpass */ kcg_bool T_NVCONTACT_Overpass,
-  /* ComputeModesConditions::Error_BG_System_Version */ kcg_bool Error_BG_System_Version,
-  /* ComputeModesConditions::Failure_Occured */ kcg_bool Failure_Occured,
-  /* ComputeModesConditions::Continue_Shunting_Function_Active */ kcg_bool Continue_Shunting_Function_Active,
-  /* ComputeModesConditions::Stop_Shunting_Stored */ kcg_bool Stop_Shunting_Stored,
-  /* ComputeModesConditions::Linking_Reaction_To_Trip */ kcg_bool Linking_Reaction_To_Trip,
-  /* ComputeModesConditions::TripModeFromLevel */ kcg_bool TripModeFromLevel,
+  /* ComputeModesConditions::Current_Level */M_LEVEL Current_Level,
+  /* ComputeModesConditions::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
+  /* ComputeModesConditions::Train_Permitted_NL */kcg_bool Train_Permitted_NL,
+  /* ComputeModesConditions::Train_Permitted_PS */kcg_bool Train_Permitted_PS,
+  /* ComputeModesConditions::Train_Req_SL */kcg_bool Train_Req_SL,
+  /* ComputeModesConditions::All_Desks_Closed */kcg_bool All_Desks_Closed,
+  /* ComputeModesConditions::Desk_Open */kcg_bool Desk_Open,
+  /* ComputeModesConditions::OnBoard_Powered */kcg_bool OnBoard_Powered,
+  /* ComputeModesConditions::Valid_Train_Data_Stored */kcg_bool Valid_Train_Data_Stored,
+  /* ComputeModesConditions::Driver_Ack_LS */kcg_bool Driver_Ack_LS,
+  /* ComputeModesConditions::Driver_Ack_OS */kcg_bool Driver_Ack_OS,
+  /* ComputeModesConditions::Driver_Ack_RV */kcg_bool Driver_Ack_RV,
+  /* ComputeModesConditions::Driver_Ack_SH */kcg_bool Driver_Ack_SH,
+  /* ComputeModesConditions::Driver_Ack_SN */kcg_bool Driver_Ack_SN,
+  /* ComputeModesConditions::Driver_Ack_SR */kcg_bool Driver_Ack_SR,
+  /* ComputeModesConditions::Driver_Ack_TR */kcg_bool Driver_Ack_TR,
+  /* ComputeModesConditions::Driver_Ack_UN */kcg_bool Driver_Ack_UN,
+  /* ComputeModesConditions::Driver_Req_Exit_SH */kcg_bool Driver_Req_Exit_SH,
+  /* ComputeModesConditions::Driver_Req_NL */kcg_bool Driver_Req_NL,
+  /* ComputeModesConditions::Driver_Req_Override */kcg_bool Driver_Req_Override,
+  /* ComputeModesConditions::Driver_Req_SH */kcg_bool Driver_Req_SH,
+  /* ComputeModesConditions::Driver_Req_Start */kcg_bool Driver_Req_Start,
+  /* ComputeModesConditions::ETCS_Isolated */kcg_bool ETCS_Isolated,
+  /* ComputeModesConditions::MA_SSP_Gradiant_Available */kcg_bool MA_SSP_Gradiant_Available,
+  /* ComputeModesConditions::Mode_Profile_On_Board */T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* ComputeModesConditions::Shunting_Granted_By_RBC */kcg_bool Shunting_Granted_By_RBC,
+  /* ComputeModesConditions::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
+  /* ComputeModesConditions::List_BG_Related_To_SR_Empty */kcg_bool List_BG_Related_To_SR_Empty,
+  /* ComputeModesConditions::Stop_If_In_Shunting */kcg_bool Stop_If_In_Shunting,
+  /* ComputeModesConditions::Stop_If_In_SR */kcg_bool Stop_If_In_SR,
+  /* ComputeModesConditions::RBC_Ack_And_EB_Revocked */kcg_bool RBC_Ack_And_EB_Revocked,
+  /* ComputeModesConditions::RBC_Authorized_SR */kcg_bool RBC_Authorized_SR,
+  /* ComputeModesConditions::Reversing_Data */T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
+  /* ComputeModesConditions::Emergency_Stop_Message_Received */kcg_bool Emergency_Stop_Message_Received,
+  /* ComputeModesConditions::Estimated_Front_End_Overpass_SR_Distance */kcg_bool Estimated_Front_End_Overpass_SR_Distance,
+  /* ComputeModesConditions::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+  /* ComputeModesConditions::Override_Function_Active */kcg_bool Override_Function_Active,
+  /* ComputeModesConditions::Train_Overpass_EOA_Antenna */kcg_bool Train_Overpass_EOA_Antenna,
+  /* ComputeModesConditions::Train_Overpass_EOA_Front_End */kcg_bool Train_Overpass_EOA_Front_End,
+  /* ComputeModesConditions::Train_Speed_Under_Override_Limit */kcg_bool Train_Speed_Under_Override_Limit,
+  /* ComputeModesConditions::BG_In_Expected_List_In_SR */kcg_bool BG_In_Expected_List_In_SR,
+  /* ComputeModesConditions::BG_In_Expected_List_In_SH */kcg_bool BG_In_Expected_List_In_SH,
+  /* ComputeModesConditions::Linked_BG_Pased_In_Wrong_Direction */kcg_bool Linked_BG_Pased_In_Wrong_Direction,
+  /* ComputeModesConditions::Train_Position */trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* ComputeModesConditions::Train_Speed */Speed_T_Obu_BasicTypes_Pkg Train_Speed,
+  /* ComputeModesConditions::Train_Standstill */kcg_bool Train_Standstill,
+  /* ComputeModesConditions::Interface_To_National_System */kcg_bool Interface_To_National_System,
+  /* ComputeModesConditions::National_Trip_Order */kcg_bool National_Trip_Order,
+  /* ComputeModesConditions::T_NVCONTACT_Overpass */kcg_bool T_NVCONTACT_Overpass,
+  /* ComputeModesConditions::Error_BG_System_Version */kcg_bool Error_BG_System_Version,
+  /* ComputeModesConditions::Failure_Occured */kcg_bool Failure_Occured,
+  /* ComputeModesConditions::Continue_Shunting_Function_Active */kcg_bool Continue_Shunting_Function_Active,
+  /* ComputeModesConditions::Stop_Shunting_Stored */kcg_bool Stop_Shunting_Stored,
+  /* ComputeModesConditions::Linking_Reaction_To_Trip */kcg_bool Linking_Reaction_To_Trip,
+  /* ComputeModesConditions::TripModeFromLevel */kcg_bool TripModeFromLevel,
   outC_ComputeModesConditions *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void ComputeModesConditions_reset(outC_ComputeModesConditions *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void ComputeModesConditions_init(outC_ComputeModesConditions *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _ComputeModesConditions_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ComputeModesConditions.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

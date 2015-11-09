@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _MRSPPreindicationIterator_TargetLimits_Pkg_H_
 #define _MRSPPreindicationIterator_TargetLimits_Pkg_H_
@@ -10,24 +10,22 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TargetLimits_Pkg::MRSPPreindicationIterator */
 extern void MRSPPreindicationIterator_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::i */ kcg_int i,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::MRSP_preindication_mix */ MRSP_internal_section_T_TargetManagement_types *MRSP_preindication_mix,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::MRSP_sect_n */ MRSP_internal_section_T_TargetManagement_types *MRSP_sect_n,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::EBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *EBDcurve,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::guiCurveEnabled */ kcg_bool guiCurveEnabled,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::T */ T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::goOn */ kcg_bool *goOn,
-  /* TargetLimits_Pkg::MRSPPreindicationIterator::MRSP_preindication_next */ MRSP_internal_section_T_TargetManagement_types *MRSP_preindication_next);
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::i */kcg_int i,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::MRSP_preindication_mix */MRSP_internal_section_T_TargetManagement_types *MRSP_preindication_mix,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::MRSP_sect_n */MRSP_internal_section_T_TargetManagement_types *MRSP_sect_n,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::EBDcurve */ParabolaCurve_T_CalcBrakingCurves_types *EBDcurve,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::guiCurveEnabled */kcg_bool guiCurveEnabled,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::GUIcurve */ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::T */T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::goOn */kcg_bool *goOn,
+  /* TargetLimits_Pkg::MRSPPreindicationIterator::MRSP_preindication_next */MRSP_internal_section_T_TargetManagement_types *MRSP_preindication_next);
 
 #endif /* _MRSPPreindicationIterator_TargetLimits_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MRSPPreindicationIterator_TargetLimits_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

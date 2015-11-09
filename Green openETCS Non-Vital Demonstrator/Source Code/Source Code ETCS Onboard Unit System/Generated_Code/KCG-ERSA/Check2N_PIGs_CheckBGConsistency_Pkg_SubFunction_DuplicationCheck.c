@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,14 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs */
 kcg_bool Check2N_PIGs_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::n_pig_1 */ N_PIG n_pig_1,
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::m_dup_1 */ M_DUP m_dup_1,
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::n_pig_2 */ N_PIG n_pig_2,
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::m_dup_2 */ M_DUP m_dup_2,
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::crcCheck_1 */ kcg_bool crcCheck_1,
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::crcCheck_2 */ kcg_bool crcCheck_2)
+  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::n_pig_1 */N_PIG n_pig_1,
+  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::m_dup_1 */M_DUP m_dup_1,
+  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::n_pig_2 */N_PIG n_pig_2,
+  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::m_dup_2 */M_DUP m_dup_2,
+  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::crcCheck_1 */kcg_bool crcCheck_1,
+  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::crcCheck_2 */kcg_bool crcCheck_2)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs */
   static kcg_int tmp1;
-  /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs */
   static kcg_int tmp;
   /* CheckBGConsistency_Pkg::SubFunction::DuplicationCheck::Check2N_PIGs::valid */
   static kcg_bool valid;
@@ -50,7 +48,7 @@ kcg_bool Check2N_PIGs_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
           crcCheck_1,
           crcCheck_2);
       break;
-    case -1 :
+    case - 1 :
       valid = /* 2 */
         Dif1Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
           m_dup_2,
@@ -58,7 +56,7 @@ kcg_bool Check2N_PIGs_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
           crcCheck_2,
           crcCheck_1);
       break;
-    case -2 :
+    case - 2 :
       valid = /* 2 */
         Dif2Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
           m_dup_2,
@@ -66,7 +64,7 @@ kcg_bool Check2N_PIGs_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
           crcCheck_2,
           crcCheck_1);
       break;
-    case -3 :
+    case - 3 :
       valid = /* 2 */
         Dif3Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
           m_dup_2,
@@ -81,8 +79,8 @@ kcg_bool Check2N_PIGs_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
   return valid;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Check2N_PIGs_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

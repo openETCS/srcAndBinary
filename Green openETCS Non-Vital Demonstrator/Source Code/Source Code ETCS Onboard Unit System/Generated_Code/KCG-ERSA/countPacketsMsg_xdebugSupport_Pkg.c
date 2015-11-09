@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,34 +9,32 @@
 
 /* xdebugSupport_Pkg::countPacketsMsg */
 kcg_int countPacketsMsg_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::countPacketsMsg::Message */ ReceivedMessage_T_Common_Types_Pkg *Message)
+  /* xdebugSupport_Pkg::countPacketsMsg::Message */ReceivedMessage_T_Common_Types_Pkg *Message)
 {
-  /* xdebugSupport_Pkg::countPacketsMsg */
-  static kcg_int acc;
-  /* xdebugSupport_Pkg::countPacketsMsg */
-  static kcg_bool cond_iterw;
+  static kcg_int tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   /* xdebugSupport_Pkg::countPacketsMsg::count */
   static kcg_int count;
   
   count = 0;
-  /* 1 */ for (i = 0; i < 30; i++) {
-    acc = count;
+  for (i = 0; i < 30; i++) {
+    tmp1 = count;
     /* 1 */
     countBasics_xdebugSupport_Pkg(
-      acc,
+      tmp1,
       &(*Message).packets.PacketHeaders[i],
-      &cond_iterw,
+      &tmp,
       &count);
-    /* 1 */ if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
   return count;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** countPacketsMsg_xdebugSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

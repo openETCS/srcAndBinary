@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* TA_SSP::SSP_Truncate_at_BG_loop */
 void SSP_Truncate_at_BG_loop_TA_SSP(
-  /* TA_SSP::SSP_Truncate_at_BG_loop::i */ kcg_int i,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Acc */ StaticSpeedProfile_t_TrackAtlasTypes *Acc,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_in */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Pointer */ kcg_int Pointer,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::cont */ kcg_bool *cont,
-  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_out */ StaticSpeedProfile_t_TrackAtlasTypes *Profile_out)
+  /* TA_SSP::SSP_Truncate_at_BG_loop::i */kcg_int i,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Acc */StaticSpeedProfile_t_TrackAtlasTypes *Acc,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_in */StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Pointer */kcg_int Pointer,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::cont */kcg_bool *cont,
+  /* TA_SSP::SSP_Truncate_at_BG_loop::Profile_out */StaticSpeedProfile_t_TrackAtlasTypes *Profile_out)
 {
   /* TA_SSP::SSP_Truncate_at_BG_loop::_L8 */
   static StaticSpeedSection_t_TrackAtlasTypes _L8;
@@ -30,15 +30,15 @@ void SSP_Truncate_at_BG_loop_TA_SSP(
       (StaticSpeedSection_t_TrackAtlasTypes *)
         &DEFAULT_StaticSpeedSection_TrackAtlasTypes);
   }
+  *cont = _L8.valid;
   kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(Profile_out, Acc);
   if ((0 <= i) & (i < 50)) {
     kcg_copy_StaticSpeedSection_t_TrackAtlasTypes(&(*Profile_out)[i], &_L8);
   }
-  *cont = _L8.valid;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_Truncate_at_BG_loop_TA_SSP.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,41 +9,38 @@
 
 /* TargetLimits_Pkg::v_SBI1 */
 void v_SBI1_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::v_SBI1::SBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
-  /* TargetLimits_Pkg::v_SBI1::V_est */ V_internal_real_Type_SDM_Types_Pkg V_est,
-  /* TargetLimits_Pkg::v_SBI1::D_estfront */ L_internal_real_Type_SDM_Types_Pkg D_estfront,
-  /* TargetLimits_Pkg::v_SBI1::D_EOA */ L_internal_real_Type_SDM_Types_Pkg D_EOA,
-  /* TargetLimits_Pkg::v_SBI1::t_driver */ T_internal_real_Type_SDM_Types_Pkg t_driver,
-  /* TargetLimits_Pkg::v_SBI1::guiCurveEnabled */ kcg_bool guiCurveEnabled,
-  /* TargetLimits_Pkg::v_SBI1::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
-  /* TargetLimits_Pkg::v_SBI1::T */ T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::v_SBI1::valid */ kcg_bool *valid,
-  /* TargetLimits_Pkg::v_SBI1::V_SBI1 */ V_internal_real_Type_SDM_Types_Pkg *V_SBI1)
+  /* TargetLimits_Pkg::v_SBI1::SBDcurve */ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
+  /* TargetLimits_Pkg::v_SBI1::V_est */V_internal_real_Type_SDM_Types_Pkg V_est,
+  /* TargetLimits_Pkg::v_SBI1::D_estfront */L_internal_real_Type_SDM_Types_Pkg D_estfront,
+  /* TargetLimits_Pkg::v_SBI1::D_EOA */L_internal_real_Type_SDM_Types_Pkg D_EOA,
+  /* TargetLimits_Pkg::v_SBI1::t_driver */T_internal_real_Type_SDM_Types_Pkg t_driver,
+  /* TargetLimits_Pkg::v_SBI1::guiCurveEnabled */kcg_bool guiCurveEnabled,
+  /* TargetLimits_Pkg::v_SBI1::GUIcurve */ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
+  /* TargetLimits_Pkg::v_SBI1::T */T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::v_SBI1::valid */kcg_bool *valid,
+  /* TargetLimits_Pkg::v_SBI1::V_SBI1 */V_internal_real_Type_SDM_Types_Pkg *V_SBI1)
 {
-  /* TargetLimits_Pkg::v_SBI1 */
   static kcg_bool tmp3;
-  /* TargetLimits_Pkg::v_SBI1 */
   static V_internal_real_Type_SDM_Types_Pkg tmp2;
-  /* TargetLimits_Pkg::v_SBI1 */
   static kcg_bool tmp1;
-  /* TargetLimits_Pkg::v_SBI1 */
   static V_internal_real_Type_SDM_Types_Pkg tmp;
-  /* TargetLimits_Pkg::v_SBI1::_L8 */
-  static kcg_real _L8;
+  static V_internal_real_Type_SDM_Types_Pkg tmp4;
   /* TargetLimits_Pkg::v_SBI1::_L16 */
   static kcg_bool _L16;
   
-  _L8 = D_estfront + (t_driver + (*T).bs1) * V_est;
-  tmp1 = D_EOA > _L8;
-  /* ck__L12 */ if (tmp1) {
+  tmp4 = D_estfront + (t_driver + (*T).bs1) * V_est;
+  _L16 = D_EOA > tmp4;
+  if (_L16) {
     /* 1 */
-    getSpeedOnCurve_CalcBrakingCurves_types(SBDcurve, _L8, &tmp3, &tmp2);
+    getSpeedOnCurve_CalcBrakingCurves_types(SBDcurve, tmp4, &tmp1, &tmp);
+    tmp3 = tmp1;
+    tmp2 = tmp;
   }
   else {
     tmp3 = kcg_false;
     tmp2 = 0.0;
   }
-  /* ck_guiCurveEnabled */ if (guiCurveEnabled) {
+  if (guiCurveEnabled) {
     /* 2 */
     getSpeedOnCurve_CalcBrakingCurves_types(GUIcurve, D_estfront, &tmp1, &tmp);
   }
@@ -55,8 +52,8 @@ void v_SBI1_TargetLimits_Pkg(
   selectLEValid_TargetLimits_Pkg(tmp3, tmp2, tmp1, tmp, &_L16, valid, V_SBI1);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** v_SBI1_TargetLimits_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

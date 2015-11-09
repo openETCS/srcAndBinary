@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TM_conversions::CAST_Int_to_Q_LINKORIENTATION */
 Q_LINKORIENTATION CAST_Int_to_Q_LINKORIENTATION_TM_conversions(
-  /* TM_conversions::CAST_Int_to_Q_LINKORIENTATION::q_linkorientation_int */ kcg_int q_linkorientation_int)
+  /* TM_conversions::CAST_Int_to_Q_LINKORIENTATION::q_linkorientation_int */kcg_int q_linkorientation_int)
 {
   /* TM_conversions::CAST_Int_to_Q_LINKORIENTATION::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -20,13 +20,13 @@ Q_LINKORIENTATION CAST_Int_to_Q_LINKORIENTATION_TM_conversions(
   
   IfBlock1_clock = q_linkorientation_int ==
     INT_Q_LINKORIENTATION_nominal_TM_conversions;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     q_linkorientation = ENUM_Q_LINKORIENTATION_nominal_TM_conversions;
   }
   else {
     else_clock_IfBlock1 = q_linkorientation_int ==
       INT_Q_LINKORIENTATION_reverse_TM_conversions;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       q_linkorientation = ENUM_Q_LINKORIENTATION_reverse_TM_conversions;
     }
     else {
@@ -36,8 +36,8 @@ Q_LINKORIENTATION CAST_Int_to_Q_LINKORIENTATION_TM_conversions(
   return q_linkorientation;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Int_to_Q_LINKORIENTATION_TM_conversions.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

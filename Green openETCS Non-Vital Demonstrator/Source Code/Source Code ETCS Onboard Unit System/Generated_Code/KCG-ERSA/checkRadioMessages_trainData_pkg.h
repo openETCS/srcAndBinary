@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _checkRadioMessages_trainData_pkg_H_
 #define _checkRadioMessages_trainData_pkg_H_
@@ -9,19 +9,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* trainData_pkg::checkRadioMessages */
 extern void checkRadioMessages_trainData_pkg(
-  /* trainData_pkg::checkRadioMessages::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
-  /* trainData_pkg::checkRadioMessages::actualStatus */ trainDataStatus_T_trainData_Types_pkg *actualStatus,
-  /* trainData_pkg::checkRadioMessages::ackReceived */ kcg_bool *ackReceived,
-  /* trainData_pkg::checkRadioMessages::ackRequested */ kcg_bool *ackRequested);
+  /* trainData_pkg::checkRadioMessages::trackMessages */ReceivedMessage_T_Common_Types_Pkg *trackMessages,
+  /* trainData_pkg::checkRadioMessages::actualStatus */trainDataStatus_T_trainData_Types_pkg *actualStatus,
+  /* trainData_pkg::checkRadioMessages::ackReceived */kcg_bool *ackReceived,
+  /* trainData_pkg::checkRadioMessages::ackRequested */kcg_bool *ackRequested);
 
 #endif /* _checkRadioMessages_trainData_pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkRadioMessages_trainData_pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

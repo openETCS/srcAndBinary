@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* Messages::CAST_EVC_to_DMI_to_int */
 void CAST_EVC_to_DMI_to_int_Messages(
-  /* Messages::CAST_EVC_to_DMI_to_int::evc_to_dmi_ct */ EVC_to_DMI_Message_T_API_DMI_Pkg *evc_to_dmi_ct,
-  /* Messages::CAST_EVC_to_DMI_to_int::evc_to_dmi_int */ EVC_to_DMI_Message_int_T_API_DMI_Pkg *evc_to_dmi_int)
+  /* Messages::CAST_EVC_to_DMI_to_int::evc_to_dmi_ct */EVC_to_DMI_Message_T_API_DMI_Pkg *evc_to_dmi_ct,
+  /* Messages::CAST_EVC_to_DMI_to_int::evc_to_dmi_int */EVC_to_DMI_Message_int_T_API_DMI_Pkg *evc_to_dmi_int)
 {
   (&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(*evc_to_dmi_int)[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[0] =
     1;
@@ -42,7 +42,7 @@ void CAST_EVC_to_DMI_to_int_Messages(
   /* 1 */
   Write_DMI_Track_Description_to_int_DATA_Packets_EVC_to_DMI(
     &(*evc_to_dmi_ct).trackDescription,
-    (DMI_Track_Description_int_array_T *)
+    (_49_DMI_Track_Description_int_array_T *)
       &(&(&(&(&(&(&(&(&(&(&(*evc_to_dmi_int)[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[302]);
   /* 1 */
   CAST_DMI_Identifier_Request_to_int_DATA_Packets_EVC_to_DMI(
@@ -94,8 +94,8 @@ void CAST_EVC_to_DMI_to_int_Messages(
     (DMI_Icons_int_array_T_DATA *) &(*evc_to_dmi_int)[990]);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_EVC_to_DMI_to_int_Messages.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

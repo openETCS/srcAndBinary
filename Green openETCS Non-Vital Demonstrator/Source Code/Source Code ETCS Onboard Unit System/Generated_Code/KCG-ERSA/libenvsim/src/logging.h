@@ -5,6 +5,7 @@
 // History:
 // - 26.09.15, J. Kastner: initial version
 // - 10.10.15, J. Kastner: use environment variable OPENETCS_ENVSIM_LOGDIR instead of OPENETCS_ENVSIM_LOGFILE
+// - 05.11.15, J. Kastner: rename env variable OPENETCS_ENVSIM_LOGDIR to ENVSIM_LOGDIR
 
 #ifndef LIBENVSIM_LOGGING_H
 #define LIBENVSIM_LOGGING_H

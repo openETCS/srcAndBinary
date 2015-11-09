@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* manage_TextMessages_Pkg::mapMLtoElement */
 void mapMLtoElement_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::mapMLtoElement::inModeLevel_Ack */ T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
-  /* manage_TextMessages_Pkg::mapMLtoElement::announcedLevel */ M_LEVEL announcedLevel,
-  /* manage_TextMessages_Pkg::mapMLtoElement::outDerivedElement */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *outDerivedElement)
+  /* manage_TextMessages_Pkg::mapMLtoElement::inModeLevel_Ack */T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
+  /* manage_TextMessages_Pkg::mapMLtoElement::announcedLevel */M_LEVEL announcedLevel,
+  /* manage_TextMessages_Pkg::mapMLtoElement::outDerivedElement */DMI_TXT_MSG_status_T_DMI_Types_Pkg *outDerivedElement)
 {
   (*outDerivedElement).valid = (*inModeLevel_Ack).valid;
   (*outDerivedElement).dmi_textMessageID = 0;
@@ -21,8 +21,8 @@ void mapMLtoElement_manage_TextMessages_Pkg(
   (*outDerivedElement).nid_textmessage = 0;
   (*outDerivedElement).whichLevel = announcedLevel;
   (*outDerivedElement).whichMode = (*inModeLevel_Ack).whichMode;
-  /* 1 */ if ((*inModeLevel_Ack).valid) {
-    /* 2 */ if ((*inModeLevel_Ack).LevelNeedsAck) {
+  if ((*inModeLevel_Ack).valid) {
+    if ((*inModeLevel_Ack).LevelNeedsAck) {
       (*outDerivedElement).context = con_levelMgmt_DMI_Types_Pkg;
     }
     else {
@@ -34,8 +34,8 @@ void mapMLtoElement_manage_TextMessages_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mapMLtoElement_manage_TextMessages_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

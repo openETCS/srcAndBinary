@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* SDMConversionModelPkg::InflateABrakeSpeeds */
 void InflateABrakeSpeeds_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::InflateABrakeSpeeds::Akku */ V_internal_Type_Obu_BasicTypes_Pkg Akku,
-  /* SDMConversionModelPkg::InflateABrakeSpeeds::V */ V_internal_Type_Obu_BasicTypes_Pkg V,
-  /* SDMConversionModelPkg::InflateABrakeSpeeds::Akku_out */ V_internal_Type_Obu_BasicTypes_Pkg *Akku_out,
-  /* SDMConversionModelPkg::InflateABrakeSpeeds::Vint */ V_internal_real_Type_SDM_Types_Pkg *Vint)
+  /* SDMConversionModelPkg::InflateABrakeSpeeds::Akku */V_internal_Type_Obu_BasicTypes_Pkg Akku,
+  /* SDMConversionModelPkg::InflateABrakeSpeeds::V */V_internal_Type_Obu_BasicTypes_Pkg V,
+  /* SDMConversionModelPkg::InflateABrakeSpeeds::Akku_out */V_internal_Type_Obu_BasicTypes_Pkg *Akku_out,
+  /* SDMConversionModelPkg::InflateABrakeSpeeds::Vint */V_internal_real_Type_SDM_Types_Pkg *Vint)
 {
-  /* 1 */ if (V > 0) {
+  if (V > 0) {
     *Akku_out = V;
   }
   else {
@@ -23,8 +23,8 @@ void InflateABrakeSpeeds_SDMConversionModelPkg(
   *Vint = /* 1 */ TransformV_intToV_real_SDM_Types_Pkg(*Akku_out);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** InflateABrakeSpeeds_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T14:49:05
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef __205_MA_Convert_P15_to_DistanceProfile_TA_MA_H_
 #define __205_MA_Convert_P15_to_DistanceProfile_TA_MA_H_
@@ -14,18 +14,16 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TA_MA::MA_Convert_P15_to_DistanceProfile */
 extern void _205_MA_Convert_P15_to_DistanceProfile_TA_MA(
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile::Packet15_in */ P015_OBU_T_TM *Packet15_in,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile::NV_in */ P003V1_OBU_T_TM_baseline2 *NV_in,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile::MovementAuthority */ MovementAuthority_t_TrackAtlasTypes *MovementAuthority);
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile::Packet15_in */P015_OBU_T_TM *Packet15_in,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile::NV_in */P003V1_OBU_T_TM_baseline2 *NV_in,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile::MovementAuthority */MovementAuthority_t_TrackAtlasTypes *MovementAuthority);
 
 #endif /* __205_MA_Convert_P15_to_DistanceProfile_TA_MA_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** _205_MA_Convert_P15_to_DistanceProfile_TA_MA.h
-** Generation date: 2015-11-05T14:49:05
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

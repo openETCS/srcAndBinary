@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TargetLimits_Pkg::f_41 */
 V_internal_real_Type_SDM_Types_Pkg f_41_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::f_41::v_in */ V_internal_real_Type_SDM_Types_Pkg v_in)
+  /* TargetLimits_Pkg::f_41::v_in */V_internal_real_Type_SDM_Types_Pkg v_in)
 {
   /* TargetLimits_Pkg::f_41::v_out */
   static V_internal_real_Type_SDM_Types_Pkg v_out;
@@ -19,8 +19,8 @@ V_internal_real_Type_SDM_Types_Pkg f_41_TargetLimits_Pkg(
   return v_out;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** f_41_TargetLimits_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

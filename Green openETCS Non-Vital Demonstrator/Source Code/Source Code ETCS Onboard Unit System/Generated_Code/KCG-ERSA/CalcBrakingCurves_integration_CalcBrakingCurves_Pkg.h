@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _CalcBrakingCurves_integration_CalcBrakingCurves_Pkg_H_
 #define _CalcBrakingCurves_integration_CalcBrakingCurves_Pkg_H_
@@ -10,8 +10,6 @@
 #include "makeEmptyParabolaCurve_CalcBrakingCurves_types.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -31,25 +29,18 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration */
 extern void CalcBrakingCurves_integration_CalcBrakingCurves_Pkg(
-  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::TrainLocations */ TrainLocations_real_T_SDM_Types_Pkg *TrainLocations,
-  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::targetCollection */ TargetCollection_T_TargetManagement_types *targetCollection,
-  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::A_Safe */ ASafe_T_CalcBrakingCurves_types *A_Safe,
-  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::A_Expected */ ASafe_T_CalcBrakingCurves_types *A_Expected,
+  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::TrainLocations */TrainLocations_real_T_SDM_Types_Pkg *TrainLocations,
+  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::targetCollection */TargetCollection_T_TargetManagement_types *targetCollection,
+  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::A_Safe */ASafe_T_CalcBrakingCurves_types *A_Safe,
+  /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::A_Expected */ASafe_T_CalcBrakingCurves_types *A_Expected,
   outC_CalcBrakingCurves_integration_CalcBrakingCurves_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void CalcBrakingCurves_integration_reset_CalcBrakingCurves_Pkg(
   outC_CalcBrakingCurves_integration_CalcBrakingCurves_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void CalcBrakingCurves_integration_init_CalcBrakingCurves_Pkg(
-  outC_CalcBrakingCurves_integration_CalcBrakingCurves_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _CalcBrakingCurves_integration_CalcBrakingCurves_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CalcBrakingCurves_integration_CalcBrakingCurves_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

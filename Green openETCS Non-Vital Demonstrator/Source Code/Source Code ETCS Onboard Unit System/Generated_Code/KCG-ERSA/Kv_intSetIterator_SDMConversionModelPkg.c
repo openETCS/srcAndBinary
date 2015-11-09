@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,12 @@
 
 /* SDMConversionModelPkg::Kv_intSetIterator */
 void Kv_intSetIterator_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kv_intSetIterator::akku */ kcg_bool akku,
-  /* SDMConversionModelPkg::Kv_intSetIterator::Kv_intSet */ nvkvintset_T_Packet_Types_Pkg *Kv_intSet,
-  /* SDMConversionModelPkg::Kv_intSetIterator::CTrain */ NC_TRAIN CTrain,
-  /* SDMConversionModelPkg::Kv_intSetIterator::goOn */ kcg_bool *goOn,
-  /* SDMConversionModelPkg::Kv_intSetIterator::akku_out */ kcg_bool *akku_out)
+  /* SDMConversionModelPkg::Kv_intSetIterator::akku */kcg_bool akku,
+  /* SDMConversionModelPkg::Kv_intSetIterator::Kv_intSet */nvkvintset_T_Packet_Types_Pkg *Kv_intSet,
+  /* SDMConversionModelPkg::Kv_intSetIterator::CTrain */NC_TRAIN CTrain,
+  /* SDMConversionModelPkg::Kv_intSetIterator::goOn */kcg_bool *goOn,
+  /* SDMConversionModelPkg::Kv_intSetIterator::akku_out */kcg_bool *akku_out)
 {
-  /* SDMConversionModelPkg::Kv_intSetIterator */
   static Q_NVKVINTSET tmp;
   
   *akku_out = akku;
@@ -30,8 +29,8 @@ void Kv_intSetIterator_SDMConversionModelPkg(
   *goOn = !((*Kv_intSet).valid & ((*Kv_intSet).q_nvkvintset == tmp));
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Kv_intSetIterator_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

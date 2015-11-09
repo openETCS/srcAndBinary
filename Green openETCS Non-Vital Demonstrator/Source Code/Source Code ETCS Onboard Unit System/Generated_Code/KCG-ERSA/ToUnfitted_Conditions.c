@@ -1,38 +1,25 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "ToUnfitted_Conditions.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void ToUnfitted_init_Conditions(outC_ToUnfitted_Conditions *outC)
-{
-  outC->Condition21 = kcg_true;
-  outC->init = kcg_true;
-  outC->rem_Current_Level = M_LEVEL_Level_0;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void ToUnfitted_reset_Conditions(outC_ToUnfitted_Conditions *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* Conditions::ToUnfitted */
 void ToUnfitted_Conditions(
-  /* Conditions::ToUnfitted::Current_Level */ M_LEVEL Current_Level,
+  /* Conditions::ToUnfitted::Current_Level */M_LEVEL Current_Level,
   outC_ToUnfitted_Conditions *outC)
 {
-  /* Conditions::ToUnfitted */
   static M_LEVEL tmp;
   
-  /* last_init_ck_Current_Level */ if (outC->init) {
+  if (outC->init) {
     outC->init = kcg_false;
     tmp = M_LEVEL_Level_0;
   }
@@ -44,8 +31,8 @@ void ToUnfitted_Conditions(
   outC->rem_Current_Level = Current_Level;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ToUnfitted_Conditions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

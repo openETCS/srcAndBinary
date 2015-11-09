@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_Icon_group_to_int */
 Icon_group_INT_T_DATA CAST_Icon_group_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_Icon_group_to_int::Input1 */ Icon_group_T_DMI_Types_Pkg Input1)
+  /* DATA::Variables::CAST_Icon_group_to_int::Input1 */Icon_group_T_DMI_Types_Pkg Input1)
 {
   /* DATA::Variables::CAST_Icon_group_to_int::IfBlock1::else */
   static kcg_bool _5_else_clock_IfBlock1;
@@ -29,40 +29,40 @@ Icon_group_INT_T_DATA CAST_Icon_group_to_int_DATA_Variables(
   static Icon_group_INT_T_DATA Output1;
   
   IfBlock1_clock = Input1 == ENUM_Icon_group_T_level_symbol;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     Output1 = INT_Icon_group_T_level_symbol;
   }
   else {
     _5_else_clock_IfBlock1 = Input1 == ENUM_Icon_group_T_mode_symbols;
-    /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
+    if (_5_else_clock_IfBlock1) {
       Output1 = INT_Icon_group_T_mode_symbols;
     }
     else {
       _4_else_clock_IfBlock1 = Input1 == ENUM_Icon_group_T_navigation_symbols;
-      /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+      if (_4_else_clock_IfBlock1) {
         Output1 = INT_Icon_group_T_navigation_symbols;
       }
       else {
         _3_else_clock_IfBlock1 = Input1 ==
           ENUM_Icon_group_T_order_an_announcements_symbols;
-        /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+        if (_3_else_clock_IfBlock1) {
           Output1 = INT_Icon_group_T_order_an_announcements_symbols;
         }
         else {
           _2_else_clock_IfBlock1 = Input1 ==
             ENUM_Icon_group_T_planning_information_symbols;
-          /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+          if (_2_else_clock_IfBlock1) {
             Output1 = INT_Icon_group_T_planning_information_symbols;
           }
           else {
             _1_else_clock_IfBlock1 = Input1 ==
               ENUM_Icon_group_T_settings_symbols;
-            /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+            if (_1_else_clock_IfBlock1) {
               Output1 = INT_Icon_group_T_settings_symbols;
             }
             else {
               else_clock_IfBlock1 = Input1 == ENUM_Icon_group_T_status_symbols;
-              /* ck_anon_activ */ if (else_clock_IfBlock1) {
+              if (else_clock_IfBlock1) {
                 Output1 = INT_Icon_group_T_status_symbols;
               }
               else {
@@ -77,8 +77,8 @@ Icon_group_INT_T_DATA CAST_Icon_group_to_int_DATA_Variables(
   return Output1;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Icon_group_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

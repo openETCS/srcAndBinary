@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* TM_conversions::C_P021_to_legacy_loop */
 void C_P021_to_legacy_loop_TM_conversions(
-  /* TM_conversions::C_P021_to_legacy_loop::i */ kcg_int i,
-  /* TM_conversions::C_P021_to_legacy_loop::P021_in */ P021_OBU_T_TM *P021_in,
-  /* TM_conversions::C_P021_to_legacy_loop::P021_section_in */ P021_OBU_sectionlist_enum_T_TM *P021_section_in,
-  /* TM_conversions::C_P021_to_legacy_loop::P015_legacy_out */ P21_GradientProfile_T_Packet_Types_Pkg *P015_legacy_out)
+  /* TM_conversions::C_P021_to_legacy_loop::i */kcg_int i,
+  /* TM_conversions::C_P021_to_legacy_loop::P021_in */P021_OBU_T_TM *P021_in,
+  /* TM_conversions::C_P021_to_legacy_loop::P021_section_in */P021_OBU_sectionlist_enum_T_TM *P021_section_in,
+  /* TM_conversions::C_P021_to_legacy_loop::P015_legacy_out */P21_GradientProfile_T_Packet_Types_Pkg *P015_legacy_out)
 {
   /* TM_conversions::C_P021_to_legacy_loop::_L21 */
   static P021_section_enum_T_TM _L21;
@@ -33,8 +33,8 @@ void C_P021_to_legacy_loop_TM_conversions(
   (*P015_legacy_out).g_a = _L21.g_a;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P021_to_legacy_loop_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

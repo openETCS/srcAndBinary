@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_Area_group_to_int */
 Area_group_INT_T_DATA CAST_Area_group_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_Area_group_to_int::area_group_ct */ Area_group_T_DMI_Types_Pkg area_group_ct)
+  /* DATA::Variables::CAST_Area_group_to_int::area_group_ct */Area_group_T_DMI_Types_Pkg area_group_ct)
 {
   /* DATA::Variables::CAST_Area_group_to_int::IfBlock1::else */
   static kcg_bool _6_else_clock_IfBlock1;
@@ -31,42 +31,42 @@ Area_group_INT_T_DATA CAST_Area_group_to_int_DATA_Variables(
   static Area_group_INT_T_DATA area_group_int;
   
   IfBlock1_clock = area_group_ct == ENUM_Area_group_T_A;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     area_group_int = INT_Area_group_T_A;
   }
   else {
     _6_else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_B;
-    /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
+    if (_6_else_clock_IfBlock1) {
       area_group_int = INT_Area_group_T_B;
     }
     else {
       _5_else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_C;
-      /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
+      if (_5_else_clock_IfBlock1) {
         area_group_int = INT_Area_group_T_C;
       }
       else {
         _4_else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_D;
-        /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+        if (_4_else_clock_IfBlock1) {
           area_group_int = INT_Area_group_T_D;
         }
         else {
           _3_else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_E;
-          /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+          if (_3_else_clock_IfBlock1) {
             area_group_int = INT_Area_group_T_E;
           }
           else {
             _2_else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_F;
-            /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+            if (_2_else_clock_IfBlock1) {
               area_group_int = INT_Area_group_T_F;
             }
             else {
               _1_else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_G;
-              /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+              if (_1_else_clock_IfBlock1) {
                 area_group_int = INT_Area_group_T_G;
               }
               else {
                 else_clock_IfBlock1 = area_group_ct == ENUM_Area_group_T_H;
-                /* ck_anon_activ */ if (else_clock_IfBlock1) {
+                if (else_clock_IfBlock1) {
                   area_group_int = INT_Area_group_T_H;
                 }
                 else {
@@ -82,8 +82,8 @@ Area_group_INT_T_DATA CAST_Area_group_to_int_DATA_Variables(
   return area_group_int;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Area_group_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

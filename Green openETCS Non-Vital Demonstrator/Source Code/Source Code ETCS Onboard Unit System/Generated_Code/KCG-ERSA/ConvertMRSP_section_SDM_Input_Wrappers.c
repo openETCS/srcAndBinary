@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* SDM_Input_Wrappers::ConvertMRSP_section */
 void ConvertMRSP_section_SDM_Input_Wrappers(
-  /* SDM_Input_Wrappers::ConvertMRSP_section::MRSP_section_ext */ MRSP_section_t_TrackAtlasTypes *MRSP_section_ext,
-  /* SDM_Input_Wrappers::ConvertMRSP_section::MRSP_section_int */ MRSP_internal_section_T_TargetManagement_types *MRSP_section_int)
+  /* SDM_Input_Wrappers::ConvertMRSP_section::MRSP_section_ext */MRSP_section_t_TrackAtlasTypes *MRSP_section_ext,
+  /* SDM_Input_Wrappers::ConvertMRSP_section::MRSP_section_int */MRSP_internal_section_T_TargetManagement_types *MRSP_section_int)
 {
   (*MRSP_section_int).valid = (*MRSP_section_ext).valid;
   (*MRSP_section_int).Loc_Abs = /* 12 */
@@ -19,8 +19,8 @@ void ConvertMRSP_section_SDM_Input_Wrappers(
     TransformV_intToV_real_SDM_Types_Pkg((*MRSP_section_ext).MRS);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ConvertMRSP_section_SDM_Input_Wrappers.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

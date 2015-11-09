@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,14 @@
 
 /* LevelTransitionSelection::SelectNormalTransition */
 void SelectNormalTransition_LevelTransitionSelection(
-  /* LevelTransitionSelection::SelectNormalTransition::last_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *last_level_transition,
-  /* LevelTransitionSelection::SelectNormalTransition::ERTMS_capabilities */ T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities,
-  /* LevelTransitionSelection::SelectNormalTransition::level_transition_table */ T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg *level_transition_table,
-  /* LevelTransitionSelection::SelectNormalTransition::Available_for_use */ kcg_bool *Available_for_use,
-  /* LevelTransitionSelection::SelectNormalTransition::output_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *output_level_transition)
+  /* LevelTransitionSelection::SelectNormalTransition::last_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *last_level_transition,
+  /* LevelTransitionSelection::SelectNormalTransition::ERTMS_capabilities */T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities,
+  /* LevelTransitionSelection::SelectNormalTransition::level_transition_table */T_LevelTransition_PriorityTable_Level_And_Mode_Types_Pkg *level_transition_table,
+  /* LevelTransitionSelection::SelectNormalTransition::Available_for_use */kcg_bool *Available_for_use,
+  /* LevelTransitionSelection::SelectNormalTransition::output_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *output_level_transition)
 {
-  /* LevelTransitionSelection::SelectNormalTransition */
-  static T_LevelTransition_Level_And_Mode_Types_Pkg acc;
-  /* LevelTransitionSelection::SelectNormalTransition */
-  static kcg_bool cond_iterw;
+  static T_LevelTransition_Level_And_Mode_Types_Pkg tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   /* LevelTransitionSelection::SelectNormalTransition::Loc_index */
   static kcg_int Loc_index;
@@ -26,24 +24,23 @@ void SelectNormalTransition_LevelTransitionSelection(
   kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
     output_level_transition,
     last_level_transition);
-  /* 1 */ for (i = 0; i < 7; i++) {
+  for (i = 0; i < 7; i++) {
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
-      &acc,
+      &tmp1,
       output_level_transition);
     /* 1 */
     IsSelectedTransition_LevelTransitionSelection(
-      &acc,
+      &tmp1,
       &(*level_transition_table)[i],
       ERTMS_capabilities,
-      &cond_iterw,
+      &tmp,
       output_level_transition);
     Loc_index = i + 1;
-    /* 1 */ if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
-  /* 1 */ if (Loc_index <
-    M_Max_TransitionInPriorityTable_Level_And_Mode_Types_Pkg) {
+  if (Loc_index < M_Max_TransitionInPriorityTable_Level_And_Mode_Types_Pkg) {
     *Available_for_use = kcg_true;
   }
   else {
@@ -51,8 +48,8 @@ void SelectNormalTransition_LevelTransitionSelection(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SelectNormalTransition_LevelTransitionSelection.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

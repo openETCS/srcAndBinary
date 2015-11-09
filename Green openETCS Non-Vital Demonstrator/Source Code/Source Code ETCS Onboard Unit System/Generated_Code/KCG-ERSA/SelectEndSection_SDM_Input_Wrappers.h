@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _SelectEndSection_SDM_Input_Wrappers_H_
 #define _SelectEndSection_SDM_Input_Wrappers_H_
@@ -9,19 +9,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* SDM_Input_Wrappers::SelectEndSection */
 extern void SelectEndSection_SDM_Input_Wrappers(
-  /* SDM_Input_Wrappers::SelectEndSection::I */ L_internal_Type_Obu_BasicTypes_Pkg I,
-  /* SDM_Input_Wrappers::SelectEndSection::section */ MovementAuthoritySection_t_TrackAtlasTypes *section,
-  /* SDM_Input_Wrappers::SelectEndSection::go_on */ kcg_bool *go_on,
-  /* SDM_Input_Wrappers::SelectEndSection::eoa */ L_internal_Type_Obu_BasicTypes_Pkg *eoa);
+  /* SDM_Input_Wrappers::SelectEndSection::I */L_internal_Type_Obu_BasicTypes_Pkg I,
+  /* SDM_Input_Wrappers::SelectEndSection::section */_20_MovementAuthoritySection_t_TrackAtlasTypes *section,
+  /* SDM_Input_Wrappers::SelectEndSection::go_on */kcg_bool *go_on,
+  /* SDM_Input_Wrappers::SelectEndSection::eoa */L_internal_Type_Obu_BasicTypes_Pkg *eoa);
 
 #endif /* _SelectEndSection_SDM_Input_Wrappers_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SelectEndSection_SDM_Input_Wrappers.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

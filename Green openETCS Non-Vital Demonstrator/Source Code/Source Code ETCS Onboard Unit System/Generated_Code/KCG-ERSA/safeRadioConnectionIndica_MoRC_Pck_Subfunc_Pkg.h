@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T14:49:05
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg_H_
 #define _safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg_H_
@@ -10,8 +10,6 @@
 #include "countDownTimer_MoRC_Pck_Utils.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -23,36 +21,29 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   SSM_ST_connectionStatus_SM /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionStatus_SM */ connectionStatus_SM_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_RisingEdge_digital /* 4 */ Context_4;
-  outC_countDownTimer_MoRC_Pck_Utils /* 1 */ Context_1;
   outC_RisingEdge_digital /* 3 */ Context_3;
+  outC_countDownTimer_MoRC_Pck_Utils /* 1 */ Context_1;
+  outC_RisingEdge_digital /* 4 */ Context_4;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2 */
 extern void safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg(
-  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionCmd */ mobileConnectionCmd_T_RCM_Types_Pkg *connectionCmd,
-  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionStatus */ mobileConnectionContext_T_RCM_Types_Pkg *connectionStatus,
-  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::eventsAndPhases */ obuEventsAndPhases_T_RCM_Session_Types_Pkg *eventsAndPhases,
-  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::currentTime */ T_internal_Type_Obu_BasicTypes_Pkg currentTime,
-  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::reset */ kcg_bool reset,
-  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionStatusTimerInterval */ time_Type_MoRC_Pck connectionStatusTimerInterval,
+  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionCmd */mobileConnectionCmd_T_RCM_Types_Pkg *connectionCmd,
+  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionStatus */mobileConnectionContext_T_RCM_Types_Pkg *connectionStatus,
+  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::eventsAndPhases */obuEventsAndPhases_T_RCM_Session_Types_Pkg *eventsAndPhases,
+  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::currentTime */T_internal_Type_Obu_BasicTypes_Pkg currentTime,
+  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::reset */kcg_bool reset,
+  /* MoRC_Pck::Subfunc_Pkg::safeRadioConnectionIndication_v2::connectionStatusTimerInterval */time_Type_MoRC_Pck connectionStatusTimerInterval,
   outC_safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void safeRadioConnectionIndica_reset_MoRC_Pck_Subfunc_Pkg(
   outC_safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void safeRadioConnectionIndica_init_MoRC_Pck_Subfunc_Pkg(
-  outC_safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-05T14:49:05
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

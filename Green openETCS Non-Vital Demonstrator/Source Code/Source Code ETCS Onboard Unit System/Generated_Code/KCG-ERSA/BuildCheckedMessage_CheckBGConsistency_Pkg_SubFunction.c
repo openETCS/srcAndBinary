@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage */
 void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::trackSideForCheck */ TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::q_nvlocacc */ Q_NVLOCACC q_nvlocacc,
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::checkedMessage */ ReceivedMessage_T_Common_Types_Pkg *checkedMessage)
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::trackSideForCheck */TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::q_nvlocacc */Q_NVLOCACC q_nvlocacc,
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::checkedMessage */ReceivedMessage_T_Common_Types_Pkg *checkedMessage)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage */
   static Telegram_T_BG_Types_Pkg tmp;
   
   (*checkedMessage).valid = (*trackSideForCheck).telegramHeaders.present;
@@ -43,8 +42,8 @@ void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
     &tmp.packets);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

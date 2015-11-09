@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TM_conversions::CAST_Int_to_M_AIRTIGHT */
 M_AIRTIGHT CAST_Int_to_M_AIRTIGHT_TM_conversions(
-  /* TM_conversions::CAST_Int_to_M_AIRTIGHT::int__m_airtight_in */ kcg_int int__m_airtight_in)
+  /* TM_conversions::CAST_Int_to_M_AIRTIGHT::int__m_airtight_in */kcg_int int__m_airtight_in)
 {
   /* TM_conversions::CAST_Int_to_M_AIRTIGHT::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -19,13 +19,13 @@ M_AIRTIGHT CAST_Int_to_M_AIRTIGHT_TM_conversions(
   static M_AIRTIGHT m_airtight;
   
   IfBlock1_clock = int__m_airtight_in == INT_M_AIRTIGHT_fitted_TM_conversions;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     m_airtight = ENUM_M_AIRTIGHT_fitted_TM_conversions;
   }
   else {
     else_clock_IfBlock1 = int__m_airtight_in ==
       INT_M_AIRTIGHT_not_fitted_TM_conversions;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       m_airtight = ENUM_M_AIRTIGHT_not_fitted_TM_conversions;
     }
     else {
@@ -35,8 +35,8 @@ M_AIRTIGHT CAST_Int_to_M_AIRTIGHT_TM_conversions(
   return m_airtight;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Int_to_M_AIRTIGHT_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

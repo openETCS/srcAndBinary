@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,17 @@
 
 /* TA_Gradient::GP_Preprocessing */
 void GP_Preprocessing_TA_Gradient(
-  /* TA_Gradient::GP_Preprocessing::p21 */ P021_OBU_T_TM *p21,
-  /* TA_Gradient::GP_Preprocessing::reset */ kcg_bool reset,
-  /* TA_Gradient::GP_Preprocessing::msg_LRBG */ kcg_bool msg_LRBG,
-  /* TA_Gradient::GP_Preprocessing::msg_prvLRBG */ kcg_bool msg_prvLRBG,
-  /* TA_Gradient::GP_Preprocessing::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  /* TA_Gradient::GP_Preprocessing::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
-  /* TA_Gradient::GP_Preprocessing::GP */ GradientProfile_t_TrackAtlasTypes *GP)
+  /* TA_Gradient::GP_Preprocessing::p21 */P021_OBU_T_TM *p21,
+  /* TA_Gradient::GP_Preprocessing::reset */kcg_bool reset,
+  /* TA_Gradient::GP_Preprocessing::msg_LRBG */kcg_bool msg_LRBG,
+  /* TA_Gradient::GP_Preprocessing::msg_prvLRBG */kcg_bool msg_prvLRBG,
+  /* TA_Gradient::GP_Preprocessing::pos_LRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
+  /* TA_Gradient::GP_Preprocessing::pos_prvLRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
+  /* TA_Gradient::GP_Preprocessing::GP */GradientProfile_t_TrackAtlasTypes *GP)
 {
-  /* TA_Gradient::GP_Preprocessing */
   static GradientProfile_t_TrackAtlasTypes tmp;
   
-  /* 1 */ GP_Convert_P21_to_DistanceProfile_TA_Gradient(p21, &tmp);
+  /* 1 */ _200_GP_Convert_P21_to_DistanceProfile_TA_Gradient(p21, &tmp);
   /* 1 */
   MoveGPSectionsAbsolute_TA_Lib_internal(
     &tmp,
@@ -31,8 +30,8 @@ void GP_Preprocessing_TA_Gradient(
     GP);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** GP_Preprocessing_TA_Gradient.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

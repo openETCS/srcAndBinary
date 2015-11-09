@@ -1,53 +1,24 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Build_GradientProfile_TA_Gradient.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void Build_GradientProfile_init_TA_Gradient(
-  outC_Build_GradientProfile_TA_Gradient *outC)
-{
-  static kcg_int i;
-  
-  outC->updated = kcg_true;
-  outC->available = kcg_true;
-  outC->init = kcg_true;
-  outC->rem__L111 = 0;
-  for (i = 0; i < 50; i++) {
-    outC->_L237[i].valid = kcg_true;
-    outC->_L237[i].Loc_Absolute = 0;
-    outC->_L237[i].Loc_LRBG = 0;
-    outC->_L237[i].Gradient = 0;
-    outC->_L237[i].L_Gradient = 0;
-    outC->GP[i].valid = kcg_true;
-    outC->GP[i].Loc_Absolute = 0;
-    outC->GP[i].Loc_LRBG = 0;
-    outC->GP[i].Gradient = 0;
-    outC->GP[i].L_Gradient = 0;
-  }
-  /* 1 */ GP_Postprocessing_init_TA_Gradient(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Build_GradientProfile_reset_TA_Gradient(
   outC_Build_GradientProfile_TA_Gradient *outC)
 {
   outC->init = kcg_true;
   /* 1 */ GP_Postprocessing_reset_TA_Gradient(&outC->Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_Gradient::Build_GradientProfile */
 void Build_GradientProfile_TA_Gradient(
-  /* TA_Gradient::Build_GradientProfile::reset */ kcg_bool reset,
-  /* TA_Gradient::Build_GradientProfile::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TA_Gradient::Build_GradientProfile::train_position */ trainPosition_T_TrainPosition_Types_Pck *train_position,
+  /* TA_Gradient::Build_GradientProfile::reset */kcg_bool reset,
+  /* TA_Gradient::Build_GradientProfile::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_Gradient::Build_GradientProfile::train_position */trainPosition_T_TrainPosition_Types_Pck *train_position,
   outC_Build_GradientProfile_TA_Gradient *outC)
 {
   /* TA_Gradient::Build_GradientProfile::_L60 */
@@ -62,7 +33,7 @@ void Build_GradientProfile_TA_Gradient(
   static kcg_bool _L244;
   
   /* 1 */ Read_P021_TM(&(*MessageIn).packets, &outC->updated, &_L60);
-  /* fby_1_init_1 */ if (outC->init) {
+  if (outC->init) {
     _L243 = 0;
   }
   else {
@@ -70,7 +41,7 @@ void Build_GradientProfile_TA_Gradient(
   }
   _L240 = outC->updated | (_L243 != (*train_position).LRBG.nid_bg);
   /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn, &_L244, &_L243, &_L108);
-  /* ck_updated */ if (outC->updated) {
+  if (outC->updated) {
     /* 1 */
     GP_Preprocessing_TA_Gradient(
       &_L60,
@@ -87,7 +58,7 @@ void Build_GradientProfile_TA_Gradient(
       (GradientProfile_t_TrackAtlasTypes *)
         &DEFAULT_GradientProfile_TrackAtlasTypes);
   }
-  /* ck__L240 */ if (_L240) {
+  if (_L240) {
     /* 1 */
     GP_Postprocessing_TA_Gradient(
       &outC->_L237,
@@ -109,8 +80,8 @@ void Build_GradientProfile_TA_Gradient(
   outC->rem__L111 = (*train_position).LRBG.nid_bg;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_GradientProfile_TA_Gradient.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

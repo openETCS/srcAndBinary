@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _ROOT_EVC_EVC_IP_DMI_H_
 #define _ROOT_EVC_EVC_IP_DMI_H_
@@ -19,8 +19,6 @@ typedef struct {
   mobileHWStatus_Type_MoRC_Pck /* EVC_IP_DMI::ROOT_EVC::API_mobileHWStatus */ API_mobileHWStatus;
   ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg /* EVC_IP_DMI::ROOT_EVC::API_persistentData */ API_persistentData;
 } inC_ROOT_EVC_EVC_IP_DMI;
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -41,10 +39,10 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  EVC_to_DMI_Message_int_T_API_DMI_Pkg /* EVC_IP_DMI::ROOT_EVC::_L4 */ _L4;
+  EVC_to_DMI_Message_int_T_API_DMI_Pkg /* EVC_IP_DMI::ROOT_EVC::_L4 */ rem__L4;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_EVC /* 1 */ _1_Context_1;
-  outC_RemoteDMIBus_EnvSim /* 1 */ Context_1;
+  outC_RemoteDMIBus_EnvSim /* 1 */ _1_Context_1;
+  outC_EVC /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ROOT_EVC_EVC_IP_DMI;
 
@@ -54,17 +52,11 @@ extern void ROOT_EVC_EVC_IP_DMI(
   inC_ROOT_EVC_EVC_IP_DMI *inC,
   outC_ROOT_EVC_EVC_IP_DMI *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void ROOT_EVC_reset_EVC_IP_DMI(outC_ROOT_EVC_EVC_IP_DMI *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void ROOT_EVC_init_EVC_IP_DMI(outC_ROOT_EVC_EVC_IP_DMI *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _ROOT_EVC_EVC_IP_DMI_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ROOT_EVC_EVC_IP_DMI.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _signChanged_BasicLocationFunctions_Pkg_H_
 #define _signChanged_BasicLocationFunctions_Pkg_H_
@@ -8,8 +8,6 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,22 +25,15 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* BasicLocationFunctions_Pkg::signChanged */
 extern void signChanged_BasicLocationFunctions_Pkg(
-  /* BasicLocationFunctions_Pkg::signChanged::val */ kcg_int val,
+  /* BasicLocationFunctions_Pkg::signChanged::val */kcg_int val,
   outC_signChanged_BasicLocationFunctions_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void signChanged_reset_BasicLocationFunctions_Pkg(
   outC_signChanged_BasicLocationFunctions_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void signChanged_init_BasicLocationFunctions_Pkg(
-  outC_signChanged_BasicLocationFunctions_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _signChanged_BasicLocationFunctions_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** signChanged_BasicLocationFunctions_Pkg.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

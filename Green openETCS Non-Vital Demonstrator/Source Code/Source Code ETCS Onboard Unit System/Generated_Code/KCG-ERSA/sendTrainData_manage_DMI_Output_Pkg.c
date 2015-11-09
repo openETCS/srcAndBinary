@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* manage_DMI_Output_Pkg::sendTrainData */
 void sendTrainData_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::sendTrainData::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_DMI_Output_Pkg::sendTrainData::trainDataFromEVC */ trainData_T_TIU_Types_Pkg *trainDataFromEVC,
-  /* manage_DMI_Output_Pkg::sendTrainData::trainData_ForDMI */ DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *trainData_ForDMI)
+  /* manage_DMI_Output_Pkg::sendTrainData::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_DMI_Output_Pkg::sendTrainData::trainDataFromEVC */trainData_T_TIU_Types_Pkg *trainDataFromEVC,
+  /* manage_DMI_Output_Pkg::sendTrainData::trainData_ForDMI */DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *trainData_ForDMI)
 {
   (*trainData_ForDMI).valid = (*trainDataFromEVC).valid;
   (*trainData_ForDMI).systemTime = inSystemTime;
@@ -24,8 +24,8 @@ void sendTrainData_manage_DMI_Output_Pkg(
   (*trainData_ForDMI).m_loadingGauge = (*trainDataFromEVC).loadingGauge;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** sendTrainData_manage_DMI_Output_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

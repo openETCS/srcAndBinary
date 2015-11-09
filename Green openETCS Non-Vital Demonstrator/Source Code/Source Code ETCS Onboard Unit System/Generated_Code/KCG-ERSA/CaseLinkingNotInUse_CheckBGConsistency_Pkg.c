@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,27 +9,24 @@
 
 /* CheckBGConsistency_Pkg::CaseLinkingNotInUse */
 void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::trackSideForCheck */ TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::q_nvlocacc */ Q_NVLOCACC q_nvlocacc,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::applyServiceBrake */ kcg_bool *applyServiceBrake,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::badBaliseMessageToDMI */ kcg_bool *badBaliseMessageToDMI,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::passedBG_out */ ReceivedMessage_T_Common_Types_Pkg *passedBG_out,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::errorUnlinkedBG */ kcg_bool *errorUnlinkedBG,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::nid_errorBG */ NID_ERRORBG_BG_Types_Pkg *nid_errorBG,
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::nid_c */ NID_C *nid_c)
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::trackSideForCheck */TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::q_nvlocacc */Q_NVLOCACC q_nvlocacc,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::applyServiceBrake */kcg_bool *applyServiceBrake,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::badBaliseMessageToDMI */kcg_bool *badBaliseMessageToDMI,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::passedBG_out */ReceivedMessage_T_Common_Types_Pkg *passedBG_out,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::errorUnlinkedBG */kcg_bool *errorUnlinkedBG,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::nid_errorBG */NID_ERRORBG_BG_Types_Pkg *nid_errorBG,
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::nid_c */NID_C *nid_c)
 {
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse */
   static kcg_int tmp2;
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse */
   static kcg_int tmp1;
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse */
   static ReceivedMessage_T_Common_Types_Pkg tmp;
+  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::IfBlock1::else */
+  static kcg_bool else_clock_IfBlock1;
   /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::IfBlock1 */
   static kcg_bool IfBlock1_clock;
   /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::isComplete */
   static kcg_bool isComplete;
-  /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::isSingle */
-  static kcg_bool isSingle;
   /* CheckBGConsistency_Pkg::CaseLinkingNotInUse::lastTelegram */
   static Telegram_T_BG_Types_Pkg lastTelegram;
   
@@ -37,12 +34,12 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
   CheckCompleteness_CheckBGConsistency_Pkg(
     &(*trackSideForCheck).telegramHeaders,
     &IfBlock1_clock,
-    &isSingle,
+    &else_clock_IfBlock1,
     &lastTelegram);
-  isComplete = IfBlock1_clock ^ isSingle;
-  IfBlock1_clock = isComplete & isSingle;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    *applyServiceBrake = kcg_false;
+  isComplete = IfBlock1_clock ^ else_clock_IfBlock1;
+  IfBlock1_clock = isComplete & else_clock_IfBlock1;
+  if (IfBlock1_clock) {
+    *errorUnlinkedBG = kcg_false;
     /* 1 */
     BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
       trackSideForCheck,
@@ -53,8 +50,8 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
     *nid_errorBG = 0;
     *nid_c = 0;
   }
-  else /* ck_anon_activ */ if (isComplete) {
-    *applyServiceBrake = kcg_false;
+  else if (isComplete) {
+    *errorUnlinkedBG = kcg_false;
     tmp2 = /* 16 */
       N_PIG2int_CheckBGConsistency_Pkg_SubFunction(
         lastTelegram.telegramheader.n_pig);
@@ -75,7 +72,7 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
     *nid_c = 0;
   }
   else {
-    *applyServiceBrake = kcg_true;
+    *errorUnlinkedBG = kcg_true;
     kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
       passedBG_out,
       (ReceivedMessage_T_Common_Types_Pkg *)
@@ -85,12 +82,12 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
     *nid_c =
       (*trackSideForCheck).telegramHeaders.Telegrams[0].telegramheader.nid_c;
   }
-  *errorUnlinkedBG = *applyServiceBrake;
-  *badBaliseMessageToDMI = *applyServiceBrake;
+  *applyServiceBrake = *errorUnlinkedBG;
+  *badBaliseMessageToDMI = *errorUnlinkedBG;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CaseLinkingNotInUse_CheckBGConsistency_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

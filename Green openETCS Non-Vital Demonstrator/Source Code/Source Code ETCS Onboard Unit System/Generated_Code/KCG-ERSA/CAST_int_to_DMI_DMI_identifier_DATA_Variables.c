@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_int_to_DMI_DMI_identifier */
 DMI_DMI_Identifier_T_DMI_Types_Pkg CAST_int_to_DMI_DMI_identifier_DATA_Variables(
-  /* DATA::Variables::CAST_int_to_DMI_DMI_identifier::dmi_dmi_identifier_int */ kcg_int dmi_dmi_identifier_int)
+  /* DATA::Variables::CAST_int_to_DMI_DMI_identifier::dmi_dmi_identifier_int */kcg_int dmi_dmi_identifier_int)
 {
   /* DATA::Variables::CAST_int_to_DMI_DMI_identifier::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -19,13 +19,13 @@ DMI_DMI_Identifier_T_DMI_Types_Pkg CAST_int_to_DMI_DMI_identifier_DATA_Variables
   static DMI_DMI_Identifier_T_DMI_Types_Pkg dmi_dmi_identifier_ct;
   
   IfBlock1_clock = dmi_dmi_identifier_int == INT_DMI_DMI_Identifier_T_DMI_1;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     dmi_dmi_identifier_ct = ENUM_DMI_DMI_Identifier_T_DMI_1;
   }
   else {
     else_clock_IfBlock1 = dmi_dmi_identifier_int ==
       INT_DMI_DMI_Identifier_T_DMI_2;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       dmi_dmi_identifier_ct = ENUM_DMI_DMI_Identifier_T_DMI_2;
     }
     else {
@@ -35,8 +35,8 @@ DMI_DMI_Identifier_T_DMI_Types_Pkg CAST_int_to_DMI_DMI_identifier_DATA_Variables
   return dmi_dmi_identifier_ct;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_DMI_DMI_identifier_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

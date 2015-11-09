@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,25 +9,25 @@
 
 /* TA_MA::Normalize_Overlap */
 void Normalize_Overlap_TA_MA(
-  /* TA_MA::Normalize_Overlap::d_endsection */ L_internal_Type_Obu_BasicTypes_Pkg d_endsection,
-  /* TA_MA::Normalize_Overlap::Packet15_in */ P015_OBU_T_TM *Packet15_in,
-  /* TA_MA::Normalize_Overlap::NV_in */ P003V1_OBU_T_TM_baseline2 *NV_in,
-  /* TA_MA::Normalize_Overlap::q_overlap */ kcg_bool *q_overlap,
-  /* TA_MA::Normalize_Overlap::overlap */ DP_or_OL_t_TrackAtlasTypes *overlap)
+  /* TA_MA::Normalize_Overlap::d_endsection */L_internal_Type_Obu_BasicTypes_Pkg d_endsection,
+  /* TA_MA::Normalize_Overlap::Packet15_in */P015_OBU_T_TM *Packet15_in,
+  /* TA_MA::Normalize_Overlap::NV_in */P003V1_OBU_T_TM_baseline2 *NV_in,
+  /* TA_MA::Normalize_Overlap::q_overlap */kcg_bool *q_overlap,
+  /* TA_MA::Normalize_Overlap::overlap */DP_or_OL_t_TrackAtlasTypes *overlap)
 {
   /* TA_MA::Normalize_Overlap::_L1 */
   static V_internal_Type_Obu_BasicTypes_Pkg _L1;
   /* TA_MA::Normalize_Overlap::_L2 */
   static kcg_bool _L2;
   
+  *q_overlap = /* 1 */ EVAL_Q_OVERLAP_TA_Lib_internal((*Packet15_in).q_overlap);
   /* 1 */
   EVAL_V_Release_TA_Lib_internal(
     (*Packet15_in).v_releaseol,
     (*NV_in).v_nvrel,
     &_L1,
     &_L2);
-  *q_overlap = /* 1 */ EVAL_Q_OVERLAP_TA_Lib_internal((*Packet15_in).q_overlap);
-  /* 1 */ if (*q_overlap) {
+  if (*q_overlap) {
     (*overlap).v_release = _L1;
     (*overlap).calc_v_release_onboard = _L2;
     (*overlap).d_DP_or_OL = /* 1 */
@@ -41,8 +41,8 @@ void Normalize_Overlap_TA_MA(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Normalize_Overlap_TA_MA.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

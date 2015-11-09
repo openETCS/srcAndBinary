@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Variables::CAST_connectionStatusRadioUnit_to_int */
 connectionStatusRadioUnit_INT_T_DATA CAST_connectionStatusRadioUnit_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_connectionStatusRadioUnit_to_int::connectionStatusRadioUnit_ct */ connectionStatusRadioUnit_T_API_RadioCommunication_Pkg connectionStatusRadioUnit_ct)
+  /* DATA::Variables::CAST_connectionStatusRadioUnit_to_int::connectionStatusRadioUnit_ct */connectionStatusRadioUnit_T_API_RadioCommunication_Pkg connectionStatusRadioUnit_ct)
 {
   /* DATA::Variables::CAST_connectionStatusRadioUnit_to_int::IfBlock1::else */
   static kcg_bool _2_else_clock_IfBlock1;
@@ -23,35 +23,35 @@ connectionStatusRadioUnit_INT_T_DATA CAST_connectionStatusRadioUnit_to_int_DATA_
   static connectionStatusRadioUnit_INT_T_DATA connectionStatusRadioUnit_int;
   
   IfBlock1_clock = connectionStatusRadioUnit_ct ==
-    ENUM_connectionStatusRadioUnit_T_conn_unknown;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+    _101_ENUM_connectionStatusRadioUnit_T_conn_unknown;
+  if (IfBlock1_clock) {
     connectionStatusRadioUnit_int =
-      INT_connectionStatusRadioUnit_T_conn_unknown;
+      _98_INT_connectionStatusRadioUnit_T_conn_unknown;
   }
   else {
     _2_else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
-      ENUM_connectionStatusRadioUnit_T_conn_no_connection;
-    /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+      _100_ENUM_connectionStatusRadioUnit_T_conn_no_connection;
+    if (_2_else_clock_IfBlock1) {
       connectionStatusRadioUnit_int =
         INT_connectionStatusRadioUnit_T_conn_no_connection;
     }
     else {
       _1_else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
-        ENUM_connectionStatusRadioUnit_T_conn_ConnectionUp;
-      /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+        _99_ENUM_connectionStatusRadioUnit_T_conn_ConnectionUp;
+      if (_1_else_clock_IfBlock1) {
         connectionStatusRadioUnit_int =
-          INT_connectionStatusRadioUnit_T_conn_ConnectionUp;
+          _96_INT_connectionStatusRadioUnit_T_conn_ConnectionUp;
       }
       else {
         else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
           ENUM_connectionStatusRadioUnit_T_conn_SetupFailed;
-        /* ck_anon_activ */ if (else_clock_IfBlock1) {
+        if (else_clock_IfBlock1) {
           connectionStatusRadioUnit_int =
-            INT_connectionStatusRadioUnit_T_conn_SetupFailed;
+            _97_INT_connectionStatusRadioUnit_T_conn_SetupFailed;
         }
         else {
           connectionStatusRadioUnit_int =
-            INT_connectionStatusRadioUnit_T_conn_unknown;
+            _98_INT_connectionStatusRadioUnit_T_conn_unknown;
         }
       }
     }
@@ -59,8 +59,8 @@ connectionStatusRadioUnit_INT_T_DATA CAST_connectionStatusRadioUnit_to_int_DATA_
   return connectionStatusRadioUnit_int;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_connectionStatusRadioUnit_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

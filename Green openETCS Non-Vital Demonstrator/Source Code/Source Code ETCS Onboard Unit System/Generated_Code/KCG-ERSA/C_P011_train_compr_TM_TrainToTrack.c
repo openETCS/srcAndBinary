@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,15 @@
 
 /* TM_TrainToTrack::C_P011_train_compr */
 void C_P011_train_compr_TM_TrainToTrack(
-  /* TM_TrainToTrack::C_P011_train_compr::P011_in */ P011_TM_TrainToTrack *P011_in,
-  /* TM_TrainToTrack::C_P011_train_compr::P011_int */ P011_TrainTrack_int_TM_TrainToTrack *P011_int)
+  /* TM_TrainToTrack::C_P011_train_compr::P011_in */P011_TM_TrainToTrack *P011_in,
+  /* TM_TrainToTrack::C_P011_train_compr::P011_int */P011_TrainTrack_int_TM_TrainToTrack *P011_int)
 {
-  /* TM_TrainToTrack::C_P011_train_compr */
   static array_int_9 tmp;
+  /* TM_TrainToTrack::C_P011_train_compr::_L109 */
+  static array_int_1 _L109;
   
+  _L109[0] = /* 2 */
+    CAST_N_ITER_to_int_TM_conversions((*P011_in).n_iter_nid_ntc);
   (&(&(*P011_int)[0])[0])[0] = /* 1 */
     CAST_NID_PACKET_to_int_TM_conversions((*P011_in).nid_packet);
   (&(&(*P011_int)[0])[0])[1] = /* 1 */
@@ -41,8 +44,7 @@ void C_P011_train_compr_TM_TrainToTrack(
   C_P011_flatten_sections_voltage_TM_TrainToTrack_lib_internal(
     &(*P011_in).voltage_list,
     (P011_voltage_sections_array_flat_t_TM_TrainToTrack *) &tmp[0]);
-  (&tmp[8])[0] = /* 2 */
-    CAST_N_ITER_to_int_TM_conversions((*P011_in).n_iter_nid_ntc);
+  kcg_copy_array_int_1(&tmp[8], &_L109);
   kcg_copy_array_int_9(&(*P011_int)[11], &tmp);
   /* 1 */
   C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal(
@@ -50,8 +52,8 @@ void C_P011_train_compr_TM_TrainToTrack(
     (P011_ntc_list_array_T_TM_TrainToTrack *) &(*P011_int)[20]);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P011_train_compr_TM_TrainToTrack.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

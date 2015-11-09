@@ -1,46 +1,25 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "SelectLevelTransition_LevelTransitionSelection.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void SelectLevelTransition_init_LevelTransitionSelection(
-  outC_SelectLevelTransition_LevelTransitionSelection *outC)
-{
-  outC->IsAvailableForUse = kcg_true;
-  outC->init = kcg_true;
-  outC->selected_level_transition.is_set = kcg_true;
-  outC->selected_level_transition.transition.level = M_LEVEL_Level_0;
-  outC->selected_level_transition.transition.position = 0;
-  outC->selected_level_transition.transition.transitionType =
-    M_TransitionType_Conditional_Level_And_Mode_Types_Pkg;
-  outC->selected_level_transition.transition.immediateAck = kcg_true;
-  outC->selected_level_transition.transition.AckLength = 0;
-  outC->selected_level_transition.LRBG = 0;
-  outC->selected_level_transition.referenceLocation = 0;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void SelectLevelTransition_reset_LevelTransitionSelection(
   outC_SelectLevelTransition_LevelTransitionSelection *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* LevelTransitionSelection::SelectLevelTransition */
 void SelectLevelTransition_LevelTransitionSelection(
-  /* LevelTransitionSelection::SelectLevelTransition::current_level */ M_LEVEL current_level,
-  /* LevelTransitionSelection::SelectLevelTransition::train_standstill */ kcg_bool train_standstill,
-  /* LevelTransitionSelection::SelectLevelTransition::driver_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *driver_level_transition,
-  /* LevelTransitionSelection::SelectLevelTransition::ERTMS_capabilities */ T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities,
-  /* LevelTransitionSelection::SelectLevelTransition::Data_From_Track_to_Level */ T_Data_From_Track_To_Level_Level_And_Mode_Types_Pkg *Data_From_Track_to_Level,
+  /* LevelTransitionSelection::SelectLevelTransition::current_level */M_LEVEL current_level,
+  /* LevelTransitionSelection::SelectLevelTransition::train_standstill */kcg_bool train_standstill,
+  /* LevelTransitionSelection::SelectLevelTransition::driver_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *driver_level_transition,
+  /* LevelTransitionSelection::SelectLevelTransition::ERTMS_capabilities */T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities,
+  /* LevelTransitionSelection::SelectLevelTransition::Data_From_Track_to_Level */T_Data_From_Track_To_Level_Level_And_Mode_Types_Pkg *Data_From_Track_to_Level,
   outC_SelectLevelTransition_LevelTransitionSelection *outC)
 {
   /* LevelTransitionSelection::SelectLevelTransition::Loc_conditionnal */
@@ -58,19 +37,19 @@ void SelectLevelTransition_LevelTransitionSelection(
   /* LevelTransitionSelection::SelectLevelTransition::_L24 */
   static kcg_bool _L24;
   
-  /* last_init_ck_IsAvailableForUse */ if (outC->init) {
+  if (outC->init) {
+    outC->init = kcg_false;
+    _L24 = kcg_false;
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
       &last_level_transition,
       (T_LevelTransition_Level_And_Mode_Types_Pkg *)
         &M_Default_Transition_Level_And_Mode_Types_Pkg);
-    outC->init = kcg_false;
-    _L24 = kcg_false;
   }
   else {
+    _L24 = outC->IsAvailableForUse;
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
       &last_level_transition,
       &outC->selected_level_transition);
-    _L24 = outC->IsAvailableForUse;
   }
   last_level_transition.is_set = kcg_false;
   /* 1 */
@@ -83,32 +62,32 @@ void SelectLevelTransition_LevelTransitionSelection(
     &Loc_Conditionnal_Available,
     &Loc_conditionnal);
   /* 1 */
-  SelectDriverCondition_LevelTransitionSelection(
-    current_level,
-    train_standstill,
-    driver_level_transition,
-    &last_level_transition,
-    &Loc_driver);
-  /* 1 */
   SelectNormalTransition_LevelTransitionSelection(
     &last_level_transition,
     ERTMS_capabilities,
     &(*Data_From_Track_to_Level).level_transition_priority_table,
     &Loc_Normal_Available,
     &Loc_Normal);
-  /* ck_Loc_conditionnal_set */ if (Loc_conditionnal.is_set) {
+  /* 1 */
+  SelectDriverCondition_LevelTransitionSelection(
+    current_level,
+    train_standstill,
+    driver_level_transition,
+    &last_level_transition,
+    &Loc_driver);
+  if (Loc_conditionnal.is_set) {
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
       &outC->selected_level_transition,
       &Loc_conditionnal);
     outC->IsAvailableForUse = Loc_Conditionnal_Available;
   }
-  else /* ck_anon_activ */ if (Loc_Normal.is_set) {
+  else if (Loc_Normal.is_set) {
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
       &outC->selected_level_transition,
       &Loc_Normal);
     outC->IsAvailableForUse = Loc_Normal_Available;
   }
-  else /* ck_anon_activ */ if (Loc_driver.is_set) {
+  else if (Loc_driver.is_set) {
     outC->IsAvailableForUse = kcg_true;
     kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
       &outC->selected_level_transition,
@@ -122,8 +101,8 @@ void SelectLevelTransition_LevelTransitionSelection(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SelectLevelTransition_LevelTransitionSelection.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

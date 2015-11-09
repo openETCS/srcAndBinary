@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* CalculateTrainPosition_Pkg::prevPassedLinkedBG */
 void prevPassedLinkedBG_CalculateTrainPosition_Pkg(
-  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::passedBG */ passedBG_T_BG_Types_Pkg *passedBG,
-  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::last_BGs */ positionedBGs_T_TrainPosition_Types_Pck *last_BGs,
-  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::previouslyPassedBG */ positionedBG_T_TrainPosition_Types_Pck *previouslyPassedBG)
+  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::passedBG */passedBG_T_BG_Types_Pkg *passedBG,
+  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::last_BGs */positionedBGs_T_TrainPosition_Types_Pck *last_BGs,
+  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::previouslyPassedBG */positionedBG_T_TrainPosition_Types_Pck *previouslyPassedBG)
 {
-  /* CalculateTrainPosition_Pkg::prevPassedLinkedBG */
   static kcg_bool tmp;
   /* CalculateTrainPosition_Pkg::prevPassedLinkedBG::_L61 */
   static kcg_bool _L61;
@@ -45,7 +44,7 @@ void prevPassedLinkedBG_CalculateTrainPosition_Pkg(
       _L64.nid_bg,
       (*passedBG).BG_Header.nid_c,
       (*passedBG).BG_Header.nid_bg);
-  /* 1 */ if (_L61 & !tmp) {
+  if (_L61 & !tmp) {
     kcg_copy_positionedBG_T_TrainPosition_Types_Pck(previouslyPassedBG, &_L64);
   }
   else {
@@ -56,8 +55,8 @@ void prevPassedLinkedBG_CalculateTrainPosition_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** prevPassedLinkedBG_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

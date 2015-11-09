@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,32 +9,30 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter */
 void MergAllPackets_Iter_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter::telegramArray */ TelegramArray_T_BG_Types_Pkg *telegramArray,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter::telegramout */ Telegram_T_BG_Types_Pkg *telegramout)
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter::telegramArray */TelegramArray_T_BG_Types_Pkg *telegramArray,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter::telegramout */Telegram_T_BG_Types_Pkg *telegramout)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter */
-  static Telegram_T_BG_Types_Pkg acc;
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::MergAllPackets_Iter */
-  static kcg_bool cond_iterw;
+  static Telegram_T_BG_Types_Pkg tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   
   kcg_copy_Telegram_T_BG_Types_Pkg(telegramout, &(*telegramArray)[0]);
   for (i = 0; i < 7; i++) {
-    kcg_copy_Telegram_T_BG_Types_Pkg(&acc, telegramout);
+    kcg_copy_Telegram_T_BG_Types_Pkg(&tmp1, telegramout);
     /* 1 */
     MergAllPackets_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-      &acc,
+      &tmp1,
       &(*telegramArray)[i + 1],
-      &cond_iterw,
+      &tmp,
       telegramout);
-    if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MergAllPackets_Iter_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

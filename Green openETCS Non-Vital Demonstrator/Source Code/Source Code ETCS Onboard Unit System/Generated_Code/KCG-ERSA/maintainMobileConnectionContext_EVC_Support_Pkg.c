@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* EVC_Support_Pkg::maintainMobileConnectionContext */
 void maintainMobileConnectionContext_EVC_Support_Pkg(
-  /* EVC_Support_Pkg::maintainMobileConnectionContext::MobileFromAPI */ mobileHWStatus_Type_MoRC_Pck *MobileFromAPI,
-  /* EVC_Support_Pkg::maintainMobileConnectionContext::mobileDeviceNo */ kcg_int mobileDeviceNo,
-  /* EVC_Support_Pkg::maintainMobileConnectionContext::Radio_ID */ NID_RADIO Radio_ID,
-  /* EVC_Support_Pkg::maintainMobileConnectionContext::inRadioHole */ kcg_bool inRadioHole,
-  /* EVC_Support_Pkg::maintainMobileConnectionContext::MobileConnectionContext */ mobileConnectionContext_T_RCM_Types_Pkg *MobileConnectionContext)
+  /* EVC_Support_Pkg::maintainMobileConnectionContext::MobileFromAPI */mobileHWStatus_Type_MoRC_Pck *MobileFromAPI,
+  /* EVC_Support_Pkg::maintainMobileConnectionContext::mobileDeviceNo */kcg_int mobileDeviceNo,
+  /* EVC_Support_Pkg::maintainMobileConnectionContext::Radio_ID */NID_RADIO Radio_ID,
+  /* EVC_Support_Pkg::maintainMobileConnectionContext::inRadioHole */kcg_bool inRadioHole,
+  /* EVC_Support_Pkg::maintainMobileConnectionContext::MobileConnectionContext */mobileConnectionContext_T_RCM_Types_Pkg *MobileConnectionContext)
 {
   (*MobileConnectionContext).valid = (*MobileFromAPI).valid & (mobileDeviceNo >=
       0);
@@ -27,8 +27,8 @@ void maintainMobileConnectionContext_EVC_Support_Pkg(
     getMobileConStatus_EVC_Support_Pkg((*MobileFromAPI).connectionStatus);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** maintainMobileConnectionContext_EVC_Support_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

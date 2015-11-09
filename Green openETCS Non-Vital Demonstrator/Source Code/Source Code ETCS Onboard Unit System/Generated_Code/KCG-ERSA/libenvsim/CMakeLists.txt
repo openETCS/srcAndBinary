@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.3)
-project(libenvsim VERSION 0.1 LANGUAGES C)
+project(libenvsim VERSION 0.2.1 LANGUAGES C)
 
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
@@ -15,6 +15,7 @@ set(COMMON_SOURCE_FILES
   src/rcontrol.h src/rcontrol.c
   src/tcl/track.c src/tcl/track.h
   src/tcl/pkts.c src/tcl/pkts.h
+  ${CMAKE_CURRENT_BINARY_DIR}/version.c
 )
 
 set(LIBENVSIM_SOURCE_FILES ${COMMON_SOURCE_FILES}
@@ -35,8 +36,15 @@ set(EXTENVSIM_SOURCE_FILES ${COMMON_SOURCE_FILES}
   src/tcl/envsimInt.c src/tcl/envsimInt.h
 )
 
+FILE(WRITE ${CMAKE_CURRENT_BINARY_DIR}/version.c
+  "const char *ES_VERSION = \"${PROJECT_VERSION}\";
+   const char *ES_BUILDDATE = __DATE__ \" \" __TIME__;
+  "
+)
+
 add_library(envsim STATIC ${LIBENVSIM_SOURCE_FILES})
 
+add_definitions(-D__USE_UNIX98)
 
 IF(WITH_TCL_EXTENSION)
   add_definitions(-DWITH_TCL_EXTENSION -DUSE_TCL_STUBS -DUSE_TK_STUBS)
@@ -71,3 +79,4 @@ IF(ENABLE_TESTS)
   #target_link_libraries(main envsim)
     add_subdirectory(test/unit)
 ENDIF(ENABLE_TESTS)
+

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TM_conversions::CAST_Q_EMERGENCYSTOP_to_int */
 kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_conversions(
-  /* TM_conversions::CAST_Q_EMERGENCYSTOP_to_int::q_emergencystop */ Q_EMERGENCYSTOP q_emergencystop)
+  /* TM_conversions::CAST_Q_EMERGENCYSTOP_to_int::q_emergencystop */Q_EMERGENCYSTOP q_emergencystop)
 {
   /* TM_conversions::CAST_Q_EMERGENCYSTOP_to_int::IfBlock1::else */
   static kcg_bool _2_else_clock_IfBlock1;
@@ -23,29 +23,29 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_conversions(
   static kcg_int q_emergencystop_int;
   
   IfBlock1_clock = q_emergencystop ==
-    ENUM_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+    _11_ENUM_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions;
+  if (IfBlock1_clock) {
     q_emergencystop_int =
       INT_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions;
   }
   else {
     _2_else_clock_IfBlock1 = q_emergencystop ==
       ENUM_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions;
-    /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+    if (_2_else_clock_IfBlock1) {
       q_emergencystop_int =
-        INT_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions;
+        _10_INT_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions;
     }
     else {
       _1_else_clock_IfBlock1 = q_emergencystop ==
         ENUM_Q_EMERGENCYSTOP_uncond_accepted_TM_conversions;
-      /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+      if (_1_else_clock_IfBlock1) {
         q_emergencystop_int =
           INT_Q_EMERGENCYSTOP_uncond_accepted_TM_conversions;
       }
       else {
         else_clock_IfBlock1 = q_emergencystop ==
           ENUM_Q_EMERGENCYSTOP_rejected_TM_conversions;
-        /* ck_anon_activ */ if (else_clock_IfBlock1) {
+        if (else_clock_IfBlock1) {
           q_emergencystop_int = INT_Q_EMERGENCYSTOP_rejected_TM_conversions;
         }
         else {
@@ -57,8 +57,8 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_conversions(
   return q_emergencystop_int;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Q_EMERGENCYSTOP_to_int_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

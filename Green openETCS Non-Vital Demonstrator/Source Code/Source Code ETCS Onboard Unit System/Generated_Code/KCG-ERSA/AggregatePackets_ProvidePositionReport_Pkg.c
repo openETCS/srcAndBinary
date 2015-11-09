@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* ProvidePositionReport_Pkg::AggregatePackets */
 void AggregatePackets_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *inPacket0,
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *inPacket1,
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket4 */ PT4_ErrorReporting_T_Packet_TrainTypes_Pkg *inPacket4,
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket5 */ PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *inPacket5,
-  /* ProvidePositionReport_Pkg::AggregatePackets::outPackets */ outPackets_T_Common_Types_Pkg *outPackets)
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *inPacket0,
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket1 */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *inPacket1,
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket4 */PT4_ErrorReporting_T_Packet_TrainTypes_Pkg *inPacket4,
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket5 */PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *inPacket5,
+  /* ProvidePositionReport_Pkg::AggregatePackets::outPackets */outPackets_T_Common_Types_Pkg *outPackets)
 {
   kcg_copy_PT0_PositionReport_T_Packet_TrainTypes_Pkg(
     &(*outPackets).p0,
@@ -41,8 +41,8 @@ void AggregatePackets_ProvidePositionReport_Pkg(
       &cInitPT11_ProvidePositionReport_Pkg);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** AggregatePackets_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

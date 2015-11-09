@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _FallingEdge_digital_H_
 #define _FallingEdge_digital_H_
@@ -8,8 +8,6 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,20 +25,14 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* digital::FallingEdge */
 extern void FallingEdge_digital(
-  /* digital::FallingEdge::FE_Input */ kcg_bool FE_Input,
+  /* digital::FallingEdge::FE_Input */kcg_bool FE_Input,
   outC_FallingEdge_digital *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void FallingEdge_reset_digital(outC_FallingEdge_digital *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void FallingEdge_init_digital(outC_FallingEdge_digital *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _FallingEdge_digital_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FallingEdge_digital.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,18 @@
 
 /* TM_conversions::C_P015_compr_onboard */
 void C_P015_compr_onboard_TM_conversions(
-  /* TM_conversions::C_P015_compr_onboard::PacketData */ CompressedPacketData_T_Common_Types_Pkg *PacketData,
-  /* TM_conversions::C_P015_compr_onboard::Metadata_Element */ MetadataElement_T_Common_Types_Pkg *Metadata_Element,
-  /* TM_conversions::C_P015_compr_onboard::P015_onboard */ P015_OBU_T_TM *P015_onboard)
+  /* TM_conversions::C_P015_compr_onboard::PacketData */CompressedPacketData_T_Common_Types_Pkg *PacketData,
+  /* TM_conversions::C_P015_compr_onboard::Metadata_Element */MetadataElement_T_Common_Types_Pkg *Metadata_Element,
+  /* TM_conversions::C_P015_compr_onboard::P015_onboard */P015_OBU_T_TM *P015_onboard)
 {
+  /* TM_conversions::CAST_Int_to_Q_DIR::IfBlock1::else */
+  static kcg_bool _2_else_clock_2_IfBlock1;
+  /* TM_conversions::CAST_Int_to_Q_SCALE::IfBlock1::else */
+  static kcg_bool _1_else_clock_2_IfBlock1;
+  /* TM_conversions::CAST_Int_to_Q_SCALE::IfBlock1::else::else */
+  static kcg_bool else_clock_2_IfBlock1;
   /* TM_conversions::CAST_Int_to_Q_SCALE::IfBlock1 */
   static kcg_bool IfBlock1_clock_2;
-  /* TM_conversions::CAST_Int_to_Q_SCALE::IfBlock1::else::else */
-  static kcg_bool _1_else_clock_2_IfBlock1;
-  /* TM_conversions::CAST_Int_to_Q_SCALE::IfBlock1::else */
-  static kcg_bool _2_else_clock_2_IfBlock1;
-  /* TM_conversions::CAST_Int_to_Q_DIR::IfBlock1::else */
-  static kcg_bool else_clock_2_IfBlock1;
   /* TM_conversions::C_P015_compr_onboard::nid_packet_ok */
   static kcg_bool nid_packet_ok;
   /* TM_conversions::C_P015_compr_onboard::_L138 */
@@ -29,23 +29,23 @@ void C_P015_compr_onboard_TM_conversions(
   static array_int_6 _L125;
   
   (*P015_onboard).n_iter = (*PacketData)[21];
+  kcg_copy_array_int_15(&_L138, (array_int_15 *) &(*PacketData)[6]);
   kcg_copy_array_int_6(&_L125, (array_int_6 *) &(*PacketData)[0]);
   nid_packet_ok = 15 == _L125[0];
   (*P015_onboard).valid = nid_packet_ok;
-  _1_else_clock_2_IfBlock1 = _L125[1] == INT_Q_DIR_nomiinal_TM_conversions;
+  else_clock_2_IfBlock1 = _L125[1] == INT_Q_DIR_nomiinal_TM_conversions;
   IfBlock1_clock_2 = _L125[3] == INT_Q_SCALE_10cm_TM_conversions;
-  kcg_copy_array_int_15(&_L138, (array_int_15 *) &(*PacketData)[6]);
-  /* 2_ck_IfBlock1 */ if (_1_else_clock_2_IfBlock1) {
+  if (else_clock_2_IfBlock1) {
     (*P015_onboard).q_dir = ENUM_Q_DIR_nominal_TM_conversions;
   }
   else {
-    else_clock_2_IfBlock1 = _L125[1] == INT_Q_DIR_reverse_TM_conversions;
-    /* 2_ck_anon_activ */ if (else_clock_2_IfBlock1) {
+    _2_else_clock_2_IfBlock1 = _L125[1] == INT_Q_DIR_reverse_TM_conversions;
+    if (_2_else_clock_2_IfBlock1) {
       (*P015_onboard).q_dir = ENUM_Q_DIR_reverse_TM_conversions;
     }
     else {
-      _2_else_clock_2_IfBlock1 = _L125[1] == INT_Q_DIR_both_TM_conversions;
-      /* 2_ck_anon_activ */ if (_2_else_clock_2_IfBlock1) {
+      _1_else_clock_2_IfBlock1 = _L125[1] == INT_Q_DIR_both_TM_conversions;
+      if (_1_else_clock_2_IfBlock1) {
         (*P015_onboard).q_dir = ENUM_Q_DIR_both_TM_conversions;
       }
       else {
@@ -53,17 +53,17 @@ void C_P015_compr_onboard_TM_conversions(
       }
     }
   }
-  /* 2_ck_IfBlock1 */ if (IfBlock1_clock_2) {
+  if (IfBlock1_clock_2) {
     (*P015_onboard).q_scale = ENUM_Q_SCALE_10cm_TM_conversions;
   }
   else {
-    _2_else_clock_2_IfBlock1 = _L125[3] == INT_Q_SCALE_1m_TM_conversions;
-    /* 2_ck_anon_activ */ if (_2_else_clock_2_IfBlock1) {
+    _1_else_clock_2_IfBlock1 = _L125[3] == INT_Q_SCALE_1m_TM_conversions;
+    if (_1_else_clock_2_IfBlock1) {
       (*P015_onboard).q_scale = ENUM_Q_SCALE_1m_TM_conversions;
     }
     else {
-      _1_else_clock_2_IfBlock1 = _L125[3] == INT_Q_SCALE_10m_TM_conversions;
-      /* 2_ck_anon_activ */ if (_1_else_clock_2_IfBlock1) {
+      else_clock_2_IfBlock1 = _L125[3] == INT_Q_SCALE_10m_TM_conversions;
+      if (else_clock_2_IfBlock1) {
         (*P015_onboard).q_scale = ENUM_Q_SCALE_10m_TM_conversions;
       }
       else {
@@ -108,8 +108,8 @@ void C_P015_compr_onboard_TM_conversions(
     CAST_Int_to_V_RELEASEOL_TM_conversions(_L138[14]);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P015_compr_onboard_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

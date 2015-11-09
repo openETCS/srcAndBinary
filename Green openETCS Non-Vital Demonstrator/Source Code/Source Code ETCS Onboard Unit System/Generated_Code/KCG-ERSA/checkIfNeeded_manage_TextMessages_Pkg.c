@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* manage_TextMessages_Pkg::checkIfNeeded */
 kcg_bool checkIfNeeded_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::checkIfNeeded::inModeLevel_Ack */ T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
-  /* manage_TextMessages_Pkg::checkIfNeeded::announcedLevel */ M_LEVEL announcedLevel,
-  /* manage_TextMessages_Pkg::checkIfNeeded::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList)
+  /* manage_TextMessages_Pkg::checkIfNeeded::inModeLevel_Ack */T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
+  /* manage_TextMessages_Pkg::checkIfNeeded::announcedLevel */M_LEVEL announcedLevel,
+  /* manage_TextMessages_Pkg::checkIfNeeded::inStatusList */DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList)
 {
-  /* manage_TextMessages_Pkg::checkIfNeeded */
   static DMI_TXT_MSG_status_T_DMI_Types_Pkg tmp;
   /* manage_TextMessages_Pkg::checkIfNeeded::IfBlock1 */
   static kcg_bool IfBlock1_clock;
@@ -22,7 +21,7 @@ kcg_bool checkIfNeeded_manage_TextMessages_Pkg(
   
   IfBlock1_clock = (!(*inModeLevel_Ack).LevelNeedsAck &
       (*inModeLevel_Ack).valid) | (*inModeLevel_Ack).LevelNeedsAck;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     /* 1 */
     mapMLtoElement_manage_TextMessages_Pkg(
       inModeLevel_Ack,
@@ -37,8 +36,8 @@ kcg_bool checkIfNeeded_manage_TextMessages_Pkg(
   return sendingNeeded;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkIfNeeded_manage_TextMessages_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

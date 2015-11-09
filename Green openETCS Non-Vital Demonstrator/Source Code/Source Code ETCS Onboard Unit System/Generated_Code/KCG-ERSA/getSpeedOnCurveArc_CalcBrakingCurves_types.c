@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* CalcBrakingCurves_types::getSpeedOnCurveArc */
 V_internal_real_Type_SDM_Types_Pkg getSpeedOnCurveArc_CalcBrakingCurves_types(
-  /* CalcBrakingCurves_types::getSpeedOnCurveArc::arc */ ParabolaArc_T_CalcBrakingCurves_types *arc,
-  /* CalcBrakingCurves_types::getSpeedOnCurveArc::location */ L_internal_real_Type_SDM_Types_Pkg location)
+  /* CalcBrakingCurves_types::getSpeedOnCurveArc::arc */ParabolaArc_T_CalcBrakingCurves_types *arc,
+  /* CalcBrakingCurves_types::getSpeedOnCurveArc::location */L_internal_real_Type_SDM_Types_Pkg location)
 {
   /* CalcBrakingCurves_types::getSpeedOnCurveArc::speed */
   static V_internal_real_Type_SDM_Types_Pkg speed;
@@ -22,8 +22,8 @@ V_internal_real_Type_SDM_Types_Pkg getSpeedOnCurveArc_CalcBrakingCurves_types(
   return speed;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getSpeedOnCurveArc_CalcBrakingCurves_types.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,19 +9,18 @@
 
 /* TA_Lib_internal::MoveMAAbsolute */
 void MoveMAAbsolute_TA_Lib_internal(
-  /* TA_Lib_internal::MoveMAAbsolute::ProfileIn */ MovementAuthority_t_TrackAtlasTypes *ProfileIn,
-  /* TA_Lib_internal::MoveMAAbsolute::msg_prvLRBG */ kcg_bool msg_prvLRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::msg_LRBG */ kcg_bool msg_LRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::ProfileOut */ MovementAuthority_t_TrackAtlasTypes *ProfileOut)
+  /* TA_Lib_internal::MoveMAAbsolute::ProfileIn */MovementAuthority_t_TrackAtlasTypes *ProfileIn,
+  /* TA_Lib_internal::MoveMAAbsolute::msg_prvLRBG */kcg_bool msg_prvLRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::msg_LRBG */kcg_bool msg_LRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::pos_LRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::pos_prvLRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::ProfileOut */MovementAuthority_t_TrackAtlasTypes *ProfileOut)
 {
-  /* TA_Lib_internal::MoveMAAbsolute */
-  static MovementAuthoritySectionlist_t_TrackAtlasTypes acc;
+  static MovementAuthoritySectionlist_t_TrackAtlasTypes tmp;
   static kcg_int i;
   
   kcg_copy_MovementAuthority_t_TrackAtlasTypes(ProfileOut, ProfileIn);
-  /* ck__L124 */ if ((*ProfileIn).q_dangerpoint) {
+  if ((*ProfileIn).q_dangerpoint) {
     /* 2 */
     Move_DP_or_OL_TA_Lib_internal(
       &(*ProfileIn).dangerpoint,
@@ -36,7 +35,7 @@ void MoveMAAbsolute_TA_Lib_internal(
       &(*ProfileOut).dangerpoint,
       (DP_or_OL_t_TrackAtlasTypes *) &DEFAULT_DP_TrackAtlasTypes);
   }
-  /* ck__L123 */ if ((*ProfileIn).q_overlap) {
+  if ((*ProfileIn).q_overlap) {
     /* 1 */
     Move_DP_or_OL_TA_Lib_internal(
       &(*ProfileIn).overlap,
@@ -54,14 +53,14 @@ void MoveMAAbsolute_TA_Lib_internal(
   kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
     &(*ProfileOut).sections,
     &(*ProfileIn).sections);
-  /* 1 */ for (i = 0; i < 10; i++) {
+  for (i = 0; i < 10; i++) {
     kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
-      &acc,
+      &tmp,
       &(*ProfileOut).sections);
     /* 1 */
     MoveMAAbsolute_Loop_TA_Lib_internal(
       i,
-      &acc,
+      &tmp,
       msg_prvLRBG,
       msg_LRBG,
       pos_LRBG,
@@ -70,8 +69,8 @@ void MoveMAAbsolute_TA_Lib_internal(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MoveMAAbsolute_TA_Lib_internal.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

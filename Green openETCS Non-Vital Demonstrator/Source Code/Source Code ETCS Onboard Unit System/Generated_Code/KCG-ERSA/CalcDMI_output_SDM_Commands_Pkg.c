@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* SDM_Commands_Pkg::CalcDMI_output */
 void CalcDMI_output_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CalcDMI_output::in_sdmCmd */ SDM_Commands_T_SDM_Types_Pkg *in_sdmCmd,
-  /* SDM_Commands_Pkg::CalcDMI_output::limit_locations */ SDM_Locations_T_SDM_Types_Pkg *limit_locations,
-  /* SDM_Commands_Pkg::CalcDMI_output::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
-  /* SDM_Commands_Pkg::CalcDMI_output::sdmToDMI */ speedSupervisionForDMI_T_DMI_Types_Pkg *sdmToDMI)
+  /* SDM_Commands_Pkg::CalcDMI_output::in_sdmCmd */SDM_Commands_T_SDM_Types_Pkg *in_sdmCmd,
+  /* SDM_Commands_Pkg::CalcDMI_output::limit_locations */SDM_Locations_T_SDM_Types_Pkg *limit_locations,
+  /* SDM_Commands_Pkg::CalcDMI_output::trainLocations */trainPosition_T_TrainPosition_Types_Pck *trainLocations,
+  /* SDM_Commands_Pkg::CalcDMI_output::sdmToDMI */speedSupervisionForDMI_T_DMI_Types_Pkg *sdmToDMI)
 {
   (*sdmToDMI).valid = (*in_sdmCmd).supervisionStatus !=
     Undefined_Supervision_SDM_Types_Pkg;
@@ -21,25 +21,25 @@ void CalcDMI_output_SDM_Commands_Pkg(
     (*limit_locations).EBD_preindication_location;
   (*sdmToDMI).distanceIndicationPoint = (*limit_locations).d_I_of_V_est -
     (*trainLocations).maxSafeFrontEndPostion;
-  /* 1 */ if ((*in_sdmCmd).valid_v_mrdt) {
+  if ((*in_sdmCmd).valid_v_mrdt) {
     (*sdmToDMI).targetSpeed = (*in_sdmCmd).mrdtSpeed;
   }
   else {
     (*sdmToDMI).targetSpeed = cDMIUnknownSpeed_DMI_Types_Pkg;
   }
-  /* 2 */ if ((*in_sdmCmd).valid_v_permitted) {
+  if ((*in_sdmCmd).valid_v_permitted) {
     (*sdmToDMI).permittedSpeed = (*in_sdmCmd).permittedSpeed;
   }
   else {
     (*sdmToDMI).permittedSpeed = cDMIUnknownSpeed_DMI_Types_Pkg;
   }
-  /* 3 */ if ((*in_sdmCmd).valid_v_release) {
+  if ((*in_sdmCmd).valid_v_release) {
     (*sdmToDMI).releaseSpeed = (*in_sdmCmd).releaseSpeed;
   }
   else {
     (*sdmToDMI).releaseSpeed = cDMIUnknownSpeed_DMI_Types_Pkg;
   }
-  /* 4 */ if ((*in_sdmCmd).valid_v_sbi) {
+  if ((*in_sdmCmd).valid_v_sbi) {
     (*sdmToDMI).interventionSpeed = (*in_sdmCmd).sbiSpeed;
   }
   else {
@@ -53,7 +53,7 @@ void CalcDMI_output_SDM_Commands_Pkg(
       (*sdmToDMI).sup_status = RSM_DMI_Types_Pkg;
       break;
     case TSM_SDM_Types_Pkg :
-      /* 5 */ if ((*trainLocations).maxSafeFrontEndPostion <=
+      if ((*trainLocations).maxSafeFrontEndPostion <=
         (*limit_locations).d_I_of_V_MRSP) {
         (*sdmToDMI).sup_status = PIM_DMI_Types_Pkg;
       }
@@ -87,8 +87,8 @@ void CalcDMI_output_SDM_Commands_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CalcDMI_output_SDM_Commands_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

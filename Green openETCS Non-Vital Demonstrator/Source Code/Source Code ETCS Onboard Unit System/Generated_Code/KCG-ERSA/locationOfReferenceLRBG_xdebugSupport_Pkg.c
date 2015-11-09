@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* xdebugSupport_Pkg::locationOfReferenceLRBG */
 void locationOfReferenceLRBG_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::locationOfReferenceLRBG::LRBG */ NID_LRBG LRBG,
-  /* xdebugSupport_Pkg::locationOfReferenceLRBG::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* xdebugSupport_Pkg::locationOfReferenceLRBG::position */ L_internal_Type_Obu_BasicTypes_Pkg *position,
-  /* xdebugSupport_Pkg::locationOfReferenceLRBG::passed */ kcg_bool *passed)
+  /* xdebugSupport_Pkg::locationOfReferenceLRBG::LRBG */NID_LRBG LRBG,
+  /* xdebugSupport_Pkg::locationOfReferenceLRBG::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* xdebugSupport_Pkg::locationOfReferenceLRBG::position */L_internal_Type_Obu_BasicTypes_Pkg *position,
+  /* xdebugSupport_Pkg::locationOfReferenceLRBG::passed */kcg_bool *passed)
 {
   /* xdebugSupport_Pkg::locationOfReferenceLRBG::_L14 */
   static NID_BG _L14;
@@ -21,7 +21,7 @@ void locationOfReferenceLRBG_xdebugSupport_Pkg(
   
   *passed = kcg_true;
   /* 1 */ Decode_NID_LRBG_TM(LRBG, &_L13, &_L14);
-  /* 1 */ if ((_L13 == (*trainPosition).LRBG.nid_c) & (_L14 ==
+  if ((_L13 == (*trainPosition).LRBG.nid_c) & (_L14 ==
       (*trainPosition).LRBG.nid_bg)) {
     *position = (*trainPosition).LRBG.location.nominal;
   }
@@ -30,8 +30,8 @@ void locationOfReferenceLRBG_xdebugSupport_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** locationOfReferenceLRBG_xdebugSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

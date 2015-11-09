@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL */
 void TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::triggerConds */ TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
+  /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::speeds */Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::triggerConds */TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
 {
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::_L10 */
   static kcg_bool _L10;
@@ -23,9 +23,9 @@ void TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_EOA_SvL::_L41 */
   static kcg_int _L41;
   
+  _L41 = (*speeds).V_MRSP + (*speeds).dV_warning_V_MRSP;
   _L40 = ((*speeds).V_release < (*speeds).V_est) & ((*speeds).V_est <=
       (*speeds).V_MRSP);
-  _L41 = (*speeds).V_MRSP + (*speeds).dV_warning_V_MRSP;
   _L22 = (*speeds).V_MRSP + (*speeds).dV_sbi_V_MRSP;
   _L20 = (*speeds).V_est <= _L22;
   _L10 = (*speeds).V_est <= (*speeds).V_MRSP + (*speeds).dV_ebi_V_MRSP;
@@ -48,8 +48,8 @@ void TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg(
   (*triggerConds).t10 = _L20 & ((*speeds).V_est > (*speeds).V_release);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TSM_EstSpeedCond_EOA_SvL_SDM_Commands_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

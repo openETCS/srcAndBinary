@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TA_MA::Pack_Endsection */
 void Pack_Endsection_TA_MA(
-  /* TA_MA::Pack_Endsection::Packet15_in */ P015_OBU_T_TM *Packet15_in,
-  /* TA_MA::Pack_Endsection::endsection */ P015_section_enum_T_TM *endsection)
+  /* TA_MA::Pack_Endsection::Packet15_in */P015_OBU_T_TM *Packet15_in,
+  /* TA_MA::Pack_Endsection::endsection */P015_section_enum_T_TM *endsection)
 {
   (*endsection).valid = kcg_true;
   (*endsection).l_section = (*Packet15_in).l_endsection;
@@ -19,8 +19,8 @@ void Pack_Endsection_TA_MA(
   (*endsection).d_sectiontimerstoploc = (*Packet15_in).d_sectiontimerstoploc;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Pack_Endsection_TA_MA.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

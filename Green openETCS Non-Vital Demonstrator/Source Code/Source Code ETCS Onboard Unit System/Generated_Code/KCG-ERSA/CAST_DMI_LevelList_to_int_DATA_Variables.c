@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* DATA::Variables::CAST_DMI_LevelList_to_int */
 void CAST_DMI_LevelList_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_DMI_LevelList_to_int::dmi_LevelList */ DMI_LevelList_T_DMI_Types_Pkg *dmi_LevelList,
-  /* DATA::Variables::CAST_DMI_LevelList_to_int::dmi_LevelList_int */ DMI_LevelList_int_array_T_DATA *dmi_LevelList_int)
+  /* DATA::Variables::CAST_DMI_LevelList_to_int::dmi_LevelList */DMI_LevelList_T_DMI_Types_Pkg *dmi_LevelList,
+  /* DATA::Variables::CAST_DMI_LevelList_to_int::dmi_LevelList_int */DMI_LevelList_int_array_T_DATA *dmi_LevelList_int)
 {
   static kcg_int i;
   /* DATA::Variables::CAST_DMI_LevelList_to_int::_L6 */
@@ -19,7 +19,7 @@ void CAST_DMI_LevelList_to_int_DATA_Variables(
   static array_int_32 _L8;
   
   (&(&(*dmi_LevelList_int)[0])[0])[0] = (*dmi_LevelList).number;
-  /* 1 */ for (i = 0; i < 32; i++) {
+  for (i = 0; i < 32; i++) {
     /* 1 */
     CAST_DMI_level_to_int_DATA_Variables(
       &(*dmi_LevelList).levelList[i],
@@ -30,8 +30,8 @@ void CAST_DMI_LevelList_to_int_DATA_Variables(
   kcg_copy_array_int_32(&(*dmi_LevelList_int)[33], &_L8);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_LevelList_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

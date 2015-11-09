@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _op_3_8_2_3_b_TA_MA_Request_H_
 #define _op_3_8_2_3_b_TA_MA_Request_H_
@@ -10,17 +10,15 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TA_MA_Request::op_3_8_2_3_b */
 extern kcg_bool op_3_8_2_3_b_TA_MA_Request(
-  /* TA_MA_Request::op_3_8_2_3_b::t_timeoutrqst */ kcg_int t_timeoutrqst,
-  /* TA_MA_Request::op_3_8_2_3_b::ma_s */ MovementAuthority_t_TrackAtlasTypes *ma_s);
+  /* TA_MA_Request::op_3_8_2_3_b::t_timeoutrqst */kcg_int t_timeoutrqst,
+  /* TA_MA_Request::op_3_8_2_3_b::ma_s */MovementAuthority_t_TrackAtlasTypes *ma_s);
 
 #endif /* _op_3_8_2_3_b_TA_MA_Request_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** op_3_8_2_3_b_TA_MA_Request.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

@@ -1,44 +1,29 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "MergeMLRequests_SDM_Commands_Pkg.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void MergeMLRequests_init_SDM_Commands_Pkg(
-  outC_MergeMLRequests_SDM_Commands_Pkg *outC)
-{
-  outC->revokedSB = kcg_true;
-  outC->triggeredSB = kcg_true;
-  outC->rem_sbr = kcg_true;
-  outC->init = kcg_true;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void MergeMLRequests_reset_SDM_Commands_Pkg(
   outC_MergeMLRequests_SDM_Commands_Pkg *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* SDM_Commands_Pkg::MergeMLRequests */
 void MergeMLRequests_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::MergeMLRequests::revokedSBcmd */ kcg_bool revokedSBcmd,
-  /* SDM_Commands_Pkg::MergeMLRequests::sbr */ kcg_bool sbr,
-  /* SDM_Commands_Pkg::MergeMLRequests::triggeredSBcmd */ kcg_bool triggeredSBcmd,
+  /* SDM_Commands_Pkg::MergeMLRequests::revokedSBcmd */kcg_bool revokedSBcmd,
+  /* SDM_Commands_Pkg::MergeMLRequests::sbr */kcg_bool sbr,
+  /* SDM_Commands_Pkg::MergeMLRequests::triggeredSBcmd */kcg_bool triggeredSBcmd,
   outC_MergeMLRequests_SDM_Commands_Pkg *outC)
 {
   /* SDM_Commands_Pkg::MergeMLRequests::_L62 */
   static kcg_bool _L62;
   
-  outC->triggeredSB = triggeredSBcmd | sbr;
-  /* last_init_ck_sbr */ if (outC->init) {
+  if (outC->init) {
     outC->init = kcg_false;
     _L62 = kcg_false;
   }
@@ -46,11 +31,12 @@ void MergeMLRequests_SDM_Commands_Pkg(
     _L62 = outC->rem_sbr;
   }
   outC->revokedSB = revokedSBcmd | (!triggeredSBcmd & ((sbr ^ _L62) & _L62));
+  outC->triggeredSB = triggeredSBcmd | sbr;
   outC->rem_sbr = sbr;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MergeMLRequests_SDM_Commands_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt */
 void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::index */ kcg_int index,
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::ACCU */ extractTargetsMRSPACC_TargetManagement_pkg *ACCU,
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::MRSP */ MRSP_internal_T_TargetManagement_types *MRSP,
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::endCondition */ kcg_bool *endCondition,
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::ACCUout */ extractTargetsMRSPACC_TargetManagement_pkg *ACCUout)
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::index */kcg_int index,
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::ACCU */extractTargetsMRSPACC_TargetManagement_pkg *ACCU,
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::MRSP */MRSP_internal_T_TargetManagement_types *MRSP,
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::endCondition */kcg_bool *endCondition,
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::ACCUout */extractTargetsMRSPACC_TargetManagement_pkg *ACCUout)
 {
   /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::_L14 */
   static MRSP_internal_section_T_TargetManagement_types _L14;
@@ -22,17 +22,6 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
   /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::_L34 */
   static kcg_int _L34;
   
-  if ((0 <= index) & (index < 200)) {
-    kcg_copy_MRSP_internal_section_T_TargetManagement_types(
-      &_L14,
-      &(*MRSP)[index]);
-  }
-  else {
-    kcg_copy_MRSP_internal_section_T_TargetManagement_types(
-      &_L14,
-      (MRSP_internal_section_T_TargetManagement_types *)
-        &emptyMRSPSection_TargetManagement_pkg);
-  }
   if ((0 <= index + 1) & (index + 1 < 200)) {
     kcg_copy_MRSP_internal_section_T_TargetManagement_types(
       &_L15,
@@ -46,7 +35,18 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
   }
   *endCondition = _L15.valid;
   _L34 = 1 + (*ACCU).lastInsertedTargetIndex;
-  /* 1 */ if ((_L14.MRS > _L15.MRS) & _L14.valid & *endCondition) {
+  if ((0 <= index) & (index < 200)) {
+    kcg_copy_MRSP_internal_section_T_TargetManagement_types(
+      &_L14,
+      &(*MRSP)[index]);
+  }
+  else {
+    kcg_copy_MRSP_internal_section_T_TargetManagement_types(
+      &_L14,
+      (MRSP_internal_section_T_TargetManagement_types *)
+        &emptyMRSPSection_TargetManagement_pkg);
+  }
+  if ((_L14.MRS > _L15.MRS) & _L14.valid & *endCondition) {
     (*ACCUout).lastInsertedTargetIndex = _L34;
     kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
       &(*ACCUout).targetList,
@@ -62,8 +62,8 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

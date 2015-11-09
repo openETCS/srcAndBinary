@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,19 +9,18 @@
 
 /* TA_Gradient::GP_Merge_New_P21_to_Profile */
 void GP_Merge_New_P21_to_Profile_TA_Gradient(
-  /* TA_Gradient::GP_Merge_New_P21_to_Profile::new_GP */ GradientProfile_t_TrackAtlasTypes *new_GP,
-  /* TA_Gradient::GP_Merge_New_P21_to_Profile::Last_GradientProfile_in */ GradientProfile_t_TrackAtlasTypes *Last_GradientProfile_in,
-  /* TA_Gradient::GP_Merge_New_P21_to_Profile::GradientdProfile_out */ GradientProfile_t_TrackAtlasTypes *GradientdProfile_out)
+  /* TA_Gradient::GP_Merge_New_P21_to_Profile::new_GP */GradientProfile_t_TrackAtlasTypes *new_GP,
+  /* TA_Gradient::GP_Merge_New_P21_to_Profile::Last_GradientProfile_in */GradientProfile_t_TrackAtlasTypes *Last_GradientProfile_in,
+  /* TA_Gradient::GP_Merge_New_P21_to_Profile::GradientdProfile_out */GradientProfile_t_TrackAtlasTypes *GradientdProfile_out)
 {
-  /* TA_Gradient::GP_Merge_New_P21_to_Profile */
-  static GradientProfile_t_TrackAtlasTypes acc;
+  static GradientProfile_t_TrackAtlasTypes tmp;
   static kcg_int i;
   /* TA_Gradient::GP_Merge_New_P21_to_Profile::_L1 */
   static kcg_int _L1;
   
-  /* ck__L148 */ if ((*Last_GradientProfile_in)[0].valid) {
+  if ((*Last_GradientProfile_in)[0].valid) {
     _L1 = /* 1 */
-      FindStartOfNewGradientProfileAbs_TA_Lib_internal(
+      _203_FindStartOfNewGradientProfileAbs_TA_Lib_internal(
         Last_GradientProfile_in,
         new_GP);
   }
@@ -31,20 +30,20 @@ void GP_Merge_New_P21_to_Profile_TA_Gradient(
   kcg_copy_GradientProfile_t_TrackAtlasTypes(
     GradientdProfile_out,
     Last_GradientProfile_in);
-  /* 2 */ for (i = 0; i < 50; i++) {
-    kcg_copy_GradientProfile_t_TrackAtlasTypes(&acc, GradientdProfile_out);
+  for (i = 0; i < 50; i++) {
+    kcg_copy_GradientProfile_t_TrackAtlasTypes(&tmp, GradientdProfile_out);
     /* 1 */
     GP_Merge_New_P21_to_Profile_loop_TA_Gradient(
       i,
-      &acc,
+      &tmp,
       _L1,
       new_GP,
       GradientdProfile_out);
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** GP_Merge_New_P21_to_Profile_TA_Gradient.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

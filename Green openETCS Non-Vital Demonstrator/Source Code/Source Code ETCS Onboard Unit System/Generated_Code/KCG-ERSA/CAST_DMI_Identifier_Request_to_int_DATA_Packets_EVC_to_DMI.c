@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int */
 void CAST_DMI_Identifier_Request_to_int_DATA_Packets_EVC_to_DMI(
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_ct */ DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_id_ct,
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_int */ DMI_Identifier_Request_int_array_T_DATA *dmi_id_int)
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_ct */_26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_id_ct,
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_int */DMI_Identifier_Request_int_array_T_DATA *dmi_id_int)
 {
   (&(&(*dmi_id_int)[0])[0])[1] = (*dmi_id_ct).system_clock;
   (&(&(*dmi_id_int)[0])[0])[0] = /* 1 */
@@ -29,8 +29,8 @@ void CAST_DMI_Identifier_Request_to_int_DATA_Packets_EVC_to_DMI(
     CAST_L_TEXT_to_int_TM_conversions((*dmi_id_ct).l_extra);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_Identifier_Request_to_int_DATA_Packets_EVC_to_DMI.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

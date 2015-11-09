@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,15 @@
 
 /* TM_lib_internal::SEND_WriteBaliseMessageHeader */
 void SEND_WriteBaliseMessageHeader_TM_lib_internal(
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::HeadersIn */ Metadata_T_Common_Types_Pkg *HeadersIn,
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::NewHeader */ MetadataElement_T_Common_Types_Pkg *NewHeader,
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::HeadersOut */ Metadata_T_Common_Types_Pkg *HeadersOut,
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::NewStartAddr */ kcg_int *NewStartAddr,
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::NewEndAddr */ kcg_int *NewEndAddr)
+  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::HeadersIn */Metadata_T_Common_Types_Pkg *HeadersIn,
+  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::NewHeader */MetadataElement_T_Common_Types_Pkg *NewHeader,
+  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::HeadersOut */Metadata_T_Common_Types_Pkg *HeadersOut,
+  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::NewStartAddr */kcg_int *NewStartAddr,
+  /* TM_lib_internal::SEND_WriteBaliseMessageHeader::NewEndAddr */kcg_int *NewEndAddr)
 {
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader */
-  static kcg_int acc;
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader */
-  static kcg_bool cond_iterw;
+  static kcg_int tmp2;
+  static kcg_bool tmp1;
   static kcg_int i;
-  /* TM_lib_internal::SEND_WriteBaliseMessageHeader */
   static MetadataElement_T_Common_Types_Pkg tmp;
   /* TM_lib_internal::SEND_WriteBaliseMessageHeader::_L7 */
   static kcg_int _L7;
@@ -29,20 +26,20 @@ void SEND_WriteBaliseMessageHeader_TM_lib_internal(
   
   _L7 = 0;
   for (i = 0; i < 30; i++) {
-    acc = _L7;
+    tmp2 = _L7;
     /* 1 */
     SEND_FindSlot_TM_lib_internal(
-      acc,
+      tmp2,
       &(*HeadersIn)[i],
       (MetadataElement_T_Common_Types_Pkg *) &DEFAULT_Headers_TM[i],
-      &cond_iterw,
+      &tmp1,
       &_L7);
     _L3 = i + 1;
-    if (!cond_iterw) {
+    if (!tmp1) {
       break;
     }
   }
-  /* 1 */ if (_L7 == 0) {
+  if (_L7 == 0) {
     *NewStartAddr = 0;
   }
   else {
@@ -59,8 +56,8 @@ void SEND_WriteBaliseMessageHeader_TM_lib_internal(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SEND_WriteBaliseMessageHeader_TM_lib_internal.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

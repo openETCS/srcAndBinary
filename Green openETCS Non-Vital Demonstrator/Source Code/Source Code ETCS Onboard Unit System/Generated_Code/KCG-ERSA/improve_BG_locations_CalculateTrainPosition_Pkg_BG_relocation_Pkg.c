@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,24 +9,22 @@
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations */
 void improve_BG_locations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::referenceBG */ positionedBG_T_TrainPosition_Types_Pck *referenceBG,
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::BGs_out */ positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::referenceBG */positionedBG_T_TrainPosition_Types_Pck *referenceBG,
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
 {
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations */
   static positionedBGs_T_TrainPosition_Types_Pck tmp1;
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improve_BG_locations */
   static positionedBGs_T_TrainPosition_Types_Pck tmp;
   
   /* 1 */
-  recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
+  _199_recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
     referenceBG,
     BGs_in,
     trainProperties,
     &tmp);
   /* 1 */
-  recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
+  _198_recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
     referenceBG,
     &tmp,
     trainProperties,
@@ -37,8 +35,8 @@ void improve_BG_locations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
     BGs_out);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** improve_BG_locations_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

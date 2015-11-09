@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
 #define _linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
@@ -11,8 +11,6 @@
 #include "indexOfLastBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -33,24 +31,17 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed */
 extern void linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg(
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::currentOdometry */ odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::BGs */ positionedBGs_T_TrainPosition_Types_Pck *BGs,
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::recalculateBGs */ kcg_bool recalculateBGs,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::currentOdometry */odometry_T_Obu_BasicTypes_Pkg *currentOdometry,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::BGs */positionedBGs_T_TrainPosition_Types_Pck *BGs,
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkingIsUsed::recalculateBGs */kcg_bool recalculateBGs,
   outC_linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void linkingIsUsed_reset_CalculateTrainPosition_Pkg_Linking_Pkg(
   outC_linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void linkingIsUsed_init_CalculateTrainPosition_Pkg_Linking_Pkg(
-  outC_linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** linkingIsUsed_CalculateTrainPosition_Pkg_Linking_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

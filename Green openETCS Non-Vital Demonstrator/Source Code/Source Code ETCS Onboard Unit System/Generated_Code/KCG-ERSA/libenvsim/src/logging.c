@@ -4,6 +4,7 @@
 //
 // History:
 // - 26.09.15, J. Kastner: initial version
+// - 05.11.15, J. Kastner: implement logging of version info; rename OPENETCS_ENVSIM_LOGDIR to ENVSIM_LOGDIR
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -19,6 +20,9 @@ FILE *es_logfile = NULL;
 #define LOG_BUF_SIZE LOG_MSG_SIZE+50
 char es_logmsg[LOG_MSG_SIZE];
 char es_logbuf[LOG_BUF_SIZE];
+
+extern const char *ES_VERSION;
+extern const char *ES_BUILDDATE;
 
 es_LogLevel es_current_loglevel = ES_LOG_INFO;
 
@@ -48,28 +52,32 @@ void es_log_init(char *logfile) {
 
   if(logfile==NULL) {
     es_log_write = es_log_write_to_stdout;
-    return;
+    goto finish;
   }
 
-  char *logdir = getenv("OPENETCS_ENVSIM_LOGDIR");
+  char *logdir = getenv("ENVSIM_LOGDIR");
   if( logdir==NULL ) {
     es_log_write = es_log_write_to_stdout;
-    return;
+    goto finish;
   }
 
   char buf[256];
   if( snprintf(buf,256,"%s/%s",logdir,logfile) >= 256 ) {
     perror("path to log file too long! writing log messages to stdout");
     es_log_write = es_log_write_to_stdout;
-    return;
+    goto finish;
   }
 
   es_logfile = fopen(buf,"w");
   if(es_logfile==NULL) {
     perror("opening logfile");
   }
-  atexit(es_log_exit);
   es_log_write = es_log_write_to_file;
+
+finish:
+  atexit(es_log_exit);
+  snprintf(buf,256,"*** openETCS libenvsim V%s (%s) ***",ES_VERSION,ES_BUILDDATE);
+  es_log_write(buf);
 };
 
 

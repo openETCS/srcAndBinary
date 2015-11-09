@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* TargetLimits_Pkg::splitT_bs */
 void splitT_bs_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::splitT_bs::bs */ T_internal_real_Type_SDM_Types_Pkg bs,
-  /* TargetLimits_Pkg::splitT_bs::isSB_FBAvailable */ kcg_bool isSB_FBAvailable,
-  /* TargetLimits_Pkg::splitT_bs::isSB_CmdAvailable */ kcg_bool isSB_CmdAvailable,
-  /* TargetLimits_Pkg::splitT_bs::bs1 */ T_internal_real_Type_SDM_Types_Pkg *bs1,
-  /* TargetLimits_Pkg::splitT_bs::bs2 */ T_internal_real_Type_SDM_Types_Pkg *bs2)
+  /* TargetLimits_Pkg::splitT_bs::bs */T_internal_real_Type_SDM_Types_Pkg bs,
+  /* TargetLimits_Pkg::splitT_bs::isSB_FBAvailable */kcg_bool isSB_FBAvailable,
+  /* TargetLimits_Pkg::splitT_bs::isSB_CmdAvailable */kcg_bool isSB_CmdAvailable,
+  /* TargetLimits_Pkg::splitT_bs::bs1 */T_internal_real_Type_SDM_Types_Pkg *bs1,
+  /* TargetLimits_Pkg::splitT_bs::bs2 */T_internal_real_Type_SDM_Types_Pkg *bs2)
 {
-  /* 1 */ if (isSB_CmdAvailable) {
+  if (isSB_CmdAvailable) {
     *bs1 = bs;
   }
   else {
@@ -24,8 +24,8 @@ void splitT_bs_TargetLimits_Pkg(
   *bs2 = *bs1;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** splitT_bs_TargetLimits_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

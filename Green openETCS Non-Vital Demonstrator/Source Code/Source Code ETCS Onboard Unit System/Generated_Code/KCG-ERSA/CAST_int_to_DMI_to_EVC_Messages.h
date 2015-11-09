@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _CAST_int_to_DMI_to_EVC_Messages_H_
 #define _CAST_int_to_DMI_to_EVC_Messages_H_
@@ -21,17 +21,15 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* Messages::CAST_int_to_DMI_to_EVC */
 extern void CAST_int_to_DMI_to_EVC_Messages(
-  /* Messages::CAST_int_to_DMI_to_EVC::dmi_to_evc_int */ DMI_to_EVC_Message_int_T_API_DMI_Pkg *dmi_to_evc_int,
-  /* Messages::CAST_int_to_DMI_to_EVC::dmi_to_evc_ct */ DMI_to_EVC_Message_T_API_DMI_Pkg *dmi_to_evc_ct);
+  /* Messages::CAST_int_to_DMI_to_EVC::dmi_to_evc_int */DMI_to_EVC_Message_int_T_API_DMI_Pkg *dmi_to_evc_int,
+  /* Messages::CAST_int_to_DMI_to_EVC::dmi_to_evc_ct */DMI_to_EVC_Message_T_API_DMI_Pkg *dmi_to_evc_ct);
 
 #endif /* _CAST_int_to_DMI_to_EVC_Messages_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_DMI_to_EVC_Messages.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

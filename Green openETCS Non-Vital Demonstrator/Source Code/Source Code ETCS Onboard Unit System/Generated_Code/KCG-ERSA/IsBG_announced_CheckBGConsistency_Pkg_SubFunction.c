@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,11 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced */
 void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::recivedBG_header */ BG_Header_T_BG_Types_Pkg *recivedBG_header,
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::storedBGs */ positionedBGs_T_TrainPosition_Types_Pck *storedBGs,
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::isAnnounced */ kcg_bool *isAnnounced,
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::q_linkorintation */ Q_LINKORIENTATION *q_linkorintation)
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::recivedBG_header */BG_Header_T_BG_Types_Pkg *recivedBG_header,
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::storedBGs */positionedBGs_T_TrainPosition_Types_Pck *storedBGs,
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::isAnnounced */kcg_bool *isAnnounced,
+  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::q_linkorintation */Q_LINKORIENTATION *q_linkorintation)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced */
   static positionedBG_T_TrainPosition_Types_Pck tmp;
   /* CheckBGConsistency_Pkg::SubFunction::IsBG_announced::IfBlock1::then::_L2 */
   static positionedBG_T_TrainPosition_Types_Pck _L2_IfBlock1;
@@ -29,7 +28,7 @@ void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
     recivedBG_header,
     &indexLocal,
     &isStored);
-  /* ck_isStored */ if (isStored) {
+  if (isStored) {
     if ((0 <= indexLocal) & (indexLocal < 41)) {
       kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
         &_L2_IfBlock1,
@@ -62,8 +61,8 @@ void IsBG_announced_CheckBGConsistency_Pkg_SubFunction(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** IsBG_announced_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

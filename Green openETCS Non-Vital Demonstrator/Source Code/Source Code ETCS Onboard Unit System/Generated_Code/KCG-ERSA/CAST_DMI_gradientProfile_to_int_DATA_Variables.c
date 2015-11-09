@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* DATA::Variables::CAST_DMI_gradientProfile_to_int */
 void CAST_DMI_gradientProfile_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_DMI_gradientProfile_to_int::dmi_gradientProfile */ DMI_gradientProfile_T_DMI_Types_Pkg *dmi_gradientProfile,
-  /* DATA::Variables::CAST_DMI_gradientProfile_to_int::DMI_gradientProfile_int */ DMI_gradientProfile_int_arrayT *DMI_gradientProfile_int)
+  /* DATA::Variables::CAST_DMI_gradientProfile_to_int::dmi_gradientProfile */DMI_gradientProfile_T_DMI_Types_Pkg *dmi_gradientProfile,
+  /* DATA::Variables::CAST_DMI_gradientProfile_to_int::DMI_gradientProfile_int */DMI_gradientProfile_int_arrayT *DMI_gradientProfile_int)
 {
-  static kcg_int i;
+  static kcg_int tmp;
   /* DATA::Variables::CAST_DMI_gradientProfile_to_int::_L9 */
   static array_int_32 _L9;
   /* DATA::Variables::CAST_DMI_gradientProfile_to_int::_L8 */
@@ -22,25 +22,25 @@ void CAST_DMI_gradientProfile_to_int_DATA_Variables(
   /* DATA::Variables::CAST_DMI_gradientProfile_to_int::_L6 */
   static array_int_32 _L6;
   
-  /* 1 */ for (i = 0; i < 32; i++) {
+  for (tmp = 0; tmp < 32; tmp++) {
     /* 1 */
     CAST_DMI_gradientProfileElement_to_int_DATA_Variables(
-      &(*dmi_gradientProfile).gradientProfiles[i],
-      &_L6[i],
-      &_L7[i],
-      &_L8[i],
-      &_L9[i]);
+      &(*dmi_gradientProfile).gradientProfiles[tmp],
+      &_L6[tmp],
+      &_L7[tmp],
+      &_L8[tmp],
+      &_L9[tmp]);
   }
-  (&(&(&(&(*DMI_gradientProfile_int)[0])[0])[0])[0])[0] = /* 1 */
-    Bool_to_Int_Utilities((*dmi_gradientProfile).profileChanged);
+  tmp = /* 1 */ Bool_to_Int_Utilities((*dmi_gradientProfile).profileChanged);
+  (&(&(&(&(*DMI_gradientProfile_int)[0])[0])[0])[0])[0] = tmp;
   kcg_copy_array_int_32(&(*DMI_gradientProfile_int)[1], &_L6);
   kcg_copy_array_int_32(&(*DMI_gradientProfile_int)[33], &_L7);
   kcg_copy_array_int_32(&(*DMI_gradientProfile_int)[65], &_L8);
   kcg_copy_array_int_32(&(*DMI_gradientProfile_int)[97], &_L9);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_gradientProfile_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,26 @@
 
 /* TargetLimits_Pkg::SDMLimitLocations */
 void SDMLimitLocations_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::SDMLimitLocations::MRSP_Profile */ MRSP_internal_T_TargetManagement_types *MRSP_Profile,
-  /* TargetLimits_Pkg::SDMLimitLocations::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* TargetLimits_Pkg::SDMLimitLocations::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
-  /* TargetLimits_Pkg::SDMLimitLocations::targetCollection */ TargetCollection_T_TargetManagement_types *targetCollection,
-  /* TargetLimits_Pkg::SDMLimitLocations::curveCollection */ CurveCollection_T_CalcBrakingCurves_types *curveCollection,
-  /* TargetLimits_Pkg::SDMLimitLocations::MA */ MA_section_real_T_TargetManagement_types *MA,
-  /* TargetLimits_Pkg::SDMLimitLocations::T_b */ t_Brake_t_SDMModelPkg *T_b,
-  /* TargetLimits_Pkg::SDMLimitLocations::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* TargetLimits_Pkg::SDMLimitLocations::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int,
-  /* TargetLimits_Pkg::SDMLimitLocations::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
-  /* TargetLimits_Pkg::SDMLimitLocations::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* TargetLimits_Pkg::SDMLimitLocations::MostRestrictiveDisplayedTarget */ Target_T_TargetManagement_types *MostRestrictiveDisplayedTarget,
-  /* TargetLimits_Pkg::SDMLimitLocations::FLOIisSBI1 */ kcg_bool *FLOIisSBI1)
+  /* TargetLimits_Pkg::SDMLimitLocations::MRSP_Profile */MRSP_internal_T_TargetManagement_types *MRSP_Profile,
+  /* TargetLimits_Pkg::SDMLimitLocations::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TargetLimits_Pkg::SDMLimitLocations::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* TargetLimits_Pkg::SDMLimitLocations::targetCollection */TargetCollection_T_TargetManagement_types *targetCollection,
+  /* TargetLimits_Pkg::SDMLimitLocations::curveCollection */CurveCollection_T_CalcBrakingCurves_types *curveCollection,
+  /* TargetLimits_Pkg::SDMLimitLocations::MA */MA_section_real_T_TargetManagement_types *MA,
+  /* TargetLimits_Pkg::SDMLimitLocations::T_b */t_Brake_t_SDMModelPkg *T_b,
+  /* TargetLimits_Pkg::SDMLimitLocations::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* TargetLimits_Pkg::SDMLimitLocations::trainData_int */trainData_internal_t_SDM_Types_Pkg *trainData_int,
+  /* TargetLimits_Pkg::SDMLimitLocations::speeds */Speeds_T_SDM_Types_Pkg *speeds,
+  /* TargetLimits_Pkg::SDMLimitLocations::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* TargetLimits_Pkg::SDMLimitLocations::MostRestrictiveDisplayedTarget */Target_T_TargetManagement_types *MostRestrictiveDisplayedTarget,
+  /* TargetLimits_Pkg::SDMLimitLocations::FLOIisSBI1 */kcg_bool *FLOIisSBI1)
 {
-  /* TargetLimits_Pkg::SDMLimitLocations */
-  static kcg_real tmp;
+  static L_internal_real_Type_SDM_Types_Pkg tmp5;
+  static kcg_real tmp4;
+  static V_internal_real_Type_SDM_Types_Pkg tmp3;
+  static V_internal_real_Type_SDM_Types_Pkg tmp2;
+  static V_internal_real_Type_SDM_Types_Pkg tmp1;
+  static V_internal_real_Type_SDM_Types_Pkg tmp;
   /* TargetLimits_Pkg::SDMLimitLocations::V_est */
   static V_internal_real_Type_SDM_Types_Pkg V_est;
   /* TargetLimits_Pkg::SDMLimitLocations::bec */
@@ -51,38 +55,26 @@ void SDMLimitLocations_TargetLimits_Pkg(
   static ParabolaCurve_T_CalcBrakingCurves_types GUIcurve;
   /* TargetLimits_Pkg::SDMLimitLocations::valid_RSM1_start */
   static kcg_bool valid_RSM1_start;
-  /* TargetLimits_Pkg::SDMLimitLocations::D_SBI2 */
-  static L_internal_real_Type_SDM_Types_Pkg D_SBI2;
   /* TargetLimits_Pkg::SDMLimitLocations::V_SBI_MRDT */
   static V_internal_real_Type_SDM_Types_Pkg V_SBI_MRDT;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L24 */
-  static L_internal_real_Type_SDM_Types_Pkg _L24;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L23 */
-  static L_internal_real_Type_SDM_Types_Pkg _L23;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L22 */
-  static L_internal_real_Type_SDM_Types_Pkg _L22;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L21 */
-  static L_internal_real_Type_SDM_Types_Pkg _L21;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L25 */
-  static V_internal_real_Type_SDM_Types_Pkg _L25;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L87 */
-  static L_internal_real_Type_SDM_Types_Pkg _L87;
+  /* TargetLimits_Pkg::SDMLimitLocations::_L26 */
+  static V_internal_real_Type_SDM_Types_Pkg _L26;
   /* TargetLimits_Pkg::SDMLimitLocations::_L86 */
   static L_internal_real_Type_SDM_Types_Pkg _L86;
   /* TargetLimits_Pkg::SDMLimitLocations::_L641 */
   static kcg_bool _L641;
+  /* TargetLimits_Pkg::SDMLimitLocations::_L642 */
+  static kcg_bool _L642;
   /* TargetLimits_Pkg::SDMLimitLocations::_L910 */
   static V_internal_real_Type_SDM_Types_Pkg _L910;
   /* TargetLimits_Pkg::SDMLimitLocations::_L909 */
   static V_internal_real_Type_SDM_Types_Pkg _L909;
   /* TargetLimits_Pkg::SDMLimitLocations::_L934 */
   static kcg_real _L934;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L931 */
-  static kcg_real _L931;
+  /* TargetLimits_Pkg::SDMLimitLocations::_L927 */
+  static kcg_real _L927;
   /* TargetLimits_Pkg::SDMLimitLocations::_L982 */
   static V_odometry_Type_Obu_BasicTypes_Pkg _L982;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L992 */
-  static kcg_bool _L992;
   /* TargetLimits_Pkg::SDMLimitLocations::_L988 */
   static kcg_bool _L988;
   /* TargetLimits_Pkg::SDMLimitLocations::_L344 */
@@ -91,12 +83,8 @@ void SDMLimitLocations_TargetLimits_Pkg(
   static kcg_bool _L343;
   /* TargetLimits_Pkg::SDMLimitLocations::_L1030 */
   static V_odometry_Type_Obu_BasicTypes_Pkg _L1030;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L1031 */
-  static V_odometry_Type_Obu_BasicTypes_Pkg _L1031;
   /* TargetLimits_Pkg::SDMLimitLocations::_L1032 */
   static V_odometry_Type_Obu_BasicTypes_Pkg _L1032;
-  /* TargetLimits_Pkg::SDMLimitLocations::_L1050 */
-  static L_internal_real_Type_SDM_Types_Pkg _L1050;
   
   (*speeds).OdoStandStill = (*odometry).motionState ==
     noMotion_Obu_BasicTypes_Pkg;
@@ -115,79 +103,66 @@ void SDMLimitLocations_TargetLimits_Pkg(
     &GUIcurve,
     &_L343,
     &V_target,
-    &_L909,
+    &_L910,
     &D_EOA,
     &D_SvL,
     &V_est,
     &T,
-    &_L25,
+    &_L927,
     &bec,
-    &D_SBI2,
+    &tmp1,
     &_L641,
     &D_est,
     &D_maxsafefront);
-  _L992 = EoA_TargetManagement_types ==
+  _L1032 = /* 15 */ TransformV_realToV_odo_SDM_Types_Pkg(V_target);
+  (*speeds).V_target = _L1032;
+  _L1030 = /* 14 */ TransformV_realToV_odo_SDM_Types_Pkg(_L910);
+  (*speeds).v_p_mrdt = _L1030;
+  if (_L1032 >= _L1030) {
+    _L982 = _L1032;
+  }
+  else {
+    _L982 = _L1030;
+  }
+  valid_RSM1_start = EoA_TargetManagement_types ==
     (*MostRestrictiveDisplayedTarget).targetType;
-  /* 1 */
-  MRSPPreindicationSelector_TargetLimits_Pkg(
-    MRSP_Profile,
-    &EBDcurve,
-    &SBDcurve,
-    &GUIcurve,
-    _L343,
-    _L992,
-    &T,
-    &_L86,
-    &_L1050,
-    &_L988);
-  (*locations).Preindication_EBD_location_valid = _L988;
-  (*locations).SBD_preindication_location = /* 1 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L86);
-  (*locations).EBD_preindication_location =
-    (*locations).SBD_preindication_location;
+  _L988 = valid_RSM1_start | ((*MostRestrictiveDisplayedTarget).targetType ==
+      SvL_TargetManagement_types);
+  _L910 = /* 3 */ dV_sbi_for_V_SDM_Types_Pkg(V_target);
   /* 1 */
   v_release_TargetLimits_Pkg(
     &EBDcurve,
     V_target,
     D_EOA,
     MA,
-    _L25,
+    _L927,
     trainLocations,
     trainData_int,
     &T,
     &V_release,
-    &valid_RSM1_start);
-  /* 1 */
-  d_RSM_start_TargetLimits_Pkg(
-    V_release,
-    &EBDcurve,
-    &SBDcurve,
-    D_maxsafefront,
-    D_est,
-    &T,
-    &_L21,
-    &_L87,
-    &_L86,
-    &(*locations).RSM_start_location_EBD_valid,
-    &valid_RSM1_start);
-  (*locations).RSM_start_location_SBD_valid = valid_RSM1_start;
+    &_L642);
+  if (_L988) {
+    _L927 = V_target + _L910;
+  }
+  else {
+    _L927 = V_release;
+  }
   /* 2 */
   d_limits_TargetLimits_Pkg(
     V_est,
     &SBDcurve,
     _L641,
-    D_SBI2,
+    tmp1,
     D_est,
     D_maxsafefront,
     &T,
     &GUIcurve,
     _L343,
-    &_L24,
-    &_L23,
-    &_L22,
-    &_L21,
+    &_L909,
+    &tmp4,
+    &tmp3,
+    &tmp2,
     FLOIisSBI1);
-  (*locations).Preindication_SBD_location_valid = *FLOIisSBI1 & _L988;
   /* 1 */
   v_SBI1_TargetLimits_Pkg(
     &SBDcurve,
@@ -198,8 +173,8 @@ void SDMLimitLocations_TargetLimits_Pkg(
     kcg_false,
     &GUIcurve,
     &T,
-    &valid_RSM1_start,
-    &_L25);
+    &_L642,
+    &tmp);
   /* 1 */
   v_SBI2_TargetLimits_Pkg(
     &EBDcurve,
@@ -212,38 +187,74 @@ void SDMLimitLocations_TargetLimits_Pkg(
     &GUIcurve,
     &T,
     &_L641,
-    &_L910);
-  /* 1 */ if (*FLOIisSBI1) {
-    V_SBI_MRDT = _L25;
+    &_L26);
+  if (*FLOIisSBI1) {
+    V_SBI_MRDT = tmp;
   }
   else {
-    V_SBI_MRDT = _L910;
+    V_SBI_MRDT = _L26;
   }
+  if (_L927 >= V_SBI_MRDT) {
+    _L934 = _L927;
+  }
+  else {
+    _L934 = V_SBI_MRDT;
+  }
+  /* 1 */
+  MRSPPreindicationSelector_TargetLimits_Pkg(
+    MRSP_Profile,
+    &EBDcurve,
+    &SBDcurve,
+    &GUIcurve,
+    _L343,
+    valid_RSM1_start,
+    &T,
+    &_L86,
+    &_L927,
+    &_L642);
+  (*locations).Preindication_EBD_location_valid = _L642;
+  (*locations).Preindication_SBD_location_valid = *FLOIisSBI1 & _L642;
+  (*locations).SBD_preindication_location = /* 1 */
+    TransformL_realToL_int_SDM_Types_Pkg(_L86);
+  (*locations).EBD_preindication_location =
+    (*locations).SBD_preindication_location;
+  /* 1 */
+  d_RSM_start_TargetLimits_Pkg(
+    V_release,
+    &EBDcurve,
+    &SBDcurve,
+    D_maxsafefront,
+    D_est,
+    &T,
+    &_L344,
+    &tmp5,
+    &_L86,
+    &(*locations).RSM_start_location_EBD_valid,
+    &valid_RSM1_start);
+  (*locations).RSM_start_location_SBD_valid = valid_RSM1_start;
   /* 1 */ d_P_target_TargetLimits_Pkg(&EBDcurve, V_target, &T, &_L343, &_L344);
-  _L988 = _L992 | ((*MostRestrictiveDisplayedTarget).targetType ==
-      SvL_TargetManagement_types);
   (*locations).EBD_RSM_start_location = /* 3 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L87);
+    TransformL_realToL_int_SDM_Types_Pkg(tmp5);
   (*locations).SBD_RSM_start_location = /* 10 */
     TransformL_realToL_int_SDM_Types_Pkg(_L86);
   (*locations).d_I_of_V_est = /* 4 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L24);
+    TransformL_realToL_int_SDM_Types_Pkg(_L909);
   (*locations).d_I_of_V_MRSP = /* 11 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L1050);
+    TransformL_realToL_int_SDM_Types_Pkg(_L927);
   (*locations).d_P_of_V_est = /* 5 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L23);
+    TransformL_realToL_int_SDM_Types_Pkg(tmp4);
   (*locations).d_W_of_V_est = /* 12 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L22);
+    TransformL_realToL_int_SDM_Types_Pkg(tmp3);
   (*locations).d_FLOI_of_V_est = /* 6 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L21);
+    TransformL_realToL_int_SDM_Types_Pkg(tmp2);
   (*locations).d_EBI_of_V_est = /* 13 */
-    TransformL_realToL_int_SDM_Types_Pkg(D_SBI2 + V_est * T.bs2);
+    TransformL_realToL_int_SDM_Types_Pkg(tmp1 + V_est * T.bs2);
   (*locations).FLOI_of_V_est = /* 7 */
     TransformL_realToL_int_SDM_Types_Pkg(V_SBI_MRDT);
   (*locations).SBI1_of_V_est = /* 14 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L25);
+    TransformL_realToL_int_SDM_Types_Pkg(tmp);
   (*locations).SBI2_of_V_est = /* 8 */
-    TransformL_realToL_int_SDM_Types_Pkg(_L910);
+    TransformL_realToL_int_SDM_Types_Pkg(_L26);
   (*locations).d_target = /* 15 */
     TransformL_realToL_int_SDM_Types_Pkg(
       /* 1 */
@@ -256,38 +267,15 @@ void SDMLimitLocations_TargetLimits_Pkg(
         _L988));
   (*locations).d_eoa = /* 9 */ TransformL_realToL_int_SDM_Types_Pkg(D_EOA);
   (*locations).d_svl = /* 16 */ TransformL_realToL_int_SDM_Types_Pkg(D_SvL);
-  _L25 = /* 1 */ getMRSFromMRSP_SDM_Types_Pkg(MRSP_Profile, D_maxsafefront);
-  _L1032 = /* 16 */ TransformV_realToV_odo_SDM_Types_Pkg(_L25);
+  _L86 = /* 1 */ getMRSFromMRSP_SDM_Types_Pkg(MRSP_Profile, D_maxsafefront);
+  _L1032 = /* 16 */ TransformV_realToV_odo_SDM_Types_Pkg(_L86);
   (*speeds).V_MRSP = _L1032;
-  _L1031 = /* 15 */ TransformV_realToV_odo_SDM_Types_Pkg(V_target);
-  (*speeds).V_target = _L1031;
-  _L1030 = /* 14 */ TransformV_realToV_odo_SDM_Types_Pkg(_L909);
-  (*speeds).v_p_mrdt = _L1030;
-  /* 2 */ if (_L1031 >= _L1030) {
-    _L982 = _L1031;
-  }
-  else {
-    _L982 = _L1030;
-  }
-  _L910 = /* 1 */ dV_sbi_for_V_SDM_Types_Pkg(V_target);
-  /* 2 */ if (_L988) {
-    _L931 = V_target + _L910;
-  }
-  else {
-    _L931 = V_release;
-  }
-  /* 2 */ if (_L931 >= V_SBI_MRDT) {
-    _L934 = _L931;
-  }
-  else {
-    _L934 = V_SBI_MRDT;
-  }
-  _L909 = /* 2 */ dV_sbi_for_V_SDM_Types_Pkg(_L25);
-  _L931 = _L25 + _L909;
+  _L909 = /* 4 */ dV_sbi_for_V_SDM_Types_Pkg(_L86);
+  _L927 = _L86 + _L909;
   (*speeds).V_est = /* 1 */ TransformV_realToV_odo_SDM_Types_Pkg(V_est);
   (*speeds).V_release = /* 13 */
     TransformV_realToV_odo_SDM_Types_Pkg(V_release);
-  /* 1 */ if (_L1032 <= _L982) {
+  if (_L1032 <= _L982) {
     (*speeds).v_p_dmi = _L1032;
   }
   else {
@@ -295,16 +283,16 @@ void SDMLimitLocations_TargetLimits_Pkg(
   }
   (*speeds).v_sbi_mrdt = /* 11 */
     TransformV_realToV_odo_SDM_Types_Pkg(V_SBI_MRDT);
-  /* 1 */ if (_L934 <= _L931) {
-    tmp = _L934;
+  if (_L934 <= _L927) {
+    tmp4 = _L934;
   }
   else {
-    tmp = _L931;
+    tmp4 = _L927;
   }
-  (*speeds).v_FLOI_dmi = /* 10 */ TransformV_realToV_odo_SDM_Types_Pkg(tmp);
+  (*speeds).v_FLOI_dmi = /* 10 */ TransformV_realToV_odo_SDM_Types_Pkg(tmp4);
   (*speeds).dV_warning_V_MRSP = /* 9 */
     TransformV_realToV_odo_SDM_Types_Pkg(
-      /* 2 */ dV_warning_for_V_SDM_Types_Pkg(_L25));
+      /* 2 */ dV_warning_for_V_SDM_Types_Pkg(_L86));
   (*speeds).dV_warning_V_target = /* 8 */
     TransformV_realToV_odo_SDM_Types_Pkg(
       /* 1 */ dV_warning_for_V_SDM_Types_Pkg(V_target));
@@ -313,14 +301,14 @@ void SDMLimitLocations_TargetLimits_Pkg(
     TransformV_realToV_odo_SDM_Types_Pkg(_L910);
   (*speeds).dV_ebi_V_MRSP = /* 5 */
     TransformV_realToV_odo_SDM_Types_Pkg(
-      /* 2 */ dV_ebi_for_V_SDM_Types_Pkg(_L25));
+      /* 2 */ dV_ebi_for_V_SDM_Types_Pkg(_L86));
   (*speeds).dV_ebi_V_target = /* 4 */
     TransformV_realToV_odo_SDM_Types_Pkg(
       /* 1 */ dV_ebi_for_V_SDM_Types_Pkg(V_target));
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SDMLimitLocations_TargetLimits_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

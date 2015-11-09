@@ -1,45 +1,29 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void op_3_6_5_1_4_e_h_k_init_ProvidePositionReport_Pkg(
-  outC_op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg *outC)
-{
-  outC->trigger = kcg_true;
-  outC->init = kcg_true;
-  outC->rem_trackInfo.minSafeRearEndPassed = kcg_true;
-  outC->rem_trackInfo.maxSafeFrontEndPassed = kcg_true;
-  outC->rem_rbcComm.newSessionEstablished = kcg_true;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void op_3_6_5_1_4_e_h_k_reset_ProvidePositionReport_Pkg(
   outC_op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k */
 void op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k::trackInfo */ LocationBasedEvents_T_ProvidePositionReport_Pkg *trackInfo,
-  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k::rbcComm */ RBC_Communication_T_ProvidePositionReport_Pkg *rbcComm,
+  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k::trackInfo */LocationBasedEvents_T_ProvidePositionReport_Pkg *trackInfo,
+  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k::rbcComm */RBC_Communication_T_ProvidePositionReport_Pkg *rbcComm,
   outC_op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg *outC)
 {
-  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k */
   static kcg_bool tmp;
   /* ProvidePositionReport_Pkg::op_3_6_5_1_4_e_h_k::_L22 */
   static LocationBasedEvents_T_ProvidePositionReport_Pkg _L22;
   
-  /* last_init_ck_rbcComm */ if (outC->init) {
+  if (outC->init) {
     outC->init = kcg_false;
     kcg_copy_LocationBasedEvents_T_ProvidePositionReport_Pkg(
       &_L22,
@@ -66,8 +50,8 @@ void op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg(
     rbcComm);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** op_3_6_5_1_4_e_h_k_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

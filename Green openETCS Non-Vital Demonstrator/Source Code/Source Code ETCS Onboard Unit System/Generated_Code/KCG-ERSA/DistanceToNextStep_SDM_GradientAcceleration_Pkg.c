@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* SDM_GradientAcceleration_Pkg::DistanceToNextStep */
 void DistanceToNextStep_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::position */ L_internal_real_Type_SDM_Types_Pkg position,
-  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::relatedIndex */ kcg_int relatedIndex,
-  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::distance */ L_internal_real_Type_SDM_Types_Pkg *distance,
-  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::validDistance */ kcg_bool *validDistance)
+  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::position */L_internal_real_Type_SDM_Types_Pkg position,
+  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::relatedIndex */kcg_int relatedIndex,
+  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::distance */L_internal_real_Type_SDM_Types_Pkg *distance,
+  /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::validDistance */kcg_bool *validDistance)
 {
   /* SDM_GradientAcceleration_Pkg::DistanceToNextStep::_L15 */
   static Gradient_section_real_t_SDM_GradientAcceleration_types _L15;
@@ -24,12 +24,12 @@ void DistanceToNextStep_SDM_GradientAcceleration_Pkg(
     relatedIndex,
     1,
     &_L15);
-  *distance = _L15.location - position;
   *validDistance = _L15.valid;
+  *distance = _L15.location - position;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DistanceToNextStep_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* Utilities::Int_Check */
 kcg_bool Int_Check_Utilities(
-  /* Utilities::Int_Check::int_in */ kcg_int int_in,
-  /* Utilities::Int_Check::max_value */ kcg_int max_value,
-  /* Utilities::Int_Check::min_value */ kcg_int min_value)
+  /* Utilities::Int_Check::int_in */kcg_int int_in,
+  /* Utilities::Int_Check::max_value */kcg_int max_value,
+  /* Utilities::Int_Check::min_value */kcg_int min_value)
 {
   /* Utilities::Int_Check::error */
   static kcg_bool error;
   
-  /* 1 */ if ((min_value > int_in) | (int_in > max_value)) {
+  if ((min_value > int_in) | (int_in > max_value)) {
     error = kcg_true;
   }
   else {
@@ -25,8 +25,8 @@ kcg_bool Int_Check_Utilities(
   return error;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Int_Check_Utilities.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

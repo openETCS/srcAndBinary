@@ -1,74 +1,36 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Build_MRSP_TA_MRSP.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void Build_MRSP_init_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC)
-{
-  static kcg_int i;
-  
-  outC->newMRSP = kcg_true;
-  outC->SSP_available = kcg_true;
-  outC->init = kcg_true;
-  for (i = 0; i < 50; i++) {
-    outC->SSP[i].valid = kcg_true;
-    outC->SSP[i].d_static_abs = 0;
-    outC->SSP[i].d_static_LRBG = 0;
-    outC->SSP[i].q_train_length_corr = kcg_true;
-    outC->SSP[i].v_static = 0;
-  }
-  for (i = 0; i < 200; i++) {
-    outC->MRSP[i].valid = kcg_true;
-    outC->MRSP[i].Loc_Abs = 0;
-    outC->MRSP[i].Loc_LRBG = 0;
-    outC->MRSP[i].MRS = 0;
-  }
-  /* 1 */ Build_StaticSpeedProfile_init_TA_SSP(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Build_MRSP_reset_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC)
 {
   outC->init = kcg_true;
   /* 1 */ Build_StaticSpeedProfile_reset_TA_SSP(&outC->Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_MRSP::Build_MRSP */
 void Build_MRSP_TA_MRSP(
-  /* TA_MRSP::Build_MRSP::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TA_MRSP::Build_MRSP::TrainDataIn */ FromTIU_t_TrackAtlasTypes TrainDataIn,
-  /* TA_MRSP::Build_MRSP::ModeAndLevel_in */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeAndLevel_in,
-  /* TA_MRSP::Build_MRSP::train_length */ L_internal_Type_Obu_BasicTypes_Pkg train_length,
-  /* TA_MRSP::Build_MRSP::train_position */ trainPosition_T_TrainPosition_Types_Pck *train_position,
+  /* TA_MRSP::Build_MRSP::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_MRSP::Build_MRSP::TrainDataIn */FromTIU_t_TrackAtlasTypes TrainDataIn,
+  /* TA_MRSP::Build_MRSP::ModeAndLevel_in */T_Mode_Level_Level_And_Mode_Types_Pkg *ModeAndLevel_in,
+  /* TA_MRSP::Build_MRSP::train_length */L_internal_Type_Obu_BasicTypes_Pkg train_length,
+  /* TA_MRSP::Build_MRSP::train_position */trainPosition_T_TrainPosition_Types_Pck *train_position,
   outC_Build_MRSP_TA_MRSP *outC)
 {
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp9;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp8;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp7;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp6;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp5;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp4;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp3;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp2;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp1;
-  /* TA_MRSP::Build_MRSP */
   static SSP_cat_t_TA_MRSP tmp;
   /* TA_MRSP::Build_MRSP::_L2 */
   static SSP_matrix_t_TA_MRSP _L2;
@@ -119,7 +81,7 @@ void Build_MRSP_TA_MRSP(
     &tmp,
     &outC->newMRSP,
     &_L2);
-  /* ck_newMRSP */ if (outC->newMRSP) {
+  if (outC->newMRSP) {
     /* 1 */ Calculate_MRSP1_TA_MRSP(&_L2, &outC->MRSP);
   }
   else if (outC->init) {
@@ -130,8 +92,8 @@ void Build_MRSP_TA_MRSP(
   outC->init = kcg_false;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_MRSP_TA_MRSP.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

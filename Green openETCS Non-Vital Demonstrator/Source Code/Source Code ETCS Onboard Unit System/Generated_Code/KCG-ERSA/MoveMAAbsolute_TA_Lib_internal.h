@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _MoveMAAbsolute_TA_Lib_internal_H_
 #define _MoveMAAbsolute_TA_Lib_internal_H_
@@ -11,21 +11,19 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TA_Lib_internal::MoveMAAbsolute */
 extern void MoveMAAbsolute_TA_Lib_internal(
-  /* TA_Lib_internal::MoveMAAbsolute::ProfileIn */ MovementAuthority_t_TrackAtlasTypes *ProfileIn,
-  /* TA_Lib_internal::MoveMAAbsolute::msg_prvLRBG */ kcg_bool msg_prvLRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::msg_LRBG */ kcg_bool msg_LRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
-  /* TA_Lib_internal::MoveMAAbsolute::ProfileOut */ MovementAuthority_t_TrackAtlasTypes *ProfileOut);
+  /* TA_Lib_internal::MoveMAAbsolute::ProfileIn */MovementAuthority_t_TrackAtlasTypes *ProfileIn,
+  /* TA_Lib_internal::MoveMAAbsolute::msg_prvLRBG */kcg_bool msg_prvLRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::msg_LRBG */kcg_bool msg_LRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::pos_LRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::pos_prvLRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
+  /* TA_Lib_internal::MoveMAAbsolute::ProfileOut */MovementAuthority_t_TrackAtlasTypes *ProfileOut);
 
 #endif /* _MoveMAAbsolute_TA_Lib_internal_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MoveMAAbsolute_TA_Lib_internal.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

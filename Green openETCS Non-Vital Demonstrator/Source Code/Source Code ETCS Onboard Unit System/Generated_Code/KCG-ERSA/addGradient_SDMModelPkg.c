@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,12 @@
 
 /* SDMModelPkg::addGradient */
 void addGradient_SDMModelPkg(
-  /* SDMModelPkg::addGradient::aBrakeSafe */ ASafe_T_CalcBrakingCurves_types *aBrakeSafe,
-  /* SDMModelPkg::addGradient::aGradient */ A_gradient_t_SDM_GradientAcceleration_types *aGradient,
-  /* SDMModelPkg::addGradient::aSafe */ ASafe_T_CalcBrakingCurves_types *aSafe)
+  /* SDMModelPkg::addGradient::aBrakeSafe */ASafe_T_CalcBrakingCurves_types *aBrakeSafe,
+  /* SDMModelPkg::addGradient::aGradient */A_gradient_t_SDM_GradientAcceleration_types *aGradient,
+  /* SDMModelPkg::addGradient::aSafe */ASafe_T_CalcBrakingCurves_types *aSafe)
 {
-  /* SDMModelPkg::addGradient */
-  static kcg_real acc;
-  /* SDMModelPkg::addGradient */
-  static ASafe_Data_T_CalcBrakingCurves_types tmp;
+  static kcg_real tmp1;
+  static array_real_100_14 tmp;
   static kcg_int i;
   /* SDMModelPkg::addGradient::_L17 */
   static L_internal_real_Type_SDM_Types_Pkg _L17;
@@ -27,11 +25,11 @@ void addGradient_SDMModelPkg(
     &(*aSafe).speed_definition,
     &(*aBrakeSafe).speed_definition);
   _L17 = 0.0;
-  /* 1 */ for (i = 0; i < 100; i++) {
-    acc = _L17;
+  for (i = 0; i < 100; i++) {
+    tmp1 = _L17;
     /* 1 */
     collectGradientLocations_SDMModelPkg(
-      acc,
+      tmp1,
       &(*aGradient)[i],
       &_L17,
       &_L28[i]);
@@ -39,15 +37,15 @@ void addGradient_SDMModelPkg(
   kcg_copy_ASafeDistanceDefinition_T_CalcBrakingCurves_types(
     &(*aSafe).distance_definition,
     &_L28);
-  /* 2 */ for (i = 0; i < 14; i++) {
+  for (i = 0; i < 14; i++) {
     /* 1 */
     iterateASafeData_SDMModelPkg(&(*aBrakeSafe).data[i], aGradient, &tmp[i]);
   }
   kcg_copy_ASafe_Data_T_CalcBrakingCurves_types(&(*aSafe).data, &tmp);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** addGradient_SDMModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

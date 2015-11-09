@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* radioOutput_Pkg::nextGen_P00 */
 void nextGen_P00_radioOutput_Pkg(
-  /* radioOutput_Pkg::nextGen_P00::inP0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *inP0,
-  /* radioOutput_Pkg::nextGen_P00::outP0 */ P000_TM_TrainToTrack *outP0)
+  /* radioOutput_Pkg::nextGen_P00::inP0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *inP0,
+  /* radioOutput_Pkg::nextGen_P00::outP0 */P000_TM_TrainToTrack *outP0)
 {
   (*outP0).valid = (*inP0).valid;
   (*outP0).nid_packet = (*inP0).packet0.NID_PACKET;
@@ -31,8 +31,8 @@ void nextGen_P00_radioOutput_Pkg(
   (*outP0).nid_ntc = (*inP0).packet0.NID_NTC;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** nextGen_P00_radioOutput_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _emptyBCAcc_CalcBrakingCurves_Pkg_H_
 #define _emptyBCAcc_CalcBrakingCurves_Pkg_H_
@@ -10,16 +10,14 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* CalcBrakingCurves_Pkg::emptyBCAcc */
 extern void emptyBCAcc_CalcBrakingCurves_Pkg(
-  /* CalcBrakingCurves_Pkg::emptyBCAcc::Output1 */ BCAccumulator_type_CalcBrakingCurves_Pkg *Output1);
+  /* CalcBrakingCurves_Pkg::emptyBCAcc::Output1 */BCAccumulator_type_CalcBrakingCurves_Pkg *Output1);
 
 #endif /* _emptyBCAcc_CalcBrakingCurves_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** emptyBCAcc_CalcBrakingCurves_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_lib_internal::C_P003V1_extract_el_section */
 kcg_int C_P003V1_extract_el_section_TM_lib_internal(
-  /* TM_lib_internal::C_P003V1_extract_el_section::offset */ kcg_int offset,
-  /* TM_lib_internal::C_P003V1_extract_el_section::flat */ P003V1_OBU_sectionlist_int_T_TM_baseline2 *flat)
+  /* TM_lib_internal::C_P003V1_extract_el_section::offset */kcg_int offset,
+  /* TM_lib_internal::C_P003V1_extract_el_section::flat */P003V1_OBU_sectionlist_int_T_TM_baseline2 *flat)
 {
   /* TM_lib_internal::C_P003V1_extract_el_section::element */
   static kcg_int element;
@@ -24,8 +24,8 @@ kcg_int C_P003V1_extract_el_section_TM_lib_internal(
   return element;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P003V1_extract_el_section_TM_lib_internal.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

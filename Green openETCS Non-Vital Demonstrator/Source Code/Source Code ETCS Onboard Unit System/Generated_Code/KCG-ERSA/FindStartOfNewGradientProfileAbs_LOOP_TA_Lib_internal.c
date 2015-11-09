@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,18 @@
 
 /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP */
 void FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal(
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::i */ kcg_int i,
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::Acc */ kcg_int Acc,
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::distance_in */ L_internal_Type_Obu_BasicTypes_Pkg distance_in,
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::Profile_in */ GradientProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::cont */ kcg_bool *cont,
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::relevant_section */ kcg_int *relevant_section)
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::i */kcg_int i,
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::Acc */kcg_int Acc,
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::distance_in */L_internal_Type_Obu_BasicTypes_Pkg distance_in,
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::Profile_in */GradientProfile_t_TrackAtlasTypes *Profile_in,
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::cont */kcg_bool *cont,
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::relevant_section */kcg_int *relevant_section)
 {
-  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP */
   static G_internal_Type_Obu_BasicTypes_Pkg tmp;
   /* TA_Lib_internal::FindStartOfNewGradientProfileAbs_LOOP::_L4 */
   static Gradient_section_t_TrackAtlasTypes _L4;
   
+  *relevant_section = i + 0;
   if ((0 <= i) & (i < 50)) {
     kcg_copy_Gradient_section_t_TrackAtlasTypes(&_L4, &(*Profile_in)[i]);
   }
@@ -30,7 +30,7 @@ void FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal(
       (Gradient_section_t_TrackAtlasTypes *)
         &DEFAULT_GradientSection_TrackAtlasTypes);
   }
-  /* 2 */ if (0 <= _L4.Gradient) {
+  if (0 <= _L4.Gradient) {
     tmp = _L4.Gradient;
   }
   else {
@@ -38,11 +38,10 @@ void FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal(
   }
   *cont = !((i > 0) & (0 == _L4.Loc_Absolute)) & (_L4.Loc_Absolute <
       distance_in) & (tmp != 255);
-  *relevant_section = i + 0;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

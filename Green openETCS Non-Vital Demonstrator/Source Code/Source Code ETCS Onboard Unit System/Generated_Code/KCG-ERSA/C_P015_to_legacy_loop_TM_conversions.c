@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* TM_conversions::C_P015_to_legacy_loop */
 void C_P015_to_legacy_loop_TM_conversions(
-  /* TM_conversions::C_P015_to_legacy_loop::i */ kcg_int i,
-  /* TM_conversions::C_P015_to_legacy_loop::P015_in */ P015_OBU_T_TM *P015_in,
-  /* TM_conversions::C_P015_to_legacy_loop::P015_section_in */ P015_OBU_sectionlist_enum_T_TM *P015_section_in,
-  /* TM_conversions::C_P015_to_legacy_loop::P015_legacy_out */ P15_Level23MovementAuthority_T_Packet_Types_Pkg *P015_legacy_out)
+  /* TM_conversions::C_P015_to_legacy_loop::i */kcg_int i,
+  /* TM_conversions::C_P015_to_legacy_loop::P015_in */P015_OBU_T_TM *P015_in,
+  /* TM_conversions::C_P015_to_legacy_loop::P015_section_in */P015_OBU_sectionlist_enum_T_TM *P015_section_in,
+  /* TM_conversions::C_P015_to_legacy_loop::P015_legacy_out */P15_Level23MovementAuthority_T_Packet_Types_Pkg *P015_legacy_out)
 {
   /* TM_conversions::C_P015_to_legacy_loop::_L21 */
   static P015_section_enum_T_TM _L21;
@@ -48,7 +48,7 @@ void C_P015_to_legacy_loop_TM_conversions(
   (*P015_legacy_out).q_sectiontimer_k = _L21.q_sectiontimer;
   (*P015_legacy_out).t_sectiontimer_k = _L21.t_sectiontimer;
   (*P015_legacy_out).d_sectiontimerstoploc_k = _L21.d_sectiontimerstoploc;
-  /* 1 */ if (i > 0) {
+  if (i > 0) {
     (*P015_legacy_out).valid = _L21.valid;
   }
   else {
@@ -56,8 +56,8 @@ void C_P015_to_legacy_loop_TM_conversions(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P015_to_legacy_loop_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

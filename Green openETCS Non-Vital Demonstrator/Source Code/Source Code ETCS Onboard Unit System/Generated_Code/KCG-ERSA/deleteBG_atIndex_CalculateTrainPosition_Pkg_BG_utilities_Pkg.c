@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,30 +9,31 @@
 
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex */
 void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::indexOfBG */ kcg_int indexOfBG,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::del */ kcg_bool del,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::BGs_out */ positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::indexOfBG */kcg_int indexOfBG,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::del */kcg_bool del,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
 {
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex */
-  static positionedBGs_T_TrainPosition_Types_Pck tmp;
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex */
-  static kcg_bool cond_iterw;
+  static array__106059 tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L8 */
   static kcg_bool _L8;
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L12 */
+  static array__108352 _L12;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L15 */
-  static positionedBGs_T_TrainPosition_Types_Pck _L15;
+  static array__106059 _L15;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L16 */
   static kcg_int _L16;
   
   _L8 = del & (indexOfBG >= 0) & (indexOfBG <
       cMaxNoOfStoredBGs_TrainPosition_Types_Pck);
-  kcg_copy_array_97439(&tmp[0], (array_97439 *) &(*BGs_in)[1]);
   kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
-    &(&tmp[40])[0],
+    &_L12[0],
     (positionedBG_T_TrainPosition_Types_Pck *)
       &cNoPositionedBG_CalculateTrainPosition_Pkg);
+  kcg_copy_array__113146(&tmp1[0], (array__113146 *) &(*BGs_in)[1]);
+  kcg_copy_array__108352(&tmp1[40], &_L12);
   if (_L8) {
     for (i = 0; i < 41; i++) {
       /* 1 */
@@ -40,11 +41,11 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
         i,
         indexOfBG,
         &(*BGs_in)[i],
-        &tmp[i],
-        &cond_iterw,
+        &tmp1[i],
+        &tmp,
         &_L15[i]);
       _L16 = i + 1;
-      if (!cond_iterw) {
+      if (!tmp) {
         break;
       }
     }
@@ -62,7 +63,7 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   }
 #endif /* KCG_MAPW_CPY */
   
-  /* 1 */ if (_L8) {
+  if (_L8) {
     kcg_copy_positionedBGs_T_TrainPosition_Types_Pck(BGs_out, &_L15);
   }
   else {
@@ -70,8 +71,8 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

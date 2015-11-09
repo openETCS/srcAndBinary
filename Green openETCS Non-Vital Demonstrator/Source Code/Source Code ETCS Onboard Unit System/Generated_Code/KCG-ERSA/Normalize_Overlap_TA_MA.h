@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _Normalize_Overlap_TA_MA_H_
 #define _Normalize_Overlap_TA_MA_H_
@@ -12,20 +12,18 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TA_MA::Normalize_Overlap */
 extern void Normalize_Overlap_TA_MA(
-  /* TA_MA::Normalize_Overlap::d_endsection */ L_internal_Type_Obu_BasicTypes_Pkg d_endsection,
-  /* TA_MA::Normalize_Overlap::Packet15_in */ P015_OBU_T_TM *Packet15_in,
-  /* TA_MA::Normalize_Overlap::NV_in */ P003V1_OBU_T_TM_baseline2 *NV_in,
-  /* TA_MA::Normalize_Overlap::q_overlap */ kcg_bool *q_overlap,
-  /* TA_MA::Normalize_Overlap::overlap */ DP_or_OL_t_TrackAtlasTypes *overlap);
+  /* TA_MA::Normalize_Overlap::d_endsection */L_internal_Type_Obu_BasicTypes_Pkg d_endsection,
+  /* TA_MA::Normalize_Overlap::Packet15_in */P015_OBU_T_TM *Packet15_in,
+  /* TA_MA::Normalize_Overlap::NV_in */P003V1_OBU_T_TM_baseline2 *NV_in,
+  /* TA_MA::Normalize_Overlap::q_overlap */kcg_bool *q_overlap,
+  /* TA_MA::Normalize_Overlap::overlap */DP_or_OL_t_TrackAtlasTypes *overlap);
 
 #endif /* _Normalize_Overlap_TA_MA_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Normalize_Overlap_TA_MA.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

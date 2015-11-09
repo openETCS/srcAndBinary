@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* EVC_Support_Pkg::getMobileRegStatus */
 mobileRegistrationStatus_T_RCM_Types_Pkg getMobileRegStatus_EVC_Support_Pkg(
-  /* EVC_Support_Pkg::getMobileRegStatus::HW_ConnectionStatus */ mobileHWConnectionStatus_Type_MoRC_Pck HW_ConnectionStatus)
+  /* EVC_Support_Pkg::getMobileRegStatus::HW_ConnectionStatus */mobileHWConnectionStatus_Type_MoRC_Pck HW_ConnectionStatus)
 {
   /* EVC_Support_Pkg::getMobileRegStatus::MobileRegistrationStatus */
   static mobileRegistrationStatus_T_RCM_Types_Pkg MobileRegistrationStatus;
@@ -34,8 +34,8 @@ mobileRegistrationStatus_T_RCM_Types_Pkg getMobileRegStatus_EVC_Support_Pkg(
   return MobileRegistrationStatus;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getMobileRegStatus_EVC_Support_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

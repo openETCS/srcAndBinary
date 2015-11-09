@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress */
 void ShiftAddress_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::metaData_In */ MetadataElement_T_Common_Types_Pkg *metaData_In,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::distance */ kcg_int distance,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::metaData_Out */ MetadataElement_T_Common_Types_Pkg *metaData_Out)
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::metaData_In */MetadataElement_T_Common_Types_Pkg *metaData_In,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::distance */kcg_int distance,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::metaData_Out */MetadataElement_T_Common_Types_Pkg *metaData_Out)
 {
   /* CheckBGConsistency_Pkg::SubFunction::MergFunction::ShiftAddress::_L9 */
   static kcg_int _L9;
@@ -25,8 +25,8 @@ void ShiftAddress_CheckBGConsistency_Pkg_SubFunction_MergFunction(
       (*metaData_In).startAddress);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ShiftAddress_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

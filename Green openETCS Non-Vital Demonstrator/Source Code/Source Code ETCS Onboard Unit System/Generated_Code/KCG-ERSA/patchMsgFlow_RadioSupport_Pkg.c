@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* RadioSupport_Pkg::patchMsgFlow */
 void patchMsgFlow_RadioSupport_Pkg(
-  /* RadioSupport_Pkg::patchMsgFlow::fromEVC */ M_TrainTrack_Message_T_TM_radio_messages *fromEVC,
-  /* RadioSupport_Pkg::patchMsgFlow::insafeSessionEstablished */ kcg_bool insafeSessionEstablished,
-  /* RadioSupport_Pkg::patchMsgFlow::inModeAndLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
-  /* RadioSupport_Pkg::patchMsgFlow::toRBC */ M_TrainTrack_Message_T_TM_radio_messages *toRBC)
+  /* RadioSupport_Pkg::patchMsgFlow::fromEVC */M_TrainTrack_Message_T_TM_radio_messages *fromEVC,
+  /* RadioSupport_Pkg::patchMsgFlow::insafeSessionEstablished */kcg_bool insafeSessionEstablished,
+  /* RadioSupport_Pkg::patchMsgFlow::inModeAndLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
+  /* RadioSupport_Pkg::patchMsgFlow::toRBC */M_TrainTrack_Message_T_TM_radio_messages *toRBC)
 {
-  /* 1 */ if (((*fromEVC).Message.valid & ((*fromEVC).Message.nid_message ==
+  if (((*fromEVC).Message.valid & ((*fromEVC).Message.nid_message ==
         co132_MA_Request_Id_Pkg) & !((M_LEVEL_Level_3 ==
           (*inModeAndLevel).level) | ((*inModeAndLevel).level ==
           M_LEVEL_Level_2))) | ((*fromEVC).Message.valid &
@@ -29,8 +29,8 @@ void patchMsgFlow_RadioSupport_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** patchMsgFlow_RadioSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

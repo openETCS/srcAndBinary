@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _getSpeedOnCurve_CalcBrakingCurves_types_H_
 #define _getSpeedOnCurve_CalcBrakingCurves_types_H_
@@ -10,19 +10,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* CalcBrakingCurves_types::getSpeedOnCurve */
 extern void getSpeedOnCurve_CalcBrakingCurves_types(
-  /* CalcBrakingCurves_types::getSpeedOnCurve::curve */ ParabolaCurve_T_CalcBrakingCurves_types *curve,
-  /* CalcBrakingCurves_types::getSpeedOnCurve::position */ L_internal_real_Type_SDM_Types_Pkg position,
-  /* CalcBrakingCurves_types::getSpeedOnCurve::valid */ kcg_bool *valid,
-  /* CalcBrakingCurves_types::getSpeedOnCurve::speed */ V_internal_real_Type_SDM_Types_Pkg *speed);
+  /* CalcBrakingCurves_types::getSpeedOnCurve::curve */ParabolaCurve_T_CalcBrakingCurves_types *curve,
+  /* CalcBrakingCurves_types::getSpeedOnCurve::position */L_internal_real_Type_SDM_Types_Pkg position,
+  /* CalcBrakingCurves_types::getSpeedOnCurve::valid */kcg_bool *valid,
+  /* CalcBrakingCurves_types::getSpeedOnCurve::speed */V_internal_real_Type_SDM_Types_Pkg *speed);
 
 #endif /* _getSpeedOnCurve_CalcBrakingCurves_types_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getSpeedOnCurve_CalcBrakingCurves_types.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

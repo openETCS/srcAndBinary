@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _GP_Position_GP_with_BGs_TA_Gradient_H_
 #define _GP_Position_GP_with_BGs_TA_Gradient_H_
@@ -13,23 +13,21 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TA_Gradient::GP_Position_GP_with_BGs */
 extern void GP_Position_GP_with_BGs_TA_Gradient(
-  /* TA_Gradient::GP_Position_GP_with_BGs::ProfileIn */ GradientProfile_t_TrackAtlasTypes *ProfileIn,
-  /* TA_Gradient::GP_Position_GP_with_BGs::pos_LRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
-  /* TA_Gradient::GP_Position_GP_with_BGs::pos_prvLRBG */ L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
-  /* TA_Gradient::GP_Position_GP_with_BGs::there_is_prvLRBG */ kcg_bool there_is_prvLRBG,
-  /* TA_Gradient::GP_Position_GP_with_BGs::LastProfile */ GradientProfile_t_TrackAtlasTypes *LastProfile,
-  /* TA_Gradient::GP_Position_GP_with_BGs::ProfileOut */ GradientProfile_t_TrackAtlasTypes *ProfileOut,
-  /* TA_Gradient::GP_Position_GP_with_BGs::available */ kcg_bool *available,
-  /* TA_Gradient::GP_Position_GP_with_BGs::ProfileLoopOut */ GradientProfile_t_TrackAtlasTypes *ProfileLoopOut);
+  /* TA_Gradient::GP_Position_GP_with_BGs::ProfileIn */GradientProfile_t_TrackAtlasTypes *ProfileIn,
+  /* TA_Gradient::GP_Position_GP_with_BGs::pos_LRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_LRBG,
+  /* TA_Gradient::GP_Position_GP_with_BGs::pos_prvLRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
+  /* TA_Gradient::GP_Position_GP_with_BGs::there_is_prvLRBG */kcg_bool there_is_prvLRBG,
+  /* TA_Gradient::GP_Position_GP_with_BGs::LastProfile */GradientProfile_t_TrackAtlasTypes *LastProfile,
+  /* TA_Gradient::GP_Position_GP_with_BGs::ProfileOut */GradientProfile_t_TrackAtlasTypes *ProfileOut,
+  /* TA_Gradient::GP_Position_GP_with_BGs::available */kcg_bool *available,
+  /* TA_Gradient::GP_Position_GP_with_BGs::ProfileLoopOut */GradientProfile_t_TrackAtlasTypes *ProfileLoopOut);
 
 #endif /* _GP_Position_GP_with_BGs_TA_Gradient_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** GP_Position_GP_with_BGs_TA_Gradient.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

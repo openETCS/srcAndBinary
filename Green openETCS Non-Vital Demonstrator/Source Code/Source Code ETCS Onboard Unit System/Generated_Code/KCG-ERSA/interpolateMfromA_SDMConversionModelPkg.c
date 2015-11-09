@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* SDMConversionModelPkg::interpolateMfromA */
 A_internal_Type_Obu_BasicTypes_Pkg interpolateMfromA_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::interpolateMfromA::a */ A_internal_Type_Obu_BasicTypes_Pkg a,
-  /* SDMConversionModelPkg::interpolateMfromA::a12 */ A_internal_Type_Obu_BasicTypes_Pkg a12,
-  /* SDMConversionModelPkg::interpolateMfromA::a23 */ A_internal_Type_Obu_BasicTypes_Pkg a23,
-  /* SDMConversionModelPkg::interpolateMfromA::m12 */ A_internal_Type_Obu_BasicTypes_Pkg m12,
-  /* SDMConversionModelPkg::interpolateMfromA::m23 */ A_internal_Type_Obu_BasicTypes_Pkg m23)
+  /* SDMConversionModelPkg::interpolateMfromA::a */A_internal_Type_Obu_BasicTypes_Pkg a,
+  /* SDMConversionModelPkg::interpolateMfromA::a12 */A_internal_Type_Obu_BasicTypes_Pkg a12,
+  /* SDMConversionModelPkg::interpolateMfromA::a23 */A_internal_Type_Obu_BasicTypes_Pkg a23,
+  /* SDMConversionModelPkg::interpolateMfromA::m12 */A_internal_Type_Obu_BasicTypes_Pkg m12,
+  /* SDMConversionModelPkg::interpolateMfromA::m23 */A_internal_Type_Obu_BasicTypes_Pkg m23)
 {
   /* SDMConversionModelPkg::interpolateMfromA::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -23,12 +23,12 @@ A_internal_Type_Obu_BasicTypes_Pkg interpolateMfromA_SDMConversionModelPkg(
   static A_internal_Type_Obu_BasicTypes_Pkg m;
   
   IfBlock1_clock = a <= a12;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     m = m12;
   }
   else {
     else_clock_IfBlock1 = a23 <= a;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       m = m23;
     }
     else {
@@ -38,8 +38,8 @@ A_internal_Type_Obu_BasicTypes_Pkg interpolateMfromA_SDMConversionModelPkg(
   return m;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** interpolateMfromA_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

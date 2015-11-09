@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _ToFullSupervision_Conditions_H_
 #define _ToFullSupervision_Conditions_H_
@@ -8,8 +8,6 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -29,25 +27,18 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Conditions::ToFullSupervision */
 extern void ToFullSupervision_Conditions(
-  /* Conditions::ToFullSupervision::Current_Level */ M_LEVEL Current_Level,
-  /* Conditions::ToFullSupervision::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
-  /* Conditions::ToFullSupervision::Mode_Profile_On_Board */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
-  /* Conditions::ToFullSupervision::MA_SSP_Gradiant_Available */ kcg_bool MA_SSP_Gradiant_Available,
+  /* Conditions::ToFullSupervision::Current_Level */M_LEVEL Current_Level,
+  /* Conditions::ToFullSupervision::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
+  /* Conditions::ToFullSupervision::Mode_Profile_On_Board */T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Board,
+  /* Conditions::ToFullSupervision::MA_SSP_Gradiant_Available */kcg_bool MA_SSP_Gradiant_Available,
   outC_ToFullSupervision_Conditions *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void ToFullSupervision_reset_Conditions(
   outC_ToFullSupervision_Conditions *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void ToFullSupervision_init_Conditions(
-  outC_ToFullSupervision_Conditions *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _ToFullSupervision_Conditions_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ToFullSupervision_Conditions.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

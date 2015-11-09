@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 #ifndef _SDM_Commands_SDM_Commands_Pkg_H_
 #define _SDM_Commands_SDM_Commands_Pkg_H_
@@ -15,8 +15,6 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
@@ -29,40 +27,33 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_CalcBrakeCmd_SDM_Commands_Pkg /* 1 */ _1_Context_1;
+  outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg /* 1 */ _1_Context_1;
   outC_MergeMLRequests_SDM_Commands_Pkg /* 2 */ Context_2;
-  outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg /* 1 */ Context_1;
+  outC_CalcBrakeCmd_SDM_Commands_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_SDM_Commands_SDM_Commands_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* SDM_Commands_Pkg::SDM_Commands */
 extern void SDM_Commands_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::SDM_Commands::allTargets */ TargetCollection_T_TargetManagement_types *allTargets,
-  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
-  /* SDM_Commands_Pkg::SDM_Commands::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::SDM_Commands::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::SDM_Commands::mrdt */ Target_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::SDM_Commands::floiIsSB1 */ kcg_bool floiIsSB1,
-  /* SDM_Commands_Pkg::SDM_Commands::MLrequestSB */ kcg_bool MLrequestSB,
-  /* SDM_Commands_Pkg::SDM_Commands::MLrequestEB */ kcg_bool MLrequestEB,
-  /* SDM_Commands_Pkg::SDM_Commands::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDM_Commands_Pkg::SDM_Commands::TrainData_int */ trainData_internal_t_SDM_Types_Pkg *TrainData_int,
+  /* SDM_Commands_Pkg::SDM_Commands::allTargets */TargetCollection_T_TargetManagement_types *allTargets,
+  /* SDM_Commands_Pkg::SDM_Commands::trainLocations */trainPosition_T_TrainPosition_Types_Pck *trainLocations,
+  /* SDM_Commands_Pkg::SDM_Commands::speeds */Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::SDM_Commands::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::SDM_Commands::mrdt */Target_T_TargetManagement_types *mrdt,
+  /* SDM_Commands_Pkg::SDM_Commands::floiIsSB1 */kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::SDM_Commands::MLrequestSB */kcg_bool MLrequestSB,
+  /* SDM_Commands_Pkg::SDM_Commands::MLrequestEB */kcg_bool MLrequestEB,
+  /* SDM_Commands_Pkg::SDM_Commands::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDM_Commands_Pkg::SDM_Commands::TrainData_int */trainData_internal_t_SDM_Types_Pkg *TrainData_int,
   outC_SDM_Commands_SDM_Commands_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void SDM_Commands_reset_SDM_Commands_Pkg(
   outC_SDM_Commands_SDM_Commands_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void SDM_Commands_init_SDM_Commands_Pkg(
-  outC_SDM_Commands_SDM_Commands_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _SDM_Commands_SDM_Commands_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SDM_Commands_SDM_Commands_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:20
 *************************************************************$ */
 

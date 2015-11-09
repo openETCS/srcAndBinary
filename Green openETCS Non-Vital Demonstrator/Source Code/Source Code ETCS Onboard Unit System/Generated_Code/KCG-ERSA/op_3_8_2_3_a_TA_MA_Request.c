@@ -1,41 +1,26 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "op_3_8_2_3_a_TA_MA_Request.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void op_3_8_2_3_a_init_TA_MA_Request(outC_op_3_8_2_3_a_TA_MA_Request *outC)
-{
-  outC->exception = kcg_true;
-  outC->triggerMA = kcg_true;
-  outC->init = kcg_true;
-  outC->rem_preindicationLoc = 0;
-  /* 1 */ RisingEdge_init_digital(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void op_3_8_2_3_a_reset_TA_MA_Request(outC_op_3_8_2_3_a_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
   /* 1 */ RisingEdge_reset_digital(&outC->Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_MA_Request::op_3_8_2_3_a */
 void op_3_8_2_3_a_TA_MA_Request(
-  /* TA_MA_Request::op_3_8_2_3_a::t_mar */ T_MAR t_mar,
-  /* TA_MA_Request::op_3_8_2_3_a::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* TA_MA_Request::op_3_8_2_3_a::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* TA_MA_Request::op_3_8_2_3_a::preindicationLoc */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLoc,
+  /* TA_MA_Request::op_3_8_2_3_a::t_mar */T_MAR t_mar,
+  /* TA_MA_Request::op_3_8_2_3_a::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* TA_MA_Request::op_3_8_2_3_a::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TA_MA_Request::op_3_8_2_3_a::preindicationLoc */L_internal_Type_Obu_BasicTypes_Pkg preindicationLoc,
   outC_op_3_8_2_3_a_TA_MA_Request *outC)
 {
-  /* TA_MA_Request::op_3_8_2_3_a */
   static L_internal_Type_Obu_BasicTypes_Pkg tmp;
   /* TA_MA_Request::op_3_8_2_3_a::_L20 */
   static kcg_real _L20;
@@ -49,7 +34,7 @@ void op_3_8_2_3_a_TA_MA_Request(
     - 1.0,
     &_L20,
     &outC->exception);
-  /* last_init_ck_preindicationLoc */ if (outC->init) {
+  if (outC->init) {
     outC->init = kcg_false;
     tmp = cLocation_TA_MA_Request;
   }
@@ -62,8 +47,8 @@ void op_3_8_2_3_a_TA_MA_Request(
   outC->rem_preindicationLoc = preindicationLoc;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** op_3_8_2_3_a_TA_MA_Request.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

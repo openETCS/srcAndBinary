@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,36 +9,34 @@
 
 /* xdebugSupport_Pkg::packetValid */
 kcg_bool packetValid_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::packetValid::packetHeader */ Metadata_T_Common_Types_Pkg *packetHeader,
-  /* xdebugSupport_Pkg::packetValid::which_ID */ NID_PACKET which_ID)
+  /* xdebugSupport_Pkg::packetValid::packetHeader */Metadata_T_Common_Types_Pkg *packetHeader,
+  /* xdebugSupport_Pkg::packetValid::which_ID */NID_PACKET which_ID)
 {
-  /* xdebugSupport_Pkg::packetValid */
-  static kcg_bool acc;
-  /* xdebugSupport_Pkg::packetValid */
-  static kcg_bool cond_iterw;
+  static kcg_bool tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   /* xdebugSupport_Pkg::packetValid::isValid */
   static kcg_bool isValid;
   
   isValid = kcg_true;
-  /* 1 */ for (i = 0; i < 30; i++) {
-    acc = isValid;
+  for (i = 0; i < 30; i++) {
+    tmp1 = isValid;
     /* 1 */
     packetValidBasics_xdebugSupport_Pkg(
-      acc,
+      tmp1,
       &(*packetHeader)[i],
       which_ID,
-      &cond_iterw,
+      &tmp,
       &isValid);
-    /* 1 */ if (!cond_iterw) {
+    if (!tmp) {
       break;
     }
   }
   return isValid;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** packetValid_xdebugSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

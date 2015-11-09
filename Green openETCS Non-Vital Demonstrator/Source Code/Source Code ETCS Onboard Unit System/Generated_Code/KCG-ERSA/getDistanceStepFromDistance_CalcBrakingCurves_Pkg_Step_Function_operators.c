@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,20 +9,19 @@
 
 /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance */
 void getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators(
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::DistanceIn */ L_internal_real_Type_SDM_Types_Pkg DistanceIn,
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::ASafeDistances */ ASafeDistanceDefinition_T_CalcBrakingCurves_types *ASafeDistances,
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::DistanceStepOut */ L_internal_real_Type_SDM_Types_Pkg *DistanceStepOut,
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::DistanceStepIndexOut */ kcg_int *DistanceStepIndexOut)
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::DistanceIn */L_internal_real_Type_SDM_Types_Pkg DistanceIn,
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::ASafeDistances */ASafeDistanceDefinition_T_CalcBrakingCurves_types *ASafeDistances,
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::DistanceStepOut */L_internal_real_Type_SDM_Types_Pkg *DistanceStepOut,
+  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance::DistanceStepIndexOut */kcg_int *DistanceStepIndexOut)
 {
-  /* CalcBrakingCurves_Pkg::Step_Function_operators::getDistanceStepFromDistance */
-  static kcg_int acc;
+  static kcg_int tmp;
   static kcg_int i;
   
   *DistanceStepIndexOut = 0;
   for (i = 0; i < 100; i++) {
-    acc = *DistanceStepIndexOut;
-    /* 1 */ if (DistanceIn < (*ASafeDistances)[i]) {
-      *DistanceStepIndexOut = acc;
+    tmp = *DistanceStepIndexOut;
+    if (DistanceIn < (*ASafeDistances)[i]) {
+      *DistanceStepIndexOut = tmp;
     }
     else {
       *DistanceStepIndexOut = i;
@@ -36,8 +35,8 @@ void getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

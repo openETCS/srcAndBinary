@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _maintainMobileRegistrationContext_EVC_Support_Pkg_H_
 #define _maintainMobileRegistrationContext_EVC_Support_Pkg_H_
@@ -10,19 +10,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* EVC_Support_Pkg::maintainMobileRegistrationContext */
 extern void maintainMobileRegistrationContext_EVC_Support_Pkg(
-  /* EVC_Support_Pkg::maintainMobileRegistrationContext::MobileFromAPI */ mobileHWStatus_Type_MoRC_Pck *MobileFromAPI,
-  /* EVC_Support_Pkg::maintainMobileRegistrationContext::mobileDeviceNo */ kcg_int mobileDeviceNo,
-  /* EVC_Support_Pkg::maintainMobileRegistrationContext::Registered_MN */ NID_MN Registered_MN,
-  /* EVC_Support_Pkg::maintainMobileRegistrationContext::MobileRegistrationContext */ mobileRegistrationContext_T_RCM_Types_Pkg *MobileRegistrationContext);
+  /* EVC_Support_Pkg::maintainMobileRegistrationContext::MobileFromAPI */mobileHWStatus_Type_MoRC_Pck *MobileFromAPI,
+  /* EVC_Support_Pkg::maintainMobileRegistrationContext::mobileDeviceNo */kcg_int mobileDeviceNo,
+  /* EVC_Support_Pkg::maintainMobileRegistrationContext::Registered_MN */NID_MN Registered_MN,
+  /* EVC_Support_Pkg::maintainMobileRegistrationContext::MobileRegistrationContext */mobileRegistrationContext_T_RCM_Types_Pkg *MobileRegistrationContext);
 
 #endif /* _maintainMobileRegistrationContext_EVC_Support_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** maintainMobileRegistrationContext_EVC_Support_Pkg.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* SDM_GradientAcceleration_Pkg::selectGradientOffset */
 void selectGradientOffset_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::Index */ kcg_int Index,
-  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::Offset */ kcg_int Offset,
-  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::GradientSect */ Gradient_section_real_t_SDM_GradientAcceleration_types *GradientSect)
+  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::Index */kcg_int Index,
+  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::Offset */kcg_int Offset,
+  /* SDM_GradientAcceleration_Pkg::selectGradientOffset::GradientSect */Gradient_section_real_t_SDM_GradientAcceleration_types *GradientSect)
 {
   if ((0 <= Index + Offset) & (Index + Offset < 50)) {
     kcg_copy_Gradient_section_real_t_SDM_GradientAcceleration_types(
@@ -26,8 +26,8 @@ void selectGradientOffset_SDM_GradientAcceleration_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** selectGradientOffset_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

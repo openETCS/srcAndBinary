@@ -1,0 +1,1 @@
+-target C -O 3 -static -name_length 200 -significance_length 31 -user_config ./user_macros.h -node EVC_IP_DMI::ROOT_EVC R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA/scade_model_without_unused.scade -target_dir R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,17 @@
 
 /* xdebugSupport_Pkg::dataForLevelTransition */
 void dataForLevelTransition_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::dataForLevelTransition::actualMessage */ ReceivedMessage_T_Common_Types_Pkg *actualMessage,
-  /* xdebugSupport_Pkg::dataForLevelTransition::storedData */ dataCollectionForLevelTransition_T_xdebugSupport_Pkg *storedData,
-  /* xdebugSupport_Pkg::dataForLevelTransition::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* xdebugSupport_Pkg::dataForLevelTransition::positionNeeded */ kcg_bool positionNeeded,
-  /* xdebugSupport_Pkg::dataForLevelTransition::actualLevel */ M_LEVEL actualLevel,
-  /* xdebugSupport_Pkg::dataForLevelTransition::outstoredData */ dataCollectionForLevelTransition_T_xdebugSupport_Pkg *outstoredData,
-  /* xdebugSupport_Pkg::dataForLevelTransition::outPositionNeeded */ kcg_bool *outPositionNeeded)
+  /* xdebugSupport_Pkg::dataForLevelTransition::actualMessage */ReceivedMessage_T_Common_Types_Pkg *actualMessage,
+  /* xdebugSupport_Pkg::dataForLevelTransition::storedData */dataCollectionForLevelTransition_T_xdebugSupport_Pkg *storedData,
+  /* xdebugSupport_Pkg::dataForLevelTransition::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* xdebugSupport_Pkg::dataForLevelTransition::positionNeeded */kcg_bool positionNeeded,
+  /* xdebugSupport_Pkg::dataForLevelTransition::actualLevel */M_LEVEL actualLevel,
+  /* xdebugSupport_Pkg::dataForLevelTransition::outstoredData */dataCollectionForLevelTransition_T_xdebugSupport_Pkg *outstoredData,
+  /* xdebugSupport_Pkg::dataForLevelTransition::outPositionNeeded */kcg_bool *outPositionNeeded)
 {
-  /* xdebugSupport_Pkg::dataForLevelTransition */
   static kcg_bool tmp1;
-  /* xdebugSupport_Pkg::dataForLevelTransition */
   static P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg tmp;
+  static L_internal_Type_Obu_BasicTypes_Pkg tmp2;
   /* xdebugSupport_Pkg::dataForLevelTransition::ntcRequested */
   static kcg_bool ntcRequested;
   /* xdebugSupport_Pkg::dataForLevelTransition::_L3 */
@@ -43,19 +42,31 @@ void dataForLevelTransition_xdebugSupport_Pkg(
       &(*actualMessage).packets.PacketHeaders,
       cp041_Level_Transition_Order_Id_Pkg);
   _L71 = positionNeeded | tmp1;
-  /* ck_p41Valid */ if (tmp1) {
+  if (tmp1) {
     _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pkg(actualMessage);
   }
   else {
     _L116 = (*storedData).LRBG;
   }
-  /* 1 */ Read_P015_TM(&(*actualMessage).packets, &_L3, &_L4);
   /* 1 */ Read_P041_Legacy_TM_specific(&(*actualMessage).packets, &_L18);
+  if (_L71) {
+    /* 1 */
+    locationOfReferenceLRBG_xdebugSupport_Pkg(
+      _L116,
+      trainPosition,
+      &tmp2,
+      &_L3);
+    *outPositionNeeded = !_L3;
+  }
+  else {
+    *outPositionNeeded = !positionNeeded;
+  }
+  /* 1 */ Read_P015_TM(&(*actualMessage).packets, &_L3, &_L4);
   /* 1 */ Read_P021_TM(&(*actualMessage).packets, &_L20, &_L21);
   kcg_copy_dataCollectionForLevelTransition_T_xdebugSupport_Pkg(
     outstoredData,
     storedData);
-  /* 2 */ if (tmp1) {
+  if (tmp1) {
     ntcRequested = /* 2 */ checkNTCPriority_xdebugSupport_Pkg(&_L18);
     kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg(
       &(*outstoredData).p41,
@@ -63,7 +74,7 @@ void dataForLevelTransition_xdebugSupport_Pkg(
   }
   else {
     ntcRequested = kcg_false;
-    /* 4 */ if (actualLevel == M_LEVEL_Level_0) {
+    if (actualLevel == M_LEVEL_Level_0) {
       kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg(
         &(*outstoredData).p41,
         (P41_LevelTransistionOrders_T_Packet_Types_Pkg *)
@@ -79,14 +90,14 @@ void dataForLevelTransition_xdebugSupport_Pkg(
     packetValid_xdebugSupport_Pkg(
       &(*actualMessage).packets.PacketHeaders,
       cp046_Conditional_Level_Transition_Order_Id_Pkg);
-  /* 3 */ if (tmp1) {
+  if (tmp1) {
     /* 1 */
     Read_P046_Legacy_TM_specific(
       &(*actualMessage).packets,
       &(*outstoredData).p46);
   }
   else {
-    kcg_copy_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg(
+    kcg_copy__7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg(
       &(*outstoredData).p46,
       &(*storedData).p46);
   }
@@ -98,23 +109,16 @@ void dataForLevelTransition_xdebugSupport_Pkg(
   (*outstoredData).p27_received = tmp.valid | (*storedData).p27_received |
     ntcRequested;
   (*outstoredData).LRBG = _L116;
-  /* ck__L71 */ if (_L71) {
-    /* 1 */
-    locationOfReferenceLRBG_xdebugSupport_Pkg(
-      _L116,
-      trainPosition,
-      &(*outstoredData).referenceLocation,
-      &tmp1);
-    *outPositionNeeded = !tmp1;
+  if (_L71) {
+    (*outstoredData).referenceLocation = tmp2;
   }
   else {
     (*outstoredData).referenceLocation = (*storedData).referenceLocation;
-    *outPositionNeeded = !positionNeeded;
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** dataForLevelTransition_xdebugSupport_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

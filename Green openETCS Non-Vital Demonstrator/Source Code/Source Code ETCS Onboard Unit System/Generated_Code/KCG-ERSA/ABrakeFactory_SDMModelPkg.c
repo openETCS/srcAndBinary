@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,19 @@
 
 /* SDMModelPkg::ABrakeFactory */
 void ABrakeFactory_SDMModelPkg(
-  /* SDMModelPkg::ABrakeFactory::trainData */ trainData_T_TIU_Types_Pkg *trainData,
-  /* SDMModelPkg::ABrakeFactory::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDMModelPkg::ABrakeFactory::T_b */ t_Brake_t_SDMModelPkg *T_b,
-  /* SDMModelPkg::ABrakeFactory::aBrakeSafe */ ASafe_T_CalcBrakingCurves_types *aBrakeSafe,
-  /* SDMModelPkg::ABrakeFactory::aBrakeService */ ASafe_T_CalcBrakingCurves_types *aBrakeService)
+  /* SDMModelPkg::ABrakeFactory::trainData */trainData_T_TIU_Types_Pkg *trainData,
+  /* SDMModelPkg::ABrakeFactory::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDMModelPkg::ABrakeFactory::T_b */t_Brake_t_SDMModelPkg *T_b,
+  /* SDMModelPkg::ABrakeFactory::aBrakeSafe */ASafe_T_CalcBrakingCurves_types *aBrakeSafe,
+  /* SDMModelPkg::ABrakeFactory::aBrakeService */ASafe_T_CalcBrakingCurves_types *aBrakeService)
 {
-  /* SDMModelPkg::ABrakeFactory */
   static ASafe_T_CalcBrakingCurves_types tmp1;
-  /* SDMModelPkg::ABrakeFactory */
   static av_MergedMap_t_SDMConversionModelPkg tmp;
   /* SDMModelPkg::ABrakeFactory::_L10 */
   static a_Brake_t_SDMConversionModelPkg _L10;
   
-  /* 1 */ brakeBuildUp_SDMConversionModelPkg(trainData, NationalValues, T_b);
   /* 1 */ brakePercentToABrake_SDMConversionModelPkg(trainData, &_L10);
+  /* 1 */ InflateABrakeService_SDMConversionModelPkg(&_L10, aBrakeService);
   /* 1 */
   A_brake_safe_SDMConversionModelPkg(&_L10, trainData, NationalValues, &tmp);
   /* 1 */ InflateABrakeSafe_SDMConversionModelPkg(&tmp, &tmp1);
@@ -33,11 +31,11 @@ void ABrakeFactory_SDMModelPkg(
     trainData,
     NationalValues,
     aBrakeSafe);
-  /* 1 */ InflateABrakeService_SDMConversionModelPkg(&_L10, aBrakeService);
+  /* 1 */ brakeBuildUp_SDMConversionModelPkg(trainData, NationalValues, T_b);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ABrakeFactory_SDMModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

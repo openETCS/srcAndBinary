@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,24 +9,17 @@
 
 /* CalcBrakingCurves_types::getLocationOnCurve */
 void getLocationOnCurve_CalcBrakingCurves_types(
-  /* CalcBrakingCurves_types::getLocationOnCurve::curve */ ParabolaCurve_T_CalcBrakingCurves_types *curve,
-  /* CalcBrakingCurves_types::getLocationOnCurve::speed */ V_internal_real_Type_SDM_Types_Pkg speed,
-  /* CalcBrakingCurves_types::getLocationOnCurve::valid */ kcg_bool *valid,
-  /* CalcBrakingCurves_types::getLocationOnCurve::location */ L_internal_real_Type_SDM_Types_Pkg *location)
+  /* CalcBrakingCurves_types::getLocationOnCurve::curve */ParabolaCurve_T_CalcBrakingCurves_types *curve,
+  /* CalcBrakingCurves_types::getLocationOnCurve::speed */V_internal_real_Type_SDM_Types_Pkg speed,
+  /* CalcBrakingCurves_types::getLocationOnCurve::valid */kcg_bool *valid,
+  /* CalcBrakingCurves_types::getLocationOnCurve::location */L_internal_real_Type_SDM_Types_Pkg *location)
 {
-  /* CalcBrakingCurves_types::getLocationOnCurve */
-  static ParabolaArc_T_CalcBrakingCurves_types mk_struct;
-  /* CalcBrakingCurves_types::getLocationOnCurve */
-  static kcg_int acc;
+  static struct__107742 tmp;
+  static kcg_int tmp4;
   static kcg_int i;
-  /* CalcBrakingCurves_types::searchIdxFloorBackward */
-  static V_internal_real_Type_SDM_Types_Pkg tmp_1;
-  /* CalcBrakingCurves_types::getLocationOnCurve */
+  static kcg_real tmp3;
   static kcg_real tmp2;
-  /* CalcBrakingCurves_types::getLocationOnCurve */
   static kcg_real tmp1;
-  /* CalcBrakingCurves_types::getLocationOnCurve */
-  static kcg_real tmp;
   /* CalcBrakingCurves_types::getLocationOnCurve::idx */
   static kcg_int idx;
   /* CalcBrakingCurves_types::getLocationOnCurve::_L30 */
@@ -34,21 +27,21 @@ void getLocationOnCurve_CalcBrakingCurves_types(
   
   idx = - 1;
   for (i = 0; i < 114; i++) {
-    acc = idx;
-    /* 3 */ if ((*curve).valid[i]) {
-      tmp_1 = (*curve).speeds[i];
+    tmp4 = idx;
+    if ((*curve).valid[i]) {
+      tmp1 = (*curve).speeds[i];
     }
     else {
-      tmp_1 = 0.0;
+      tmp1 = 0.0;
     }
-    _L30 = speed >= tmp_1;
-    /* 1 */ if (_L30) {
+    _L30 = speed >= tmp1;
+    if (_L30) {
       idx = i;
     }
     else {
-      idx = acc;
+      idx = tmp4;
     }
-    if (_L30) {
+    if (!!_L30) {
       break;
     }
   }
@@ -58,26 +51,22 @@ void getLocationOnCurve_CalcBrakingCurves_types(
   else {
     _L30 = kcg_false;
   }
-  /* ck__L30 */ if (_L30) {
+  if (_L30) {
     if ((0 <= idx) & (idx < 114)) {
-      tmp2 = (*curve).distances[idx];
-      tmp1 = (*curve).speeds[idx];
-      tmp = (*curve).accelerations[idx];
+      tmp3 = (*curve).distances[idx];
+      tmp2 = (*curve).speeds[idx];
+      tmp1 = (*curve).accelerations[idx];
     }
     else {
+      tmp3 = 0.0;
       tmp2 = 0.0;
       tmp1 = 0.0;
-      tmp = 0.0;
     }
-    mk_struct.distance = tmp2;
-    mk_struct.speed = tmp1;
-    mk_struct.acceleration = tmp;
+    tmp.distance = tmp3;
+    tmp.speed = tmp2;
+    tmp.acceleration = tmp1;
     /* 1 */
-    getLocationOnCurveArc_CalcBrakingCurves_types(
-      &mk_struct,
-      speed,
-      location,
-      valid);
+    getLocationOnCurveArc_CalcBrakingCurves_types(&tmp, speed, location, valid);
   }
   else {
     *valid = kcg_false;
@@ -85,8 +74,8 @@ void getLocationOnCurve_CalcBrakingCurves_types(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getLocationOnCurve_CalcBrakingCurves_types.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

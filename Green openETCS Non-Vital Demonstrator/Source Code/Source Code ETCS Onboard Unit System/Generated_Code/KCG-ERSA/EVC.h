@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
@@ -16,7 +16,7 @@
 #include "Master_Procedure_ManageProcedure_Pkg.h"
 #include "SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.h"
 #include "manageDMI_Input_manage_DMI_Input_Pkg.h"
-#include "Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h"
+#include "Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.h"
 #include "ProvidePositionReport_ProvidePositionReport_Pkg.h"
 #include "collectRadioOutput_radioOutput_Pkg.h"
 #include "manageTIU_input_input_from_TIU_API_Pkg.h"
@@ -28,8 +28,6 @@
 #include "MoRC_HO_MoRC_HO_Pkg.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -78,49 +76,43 @@ typedef struct {
   NID_MN /* EVC::MoRC_MN_1 */ MoRC_MN_1;
   kcg_bool /* EVC::_L477 */ _L477;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_collectRadioOutput_radioOutput_Pkg /* 1 */ _12_Context_1;
-  outC_checkGeneralMessage_trainData_pkg /* 3 */ _11_Context_3;
-  outC_manageDMI_Output_manage_DMI_Output_Pkg /* 2 */ _10_Context_2;
-  outC_Master_Procedure_ManageProcedure_Pkg /* 2 */ _9_Context_2;
-  outC_MoRC_HO_MoRC_HO_Pkg /* 1 */ _8_Context_1;
-  outC_keepP42_EVC_Support_Pkg /* 1 */ Context_1;
-  outC_ProvidePositionReport_ProvidePositionReport_Pkg /* 2 */ _7_Context_2;
-  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 2 */ _6_Context_2;
-  outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 2 */ _5_Context_2;
-  outC_ManageLevelAndMode /* 2 */ _4_Context_2;
-  outC_TrackAtlas_TrackAtlas /* 2 */ _3_Context_2;
-  outC_trainData_trainData_pkg /* 2 */ _2_Context_2;
-  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 3 */ _1_Context_3;
-  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 3 */ Context_3;
-  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 2 */ Context_2;
   outC_manageTIU_input_input_from_TIU_API_Pkg /* 5 */ Context_5;
+  outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg /* 2 */ _12_Context_2;
+  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 3 */ _11_Context_3;
+  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 3 */ _10_Context_3;
+  outC_trainData_trainData_pkg /* 2 */ _9_Context_2;
+  outC_TrackAtlas_TrackAtlas /* 2 */ _8_Context_2;
+  outC_ManageLevelAndMode /* 2 */ _7_Context_2;
+  outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 2 */ _6_Context_2;
+  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 2 */ _5_Context_2;
+  outC_ProvidePositionReport_ProvidePositionReport_Pkg /* 2 */ _4_Context_2;
+  outC_keepP42_EVC_Support_Pkg /* 1 */ _3_Context_1;
+  outC_MoRC_HO_MoRC_HO_Pkg /* 1 */ _2_Context_1;
+  outC_Master_Procedure_ManageProcedure_Pkg /* 2 */ _1_Context_2;
+  outC_manageDMI_Output_manage_DMI_Output_Pkg /* 2 */ Context_2;
+  outC_checkGeneralMessage_trainData_pkg /* 3 */ Context_3;
+  outC_collectRadioOutput_radioOutput_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_EVC;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* EVC */
 extern void EVC(
-  /* EVC::EVC_reset */ kcg_bool _25_EVC_reset,
-  /* EVC::API_Odometry */ odometry_T_Obu_BasicTypes_Pkg *API_Odometry,
-  /* EVC::API_SystemTime */ T_internal_Type_Obu_BasicTypes_Pkg API_SystemTime,
-  /* EVC::API_fromTrack */ API_TrackSideInput_T_API_Msg_Pkg *API_fromTrack,
-  /* EVC::API_fromDMI */ DMI_to_EVC_Message_int_T_API_DMI_Pkg *API_fromDMI,
-  /* EVC::API_fromTIU */ TIU_Input_msg_API_TIU_Pkg *API_fromTIU,
-  /* EVC::API_mobileHWStatus */ mobileHWStatus_Type_MoRC_Pck *API_mobileHWStatus,
-  /* EVC::API_persistentData */ ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *API_persistentData,
+  /* EVC::EVC_reset */kcg_bool _22_EVC_reset,
+  /* EVC::API_Odometry */odometry_T_Obu_BasicTypes_Pkg *API_Odometry,
+  /* EVC::API_SystemTime */T_internal_Type_Obu_BasicTypes_Pkg API_SystemTime,
+  /* EVC::API_fromTrack */API_TrackSideInput_T_API_Msg_Pkg *API_fromTrack,
+  /* EVC::API_fromDMI */DMI_to_EVC_Message_int_T_API_DMI_Pkg *API_fromDMI,
+  /* EVC::API_fromTIU */TIU_Input_msg_API_TIU_Pkg *API_fromTIU,
+  /* EVC::API_mobileHWStatus */mobileHWStatus_Type_MoRC_Pck *API_mobileHWStatus,
+  /* EVC::API_persistentData */ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *API_persistentData,
   outC_EVC *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void EVC_reset(outC_EVC *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void EVC_init(outC_EVC *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _EVC_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** EVC.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

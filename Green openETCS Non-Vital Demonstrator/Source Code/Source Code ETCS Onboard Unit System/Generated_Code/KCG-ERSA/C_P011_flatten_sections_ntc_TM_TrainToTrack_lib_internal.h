@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal_H_
 #define _C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal_H_
@@ -10,17 +10,15 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TM_TrainToTrack_lib_internal::C_P011_flatten_sections_ntc */
 extern void C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal(
-  /* TM_TrainToTrack_lib_internal::C_P011_flatten_sections_ntc::MergedSections */ P011_ntc_list_TM_TrainToTrack *MergedSections,
-  /* TM_TrainToTrack_lib_internal::C_P011_flatten_sections_ntc::Flattened */ P011_ntc_list_array_T_TM_TrainToTrack *Flattened);
+  /* TM_TrainToTrack_lib_internal::C_P011_flatten_sections_ntc::MergedSections */P011_ntc_list_TM_TrainToTrack *MergedSections,
+  /* TM_TrainToTrack_lib_internal::C_P011_flatten_sections_ntc::Flattened */P011_ntc_list_array_T_TM_TrainToTrack *Flattened);
 
 #endif /* _C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P011_flatten_sections_ntc_TM_TrainToTrack_lib_internal.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

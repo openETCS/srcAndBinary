@@ -1,44 +1,26 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Output_Mode_Level_To_Use_OutputManagement.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void Output_Mode_Level_To_Use_init_OutputManagement(
-  outC_Output_Mode_Level_To_Use_OutputManagement *outC)
-{
-  outC->init = kcg_true;
-  outC->rem_currentMode = NP_Level_And_Mode_Types_Pkg;
-  outC->Compatible_Mode_And_Level.compatibleModeAndLevel = kcg_true;
-  outC->Compatible_Mode_And_Level.level = M_LEVEL_Level_0;
-  outC->Compatible_Mode_And_Level.newLevel = kcg_true;
-  outC->Compatible_Mode_And_Level.Mode = M_MODE_Full_Supervision;
-  outC->Compatible_Mode_And_Level.newMode = kcg_true;
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Output_Mode_Level_To_Use_reset_OutputManagement(
   outC_Output_Mode_Level_To_Use_OutputManagement *outC)
 {
   outC->init = kcg_true;
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* OutputManagement::Output_Mode_Level_To_Use */
 void Output_Mode_Level_To_Use_OutputManagement(
-  /* OutputManagement::Output_Mode_Level_To_Use::next_level */ M_LEVEL next_level,
-  /* OutputManagement::Output_Mode_Level_To_Use::currentMode */ T_Mode_Level_And_Mode_Types_Pkg currentMode,
-  /* OutputManagement::Output_Mode_Level_To_Use::Level_Mode_Compatible */ kcg_bool Level_Mode_Compatible,
-  /* OutputManagement::Output_Mode_Level_To_Use::isNewLevel */ kcg_bool isNewLevel,
+  /* OutputManagement::Output_Mode_Level_To_Use::next_level */M_LEVEL next_level,
+  /* OutputManagement::Output_Mode_Level_To_Use::currentMode */T_Mode_Level_And_Mode_Types_Pkg currentMode,
+  /* OutputManagement::Output_Mode_Level_To_Use::Level_Mode_Compatible */kcg_bool Level_Mode_Compatible,
+  /* OutputManagement::Output_Mode_Level_To_Use::isNewLevel */kcg_bool isNewLevel,
   outC_Output_Mode_Level_To_Use_OutputManagement *outC)
 {
-  /* OutputManagement::Output_Mode_Level_To_Use */
   static T_Mode_Level_And_Mode_Types_Pkg tmp;
   
   outC->Compatible_Mode_And_Level.compatibleModeAndLevel =
@@ -99,7 +81,7 @@ void Output_Mode_Level_To_Use_OutputManagement(
       break;
     
   }
-  /* last_init_ck_currentMode */ if (outC->init) {
+  if (outC->init) {
     outC->init = kcg_false;
     tmp = SB_Level_And_Mode_Types_Pkg;
   }
@@ -110,8 +92,8 @@ void Output_Mode_Level_To_Use_OutputManagement(
   outC->rem_currentMode = currentMode;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Output_Mode_Level_To_Use_OutputManagement.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* TM_lib_internal::SEND_FindSlot */
 void SEND_FindSlot_TM_lib_internal(
-  /* TM_lib_internal::SEND_FindSlot::a */ kcg_int a,
-  /* TM_lib_internal::SEND_FindSlot::MessageIn */ MetadataElement_T_Common_Types_Pkg *MessageIn,
-  /* TM_lib_internal::SEND_FindSlot::EmptyHeader */ MetadataElement_T_Common_Types_Pkg *EmptyHeader,
-  /* TM_lib_internal::SEND_FindSlot::Cont */ kcg_bool *Cont,
-  /* TM_lib_internal::SEND_FindSlot::Acc */ kcg_int *Acc)
+  /* TM_lib_internal::SEND_FindSlot::a */kcg_int a,
+  /* TM_lib_internal::SEND_FindSlot::MessageIn */MetadataElement_T_Common_Types_Pkg *MessageIn,
+  /* TM_lib_internal::SEND_FindSlot::EmptyHeader */MetadataElement_T_Common_Types_Pkg *EmptyHeader,
+  /* TM_lib_internal::SEND_FindSlot::Cont */kcg_bool *Cont,
+  /* TM_lib_internal::SEND_FindSlot::Acc */kcg_int *Acc)
 {
   *Cont = (*MessageIn).nid_packet != (*EmptyHeader).nid_packet;
-  /* 1 */ if (*Cont) {
+  if (*Cont) {
     *Acc = (*MessageIn).endAddress;
   }
   else {
@@ -24,8 +24,8 @@ void SEND_FindSlot_TM_lib_internal(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SEND_FindSlot_TM_lib_internal.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

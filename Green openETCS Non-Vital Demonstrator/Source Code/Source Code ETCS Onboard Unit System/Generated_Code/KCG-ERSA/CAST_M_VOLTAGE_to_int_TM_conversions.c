@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TM_conversions::CAST_M_VOLTAGE_to_int */
 kcg_int CAST_M_VOLTAGE_to_int_TM_conversions(
-  /* TM_conversions::CAST_M_VOLTAGE_to_int::m_voltage */ M_VOLTAGE m_voltage)
+  /* TM_conversions::CAST_M_VOLTAGE_to_int::m_voltage */M_VOLTAGE m_voltage)
 {
   /* TM_conversions::CAST_M_VOLTAGE_to_int::IfBlock1::else */
   static kcg_bool _4_else_clock_IfBlock1;
@@ -27,37 +27,37 @@ kcg_int CAST_M_VOLTAGE_to_int_TM_conversions(
   static kcg_int m_voltage_int;
   
   IfBlock1_clock = m_voltage == ENUM_M_VOLTAGE_Line_not_fitted_TM_conversions;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     m_voltage_int = INT_M_VOLTAGE_Line_not_fitted_TM_conversions;
   }
   else {
     _4_else_clock_IfBlock1 = m_voltage ==
       ENUM_M_VOLTAGE_AC_25_kV_50_Hz_TM_conversions;
-    /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+    if (_4_else_clock_IfBlock1) {
       m_voltage_int = INT_M_VOLTAGE_AC_25_kV_50_Hz_TM_conversions;
     }
     else {
       _3_else_clock_IfBlock1 = m_voltage ==
         ENUM_M_VOLTAGE_AC_15_kV_16_7_Hz_TM_conversions;
-      /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+      if (_3_else_clock_IfBlock1) {
         m_voltage_int = INT_M_VOLTAGE_AC_15_kV_16_7_Hz_TM_conversions;
       }
       else {
         _2_else_clock_IfBlock1 = m_voltage ==
           ENUM_M_VOLTAGE_DC_3_kV_TM_conversions;
-        /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+        if (_2_else_clock_IfBlock1) {
           m_voltage_int = INT_M_VOLTAGE_DC_3_kV_TM_conversions;
         }
         else {
           _1_else_clock_IfBlock1 = m_voltage ==
             ENUM_M_VOLTAGE_DC_1_5_kV_TM_conversions;
-          /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+          if (_1_else_clock_IfBlock1) {
             m_voltage_int = INT_M_VOLTAGE_DC_1_5_kV_TM_conversions;
           }
           else {
             else_clock_IfBlock1 = m_voltage ==
               ENUM_M_VOLTAGE_DC_600_or_750_V_TM_conversions;
-            /* ck_anon_activ */ if (else_clock_IfBlock1) {
+            if (else_clock_IfBlock1) {
               m_voltage_int = INT_M_VOLTAGE_DC_600_or_750_V_TM_conversions;
             }
             else {
@@ -71,8 +71,8 @@ kcg_int CAST_M_VOLTAGE_to_int_TM_conversions(
   return m_voltage_int;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_M_VOLTAGE_to_int_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

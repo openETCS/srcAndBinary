@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _sendAcknowledgementRBC_trainData_pkg_H_
 #define _sendAcknowledgementRBC_trainData_pkg_H_
@@ -10,8 +10,6 @@
 #include "Send_M146_TM_radio_messages.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -29,27 +27,20 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* trainData_pkg::sendAcknowledgementRBC */
 extern void sendAcknowledgementRBC_trainData_pkg(
-  /* trainData_pkg::sendAcknowledgementRBC::EVC_t_train */ T_TRAIN EVC_t_train,
-  /* trainData_pkg::sendAcknowledgementRBC::nidEngine */ NID_ENGINE nidEngine,
-  /* trainData_pkg::sendAcknowledgementRBC::RBC_timeStamp */ T_TRAIN RBC_timeStamp,
-  /* trainData_pkg::sendAcknowledgementRBC::actualStatus */ trainDataStatus_T_trainData_Types_pkg *actualStatus,
-  /* trainData_pkg::sendAcknowledgementRBC::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
-  /* trainData_pkg::sendAcknowledgementRBC::inVersion */ M_VERSION inVersion,
+  /* trainData_pkg::sendAcknowledgementRBC::EVC_t_train */T_TRAIN EVC_t_train,
+  /* trainData_pkg::sendAcknowledgementRBC::nidEngine */NID_ENGINE nidEngine,
+  /* trainData_pkg::sendAcknowledgementRBC::RBC_timeStamp */T_TRAIN RBC_timeStamp,
+  /* trainData_pkg::sendAcknowledgementRBC::actualStatus */trainDataStatus_T_trainData_Types_pkg *actualStatus,
+  /* trainData_pkg::sendAcknowledgementRBC::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* trainData_pkg::sendAcknowledgementRBC::inVersion */M_VERSION inVersion,
   outC_sendAcknowledgementRBC_trainData_pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void sendAcknowledgementRBC_reset_trainData_pkg(
   outC_sendAcknowledgementRBC_trainData_pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void sendAcknowledgementRBC_init_trainData_pkg(
-  outC_sendAcknowledgementRBC_trainData_pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _sendAcknowledgementRBC_trainData_pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** sendAcknowledgementRBC_trainData_pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

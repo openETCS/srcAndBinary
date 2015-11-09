@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,15 @@
 
 /* SDMConversionModelPkg::Kv_intVectorMerger */
 void Kv_intVectorMerger_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_in */ array_int_2 *indices_in,
-  /* SDMConversionModelPkg::Kv_intVectorMerger::Kv */ mv_Map_t_SDMConversionModelPkg *Kv,
-  /* SDMConversionModelPkg::Kv_intVectorMerger::Abrake */ av_Map_t_SDMConversionModelPkg *Abrake,
-  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_out */ array_int_2 *indices_out,
-  /* SDMConversionModelPkg::Kv_intVectorMerger::a */ A_internal_Type_Obu_BasicTypes_Pkg *a,
-  /* SDMConversionModelPkg::Kv_intVectorMerger::v */ V_internal_Type_Obu_BasicTypes_Pkg *v)
+  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_in */array_int_2 *indices_in,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::Kv */mv_Map_t_SDMConversionModelPkg *Kv,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::Abrake */av_Map_t_SDMConversionModelPkg *Abrake,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::indices_out */array_int_2 *indices_out,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::a */A_internal_Type_Obu_BasicTypes_Pkg *a,
+  /* SDMConversionModelPkg::Kv_intVectorMerger::v */V_internal_Type_Obu_BasicTypes_Pkg *v)
 {
-  /* SDMConversionModelPkg::Kv_intVectorMerger::_L23 */
-  static kcg_int _L23;
-  /* SDMConversionModelPkg::Kv_intVectorMerger::_L18 */
-  static kcg_int _L18;
-  /* SDMConversionModelPkg::Kv_intVectorMerger::_L24 */
-  static kcg_int _L24;
-  /* SDMConversionModelPkg::Kv_intVectorMerger::_L26 */
-  static kcg_int _L26;
+  static kcg_int tmp1;
+  static kcg_int tmp;
   /* SDMConversionModelPkg::Kv_intVectorMerger::_L45 */
   static kcg_int _L45;
   /* SDMConversionModelPkg::Kv_intVectorMerger::_L44 */
@@ -33,52 +27,52 @@ void Kv_intVectorMerger_SDMConversionModelPkg(
   /* SDMConversionModelPkg::Kv_intVectorMerger::_L59 */
   static kcg_bool _L59;
   
-  if ((0 <= (*indices_in)[0]) & ((*indices_in)[0] < 7)) {
-    _L18 = (*Kv).m[(*indices_in)[0]];
-    _L45 = (*Kv).v[(*indices_in)[0]];
+  tmp1 = 1 + (*indices_in)[1];
+  if ((0 <= tmp1) & (tmp1 < 6)) {
+    tmp = (*Abrake).v[tmp1];
   }
   else {
-    _L18 = 1;
-    _L45 = 0;
+    tmp = 0;
   }
-  if ((0 <= (*indices_in)[1]) & ((*indices_in)[1] < 6)) {
-    _L26 = (*Abrake).a[(*indices_in)[1]];
-    _L44 = (*Abrake).v[(*indices_in)[1]];
+  _L59 = tmp > 0;
+  _L45 = 1 + (*indices_in)[0];
+  if ((0 <= _L45) & (_L45 < 7)) {
+    _L44 = (*Kv).v[_L45];
   }
   else {
-    _L26 = 0;
     _L44 = 0;
   }
-  *a = _L18 * _L26 / 100;
-  _L26 = 1 + (*indices_in)[1];
-  if ((0 <= _L26) & (_L26 < 6)) {
-    _L18 = (*Abrake).v[_L26];
-  }
-  else {
-    _L18 = 0;
-  }
-  _L24 = 1 + (*indices_in)[0];
-  if ((0 <= _L24) & (_L24 < 7)) {
-    _L23 = (*Kv).v[_L24];
-  }
-  else {
-    _L23 = 0;
-  }
-  _L56 = _L23 > 0;
-  _L59 = _L18 > 0;
-  /* 1 */ if (_L56 & ((_L23 <= _L18) | !_L59)) {
-    (*indices_out)[0] = _L24;
+  _L56 = _L44 > 0;
+  if (_L56 & ((_L44 <= tmp) | !_L59)) {
+    (*indices_out)[0] = _L45;
   }
   else {
     (*indices_out)[0] = (*indices_in)[0];
   }
-  /* 2 */ if (_L59 & (!_L56 | (_L23 >= _L18))) {
-    (*indices_out)[1] = _L26;
+  if (_L59 & (!_L56 | (_L44 >= tmp))) {
+    (*indices_out)[1] = tmp1;
   }
   else {
     (*indices_out)[1] = (*indices_in)[1];
   }
-  /* 2 */ if (_L45 >= _L44) {
+  if ((0 <= (*indices_in)[0]) & ((*indices_in)[0] < 7)) {
+    _L45 = (*Kv).v[(*indices_in)[0]];
+    tmp1 = (*Kv).m[(*indices_in)[0]];
+  }
+  else {
+    _L45 = 0;
+    tmp1 = 1;
+  }
+  if ((0 <= (*indices_in)[1]) & ((*indices_in)[1] < 6)) {
+    _L44 = (*Abrake).v[(*indices_in)[1]];
+    tmp = (*Abrake).a[(*indices_in)[1]];
+  }
+  else {
+    _L44 = 0;
+    tmp = 0;
+  }
+  *a = tmp1 * tmp / 100;
+  if (_L45 >= _L44) {
     *v = _L45;
   }
   else {
@@ -86,8 +80,8 @@ void Kv_intVectorMerger_SDMConversionModelPkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Kv_intVectorMerger_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

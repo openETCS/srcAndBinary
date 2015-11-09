@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* TM_lib_internal::T_Filter_Metadata */
 kcg_bool T_Filter_Metadata_TM_lib_internal(
-  /* TM_lib_internal::T_Filter_Metadata::Metadata_from_track */ kcg_int Metadata_from_track,
-  /* TM_lib_internal::T_Filter_Metadata::Metadata_looked_for */ kcg_int Metadata_looked_for,
-  /* TM_lib_internal::T_Filter_Metadata::F_version */ kcg_bool F_version,
-  /* TM_lib_internal::T_Filter_Metadata::F_id */ kcg_bool F_id)
+  /* TM_lib_internal::T_Filter_Metadata::Metadata_from_track */kcg_int Metadata_from_track,
+  /* TM_lib_internal::T_Filter_Metadata::Metadata_looked_for */kcg_int Metadata_looked_for,
+  /* TM_lib_internal::T_Filter_Metadata::F_version */kcg_bool F_version,
+  /* TM_lib_internal::T_Filter_Metadata::F_id */kcg_bool F_id)
 {
   /* TM_lib_internal::T_Filter_Metadata::_L6 */
   static kcg_int _L6;
@@ -39,8 +39,8 @@ kcg_bool T_Filter_Metadata_TM_lib_internal(
   return data_match;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** T_Filter_Metadata_TM_lib_internal.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

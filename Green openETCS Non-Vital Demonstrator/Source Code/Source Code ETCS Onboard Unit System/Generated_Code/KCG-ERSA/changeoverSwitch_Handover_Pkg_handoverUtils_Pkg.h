@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _changeoverSwitch_Handover_Pkg_handoverUtils_Pkg_H_
 #define _changeoverSwitch_Handover_Pkg_handoverUtils_Pkg_H_
@@ -10,8 +10,6 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
@@ -20,7 +18,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _1_SSM_ST_SM1 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */ SM1_state_nxt;
+  _110_SSM_ST_SM1 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */ SM1_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_FallingEdge_digital /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
@@ -29,23 +27,16 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch */
 extern void changeoverSwitch_Handover_Pkg_handoverUtils_Pkg(
-  /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::handoverInprogress */ kcg_bool handoverInprogress,
-  /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::sessionManagementAbility */ abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
+  /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::handoverInprogress */kcg_bool handoverInprogress,
+  /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::sessionManagementAbility */abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
   outC_changeoverSwitch_Handover_Pkg_handoverUtils_Pkg *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void changeoverSwitch_reset_Handover_Pkg_handoverUtils_Pkg(
   outC_changeoverSwitch_Handover_Pkg_handoverUtils_Pkg *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void changeoverSwitch_init_Handover_Pkg_handoverUtils_Pkg(
-  outC_changeoverSwitch_Handover_Pkg_handoverUtils_Pkg *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _changeoverSwitch_Handover_Pkg_handoverUtils_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** changeoverSwitch_Handover_Pkg_handoverUtils_Pkg.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

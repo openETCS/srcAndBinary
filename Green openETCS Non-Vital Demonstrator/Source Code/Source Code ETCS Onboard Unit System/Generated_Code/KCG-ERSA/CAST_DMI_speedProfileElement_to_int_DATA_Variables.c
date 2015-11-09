@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* DATA::Variables::CAST_DMI_speedProfileElement_to_int */
 void CAST_DMI_speedProfileElement_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::dmi_speedProfileElemen */ DMI_speedProfileElement_T_DMI_Types_Pkg *dmi_speedProfileElemen,
-  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::valid */ kcg_int *valid,
-  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::loc_abs */ kcg_int *loc_abs,
-  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::loc_lrbg */ kcg_int *loc_lrbg,
-  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::mrs */ kcg_int *mrs)
+  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::dmi_speedProfileElemen */DMI_speedProfileElement_T_DMI_Types_Pkg *dmi_speedProfileElemen,
+  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::valid */kcg_int *valid,
+  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::loc_abs */kcg_int *loc_abs,
+  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::loc_lrbg */kcg_int *loc_lrbg,
+  /* DATA::Variables::CAST_DMI_speedProfileElement_to_int::mrs */kcg_int *mrs)
 {
   *mrs = (*dmi_speedProfileElemen).MRS;
   *loc_lrbg = (*dmi_speedProfileElemen).Loc_LRBG;
@@ -21,8 +21,8 @@ void CAST_DMI_speedProfileElement_to_int_DATA_Variables(
   *valid = /* 1 */ Bool_to_Int_Utilities((*dmi_speedProfileElemen).valid);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_speedProfileElement_to_int_DATA_Variables.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

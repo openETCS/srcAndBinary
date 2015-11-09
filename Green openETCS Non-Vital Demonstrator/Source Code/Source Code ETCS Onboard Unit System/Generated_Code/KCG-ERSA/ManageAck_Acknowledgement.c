@@ -1,36 +1,24 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "ManageAck_Acknowledgement.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void ManageAck_init_Acknowledgement(outC_ManageAck_Acknowledgement *outC)
-{
-  outC->needsAckFromDriver = kcg_true;
-  outC->service_brake = kcg_true;
-  /* 1 */ RequestAck_init_Acknowledgement(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void ManageAck_reset_Acknowledgement(outC_ManageAck_Acknowledgement *outC)
 {
   /* 1 */ RequestAck_reset_Acknowledgement(&outC->Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* Acknowledgement::ManageAck */
 void ManageAck_Acknowledgement(
-  /* Acknowledgement::ManageAck::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* Acknowledgement::ManageAck::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* Acknowledgement::ManageAck::last_level */ M_LEVEL last_level,
-  /* Acknowledgement::ManageAck::levelAck */ kcg_bool levelAck,
-  /* Acknowledgement::ManageAck::IsNewLevel */ kcg_bool IsNewLevel,
+  /* Acknowledgement::ManageAck::selected_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
+  /* Acknowledgement::ManageAck::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* Acknowledgement::ManageAck::last_level */M_LEVEL last_level,
+  /* Acknowledgement::ManageAck::levelAck */kcg_bool levelAck,
+  /* Acknowledgement::ManageAck::IsNewLevel */kcg_bool IsNewLevel,
   outC_ManageAck_Acknowledgement *outC)
 {
   /* 1 */
@@ -45,8 +33,8 @@ void ManageAck_Acknowledgement(
   outC->service_brake = outC->Context_1.service_brake;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ManageAck_Acknowledgement.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

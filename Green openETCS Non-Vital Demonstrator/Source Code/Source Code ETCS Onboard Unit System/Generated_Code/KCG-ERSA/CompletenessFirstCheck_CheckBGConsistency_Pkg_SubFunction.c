@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,14 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck */
 void CompletenessFirstCheck_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::telegramarray_in */ TelegramArray_T_BG_Types_Pkg *telegramarray_in,
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::isComplete */ kcg_bool *isComplete,
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::lastTelegram */ Telegram_T_BG_Types_Pkg *lastTelegram,
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::inDex */ kcg_int *inDex)
+  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::telegramarray_in */TelegramArray_T_BG_Types_Pkg *telegramarray_in,
+  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::isComplete */kcg_bool *isComplete,
+  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::lastTelegram */Telegram_T_BG_Types_Pkg *lastTelegram,
+  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::inDex */kcg_int *inDex)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck */
-  static Telegram_T_BG_Types_Pkg acc;
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck */
-  static kcg_bool cond_iterw;
+  static Telegram_T_BG_Types_Pkg tmp2;
+  static kcg_bool tmp1;
   static kcg_int i;
-  /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck */
   static Telegram_T_BG_Types_Pkg tmp;
   /* CheckBGConsistency_Pkg::SubFunction::CompletenessFirstCheck::IfBlock1::then::_L37 */
   static kcg_bool _L37_IfBlock1;
@@ -35,18 +32,18 @@ void CompletenessFirstCheck_CheckBGConsistency_Pkg_SubFunction(
         &(*telegramarray_in)[0].telegramheader) | /* 1 */
       CheckFirstTelNotDup_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
         &(*telegramarray_in)[0].telegramheader)) & (*telegramarray_in)[0].valid;
-  /* ck_firstTelegramIsValid */ if (firstTelegramIsValid) {
+  if (firstTelegramIsValid) {
     kcg_copy_Telegram_T_BG_Types_Pkg(&_L10_IfBlock1, &(*telegramarray_in)[0]);
     for (i = 0; i < 7; i++) {
-      kcg_copy_Telegram_T_BG_Types_Pkg(&acc, &_L10_IfBlock1);
+      kcg_copy_Telegram_T_BG_Types_Pkg(&tmp2, &_L10_IfBlock1);
       /* 5 */
       Check2Telegrams_CheckBGConsistency_Pkg_SubFunction(
-        &acc,
+        &tmp2,
         &(*telegramarray_in)[i + 1],
-        &cond_iterw,
+        &tmp1,
         &_L10_IfBlock1);
       *inDex = i + 1;
-      if (!cond_iterw) {
+      if (!tmp1) {
         break;
       }
     }
@@ -92,8 +89,8 @@ void CompletenessFirstCheck_CheckBGConsistency_Pkg_SubFunction(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CompletenessFirstCheck_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

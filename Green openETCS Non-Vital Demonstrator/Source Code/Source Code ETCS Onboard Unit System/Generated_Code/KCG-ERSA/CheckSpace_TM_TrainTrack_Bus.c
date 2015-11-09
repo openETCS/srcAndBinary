@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,35 +9,28 @@
 
 /* TM_TrainTrack_Bus::CheckSpace */
 void CheckSpace_TM_TrainTrack_Bus(
-  /* TM_TrainTrack_Bus::CheckSpace::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
-  /* TM_TrainTrack_Bus::CheckSpace::Busy */ kcg_bool *Busy,
-  /* TM_TrainTrack_Bus::CheckSpace::SlotsUsed */ kcg_int *SlotsUsed)
+  /* TM_TrainTrack_Bus::CheckSpace::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* TM_TrainTrack_Bus::CheckSpace::Busy */kcg_bool *Busy,
+  /* TM_TrainTrack_Bus::CheckSpace::SlotsUsed */kcg_int *SlotsUsed)
 {
-  /* TM_TrainTrack_Bus::CheckSpace */
-  static kcg_int acc;
-  /* TM_TrainTrack_Bus::CheckSpace */
-  static kcg_bool cond_iterw;
+  static kcg_int tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   
   *SlotsUsed = 0;
-  /* 1 */ for (i = 0; i < 5; i++) {
-    acc = *SlotsUsed;
+  for (i = 0; i < 5; i++) {
+    tmp1 = *SlotsUsed;
     /* 1 */
-    CheckSpaceLoop_TM_TrainTrack_Bus(
-      i,
-      acc,
-      MessageBus,
-      &cond_iterw,
-      SlotsUsed);
-    /* 1 */ if (!cond_iterw) {
+    CheckSpaceLoop_TM_TrainTrack_Bus(i, tmp1, MessageBus, &tmp, SlotsUsed);
+    if (!tmp) {
       break;
     }
   }
   *Busy = *SlotsUsed >= BusWidth_TM_TrainTrack_Bus;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckSpace_TM_TrainTrack_Bus.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

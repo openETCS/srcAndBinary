@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,14 @@
 
 /* Receive_TrackSide_Msg_Pkg::checkTelegram */
 void checkTelegram_Receive_TrackSide_Msg_Pkg(
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::newTelegram */ Telegram_T_BG_Types_Pkg *newTelegram,
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::inTelegramArray */ TelegramArray_T_BG_Types_Pkg *inTelegramArray,
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::BGCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *BGCollector,
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector,
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outTelegramArray */ TelegramArray_T_BG_Types_Pkg *outTelegramArray,
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outTelegramNotInGroup */ kcg_bool *outTelegramNotInGroup,
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outBGchangedEarly */ kcg_bool *outBGchangedEarly)
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::newTelegram */Telegram_T_BG_Types_Pkg *newTelegram,
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::inTelegramArray */TelegramArray_T_BG_Types_Pkg *inTelegramArray,
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::BGCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *BGCollector,
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector,
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outTelegramArray */TelegramArray_T_BG_Types_Pkg *outTelegramArray,
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outTelegramNotInGroup */kcg_bool *outTelegramNotInGroup,
+  /* Receive_TrackSide_Msg_Pkg::checkTelegram::outBGchangedEarly */kcg_bool *outBGchangedEarly)
 {
-  /* Receive_TrackSide_Msg_Pkg::checkTelegram */
   static BGCollector_T_Receive_TrackSide_Msg_Pkg tmp;
   /* Receive_TrackSide_Msg_Pkg::checkTelegram::newBGInitNeeded */
   static kcg_bool newBGInitNeeded;
@@ -29,32 +28,32 @@ void checkTelegram_Receive_TrackSide_Msg_Pkg(
   _L36 = (*newTelegram).telegramheader.nid_bg == (*BGCollector).BG_ID;
   _L63 = !_L36 & ((*BGCollector).totalTelegrams > 0);
   newBGInitNeeded = _L63 & (*BGCollector).BGMessageSent;
-  /* 2 */ if (newBGInitNeeded) {
+  if (newBGInitNeeded) {
+    /* 1 */
+    initCollector_Receive_TrackSide_Msg_Pkg_BaliseSupport(newTelegram, &tmp);
     kcg_copy_TelegramArray_T_BG_Types_Pkg(
       outTelegramArray,
       (TelegramArray_T_BG_Types_Pkg *) &cEmptyTelegramArray_BG_Types_Pkg);
-    /* 1 */
-    initCollector_Receive_TrackSide_Msg_Pkg_BaliseSupport(newTelegram, &tmp);
   }
   else {
-    kcg_copy_TelegramArray_T_BG_Types_Pkg(outTelegramArray, inTelegramArray);
     kcg_copy_BGCollector_T_Receive_TrackSide_Msg_Pkg(&tmp, BGCollector);
+    kcg_copy_TelegramArray_T_BG_Types_Pkg(outTelegramArray, inTelegramArray);
   }
-  *outTelegramNotInGroup = !/* 1 */
-    findTelegram_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-      (*newTelegram).telegramheader.n_pig,
-      outTelegramArray,
-      (kcg_bool) ((*newTelegram).valid & _L36));
-  *outBGchangedEarly = _L63 & !(*BGCollector).BGMessageSent;
   /* 1 */
   checkSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport(
     newTelegram,
     &tmp,
     outCollector);
+  *outBGchangedEarly = _L63 & !(*BGCollector).BGMessageSent;
+  *outTelegramNotInGroup = !/* 1 */
+    findTelegram_Receive_TrackSide_Msg_Pkg_BaliseSupport(
+      (*newTelegram).telegramheader.n_pig,
+      outTelegramArray,
+      (kcg_bool) ((*newTelegram).valid & _L36));
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkTelegram_Receive_TrackSide_Msg_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,54 +1,25 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Build_StaticSpeedProfile_TA_SSP.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void Build_StaticSpeedProfile_init_TA_SSP(
-  outC_Build_StaticSpeedProfile_TA_SSP *outC)
-{
-  static kcg_int i;
-  
-  outC->updated = kcg_true;
-  outC->available = kcg_true;
-  outC->init = kcg_true;
-  outC->rem__L111 = 0;
-  for (i = 0; i < 50; i++) {
-    outC->_L237[i].valid = kcg_true;
-    outC->_L237[i].d_static_abs = 0;
-    outC->_L237[i].d_static_LRBG = 0;
-    outC->_L237[i].q_train_length_corr = kcg_true;
-    outC->_L237[i].v_static = 0;
-    outC->SSP[i].valid = kcg_true;
-    outC->SSP[i].d_static_abs = 0;
-    outC->SSP[i].d_static_LRBG = 0;
-    outC->SSP[i].q_train_length_corr = kcg_true;
-    outC->SSP[i].v_static = 0;
-  }
-  /* 1 */ SSP_Postprocessing_init_TA_SSP(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Build_StaticSpeedProfile_reset_TA_SSP(
   outC_Build_StaticSpeedProfile_TA_SSP *outC)
 {
   outC->init = kcg_true;
   /* 1 */ SSP_Postprocessing_reset_TA_SSP(&outC->Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_SSP::Build_StaticSpeedProfile */
 void Build_StaticSpeedProfile_TA_SSP(
-  /* TA_SSP::Build_StaticSpeedProfile::reset */ kcg_bool reset,
-  /* TA_SSP::Build_StaticSpeedProfile::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TA_SSP::Build_StaticSpeedProfile::train_position */ trainPosition_T_TrainPosition_Types_Pck *train_position,
-  /* TA_SSP::Build_StaticSpeedProfile::train_length */ L_internal_Type_Obu_BasicTypes_Pkg train_length,
+  /* TA_SSP::Build_StaticSpeedProfile::reset */kcg_bool reset,
+  /* TA_SSP::Build_StaticSpeedProfile::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_SSP::Build_StaticSpeedProfile::train_position */trainPosition_T_TrainPosition_Types_Pck *train_position,
+  /* TA_SSP::Build_StaticSpeedProfile::train_length */L_internal_Type_Obu_BasicTypes_Pkg train_length,
   outC_Build_StaticSpeedProfile_TA_SSP *outC)
 {
   /* TA_SSP::Build_StaticSpeedProfile::_L60 */
@@ -64,7 +35,7 @@ void Build_StaticSpeedProfile_TA_SSP(
   
   /* 1 */
   Read_P027V1_TM_baseline2(&(*MessageIn).packets, &outC->updated, &_L60);
-  /* fby_1_init_1 */ if (outC->init) {
+  if (outC->init) {
     _L244 = 0;
   }
   else {
@@ -72,7 +43,7 @@ void Build_StaticSpeedProfile_TA_SSP(
   }
   _L240 = outC->updated | (_L244 != (*train_position).LRBG.nid_bg);
   /* 1 */ Eval_LRBG_TA_Lib_internal(MessageIn, &_L245, &_L244, &_L108);
-  /* ck_updated */ if (outC->updated) {
+  if (outC->updated) {
     /* 1 */
     SSP_Preprocessing_TA_SSP(
       &_L60,
@@ -89,7 +60,7 @@ void Build_StaticSpeedProfile_TA_SSP(
       (StaticSpeedProfile_t_TrackAtlasTypes *)
         &DEFAULT_StaticSpeedProfile_TrackAtlasTypes);
   }
-  /* ck__L240 */ if (_L240) {
+  if (_L240) {
     /* 1 */
     SSP_Postprocessing_TA_SSP(
       &outC->_L237,
@@ -114,8 +85,8 @@ void Build_StaticSpeedProfile_TA_SSP(
   outC->rem__L111 = (*train_position).LRBG.nid_bg;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_StaticSpeedProfile_TA_SSP.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

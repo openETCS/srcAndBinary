@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TM_conversions::CAST_Int_to_Q_ENDTIMER */
 Q_ENDTIMER CAST_Int_to_Q_ENDTIMER_TM_conversions(
-  /* TM_conversions::CAST_Int_to_Q_ENDTIMER::q_endtimer_int */ kcg_int q_endtimer_int)
+  /* TM_conversions::CAST_Int_to_Q_ENDTIMER::q_endtimer_int */kcg_int q_endtimer_int)
 {
   /* TM_conversions::CAST_Int_to_Q_ENDTIMER::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -20,13 +20,13 @@ Q_ENDTIMER CAST_Int_to_Q_ENDTIMER_TM_conversions(
   
   IfBlock1_clock = q_endtimer_int ==
     INT_Q_ENDTIMER_no_endsection_timer_info_TM_conversions;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     q_endtimer = ENUM_Q_ENDTIMER_no_endsection_timer_info_TM_conversions;
   }
   else {
     else_clock_IfBlock1 = q_endtimer_int ==
       INT_Q_ENDTIMER_endsection_timer_info_follows_TM_conversions;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       q_endtimer = ENUM_Q_ENDTIMER_endsection_timer_info_follows_TM_conversions;
     }
     else {
@@ -36,8 +36,8 @@ Q_ENDTIMER CAST_Int_to_Q_ENDTIMER_TM_conversions(
   return q_endtimer;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Int_to_Q_ENDTIMER_TM_conversions.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

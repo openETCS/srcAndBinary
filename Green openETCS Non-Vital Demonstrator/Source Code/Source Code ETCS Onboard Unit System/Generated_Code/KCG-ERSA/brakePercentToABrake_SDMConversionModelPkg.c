@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* SDMConversionModelPkg::brakePercentToABrake */
 void brakePercentToABrake_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::brakePercentToABrake::trainData */ trainData_T_TIU_Types_Pkg *trainData,
-  /* SDMConversionModelPkg::brakePercentToABrake::aBrake */ a_Brake_t_SDMConversionModelPkg *aBrake)
+  /* SDMConversionModelPkg::brakePercentToABrake::trainData */trainData_T_TIU_Types_Pkg *trainData,
+  /* SDMConversionModelPkg::brakePercentToABrake::aBrake */a_Brake_t_SDMConversionModelPkg *aBrake)
 {
   /* SDMConversionModelPkg::brakePercentToABrake::_L1 */
   static av_Map_t_SDMConversionModelPkg _L1;
@@ -22,7 +22,7 @@ void brakePercentToABrake_SDMConversionModelPkg(
   kcg_copy_av_Map_t_SDMConversionModelPkg(&(*aBrake).emergency, &_L1);
   _L5 = (*trainData).brakePerctage >
     cBrakePercentServiceMax_SDMConversionModelPkg;
-  /* ck__L5 */ if (_L5) {
+  if (_L5) {
     /* 2 */
     brakePercentLookUp_SDMConversionModelPkg(
       cBrakePercentServiceMax_SDMConversionModelPkg,
@@ -33,8 +33,8 @@ void brakePercentToABrake_SDMConversionModelPkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** brakePercentToABrake_SDMConversionModelPkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

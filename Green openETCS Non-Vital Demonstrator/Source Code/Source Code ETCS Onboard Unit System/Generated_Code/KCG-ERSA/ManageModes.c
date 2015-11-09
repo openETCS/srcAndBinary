@@ -1,64 +1,33 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "ManageModes.h"
 
-#ifndef KCG_USER_DEFINED_INIT
-void ManageModes_init(outC_ManageModes *outC)
-{
-  outC->EB_Requested = kcg_true;
-  outC->Service_Brake_Command = kcg_true;
-  outC->init = kcg_true;
-  outC->Data_To_BG_Management.EoM_Procedure_req = kcg_true;
-  outC->Data_To_BG_Management.Clean_BG_List_SH_Area = kcg_true;
-  outC->Data_To_BG_Management.MA_Req = kcg_true;
-  outC->Data_To_BG_Management.Req_for_SH_from_Driver = kcg_true;
-  outC->Data_To_BG_Management.Connection_to_RBC_req = kcg_true;
-  outC->Data_To_BG_Management.Position_Repport_Needed = kcg_true;
-  outC->Data_To_DMI.Ack_LS = kcg_true;
-  outC->Data_To_DMI.Ack_OS = kcg_true;
-  outC->Data_To_DMI.Ack_RV = kcg_true;
-  outC->Data_To_DMI.Ack_SH = kcg_true;
-  outC->Data_To_DMI.Ack_SN = kcg_true;
-  outC->Data_To_DMI.Ack_SR = kcg_true;
-  outC->Data_To_DMI.Ack_TR = kcg_true;
-  outC->Data_To_DMI.Ack_UN = kcg_true;
-  outC->Data_To_DMI.SH_Refused_By_RBC = kcg_true;
-  outC->currentMode = NP_Level_And_Mode_Types_Pkg;
-  /* 1 */ SwitchModes_init(&outC->_1_Context_1);
-  /* 1 */ ComputeModesConditions_init(&outC->Context_1);
-}
-#endif /* KCG_USER_DEFINED_INIT */
-
-
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void ManageModes_reset(outC_ManageModes *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ SwitchModes_reset(&outC->_1_Context_1);
-  /* 1 */ ComputeModesConditions_reset(&outC->Context_1);
+  /* 1 */ SwitchModes_reset(&outC->Context_1);
+  /* 1 */ ComputeModesConditions_reset(&outC->_1_Context_1);
 }
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* ManageModes */
 void ManageModes(
-  /* ManageModes::Current_Level */ M_LEVEL Current_Level,
-  /* ManageModes::Cab */ cab_ID_T_TIU_Types_Pkg Cab,
-  /* ManageModes::Data_From_DMI */ T_Data_From_DMI_Level_And_Mode_Types_Pkg *Data_From_DMI,
-  /* ManageModes::Data_From_F2_Functions */ T_Data_From_F2_functions_Level_And_Mode_Types_Pkg *Data_From_F2_Functions,
-  /* ManageModes::Data_From_Localisation */ T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
-  /* ManageModes::Data_From_Speed_and_Supervision */ T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
-  /* ManageModes::Data_From_STM */ T_Data_From_STM_Level_And_Mode_Types_Pkg *Data_From_STM,
-  /* ManageModes::Data_From_TIU */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *Data_From_TIU,
-  /* ManageModes::Data_From_Track */ T_Data_From_Track_To_Mode_Level_And_Mode_Types_Pkg *Data_From_Track,
-  /* ManageModes::TripModeFromLevel */ kcg_bool TripModeFromLevel,
+  /* ManageModes::Current_Level */M_LEVEL Current_Level,
+  /* ManageModes::Cab */cab_ID_T_TIU_Types_Pkg Cab,
+  /* ManageModes::Data_From_DMI */T_Data_From_DMI_Level_And_Mode_Types_Pkg *Data_From_DMI,
+  /* ManageModes::Data_From_F2_Functions */T_Data_From_F2_functions_Level_And_Mode_Types_Pkg *Data_From_F2_Functions,
+  /* ManageModes::Data_From_Localisation */T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
+  /* ManageModes::Data_From_Speed_and_Supervision */T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
+  /* ManageModes::Data_From_STM */T_Data_From_STM_Level_And_Mode_Types_Pkg *Data_From_STM,
+  /* ManageModes::Data_From_TIU */Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *Data_From_TIU,
+  /* ManageModes::Data_From_Track */T_Data_From_Track_To_Mode_Level_And_Mode_Types_Pkg *Data_From_Track,
+  /* ManageModes::TripModeFromLevel */kcg_bool TripModeFromLevel,
   outC_ManageModes *outC)
 {
-  /* ManageModes */
   static T_Mode_Level_And_Mode_Types_Pkg tmp;
   /* ManageModes::_L153 */
   static kcg_bool _L153;
@@ -166,16 +135,15 @@ void ManageModes(
   static kcg_bool _L285;
   
   /* 1 */
-  InputTIUManagement_Interfaces(
-    Data_From_TIU,
-    Cab,
-    &_L177,
-    &_L180,
-    &_L179,
-    &_L181,
-    &_L182,
-    &_L183,
-    &_L153);
+  InputF2Functions_Interfaces(
+    Data_From_F2_Functions,
+    &_L175,
+    &_L163,
+    &_L164,
+    &_L156,
+    &_L185,
+    &_L184);
+  /* 1 */ InputSTM_Interfaces(Data_From_STM, &_L174, &_L170);
   /* InputDMI */
   InputDMI_Interfaces(
     Data_From_DMI,
@@ -193,6 +161,26 @@ void ManageModes(
     &_L161,
     &_L162,
     &_L173);
+  /* 1 */
+  InputLocalisation_Interfaces(
+    Data_From_Localisation,
+    &_L256,
+    &_L257,
+    &_L258,
+    &_L259,
+    &_L260,
+    &_L261);
+  /* 1 */
+  InputTIUManagement_Interfaces(
+    Data_From_TIU,
+    Cab,
+    &_L177,
+    &_L180,
+    &_L179,
+    &_L181,
+    &_L182,
+    &_L183,
+    &_L153);
   /* 1 */
   InputTrackManagement_Interfaces(
     Data_From_Track,
@@ -216,26 +204,7 @@ void ManageModes(
     &_L231,
     &_L232,
     &_L235);
-  /* 1 */
-  InputLocalisation_Interfaces(
-    Data_From_Localisation,
-    &_L256,
-    &_L257,
-    &_L258,
-    &_L259,
-    &_L260,
-    &_L261);
-  /* 1 */ InputSTM_Interfaces(Data_From_STM, &_L174, &_L170);
-  /* 1 */
-  InputF2Functions_Interfaces(
-    Data_From_F2_Functions,
-    &_L175,
-    &_L163,
-    &_L164,
-    &_L156,
-    &_L185,
-    &_L184);
-  /* last_init_ck_currentMode */ if (outC->init) {
+  if (outC->init) {
     outC->init = kcg_false;
     tmp = SB_Level_And_Mode_Types_Pkg;
   }
@@ -299,75 +268,75 @@ void ManageModes(
     _L185,
     _L184,
     TripModeFromLevel,
-    &outC->Context_1);
-  _L184 = outC->Context_1.Ack_LS_Req_To_Driver;
-  _L163 = outC->Context_1.Ack_OS_Req_To_Driver;
-  _L175 = outC->Context_1.Ack_RV_Req_To_Driver;
-  _L164 = outC->Context_1.Ack_SH_Req_To_Driver;
-  _L185 = outC->Context_1.Ack_SN_Req_To_Driver;
-  _L156 = outC->Context_1.Ack_SR_Req_To_Driver;
-  _L170 = outC->Context_1.Ack_TR_Req_To_Driver;
-  _L174 = outC->Context_1.Ack_UN_Req_To_Driver;
-  _L183 = outC->Context_1.Clean_BG_List_SH_Area;
-  _L153 = outC->Context_1.EB_Requested;
-  _L173 = outC->Context_1.End_Of_Mission_Procedure_Req;
-  _L161 = outC->Context_1.MA_Req_To_RBC;
-  _L162 = outC->Context_1.Request_For_SH_To_RBC;
-  _L169 = outC->Context_1.Service_Brake_Command;
-  _L155 = outC->Context_1.SH_Refused_By_RBC_To_DMI;
+    &outC->_1_Context_1);
+  _L184 = outC->_1_Context_1.Ack_LS_Req_To_Driver;
+  _L163 = outC->_1_Context_1.Ack_OS_Req_To_Driver;
+  _L175 = outC->_1_Context_1.Ack_RV_Req_To_Driver;
+  _L164 = outC->_1_Context_1.Ack_SH_Req_To_Driver;
+  _L185 = outC->_1_Context_1.Ack_SN_Req_To_Driver;
+  _L156 = outC->_1_Context_1.Ack_SR_Req_To_Driver;
+  _L170 = outC->_1_Context_1.Ack_TR_Req_To_Driver;
+  _L174 = outC->_1_Context_1.Ack_UN_Req_To_Driver;
+  _L183 = outC->_1_Context_1.Clean_BG_List_SH_Area;
+  _L153 = outC->_1_Context_1.EB_Requested;
+  _L173 = outC->_1_Context_1.End_Of_Mission_Procedure_Req;
+  _L161 = outC->_1_Context_1.MA_Req_To_RBC;
+  _L162 = outC->_1_Context_1.Request_For_SH_To_RBC;
+  _L169 = outC->_1_Context_1.Service_Brake_Command;
+  _L155 = outC->_1_Context_1.SH_Refused_By_RBC_To_DMI;
   /* 1 */
   SwitchModes(
-    outC->Context_1.Condition1,
-    outC->Context_1.Condition2,
-    outC->Context_1.Condition3,
-    outC->Context_1.Condition4,
-    outC->Context_1.Condition5,
-    outC->Context_1.Condition6,
-    outC->Context_1.Condition7,
-    outC->Context_1.Condition8,
-    outC->Context_1.Condition10,
-    outC->Context_1.Condition13,
-    outC->Context_1.Condition14,
-    outC->Context_1.Condition15,
-    outC->Context_1.Condition19,
-    outC->Context_1.Condition21,
-    outC->Context_1.Condition22,
-    outC->Context_1.Condition23,
-    outC->Context_1.Condition25,
-    outC->Context_1.Condition26,
-    outC->Context_1.Condition27,
-    outC->Context_1.Condition28,
-    outC->Context_1.Condition29,
-    outC->Context_1.Condition30,
-    outC->Context_1.Condition31,
-    outC->Context_1.Condition32,
-    outC->Context_1.Condition34,
-    outC->Context_1.Condition37,
-    outC->Context_1.Condition40,
-    outC->Context_1.Condition44,
-    outC->Context_1.Condition45,
-    outC->Context_1.Condition46,
-    outC->Context_1.Condition47,
-    outC->Context_1.Condition50,
-    outC->Context_1.Condition51,
-    outC->Context_1.Condition56,
-    outC->Context_1.Condition58,
-    outC->Context_1.Condition59,
-    outC->Context_1.Condition60,
-    outC->Context_1.Condition61,
-    outC->Context_1.Condition62,
-    outC->Context_1.Condition63,
-    outC->Context_1.Condition68,
-    outC->Context_1.Condition70,
-    outC->Context_1.Condition71,
-    outC->Context_1.Condition72,
-    outC->Context_1.Condition73,
-    outC->Context_1.Condition74,
-    outC->Context_1.Condition_Trip,
-    &outC->_1_Context_1);
+    outC->_1_Context_1.Condition1,
+    outC->_1_Context_1.Condition2,
+    outC->_1_Context_1.Condition3,
+    outC->_1_Context_1.Condition4,
+    outC->_1_Context_1.Condition5,
+    outC->_1_Context_1.Condition6,
+    outC->_1_Context_1.Condition7,
+    outC->_1_Context_1.Condition8,
+    outC->_1_Context_1.Condition10,
+    outC->_1_Context_1.Condition13,
+    outC->_1_Context_1.Condition14,
+    outC->_1_Context_1.Condition15,
+    outC->_1_Context_1.Condition19,
+    outC->_1_Context_1.Condition21,
+    outC->_1_Context_1.Condition22,
+    outC->_1_Context_1.Condition23,
+    outC->_1_Context_1.Condition25,
+    outC->_1_Context_1.Condition26,
+    outC->_1_Context_1.Condition27,
+    outC->_1_Context_1.Condition28,
+    outC->_1_Context_1.Condition29,
+    outC->_1_Context_1.Condition30,
+    outC->_1_Context_1.Condition31,
+    outC->_1_Context_1.Condition32,
+    outC->_1_Context_1.Condition34,
+    outC->_1_Context_1.Condition37,
+    outC->_1_Context_1.Condition40,
+    outC->_1_Context_1.Condition44,
+    outC->_1_Context_1.Condition45,
+    outC->_1_Context_1.Condition46,
+    outC->_1_Context_1.Condition47,
+    outC->_1_Context_1.Condition50,
+    outC->_1_Context_1.Condition51,
+    outC->_1_Context_1.Condition56,
+    outC->_1_Context_1.Condition58,
+    outC->_1_Context_1.Condition59,
+    outC->_1_Context_1.Condition60,
+    outC->_1_Context_1.Condition61,
+    outC->_1_Context_1.Condition62,
+    outC->_1_Context_1.Condition63,
+    outC->_1_Context_1.Condition68,
+    outC->_1_Context_1.Condition70,
+    outC->_1_Context_1.Condition71,
+    outC->_1_Context_1.Condition72,
+    outC->_1_Context_1.Condition73,
+    outC->_1_Context_1.Condition74,
+    outC->_1_Context_1.Condition_Trip,
+    &outC->Context_1);
   /* 1 */
   OutputManagement_Interfaces(
-    outC->_1_Context_1.currentMode,
+    outC->Context_1.currentMode,
     _L184,
     _L163,
     _L175,
@@ -390,8 +359,8 @@ void ManageModes(
     &outC->currentMode);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ManageModes.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

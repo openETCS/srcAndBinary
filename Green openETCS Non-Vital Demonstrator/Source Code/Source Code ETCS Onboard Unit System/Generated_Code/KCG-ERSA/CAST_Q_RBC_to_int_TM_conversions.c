@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* TM_conversions::CAST_Q_RBC_to_int */
 kcg_int CAST_Q_RBC_to_int_TM_conversions(
-  /* TM_conversions::CAST_Q_RBC_to_int::q_rbc */ Q_RBC q_rbc)
+  /* TM_conversions::CAST_Q_RBC_to_int::q_rbc */Q_RBC q_rbc)
 {
   /* TM_conversions::CAST_Q_RBC_to_int::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -19,12 +19,12 @@ kcg_int CAST_Q_RBC_to_int_TM_conversions(
   static kcg_int q_rbc_int;
   
   IfBlock1_clock = q_rbc == ENUM_Q_RBC_establish_TM_conversions;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+  if (IfBlock1_clock) {
     q_rbc_int = INT_Q_RBC_establish_TM_conversions;
   }
   else {
     else_clock_IfBlock1 = q_rbc == ENUM_Q_RBC_terminate_TM_conversions;
-    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+    if (else_clock_IfBlock1) {
       q_rbc_int = INT_Q_RBC_terminate_TM_conversions;
     }
     else {
@@ -34,8 +34,8 @@ kcg_int CAST_Q_RBC_to_int_TM_conversions(
   return q_rbc_int;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Q_RBC_to_int_TM_conversions.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

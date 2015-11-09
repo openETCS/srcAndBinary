@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* Interfaces::InputSpeedAndSupervision */
 void InputSpeedAndSupervision_Interfaces(
-  /* Interfaces::InputSpeedAndSupervision::Data_From_Speed_and_Supervision */ T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
-  /* Interfaces::InputSpeedAndSupervision::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool *Estimated_Front_End_Overpass_SR_Distance,
-  /* Interfaces::InputSpeedAndSupervision::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool *Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
-  /* Interfaces::InputSpeedAndSupervision::Override_Function_Active */ kcg_bool *Override_Function_Active,
-  /* Interfaces::InputSpeedAndSupervision::Train_Overpass_EOA_Antenna */ kcg_bool *Train_Overpass_EOA_Antenna,
-  /* Interfaces::InputSpeedAndSupervision::Train_Overpass_EOA_Front_End */ kcg_bool *Train_Overpass_EOA_Front_End,
-  /* Interfaces::InputSpeedAndSupervision::Train_Speed_Under_Override_Limit */ kcg_bool *Train_Speed_Under_Override_Limit)
+  /* Interfaces::InputSpeedAndSupervision::Data_From_Speed_and_Supervision */T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
+  /* Interfaces::InputSpeedAndSupervision::Estimated_Front_End_Overpass_SR_Distance */kcg_bool *Estimated_Front_End_Overpass_SR_Distance,
+  /* Interfaces::InputSpeedAndSupervision::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */kcg_bool *Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+  /* Interfaces::InputSpeedAndSupervision::Override_Function_Active */kcg_bool *Override_Function_Active,
+  /* Interfaces::InputSpeedAndSupervision::Train_Overpass_EOA_Antenna */kcg_bool *Train_Overpass_EOA_Antenna,
+  /* Interfaces::InputSpeedAndSupervision::Train_Overpass_EOA_Front_End */kcg_bool *Train_Overpass_EOA_Front_End,
+  /* Interfaces::InputSpeedAndSupervision::Train_Speed_Under_Override_Limit */kcg_bool *Train_Speed_Under_Override_Limit)
 {
   *Train_Speed_Under_Override_Limit =
     (*Data_From_Speed_and_Supervision).Train_Speed_Under_Overide_Limit;
@@ -31,8 +31,8 @@ void InputSpeedAndSupervision_Interfaces(
     (*Data_From_Speed_and_Supervision).Estim_front_End_overpass_SR_Dist;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** InputSpeedAndSupervision_Interfaces.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,46 +9,42 @@
 
 /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out */
 void mobileCtrlCmdRouter_out_Handover_Pkg_handoverUtils_Pkg(
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::additionalSessionCmdsFromTrack_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *additionalSessionCmdsFromTrack_in,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_acceptingRBC_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_acceptingRBC_in,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_handingOverRBC_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_handingOverRBC_in,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_for_handingOverRBC_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *p45_radioNetworkRegistrationOrder_for_handingOverRBC_in,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_for_acceptingRBC_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *p45_radioNetworkRegistrationOrder_for_acceptingRBC_in,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::handingOverMobile_is_mobile_1 */ kcg_bool handingOverMobile_is_mobile_1,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::useInformationFromAcceptingRBC */ kcg_bool useInformationFromAcceptingRBC,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::sessionManagementAbility */ abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_1 */ msgFromTrack_T_RCM_MsgTypes_Pkg *p45_radioNetworkRegistrationOrder_1,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_RBC_1 */ msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_RBC_1,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::additionalSessionCmdsFromTrack_for_RBC_1 */ msgFromTrack_T_RCM_MsgTypes_Pkg *additionalSessionCmdsFromTrack_for_RBC_1,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_2 */ msgFromTrack_T_RCM_MsgTypes_Pkg *p45_radioNetworkRegistrationOrder_2,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_RBC_2 */ msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_RBC_2,
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::additionalSessionCmdsFromTrack_for_RBC_2 */ msgFromTrack_T_RCM_MsgTypes_Pkg *additionalSessionCmdsFromTrack_for_RBC_2)
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::additionalSessionCmdsFromTrack_in */msgFromTrack_T_RCM_MsgTypes_Pkg *_8_additionalSessionCmdsFromTrack_in,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_acceptingRBC_in */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_acceptingRBC_in,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_handingOverRBC_in */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_handingOverRBC_in,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_for_handingOverRBC_in */msgFromTrack_T_RCM_MsgTypes_Pkg *_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC_in,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_for_acceptingRBC_in */msgFromTrack_T_RCM_MsgTypes_Pkg *_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC_in,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::handingOverMobile_is_mobile_1 */kcg_bool handingOverMobile_is_mobile_1,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::useInformationFromAcceptingRBC */kcg_bool useInformationFromAcceptingRBC,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::sessionManagementAbility */abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_1 */msgFromTrack_T_RCM_MsgTypes_Pkg *_5_p45_radioNetworkRegistrationOrder_1,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_RBC_1 */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_RBC_1,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::additionalSessionCmdsFromTrack_for_RBC_1 */msgFromTrack_T_RCM_MsgTypes_Pkg *_4_additionalSessionCmdsFromTrack_for_RBC_1,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p45_radioNetworkRegistrationOrder_2 */msgFromTrack_T_RCM_MsgTypes_Pkg *p45_radioNetworkRegistrationOrder_2,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::p42_sessionCmd_for_RBC_2 */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_for_RBC_2,
+  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::additionalSessionCmdsFromTrack_for_RBC_2 */msgFromTrack_T_RCM_MsgTypes_Pkg *additionalSessionCmdsFromTrack_for_RBC_2)
 {
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::IfBlock1::else::_L52 */
-  static msgFromTrack_T_RCM_MsgTypes_Pkg _L52_IfBlock1;
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::IfBlock1::else::_L50 */
-  static msgFromTrack_T_RCM_MsgTypes_Pkg _L50_IfBlock1;
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::IfBlock1::else::_L47 */
-  static msgFromTrack_T_RCM_MsgTypes_Pkg _L47_IfBlock1;
-  /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::IfBlock1::else::_L46 */
-  static msgFromTrack_T_RCM_MsgTypes_Pkg _L46_IfBlock1;
+  static msgFromTrack_T_RCM_MsgTypes_Pkg tmp3;
+  static msgFromTrack_T_RCM_MsgTypes_Pkg tmp2;
+  static msgFromTrack_T_RCM_MsgTypes_Pkg tmp1;
+  static msgFromTrack_T_RCM_MsgTypes_Pkg tmp;
   /* Handover_Pkg::handoverUtils_Pkg::mobileCtrlCmdRouter_out::IfBlock1 */
   static kcg_bool IfBlock1_clock;
   
   IfBlock1_clock = sessionManagementAbility ==
     isAbleToManageOneSession_Handover_Pkg;
-  /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    /* 37 */ if ((*p45_radioNetworkRegistrationOrder_for_acceptingRBC_in).valid) {
+  if (IfBlock1_clock) {
+    if ((*_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC_in).valid) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        p45_radioNetworkRegistrationOrder_1,
-        p45_radioNetworkRegistrationOrder_for_acceptingRBC_in);
+        _5_p45_radioNetworkRegistrationOrder_1,
+        _6_p45_radioNetworkRegistrationOrder_for_acceptingRBC_in);
     }
     else {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        p45_radioNetworkRegistrationOrder_1,
-        p45_radioNetworkRegistrationOrder_for_handingOverRBC_in);
+        _5_p45_radioNetworkRegistrationOrder_1,
+        _7_p45_radioNetworkRegistrationOrder_for_handingOverRBC_in);
     }
-    /* 25 */ if ((*p42_sessionCmd_for_acceptingRBC_in).valid) {
+    if ((*p42_sessionCmd_for_acceptingRBC_in).valid) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p42_sessionCmd_for_RBC_1,
         p42_sessionCmd_for_acceptingRBC_in);
@@ -59,8 +55,8 @@ void mobileCtrlCmdRouter_out_Handover_Pkg_handoverUtils_Pkg(
         p42_sessionCmd_for_handingOverRBC_in);
     }
     kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-      additionalSessionCmdsFromTrack_for_RBC_1,
-      additionalSessionCmdsFromTrack_in);
+      _4_additionalSessionCmdsFromTrack_for_RBC_1,
+      _8_additionalSessionCmdsFromTrack_in);
     kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
       p45_radioNetworkRegistrationOrder_2,
       (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
@@ -72,97 +68,97 @@ void mobileCtrlCmdRouter_out_Handover_Pkg_handoverUtils_Pkg(
       (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
   }
   else {
-    /* 23 */ if (handingOverMobile_is_mobile_1) {
+    if (handingOverMobile_is_mobile_1) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L46_IfBlock1,
-        p45_radioNetworkRegistrationOrder_for_handingOverRBC_in);
+        &tmp3,
+        (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
+      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
+        &tmp2,
+        _8_additionalSessionCmdsFromTrack_in);
+      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
+        &tmp1,
+        (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
+      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
+        &tmp,
+        _7_p45_radioNetworkRegistrationOrder_for_handingOverRBC_in);
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p42_sessionCmd_for_RBC_1,
         p42_sessionCmd_for_handingOverRBC_in);
-      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L52_IfBlock1,
-        (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
-      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L50_IfBlock1,
-        additionalSessionCmdsFromTrack_in);
-      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L47_IfBlock1,
-        (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p42_sessionCmd_for_RBC_2,
         p42_sessionCmd_for_acceptingRBC_in);
     }
     else {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L46_IfBlock1,
+        &tmp3,
+        _8_additionalSessionCmdsFromTrack_in);
+      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
+        &tmp2,
+        (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
+      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
+        &tmp1,
+        _7_p45_radioNetworkRegistrationOrder_for_handingOverRBC_in);
+      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
+        &tmp,
         (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p42_sessionCmd_for_RBC_1,
         p42_sessionCmd_for_acceptingRBC_in);
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L52_IfBlock1,
-        additionalSessionCmdsFromTrack_in);
-      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L50_IfBlock1,
-        (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
-      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        &_L47_IfBlock1,
-        p45_radioNetworkRegistrationOrder_for_handingOverRBC_in);
-      kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p42_sessionCmd_for_RBC_2,
         p42_sessionCmd_for_handingOverRBC_in);
     }
-    /* 40 */ if (_L46_IfBlock1.valid) {
+    if (tmp.valid) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        p45_radioNetworkRegistrationOrder_1,
-        &_L46_IfBlock1);
+        _5_p45_radioNetworkRegistrationOrder_1,
+        &tmp);
     }
-    else /* 38 */ if (handingOverMobile_is_mobile_1) {
+    else if (handingOverMobile_is_mobile_1) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        p45_radioNetworkRegistrationOrder_1,
+        _5_p45_radioNetworkRegistrationOrder_1,
         (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
     }
     else {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        p45_radioNetworkRegistrationOrder_1,
-        p45_radioNetworkRegistrationOrder_for_acceptingRBC_in);
+        _5_p45_radioNetworkRegistrationOrder_1,
+        _6_p45_radioNetworkRegistrationOrder_for_acceptingRBC_in);
     }
-    /* 41 */ if (_L47_IfBlock1.valid) {
+    if (tmp1.valid) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p45_radioNetworkRegistrationOrder_2,
-        &_L47_IfBlock1);
+        &tmp1);
     }
-    else /* 39 */ if (handingOverMobile_is_mobile_1) {
+    else if (handingOverMobile_is_mobile_1) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p45_radioNetworkRegistrationOrder_2,
-        p45_radioNetworkRegistrationOrder_for_acceptingRBC_in);
+        _6_p45_radioNetworkRegistrationOrder_for_acceptingRBC_in);
     }
     else {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         p45_radioNetworkRegistrationOrder_2,
         (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
     }
-    /* 36 */ if (useInformationFromAcceptingRBC) {
+    if (useInformationFromAcceptingRBC) {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        additionalSessionCmdsFromTrack_for_RBC_1,
-        &_L52_IfBlock1);
+        _4_additionalSessionCmdsFromTrack_for_RBC_1,
+        &tmp3);
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         additionalSessionCmdsFromTrack_for_RBC_2,
-        &_L50_IfBlock1);
+        &tmp2);
     }
     else {
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-        additionalSessionCmdsFromTrack_for_RBC_1,
-        &_L50_IfBlock1);
+        _4_additionalSessionCmdsFromTrack_for_RBC_1,
+        &tmp2);
       kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
         additionalSessionCmdsFromTrack_for_RBC_2,
-        &_L52_IfBlock1);
+        &tmp3);
     }
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mobileCtrlCmdRouter_out_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_TrainToTrack::C_P000_train_compr */
 void C_P000_train_compr_TM_TrainToTrack(
-  /* TM_TrainToTrack::C_P000_train_compr::P000_in */ P000_TM_TrainToTrack *P000_in,
-  /* TM_TrainToTrack::C_P000_train_compr::P000_int */ P000_TrainTrack_int_TM_TrainToTrack *P000_int)
+  /* TM_TrainToTrack::C_P000_train_compr::P000_in */P000_TM_TrainToTrack *P000_in,
+  /* TM_TrainToTrack::C_P000_train_compr::P000_int */P000_TrainTrack_int_TM_TrainToTrack *P000_int)
 {
   (*P000_int)[16] = 0;
   (*P000_int)[0] = /* 2 */
@@ -48,8 +48,8 @@ void C_P000_train_compr_TM_TrainToTrack(
     CAST_NID_NTC_to_int_TM_conversions((*P000_in).nid_ntc);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P000_train_compr_TM_TrainToTrack.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

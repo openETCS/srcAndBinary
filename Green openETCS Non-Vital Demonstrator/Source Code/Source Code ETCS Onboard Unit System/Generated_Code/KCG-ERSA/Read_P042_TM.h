@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 #ifndef _Read_P042_TM_H_
 #define _Read_P042_TM_H_
@@ -11,18 +11,16 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* TM::Read_P042 */
 extern void Read_P042_TM(
-  /* TM::Read_P042::Message_IN */ CompressedPackets_T_Common_Types_Pkg *Message_IN,
-  /* TM::Read_P042::received */ kcg_bool *received,
-  /* TM::Read_P042::P042_OBU_out */ P42_SessionManagement_T_Packet_Types_Pkg *P042_OBU_out);
+  /* TM::Read_P042::Message_IN */CompressedPackets_T_Common_Types_Pkg *Message_IN,
+  /* TM::Read_P042::received */kcg_bool *received,
+  /* TM::Read_P042::P042_OBU_out */P42_SessionManagement_T_Packet_Types_Pkg *P042_OBU_out);
 
 #endif /* _Read_P042_TM_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Read_P042_TM.h
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

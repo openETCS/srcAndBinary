@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,26 @@
 
 /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop */
 void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::i */ kcg_int i,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::ProfileAccu */ AccuDistanceProfileMA_TA_MA *ProfileAccu,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::SectionsIn */ P015_OBU_sectionlist_enum_T_TM *SectionsIn,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::n_iter */ N_ITER n_iter,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::q_scale */ Q_SCALE q_scale,
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::SpeedtProfile */ AccuDistanceProfileMA_TA_MA *SpeedtProfile)
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::i */kcg_int i,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::ProfileAccu */AccuDistanceProfileMA_TA_MA *ProfileAccu,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::SectionsIn */P015_OBU_sectionlist_enum_T_TM *SectionsIn,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::n_iter */N_ITER n_iter,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::q_scale */Q_SCALE q_scale,
+  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::SpeedtProfile */AccuDistanceProfileMA_TA_MA *SpeedtProfile)
 {
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop */
   static kcg_bool tmp2;
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop */
   static T_SECTIONTIMER tmp1;
-  /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop */
   static kcg_int tmp;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::section_d */
   static kcg_int section_d;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L227 */
   static P015_section_enum_T_TM _L227;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L252 */
-  static MovementAuthoritySection_t_TrackAtlasTypes _L252;
+  static _20_MovementAuthoritySection_t_TrackAtlasTypes _L252;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L281 */
   static kcg_bool _L281;
   
+  _L281 = n_iter == i;
   if ((0 <= i) & (i < 32)) {
     kcg_copy_P015_section_enum_T_TM(&_L227, &(*SectionsIn)[i]);
   }
@@ -40,22 +38,22 @@ void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
       (P015_section_enum_T_TM *) &DEFAULT_P015_OBU_section_TM);
   }
   if ((0 <= i - 1) & (i - 1 < 10)) {
-    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
       &_L252,
       &(*ProfileAccu).sections[i - 1]);
   }
   else {
-    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
       &_L252,
-      (MovementAuthoritySection_t_TrackAtlasTypes *) &DefaultMA_section_TA_MA);
+      (_20_MovementAuthoritySection_t_TrackAtlasTypes *)
+        &DefaultMA_section_TA_MA);
   }
-  _L281 = n_iter == i;
   kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
     &(*SpeedtProfile).sections,
     &(*ProfileAccu).sections);
   tmp2 = /* 1 */
     CAST_Q_SECTIONTIMER_to_bool_TM_conversions(_L227.q_sectiontimer);
-  /* 2 */ if (_L227.valid) {
+  if (_L227.valid) {
     section_d = /* 1 */
       Normalize_Distance_d_internal_t_TA_Lib_internal(
         q_scale,
@@ -79,7 +77,7 @@ void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
     (*SpeedtProfile).sections[i].t_sectiontimer = tmp1;
     (*SpeedtProfile).sections[i].d_sectiontimerstoploc = tmp;
   }
-  /* 4 */ if (_L281) {
+  if (_L281) {
     (*SpeedtProfile).d_endsection = section_d;
   }
   else {
@@ -87,8 +85,8 @@ void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Convert_P15_to_DistanceProfile_loop_TA_MA.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* DATA::Packets::Bothways::Write_DMI_Driver_Identifier_to_int */
 void Write_DMI_Driver_Identifier_to_int_DATA_Packets_Bothways(
-  /* DATA::Packets::Bothways::Write_DMI_Driver_Identifier_to_int::dmi_driver_identifier_ct */ DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *dmi_driver_identifier_ct,
-  /* DATA::Packets::Bothways::Write_DMI_Driver_Identifier_to_int::dmi_driver_identifier_int */ DMI_Driver_Identifier_int_array_T_DATA *dmi_driver_identifier_int)
+  /* DATA::Packets::Bothways::Write_DMI_Driver_Identifier_to_int::dmi_driver_identifier_ct */_24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *dmi_driver_identifier_ct,
+  /* DATA::Packets::Bothways::Write_DMI_Driver_Identifier_to_int::dmi_driver_identifier_int */DMI_Driver_Identifier_int_array_T_DATA *dmi_driver_identifier_int)
 {
-  /* ck__L22 */ if ((*dmi_driver_identifier_ct).valid) {
+  if ((*dmi_driver_identifier_ct).valid) {
     /* 1 */
     C_DMI_Driver_Identifier_to_int1_DATA_Packets_Bothways(
       dmi_driver_identifier_ct,
@@ -26,8 +26,8 @@ void Write_DMI_Driver_Identifier_to_int_DATA_Packets_Bothways(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Write_DMI_Driver_Identifier_to_int_DATA_Packets_Bothways.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

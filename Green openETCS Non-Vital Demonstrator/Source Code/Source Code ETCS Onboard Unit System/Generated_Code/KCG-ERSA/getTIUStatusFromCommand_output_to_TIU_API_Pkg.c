@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* output_to_TIU_API_Pkg::getTIUStatusFromCommand */
 void getTIUStatusFromCommand_output_to_TIU_API_Pkg(
-  /* output_to_TIU_API_Pkg::getTIUStatusFromCommand::in_IsolationStatus */ Isolation_Status_T_TIU_Types_Pkg *in_IsolationStatus,
-  /* output_to_TIU_API_Pkg::getTIUStatusFromCommand::in_brake_command */ Brake_command_T_TIU_Types_Pkg *in_brake_command,
-  /* output_to_TIU_API_Pkg::getTIUStatusFromCommand::outStatus */ TIU_commandStatus_T_TIU_Types_Pkg *outStatus)
+  /* output_to_TIU_API_Pkg::getTIUStatusFromCommand::in_IsolationStatus */Isolation_Status_T_TIU_Types_Pkg *in_IsolationStatus,
+  /* output_to_TIU_API_Pkg::getTIUStatusFromCommand::in_brake_command */Brake_command_T_TIU_Types_Pkg *in_brake_command,
+  /* output_to_TIU_API_Pkg::getTIUStatusFromCommand::outStatus */TIU_commandStatus_T_TIU_Types_Pkg *outStatus)
 {
   (*outStatus).valid = (*in_brake_command).valid | (*in_IsolationStatus).valid;
   (*outStatus).emergencyBrakeActive = (*in_brake_command).valid &
@@ -21,8 +21,8 @@ void getTIUStatusFromCommand_output_to_TIU_API_Pkg(
       on_board_equipment_is_isolated_TIU_Types_Pkg);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getTIUStatusFromCommand_output_to_TIU_API_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:23
 *************************************************************$ */
 

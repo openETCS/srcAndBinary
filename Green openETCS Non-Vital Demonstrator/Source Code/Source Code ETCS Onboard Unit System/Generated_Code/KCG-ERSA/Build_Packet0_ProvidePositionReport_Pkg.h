@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _Build_Packet0_ProvidePositionReport_Pkg_H_
 #define _Build_Packet0_ProvidePositionReport_Pkg_H_
@@ -14,22 +14,20 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* ProvidePositionReport_Pkg::Build_Packet0 */
 extern void Build_Packet0_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::Build_Packet0::posBGs */ positionedBGs_T_TrainPosition_Types_Pck *posBGs,
-  /* ProvidePositionReport_Pkg::Build_Packet0::modeLevelStatus */ ModeLevel2PositionReport_T_ProvidePositionReport_Pkg *modeLevelStatus,
-  /* ProvidePositionReport_Pkg::Build_Packet0::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* ProvidePositionReport_Pkg::Build_Packet0::train2trackStatus */ TrainToTrackStatus_T_BG_Types_Pkg *train2trackStatus,
-  /* ProvidePositionReport_Pkg::Build_Packet0::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
-  /* ProvidePositionReport_Pkg::Build_Packet0::trainPos */ trainPosition_T_TrainPosition_Types_Pck *trainPos,
-  /* ProvidePositionReport_Pkg::Build_Packet0::packet0 */ Position_Report_TrainToTrack *packet0);
+  /* ProvidePositionReport_Pkg::Build_Packet0::posBGs */positionedBGs_T_TrainPosition_Types_Pck *posBGs,
+  /* ProvidePositionReport_Pkg::Build_Packet0::modeLevelStatus */ModeLevel2PositionReport_T_ProvidePositionReport_Pkg *modeLevelStatus,
+  /* ProvidePositionReport_Pkg::Build_Packet0::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* ProvidePositionReport_Pkg::Build_Packet0::train2trackStatus */TrainToTrackStatus_T_BG_Types_Pkg *train2trackStatus,
+  /* ProvidePositionReport_Pkg::Build_Packet0::trainProps */trainProperties_T_TrainPosition_Types_Pck *trainProps,
+  /* ProvidePositionReport_Pkg::Build_Packet0::trainPos */trainPosition_T_TrainPosition_Types_Pck *trainPos,
+  /* ProvidePositionReport_Pkg::Build_Packet0::packet0 */Position_Report_TrainToTrack *packet0);
 
 #endif /* _Build_Packet0_ProvidePositionReport_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_Packet0_ProvidePositionReport_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

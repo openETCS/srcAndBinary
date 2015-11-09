@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _Output_To_DMI_OutputManagement_H_
 #define _Output_To_DMI_OutputManagement_H_
@@ -8,8 +8,6 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,26 +26,19 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* OutputManagement::Output_To_DMI */
 extern void Output_To_DMI_OutputManagement(
-  /* OutputManagement::Output_To_DMI::Level_Mode_Compatible */ kcg_bool Level_Mode_Compatible,
-  /* OutputManagement::Output_To_DMI::needsAckFromDriver */ kcg_bool needsAckFromDriver,
-  /* OutputManagement::Output_To_DMI::Data_To_DMI_From_Mode */ T_Data_To_DMI_Level_And_Mode_Types_Pkg *Data_To_DMI_From_Mode,
-  /* OutputManagement::Output_To_DMI::announcedLevelTransition */ T_LevelTransition_Level_And_Mode_Types_Pkg *announcedLevelTransition,
-  /* OutputManagement::Output_To_DMI::isAvailableForUse */ kcg_bool isAvailableForUse,
+  /* OutputManagement::Output_To_DMI::Level_Mode_Compatible */kcg_bool Level_Mode_Compatible,
+  /* OutputManagement::Output_To_DMI::needsAckFromDriver */kcg_bool needsAckFromDriver,
+  /* OutputManagement::Output_To_DMI::Data_To_DMI_From_Mode */T_Data_To_DMI_Level_And_Mode_Types_Pkg *Data_To_DMI_From_Mode,
+  /* OutputManagement::Output_To_DMI::announcedLevelTransition */T_LevelTransition_Level_And_Mode_Types_Pkg *announcedLevelTransition,
+  /* OutputManagement::Output_To_DMI::isAvailableForUse */kcg_bool isAvailableForUse,
   outC_Output_To_DMI_OutputManagement *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Output_To_DMI_reset_OutputManagement(
   outC_Output_To_DMI_OutputManagement *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void Output_To_DMI_init_OutputManagement(
-  outC_Output_To_DMI_OutputManagement *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Output_To_DMI_OutputManagement_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Output_To_DMI_OutputManagement.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 

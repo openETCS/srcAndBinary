@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* EVC_Support_Pkg::patchEmergencyBrakeMsg */
 void patchEmergencyBrakeMsg_EVC_Support_Pkg(
-  /* EVC_Support_Pkg::patchEmergencyBrakeMsg::inFromTA */ DataForModeAndLevel_t_TrackAtlasTypes *inFromTA,
-  /* EVC_Support_Pkg::patchEmergencyBrakeMsg::outToML */ DataForModeAndLevel_t_TrackAtlasTypes *outToML)
+  /* EVC_Support_Pkg::patchEmergencyBrakeMsg::inFromTA */DataForModeAndLevel_t_TrackAtlasTypes *inFromTA,
+  /* EVC_Support_Pkg::patchEmergencyBrakeMsg::outToML */DataForModeAndLevel_t_TrackAtlasTypes *outToML)
 {
   kcg_copy_DataForModeAndLevel_t_TrackAtlasTypes(outToML, inFromTA);
   kcg_copy_T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg(
@@ -20,8 +20,8 @@ void patchEmergencyBrakeMsg_EVC_Support_Pkg(
   (*outToML).train_messages.Mess_15 = kcg_false;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** patchEmergencyBrakeMsg_EVC_Support_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

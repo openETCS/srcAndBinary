@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA */
 void TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::triggerConds */ TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
+  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::speeds */Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::triggerConds */TSM_triggerCond_T_SDM_Commands_Pkg *triggerConds)
 {
   /* SDM_Commands_Pkg::TSM_EstSpeedCond_MRSP_LOA::_L10 */
   static kcg_bool _L10;
@@ -48,8 +48,8 @@ void TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg(
       (*speeds).V_est);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TSM_EstSpeedCond_MRSP_LOA_SDM_Commands_Pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd */
 void checkSessionCmd_Handover_Pkg_handoverUtils_Pkg(
-  /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::p42_sessionCmd_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_in,
-  /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::currentMoRCStatus */ morcStatus_T_RCM_Session_Types_Pkg *currentMoRCStatus,
-  /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::p42_sessionCmd_out */ msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_out)
+  /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::p42_sessionCmd_in */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_in,
+  /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::currentMoRCStatus */morcStatus_T_RCM_Session_Types_Pkg *currentMoRCStatus,
+  /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::p42_sessionCmd_out */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_sessionCmd_out)
 {
   /* Handover_Pkg::handoverUtils_Pkg::checkSessionCmd::_L43 */
   static kcg_bool _L43;
@@ -19,7 +19,7 @@ void checkSessionCmd_Handover_Pkg_handoverUtils_Pkg(
   static P42_SessionManagement_T_Packet_Types_Pkg _L44;
   
   /* 1 */ Read_P042_TM(&(*p42_sessionCmd_in).packets, &_L43, &_L44);
-  /* 1 */ if (((((*currentMoRCStatus).registration.status ==
+  if (((((*currentMoRCStatus).registration.status ==
           mrs_registered_RCM_Types_Pkg) & (_L44.q_rbc ==
           Q_RBC_Establish_communication_session)) | ((_L44.q_rbc ==
           Q_RBC_Terminate_communication_session) &
@@ -42,8 +42,8 @@ void checkSessionCmd_Handover_Pkg_handoverUtils_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** checkSessionCmd_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

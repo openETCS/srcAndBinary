@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_conversions_TrainToTrack::C_legacy_P000 */
 void C_legacy_P000_TM_conversions_TrainToTrack(
-  /* TM_conversions_TrainToTrack::C_legacy_P000::legacy_in */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *legacy_in,
-  /* TM_conversions_TrainToTrack::C_legacy_P000::p */ P000_TM_TrainToTrack *p)
+  /* TM_conversions_TrainToTrack::C_legacy_P000::legacy_in */PT0_PositionReport_T_Packet_TrainTypes_Pkg *legacy_in,
+  /* TM_conversions_TrainToTrack::C_legacy_P000::p */P000_TM_TrainToTrack *p)
 {
   (*p).valid = (*legacy_in).valid;
   (*p).nid_packet = (*legacy_in).packet0.NID_PACKET;
@@ -31,8 +31,8 @@ void C_legacy_P000_TM_conversions_TrainToTrack(
   (*p).nid_ntc = (*legacy_in).packet0.NID_NTC;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_legacy_P000_TM_conversions_TrainToTrack.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

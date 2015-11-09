@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 #ifndef _CheckCompleteness_CheckBGConsistency_Pkg_H_
 #define _CheckCompleteness_CheckBGConsistency_Pkg_H_
@@ -12,19 +12,17 @@
 
 /* =====================  no input structure  ====================== */
 
-/* =====================  no output structure  ====================== */
-
 
 /* CheckBGConsistency_Pkg::CheckCompleteness */
 extern void CheckCompleteness_CheckBGConsistency_Pkg(
-  /* CheckBGConsistency_Pkg::CheckCompleteness::bgMessage */ BG_Message_T_BG_Types_Pkg *bgMessage,
-  /* CheckBGConsistency_Pkg::CheckCompleteness::isComplete */ kcg_bool *isComplete,
-  /* CheckBGConsistency_Pkg::CheckCompleteness::isSingleBG */ kcg_bool *isSingleBG,
-  /* CheckBGConsistency_Pkg::CheckCompleteness::lastTelegram */ Telegram_T_BG_Types_Pkg *lastTelegram);
+  /* CheckBGConsistency_Pkg::CheckCompleteness::bgMessage */BG_Message_T_BG_Types_Pkg *bgMessage,
+  /* CheckBGConsistency_Pkg::CheckCompleteness::isComplete */kcg_bool *isComplete,
+  /* CheckBGConsistency_Pkg::CheckCompleteness::isSingleBG */kcg_bool *isSingleBG,
+  /* CheckBGConsistency_Pkg::CheckCompleteness::lastTelegram */Telegram_T_BG_Types_Pkg *lastTelegram);
 
 #endif /* _CheckCompleteness_CheckBGConsistency_Pkg_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckCompleteness_CheckBGConsistency_Pkg.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,11 @@
 
 /* TA_MA::MA_Normalize_MA_LRBG */
 void MA_Normalize_MA_LRBG_TA_MA(
-  /* TA_MA::MA_Normalize_MA_LRBG::ProfileIn */ MovementAuthority_t_TrackAtlasTypes *ProfileIn,
-  /* TA_MA::MA_Normalize_MA_LRBG::pos_BG */ L_internal_Type_Obu_BasicTypes_Pkg pos_BG,
-  /* TA_MA::MA_Normalize_MA_LRBG::ProfileNormalized_LRBG */ MovementAuthority_t_TrackAtlasTypes *ProfileNormalized_LRBG)
+  /* TA_MA::MA_Normalize_MA_LRBG::ProfileIn */MovementAuthority_t_TrackAtlasTypes *ProfileIn,
+  /* TA_MA::MA_Normalize_MA_LRBG::pos_BG */L_internal_Type_Obu_BasicTypes_Pkg pos_BG,
+  /* TA_MA::MA_Normalize_MA_LRBG::ProfileNormalized_LRBG */MovementAuthority_t_TrackAtlasTypes *ProfileNormalized_LRBG)
 {
-  /* TA_MA::MA_Normalize_MA_LRBG */
-  static MovementAuthoritySectionlist_t_TrackAtlasTypes acc;
+  static MovementAuthoritySectionlist_t_TrackAtlasTypes tmp;
   static kcg_int i;
   /* TA_MA::MA_Normalize_MA_LRBG::_L36 */
   static DP_or_OL_t_TrackAtlasTypes _L36;
@@ -28,14 +27,14 @@ void MA_Normalize_MA_LRBG_TA_MA(
   kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
     &(*ProfileNormalized_LRBG).sections,
     &(*ProfileIn).sections);
-  /* 1 */ for (i = 0; i < 50; i++) {
+  for (i = 0; i < 50; i++) {
     kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
-      &acc,
+      &tmp,
       &(*ProfileNormalized_LRBG).sections);
     /* 1 */
     MA_Normalize_Sections_loop_TA_MA(
       i,
-      &acc,
+      &tmp,
       pos_BG,
       &(*ProfileNormalized_LRBG).sections);
   }
@@ -47,8 +46,8 @@ void MA_Normalize_MA_LRBG_TA_MA(
     &_L36);
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Normalize_MA_LRBG_TA_MA.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

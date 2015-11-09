@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,23 +9,25 @@
 
 /* trainData_pkg::storeDriverInput */
 void storeDriverInput_trainData_pkg(
-  /* trainData_pkg::storeDriverInput::fromDMI_TrainData */ DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *fromDMI_TrainData,
-  /* trainData_pkg::storeDriverInput::trainDataAckfromDriver */ DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *trainDataAckfromDriver,
-  /* trainData_pkg::storeDriverInput::originalTrainData */ trainData_T_TIU_Types_Pkg *originalTrainData,
-  /* trainData_pkg::storeDriverInput::actualStatus */ trainDataStatus_T_trainData_Types_pkg *actualStatus,
-  /* trainData_pkg::storeDriverInput::trainDataForEVC */ trainData_T_TIU_Types_Pkg *trainDataForEVC,
-  /* trainData_pkg::storeDriverInput::updatedStatus */ trainDataStatus_T_trainData_Types_pkg *updatedStatus)
+  /* trainData_pkg::storeDriverInput::fromDMI_TrainData */DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *fromDMI_TrainData,
+  /* trainData_pkg::storeDriverInput::trainDataAckfromDriver */DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *trainDataAckfromDriver,
+  /* trainData_pkg::storeDriverInput::originalTrainData */trainData_T_TIU_Types_Pkg *originalTrainData,
+  /* trainData_pkg::storeDriverInput::actualStatus */trainDataStatus_T_trainData_Types_pkg *actualStatus,
+  /* trainData_pkg::storeDriverInput::trainDataForEVC */trainData_T_TIU_Types_Pkg *trainDataForEVC,
+  /* trainData_pkg::storeDriverInput::updatedStatus */trainDataStatus_T_trainData_Types_pkg *updatedStatus)
 {
   /* trainData_pkg::storeDriverInput::newState */
   static kcg_bool newState;
   
-  /* 1 */ if ((*trainDataAckfromDriver).valid) {
+  if ((*trainDataAckfromDriver).valid) {
     newState = (*trainDataAckfromDriver).acknowledged;
   }
   else {
     newState = (*originalTrainData).acknowledgedByDriver;
   }
-  /* ck_updateTrainData */ if ((*fromDMI_TrainData).valid) {
+  kcg_copy_trainDataStatus_T_trainData_Types_pkg(updatedStatus, actualStatus);
+  (*updatedStatus).validatedByDriver = newState;
+  if ((*fromDMI_TrainData).valid) {
     (*trainDataForEVC).valid = (*originalTrainData).valid;
     (*trainDataForEVC).acknowledgedByDriver = newState;
     (*trainDataForEVC).trainCategory = (*fromDMI_TrainData).trainCategory;
@@ -52,12 +54,10 @@ void storeDriverInput_trainData_pkg(
     kcg_copy_trainData_T_TIU_Types_Pkg(trainDataForEVC, originalTrainData);
     (*trainDataForEVC).acknowledgedByDriver = newState;
   }
-  kcg_copy_trainDataStatus_T_trainData_Types_pkg(updatedStatus, actualStatus);
-  (*updatedStatus).validatedByDriver = newState;
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** storeDriverInput_trainData_pkg.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

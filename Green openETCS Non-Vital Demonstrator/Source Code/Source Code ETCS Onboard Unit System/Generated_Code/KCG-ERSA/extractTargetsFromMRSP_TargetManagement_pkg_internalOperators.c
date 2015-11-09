@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:44
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,11 @@
 
 /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP */
 void extractTargetsFromMRSP_TargetManagement_pkg_internalOperators(
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP::MRSP */ MRSP_internal_T_TargetManagement_types *MRSP,
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP::TargetsOfMRSP */ extractTargetsMRSPACC_TargetManagement_pkg *TargetsOfMRSP)
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP::MRSP */MRSP_internal_T_TargetManagement_types *MRSP,
+  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP::TargetsOfMRSP */extractTargetsMRSPACC_TargetManagement_pkg *TargetsOfMRSP)
 {
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP */
-  static extractTargetsMRSPACC_TargetManagement_pkg acc;
-  /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSP */
-  static kcg_bool cond_iterw;
+  static struct__107841 tmp1;
+  static kcg_bool tmp;
   static kcg_int i;
   
   (*TargetsOfMRSP).lastInsertedTargetIndex = - 1;
@@ -27,23 +25,23 @@ void extractTargetsFromMRSP_TargetManagement_pkg_internalOperators(
   }
   if ((*MRSP)[0].valid) {
     for (i = 0; i < 200; i++) {
-      kcg_copy_extractTargetsMRSPACC_TargetManagement_pkg(&acc, TargetsOfMRSP);
+      kcg_copy_extractTargetsMRSPACC_TargetManagement_pkg(&tmp1, TargetsOfMRSP);
       /* 1 */
       extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
         i,
-        &acc,
+        &tmp1,
         MRSP,
-        &cond_iterw,
+        &tmp,
         TargetsOfMRSP);
-      if (!cond_iterw) {
+      if (!tmp) {
         break;
       }
     }
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** extractTargetsFromMRSP_TargetManagement_pkg_internalOperators.c
-** Generation date: 2015-11-05T15:01:44
+** Generation date: 2015-11-09T11:52:24
 *************************************************************$ */
 

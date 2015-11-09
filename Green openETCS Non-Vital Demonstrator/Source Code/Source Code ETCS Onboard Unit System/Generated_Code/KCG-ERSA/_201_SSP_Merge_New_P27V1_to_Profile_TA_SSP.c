@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T14:49:07
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,16 @@
 
 /* TA_SSP::SSP_Merge_New_P27V1_to_Profile */
 void _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP(
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::new_GP */ StaticSpeedProfile_t_TrackAtlasTypes *new_GP,
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::Last_SpeedProfile_in */ StaticSpeedProfile_t_TrackAtlasTypes *Last_SpeedProfile_in,
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::SpeedProfile_out */ StaticSpeedProfile_t_TrackAtlasTypes *SpeedProfile_out)
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::new_GP */StaticSpeedProfile_t_TrackAtlasTypes *new_GP,
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::Last_SpeedProfile_in */StaticSpeedProfile_t_TrackAtlasTypes *Last_SpeedProfile_in,
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::SpeedProfile_out */StaticSpeedProfile_t_TrackAtlasTypes *SpeedProfile_out)
 {
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile */ StaticSpeedProfile_t_TrackAtlasTypes acc;
-  kcg_int i;
-  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::_L1 */ kcg_int _L1;
+  static StaticSpeedProfile_t_TrackAtlasTypes tmp;
+  static kcg_int i;
+  /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::_L1 */
+  static kcg_int _L1;
   
-  /* ck__L148 */ if ((*Last_SpeedProfile_in)[0].valid) {
+  if ((*Last_SpeedProfile_in)[0].valid) {
     _L1 = /* 1 */
       _204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal(
         Last_SpeedProfile_in,
@@ -29,20 +30,20 @@ void _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP(
   kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(
     SpeedProfile_out,
     Last_SpeedProfile_in);
-  /* 2 */ for (i = 0; i < 50; i++) {
-    kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(&acc, SpeedProfile_out);
+  for (i = 0; i < 50; i++) {
+    kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(&tmp, SpeedProfile_out);
     /* 1 */
     SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP(
       i,
-      &acc,
+      &tmp,
       _L1,
       new_GP,
       SpeedProfile_out);
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.c
-** Generation date: 2015-11-05T14:49:07
+** Generation date: 2015-11-09T11:52:25
 *************************************************************$ */
 

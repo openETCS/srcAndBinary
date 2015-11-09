@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:45
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,32 +9,31 @@
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs */
 void findLinkedBGs_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::BGs_indices */ linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg *BGs_indices)
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::BGs_indices */linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg *BGs_indices)
 {
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs */
-  static linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg acc;
+  static linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg tmp;
   static kcg_int i;
   /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::_L24 */
-  static linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg _L24;
+  static array__106350 _L24;
   /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::_L29 */
-  static linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg _L29;
+  static array__106350 _L29;
   /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::findLinkedBGs::_L28 */
   static linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg _L28;
   
   kcg_copy_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-    &acc,
+    &tmp,
     (linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg *)
       &cNoLinkedBG_index_CalculateTrainPosition_Pkg_BG_relocation_Pkg);
   for (i = 0; i < 41; i++) {
     kcg_copy_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
       &_L28,
-      &acc);
+      &tmp);
     /* 1 */
     findLinkedBG_fwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
       &_L28,
       &(*BGs_in)[i],
-      &acc,
+      &tmp,
       &_L24[i]);
   }
   kcg_copy_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
@@ -43,11 +42,11 @@ void findLinkedBGs_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
       &cNoLinkedBG_index_CalculateTrainPosition_Pkg_BG_relocation_Pkg);
   for (i = 0; i < 41; i++) {
     kcg_copy_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-      &acc,
+      &tmp,
       &_L28);
     /* 1 */
     findLinkedBG_bckwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-      &acc,
+      &tmp,
       &_L24[40 - i],
       &(*BGs_in)[40 - i],
       &_L28,
@@ -60,8 +59,8 @@ void findLinkedBGs_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
   }
 }
 
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** findLinkedBGs_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-** Generation date: 2015-11-05T15:01:45
+** Generation date: 2015-11-09T11:52:26
 *************************************************************$ */
 

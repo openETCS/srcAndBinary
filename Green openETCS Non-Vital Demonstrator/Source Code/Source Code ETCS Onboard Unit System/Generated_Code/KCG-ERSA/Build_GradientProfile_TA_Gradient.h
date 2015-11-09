@@ -1,6 +1,6 @@
-/* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG/config.txt
-** Generation date: 2015-11-05T15:01:43
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 #ifndef _Build_GradientProfile_TA_Gradient_H_
 #define _Build_GradientProfile_TA_Gradient_H_
@@ -12,8 +12,6 @@
 #include "GP_Postprocessing_TA_Gradient.h"
 
 /* =====================  no input structure  ====================== */
-
-/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -35,24 +33,17 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TA_Gradient::Build_GradientProfile */
 extern void Build_GradientProfile_TA_Gradient(
-  /* TA_Gradient::Build_GradientProfile::reset */ kcg_bool reset,
-  /* TA_Gradient::Build_GradientProfile::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TA_Gradient::Build_GradientProfile::train_position */ trainPosition_T_TrainPosition_Types_Pck *train_position,
+  /* TA_Gradient::Build_GradientProfile::reset */kcg_bool reset,
+  /* TA_Gradient::Build_GradientProfile::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_Gradient::Build_GradientProfile::train_position */trainPosition_T_TrainPosition_Types_Pck *train_position,
   outC_Build_GradientProfile_TA_Gradient *outC);
 
-#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Build_GradientProfile_reset_TA_Gradient(
   outC_Build_GradientProfile_TA_Gradient *outC);
-#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
-
-#ifndef KCG_USER_DEFINED_INIT
-extern void Build_GradientProfile_init_TA_Gradient(
-  outC_Build_GradientProfile_TA_Gradient *outC);
-#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Build_GradientProfile_TA_Gradient_H_ */
-/* $**************** KCG Version 6.4 (build i21) ****************
+/* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_GradientProfile_TA_Gradient.h
-** Generation date: 2015-11-05T15:01:43
+** Generation date: 2015-11-09T11:52:22
 *************************************************************$ */
 
