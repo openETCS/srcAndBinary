@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,7 @@ void Input(
   /* Input::Data_From_Track_Packets */T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg *Data_From_Track_Packets,
   /* Input::Data_From_STM */T_Data_From_STM_Level_And_Mode_Types_Pkg *Data_From_STM,
   /* Input::Data_From_Localisation */T_Data_From_Localisation_Level_And_Mode_Types_Pkg *Data_From_Localisation,
-  /* Input::Data_From_Speed_and_Supervision */T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *_1_Data_From_Speed_and_Supervision,
+  /* Input::Data_From_Speed_and_Supervision */T_Data_From_Speed_Supervision_Level_And_Mode_Types_Pkg *Data_From_Speed_and_Supervision,
   /* Input::Data_From_F2_Functions */T_Data_From_F2_functions_Level_And_Mode_Types_Pkg *Data_From_F2_Functions,
   /* Input::Cab_In */cab_ID_T_TIU_Types_Pkg Cab_In,
   /* Input::driver_level_transition_In */T_LevelTransition_Level_And_Mode_Types_Pkg *driver_level_transition_In,
@@ -61,7 +61,7 @@ void Input(
     Data_From_Track_to_Level);
   /* 1 */
   InputSpeedAndSupervision_InputManagement(
-    _1_Data_From_Speed_and_Supervision,
+    Data_From_Speed_and_Supervision,
     Data_From_Speed_and_Supervision_To_Mode);
   /* 1 */
   InputLocalisation_InputManagement(
@@ -80,6 +80,6 @@ void Input(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Input.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

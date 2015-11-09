@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -25,40 +25,37 @@ M_SupervisionDisplay_INT_T_DATA CAST_M_SupervisionDisplay_to_int_DATA_Variables(
   static M_SupervisionDisplay_INT_T_DATA m_supervisiondisplay_int;
   
   IfBlock1_clock = m_supervisiondisplay_ct ==
-    _109_ENUM_M_SupervisionDisplay_T_supDis_normal;
+    ENUM_M_SupervisionDisplay_T_supDis_normal;
   if (IfBlock1_clock) {
-    m_supervisiondisplay_int = _105_INT_M_SupervisionDisplay_T_supDis_normal;
+    m_supervisiondisplay_int = INT_M_SupervisionDisplay_T_supDis_normal;
   }
   else {
     _3_else_clock_IfBlock1 = m_supervisiondisplay_ct ==
-      _108_ENUM_M_SupervisionDisplay_T_supDis_indication;
+      ENUM_M_SupervisionDisplay_T_supDis_indication;
     if (_3_else_clock_IfBlock1) {
       m_supervisiondisplay_int = INT_M_SupervisionDisplay_T_supDis_indication;
     }
     else {
       _2_else_clock_IfBlock1 = m_supervisiondisplay_ct ==
-        _107_ENUM_M_SupervisionDisplay_T_supDis_overspeed;
+        ENUM_M_SupervisionDisplay_T_supDis_overspeed;
       if (_2_else_clock_IfBlock1) {
-        m_supervisiondisplay_int =
-          _102_INT_M_SupervisionDisplay_T_supDis_overspeed;
+        m_supervisiondisplay_int = INT_M_SupervisionDisplay_T_supDis_overspeed;
       }
       else {
         _1_else_clock_IfBlock1 = m_supervisiondisplay_ct ==
-          _106_ENUM_M_SupervisionDisplay_T_supDis_warning;
+          ENUM_M_SupervisionDisplay_T_supDis_warning;
         if (_1_else_clock_IfBlock1) {
-          m_supervisiondisplay_int =
-            _103_INT_M_SupervisionDisplay_T_supDis_warning;
+          m_supervisiondisplay_int = INT_M_SupervisionDisplay_T_supDis_warning;
         }
         else {
           else_clock_IfBlock1 = m_supervisiondisplay_ct ==
             ENUM_M_SupervisionDisplay_T_supDis_intervention;
           if (else_clock_IfBlock1) {
             m_supervisiondisplay_int =
-              _104_INT_M_SupervisionDisplay_T_supDis_intervention;
+              INT_M_SupervisionDisplay_T_supDis_intervention;
           }
           else {
-            m_supervisiondisplay_int =
-              _105_INT_M_SupervisionDisplay_T_supDis_normal;
+            m_supervisiondisplay_int = INT_M_SupervisionDisplay_T_supDis_normal;
           }
         }
       }
@@ -69,6 +66,6 @@ M_SupervisionDisplay_INT_T_DATA CAST_M_SupervisionDisplay_to_int_DATA_Variables(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_M_SupervisionDisplay_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -43,31 +43,31 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
   static DMI_List_Entry_Request_INT_T_DATA dmi_list_entry_request_int;
   
   IfBlock1_clock = dmi_list_entry_request_ct ==
-    _95_ENUM_DMI_List_Entry_Request_T_Enter_revalidate_driver_identifier;
+    ENUM_DMI_List_Entry_Request_T_Enter_revalidate_driver_identifier;
   if (IfBlock1_clock) {
     dmi_list_entry_request_int =
       INT_DMI_List_Entry_Request_T_Enter_revalidate_driver_identifier;
   }
   else {
     _12_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-      _94_ENUM_DMI_List_Entry_Request_T_Enter_revalidate_train_running_number;
+      ENUM_DMI_List_Entry_Request_T_Enter_revalidate_train_running_number;
     if (_12_else_clock_IfBlock1) {
       dmi_list_entry_request_int =
-        _78_INT_DMI_List_Entry_Request_T_Enter_revalidate_train_running_number;
+        INT_DMI_List_Entry_Request_T_Enter_revalidate_train_running_number;
     }
     else {
       _11_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-        _93_ENUM_DMI_List_Entry_Request_T_Enter_revalidate_ETCS_level;
+        ENUM_DMI_List_Entry_Request_T_Enter_revalidate_ETCS_level;
       if (_11_else_clock_IfBlock1) {
         dmi_list_entry_request_int =
-          _79_INT_DMI_List_Entry_Request_T_Enter_revalidate_ETCS_level;
+          INT_DMI_List_Entry_Request_T_Enter_revalidate_ETCS_level;
       }
       else {
         _10_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-          _92_ENUM_DMI_List_Entry_Request_T_Enter_RBC_contact_menu;
+          ENUM_DMI_List_Entry_Request_T_Enter_RBC_contact_menu;
         if (_10_else_clock_IfBlock1) {
           dmi_list_entry_request_int =
-            _80_INT_DMI_List_Entry_Request_T_Enter_RBC_contact_menu;
+            INT_DMI_List_Entry_Request_T_Enter_RBC_contact_menu;
         }
         else {
           _9_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
@@ -78,14 +78,14 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
           }
           else {
             _8_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-              _91_ENUM_DMI_List_Entry_Request_T_Enter_NTC_data;
+              ENUM_DMI_List_Entry_Request_T_Enter_NTC_data;
             if (_8_else_clock_IfBlock1) {
               dmi_list_entry_request_int =
-                _81_INT_DMI_List_Entry_Request_T_Enter_NTC_data;
+                INT_DMI_List_Entry_Request_T_Enter_NTC_data;
             }
             else {
               _7_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                _90_ENUM_DMI_List_Entry_Request_T_Spare;
+                ENUM_DMI_List_Entry_Request_T_Spare;
               if (_7_else_clock_IfBlock1) {
                 dmi_list_entry_request_int = INT_DMI_List_Entry_Request_T_Spare;
               }
@@ -94,7 +94,7 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
                   ENUM_DMI_List_Entry_Request_T_Enable_the_track_ahead_free_by_the_driver;
                 if (_6_else_clock_IfBlock1) {
                   dmi_list_entry_request_int =
-                    _82_INT_DMI_List_Entry_Request_T_Enable_the_track_ahead_free_by_the_driver;
+                    INT_DMI_List_Entry_Request_T_Enable_the_track_ahead_free_by_the_driver;
                 }
                 else {
                   _5_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
@@ -105,14 +105,14 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
                   }
                   else {
                     _4_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                      _89_ENUM_DMI_List_Entry_Request_T_Show_main_window;
+                      ENUM_DMI_List_Entry_Request_T_Show_main_window;
                     if (_4_else_clock_IfBlock1) {
                       dmi_list_entry_request_int =
                         INT_DMI_List_Entry_Request_T_Show_main_window;
                     }
                     else {
                       _3_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                        _88_ENUM_DMI_List_Entry_Request_T_Hide_main_window;
+                        ENUM_DMI_List_Entry_Request_T_Hide_main_window;
                       if (_3_else_clock_IfBlock1) {
                         dmi_list_entry_request_int =
                           INT_DMI_List_Entry_Request_T_Hide_main_window;
@@ -122,25 +122,25 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
                           ENUM_DMI_List_Entry_Request_T_Hide_adhesion_factor_entry_window;
                         if (_2_else_clock_IfBlock1) {
                           dmi_list_entry_request_int =
-                            _83_INT_DMI_List_Entry_Request_T_Hide_adhesion_factor_entry_window;
+                            INT_DMI_List_Entry_Request_T_Hide_adhesion_factor_entry_window;
                         }
                         else {
                           _1_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                            _87_ENUM_DMI_List_Entry_Request_T_Show_Set_VBC_validation_window;
+                            ENUM_DMI_List_Entry_Request_T_Show_Set_VBC_validation_window;
                           if (_1_else_clock_IfBlock1) {
                             dmi_list_entry_request_int =
-                              _85_INT_DMI_List_Entry_Request_T_Show_Set_VBC_validation_window;
+                              INT_DMI_List_Entry_Request_T_Show_Set_VBC_validation_window;
                           }
                           else {
                             else_clock_IfBlock1 = dmi_list_entry_request_ct ==
                               ENUM_DMI_List_Entry_Request_T_Show_Remove_VBC_validation_window;
                             if (else_clock_IfBlock1) {
                               dmi_list_entry_request_int =
-                                _86_INT_DMI_List_Entry_Request_T_Show_Remove_VBC_validation_window;
+                                INT_DMI_List_Entry_Request_T_Show_Remove_VBC_validation_window;
                             }
                             else {
                               dmi_list_entry_request_int =
-                                _86_INT_DMI_List_Entry_Request_T_Show_Remove_VBC_validation_window;
+                                INT_DMI_List_Entry_Request_T_Show_Remove_VBC_validation_window;
                             }
                           }
                         }
@@ -160,6 +160,6 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_List_Entry_Request_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

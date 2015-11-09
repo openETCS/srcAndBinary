@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _SDM_Commands_SDM_Commands_Pkg_H_
 #define _SDM_Commands_SDM_Commands_Pkg_H_
@@ -54,6 +54,6 @@ extern void SDM_Commands_reset_SDM_Commands_Pkg(
 #endif /* _SDM_Commands_SDM_Commands_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SDM_Commands_SDM_Commands_Pkg.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

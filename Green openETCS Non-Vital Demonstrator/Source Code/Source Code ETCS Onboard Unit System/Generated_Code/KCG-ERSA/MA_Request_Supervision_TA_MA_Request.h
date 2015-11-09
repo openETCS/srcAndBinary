@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _MA_Request_Supervision_TA_MA_Request_H_
 #define _MA_Request_Supervision_TA_MA_Request_H_
@@ -22,7 +22,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _166_SSM_ST_SM1 /* TA_MA_Request::MA_Request_Supervision::SM1 */ SM1_state_nxt;
+  _24_SSM_ST_SM1 /* TA_MA_Request::MA_Request_Supervision::SM1 */ SM1_state_nxt;
   kcg_bool /* TA_MA_Request::MA_Request_Supervision::pendingReq */ pendingReq;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_op_3_8_2_3_a_TA_MA_Request /* op_3_8_2_3_a */ Context_op_3_8_2_3_a;
@@ -54,6 +54,6 @@ extern void MA_Request_Supervision_reset_TA_MA_Request(
 #endif /* _MA_Request_Supervision_TA_MA_Request_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Request_Supervision_TA_MA_Request.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

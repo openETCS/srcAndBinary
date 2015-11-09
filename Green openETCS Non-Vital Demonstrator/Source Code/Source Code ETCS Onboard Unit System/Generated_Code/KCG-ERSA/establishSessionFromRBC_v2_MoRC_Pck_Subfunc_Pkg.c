@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,15 +21,15 @@ void establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg(
   outC_establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg *outC)
 {
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::SM1 */
-  static _152_SSM_ST_SM1 SM1_state_sel;
+  static _13_SSM_ST_SM1 SM1_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::SM1 */
-  static _152_SSM_ST_SM1 SM1_state_act;
+  static _13_SSM_ST_SM1 SM1_state_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::initiatedByRBC */
   static kcg_bool initiatedByRBC;
   
   outC->sessionStatus.valid = kcg_true;
   if (outC->init) {
-    SM1_state_sel = _151_SSM_st_idle_SM1;
+    SM1_state_sel = _12_SSM_st_idle_SM1;
   }
   else {
     SM1_state_sel = outC->SM1_state_nxt;
@@ -42,20 +42,20 @@ void establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg(
     case SSM_st_sessionEstablished_SM1 :
       outC->send_m159_sessionEstablishedReport = kcg_false;
       if (reset) {
-        SM1_state_act = _151_SSM_st_idle_SM1;
+        SM1_state_act = _12_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_sessionEstablished_SM1;
       }
       break;
-    case _151_SSM_st_idle_SM1 :
+    case _12_SSM_st_idle_SM1 :
       if (initiatedByRBC) {
         outC->send_m159_sessionEstablishedReport = kcg_true;
         SM1_state_act = SSM_st_sessionEstablished_SM1;
       }
       else {
         outC->send_m159_sessionEstablishedReport = kcg_false;
-        SM1_state_act = _151_SSM_st_idle_SM1;
+        SM1_state_act = _12_SSM_st_idle_SM1;
       }
       break;
     
@@ -87,9 +87,9 @@ void establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg(
       outC->sessionStatus.phase = sp_establishing_RCM_Session_Types_Pkg;
       outC->SM1_state_nxt = SSM_st_sessionEstablished_SM1;
       break;
-    case _151_SSM_st_idle_SM1 :
+    case _12_SSM_st_idle_SM1 :
       outC->sessionStatus.phase = sp_terminated_RCM_Session_Types_Pkg;
-      outC->SM1_state_nxt = _151_SSM_st_idle_SM1;
+      outC->SM1_state_nxt = _12_SSM_st_idle_SM1;
       break;
     
   }
@@ -97,6 +97,6 @@ void establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

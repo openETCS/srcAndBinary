@@ -1,28 +1,28 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "Procedure_SH_Initiated_By_Procedures.h"
+#include "Procedure_SH_Initiated_By_Driver_Procedures.h"
 
-void Procedure_SH_Initiated_By_reset_Procedures(
-  outC_Procedure_SH_Initiated_By_Procedures *outC)
+void Procedure_SH_Initiated_By_Driver_reset_Procedures(
+  outC_Procedure_SH_Initiated_By_Driver_Procedures *outC)
 {
   outC->init = kcg_true;
   /* 1 */ SH_Initiated_By_Driver_On_reset_Procedures(&outC->Context_1);
 }
 
 /* Procedures::Procedure_SH_Initiated_By_Driver */
-void Procedure_SH_Initiated_By_Procedures(
+void Procedure_SH_Initiated_By_Driver_Procedures(
   /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Level */M_LEVEL Current_Level,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Driver_Req_SH */kcg_bool Driver_Req_SH,
   /* Procedures::Procedure_SH_Initiated_By_Driver::On_Going_Mission */kcg_bool On_Going_Mission,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Shunting_Granted_By_RBC */kcg_bool Shunting_Granted_By_RBC,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Train_Standstill */kcg_bool Train_Standstill,
-  outC_Procedure_SH_Initiated_By_Procedures *outC)
+  outC_Procedure_SH_Initiated_By_Driver_Procedures *outC)
 {
   /* Procedures::Procedure_SH_Initiated_By_Driver::SH_Initiated_By_Driver */
   static SSM_ST_SH_Initiated_By_Driver SH_Initiated_By_Driver_state_sel;
@@ -134,7 +134,7 @@ void Procedure_SH_Initiated_By_Procedures(
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Procedure_SH_Initiated_By_Procedures.c
-** Generation date: 2015-11-09T11:52:25
+** Procedure_SH_Initiated_By_Driver_Procedures.c
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

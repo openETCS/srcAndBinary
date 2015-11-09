@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
-#ifndef _registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg_H_
-#define _registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg_H_
+#ifndef _registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg_H_
+#define _registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg_H_
 
 #include "kcg_types.h"
 #include "Read_P045_TM.h"
@@ -36,11 +36,11 @@ typedef struct {
   outC_FallingEdge_digital /* 1 */ Context_1;
   outC_RisingEdge_digital /* 8 */ Context_8;
   /* ----------------- no clocks of observable data ------------------ */
-} outC_registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg;
+} outC_registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2 */
-extern void registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg(
+extern void registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::atPowerUpRadioNetworkID */P45_RadioNetworkRegistration_T_Packet_Types_Pkg *atPowerUpRadioNetworkID,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::newRadioNetworkIDFromDriver */P45_RadioNetworkRegistration_T_Packet_Types_Pkg *newRadioNetworkIDFromDriver,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::p45_registrationOrder */msgFromTrack_T_RCM_MsgTypes_Pkg *p45_registrationOrder,
@@ -51,14 +51,14 @@ extern void registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::mobileRegistrationContext */mobileRegistrationContext_T_RCM_Types_Pkg *mobileRegistrationContext,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::reset */kcg_bool reset,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::RadioNetworkID_Default */P45_RadioNetworkRegistration_T_Packet_Types_Pkg *RadioNetworkID_Default,
-  outC_registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg *outC);
+  outC_registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg *outC);
 
-extern void registeringToTheRadioNetw_reset_MoRC_Pck_Subfunc_Pkg(
-  outC_registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg *outC);
+extern void registeringToTheRadioNetwork_v2_reset_MoRC_Pck_Subfunc_Pkg(
+  outC_registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg *outC);
 
-#endif /* _registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg_H_ */
+#endif /* _registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.h
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

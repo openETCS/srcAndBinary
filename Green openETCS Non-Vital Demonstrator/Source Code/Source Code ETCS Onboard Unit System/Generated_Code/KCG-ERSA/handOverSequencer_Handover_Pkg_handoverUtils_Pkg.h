@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _handOverSequencer_Handover_Pkg_handoverUtils_Pkg_H_
 #define _handOverSequencer_Handover_Pkg_handoverUtils_Pkg_H_
@@ -19,8 +19,8 @@ typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   msgFromTrack_T_RCM_MsgTypes_Pkg /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::p42_sessionCmd_for_acceptingRBC */ p42_sessionCmd_for_acceptingRBC;
   msgFromTrack_T_RCM_MsgTypes_Pkg /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::p42_sessionCmd_for_handingOverRBC */ p42_sessionCmd_for_handingOverRBC;
-  msgFromTrack_T_RCM_MsgTypes_Pkg /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::p45_radioNetworkRegistrationOrder_for_handingOverRBC */ _7_p45_radioNetworkRegistrationOrder_for_handingOverRBC;
-  msgFromTrack_T_RCM_MsgTypes_Pkg /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::p45_radioNetworkRegistrationOrder_for_acceptingRBC */ _6_p45_radioNetworkRegistrationOrder_for_acceptingRBC;
+  msgFromTrack_T_RCM_MsgTypes_Pkg /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::p45_radioNetworkRegistrationOrder_for_handingOverRBC */ p45_radioNetworkRegistrationOrder_for_handingOverRBC;
+  msgFromTrack_T_RCM_MsgTypes_Pkg /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::p45_radioNetworkRegistrationOrder_for_acceptingRBC */ p45_radioNetworkRegistrationOrder_for_acceptingRBC;
   kcg_bool /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::sendPositionReport_2_handingOverRBC */ sendPositionReport_2_handingOverRBC;
   kcg_bool /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::sendPositionReport_2_acceptingRBC */ sendPositionReport_2_acceptingRBC;
   kcg_bool /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::sendTrainData_2_acceptingRBC */ sendTrainData_2_acceptingRBC;
@@ -75,6 +75,6 @@ extern void handOverSequencer_reset_Handover_Pkg_handoverUtils_Pkg(
 #endif /* _handOverSequencer_Handover_Pkg_handoverUtils_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** handOverSequencer_Handover_Pkg_handoverUtils_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

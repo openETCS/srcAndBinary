@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,11 +11,13 @@ void MoRC_Main_v2_reset_MoRC_Pck(outC_MoRC_Main_v2_MoRC_Pck *outC)
 {
   outC->init = kcg_true;
   /* 1 */
-  safeRadioConnectionIndica_reset_MoRC_Pck_Subfunc_Pkg(&outC->Context_1);
+  safeRadioConnectionIndication_v2_reset_MoRC_Pck_Subfunc_Pkg(&outC->Context_1);
   /* 1 */
-  registeringToTheRadioNetw_reset_MoRC_Pck_Subfunc_Pkg(&outC->_1_Context_1);
+  registeringToTheRadioNetwork_v2_reset_MoRC_Pck_Subfunc_Pkg(
+    &outC->_1_Context_1);
   /* 1 */
-  requestRadioConnectionSet_reset_MoRC_Pck_Subfunc_Pkg(&outC->_2_Context_1);
+  requestRadioConnectionSetupFromOBU_v2_reset_MoRC_Pck_Subfunc_Pkg(
+    &outC->_2_Context_1);
   /* 1 */ sessionSequencer_v2_reset_MoRC_Pck_Subfunc_Pkg(&outC->_3_Context_1);
   /* 1 */
   initiateTerminatingSession_v2_reset_MoRC_Pck_Subfunc_Pkg(&outC->_4_Context_1);
@@ -138,7 +140,7 @@ void MoRC_Main_v2_MoRC_Pck(
     &outC->status.session,
     &outC->sessionStatus_l);
   /* 1 */
-  requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
+  requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
     mode,
     eventsAndPhases,
     &outC->_3_Context_1.p42_SessionManagement_out,
@@ -164,7 +166,7 @@ void MoRC_Main_v2_MoRC_Pck(
     &outC->status.connection,
     &outC->connectionStatus_l);
   /* 1 */
-  registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg(
+  registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg(
     atPowerUpRadioNetworkID,
     newRadioNetworkIDFromDriver,
     msg_in,
@@ -249,7 +251,7 @@ void MoRC_Main_v2_MoRC_Pck(
       (msgToTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageToRBC_MoRC_Pck);
   }
   /* 1 */
-  safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg(
+  safeRadioConnectionIndication_v2_MoRC_Pck_Subfunc_Pkg(
     &outC->mobileConnectionCmd,
     &outC->connectionStatus_l,
     eventsAndPhases,
@@ -266,6 +268,6 @@ void MoRC_Main_v2_MoRC_Pck(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MoRC_Main_v2_MoRC_Pck.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

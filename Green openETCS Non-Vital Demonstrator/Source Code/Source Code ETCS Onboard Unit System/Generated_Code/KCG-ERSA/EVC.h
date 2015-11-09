@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
@@ -16,7 +16,7 @@
 #include "Master_Procedure_ManageProcedure_Pkg.h"
 #include "SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.h"
 #include "manageDMI_Input_manage_DMI_Input_Pkg.h"
-#include "Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.h"
+#include "Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h"
 #include "ProvidePositionReport_ProvidePositionReport_Pkg.h"
 #include "collectRadioOutput_radioOutput_Pkg.h"
 #include "manageTIU_input_input_from_TIU_API_Pkg.h"
@@ -77,7 +77,7 @@ typedef struct {
   kcg_bool /* EVC::_L477 */ _L477;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_manageTIU_input_input_from_TIU_API_Pkg /* 5 */ Context_5;
-  outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg /* 2 */ _12_Context_2;
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 2 */ _12_Context_2;
   outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 3 */ _11_Context_3;
   outC_manageDMI_Input_manage_DMI_Input_Pkg /* 3 */ _10_Context_3;
   outC_trainData_trainData_pkg /* 2 */ _9_Context_2;
@@ -113,6 +113,6 @@ extern void EVC_reset(outC_EVC *outC);
 #endif /* _EVC_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** EVC.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

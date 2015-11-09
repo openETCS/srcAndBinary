@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _calculateTrainPosition_CalculateTrainPosition_Pkg_H_
 #define _calculateTrainPosition_CalculateTrainPosition_Pkg_H_
@@ -13,7 +13,7 @@
 #include "calculateTrainPositionInfo_CalculateTrainPosition_Pkg.h"
 #include "calculateBGLocations_CalculateTrainPosition_Pkg.h"
 #include "linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h"
-#include "twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg.h"
+#include "twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -31,7 +31,7 @@ typedef struct {
   outC_calculateBGLocations_CalculateTrainPosition_Pkg /* 6 */ Context_6;
   outC_calculateTrainPositionInfo_CalculateTrainPosition_Pkg /* 1 */ _1_Context_1;
   outC_linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg /* 2 */ Context_2;
-  outC_twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg /* 1 */ Context_1;
+  outC_twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_calculateTrainPosition_CalculateTrainPosition_Pkg;
 
@@ -51,6 +51,6 @@ extern void calculateTrainPosition_reset_CalculateTrainPosition_Pkg(
 #endif /* _calculateTrainPosition_CalculateTrainPosition_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** calculateTrainPosition_CalculateTrainPosition_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

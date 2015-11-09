@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -52,11 +52,11 @@ void Procedure_StartOfMission_Procedures(
   /* Procedures::Procedure_StartOfMission::SM_StartOfMissionProcedure::Procedure_On::SM_SoM_On::Waiting_Driver_Strating_Command */
   static kcg_bool _1_br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Strating_Command;
   /* Procedures::Procedure_StartOfMission::SM_StartOfMissionProcedure::Procedure_On::SM_SoM_On::Waiting_Driver_Command */
-  static kcg_bool _2_br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Command;
+  static kcg_bool br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Command;
   /* Procedures::Procedure_StartOfMission::SM_StartOfMissionProcedure */
   static SSM_ST_SM_StartOfMissionProcedure SM_StartOfMissionProcedure_state_sel;
   /* Procedures::Procedure_StartOfMission::SM_StartOfMissionProcedure */
-  static SSM_ST_SM_StartOfMissionProcedure _3_SM_StartOfMissionProcedure_state_act;
+  static SSM_ST_SM_StartOfMissionProcedure SM_StartOfMissionProcedure_state_act;
   /* Procedures::Procedure_StartOfMission::SM_StartOfMissionProcedure */
   static kcg_bool SM_StartOfMissionProcedure_reset_act;
   
@@ -74,11 +74,11 @@ void Procedure_StartOfMission_Procedures(
       SM_StartOfMissionProcedure_reset_act = (Current_Mode ==
           SB_Level_And_Mode_Types_Pkg) & Train_Standstill & Desk_Open;
       if (SM_StartOfMissionProcedure_reset_act) {
-        _3_SM_StartOfMissionProcedure_state_act =
+        SM_StartOfMissionProcedure_state_act =
           SSM_st_Procedure_On_SM_StartOfMissionProcedure;
       }
       else {
-        _3_SM_StartOfMissionProcedure_state_act =
+        SM_StartOfMissionProcedure_state_act =
           SSM_st_Procedure_Off_SM_StartOfMissionProcedure;
       }
       break;
@@ -89,16 +89,16 @@ void Procedure_StartOfMission_Procedures(
         !(Current_Mode == SB_Level_And_Mode_Types_Pkg) | !Desk_Open;
       if (br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Strating_Command) {
         SM_StartOfMissionProcedure_reset_act = kcg_true;
-        _3_SM_StartOfMissionProcedure_state_act =
+        SM_StartOfMissionProcedure_state_act =
           SSM_st_EB_Requested_SM_StartOfMissionProcedure;
       }
       else {
         if (br_2_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Strating_Command) {
-          _3_SM_StartOfMissionProcedure_state_act =
+          SM_StartOfMissionProcedure_state_act =
             SSM_st_Procedure_Off_SM_StartOfMissionProcedure;
         }
         else {
-          _3_SM_StartOfMissionProcedure_state_act =
+          SM_StartOfMissionProcedure_state_act =
             SSM_st_Procedure_On_SM_StartOfMissionProcedure;
         }
         SM_StartOfMissionProcedure_reset_act =
@@ -107,18 +107,18 @@ void Procedure_StartOfMission_Procedures(
       break;
     case SSM_st_EB_Requested_SM_StartOfMissionProcedure :
       if (Train_Standstill) {
-        _3_SM_StartOfMissionProcedure_state_act =
+        SM_StartOfMissionProcedure_state_act =
           SSM_st_Procedure_Off_SM_StartOfMissionProcedure;
       }
       else {
-        _3_SM_StartOfMissionProcedure_state_act =
+        SM_StartOfMissionProcedure_state_act =
           SSM_st_EB_Requested_SM_StartOfMissionProcedure;
       }
       SM_StartOfMissionProcedure_reset_act = Train_Standstill;
       break;
     
   }
-  switch (_3_SM_StartOfMissionProcedure_state_act) {
+  switch (SM_StartOfMissionProcedure_state_act) {
     case SSM_st_EB_Requested_SM_StartOfMissionProcedure :
       outC->Ack_LS_Req_To_Driver = kcg_false;
       outC->Ack_OS_Req_To_Driver = kcg_false;
@@ -162,9 +162,9 @@ void Procedure_StartOfMission_Procedures(
       }
       switch (SM_SoM_On_state_sel_SM_StartOfMissionProcedure_Procedure_On) {
         case SSM_st_Waiting_Driver_Command_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
-          _2_br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Command =
+          br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Command =
             Driver_Req_NL & Train_Permitted_NL;
-          if (_2_br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Command) {
+          if (br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Command) {
             SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On =
               kcg_true;
             SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
@@ -174,7 +174,7 @@ void Procedure_StartOfMission_Procedures(
             SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On =
               kcg_true;
             SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
-              _180_SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
+              SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           }
           else {
             if (Valid_Train_Data_Stored) {
@@ -195,11 +195,11 @@ void Procedure_StartOfMission_Procedures(
           SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
             SSM_st_NL_Mode_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           break;
-        case _180_SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
+        case SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
           SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On =
             kcg_false;
           SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
-            _180_SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
+            SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           break;
         case SSM_st_Waiting_Driver_Strating_Command_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
           br_1_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Strating_Command =
@@ -215,7 +215,7 @@ void Procedure_StartOfMission_Procedures(
             SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On =
               kcg_true;
             SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
-              _179_SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
+              SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           }
           else {
             if (br_2_guard_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On_Waiting_Driver_Strating_Command) {
@@ -272,18 +272,18 @@ void Procedure_StartOfMission_Procedures(
           SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
             SSM_st_UN_Mode_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           break;
-        case _179_SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
+        case SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
           SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On =
             kcg_false;
           SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On =
-            _179_SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
+            SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           break;
         
       }
       outC->SM_StartOfMissionProcedure_state_nxt =
         SSM_st_Procedure_On_SM_StartOfMissionProcedure;
       switch (SM_SoM_On_state_act_SM_StartOfMissionProcedure_Procedure_On) {
-        case _179_SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
+        case SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
           if (SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On) {
             /* 1 */ Procedure_Start_L1_L2_L3_reset_Procedures(&outC->Context_1);
           }
@@ -300,7 +300,7 @@ void Procedure_StartOfMission_Procedures(
             RBC_Authorizes_SR,
             &outC->Context_1);
           outC->SM_SoM_On_state_nxt_SM_StartOfMissionProcedure_Procedure_On =
-            _179_SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
+            SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           outC->End_Of_Mission_Procedure_Req = kcg_false;
           outC->Request_For_SH_To_RBC = kcg_false;
           outC->SH_Refused_By_RBC_To_DMI = kcg_false;
@@ -448,7 +448,7 @@ void Procedure_StartOfMission_Procedures(
           outC->Condition_60 = kcg_false;
           outC->Condition_70 = kcg_false;
           break;
-        case _180_SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
+        case SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On :
           if (SM_SoM_On_reset_act_SM_StartOfMissionProcedure_Procedure_On) {
             /* 1 */
             SH_Initiated_By_Driver_On_reset_Procedures(&outC->_1_Context_1);
@@ -461,7 +461,7 @@ void Procedure_StartOfMission_Procedures(
             Shunting_Granted_By_RBC,
             &outC->_1_Context_1);
           outC->SM_SoM_On_state_nxt_SM_StartOfMissionProcedure_Procedure_On =
-            _180_SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
+            SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On;
           outC->MA_Req_To_RBC = kcg_false;
           outC->SH_Refused_By_RBC_To_DMI =
             outC->_1_Context_1.SH_Refused_By_RBC_To_DMI;
@@ -574,6 +574,6 @@ void Procedure_StartOfMission_Procedures(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Procedure_StartOfMission_Procedures.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

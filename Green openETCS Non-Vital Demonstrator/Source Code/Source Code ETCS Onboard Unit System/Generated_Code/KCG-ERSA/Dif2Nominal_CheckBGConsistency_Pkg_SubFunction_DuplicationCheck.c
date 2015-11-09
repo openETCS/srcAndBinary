@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,16 +23,16 @@ kcg_bool Dif2Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
   valid = ((m_dup_1 == M_DUP_No_duplicates) & (m_dup_2 ==
         M_DUP_This_balise_is_a_duplicate_of_the_previous_balise) & crcCheck_1 &
       crcCheck_2) | ((m_dup_1 ==
-        _42_M_DUP_This_balise_is_a_duplicate_of_the_next_balise) & _L15 &
+        M_DUP_This_balise_is_a_duplicate_of_the_next_balise) & _L15 &
       crcCheck_2) | ((m_dup_1 ==
         M_DUP_This_balise_is_a_duplicate_of_the_previous_balise) &
       ((crcCheck_2 & _L15) | (m_dup_2 ==
-          _42_M_DUP_This_balise_is_a_duplicate_of_the_next_balise)));
+          M_DUP_This_balise_is_a_duplicate_of_the_next_balise)));
   return valid;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Dif2Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

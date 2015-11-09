@@ -1,14 +1,14 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.h"
+#include "requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.h"
 
-void requestRadioConnectionSet_reset_MoRC_Pck_Subfunc_Pkg(
-  outC_requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg *outC)
+void requestRadioConnectionSetupFromOBU_v2_reset_MoRC_Pck_Subfunc_Pkg(
+  outC_requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg *outC)
 {
   outC->init = kcg_true;
   /* 1 */ countDownTimer_reset_MoRC_Pck_Utils(&outC->Context_1);
@@ -17,7 +17,7 @@ void requestRadioConnectionSet_reset_MoRC_Pck_Subfunc_Pkg(
 }
 
 /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2 */
-void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
+void requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::mode */M_MODE mode,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::eventsPhases */obuEventsAndPhases_T_RCM_Session_Types_Pkg *eventsPhases,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::p42_sessionManagement */p42_sessionManagement_T_RCM_MsgTypes_Pkg *p42_sessionManagement,
@@ -30,7 +30,7 @@ void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::reset */kcg_bool reset,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::maxTimeToMaintainCommSession */T_internal_Type_Obu_BasicTypes_Pkg maxTimeToMaintainCommSession,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::noOfRetriesToEstablishASafeRadioConnection */kcg_int noOfRetriesToEstablishASafeRadioConnection,
-  outC_requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg *outC)
+  outC_requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg *outC)
 {
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
@@ -39,9 +39,9 @@ void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::repeat_SM::rep_inactive */
   static kcg_bool br_2_clock_repeat_SM_rep_inactive;
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::repeat_SM::rep_repeatUntilSuccessfulOrADefinedNumberOfTimes */
-  static kcg_bool _2_br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes;
+  static kcg_bool br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes;
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::repeat_SM::rep_repeatUntilSuccessfulOrADefinedNumberOfTimes */
-  static kcg_bool _1_br_2_clock_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes;
+  static kcg_bool br_2_clock_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes;
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::repeat_SM::rep_repeatUntilStopConditionMet */
   static kcg_bool br_1_guard_repeat_SM_rep_repeatUntilStopConditionMet;
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::repeat_SM::rep_repeatUntilStopConditionMet */
@@ -146,13 +146,13 @@ void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
       }
       break;
     case SSM_st_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes_repeat_SM :
-      _2_br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes =
+      br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes =
         else_clock_IfBlock1 | reset;
-      if (_2_br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes) {
+      if (br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes) {
         repeat_SM_state_act = SSM_st_rep_inactive_repeat_SM;
       }
       else {
-        _1_br_2_clock_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes =
+        br_2_clock_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes =
           outC->_1_Context_1.RE_Output;
         repeat_SM_state_act =
           SSM_st_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes_repeat_SM;
@@ -199,10 +199,10 @@ void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
         }
         break;
       case SSM_st_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes_repeat_SM :
-        if (_2_br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes) {
+        if (br_1_guard_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes) {
           else_clock_IfBlock1 = kcg_false;
         }
-        else if (_1_br_2_clock_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes) {
+        else if (br_2_clock_repeat_SM_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes) {
           else_clock_IfBlock1 = kcg_true;
         }
         else {
@@ -274,7 +274,7 @@ void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.c
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

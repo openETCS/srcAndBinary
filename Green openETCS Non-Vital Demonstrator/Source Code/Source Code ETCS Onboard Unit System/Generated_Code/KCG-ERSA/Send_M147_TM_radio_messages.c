@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -65,6 +65,6 @@ void Send_M147_TM_radio_messages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Send_M147_TM_radio_messages.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

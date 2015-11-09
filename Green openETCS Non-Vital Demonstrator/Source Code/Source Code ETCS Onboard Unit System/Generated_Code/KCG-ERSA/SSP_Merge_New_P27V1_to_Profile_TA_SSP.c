@@ -1,14 +1,14 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "_201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.h"
+#include "SSP_Merge_New_P27V1_to_Profile_TA_SSP.h"
 
 /* TA_SSP::SSP_Merge_New_P27V1_to_Profile */
-void _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP(
+void SSP_Merge_New_P27V1_to_Profile_TA_SSP(
   /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::new_GP */StaticSpeedProfile_t_TrackAtlasTypes *new_GP,
   /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::Last_SpeedProfile_in */StaticSpeedProfile_t_TrackAtlasTypes *Last_SpeedProfile_in,
   /* TA_SSP::SSP_Merge_New_P27V1_to_Profile::SpeedProfile_out */StaticSpeedProfile_t_TrackAtlasTypes *SpeedProfile_out)
@@ -20,7 +20,7 @@ void _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP(
   
   if ((*Last_SpeedProfile_in)[0].valid) {
     _L1 = /* 1 */
-      _204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal(
+      FindStartOfNewSpeedProfileAbs_TA_Lib_internal(
         Last_SpeedProfile_in,
         new_GP);
   }
@@ -43,7 +43,7 @@ void _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP(
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.c
-** Generation date: 2015-11-09T11:52:25
+** SSP_Merge_New_P27V1_to_Profile_TA_SSP.c
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

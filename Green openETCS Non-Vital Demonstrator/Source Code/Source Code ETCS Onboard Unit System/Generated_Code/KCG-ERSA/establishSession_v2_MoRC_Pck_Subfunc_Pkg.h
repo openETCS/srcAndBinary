@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _establishSession_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _establishSession_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -27,7 +27,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _147_SSM_ST_SM1 /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */ SM1_state_nxt;
+  _8_SSM_ST_SM1 /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */ SM1_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg /* 1 */ _1_Context_1;
   outC_establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg /* 1 */ Context_1;
@@ -49,6 +49,6 @@ extern void establishSession_v2_reset_MoRC_Pck_Subfunc_Pkg(
 #endif /* _establishSession_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** establishSession_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,9 +28,9 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::SM1::waitForSystemVersion */
   static kcg_bool br_1_guard_SM1_waitForSystemVersion;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::SM1 */
-  static _158_SSM_ST_SM1 SM1_state_sel;
+  static _19_SSM_ST_SM1 SM1_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::SM1 */
-  static _158_SSM_ST_SM1 SM1_state_act;
+  static _19_SSM_ST_SM1 SM1_state_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::systemVersionSupported */
   static kcg_bool systemVersionSupported;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::systemVersionNotSupported */
@@ -38,7 +38,7 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
   
   outC->sessionStatus.valid = kcg_true;
   if (outC->init) {
-    SM1_state_sel = _157_SSM_st_idle_SM1;
+    SM1_state_sel = _18_SSM_st_idle_SM1;
   }
   else {
     SM1_state_sel = outC->SM1_state_nxt;
@@ -46,7 +46,7 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
   systemVersionSupported = (*m32_SystemVersion).valid &
     (*m32_SystemVersion).versionSupported;
   switch (SM1_state_sel) {
-    case _156_SSM_st_sessionEstablished_SM1 :
+    case _17_SSM_st_sessionEstablished_SM1 :
       outC->send_m159_sessionEstablishedReport = kcg_false;
       break;
     case SSM_st_waitForSystemVersion_SM1 :
@@ -67,7 +67,7 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
     case SSM_st_waitForSafeRadioConnectionSetUp_SM1 :
       outC->send_m159_sessionEstablishedReport = kcg_false;
       break;
-    case _157_SSM_st_idle_SM1 :
+    case _18_SSM_st_idle_SM1 :
       outC->send_m159_sessionEstablishedReport = kcg_false;
       break;
     
@@ -76,7 +76,7 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
   systemVersionNotSupported = (*m32_SystemVersion).valid &
     !(*m32_SystemVersion).versionSupported;
   switch (SM1_state_sel) {
-    case _156_SSM_st_sessionEstablished_SM1 :
+    case _17_SSM_st_sessionEstablished_SM1 :
       outC->send_m154_noCompatibleVersionSupported = kcg_false;
       outC->requestSafeRadioConnectionSetup = kcg_false;
       break;
@@ -99,7 +99,7 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
       outC->send_m154_noCompatibleVersionSupported = kcg_false;
       outC->requestSafeRadioConnectionSetup = kcg_false;
       break;
-    case _157_SSM_st_idle_SM1 :
+    case _18_SSM_st_idle_SM1 :
       outC->send_m154_noCompatibleVersionSupported = kcg_false;
       br_1_guard_SM1_idle = (*sessionEstablishCmd_in).valid &
         (*sessionEstablishCmd_in).initiatedByOBU;
@@ -151,24 +151,24 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
         &cNo_p42_SessionManagement_RCM_MsgTypes_Pkg);
   }
   switch (SM1_state_sel) {
-    case _156_SSM_st_sessionEstablished_SM1 :
+    case _17_SSM_st_sessionEstablished_SM1 :
       if (reset) {
-        SM1_state_act = _157_SSM_st_idle_SM1;
+        SM1_state_act = _18_SSM_st_idle_SM1;
       }
       else {
-        SM1_state_act = _156_SSM_st_sessionEstablished_SM1;
+        SM1_state_act = _17_SSM_st_sessionEstablished_SM1;
       }
       outC->send_m155_initiationOfACommunicationSession = kcg_false;
       break;
     case SSM_st_waitForSystemVersion_SM1 :
       if (br_1_guard_SM1_waitForSystemVersion) {
-        SM1_state_act = _157_SSM_st_idle_SM1;
+        SM1_state_act = _18_SSM_st_idle_SM1;
       }
       else if (systemVersionSupported) {
-        SM1_state_act = _156_SSM_st_sessionEstablished_SM1;
+        SM1_state_act = _17_SSM_st_sessionEstablished_SM1;
       }
       else if (systemVersionNotSupported) {
-        SM1_state_act = _157_SSM_st_idle_SM1;
+        SM1_state_act = _18_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_waitForSystemVersion_SM1;
@@ -187,7 +187,7 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
       }
       else {
         if (reset) {
-          SM1_state_act = _157_SSM_st_idle_SM1;
+          SM1_state_act = _18_SSM_st_idle_SM1;
         }
         else {
           SM1_state_act = SSM_st_waitForSafeRadioConnectionSetUp_SM1;
@@ -195,21 +195,21 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
         outC->send_m155_initiationOfACommunicationSession = kcg_false;
       }
       break;
-    case _157_SSM_st_idle_SM1 :
+    case _18_SSM_st_idle_SM1 :
       if (br_1_guard_SM1_idle) {
         SM1_state_act = SSM_st_waitForSafeRadioConnectionSetUp_SM1;
       }
       else {
-        SM1_state_act = _157_SSM_st_idle_SM1;
+        SM1_state_act = _18_SSM_st_idle_SM1;
       }
       outC->send_m155_initiationOfACommunicationSession = kcg_false;
       break;
     
   }
   switch (SM1_state_act) {
-    case _156_SSM_st_sessionEstablished_SM1 :
+    case _17_SSM_st_sessionEstablished_SM1 :
       outC->sessionStatus.phase = sp_establishing_RCM_Session_Types_Pkg;
-      outC->SM1_state_nxt = _156_SSM_st_sessionEstablished_SM1;
+      outC->SM1_state_nxt = _17_SSM_st_sessionEstablished_SM1;
       break;
     case SSM_st_waitForSystemVersion_SM1 :
       outC->sessionStatus.phase = sp_establishing_RCM_Session_Types_Pkg;
@@ -219,9 +219,9 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
       outC->sessionStatus.phase = sp_establishing_RCM_Session_Types_Pkg;
       outC->SM1_state_nxt = SSM_st_waitForSafeRadioConnectionSetUp_SM1;
       break;
-    case _157_SSM_st_idle_SM1 :
+    case _18_SSM_st_idle_SM1 :
       outC->sessionStatus.phase = sp_terminated_RCM_Session_Types_Pkg;
-      outC->SM1_state_nxt = _157_SSM_st_idle_SM1;
+      outC->SM1_state_nxt = _18_SSM_st_idle_SM1;
       break;
     
   }
@@ -229,6 +229,6 @@ void establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

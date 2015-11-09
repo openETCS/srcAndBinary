@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -34,7 +34,7 @@ kcg_bool CheckSingleBG_CheckBGConsistency_Pkg_SubFunction(
         CheckOneTelegram_CheckBGConsistency_Pkg_SubFunction(telegram_in) &
         ((((*telegram_in).telegramheader.n_pig == N_PIG_I_am_the_1st) &
             ((*telegram_in).telegramheader.m_dup ==
-              _42_M_DUP_This_balise_is_a_duplicate_of_the_next_balise)) |
+              M_DUP_This_balise_is_a_duplicate_of_the_next_balise)) |
           (((*telegram_in).telegramheader.n_pig == N_PIG_I_am_the_2nd) &
             ((*telegram_in).telegramheader.m_dup ==
               M_DUP_This_balise_is_a_duplicate_of_the_previous_balise)));
@@ -48,6 +48,6 @@ kcg_bool CheckSingleBG_CheckBGConsistency_Pkg_SubFunction(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckSingleBG_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

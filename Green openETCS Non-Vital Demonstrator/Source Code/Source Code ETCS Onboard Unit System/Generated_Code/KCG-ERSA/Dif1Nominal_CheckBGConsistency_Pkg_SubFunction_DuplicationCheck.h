@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _Dif1Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck_H_
 #define _Dif1Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck_H_
@@ -20,6 +20,6 @@ extern kcg_bool Dif1Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck(
 #endif /* _Dif1Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Dif1Nominal_CheckBGConsistency_Pkg_SubFunction_DuplicationCheck.h
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

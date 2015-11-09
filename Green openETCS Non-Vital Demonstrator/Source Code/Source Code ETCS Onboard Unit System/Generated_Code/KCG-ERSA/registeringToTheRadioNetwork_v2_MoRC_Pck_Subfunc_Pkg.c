@@ -1,14 +1,14 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.h"
+#include "registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.h"
 
-void registeringToTheRadioNetw_reset_MoRC_Pck_Subfunc_Pkg(
-  outC_registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg *outC)
+void registeringToTheRadioNetwork_v2_reset_MoRC_Pck_Subfunc_Pkg(
+  outC_registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg *outC)
 {
   outC->init = kcg_true;
   /* 8 */ RisingEdge_reset_digital(&outC->Context_8);
@@ -18,7 +18,7 @@ void registeringToTheRadioNetw_reset_MoRC_Pck_Subfunc_Pkg(
 }
 
 /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2 */
-void registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg(
+void registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::atPowerUpRadioNetworkID */P45_RadioNetworkRegistration_T_Packet_Types_Pkg *atPowerUpRadioNetworkID,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::newRadioNetworkIDFromDriver */P45_RadioNetworkRegistration_T_Packet_Types_Pkg *newRadioNetworkIDFromDriver,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::p45_registrationOrder */msgFromTrack_T_RCM_MsgTypes_Pkg *p45_registrationOrder,
@@ -29,7 +29,7 @@ void registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::mobileRegistrationContext */mobileRegistrationContext_T_RCM_Types_Pkg *mobileRegistrationContext,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::reset */kcg_bool reset,
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::RadioNetworkID_Default */P45_RadioNetworkRegistration_T_Packet_Types_Pkg *RadioNetworkID_Default,
-  outC_registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg *outC)
+  outC_registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg *outC)
 {
   /* MoRC_Pck::Subfunc_Pkg::registeringToTheRadioNetwork_v2::Register_SM::Registering */
   static kcg_bool br_1_guard_Register_SM_Registering;
@@ -298,7 +298,7 @@ void registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg(
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.c
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

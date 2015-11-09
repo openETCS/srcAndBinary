@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,9 +20,9 @@ void SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg(
   outC_SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg *outC)
 {
   /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */
-  static _195_SSM_ST_SM1 SM1_state_sel;
+  static _36_SSM_ST_SM1 SM1_state_sel;
   /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */
-  static _195_SSM_ST_SM1 SM1_state_act;
+  static _36_SSM_ST_SM1 SM1_state_act;
   
   outC->request_Mode_Change_SB_to_FS_to_Level_and_Mode_Management = kcg_false;
   if (outC->init) {
@@ -88,6 +88,6 @@ void SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,7 @@ void C_P027V1_compr_onboard_sections_level2_TM_conversions_baseline2(
   /* TM_conversions_baseline2::C_P027V1_compr_onboard_sections_level2::_L6 */
   static array_int_3 _L6;
   /* TM_conversions_baseline2::C_P027V1_compr_onboard_sections_level2::_L5 */
-  static _3_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 _L5;
+  static P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 _L5;
   /* TM_conversions_baseline2::C_P027V1_compr_onboard_sections_level2::_L29 */
   static array_int_64 _L29;
   
@@ -55,7 +55,7 @@ void C_P027V1_compr_onboard_sections_level2_TM_conversions_baseline2(
   }
 #endif /* KCG_MAPW_CPY */
   
-  kcg_copy__3_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2(
+  kcg_copy_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2(
     &(*P027V1_section_onbard).SECTIONS_q_diff,
     &_L5);
   tmp1 = /* 1 */ CAST_Int_to_D_STATIC_TM_conversions(_L6[0]);
@@ -68,6 +68,6 @@ void C_P027V1_compr_onboard_sections_level2_TM_conversions_baseline2(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P027V1_compr_onboard_sections_level2_TM_conversions_baseline2.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

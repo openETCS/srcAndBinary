@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _ExitLevel2or3_OutputToRBC_H_
 #define _ExitLevel2or3_OutputToRBC_H_
@@ -17,7 +17,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _172_SSM_ST_SM1 /* OutputToRBC::ExitLevel2or3::SM1 */ SM1_state_nxt;
+  _30_SSM_ST_SM1 /* OutputToRBC::ExitLevel2or3::SM1 */ SM1_state_nxt;
   M_POSITION /* OutputToRBC::ExitLevel2or3::Loc_Position */ Loc_Position;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
@@ -38,6 +38,6 @@ extern void ExitLevel2or3_reset_OutputToRBC(
 #endif /* _ExitLevel2or3_OutputToRBC_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ExitLevel2or3_OutputToRBC.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

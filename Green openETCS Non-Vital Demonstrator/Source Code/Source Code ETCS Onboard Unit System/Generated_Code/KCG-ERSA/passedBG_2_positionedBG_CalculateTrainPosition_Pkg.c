@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -68,7 +68,7 @@ void passedBG_2_positionedBG_CalculateTrainPosition_Pkg(
         (Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_nominal_direction ==
           (*passedBG_asAnnounced).infoFromLinking.linkingInfo.q_linkorientation)) |
       (((*passedBG).BG_Header.trainOrientationToBG == Q_DIRLRBG_Reverse) &
-        (_54_Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction ==
+        (Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction ==
           (*passedBG_asAnnounced).infoFromLinking.linkingInfo.q_linkorientation)));
   if (ifAnnouncedOrABGWasPreviouslyPassed_clock) {
     *foundNotWhereAnnounced = kcg_false;
@@ -191,6 +191,6 @@ void passedBG_2_positionedBG_CalculateTrainPosition_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** passedBG_2_positionedBG_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

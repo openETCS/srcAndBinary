@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -67,7 +67,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::then::handOver_with_2_Sessions_SM::WaitForTerminationOrderFromHandingOverRBC::_L3 */
   static msgFromTrack_T_RCM_MsgTypes_Pkg _L3_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::then::handOver_with_2_Sessions_SM::WaitForTerminationOrderFromHandingOverRBC::_L26 */
-  static kcg_bool _L265_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC;
+  static kcg_bool _L26_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::then::handOver_with_2_Sessions_SM::WaitForTerminationOrderFromHandingOverRBC::_L27 */
   static P42_SessionManagement_T_Packet_Types_Pkg _L27_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::then::handOver_with_2_Sessions_SM::WaitForSessionWithAcceptingRBCEstablished::sessionWithAcceptingRBCEstablished */
@@ -83,9 +83,9 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::p45_radioNetworkRegistrationOrder_2_handingOverRBC_loc */
   static msgFromTrack_T_RCM_MsgTypes_Pkg last_p45_radioNetworkRegistrationOrder_2_handingOverRBC_loc_IfBlock1;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForHandingOverRBCRegistered::handingOverRBCReregistered */
-  static kcg_bool _6_handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered;
+  static kcg_bool handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::RegisterAcceptingRBC::unregistered_or_noReregisterRequired */
-  static kcg_bool _7_unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC;
+  static kcg_bool unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::RegisterAcceptingRBC::_L38 */
   static kcg_bool _L38_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::RegisterAcceptingRBC::_L39 */
@@ -97,9 +97,9 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::RegisterAcceptingRBC::_L53 */
   static kcg_bool _L53_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForHandingOverRBCTerminated::sessionWithHandingOverRBC_terminated */
-  static kcg_bool _8_sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated;
+  static kcg_bool sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForTerminationOrderFromHandingOverRBC::terminationWithHandingOverRBCOrdered */
-  static kcg_bool _9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
+  static kcg_bool terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForTerminationOrderFromHandingOverRBC::_L3 */
   static msgFromTrack_T_RCM_MsgTypes_Pkg _L3_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForTerminationOrderFromHandingOverRBC::_L28 */
@@ -107,7 +107,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForTerminationOrderFromHandingOverRBC::_L29 */
   static P42_SessionManagement_T_Packet_Types_Pkg _L29_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM::WaitForSessionWithAcceptingRBCEstablished::sessionWithAcceptingRBCEstablished */
-  static kcg_bool _10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished;
+  static kcg_bool sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished;
   /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1 */
   static kcg_bool IfBlock1_clock;
   
@@ -177,11 +177,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         if ((*p131_transitionOrder).valid) {
@@ -267,17 +267,17 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if (_L28_IfBlock1_handOver_with_2_Sessions_SM_ReregisterHandingOverRBC &
           tmp1) {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-            &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+            &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
             &_4_last_p45_radioNetworkRegistrationOrder_2_handingOverRBC_loc_IfBlock1);
         }
         else {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-            &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+            &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
             (msgFromTrack_T_RCM_MsgTypes_Pkg *)
               &cNoMessageFromTrack_Handover_Pkg);
         }
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         if ((*p131_transitionOrder).valid) {
@@ -330,11 +330,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         if ((*p131_transitionOrder).valid) {
@@ -378,11 +378,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         /* 1 */
         Read_P042_TM(
           &_L3_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC.packets,
-          &_L265_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC,
+          &_L26_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC,
           &_L27_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC);
         terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC =
           _L3_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC.valid &
-          _L265_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC &
+          _L26_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC &
           (_L27_IfBlock1_handOver_with_2_Sessions_SM_WaitForTerminationOrderFromHandingOverRBC.q_rbc ==
             Q_RBC_Terminate_communication_session);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
@@ -404,11 +404,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
               &cNoMessageFromTrack_Handover_Pkg);
         }
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         if ((*p131_transitionOrder).valid) {
@@ -460,11 +460,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->sendTrainData_2_acceptingRBC =
@@ -517,11 +517,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->sendPositionReport_2_handingOverRBC = outC->Context_8.RE_Output;
@@ -587,11 +587,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->sendPositionReport_2_handingOverRBC = outC->Context_5.RE_Output;
@@ -624,12 +624,12 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
       case SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_2_Sessions_SM :
         if ((*p45_radioNetworkRegistrationOrder_in).valid) {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-            &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+            &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
             p45_radioNetworkRegistrationOrder_in);
         }
         else {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-            &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+            &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
             &_4_last_p45_radioNetworkRegistrationOrder_2_handingOverRBC_loc_IfBlock1);
         }
         /* 2 */
@@ -651,7 +651,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           _L4_IfBlock1_handOver_with_2_Sessions_SM_WaitForTransitionOrder.valid;
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
           &outC->p45_radioNetworkRegistrationOrder_2_handingOverRBC_loc_IfBlock1,
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC);
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
           &outC->p42_sessionCmd_for_acceptingRBC,
           &_L4_IfBlock1_handOver_with_2_Sessions_SM_WaitForTransitionOrder);
@@ -660,7 +660,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->handoverInprogress =
@@ -690,7 +690,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         &last_p131_transitionOrder_loc_IfBlock1,
         (msgFromTrack_T_RCM_MsgTypes_Pkg *) &cNoMessageFromTrack_Handover_Pkg);
       handOver_with_1_Session_SM_state_act_IfBlock1 =
-        _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+        SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
       outC->init1 = kcg_false;
       handOver_with_1_Session_SM_reset_sel_IfBlock1 = kcg_false;
     }
@@ -731,28 +731,28 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           morcStatusFromHandingOverRBC,
           &outC->p42_sessionCmd_for_handingOverRBC);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->handoverFinished = kcg_false;
         outC->handoverInprogress = kcg_true;
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _122_SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         break;
-      case _119_SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM :
-        _6_handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered =
+      case SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM :
+        handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered =
           mrs_registered_RCM_Types_Pkg ==
           (*morcStatusFromHandingOverRBC).registration.status;
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
@@ -769,11 +769,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->handoverFinished = kcg_false;
@@ -781,21 +781,21 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 =
-            _6_handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered;
-          if (_6_handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered) {
+            handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered;
+          if (handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
               SSM_st_EstablishSessionWithAcceptingRBC_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _119_SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM;
           }
-          if (_6_handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered) {
+          if (handingOverRBCReregistered_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCRegistered) {
             outC->notReady = kcg_true;
           }
           else {
@@ -822,7 +822,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
                 (*morcStatusFromHandingOverRBC).registration.nid_mn) &
               _L43_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC) |
             _L44_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC);
-        _7_unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC =
+        unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC =
           (!_L53_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC &
             _L43_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC) |
           (_L53_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC &
@@ -841,7 +841,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         if (handOver_with_1_Session_SM_reset_sel_IfBlock1) {
@@ -856,12 +856,12 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if (_L53_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC &
           tmp) {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-            &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+            &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
             &last_p45_radioNetworkRegistrationOrder_2_handingOverRBC_loc_IfBlock1);
         }
         else {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-            &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+            &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
             (msgFromTrack_T_RCM_MsgTypes_Pkg *)
               &cNoMessageFromTrack_Handover_Pkg);
         }
@@ -871,21 +871,21 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 =
-            _7_unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC;
-          if (_7_unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC) {
+            unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC;
+          if (unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _119_SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
               SSM_st_RegisterAcceptingRBC_IfBlock1_handOver_with_1_Session_SM;
           }
-          if (_7_unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC) {
+          if (unregistered_or_noReregisterRequired_IfBlock1_handOver_with_1_Session_SM_RegisterAcceptingRBC) {
             outC->notReady = kcg_true;
           }
           else {
@@ -893,8 +893,8 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           }
         }
         break;
-      case _120_SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM :
-        _8_sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated =
+      case SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM :
+        sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated =
           (*morcStatusFromHandingOverRBC).session.phase ==
           sp_terminated_RCM_Session_Types_Pkg;
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
@@ -911,11 +911,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->handoverFinished = kcg_false;
@@ -923,21 +923,21 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 =
-            _8_sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated;
-          if (_8_sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated) {
+            sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated;
+          if (sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
               SSM_st_RegisterAcceptingRBC_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _120_SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM;
           }
-          if (_8_sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated) {
+          if (sessionWithHandingOverRBC_terminated_IfBlock1_handOver_with_1_Session_SM_WaitForHandingOverRBCTerminated) {
             outC->notReady = kcg_true;
           }
           else {
@@ -945,7 +945,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           }
         }
         break;
-      case _121_SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM :
+      case SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM :
         /* 11 */
         checkSessionCmd_Handover_Pkg_handoverUtils_Pkg(
           p42_terminateCmd_from_handingOverRBC,
@@ -956,7 +956,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           &_L3_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC.packets,
           &_L28_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC,
           &_L29_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC);
-        _9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC =
+        terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC =
           _L3_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC.valid &
           _L28_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC &
           (_L29_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC.q_rbc ==
@@ -970,7 +970,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         outC->sendTrainData_2_acceptingRBC = kcg_false;
         outC->sendPositionReport_2_acceptingRBC = kcg_false;
         outC->sendPositionReport_2_handingOverRBC = kcg_false;
-        if (_9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC) {
+        if (terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC) {
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
             &outC->p42_sessionCmd_for_handingOverRBC,
             &_L3_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC);
@@ -982,34 +982,34 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
               &cNoMessageFromTrack_Handover_Pkg);
         }
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->handoverFinished = kcg_false;
         outC->handoverInprogress =
-          _9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
+          terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 =
-            _9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
-          if (_9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC) {
+            terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC;
+          if (terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _120_SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _121_SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM;
           }
-          if (_9_terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC) {
+          if (terminationWithHandingOverRBCOrdered_IfBlock1_handOver_with_1_Session_SM_WaitForTerminationOrderFromHandingOverRBC) {
             outC->notReady = kcg_true;
           }
           else {
@@ -1017,8 +1017,8 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           }
         }
         break;
-      case _122_SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM :
-        _10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished =
+      case SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM :
+        sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished =
           (*morcStatusFromHandingOverRBC).session.phase ==
           sp_maintaining_RCM_Session_Types_Pkg;
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
@@ -1035,38 +1035,38 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->sendPositionReport_2_acceptingRBC =
-          _10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished;
+          sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished;
         outC->sendTrainData_2_acceptingRBC =
-          _10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished &
+          sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished &
           !((M_MODE_Sleeping == mode) | (mode == M_MODE_Non_Leading));
         outC->handoverInprogress = kcg_true;
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->handoverFinished = kcg_false;
           outC->notReady = kcg_true;
         }
         else {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 =
-            _10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished;
-          if (_10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished) {
+            sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished;
+          if (sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _122_SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM;
           }
-          if (_10_sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished) {
+          if (sessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM_WaitForSessionWithAcceptingRBCEstablished) {
             outC->handoverFinished = kcg_true;
             outC->notReady = kcg_true;
           }
@@ -1076,7 +1076,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           }
         }
         break;
-      case _123_SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM :
+      case SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM :
         if (handOver_with_1_Session_SM_reset_sel_IfBlock1) {
           /* 28 */ RisingEdge_reset_digital(&outC->Context_28);
         }
@@ -1100,11 +1100,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->sendPositionReport_2_handingOverRBC = outC->Context_28.RE_Output;
@@ -1113,7 +1113,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
@@ -1121,11 +1121,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
             outC->Context_28.RE_Output;
           if (outC->Context_28.RE_Output) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _121_SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _123_SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM;
           }
           if (outC->Context_28.RE_Output) {
             outC->notReady = kcg_true;
@@ -1135,7 +1135,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           }
         }
         break;
-      case _124_SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM :
+      case SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM :
         if (handOver_with_1_Session_SM_reset_sel_IfBlock1) {
           /* 26 */ RisingEdge_reset_digital(&outC->Context_26);
         }
@@ -1159,11 +1159,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->sendPositionReport_2_handingOverRBC = outC->Context_26.RE_Output;
@@ -1172,7 +1172,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         if ((*p131_transitionOrder).valid) {
           outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 = kcg_true;
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           outC->notReady = kcg_true;
         }
         else {
@@ -1180,11 +1180,11 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
             outC->Context_26.RE_Output;
           if (outC->Context_26.RE_Output) {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _123_SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM;
           }
           else {
             outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-              _124_SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM;
+              SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM;
           }
           if (outC->Context_26.RE_Output) {
             outC->notReady = kcg_true;
@@ -1194,7 +1194,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           }
         }
         break;
-      case _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM :
+      case SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM :
         outC->handOver_with_1_Session_SM_reset_nxt_IfBlock1 =
           outC->p131_transitionOrder_mem.valid;
         if ((*p45_radioNetworkRegistrationOrder_in).valid) {
@@ -1215,20 +1215,20 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC,
           p45_radioNetworkRegistrationOrder_in);
-        outC->_7_p45_radioNetworkRegistrationOrder_for_handingOverRBC.valid =
+        outC->p45_radioNetworkRegistrationOrder_for_handingOverRBC.valid =
           !outC->p131_transitionOrder_mem.valid &
           (*p45_radioNetworkRegistrationOrder_in).valid;
         kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
-          &outC->_6_p45_radioNetworkRegistrationOrder_for_acceptingRBC,
+          &outC->p45_radioNetworkRegistrationOrder_for_acceptingRBC,
           (msgFromTrack_T_RCM_MsgTypes_Pkg *)
             &cNoMessageFromTrack_Handover_Pkg);
         outC->handoverFinished = kcg_false;
         outC->handoverInprogress = kcg_false;
         if (outC->p131_transitionOrder_mem.valid) {
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _124_SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM;
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
             &outC->p131_transitionOrder_loc_IfBlock1,
             &outC->p131_transitionOrder_mem);
@@ -1236,7 +1236,7 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
         }
         else {
           outC->handOver_with_1_Session_SM_state_nxt_IfBlock1 =
-            _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
+            SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM;
           kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
             &outC->p131_transitionOrder_loc_IfBlock1,
             &last_p131_transitionOrder_loc_IfBlock1);
@@ -1250,6 +1250,6 @@ void handOverSequencer_Handover_Pkg_handoverUtils_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** handOverSequencer_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

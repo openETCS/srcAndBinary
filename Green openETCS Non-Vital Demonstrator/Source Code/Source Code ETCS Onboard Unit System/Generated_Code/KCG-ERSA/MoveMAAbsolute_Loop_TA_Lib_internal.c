@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,14 +17,14 @@ void MoveMAAbsolute_Loop_TA_Lib_internal(
   /* TA_Lib_internal::MoveMAAbsolute_Loop::pos_prvLRBG */L_internal_Type_Obu_BasicTypes_Pkg pos_prvLRBG,
   /* TA_Lib_internal::MoveMAAbsolute_Loop::ProfileOut */MovementAuthoritySectionlist_t_TrackAtlasTypes *ProfileOut)
 {
-  static _20_MovementAuthoritySection_t_TrackAtlasTypes tmp1;
+  static MovementAuthoritySection_t_TrackAtlasTypes tmp1;
   static kcg_int tmp;
   /* TA_Lib_internal::MoveMAAbsolute_Loop::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
   /* TA_Lib_internal::MoveMAAbsolute_Loop::IfBlock1 */
   static kcg_bool IfBlock1_clock;
   /* TA_Lib_internal::MoveMAAbsolute_Loop::_L6 */
-  static _20_MovementAuthoritySection_t_TrackAtlasTypes _L6;
+  static MovementAuthoritySection_t_TrackAtlasTypes _L6;
   
   IfBlock1_clock = msg_LRBG & !msg_prvLRBG;
   if (IfBlock1_clock) {
@@ -33,20 +33,18 @@ void MoveMAAbsolute_Loop_TA_Lib_internal(
     else_clock_IfBlock1 = !msg_LRBG & msg_prvLRBG;
   }
   if ((0 <= i) & (i < 10)) {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
-      &_L6,
-      &(*ProfileIn)[i]);
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(&_L6, &(*ProfileIn)[i]);
   }
   else {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
       &_L6,
-      (_20_MovementAuthoritySection_t_TrackAtlasTypes *)
+      (MovementAuthoritySection_t_TrackAtlasTypes *)
         &DEFAULT_MA_section_TrackAtlasTypes);
   }
   kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
     ProfileOut,
     ProfileIn);
-  kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(&tmp1, &_L6);
+  kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(&tmp1, &_L6);
   if (_L6.valid) {
     if (IfBlock1_clock) {
       tmp = pos_LRBG;
@@ -63,7 +61,7 @@ void MoveMAAbsolute_Loop_TA_Lib_internal(
   }
   tmp1.l_section = _L6.l_section + tmp;
   if ((0 <= i) & (i < 10)) {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
       &(*ProfileOut)[i],
       &tmp1);
   }
@@ -71,6 +69,6 @@ void MoveMAAbsolute_Loop_TA_Lib_internal(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MoveMAAbsolute_Loop_TA_Lib_internal.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

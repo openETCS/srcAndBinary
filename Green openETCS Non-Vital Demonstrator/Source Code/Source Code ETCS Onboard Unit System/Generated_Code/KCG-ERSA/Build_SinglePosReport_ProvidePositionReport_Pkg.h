@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _Build_SinglePosReport_ProvidePositionReport_Pkg_H_
 #define _Build_SinglePosReport_ProvidePositionReport_Pkg_H_
@@ -20,7 +20,7 @@ extern void Build_SinglePosReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::in_packet0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *in_packet0,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::in_packet1 */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *in_packet1,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::t_train */T_TRAIN t_train,
-  /* ProvidePositionReport_Pkg::Build_SinglePosReport::posRepHeader */_9_Radio_TrainTrack_Header_T_Radio_Types_Pkg *posRepHeader,
+  /* ProvidePositionReport_Pkg::Build_SinglePosReport::posRepHeader */Radio_TrainTrack_Header_T_Radio_Types_Pkg *posRepHeader,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::packet0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::packet1 */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::packet4 */PT4_ErrorReporting_T_Packet_TrainTypes_Pkg *packet4,
@@ -29,6 +29,6 @@ extern void Build_SinglePosReport_ProvidePositionReport_Pkg(
 #endif /* _Build_SinglePosReport_ProvidePositionReport_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_SinglePosReport_ProvidePositionReport_Pkg.h
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

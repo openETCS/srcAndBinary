@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,7 +24,7 @@ void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L227 */
   static P015_section_enum_T_TM _L227;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L252 */
-  static _20_MovementAuthoritySection_t_TrackAtlasTypes _L252;
+  static MovementAuthoritySection_t_TrackAtlasTypes _L252;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L281 */
   static kcg_bool _L281;
   
@@ -38,15 +38,14 @@ void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
       (P015_section_enum_T_TM *) &DEFAULT_P015_OBU_section_TM);
   }
   if ((0 <= i - 1) & (i - 1 < 10)) {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
       &_L252,
       &(*ProfileAccu).sections[i - 1]);
   }
   else {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
       &_L252,
-      (_20_MovementAuthoritySection_t_TrackAtlasTypes *)
-        &DefaultMA_section_TA_MA);
+      (MovementAuthoritySection_t_TrackAtlasTypes *) &DefaultMA_section_TA_MA);
   }
   kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
     &(*SpeedtProfile).sections,
@@ -87,6 +86,6 @@ void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Convert_P15_to_DistanceProfile_loop_TA_MA.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

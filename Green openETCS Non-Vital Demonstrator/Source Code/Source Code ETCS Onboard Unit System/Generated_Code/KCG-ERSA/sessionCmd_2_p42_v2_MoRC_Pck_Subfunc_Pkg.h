@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -19,6 +19,6 @@ extern void sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg(
 #endif /* _sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

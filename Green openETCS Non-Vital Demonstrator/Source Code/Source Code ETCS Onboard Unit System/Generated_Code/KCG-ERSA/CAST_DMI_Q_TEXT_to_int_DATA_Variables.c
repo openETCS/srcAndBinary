@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -133,24 +133,24 @@ kcg_int CAST_DMI_Q_TEXT_to_int_DATA_Variables(
                       }
                       else {
                         _15_else_clock_IfBlock1 = q_text_ct ==
-                          _77_ENUM_DMI_Q_TEXT_route_unsuitable_axle_load_category;
+                          ENUM_DMI_Q_TEXT_route_unsuitable_axle_load_category;
                         if (_15_else_clock_IfBlock1) {
                           q_text_int =
                             INT_DMI_Q_TEXT_route_unsuitable_axle_load_category;
                         }
                         else {
                           _14_else_clock_IfBlock1 = q_text_ct ==
-                            _76_ENUM_DMI_Q_TEXT_route_unsuitable_loading_gauge;
+                            ENUM_DMI_Q_TEXT_route_unsuitable_loading_gauge;
                           if (_14_else_clock_IfBlock1) {
                             q_text_int =
-                              _74_INT_DMI_Q_TEXT_route_unsuitable_loading_gauge;
+                              INT_DMI_Q_TEXT_route_unsuitable_loading_gauge;
                           }
                           else {
                             _13_else_clock_IfBlock1 = q_text_ct ==
                               ENUM_DMI_Q_TEXT_route_unsuitable_traction_system;
                             if (_13_else_clock_IfBlock1) {
                               q_text_int =
-                                _75_INT_DMI_Q_TEXT_route_unsuitable_traction_system;
+                                INT_DMI_Q_TEXT_route_unsuitable_traction_system;
                             }
                             else {
                               _12_else_clock_IfBlock1 = q_text_ct ==
@@ -282,6 +282,6 @@ kcg_int CAST_DMI_Q_TEXT_to_int_DATA_Variables(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_Q_TEXT_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

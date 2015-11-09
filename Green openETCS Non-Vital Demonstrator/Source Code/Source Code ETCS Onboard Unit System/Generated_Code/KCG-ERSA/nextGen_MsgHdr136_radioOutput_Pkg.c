@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* radioOutput_Pkg::nextGen_MsgHdr136 */
 void nextGen_MsgHdr136_radioOutput_Pkg(
-  /* radioOutput_Pkg::nextGen_MsgHdr136::inCommonHeader */_9_Radio_TrainTrack_Header_T_Radio_Types_Pkg *inCommonHeader,
+  /* radioOutput_Pkg::nextGen_MsgHdr136::inCommonHeader */Radio_TrainTrack_Header_T_Radio_Types_Pkg *inCommonHeader,
   /* radioOutput_Pkg::nextGen_MsgHdr136::outnextGenHeader */M_136_T_TM_radio_messages *outnextGenHeader)
 {
   (*outnextGenHeader).valid = (*inCommonHeader).present;
@@ -21,6 +21,6 @@ void nextGen_MsgHdr136_radioOutput_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** nextGen_MsgHdr136_radioOutput_Pkg.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

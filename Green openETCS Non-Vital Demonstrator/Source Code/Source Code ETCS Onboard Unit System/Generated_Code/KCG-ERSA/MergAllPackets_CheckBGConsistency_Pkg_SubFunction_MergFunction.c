@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -38,7 +38,7 @@ void MergAllPackets_CheckBGConsistency_Pkg_SubFunction_MergFunction(
       (*telegramACC).telegramheader.n_pig) - i;
   *go_on = (*telegram).valid;
   IfBlock1_clock = (diff == - 1) & (((*telegramACC).telegramheader.m_dup ==
-        _42_M_DUP_This_balise_is_a_duplicate_of_the_next_balise) &
+        M_DUP_This_balise_is_a_duplicate_of_the_next_balise) &
       ((*telegram).telegramheader.m_dup ==
         M_DUP_This_balise_is_a_duplicate_of_the_previous_balise)) & *go_on;
   if (IfBlock1_clock) {
@@ -51,7 +51,7 @@ void MergAllPackets_CheckBGConsistency_Pkg_SubFunction_MergFunction(
     else_clock_IfBlock1 = (diff == 1) & (((*telegramACC).telegramheader.m_dup ==
           M_DUP_This_balise_is_a_duplicate_of_the_previous_balise) &
         ((*telegram).telegramheader.m_dup ==
-          _42_M_DUP_This_balise_is_a_duplicate_of_the_next_balise)) & *go_on;
+          M_DUP_This_balise_is_a_duplicate_of_the_next_balise)) & *go_on;
     if (else_clock_IfBlock1) {
       kcg_copy_Telegram_T_BG_Types_Pkg(telegram_out, telegram);
       kcg_copy_CompressedPacketData_T_Common_Types_Pkg(
@@ -89,6 +89,6 @@ void MergAllPackets_CheckBGConsistency_Pkg_SubFunction_MergFunction(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MergAllPackets_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

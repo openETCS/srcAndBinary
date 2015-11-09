@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _nextGen_Msg136_radioOutput_Pkg_H_
 #define _nextGen_Msg136_radioOutput_Pkg_H_
@@ -31,7 +31,7 @@ typedef struct {
 /* radioOutput_Pkg::nextGen_Msg136 */
 extern void nextGen_Msg136_radioOutput_Pkg(
   /* radioOutput_Pkg::nextGen_Msg136::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
-  /* radioOutput_Pkg::nextGen_Msg136::inFromPositionReport */_8_Radio_TrainTrack_Message_T_Radio_Types_Pkg *inFromPositionReport,
+  /* radioOutput_Pkg::nextGen_Msg136::inFromPositionReport */Radio_TrainTrack_Message_T_Radio_Types_Pkg *inFromPositionReport,
   /* radioOutput_Pkg::nextGen_Msg136::inVersion */M_VERSION inVersion,
   /* radioOutput_Pkg::nextGen_Msg136::inT_TRAIN */T_TRAIN inT_TRAIN,
   outC_nextGen_Msg136_radioOutput_Pkg *outC);
@@ -42,6 +42,6 @@ extern void nextGen_Msg136_reset_radioOutput_Pkg(
 #endif /* _nextGen_Msg136_radioOutput_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** nextGen_Msg136_radioOutput_Pkg.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

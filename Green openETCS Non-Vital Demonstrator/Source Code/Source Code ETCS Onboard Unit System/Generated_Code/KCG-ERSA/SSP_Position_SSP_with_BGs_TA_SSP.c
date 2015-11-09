@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,8 +24,7 @@ void SSP_Position_SSP_with_BGs_TA_SSP(
   /* TA_SSP::SSP_Position_SSP_with_BGs::_L6 */
   static StaticSpeedProfile_t_TrackAtlasTypes _L6;
   
-  /* 1 */
-  _201_SSP_Merge_New_P27V1_to_Profile_TA_SSP(ProfileIn, LastProfile, &_L6);
+  /* 1 */ SSP_Merge_New_P27V1_to_Profile_TA_SSP(ProfileIn, LastProfile, &_L6);
   /* 2 */ SSP_Normalize_Profile_TA_SSP(&_L6, pos_prvLRBG, train_length, &tmp);
   /* 2 */ SSP_Truncate_at_BG_TA_SSP(&tmp, &tmp1);
   /* 2 */ SSP_Correct_StartSection_TA_SSP(&tmp1, ProfileLoopOut);
@@ -37,6 +36,6 @@ void SSP_Position_SSP_with_BGs_TA_SSP(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_Position_SSP_with_BGs_TA_SSP.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

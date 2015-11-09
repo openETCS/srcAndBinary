@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 void ToShunting_reset_Conditions(outC_ToShunting_Conditions *outC)
 {
-  /* 1 */ Procedure_SH_Initiated_By_reset_Procedures(&outC->Context_1);
+  /* 1 */ Procedure_SH_Initiated_By_Driver_reset_Procedures(&outC->Context_1);
   /* 1 */ Procedure_SH_Ordered_By_Track_reset_Procedures(&outC->_1_Context_1);
 }
 
@@ -43,7 +43,7 @@ void ToShunting_Conditions(
   outC->Ack_SH_Req_To_Driver = outC->_1_Context_1.Ack_SH_Req_To_Driver;
   outC->Service_Brake_Command = outC->_1_Context_1.Service_Brake_Command;
   /* 1 */
-  Procedure_SH_Initiated_By_Procedures(
+  Procedure_SH_Initiated_By_Driver_Procedures(
     Current_Level,
     Current_Mode,
     Driver_Req_SH,
@@ -63,6 +63,6 @@ void ToShunting_Conditions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ToShunting_Conditions.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

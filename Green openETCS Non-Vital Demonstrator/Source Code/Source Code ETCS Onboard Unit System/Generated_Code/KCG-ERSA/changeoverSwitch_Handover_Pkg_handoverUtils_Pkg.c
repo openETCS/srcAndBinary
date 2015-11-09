@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,9 +21,9 @@ void changeoverSwitch_Handover_Pkg_handoverUtils_Pkg(
   outC_changeoverSwitch_Handover_Pkg_handoverUtils_Pkg *outC)
 {
   /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */
-  static _110_SSM_ST_SM1 SM1_state_sel;
+  static _1_SSM_ST_SM1 SM1_state_sel;
   /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */
-  static _110_SSM_ST_SM1 SM1_state_act;
+  static _1_SSM_ST_SM1 SM1_state_act;
   /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::toogle */
   static kcg_bool toogle;
   
@@ -71,6 +71,6 @@ void changeoverSwitch_Handover_Pkg_handoverUtils_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** changeoverSwitch_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

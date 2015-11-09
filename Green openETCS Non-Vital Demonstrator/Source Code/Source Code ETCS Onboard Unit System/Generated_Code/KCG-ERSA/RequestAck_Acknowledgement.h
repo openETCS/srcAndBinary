@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _RequestAck_Acknowledgement_H_
 #define _RequestAck_Acknowledgement_H_
@@ -19,7 +19,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _169_SSM_ST_SM1 /* Acknowledgement::RequestAck::SM1 */ SM1_state_nxt;
+  _27_SSM_ST_SM1 /* Acknowledgement::RequestAck::SM1 */ SM1_state_nxt;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
 } outC_RequestAck_Acknowledgement;
@@ -40,6 +40,6 @@ extern void RequestAck_reset_Acknowledgement(
 #endif /* _RequestAck_Acknowledgement_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RequestAck_Acknowledgement.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _SelectLevelTransition_LevelTransitionSelection_H_
 #define _SelectLevelTransition_LevelTransitionSelection_H_
@@ -41,6 +41,6 @@ extern void SelectLevelTransition_reset_LevelTransitionSelection(
 #endif /* _SelectLevelTransition_LevelTransitionSelection_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SelectLevelTransition_LevelTransitionSelection.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,31 +23,31 @@ void doIdentifierRequest_manage_DMI_Output_Pkg(
   if ((*TIU_TrainStatus).deskOpen) {
     if (outC->init) {
       outC->init = kcg_false;
-      kcg_copy__26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
+      kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
         &outC->identifierRequest,
-        (_26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
+        (DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
           &cEVCIdentifierRequest_manage_DMI_Output_Pkg);
       outC->identifierRequest.system_clock = inSystemTime;
       outC->identifierRequest.ERTMS_Version = ownVersion;
       outC->identifierRequest.EVC_Version = ownVersion;
     }
     else {
-      kcg_copy__26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
+      kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
         &outC->identifierRequest,
-        (_26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
+        (DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
           &cEmptyIdentifierRequest_manage_DMI_Output_Pkg);
     }
   }
   else {
-    kcg_copy__26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
+    kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
       &outC->identifierRequest,
-      (_26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
+      (DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
         &cEmptyIdentifierRequest_manage_DMI_Output_Pkg);
   }
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** doIdentifierRequest_manage_DMI_Output_Pkg.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

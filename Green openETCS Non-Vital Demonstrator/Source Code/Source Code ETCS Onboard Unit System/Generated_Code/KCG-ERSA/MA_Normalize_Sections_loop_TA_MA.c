@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,25 +14,22 @@ void MA_Normalize_Sections_loop_TA_MA(
   /* TA_MA::MA_Normalize_Sections_loop::pos_BG */L_internal_Type_Obu_BasicTypes_Pkg pos_BG,
   /* TA_MA::MA_Normalize_Sections_loop::ProfileNormalized_LRBG */MovementAuthoritySectionlist_t_TrackAtlasTypes *ProfileNormalized_LRBG)
 {
-  static _20_MovementAuthoritySection_t_TrackAtlasTypes tmp;
+  static MovementAuthoritySection_t_TrackAtlasTypes tmp;
   /* TA_MA::MA_Normalize_Sections_loop::_L4 */
-  static _20_MovementAuthoritySection_t_TrackAtlasTypes _L4;
+  static MovementAuthoritySection_t_TrackAtlasTypes _L4;
   
   if ((0 <= i) & (i < 10)) {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
-      &_L4,
-      &(*ProfileIn)[i]);
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(&_L4, &(*ProfileIn)[i]);
   }
   else {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
       &_L4,
-      (_20_MovementAuthoritySection_t_TrackAtlasTypes *)
-        &DefaultMA_section_TA_MA);
+      (MovementAuthoritySection_t_TrackAtlasTypes *) &DefaultMA_section_TA_MA);
   }
   kcg_copy_MovementAuthoritySectionlist_t_TrackAtlasTypes(
     ProfileNormalized_LRBG,
     ProfileIn);
-  kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(&tmp, &_L4);
+  kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(&tmp, &_L4);
   if (_L4.valid) {
     tmp.l_section = _L4.l_section - pos_BG;
     tmp.d_sectiontimerstoploc = _L4.d_sectiontimerstoploc - pos_BG;
@@ -42,7 +39,7 @@ void MA_Normalize_Sections_loop_TA_MA(
     tmp.d_sectiontimerstoploc = 0;
   }
   if ((0 <= i) & (i < 10)) {
-    kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes(
+    kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes(
       &(*ProfileNormalized_LRBG)[i],
       &tmp);
   }
@@ -50,6 +47,6 @@ void MA_Normalize_Sections_loop_TA_MA(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Normalize_Sections_loop_TA_MA.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

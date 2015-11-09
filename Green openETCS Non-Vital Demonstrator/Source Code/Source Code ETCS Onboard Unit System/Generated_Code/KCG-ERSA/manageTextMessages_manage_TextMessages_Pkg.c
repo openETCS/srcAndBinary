@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -126,7 +126,7 @@ void manageTextMessages_manage_TextMessages_Pkg(
       
     }
     if ((*inModeLevel_Ack).LevelNeedsAck) {
-      tmp1.q_textConfirm = _53_Q_TEXTCONFIRM_Confirmation_required;
+      tmp1.q_textConfirm = Q_TEXTCONFIRM_Confirmation_required;
     }
     else {
       tmp1.q_textConfirm = Q_TEXTCONFIRM_No_confirmation_required;
@@ -163,6 +163,6 @@ void manageTextMessages_manage_TextMessages_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageTextMessages_manage_TextMessages_Pkg.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

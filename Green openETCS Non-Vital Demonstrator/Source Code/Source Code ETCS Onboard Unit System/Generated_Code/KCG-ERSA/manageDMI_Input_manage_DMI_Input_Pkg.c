@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -61,10 +61,10 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
     kcg_copy_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_Identifier,
       &_L54_IfBlock1.identifier);
-    kcg_copy__24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
+    kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_DriverIdentifier,
       &_L54_IfBlock1.driverIdentifier);
-    kcg_copy__23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
+    kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_TrainRunningNumber,
       &_L54_IfBlock1.trainRunningNumber);
     kcg_copy_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg(
@@ -79,7 +79,7 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
     kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_TrainDataAck,
       &_L54_IfBlock1.trainDataAck);
-    kcg_copy__22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg(
+    kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_AdhesionFactor,
       &_L54_IfBlock1.adhesionFactor);
     /* 1 */
@@ -102,13 +102,13 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
       &outC->fromDMI_Identifier,
       (DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg *)
         &cDMIIdentifierDefault_manage_DMI_Input_Pkg);
-    kcg_copy__24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
+    kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_DriverIdentifier,
-      (_24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *)
+      (DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *)
         &cDMIDriverIdentifierDefault_manage_DMI_Input_Pkg);
-    kcg_copy__23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
+    kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_TrainRunningNumber,
-      (_23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg *)
+      (DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg *)
         &cDMITrainRunningNumberDefault_manage_DMI_Input_Pkg);
     kcg_copy_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg(
       &outC->fromDMI_RadioNetData,
@@ -126,9 +126,9 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
       &outC->fromDMI_TrainDataAck,
       (DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
         &cDMITrainDataAckDefault_manage_DMI_Input_Pkg);
-    kcg_copy__22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg(
+    kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg(
       &outC->fromDMI_AdhesionFactor,
-      (_22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *)
+      (DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *)
         &cDMIAdhesionFactorDefault_manage_DMI_Input_Pkg);
     kcg_copy_DMI_To_Modes_T_DMI_Types_Pkg(
       &outC->forModesAndLevel,
@@ -175,6 +175,6 @@ void manageDMI_Input_manage_DMI_Input_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

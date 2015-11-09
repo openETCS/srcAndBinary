@@ -1,31 +1,31 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "_204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal.h"
+#include "FindStartOfNewGradientProfileAbs_TA_Lib_internal.h"
 
-/* TA_Lib_internal::FindStartOfNewSpeedProfileAbs */
-kcg_int _204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal(
-  /* TA_Lib_internal::FindStartOfNewSpeedProfileAbs::Profile_in */StaticSpeedProfile_t_TrackAtlasTypes *Profile_in,
-  /* TA_Lib_internal::FindStartOfNewSpeedProfileAbs::New_Profile */StaticSpeedProfile_t_TrackAtlasTypes *New_Profile)
+/* TA_Lib_internal::FindStartOfNewGradientProfileAbs */
+kcg_int FindStartOfNewGradientProfileAbs_TA_Lib_internal(
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs::Profile_in */GradientProfile_t_TrackAtlasTypes *Profile_in,
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs::New_Profile */GradientProfile_t_TrackAtlasTypes *New_Profile)
 {
   static kcg_int tmp1;
   static kcg_bool tmp;
   static kcg_int i;
-  /* TA_Lib_internal::FindStartOfNewSpeedProfileAbs::relevant_section */
+  /* TA_Lib_internal::FindStartOfNewGradientProfileAbs::relevant_section */
   static kcg_int relevant_section;
   
   relevant_section = 0;
   for (i = 0; i < 50; i++) {
     tmp1 = relevant_section;
     /* 1 */
-    FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal(
+    FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal(
       i,
       tmp1,
-      (*New_Profile)[0].d_static_abs,
+      (*New_Profile)[0].Loc_Absolute,
       Profile_in,
       &tmp,
       &relevant_section);
@@ -37,7 +37,7 @@ kcg_int _204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal(
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** _204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal.c
-** Generation date: 2015-11-09T11:52:25
+** FindStartOfNewGradientProfileAbs_TA_Lib_internal.c
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

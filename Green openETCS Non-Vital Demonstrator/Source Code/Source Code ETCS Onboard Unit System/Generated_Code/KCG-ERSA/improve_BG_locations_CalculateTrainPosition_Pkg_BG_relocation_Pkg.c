@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,13 +18,13 @@ void improve_BG_locations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
   static positionedBGs_T_TrainPosition_Types_Pck tmp;
   
   /* 1 */
-  _199_recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
+  recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
     referenceBG,
     BGs_in,
     trainProperties,
     &tmp);
   /* 1 */
-  _198_recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
+  recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
     referenceBG,
     &tmp,
     trainProperties,
@@ -37,6 +37,6 @@ void improve_BG_locations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** improve_BG_locations_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

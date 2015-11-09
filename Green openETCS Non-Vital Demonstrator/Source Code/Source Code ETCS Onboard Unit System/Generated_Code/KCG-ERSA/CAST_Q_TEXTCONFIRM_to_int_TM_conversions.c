@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,13 +23,13 @@ kcg_int CAST_Q_TEXTCONFIRM_to_int_TM_conversions(
   static kcg_int q_textconfirm_int;
   
   IfBlock1_clock = q_textconfirm ==
-    _19_ENUM_Q_TEXTCONFIRM_confirmation_TM_conversions;
+    ENUM_Q_TEXTCONFIRM_confirmation_TM_conversions;
   if (IfBlock1_clock) {
-    q_textconfirm_int = _17_INT_Q_TEXTCONFIRM_confirmation_TM_conversions;
+    q_textconfirm_int = INT_Q_TEXTCONFIRM_confirmation_TM_conversions;
   }
   else {
     _2_else_clock_IfBlock1 = q_textconfirm ==
-      _18_ENUM_Q_TEXTCONFIRM_confirmation_EB_TM_conversions;
+      ENUM_Q_TEXTCONFIRM_confirmation_EB_TM_conversions;
     if (_2_else_clock_IfBlock1) {
       q_textconfirm_int = INT_Q_TEXTCONFIRM_confirmation_EB_TM_conversions;
     }
@@ -37,8 +37,7 @@ kcg_int CAST_Q_TEXTCONFIRM_to_int_TM_conversions(
       _1_else_clock_IfBlock1 = q_textconfirm ==
         ENUM_Q_TEXTCONFIRM_confirmation_SB_TM_conversions;
       if (_1_else_clock_IfBlock1) {
-        q_textconfirm_int =
-          _16_INT_Q_TEXTCONFIRM_confirmation_SB_TM_conversions;
+        q_textconfirm_int = INT_Q_TEXTCONFIRM_confirmation_SB_TM_conversions;
       }
       else {
         else_clock_IfBlock1 = q_textconfirm ==
@@ -47,7 +46,7 @@ kcg_int CAST_Q_TEXTCONFIRM_to_int_TM_conversions(
           q_textconfirm_int = INT_Q_TEXTCONFIRM_no_confirmation_TM_conversions;
         }
         else {
-          q_textconfirm_int = _17_INT_Q_TEXTCONFIRM_confirmation_TM_conversions;
+          q_textconfirm_int = INT_Q_TEXTCONFIRM_confirmation_TM_conversions;
         }
       }
     }
@@ -57,6 +56,6 @@ kcg_int CAST_Q_TEXTCONFIRM_to_int_TM_conversions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Q_TEXTCONFIRM_to_int_TM_conversions.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

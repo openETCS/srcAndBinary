@@ -1,12 +1,12 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _SSP_Position_SSP_with_BGs_TA_SSP_H_
 #define _SSP_Position_SSP_with_BGs_TA_SSP_H_
 
 #include "kcg_types.h"
-#include "_201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.h"
+#include "SSP_Merge_New_P27V1_to_Profile_TA_SSP.h"
 #include "SSP_Normalize_Profile_TA_SSP.h"
 #include "SSP_Truncate_at_BG_TA_SSP.h"
 #include "SSP_Correct_StartSection_TA_SSP.h"
@@ -29,6 +29,6 @@ extern void SSP_Position_SSP_with_BGs_TA_SSP(
 #endif /* _SSP_Position_SSP_with_BGs_TA_SSP_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_Position_SSP_with_BGs_TA_SSP.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

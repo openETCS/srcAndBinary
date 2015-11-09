@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -174,35 +174,35 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                               INT_DMI_Request_T_Request_for_radio_network_entry;
                             if (_24_else_clock_IfBlock1) {
                               dmi_reqest_ct =
-                                _55_ENUM_DMI_Request_T_Request_for_radio_network_entry;
+                                ENUM_DMI_Request_T_Request_for_radio_network_entry;
                             }
                             else {
                               _23_else_clock_IfBlock1 = dmi_request_int ==
                                 INT_DMI_Request_T_Request_for_SR_data;
                               if (_23_else_clock_IfBlock1) {
                                 dmi_reqest_ct =
-                                  _56_ENUM_DMI_Request_T_Request_for_SR_data;
+                                  ENUM_DMI_Request_T_Request_for_SR_data;
                               }
                               else {
                                 _22_else_clock_IfBlock1 = dmi_request_int ==
-                                  _67_INT_DMI_Request_T_Request_for_switching_train_data_entry;
+                                  INT_DMI_Request_T_Request_for_switching_train_data_entry;
                                 if (_22_else_clock_IfBlock1) {
                                   dmi_reqest_ct =
-                                    _57_ENUM_DMI_Request_T_Request_for_switching_train_data_entry;
+                                    ENUM_DMI_Request_T_Request_for_switching_train_data_entry;
                                 }
                                 else {
                                   _21_else_clock_IfBlock1 = dmi_request_int ==
                                     INT_DMI_Request_T_Request_for_system_version;
                                   if (_21_else_clock_IfBlock1) {
                                     dmi_reqest_ct =
-                                      _58_ENUM_DMI_Request_T_Request_for_system_version;
+                                      ENUM_DMI_Request_T_Request_for_system_version;
                                   }
                                   else {
                                     _20_else_clock_IfBlock1 = dmi_request_int ==
-                                      _66_INT_DMI_Request_T_Request_for_train_data;
+                                      INT_DMI_Request_T_Request_for_train_data;
                                     if (_20_else_clock_IfBlock1) {
                                       dmi_reqest_ct =
-                                        _59_ENUM_DMI_Request_T_Request_for_train_data;
+                                        ENUM_DMI_Request_T_Request_for_train_data;
                                     }
                                     else {
                                       _19_else_clock_IfBlock1 =
@@ -210,7 +210,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                                         INT_DMI_Request_T_Request_for_train_data_view;
                                       if (_19_else_clock_IfBlock1) {
                                         dmi_reqest_ct =
-                                          _60_ENUM_DMI_Request_T_Request_for_train_data_view;
+                                          ENUM_DMI_Request_T_Request_for_train_data_view;
                                       }
                                       else {
                                         _18_else_clock_IfBlock1 =
@@ -231,7 +231,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                                           else {
                                             _16_else_clock_IfBlock1 =
                                               dmi_request_int ==
-                                              _65_INT_DMI_Request_T_Request_to_hide_geographical_information;
+                                              INT_DMI_Request_T_Request_to_hide_geographical_information;
                                             if (_16_else_clock_IfBlock1) {
                                               dmi_reqest_ct =
                                                 ENUM_DMI_Request_T_Request_to_hide_geographical_information;
@@ -242,7 +242,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                                                 INT_DMI_Request_T_Request_to_hide_supervision_data;
                                               if (_15_else_clock_IfBlock1) {
                                                 dmi_reqest_ct =
-                                                  _61_ENUM_DMI_Request_T_Request_to_hide_supervision_data;
+                                                  ENUM_DMI_Request_T_Request_to_hide_supervision_data;
                                               }
                                               else {
                                                 _14_else_clock_IfBlock1 =
@@ -338,7 +338,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                                                                         INT_DMI_Request_T_Scroll_text_down;
                                                                       if (_3_else_clock_IfBlock1) {
                                                                         dmi_reqest_ct =
-                                                                          _62_ENUM_DMI_Request_T_Scroll_text_down;
+                                                                          ENUM_DMI_Request_T_Scroll_text_down;
                                                                       }
                                                                       else {
                                                                         _2_else_clock_IfBlock1 =
@@ -351,7 +351,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                                                                         else {
                                                                           _1_else_clock_IfBlock1 =
                                                                             dmi_request_int ==
-                                                                            _64_INT_DMI_Request_T_Request_to_show_supervision_data;
+                                                                            INT_DMI_Request_T_Request_to_show_supervision_data;
                                                                           if (_1_else_clock_IfBlock1) {
                                                                             dmi_reqest_ct =
                                                                               ENUM_DMI_Request_T_Request_to_show_supervision_data;
@@ -362,7 +362,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
                                                                               INT_DMI_Request_T_Request_to_show_geographical_position;
                                                                             if (else_clock_IfBlock1) {
                                                                               dmi_reqest_ct =
-                                                                                _63_ENUM_DMI_Request_T_Request_to_show_geographical_position;
+                                                                                ENUM_DMI_Request_T_Request_to_show_geographical_position;
                                                                             }
                                                                             else {
                                                                               dmi_reqest_ct =
@@ -410,6 +410,6 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Variables(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_DMI_Request_DATA_Variables.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _MA_Convert_P15_to_DistanceProfile_loop_TA_MA_H_
 #define _MA_Convert_P15_to_DistanceProfile_loop_TA_MA_H_
@@ -24,6 +24,6 @@ extern void MA_Convert_P15_to_DistanceProfile_loop_TA_MA(
 #endif /* _MA_Convert_P15_to_DistanceProfile_loop_TA_MA_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Convert_P15_to_DistanceProfile_loop_TA_MA.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

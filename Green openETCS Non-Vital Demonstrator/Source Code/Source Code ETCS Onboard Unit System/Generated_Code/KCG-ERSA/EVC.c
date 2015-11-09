@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,7 +31,7 @@ void EVC_reset(outC_EVC *outC)
   /* 3 */
   calculateTrainPosition_reset_CalculateTrainPosition_Pkg(&outC->_11_Context_3);
   /* 2 */
-  Manage_TrackSideInformati_reset_Manage_TrackSideInformation_Integration_Pkg(
+  Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_Integration_Pkg(
     &outC->_12_Context_2);
   /* 5 */ manageTIU_input_reset_input_from_TIU_API_Pkg(&outC->Context_5);
 }
@@ -73,7 +73,7 @@ void EVC(
   /* EVC::EVC_PersistentData */
   static ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg last_EVC_PersistentData;
   /* EVC::DMI_trainRunningNumber */
-  static _23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg DMI_trainRunningNumber;
+  static DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg DMI_trainRunningNumber;
   /* EVC::_L523 */
   static DMI_EVC_status_T_DMI_Types_Pkg _L523;
   /* EVC::_L772 */
@@ -188,7 +188,7 @@ void EVC(
   tmp9.SPPAndGradientOnBoard = kcg_false;
   tmp9.MACoverNotFullLength = kcg_false;
   /* 2 */
-  Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg(
+  Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg(
     kcg_true,
     API_fromTrack,
     API_Odometry,
@@ -232,7 +232,7 @@ void EVC(
   kcg_copy_DMI_EVC_status_T_DMI_Types_Pkg(
     &outC->DMI_currentDMIStatus,
     &outC->_10_Context_3.currentDMIStatus);
-  kcg_copy__23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
+  kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
     &DMI_trainRunningNumber,
     &outC->_10_Context_3.fromDMI_TrainRunningNumber);
   outC->EVC_currentNTC = outC->_10_Context_3.updatedNTC;
@@ -600,7 +600,7 @@ void EVC(
     &outC->MoRC_RadioStatus_1,
     &outC->td_trainData,
     &outC->_1_Context_2.DMI_Entry_Request_to_DMI,
-    (_27_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
+    (DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
       &cEmptyDMIEVCcodedTrainData,
     &outC->_8_Context_2.to_DMI,
     cOwnVersion,
@@ -608,13 +608,12 @@ void EVC(
       &cEmptyDMIDisplayControl,
     &tmp10,
     outC->_10_Context_3.outUpdateLevelsDMI,
-    (_25_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
-      &cEmptyDMIRadioNet,
-    (_24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *)
+    (DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg *) &cEmptyDMIRadioNet,
+    (DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg *)
       &cEmptyDMIDriverIdentifier,
-    (_23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg *)
+    (DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg *)
       &cEmptyDMITrainRunningNumber,
-    (_22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *)
+    (DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *)
       &cEmptyDMIAdhesionFactorData,
     outC->_12_Context_2.BadBaliseMessageToDMI,
     &outC->_7_Context_2.Data_To_DMI_Ack,
@@ -680,6 +679,6 @@ void EVC(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** EVC.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -34,7 +34,7 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::initiateTerminatingSession_v2::TrainExitedFromRBCArea_SM */
   static SSM_ST_TrainExitedFromRBCArea_SM TrainExitedFromRBCArea_SM_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::initiateTerminatingSession_v2::TrainExitedFromRBCArea_SM */
-  static SSM_ST_TrainExitedFromRBCArea_SM _1_TrainExitedFromRBCArea_SM_state_act;
+  static SSM_ST_TrainExitedFromRBCArea_SM TrainExitedFromRBCArea_SM_state_act;
   /* MoRC_Pck::Subfunc_Pkg::initiateTerminatingSession_v2::TrainExitedFromRBCArea_SM */
   static kcg_bool TrainExitedFromRBCArea_SM_reset_act;
   /* MoRC_Pck::Subfunc_Pkg::initiateTerminatingSession_v2::orderToTerminateTheSessionIsReceived */
@@ -65,11 +65,11 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
       br_1_guard_TrainExitedFromRBCArea_SM_WaitForOrderToTerminateTheSession =
         orderToTerminateTheSessionIsReceived | reset;
       if (br_1_guard_TrainExitedFromRBCArea_SM_WaitForOrderToTerminateTheSession) {
-        _1_TrainExitedFromRBCArea_SM_state_act =
+        TrainExitedFromRBCArea_SM_state_act =
           SSM_st_Idle_TrainExitedFromRBCArea_SM;
       }
       else {
-        _1_TrainExitedFromRBCArea_SM_state_act =
+        TrainExitedFromRBCArea_SM_state_act =
           SSM_st_WaitForOrderToTerminateTheSession_TrainExitedFromRBCArea_SM;
       }
       TrainExitedFromRBCArea_SM_reset_act =
@@ -77,17 +77,17 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
       break;
     case SSM_st_Idle_TrainExitedFromRBCArea_SM :
       if (reset) {
-        _1_TrainExitedFromRBCArea_SM_state_act =
+        TrainExitedFromRBCArea_SM_state_act =
           SSM_st_Idle_TrainExitedFromRBCArea_SM;
         TrainExitedFromRBCArea_SM_reset_act = kcg_true;
       }
       else {
         if ((*eventsAndPhases).trainExitedFromAnRBCArea) {
-          _1_TrainExitedFromRBCArea_SM_state_act =
+          TrainExitedFromRBCArea_SM_state_act =
             SSM_st_WaitForOrderToTerminateTheSession_TrainExitedFromRBCArea_SM;
         }
         else {
-          _1_TrainExitedFromRBCArea_SM_state_act =
+          TrainExitedFromRBCArea_SM_state_act =
             SSM_st_Idle_TrainExitedFromRBCArea_SM;
         }
         TrainExitedFromRBCArea_SM_reset_act =
@@ -96,7 +96,7 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
       break;
     
   }
-  switch (_1_TrainExitedFromRBCArea_SM_state_act) {
+  switch (TrainExitedFromRBCArea_SM_state_act) {
     case SSM_st_WaitForOrderToTerminateTheSession_TrainExitedFromRBCArea_SM :
       switch (TrainExitedFromRBCArea_SM_state_sel) {
         case SSM_st_Idle_TrainExitedFromRBCArea_SM :
@@ -113,7 +113,7 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
         case SSM_st_WaitForOrderToTerminateTheSession_TrainExitedFromRBCArea_SM :
           if (br_1_guard_TrainExitedFromRBCArea_SM_WaitForOrderToTerminateTheSession) {
             tmp =
-              _141_SSM_TR_WaitForOrderToTerminateTheSession_1_TrainExitedFromRBCArea_SM;
+              SSM_TR_WaitForOrderToTerminateTheSession_1_TrainExitedFromRBCArea_SM;
           }
           else {
             tmp = SSM_TR_no_trans_TrainExitedFromRBCArea_SM;
@@ -176,6 +176,6 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

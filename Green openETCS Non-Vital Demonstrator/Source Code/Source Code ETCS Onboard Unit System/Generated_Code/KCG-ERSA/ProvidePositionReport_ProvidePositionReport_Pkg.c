@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -49,7 +49,7 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 {
   static struct__105801 tmp;
   static array__108340 tmp7;
-  static _9_Radio_TrainTrack_Header_T_Radio_Types_Pkg tmp6;
+  static Radio_TrainTrack_Header_T_Radio_Types_Pkg tmp6;
   static outPackets_T_Common_Types_Pkg tmp5;
   static PT0_PositionReport_T_Packet_TrainTypes_Pkg tmp4;
   static PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg tmp3;
@@ -137,9 +137,9 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
       &tmp1);
   }
   else {
-    kcg_copy__9_Radio_TrainTrack_Header_T_Radio_Types_Pkg(
+    kcg_copy_Radio_TrainTrack_Header_T_Radio_Types_Pkg(
       &tmp6,
-      (_9_Radio_TrainTrack_Header_T_Radio_Types_Pkg *)
+      (Radio_TrainTrack_Header_T_Radio_Types_Pkg *)
         &emptyHeader_ProvidePositionReport_Pkg);
     kcg_copy_PT0_PositionReport_T_Packet_TrainTypes_Pkg(
       &tmp4,
@@ -161,7 +161,7 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   /* 1 */
   AggregatePackets_ProvidePositionReport_Pkg(&tmp4, &tmp3, &tmp2, &tmp1, &tmp5);
   tmp.present = _L312;
-  kcg_copy__9_Radio_TrainTrack_Header_T_Radio_Types_Pkg(&tmp.header, &tmp6);
+  kcg_copy_Radio_TrainTrack_Header_T_Radio_Types_Pkg(&tmp.header, &tmp6);
   kcg_copy_outPackets_T_Common_Types_Pkg(&tmp.packets, &tmp5);
   /* 1 */
   nextGen_Msg136_radioOutput_Pkg(
@@ -186,6 +186,6 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

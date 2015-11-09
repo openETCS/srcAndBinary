@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -94,11 +94,11 @@ void ComputeModesConditions(
   /* ComputeModesConditions::Loc_Clean_BG_List_Of_SoM */
   static kcg_bool Loc_Clean_BG_List_Of_SoM;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_SH */
-  static kcg_bool _3_Loc_End_Of_Mission_Procedure_Req_SH;
+  static kcg_bool Loc_End_Of_Mission_Procedure_Req_SH;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_SB */
-  static kcg_bool _2_Loc_End_Of_Mission_Procedure_Req_SB;
+  static kcg_bool Loc_End_Of_Mission_Procedure_Req_SB;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_TR */
-  static kcg_bool _1_Loc_End_Of_Mission_Procedure_Req_TR;
+  static kcg_bool Loc_End_Of_Mission_Procedure_Req_TR;
   /* ComputeModesConditions::Loc_Clean_BG_List_SH_Area_TR */
   static kcg_bool Loc_Clean_BG_List_SH_Area_TR;
   /* ComputeModesConditions::Loc_End_Of_Mission_Procedure_Req_SoM */
@@ -245,7 +245,7 @@ void ComputeModesConditions(
   outC->Condition61 = outC->_10_Context_1.Condition61;
   Loc_Ack_SH_Req_To_Driver_SH = outC->_10_Context_1.Ack_SH_Req_To_Driver;
   Loc_Clean_BG_List_SH_Area_SH = outC->_10_Context_1.Clean_BG_List_SH_Area;
-  _3_Loc_End_Of_Mission_Procedure_Req_SH =
+  Loc_End_Of_Mission_Procedure_Req_SH =
     outC->_10_Context_1.End_Of_Mission_Procedure_Req;
   Loc_Request_For_SH_To_RBC_SH = outC->_10_Context_1.Request_For_SH_To_RBC;
   Loc_Service_Brake_Command_SH = outC->_10_Context_1.Service_Brake_Command;
@@ -364,7 +364,7 @@ void ComputeModesConditions(
   outC->Condition63 = outC->_7_Context_1.Condition_63;
   outC->Condition68 = outC->_7_Context_1.Condition_68;
   Loc_Cond_70_TR = outC->_7_Context_1.Condition_70;
-  _1_Loc_End_Of_Mission_Procedure_Req_TR =
+  Loc_End_Of_Mission_Procedure_Req_TR =
     outC->_7_Context_1.End_Of_Mission_Procedure_Req;
   Loc_MA_Req_To_RBC_TR = outC->_7_Context_1.MA_Req_To_RBC;
   Loc_Request_For_SH_To_RBC_TR = outC->_7_Context_1.Request_For_SH_To_RBC;
@@ -419,7 +419,7 @@ void ComputeModesConditions(
     &outC->Condition28,
     &outC->Condition30,
     &outC->Condition47,
-    &_2_Loc_End_Of_Mission_Procedure_Req_SB);
+    &Loc_End_Of_Mission_Procedure_Req_SB);
   /* 1 */
   ToFullSupervision_Conditions(
     Current_Level,
@@ -454,10 +454,10 @@ void ComputeModesConditions(
     Loc_Clean_BG_List_Of_SoM,
     Loc_Clean_BG_List_SH_Area_SH,
     Loc_Clean_BG_List_SH_Area_TR,
-    _2_Loc_End_Of_Mission_Procedure_Req_SB,
-    _3_Loc_End_Of_Mission_Procedure_Req_SH,
+    Loc_End_Of_Mission_Procedure_Req_SB,
+    Loc_End_Of_Mission_Procedure_Req_SH,
     Loc_End_Of_Mission_Procedure_Req_SoM,
-    _1_Loc_End_Of_Mission_Procedure_Req_TR,
+    Loc_End_Of_Mission_Procedure_Req_TR,
     Loc_MA_Req_To_RBC_SoM,
     Loc_MA_Req_To_RBC_TR,
     Loc_Request_For_SH_To_RBC_SH,
@@ -546,6 +546,6 @@ void ComputeModesConditions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ComputeModesConditions.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

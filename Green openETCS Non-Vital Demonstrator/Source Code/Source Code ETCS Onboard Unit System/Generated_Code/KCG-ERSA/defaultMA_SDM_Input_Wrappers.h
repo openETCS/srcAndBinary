@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _defaultMA_SDM_Input_Wrappers_H_
 #define _defaultMA_SDM_Input_Wrappers_H_
@@ -17,6 +17,6 @@ extern void defaultMA_SDM_Input_Wrappers(
 #endif /* _defaultMA_SDM_Input_Wrappers_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** defaultMA_SDM_Input_Wrappers.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,7 +28,7 @@ void SH_Initiated_By_Driver_On_Procedures(
   /* Procedures::SH_Initiated_By_Driver_On::SM_SH_Initiated_By_Driver */
   static SSM_ST_SM_SH_Initiated_By_Driver SM_SH_Initiated_By_Driver_state_sel;
   /* Procedures::SH_Initiated_By_Driver_On::SM_SH_Initiated_By_Driver */
-  static SSM_ST_SM_SH_Initiated_By_Driver _1_SM_SH_Initiated_By_Driver_state_act;
+  static SSM_ST_SM_SH_Initiated_By_Driver SM_SH_Initiated_By_Driver_state_act;
   /* Procedures::SH_Initiated_By_Driver_On::Loc_Level_2_3 */
   static kcg_bool Loc_Level_2_3;
   
@@ -54,12 +54,12 @@ void SH_Initiated_By_Driver_On_Procedures(
   }
   switch (SM_SH_Initiated_By_Driver_state_sel) {
     case SSM_st_SH_Authorized_L2_L3_SM_SH_Initiated_By_Driver :
-      _1_SM_SH_Initiated_By_Driver_state_act =
+      SM_SH_Initiated_By_Driver_state_act =
         SSM_st_SH_Authorized_L2_L3_SM_SH_Initiated_By_Driver;
       outC->SH_Refused_By_RBC_To_DMI = kcg_false;
       break;
     case SSM_st_SH_Authorized_L0_L1_LNTC_SM_SH_Initiated_By_Driver :
-      _1_SM_SH_Initiated_By_Driver_state_act =
+      SM_SH_Initiated_By_Driver_state_act =
         SSM_st_SH_Authorized_L0_L1_LNTC_SM_SH_Initiated_By_Driver;
       outC->SH_Refused_By_RBC_To_DMI = kcg_false;
       break;
@@ -67,17 +67,17 @@ void SH_Initiated_By_Driver_On_Procedures(
       br_2_guard_SM_SH_Initiated_By_Driver_Issue_SH_Request_L2_L3 =
         !Shunting_Granted_By_RBC;
       if (Shunting_Granted_By_RBC) {
-        _1_SM_SH_Initiated_By_Driver_state_act =
+        SM_SH_Initiated_By_Driver_state_act =
           SSM_st_SH_Authorized_L2_L3_SM_SH_Initiated_By_Driver;
         outC->SH_Refused_By_RBC_To_DMI = kcg_false;
       }
       else if (br_2_guard_SM_SH_Initiated_By_Driver_Issue_SH_Request_L2_L3) {
-        _1_SM_SH_Initiated_By_Driver_state_act =
+        SM_SH_Initiated_By_Driver_state_act =
           SSM_st_SH_procedure_possible_SM_SH_Initiated_By_Driver;
         outC->SH_Refused_By_RBC_To_DMI = kcg_true;
       }
       else {
-        _1_SM_SH_Initiated_By_Driver_state_act =
+        SM_SH_Initiated_By_Driver_state_act =
           SSM_st_Issue_SH_Request_L2_L3_SM_SH_Initiated_By_Driver;
         outC->SH_Refused_By_RBC_To_DMI = kcg_false;
       }
@@ -89,23 +89,23 @@ void SH_Initiated_By_Driver_On_Procedures(
         (br_1_guard_SM_SH_Initiated_By_Driver_SH_procedure_possible |
           Loc_Level_2_3)) {
         if (br_1_guard_SM_SH_Initiated_By_Driver_SH_procedure_possible) {
-          _1_SM_SH_Initiated_By_Driver_state_act =
+          SM_SH_Initiated_By_Driver_state_act =
             SSM_st_SH_Authorized_L0_L1_LNTC_SM_SH_Initiated_By_Driver;
         }
         else {
-          _1_SM_SH_Initiated_By_Driver_state_act =
+          SM_SH_Initiated_By_Driver_state_act =
             SSM_st_Issue_SH_Request_L2_L3_SM_SH_Initiated_By_Driver;
         }
       }
       else {
-        _1_SM_SH_Initiated_By_Driver_state_act =
+        SM_SH_Initiated_By_Driver_state_act =
           SSM_st_SH_procedure_possible_SM_SH_Initiated_By_Driver;
       }
       outC->SH_Refused_By_RBC_To_DMI = kcg_false;
       break;
     
   }
-  switch (_1_SM_SH_Initiated_By_Driver_state_act) {
+  switch (SM_SH_Initiated_By_Driver_state_act) {
     case SSM_st_SH_procedure_possible_SM_SH_Initiated_By_Driver :
       outC->Clean_BG_List_SH_Area = kcg_false;
       outC->Condition5 = kcg_false;
@@ -148,6 +148,6 @@ void SH_Initiated_By_Driver_On_Procedures(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SH_Initiated_By_Driver_On_Procedures.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

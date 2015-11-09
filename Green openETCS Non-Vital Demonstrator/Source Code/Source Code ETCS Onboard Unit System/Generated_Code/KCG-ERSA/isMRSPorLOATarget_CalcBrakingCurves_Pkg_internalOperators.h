@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _isMRSPorLOATarget_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _isMRSPorLOATarget_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -17,6 +17,6 @@ extern kcg_bool isMRSPorLOATarget_CalcBrakingCurves_Pkg_internalOperators(
 #endif /* _isMRSPorLOATarget_CalcBrakingCurves_Pkg_internalOperators_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** isMRSPorLOATarget_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

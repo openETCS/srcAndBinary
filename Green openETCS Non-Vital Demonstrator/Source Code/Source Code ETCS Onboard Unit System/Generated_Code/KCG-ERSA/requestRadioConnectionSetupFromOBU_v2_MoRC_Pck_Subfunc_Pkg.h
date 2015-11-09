@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
-#ifndef _requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg_H_
-#define _requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg_H_
+#ifndef _requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg_H_
+#define _requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg_H_
 
 #include "kcg_types.h"
 #include "validate_q_sleepsession_v2_MoRC_Pck_Subfunc_Pkg.h"
@@ -27,11 +27,11 @@ typedef struct {
   outC_RisingEdge_digital /* 2 */ Context_2;
   outC_countDownTimer_MoRC_Pck_Utils /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
-} outC_requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg;
+} outC_requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2 */
-extern void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
+extern void requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::mode */M_MODE mode,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::eventsPhases */obuEventsAndPhases_T_RCM_Session_Types_Pkg *eventsPhases,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::p42_sessionManagement */p42_sessionManagement_T_RCM_MsgTypes_Pkg *p42_sessionManagement,
@@ -44,14 +44,14 @@ extern void requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::reset */kcg_bool reset,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::maxTimeToMaintainCommSession */T_internal_Type_Obu_BasicTypes_Pkg maxTimeToMaintainCommSession,
   /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::noOfRetriesToEstablishASafeRadioConnection */kcg_int noOfRetriesToEstablishASafeRadioConnection,
-  outC_requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg *outC);
+  outC_requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg *outC);
 
-extern void requestRadioConnectionSet_reset_MoRC_Pck_Subfunc_Pkg(
-  outC_requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg *outC);
+extern void requestRadioConnectionSetupFromOBU_v2_reset_MoRC_Pck_Subfunc_Pkg(
+  outC_requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg *outC);
 
-#endif /* _requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg_H_ */
+#endif /* _requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.h
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

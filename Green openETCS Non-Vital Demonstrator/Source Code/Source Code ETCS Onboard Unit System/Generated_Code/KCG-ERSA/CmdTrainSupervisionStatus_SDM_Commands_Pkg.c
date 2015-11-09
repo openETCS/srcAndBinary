@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -82,55 +82,55 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Intervention */
   static kcg_bool br_1_guard_modeInterplay_TSM_SM4_Intervention;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Warning */
-  static kcg_bool _2_br_2_clock_modeInterplay_TSM_SM4_Warning;
+  static kcg_bool br_2_clock_modeInterplay_TSM_SM4_Warning;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Warning */
   static kcg_bool br_4_clock_modeInterplay_TSM_SM4_Warning;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Warning */
-  static kcg_bool _1_br_3_clock_modeInterplay_TSM_SM4_Warning;
+  static kcg_bool br_3_clock_modeInterplay_TSM_SM4_Warning;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Warning */
-  static kcg_bool _16_br_1_guard_modeInterplay_TSM_SM4_Warning;
+  static kcg_bool br_1_guard_modeInterplay_TSM_SM4_Warning;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Warning */
   static kcg_bool br_2_guard_modeInterplay_TSM_SM4_Warning;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Warning */
   static kcg_bool br_3_guard_modeInterplay_TSM_SM4_Warning;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Overspeed */
-  static kcg_bool _5_br_2_clock_modeInterplay_TSM_SM4_Overspeed;
+  static kcg_bool br_2_clock_modeInterplay_TSM_SM4_Overspeed;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Overspeed */
-  static kcg_bool _3_br_4_clock_modeInterplay_TSM_SM4_Overspeed;
+  static kcg_bool br_4_clock_modeInterplay_TSM_SM4_Overspeed;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Overspeed */
   static kcg_bool br_5_clock_modeInterplay_TSM_SM4_Overspeed;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Overspeed */
-  static kcg_bool _4_br_3_clock_modeInterplay_TSM_SM4_Overspeed;
+  static kcg_bool br_3_clock_modeInterplay_TSM_SM4_Overspeed;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Overspeed */
-  static kcg_bool _17_br_1_guard_modeInterplay_TSM_SM4_Overspeed;
+  static kcg_bool br_1_guard_modeInterplay_TSM_SM4_Overspeed;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Overspeed */
-  static kcg_bool _18_br_2_guard_modeInterplay_TSM_SM4_Overspeed;
+  static kcg_bool br_2_guard_modeInterplay_TSM_SM4_Overspeed;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Indication */
-  static kcg_bool _8_br_2_clock_modeInterplay_TSM_SM4_Indication;
+  static kcg_bool br_2_clock_modeInterplay_TSM_SM4_Indication;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Indication */
-  static kcg_bool _6_br_4_clock_modeInterplay_TSM_SM4_Indication;
+  static kcg_bool br_4_clock_modeInterplay_TSM_SM4_Indication;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Indication */
-  static kcg_bool _7_br_3_clock_modeInterplay_TSM_SM4_Indication;
+  static kcg_bool br_3_clock_modeInterplay_TSM_SM4_Indication;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Indication */
-  static kcg_bool _19_br_1_guard_modeInterplay_TSM_SM4_Indication;
+  static kcg_bool br_1_guard_modeInterplay_TSM_SM4_Indication;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Indication */
-  static kcg_bool _20_br_2_guard_modeInterplay_TSM_SM4_Indication;
+  static kcg_bool br_2_guard_modeInterplay_TSM_SM4_Indication;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Normal */
-  static kcg_bool _10_br_2_clock_modeInterplay_TSM_SM4_Normal;
+  static kcg_bool br_2_clock_modeInterplay_TSM_SM4_Normal;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Normal */
-  static kcg_bool _9_br_3_clock_modeInterplay_TSM_SM4_Normal;
+  static kcg_bool br_3_clock_modeInterplay_TSM_SM4_Normal;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::Normal */
-  static kcg_bool _21_br_1_guard_modeInterplay_TSM_SM4_Normal;
+  static kcg_bool br_1_guard_modeInterplay_TSM_SM4_Normal;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::init */
-  static kcg_bool _13_br_2_clock_modeInterplay_TSM_SM4_init;
+  static kcg_bool br_2_clock_modeInterplay_TSM_SM4_init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::init */
-  static kcg_bool _11_br_4_clock_modeInterplay_TSM_SM4_init;
+  static kcg_bool br_4_clock_modeInterplay_TSM_SM4_init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::init */
-  static kcg_bool _12_br_3_clock_modeInterplay_TSM_SM4_init;
+  static kcg_bool br_3_clock_modeInterplay_TSM_SM4_init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::init */
-  static kcg_bool _22_br_1_guard_modeInterplay_TSM_SM4_init;
+  static kcg_bool br_1_guard_modeInterplay_TSM_SM4_init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4::init */
-  static kcg_bool _23_br_3_guard_modeInterplay_TSM_SM4_init;
+  static kcg_bool br_3_guard_modeInterplay_TSM_SM4_init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::WS_OS2IS */
   static kcg_bool WS_OS2IS_modeInterplay_RSM;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::US_NS2IS */
@@ -148,7 +148,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::InterventionStatus */
   static kcg_bool br_1_guard_modeInterplay_RSM_RSM_InterventionStatus;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::IndicationStatus */
-  static kcg_bool _14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus;
+  static kcg_bool br_1_guard_modeInterplay_RSM_RSM_IndicationStatus;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::Init */
   static kcg_bool br_2_clock_modeInterplay_RSM_RSM_Init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::Init */
@@ -158,7 +158,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::Init */
   static kcg_bool br_3_clock_modeInterplay_RSM_RSM_Init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::Init */
-  static kcg_bool _15_br_1_guard_modeInterplay_RSM_RSM_Init;
+  static kcg_bool br_1_guard_modeInterplay_RSM_RSM_Init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::RSM::RSM::Init */
   static kcg_bool br_2_guard_modeInterplay_RSM_RSM_Init;
   /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::status */
@@ -224,7 +224,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
     case SSM_st_RSM_modeInterplay :
       br_1_guard_modeInterplay_RSM_RSM_InterventionStatus =
         SupervisedTargetsListUpdated & !br_5_clock_modeInterplay_RSM_RSM_Init;
-      _14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus =
+      br_1_guard_modeInterplay_RSM_RSM_IndicationStatus =
         SupervisedTargetsListUpdated & br_5_clock_modeInterplay_RSM_RSM_Init &
         !br_4_clock_modeInterplay_RSM_RSM_Init;
       if (br_1_guard_modeInterplay_RSM_RSM_InterventionStatus) {
@@ -232,14 +232,14 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
         modeInterplay_state_act = SSM_st_CSM_modeInterplay;
       }
       else {
-        if (_14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus) {
+        if (br_1_guard_modeInterplay_RSM_RSM_IndicationStatus) {
           modeInterplay_state_act = SSM_st_TSM_modeInterplay;
         }
         else {
           modeInterplay_state_act = SSM_st_RSM_modeInterplay;
         }
         br_3_clock_modeInterplay_RSM_RSM_Init =
-          _14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus;
+          br_1_guard_modeInterplay_RSM_RSM_IndicationStatus;
       }
       break;
     
@@ -288,10 +288,10 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
             cSupervisionStatus_SDM_Commands_Pkg;
           break;
         case SSM_st_IndicationStatus_modeInterplay_RSM_RSM :
-          _14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus =
+          br_1_guard_modeInterplay_RSM_RSM_IndicationStatus =
             t2_modeInterplay_RSM;
           outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands_Pkg;
-          if (_14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus) {
+          if (br_1_guard_modeInterplay_RSM_RSM_IndicationStatus) {
             RSM_state_act_modeInterplay_RSM =
               SSM_st_InterventionStatus_modeInterplay_RSM_RSM;
             outC->triggeredSupervisionStatus =
@@ -305,11 +305,11 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Init_modeInterplay_RSM_RSM :
-          _15_br_1_guard_modeInterplay_RSM_RSM_Init = last_status ==
+          br_1_guard_modeInterplay_RSM_RSM_Init = last_status ==
             Indication_Supervision_SDM_Types_Pkg;
           br_2_guard_modeInterplay_RSM_RSM_Init = last_status ==
             Intervention_Supervision_SDM_Types_Pkg;
-          if (_15_br_1_guard_modeInterplay_RSM_RSM_Init) {
+          if (br_1_guard_modeInterplay_RSM_RSM_Init) {
             RSM_state_act_modeInterplay_RSM =
               SSM_st_IndicationStatus_modeInterplay_RSM_RSM;
             outC->revokedSupervisionStatus =
@@ -479,13 +479,12 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Warning_modeInterplay_TSM_SM4 :
-          _16_br_1_guard_modeInterplay_TSM_SM4_Warning =
-            t10_12_modeInterplay_TSM;
+          br_1_guard_modeInterplay_TSM_SM4_Warning = t10_12_modeInterplay_TSM;
           br_2_guard_modeInterplay_TSM_SM4_Warning = _L2_modeInterplay_TSM.t13 |
             _L2_modeInterplay_TSM.t14;
           br_3_guard_modeInterplay_TSM_SM4_Warning = _L1_modeInterplay_TSM.r1 |
             _L1_modeInterplay_TSM.r2;
-          if (_16_br_1_guard_modeInterplay_TSM_SM4_Warning) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Warning) {
             SM4_state_act_modeInterplay_TSM =
               SSM_st_Intervention_modeInterplay_TSM_SM4;
             outC->triggeredSB = kcg_true;
@@ -513,9 +512,9 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
                 SSM_st_Warning_modeInterplay_TSM_SM4;
             }
             outC->triggeredSB = kcg_false;
-            _2_br_2_clock_modeInterplay_TSM_SM4_Warning =
+            br_2_clock_modeInterplay_TSM_SM4_Warning =
               br_2_guard_modeInterplay_TSM_SM4_Warning;
-            if (_2_br_2_clock_modeInterplay_TSM_SM4_Warning) {
+            if (br_2_clock_modeInterplay_TSM_SM4_Warning) {
               outC->revokedSB = kcg_false;
               outC->revokedSupervisionStatus =
                 cSupervisionStatus_SDM_Commands_Pkg;
@@ -523,11 +522,11 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
                 Intervention_Supervision_SDM_Types_Pkg;
             }
             else {
-              _1_br_3_clock_modeInterplay_TSM_SM4_Warning =
+              br_3_clock_modeInterplay_TSM_SM4_Warning =
                 br_3_guard_modeInterplay_TSM_SM4_Warning;
               outC->triggeredSupervisionStatus =
                 cSupervisionStatus_SDM_Commands_Pkg;
-              if (_1_br_3_clock_modeInterplay_TSM_SM4_Warning) {
+              if (br_3_clock_modeInterplay_TSM_SM4_Warning) {
                 outC->revokedSupervisionStatus =
                   Warning_Supervision_SDM_Types_Pkg;
                 outC->revokedSB = kcg_true;
@@ -550,11 +549,11 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Overspeed_modeInterplay_TSM_SM4 :
-          _17_br_1_guard_modeInterplay_TSM_SM4_Overspeed =
+          br_1_guard_modeInterplay_TSM_SM4_Overspeed =
             _L1_modeInterplay_TSM.r1 | _L1_modeInterplay_TSM.r2;
-          _18_br_2_guard_modeInterplay_TSM_SM4_Overspeed =
+          br_2_guard_modeInterplay_TSM_SM4_Overspeed =
             _L2_modeInterplay_TSM.t13 | _L2_modeInterplay_TSM.t14;
-          if (_17_br_1_guard_modeInterplay_TSM_SM4_Overspeed) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Overspeed) {
             SM4_state_act_modeInterplay_TSM =
               SSM_st_Normal_modeInterplay_TSM_SM4;
             outC->triggeredSB = kcg_false;
@@ -565,7 +564,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               cSupervisionStatus_SDM_Commands_Pkg;
           }
           else {
-            if (_18_br_2_guard_modeInterplay_TSM_SM4_Overspeed) {
+            if (br_2_guard_modeInterplay_TSM_SM4_Overspeed) {
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_Intervention_modeInterplay_TSM_SM4;
             }
@@ -585,9 +584,9 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_Overspeed_modeInterplay_TSM_SM4;
             }
-            _5_br_2_clock_modeInterplay_TSM_SM4_Overspeed =
-              _18_br_2_guard_modeInterplay_TSM_SM4_Overspeed;
-            if (_5_br_2_clock_modeInterplay_TSM_SM4_Overspeed) {
+            br_2_clock_modeInterplay_TSM_SM4_Overspeed =
+              br_2_guard_modeInterplay_TSM_SM4_Overspeed;
+            if (br_2_clock_modeInterplay_TSM_SM4_Overspeed) {
               outC->triggeredSB = kcg_false;
               outC->revokedSB = kcg_false;
               outC->revokedSupervisionStatus =
@@ -596,9 +595,9 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
                 Intervention_Supervision_SDM_Types_Pkg;
             }
             else {
-              _4_br_3_clock_modeInterplay_TSM_SM4_Overspeed =
+              br_3_clock_modeInterplay_TSM_SM4_Overspeed =
                 t10_12_modeInterplay_TSM;
-              if (_4_br_3_clock_modeInterplay_TSM_SM4_Overspeed) {
+              if (br_3_clock_modeInterplay_TSM_SM4_Overspeed) {
                 outC->triggeredSB = kcg_true;
                 outC->revokedSB = kcg_false;
                 outC->revokedSupervisionStatus =
@@ -608,9 +607,9 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               }
               else {
                 outC->triggeredSB = kcg_false;
-                _3_br_4_clock_modeInterplay_TSM_SM4_Overspeed =
+                br_4_clock_modeInterplay_TSM_SM4_Overspeed =
                   _L1_modeInterplay_TSM.r3;
-                if (_3_br_4_clock_modeInterplay_TSM_SM4_Overspeed) {
+                if (br_4_clock_modeInterplay_TSM_SM4_Overspeed) {
                   outC->revokedSB = kcg_true;
                   outC->revokedSupervisionStatus =
                     Overspeed_Supervision_SDM_Types_Pkg;
@@ -637,11 +636,11 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Indication_modeInterplay_TSM_SM4 :
-          _19_br_1_guard_modeInterplay_TSM_SM4_Indication =
+          br_1_guard_modeInterplay_TSM_SM4_Indication =
             _L1_modeInterplay_TSM.r1 | _L1_modeInterplay_TSM.r2;
-          _20_br_2_guard_modeInterplay_TSM_SM4_Indication =
+          br_2_guard_modeInterplay_TSM_SM4_Indication =
             _L2_modeInterplay_TSM.t13 | _L2_modeInterplay_TSM.t14;
-          if (_19_br_1_guard_modeInterplay_TSM_SM4_Indication) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Indication) {
             SM4_state_act_modeInterplay_TSM =
               SSM_st_Normal_modeInterplay_TSM_SM4;
             outC->triggeredSB = kcg_false;
@@ -652,7 +651,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               cSupervisionStatus_SDM_Commands_Pkg;
           }
           else {
-            if (_20_br_2_guard_modeInterplay_TSM_SM4_Indication) {
+            if (br_2_guard_modeInterplay_TSM_SM4_Indication) {
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_Intervention_modeInterplay_TSM_SM4;
             }
@@ -675,25 +674,25 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
             outC->revokedSB = kcg_false;
             outC->revokedSupervisionStatus =
               cSupervisionStatus_SDM_Commands_Pkg;
-            _8_br_2_clock_modeInterplay_TSM_SM4_Indication =
-              _20_br_2_guard_modeInterplay_TSM_SM4_Indication;
-            if (_8_br_2_clock_modeInterplay_TSM_SM4_Indication) {
+            br_2_clock_modeInterplay_TSM_SM4_Indication =
+              br_2_guard_modeInterplay_TSM_SM4_Indication;
+            if (br_2_clock_modeInterplay_TSM_SM4_Indication) {
               outC->triggeredSupervisionStatus =
                 Intervention_Supervision_SDM_Types_Pkg;
               outC->triggeredSB = kcg_false;
             }
             else {
-              _7_br_3_clock_modeInterplay_TSM_SM4_Indication =
+              br_3_clock_modeInterplay_TSM_SM4_Indication =
                 t10_12_modeInterplay_TSM;
-              if (_7_br_3_clock_modeInterplay_TSM_SM4_Indication) {
+              if (br_3_clock_modeInterplay_TSM_SM4_Indication) {
                 outC->triggeredSupervisionStatus =
                   Intervention_Supervision_SDM_Types_Pkg;
                 outC->triggeredSB = kcg_true;
               }
               else {
-                _6_br_4_clock_modeInterplay_TSM_SM4_Indication =
+                br_4_clock_modeInterplay_TSM_SM4_Indication =
                   t7_9_modeInterplay_TSM;
-                if (_6_br_4_clock_modeInterplay_TSM_SM4_Indication) {
+                if (br_4_clock_modeInterplay_TSM_SM4_Indication) {
                   outC->triggeredSupervisionStatus =
                     Warning_Supervision_SDM_Types_Pkg;
                 }
@@ -711,11 +710,11 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Normal_modeInterplay_TSM_SM4 :
-          _21_br_1_guard_modeInterplay_TSM_SM4_Normal =
-            _L2_modeInterplay_TSM.t13 | _L2_modeInterplay_TSM.t14;
+          br_1_guard_modeInterplay_TSM_SM4_Normal = _L2_modeInterplay_TSM.t13 |
+            _L2_modeInterplay_TSM.t14;
           outC->revokedSB = kcg_false;
           outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands_Pkg;
-          if (_21_br_1_guard_modeInterplay_TSM_SM4_Normal) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Normal) {
             SM4_state_act_modeInterplay_TSM =
               SSM_st_Intervention_modeInterplay_TSM_SM4;
             outC->triggeredSupervisionStatus =
@@ -743,17 +742,15 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_Normal_modeInterplay_TSM_SM4;
             }
-            _10_br_2_clock_modeInterplay_TSM_SM4_Normal =
-              t10_12_modeInterplay_TSM;
-            if (_10_br_2_clock_modeInterplay_TSM_SM4_Normal) {
+            br_2_clock_modeInterplay_TSM_SM4_Normal = t10_12_modeInterplay_TSM;
+            if (br_2_clock_modeInterplay_TSM_SM4_Normal) {
               outC->triggeredSupervisionStatus =
                 Intervention_Supervision_SDM_Types_Pkg;
               outC->triggeredSB = kcg_true;
             }
             else {
-              _9_br_3_clock_modeInterplay_TSM_SM4_Normal =
-                t7_9_modeInterplay_TSM;
-              if (_9_br_3_clock_modeInterplay_TSM_SM4_Normal) {
+              br_3_clock_modeInterplay_TSM_SM4_Normal = t7_9_modeInterplay_TSM;
+              if (br_3_clock_modeInterplay_TSM_SM4_Normal) {
                 outC->triggeredSupervisionStatus =
                   Warning_Supervision_SDM_Types_Pkg;
               }
@@ -774,13 +771,13 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_init_modeInterplay_TSM_SM4 :
-          _22_br_1_guard_modeInterplay_TSM_SM4_init = _L2_modeInterplay_TSM.t1 |
+          br_1_guard_modeInterplay_TSM_SM4_init = _L2_modeInterplay_TSM.t1 |
             _L2_modeInterplay_TSM.t2;
-          _23_br_3_guard_modeInterplay_TSM_SM4_init =
-            _L2_modeInterplay_TSM.t13 | _L2_modeInterplay_TSM.t14;
+          br_3_guard_modeInterplay_TSM_SM4_init = _L2_modeInterplay_TSM.t13 |
+            _L2_modeInterplay_TSM.t14;
           outC->revokedSB = kcg_false;
           outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands_Pkg;
-          if (_22_br_1_guard_modeInterplay_TSM_SM4_init) {
+          if (br_1_guard_modeInterplay_TSM_SM4_init) {
             SM4_state_act_modeInterplay_TSM =
               SSM_st_Normal_modeInterplay_TSM_SM4;
             outC->triggeredSupervisionStatus = Normal_Supervision_SDM_Types_Pkg;
@@ -791,7 +788,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_Intervention_modeInterplay_TSM_SM4;
             }
-            else if (_23_br_3_guard_modeInterplay_TSM_SM4_init) {
+            else if (br_3_guard_modeInterplay_TSM_SM4_init) {
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_Intervention_modeInterplay_TSM_SM4;
             }
@@ -811,24 +808,22 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               SM4_state_act_modeInterplay_TSM =
                 SSM_st_init_modeInterplay_TSM_SM4;
             }
-            _13_br_2_clock_modeInterplay_TSM_SM4_init =
-              t10_12_modeInterplay_TSM;
-            if (_13_br_2_clock_modeInterplay_TSM_SM4_init) {
+            br_2_clock_modeInterplay_TSM_SM4_init = t10_12_modeInterplay_TSM;
+            if (br_2_clock_modeInterplay_TSM_SM4_init) {
               outC->triggeredSupervisionStatus =
                 Intervention_Supervision_SDM_Types_Pkg;
               outC->triggeredSB = kcg_true;
             }
             else {
-              _12_br_3_clock_modeInterplay_TSM_SM4_init =
-                _23_br_3_guard_modeInterplay_TSM_SM4_init;
-              if (_12_br_3_clock_modeInterplay_TSM_SM4_init) {
+              br_3_clock_modeInterplay_TSM_SM4_init =
+                br_3_guard_modeInterplay_TSM_SM4_init;
+              if (br_3_clock_modeInterplay_TSM_SM4_init) {
                 outC->triggeredSupervisionStatus =
                   Intervention_Supervision_SDM_Types_Pkg;
               }
               else {
-                _11_br_4_clock_modeInterplay_TSM_SM4_init =
-                  t7_9_modeInterplay_TSM;
-                if (_11_br_4_clock_modeInterplay_TSM_SM4_init) {
+                br_4_clock_modeInterplay_TSM_SM4_init = t7_9_modeInterplay_TSM;
+                if (br_4_clock_modeInterplay_TSM_SM4_init) {
                   outC->triggeredSupervisionStatus =
                     Warning_Supervision_SDM_Types_Pkg;
                 }
@@ -911,7 +906,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
         ((Indication_Supervision_SDM_Types_Pkg == last_status) &
           !_L58_modeInterplay_CSM & t2_modeInterplay_CSM);
       switch (CSM_state_sel_modeInterplay_CSM) {
-        case _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM :
+        case SSM_st_InterventionStatus_modeInterplay_CSM_CSM :
           outC->triggeredSB = kcg_false;
           outC->triggeredSupervisionStatus =
             cSupervisionStatus_SDM_Commands_Pkg;
@@ -929,7 +924,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
             }
             else {
               CSM_state_act_modeInterplay_CSM =
-                _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+                SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
             }
             if (t1_modeInterplay_CSM) {
               outC->revokedSupervisionStatus =
@@ -946,7 +941,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
         case SSM_st_WarningStatus_modeInterplay_CSM_CSM :
           if (_L102_modeInterplay_CSM) {
             CSM_state_act_modeInterplay_CSM =
-              _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+              SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
             outC->revokedSB = kcg_false;
             outC->revokedSupervisionStatus =
               cSupervisionStatus_SDM_Commands_Pkg;
@@ -977,7 +972,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
         case SSM_st_OverspeedStatus_modeInterplay_CSM_CSM :
           if (_L102_modeInterplay_CSM) {
             CSM_state_act_modeInterplay_CSM =
-              _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+              SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
             outC->revokedSB = kcg_false;
             outC->revokedSupervisionStatus =
               cSupervisionStatus_SDM_Commands_Pkg;
@@ -1020,7 +1015,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands_Pkg;
           if (_L102_modeInterplay_CSM) {
             CSM_state_act_modeInterplay_CSM =
-              _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+              SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
             outC->triggeredSupervisionStatus =
               Intervention_Supervision_SDM_Types_Pkg;
             outC->triggeredSB = t4_modeInterplay_CSM;
@@ -1083,7 +1078,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
             }
             else if (c5_modeInterplay_CSM) {
               CSM_state_act_modeInterplay_CSM =
-                _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+                SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
               outC->triggeredSupervisionStatus =
                 Intervention_Supervision_SDM_Types_Pkg;
             }
@@ -1112,7 +1107,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
               }
               else if (last_status == Intervention_Supervision_SDM_Types_Pkg) {
                 CSM_state_act_modeInterplay_CSM =
-                  _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+                  SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
               }
               else {
                 CSM_state_act_modeInterplay_CSM =
@@ -1138,7 +1133,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
         case SSM_st_WarningStatus_modeInterplay_CSM_CSM :
           outC->sdmType = CSM_SDM_Types_Pkg;
           break;
-        case _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM :
+        case SSM_st_InterventionStatus_modeInterplay_CSM_CSM :
           outC->sdmType = CSM_SDM_Types_Pkg;
           break;
         
@@ -1173,7 +1168,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           break;
         case SSM_st_IndicationStatus_modeInterplay_RSM_RSM :
           outC->revokedEB = kcg_false;
-          if (_14_br_1_guard_modeInterplay_RSM_RSM_IndicationStatus) {
+          if (br_1_guard_modeInterplay_RSM_RSM_IndicationStatus) {
             outC->triggeredEB = kcg_true;
           }
           else {
@@ -1182,7 +1177,7 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           break;
         case SSM_st_Init_modeInterplay_RSM_RSM :
           outC->revokedEB = kcg_false;
-          if (_15_br_1_guard_modeInterplay_RSM_RSM_Init) {
+          if (br_1_guard_modeInterplay_RSM_RSM_Init) {
             outC->triggeredEB = kcg_false;
           }
           else if (br_2_clock_modeInterplay_RSM_RSM_Init) {
@@ -1228,16 +1223,16 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
       switch (SM4_state_sel_modeInterplay_TSM) {
         case SSM_st_init_modeInterplay_TSM_SM4 :
           outC->revokedTCO = kcg_false;
-          if (_22_br_1_guard_modeInterplay_TSM_SM4_init) {
+          if (br_1_guard_modeInterplay_TSM_SM4_init) {
             outC->triggeredTCO = kcg_false;
           }
-          else if (_13_br_2_clock_modeInterplay_TSM_SM4_init) {
+          else if (br_2_clock_modeInterplay_TSM_SM4_init) {
             outC->triggeredTCO = kcg_false;
           }
-          else if (_12_br_3_clock_modeInterplay_TSM_SM4_init) {
+          else if (br_3_clock_modeInterplay_TSM_SM4_init) {
             outC->triggeredTCO = kcg_false;
           }
-          else if (_11_br_4_clock_modeInterplay_TSM_SM4_init) {
+          else if (br_4_clock_modeInterplay_TSM_SM4_init) {
             outC->triggeredTCO = kcg_true;
           }
           else {
@@ -1246,13 +1241,13 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           break;
         case SSM_st_Normal_modeInterplay_TSM_SM4 :
           outC->revokedTCO = kcg_false;
-          if (_21_br_1_guard_modeInterplay_TSM_SM4_Normal) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Normal) {
             outC->triggeredTCO = kcg_false;
           }
-          else if (_10_br_2_clock_modeInterplay_TSM_SM4_Normal) {
+          else if (br_2_clock_modeInterplay_TSM_SM4_Normal) {
             outC->triggeredTCO = kcg_false;
           }
-          else if (_9_br_3_clock_modeInterplay_TSM_SM4_Normal) {
+          else if (br_3_clock_modeInterplay_TSM_SM4_Normal) {
             outC->triggeredTCO = kcg_true;
           }
           else {
@@ -1260,19 +1255,19 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Indication_modeInterplay_TSM_SM4 :
-          if (_19_br_1_guard_modeInterplay_TSM_SM4_Indication) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Indication) {
             outC->triggeredTCO = kcg_false;
             outC->revokedTCO = kcg_true;
           }
           else {
             outC->revokedTCO = kcg_false;
-            if (_8_br_2_clock_modeInterplay_TSM_SM4_Indication) {
+            if (br_2_clock_modeInterplay_TSM_SM4_Indication) {
               outC->triggeredTCO = kcg_false;
             }
-            else if (_7_br_3_clock_modeInterplay_TSM_SM4_Indication) {
+            else if (br_3_clock_modeInterplay_TSM_SM4_Indication) {
               outC->triggeredTCO = kcg_false;
             }
-            else if (_6_br_4_clock_modeInterplay_TSM_SM4_Indication) {
+            else if (br_4_clock_modeInterplay_TSM_SM4_Indication) {
               outC->triggeredTCO = kcg_true;
             }
             else {
@@ -1281,19 +1276,19 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           }
           break;
         case SSM_st_Overspeed_modeInterplay_TSM_SM4 :
-          if (_17_br_1_guard_modeInterplay_TSM_SM4_Overspeed) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Overspeed) {
             outC->triggeredTCO = kcg_false;
             outC->revokedTCO = kcg_true;
           }
-          else if (_5_br_2_clock_modeInterplay_TSM_SM4_Overspeed) {
+          else if (br_2_clock_modeInterplay_TSM_SM4_Overspeed) {
             outC->triggeredTCO = kcg_false;
             outC->revokedTCO = kcg_false;
           }
-          else if (_4_br_3_clock_modeInterplay_TSM_SM4_Overspeed) {
+          else if (br_3_clock_modeInterplay_TSM_SM4_Overspeed) {
             outC->triggeredTCO = kcg_false;
             outC->revokedTCO = kcg_false;
           }
-          else if (_3_br_4_clock_modeInterplay_TSM_SM4_Overspeed) {
+          else if (br_4_clock_modeInterplay_TSM_SM4_Overspeed) {
             outC->triggeredTCO = kcg_false;
             outC->revokedTCO = kcg_true;
           }
@@ -1309,13 +1304,13 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           break;
         case SSM_st_Warning_modeInterplay_TSM_SM4 :
           outC->triggeredTCO = kcg_false;
-          if (_16_br_1_guard_modeInterplay_TSM_SM4_Warning) {
+          if (br_1_guard_modeInterplay_TSM_SM4_Warning) {
             outC->revokedTCO = kcg_false;
           }
-          else if (_2_br_2_clock_modeInterplay_TSM_SM4_Warning) {
+          else if (br_2_clock_modeInterplay_TSM_SM4_Warning) {
             outC->revokedTCO = kcg_false;
           }
-          else if (_1_br_3_clock_modeInterplay_TSM_SM4_Warning) {
+          else if (br_3_clock_modeInterplay_TSM_SM4_Warning) {
             outC->revokedTCO = kcg_true;
           }
           else if (br_4_clock_modeInterplay_TSM_SM4_Warning) {
@@ -1398,12 +1393,12 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
       outC->revokedTCO = kcg_false;
       outC->modeInterplay_state_nxt = SSM_st_CSM_modeInterplay;
       switch (CSM_state_act_modeInterplay_CSM) {
-        case _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM :
+        case SSM_st_InterventionStatus_modeInterplay_CSM_CSM :
           outC->revokedEB = kcg_false;
           outC->triggeredEB = t5_modeInterplay_CSM | t1_modeInterplay_RSM;
           outC->supVisStatus = Intervention_Supervision_SDM_Types_Pkg;
           outC->CSM_state_nxt_modeInterplay_CSM =
-            _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
+            SSM_st_InterventionStatus_modeInterplay_CSM_CSM;
           break;
         case SSM_st_WarningStatus_modeInterplay_CSM_CSM :
           outC->revokedEB = kcg_false;
@@ -1444,6 +1439,6 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CmdTrainSupervisionStatus_SDM_Commands_Pkg.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

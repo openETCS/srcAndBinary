@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg_H_
 #define _SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg_H_
@@ -19,7 +19,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _195_SSM_ST_SM1 /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */ SM1_state_nxt;
+  _36_SSM_ST_SM1 /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */ SM1_state_nxt;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
 } outC_SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg;
@@ -37,6 +37,6 @@ extern void SoM_SR_FS_OS_LS_SH_SN_UN_reset_SoMProcedure_Pkg(
 #endif /* _SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SoM_SR_FS_OS_LS_SH_SN_UN_SoMProcedure_Pkg.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

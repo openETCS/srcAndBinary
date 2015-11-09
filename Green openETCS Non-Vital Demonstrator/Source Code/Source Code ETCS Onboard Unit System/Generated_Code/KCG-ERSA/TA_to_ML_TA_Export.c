@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -25,9 +25,9 @@ void TA_to_ML_TA_Export(
   static kcg_int _L20;
   
   *P_12_to_Input_MA_SSP_Gradient_at_ML = kcg_false;
-  kcg_copy__6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg(
+  kcg_copy_P12_Level1MovementAuthorities_T_Packet_Types_Pkg(
     &(*Data_to_From_Track_Packets_at_ML).P_12,
-    (_6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg *)
+    (P12_Level1MovementAuthorities_T_Packet_Types_Pkg *)
       &Default_P12_legacy_TA_Export);
   kcg_copy_P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg(
     &(*Data_to_From_Track_Packets_at_ML).P_135,
@@ -97,6 +97,6 @@ void TA_to_ML_TA_Export(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TA_to_ML_TA_Export.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

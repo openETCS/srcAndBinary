@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _Counter_pwlinear_int_H_
 #define _Counter_pwlinear_int_H_
@@ -33,6 +33,6 @@ extern void Counter_reset_pwlinear_int(outC_Counter_pwlinear_int *outC);
 #endif /* _Counter_pwlinear_int_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Counter_pwlinear_int.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

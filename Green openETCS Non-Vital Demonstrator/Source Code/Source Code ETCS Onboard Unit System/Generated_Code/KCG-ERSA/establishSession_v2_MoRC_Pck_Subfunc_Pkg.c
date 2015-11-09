@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,9 +26,9 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
   outC_establishSession_v2_MoRC_Pck_Subfunc_Pkg *outC)
 {
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
-  static _147_SSM_ST_SM1 SM1_state_sel;
+  static _8_SSM_ST_SM1 SM1_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
-  static _147_SSM_ST_SM1 SM1_state_act;
+  static _8_SSM_ST_SM1 SM1_state_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
   static kcg_bool SM1_reset_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::initiatedByOBU */
@@ -42,7 +42,7 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
       ((*connectionStatus).status == mcs_connected_RCM_Types_Pkg));
   if (outC->init) {
     outC->init = kcg_false;
-    SM1_state_sel = _146_SSM_st_idle_SM1;
+    SM1_state_sel = _7_SSM_st_idle_SM1;
   }
   else {
     SM1_state_sel = outC->SM1_state_nxt;
@@ -50,7 +50,7 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
   initiatedByOBU = (*sessionEstablishCmd_in).valid &
     (*sessionEstablishCmd_in).initiatedByOBU;
   switch (SM1_state_sel) {
-    case _146_SSM_st_idle_SM1 :
+    case _7_SSM_st_idle_SM1 :
       if (initiatedByOBU) {
         SM1_reset_act = kcg_true;
         SM1_state_act = SSM_st_establishingByOBU_SM1;
@@ -60,14 +60,14 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
           SM1_state_act = SSM_st_establishingByRBC_SM1;
         }
         else {
-          SM1_state_act = _146_SSM_st_idle_SM1;
+          SM1_state_act = _7_SSM_st_idle_SM1;
         }
         SM1_reset_act = initiatedByRBC;
       }
       break;
     case SSM_st_establishingByOBU_SM1 :
       if (reset) {
-        SM1_state_act = _146_SSM_st_idle_SM1;
+        SM1_state_act = _7_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_establishingByOBU_SM1;
@@ -76,7 +76,7 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
       break;
     case SSM_st_establishingByRBC_SM1 :
       if (reset) {
-        SM1_state_act = _146_SSM_st_idle_SM1;
+        SM1_state_act = _7_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_establishingByRBC_SM1;
@@ -86,7 +86,7 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
     
   }
   switch (SM1_state_act) {
-    case _146_SSM_st_idle_SM1 :
+    case _7_SSM_st_idle_SM1 :
       outC->send_m155_initiationOfACommunicationSession = kcg_false;
       outC->send_m159_sessionEstablishedReport = kcg_false;
       outC->send_m154_noCompatibleVersionSupported = kcg_false;
@@ -94,7 +94,7 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
       outC->terminateCommunicationSession = kcg_false;
       outC->infomDriverNoCompatibleVersionSupported = kcg_false;
       outC->established = kcg_false;
-      outC->SM1_state_nxt = _146_SSM_st_idle_SM1;
+      outC->SM1_state_nxt = _7_SSM_st_idle_SM1;
       kcg_copy_sessionStatus_T_RCM_Session_Types_Pkg(
         &outC->sessionStatus,
         (sessionStatus_T_RCM_Session_Types_Pkg *)
@@ -173,6 +173,6 @@ void establishSession_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** establishSession_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

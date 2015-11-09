@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _changeoverSwitch_Handover_Pkg_handoverUtils_Pkg_H_
 #define _changeoverSwitch_Handover_Pkg_handoverUtils_Pkg_H_
@@ -18,7 +18,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _110_SSM_ST_SM1 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */ SM1_state_nxt;
+  _1_SSM_ST_SM1 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */ SM1_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_FallingEdge_digital /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
@@ -37,6 +37,6 @@ extern void changeoverSwitch_reset_Handover_Pkg_handoverUtils_Pkg(
 #endif /* _changeoverSwitch_Handover_Pkg_handoverUtils_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** changeoverSwitch_Handover_Pkg_handoverUtils_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

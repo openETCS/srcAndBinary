@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,7 +30,7 @@ void ES_Build_AcknowledgementNew_TA_EmergencyStop(
   else if (cesAccepted) {
     if (updateEOA) {
       (*m147).q_emergencystop =
-        _30_Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
+        Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA;
     }
     else {
       (*m147).q_emergencystop =
@@ -44,6 +44,6 @@ void ES_Build_AcknowledgementNew_TA_EmergencyStop(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ES_Build_AcknowledgementNew_TA_EmergencyStop.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

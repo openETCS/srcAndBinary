@@ -1,14 +1,14 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
-#include "Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.h"
+#include "Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h"
 
-void Manage_TrackSideInformati_reset_Manage_TrackSideInformation_Integration_Pkg(
-  outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg *outC)
+void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_Integration_Pkg(
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC)
 {
   outC->init = kcg_true;
   /* 3 */ InformationFilter_reset_InformationFilter_Pkg(&outC->Context_3);
@@ -20,7 +20,7 @@ void Manage_TrackSideInformati_reset_Manage_TrackSideInformation_Integration_Pkg
 }
 
 /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration */
-void Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg(
+void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg(
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::fullChecks */kcg_bool fullChecks,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::API_trackSide_Message */API_TrackSideInput_T_API_Msg_Pkg *API_trackSide_Message,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::ActualOdometry */odometry_T_Obu_BasicTypes_Pkg *ActualOdometry,
@@ -38,7 +38,7 @@ void Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg(
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inTrainDataValid */kcg_bool inTrainDataValid,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::transitionPositionPassed */kcg_bool transitionPositionPassed,
-  outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg *outC)
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC)
 {
   static positionedBG_T_TrainPosition_Types_Pck tmp8;
   static kcg_bool tmp7;
@@ -224,7 +224,7 @@ void Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg(
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.c
-** Generation date: 2015-11-09T11:52:25
+** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.c
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

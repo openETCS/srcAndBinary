@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _genMsgToRBC_MoRC_Pck_Coder_Pkg_H_
 #define _genMsgToRBC_MoRC_Pck_Coder_Pkg_H_
@@ -17,11 +17,11 @@ extern void genMsgToRBC_MoRC_Pck_Coder_Pkg(
   /* MoRC_Pck::Coder_Pkg::genMsgToRBC::t_train */T_TRAIN t_train,
   /* MoRC_Pck::Coder_Pkg::genMsgToRBC::xt_train */T_TRAIN xt_train,
   /* MoRC_Pck::Coder_Pkg::genMsgToRBC::nid_engine */NID_ENGINE nid_engine,
-  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */_8_Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage);
+  /* MoRC_Pck::Coder_Pkg::genMsgToRBC::radioMessage */Radio_TrainTrack_Message_T_Radio_Types_Pkg *radioMessage);
 
 #endif /* _genMsgToRBC_MoRC_Pck_Coder_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** genMsgToRBC_MoRC_Pck_Coder_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

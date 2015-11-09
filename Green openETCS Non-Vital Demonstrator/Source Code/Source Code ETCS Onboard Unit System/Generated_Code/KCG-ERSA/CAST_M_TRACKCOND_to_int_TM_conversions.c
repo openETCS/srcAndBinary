@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -48,7 +48,7 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conversions(
     }
     else {
       _8_else_clock_IfBlock1 = m_trackcond ==
-        _15_ENUM_M_TRACKCOND_Powerless_section_Lower_pantograph_TM_conversions;
+        ENUM_M_TRACKCOND_Powerless_section_Lower_pantograph_TM_conversions;
       if (_8_else_clock_IfBlock1) {
         m_trackcond_int =
           INT_M_TRACKCOND_Powerless_section_Lower_pantograph_TM_conversions;
@@ -58,7 +58,7 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conversions(
           ENUM_M_TRACKCOND_Powerless_section_switch_off_the_main_power_switch_TM_conversions;
         if (_7_else_clock_IfBlock1) {
           m_trackcond_int =
-            _12_INT_M_TRACKCOND_Powerless_section_switch_off_the_main_power_switch_TM_conversions;
+            INT_M_TRACKCOND_Powerless_section_switch_off_the_main_power_switch_TM_conversions;
         }
         else {
           _6_else_clock_IfBlock1 = m_trackcond ==
@@ -75,7 +75,7 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conversions(
             }
             else {
               _4_else_clock_IfBlock1 = m_trackcond ==
-                _14_ENUM_M_TRACKCOND_Switch_off_eddy_current_brake_for_emergency_brake_TM_conversions;
+                ENUM_M_TRACKCOND_Switch_off_eddy_current_brake_for_emergency_brake_TM_conversions;
               if (_4_else_clock_IfBlock1) {
                 m_trackcond_int =
                   INT_M_TRACKCOND_Switch_off_eddy_current_brake_for_emergency_brake_TM_conversions;
@@ -85,7 +85,7 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conversions(
                   ENUM_M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_TM_conversions;
                 if (_3_else_clock_IfBlock1) {
                   m_trackcond_int =
-                    _13_INT_M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_TM_conversions;
+                    INT_M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_TM_conversions;
                 }
                 else {
                   _2_else_clock_IfBlock1 = m_trackcond ==
@@ -127,6 +127,6 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conversions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_M_TRACKCOND_to_int_TM_conversions.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

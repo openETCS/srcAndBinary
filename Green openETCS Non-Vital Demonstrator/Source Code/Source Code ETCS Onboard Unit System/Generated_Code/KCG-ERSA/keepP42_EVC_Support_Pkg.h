@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _keepP42_EVC_Support_Pkg_H_
 #define _keepP42_EVC_Support_Pkg_H_
@@ -34,6 +34,6 @@ extern void keepP42_reset_EVC_Support_Pkg(outC_keepP42_EVC_Support_Pkg *outC);
 #endif /* _keepP42_EVC_Support_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** keepP42_EVC_Support_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

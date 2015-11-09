@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:52
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -121,8 +121,8 @@ typedef enum {
 /* Q_TEXTCONFIRM */
 typedef enum {
   Q_TEXTCONFIRM_No_confirmation_required = 0,
-  _53_Q_TEXTCONFIRM_Confirmation_required = 1,
-  _52_Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_service_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver = 2,
+  Q_TEXTCONFIRM_Confirmation_required = 1,
+  Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_service_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver = 2,
   Q_TEXTCONFIRM_Confirmation_required_command_application_of_the_emergency_brake_when_display_end_condition_is_fulfilled_unless_the_text_has_already_been_acknowledged_by_the_driver = 3
 } Q_TEXTCONFIRM;
 /* M_TRACKCOND */
@@ -134,7 +134,7 @@ typedef enum {
   M_TRACKCOND_Radio_hole_stop_supervising_T_NVCONTACT_Initial_state_is_supervise_T_NVCONTACT = 4,
   M_TRACKCOND_Air_tightness_Initial_state_is_no_request_for_air_tightness = 5,
   M_TRACKCOND_Switch_off_regenerative_brake_Initial_state_is_regenerative_brake_on = 6,
-  _51_M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_Initial_state_is_eddy_current_brake_for_service_brake_on = 7,
+  M_TRACKCOND_Switch_off_eddy_current_brake_for_service_brake_Initial_state_is_eddy_current_brake_for_service_brake_on = 7,
   M_TRACKCOND_Switch_off_magnetic_shoe_brake_Initial_state_is_magnetic_shoe_brake_on = 8,
   M_TRACKCOND_Powerless_section_switch_off_the_main_power_switch_Initial_state_is_not_powerless_section = 9,
   M_TRACKCOND_Switch_off_eddy_current_brake_for_emergency_brake_Initial_state_is_eddy_current_brake_for_emergency_brake_on = 10
@@ -388,21 +388,21 @@ typedef enum {
 /* Q_DIFF */
 typedef enum {
   Q_DIFF_Cant_Deficiency_specific_category = 0,
-  _41_Q_DIFF_Other_specific_category_replaces_the_Cant_Deficiency_SSP = 1,
+  Q_DIFF_Other_specific_category_replaces_the_Cant_Deficiency_SSP = 1,
   Q_DIFF_Other_specific_category_does_not_replace_the_Cant_Deficiency_SSP = 2
 } Q_DIFF;
 /* NC_CDDIFF */
 typedef enum {
-  _40_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_80_mm = 0,
-  _39_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_100_mm = 1,
-  _38_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_130_mm = 2,
-  _37_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_150_mm = 3,
-  _36_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_165_mm = 4,
-  _35_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_180_mm = 5,
-  _34_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_210_mm = 6,
-  _33_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_225_mm = 7,
-  _32_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_245_mm = 8,
-  _31_NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_275_mm = 9,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_80_mm = 0,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_100_mm = 1,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_130_mm = 2,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_150_mm = 3,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_165_mm = 4,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_180_mm = 5,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_210_mm = 6,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_225_mm = 7,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_245_mm = 8,
+  NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_275_mm = 9,
   NC_CDDIFF_Specific_SSP_applicable_to_Cant_Deficiency_300_mm = 10
 } NC_CDDIFF;
 /* Q_FRONT */
@@ -455,7 +455,7 @@ typedef enum {
 } MA_Level_t_TrackAtlasTypes;
 /* Q_NVEMRRLS */
 typedef enum {
-  _48_Q_NVEMRRLS_Revoke_emergency_brake_command_at_standstill = 0,
+  Q_NVEMRRLS_Revoke_emergency_brake_command_at_standstill = 0,
   Q_NVEMRRLS_Revoke_emergency_brake_command_when_permitted_speed_supervision_limit_is_no_longer_exceeded = 1
 } Q_NVEMRRLS;
 /* Q_NVSBTSMPERM */
@@ -488,11 +488,11 @@ typedef enum {
   M_NVEBCL_Confidence_level_90 = 1,
   M_NVEBCL_Confidence_level_99 = 2,
   M_NVEBCL_Confidence_level_99_9 = 3,
-  _47_M_NVEBCL_Confidence_level_99_99 = 4,
-  _46_M_NVEBCL_Confidence_level_99_999 = 5,
-  _45_M_NVEBCL_Confidence_level_99_9999 = 6,
-  _44_M_NVEBCL_Confidence_level_99_99999 = 7,
-  _43_M_NVEBCL_Confidence_level_99_999999 = 8,
+  M_NVEBCL_Confidence_level_99_99 = 4,
+  M_NVEBCL_Confidence_level_99_999 = 5,
+  M_NVEBCL_Confidence_level_99_9999 = 6,
+  M_NVEBCL_Confidence_level_99_99999 = 7,
+  M_NVEBCL_Confidence_level_99_999999 = 8,
   M_NVEBCL_Confidence_level_99_9999999 = 9
 } M_NVEBCL;
 /* Q_NVKINT */
@@ -547,7 +547,7 @@ typedef enum {
 } Q_NEWCOUNTRY;
 /* Q_LINKORIENTATION */
 typedef enum {
-  _54_Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction = 0,
+  Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction = 0,
   Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_nominal_direction = 1
 } Q_LINKORIENTATION;
 /* Q_LINKREACTION */
@@ -668,7 +668,7 @@ typedef enum {
 /* Q_LENGTH */
 typedef enum {
   Q_LENGTH_No_train_integrity_information_available = 0,
-  _29_Q_LENGTH_Train_integrity_confirmed_by_integrity_monitoring_device = 1,
+  Q_LENGTH_Train_integrity_confirmed_by_integrity_monitoring_device = 1,
   Q_LENGTH_Train_integrity_confirmed_by_driver = 2,
   Q_LENGTH_Train_integrity_lost = 3
 } Q_LENGTH;
@@ -682,7 +682,7 @@ typedef enum {
 } Q_MARQSTREASON;
 /* Q_EMERGENCYSTOP */
 typedef enum {
-  _30_Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA = 0,
+  Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA = 0,
   Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_no_update_of_EOA = 1,
   Q_EMERGENCYSTOP_Unconditional_Emergency_Stop_accepted = 2,
   Q_EMERGENCYSTOP_Emergency_stop = 3
@@ -775,7 +775,7 @@ typedef enum {
 /* NC_TRAIN */
 typedef enum {
   NC_TRAIN_Train_does_not_belong_to_any_of_the_Other_International_Train_Category = 0,
-  _50_NC_TRAIN_Freight_train_braked_in_P_position = 1,
+  NC_TRAIN_Freight_train_braked_in_P_position = 1,
   NC_TRAIN_Freight_train_braked_in_G_position = 2,
   NC_TRAIN_Passenger_train = 4
 } NC_TRAIN;
@@ -874,7 +874,7 @@ typedef enum {
   radio_hole_TIU_Types_Pkg,
   air_tightness_TIU_Types_Pkg,
   switch_off_regenerative_brake_TIU_Types_Pkg,
-  _28_switch_off_eddy_current_brake_for_service_brake_TIU_Types_Pkg,
+  switch_off_eddy_current_brake_for_service_brake_TIU_Types_Pkg,
   switch_off_magnetic_shoe_brake_TIU_Types_Pkg,
   powerless_section_switch_off_main_power_switch_TIU_Types_Pkg,
   switch_off_eddy_current_brake_for_emergency_brake_TIU_Types_Pkg
@@ -932,7 +932,7 @@ typedef enum {
 /* M_DUP */
 typedef enum {
   M_DUP_No_duplicates = 0,
-  _42_M_DUP_This_balise_is_a_duplicate_of_the_next_balise = 1,
+  M_DUP_This_balise_is_a_duplicate_of_the_next_balise = 1,
   M_DUP_This_balise_is_a_duplicate_of_the_previous_balise = 2
 } M_DUP;
 /* M_VERSION */
@@ -977,18 +977,18 @@ typedef enum {
 } mobileHWConnectionStatus_Type_MoRC_Pck;
 /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */
 typedef enum {
-  _196_SSM_TR_no_trans_SM1,
+  _37_SSM_TR_no_trans_SM1,
   SSM_TR_State1_1_SM1,
   SSM_TR_Waiting_for_MA_for_FS_or_SR_or_OS_LS_SH_1_SM1,
   SSM_TR_Wait_for_Acknowledgment_for_mode_change_SB_to_FS_from_mode_and_Level_Management_1_SM1
-} _197_SSM_TR_SM1;
+} _38_SSM_TR_SM1;
 /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */
 typedef enum {
   SSM_st_State1_SM1,
   SSM_st_Waiting_for_MA_for_FS_or_SR_or_OS_LS_SH_SM1,
   SSM_st_Wait_for_Acknowledgment_for_mode_change_SB_to_FS_from_mode_and_Level_Management_SM1,
   SSM_st_FS_Mode_SM1
-} _195_SSM_ST_SM1;
+} _36_SSM_ST_SM1;
 /* SoMProcedure_Pkg::SoM_NTC_SN::Level_NTC_and_Mode_SN */
 typedef enum {
   SSM_TR_no_trans_Level_NTC_and_Mode_SN,
@@ -1003,31 +1003,31 @@ typedef enum {
 } SSM_ST_Level_NTC_and_Mode_SN;
 /* ManageProcedure_Pkg::Master_Procedure::SM1 */
 typedef enum {
-  _193_SSM_TR_no_trans_SM1,
+  _34_SSM_TR_no_trans_SM1,
   SSM_TR_NP_1_SM1,
   SSM_TR_Awakness_of_Train_1_SM1,
   SSM_TR_Awakness_of_Train_2_SM1,
   SSM_TR_Awakness_of_Train_3_SM1
-} _194_SSM_TR_SM1;
+} _35_SSM_TR_SM1;
 /* ManageProcedure_Pkg::Master_Procedure::SM1 */
 typedef enum {
   SSM_st_NP_SM1,
   SSM_st_Awakness_of_Train_SM1,
   SSM_st_SoM_L2_3_FS_SR_OS_LS_SH_SM1,
   SSM_st_SoM_NTC_SN_SM1
-} _192_SSM_ST_SM1;
+} _33_SSM_ST_SM1;
 /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */
 typedef enum {
   SSM_TR_no_trans_SM3_SM1_Awakness_of_Train,
   SSM_TR_Waition_for_Driver_ID_1_SM3_SM1_Awakness_of_Train,
-  _191_SSM_TR_first_Validation_for_Train_Number_1_SM3_SM1_Awakness_of_Train,
-  _190_SSM_TR_first_Validation_for_Train_Number_2_SM3_SM1_Awakness_of_Train,
+  SSM_TR_first_Validation_for_Train_Number_1_SM3_SM1_Awakness_of_Train,
+  SSM_TR_first_Validation_for_Train_Number_2_SM3_SM1_Awakness_of_Train,
   SSM_TR_first_Validation_for_Train_Number_3_SM3_SM1_Awakness_of_Train,
   SSM_TR_request_Level_1_SM3_SM1_Awakness_of_Train,
   SSM_TR_Waiting_for_RBC_Establishment_1_SM3_SM1_Awakness_of_Train,
   SSM_TR_Acknowlege_of_Position_from_RBC_1_SM3_SM1_Awakness_of_Train,
   SSM_TR_Validation_of_Train_Data_from_Driver_1_SM3_SM1_Awakness_of_Train,
-  _189_SSM_TR_Second_Validation_of_Train_Number_from_Driver_1_SM3_SM1_Awakness_of_Train,
+  SSM_TR_Second_Validation_of_Train_Number_from_Driver_1_SM3_SM1_Awakness_of_Train,
   SSM_TR_Second_Validation_of_Train_Number_from_Driver_2_SM3_SM1_Awakness_of_Train,
   SSM_TR_Waiting_for_Acknowledgement_of_Train_Data_from_RBC_1_SM3_SM1_Awakness_of_Train,
   SSM_TR_SB_1_SM3_SM1_Awakness_of_Train,
@@ -1094,7 +1094,7 @@ typedef enum {
   SSM_st_NormalStatus_modeInterplay_CSM_CSM,
   SSM_st_OverspeedStatus_modeInterplay_CSM_CSM,
   SSM_st_WarningStatus_modeInterplay_CSM_CSM,
-  _188_SSM_st_InterventionStatus_modeInterplay_CSM_CSM
+  SSM_st_InterventionStatus_modeInterplay_CSM_CSM
 } SSM_ST_CSM_modeInterplay_CSM;
 /* SDM_Commands_Pkg::CmdTrainSupervisionStatus::modeInterplay::TSM::SM4 */
 typedef enum {
@@ -1157,7 +1157,7 @@ typedef enum {
 /* Procedures::SH_Initiated_By_Driver_On::SM_SH_Initiated_By_Driver */
 typedef enum {
   SSM_TR_no_trans_SM_SH_Initiated_By_Driver,
-  _187_SSM_TR_SH_procedure_possible_1_1_SM_SH_Initiated_By_Driver,
+  SSM_TR_SH_procedure_possible_1_1_SM_SH_Initiated_By_Driver,
   SSM_TR_SH_procedure_possible_1_2_SM_SH_Initiated_By_Driver,
   SSM_TR_Issue_SH_Request_L2_L3_1_SM_SH_Initiated_By_Driver,
   SSM_TR_Issue_SH_Request_L2_L3_2_SM_SH_Initiated_By_Driver
@@ -1206,15 +1206,15 @@ typedef enum {
 typedef enum {
   SSM_st_Req_Futher_Location_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location,
   SSM_st_Start_Supervision_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location,
-  _186_SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location,
-  _185_SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location
+  SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location,
+  SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location
 } SSM_ST_SM_Futher_Location_SM_Mode_Profile_By_Trackside_Futher_location;
 /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside::Current_Location::SM_Current_Location */
 typedef enum {
   SSM_TR_no_trans_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
   SSM_TR_Req_Current_Location_1_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
   SSM_TR_Req_Current_Location_2_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
-  _184_SSM_TR_Switch_Autorized_Waiting_Ack_1_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
+  SSM_TR_Switch_Autorized_Waiting_Ack_1_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
   SSM_TR_Switch_Autorized_Waiting_Ack_2_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
   SSM_TR_Waiting_Ack_1_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location,
   SSM_TR_Ack_Not_Received_1_SM_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location
@@ -1230,7 +1230,7 @@ typedef enum {
 /* Procedures::Procedure_Start_L1_L2_L3::SM_Start_L1_L2_L3 */
 typedef enum {
   SSM_TR_no_trans_SM_Start_L1_L2_L3,
-  _183_SSM_TR_Waiting_Driver_Starting_Command_1_1_SM_Start_L1_L2_L3,
+  SSM_TR_Waiting_Driver_Starting_Command_1_1_SM_Start_L1_L2_L3,
   SSM_TR_Waiting_Driver_Starting_Command_1_2_SM_Start_L1_L2_L3,
   SSM_TR_Level_1_1_SM_Start_L1_L2_L3,
   SSM_TR_Level_2_3_1_SM_Start_L1_L2_L3,
@@ -1276,8 +1276,8 @@ typedef enum {
   SSM_TR_Waiting_Driver_Command_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
   SSM_TR_Waiting_Driver_Command_2_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
   SSM_TR_Waiting_Driver_Command_3_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
-  _182_SSM_TR_Waiting_Driver_Strating_Command_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
-  _181_SSM_TR_Waiting_Driver_Strating_Command_2_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
+  SSM_TR_Waiting_Driver_Strating_Command_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
+  SSM_TR_Waiting_Driver_Strating_Command_2_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
   SSM_TR_Waiting_Driver_Strating_Command_2_2_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
   SSM_TR_Level_0_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On,
   SSM_TR_Level_NTC_1_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On
@@ -1286,22 +1286,22 @@ typedef enum {
 typedef enum {
   SSM_st_Waiting_Driver_Command_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
   SSM_st_NL_Mode_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
-  _180_SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
+  SSM_st_Procedure_SH_Initiated_By_Driver_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
   SSM_st_Waiting_Driver_Strating_Command_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
   SSM_st_Level_0_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
   SSM_st_Level_NTC_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
   SSM_st_SN_Mode_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
   SSM_st_UN_Mode_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On,
-  _179_SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On
+  SSM_st_Waiting_Driver_Selection_SM_StartOfMissionProcedure_Procedure_On_SM_SoM_On
 } SSM_ST_SM_SoM_On_SM_StartOfMissionProcedure_Procedure_On;
 /* Procedures::Procedure_Train_Trip::SM_Train_Trip */
 typedef enum {
   SSM_TR_no_trans_SM_Train_Trip,
   SSM_TR_Train_Trip_procedure_off_1_SM_Train_Trip,
   SSM_TR_Trip_Mode_1_SM_Train_Trip,
-  _178_SSM_TR_Trip_Mode_Waiting_Ack_1_1_SM_Train_Trip,
-  _177_SSM_TR_Trip_Mode_Waiting_Ack_1_2_SM_Train_Trip,
-  _176_SSM_TR_Trip_Mode_Waiting_Ack_1_3_1_SM_Train_Trip,
+  SSM_TR_Trip_Mode_Waiting_Ack_1_1_SM_Train_Trip,
+  SSM_TR_Trip_Mode_Waiting_Ack_1_2_SM_Train_Trip,
+  SSM_TR_Trip_Mode_Waiting_Ack_1_3_1_SM_Train_Trip,
   SSM_TR_Trip_Mode_Waiting_Ack_1_3_2_SM_Train_Trip,
   SSM_TR_Post_Trip_Mode_1_SM_Train_Trip,
   SSM_TR_Post_Trip_Mode_2_SM_Train_Trip,
@@ -1329,7 +1329,7 @@ typedef enum {
   SSM_TR_Reversing_Condition_1_SM_Train_Reversing,
   SSM_TR_Reversing_Condition_2_SM_Train_Reversing,
   SSM_TR_Reversing_Condition_3_SM_Train_Reversing,
-  _175_SSM_TR_Reversing_Data_Available_1_SM_Train_Reversing,
+  SSM_TR_Reversing_Data_Available_1_SM_Train_Reversing,
   SSM_TR_Reversing_Data_Available_2_SM_Train_Reversing
 } SSM_TR_SM_Train_Reversing;
 /* Procedures::Procedure_Train_Reversing::SM_Train_Reversing */
@@ -1341,39 +1341,39 @@ typedef enum {
 } SSM_ST_SM_Train_Reversing;
 /* OutputToRBC::ExitLevel2or3::SM1 */
 typedef enum {
-  _173_SSM_TR_no_trans_SM1,
+  _31_SSM_TR_no_trans_SM1,
   SSM_TR_BeforeChange_1_SM1,
   SSM_TR_State2_1_SM1
-} _174_SSM_TR_SM1;
+} _32_SSM_TR_SM1;
 /* OutputToRBC::ExitLevel2or3::SM1 */
-typedef enum { SSM_st_BeforeChange_SM1, SSM_st_State2_SM1 } _172_SSM_ST_SM1;
+typedef enum { SSM_st_BeforeChange_SM1, SSM_st_State2_SM1 } _30_SSM_ST_SM1;
 /* Acknowledgement::RequestAck::SM1 */
 typedef enum {
-  _170_SSM_TR_no_trans_SM1,
+  _28_SSM_TR_no_trans_SM1,
   SSM_TR_Waiting_1_SM1,
   SSM_TR_LaunchRequest_1_SM1,
   SSM_TR_LaunchRequest_2_SM1,
   SSM_TR_AckReceived_1_SM1
-} _171_SSM_TR_SM1;
+} _29_SSM_TR_SM1;
 /* Acknowledgement::RequestAck::SM1 */
 typedef enum {
   SSM_st_Waiting_SM1,
   SSM_st_LaunchRequest_SM1,
   SSM_st_AckReceived_SM1
-} _169_SSM_ST_SM1;
+} _27_SSM_ST_SM1;
 /* TA_MA_Request::MA_Request_Supervision::SM1 */
 typedef enum {
-  _167_SSM_TR_no_trans_SM1,
+  _25_SSM_TR_no_trans_SM1,
   SSM_TR_init_1_SM1,
   SSM_TR_NoReqPending_1_SM1,
   SSM_TR_ReqPending_1_SM1
-} _168_SSM_TR_SM1;
+} _26_SSM_TR_SM1;
 /* TA_MA_Request::MA_Request_Supervision::SM1 */
 typedef enum {
   SSM_st_init_SM1,
   SSM_st_NoReqPending_SM1,
   SSM_st_ReqPending_SM1
-} _166_SSM_ST_SM1;
+} _24_SSM_ST_SM1;
 /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */
 typedef enum {
   SSM_TR_no_trans_TimerStatus_SM,
@@ -1397,9 +1397,9 @@ typedef enum {
   SSM_TR_no_trans_repeat_SM,
   SSM_TR_rep_inactive_1_repeat_SM,
   SSM_TR_rep_inactive_2_repeat_SM,
-  _165_SSM_TR_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes_1_repeat_SM,
+  SSM_TR_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes_1_repeat_SM,
   SSM_TR_rep_repeatUntilSuccessfulOrADefinedNumberOfTimes_2_repeat_SM,
-  _164_SSM_TR_rep_repeatUntilStopConditionMet_1_repeat_SM,
+  SSM_TR_rep_repeatUntilStopConditionMet_1_repeat_SM,
   SSM_TR_rep_repeatUntilStopConditionMet_2_repeat_SM
 } SSM_TR_repeat_SM;
 /* MoRC_Pck::Subfunc_Pkg::requestRadioConnectionSetupFromOBU_v2::repeat_SM */
@@ -1430,61 +1430,61 @@ typedef enum {
 } SSM_ST_Register_SM;
 /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::SM1 */
 typedef enum {
-  _162_SSM_TR_no_trans_SM1,
-  _161_SSM_TR_idle_1_SM1,
-  _160_SSM_TR_waitForSafeRadioConnectionSetUp_1_SM1,
+  _22_SSM_TR_no_trans_SM1,
+  _21_SSM_TR_idle_1_SM1,
+  SSM_TR_waitForSafeRadioConnectionSetUp_1_SM1,
   SSM_TR_waitForSafeRadioConnectionSetUp_2_SM1,
   SSM_TR_waitForSystemVersion_1_SM1,
   SSM_TR_waitForSystemVersion_2_SM1,
   SSM_TR_waitForSystemVersion_3_SM1,
-  _159_SSM_TR_sessionEstablished_1_SM1
-} _163_SSM_TR_SM1;
+  _20_SSM_TR_sessionEstablished_1_SM1
+} _23_SSM_TR_SM1;
 /* MoRC_Pck::Subfunc_Pkg::establishSessionFromOBU_v2::SM1 */
 typedef enum {
-  _157_SSM_st_idle_SM1,
+  _18_SSM_st_idle_SM1,
   SSM_st_waitForSafeRadioConnectionSetUp_SM1,
   SSM_st_waitForSystemVersion_SM1,
-  _156_SSM_st_sessionEstablished_SM1
-} _158_SSM_ST_SM1;
+  _17_SSM_st_sessionEstablished_SM1
+} _19_SSM_ST_SM1;
 /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::SM1 */
 typedef enum {
-  _154_SSM_TR_no_trans_SM1,
-  _153_SSM_TR_idle_1_SM1,
+  _15_SSM_TR_no_trans_SM1,
+  _14_SSM_TR_idle_1_SM1,
   SSM_TR_sessionEstablished_1_SM1
-} _155_SSM_TR_SM1;
+} _16_SSM_TR_SM1;
 /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::SM1 */
 typedef enum {
-  _151_SSM_st_idle_SM1,
+  _12_SSM_st_idle_SM1,
   SSM_st_sessionEstablished_SM1
-} _152_SSM_ST_SM1;
+} _13_SSM_ST_SM1;
 /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
 typedef enum {
-  _149_SSM_TR_no_trans_SM1,
-  _148_SSM_TR_idle_1_SM1,
+  _10_SSM_TR_no_trans_SM1,
+  _9_SSM_TR_idle_1_SM1,
   SSM_TR_idle_2_SM1,
   SSM_TR_establishingByOBU_1_SM1,
   SSM_TR_establishingByRBC_1_SM1
-} _150_SSM_TR_SM1;
+} _11_SSM_TR_SM1;
 /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
 typedef enum {
-  _146_SSM_st_idle_SM1,
+  _7_SSM_st_idle_SM1,
   SSM_st_establishingByOBU_SM1,
   SSM_st_establishingByRBC_SM1
-} _147_SSM_ST_SM1;
+} _8_SSM_ST_SM1;
 /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1 */
 typedef enum {
-  _144_SSM_TR_no_trans_SM1,
+  _5_SSM_TR_no_trans_SM1,
   SSM_TR_idle_1_SM1,
-  _143_SSM_TR_waitForAckTerminationOfCommunicationSessionReceived_1_SM1,
+  SSM_TR_waitForAckTerminationOfCommunicationSessionReceived_1_SM1,
   SSM_TR_waitForAckTerminationOfCommunicationSessionReceived_2_SM1,
   SSM_TR_terminated_1_SM1
-} _145_SSM_TR_SM1;
+} _6_SSM_TR_SM1;
 /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1 */
 typedef enum {
   SSM_st_idle_SM1,
   SSM_st_waitForAckTerminationOfCommunicationSessionReceived_SM1,
   SSM_st_terminated_SM1
-} _142_SSM_ST_SM1;
+} _4_SSM_ST_SM1;
 /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::Session_SM */
 typedef enum {
   SSM_TR_no_trans_Session_SM,
@@ -1506,7 +1506,7 @@ typedef enum {
   SSM_TR_no_trans_TrainExitedFromRBCArea_SM,
   SSM_TR_Idle_1_TrainExitedFromRBCArea_SM,
   SSM_TR_Idle_2_TrainExitedFromRBCArea_SM,
-  _141_SSM_TR_WaitForOrderToTerminateTheSession_1_TrainExitedFromRBCArea_SM,
+  SSM_TR_WaitForOrderToTerminateTheSession_1_TrainExitedFromRBCArea_SM,
   SSM_TR_WaitForOrderToTerminateTheSession_2_TrainExitedFromRBCArea_SM
 } SSM_TR_TrainExitedFromRBCArea_SM;
 /* MoRC_Pck::Subfunc_Pkg::initiateTerminatingSession_v2::TrainExitedFromRBCArea_SM */
@@ -1519,7 +1519,7 @@ typedef enum {
   SSM_TR_no_trans_connectionStatus_SM,
   SSM_TR_NoConnection_1_connectionStatus_SM,
   SSM_TR_NoConnection_2_connectionStatus_SM,
-  _140_SSM_TR_ConnectionLost_SetupFailed_1_connectionStatus_SM,
+  SSM_TR_ConnectionLost_SetupFailed_1_connectionStatus_SM,
   SSM_TR_ConnectionLost_SetupFailed_2_connectionStatus_SM,
   SSM_TR_ConnectionUp_1_connectionStatus_SM,
   SSM_TR_ConnectionUp_2_connectionStatus_SM
@@ -1533,52 +1533,52 @@ typedef enum {
 /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM */
 typedef enum {
   SSM_TR_no_trans_handOver_with_1_Session_SM_IfBlock1,
-  _139_SSM_TR_WaitForTransitionOrder_1_handOver_with_1_Session_SM_IfBlock1,
-  _138_SSM_TR_WaitForMaxSafeFrontEndPassing_1_handOver_with_1_Session_SM_IfBlock1,
-  _137_SSM_TR_WaitForMaxSafeFrontEndPassing_2_handOver_with_1_Session_SM_IfBlock1,
-  _136_SSM_TR_WaitForMinSafeRearEndPassing_1_handOver_with_1_Session_SM_IfBlock1,
-  _135_SSM_TR_WaitForMinSafeRearEndPassing_2_handOver_with_1_Session_SM_IfBlock1,
-  _134_SSM_TR_WaitForSessionWithAcceptingRBCEstablished_1_handOver_with_1_Session_SM_IfBlock1,
-  _133_SSM_TR_WaitForSessionWithAcceptingRBCEstablished_2_handOver_with_1_Session_SM_IfBlock1,
-  _132_SSM_TR_WaitForTerminationOrderFromHandingOverRBC_1_handOver_with_1_Session_SM_IfBlock1,
-  _131_SSM_TR_WaitForTerminationOrderFromHandingOverRBC_2_handOver_with_1_Session_SM_IfBlock1,
-  _130_SSM_TR_WaitForHandingOverRBCTerminated_1_handOver_with_1_Session_SM_IfBlock1,
-  _129_SSM_TR_WaitForHandingOverRBCTerminated_2_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForTransitionOrder_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForMaxSafeFrontEndPassing_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForMaxSafeFrontEndPassing_2_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForMinSafeRearEndPassing_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForMinSafeRearEndPassing_2_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForSessionWithAcceptingRBCEstablished_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForSessionWithAcceptingRBCEstablished_2_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForTerminationOrderFromHandingOverRBC_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForTerminationOrderFromHandingOverRBC_2_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForHandingOverRBCTerminated_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForHandingOverRBCTerminated_2_handOver_with_1_Session_SM_IfBlock1,
   SSM_TR_RegisterAcceptingRBC_1_handOver_with_1_Session_SM_IfBlock1,
   SSM_TR_RegisterAcceptingRBC_2_handOver_with_1_Session_SM_IfBlock1,
-  _128_SSM_TR_WaitForHandingOverRBCRegistered_1_handOver_with_1_Session_SM_IfBlock1,
-  _127_SSM_TR_WaitForHandingOverRBCRegistered_2_handOver_with_1_Session_SM_IfBlock1,
-  _126_SSM_TR_EstablishSessionWithAcceptingRBC_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForHandingOverRBCRegistered_1_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_WaitForHandingOverRBCRegistered_2_handOver_with_1_Session_SM_IfBlock1,
+  SSM_TR_EstablishSessionWithAcceptingRBC_1_handOver_with_1_Session_SM_IfBlock1,
   SSM_TR_EstablishSessionWithAcceptingRBC_2_handOver_with_1_Session_SM_IfBlock1
 } SSM_TR_handOver_with_1_Session_SM_IfBlock1;
 /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::else::handOver_with_1_Session_SM */
 typedef enum {
-  _125_SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM,
-  _124_SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM,
-  _123_SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM,
-  _122_SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM,
-  _121_SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM,
-  _120_SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForTransitionOrder_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForMaxSafeFrontEndPassing_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForMinSafeRearEndPassing_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForSessionWithAcceptingRBCEstablished_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForTerminationOrderFromHandingOverRBC_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForHandingOverRBCTerminated_IfBlock1_handOver_with_1_Session_SM,
   SSM_st_RegisterAcceptingRBC_IfBlock1_handOver_with_1_Session_SM,
-  _119_SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM,
+  SSM_st_WaitForHandingOverRBCRegistered_IfBlock1_handOver_with_1_Session_SM,
   SSM_st_EstablishSessionWithAcceptingRBC_IfBlock1_handOver_with_1_Session_SM
 } SSM_ST_handOver_with_1_Session_SM_IfBlock1;
 /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::then::handOver_with_2_Sessions_SM */
 typedef enum {
   SSM_TR_no_trans_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForTransitionOrder_1_handOver_with_2_Sessions_SM_IfBlock1,
-  _118_SSM_TR_WaitForMaxSafeFrontEndPassing_1_handOver_with_2_Sessions_SM_IfBlock1,
+  SSM_TR_WaitForMaxSafeFrontEndPassing_1_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForMaxSafeFrontEndPassing_2_handOver_with_2_Sessions_SM_IfBlock1,
-  _117_SSM_TR_WaitForMinSafeRearEndPassing_1_handOver_with_2_Sessions_SM_IfBlock1,
+  SSM_TR_WaitForMinSafeRearEndPassing_1_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForMinSafeRearEndPassing_2_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForSessionWithAcceptingRBCEstablished_1_handOver_with_2_Sessions_SM_IfBlock1,
-  _116_SSM_TR_WaitForTerminationOrderFromHandingOverRBC_1_handOver_with_2_Sessions_SM_IfBlock1,
+  SSM_TR_WaitForTerminationOrderFromHandingOverRBC_1_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForTerminationOrderFromHandingOverRBC_2_handOver_with_2_Sessions_SM_IfBlock1,
-  _115_SSM_TR_WaitForHandingOverRBCTerminated_1_handOver_with_2_Sessions_SM_IfBlock1,
+  SSM_TR_WaitForHandingOverRBCTerminated_1_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForHandingOverRBCTerminated_2_handOver_with_2_Sessions_SM_IfBlock1,
-  _114_SSM_TR_ReregisterHandingOverRBC_1_handOver_with_2_Sessions_SM_IfBlock1,
+  SSM_TR_ReregisterHandingOverRBC_1_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_ReregisterHandingOverRBC_2_handOver_with_2_Sessions_SM_IfBlock1,
-  _113_SSM_TR_WaitForHandingOverRBCRegistered_1_handOver_with_2_Sessions_SM_IfBlock1,
+  SSM_TR_WaitForHandingOverRBCRegistered_1_handOver_with_2_Sessions_SM_IfBlock1,
   SSM_TR_WaitForHandingOverRBCRegistered_2_handOver_with_2_Sessions_SM_IfBlock1
 } SSM_TR_handOver_with_2_Sessions_SM_IfBlock1;
 /* Handover_Pkg::handoverUtils_Pkg::handOverSequencer::IfBlock1::then::handOver_with_2_Sessions_SM */
@@ -1594,12 +1594,12 @@ typedef enum {
 } SSM_ST_handOver_with_2_Sessions_SM_IfBlock1;
 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */
 typedef enum {
-  _111_SSM_TR_no_trans_SM1,
+  _2_SSM_TR_no_trans_SM1,
   SSM_TR_mobile_1_1_SM1,
   SSM_TR_mobile_2_1_SM1
-} _112_SSM_TR_SM1;
+} _3_SSM_TR_SM1;
 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */
-typedef enum { SSM_st_mobile_1_SM1, SSM_st_mobile_2_SM1 } _110_SSM_ST_SM1;
+typedef enum { SSM_st_mobile_1_SM1, SSM_st_mobile_2_SM1 } _1_SSM_ST_SM1;
 /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */
 typedef enum {
   SSM_TR_no_trans_SM1,
@@ -2559,7 +2559,7 @@ typedef struct {
 } struct__105682;
 
 /* Radio_Types_Pkg::Radio_TrainTrack_Header_T */
-typedef struct__105682 _9_Radio_TrainTrack_Header_T_Radio_Types_Pkg;
+typedef struct__105682 Radio_TrainTrack_Header_T_Radio_Types_Pkg;
 
 /* TM_transitional::Radio_TrainTrack_Header_T */
 typedef struct__105682 Radio_TrainTrack_Header_T_TM_transitional;
@@ -2703,10 +2703,10 @@ typedef struct {
 } struct__105801;
 
 /* Radio_Types_Pkg::Radio_TrainTrack_Message_T */
-typedef struct__105801 _8_Radio_TrainTrack_Message_T_Radio_Types_Pkg;
+typedef struct__105801 Radio_TrainTrack_Message_T_Radio_Types_Pkg;
 
 /* RCM_MsgTypes_Pkg::msgToTrack_T */
-typedef _8_Radio_TrainTrack_Message_T_Radio_Types_Pkg msgToTrack_T_RCM_MsgTypes_Pkg;
+typedef Radio_TrainTrack_Message_T_Radio_Types_Pkg msgToTrack_T_RCM_MsgTypes_Pkg;
 
 /* TM_transitional::Radio_TrainTrack_Message_T */
 typedef struct__105801 Radio_TrainTrack_Message_T_TM_transitional;
@@ -3230,7 +3230,7 @@ typedef struct__106152 array__106159[32];
 typedef array__106159 P003_OBU_k_m_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P203V1_OBU_k_m_sectionlist_enum_T */
-typedef array__106159 _2_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2;
+typedef array__106159 P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
@@ -3604,9 +3604,9 @@ typedef struct {
 } struct__106394;
 
 /* TrackAtlasTypes::MovementAuthoritySection_t */
-typedef struct__106394 _20_MovementAuthoritySection_t_TrackAtlasTypes;
+typedef struct__106394 MovementAuthoritySection_t_TrackAtlasTypes;
 
-typedef _20_MovementAuthoritySection_t_TrackAtlasTypes array__106403[10];
+typedef MovementAuthoritySection_t_TrackAtlasTypes array__106403[10];
 
 /* TrackAtlasTypes::MovementAuthoritySectionlist_t */
 typedef array__106403 MovementAuthoritySectionlist_t_TrackAtlasTypes;
@@ -3985,7 +3985,7 @@ typedef struct__106645 P12_Level1MovementAuthority_T_Packet_Types_Pkg;
 typedef P12_Level1MovementAuthority_T_Packet_Types_Pkg array__106673[5];
 
 /* Packet_Types_Pkg::P12_Level1MovementAuthorities_T */
-typedef array__106673 _6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg;
+typedef array__106673 P12_Level1MovementAuthorities_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4087,7 +4087,7 @@ typedef struct__106722 P15_Level23MovementAuthority_T_Packet_Types_Pkg;
 typedef P15_Level23MovementAuthority_T_Packet_Types_Pkg array__106749[5];
 
 /* Packet_Types_Pkg::P15_Level23MovementAuthorities_T */
-typedef array__106749 _5_P15_Level23MovementAuthorities_T_Packet_Types_Pkg;
+typedef array__106749 P15_Level23MovementAuthorities_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4124,7 +4124,7 @@ typedef struct__106766 P027V1_section_enum_qdiff_T_TM_baseline2;
 typedef P027V1_section_enum_qdiff_T_TM_baseline2 array__106772[32];
 
 /* TM_baseline2::P027V1_OBU_sectionlist_enum_qdiff_T */
-typedef array__106772 _3_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2;
+typedef array__106772 P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2;
 
 typedef struct {
   kcg_bool valid;
@@ -4132,7 +4132,7 @@ typedef struct {
   V_STATIC v_static;
   Q_FRONT q_front;
   N_ITER n_iter;
-  _3_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 SECTIONS_q_diff;
+  P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 SECTIONS_q_diff;
 } struct__106775;
 
 /* TM_baseline2::P027V1_section_enum_T */
@@ -4270,7 +4270,7 @@ typedef struct__106868 P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg;
 typedef P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg array__106875[7];
 
 /* Packet_Types_Pkg::P46_ConditionalLevelTransitionOrders_T */
-typedef array__106875 _7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg;
+typedef array__106875 P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4368,16 +4368,16 @@ typedef struct {
 typedef struct__106929 T_Data_From_Track_Mess_Level_And_Mode_Types_Pkg;
 
 typedef struct {
-  _6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg P_12;
+  P12_Level1MovementAuthorities_T_Packet_Types_Pkg P_12;
   P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg P_135;
   P137_StopIfInStaffResponsible_T_Packet_Types_Pkg P_137;
   P138_ReversingAreaInformation_T_Packet_Types_Pkg P_138;
   P139_ReversingSupervisionInformation_T_Packet_Types_Pkg P_139;
-  _5_P15_Level23MovementAuthorities_T_Packet_Types_Pkg P_15;
+  P15_Level23MovementAuthorities_T_Packet_Types_Pkg P_15;
   P21_GradientProfiles_T_Packet_Types_Pkg P_21;
   P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg P_27;
   P41_LevelTransistionOrders_T_Packet_Types_Pkg P_41;
-  _7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg P_46;
+  P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg P_46;
   P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg P_63;
   P80_ModeProfiles_T_Packet_Types_Pkg P_80;
   NID_LRBG LRBG;
@@ -4398,9 +4398,9 @@ typedef struct {
 typedef struct__106955 DMI_gradientProfileElement_T_DMI_Types_Pkg;
 
 /* TrackAtlasTypes::GradientProfile_for_DMI_section_t */
-typedef struct__106955 _21_GradientProfile_for_DMI_section_t_TrackAtlasTypes;
+typedef struct__106955 GradientProfile_for_DMI_section_t_TrackAtlasTypes;
 
-typedef _21_GradientProfile_for_DMI_section_t_TrackAtlasTypes array__106962[50];
+typedef GradientProfile_for_DMI_section_t_TrackAtlasTypes array__106962[50];
 
 /* TrackAtlasTypes::GradientProfile_for_DMI_t */
 typedef array__106962 GradientProfile_for_DMI_t_TrackAtlasTypes;
@@ -4408,7 +4408,7 @@ typedef array__106962 GradientProfile_for_DMI_t_TrackAtlasTypes;
 typedef struct__106253 array__106965[32];
 
 /* TM::P003_OBU_nid_c_sectionlist_enum_T */
-typedef array__106965 _4_P003_OBU_nid_c_sectionlist_enum_T_TM;
+typedef array__106965 P003_OBU_nid_c_sectionlist_enum_T_TM;
 
 /* TM_baseline2::P003V1_sectionlist_enum_T */
 typedef array__106965 P003V1_sectionlist_enum_T_TM_baseline2;
@@ -4493,7 +4493,7 @@ typedef struct {
   D_VALIDNV d_validnv;
   NID_C nid_c;
   N_ITER n_iter_nid_c;
-  _4_P003_OBU_nid_c_sectionlist_enum_T_TM nid_c_list;
+  P003_OBU_nid_c_sectionlist_enum_T_TM nid_c_list;
   V_NVSHUNT v_nvshunt;
   V_NVSTFF v_nvstff;
   V_NVONSIGHT v_nvonsight;
@@ -4698,7 +4698,7 @@ typedef struct {
 } struct__107178;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Train_Running_Number_T */
-typedef struct__107178 _23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg;
+typedef struct__107178 DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -4878,7 +4878,7 @@ typedef struct__107306 probesBalises_T_xdebugSupport_Pkg;
 
 typedef struct {
   P41_LevelTransistionOrders_T_Packet_Types_Pkg p41;
-  _7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg p46;
+  P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg p46;
   kcg_bool p12_received;
   kcg_bool p15_received;
   kcg_bool p21_received;
@@ -5122,7 +5122,7 @@ typedef struct {
 } struct__107488;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Adhesion_Factor_Data_T */
-typedef struct__107488 _22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg;
+typedef struct__107488 DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg;
 
 typedef kcg_char array_char_9[9];
 
@@ -5136,7 +5136,7 @@ typedef struct {
 } struct__107497;
 
 /* DMI_Messages_Bothways_Pkg::DMI_Driver_Identifier_T */
-typedef struct__107497 _24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg;
+typedef struct__107497 DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -5179,13 +5179,13 @@ typedef struct {
   DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg status;
   DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg identifier;
   DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg driverRequest;
-  _24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg driverIdentifier;
-  _23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg trainRunningNumber;
+  DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg driverIdentifier;
+  DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg trainRunningNumber;
   DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg radioNetData;
   DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg textMessageAck;
   DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg trainDataAck;
   DMI_Train_Data_T_DMI_Messages_Bothways_Pkg trainData;
-  _22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg adhesionFactor;
+  DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg adhesionFactor;
   DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg iconAck;
   DMI_Level_Data_T_DMI_Messages_Bothways_Pkg selectedLevel;
 } struct__107528;
@@ -5713,7 +5713,7 @@ typedef struct {
 } struct__107909;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_EVC_Radio_Net_Data_T */
-typedef struct__107909 _25_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__107909 DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -5779,7 +5779,7 @@ typedef struct {
 } struct__107945;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_EVC_Coded_Train_Data_T */
-typedef struct__107945 _27_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__107945 DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef struct {
   kcg_bool valid;
@@ -5856,7 +5856,7 @@ typedef struct {
 } struct__107999;
 
 /* DMI_Messages_EVC_to_DMI_Pkg::DMI_Identifier_Request_T */
-typedef struct__107999 _26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
+typedef struct__107999 DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg;
 
 typedef kcg_int array_int_129[129];
 
@@ -5927,7 +5927,7 @@ typedef struct__108041 DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg;
 typedef kcg_int array_int_325[325];
 
 /* DMI_Track_Description_int_array_T */
-typedef array_int_325 _49_DMI_Track_Description_int_array_T;
+typedef array_int_325 DMI_Track_Description_int_array_T;
 
 typedef kcg_int array_int_262[262];
 
@@ -6027,18 +6027,18 @@ typedef struct {
   DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg dynamic;
   DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg menu_request;
   DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg entry_request;
-  _27_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg evc_coded_train_data;
+  DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg evc_coded_train_data;
   DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg textMessage;
   DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg trackDescription;
-  _26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg identifierRequest;
+  DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg identifierRequest;
   DMI_System_Version_T_DMI_Messages_EVC_to_DMI_Pkg systemVersion;
   DMI_Display_Control_T_DMI_Messages_EVC_to_DMI_Pkg displayControl;
   DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg EVC_levelData;
-  _25_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg EVC_radioNetData;
-  _24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg driverIdentifier;
-  _23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg trainRunningNumber;
+  DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg EVC_radioNetData;
+  DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg driverIdentifier;
+  DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg trainRunningNumber;
   DMI_Train_Data_T_DMI_Messages_Bothways_Pkg trainData;
-  _22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg adhesionFactor;
+  DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg adhesionFactor;
   DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg iconRequest;
 } struct__108131;
 
@@ -10615,9 +10615,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_SSP_matrix_t_TA_MRSP kcg_copy_array__107009
 
-#define kcg_comp__49_DMI_Track_Description_int_array_T kcg_comp_array_int_325
+#define kcg_comp_DMI_Track_Description_int_array_T kcg_comp_array_int_325
 
-#define kcg_copy__49_DMI_Track_Description_int_array_T kcg_copy_array_int_325
+#define kcg_copy_DMI_Track_Description_int_array_T kcg_copy_array_int_325
 
 #define kcg_comp_DMI_gradientProfile_int_arrayT kcg_comp_array_int_129
 
@@ -10855,9 +10855,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P203V1_OBU_k_m_section_enum_T_TM_baseline2 kcg_copy_struct__106152
 
-#define kcg_comp__2_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_comp_array__106159
+#define kcg_comp_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_comp_array__106159
 
-#define kcg_copy__2_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_copy_array__106159
+#define kcg_copy_P203V1_OBU_k_m_sectionlist_enum_T_TM_baseline2 kcg_copy_array__106159
 
 #define kcg_comp_P203V1_OBU_k_section_enum_T_TM_baseline2 kcg_comp_struct__106162
 
@@ -10915,9 +10915,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P027V1_section_enum_qdiff_T_TM_baseline2 kcg_copy_struct__106766
 
-#define kcg_comp__3_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_comp_array__106772
+#define kcg_comp_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_comp_array__106772
 
-#define kcg_copy__3_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_copy_array__106772
+#define kcg_copy_P027V1_OBU_sectionlist_enum_qdiff_T_TM_baseline2 kcg_copy_array__106772
 
 #define kcg_comp_P027V1_section_enum_T_TM_baseline2 kcg_comp_struct__106775
 
@@ -11091,9 +11091,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_MovementAuthority_t_TrackAtlasTypes kcg_copy_struct__106417
 
-#define kcg_comp__20_MovementAuthoritySection_t_TrackAtlasTypes kcg_comp_struct__106394
+#define kcg_comp_MovementAuthoritySection_t_TrackAtlasTypes kcg_comp_struct__106394
 
-#define kcg_copy__20_MovementAuthoritySection_t_TrackAtlasTypes kcg_copy_struct__106394
+#define kcg_copy_MovementAuthoritySection_t_TrackAtlasTypes kcg_copy_struct__106394
 
 #define kcg_comp_MRSP_Profile_t_TrackAtlasTypes kcg_comp_array__106637
 
@@ -11107,9 +11107,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_DataForDMI_t_TrackAtlasTypes kcg_copy_struct__107090
 
-#define kcg_comp__21_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_comp_struct__106955
+#define kcg_comp_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_comp_struct__106955
 
-#define kcg_copy__21_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_copy_struct__106955
+#define kcg_copy_GradientProfile_for_DMI_section_t_TrackAtlasTypes kcg_copy_struct__106955
 
 #define kcg_comp_MRSP_section_t_TrackAtlasTypes kcg_comp_struct__106619
 
@@ -11171,25 +11171,25 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107425
 
-#define kcg_comp__22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107488
+#define kcg_comp_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107488
 
-#define kcg_copy__22_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107488
+#define kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107488
 
 #define kcg_comp_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107124
 
 #define kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107124
 
-#define kcg_comp__23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107178
+#define kcg_comp_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107178
 
-#define kcg_copy__23_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107178
+#define kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107178
 
 #define kcg_comp_driverIdentifier_T_DMI_Messages_Bothways_Pkg kcg_comp_array_char_9
 
 #define kcg_copy_driverIdentifier_T_DMI_Messages_Bothways_Pkg kcg_copy_array_char_9
 
-#define kcg_comp__24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107497
+#define kcg_comp_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_comp_struct__107497
 
-#define kcg_copy__24_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107497
+#define kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg kcg_copy_struct__107497
 
 #define kcg_comp_DMI_to_EVC_Message_int_T_API_DMI_Pkg kcg_comp_array_int_311
 
@@ -11399,9 +11399,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg kcg_copy_struct__105608
 
-#define kcg_comp__4_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_comp_array__106965
+#define kcg_comp_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_comp_array__106965
 
-#define kcg_copy__4_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_copy_array__106965
+#define kcg_copy_P003_OBU_nid_c_sectionlist_enum_T_TM kcg_copy_array__106965
 
 #define kcg_comp_P003_OBU_T_TM kcg_comp_struct__107017
 
@@ -11435,9 +11435,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P058_section_enum_T_TM kcg_copy_struct__107274
 
-#define kcg_comp__25_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__107909
+#define kcg_comp_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__107909
 
-#define kcg_copy__25_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__107909
+#define kcg_copy_DMI_EVC_Radio_Net_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__107909
 
 #define kcg_comp_P138_OBU_T_TM kcg_comp_struct__106714
 
@@ -11471,9 +11471,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P012_sections_array_flat_T_TM kcg_copy_array_int_128
 
-#define kcg_comp__26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__107999
+#define kcg_comp_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__107999
 
-#define kcg_copy__26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__107999
+#define kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__107999
 
 #define kcg_comp_P012_section_enum_T_TM kcg_comp_struct__106519
 
@@ -11491,9 +11491,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__108055
 
-#define kcg_comp__27_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__107945
+#define kcg_comp_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_comp_struct__107945
 
-#define kcg_copy__27_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__107945
+#define kcg_copy_DMI_EVC_Coded_Train_Data_T_DMI_Messages_EVC_to_DMI_Pkg kcg_copy_struct__107945
 
 #define kcg_comp_Array03_TM kcg_comp_array_int_3
 
@@ -12271,9 +12271,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P15_Level23MovementAuthority_T_Packet_Types_Pkg kcg_copy_struct__106722
 
-#define kcg_comp__5_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_comp_array__106749
+#define kcg_comp_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_comp_array__106749
 
-#define kcg_copy__5_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_copy_array__106749
+#define kcg_copy_P15_Level23MovementAuthorities_T_Packet_Types_Pkg kcg_copy_array__106749
 
 #define kcg_comp_P139_ReversingSupervisionInformation_T_Packet_Types_Pkg kcg_comp_struct__106752
 
@@ -12295,9 +12295,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_copy_array__106350
 
-#define kcg_comp__6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg kcg_comp_array__106673
+#define kcg_comp_P12_Level1MovementAuthorities_T_Packet_Types_Pkg kcg_comp_array__106673
 
-#define kcg_copy__6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg kcg_copy_array__106673
+#define kcg_copy_P12_Level1MovementAuthorities_T_Packet_Types_Pkg kcg_copy_array__106673
 
 #define kcg_comp_linkedBG_index_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg kcg_comp_struct__106344
 
@@ -12343,9 +12343,9 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P46_ConditionalLevelTransitionOrder_T_Packet_Types_Pkg kcg_copy_struct__106868
 
-#define kcg_comp__7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_comp_array__106875
+#define kcg_comp_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_comp_array__106875
 
-#define kcg_copy__7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_copy_array__106875
+#define kcg_copy_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg kcg_copy_array__106875
 
 #define kcg_comp_P41_LevelTransitionOrder_T_Packet_Types_Pkg kcg_comp_struct__106836
 
@@ -12399,13 +12399,13 @@ extern kcg_bool kcg_comp_array__113321(
 
 #define kcg_copy_P42_SessionManagement_T_Packet_Types_Pkg kcg_copy_struct__105854
 
-#define kcg_comp__8_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_comp_struct__105801
+#define kcg_comp_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_comp_struct__105801
 
-#define kcg_copy__8_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_copy_struct__105801
+#define kcg_copy_Radio_TrainTrack_Message_T_Radio_Types_Pkg kcg_copy_struct__105801
 
-#define kcg_comp__9_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_comp_struct__105682
+#define kcg_comp_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_comp_struct__105682
 
-#define kcg_copy__9_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_copy_struct__105682
+#define kcg_copy_Radio_TrainTrack_Header_T_Radio_Types_Pkg kcg_copy_struct__105682
 
 #define kcg_comp_RadioMessage_T_Radio_Types_Pkg kcg_comp_struct__107360
 
@@ -12482,6 +12482,6 @@ extern kcg_bool kcg_comp_array__113321(
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:52
 *************************************************************$ */
 

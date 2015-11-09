@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _dec_m32_RCM_Utils_Pkg_decoders_H_
 #define _dec_m32_RCM_Utils_Pkg_decoders_H_
@@ -19,6 +19,6 @@ extern void dec_m32_RCM_Utils_Pkg_decoders(
 #endif /* _dec_m32_RCM_Utils_Pkg_decoders_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** dec_m32_RCM_Utils_Pkg_decoders.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

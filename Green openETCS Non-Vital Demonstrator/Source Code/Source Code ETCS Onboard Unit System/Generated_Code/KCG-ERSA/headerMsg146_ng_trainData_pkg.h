@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _headerMsg146_ng_trainData_pkg_H_
 #define _headerMsg146_ng_trainData_pkg_H_
@@ -20,6 +20,6 @@ extern void headerMsg146_ng_trainData_pkg(
 #endif /* _headerMsg146_ng_trainData_pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** headerMsg146_ng_trainData_pkg.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

@@ -1,12 +1,12 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _ToShunting_Conditions_H_
 #define _ToShunting_Conditions_H_
 
 #include "kcg_types.h"
-#include "Procedure_SH_Initiated_By_Procedures.h"
+#include "Procedure_SH_Initiated_By_Driver_Procedures.h"
 #include "Procedure_SH_Ordered_By_Track_Procedures.h"
 
 /* =====================  no input structure  ====================== */
@@ -31,7 +31,7 @@ typedef struct {
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_Procedure_SH_Ordered_By_Track_Procedures /* 1 */ _1_Context_1;
-  outC_Procedure_SH_Initiated_By_Procedures /* 1 */ Context_1;
+  outC_Procedure_SH_Initiated_By_Driver_Procedures /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_ToShunting_Conditions;
 
@@ -57,6 +57,6 @@ extern void ToShunting_reset_Conditions(outC_ToShunting_Conditions *outC);
 #endif /* _ToShunting_Conditions_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ToShunting_Conditions.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

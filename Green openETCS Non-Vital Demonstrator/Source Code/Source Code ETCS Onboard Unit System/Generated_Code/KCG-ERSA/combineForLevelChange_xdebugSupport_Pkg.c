@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,9 +30,9 @@ void combineForLevelChange_xdebugSupport_Pkg(
   /* xdebugSupport_Pkg::combineForLevelChange::_L108 */
   static kcg_bool _L108;
   
-  kcg_copy__6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg(
+  kcg_copy_P12_Level1MovementAuthorities_T_Packet_Types_Pkg(
     &outC->Data_to_From_Track_Packets_at_ML.P_12,
-    (_6_P12_Level1MovementAuthorities_T_Packet_Types_Pkg *)
+    (P12_Level1MovementAuthorities_T_Packet_Types_Pkg *)
       &Default_P12_legacy_xdebugSupport_Pkg);
   kcg_copy_P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg(
     &outC->Data_to_From_Track_Packets_at_ML.P_135,
@@ -95,7 +95,7 @@ void combineForLevelChange_xdebugSupport_Pkg(
       &outC->infoForLevelTransition,
       &last_infoForLevelTransition);
   }
-  kcg_copy__7_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg(
+  kcg_copy_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg(
     &outC->Data_to_From_Track_Packets_at_ML.P_46,
     &outC->infoForLevelTransition.p46);
   outC->Data_to_From_Track_Packets_at_ML.LRBG =
@@ -171,6 +171,6 @@ void combineForLevelChange_xdebugSupport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** combineForLevelChange_xdebugSupport_Pkg.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void sessionSequencer_v2_reset_MoRC_Pck_Subfunc_Pkg(
 void sessionSequencer_v2_MoRC_Pck_Subfunc_Pkg(
   /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::sessionEstablishCmd */sessionCmd_T_RCM_Session_Types_Pkg *sessionEstablishCmd,
   /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::p42_SessionManagement_in */p42_sessionManagement_T_RCM_MsgTypes_Pkg *p42_SessionManagement_in,
-  /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::m39_AckOfTerminationOfACommunicationSession */m39_AckOfTerminationOfACommunicationSession_T_RCM_MsgTypes_Pkg *_2_m39_AckOfTerminationOfACommunicationSession,
+  /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::m39_AckOfTerminationOfACommunicationSession */m39_AckOfTerminationOfACommunicationSession_T_RCM_MsgTypes_Pkg *m39_AckOfTerminationOfACommunicationSession,
   /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::m32_SystemVersion */m32_RBC_RIU_SystemVersion_T_RCM_MsgTypes_Pkg *m32_SystemVersion,
   /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::connectionStatus */mobileConnectionContext_T_RCM_Types_Pkg *connectionStatus,
   /* MoRC_Pck::Subfunc_Pkg::sessionSequencer_v2::initiateTermination */kcg_bool initiateTermination,
@@ -70,7 +70,7 @@ void sessionSequencer_v2_MoRC_Pck_Subfunc_Pkg(
       /* 1 */
       terminateSession_v2_MoRC_Pck_Subfunc_Pkg(
         kcg_true,
-        _2_m39_AckOfTerminationOfACommunicationSession,
+        m39_AckOfTerminationOfACommunicationSession,
         currentTime,
         &last_sessionStatus_l,
         reset,
@@ -256,6 +256,6 @@ void sessionSequencer_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** sessionSequencer_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

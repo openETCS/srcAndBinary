@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -37,9 +37,9 @@ void MA_Request_Supervision_TA_MA_Request(
   static kcg_bool tmp;
   static kcg_bool tmp2;
   /* TA_MA_Request::MA_Request_Supervision::SM1 */
-  static _166_SSM_ST_SM1 SM1_state_sel;
+  static _24_SSM_ST_SM1 SM1_state_sel;
   /* TA_MA_Request::MA_Request_Supervision::SM1 */
-  static _166_SSM_ST_SM1 SM1_state_act;
+  static _24_SSM_ST_SM1 SM1_state_act;
   /* TA_MA_Request::MA_Request_Supervision::_L80 */
   static kcg_bool _L80;
   /* TA_MA_Request::MA_Request_Supervision::_L81 */
@@ -139,6 +139,6 @@ void MA_Request_Supervision_TA_MA_Request(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_Request_Supervision_TA_MA_Request.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -38,6 +38,6 @@ DMI_train_id_INT_T_DATA CAST_DMI_train_id_to_int_DATA_Variables(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_train_id_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

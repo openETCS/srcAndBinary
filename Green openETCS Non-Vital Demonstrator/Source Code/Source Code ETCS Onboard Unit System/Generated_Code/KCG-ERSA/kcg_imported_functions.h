@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:52
 *************************************************************$ */
 #ifndef _KCG_IMPORTED_FUNCTIONS_H_
 #define _KCG_IMPORTED_FUNCTIONS_H_
@@ -27,6 +27,6 @@ extern kcg_int Char_to_Int_Utilities(
 #endif /* _KCG_IMPORTED_FUNCTIONS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_imported_functions.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:52
 *************************************************************$ */
 

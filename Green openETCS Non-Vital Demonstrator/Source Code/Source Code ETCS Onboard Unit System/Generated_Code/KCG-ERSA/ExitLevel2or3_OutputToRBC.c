@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -25,7 +25,7 @@ void ExitLevel2or3_OutputToRBC(
   /* OutputToRBC::ExitLevel2or3::Loc_Position */
   static M_POSITION last_Loc_Position;
   /* OutputToRBC::ExitLevel2or3::SM1 */
-  static _172_SSM_ST_SM1 SM1_state_act;
+  static _30_SSM_ST_SM1 SM1_state_act;
   
   if (outC->init) {
     outC->init = kcg_false;
@@ -69,6 +69,6 @@ void ExitLevel2or3_OutputToRBC(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ExitLevel2or3_OutputToRBC.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

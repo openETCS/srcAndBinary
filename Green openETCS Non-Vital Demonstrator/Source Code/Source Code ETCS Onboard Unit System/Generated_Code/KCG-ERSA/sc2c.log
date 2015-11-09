@@ -1,5 +1,5 @@
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-09T11:51:29
+** Generation date: 2015-11-09T13:57:59
 ** Command: scade -code "R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\EVC_IP_DMI.etp" -root EVC_IP_DMI::ROOT_EVC -conf KCG_ERSA
 *************************************************************$
 *** Generated Files Information (GENFIL): KCG- Generated files
@@ -187,8 +187,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\dec_m38_RCM_Utils_Pkg_decoders.c, line 0, character 0
  ~dec_m32_RCM_Utils_Pkg_decoders.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\dec_m32_RCM_Utils_Pkg_decoders.c, line 0, character 0
- ~safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
+ ~safeRadioConnectionIndication_v2_MoRC_Pck_Subfunc_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\safeRadioConnectionIndication_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
  ~initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
  ~sessionSequencer_v2_MoRC_Pck_Subfunc_Pkg.c
@@ -207,8 +207,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
  ~sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
- ~registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
+ ~registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
  ~Read_P045_TM.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Read_P045_TM.c, line 0, character 0
  ~C_P045_compr_onboard_TM_conversions.c
@@ -217,8 +217,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\CAST_Int_to_NID_MN_TM_conversions.c, line 0, character 0
  ~connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
- ~requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
+ ~requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.c, line 0, character 0
  ~countDownTimer_MoRC_Pck_Utils.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\countDownTimer_MoRC_Pck_Utils.c, line 0, character 0
  ~initiateSession_v2_MoRC_Pck_Subfunc_Pkg.c
@@ -239,8 +239,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\setProbesBalises_xdebugSupport_Pkg.c, line 0, character 0
  ~calculateTrainPosition_CalculateTrainPosition_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\calculateTrainPosition_CalculateTrainPosition_Pkg.c, line 0, character 0
- ~twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg.c, line 0, character 0
+ ~twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg.c, line 0, character 0
  ~linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.c, line 0, character 0
  ~positionedBGs_ids_notEqual_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
@@ -311,14 +311,14 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\findLinkedBG_bckwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
  ~findLinkedBG_fwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\findLinkedBG_fwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
- ~_198_recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_198_recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
+ ~recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
  ~recalculate_BG_locations_astern_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_astern_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
  ~recalculate_BG_location_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_location_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
- ~_199_recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_199_recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
+ ~recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
  ~recalculate_BG_locations_ahead_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_ahead_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c, line 0, character 0
  ~recalculate_BG_location_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
@@ -481,14 +481,14 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Merge_New_P21_to_Profile_TA_Gradient.c, line 0, character 0
  ~GP_Merge_New_P21_to_Profile_loop_TA_Gradient.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Merge_New_P21_to_Profile_loop_TA_Gradient.c, line 0, character 0
- ~_203_FindStartOfNewGradientProfileAbs_TA_Lib_internal.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_203_FindStartOfNewGradientProfileAbs_TA_Lib_internal.c, line 0, character 0
+ ~FindStartOfNewGradientProfileAbs_TA_Lib_internal.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewGradientProfileAbs_TA_Lib_internal.c, line 0, character 0
  ~FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal.c, line 0, character 0
  ~GP_Preprocessing_TA_Gradient.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Preprocessing_TA_Gradient.c, line 0, character 0
- ~_200_GP_Convert_P21_to_DistanceProfile_TA_Gradient.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_200_GP_Convert_P21_to_DistanceProfile_TA_Gradient.c, line 0, character 0
+ ~GP_Convert_P21_to_DistanceProfile_TA_Gradient.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Convert_P21_to_DistanceProfile_TA_Gradient.c, line 0, character 0
  ~GP_Convert_P21_to_DistanceProfile_loop_TA_Gradient.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Convert_P21_to_DistanceProfile_loop_TA_Gradient.c, line 0, character 0
  ~EVAL_Q_GDIR_TA_Lib_internal.c
@@ -627,18 +627,18 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Normalize_Profile_loop_TA_SSP.c, line 0, character 0
  ~TrainLength_Correction_TA_Lib_internal.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\TrainLength_Correction_TA_Lib_internal.c, line 0, character 0
- ~_201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.c, line 0, character 0
+ ~SSP_Merge_New_P27V1_to_Profile_TA_SSP.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Merge_New_P27V1_to_Profile_TA_SSP.c, line 0, character 0
  ~SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP.c, line 0, character 0
- ~_204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal.c, line 0, character 0
+ ~FindStartOfNewSpeedProfileAbs_TA_Lib_internal.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewSpeedProfileAbs_TA_Lib_internal.c, line 0, character 0
  ~FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal.c, line 0, character 0
  ~SSP_Preprocessing_TA_SSP.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Preprocessing_TA_SSP.c, line 0, character 0
- ~_202_SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_202_SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.c, line 0, character 0
+ ~SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.c, line 0, character 0
  ~SSP_Convert_P27V1_to_DistanceProfile_loop_TA_SSP.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Convert_P27V1_to_DistanceProfile_loop_TA_SSP.c, line 0, character 0
  ~Eval_Q_Front_TA_Lib_internal.c
@@ -679,8 +679,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Update_MA_TA_MA.c, line 0, character 0
  ~MA_L23_Preprocessing_TA_MA.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\MA_L23_Preprocessing_TA_MA.c, line 0, character 0
- ~_205_MA_Convert_P15_to_DistanceProfile_TA_MA.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_205_MA_Convert_P15_to_DistanceProfile_TA_MA.c, line 0, character 0
+ ~MA_Convert_P15_to_DistanceProfile_TA_MA.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\MA_Convert_P15_to_DistanceProfile_TA_MA.c, line 0, character 0
  ~EVAL_T_LOA_TA_Lib_internal.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\EVAL_T_LOA_TA_Lib_internal.c, line 0, character 0
  ~Normalize_Dangerpoint_TA_MA.c
@@ -959,8 +959,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Position_In_Ack_Area_Librairies.c, line 0, character 0
  ~Counter_pwlinear_int.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Counter_pwlinear_int.c, line 0, character 0
- ~Procedure_SH_Initiated_By_Procedures.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Procedure_SH_Initiated_By_Procedures.c, line 0, character 0
+ ~Procedure_SH_Initiated_By_Driver_Procedures.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Procedure_SH_Initiated_By_Driver_Procedures.c, line 0, character 0
  ~SH_Initiated_By_Driver_On_Procedures.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SH_Initiated_By_Driver_On_Procedures.c, line 0, character 0
  ~ToStandBy_Conditions.c
@@ -1177,8 +1177,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\UpdateReportedBG_ProvidePositionReport_Pkg.c, line 0, character 0
  ~ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.c, line 0, character 0
- ~Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.c, line 0, character 0
+ ~Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.c, line 0, character 0
  ~bypassGeneralMessage_xdebugSupport_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\bypassGeneralMessage_xdebugSupport_Pkg.c, line 0, character 0
  ~countPacketsMsg_xdebugSupport_Pkg.c
@@ -2373,8 +2373,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\dec_m38_RCM_Utils_Pkg_decoders.h, line 0, character 0
  ~dec_m32_RCM_Utils_Pkg_decoders.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\dec_m32_RCM_Utils_Pkg_decoders.h, line 0, character 0
- ~safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\safeRadioConnectionIndica_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
+ ~safeRadioConnectionIndication_v2_MoRC_Pck_Subfunc_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\safeRadioConnectionIndication_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
  ~initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
  ~sessionSequencer_v2_MoRC_Pck_Subfunc_Pkg.h
@@ -2393,8 +2393,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\establishSessionFromOBU_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
  ~sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\sessionCmd_2_p42_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
- ~registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\registeringToTheRadioNetw_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
+ ~registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\registeringToTheRadioNetwork_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
  ~Read_P045_TM.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Read_P045_TM.h, line 0, character 0
  ~C_P045_compr_onboard_TM_conversions.h
@@ -2403,8 +2403,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\CAST_Int_to_NID_MN_TM_conversions.h, line 0, character 0
  ~connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
- ~requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\requestRadioConnectionSet_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
+ ~requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\requestRadioConnectionSetupFromOBU_v2_MoRC_Pck_Subfunc_Pkg.h, line 0, character 0
  ~countDownTimer_MoRC_Pck_Utils.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\countDownTimer_MoRC_Pck_Utils.h, line 0, character 0
  ~initiateSession_v2_MoRC_Pck_Subfunc_Pkg.h
@@ -2425,8 +2425,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\setProbesBalises_xdebugSupport_Pkg.h, line 0, character 0
  ~calculateTrainPosition_CalculateTrainPosition_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\calculateTrainPosition_CalculateTrainPosition_Pkg.h, line 0, character 0
- ~twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg.h, line 0, character 0
+ ~twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h, line 0, character 0
  ~linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h, line 0, character 0
  ~positionedBGs_ids_notEqual_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h
@@ -2497,14 +2497,14 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\findLinkedBG_bckwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
  ~findLinkedBG_fwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\findLinkedBG_fwd_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
- ~_198_recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_198_recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
+ ~recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
  ~recalculate_BG_locations_astern_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_astern_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
  ~recalculate_BG_location_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_location_astern_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
- ~_199_recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_199_recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
+ ~recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
  ~recalculate_BG_locations_ahead_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\recalculate_BG_locations_ahead_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h, line 0, character 0
  ~recalculate_BG_location_ahead_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
@@ -2667,14 +2667,14 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Merge_New_P21_to_Profile_TA_Gradient.h, line 0, character 0
  ~GP_Merge_New_P21_to_Profile_loop_TA_Gradient.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Merge_New_P21_to_Profile_loop_TA_Gradient.h, line 0, character 0
- ~_203_FindStartOfNewGradientProfileAbs_TA_Lib_internal.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_203_FindStartOfNewGradientProfileAbs_TA_Lib_internal.h, line 0, character 0
+ ~FindStartOfNewGradientProfileAbs_TA_Lib_internal.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewGradientProfileAbs_TA_Lib_internal.h, line 0, character 0
  ~FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewGradientProfileAbs_LOOP_TA_Lib_internal.h, line 0, character 0
  ~GP_Preprocessing_TA_Gradient.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Preprocessing_TA_Gradient.h, line 0, character 0
- ~_200_GP_Convert_P21_to_DistanceProfile_TA_Gradient.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_200_GP_Convert_P21_to_DistanceProfile_TA_Gradient.h, line 0, character 0
+ ~GP_Convert_P21_to_DistanceProfile_TA_Gradient.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Convert_P21_to_DistanceProfile_TA_Gradient.h, line 0, character 0
  ~GP_Convert_P21_to_DistanceProfile_loop_TA_Gradient.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\GP_Convert_P21_to_DistanceProfile_loop_TA_Gradient.h, line 0, character 0
  ~EVAL_Q_GDIR_TA_Lib_internal.h
@@ -2813,18 +2813,18 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Normalize_Profile_loop_TA_SSP.h, line 0, character 0
  ~TrainLength_Correction_TA_Lib_internal.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\TrainLength_Correction_TA_Lib_internal.h, line 0, character 0
- ~_201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_201_SSP_Merge_New_P27V1_to_Profile_TA_SSP.h, line 0, character 0
+ ~SSP_Merge_New_P27V1_to_Profile_TA_SSP.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Merge_New_P27V1_to_Profile_TA_SSP.h, line 0, character 0
  ~SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Merge_New_P27V1_to_Profile_loop_TA_SSP.h, line 0, character 0
- ~_204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_204_FindStartOfNewSpeedProfileAbs_TA_Lib_internal.h, line 0, character 0
+ ~FindStartOfNewSpeedProfileAbs_TA_Lib_internal.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewSpeedProfileAbs_TA_Lib_internal.h, line 0, character 0
  ~FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal.h, line 0, character 0
  ~SSP_Preprocessing_TA_SSP.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Preprocessing_TA_SSP.h, line 0, character 0
- ~_202_SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_202_SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.h, line 0, character 0
+ ~SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Convert_P27V1_to_DistanceProfile_TA_SSP.h, line 0, character 0
  ~SSP_Convert_P27V1_to_DistanceProfile_loop_TA_SSP.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SSP_Convert_P27V1_to_DistanceProfile_loop_TA_SSP.h, line 0, character 0
  ~Eval_Q_Front_TA_Lib_internal.h
@@ -2865,8 +2865,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Update_MA_TA_MA.h, line 0, character 0
  ~MA_L23_Preprocessing_TA_MA.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\MA_L23_Preprocessing_TA_MA.h, line 0, character 0
- ~_205_MA_Convert_P15_to_DistanceProfile_TA_MA.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\_205_MA_Convert_P15_to_DistanceProfile_TA_MA.h, line 0, character 0
+ ~MA_Convert_P15_to_DistanceProfile_TA_MA.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\MA_Convert_P15_to_DistanceProfile_TA_MA.h, line 0, character 0
  ~EVAL_T_LOA_TA_Lib_internal.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\EVAL_T_LOA_TA_Lib_internal.h, line 0, character 0
  ~Normalize_Dangerpoint_TA_MA.h
@@ -3145,8 +3145,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Position_In_Ack_Area_Librairies.h, line 0, character 0
  ~Counter_pwlinear_int.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Counter_pwlinear_int.h, line 0, character 0
- ~Procedure_SH_Initiated_By_Procedures.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Procedure_SH_Initiated_By_Procedures.h, line 0, character 0
+ ~Procedure_SH_Initiated_By_Driver_Procedures.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Procedure_SH_Initiated_By_Driver_Procedures.h, line 0, character 0
  ~SH_Initiated_By_Driver_On_Procedures.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\SH_Initiated_By_Driver_On_Procedures.h, line 0, character 0
  ~ToStandBy_Conditions.h
@@ -3363,8 +3363,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\UpdateReportedBG_ProvidePositionReport_Pkg.h, line 0, character 0
  ~ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.h, line 0, character 0
- ~Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.h, line 0, character 0
+ ~Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h, line 0, character 0
  ~bypassGeneralMessage_xdebugSupport_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\bypassGeneralMessage_xdebugSupport_Pkg.h, line 0, character 0
  ~countPacketsMsg_xdebugSupport_Pkg.h
@@ -4405,6 +4405,6 @@ $**************  SCADETOC Version R16 (build i21) **************
  ~sc2c_integration_files.txt
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\EVC_IP_DMI\KCG_ERSA\sc2c_integration_files.txt, line 0, character 0
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-09T11:52:53
+** Generation date: 2015-11-09T13:59:29
 ** sc2c.log
 *************************************************************$

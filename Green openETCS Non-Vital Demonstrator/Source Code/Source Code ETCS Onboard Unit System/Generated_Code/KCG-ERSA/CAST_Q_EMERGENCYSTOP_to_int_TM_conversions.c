@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,7 +23,7 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_conversions(
   static kcg_int q_emergencystop_int;
   
   IfBlock1_clock = q_emergencystop ==
-    _11_ENUM_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions;
+    ENUM_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions;
   if (IfBlock1_clock) {
     q_emergencystop_int =
       INT_Q_EMERGENCYSTOP_cond_accepted_with_EOA_update_TM_conversions;
@@ -33,7 +33,7 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_conversions(
       ENUM_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions;
     if (_2_else_clock_IfBlock1) {
       q_emergencystop_int =
-        _10_INT_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions;
+        INT_Q_EMERGENCYSTOP_cond_accepted_with_no_EOA_update_TM_conversions;
     }
     else {
       _1_else_clock_IfBlock1 = q_emergencystop ==
@@ -59,6 +59,6 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_conversions(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_Q_EMERGENCYSTOP_to_int_TM_conversions.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -235,10 +235,10 @@ void processHandingOver_Handover_Pkg_handoverUtils_Pkg(
     &outC->_1_Context_1.p42_sessionCmd_for_handingOverRBC);
   kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
     &_L243,
-    &outC->_1_Context_1._7_p45_radioNetworkRegistrationOrder_for_handingOverRBC);
+    &outC->_1_Context_1.p45_radioNetworkRegistrationOrder_for_handingOverRBC);
   kcg_copy_msgFromTrack_T_RCM_MsgTypes_Pkg(
     &_L246,
-    &outC->_1_Context_1._6_p45_radioNetworkRegistrationOrder_for_acceptingRBC);
+    &outC->_1_Context_1.p45_radioNetworkRegistrationOrder_for_acceptingRBC);
   outC->sendPositionReport_2_handingOverRBC =
     outC->_1_Context_1.sendPositionReport_2_handingOverRBC;
   outC->sendPositionReport_2_acceptingRBC =
@@ -301,6 +301,6 @@ void processHandingOver_Handover_Pkg_handoverUtils_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** processHandingOver_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

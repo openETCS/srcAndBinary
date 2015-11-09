@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -47,7 +47,7 @@ void Procedure_With_Mode_Profile_Procedures(
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside::Current_Location::SM_Current_Location::Req_Current_Location */
   static kcg_bool br_1_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location;
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside::Current_Location::SM_Current_Location::Req_Current_Location */
-  static kcg_bool _3_br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location;
+  static kcg_bool br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location;
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside::Current_Location::SM_Current_Location::Switch_Autorized_Waiting_Ack::IfBlock1::else */
   static kcg_bool else_clock_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Switch_Autorized_Waiting_Ack_IfBlock1;
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside::Current_Location::SM_Current_Location::Switch_Autorized_Waiting_Ack::IfBlock1 */
@@ -55,7 +55,7 @@ void Procedure_With_Mode_Profile_Procedures(
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside */
   static SSM_ST_SM_Mode_Profile_By_Trackside SM_Mode_Profile_By_Trackside_state_sel;
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside */
-  static SSM_ST_SM_Mode_Profile_By_Trackside _4_SM_Mode_Profile_By_Trackside_state_act;
+  static SSM_ST_SM_Mode_Profile_By_Trackside SM_Mode_Profile_By_Trackside_state_act;
   /* Procedures::Procedure_With_Mode_Profile::SM_Mode_Profile_By_Trackside */
   static kcg_bool SM_Mode_Profile_By_Trackside_reset_act;
   /* Procedures::Procedure_With_Mode_Profile::Loc_Supervision_Condition_Covered */
@@ -91,16 +91,16 @@ void Procedure_With_Mode_Profile_Procedures(
             br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Switch_Autorized_Waiting_Ack));
       if (SM_Mode_Profile_By_Trackside_reset_act) {
         if (else_clock_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Switch_Autorized_Waiting_Ack_IfBlock1) {
-          _4_SM_Mode_Profile_By_Trackside_state_act =
+          SM_Mode_Profile_By_Trackside_state_act =
             SSM_st_Futher_location_SM_Mode_Profile_By_Trackside;
         }
         else {
-          _4_SM_Mode_Profile_By_Trackside_state_act =
+          SM_Mode_Profile_By_Trackside_state_act =
             SSM_st_Current_Location_SM_Mode_Profile_By_Trackside;
         }
       }
       else {
-        _4_SM_Mode_Profile_By_Trackside_state_act =
+        SM_Mode_Profile_By_Trackside_state_act =
           SSM_st_Procedure_Off_SM_Mode_Profile_By_Trackside;
       }
       break;
@@ -108,16 +108,16 @@ void Procedure_With_Mode_Profile_Procedures(
       tmp = !Procedure_Possible;
       if (tmp) {
         SM_Mode_Profile_By_Trackside_reset_act = kcg_true;
-        _4_SM_Mode_Profile_By_Trackside_state_act =
+        SM_Mode_Profile_By_Trackside_state_act =
           SSM_st_Procedure_Off_SM_Mode_Profile_By_Trackside;
       }
       else {
         if (br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Switch_Autorized_Waiting_Ack) {
-          _4_SM_Mode_Profile_By_Trackside_state_act =
+          SM_Mode_Profile_By_Trackside_state_act =
             SSM_st_Current_Location_SM_Mode_Profile_By_Trackside;
         }
         else {
-          _4_SM_Mode_Profile_By_Trackside_state_act =
+          SM_Mode_Profile_By_Trackside_state_act =
             SSM_st_Futher_location_SM_Mode_Profile_By_Trackside;
         }
         SM_Mode_Profile_By_Trackside_reset_act =
@@ -133,17 +133,17 @@ void Procedure_With_Mode_Profile_Procedures(
       }
       SM_Mode_Profile_By_Trackside_reset_act = !Procedure_Possible & tmp2;
       if (SM_Mode_Profile_By_Trackside_reset_act) {
-        _4_SM_Mode_Profile_By_Trackside_state_act =
+        SM_Mode_Profile_By_Trackside_state_act =
           SSM_st_Procedure_Off_SM_Mode_Profile_By_Trackside;
       }
       else {
-        _4_SM_Mode_Profile_By_Trackside_state_act =
+        SM_Mode_Profile_By_Trackside_state_act =
           SSM_st_Current_Location_SM_Mode_Profile_By_Trackside;
       }
       break;
     
   }
-  switch (_4_SM_Mode_Profile_By_Trackside_state_act) {
+  switch (SM_Mode_Profile_By_Trackside_state_act) {
     case SSM_st_Procedure_Off_SM_Mode_Profile_By_Trackside :
       outC->Condition_15_50_70 = kcg_false;
       outC->Condition_34_61_71 = kcg_false;
@@ -188,26 +188,26 @@ void Procedure_With_Mode_Profile_Procedures(
         case SSM_st_Start_Supervision_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
           if (Loc_Supervision_Condition_Covered) {
             SM_Futher_Location_state_act_SM_Mode_Profile_By_Trackside_Futher_location =
-              _186_SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
+              SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           }
           else {
             SM_Futher_Location_state_act_SM_Mode_Profile_By_Trackside_Futher_location =
               SSM_st_Start_Supervision_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           }
           break;
-        case _186_SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
+        case SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
           if (Driver_Ack_Mode_Profile) {
             SM_Futher_Location_state_act_SM_Mode_Profile_By_Trackside_Futher_location =
-              _185_SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
+              SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           }
           else {
             SM_Futher_Location_state_act_SM_Mode_Profile_By_Trackside_Futher_location =
-              _186_SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
+              SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           }
           break;
-        case _185_SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
+        case SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
           SM_Futher_Location_state_act_SM_Mode_Profile_By_Trackside_Futher_location =
-            _185_SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
+            SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           break;
         
       }
@@ -215,16 +215,16 @@ void Procedure_With_Mode_Profile_Procedures(
         SSM_st_Futher_location_SM_Mode_Profile_By_Trackside;
       outC->Loc_Timer = 0;
       switch (SM_Futher_Location_state_act_SM_Mode_Profile_By_Trackside_Futher_location) {
-        case _185_SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
+        case SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
           outC->Ack_Req_To_Driver = kcg_false;
           outC->SM_Futher_Location_state_nxt_SM_Mode_Profile_By_Trackside_Futher_location =
-            _185_SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
+            SSM_st_Switch_Mode_Confirmed_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           outC->Condition_15_50_70 = kcg_true;
           break;
-        case _186_SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
+        case SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
           outC->Ack_Req_To_Driver = kcg_true;
           outC->SM_Futher_Location_state_nxt_SM_Mode_Profile_By_Trackside_Futher_location =
-            _186_SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
+            SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location;
           outC->Condition_15_50_70 = kcg_false;
           break;
         case SSM_st_Start_Supervision_SM_Mode_Profile_By_Trackside_Futher_location_SM_Futher_Location :
@@ -324,7 +324,7 @@ void Procedure_With_Mode_Profile_Procedures(
             (Current_Mode == UN_Level_And_Mode_Types_Pkg) | (Current_Mode ==
               SN_Level_And_Mode_Types_Pkg) | (Current_Mode ==
               SR_Level_And_Mode_Types_Pkg) | Supervision_Modes;
-          _3_br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location =
+          br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location =
             (Current_Mode == SB_Level_And_Mode_Types_Pkg) | (Current_Mode ==
               PT_Level_And_Mode_Types_Pkg);
           if (br_1_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location) {
@@ -335,7 +335,7 @@ void Procedure_With_Mode_Profile_Procedures(
               kcg_true;
           }
           else {
-            if (_3_br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location) {
+            if (br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location) {
               SM_Current_Location_state_act_SM_Mode_Profile_By_Trackside_Current_Location =
                 SSM_st_Waiting_Ack_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location;
               tmp = kcg_true;
@@ -346,7 +346,7 @@ void Procedure_With_Mode_Profile_Procedures(
               tmp = kcg_false;
             }
             SM_Current_Location_reset_act_SM_Mode_Profile_By_Trackside_Current_Location =
-              _3_br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location;
+              br_2_guard_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location_Req_Current_Location;
           }
           break;
         
@@ -469,6 +469,6 @@ void Procedure_With_Mode_Profile_Procedures(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Procedure_With_Mode_Profile_Procedures.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

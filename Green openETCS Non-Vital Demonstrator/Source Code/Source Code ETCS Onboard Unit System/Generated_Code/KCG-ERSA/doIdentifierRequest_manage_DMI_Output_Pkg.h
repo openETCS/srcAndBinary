@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:52
 *************************************************************$ */
 #ifndef _doIdentifierRequest_manage_DMI_Output_Pkg_H_
 #define _doIdentifierRequest_manage_DMI_Output_Pkg_H_
@@ -12,7 +12,7 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  _26_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg /* manage_DMI_Output_Pkg::doIdentifierRequest::identifierRequest */ identifierRequest;
+  DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg /* manage_DMI_Output_Pkg::doIdentifierRequest::identifierRequest */ identifierRequest;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -35,6 +35,6 @@ extern void doIdentifierRequest_reset_manage_DMI_Output_Pkg(
 #endif /* _doIdentifierRequest_manage_DMI_Output_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** doIdentifierRequest_manage_DMI_Output_Pkg.h
-** Generation date: 2015-11-09T11:52:20
+** Generation date: 2015-11-09T13:58:52
 *************************************************************$ */
 

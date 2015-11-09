@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void MA_L23_Preprocessing_TA_MA(
 {
   static MovementAuthority_t_TrackAtlasTypes tmp;
   
-  /* 1 */ _205_MA_Convert_P15_to_DistanceProfile_TA_MA(p15, NV_in, &tmp);
+  /* 1 */ MA_Convert_P15_to_DistanceProfile_TA_MA(p15, NV_in, &tmp);
   /* 1 */
   MoveMAAbsolute_TA_Lib_internal(
     &tmp,
@@ -33,6 +33,6 @@ void MA_L23_Preprocessing_TA_MA(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MA_L23_Preprocessing_TA_MA.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

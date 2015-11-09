@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -32,6 +32,6 @@ void Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunction(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

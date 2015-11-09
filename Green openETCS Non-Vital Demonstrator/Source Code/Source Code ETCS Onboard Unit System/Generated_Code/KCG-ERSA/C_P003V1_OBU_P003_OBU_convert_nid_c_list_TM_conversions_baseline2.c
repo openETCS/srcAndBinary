@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::P003V1_onboard */P003V1_OBU_T_TM_baseline2 *P003V1_onboard,
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::nid_c1 */NID_C *nid_c1,
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::n_iter_out */N_ITER *n_iter_out,
-  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::nid_c_list */_4_P003_OBU_nid_c_sectionlist_enum_T_TM *nid_c_list)
+  /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::nid_c_list */P003_OBU_nid_c_sectionlist_enum_T_TM *nid_c_list)
 {
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::_L116 */
   static array__108343 _L116;
@@ -31,6 +31,6 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2.c
-** Generation date: 2015-11-09T11:52:26
+** Generation date: 2015-11-09T13:58:56
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _CheckEuroRadioMessage_CheckEuroradioMessage_H_
 #define _CheckEuroRadioMessage_CheckEuroradioMessage_H_
@@ -46,6 +46,6 @@ extern void CheckEuroRadioMessage_reset_CheckEuroradioMessage(
 #endif /* _CheckEuroRadioMessage_CheckEuroradioMessage_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckEuroRadioMessage_CheckEuroradioMessage.h
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

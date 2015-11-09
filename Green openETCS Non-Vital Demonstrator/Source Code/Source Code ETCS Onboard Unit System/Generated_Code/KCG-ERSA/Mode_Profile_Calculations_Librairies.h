@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _Mode_Profile_Calculations_Librairies_H_
 #define _Mode_Profile_Calculations_Librairies_H_
@@ -27,6 +27,6 @@ extern void Mode_Profile_Calculations_Librairies(
 #endif /* _Mode_Profile_Calculations_Librairies_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Mode_Profile_Calculations_Librairies.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

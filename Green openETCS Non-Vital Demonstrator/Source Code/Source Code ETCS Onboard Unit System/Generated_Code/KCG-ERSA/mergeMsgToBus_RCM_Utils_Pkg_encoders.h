@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 #ifndef _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_
 #define _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_
@@ -41,6 +41,6 @@ extern void mergeMsgToBus_reset_RCM_Utils_Pkg_encoders(
 #endif /* _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_encoders.h
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,9 +22,9 @@ void RequestAck_Acknowledgement(
   outC_RequestAck_Acknowledgement *outC)
 {
   /* Acknowledgement::RequestAck::SM1 */
-  static _169_SSM_ST_SM1 SM1_state_sel;
+  static _27_SSM_ST_SM1 SM1_state_sel;
   /* Acknowledgement::RequestAck::SM1 */
-  static _169_SSM_ST_SM1 SM1_state_act;
+  static _27_SSM_ST_SM1 SM1_state_act;
   /* Acknowledgement::RequestAck::Loc_PositionInAckArea */
   static kcg_bool Loc_PositionInAckArea;
   
@@ -94,6 +94,6 @@ void RequestAck_Acknowledgement(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RequestAck_Acknowledgement.c
-** Generation date: 2015-11-09T11:52:25
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

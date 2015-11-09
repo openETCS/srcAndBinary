@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
-#ifndef _twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg_H_
-#define _twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg_H_
+#ifndef _twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
+#define _twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
 
 #include "kcg_types.h"
 #include "positionedBGs_ids_notEqual_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h"
@@ -21,23 +21,23 @@ typedef struct {
   positionedBG_T_TrainPosition_Types_Pck /* CalculateTrainPosition_Pkg::Linking_Pkg::twoConsecutiveLinkedBGs_missed::storedMissedBG */ storedMissedBG;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-} outC_twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg;
+} outC_twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* CalculateTrainPosition_Pkg::Linking_Pkg::twoConsecutiveLinkedBGs_missed */
-extern void twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg(
+extern void twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg(
   /* CalculateTrainPosition_Pkg::Linking_Pkg::twoConsecutiveLinkedBGs_missed::missed */kcg_bool missed,
   /* CalculateTrainPosition_Pkg::Linking_Pkg::twoConsecutiveLinkedBGs_missed::missedLinkedBG */positionedBG_T_TrainPosition_Types_Pck *missedLinkedBG,
   /* CalculateTrainPosition_Pkg::Linking_Pkg::twoConsecutiveLinkedBGs_missed::passedBG */positionedBG_T_TrainPosition_Types_Pck *passedBG,
   /* CalculateTrainPosition_Pkg::Linking_Pkg::twoConsecutiveLinkedBGs_missed::reset */kcg_bool reset,
-  outC_twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
+  outC_twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
 
-extern void twoConsecutiveLinkedBGs_m_reset_CalculateTrainPosition_Pkg_Linking_Pkg(
-  outC_twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
+extern void twoConsecutiveLinkedBGs_missed_reset_CalculateTrainPosition_Pkg_Linking_Pkg(
+  outC_twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg *outC);
 
-#endif /* _twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg_H_ */
+#endif /* _twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** twoConsecutiveLinkedBGs_m_CalculateTrainPosition_Pkg_Linking_Pkg.h
-** Generation date: 2015-11-09T11:52:23
+** twoConsecutiveLinkedBGs_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

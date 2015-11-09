@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,35 +23,35 @@ connectionStatusRadioUnit_INT_T_DATA CAST_connectionStatusRadioUnit_to_int_DATA_
   static connectionStatusRadioUnit_INT_T_DATA connectionStatusRadioUnit_int;
   
   IfBlock1_clock = connectionStatusRadioUnit_ct ==
-    _101_ENUM_connectionStatusRadioUnit_T_conn_unknown;
+    ENUM_connectionStatusRadioUnit_T_conn_unknown;
   if (IfBlock1_clock) {
     connectionStatusRadioUnit_int =
-      _98_INT_connectionStatusRadioUnit_T_conn_unknown;
+      INT_connectionStatusRadioUnit_T_conn_unknown;
   }
   else {
     _2_else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
-      _100_ENUM_connectionStatusRadioUnit_T_conn_no_connection;
+      ENUM_connectionStatusRadioUnit_T_conn_no_connection;
     if (_2_else_clock_IfBlock1) {
       connectionStatusRadioUnit_int =
         INT_connectionStatusRadioUnit_T_conn_no_connection;
     }
     else {
       _1_else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
-        _99_ENUM_connectionStatusRadioUnit_T_conn_ConnectionUp;
+        ENUM_connectionStatusRadioUnit_T_conn_ConnectionUp;
       if (_1_else_clock_IfBlock1) {
         connectionStatusRadioUnit_int =
-          _96_INT_connectionStatusRadioUnit_T_conn_ConnectionUp;
+          INT_connectionStatusRadioUnit_T_conn_ConnectionUp;
       }
       else {
         else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
           ENUM_connectionStatusRadioUnit_T_conn_SetupFailed;
         if (else_clock_IfBlock1) {
           connectionStatusRadioUnit_int =
-            _97_INT_connectionStatusRadioUnit_T_conn_SetupFailed;
+            INT_connectionStatusRadioUnit_T_conn_SetupFailed;
         }
         else {
           connectionStatusRadioUnit_int =
-            _98_INT_connectionStatusRadioUnit_T_conn_unknown;
+            INT_connectionStatusRadioUnit_T_conn_unknown;
         }
       }
     }
@@ -61,6 +61,6 @@ connectionStatusRadioUnit_INT_T_DATA CAST_connectionStatusRadioUnit_to_int_DATA_
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_connectionStatusRadioUnit_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T11:52:23
+** Generation date: 2015-11-09T13:58:54
 *************************************************************$ */
 

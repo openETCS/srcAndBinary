@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:21
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
-#ifndef _Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg_H_
-#define _Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg_H_
+#ifndef _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
+#define _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
 
 #include "kcg_types.h"
 #include "CheckBGConsistency_CheckBGConsistency_Pkg.h"
@@ -38,11 +38,11 @@ typedef struct {
   outC_combineForLevelChange_xdebugSupport_Pkg /* 1 */ Context_1;
   outC_InformationFilter_InformationFilter_Pkg /* 3 */ Context_3;
   /* ----------------- no clocks of observable data ------------------ */
-} outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg;
+} outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration */
-extern void Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg(
+extern void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg(
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::fullChecks */kcg_bool fullChecks,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::API_trackSide_Message */API_TrackSideInput_T_API_Msg_Pkg *API_trackSide_Message,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::ActualOdometry */odometry_T_Obu_BasicTypes_Pkg *ActualOdometry,
@@ -60,14 +60,14 @@ extern void Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pk
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inTrainDataValid */kcg_bool inTrainDataValid,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::transitionPositionPassed */kcg_bool transitionPositionPassed,
-  outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg *outC);
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC);
 
-extern void Manage_TrackSideInformati_reset_Manage_TrackSideInformation_Integration_Pkg(
-  outC_Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg *outC);
+extern void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_Integration_Pkg(
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC);
 
-#endif /* _Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg_H_ */
+#endif /* _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Manage_TrackSideInformati_Manage_TrackSideInformation_Integration_Pkg.h
-** Generation date: 2015-11-09T11:52:21
+** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
-#ifndef _Procedure_SH_Initiated_By_Procedures_H_
-#define _Procedure_SH_Initiated_By_Procedures_H_
+#ifndef _Procedure_SH_Initiated_By_Driver_Procedures_H_
+#define _Procedure_SH_Initiated_By_Driver_Procedures_H_
 
 #include "kcg_types.h"
 #include "SH_Initiated_By_Driver_On_Procedures.h"
@@ -27,25 +27,25 @@ typedef struct {
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_SH_Initiated_By_Driver_On_Procedures /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
-} outC_Procedure_SH_Initiated_By_Procedures;
+} outC_Procedure_SH_Initiated_By_Driver_Procedures;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Procedures::Procedure_SH_Initiated_By_Driver */
-extern void Procedure_SH_Initiated_By_Procedures(
+extern void Procedure_SH_Initiated_By_Driver_Procedures(
   /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Level */M_LEVEL Current_Level,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Driver_Req_SH */kcg_bool Driver_Req_SH,
   /* Procedures::Procedure_SH_Initiated_By_Driver::On_Going_Mission */kcg_bool On_Going_Mission,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Shunting_Granted_By_RBC */kcg_bool Shunting_Granted_By_RBC,
   /* Procedures::Procedure_SH_Initiated_By_Driver::Train_Standstill */kcg_bool Train_Standstill,
-  outC_Procedure_SH_Initiated_By_Procedures *outC);
+  outC_Procedure_SH_Initiated_By_Driver_Procedures *outC);
 
-extern void Procedure_SH_Initiated_By_reset_Procedures(
-  outC_Procedure_SH_Initiated_By_Procedures *outC);
+extern void Procedure_SH_Initiated_By_Driver_reset_Procedures(
+  outC_Procedure_SH_Initiated_By_Driver_Procedures *outC);
 
-#endif /* _Procedure_SH_Initiated_By_Procedures_H_ */
+#endif /* _Procedure_SH_Initiated_By_Driver_Procedures_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Procedure_SH_Initiated_By_Procedures.h
-** Generation date: 2015-11-09T11:52:22
+** Procedure_SH_Initiated_By_Driver_Procedures.h
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 

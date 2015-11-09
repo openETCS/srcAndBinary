@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,7 +30,7 @@ void Master_Procedure_ManageProcedure_Pkg(
   outC_Master_Procedure_ManageProcedure_Pkg *outC)
 {
   static kcg_int i;
-  static _194_SSM_TR_SM1 tmp;
+  static _35_SSM_TR_SM1 tmp;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */
   static SSM_ST_SM3_SM1_Awakness_of_Train SM3_state_act_SM1_Awakness_of_Train;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */
@@ -40,31 +40,31 @@ void Master_Procedure_ManageProcedure_Pkg(
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Waiting_for_driver_selection_E10_E11_or_E12 */
   static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_driver_selection_E10_E11_or_E12;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Waiting_for_Mobile_terminal_registration */
-  static kcg_bool _1_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::SB */
-  static kcg_bool _2_br_1_guard_SM1_Awakness_of_Train_SM3_SB;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_SB;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Waiting_for_Acknowledgement_of_Train_Data_from_RBC */
-  static kcg_bool _3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Second_Validation_of_Train_Number_from_Driver */
-  static kcg_bool _4_br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Second_Validation_of_Train_Number_from_Driver */
-  static kcg_bool _5_br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver;
+  static kcg_bool br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Validation_of_Train_Data_from_Driver */
-  static kcg_bool _6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Acknowlege_of_Position_from_RBC */
-  static kcg_bool _7_br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::request_Level */
-  static kcg_bool _8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_request_Level;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::first_Validation_for_Train_Number */
   static kcg_bool br_3_clock_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::first_Validation_for_Train_Number */
-  static kcg_bool _9_br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::first_Validation_for_Train_Number */
-  static kcg_bool _10_br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
+  static kcg_bool br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::first_Validation_for_Train_Number */
-  static kcg_bool _11_br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
+  static kcg_bool br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3::Waition_for_Driver_ID */
-  static kcg_bool _12_br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train */
   static kcg_bool br_2_guard_SM1_Awakness_of_Train;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train */
@@ -72,15 +72,15 @@ void Master_Procedure_ManageProcedure_Pkg(
   /* ManageProcedure_Pkg::Master_Procedure::SM1::NP */
   static kcg_bool br_1_guard_SM1_NP;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train */
-  static kcg_bool _13_br_1_guard_SM1_Awakness_of_Train;
+  static kcg_bool br_1_guard_SM1_Awakness_of_Train;
   /* ManageProcedure_Pkg::Master_Procedure::sendingTrainData_to_RBC */
   static kcg_bool last_sendingTrainData_to_RBC;
   /* ManageProcedure_Pkg::Master_Procedure::sendingPositionReport_to_RBC */
   static kcg_bool last_sendingPositionReport_to_RBC;
   /* ManageProcedure_Pkg::Master_Procedure::SM1 */
-  static _192_SSM_ST_SM1 SM1_state_sel;
+  static _33_SSM_ST_SM1 SM1_state_sel;
   /* ManageProcedure_Pkg::Master_Procedure::SM1 */
-  static _192_SSM_ST_SM1 SM1_state_act;
+  static _33_SSM_ST_SM1 SM1_state_act;
   /* ManageProcedure_Pkg::Master_Procedure::M_LEVEL_Level_NTC */
   static kcg_bool M_LEVEL_Level_NTC;
   /* ManageProcedure_Pkg::Master_Procedure::M_LEVEL_Level3 */
@@ -121,28 +121,28 @@ void Master_Procedure_ManageProcedure_Pkg(
       else {
         SM1_state_act = SSM_st_NP_SM1;
       }
-      _6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
+      br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
         br_1_guard_SM1_NP;
       break;
     case SSM_st_Awakness_of_Train_SM1 :
-      _13_br_1_guard_SM1_Awakness_of_Train =
+      br_1_guard_SM1_Awakness_of_Train =
         !br_3_clock_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
-      if (_13_br_1_guard_SM1_Awakness_of_Train) {
+      if (br_1_guard_SM1_Awakness_of_Train) {
         SM1_state_act = SSM_st_NP_SM1;
       }
       else {
         SM1_state_act = SSM_st_Awakness_of_Train_SM1;
       }
-      _6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
-        _13_br_1_guard_SM1_Awakness_of_Train;
+      br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
+        br_1_guard_SM1_Awakness_of_Train;
       break;
     case SSM_st_SoM_L2_3_FS_SR_OS_LS_SH_SM1 :
-      _6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
+      br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
         kcg_false;
       SM1_state_act = SSM_st_SoM_L2_3_FS_SR_OS_LS_SH_SM1;
       break;
     case SSM_st_SoM_NTC_SN_SM1 :
-      _6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
+      br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
         kcg_false;
       SM1_state_act = SSM_st_SoM_NTC_SN_SM1;
       break;
@@ -150,7 +150,7 @@ void Master_Procedure_ManageProcedure_Pkg(
   }
   _L262 = (*StatusModeandLevel_from_Level_and_Mode_Management).level ==
     M_LEVEL_Level_0;
-  _3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC =
+  br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC =
     (*StatusModeandLevel_from_Level_and_Mode_Management).level ==
     M_LEVEL_Level_1;
   M_LEVEL_Level_NTC =
@@ -168,7 +168,7 @@ void Master_Procedure_ManageProcedure_Pkg(
       br_2_guard_SM1_Awakness_of_Train = kcg_false;
       break;
     case SSM_st_Awakness_of_Train_SM1 :
-      if (_6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver) {
+      if (br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver) {
         outC->init = kcg_true;
       }
       if (outC->init) {
@@ -185,7 +185,7 @@ void Master_Procedure_ManageProcedure_Pkg(
           _L67 = kcg_false;
           br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_driver_selection_E10_E11_or_E12 =
             LevelValid_from_Level_and_Mode_Management & (_L262 |
-              _3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC |
+              br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC |
               M_LEVEL_Level_NTC);
           if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_driver_selection_E10_E11_or_E12) {
             br_2_guard_SM1_Awakness_of_Train = kcg_true;
@@ -201,9 +201,9 @@ void Master_Procedure_ManageProcedure_Pkg(
           break;
         case SSM_st_SB_SM1_Awakness_of_Train_SM3 :
           Awakness_of_Train_weakb_clock_SM1 = kcg_false;
-          _2_br_1_guard_SM1_Awakness_of_Train_SM3_SB = kcg_true;
-          if (_2_br_1_guard_SM1_Awakness_of_Train_SM3_SB) {
-            _L67 = _2_br_1_guard_SM1_Awakness_of_Train_SM3_SB;
+          br_1_guard_SM1_Awakness_of_Train_SM3_SB = kcg_true;
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_SB) {
+            _L67 = br_1_guard_SM1_Awakness_of_Train_SM3_SB;
           }
           else {
             _L67 = kcg_false;
@@ -228,9 +228,9 @@ void Master_Procedure_ManageProcedure_Pkg(
         case SSM_st_Validation_of_Train_Data_from_Driver_SM1_Awakness_of_Train_SM3 :
           Awakness_of_Train_weakb_clock_SM1 = kcg_false;
           _L67 = kcg_false;
-          _6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
+          br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver =
             (*statusDMI_from_DMI).DMI_TrainDataValidated;
-          if (_6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver) {
             br_2_guard_SM1_Awakness_of_Train = kcg_true;
           }
           else {
@@ -240,9 +240,9 @@ void Master_Procedure_ManageProcedure_Pkg(
         case SSM_st_Acknowlege_of_Position_from_RBC_SM1_Awakness_of_Train_SM3 :
           Awakness_of_Train_weakb_clock_SM1 = kcg_false;
           _L67 = kcg_false;
-          _7_br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC =
+          br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC =
             outC->_2_fby_tmp.items[outC->_2_fby_tmp.idx];
-          if (_7_br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC) {
             br_2_guard_SM1_Awakness_of_Train = kcg_true;
           }
           else {
@@ -262,27 +262,27 @@ void Master_Procedure_ManageProcedure_Pkg(
         case SSM_st_first_Validation_for_Train_Number_SM1_Awakness_of_Train_SM3 :
           Awakness_of_Train_weakb_clock_SM1 = kcg_false;
           _L67 = kcg_false;
-          _9_br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number =
+          br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number =
             (*statusDMI_from_DMI).DMI_TrainRunningNumberFirstValidation &
             statusValid_Position_from_Position_Calculation;
-          _10_br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number =
+          br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number =
             (*statusDMI_from_DMI).DMI_TrainRunningNumberFirstValidation &
             !statusValid_Position_from_Position_Calculation &
             !LevelValid_from_Level_and_Mode_Management;
-          _11_br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number =
+          br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number =
             (*statusDMI_from_DMI).DMI_TrainRunningNumberFirstValidation &
             !statusValid_Position_from_Position_Calculation &
             LevelValid_from_Level_and_Mode_Management;
-          if (_9_br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
             br_2_guard_SM1_Awakness_of_Train = kcg_false;
           }
           else {
-            _8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level =
-              _10_br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
-            if (_8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
+            br_1_guard_SM1_Awakness_of_Train_SM3_request_Level =
+              br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number;
+            if (br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
               br_2_guard_SM1_Awakness_of_Train = kcg_false;
             }
-            else if (_11_br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
+            else if (br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
               br_2_guard_SM1_Awakness_of_Train = kcg_true;
             }
             else {
@@ -292,9 +292,9 @@ void Master_Procedure_ManageProcedure_Pkg(
           break;
         case SSM_st_Waition_for_Driver_ID_SM1_Awakness_of_Train_SM3 :
           _L67 = kcg_false;
-          _12_br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID =
+          br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID =
             (*statusDMI_from_DMI).DMI_DriverIdValidated;
-          if (_12_br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID) {
             Awakness_of_Train_weakb_clock_SM1 = kcg_true;
           }
           else {
@@ -346,9 +346,9 @@ void Master_Procedure_ManageProcedure_Pkg(
           break;
         case SSM_st_Waiting_for_Acknowledgement_of_Train_Data_from_RBC_SM1_Awakness_of_Train_SM3 :
           _L262 = kcg_false;
-          _3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC =
+          br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC =
             outC->fby_tmp.items[outC->fby_tmp.idx];
-          if (_3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC) {
             br_3_guard_SM1_Awakness_of_Train = kcg_true;
           }
           else {
@@ -356,19 +356,19 @@ void Master_Procedure_ManageProcedure_Pkg(
           }
           break;
         case SSM_st_Second_Validation_of_Train_Number_from_Driver_SM1_Awakness_of_Train_SM3 :
-          _4_br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver =
+          br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver =
             (*statusDMI_from_DMI).DMI_TrainRunningNumberValidated &
             (br_3_clock_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number |
               M_LEVEL_Level3);
-          _5_br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver =
+          br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver =
             (*statusDMI_from_DMI).DMI_TrainRunningNumberValidated & (_L262 |
-              _3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC |
+              br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC |
               M_LEVEL_Level_NTC);
           _L262 = kcg_false;
-          if (_4_br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
             br_3_guard_SM1_Awakness_of_Train = kcg_false;
           }
-          else if (_5_br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
+          else if (br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
             br_3_guard_SM1_Awakness_of_Train = kcg_true;
           }
           else {
@@ -393,10 +393,10 @@ void Master_Procedure_ManageProcedure_Pkg(
           break;
         case SSM_st_first_Validation_for_Train_Number_SM1_Awakness_of_Train_SM3 :
           br_3_guard_SM1_Awakness_of_Train = kcg_false;
-          if (_9_br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
             _L262 = kcg_false;
           }
-          else if (_8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
+          else if (br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
             _L262 = kcg_true;
           }
           else {
@@ -459,10 +459,10 @@ void Master_Procedure_ManageProcedure_Pkg(
           break;
         case SSM_st_request_Level_SM1_Awakness_of_Train_SM3 :
           _L262 = kcg_false;
-          _8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level =
+          br_1_guard_SM1_Awakness_of_Train_SM3_request_Level =
             br_3_clock_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number |
             M_LEVEL_Level3;
-          if (_8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
             _L67 = kcg_true;
           }
           else {
@@ -499,9 +499,9 @@ void Master_Procedure_ManageProcedure_Pkg(
           break;
         case SSM_st_Waiting_for_Mobile_terminal_registration_SM1_Awakness_of_Train_SM3 :
           _L67 = kcg_false;
-          _1_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration =
+          br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration =
             (*mobileStatus).registration.status == mrs_registered_RCM_Types_Pkg;
-          if (_1_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration) {
             _L262 = kcg_true;
           }
           else {
@@ -610,7 +610,7 @@ void Master_Procedure_ManageProcedure_Pkg(
       break;
     case SSM_st_Awakness_of_Train_SM1 :
       outC->powerUp_to_MoRC = kcg_false;
-      if (_13_br_1_guard_SM1_Awakness_of_Train) {
+      if (br_1_guard_SM1_Awakness_of_Train) {
         outC->powerOff_to_MoRC = kcg_true;
       }
       else {
@@ -664,26 +664,26 @@ void Master_Procedure_ManageProcedure_Pkg(
             tmp = SSM_TR_NP_1_SM1;
           }
           else {
-            tmp = _193_SSM_TR_no_trans_SM1;
+            tmp = _34_SSM_TR_no_trans_SM1;
           }
           break;
         case SSM_st_Awakness_of_Train_SM1 :
-          if (_13_br_1_guard_SM1_Awakness_of_Train) {
+          if (br_1_guard_SM1_Awakness_of_Train) {
             tmp = SSM_TR_Awakness_of_Train_1_SM1;
           }
           else {
-            tmp = _193_SSM_TR_no_trans_SM1;
+            tmp = _34_SSM_TR_no_trans_SM1;
           }
           break;
         case SSM_st_SoM_L2_3_FS_SR_OS_LS_SH_SM1 :
-          tmp = _193_SSM_TR_no_trans_SM1;
+          tmp = _34_SSM_TR_no_trans_SM1;
           break;
         case SSM_st_SoM_NTC_SN_SM1 :
-          tmp = _193_SSM_TR_no_trans_SM1;
+          tmp = _34_SSM_TR_no_trans_SM1;
           break;
         
       }
-      Awakness_of_Train_weakb_clock_SM1 = tmp != _193_SSM_TR_no_trans_SM1;
+      Awakness_of_Train_weakb_clock_SM1 = tmp != _34_SSM_TR_no_trans_SM1;
       switch (SM3_state_sel_SM1_Awakness_of_Train) {
         case SSM_st_Waiting_for_driver_selection_E10_E11_or_E12_SM1_Awakness_of_Train_SM3 :
           if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_driver_selection_E10_E11_or_E12) {
@@ -699,7 +699,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_Waiting_for_Mobile_terminal_registration_SM1_Awakness_of_Train_SM3 :
-          if (_1_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Mobile_terminal_registration) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Waiting_for_RBC_Establishment_SM1_Awakness_of_Train_SM3;
           }
@@ -712,7 +712,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_SB_SM1_Awakness_of_Train_SM3 :
-          if (_2_br_1_guard_SM1_Awakness_of_Train_SM3_SB) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_SB) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Waition_for_Driver_ID_SM1_Awakness_of_Train_SM3;
           }
@@ -732,7 +732,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_Waiting_for_Acknowledgement_of_Train_Data_from_RBC_SM1_Awakness_of_Train_SM3 :
-          if (_3_br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_Acknowledgement_of_Train_Data_from_RBC) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Waiting_of_Start_from_Driver_SM1_Awakness_of_Train_SM3;
           }
@@ -745,13 +745,13 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_Second_Validation_of_Train_Number_from_Driver_SM1_Awakness_of_Train_SM3 :
-          if (_4_br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Waiting_for_Acknowledgement_of_Train_Data_from_RBC_SM1_Awakness_of_Train_SM3;
             outC->sendingTrainData_to_RBC = kcg_true;
           }
           else {
-            if (_5_br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
+            if (br_2_guard_SM1_Awakness_of_Train_SM3_Second_Validation_of_Train_Number_from_Driver) {
               SM3_state_act_SM1_Awakness_of_Train =
                 SSM_st_Waiting_of_Start_from_Driver_SM1_Awakness_of_Train_SM3;
             }
@@ -765,7 +765,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_Validation_of_Train_Data_from_Driver_SM1_Awakness_of_Train_SM3 :
-          if (_6_br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Validation_of_Train_Data_from_Driver) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Second_Validation_of_Train_Number_from_Driver_SM1_Awakness_of_Train_SM3;
           }
@@ -778,7 +778,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_Acknowlege_of_Position_from_RBC_SM1_Awakness_of_Train_SM3 :
-          if (_7_br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Acknowlege_of_Position_from_RBC) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Validation_of_Train_Data_from_Driver_SM1_Awakness_of_Train_SM3;
           }
@@ -807,7 +807,7 @@ void Master_Procedure_ManageProcedure_Pkg(
           }
           break;
         case SSM_st_request_Level_SM1_Awakness_of_Train_SM3 :
-          if (_8_br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_request_Level) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Waiting_for_Mobile_terminal_registration_SM1_Awakness_of_Train_SM3;
           }
@@ -820,15 +820,15 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_first_Validation_for_Train_Number_SM1_Awakness_of_Train_SM3 :
-          if (_9_br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_request_Level_SM1_Awakness_of_Train_SM3;
           }
-          else if (_10_br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
+          else if (br_2_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Waiting_for_driver_selection_E10_E11_or_E12_SM1_Awakness_of_Train_SM3;
           }
-          else if (_11_br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
+          else if (br_3_guard_SM1_Awakness_of_Train_SM3_first_Validation_for_Train_Number) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_Validation_of_Train_Data_from_Driver_SM1_Awakness_of_Train_SM3;
           }
@@ -841,7 +841,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             last_sendingPositionReport_to_RBC;
           break;
         case SSM_st_Waition_for_Driver_ID_SM1_Awakness_of_Train_SM3 :
-          if (_12_br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID) {
+          if (br_1_guard_SM1_Awakness_of_Train_SM3_Waition_for_Driver_ID) {
             SM3_state_act_SM1_Awakness_of_Train =
               SSM_st_first_Validation_for_Train_Number_SM1_Awakness_of_Train_SM3;
           }
@@ -960,6 +960,6 @@ void Master_Procedure_ManageProcedure_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Master_Procedure_ManageProcedure_Pkg.c
-** Generation date: 2015-11-09T11:52:24
+** Generation date: 2015-11-09T13:58:55
 *************************************************************$ */
 

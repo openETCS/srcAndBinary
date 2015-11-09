@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 #ifndef _SP_SignalingRelated_TA_SpeedProfiles_H_
 #define _SP_SignalingRelated_TA_SpeedProfiles_H_
@@ -19,6 +19,6 @@ extern void SP_SignalingRelated_TA_SpeedProfiles(
 #endif /* _SP_SignalingRelated_TA_SpeedProfiles_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SP_SignalingRelated_TA_SpeedProfiles.h
-** Generation date: 2015-11-09T11:52:22
+** Generation date: 2015-11-09T13:58:53
 *************************************************************$ */
 
