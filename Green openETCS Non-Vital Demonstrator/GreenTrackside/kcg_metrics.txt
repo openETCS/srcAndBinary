@@ -1,0 +1,29 @@
+$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrackside/config.txt
+** Generation date: 2015-11-10T22:49:52
+*************************************************************$
+Data structures
+  Structures
+    Max members in a single structure: 26
+  Arrays
+    Max number of dimensions for an array: 2
+    Maximum size for a dimension: 500
+  Enumeration
+    Max of enum constants in a single enumeration: 17
+Control structures
+  Max numbers of case labels in a switch: 8
+  Max number of nesting levels in compound statement: 16
+Program size
+  Functions
+    Max number of function parameters in definition: 13
+    Max number of function arguments in a call: 13
+  Expressions
+    Max number of nesting levels of parenthesized expression in a full expression: 4
+  Identifiers
+    Max number of identifiers with block scope declared in one block: 101
+    Max number of macro identifiers simultaneously defined in one preprocessing translation unit: 1555
+    Max number of extern identifiers in one translation unit: 1513
+$**************** KCG Version 6.4 (build i21) ****************
+** kcg_metrics.txt
+** Generation date: 2015-11-10T22:49:52
+*************************************************************$

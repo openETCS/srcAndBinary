@@ -1,0 +1,73 @@
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-10T23:01:10
+*************************************************************$ */
+
+#include "kcg_consts.h"
+#include "kcg_sensors.h"
+#include "d_limits_TargetLimits_Pkg.h"
+
+/* TargetLimits_Pkg::d_limits */
+void d_limits_TargetLimits_Pkg(
+  /* TargetLimits_Pkg::d_limits::V_est */ V_internal_real_Type_SDM_Types_ V_est,
+  /* TargetLimits_Pkg::d_limits::SBDcurve */ ParabolaCurve_T_CalcBrakingCurv *SBDcurve,
+  /* TargetLimits_Pkg::d_limits::SBI2valid */ kcg_bool SBI2valid,
+  /* TargetLimits_Pkg::d_limits::D_SBI2_V_est */ L_internal_real_Type_SDM_Types_ D_SBI2_V_est,
+  /* TargetLimits_Pkg::d_limits::D_estfront */ L_internal_real_Type_SDM_Types_ D_estfront,
+  /* TargetLimits_Pkg::d_limits::D_maxsafefront */ L_internal_real_Type_SDM_Types_ D_maxsafefront,
+  /* TargetLimits_Pkg::d_limits::T */ T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::d_limits::GUIcurve */ ParabolaCurve_T_CalcBrakingCurv *GUIcurve,
+  /* TargetLimits_Pkg::d_limits::guiCurveEnabled */ kcg_bool guiCurveEnabled,
+  /* TargetLimits_Pkg::d_limits::D_I */ L_internal_real_Type_SDM_Types_ *D_I,
+  /* TargetLimits_Pkg::d_limits::D_P */ L_internal_real_Type_SDM_Types_ *D_P,
+  /* TargetLimits_Pkg::d_limits::D_W */ L_internal_real_Type_SDM_Types_ *D_W,
+  /* TargetLimits_Pkg::d_limits::D_FLOI */ L_internal_real_Type_SDM_Types_ *D_FLOI,
+  /* TargetLimits_Pkg::d_limits::FLOIisSBI1 */ kcg_bool *FLOIisSBI1)
+{
+  /* TargetLimits_Pkg::d_limits */
+  static kcg_bool tmp1;
+  /* TargetLimits_Pkg::d_limits */
+  static L_internal_real_Type_SDM_Types_ tmp;
+  /* TargetLimits_Pkg::d_limits::_L31 */
+  static kcg_bool _L31;
+  /* TargetLimits_Pkg::d_limits::_L37 */
+  static kcg_bool _L37;
+  
+  /* 1 */ d_SBI1_TargetLimits_Pkg(SBDcurve, V_est, T, &tmp1, &tmp);
+  *FLOIisSBI1 = /* 2 */
+    isLEValid_TargetLimits_Pkg(
+      tmp1,
+      tmp - D_estfront,
+      SBI2valid,
+      D_SBI2_V_est - D_maxsafefront);
+  /* 1 */ if (*FLOIisSBI1) {
+    *D_FLOI = tmp;
+  }
+  else {
+    *D_FLOI = D_SBI2_V_est;
+  }
+  *D_W = *D_FLOI - T_warning_SDM_Types_Pkg * V_est;
+  /* ck_guiCurveEnabled */ if (guiCurveEnabled) {
+    /* 1 */ getLocationOnCurve_CalcBrakingC(GUIcurve, V_est, &tmp1, &tmp);
+  }
+  else {
+    tmp1 = kcg_false;
+    tmp = 0.0;
+  }
+  /* 1 */
+  selectLEValid_TargetLimits_Pkg(
+    kcg_true,
+    *D_FLOI - V_est * T_driver_SDM_Types_Pkg,
+    tmp1,
+    tmp,
+    &_L31,
+    &_L37,
+    D_P);
+  *D_I = *D_P - V_est * (*T).indication;
+}
+
+/* $**************** KCG Version 6.4 (build i21) ****************
+** d_limits_TargetLimits_Pkg.c
+** Generation date: 2015-11-10T23:01:10
+*************************************************************$ */
+
