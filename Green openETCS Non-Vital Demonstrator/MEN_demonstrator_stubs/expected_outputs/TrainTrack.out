@@ -1,0 +1,7 @@
+STEP 1
+OUTPUT Test_TrainTrack/Message_157_out = (true, 157, 73, 3555, 272827, Q_STATUS_Valid)
+OUTPUT Test_TrainTrack/P000 = (true, 998, 22, Q_SCALE_1_m_scale, 42600352, 2525, Q_DIRLRBG_Nominal, Q_DLRBG_Reverse, 2, 3, Q_LENGTH_No_train_integrity_information_available, 0, 30, Q_DIRTRAIN_Nominal, M_MODE_Full_Supervision, M_LEVEL_Level_2, 0)
+OUTPUT Test_TrainTrack/P001 = (false, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0, Q_DIRLRBG_Reverse, Q_DLRBG_Reverse, 0, 0, Q_LENGTH_No_train_integrity_information_available, 0, 0, Q_DIRTRAIN_Reverse, M_MODE_Full_Supervision, M_LEVEL_Level_0, 0)
+OUTPUT Test_TrainTrack/P004 = (false, 0, 0, M_ERROR_Balise_group_linking_consistency_error)
+OUTPUT Test_TrainTrack/P005 = (false, 0, 0, 0)
+
