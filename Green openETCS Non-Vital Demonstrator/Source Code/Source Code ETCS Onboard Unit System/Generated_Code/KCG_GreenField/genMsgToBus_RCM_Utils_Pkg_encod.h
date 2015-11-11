@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _genMsgToBus_RCM_Utils_Pkg_enco
 #define _genMsgToBus_RCM_Utils_Pkg_enco
@@ -55,6 +55,6 @@ extern void genMsgToBus_init_RCM_Utils_Pkg_(
 #endif /* _genMsgToBus_RCM_Utils_Pkg_enco */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** genMsgToBus_RCM_Utils_Pkg_encod.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

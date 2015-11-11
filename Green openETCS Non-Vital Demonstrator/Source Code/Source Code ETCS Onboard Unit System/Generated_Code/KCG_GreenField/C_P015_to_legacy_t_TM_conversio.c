@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* TM_conversions::C_P015_to_legacy_t */
 void C_P015_to_legacy_t_TM_conversio(
   /* TM_conversions::C_P015_to_legacy_t::P015_in */ P015_OBU_T_TM *P015_in,
-  /* TM_conversions::C_P015_to_legacy_t::P015_legacy_out */ _5_P15_Level23MovementAuthoriti *P015_legacy_out)
+  /* TM_conversions::C_P015_to_legacy_t::P015_legacy_out */ _6_P15_Level23MovementAuthoriti *P015_legacy_out)
 {
   static kcg_int i;
   
@@ -26,6 +26,6 @@ void C_P015_to_legacy_t_TM_conversio(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P015_to_legacy_t_TM_conversio.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ kcg_bool CheckFirstTelDup_CheckBGConsist(
   static kcg_bool isTheFirst;
   
   _L20 = /* 3 */ N_PIG2int_CheckBGConsistency_Pk((*telegramHeader_in).n_pig);
-  isTheFirst = ((_43_M_DUP_This_balise_is_a_dupl ==
+  isTheFirst = ((_44_M_DUP_This_balise_is_a_dupl ==
         (*telegramHeader_in).m_dup) & (/* 3 */
         N_TOTAL2int_CheckBGConsistency_((*telegramHeader_in).n_total) - 1 ==
         _L20)) | ((_L20 == 2) & ((*telegramHeader_in).m_dup ==
@@ -27,6 +27,6 @@ kcg_bool CheckFirstTelDup_CheckBGConsist(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckFirstTelDup_CheckBGConsist.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

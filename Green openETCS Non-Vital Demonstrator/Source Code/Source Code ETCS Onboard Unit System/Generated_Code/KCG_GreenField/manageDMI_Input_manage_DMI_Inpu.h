@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _manageDMI_Input_manage_DMI_Inp
 #define _manageDMI_Input_manage_DMI_Inp
@@ -22,13 +22,13 @@ typedef struct {
   DMI_EVC_status_T_DMI_Types_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::currentDMIStatus */ currentDMIStatus;
   DMI_Identifier_T_DMI_Messages_D /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_Identifier */ fromDMI_Identifier;
   kcg_bool /* manage_DMI_Input_Pkg::manageDMI_Input::outUpdateLevelsDMI */ outUpdateLevelsDMI;
-  _24_DMI_Driver_Identifier_T_DMI /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_DriverIdentifier */ fromDMI_DriverIdentifier;
-  _23_DMI_Train_Running_Number_T_ /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainRunningNumber */ fromDMI_TrainRunningNumber;
+  _26_DMI_Driver_Identifier_T_DMI /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_DriverIdentifier */ fromDMI_DriverIdentifier;
+  _25_DMI_Train_Running_Number_T_ /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainRunningNumber */ fromDMI_TrainRunningNumber;
   DMI_Radio_Net_Data_T_DMI_Messag /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_RadioNetData */ fromDMI_RadioNetData;
   DMI_Icon_Ack_T_DMI_Messages_DMI /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_Icon_Ack */ fromDMI_Icon_Ack;
   DMI_Train_Data_T_DMI_Messages_B /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainData */ fromDMI_TrainData;
   DMI_Train_Data_Ack_T_DMI_Messag /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_TrainDataAck */ fromDMI_TrainDataAck;
-  _22_DMI_Adhesion_Factor_Data_T_ /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_AdhesionFactor */ fromDMI_AdhesionFactor;
+  _24_DMI_Adhesion_Factor_Data_T_ /* manage_DMI_Input_Pkg::manageDMI_Input::fromDMI_AdhesionFactor */ fromDMI_AdhesionFactor;
   DMI_To_Modes_T_DMI_Types_Pkg /* manage_DMI_Input_Pkg::manageDMI_Input::forModesAndLevel */ forModesAndLevel;
   T_LevelTransition_Level_And_Mod /* manage_DMI_Input_Pkg::manageDMI_Input::ML_levelTransition */ ML_levelTransition;
   DMI_TXT_MSGList_status_T_DMI_Ty /* manage_DMI_Input_Pkg::manageDMI_Input::outStatusList */ outStatusList;
@@ -66,6 +66,6 @@ extern void manageDMI_Input_init_manage_DMI(
 #endif /* _manageDMI_Input_manage_DMI_Inp */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Input_manage_DMI_Inpu.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

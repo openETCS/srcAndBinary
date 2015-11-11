@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier */
 void Write_int_to_DMI_Driver_Identif(
   /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::dmi_driver_identifier_int */ DMI_Driver_Identifier_int_array *dmi_driver_identifier_int,
-  /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::dmi_driver_identifier_ct */ _24_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct)
+  /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::dmi_driver_identifier_ct */ _26_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct)
 {
   /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::_L25 */
   static kcg_bool _L25;
@@ -23,14 +23,14 @@ void Write_int_to_DMI_Driver_Identif(
       dmi_driver_identifier_ct);
   }
   else {
-    kcg_copy__24_DMI_Driver_Identif(
+    kcg_copy__26_DMI_Driver_Identif(
       dmi_driver_identifier_ct,
-      (_24_DMI_Driver_Identifier_T_DMI *) &cDMI_Driver_Identifier_DATA_Pac);
+      (_26_DMI_Driver_Identifier_T_DMI *) &cDMI_Driver_Identifier_DATA_Pac);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_int_to_DMI_Driver_Identif.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

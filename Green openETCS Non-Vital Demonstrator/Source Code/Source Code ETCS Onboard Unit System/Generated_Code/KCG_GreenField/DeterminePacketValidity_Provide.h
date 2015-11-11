@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _DeterminePacketValidity_Provid
 #define _DeterminePacketValidity_Provid
@@ -21,6 +21,6 @@ extern void DeterminePacketValidity_Provide(
 #endif /* _DeterminePacketValidity_Provid */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** DeterminePacketValidity_Provide.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -25,9 +25,9 @@ void TA_to_ML_TA_Export(
   static kcg_int _L20;
   
   *P_12_to_Input_MA_SSP_Gradient_a = kcg_false;
-  kcg_copy__6_P12_Level1MovementA(
+  kcg_copy__7_P12_Level1MovementA(
     &(*Data_to_From_Track_Packets_at_M).P_12,
-    (_6_P12_Level1MovementAuthoritie *) &Default_P12_legacy_TA_Export);
+    (_7_P12_Level1MovementAuthoritie *) &Default_P12_legacy_TA_Export);
   kcg_copy_P135_StopShuntingOnDes(
     &(*Data_to_From_Track_Packets_at_M).P_135,
     (P135_StopShuntingOnDeskOpening_ *) &Default_P135_legacy_TA_Export);
@@ -94,6 +94,6 @@ void TA_to_ML_TA_Export(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TA_to_ML_TA_Export.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

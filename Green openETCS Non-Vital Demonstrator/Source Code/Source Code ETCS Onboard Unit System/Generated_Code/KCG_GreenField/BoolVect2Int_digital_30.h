@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _BoolVect2Int_digital_30_H_
 #define _BoolVect2Int_digital_30_H_
@@ -19,6 +19,6 @@ extern kcg_int BoolVect2Int_digital_30(
 #endif /* _BoolVect2Int_digital_30_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BoolVect2Int_digital_30.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

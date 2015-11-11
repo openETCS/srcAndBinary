@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -49,7 +49,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
   outC->errors.bg.infoFromLinking.linkingInfo.nid_c = 0;
   outC->errors.bg.infoFromLinking.linkingInfo.nid_bg = 0;
   outC->errors.bg.infoFromLinking.linkingInfo.q_linkorientation =
-    _55_Q_LINKORIENTATION_The_balis;
+    _56_Q_LINKORIENTATION_The_balis;
   outC->errors.bg.infoFromLinking.linkingInfo.q_linkreaction =
     Q_LINKREACTION_Train_trip;
   outC->errors.bg.infoFromLinking.linkingInfo.q_locacc = 0;
@@ -104,7 +104,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
     outC->errors.bg.infoFromPassing.linkedBGs[i].nid_c = 0;
     outC->errors.bg.infoFromPassing.linkedBGs[i].nid_bg = 0;
     outC->errors.bg.infoFromPassing.linkedBGs[i].q_linkorientation =
-      _55_Q_LINKORIENTATION_The_balis;
+      _56_Q_LINKORIENTATION_The_balis;
     outC->errors.bg.infoFromPassing.linkedBGs[i].q_linkreaction =
       Q_LINKREACTION_Train_trip;
     outC->errors.bg.infoFromPassing.linkedBGs[i].q_locacc = 0;
@@ -138,7 +138,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
     outC->BGs[i].infoFromLinking.linkingInfo.nid_c = 0;
     outC->BGs[i].infoFromLinking.linkingInfo.nid_bg = 0;
     outC->BGs[i].infoFromLinking.linkingInfo.q_linkorientation =
-      _55_Q_LINKORIENTATION_The_balis;
+      _56_Q_LINKORIENTATION_The_balis;
     outC->BGs[i].infoFromLinking.linkingInfo.q_linkreaction =
       Q_LINKREACTION_Train_trip;
     outC->BGs[i].infoFromLinking.linkingInfo.q_locacc = 0;
@@ -193,7 +193,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
       outC->BGs[i].infoFromPassing.linkedBGs[i1].nid_c = 0;
       outC->BGs[i].infoFromPassing.linkedBGs[i1].nid_bg = 0;
       outC->BGs[i].infoFromPassing.linkedBGs[i1].q_linkorientation =
-        _55_Q_LINKORIENTATION_The_balis;
+        _56_Q_LINKORIENTATION_The_balis;
       outC->BGs[i].infoFromPassing.linkedBGs[i1].q_linkreaction =
         Q_LINKREACTION_Train_trip;
       outC->BGs[i].infoFromPassing.linkedBGs[i1].q_locacc = 0;
@@ -238,7 +238,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
   outC->trainPosition.LRBG.infoFromLinking.linkingInfo.nid_c = 0;
   outC->trainPosition.LRBG.infoFromLinking.linkingInfo.nid_bg = 0;
   outC->trainPosition.LRBG.infoFromLinking.linkingInfo.q_linkorientation =
-    _55_Q_LINKORIENTATION_The_balis;
+    _56_Q_LINKORIENTATION_The_balis;
   outC->trainPosition.LRBG.infoFromLinking.linkingInfo.q_linkreaction =
     Q_LINKREACTION_Train_trip;
   outC->trainPosition.LRBG.infoFromLinking.linkingInfo.q_locacc = 0;
@@ -301,7 +301,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
     outC->trainPosition.LRBG.infoFromPassing.linkedBGs[i].nid_c = 0;
     outC->trainPosition.LRBG.infoFromPassing.linkedBGs[i].nid_bg = 0;
     outC->trainPosition.LRBG.infoFromPassing.linkedBGs[i].q_linkorientation =
-      _55_Q_LINKORIENTATION_The_balis;
+      _56_Q_LINKORIENTATION_The_balis;
     outC->trainPosition.LRBG.infoFromPassing.linkedBGs[i].q_linkreaction =
       Q_LINKREACTION_Train_trip;
     outC->trainPosition.LRBG.infoFromPassing.linkedBGs[i].q_locacc = 0;
@@ -335,7 +335,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
   outC->trainPosition.prvLRBG.infoFromLinking.linkingInfo.nid_c = 0;
   outC->trainPosition.prvLRBG.infoFromLinking.linkingInfo.nid_bg = 0;
   outC->trainPosition.prvLRBG.infoFromLinking.linkingInfo.q_linkorientation =
-    _55_Q_LINKORIENTATION_The_balis;
+    _56_Q_LINKORIENTATION_The_balis;
   outC->trainPosition.prvLRBG.infoFromLinking.linkingInfo.q_linkreaction =
     Q_LINKREACTION_Train_trip;
   outC->trainPosition.prvLRBG.infoFromLinking.linkingInfo.q_locacc = 0;
@@ -404,7 +404,7 @@ void calculateTrainPosition_init_Cal(outC_calculateTrainPosition_Cal *outC)
     outC->trainPosition.prvLRBG.infoFromPassing.linkedBGs[i].nid_c = 0;
     outC->trainPosition.prvLRBG.infoFromPassing.linkedBGs[i].nid_bg = 0;
     outC->trainPosition.prvLRBG.infoFromPassing.linkedBGs[i].q_linkorientation =
-      _55_Q_LINKORIENTATION_The_balis;
+      _56_Q_LINKORIENTATION_The_balis;
     outC->trainPosition.prvLRBG.infoFromPassing.linkedBGs[i].q_linkreaction =
       Q_LINKREACTION_Train_trip;
     outC->trainPosition.prvLRBG.infoFromPassing.linkedBGs[i].q_locacc = 0;
@@ -605,6 +605,6 @@ void calculateTrainPosition_Calculat(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** calculateTrainPosition_Calculat.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _CAST_DMI_Q_TEXT_to_int_DATA_Va
 #define _CAST_DMI_Q_TEXT_to_int_DATA_Va
@@ -19,6 +19,6 @@ extern kcg_int CAST_DMI_Q_TEXT_to_int_DATA_Var(
 #endif /* _CAST_DMI_Q_TEXT_to_int_DATA_Va */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Q_TEXT_to_int_DATA_Var.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _calculateBGLocations_Calculate
 #define _calculateBGLocations_Calculate
@@ -52,6 +52,6 @@ extern void calculateBGLocations_init_Calcu(
 #endif /* _calculateBGLocations_Calculate */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** calculateBGLocations_CalculateT.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

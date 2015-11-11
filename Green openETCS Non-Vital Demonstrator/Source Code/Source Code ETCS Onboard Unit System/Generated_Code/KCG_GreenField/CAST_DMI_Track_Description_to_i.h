@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _CAST_DMI_Track_Description_to_
 #define _CAST_DMI_Track_Description_to_
@@ -19,11 +19,11 @@
 /* DATA::Packets::EVC_to_DMI::CAST_DMI_Track_Description_to_int */
 extern void CAST_DMI_Track_Description_to_i(
   /* DATA::Packets::EVC_to_DMI::CAST_DMI_Track_Description_to_int::Input1 */ DMI_Track_Description_T_DMI_Mes *Input1,
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Track_Description_to_int::Output1 */ _50_DMI_Track_Description_int_a *Output1);
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Track_Description_to_int::Output1 */ _51_DMI_Track_Description_int_a *Output1);
 
 #endif /* _CAST_DMI_Track_Description_to_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Track_Description_to_i.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

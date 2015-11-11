@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _Receive_RadioMsg_Receive_Track
 #define _Receive_RadioMsg_Receive_Track
@@ -20,6 +20,6 @@ extern void Receive_RadioMsg_Receive_TrackS(
 #endif /* _Receive_RadioMsg_Receive_Track */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Receive_RadioMsg_Receive_TrackS.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -42,7 +42,7 @@ void CAST_EVC_to_DMI_to_int_Messages(
   /* 1 */
   Write_DMI_Track_Description_to_(
     &(*evc_to_dmi_ct).trackDescription,
-    (_50_DMI_Track_Description_int_a *)
+    (_51_DMI_Track_Description_int_a *)
       &(&(&(&(&(&(&(&(&(&(&(*evc_to_dmi_int)[0])[0])[0])[0])[0])[0])[0])[0])[0])[0])[302]);
   /* 1 */
   CAST_DMI_Identifier_Request_to_(
@@ -95,6 +95,6 @@ void CAST_EVC_to_DMI_to_int_Messages(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_EVC_to_DMI_to_int_Messages.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

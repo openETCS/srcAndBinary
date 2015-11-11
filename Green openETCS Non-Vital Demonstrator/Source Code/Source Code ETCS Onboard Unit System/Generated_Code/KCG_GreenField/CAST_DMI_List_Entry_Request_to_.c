@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -44,27 +44,27 @@ DMI_List_Entry_Request_INT_T_DA CAST_DMI_List_Entry_Request_to_(
   /* DATA::Variables::CAST_DMI_List_Entry_Request_to_int::dmi_list_entry_request_int */
   static DMI_List_Entry_Request_INT_T_DA dmi_list_entry_request_int;
   
-  IfBlock1_clock = dmi_list_entry_request_ct == _96_ENUM_DMI_List_Entry_Request;
+  IfBlock1_clock = dmi_list_entry_request_ct == _97_ENUM_DMI_List_Entry_Request;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     dmi_list_entry_request_int = INT_DMI_List_Entry_Request_T_En;
   }
   else {
     _13_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-      _95_ENUM_DMI_List_Entry_Request;
+      _96_ENUM_DMI_List_Entry_Request;
     /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
-      dmi_list_entry_request_int = _79_INT_DMI_List_Entry_Request_;
+      dmi_list_entry_request_int = _80_INT_DMI_List_Entry_Request_;
     }
     else {
       _12_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-        _94_ENUM_DMI_List_Entry_Request;
+        _95_ENUM_DMI_List_Entry_Request;
       /* ck_anon_activ */ if (_12_else_clock_IfBlock1) {
-        dmi_list_entry_request_int = _80_INT_DMI_List_Entry_Request_;
+        dmi_list_entry_request_int = _81_INT_DMI_List_Entry_Request_;
       }
       else {
         _11_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-          _93_ENUM_DMI_List_Entry_Request;
+          _94_ENUM_DMI_List_Entry_Request;
         /* ck_anon_activ */ if (_11_else_clock_IfBlock1) {
-          dmi_list_entry_request_int = _81_INT_DMI_List_Entry_Request_;
+          dmi_list_entry_request_int = _82_INT_DMI_List_Entry_Request_;
         }
         else {
           _10_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
@@ -74,13 +74,13 @@ DMI_List_Entry_Request_INT_T_DA CAST_DMI_List_Entry_Request_to_(
           }
           else {
             _9_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-              _92_ENUM_DMI_List_Entry_Request;
+              _93_ENUM_DMI_List_Entry_Request;
             /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
-              dmi_list_entry_request_int = _82_INT_DMI_List_Entry_Request_;
+              dmi_list_entry_request_int = _83_INT_DMI_List_Entry_Request_;
             }
             else {
               _8_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                _91_ENUM_DMI_List_Entry_Request;
+                _92_ENUM_DMI_List_Entry_Request;
               /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
                 dmi_list_entry_request_int = INT_DMI_List_Entry_Request_T_Sp;
               }
@@ -88,7 +88,7 @@ DMI_List_Entry_Request_INT_T_DA CAST_DMI_List_Entry_Request_to_(
                 _7_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
                   ENUM_DMI_List_Entry_Request_T_E;
                 /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
-                  dmi_list_entry_request_int = _83_INT_DMI_List_Entry_Request_;
+                  dmi_list_entry_request_int = _84_INT_DMI_List_Entry_Request_;
                 }
                 else {
                   _6_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
@@ -99,14 +99,14 @@ DMI_List_Entry_Request_INT_T_DA CAST_DMI_List_Entry_Request_to_(
                   }
                   else {
                     _5_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                      _90_ENUM_DMI_List_Entry_Request;
+                      _91_ENUM_DMI_List_Entry_Request;
                     /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
                       dmi_list_entry_request_int =
                         INT_DMI_List_Entry_Request_T_Sh;
                     }
                     else {
                       _4_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
-                        _89_ENUM_DMI_List_Entry_Request;
+                        _90_ENUM_DMI_List_Entry_Request;
                       /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
                         dmi_list_entry_request_int =
                           INT_DMI_List_Entry_Request_T_Hi;
@@ -116,33 +116,33 @@ DMI_List_Entry_Request_INT_T_DA CAST_DMI_List_Entry_Request_to_(
                           ENUM_DMI_List_Entry_Request_T_H;
                         /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
                           dmi_list_entry_request_int =
-                            _84_INT_DMI_List_Entry_Request_;
+                            _85_INT_DMI_List_Entry_Request_;
                         }
                         else {
                           _2_else_clock_IfBlock1 = dmi_list_entry_request_ct ==
                             ENUM_DMI_List_Entry_Request_T_H;
                           /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
                             dmi_list_entry_request_int =
-                              _85_INT_DMI_List_Entry_Request_;
+                              _86_INT_DMI_List_Entry_Request_;
                           }
                           else {
                             _1_else_clock_IfBlock1 =
                               dmi_list_entry_request_ct ==
-                              _88_ENUM_DMI_List_Entry_Request;
+                              _89_ENUM_DMI_List_Entry_Request;
                             /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
                               dmi_list_entry_request_int =
-                                _86_INT_DMI_List_Entry_Request_;
+                                _87_INT_DMI_List_Entry_Request_;
                             }
                             else {
                               else_clock_IfBlock1 = dmi_list_entry_request_ct ==
                                 ENUM_DMI_List_Entry_Request_T_S;
                               /* ck_anon_activ */ if (else_clock_IfBlock1) {
                                 dmi_list_entry_request_int =
-                                  _87_INT_DMI_List_Entry_Request_;
+                                  _88_INT_DMI_List_Entry_Request_;
                               }
                               else {
                                 dmi_list_entry_request_int =
-                                  _87_INT_DMI_List_Entry_Request_;
+                                  _88_INT_DMI_List_Entry_Request_;
                               }
                             }
                           }
@@ -163,6 +163,6 @@ DMI_List_Entry_Request_INT_T_DA CAST_DMI_List_Entry_Request_to_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_List_Entry_Request_to_.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

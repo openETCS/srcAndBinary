@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _Build_MA_L23_TA_MA_H_
 #define _Build_MA_L23_TA_MA_H_
@@ -56,6 +56,6 @@ extern void Build_MA_L23_init_TA_MA(outC_Build_MA_L23_TA_MA *outC);
 #endif /* _Build_MA_L23_TA_MA_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MA_L23_TA_MA.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

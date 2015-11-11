@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _Build_MA_request_TA_MA_Request
 #define _Build_MA_request_TA_MA_Request
@@ -50,6 +50,6 @@ extern void Build_MA_request_init_TA_MA_Req(
 #endif /* _Build_MA_request_TA_MA_Request */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MA_request_TA_MA_Request.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

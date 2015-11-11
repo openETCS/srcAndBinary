@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,8 +22,8 @@ void BufferOutput_write_only2_TM_lib(
   kcg_copy_M_TrainTrack_Message_T(
     Message_out,
     (M_TrainTrack_Message_T_TM_radio *) &EMPTY_TrainTrackMessage_TM_lib_);
-  kcg_copy_array_96788(&(*Buffer_Out)[0], (array_96788 *) &(*Message_In)[0]);
-  kcg_copy_array_96847(&(*Buffer_Out)[2], (array_96847 *) &(*Buffer_In)[0]);
+  kcg_copy_array_101097(&(*Buffer_Out)[0], (array_101097 *) &(*Message_In)[0]);
+  kcg_copy_array_101157(&(*Buffer_Out)[2], (array_101157 *) &(*Buffer_In)[0]);
   _L7 = Stacksize_old + 2;
   /* 1 */ if (_L7 > DIM_FIFO_TrainTrackOutput_TM_li) {
     *Stacksize_new = DIM_FIFO_TrainTrackOutput_TM_li;
@@ -35,6 +35,6 @@ void BufferOutput_write_only2_TM_lib(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_write_only2_TM_lib.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

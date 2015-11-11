@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _TrackAtlasETCS_TrackAtlas_H_
 #define _TrackAtlasETCS_TrackAtlas_H_
@@ -85,6 +85,6 @@ extern void TrackAtlasETCS_init_TrackAtlas(
 #endif /* _TrackAtlasETCS_TrackAtlas_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

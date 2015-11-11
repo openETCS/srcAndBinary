@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -42,7 +42,7 @@ void twoConsecutiveLinkedBGs_m_init_(outC_twoConsecutiveLinkedBGs_m_ *outC)
   outC->storedMissedBG.infoFromLinking.linkingInfo.nid_c = 0;
   outC->storedMissedBG.infoFromLinking.linkingInfo.nid_bg = 0;
   outC->storedMissedBG.infoFromLinking.linkingInfo.q_linkorientation =
-    _55_Q_LINKORIENTATION_The_balis;
+    _56_Q_LINKORIENTATION_The_balis;
   outC->storedMissedBG.infoFromLinking.linkingInfo.q_linkreaction =
     Q_LINKREACTION_Train_trip;
   outC->storedMissedBG.infoFromLinking.linkingInfo.q_locacc = 0;
@@ -100,7 +100,7 @@ void twoConsecutiveLinkedBGs_m_init_(outC_twoConsecutiveLinkedBGs_m_ *outC)
     outC->storedMissedBG.infoFromPassing.linkedBGs[i].nid_c = 0;
     outC->storedMissedBG.infoFromPassing.linkedBGs[i].nid_bg = 0;
     outC->storedMissedBG.infoFromPassing.linkedBGs[i].q_linkorientation =
-      _55_Q_LINKORIENTATION_The_balis;
+      _56_Q_LINKORIENTATION_The_balis;
     outC->storedMissedBG.infoFromPassing.linkedBGs[i].q_linkreaction =
       Q_LINKREACTION_Train_trip;
     outC->storedMissedBG.infoFromPassing.linkedBGs[i].q_locacc = 0;
@@ -155,6 +155,6 @@ void twoConsecutiveLinkedBGs_m_Calcu(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** twoConsecutiveLinkedBGs_m_Calcu.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

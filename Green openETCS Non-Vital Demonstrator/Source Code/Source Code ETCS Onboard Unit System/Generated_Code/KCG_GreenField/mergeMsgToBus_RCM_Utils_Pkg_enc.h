@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _mergeMsgToBus_RCM_Utils_Pkg_en
 #define _mergeMsgToBus_RCM_Utils_Pkg_en
@@ -22,7 +22,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  SSM_ST_SM1 /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */ SM1_state_nxt;
+  _112_SSM_ST_SM1 /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */ SM1_state_nxt;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
 } outC_mergeMsgToBus_RCM_Utils_Pk;
@@ -50,6 +50,6 @@ extern void mergeMsgToBus_init_RCM_Utils_Pk(
 #endif /* _mergeMsgToBus_RCM_Utils_Pkg_en */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_enc.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

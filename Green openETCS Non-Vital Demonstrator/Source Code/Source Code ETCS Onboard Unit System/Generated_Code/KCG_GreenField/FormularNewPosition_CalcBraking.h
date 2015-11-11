@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _FormularNewPosition_CalcBrakin
 #define _FormularNewPosition_CalcBrakin
@@ -23,6 +23,6 @@ extern L_internal_real_Type_SDM_Types_ FormularNewPosition_CalcBraking(
 #endif /* _FormularNewPosition_CalcBrakin */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FormularNewPosition_CalcBraking.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

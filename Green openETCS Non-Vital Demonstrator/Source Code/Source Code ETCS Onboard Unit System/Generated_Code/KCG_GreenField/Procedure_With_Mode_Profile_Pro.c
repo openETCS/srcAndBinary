@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -195,39 +195,39 @@ void Procedure_With_Mode_Profile_Pro(
           break;
         case SSM_st_Start_Supervision_SM_Mod :
           if (Loc_Supervision_Condition_Cover) {
-            SM_Futher_Location_state_act_SM = _187_SSM_st_Waiting_Ack_SM_Mode;
+            SM_Futher_Location_state_act_SM = _191_SSM_st_Waiting_Ack_SM_Mode;
           }
           else {
             SM_Futher_Location_state_act_SM = SSM_st_Start_Supervision_SM_Mod;
           }
           break;
-        case _187_SSM_st_Waiting_Ack_SM_Mode :
+        case _191_SSM_st_Waiting_Ack_SM_Mode :
           if (Driver_Ack_Mode_Profile) {
-            SM_Futher_Location_state_act_SM = _186_SSM_st_Switch_Mode_Confirm;
+            SM_Futher_Location_state_act_SM = _190_SSM_st_Switch_Mode_Confirm;
           }
           else {
-            SM_Futher_Location_state_act_SM = _187_SSM_st_Waiting_Ack_SM_Mode;
+            SM_Futher_Location_state_act_SM = _191_SSM_st_Waiting_Ack_SM_Mode;
           }
           break;
-        case _186_SSM_st_Switch_Mode_Confirm :
-          SM_Futher_Location_state_act_SM = _186_SSM_st_Switch_Mode_Confirm;
+        case _190_SSM_st_Switch_Mode_Confirm :
+          SM_Futher_Location_state_act_SM = _190_SSM_st_Switch_Mode_Confirm;
           break;
         
       }
       outC->Loc_Timer = 0;
       outC->SM_Mode_Profile_By_Trackside_st = SSM_st_Futher_location_SM_Mode_;
       /* act_SM_Futher_Location */ switch (SM_Futher_Location_state_act_SM) {
-        case _186_SSM_st_Switch_Mode_Confirm :
+        case _190_SSM_st_Switch_Mode_Confirm :
           outC->Condition_15_50_70 = kcg_true;
           outC->Ack_Req_To_Driver = kcg_false;
           outC->SM_Futher_Location_state_nxt_SM =
-            _186_SSM_st_Switch_Mode_Confirm;
+            _190_SSM_st_Switch_Mode_Confirm;
           break;
-        case _187_SSM_st_Waiting_Ack_SM_Mode :
+        case _191_SSM_st_Waiting_Ack_SM_Mode :
           outC->Condition_15_50_70 = kcg_false;
           outC->Ack_Req_To_Driver = kcg_true;
           outC->SM_Futher_Location_state_nxt_SM =
-            _187_SSM_st_Waiting_Ack_SM_Mode;
+            _191_SSM_st_Waiting_Ack_SM_Mode;
           break;
         case SSM_st_Start_Supervision_SM_Mod :
           outC->Condition_15_50_70 = kcg_false;
@@ -453,6 +453,6 @@ void Procedure_With_Mode_Profile_Pro(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_With_Mode_Profile_Pro.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

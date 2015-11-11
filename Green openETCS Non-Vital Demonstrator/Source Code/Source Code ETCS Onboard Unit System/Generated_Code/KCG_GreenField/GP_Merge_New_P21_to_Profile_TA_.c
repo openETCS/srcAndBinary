@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,7 +21,7 @@ void GP_Merge_New_P21_to_Profile_TA_(
   
   /* ck__L148 */ if ((*Last_GradientProfile_in)[0].valid) {
     _L1 = /* 1 */
-      _204_FindStartOfNewGradientProf(Last_GradientProfile_in, new_GP);
+      _208_FindStartOfNewGradientProf(Last_GradientProfile_in, new_GP);
   }
   else {
     _L1 = 0;
@@ -38,6 +38,6 @@ void GP_Merge_New_P21_to_Profile_TA_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GP_Merge_New_P21_to_Profile_TA_.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

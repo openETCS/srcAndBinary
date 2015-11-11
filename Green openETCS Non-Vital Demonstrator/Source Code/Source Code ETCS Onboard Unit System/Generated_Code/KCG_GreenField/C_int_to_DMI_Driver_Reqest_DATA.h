@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _C_int_to_DMI_Driver_Reqest_DAT
 #define _C_int_to_DMI_Driver_Reqest_DAT
@@ -22,6 +22,6 @@ extern void C_int_to_DMI_Driver_Reqest_DATA(
 #endif /* _C_int_to_DMI_Driver_Reqest_DAT */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_int_to_DMI_Driver_Reqest_DATA.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

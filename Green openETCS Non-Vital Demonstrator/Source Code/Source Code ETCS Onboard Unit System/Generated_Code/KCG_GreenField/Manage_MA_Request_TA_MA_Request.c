@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,6 @@ void Manage_MA_Request_init_TA_MA_Re(outC_Manage_MA_Request_TA_MA_Re *outC)
   
   outC->triggerMA = kcg_true;
   outC->init = kcg_true;
-  outC->exception = kcg_true;
   for (i1 = 0; i1 < 5; i1++) {
     outC->bus_out[i1].Message.valid = kcg_true;
     outC->bus_out[i1].Message.nid_message = 0;
@@ -90,7 +89,6 @@ void Manage_MA_Request_TA_MA_Request(
     modeLevel,
     &outC->_1_Context_1);
   outC->triggerMA = outC->_1_Context_1.triggerMA;
-  outC->exception = outC->_1_Context_1.exception;
   /* ck_triggerMA */ if (outC->triggerMA) {
     /* 1 */
     Build_MA_request_TA_MA_Request(
@@ -112,6 +110,6 @@ void Manage_MA_Request_TA_MA_Request(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_MA_Request_TA_MA_Request.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

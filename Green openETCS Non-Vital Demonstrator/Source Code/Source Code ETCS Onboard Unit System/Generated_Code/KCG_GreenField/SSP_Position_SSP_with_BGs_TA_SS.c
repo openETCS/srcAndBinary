@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,7 +26,7 @@ void SSP_Position_SSP_with_BGs_TA_SS(
   /* TA_SSP::SSP_Position_SSP_with_BGs::_L6 */
   static StaticSpeedProfile_t_TrackAtlas _L6;
   
-  /* 1 */ _202_SSP_Merge_New_P27V1_to_Pro(ProfileIn, LastProfile, &_L6);
+  /* 1 */ _206_SSP_Merge_New_P27V1_to_Pro(ProfileIn, LastProfile, &_L6);
   /* 1 */ SSP_Normalize_Profile_TA_SSP(&_L6, pos_LRBG, train_length, &tmp);
   /* 1 */ SSP_Truncate_at_BG_TA_SSP(&tmp, &tmp1);
   /* 1 */ SSP_Correct_StartSection_TA_SSP(&tmp1, ProfileOut);
@@ -38,6 +38,6 @@ void SSP_Position_SSP_with_BGs_TA_SS(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Position_SSP_with_BGs_TA_SS.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

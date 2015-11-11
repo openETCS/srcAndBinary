@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _handleTraction_output_to_TIU_A
 #define _handleTraction_output_to_TIU_A
@@ -45,6 +45,6 @@ extern void handleTraction_init_output_to_T(
 #endif /* _handleTraction_output_to_TIU_A */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** handleTraction_output_to_TIU_AP.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

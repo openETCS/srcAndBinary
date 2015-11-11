@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _SpeedSupervision_Integration_S
 #define _SpeedSupervision_Integration_S
@@ -15,6 +15,7 @@
 #include "CalcBrakingCurves_integration_C.h"
 #include "TargetManagement_TargetManageme.h"
 #include "AGradient_SDM_GradientAccelerat.h"
+#include "ProbeSDM_EnvSim.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -33,6 +34,7 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_ProbeSDM_EnvSim /* 1 */ _4_Context_1;
   outC_SDM_Commands_SDM_Commands_ /* 1 */ _3_Context_1;
   outC_CalcBrakingCurves_integrat /* 1 */ _2_Context_1;
   outC_AGradient_SDM_GradientAcce /* 1 */ _1_Context_1;
@@ -67,6 +69,6 @@ extern void SpeedSupervision_Integration_in(
 #endif /* _SpeedSupervision_Integration_S */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_Sp.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

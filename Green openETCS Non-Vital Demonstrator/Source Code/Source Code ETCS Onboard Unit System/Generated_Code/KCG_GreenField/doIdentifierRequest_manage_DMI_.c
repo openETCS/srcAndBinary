@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -43,28 +43,28 @@ void doIdentifierRequest_manage_DMI_(
   /* ck_isStarted */ if ((*TIU_TrainStatus).deskOpen) {
     /* 1 */ if (outC->init) {
       outC->init = kcg_false;
-      kcg_copy__26_DMI_Identifier_Req(
+      kcg_copy__28_DMI_Identifier_Req(
         &outC->identifierRequest,
-        (_26_DMI_Identifier_Request_T_DM *) &cEVCIdentifierRequest_manage_DM);
+        (_28_DMI_Identifier_Request_T_DM *) &cEVCIdentifierRequest_manage_DM);
       outC->identifierRequest.system_clock = inSystemTime;
       outC->identifierRequest.ERTMS_Version = ownVersion;
       outC->identifierRequest.EVC_Version = ownVersion;
     }
     else {
-      kcg_copy__26_DMI_Identifier_Req(
+      kcg_copy__28_DMI_Identifier_Req(
         &outC->identifierRequest,
-        (_26_DMI_Identifier_Request_T_DM *) &cEmptyIdentifierRequest_manage_);
+        (_28_DMI_Identifier_Request_T_DM *) &cEmptyIdentifierRequest_manage_);
     }
   }
   else {
-    kcg_copy__26_DMI_Identifier_Req(
+    kcg_copy__28_DMI_Identifier_Req(
       &outC->identifierRequest,
-      (_26_DMI_Identifier_Request_T_DM *) &cEmptyIdentifierRequest_manage_);
+      (_28_DMI_Identifier_Request_T_DM *) &cEmptyIdentifierRequest_manage_);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** doIdentifierRequest_manage_DMI_.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

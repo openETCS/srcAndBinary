@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -136,7 +136,7 @@ void combineForLevelChange_init_xdeb(outC_combineForLevelChange_xdeb *outC)
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].q_diff =
       Q_DIFF_Cant_Deficiency_specific;
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].nc_cddiff =
-      _41_NC_CDDIFF_Specific_SSP_appl;
+      _42_NC_CDDIFF_Specific_SSP_appl;
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].nc_diff = 0;
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].v_diff = 0;
   }
@@ -152,7 +152,7 @@ void combineForLevelChange_init_xdeb(outC_combineForLevelChange_xdeb *outC)
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].q_diff =
         Q_DIFF_Cant_Deficiency_specific;
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].nc_cddiff =
-        _41_NC_CDDIFF_Specific_SSP_appl;
+        _42_NC_CDDIFF_Specific_SSP_appl;
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].nc_diff =
         0;
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].v_diff =
@@ -239,9 +239,9 @@ void combineForLevelChange_xdebugSup(
   /* xdebugSupport_Pkg::combineForLevelChange::infoForLevelTransition */
   static dataCollectionForLevelTransitio last_infoForLevelTransition;
   
-  kcg_copy__6_P12_Level1MovementA(
+  kcg_copy__7_P12_Level1MovementA(
     &outC->Data_to_From_Track_Packets_at_M.P_12,
-    (_6_P12_Level1MovementAuthoritie *) &Default_P12_legacy_xdebugSuppor);
+    (_7_P12_Level1MovementAuthoritie *) &Default_P12_legacy_xdebugSuppor);
   kcg_copy_P135_StopShuntingOnDes(
     &outC->Data_to_From_Track_Packets_at_M.P_135,
     (P135_StopShuntingOnDeskOpening_ *) &Default_P135_legacy_xdebugSuppo);
@@ -298,7 +298,7 @@ void combineForLevelChange_xdebugSup(
       &last_infoForLevelTransition);
     outC->LRBGpositionNeeded = tmp;
   }
-  kcg_copy__7_P46_ConditionalLeve(
+  kcg_copy__8_P46_ConditionalLeve(
     &outC->Data_to_From_Track_Packets_at_M.P_46,
     &outC->infoForLevelTransition.p46);
   outC->Data_to_From_Track_Packets_at_M.LRBG =
@@ -371,6 +371,6 @@ void combineForLevelChange_xdebugSup(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** combineForLevelChange_xdebugSup.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

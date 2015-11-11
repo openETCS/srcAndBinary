@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _checkIfNeeded_manage_TextMessa
 #define _checkIfNeeded_manage_TextMessa
@@ -23,6 +23,6 @@ extern kcg_bool checkIfNeeded_manage_TextMessag(
 #endif /* _checkIfNeeded_manage_TextMessa */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** checkIfNeeded_manage_TextMessag.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

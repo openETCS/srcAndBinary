@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int */
 void CAST_DMI_Identifier_Request_to_(
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_ct */ _26_DMI_Identifier_Request_T_DM *dmi_id_ct,
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_ct */ _28_DMI_Identifier_Request_T_DM *dmi_id_ct,
   /* DATA::Packets::EVC_to_DMI::CAST_DMI_Identifier_Request_to_int::dmi_id_int */ DMI_Identifier_Request_int_arra *dmi_id_int)
 {
   (&(&(*dmi_id_int)[0])[0])[1] = (*dmi_id_ct).system_clock;
@@ -31,6 +31,6 @@ void CAST_DMI_Identifier_Request_to_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Identifier_Request_to_.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

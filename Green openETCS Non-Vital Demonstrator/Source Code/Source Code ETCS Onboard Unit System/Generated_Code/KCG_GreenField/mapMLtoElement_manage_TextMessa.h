@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _mapMLtoElement_manage_TextMess
 #define _mapMLtoElement_manage_TextMess
@@ -21,6 +21,6 @@ extern void mapMLtoElement_manage_TextMessa(
 #endif /* _mapMLtoElement_manage_TextMess */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapMLtoElement_manage_TextMessa.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

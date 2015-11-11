@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,7 +26,7 @@ void p131_rbcTransitionOrder_2_p42_e(
   kcg_copy_BG_Header_T_BG_Types_P(
     &(*p42_establishSession).BG_Common_Header,
     &(*p131_transitionOrder).BG_Common_Header);
-  kcg_copy_Radio_TrackTrain_Heade(
+  kcg_copy__11_Radio_TrackTrain_H(
     &(*p42_establishSession).Radio_Common_Header,
     &(*p131_transitionOrder).Radio_Common_Header);
   kcg_copy_RBC_Id_T_Common_Types_(
@@ -47,6 +47,6 @@ void p131_rbcTransitionOrder_2_p42_e(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** p131_rbcTransitionOrder_2_p42_e.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

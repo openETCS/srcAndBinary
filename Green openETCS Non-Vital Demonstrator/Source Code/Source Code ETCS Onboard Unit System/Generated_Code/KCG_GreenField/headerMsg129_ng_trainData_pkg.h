@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _headerMsg129_ng_trainData_pkg_
 #define _headerMsg129_ng_trainData_pkg_
@@ -21,6 +21,6 @@ extern void headerMsg129_ng_trainData_pkg(
 #endif /* _headerMsg129_ng_trainData_pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** headerMsg129_ng_trainData_pkg.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

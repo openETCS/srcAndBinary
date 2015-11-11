@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,7 +31,7 @@ void StoreRaw_NV_init_TA_Storage(outC_StoreRaw_NV_TA_Storage *outC)
   outC->NV_onboard_out.v_nvrel = 0;
   outC->NV_onboard_out.d_nvroll = 0;
   outC->NV_onboard_out.q_nvsbtsmperm = Q_NVSBTSMPERM_No;
-  outC->NV_onboard_out.q_nvemrrls = _49_Q_NVEMRRLS_Revoke_emergency;
+  outC->NV_onboard_out.q_nvemrrls = _50_Q_NVEMRRLS_Revoke_emergency;
   outC->NV_onboard_out.v_nvallowovtrp = 0;
   outC->NV_onboard_out.v_nvsopovtrp = 0;
   outC->NV_onboard_out.d_nvovtrp = 0;
@@ -77,6 +77,6 @@ void StoreRaw_NV_TA_Storage(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** StoreRaw_NV_TA_Storage.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

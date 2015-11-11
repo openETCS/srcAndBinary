@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _Write_int_to_DMI_Driver_Identi
 #define _Write_int_to_DMI_Driver_Identi
@@ -16,11 +16,11 @@
 /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier */
 extern void Write_int_to_DMI_Driver_Identif(
   /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::dmi_driver_identifier_int */ DMI_Driver_Identifier_int_array *dmi_driver_identifier_int,
-  /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::dmi_driver_identifier_ct */ _24_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct);
+  /* DATA::Packets::Bothways::Write_int_to_DMI_Driver_Identifier::dmi_driver_identifier_ct */ _26_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct);
 
 #endif /* _Write_int_to_DMI_Driver_Identi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_int_to_DMI_Driver_Identif.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

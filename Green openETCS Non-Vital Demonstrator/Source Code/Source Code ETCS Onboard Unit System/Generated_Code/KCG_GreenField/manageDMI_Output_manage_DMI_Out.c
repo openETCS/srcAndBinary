@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -60,16 +60,16 @@ void manageDMI_Output_manage_DMI_Out(
   /* manage_DMI_Output_Pkg::manageDMI_Output::inMoRC_status */ morcStatus_T_RCM_Session_Types_ *inMoRC_status,
   /* manage_DMI_Output_Pkg::manageDMI_Output::trainDataFromEVC */ trainData_T_TIU_Types_Pkg *trainDataFromEVC,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_entryRequest */ DMI_Entry_Request_T_DMI_Message *dmi_entryRequest,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_evc_coded_train_data */ _27_DMI_EVC_Coded_Train_Data_T_ *dmi_evc_coded_train_data,
+  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_evc_coded_train_data */ _29_DMI_EVC_Coded_Train_Data_T_ *dmi_evc_coded_train_data,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_trackDescription */ DataForDMI_t_TrackAtlasTypes *dmi_trackDescription,
   /* manage_DMI_Output_Pkg::manageDMI_Output::evc_systemVersion */ M_VERSION evc_systemVersion,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_displayControl */ DMI_Display_Control_T_DMI_Messa *dmi_displayControl,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_EVC_levelList */ DMI_LevelList_T_DMI_Types_Pkg *dmi_EVC_levelList,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmiUpdateLevelsDMI */ kcg_bool dmiUpdateLevelsDMI,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_EVC_radioNet */ _25_DMI_EVC_Radio_Net_Data_T_DM *dmi_EVC_radioNet,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_driverIdentifier */ _24_DMI_Driver_Identifier_T_DMI *dmi_driverIdentifier,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_trainRunningNumber */ _23_DMI_Train_Running_Number_T_ *dmi_trainRunningNumber,
-  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_adhesionFactor */ _22_DMI_Adhesion_Factor_Data_T_ *dmi_adhesionFactor,
+  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_EVC_radioNet */ _27_DMI_EVC_Radio_Net_Data_T_DM *dmi_EVC_radioNet,
+  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_driverIdentifier */ _26_DMI_Driver_Identifier_T_DMI *dmi_driverIdentifier,
+  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_trainRunningNumber */ _25_DMI_Train_Running_Number_T_ *dmi_trainRunningNumber,
+  /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_adhesionFactor */ _24_DMI_Adhesion_Factor_Data_T_ *dmi_adhesionFactor,
   /* manage_DMI_Output_Pkg::manageDMI_Output::dmi_fromBG */ kcg_bool dmi_fromBG,
   /* manage_DMI_Output_Pkg::manageDMI_Output::inModeLevel_Ack */ T_AcknoledgementRequest_Level_A *inModeLevel_Ack,
   /* manage_DMI_Output_Pkg::manageDMI_Output::announcedLevel */ T_AnnouncedLevel_Level_And_Mode *announcedLevel,
@@ -185,6 +185,6 @@ void manageDMI_Output_manage_DMI_Out(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Output_manage_DMI_Out.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

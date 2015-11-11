@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _Manage_EmergencyStop_TA_Emerge
 #define _Manage_EmergencyStop_TA_Emerge
@@ -67,6 +67,6 @@ extern void Manage_EmergencyStop_init_TA_Em(
 #endif /* _Manage_EmergencyStop_TA_Emerge */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_EmergencyStop_TA_Emergen.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

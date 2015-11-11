@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -115,7 +115,7 @@ void manageTextMessages_manage_TextM(
       
     }
     /* 1 */ if ((*inModeLevel_Ack).LevelNeedsAck) {
-      tmp1.q_textConfirm = _54_Q_TEXTCONFIRM_Confirmation_;
+      tmp1.q_textConfirm = _55_Q_TEXTCONFIRM_Confirmation_;
     }
     else {
       tmp1.q_textConfirm = Q_TEXTCONFIRM_No_confirmation_r;
@@ -150,6 +150,6 @@ void manageTextMessages_manage_TextM(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTextMessages_manage_TextM.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

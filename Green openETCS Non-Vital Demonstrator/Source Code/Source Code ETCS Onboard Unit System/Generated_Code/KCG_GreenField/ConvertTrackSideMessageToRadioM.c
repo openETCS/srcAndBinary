@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,7 +28,7 @@ void ConvertTrackSideMessageToRadioM(
   kcg_copy_RBC_Id_T_Common_Types_(
     &(*ReceivedMessage).sendingRBC,
     &(*TrackSideMessage).radio_Msg.sendingRBC);
-  kcg_copy_Radio_TrackTrain_Heade(
+  kcg_copy__11_Radio_TrackTrain_H(
     &(*ReceivedMessage).Radio_Common_Header,
     &(*TrackSideMessage).radio_Msg.header);
   (*ReceivedMessage).Radio_Common_Header.receivedSystemTime =
@@ -37,6 +37,6 @@ void ConvertTrackSideMessageToRadioM(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ConvertTrackSideMessageToRadioM.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

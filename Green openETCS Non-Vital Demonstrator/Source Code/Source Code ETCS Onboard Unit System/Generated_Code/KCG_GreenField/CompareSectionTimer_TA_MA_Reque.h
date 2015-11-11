@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _CompareSectionTimer_TA_MA_Requ
 #define _CompareSectionTimer_TA_MA_Requ
@@ -15,11 +15,11 @@
 /* TA_MA_Request::CompareSectionTimer */
 extern T_internal_Type_Obu_BasicTypes_ CompareSectionTimer_TA_MA_Reque(
   /* TA_MA_Request::CompareSectionTimer::timer */ T_internal_Type_Obu_BasicTypes_ timer,
-  /* TA_MA_Request::CompareSectionTimer::ma_section */ _20_MovementAuthoritySection_t_ *ma_section);
+  /* TA_MA_Request::CompareSectionTimer::ma_section */ _22_MovementAuthoritySection_t_ *ma_section);
 
 #endif /* _CompareSectionTimer_TA_MA_Requ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CompareSectionTimer_TA_MA_Reque.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

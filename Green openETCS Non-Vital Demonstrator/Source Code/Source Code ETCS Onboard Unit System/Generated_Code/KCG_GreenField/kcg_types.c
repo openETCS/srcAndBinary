@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:18
 *************************************************************$ */
 
 #include "kcg_types.h"
@@ -111,7 +111,7 @@ kcg_bool kcg_comp_GradientProfile_for_DM(
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 50; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp__21_GradientProfile_fo(
+    kcg_equ = kcg_equ & kcg_comp__23_GradientProfile_fo(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
@@ -119,8 +119,8 @@ kcg_bool kcg_comp_GradientProfile_for_DM(
 }
 #endif /* kcg_use_GradientProfile_for_DMI */
 
-#ifdef kcg_use_array_96788
-kcg_bool kcg_comp_array_96788(array_96788 *kcg_c1, array_96788 *kcg_c2)
+#ifdef kcg_use_array_101097
+kcg_bool kcg_comp_array_101097(array_101097 *kcg_c1, array_101097 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -133,7 +133,7 @@ kcg_bool kcg_comp_array_96788(array_96788 *kcg_c1, array_96788 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_96788 */
+#endif /* kcg_use_array_101097 */
 
 #ifdef kcg_use_TelegramArray_T_BG_Type
 kcg_bool kcg_comp_TelegramArray_T_BG_Typ(
@@ -153,8 +153,8 @@ kcg_bool kcg_comp_TelegramArray_T_BG_Typ(
 }
 #endif /* kcg_use_TelegramArray_T_BG_Type */
 
-#ifdef kcg_use_array_96795
-kcg_bool kcg_comp_array_96795(array_96795 *kcg_c1, array_96795 *kcg_c2)
+#ifdef kcg_use_array_101104
+kcg_bool kcg_comp_array_101104(array_101104 *kcg_c1, array_101104 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -167,7 +167,7 @@ kcg_bool kcg_comp_array_96795(array_96795 *kcg_c1, array_96795 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_96795 */
+#endif /* kcg_use_array_101104 */
 
 #ifdef kcg_use_array_int_894
 kcg_bool kcg_comp_array_int_894(array_int_894 *kcg_c1, array_int_894 *kcg_c2)
@@ -200,6 +200,24 @@ kcg_bool kcg_comp_P41_LevelTransistionOr(
   return kcg_equ;
 }
 #endif /* kcg_use_P41_LevelTransistionOrd */
+
+#ifdef kcg_use_DMI_trackConditionArray
+kcg_bool kcg_comp_DMI_trackConditionArra(
+  DMI_trackConditionArray_T_DMI_T *kcg_c1,
+  DMI_trackConditionArray_T_DMI_T *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
+    kcg_equ = kcg_equ & kcg_comp_DMI_trackConditionElem(
+        &(*kcg_c1)[kcg_ci],
+        &(*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_DMI_trackConditionArray */
 
 #ifdef kcg_use_Target_list_MRSP_real_T
 kcg_bool kcg_comp_Target_list_MRSP_real_(
@@ -273,8 +291,8 @@ kcg_bool kcg_comp_LinkedBGs_T_BG_Types_P(
 }
 #endif /* kcg_use_LinkedBGs_T_BG_Types_Pk */
 
-#ifdef kcg_use_array_96847
-kcg_bool kcg_comp_array_96847(array_96847 *kcg_c1, array_96847 *kcg_c2)
+#ifdef kcg_use_array_101157
+kcg_bool kcg_comp_array_101157(array_101157 *kcg_c1, array_101157 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -287,23 +305,23 @@ kcg_bool kcg_comp_array_96847(array_96847 *kcg_c1, array_96847 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_96847 */
+#endif /* kcg_use_array_101157 */
 
-#ifdef kcg_use_array_96890
-kcg_bool kcg_comp_array_96890(array_96890 *kcg_c1, array_96890 *kcg_c2)
+#ifdef kcg_use_array_101201
+kcg_bool kcg_comp_array_101201(array_101201 *kcg_c1, array_101201 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_97901(
+    kcg_equ = kcg_equ & kcg_comp_struct_102216(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_96890 */
+#endif /* kcg_use_array_101201 */
 
 #ifdef kcg_use_array_bool_113
 kcg_bool kcg_comp_array_bool_113(array_bool_113 *kcg_c1, array_bool_113 *kcg_c2)
@@ -461,8 +479,8 @@ kcg_bool kcg_comp_positionedBGs_T_TrainP(
 }
 #endif /* kcg_use_positionedBGs_T_TrainPo */
 
-#ifdef kcg_use_array_97070
-kcg_bool kcg_comp_array_97070(array_97070 *kcg_c1, array_97070 *kcg_c2)
+#ifdef kcg_use_array_101362
+kcg_bool kcg_comp_array_101362(array_101362 *kcg_c1, array_101362 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -475,7 +493,25 @@ kcg_bool kcg_comp_array_97070(array_97070 *kcg_c1, array_97070 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97070 */
+#endif /* kcg_use_array_101362 */
+
+#ifdef kcg_use_LevelDecisionTableType_
+kcg_bool kcg_comp_LevelDecisionTableType(
+  LevelDecisionTableType_DataDict *kcg_c1,
+  LevelDecisionTableType_DataDict *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 256; kcg_ci++) {
+    kcg_equ = kcg_equ & kcg_comp_array_104194(
+        &(*kcg_c1)[kcg_ci],
+        &(*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_LevelDecisionTableType_ */
 
 #ifdef kcg_use_Metadata_T_Common_Types
 kcg_bool kcg_comp_Metadata_T_Common_Type(
@@ -495,8 +531,8 @@ kcg_bool kcg_comp_Metadata_T_Common_Type(
 }
 #endif /* kcg_use_Metadata_T_Common_Types */
 
-#ifdef kcg_use_array_97077
-kcg_bool kcg_comp_array_97077(array_97077 *kcg_c1, array_97077 *kcg_c2)
+#ifdef kcg_use_array_101372
+kcg_bool kcg_comp_array_101372(array_101372 *kcg_c1, array_101372 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -509,7 +545,7 @@ kcg_bool kcg_comp_array_97077(array_97077 *kcg_c1, array_97077 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97077 */
+#endif /* kcg_use_array_101372 */
 
 #ifdef kcg_use_T_LevelTransition_Prior
 kcg_bool kcg_comp_T_LevelTransition_Prio(
@@ -543,10 +579,10 @@ kcg_bool kcg_comp_array_int_261(array_int_261 *kcg_c1, array_int_261 *kcg_c2)
 }
 #endif /* kcg_use_array_int_261 */
 
-#ifdef kcg_use__7_P46_ConditionalLevel
-kcg_bool kcg_comp__7_P46_ConditionalLeve(
-  _7_P46_ConditionalLevelTransiti *kcg_c1,
-  _7_P46_ConditionalLevelTransiti *kcg_c2)
+#ifdef kcg_use__8_P46_ConditionalLevel
+kcg_bool kcg_comp__8_P46_ConditionalLeve(
+  _8_P46_ConditionalLevelTransiti *kcg_c1,
+  _8_P46_ConditionalLevelTransiti *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -559,7 +595,7 @@ kcg_bool kcg_comp__7_P46_ConditionalLeve(
   }
   return kcg_equ;
 }
-#endif /* kcg_use__7_P46_ConditionalLevel */
+#endif /* kcg_use__8_P46_ConditionalLevel */
 
 #ifdef kcg_use_nvkvintArray_T_Packet_T
 kcg_bool kcg_comp_nvkvintArray_T_Packet_(
@@ -607,58 +643,40 @@ kcg_bool kcg_comp_array_int_15(array_int_15 *kcg_c1, array_int_15 *kcg_c2)
 }
 #endif /* kcg_use_array_int_15 */
 
-#ifdef kcg_use_array_97134
-kcg_bool kcg_comp_array_97134(array_97134 *kcg_c1, array_97134 *kcg_c2)
+#ifdef kcg_use_array_101423
+kcg_bool kcg_comp_array_101423(array_101423 *kcg_c1, array_101423 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_99511(
+    kcg_equ = kcg_equ & kcg_comp_struct_103888(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97134 */
+#endif /* kcg_use_array_101423 */
 
-#ifdef kcg_use_IterPacket58List_T_Pack
-kcg_bool kcg_comp_IterPacket58List_T_Pac(
-  IterPacket58List_T_Packet_Types *kcg_c1,
-  IterPacket58List_T_Packet_Types *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  static kcg_int kcg_ci;
-  
-  kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 2; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_IterPacket58_T_Packet_(
-        &(*kcg_c1)[kcg_ci],
-        &(*kcg_c2)[kcg_ci]);
-  }
-  return kcg_equ;
-}
-#endif /* kcg_use_IterPacket58List_T_Pack */
-
-#ifdef kcg_use_array_97141
-kcg_bool kcg_comp_array_97141(array_97141 *kcg_c1, array_97141 *kcg_c2)
+#ifdef kcg_use_array_101427
+kcg_bool kcg_comp_array_101427(array_101427 *kcg_c1, array_101427 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 31; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_97901(
+    kcg_equ = kcg_equ & kcg_comp_struct_102216(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97141 */
+#endif /* kcg_use_array_101427 */
 
-#ifdef kcg_use_array_97163
-kcg_bool kcg_comp_array_97163(array_97163 *kcg_c1, array_97163 *kcg_c2)
+#ifdef kcg_use_array_101449
+kcg_bool kcg_comp_array_101449(array_101449 *kcg_c1, array_101449 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -671,7 +689,7 @@ kcg_bool kcg_comp_array_97163(array_97163 *kcg_c1, array_97163 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97163 */
+#endif /* kcg_use_array_101449 */
 
 #ifdef kcg_use_DMI_Driver_Identifier_i
 kcg_bool kcg_comp_DMI_Driver_Identifier_(
@@ -689,8 +707,8 @@ kcg_bool kcg_comp_DMI_Driver_Identifier_(
 }
 #endif /* kcg_use_DMI_Driver_Identifier_i */
 
-#ifdef kcg_use_array_97188
-kcg_bool kcg_comp_array_97188(array_97188 *kcg_c1, array_97188 *kcg_c2)
+#ifdef kcg_use_array_101479
+kcg_bool kcg_comp_array_101479(array_101479 *kcg_c1, array_101479 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -703,7 +721,7 @@ kcg_bool kcg_comp_array_97188(array_97188 *kcg_c1, array_97188 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97188 */
+#endif /* kcg_use_array_101479 */
 
 #ifdef kcg_use_array_real_100_8
 kcg_bool kcg_comp_array_real_100_8(
@@ -841,8 +859,8 @@ kcg_bool kcg_comp_array_int_42(array_int_42 *kcg_c1, array_int_42 *kcg_c2)
 }
 #endif /* kcg_use_array_int_42 */
 
-#ifdef kcg_use_array_97350
-kcg_bool kcg_comp_array_97350(array_97350 *kcg_c1, array_97350 *kcg_c2)
+#ifdef kcg_use_array_101659
+kcg_bool kcg_comp_array_101659(array_101659 *kcg_c1, array_101659 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -855,12 +873,12 @@ kcg_bool kcg_comp_array_97350(array_97350 *kcg_c1, array_97350 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97350 */
+#endif /* kcg_use_array_101659 */
 
-#ifdef kcg_use__5_P15_Level23MovementA
-kcg_bool kcg_comp__5_P15_Level23Movement(
-  _5_P15_Level23MovementAuthoriti *kcg_c1,
-  _5_P15_Level23MovementAuthoriti *kcg_c2)
+#ifdef kcg_use__6_P15_Level23MovementA
+kcg_bool kcg_comp__6_P15_Level23Movement(
+  _6_P15_Level23MovementAuthoriti *kcg_c1,
+  _6_P15_Level23MovementAuthoriti *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -873,12 +891,12 @@ kcg_bool kcg_comp__5_P15_Level23Movement(
   }
   return kcg_equ;
 }
-#endif /* kcg_use__5_P15_Level23MovementA */
+#endif /* kcg_use__6_P15_Level23MovementA */
 
-#ifdef kcg_use__6_P12_Level1MovementAu
-kcg_bool kcg_comp__6_P12_Level1MovementA(
-  _6_P12_Level1MovementAuthoritie *kcg_c1,
-  _6_P12_Level1MovementAuthoritie *kcg_c2)
+#ifdef kcg_use__7_P12_Level1MovementAu
+kcg_bool kcg_comp__7_P12_Level1MovementA(
+  _7_P12_Level1MovementAuthoritie *kcg_c1,
+  _7_P12_Level1MovementAuthoritie *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -891,7 +909,7 @@ kcg_bool kcg_comp__6_P12_Level1MovementA(
   }
   return kcg_equ;
 }
-#endif /* kcg_use__6_P12_Level1MovementAu */
+#endif /* kcg_use__7_P12_Level1MovementAu */
 
 #ifdef kcg_use_array_int_975
 kcg_bool kcg_comp_array_int_975(array_int_975 *kcg_c1, array_int_975 *kcg_c2)
@@ -925,8 +943,8 @@ kcg_bool kcg_comp_DMI_TXT_MSGList_status(
 }
 #endif /* kcg_use_DMI_TXT_MSGList_status_ */
 
-#ifdef kcg_use_array_97398
-kcg_bool kcg_comp_array_97398(array_97398 *kcg_c1, array_97398 *kcg_c2)
+#ifdef kcg_use_array_101707
+kcg_bool kcg_comp_array_101707(array_101707 *kcg_c1, array_101707 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -939,7 +957,7 @@ kcg_bool kcg_comp_array_97398(array_97398 *kcg_c1, array_97398 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97398 */
+#endif /* kcg_use_array_101707 */
 
 #ifdef kcg_use_MovementAuthoritySectio
 kcg_bool kcg_comp_MovementAuthoritySecti(
@@ -951,7 +969,7 @@ kcg_bool kcg_comp_MovementAuthoritySecti(
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 10; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp__20_MovementAuthorityS(
+    kcg_equ = kcg_equ & kcg_comp__22_MovementAuthorityS(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
@@ -1059,35 +1077,21 @@ kcg_bool kcg_comp_P046_OBU_sectionlist_e(
 }
 #endif /* kcg_use_P046_OBU_sectionlist_en */
 
-#ifdef kcg_use_array_97513
-kcg_bool kcg_comp_array_97513(array_97513 *kcg_c1, array_97513 *kcg_c2)
+#ifdef kcg_use_array_101817
+kcg_bool kcg_comp_array_101817(array_101817 *kcg_c1, array_101817 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_96820(
+    kcg_equ = kcg_equ & kcg_comp_struct_101194(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97513 */
-
-#ifdef kcg_use_array_97517
-kcg_bool kcg_comp_array_97517(array_97517 *kcg_c1, array_97517 *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  static kcg_int kcg_ci;
-  
-  kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 17; kcg_ci++) {
-    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
-  }
-  return kcg_equ;
-}
-#endif /* kcg_use_array_97517 */
+#endif /* kcg_use_array_101817 */
 
 #ifdef kcg_use_MRSP_internal_T_TargetM
 kcg_bool kcg_comp_MRSP_internal_T_Target(
@@ -1191,21 +1195,21 @@ kcg_bool kcg_comp_ParabolaCurve_list_MRS(
 }
 #endif /* kcg_use_ParabolaCurve_list_MRSP */
 
-#ifdef kcg_use_array_97555
-kcg_bool kcg_comp_array_97555(array_97555 *kcg_c1, array_97555 *kcg_c2)
+#ifdef kcg_use_array_101874
+kcg_bool kcg_comp_array_101874(array_101874 *kcg_c1, array_101874 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 4; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_96970(
+    kcg_equ = kcg_equ & kcg_comp_struct_101491(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97555 */
+#endif /* kcg_use_array_101874 */
 
 #ifdef kcg_use_array_real_100
 kcg_bool kcg_comp_array_real_100(array_real_100 *kcg_c1, array_real_100 *kcg_c2)
@@ -1315,8 +1319,8 @@ kcg_bool kcg_comp_MyArray_SDM_Commands_P(
 }
 #endif /* kcg_use_MyArray_SDM_Commands_Pk */
 
-#ifdef kcg_use_array_97601
-kcg_bool kcg_comp_array_97601(array_97601 *kcg_c1, array_97601 *kcg_c2)
+#ifdef kcg_use_array_101920
+kcg_bool kcg_comp_array_101920(array_101920 *kcg_c1, array_101920 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -1329,7 +1333,7 @@ kcg_bool kcg_comp_array_97601(array_97601 *kcg_c1, array_97601 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97601 */
+#endif /* kcg_use_array_101920 */
 
 #ifdef kcg_use_ASafeSpeedDefinition_T_
 kcg_bool kcg_comp_ASafeSpeedDefinition_T(
@@ -1425,6 +1429,20 @@ kcg_bool kcg_comp_array_int_131(array_int_131 *kcg_c1, array_int_131 *kcg_c2)
 }
 #endif /* kcg_use_array_int_131 */
 
+#ifdef kcg_use_array_int_6
+kcg_bool kcg_comp_array_int_6(array_int_6 *kcg_c1, array_int_6 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 6; kcg_ci++) {
+    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_array_int_6 */
+
 #ifdef kcg_use_P058_OBU_sectionlist_en
 kcg_bool kcg_comp_P058_OBU_sectionlist_e(
   P058_OBU_sectionlist_enum_T_TM *kcg_c1,
@@ -1442,20 +1460,6 @@ kcg_bool kcg_comp_P058_OBU_sectionlist_e(
   return kcg_equ;
 }
 #endif /* kcg_use_P058_OBU_sectionlist_en */
-
-#ifdef kcg_use_array_int_6
-kcg_bool kcg_comp_array_int_6(array_int_6 *kcg_c1, array_int_6 *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  static kcg_int kcg_ci;
-  
-  kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 6; kcg_ci++) {
-    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
-  }
-  return kcg_equ;
-}
-#endif /* kcg_use_array_int_6 */
 
 #ifdef kcg_use_array_real_6
 kcg_bool kcg_comp_array_real_6(array_real_6 *kcg_c1, array_real_6 *kcg_c2)
@@ -1533,8 +1537,8 @@ kcg_bool kcg_comp_array_int_978(array_int_978 *kcg_c1, array_int_978 *kcg_c2)
 }
 #endif /* kcg_use_array_int_978 */
 
-#ifdef kcg_use_array_97860
-kcg_bool kcg_comp_array_97860(array_97860 *kcg_c1, array_97860 *kcg_c2)
+#ifdef kcg_use_array_102167
+kcg_bool kcg_comp_array_102167(array_102167 *kcg_c1, array_102167 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -1547,7 +1551,7 @@ kcg_bool kcg_comp_array_97860(array_97860 *kcg_c1, array_97860 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97860 */
+#endif /* kcg_use_array_102167 */
 
 #ifdef kcg_use_P80_ModeProfiles_T_Pack
 kcg_bool kcg_comp_P80_ModeProfiles_T_Pac(
@@ -1603,37 +1607,37 @@ kcg_bool kcg_comp_DMI_SpeedProfileArray_(
 }
 #endif /* kcg_use_DMI_SpeedProfileArray_T */
 
-#ifdef kcg_use_array_97907
-kcg_bool kcg_comp_array_97907(array_97907 *kcg_c1, array_97907 *kcg_c2)
+#ifdef kcg_use_array_102222
+kcg_bool kcg_comp_array_102222(array_102222 *kcg_c1, array_102222 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_97939(
+    kcg_equ = kcg_equ & kcg_comp_struct_102260(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97907 */
+#endif /* kcg_use_array_102222 */
 
-#ifdef kcg_use_array_97911
-kcg_bool kcg_comp_array_97911(array_97911 *kcg_c1, array_97911 *kcg_c2)
+#ifdef kcg_use_array_102226
+kcg_bool kcg_comp_array_102226(array_102226 *kcg_c1, array_102226 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
   for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_struct_97649(
+    kcg_equ = kcg_equ & kcg_comp_struct_101968(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_97911 */
+#endif /* kcg_use_array_102226 */
 
 #ifdef kcg_use_array_int_33
 kcg_bool kcg_comp_array_int_33(array_int_33 *kcg_c1, array_int_33 *kcg_c2)
@@ -1663,23 +1667,21 @@ kcg_bool kcg_comp_array_int_888(array_int_888 *kcg_c1, array_int_888 *kcg_c2)
 }
 #endif /* kcg_use_array_int_888 */
 
-#ifdef kcg_use_ModeDecisionTableType_D
-kcg_bool kcg_comp_ModeDecisionTableType_(
-  ModeDecisionTableType_DataDicti *kcg_c1,
-  ModeDecisionTableType_DataDicti *kcg_c2)
+#ifdef kcg_use_array_102324
+kcg_bool kcg_comp_array_102324(array_102324 *kcg_c1, array_102324 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 256; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_array_97517(
+  for (kcg_ci = 0; kcg_ci < 5; kcg_ci++) {
+    kcg_equ = kcg_equ & kcg_comp_API_TrackSideInput_T_A(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_ModeDecisionTableType_D */
+#endif /* kcg_use_array_102324 */
 
 #ifdef kcg_use_P027V1_OBU_sectionlist_
 kcg_bool kcg_comp_P027V1_OBU_sectionlist(
@@ -1717,8 +1719,8 @@ kcg_bool kcg_comp_nidCArray_T_Packet_Typ(
 }
 #endif /* kcg_use_nidCArray_T_Packet_Type */
 
-#ifdef kcg_use_array_98012
-kcg_bool kcg_comp_array_98012(array_98012 *kcg_c1, array_98012 *kcg_c2)
+#ifdef kcg_use_array_102340
+kcg_bool kcg_comp_array_102340(array_102340 *kcg_c1, array_102340 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -1731,7 +1733,39 @@ kcg_bool kcg_comp_array_98012(array_98012 *kcg_c1, array_98012 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_98012 */
+#endif /* kcg_use_array_102340 */
+
+#ifdef kcg_use_array_102344
+kcg_bool kcg_comp_array_102344(array_102344 *kcg_c1, array_102344 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 17; kcg_ci++) {
+    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_array_102344 */
+
+#ifdef kcg_use_IterPacket58List_T_Pack
+kcg_bool kcg_comp_IterPacket58List_T_Pac(
+  IterPacket58List_T_Packet_Types *kcg_c1,
+  IterPacket58List_T_Packet_Types *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 2; kcg_ci++) {
+    kcg_equ = kcg_equ & kcg_comp_IterPacket58_T_Packet_(
+        &(*kcg_c1)[kcg_ci],
+        &(*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_IterPacket58List_T_Pack */
 
 #ifdef kcg_use_array_int_25
 kcg_bool kcg_comp_array_int_25(array_int_25 *kcg_c1, array_int_25 *kcg_c2)
@@ -1815,8 +1849,8 @@ kcg_bool kcg_comp_ASafe_Data_T_CalcBraki(
 }
 #endif /* kcg_use_ASafe_Data_T_CalcBrakin */
 
-#ifdef kcg_use_array_98074
-kcg_bool kcg_comp_array_98074(array_98074 *kcg_c1, array_98074 *kcg_c2)
+#ifdef kcg_use_array_102398
+kcg_bool kcg_comp_array_102398(array_102398 *kcg_c1, array_102398 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -1829,7 +1863,7 @@ kcg_bool kcg_comp_array_98074(array_98074 *kcg_c1, array_98074 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_98074 */
+#endif /* kcg_use_array_102398 */
 
 #ifdef kcg_use_array_int_99
 kcg_bool kcg_comp_array_int_99(array_int_99 *kcg_c1, array_int_99 *kcg_c2)
@@ -1918,20 +1952,6 @@ kcg_bool kcg_comp_array_real_13(array_real_13 *kcg_c1, array_real_13 *kcg_c2)
   return kcg_equ;
 }
 #endif /* kcg_use_array_real_13 */
-
-#ifdef kcg_use_array_98128
-kcg_bool kcg_comp_array_98128(array_98128 *kcg_c1, array_98128 *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  static kcg_int kcg_ci;
-  
-  kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 5; kcg_ci++) {
-    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
-  }
-  return kcg_equ;
-}
-#endif /* kcg_use_array_98128 */
 
 #ifdef kcg_use_DMI_TEXT_INT_Array_T_DA
 kcg_bool kcg_comp_DMI_TEXT_INT_Array_T_D(
@@ -2063,8 +2083,8 @@ kcg_bool kcg_comp_array_int_48(array_int_48 *kcg_c1, array_int_48 *kcg_c2)
 }
 #endif /* kcg_use_array_int_48 */
 
-#ifdef kcg_use_array_98207
-kcg_bool kcg_comp_array_98207(array_98207 *kcg_c1, array_98207 *kcg_c2)
+#ifdef kcg_use_array_102535
+kcg_bool kcg_comp_array_102535(array_102535 *kcg_c1, array_102535 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -2077,7 +2097,7 @@ kcg_bool kcg_comp_array_98207(array_98207 *kcg_c1, array_98207 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_98207 */
+#endif /* kcg_use_array_102535 */
 
 #ifdef kcg_use_SSP_matrix_t_TA_MRSP
 kcg_bool kcg_comp_SSP_matrix_t_TA_MRSP(
@@ -2096,6 +2116,20 @@ kcg_bool kcg_comp_SSP_matrix_t_TA_MRSP(
   return kcg_equ;
 }
 #endif /* kcg_use_SSP_matrix_t_TA_MRSP */
+
+#ifdef kcg_use_array_bool_5
+kcg_bool kcg_comp_array_bool_5(array_bool_5 *kcg_c1, array_bool_5 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 5; kcg_ci++) {
+    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_array_bool_5 */
 
 #ifdef kcg_use_array_int_5
 kcg_bool kcg_comp_array_int_5(array_int_5 *kcg_c1, array_int_5 *kcg_c2)
@@ -2169,10 +2203,10 @@ kcg_bool kcg_comp_array_int_40(array_int_40 *kcg_c1, array_int_40 *kcg_c2)
 }
 #endif /* kcg_use_array_int_40 */
 
-#ifdef kcg_use__50_DMI_Track_Descripti
-kcg_bool kcg_comp__50_DMI_Track_Descript(
-  _50_DMI_Track_Description_int_a *kcg_c1,
-  _50_DMI_Track_Description_int_a *kcg_c2)
+#ifdef kcg_use__51_DMI_Track_Descripti
+kcg_bool kcg_comp__51_DMI_Track_Descript(
+  _51_DMI_Track_Description_int_a *kcg_c1,
+  _51_DMI_Track_Description_int_a *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -2183,10 +2217,10 @@ kcg_bool kcg_comp__50_DMI_Track_Descript(
   }
   return kcg_equ;
 }
-#endif /* kcg_use__50_DMI_Track_Descripti */
+#endif /* kcg_use__51_DMI_Track_Descripti */
 
-#ifdef kcg_use_array_98283
-kcg_bool kcg_comp_array_98283(array_98283 *kcg_c1, array_98283 *kcg_c2)
+#ifdef kcg_use_array_102609
+kcg_bool kcg_comp_array_102609(array_102609 *kcg_c1, array_102609 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -2199,23 +2233,7 @@ kcg_bool kcg_comp_array_98283(array_98283 *kcg_c1, array_98283 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_98283 */
-
-#ifdef kcg_use_array_98287
-kcg_bool kcg_comp_array_98287(array_98287 *kcg_c1, array_98287 *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  static kcg_int kcg_ci;
-  
-  kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 9; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_ErrorMessage_T_Provide(
-        &(*kcg_c1)[kcg_ci],
-        &(*kcg_c2)[kcg_ci]);
-  }
-  return kcg_equ;
-}
-#endif /* kcg_use_array_98287 */
+#endif /* kcg_use_array_102609 */
 
 #ifdef kcg_use_MetadataTruthtable_T1_C
 kcg_bool kcg_comp_MetadataTruthtable_T1_(
@@ -2282,6 +2300,24 @@ kcg_bool kcg_comp_ParabolaCurveValid_T_C(
   return kcg_equ;
 }
 #endif /* kcg_use_ParabolaCurveValid_T_Ca */
+
+#ifdef kcg_use_ModeDecisionTableType_D
+kcg_bool kcg_comp_ModeDecisionTableType_(
+  ModeDecisionTableType_DataDicti *kcg_c1,
+  ModeDecisionTableType_DataDicti *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 256; kcg_ci++) {
+    kcg_equ = kcg_equ & kcg_comp_array_102344(
+        &(*kcg_c1)[kcg_ci],
+        &(*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_ModeDecisionTableType_D */
 
 #ifdef kcg_use_array_real_114
 kcg_bool kcg_comp_array_real_114(array_real_114 *kcg_c1, array_real_114 *kcg_c2)
@@ -2385,23 +2421,21 @@ kcg_bool kcg_comp_array_int_961(array_int_961 *kcg_c1, array_int_961 *kcg_c2)
 }
 #endif /* kcg_use_array_int_961 */
 
-#ifdef kcg_use_DMI_trackConditionArray
-kcg_bool kcg_comp_DMI_trackConditionArra(
-  DMI_trackConditionArray_T_DMI_T *kcg_c1,
-  DMI_trackConditionArray_T_DMI_T *kcg_c2)
+#ifdef kcg_use_array_104094
+kcg_bool kcg_comp_array_104094(array_104094 *kcg_c1, array_104094 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
   
   kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 32; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_DMI_trackConditionElem(
+  for (kcg_ci = 0; kcg_ci < 9; kcg_ci++) {
+    kcg_equ = kcg_equ & kcg_comp_ErrorMessage_T_Provide(
         &(*kcg_c1)[kcg_ci],
         &(*kcg_c2)[kcg_ci]);
   }
   return kcg_equ;
 }
-#endif /* kcg_use_DMI_trackConditionArray */
+#endif /* kcg_use_array_104094 */
 
 #ifdef kcg_use_SSPArray_T_Packet_Types
 kcg_bool kcg_comp_SSPArray_T_Packet_Type(
@@ -2507,8 +2541,8 @@ kcg_bool kcg_comp_array_int_20(array_int_20 *kcg_c1, array_int_20 *kcg_c2)
 }
 #endif /* kcg_use_array_int_20 */
 
-#ifdef kcg_use_array_99746
-kcg_bool kcg_comp_array_99746(array_99746 *kcg_c1, array_99746 *kcg_c2)
+#ifdef kcg_use_array_104130
+kcg_bool kcg_comp_array_104130(array_104130 *kcg_c1, array_104130 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -2521,7 +2555,7 @@ kcg_bool kcg_comp_array_99746(array_99746 *kcg_c1, array_99746 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_99746 */
+#endif /* kcg_use_array_104130 */
 
 #ifdef kcg_use_DMI_Text_Message_int_ar
 kcg_bool kcg_comp_DMI_Text_Message_int_a(
@@ -2539,26 +2573,8 @@ kcg_bool kcg_comp_DMI_Text_Message_int_a(
 }
 #endif /* kcg_use_DMI_Text_Message_int_ar */
 
-#ifdef kcg_use_LevelDecisionTableType_
-kcg_bool kcg_comp_LevelDecisionTableType(
-  LevelDecisionTableType_DataDict *kcg_c1,
-  LevelDecisionTableType_DataDict *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  static kcg_int kcg_ci;
-  
-  kcg_equ = kcg_true;
-  for (kcg_ci = 0; kcg_ci < 256; kcg_ci++) {
-    kcg_equ = kcg_equ & kcg_comp_array_98128(
-        &(*kcg_c1)[kcg_ci],
-        &(*kcg_c2)[kcg_ci]);
-  }
-  return kcg_equ;
-}
-#endif /* kcg_use_LevelDecisionTableType_ */
-
-#ifdef kcg_use_array_99769
-kcg_bool kcg_comp_array_99769(array_99769 *kcg_c1, array_99769 *kcg_c2)
+#ifdef kcg_use_array_104156
+kcg_bool kcg_comp_array_104156(array_104156 *kcg_c1, array_104156 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -2571,7 +2587,21 @@ kcg_bool kcg_comp_array_99769(array_99769 *kcg_c1, array_99769 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_99769 */
+#endif /* kcg_use_array_104156 */
+
+#ifdef kcg_use_array_104194
+kcg_bool kcg_comp_array_104194(array_104194 *kcg_c1, array_104194 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  static kcg_int kcg_ci;
+  
+  kcg_equ = kcg_true;
+  for (kcg_ci = 0; kcg_ci < 5; kcg_ci++) {
+    kcg_equ = kcg_equ & ((*kcg_c1)[kcg_ci] == (*kcg_c2)[kcg_ci]);
+  }
+  return kcg_equ;
+}
+#endif /* kcg_use_array_104194 */
 
 #ifdef kcg_use_CompressedPacketData_T_
 kcg_bool kcg_comp_CompressedPacketData_T(
@@ -2589,8 +2619,8 @@ kcg_bool kcg_comp_CompressedPacketData_T(
 }
 #endif /* kcg_use_CompressedPacketData_T_ */
 
-#ifdef kcg_use_array_99816
-kcg_bool kcg_comp_array_99816(array_99816 *kcg_c1, array_99816 *kcg_c2)
+#ifdef kcg_use_array_104206
+kcg_bool kcg_comp_array_104206(array_104206 *kcg_c1, array_104206 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   static kcg_int kcg_ci;
@@ -2603,7 +2633,7 @@ kcg_bool kcg_comp_array_99816(array_99816 *kcg_c1, array_99816 *kcg_c2)
   }
   return kcg_equ;
 }
-#endif /* kcg_use_array_99816 */
+#endif /* kcg_use_array_104206 */
 
 #ifdef kcg_use_array_bool_8
 kcg_bool kcg_comp_array_bool_8(array_bool_8 *kcg_c1, array_bool_8 *kcg_c2)
@@ -2679,10 +2709,10 @@ kcg_bool kcg_comp_P21_GradientProfile_T_(
 }
 #endif /* kcg_use_P21_GradientProfile_T_P */
 
-#ifdef kcg_use__24_DMI_Driver_Identifi
-kcg_bool kcg_comp__24_DMI_Driver_Identif(
-  _24_DMI_Driver_Identifier_T_DMI *kcg_c1,
-  _24_DMI_Driver_Identifier_T_DMI *kcg_c2)
+#ifdef kcg_use__26_DMI_Driver_Identifi
+kcg_bool kcg_comp__26_DMI_Driver_Identif(
+  _26_DMI_Driver_Identifier_T_DMI *kcg_c1,
+  _26_DMI_Driver_Identifier_T_DMI *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -2694,7 +2724,7 @@ kcg_bool kcg_comp__24_DMI_Driver_Identif(
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use__24_DMI_Driver_Identifi */
+#endif /* kcg_use__26_DMI_Driver_Identifi */
 
 #ifdef kcg_use_DMI_Train_Data_Ack_T_DM
 kcg_bool kcg_comp_DMI_Train_Data_Ack_T_D(
@@ -2711,10 +2741,10 @@ kcg_bool kcg_comp_DMI_Train_Data_Ack_T_D(
 }
 #endif /* kcg_use_DMI_Train_Data_Ack_T_DM */
 
-#ifdef kcg_use__25_DMI_EVC_Radio_Net_D
-kcg_bool kcg_comp__25_DMI_EVC_Radio_Net_(
-  _25_DMI_EVC_Radio_Net_Data_T_DM *kcg_c1,
-  _25_DMI_EVC_Radio_Net_Data_T_DM *kcg_c2)
+#ifdef kcg_use__27_DMI_EVC_Radio_Net_D
+kcg_bool kcg_comp__27_DMI_EVC_Radio_Net_(
+  _27_DMI_EVC_Radio_Net_Data_T_DM *kcg_c1,
+  _27_DMI_EVC_Radio_Net_Data_T_DM *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -2724,7 +2754,7 @@ kcg_bool kcg_comp__25_DMI_EVC_Radio_Net_(
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use__25_DMI_EVC_Radio_Net_D */
+#endif /* kcg_use__27_DMI_EVC_Radio_Net_D */
 
 #ifdef kcg_use_T_Data_From_Track_MASSP
 kcg_bool kcg_comp_T_Data_From_Track_MASS(
@@ -2896,8 +2926,8 @@ kcg_bool kcg_comp_A_gradient_element_t_S(
 }
 #endif /* kcg_use_A_gradient_element_t_SD */
 
-#ifdef kcg_use_struct_96806
-kcg_bool kcg_comp_struct_96806(struct_96806 *kcg_c1, struct_96806 *kcg_c2)
+#ifdef kcg_use_struct_101118
+kcg_bool kcg_comp_struct_101118(struct_101118 *kcg_c1, struct_101118 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -2907,7 +2937,7 @@ kcg_bool kcg_comp_struct_96806(struct_96806 *kcg_c1, struct_96806 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->trackAheadFree == kcg_c2->trackAheadFree);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_96806 */
+#endif /* kcg_use_struct_101118 */
 
 #ifdef kcg_use_centerOfBalisePosition_
 kcg_bool kcg_comp_centerOfBalisePosition(
@@ -2927,33 +2957,20 @@ kcg_bool kcg_comp_centerOfBalisePosition(
 }
 #endif /* kcg_use_centerOfBalisePosition_ */
 
-#ifdef kcg_use_struct_96820
-kcg_bool kcg_comp_struct_96820(struct_96820 *kcg_c1, struct_96820 *kcg_c2)
+#ifdef kcg_use_DMI_System_Version_T_DM
+kcg_bool kcg_comp_DMI_System_Version_T_D(
+  DMI_System_Version_T_DMI_Messag *kcg_c1,
+  DMI_System_Version_T_DMI_Messag *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_nvkrint_l == kcg_c2->m_nvkrint_l);
-  kcg_equ = kcg_equ & (kcg_c1->l_nvkrint_l == kcg_c2->l_nvkrint_l);
+  kcg_equ = kcg_equ & (kcg_c1->system_version == kcg_c2->system_version);
+  kcg_equ = kcg_equ & (kcg_c1->system_clock == kcg_c2->system_clock);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_96820 */
-
-#ifdef kcg_use_DMI_Driver_Request_T_DM
-kcg_bool kcg_comp_DMI_Driver_Request_T_D(
-  DMI_Driver_Request_T_DMI_Messag *kcg_c1,
-  DMI_Driver_Request_T_DMI_Messag *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_request == kcg_c2->m_request);
-  kcg_equ = kcg_equ & (kcg_c1->systemTime == kcg_c2->systemTime);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_DMI_Driver_Request_T_DM */
+#endif /* kcg_use_DMI_System_Version_T_DM */
 
 #ifdef kcg_use_a_Brake_t_SDMConversion
 kcg_bool kcg_comp_a_Brake_t_SDMConversio(
@@ -2972,6 +2989,24 @@ kcg_bool kcg_comp_a_Brake_t_SDMConversio(
   return kcg_equ;
 }
 #endif /* kcg_use_a_Brake_t_SDMConversion */
+
+#ifdef kcg_use_CompressedBaliseMessage
+kcg_bool kcg_comp_CompressedBaliseMessag(
+  CompressedBaliseMessage_TM *kcg_c1,
+  CompressedBaliseMessage_TM *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_CompressedPackets_T_Co(
+      &kcg_c1->Messages,
+      &kcg_c2->Messages);
+  kcg_equ = kcg_equ & kcg_comp_BaliseTelegramHeader_i(
+      &kcg_c1->Header,
+      &kcg_c2->Header);
+  return kcg_equ;
+}
+#endif /* kcg_use_CompressedBaliseMessage */
 
 #ifdef kcg_use_mobileRegistrationConte
 kcg_bool kcg_comp_mobileRegistrationCont(
@@ -3045,8 +3080,8 @@ kcg_bool kcg_comp_m38_initiationOfACommu(
 }
 #endif /* kcg_use_m38_initiationOfACommun */
 
-#ifdef kcg_use_struct_96877
-kcg_bool kcg_comp_struct_96877(struct_96877 *kcg_c1, struct_96877 *kcg_c2)
+#ifdef kcg_use_struct_101187
+kcg_bool kcg_comp_struct_101187(struct_101187 *kcg_c1, struct_101187 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -3054,26 +3089,24 @@ kcg_bool kcg_comp_struct_96877(struct_96877 *kcg_c1, struct_96877 *kcg_c2)
   kcg_equ = kcg_equ & kcg_comp_outPackets_T_Common_Ty(
       &kcg_c1->packets,
       &kcg_c2->packets);
-  kcg_equ = kcg_equ & kcg_comp_struct_99615(&kcg_c1->header, &kcg_c2->header);
+  kcg_equ = kcg_equ & kcg_comp_struct_103959(&kcg_c1->header, &kcg_c2->header);
   kcg_equ = kcg_equ & (kcg_c1->present == kcg_c2->present);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_96877 */
+#endif /* kcg_use_struct_101187 */
 
-#ifdef kcg_use_DMI_System_Version_T_DM
-kcg_bool kcg_comp_DMI_System_Version_T_D(
-  DMI_System_Version_T_DMI_Messag *kcg_c1,
-  DMI_System_Version_T_DMI_Messag *kcg_c2)
+#ifdef kcg_use_struct_101194
+kcg_bool kcg_comp_struct_101194(struct_101194 *kcg_c1, struct_101194 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->system_version == kcg_c2->system_version);
-  kcg_equ = kcg_equ & (kcg_c1->system_clock == kcg_c2->system_clock);
+  kcg_equ = kcg_equ & (kcg_c1->m_nvkrint_l == kcg_c2->m_nvkrint_l);
+  kcg_equ = kcg_equ & (kcg_c1->l_nvkrint_l == kcg_c2->l_nvkrint_l);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_DMI_System_Version_T_DM */
+#endif /* kcg_use_struct_101194 */
 
 #ifdef kcg_use_TrainLocations_real_T_S
 kcg_bool kcg_comp_TrainLocations_real_T_(
@@ -3096,6 +3129,50 @@ kcg_bool kcg_comp_TrainLocations_real_T_(
 }
 #endif /* kcg_use_TrainLocations_real_T_S */
 
+#ifdef kcg_use_ErrorMessage_T_ProvideP
+kcg_bool kcg_comp_ErrorMessage_T_Provide(
+  ErrorMessage_T_ProvidePositionR *kcg_c1,
+  ErrorMessage_T_ProvidePositionR *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->errorType == kcg_c2->errorType);
+  kcg_equ = kcg_equ & (kcg_c1->present == kcg_c2->present);
+  return kcg_equ;
+}
+#endif /* kcg_use_ErrorMessage_T_ProvideP */
+
+#ifdef kcg_use__25_DMI_Train_Running_N
+kcg_bool kcg_comp__25_DMI_Train_Running_(
+  _25_DMI_Train_Running_Number_T_ *kcg_c1,
+  _25_DMI_Train_Running_Number_T_ *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->trainRunningNumber ==
+      kcg_c2->trainRunningNumber);
+  kcg_equ = kcg_equ & (kcg_c1->systemTime == kcg_c2->systemTime);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use__25_DMI_Train_Running_N */
+
+#ifdef kcg_use_mv_Map_t_SDMConversionM
+kcg_bool kcg_comp_mv_Map_t_SDMConversion(
+  mv_Map_t_SDMConversionModelPkg *kcg_c1,
+  mv_Map_t_SDMConversionModelPkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_v_KvSteps_t_SDMConvers(&kcg_c1->v, &kcg_c2->v);
+  kcg_equ = kcg_equ & kcg_comp_m_KvSteps_t_SDMConvers(&kcg_c1->m, &kcg_c2->m);
+  return kcg_equ;
+}
+#endif /* kcg_use_mv_Map_t_SDMConversionM */
+
 #ifdef kcg_use_M_132_T_TM_radio_messag
 kcg_bool kcg_comp_M_132_T_TM_radio_messa(
   M_132_T_TM_radio_messages *kcg_c1,
@@ -3113,50 +3190,6 @@ kcg_bool kcg_comp_M_132_T_TM_radio_messa(
   return kcg_equ;
 }
 #endif /* kcg_use_M_132_T_TM_radio_messag */
-
-#ifdef kcg_use__23_DMI_Train_Running_N
-kcg_bool kcg_comp__23_DMI_Train_Running_(
-  _23_DMI_Train_Running_Number_T_ *kcg_c1,
-  _23_DMI_Train_Running_Number_T_ *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->trainRunningNumber ==
-      kcg_c2->trainRunningNumber);
-  kcg_equ = kcg_equ & (kcg_c1->systemTime == kcg_c2->systemTime);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use__23_DMI_Train_Running_N */
-
-#ifdef kcg_use_mv_Map_t_SDMConversionM
-kcg_bool kcg_comp_mv_Map_t_SDMConversion(
-  mv_Map_t_SDMConversionModelPkg *kcg_c1,
-  mv_Map_t_SDMConversionModelPkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_v_KvSteps_t_SDMConvers(&kcg_c1->v, &kcg_c2->v);
-  kcg_equ = kcg_equ & kcg_comp_m_KvSteps_t_SDMConvers(&kcg_c1->m, &kcg_c2->m);
-  return kcg_equ;
-}
-#endif /* kcg_use_mv_Map_t_SDMConversionM */
-
-#ifdef kcg_use_DMI_trackConditionEleme
-kcg_bool kcg_comp_DMI_trackConditionElem(
-  DMI_trackConditionElement_T_DMI *kcg_c1,
-  DMI_trackConditionElement_T_DMI *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_trackcond == kcg_c2->m_trackcond);
-  kcg_equ = kcg_equ & (kcg_c1->d_trackcond == kcg_c2->d_trackcond);
-  return kcg_equ;
-}
-#endif /* kcg_use_DMI_trackConditionEleme */
 
 #ifdef kcg_use_sNID_RADIO_T_Packet_Tra
 kcg_bool kcg_comp_sNID_RADIO_T_Packet_Tr(
@@ -3190,37 +3223,6 @@ kcg_bool kcg_comp_MetadataElement_T_Comm(
   return kcg_equ;
 }
 #endif /* kcg_use_MetadataElement_T_Commo */
-
-#ifdef kcg_use_Brake_inhibition_comman
-kcg_bool kcg_comp_Brake_inhibition_comma(
-  Brake_inhibition_command_T_TIU_ *kcg_c1,
-  Brake_inhibition_command_T_TIU_ *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_magneticshoebrake_cm ==
-      kcg_c2->m_magneticshoebrake_cm);
-  kcg_equ = kcg_equ & (kcg_c1->m_eddycurrentbrake_cm ==
-      kcg_c2->m_eddycurrentbrake_cm);
-  kcg_equ = kcg_equ & (kcg_c1->m_regenerativebrake_cm ==
-      kcg_c2->m_regenerativebrake_cm);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Brake_inhibition_comman */
-
-#ifdef kcg_use_struct_96970
-kcg_bool kcg_comp_struct_96970(struct_96970 *kcg_c1, struct_96970 *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->nid_ctraction == kcg_c2->nid_ctraction);
-  kcg_equ = kcg_equ & (kcg_c1->m_voltage == kcg_c2->m_voltage);
-  return kcg_equ;
-}
-#endif /* kcg_use_struct_96970 */
 
 #ifdef kcg_use_T_Data_From_Localisatio
 kcg_bool kcg_comp_T_Data_From_Localisati(
@@ -3285,10 +3287,10 @@ kcg_bool kcg_comp_mobileConnectionContex(
 }
 #endif /* kcg_use_mobileConnectionContext */
 
-#ifdef kcg_use__26_DMI_Identifier_Requ
-kcg_bool kcg_comp__26_DMI_Identifier_Req(
-  _26_DMI_Identifier_Request_T_DM *kcg_c1,
-  _26_DMI_Identifier_Request_T_DM *kcg_c2)
+#ifdef kcg_use__28_DMI_Identifier_Requ
+kcg_bool kcg_comp__28_DMI_Identifier_Req(
+  _28_DMI_Identifier_Request_T_DM *kcg_c1,
+  _28_DMI_Identifier_Request_T_DM *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -3304,7 +3306,7 @@ kcg_bool kcg_comp__26_DMI_Identifier_Req(
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use__26_DMI_Identifier_Requ */
+#endif /* kcg_use__28_DMI_Identifier_Requ */
 
 #ifdef kcg_use_trainDataStatus_T_train
 kcg_bool kcg_comp_trainDataStatus_T_trai(
@@ -3367,21 +3369,6 @@ kcg_bool kcg_comp_T_trac_t_TargetLimits_(
 }
 #endif /* kcg_use_T_trac_t_TargetLimits_P */
 
-#ifdef kcg_use_P137_StopIfInStaffRespo
-kcg_bool kcg_comp_P137_StopIfInStaffResp(
-  P137_StopIfInStaffResponsible_T *kcg_c1,
-  P137_StopIfInStaffResponsible_T *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_srstop == kcg_c2->q_srstop);
-  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_P137_StopIfInStaffRespo */
-
 #ifdef kcg_use_TIU_commandStatus_T_TIU
 kcg_bool kcg_comp_TIU_commandStatus_T_TI(
   TIU_commandStatus_T_TIU_Types_P *kcg_c1,
@@ -3397,21 +3384,6 @@ kcg_bool kcg_comp_TIU_commandStatus_T_TI(
   return kcg_equ;
 }
 #endif /* kcg_use_TIU_commandStatus_T_TIU */
-
-#ifdef kcg_use_P046_section_enum_T_TM
-kcg_bool kcg_comp_P046_section_enum_T_TM(
-  P046_section_enum_T_TM *kcg_c1,
-  P046_section_enum_T_TM *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->nid_ntc == kcg_c2->nid_ntc);
-  kcg_equ = kcg_equ & (kcg_c1->m_leveltr == kcg_c2->m_leveltr);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_P046_section_enum_T_TM */
 
 #ifdef kcg_use_DMI_To_Modes_T_DMI_Type
 kcg_bool kcg_comp_DMI_To_Modes_T_DMI_Typ(
@@ -3501,20 +3473,20 @@ kcg_bool kcg_comp_Target_real_T_TargetMa(
 }
 #endif /* kcg_use_Target_real_T_TargetMan */
 
-#ifdef kcg_use_RadioManagement_T_API_R
-kcg_bool kcg_comp_RadioManagement_T_API_(
-  RadioManagement_T_API_RadioComm *kcg_c1,
-  RadioManagement_T_API_RadioComm *kcg_c2)
+#ifdef kcg_use_P046_section_enum_T_TM
+kcg_bool kcg_comp_P046_section_enum_T_TM(
+  P046_section_enum_T_TM *kcg_c1,
+  P046_section_enum_T_TM *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->networkID == kcg_c2->networkID);
-  kcg_equ = kcg_equ & (kcg_c1->cmd == kcg_c2->cmd);
+  kcg_equ = kcg_equ & (kcg_c1->nid_ntc == kcg_c2->nid_ntc);
+  kcg_equ = kcg_equ & (kcg_c1->m_leveltr == kcg_c2->m_leveltr);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_RadioManagement_T_API_R */
+#endif /* kcg_use_P046_section_enum_T_TM */
 
 #ifdef kcg_use_DMI_Icon_Ack_T_DMI_Mess
 kcg_bool kcg_comp_DMI_Icon_Ack_T_DMI_Mes(
@@ -3531,6 +3503,20 @@ kcg_bool kcg_comp_DMI_Icon_Ack_T_DMI_Mes(
   return kcg_equ;
 }
 #endif /* kcg_use_DMI_Icon_Ack_T_DMI_Mess */
+
+#ifdef kcg_use_Isolation_Status_T_TIU_
+kcg_bool kcg_comp_Isolation_Status_T_TIU(
+  Isolation_Status_T_TIU_Types_Pk *kcg_c1,
+  Isolation_Status_T_TIU_Types_Pk *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->isolation_status == kcg_c2->isolation_status);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_Isolation_Status_T_TIU_ */
 
 #ifdef kcg_use_T_Data_From_Track_Mess_
 kcg_bool kcg_comp_T_Data_From_Track_Mess(
@@ -3572,25 +3558,6 @@ kcg_bool kcg_comp_T_Data_To_BG_Managemen(
 }
 #endif /* kcg_use_T_Data_To_BG_Management */
 
-#ifdef kcg_use_m32_RBC_RIU_SystemVersi
-kcg_bool kcg_comp_m32_RBC_RIU_SystemVers(
-  m32_RBC_RIU_SystemVersion_T_RCM *kcg_c1,
-  m32_RBC_RIU_SystemVersion_T_RCM *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
-  kcg_equ = kcg_equ & kcg_comp_RBC_Id_T_Common_Types_(
-      &kcg_c1->origin,
-      &kcg_c2->origin);
-  kcg_equ = kcg_equ & (kcg_c1->versionSupported == kcg_c2->versionSupported);
-  kcg_equ = kcg_equ & (kcg_c1->msgSrc == kcg_c2->msgSrc);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_m32_RBC_RIU_SystemVersi */
-
 #ifdef kcg_use_T_LevelTansitionInfo_Le
 kcg_bool kcg_comp_T_LevelTansitionInfo_L(
   T_LevelTansitionInfo_Level_And_ *kcg_c1,
@@ -3607,6 +3574,33 @@ kcg_bool kcg_comp_T_LevelTansitionInfo_L(
   return kcg_equ;
 }
 #endif /* kcg_use_T_LevelTansitionInfo_Le */
+
+#ifdef kcg_use_struct_101491
+kcg_bool kcg_comp_struct_101491(struct_101491 *kcg_c1, struct_101491 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->nid_ctraction == kcg_c2->nid_ctraction);
+  kcg_equ = kcg_equ & (kcg_c1->m_voltage == kcg_c2->m_voltage);
+  return kcg_equ;
+}
+#endif /* kcg_use_struct_101491 */
+
+#ifdef kcg_use_RadioManagement_T_API_R
+kcg_bool kcg_comp_RadioManagement_T_API_(
+  RadioManagement_T_API_RadioComm *kcg_c1,
+  RadioManagement_T_API_RadioComm *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->networkID == kcg_c2->networkID);
+  kcg_equ = kcg_equ & (kcg_c1->cmd == kcg_c2->cmd);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_RadioManagement_T_API_R */
 
 #ifdef kcg_use_BG_Message_T_BG_Types_P
 kcg_bool kcg_comp_BG_Message_T_BG_Types_(
@@ -3680,6 +3674,18 @@ kcg_bool kcg_comp_DMI_Radio_Net_Data_T_D(
 }
 #endif /* kcg_use_DMI_Radio_Net_Data_T_DM */
 
+#ifdef kcg_use_struct_101540
+kcg_bool kcg_comp_struct_101540(struct_101540 *kcg_c1, struct_101540 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_array_bool_5(&kcg_c1->items, &kcg_c2->items);
+  kcg_equ = kcg_equ & (kcg_c1->idx == kcg_c2->idx);
+  return kcg_equ;
+}
+#endif /* kcg_use_struct_101540 */
+
 #ifdef kcg_use_ParabolaArc_T_CalcBraki
 kcg_bool kcg_comp_ParabolaArc_T_CalcBrak(
   ParabolaArc_T_CalcBrakingCurves *kcg_c1,
@@ -3752,21 +3758,6 @@ kcg_bool kcg_comp_probesBalises_T_xdebug(
 }
 #endif /* kcg_use_probesBalises_T_xdebugS */
 
-#ifdef kcg_use__22_DMI_Adhesion_Factor
-kcg_bool kcg_comp__22_DMI_Adhesion_Facto(
-  _22_DMI_Adhesion_Factor_Data_T_ *kcg_c1,
-  _22_DMI_Adhesion_Factor_Data_T_ *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->adhesionFactor == kcg_c2->adhesionFactor);
-  kcg_equ = kcg_equ & (kcg_c1->systemTime == kcg_c2->systemTime);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use__22_DMI_Adhesion_Factor */
-
 #ifdef kcg_use_T_Data_From_Track_To_Le
 kcg_bool kcg_comp_T_Data_From_Track_To_L(
   T_Data_From_Track_To_Level_Leve *kcg_c1,
@@ -3803,6 +3794,25 @@ kcg_bool kcg_comp_nationValuesForDMI_T_D(
   return kcg_equ;
 }
 #endif /* kcg_use_nationValuesForDMI_T_DM */
+
+#ifdef kcg_use_m32_RBC_RIU_SystemVersi
+kcg_bool kcg_comp_m32_RBC_RIU_SystemVers(
+  m32_RBC_RIU_SystemVersion_T_RCM *kcg_c1,
+  m32_RBC_RIU_SystemVersion_T_RCM *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
+  kcg_equ = kcg_equ & kcg_comp_RBC_Id_T_Common_Types_(
+      &kcg_c1->origin,
+      &kcg_c2->origin);
+  kcg_equ = kcg_equ & (kcg_c1->versionSupported == kcg_c2->versionSupported);
+  kcg_equ = kcg_equ & (kcg_c1->msgSrc == kcg_c2->msgSrc);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_m32_RBC_RIU_SystemVersi */
 
 #ifdef kcg_use_DMI_Text_Message_Ack_T_
 kcg_bool kcg_comp_DMI_Text_Message_Ack_T(
@@ -3888,6 +3898,21 @@ kcg_bool kcg_comp_passedBG_T_BG_Types_Pk(
 }
 #endif /* kcg_use_passedBG_T_BG_Types_Pkg */
 
+#ifdef kcg_use__24_DMI_Adhesion_Factor
+kcg_bool kcg_comp__24_DMI_Adhesion_Facto(
+  _24_DMI_Adhesion_Factor_Data_T_ *kcg_c1,
+  _24_DMI_Adhesion_Factor_Data_T_ *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->adhesionFactor == kcg_c2->adhesionFactor);
+  kcg_equ = kcg_equ & (kcg_c1->systemTime == kcg_c2->systemTime);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use__24_DMI_Adhesion_Factor */
+
 #ifdef kcg_use_trainData_Events_T_trai
 kcg_bool kcg_comp_trainData_Events_T_tra(
   trainData_Events_T_trainData_Ty *kcg_c1,
@@ -3910,8 +3935,8 @@ kcg_bool kcg_comp_trainData_Events_T_tra(
 }
 #endif /* kcg_use_trainData_Events_T_trai */
 
-#ifdef kcg_use_struct_97369
-kcg_bool kcg_comp_struct_97369(struct_97369 *kcg_c1, struct_97369 *kcg_c2)
+#ifdef kcg_use_struct_101678
+kcg_bool kcg_comp_struct_101678(struct_101678 *kcg_c1, struct_101678 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -3924,24 +3949,10 @@ kcg_bool kcg_comp_struct_97369(struct_97369 *kcg_c1, struct_97369 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97369 */
+#endif /* kcg_use_struct_101678 */
 
-#ifdef kcg_use_IterPacket58_T_Packet_T
-kcg_bool kcg_comp_IterPacket58_T_Packet_(
-  IterPacket58_T_Packet_Types_Pkg *kcg_c1,
-  IterPacket58_T_Packet_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_lgtloc == kcg_c2->q_lgtloc);
-  kcg_equ = kcg_equ & (kcg_c1->d_loc == kcg_c2->d_loc);
-  return kcg_equ;
-}
-#endif /* kcg_use_IterPacket58_T_Packet_T */
-
-#ifdef kcg_use_struct_97387
-kcg_bool kcg_comp_struct_97387(struct_97387 *kcg_c1, struct_97387 *kcg_c2)
+#ifdef kcg_use_struct_101691
+kcg_bool kcg_comp_struct_101691(struct_101691 *kcg_c1, struct_101691 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -3952,7 +3963,21 @@ kcg_bool kcg_comp_struct_97387(struct_97387 *kcg_c1, struct_97387 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97387 */
+#endif /* kcg_use_struct_101691 */
+
+#ifdef kcg_use_DMI_trackConditionEleme
+kcg_bool kcg_comp_DMI_trackConditionElem(
+  DMI_trackConditionElement_T_DMI *kcg_c1,
+  DMI_trackConditionElement_T_DMI *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_trackcond == kcg_c2->m_trackcond);
+  kcg_equ = kcg_equ & (kcg_c1->d_trackcond == kcg_c2->d_trackcond);
+  return kcg_equ;
+}
+#endif /* kcg_use_DMI_trackConditionEleme */
 
 #ifdef kcg_use_DP_or_OL_t_TrackAtlasTy
 kcg_bool kcg_comp_DP_or_OL_t_TrackAtlasT(
@@ -4070,8 +4095,23 @@ kcg_bool kcg_comp_Gradient_section_real_(
 }
 #endif /* kcg_use_Gradient_section_real_t */
 
-#ifdef kcg_use_struct_97456
-kcg_bool kcg_comp_struct_97456(struct_97456 *kcg_c1, struct_97456 *kcg_c2)
+#ifdef kcg_use_P137_StopIfInStaffRespo
+kcg_bool kcg_comp_P137_StopIfInStaffResp(
+  P137_StopIfInStaffResponsible_T *kcg_c1,
+  P137_StopIfInStaffResponsible_T *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_srstop == kcg_c2->q_srstop);
+  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_P137_StopIfInStaffRespo */
+
+#ifdef kcg_use_struct_101771
+kcg_bool kcg_comp_struct_101771(struct_101771 *kcg_c1, struct_101771 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4083,10 +4123,10 @@ kcg_bool kcg_comp_struct_97456(struct_97456 *kcg_c1, struct_97456 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97456 */
+#endif /* kcg_use_struct_101771 */
 
-#ifdef kcg_use_struct_97465
-kcg_bool kcg_comp_struct_97465(struct_97465 *kcg_c1, struct_97465 *kcg_c2)
+#ifdef kcg_use_struct_101780
+kcg_bool kcg_comp_struct_101780(struct_101780 *kcg_c1, struct_101780 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4097,7 +4137,7 @@ kcg_bool kcg_comp_struct_97465(struct_97465 *kcg_c1, struct_97465 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->number == kcg_c2->number);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97465 */
+#endif /* kcg_use_struct_101780 */
 
 #ifdef kcg_use_connection_ids_T_Handov
 kcg_bool kcg_comp_connection_ids_T_Hando(
@@ -4117,39 +4157,6 @@ kcg_bool kcg_comp_connection_ids_T_Hando(
 }
 #endif /* kcg_use_connection_ids_T_Handov */
 
-#ifdef kcg_use_nothing_to_resume_profi
-kcg_bool kcg_comp_nothing_to_resume_prof(
-  nothing_to_resume_profile_follo *kcg_c1,
-  nothing_to_resume_profile_follo *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_trackcond == kcg_c2->m_trackcond);
-  kcg_equ = kcg_equ & kcg_comp_L_test_trackcond_T_TIU(
-      &kcg_c1->l_test_trackcond,
-      &kcg_c2->l_test_trackcond);
-  kcg_equ = kcg_equ & kcg_comp_D_test_trackcond_T_TIU(
-      &kcg_c1->d_test_trackcond,
-      &kcg_c2->d_test_trackcond);
-  return kcg_equ;
-}
-#endif /* kcg_use_nothing_to_resume_profi */
-
-#ifdef kcg_use_TrainToTrackStatus_T_BG
-kcg_bool kcg_comp_TrainToTrackStatus_T_B(
-  TrainToTrackStatus_T_BG_Types_P *kcg_c1,
-  TrainToTrackStatus_T_BG_Types_P *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_length == kcg_c2->q_length);
-  kcg_equ = kcg_equ & (kcg_c1->nid_ntc == kcg_c2->nid_ntc);
-  return kcg_equ;
-}
-#endif /* kcg_use_TrainToTrackStatus_T_BG */
-
 #ifdef kcg_use_linkedBG_index_T_Calcul
 kcg_bool kcg_comp_linkedBG_index_T_Calcu(
   linkedBG_index_T_CalculateTrain *kcg_c1,
@@ -4167,8 +4174,24 @@ kcg_bool kcg_comp_linkedBG_index_T_Calcu(
 }
 #endif /* kcg_use_linkedBG_index_T_Calcul */
 
-#ifdef kcg_use_struct_97531
-kcg_bool kcg_comp_struct_97531(struct_97531 *kcg_c1, struct_97531 *kcg_c2)
+#ifdef kcg_use_P004_TM_TrainToTrack
+kcg_bool kcg_comp_P004_TM_TrainToTrack(
+  P004_TM_TrainToTrack *kcg_c1,
+  P004_TM_TrainToTrack *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_error == kcg_c2->m_error);
+  kcg_equ = kcg_equ & (kcg_c1->l_packet == kcg_c2->l_packet);
+  kcg_equ = kcg_equ & (kcg_c1->nid_packet == kcg_c2->nid_packet);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_P004_TM_TrainToTrack */
+
+#ifdef kcg_use_struct_101838
+kcg_bool kcg_comp_struct_101838(struct_101838 *kcg_c1, struct_101838 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4177,7 +4200,37 @@ kcg_bool kcg_comp_struct_97531(struct_97531 *kcg_c1, struct_97531 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->idx == kcg_c2->idx);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97531 */
+#endif /* kcg_use_struct_101838 */
+
+#ifdef kcg_use_TIU_trainStatus_T_TIU_T
+kcg_bool kcg_comp_TIU_trainStatus_T_TIU_(
+  TIU_trainStatus_T_TIU_Types_Pkg *kcg_c1,
+  TIU_trainStatus_T_TIU_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->activeCab == kcg_c2->activeCab);
+  kcg_equ = kcg_equ & (kcg_c1->ownCab == kcg_c2->ownCab);
+  kcg_equ = kcg_equ & (kcg_c1->deskOpen == kcg_c2->deskOpen);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_TIU_trainStatus_T_TIU_T */
+
+#ifdef kcg_use_M_voltage_T_TIU_Types_P
+kcg_bool kcg_comp_M_voltage_T_TIU_Types_(
+  M_voltage_T_TIU_Types_Pkg *kcg_c1,
+  M_voltage_T_TIU_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->NID_ctraction == kcg_c2->NID_ctraction);
+  kcg_equ = kcg_equ & (kcg_c1->voltage_type == kcg_c2->voltage_type);
+  return kcg_equ;
+}
+#endif /* kcg_use_M_voltage_T_TIU_Types_P */
 
 #ifdef kcg_use_CurveCollection_T_CalcB
 kcg_bool kcg_comp_CurveCollection_T_Calc(
@@ -4332,8 +4385,8 @@ kcg_bool kcg_comp_P57_MovementAuthorityR(
 }
 #endif /* kcg_use_P57_MovementAuthorityRe */
 
-#ifdef kcg_use_struct_97649
-kcg_bool kcg_comp_struct_97649(struct_97649 *kcg_c1, struct_97649 *kcg_c2)
+#ifdef kcg_use_struct_101968
+kcg_bool kcg_comp_struct_101968(struct_101968 *kcg_c1, struct_101968 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4344,7 +4397,7 @@ kcg_bool kcg_comp_struct_97649(struct_97649 *kcg_c1, struct_97649 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97649 */
+#endif /* kcg_use_struct_101968 */
 
 #ifdef kcg_use_nvkvint_T_Packet_Types_
 kcg_bool kcg_comp_nvkvint_T_Packet_Types(
@@ -4362,32 +4415,24 @@ kcg_bool kcg_comp_nvkvint_T_Packet_Types(
 }
 #endif /* kcg_use_nvkvint_T_Packet_Types_ */
 
-#ifdef kcg_use_struct_97664
-kcg_bool kcg_comp_struct_97664(struct_97664 *kcg_c1, struct_97664 *kcg_c2)
+#ifdef kcg_use_Brake_inhibition_comman
+kcg_bool kcg_comp_Brake_inhibition_comma(
+  Brake_inhibition_command_T_TIU_ *kcg_c1,
+  Brake_inhibition_command_T_TIU_ *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
+  kcg_equ = kcg_equ & (kcg_c1->m_magneticshoebrake_cm ==
+      kcg_c2->m_magneticshoebrake_cm);
+  kcg_equ = kcg_equ & (kcg_c1->m_eddycurrentbrake_cm ==
+      kcg_c2->m_eddycurrentbrake_cm);
+  kcg_equ = kcg_equ & (kcg_c1->m_regenerativebrake_cm ==
+      kcg_c2->m_regenerativebrake_cm);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97664 */
-
-#ifdef kcg_use_DMI_Entry_Request_T_DMI
-kcg_bool kcg_comp_DMI_Entry_Request_T_DM(
-  DMI_Entry_Request_T_DMI_Message *kcg_c1,
-  DMI_Entry_Request_T_DMI_Message *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->entry_request == kcg_c2->entry_request);
-  kcg_equ = kcg_equ & (kcg_c1->system_clock == kcg_c2->system_clock);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_DMI_Entry_Request_T_DMI */
+#endif /* kcg_use_Brake_inhibition_comman */
 
 #ifdef kcg_use_P046_OBU_T_TM
 kcg_bool kcg_comp_P046_OBU_T_TM(P046_OBU_T_TM *kcg_c1, P046_OBU_T_TM *kcg_c2)
@@ -4422,29 +4467,6 @@ kcg_bool kcg_comp_P027V1_OBU_T_TM_baseli(
   return kcg_equ;
 }
 #endif /* kcg_use_P027V1_OBU_T_TM_baselin */
-
-#ifdef kcg_use_Brake_status_T_TIU_Type
-kcg_bool kcg_comp_Brake_status_T_TIU_Typ(
-  Brake_status_T_TIU_Types_Pkg *kcg_c1,
-  Brake_status_T_TIU_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_additionalbrake_st ==
-      kcg_c2->m_additionalbrake_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_electropneumaticbrake_st ==
-      kcg_c2->m_electropneumaticbrake_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_magneticshoebrake_st ==
-      kcg_c2->m_magneticshoebrake_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_eddycurrentbrake_st ==
-      kcg_c2->m_eddycurrentbrake_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_regenerativebrake_st ==
-      kcg_c2->m_regenerativebrake_st);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Brake_status_T_TIU_Type */
 
 #ifdef kcg_use_bec_t_TargetLimits_Pkg
 kcg_bool kcg_comp_bec_t_TargetLimits_Pkg(
@@ -4498,38 +4520,31 @@ kcg_bool kcg_comp_mobileHWStatus_Type_Mo(
 }
 #endif /* kcg_use_mobileHWStatus_Type_MoR */
 
-#ifdef kcg_use_TIU_trainStatus_T_TIU_T
-kcg_bool kcg_comp_TIU_trainStatus_T_TIU_(
-  TIU_trainStatus_T_TIU_Types_Pkg *kcg_c1,
-  TIU_trainStatus_T_TIU_Types_Pkg *kcg_c2)
+#ifdef kcg_use_Brake_status_T_TIU_Type
+kcg_bool kcg_comp_Brake_status_T_TIU_Typ(
+  Brake_status_T_TIU_Types_Pkg *kcg_c1,
+  Brake_status_T_TIU_Types_Pkg *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->activeCab == kcg_c2->activeCab);
-  kcg_equ = kcg_equ & (kcg_c1->ownCab == kcg_c2->ownCab);
-  kcg_equ = kcg_equ & (kcg_c1->deskOpen == kcg_c2->deskOpen);
+  kcg_equ = kcg_equ & (kcg_c1->m_additionalbrake_st ==
+      kcg_c2->m_additionalbrake_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_electropneumaticbrake_st ==
+      kcg_c2->m_electropneumaticbrake_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_magneticshoebrake_st ==
+      kcg_c2->m_magneticshoebrake_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_eddycurrentbrake_st ==
+      kcg_c2->m_eddycurrentbrake_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_regenerativebrake_st ==
+      kcg_c2->m_regenerativebrake_st);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_TIU_trainStatus_T_TIU_T */
+#endif /* kcg_use_Brake_status_T_TIU_Type */
 
-#ifdef kcg_use_DMI_level_T_DMI_Types_P
-kcg_bool kcg_comp_DMI_level_T_DMI_Types_(
-  DMI_level_T_DMI_Types_Pkg *kcg_c1,
-  DMI_level_T_DMI_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->nid_stm == kcg_c2->nid_stm);
-  kcg_equ = kcg_equ & (kcg_c1->level == kcg_c2->level);
-  return kcg_equ;
-}
-#endif /* kcg_use_DMI_level_T_DMI_Types_P */
-
-#ifdef kcg_use_struct_97750
-kcg_bool kcg_comp_struct_97750(struct_97750 *kcg_c1, struct_97750 *kcg_c2)
+#ifdef kcg_use_struct_102052
+kcg_bool kcg_comp_struct_102052(struct_102052 *kcg_c1, struct_102052 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4538,45 +4553,7 @@ kcg_bool kcg_comp_struct_97750(struct_97750 *kcg_c1, struct_97750 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->now == kcg_c2->now);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97750 */
-
-#ifdef kcg_use_Change_traction_system_
-kcg_bool kcg_comp_Change_traction_system(
-  Change_traction_system_T_TIU_Ty *kcg_c1,
-  Change_traction_system_T_TIU_Ty *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_M_voltage_T_TIU_Types_(
-      &kcg_c1->m_voltage,
-      &kcg_c2->m_voltage);
-  kcg_equ = kcg_equ & kcg_comp_D_test_traction_T_TIU_(
-      &kcg_c1->d_test_traction,
-      &kcg_c2->d_test_traction);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Change_traction_system_ */
-
-#ifdef kcg_use_Change_of_allowed_curre
-kcg_bool kcg_comp_Change_of_allowed_curr(
-  Change_of_allowed_current_consu *kcg_c1,
-  Change_of_allowed_current_consu *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_M_current_T_TIU_Types_(
-      &kcg_c1->m_current,
-      &kcg_c2->m_current);
-  kcg_equ = kcg_equ & kcg_comp_D_test_current_T_TIU_T(
-      &kcg_c1->d_test_current,
-      &kcg_c2->d_test_current);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Change_of_allowed_curre */
+#endif /* kcg_use_struct_102052 */
 
 #ifdef kcg_use_DMI_EVC_Level_Data_T_DM
 kcg_bool kcg_comp_DMI_EVC_Level_Data_T_D(
@@ -4648,25 +4625,6 @@ kcg_bool kcg_comp_ReportedBG_T_ProvidePo(
 }
 #endif /* kcg_use_ReportedBG_T_ProvidePos */
 
-#ifdef kcg_use_Type_I_train_and_brake_
-kcg_bool kcg_comp_Type_I_train_and_brake(
-  Type_I_train_and_brake_inhibiti *kcg_c1,
-  Type_I_train_and_brake_inhibiti *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_D_test_trackinit_T_TIU(
-      &kcg_c1->empty_profile_initial_state_to_,
-      &kcg_c2->empty_profile_initial_state_to_);
-  kcg_equ = kcg_equ & kcg_comp_nothing_to_resume_prof(
-      &kcg_c1->nothing_to_resume_profile_follo,
-      &kcg_c2->nothing_to_resume_profile_follo);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Type_I_train_and_brake_ */
-
 #ifdef kcg_use_radioNetWorkIDs_T_MoRC_
 kcg_bool kcg_comp_radioNetWorkIDs_T_MoRC(
   radioNetWorkIDs_T_MoRC_Pck *kcg_c1,
@@ -4688,24 +4646,65 @@ kcg_bool kcg_comp_radioNetWorkIDs_T_MoRC(
 }
 #endif /* kcg_use_radioNetWorkIDs_T_MoRC_ */
 
-#ifdef kcg_use_ModeLevel2PositionRepor
-kcg_bool kcg_comp_ModeLevel2PositionRepo(
-  ModeLevel2PositionReport_T_Prov *kcg_c1,
-  ModeLevel2PositionReport_T_Prov *kcg_c2)
+#ifdef kcg_use_Change_traction_system_
+kcg_bool kcg_comp_Change_traction_system(
+  Change_traction_system_T_TIU_Ty *kcg_c1,
+  Change_traction_system_T_TIU_Ty *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->levelTransitionBorderPassed ==
-      kcg_c2->levelTransitionBorderPassed);
-  kcg_equ = kcg_equ & (kcg_c1->currLevel == kcg_c2->currLevel);
-  kcg_equ = kcg_equ & (kcg_c1->currMode == kcg_c2->currMode);
+  kcg_equ = kcg_equ & kcg_comp_M_voltage_T_TIU_Types_(
+      &kcg_c1->m_voltage,
+      &kcg_c2->m_voltage);
+  kcg_equ = kcg_equ & kcg_comp_D_test_traction_T_TIU_(
+      &kcg_c1->d_test_traction,
+      &kcg_c2->d_test_traction);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_ModeLevel2PositionRepor */
+#endif /* kcg_use_Change_traction_system_ */
 
-#ifdef kcg_use_struct_97810
-kcg_bool kcg_comp_struct_97810(struct_97810 *kcg_c1, struct_97810 *kcg_c2)
+#ifdef kcg_use_Change_of_allowed_curre
+kcg_bool kcg_comp_Change_of_allowed_curr(
+  Change_of_allowed_current_consu *kcg_c1,
+  Change_of_allowed_current_consu *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_M_current_T_TIU_Types_(
+      &kcg_c1->m_current,
+      &kcg_c2->m_current);
+  kcg_equ = kcg_equ & kcg_comp_D_test_current_T_TIU_T(
+      &kcg_c1->d_test_current,
+      &kcg_c2->d_test_current);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_Change_of_allowed_curre */
+
+#ifdef kcg_use_Type_I_train_and_brake_
+kcg_bool kcg_comp_Type_I_train_and_brake(
+  Type_I_train_and_brake_inhibiti *kcg_c1,
+  Type_I_train_and_brake_inhibiti *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_D_test_trackinit_T_TIU(
+      &kcg_c1->empty_profile_initial_state_to_,
+      &kcg_c2->empty_profile_initial_state_to_);
+  kcg_equ = kcg_equ & kcg_comp_nothing_to_resume_prof(
+      &kcg_c1->nothing_to_resume_profile_follo,
+      &kcg_c2->nothing_to_resume_profile_follo);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_Type_I_train_and_brake_ */
+
+#ifdef kcg_use_struct_102106
+kcg_bool kcg_comp_struct_102106(struct_102106 *kcg_c1, struct_102106 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4716,7 +4715,7 @@ kcg_bool kcg_comp_struct_97810(struct_97810 *kcg_c1, struct_97810 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97810 */
+#endif /* kcg_use_struct_102106 */
 
 #ifdef kcg_use_P005_TM_TrainToTrack
 kcg_bool kcg_comp_P005_TM_TrainToTrack(
@@ -4733,6 +4732,36 @@ kcg_bool kcg_comp_P005_TM_TrainToTrack(
   return kcg_equ;
 }
 #endif /* kcg_use_P005_TM_TrainToTrack */
+
+#ifdef kcg_use_ModeLevel2PositionRepor
+kcg_bool kcg_comp_ModeLevel2PositionRepo(
+  ModeLevel2PositionReport_T_Prov *kcg_c1,
+  ModeLevel2PositionReport_T_Prov *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->levelTransitionBorderPassed ==
+      kcg_c2->levelTransitionBorderPassed);
+  kcg_equ = kcg_equ & (kcg_c1->currLevel == kcg_c2->currLevel);
+  kcg_equ = kcg_equ & (kcg_c1->currMode == kcg_c2->currMode);
+  return kcg_equ;
+}
+#endif /* kcg_use_ModeLevel2PositionRepor */
+
+#ifdef kcg_use_IterPacket58_T_Packet_T
+kcg_bool kcg_comp_IterPacket58_T_Packet_(
+  IterPacket58_T_Packet_Types_Pkg *kcg_c1,
+  IterPacket58_T_Packet_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_lgtloc == kcg_c2->q_lgtloc);
+  kcg_equ = kcg_equ & (kcg_c1->d_loc == kcg_c2->d_loc);
+  return kcg_equ;
+}
+#endif /* kcg_use_IterPacket58_T_Packet_T */
 
 #ifdef kcg_use_DMI_trackCondition_T_DM
 kcg_bool kcg_comp_DMI_trackCondition_T_D(
@@ -4813,8 +4842,25 @@ kcg_bool kcg_comp_MRSP_internal_section_(
 }
 #endif /* kcg_use_MRSP_internal_section_T */
 
-#ifdef kcg_use_struct_97873
-kcg_bool kcg_comp_struct_97873(struct_97873 *kcg_c1, struct_97873 *kcg_c2)
+#ifdef kcg_use_DebugData_T
+kcg_bool kcg_comp_DebugData_T(DebugData_T *kcg_c1, DebugData_T *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->level == kcg_c2->level);
+  kcg_equ = kcg_equ & (kcg_c1->mode == kcg_c2->mode);
+  kcg_equ = kcg_equ & (kcg_c1->interventionSpeed == kcg_c2->interventionSpeed);
+  kcg_equ = kcg_equ & (kcg_c1->permittedSpeed == kcg_c2->permittedSpeed);
+  kcg_equ = kcg_equ & kcg_comp_odometry_T_Obu_BasicTy(
+      &kcg_c1->odometry,
+      &kcg_c2->odometry);
+  return kcg_equ;
+}
+#endif /* kcg_use_DebugData_T */
+
+#ifdef kcg_use_struct_102188
+kcg_bool kcg_comp_struct_102188(struct_102188 *kcg_c1, struct_102188 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4826,7 +4872,7 @@ kcg_bool kcg_comp_struct_97873(struct_97873 *kcg_c1, struct_97873 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97873 */
+#endif /* kcg_use_struct_102188 */
 
 #ifdef kcg_use_P044_TM_TrainToTrack
 kcg_bool kcg_comp_P044_TM_TrainToTrack(
@@ -4861,8 +4907,8 @@ kcg_bool kcg_comp_av_Map_t_SDMConversion(
 }
 #endif /* kcg_use_av_Map_t_SDMConversionM */
 
-#ifdef kcg_use_struct_97901
-kcg_bool kcg_comp_struct_97901(struct_97901 *kcg_c1, struct_97901 *kcg_c2)
+#ifdef kcg_use_struct_102216
+kcg_bool kcg_comp_struct_102216(struct_102216 *kcg_c1, struct_102216 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4871,7 +4917,7 @@ kcg_bool kcg_comp_struct_97901(struct_97901 *kcg_c1, struct_97901 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97901 */
+#endif /* kcg_use_struct_102216 */
 
 #ifdef kcg_use_P003_TM_TrainToTrack
 kcg_bool kcg_comp_P003_TM_TrainToTrack(
@@ -4891,6 +4937,18 @@ kcg_bool kcg_comp_P003_TM_TrainToTrack(
   return kcg_equ;
 }
 #endif /* kcg_use_P003_TM_TrainToTrack */
+
+#ifdef kcg_use_struct_102238
+kcg_bool kcg_comp_struct_102238(struct_102238 *kcg_c1, struct_102238 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_struct_102238 */
 
 #ifdef kcg_use_SSP_T_Packet_Types_Pkg
 kcg_bool kcg_comp_SSP_T_Packet_Types_Pkg(
@@ -4930,8 +4988,8 @@ kcg_bool kcg_comp_nvkvintset_T_Packet_Ty(
 }
 #endif /* kcg_use_nvkvintset_T_Packet_Typ */
 
-#ifdef kcg_use_struct_97939
-kcg_bool kcg_comp_struct_97939(struct_97939 *kcg_c1, struct_97939 *kcg_c2)
+#ifdef kcg_use_struct_102260
+kcg_bool kcg_comp_struct_102260(struct_102260 *kcg_c1, struct_102260 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -4942,7 +5000,7 @@ kcg_bool kcg_comp_struct_97939(struct_97939 *kcg_c1, struct_97939 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_97939 */
+#endif /* kcg_use_struct_102260 */
 
 #ifdef kcg_use_t_Brake_t_SDMModelPkg
 kcg_bool kcg_comp_t_Brake_t_SDMModelPkg(
@@ -4992,38 +5050,6 @@ kcg_bool kcg_comp_P009_TM_TrainToTrack(
 }
 #endif /* kcg_use_P009_TM_TrainToTrack */
 
-#ifdef kcg_use_TIU_Output_msg_API_TIU_
-kcg_bool kcg_comp_TIU_Output_msg_API_TIU(
-  TIU_Output_msg_API_TIU_Pkg *kcg_c1,
-  TIU_Output_msg_API_TIU_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_Message_EVC_to_Train_I(
-      &kcg_c1->info,
-      &kcg_c2->info);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_TIU_Output_msg_API_TIU_ */
-
-#ifdef kcg_use_TIU_Input_msg_API_TIU_P
-kcg_bool kcg_comp_TIU_Input_msg_API_TIU_(
-  TIU_Input_msg_API_TIU_Pkg *kcg_c1,
-  TIU_Input_msg_API_TIU_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_Message_Train_Interfac(
-      &kcg_c1->info,
-      &kcg_c2->info);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_TIU_Input_msg_API_TIU_P */
-
 #ifdef kcg_use_PT0_PositionReport_T_Pa
 kcg_bool kcg_comp_PT0_PositionReport_T_P(
   PT0_PositionReport_T_Packet_Tra *kcg_c1,
@@ -5056,6 +5082,53 @@ kcg_bool kcg_comp_PT1_PositionReport_2BG(
 }
 #endif /* kcg_use_PT1_PositionReport_2BG_ */
 
+#ifdef kcg_use_TIU_Output_msg_API_TIU_
+kcg_bool kcg_comp_TIU_Output_msg_API_TIU(
+  TIU_Output_msg_API_TIU_Pkg *kcg_c1,
+  TIU_Output_msg_API_TIU_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_Message_EVC_to_Train_I(
+      &kcg_c1->info,
+      &kcg_c2->info);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_TIU_Output_msg_API_TIU_ */
+
+#ifdef kcg_use_TIU_Input_msg_API_TIU_P
+kcg_bool kcg_comp_TIU_Input_msg_API_TIU_(
+  TIU_Input_msg_API_TIU_Pkg *kcg_c1,
+  TIU_Input_msg_API_TIU_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_Message_Train_Interfac(
+      &kcg_c1->info,
+      &kcg_c2->info);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_TIU_Input_msg_API_TIU_P */
+
+#ifdef kcg_use_DMI_Driver_Request_T_DM
+kcg_bool kcg_comp_DMI_Driver_Request_T_D(
+  DMI_Driver_Request_T_DMI_Messag *kcg_c1,
+  DMI_Driver_Request_T_DMI_Messag *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_request == kcg_c2->m_request);
+  kcg_equ = kcg_equ & (kcg_c1->systemTime == kcg_c2->systemTime);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_DMI_Driver_Request_T_DM */
+
 #ifdef kcg_use_Passenger_door_control_
 kcg_bool kcg_comp_Passenger_door_control(
   Passenger_door_control_info_T_T *kcg_c1,
@@ -5085,22 +5158,6 @@ kcg_bool kcg_comp_DMI_Display_Control_T_(
 }
 #endif /* kcg_use_DMI_Display_Control_T_D */
 
-#ifdef kcg_use_Brake_command_T_TIU_Typ
-kcg_bool kcg_comp_Brake_command_T_TIU_Ty(
-  Brake_command_T_TIU_Types_Pkg *kcg_c1,
-  Brake_command_T_TIU_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_emergencybrake_cm ==
-      kcg_c2->m_emergencybrake_cm);
-  kcg_equ = kcg_equ & (kcg_c1->m_servicebrake_cm == kcg_c2->m_servicebrake_cm);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Brake_command_T_TIU_Typ */
-
 #ifdef kcg_use_nvkrint_T_Packet_Types_
 kcg_bool kcg_comp_nvkrint_T_Packet_Types(
   nvkrint_T_Packet_Types_Pkg *kcg_c1,
@@ -5115,20 +5172,6 @@ kcg_bool kcg_comp_nvkrint_T_Packet_Types(
   return kcg_equ;
 }
 #endif /* kcg_use_nvkrint_T_Packet_Types_ */
-
-#ifdef kcg_use_safeRadioConnectionIndi
-kcg_bool kcg_comp_safeRadioConnectionInd(
-  safeRadioConnectionIndication_T *kcg_c1,
-  safeRadioConnectionIndication_T *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->indicator == kcg_c2->indicator);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_safeRadioConnectionIndi */
 
 #ifdef kcg_use_ASafe_T_CalcBrakingCurv
 kcg_bool kcg_comp_ASafe_T_CalcBrakingCur(
@@ -5218,19 +5261,24 @@ kcg_bool kcg_comp_T_Reversing_Data_Level(
 }
 #endif /* kcg_use_T_Reversing_Data_Level_ */
 
-#ifdef kcg_use_ErrorMessage_T_ProvideP
-kcg_bool kcg_comp_ErrorMessage_T_Provide(
-  ErrorMessage_T_ProvidePositionR *kcg_c1,
-  ErrorMessage_T_ProvidePositionR *kcg_c2)
+#ifdef kcg_use_Type_I_train_commands_T
+kcg_bool kcg_comp_Type_I_train_commands_(
+  Type_I_train_commands_T_TIU_Typ *kcg_c1,
+  Type_I_train_commands_T_TIU_Typ *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->errorType == kcg_c2->errorType);
-  kcg_equ = kcg_equ & (kcg_c1->present == kcg_c2->present);
+  kcg_equ = kcg_equ & (kcg_c1->m_traction_cutoff_cm ==
+      kcg_c2->m_traction_cutoff_cm);
+  kcg_equ = kcg_equ & (kcg_c1->m_mainpowerswitch_cm ==
+      kcg_c2->m_mainpowerswitch_cm);
+  kcg_equ = kcg_equ & (kcg_c1->m_airtightness_cm == kcg_c2->m_airtightness_cm);
+  kcg_equ = kcg_equ & (kcg_c1->m_pantograph_cm == kcg_c2->m_pantograph_cm);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_ErrorMessage_T_ProvideP */
+#endif /* kcg_use_Type_I_train_commands_T */
 
 #ifdef kcg_use_P021_section_enum_T_TM
 kcg_bool kcg_comp_P021_section_enum_T_TM(
@@ -5247,6 +5295,20 @@ kcg_bool kcg_comp_P021_section_enum_T_TM(
   return kcg_equ;
 }
 #endif /* kcg_use_P021_section_enum_T_TM */
+
+#ifdef kcg_use_TrainToTrackStatus_T_BG
+kcg_bool kcg_comp_TrainToTrackStatus_T_B(
+  TrainToTrackStatus_T_BG_Types_P *kcg_c1,
+  TrainToTrackStatus_T_BG_Types_P *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_length == kcg_c2->q_length);
+  kcg_equ = kcg_equ & (kcg_c1->nid_ntc == kcg_c2->nid_ntc);
+  return kcg_equ;
+}
+#endif /* kcg_use_TrainToTrackStatus_T_BG */
 
 #ifdef kcg_use_TSM_revokeCond_T_SDM_Co
 kcg_bool kcg_comp_TSM_revokeCond_T_SDM_C(
@@ -5343,8 +5405,8 @@ kcg_bool kcg_comp_M_146_T_TM_radio_messa(
 }
 #endif /* kcg_use_M_146_T_TM_radio_messag */
 
-#ifdef kcg_use_struct_98166
-kcg_bool kcg_comp_struct_98166(struct_98166 *kcg_c1, struct_98166 *kcg_c2)
+#ifdef kcg_use_struct_102494
+kcg_bool kcg_comp_struct_102494(struct_102494 *kcg_c1, struct_102494 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -5356,12 +5418,12 @@ kcg_bool kcg_comp_struct_98166(struct_98166 *kcg_c1, struct_98166 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_98166 */
+#endif /* kcg_use_struct_102494 */
 
-#ifdef kcg_use__20_MovementAuthoritySe
-kcg_bool kcg_comp__20_MovementAuthorityS(
-  _20_MovementAuthoritySection_t_ *kcg_c1,
-  _20_MovementAuthoritySection_t_ *kcg_c2)
+#ifdef kcg_use__22_MovementAuthoritySe
+kcg_bool kcg_comp__22_MovementAuthorityS(
+  _22_MovementAuthoritySection_t_ *kcg_c1,
+  _22_MovementAuthoritySection_t_ *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -5375,7 +5437,7 @@ kcg_bool kcg_comp__20_MovementAuthorityS(
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use__20_MovementAuthoritySe */
+#endif /* kcg_use__22_MovementAuthoritySe */
 
 #ifdef kcg_use_T_Mode_Level_Level_And_
 kcg_bool kcg_comp_T_Mode_Level_Level_And(
@@ -5430,21 +5492,6 @@ kcg_bool kcg_comp_trainData_internal_t_S(
 }
 #endif /* kcg_use_trainData_internal_t_SD */
 
-#ifdef kcg_use_P058_section_enum_T_TM
-kcg_bool kcg_comp_P058_section_enum_T_TM(
-  P058_section_enum_T_TM *kcg_c1,
-  P058_section_enum_T_TM *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_lgtloc == kcg_c2->q_lgtloc);
-  kcg_equ = kcg_equ & (kcg_c1->d_loc == kcg_c2->d_loc);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_P058_section_enum_T_TM */
-
 #ifdef kcg_use_EOA_real_T_TargetManage
 kcg_bool kcg_comp_EOA_real_T_TargetManag(
   EOA_real_T_TargetManagement_typ *kcg_c1,
@@ -5459,20 +5506,24 @@ kcg_bool kcg_comp_EOA_real_T_TargetManag(
 }
 #endif /* kcg_use_EOA_real_T_TargetManage */
 
-#ifdef kcg_use_P027V1_OBU_body_enum_T_
-kcg_bool kcg_comp_P027V1_OBU_body_enum_T(
-  P027V1_OBU_body_enum_T_TM_basel *kcg_c1,
-  P027V1_OBU_body_enum_T_TM_basel *kcg_c2)
+#ifdef kcg_use_nothing_to_resume_profi
+kcg_bool kcg_comp_nothing_to_resume_prof(
+  nothing_to_resume_profile_follo *kcg_c1,
+  nothing_to_resume_profile_follo *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_scale == kcg_c2->q_scale);
-  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  kcg_equ = kcg_equ & (kcg_c1->m_trackcond == kcg_c2->m_trackcond);
+  kcg_equ = kcg_equ & kcg_comp_L_test_trackcond_T_TIU(
+      &kcg_c1->l_test_trackcond,
+      &kcg_c2->l_test_trackcond);
+  kcg_equ = kcg_equ & kcg_comp_D_test_trackcond_T_TIU(
+      &kcg_c1->d_test_trackcond,
+      &kcg_c2->d_test_trackcond);
   return kcg_equ;
 }
-#endif /* kcg_use_P027V1_OBU_body_enum_T_ */
+#endif /* kcg_use_nothing_to_resume_profi */
 
 #ifdef kcg_use_PT3_OnboardTelephoneNum
 kcg_bool kcg_comp_PT3_OnboardTelephoneNu(
@@ -5531,6 +5582,20 @@ kcg_bool kcg_comp_T_Data_From_F2_functio(
 }
 #endif /* kcg_use_T_Data_From_F2_function */
 
+#ifdef kcg_use_DMI_level_T_DMI_Types_P
+kcg_bool kcg_comp_DMI_level_T_DMI_Types_(
+  DMI_level_T_DMI_Types_Pkg *kcg_c1,
+  DMI_level_T_DMI_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->nid_stm == kcg_c2->nid_stm);
+  kcg_equ = kcg_equ & (kcg_c1->level == kcg_c2->level);
+  return kcg_equ;
+}
+#endif /* kcg_use_DMI_level_T_DMI_Types_P */
+
 #ifdef kcg_use_ACC_SDM_GradientAcceler
 kcg_bool kcg_comp_ACC_SDM_GradientAccele(
   ACC_SDM_GradientAcceleration_Pk *kcg_c1,
@@ -5567,48 +5632,35 @@ kcg_bool kcg_comp_sessionStatus_T_RCM_Se(
 }
 #endif /* kcg_use_sessionStatus_T_RCM_Ses */
 
-#ifdef kcg_use_PT4_ErrorReporting_T_Pa
-kcg_bool kcg_comp_PT4_ErrorReporting_T_P(
-  PT4_ErrorReporting_T_Packet_Tra *kcg_c1,
-  PT4_ErrorReporting_T_Packet_Tra *kcg_c2)
+#ifdef kcg_use_DMI_Entry_Request_T_DMI
+kcg_bool kcg_comp_DMI_Entry_Request_T_DM(
+  DMI_Entry_Request_T_DMI_Message *kcg_c1,
+  DMI_Entry_Request_T_DMI_Message *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_error == kcg_c2->m_error);
+  kcg_equ = kcg_equ & (kcg_c1->entry_request == kcg_c2->entry_request);
+  kcg_equ = kcg_equ & (kcg_c1->system_clock == kcg_c2->system_clock);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_PT4_ErrorReporting_T_Pa */
+#endif /* kcg_use_DMI_Entry_Request_T_DMI */
 
-#ifdef kcg_use_M_voltage_T_TIU_Types_P
-kcg_bool kcg_comp_M_voltage_T_TIU_Types_(
-  M_voltage_T_TIU_Types_Pkg *kcg_c1,
-  M_voltage_T_TIU_Types_Pkg *kcg_c2)
+#ifdef kcg_use_P027V1_OBU_body_enum_T_
+kcg_bool kcg_comp_P027V1_OBU_body_enum_T(
+  P027V1_OBU_body_enum_T_TM_basel *kcg_c1,
+  P027V1_OBU_body_enum_T_TM_basel *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->NID_ctraction == kcg_c2->NID_ctraction);
-  kcg_equ = kcg_equ & (kcg_c1->voltage_type == kcg_c2->voltage_type);
-  return kcg_equ;
-}
-#endif /* kcg_use_M_voltage_T_TIU_Types_P */
-
-#ifdef kcg_use_P45_RadioNetworkRegistr
-kcg_bool kcg_comp_P45_RadioNetworkRegist(
-  P45_RadioNetworkRegistration_T_ *kcg_c1,
-  P45_RadioNetworkRegistration_T_ *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->nid_mn == kcg_c2->nid_mn);
+  kcg_equ = kcg_equ & (kcg_c1->q_scale == kcg_c2->q_scale);
   kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_P45_RadioNetworkRegistr */
+#endif /* kcg_use_P027V1_OBU_body_enum_T_ */
 
 #ifdef kcg_use_DMI_Track_Description_T
 kcg_bool kcg_comp_DMI_Track_Description_(
@@ -5671,6 +5723,31 @@ kcg_bool kcg_comp_TrackSide_ForCheck_T_C(
 }
 #endif /* kcg_use_TrackSide_ForCheck_T_Co */
 
+#ifdef kcg_use_refBGs_T_CalculateTrain
+kcg_bool kcg_comp_refBGs_T_CalculateTrai(
+  refBGs_T_CalculateTrainPosition *kcg_c1,
+  refBGs_T_CalculateTrainPosition *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_LocWithInAcc_T_Obu_Bas(
+      &kcg_c1->sumOfBestDistances,
+      &kcg_c2->sumOfBestDistances);
+  kcg_equ = kcg_equ & (kcg_c1->recalculate == kcg_c2->recalculate);
+  kcg_equ = kcg_equ & kcg_comp_positionedBG_T_TrainPo(
+      &kcg_c1->prevUnlinkedBG,
+      &kcg_c2->prevUnlinkedBG);
+  kcg_equ = kcg_equ & kcg_comp_positionedBG_T_TrainPo(
+      &kcg_c1->prevLinkedBG,
+      &kcg_c2->prevLinkedBG);
+  kcg_equ = kcg_equ & kcg_comp_positionedBG_T_TrainPo(
+      &kcg_c1->refBG,
+      &kcg_c2->refBG);
+  return kcg_equ;
+}
+#endif /* kcg_use_refBGs_T_CalculateTrain */
+
 #ifdef kcg_use_API_TelegramHeader_T_AP
 kcg_bool kcg_comp_API_TelegramHeader_T_A(
   API_TelegramHeader_T_API_Msg_Pk *kcg_c1,
@@ -5707,7 +5784,7 @@ kcg_bool kcg_comp_API_RadioMsgHeader_T_A(
   kcg_equ = kcg_equ & kcg_comp_RadioMetadata_T_Common(
       &kcg_c1->Radio_MetaData,
       &kcg_c2->Radio_MetaData);
-  kcg_equ = kcg_equ & kcg_comp_Radio_TrackTrain_Heade(
+  kcg_equ = kcg_equ & kcg_comp__11_Radio_TrackTrain_H(
       &kcg_c1->Radio_Common_Header,
       &kcg_c2->Radio_Common_Header);
   kcg_equ = kcg_equ & (kcg_c1->apiConsistencyError ==
@@ -5716,31 +5793,6 @@ kcg_bool kcg_comp_API_RadioMsgHeader_T_A(
   return kcg_equ;
 }
 #endif /* kcg_use_API_RadioMsgHeader_T_AP */
-
-#ifdef kcg_use_refBGs_T_CalculateTrain
-kcg_bool kcg_comp_refBGs_T_CalculateTrai(
-  refBGs_T_CalculateTrainPosition *kcg_c1,
-  refBGs_T_CalculateTrainPosition *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_LocWithInAcc_T_Obu_Bas(
-      &kcg_c1->sumOfBestDistances,
-      &kcg_c2->sumOfBestDistances);
-  kcg_equ = kcg_equ & (kcg_c1->recalculate == kcg_c2->recalculate);
-  kcg_equ = kcg_equ & kcg_comp_positionedBG_T_TrainPo(
-      &kcg_c1->prevUnlinkedBG,
-      &kcg_c2->prevUnlinkedBG);
-  kcg_equ = kcg_equ & kcg_comp_positionedBG_T_TrainPo(
-      &kcg_c1->prevLinkedBG,
-      &kcg_c2->prevLinkedBG);
-  kcg_equ = kcg_equ & kcg_comp_positionedBG_T_TrainPo(
-      &kcg_c1->refBG,
-      &kcg_c2->refBG);
-  return kcg_equ;
-}
-#endif /* kcg_use_refBGs_T_CalculateTrain */
 
 #ifdef kcg_use_OdometrySpeeds_T_Obu_Ba
 kcg_bool kcg_comp_OdometrySpeeds_T_Obu_B(
@@ -5775,6 +5827,21 @@ kcg_bool kcg_comp_Gradient_section_t_Tra(
 }
 #endif /* kcg_use_Gradient_section_t_Trac */
 
+#ifdef kcg_use_P45_RadioNetworkRegistr
+kcg_bool kcg_comp_P45_RadioNetworkRegist(
+  P45_RadioNetworkRegistration_T_ *kcg_c1,
+  P45_RadioNetworkRegistration_T_ *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->nid_mn == kcg_c2->nid_mn);
+  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_P45_RadioNetworkRegistr */
+
 #ifdef kcg_use_dmiOutputs_T_manage_DMI
 kcg_bool kcg_comp_dmiOutputs_T_manage_DM(
   dmiOutputs_T_manage_DMI_Output_ *kcg_c1,
@@ -5805,25 +5872,6 @@ kcg_bool kcg_comp_OdometryLocations_T_Ob(
   return kcg_equ;
 }
 #endif /* kcg_use_OdometryLocations_T_Obu */
-
-#ifdef kcg_use_Type_I_train_commands_T
-kcg_bool kcg_comp_Type_I_train_commands_(
-  Type_I_train_commands_T_TIU_Typ *kcg_c1,
-  Type_I_train_commands_T_TIU_Typ *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_traction_cutoff_cm ==
-      kcg_c2->m_traction_cutoff_cm);
-  kcg_equ = kcg_equ & (kcg_c1->m_mainpowerswitch_cm ==
-      kcg_c2->m_mainpowerswitch_cm);
-  kcg_equ = kcg_equ & (kcg_c1->m_airtightness_cm == kcg_c2->m_airtightness_cm);
-  kcg_equ = kcg_equ & (kcg_c1->m_pantograph_cm == kcg_c2->m_pantograph_cm);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Type_I_train_commands_T */
 
 #ifdef kcg_use_T_Data_From_Track_To_Mo
 kcg_bool kcg_comp_T_Data_From_Track_To_M(
@@ -5896,19 +5944,19 @@ kcg_bool kcg_comp_EVC_to_DMI_Message_T_A(
   kcg_equ = kcg_equ & kcg_comp_DMI_Icons_T_DMI_Messag(
       &kcg_c1->iconRequest,
       &kcg_c2->iconRequest);
-  kcg_equ = kcg_equ & kcg_comp__22_DMI_Adhesion_Facto(
+  kcg_equ = kcg_equ & kcg_comp__24_DMI_Adhesion_Facto(
       &kcg_c1->adhesionFactor,
       &kcg_c2->adhesionFactor);
   kcg_equ = kcg_equ & kcg_comp_DMI_Train_Data_T_DMI_M(
       &kcg_c1->trainData,
       &kcg_c2->trainData);
-  kcg_equ = kcg_equ & kcg_comp__23_DMI_Train_Running_(
+  kcg_equ = kcg_equ & kcg_comp__25_DMI_Train_Running_(
       &kcg_c1->trainRunningNumber,
       &kcg_c2->trainRunningNumber);
-  kcg_equ = kcg_equ & kcg_comp__24_DMI_Driver_Identif(
+  kcg_equ = kcg_equ & kcg_comp__26_DMI_Driver_Identif(
       &kcg_c1->driverIdentifier,
       &kcg_c2->driverIdentifier);
-  kcg_equ = kcg_equ & kcg_comp__25_DMI_EVC_Radio_Net_(
+  kcg_equ = kcg_equ & kcg_comp__27_DMI_EVC_Radio_Net_(
       &kcg_c1->EVC_radioNetData,
       &kcg_c2->EVC_radioNetData);
   kcg_equ = kcg_equ & kcg_comp_DMI_EVC_Level_Data_T_D(
@@ -5920,7 +5968,7 @@ kcg_bool kcg_comp_EVC_to_DMI_Message_T_A(
   kcg_equ = kcg_equ & kcg_comp_DMI_System_Version_T_D(
       &kcg_c1->systemVersion,
       &kcg_c2->systemVersion);
-  kcg_equ = kcg_equ & kcg_comp__26_DMI_Identifier_Req(
+  kcg_equ = kcg_equ & kcg_comp__28_DMI_Identifier_Req(
       &kcg_c1->identifierRequest,
       &kcg_c2->identifierRequest);
   kcg_equ = kcg_equ & kcg_comp_DMI_Track_Description_(
@@ -5929,7 +5977,7 @@ kcg_bool kcg_comp_EVC_to_DMI_Message_T_A(
   kcg_equ = kcg_equ & kcg_comp_DMI_Text_Message_T_DMI(
       &kcg_c1->textMessage,
       &kcg_c2->textMessage);
-  kcg_equ = kcg_equ & kcg_comp__27_DMI_EVC_Coded_Trai(
+  kcg_equ = kcg_equ & kcg_comp__29_DMI_EVC_Coded_Trai(
       &kcg_c1->evc_coded_train_data,
       &kcg_c2->evc_coded_train_data);
   kcg_equ = kcg_equ & kcg_comp_DMI_Entry_Request_T_DM(
@@ -6259,7 +6307,7 @@ kcg_bool kcg_comp_DMI_to_EVC_Message_T_A(
   kcg_equ = kcg_equ & kcg_comp_DMI_Icon_Ack_T_DMI_Mes(
       &kcg_c1->iconAck,
       &kcg_c2->iconAck);
-  kcg_equ = kcg_equ & kcg_comp__22_DMI_Adhesion_Facto(
+  kcg_equ = kcg_equ & kcg_comp__24_DMI_Adhesion_Facto(
       &kcg_c1->adhesionFactor,
       &kcg_c2->adhesionFactor);
   kcg_equ = kcg_equ & kcg_comp_DMI_Train_Data_T_DMI_M(
@@ -6274,10 +6322,10 @@ kcg_bool kcg_comp_DMI_to_EVC_Message_T_A(
   kcg_equ = kcg_equ & kcg_comp_DMI_Radio_Net_Data_T_D(
       &kcg_c1->radioNetData,
       &kcg_c2->radioNetData);
-  kcg_equ = kcg_equ & kcg_comp__23_DMI_Train_Running_(
+  kcg_equ = kcg_equ & kcg_comp__25_DMI_Train_Running_(
       &kcg_c1->trainRunningNumber,
       &kcg_c2->trainRunningNumber);
-  kcg_equ = kcg_equ & kcg_comp__24_DMI_Driver_Identif(
+  kcg_equ = kcg_equ & kcg_comp__26_DMI_Driver_Identif(
       &kcg_c1->driverIdentifier,
       &kcg_c2->driverIdentifier);
   kcg_equ = kcg_equ & kcg_comp_DMI_Driver_Request_T_D(
@@ -6293,28 +6341,6 @@ kcg_bool kcg_comp_DMI_to_EVC_Message_T_A(
   return kcg_equ;
 }
 #endif /* kcg_use_DMI_to_EVC_Message_T_AP */
-
-#ifdef kcg_use_TelegramHeader_T_BG_Typ
-kcg_bool kcg_comp_TelegramHeader_T_BG_Ty(
-  TelegramHeader_T_BG_Types_Pkg *kcg_c1,
-  TelegramHeader_T_BG_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->q_link == kcg_c2->q_link);
-  kcg_equ = kcg_equ & (kcg_c1->nid_bg == kcg_c2->nid_bg);
-  kcg_equ = kcg_equ & (kcg_c1->nid_c == kcg_c2->nid_c);
-  kcg_equ = kcg_equ & (kcg_c1->m_mcount == kcg_c2->m_mcount);
-  kcg_equ = kcg_equ & (kcg_c1->m_dup == kcg_c2->m_dup);
-  kcg_equ = kcg_equ & (kcg_c1->n_total == kcg_c2->n_total);
-  kcg_equ = kcg_equ & (kcg_c1->n_pig == kcg_c2->n_pig);
-  kcg_equ = kcg_equ & (kcg_c1->q_media == kcg_c2->q_media);
-  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
-  kcg_equ = kcg_equ & (kcg_c1->q_updown == kcg_c2->q_updown);
-  return kcg_equ;
-}
-#endif /* kcg_use_TelegramHeader_T_BG_Typ */
 
 #ifdef kcg_use_P58_PositionReportParam
 kcg_bool kcg_comp_P58_PositionReportPara(
@@ -6370,40 +6396,6 @@ kcg_bool kcg_comp_P011_TM_TrainToTrack(
   return kcg_equ;
 }
 #endif /* kcg_use_P011_TM_TrainToTrack */
-
-#ifdef kcg_use_trainData_T_TIU_Types_P
-kcg_bool kcg_comp_trainData_T_TIU_Types_(
-  trainData_T_TIU_Types_Pkg *kcg_c1,
-  trainData_T_TIU_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_aTractionIdentity_T_Pa(
-      &kcg_c1->tractionSystem,
-      &kcg_c2->tractionSystem);
-  kcg_equ = kcg_equ & (kcg_c1->numberTractionSystems ==
-      kcg_c2->numberTractionSystems);
-  kcg_equ = kcg_equ & kcg_comp_aNID_NTC_T_Packet_Trai(
-      &kcg_c1->nationSystems,
-      &kcg_c2->nationSystems);
-  kcg_equ = kcg_equ & (kcg_c1->numberNationalSystems ==
-      kcg_c2->numberNationalSystems);
-  kcg_equ = kcg_equ & (kcg_c1->axleNumber == kcg_c2->axleNumber);
-  kcg_equ = kcg_equ & (kcg_c1->airtightSystem == kcg_c2->airtightSystem);
-  kcg_equ = kcg_equ & (kcg_c1->axleLoadCategory == kcg_c2->axleLoadCategory);
-  kcg_equ = kcg_equ & (kcg_c1->loadingGauge == kcg_c2->loadingGauge);
-  kcg_equ = kcg_equ & (kcg_c1->maxTrainSpeed == kcg_c2->maxTrainSpeed);
-  kcg_equ = kcg_equ & (kcg_c1->brakePerctage == kcg_c2->brakePerctage);
-  kcg_equ = kcg_equ & (kcg_c1->trainLength == kcg_c2->trainLength);
-  kcg_equ = kcg_equ & (kcg_c1->cantDeficientcy == kcg_c2->cantDeficientcy);
-  kcg_equ = kcg_equ & (kcg_c1->trainCategory == kcg_c2->trainCategory);
-  kcg_equ = kcg_equ & (kcg_c1->acknowledgedByDriver ==
-      kcg_c2->acknowledgedByDriver);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_trainData_T_TIU_Types_P */
 
 #ifdef kcg_use_P003_OBU_T_TM
 kcg_bool kcg_comp_P003_OBU_T_TM(P003_OBU_T_TM *kcg_c1, P003_OBU_T_TM *kcg_c2)
@@ -6461,7 +6453,7 @@ kcg_bool kcg_comp_P003_OBU_T_TM(P003_OBU_T_TM *kcg_c1, P003_OBU_T_TM *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->v_nvonsight == kcg_c2->v_nvonsight);
   kcg_equ = kcg_equ & (kcg_c1->v_nvstff == kcg_c2->v_nvstff);
   kcg_equ = kcg_equ & (kcg_c1->v_nvshunt == kcg_c2->v_nvshunt);
-  kcg_equ = kcg_equ & kcg_comp__4_P003_OBU_nid_c_sect(
+  kcg_equ = kcg_equ & kcg_comp__5_P003_OBU_nid_c_sect(
       &kcg_c1->nid_c_list,
       &kcg_c2->nid_c_list);
   kcg_equ = kcg_equ & (kcg_c1->n_iter_nid_c == kcg_c2->n_iter_nid_c);
@@ -6529,7 +6521,7 @@ kcg_bool kcg_comp_T_Data_From_Track_Pack(
   kcg_equ = kcg_equ & kcg_comp_P63_ListofBalisesinSRA(
       &kcg_c1->P_63,
       &kcg_c2->P_63);
-  kcg_equ = kcg_equ & kcg_comp__7_P46_ConditionalLeve(
+  kcg_equ = kcg_equ & kcg_comp__8_P46_ConditionalLeve(
       &kcg_c1->P_46,
       &kcg_c2->P_46);
   kcg_equ = kcg_equ & kcg_comp_P41_LevelTransistionOr(
@@ -6541,7 +6533,7 @@ kcg_bool kcg_comp_T_Data_From_Track_Pack(
   kcg_equ = kcg_equ & kcg_comp_P21_GradientProfiles_T(
       &kcg_c1->P_21,
       &kcg_c2->P_21);
-  kcg_equ = kcg_equ & kcg_comp__5_P15_Level23Movement(
+  kcg_equ = kcg_equ & kcg_comp__6_P15_Level23Movement(
       &kcg_c1->P_15,
       &kcg_c2->P_15);
   kcg_equ = kcg_equ & kcg_comp_P139_ReversingSupervis(
@@ -6556,7 +6548,7 @@ kcg_bool kcg_comp_T_Data_From_Track_Pack(
   kcg_equ = kcg_equ & kcg_comp_P135_StopShuntingOnDes(
       &kcg_c1->P_135,
       &kcg_c2->P_135);
-  kcg_equ = kcg_equ & kcg_comp__6_P12_Level1MovementA(
+  kcg_equ = kcg_equ & kcg_comp__7_P12_Level1MovementA(
       &kcg_c1->P_12,
       &kcg_c2->P_12);
   return kcg_equ;
@@ -7161,34 +7153,6 @@ kcg_bool kcg_comp_BG_Header_T_BG_Types_P(
 }
 #endif /* kcg_use_BG_Header_T_BG_Types_Pk */
 
-#ifdef kcg_use_Radio_TrackTrain_Header
-kcg_bool kcg_comp_Radio_TrackTrain_Heade(
-  Radio_TrackTrain_Header_T_Radio *kcg_c1,
-  Radio_TrackTrain_Header_T_Radio *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
-  kcg_equ = kcg_equ & (kcg_c1->d_emergencystop == kcg_c2->d_emergencystop);
-  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
-  kcg_equ = kcg_equ & (kcg_c1->d_ref == kcg_c2->d_ref);
-  kcg_equ = kcg_equ & (kcg_c1->t_sh_rqst == kcg_c2->t_sh_rqst);
-  kcg_equ = kcg_equ & (kcg_c1->d_sr == kcg_c2->d_sr);
-  kcg_equ = kcg_equ & (kcg_c1->q_scale == kcg_c2->q_scale);
-  kcg_equ = kcg_equ & (kcg_c1->nid_em == kcg_c2->nid_em);
-  kcg_equ = kcg_equ & (kcg_c1->t_train_reference == kcg_c2->t_train_reference);
-  kcg_equ = kcg_equ & (kcg_c1->nid_lrbg == kcg_c2->nid_lrbg);
-  kcg_equ = kcg_equ & (kcg_c1->m_ack == kcg_c2->m_ack);
-  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
-  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
-  kcg_equ = kcg_equ & (kcg_c1->receivedSystemTime ==
-      kcg_c2->receivedSystemTime);
-  kcg_equ = kcg_equ & (kcg_c1->radioDevice == kcg_c2->radioDevice);
-  return kcg_equ;
-}
-#endif /* kcg_use_Radio_TrackTrain_Header */
-
 #ifdef kcg_use_Position_Report_TrainTo
 kcg_bool kcg_comp_Position_Report_TrainT(
   Position_Report_TrainToTrack *kcg_c1,
@@ -7276,6 +7240,203 @@ kcg_bool kcg_comp_PT11_ValidatedTrainDat(
 }
 #endif /* kcg_use_PT11_ValidatedTrainData */
 
+#ifdef kcg_use_GUI_to_EVC_EnvSim
+kcg_bool kcg_comp_GUI_to_EVC_EnvSim(
+  GUI_to_EVC_EnvSim *kcg_c1,
+  GUI_to_EVC_EnvSim *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->openDesk == kcg_c2->openDesk);
+  kcg_equ = kcg_equ & (kcg_c1->mobileHWStatus == kcg_c2->mobileHWStatus);
+  kcg_equ = kcg_equ & (kcg_c1->level == kcg_c2->level);
+  kcg_equ = kcg_equ & (kcg_c1->mode == kcg_c2->mode);
+  kcg_equ = kcg_equ & (kcg_c1->initialVelocity == kcg_c2->initialVelocity);
+  kcg_equ = kcg_equ & (kcg_c1->initialPosition == kcg_c2->initialPosition);
+  kcg_equ = kcg_equ & (kcg_c1->brake == kcg_c2->brake);
+  kcg_equ = kcg_equ & (kcg_c1->traction == kcg_c2->traction);
+  kcg_equ = kcg_equ & (kcg_c1->targetSpeed == kcg_c2->targetSpeed);
+  kcg_equ = kcg_equ & (kcg_c1->reset == kcg_c2->reset);
+  return kcg_equ;
+}
+#endif /* kcg_use_GUI_to_EVC_EnvSim */
+
+#ifdef kcg_use_EVC_to_GUI_EnvSim
+kcg_bool kcg_comp_EVC_to_GUI_EnvSim(
+  EVC_to_GUI_EnvSim *kcg_c1,
+  EVC_to_GUI_EnvSim *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->timestamp == kcg_c2->timestamp);
+  kcg_equ = kcg_equ & (kcg_c1->trainPositionDeltaMin ==
+      kcg_c2->trainPositionDeltaMin);
+  kcg_equ = kcg_equ & (kcg_c1->trainPositionNominal ==
+      kcg_c2->trainPositionNominal);
+  kcg_equ = kcg_equ & (kcg_c1->trainPositionDeltaMax ==
+      kcg_c2->trainPositionDeltaMax);
+  kcg_equ = kcg_equ & (kcg_c1->afbActive == kcg_c2->afbActive);
+  kcg_equ = kcg_equ & (kcg_c1->currentVelocityInKmH ==
+      kcg_c2->currentVelocityInKmH);
+  kcg_equ = kcg_equ & (kcg_c1->currentPositionInM ==
+      kcg_c2->currentPositionInM);
+  kcg_equ = kcg_equ & (kcg_c1->currentPositionInCm ==
+      kcg_c2->currentPositionInCm);
+  kcg_equ = kcg_equ & (kcg_c1->tractionCutOff == kcg_c2->tractionCutOff);
+  kcg_equ = kcg_equ & (kcg_c1->serviceBrake == kcg_c2->serviceBrake);
+  kcg_equ = kcg_equ & (kcg_c1->emergencyBrake == kcg_c2->emergencyBrake);
+  return kcg_equ;
+}
+#endif /* kcg_use_EVC_to_GUI_EnvSim */
+
+#ifdef kcg_use_BaliseTelegramHeader_in
+kcg_bool kcg_comp_BaliseTelegramHeader_i(
+  BaliseTelegramHeader_int_T_TM *kcg_c1,
+  BaliseTelegramHeader_int_T_TM *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_link == kcg_c2->q_link);
+  kcg_equ = kcg_equ & (kcg_c1->nid_bg == kcg_c2->nid_bg);
+  kcg_equ = kcg_equ & (kcg_c1->nid_c == kcg_c2->nid_c);
+  kcg_equ = kcg_equ & (kcg_c1->m_mcount == kcg_c2->m_mcount);
+  kcg_equ = kcg_equ & (kcg_c1->m_dup == kcg_c2->m_dup);
+  kcg_equ = kcg_equ & (kcg_c1->n_total == kcg_c2->n_total);
+  kcg_equ = kcg_equ & (kcg_c1->n_pig == kcg_c2->n_pig);
+  kcg_equ = kcg_equ & (kcg_c1->q_media == kcg_c2->q_media);
+  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
+  kcg_equ = kcg_equ & (kcg_c1->q_updown == kcg_c2->q_updown);
+  return kcg_equ;
+}
+#endif /* kcg_use_BaliseTelegramHeader_in */
+
+#ifdef kcg_use_trainData_T_TIU_Types_P
+kcg_bool kcg_comp_trainData_T_TIU_Types_(
+  trainData_T_TIU_Types_Pkg *kcg_c1,
+  trainData_T_TIU_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_aTractionIdentity_T_Pa(
+      &kcg_c1->tractionSystem,
+      &kcg_c2->tractionSystem);
+  kcg_equ = kcg_equ & (kcg_c1->numberTractionSystems ==
+      kcg_c2->numberTractionSystems);
+  kcg_equ = kcg_equ & kcg_comp_aNID_NTC_T_Packet_Trai(
+      &kcg_c1->nationSystems,
+      &kcg_c2->nationSystems);
+  kcg_equ = kcg_equ & (kcg_c1->numberNationalSystems ==
+      kcg_c2->numberNationalSystems);
+  kcg_equ = kcg_equ & (kcg_c1->axleNumber == kcg_c2->axleNumber);
+  kcg_equ = kcg_equ & (kcg_c1->airtightSystem == kcg_c2->airtightSystem);
+  kcg_equ = kcg_equ & (kcg_c1->axleLoadCategory == kcg_c2->axleLoadCategory);
+  kcg_equ = kcg_equ & (kcg_c1->loadingGauge == kcg_c2->loadingGauge);
+  kcg_equ = kcg_equ & (kcg_c1->maxTrainSpeed == kcg_c2->maxTrainSpeed);
+  kcg_equ = kcg_equ & (kcg_c1->brakePerctage == kcg_c2->brakePerctage);
+  kcg_equ = kcg_equ & (kcg_c1->trainLength == kcg_c2->trainLength);
+  kcg_equ = kcg_equ & (kcg_c1->cantDeficientcy == kcg_c2->cantDeficientcy);
+  kcg_equ = kcg_equ & (kcg_c1->trainCategory == kcg_c2->trainCategory);
+  kcg_equ = kcg_equ & (kcg_c1->acknowledgedByDriver ==
+      kcg_c2->acknowledgedByDriver);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_trainData_T_TIU_Types_P */
+
+#ifdef kcg_use__4_Radio_TrackTrain_Hea
+kcg_bool kcg_comp__4_Radio_TrackTrain_He(
+  _4_Radio_TrackTrain_Header_T_TM *kcg_c1,
+  _4_Radio_TrackTrain_Header_T_TM *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
+  kcg_equ = kcg_equ & (kcg_c1->d_emergencystop == kcg_c2->d_emergencystop);
+  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
+  kcg_equ = kcg_equ & (kcg_c1->d_ref == kcg_c2->d_ref);
+  kcg_equ = kcg_equ & (kcg_c1->t_sh_rqst == kcg_c2->t_sh_rqst);
+  kcg_equ = kcg_equ & (kcg_c1->d_sr == kcg_c2->d_sr);
+  kcg_equ = kcg_equ & (kcg_c1->q_scale == kcg_c2->q_scale);
+  kcg_equ = kcg_equ & (kcg_c1->nid_em == kcg_c2->nid_em);
+  kcg_equ = kcg_equ & (kcg_c1->t_train_reference == kcg_c2->t_train_reference);
+  kcg_equ = kcg_equ & (kcg_c1->nid_lrbg == kcg_c2->nid_lrbg);
+  kcg_equ = kcg_equ & (kcg_c1->m_ack == kcg_c2->m_ack);
+  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
+  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
+  kcg_equ = kcg_equ & (kcg_c1->receivedSystemTime ==
+      kcg_c2->receivedSystemTime);
+  kcg_equ = kcg_equ & (kcg_c1->radioDevice == kcg_c2->radioDevice);
+  return kcg_equ;
+}
+#endif /* kcg_use__4_Radio_TrackTrain_Hea */
+
+#ifdef kcg_use_TelegramHeader_T_BG_Typ
+kcg_bool kcg_comp_TelegramHeader_T_BG_Ty(
+  TelegramHeader_T_BG_Types_Pkg *kcg_c1,
+  TelegramHeader_T_BG_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_link == kcg_c2->q_link);
+  kcg_equ = kcg_equ & (kcg_c1->nid_bg == kcg_c2->nid_bg);
+  kcg_equ = kcg_equ & (kcg_c1->nid_c == kcg_c2->nid_c);
+  kcg_equ = kcg_equ & (kcg_c1->m_mcount == kcg_c2->m_mcount);
+  kcg_equ = kcg_equ & (kcg_c1->m_dup == kcg_c2->m_dup);
+  kcg_equ = kcg_equ & (kcg_c1->n_total == kcg_c2->n_total);
+  kcg_equ = kcg_equ & (kcg_c1->n_pig == kcg_c2->n_pig);
+  kcg_equ = kcg_equ & (kcg_c1->q_media == kcg_c2->q_media);
+  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
+  kcg_equ = kcg_equ & (kcg_c1->q_updown == kcg_c2->q_updown);
+  return kcg_equ;
+}
+#endif /* kcg_use_TelegramHeader_T_BG_Typ */
+
+#ifdef kcg_use_struct_103634
+kcg_bool kcg_comp_struct_103634(struct_103634 *kcg_c1, struct_103634 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_version == kcg_c2->m_version);
+  kcg_equ = kcg_equ & (kcg_c1->d_emergencystop == kcg_c2->d_emergencystop);
+  kcg_equ = kcg_equ & (kcg_c1->q_dir == kcg_c2->q_dir);
+  kcg_equ = kcg_equ & (kcg_c1->d_ref == kcg_c2->d_ref);
+  kcg_equ = kcg_equ & (kcg_c1->t_sh_rqst == kcg_c2->t_sh_rqst);
+  kcg_equ = kcg_equ & (kcg_c1->d_sr == kcg_c2->d_sr);
+  kcg_equ = kcg_equ & (kcg_c1->q_scale == kcg_c2->q_scale);
+  kcg_equ = kcg_equ & (kcg_c1->nid_em == kcg_c2->nid_em);
+  kcg_equ = kcg_equ & (kcg_c1->t_train_reference == kcg_c2->t_train_reference);
+  kcg_equ = kcg_equ & (kcg_c1->nid_lrbg == kcg_c2->nid_lrbg);
+  kcg_equ = kcg_equ & (kcg_c1->m_ack == kcg_c2->m_ack);
+  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
+  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
+  kcg_equ = kcg_equ & (kcg_c1->receivedSystemTime ==
+      kcg_c2->receivedSystemTime);
+  kcg_equ = kcg_equ & (kcg_c1->radioDevice == kcg_c2->radioDevice);
+  return kcg_equ;
+}
+#endif /* kcg_use_struct_103634 */
+
+#ifdef kcg_use_safeRadioConnectionIndi
+kcg_bool kcg_comp_safeRadioConnectionInd(
+  safeRadioConnectionIndication_T *kcg_c1,
+  safeRadioConnectionIndication_T *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->indicator == kcg_c2->indicator);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_safeRadioConnectionIndi */
+
 #ifdef kcg_use_RBC_Communication_T_Pro
 kcg_bool kcg_comp_RBC_Communication_T_Pr(
   RBC_Communication_T_ProvidePosi *kcg_c1,
@@ -7311,22 +7472,6 @@ kcg_bool kcg_comp_T_Data_To_DMI_Level_An(
 }
 #endif /* kcg_use_T_Data_To_DMI_Level_And */
 
-#ifdef kcg_use_mobileConnectionCmd_T_R
-kcg_bool kcg_comp_mobileConnectionCmd_T_(
-  mobileConnectionCmd_T_RCM_Types *kcg_c1,
-  mobileConnectionCmd_T_RCM_Types *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->nid_radio == kcg_c2->nid_radio);
-  kcg_equ = kcg_equ & (kcg_c1->action == kcg_c2->action);
-  kcg_equ = kcg_equ & (kcg_c1->mobileDeviceNo == kcg_c2->mobileDeviceNo);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_mobileConnectionCmd_T_R */
-
 #ifdef kcg_use_DMI_Text_Message_T_DMI_
 kcg_bool kcg_comp_DMI_Text_Message_T_DMI(
   DMI_Text_Message_T_DMI_Messages *kcg_c1,
@@ -7348,6 +7493,22 @@ kcg_bool kcg_comp_DMI_Text_Message_T_DMI(
   return kcg_equ;
 }
 #endif /* kcg_use_DMI_Text_Message_T_DMI_ */
+
+#ifdef kcg_use_mobileConnectionCmd_T_R
+kcg_bool kcg_comp_mobileConnectionCmd_T_(
+  mobileConnectionCmd_T_RCM_Types *kcg_c1,
+  mobileConnectionCmd_T_RCM_Types *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->nid_radio == kcg_c2->nid_radio);
+  kcg_equ = kcg_equ & (kcg_c1->action == kcg_c2->action);
+  kcg_equ = kcg_equ & (kcg_c1->mobileDeviceNo == kcg_c2->mobileDeviceNo);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_mobileConnectionCmd_T_R */
 
 #ifdef kcg_use_DMI_Icons_T_DMI_Message
 kcg_bool kcg_comp_DMI_Icons_T_DMI_Messag(
@@ -7375,10 +7536,10 @@ kcg_bool kcg_comp_DMI_Icons_T_DMI_Messag(
 }
 #endif /* kcg_use_DMI_Icons_T_DMI_Message */
 
-#ifdef kcg_use__27_DMI_EVC_Coded_Train
-kcg_bool kcg_comp__27_DMI_EVC_Coded_Trai(
-  _27_DMI_EVC_Coded_Train_Data_T_ *kcg_c1,
-  _27_DMI_EVC_Coded_Train_Data_T_ *kcg_c2)
+#ifdef kcg_use__29_DMI_EVC_Coded_Train
+kcg_bool kcg_comp__29_DMI_EVC_Coded_Trai(
+  _29_DMI_EVC_Coded_Train_Data_T_ *kcg_c1,
+  _29_DMI_EVC_Coded_Train_Data_T_ *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -7406,7 +7567,7 @@ kcg_bool kcg_comp__27_DMI_EVC_Coded_Trai(
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use__27_DMI_EVC_Coded_Train */
+#endif /* kcg_use__29_DMI_EVC_Coded_Train */
 
 #ifdef kcg_use_TargetIteratorAkku_Targ
 kcg_bool kcg_comp_TargetIteratorAkku_Tar(
@@ -7567,7 +7728,7 @@ kcg_bool kcg_comp_dataCollectionForLevel(
   kcg_equ = kcg_equ & (kcg_c1->p21_received == kcg_c2->p21_received);
   kcg_equ = kcg_equ & (kcg_c1->p15_received == kcg_c2->p15_received);
   kcg_equ = kcg_equ & (kcg_c1->p12_received == kcg_c2->p12_received);
-  kcg_equ = kcg_equ & kcg_comp__7_P46_ConditionalLeve(
+  kcg_equ = kcg_equ & kcg_comp__8_P46_ConditionalLeve(
       &kcg_c1->p46,
       &kcg_c2->p46);
   kcg_equ = kcg_equ & kcg_comp_P41_LevelTransistionOr(
@@ -7620,29 +7781,6 @@ kcg_bool kcg_comp_P058_OBU_T_TM(P058_OBU_T_TM *kcg_c1, P058_OBU_T_TM *kcg_c2)
   return kcg_equ;
 }
 #endif /* kcg_use_P058_OBU_T_TM */
-
-#ifdef kcg_use_Mode_control_and_train_
-kcg_bool kcg_comp_Mode_control_and_train(
-  Mode_control_and_train_status_T *kcg_c1,
-  Mode_control_and_train_status_T *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_traction_st == kcg_c2->m_traction_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_trainintegrity_st ==
-      kcg_c2->m_trainintegrity_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_directioncontroller_st ==
-      kcg_c2->m_directioncontroller_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_cab_st == kcg_c2->m_cab_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_nonleading_st == kcg_c2->m_nonleading_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_passiveshunting_st ==
-      kcg_c2->m_passiveshunting_st);
-  kcg_equ = kcg_equ & (kcg_c1->m_sleeping_st == kcg_c2->m_sleeping_st);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Mode_control_and_train_ */
 
 #ifdef kcg_use_DMI_Train_Data_T_DMI_Me
 kcg_bool kcg_comp_DMI_Train_Data_T_DMI_M(
@@ -7776,13 +7914,13 @@ kcg_bool kcg_comp_P005_section_enum_T_TM(
 }
 #endif /* kcg_use_P005_section_enum_T_TM */
 
-#ifdef kcg_use_struct_99511
-kcg_bool kcg_comp_struct_99511(struct_99511 *kcg_c1, struct_99511 *kcg_c2)
+#ifdef kcg_use_struct_103888
+kcg_bool kcg_comp_struct_103888(struct_103888 *kcg_c1, struct_103888 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_array_97911(
+  kcg_equ = kcg_equ & kcg_comp_array_102226(
       &kcg_c1->n_iter_k_m_list,
       &kcg_c2->n_iter_k_m_list);
   kcg_equ = kcg_equ & (kcg_c1->n_iter_k_m == kcg_c2->n_iter_k_m);
@@ -7795,7 +7933,7 @@ kcg_bool kcg_comp_struct_99511(struct_99511 *kcg_c1, struct_99511 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_99511 */
+#endif /* kcg_use_struct_103888 */
 
 #ifdef kcg_use_P042_trackside_int_T_TM
 kcg_bool kcg_comp_P042_trackside_int_T_T(
@@ -7818,8 +7956,8 @@ kcg_bool kcg_comp_P042_trackside_int_T_T(
 }
 #endif /* kcg_use_P042_trackside_int_T_TM */
 
-#ifdef kcg_use_struct_99536
-kcg_bool kcg_comp_struct_99536(struct_99536 *kcg_c1, struct_99536 *kcg_c2)
+#ifdef kcg_use_struct_103913
+kcg_bool kcg_comp_struct_103913(struct_103913 *kcg_c1, struct_103913 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -7834,7 +7972,7 @@ kcg_bool kcg_comp_struct_99536(struct_99536 *kcg_c1, struct_99536 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_99536 */
+#endif /* kcg_use_struct_103913 */
 
 #ifdef kcg_use_positionedBG_T_TrainPos
 kcg_bool kcg_comp_positionedBG_T_TrainPo(
@@ -7862,26 +8000,6 @@ kcg_bool kcg_comp_positionedBG_T_TrainPo(
   return kcg_equ;
 }
 #endif /* kcg_use_positionedBG_T_TrainPos */
-
-#ifdef kcg_use_M_TrainTrack_MessageHd_
-kcg_bool kcg_comp_M_TrainTrack_MessageHd(
-  M_TrainTrack_MessageHd_T_TM_rad *kcg_c1,
-  M_TrainTrack_MessageHd_T_TM_rad *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->field3 == kcg_c2->field3);
-  kcg_equ = kcg_equ & (kcg_c1->field2 == kcg_c2->field2);
-  kcg_equ = kcg_equ & (kcg_c1->field1 == kcg_c2->field1);
-  kcg_equ = kcg_equ & (kcg_c1->nid_engine == kcg_c2->nid_engine);
-  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
-  kcg_equ = kcg_equ & (kcg_c1->l_message == kcg_c2->l_message);
-  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_M_TrainTrack_MessageHd_ */
 
 #ifdef kcg_use_P42_SessionManagement_T
 kcg_bool kcg_comp_P42_SessionManagement_(
@@ -7924,6 +8042,68 @@ kcg_bool kcg_comp_p42_sessionManagement_(
   return kcg_equ;
 }
 #endif /* kcg_use_p42_sessionManagement_T */
+
+#ifdef kcg_use_struct_103959
+kcg_bool kcg_comp_struct_103959(struct_103959 *kcg_c1, struct_103959 *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->xNID_TEXTMESSAGE == kcg_c2->xNID_TEXTMESSAGE);
+  kcg_equ = kcg_equ & (kcg_c1->xQ_EMERGENCYSTOP == kcg_c2->xQ_EMERGENCYSTOP);
+  kcg_equ = kcg_equ & (kcg_c1->xNID_EM == kcg_c2->xNID_EM);
+  kcg_equ = kcg_equ & (kcg_c1->xT_TRAIN == kcg_c2->xT_TRAIN);
+  kcg_equ = kcg_equ & (kcg_c1->xQ_MARQSTREASON == kcg_c2->xQ_MARQSTREASON);
+  kcg_equ = kcg_equ & (kcg_c1->nid_engine == kcg_c2->nid_engine);
+  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
+  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
+  kcg_equ = kcg_equ & (kcg_c1->present == kcg_c2->present);
+  return kcg_equ;
+}
+#endif /* kcg_use_struct_103959 */
+
+#ifdef kcg_use_M_TrainTrack_MessageHd_
+kcg_bool kcg_comp_M_TrainTrack_MessageHd(
+  M_TrainTrack_MessageHd_T_TM_rad *kcg_c1,
+  M_TrainTrack_MessageHd_T_TM_rad *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->field3 == kcg_c2->field3);
+  kcg_equ = kcg_equ & (kcg_c1->field2 == kcg_c2->field2);
+  kcg_equ = kcg_equ & (kcg_c1->field1 == kcg_c2->field1);
+  kcg_equ = kcg_equ & (kcg_c1->nid_engine == kcg_c2->nid_engine);
+  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
+  kcg_equ = kcg_equ & (kcg_c1->l_message == kcg_c2->l_message);
+  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_M_TrainTrack_MessageHd_ */
+
+#ifdef kcg_use_Mode_control_and_train_
+kcg_bool kcg_comp_Mode_control_and_train(
+  Mode_control_and_train_status_T *kcg_c1,
+  Mode_control_and_train_status_T *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_traction_st == kcg_c2->m_traction_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_trainintegrity_st ==
+      kcg_c2->m_trainintegrity_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_directioncontroller_st ==
+      kcg_c2->m_directioncontroller_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_cab_st == kcg_c2->m_cab_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_nonleading_st == kcg_c2->m_nonleading_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_passiveshunting_st ==
+      kcg_c2->m_passiveshunting_st);
+  kcg_equ = kcg_equ & (kcg_c1->m_sleeping_st == kcg_c2->m_sleeping_st);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_Mode_control_and_train_ */
 
 #ifdef kcg_use_odometry_T_Obu_BasicTyp
 kcg_bool kcg_comp_odometry_T_Obu_BasicTy(
@@ -7968,72 +8148,6 @@ kcg_bool kcg_comp_RadioMetadata_T_Common(
   return kcg_equ;
 }
 #endif /* kcg_use_RadioMetadata_T_Common_ */
-
-#ifdef kcg_use_struct_99615
-kcg_bool kcg_comp_struct_99615(struct_99615 *kcg_c1, struct_99615 *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->xNID_TEXTMESSAGE == kcg_c2->xNID_TEXTMESSAGE);
-  kcg_equ = kcg_equ & (kcg_c1->xQ_EMERGENCYSTOP == kcg_c2->xQ_EMERGENCYSTOP);
-  kcg_equ = kcg_equ & (kcg_c1->xNID_EM == kcg_c2->xNID_EM);
-  kcg_equ = kcg_equ & (kcg_c1->xT_TRAIN == kcg_c2->xT_TRAIN);
-  kcg_equ = kcg_equ & (kcg_c1->xQ_MARQSTREASON == kcg_c2->xQ_MARQSTREASON);
-  kcg_equ = kcg_equ & (kcg_c1->nid_engine == kcg_c2->nid_engine);
-  kcg_equ = kcg_equ & (kcg_c1->t_train == kcg_c2->t_train);
-  kcg_equ = kcg_equ & (kcg_c1->nid_message == kcg_c2->nid_message);
-  kcg_equ = kcg_equ & (kcg_c1->present == kcg_c2->present);
-  return kcg_equ;
-}
-#endif /* kcg_use_struct_99615 */
-
-#ifdef kcg_use_Isolation_Status_T_TIU_
-kcg_bool kcg_comp_Isolation_Status_T_TIU(
-  Isolation_Status_T_TIU_Types_Pk *kcg_c1,
-  Isolation_Status_T_TIU_Types_Pk *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->isolation_status == kcg_c2->isolation_status);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_Isolation_Status_T_TIU_ */
-
-#ifdef kcg_use_Message_EVC_to_Train_In
-kcg_bool kcg_comp_Message_EVC_to_Train_I(
-  Message_EVC_to_Train_Interface_ *kcg_c1,
-  Message_EVC_to_Train_Interface_ *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_Change_of_allowed_curr(
-      &kcg_c1->change_of_allowed_current_consu,
-      &kcg_c2->change_of_allowed_current_consu);
-  kcg_equ = kcg_equ & kcg_comp_Passenger_door_control(
-      &kcg_c1->passenger_door_control_info,
-      &kcg_c2->passenger_door_control_info);
-  kcg_equ = kcg_equ & kcg_comp_Change_traction_system(
-      &kcg_c1->change_traction_system,
-      &kcg_c2->change_traction_system);
-  kcg_equ = kcg_equ & kcg_comp_Type_I_train_commands_(
-      &kcg_c1->type_I_train_commands,
-      &kcg_c2->type_I_train_commands);
-  kcg_equ = kcg_equ & kcg_comp_Brake_inhibition_comma(
-      &kcg_c1->brake_inhibition,
-      &kcg_c2->brake_inhibition);
-  kcg_equ = kcg_equ & kcg_comp_Brake_command_T_TIU_Ty(
-      &kcg_c1->brake_command,
-      &kcg_c2->brake_command);
-  kcg_equ = kcg_equ & kcg_comp_Isolation_Status_T_TIU(
-      &kcg_c1->isolation_status,
-      &kcg_c2->isolation_status);
-  return kcg_equ;
-}
-#endif /* kcg_use_Message_EVC_to_Train_In */
 
 #ifdef kcg_use_trainProperties_T_Train
 kcg_bool kcg_comp_trainProperties_T_Trai(
@@ -8087,8 +8201,8 @@ kcg_bool kcg_comp_p131_q_rbcTransitionOr(
 }
 #endif /* kcg_use_p131_q_rbcTransitionOrd */
 
-#ifdef kcg_use_struct_99663
-kcg_bool kcg_comp_struct_99663(struct_99663 *kcg_c1, struct_99663 *kcg_c2)
+#ifdef kcg_use_struct_104036
+kcg_bool kcg_comp_struct_104036(struct_104036 *kcg_c1, struct_104036 *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
@@ -8099,7 +8213,7 @@ kcg_bool kcg_comp_struct_99663(struct_99663 *kcg_c1, struct_99663 *kcg_c2)
   kcg_equ = kcg_equ & kcg_comp_CompressedPackets_T_Co(
       &kcg_c1->packets,
       &kcg_c2->packets);
-  kcg_equ = kcg_equ & kcg_comp_Radio_TrackTrain_Heade(
+  kcg_equ = kcg_equ & kcg_comp_struct_103634(
       &kcg_c1->Radio_Common_Header,
       &kcg_c2->Radio_Common_Header);
   kcg_equ = kcg_equ & kcg_comp_BG_Header_T_BG_Types_P(
@@ -8112,7 +8226,7 @@ kcg_bool kcg_comp_struct_99663(struct_99663 *kcg_c1, struct_99663 *kcg_c2)
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_struct_99663 */
+#endif /* kcg_use_struct_104036 */
 
 #ifdef kcg_use_outPackets_T_Common_Typ
 kcg_bool kcg_comp_outPackets_T_Common_Ty(
@@ -8134,6 +8248,39 @@ kcg_bool kcg_comp_outPackets_T_Common_Ty(
   return kcg_equ;
 }
 #endif /* kcg_use_outPackets_T_Common_Typ */
+
+#ifdef kcg_use_Message_EVC_to_Train_In
+kcg_bool kcg_comp_Message_EVC_to_Train_I(
+  Message_EVC_to_Train_Interface_ *kcg_c1,
+  Message_EVC_to_Train_Interface_ *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & kcg_comp_Change_of_allowed_curr(
+      &kcg_c1->change_of_allowed_current_consu,
+      &kcg_c2->change_of_allowed_current_consu);
+  kcg_equ = kcg_equ & kcg_comp_Passenger_door_control(
+      &kcg_c1->passenger_door_control_info,
+      &kcg_c2->passenger_door_control_info);
+  kcg_equ = kcg_equ & kcg_comp_Change_traction_system(
+      &kcg_c1->change_traction_system,
+      &kcg_c2->change_traction_system);
+  kcg_equ = kcg_equ & kcg_comp_Type_I_train_commands_(
+      &kcg_c1->type_I_train_commands,
+      &kcg_c2->type_I_train_commands);
+  kcg_equ = kcg_equ & kcg_comp_Brake_inhibition_comma(
+      &kcg_c1->brake_inhibition,
+      &kcg_c2->brake_inhibition);
+  kcg_equ = kcg_equ & kcg_comp_Brake_command_T_TIU_Ty(
+      &kcg_c1->brake_command,
+      &kcg_c2->brake_command);
+  kcg_equ = kcg_equ & kcg_comp_Isolation_Status_T_TIU(
+      &kcg_c1->isolation_status,
+      &kcg_c2->isolation_status);
+  return kcg_equ;
+}
+#endif /* kcg_use_Message_EVC_to_Train_In */
 
 #ifdef kcg_use_Brake_pressure_value_T_
 kcg_bool kcg_comp_Brake_pressure_value_T(
@@ -8166,21 +8313,6 @@ kcg_bool kcg_comp_P63_BaliseInSRAuthorit(
 }
 #endif /* kcg_use_P63_BaliseInSRAuthority */
 
-#ifdef kcg_use_DMI_DriverAck_T_DMI_Typ
-kcg_bool kcg_comp_DMI_DriverAck_T_DMI_Ty(
-  DMI_DriverAck_T_DMI_Types_Pkg *kcg_c1,
-  DMI_DriverAck_T_DMI_Types_Pkg *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->acknowledgement == kcg_c2->acknowledgement);
-  kcg_equ = kcg_equ & (kcg_c1->whichMode == kcg_c2->whichMode);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_DMI_DriverAck_T_DMI_Typ */
-
 #ifdef kcg_use_LocWithInAcc_T_Obu_Basi
 kcg_bool kcg_comp_LocWithInAcc_T_Obu_Bas(
   LocWithInAcc_T_Obu_BasicTypes_P *kcg_c1,
@@ -8195,6 +8327,21 @@ kcg_bool kcg_comp_LocWithInAcc_T_Obu_Bas(
   return kcg_equ;
 }
 #endif /* kcg_use_LocWithInAcc_T_Obu_Basi */
+
+#ifdef kcg_use_DMI_DriverAck_T_DMI_Typ
+kcg_bool kcg_comp_DMI_DriverAck_T_DMI_Ty(
+  DMI_DriverAck_T_DMI_Types_Pkg *kcg_c1,
+  DMI_DriverAck_T_DMI_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->acknowledgement == kcg_c2->acknowledgement);
+  kcg_equ = kcg_equ & (kcg_c1->whichMode == kcg_c2->whichMode);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_DMI_DriverAck_T_DMI_Typ */
 
 #ifdef kcg_use_DataForDMI_t_TrackAtlas
 kcg_bool kcg_comp_DataForDMI_t_TrackAtla(
@@ -8216,6 +8363,21 @@ kcg_bool kcg_comp_DataForDMI_t_TrackAtla(
   return kcg_equ;
 }
 #endif /* kcg_use_DataForDMI_t_TrackAtlas */
+
+#ifdef kcg_use_P058_section_enum_T_TM
+kcg_bool kcg_comp_P058_section_enum_T_TM(
+  P058_section_enum_T_TM *kcg_c1,
+  P058_section_enum_T_TM *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->q_lgtloc == kcg_c2->q_lgtloc);
+  kcg_equ = kcg_equ & (kcg_c1->d_loc == kcg_c2->d_loc);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_P058_section_enum_T_TM */
 
 #ifdef kcg_use_T_LevelTransition_Level
 kcg_bool kcg_comp_T_LevelTransition_Leve(
@@ -8249,22 +8411,6 @@ kcg_bool kcg_comp_NID_EM_STORE_Acc_T_TA_(
   return kcg_equ;
 }
 #endif /* kcg_use_NID_EM_STORE_Acc_T_TA_E */
-
-#ifdef kcg_use_P004_TM_TrainToTrack
-kcg_bool kcg_comp_P004_TM_TrainToTrack(
-  P004_TM_TrainToTrack *kcg_c1,
-  P004_TM_TrainToTrack *kcg_c2)
-{
-  static kcg_bool kcg_equ;
-  
-  kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & (kcg_c1->m_error == kcg_c2->m_error);
-  kcg_equ = kcg_equ & (kcg_c1->l_packet == kcg_c2->l_packet);
-  kcg_equ = kcg_equ & (kcg_c1->nid_packet == kcg_c2->nid_packet);
-  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
-  return kcg_equ;
-}
-#endif /* kcg_use_P004_TM_TrainToTrack */
 
 #ifdef kcg_use_LocationBasedEvents_T_P
 kcg_bool kcg_comp_LocationBasedEvents_T_(
@@ -8317,6 +8463,21 @@ kcg_bool kcg_comp_m39_AckOfTerminationOf(
 }
 #endif /* kcg_use_m39_AckOfTerminationOfA */
 
+#ifdef kcg_use_odometryFactors_T_Toolb
+kcg_bool kcg_comp_odometryFactors_T_Tool(
+  odometryFactors_T_Toolbox *kcg_c1,
+  odometryFactors_T_Toolbox *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->o_max == kcg_c2->o_max);
+  kcg_equ = kcg_equ & (kcg_c1->o_min == kcg_c2->o_min);
+  kcg_equ = kcg_equ & (kcg_c1->o_nominal == kcg_c2->o_nominal);
+  return kcg_equ;
+}
+#endif /* kcg_use_odometryFactors_T_Toolb */
+
 #ifdef kcg_use_StaticSpeedSection_t_Tr
 kcg_bool kcg_comp_StaticSpeedSection_t_T(
   StaticSpeedSection_t_TrackAtlas *kcg_c1,
@@ -8348,6 +8509,20 @@ kcg_bool kcg_comp_P003_permanent_data_T_(
   return kcg_equ;
 }
 #endif /* kcg_use_P003_permanent_data_T_T */
+
+#ifdef kcg_use_PT4_ErrorReporting_T_Pa
+kcg_bool kcg_comp_PT4_ErrorReporting_T_P(
+  PT4_ErrorReporting_T_Packet_Tra *kcg_c1,
+  PT4_ErrorReporting_T_Packet_Tra *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_error == kcg_c2->m_error);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_PT4_ErrorReporting_T_Pa */
 
 #ifdef kcg_use_DMI_train_id_T_DMI_Type
 kcg_bool kcg_comp_DMI_train_id_T_DMI_Typ(
@@ -8384,7 +8559,7 @@ kcg_bool kcg_comp_radioManagementMessage(
   kcg_equ = kcg_equ & kcg_comp_P42_SessionManagement_(
       &kcg_c1->p42,
       &kcg_c2->p42);
-  kcg_equ = kcg_equ & kcg_comp_Radio_TrackTrain_Heade(
+  kcg_equ = kcg_equ & kcg_comp__11_Radio_TrackTrain_H(
       &kcg_c1->Radio_Common_Header,
       &kcg_c2->Radio_Common_Header);
   kcg_equ = kcg_equ & (kcg_c1->messageSource == kcg_c2->messageSource);
@@ -8410,7 +8585,7 @@ kcg_bool kcg_comp_RadioMessage_T_Radio_T(
   kcg_equ = kcg_equ & kcg_comp_RadioMetadata_T_Common(
       &kcg_c1->radioMetadata,
       &kcg_c2->radioMetadata);
-  kcg_equ = kcg_equ & kcg_comp_Radio_TrackTrain_Heade(
+  kcg_equ = kcg_equ & kcg_comp__11_Radio_TrackTrain_H(
       &kcg_c1->header,
       &kcg_c2->header);
   kcg_equ = kcg_equ & (kcg_c1->consistencyError == kcg_c2->consistencyError);
@@ -8419,30 +8594,31 @@ kcg_bool kcg_comp_RadioMessage_T_Radio_T(
 }
 #endif /* kcg_use_RadioMessage_T_Radio_Ty */
 
-#ifdef kcg_use_API_TrackSideInput_T_AP
-kcg_bool kcg_comp_API_TrackSideInput_T_A(
-  API_TrackSideInput_T_API_Msg_Pk *kcg_c1,
-  API_TrackSideInput_T_API_Msg_Pk *kcg_c2)
+#ifdef kcg_use_infoFromLinking_T_Train
+kcg_bool kcg_comp_infoFromLinking_T_Trai(
+  infoFromLinking_T_TrainPosition *kcg_c1,
+  infoFromLinking_T_TrainPosition *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_CompressedPackets_T_Co(
-      &kcg_c1->packets,
-      &kcg_c2->packets);
-  kcg_equ = kcg_equ & kcg_comp_API_RadioMsgHeader_T_A(
-      &kcg_c1->rtm_msg,
-      &kcg_c2->rtm_msg);
-  kcg_equ = kcg_equ & kcg_comp_API_TelegramHeader_T_A(
-      &kcg_c1->btm_msg,
-      &kcg_c2->btm_msg);
-  kcg_equ = kcg_equ & (kcg_c1->msg_type == kcg_c2->msg_type);
-  kcg_equ = kcg_equ & (kcg_c1->systemTimeMsgReceived ==
-      kcg_c2->systemTimeMsgReceived);
+  kcg_equ = kcg_equ & kcg_comp_LinkedBG_T_BG_Types_Pk(
+      &kcg_c1->linkingInfo,
+      &kcg_c2->linkingInfo);
+  kcg_equ = kcg_equ & kcg_comp_LocWithInAcc_T_Obu_Bas(
+      &kcg_c1->d_link,
+      &kcg_c2->d_link);
+  kcg_equ = kcg_equ & kcg_comp_LocWithInAcc_T_Obu_Bas(
+      &kcg_c1->expectedLocation,
+      &kcg_c2->expectedLocation);
+  kcg_equ = kcg_equ & (kcg_c1->nid_c_fromLinkingBG ==
+      kcg_c2->nid_c_fromLinkingBG);
+  kcg_equ = kcg_equ & (kcg_c1->nid_bg_fromLinkingBG ==
+      kcg_c2->nid_bg_fromLinkingBG);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_API_TrackSideInput_T_AP */
+#endif /* kcg_use_infoFromLinking_T_Train */
 
 #ifdef kcg_use_Message_Train_Interface
 kcg_bool kcg_comp_Message_Train_Interfac(
@@ -8473,31 +8649,30 @@ kcg_bool kcg_comp_Message_Train_Interfac(
 }
 #endif /* kcg_use_Message_Train_Interface */
 
-#ifdef kcg_use_infoFromLinking_T_Train
-kcg_bool kcg_comp_infoFromLinking_T_Trai(
-  infoFromLinking_T_TrainPosition *kcg_c1,
-  infoFromLinking_T_TrainPosition *kcg_c2)
+#ifdef kcg_use_API_TrackSideInput_T_AP
+kcg_bool kcg_comp_API_TrackSideInput_T_A(
+  API_TrackSideInput_T_API_Msg_Pk *kcg_c1,
+  API_TrackSideInput_T_API_Msg_Pk *kcg_c2)
 {
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_LinkedBG_T_BG_Types_Pk(
-      &kcg_c1->linkingInfo,
-      &kcg_c2->linkingInfo);
-  kcg_equ = kcg_equ & kcg_comp_LocWithInAcc_T_Obu_Bas(
-      &kcg_c1->d_link,
-      &kcg_c2->d_link);
-  kcg_equ = kcg_equ & kcg_comp_LocWithInAcc_T_Obu_Bas(
-      &kcg_c1->expectedLocation,
-      &kcg_c2->expectedLocation);
-  kcg_equ = kcg_equ & (kcg_c1->nid_c_fromLinkingBG ==
-      kcg_c2->nid_c_fromLinkingBG);
-  kcg_equ = kcg_equ & (kcg_c1->nid_bg_fromLinkingBG ==
-      kcg_c2->nid_bg_fromLinkingBG);
+  kcg_equ = kcg_equ & kcg_comp_CompressedPackets_T_Co(
+      &kcg_c1->packets,
+      &kcg_c2->packets);
+  kcg_equ = kcg_equ & kcg_comp_API_RadioMsgHeader_T_A(
+      &kcg_c1->rtm_msg,
+      &kcg_c2->rtm_msg);
+  kcg_equ = kcg_equ & kcg_comp_API_TelegramHeader_T_A(
+      &kcg_c1->btm_msg,
+      &kcg_c2->btm_msg);
+  kcg_equ = kcg_equ & (kcg_c1->msg_type == kcg_c2->msg_type);
+  kcg_equ = kcg_equ & (kcg_c1->systemTimeMsgReceived ==
+      kcg_c2->systemTimeMsgReceived);
   kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
   return kcg_equ;
 }
-#endif /* kcg_use_infoFromLinking_T_Train */
+#endif /* kcg_use_API_TrackSideInput_T_AP */
 
 #ifdef kcg_use_RBC_Id_T_Common_Types_P
 kcg_bool kcg_comp_RBC_Id_T_Common_Types_(
@@ -8515,6 +8690,22 @@ kcg_bool kcg_comp_RBC_Id_T_Common_Types_(
 }
 #endif /* kcg_use_RBC_Id_T_Common_Types_P */
 
+#ifdef kcg_use_Brake_command_T_TIU_Typ
+kcg_bool kcg_comp_Brake_command_T_TIU_Ty(
+  Brake_command_T_TIU_Types_Pkg *kcg_c1,
+  Brake_command_T_TIU_Types_Pkg *kcg_c2)
+{
+  static kcg_bool kcg_equ;
+  
+  kcg_equ = kcg_true;
+  kcg_equ = kcg_equ & (kcg_c1->m_emergencybrake_cm ==
+      kcg_c2->m_emergencybrake_cm);
+  kcg_equ = kcg_equ & (kcg_c1->m_servicebrake_cm == kcg_c2->m_servicebrake_cm);
+  kcg_equ = kcg_equ & (kcg_c1->valid == kcg_c2->valid);
+  return kcg_equ;
+}
+#endif /* kcg_use_Brake_command_T_TIU_Typ */
+
 #ifdef kcg_use_NID_EM_Store_T_TA_Emerg
 kcg_bool kcg_comp_NID_EM_Store_T_TA_Emer(
   NID_EM_Store_T_TA_EmergencyStop *kcg_c1,
@@ -8523,7 +8714,7 @@ kcg_bool kcg_comp_NID_EM_Store_T_TA_Emer(
   static kcg_bool kcg_equ;
   
   kcg_equ = kcg_true;
-  kcg_equ = kcg_equ & kcg_comp_array_98012(&kcg_c1->items, &kcg_c2->items);
+  kcg_equ = kcg_equ & kcg_comp_array_102340(&kcg_c1->items, &kcg_c2->items);
   kcg_equ = kcg_equ & (kcg_c1->nfree == kcg_c2->nfree);
   return kcg_equ;
 }
@@ -8531,6 +8722,6 @@ kcg_bool kcg_comp_NID_EM_Store_T_TA_Emer(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_types.c
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:18
 *************************************************************$ */
 

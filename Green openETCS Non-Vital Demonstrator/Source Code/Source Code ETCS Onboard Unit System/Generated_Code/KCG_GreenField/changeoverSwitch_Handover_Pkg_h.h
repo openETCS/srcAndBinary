@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _changeoverSwitch_Handover_Pkg_
 #define _changeoverSwitch_Handover_Pkg_
@@ -20,7 +20,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _111_SSM_ST_SM1 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */ SM1_state_nxt;
+  _115_SSM_ST_SM1 /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */ SM1_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_FallingEdge_digital /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
@@ -46,6 +46,6 @@ extern void changeoverSwitch_init_Handover_(
 #endif /* _changeoverSwitch_Handover_Pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** changeoverSwitch_Handover_Pkg_h.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

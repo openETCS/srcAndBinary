@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -165,10 +165,10 @@ void manageDMI_Input_manage_DMI_Inpu(
       &outC->forModesAndLevel,
       &outC->outStatusList,
       &outC->outUpdateLevelsDMI);
-    kcg_copy__24_DMI_Driver_Identif(
+    kcg_copy__26_DMI_Driver_Identif(
       &outC->fromDMI_DriverIdentifier,
       &_L54_IfBlock1.driverIdentifier);
-    kcg_copy__23_DMI_Train_Running_(
+    kcg_copy__25_DMI_Train_Running_(
       &outC->fromDMI_TrainRunningNumber,
       &_L54_IfBlock1.trainRunningNumber);
     kcg_copy_DMI_Radio_Net_Data_T_D(
@@ -183,7 +183,7 @@ void manageDMI_Input_manage_DMI_Inpu(
     kcg_copy_DMI_Train_Data_Ack_T_D(
       &outC->fromDMI_TrainDataAck,
       &_L54_IfBlock1.trainDataAck);
-    kcg_copy__22_DMI_Adhesion_Facto(
+    kcg_copy__24_DMI_Adhesion_Facto(
       &outC->fromDMI_AdhesionFactor,
       &_L54_IfBlock1.adhesionFactor);
     /* 1 */
@@ -205,12 +205,12 @@ void manageDMI_Input_manage_DMI_Inpu(
     kcg_copy_DMI_Identifier_T_DMI_M(
       &outC->fromDMI_Identifier,
       (DMI_Identifier_T_DMI_Messages_D *) &cDMIIdentifierDefault_manage_DM);
-    kcg_copy__24_DMI_Driver_Identif(
+    kcg_copy__26_DMI_Driver_Identif(
       &outC->fromDMI_DriverIdentifier,
-      (_24_DMI_Driver_Identifier_T_DMI *) &cDMIDriverIdentifierDefault_man);
-    kcg_copy__23_DMI_Train_Running_(
+      (_26_DMI_Driver_Identifier_T_DMI *) &cDMIDriverIdentifierDefault_man);
+    kcg_copy__25_DMI_Train_Running_(
       &outC->fromDMI_TrainRunningNumber,
-      (_23_DMI_Train_Running_Number_T_ *) &cDMITrainRunningNumberDefault_m);
+      (_25_DMI_Train_Running_Number_T_ *) &cDMITrainRunningNumberDefault_m);
     kcg_copy_DMI_Radio_Net_Data_T_D(
       &outC->fromDMI_RadioNetData,
       (DMI_Radio_Net_Data_T_DMI_Messag *) &cDMIRadioNetDataDefault_manage_);
@@ -223,9 +223,9 @@ void manageDMI_Input_manage_DMI_Inpu(
     kcg_copy_DMI_Train_Data_Ack_T_D(
       &outC->fromDMI_TrainDataAck,
       (DMI_Train_Data_Ack_T_DMI_Messag *) &cDMITrainDataAckDefault_manage_);
-    kcg_copy__22_DMI_Adhesion_Facto(
+    kcg_copy__24_DMI_Adhesion_Facto(
       &outC->fromDMI_AdhesionFactor,
-      (_22_DMI_Adhesion_Factor_Data_T_ *) &cDMIAdhesionFactorDefault_manag);
+      (_24_DMI_Adhesion_Factor_Data_T_ *) &cDMIAdhesionFactorDefault_manag);
     kcg_copy_DMI_To_Modes_T_DMI_Typ(
       &outC->forModesAndLevel,
       (DMI_To_Modes_T_DMI_Types_Pkg *) &cAckModesAndLevels_manage_DMI_I);
@@ -263,6 +263,6 @@ void manageDMI_Input_manage_DMI_Inpu(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Input_manage_DMI_Inpu.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

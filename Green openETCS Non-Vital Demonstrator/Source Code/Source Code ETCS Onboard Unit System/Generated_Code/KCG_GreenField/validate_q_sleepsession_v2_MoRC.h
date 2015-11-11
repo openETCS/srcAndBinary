@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _validate_q_sleepsession_v2_MoR
 #define _validate_q_sleepsession_v2_MoR
@@ -20,6 +20,6 @@ extern kcg_bool validate_q_sleepsession_v2_MoRC(
 #endif /* _validate_q_sleepsession_v2_MoR */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** validate_q_sleepsession_v2_MoRC.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

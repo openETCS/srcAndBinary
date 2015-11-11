@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _Manage_TrackSideInformati_Mana
 #define _Manage_TrackSideInformati_Mana
@@ -9,8 +9,6 @@
 #include "CheckBGConsistency_CheckBGConsi.h"
 #include "validateDataDirection_ValidateD.h"
 #include "ContinuousTimeoutCheck_CheckEur.h"
-#include "checkOnErrors_xdebugSupport_Pkg.h"
-#include "countPackets_xdebugSupport_Pkg.h"
 #include "bypassGeneralMessage_xdebugSupp.h"
 #include "Receive_TrackSide_Msg_Receive_T.h"
 #include "CheckEuroRadioMessage_CheckEuro.h"
@@ -31,11 +29,7 @@ typedef struct {
   T_Data_From_Track_MASSPGradient /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::forLevelManagement */ forLevelManagement;
   ReceivedMessage_T_Common_Types_ /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::outputMessageForRadioAck */ outputMessageForRadioAck;
   T_Data_From_Track_Packet_Level_ /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::Data_to_From_Track_Packets_at_ML */ Data_to_From_Track_Packets_at_M;
-  /* -----------------------   local probes  ------------------------- */
-  kcg_real /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::positionM */ positionM;
-  kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::debug_ErrorMSG */ debug_ErrorMSG;
-  kcg_bool /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::errorBG */ errorBG;
-  kcg_int /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::countPackets */ countPackets;
+  /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
@@ -83,6 +77,6 @@ extern void Manage_TrackSideInformati_init_(
 #endif /* _Manage_TrackSideInformati_Mana */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_TrackSideInformati_Manag.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

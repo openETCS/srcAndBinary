@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* DATA::Packets::Bothways::C_int_to_DMI_Driver_Identifier */
 void C_int_to_DMI_Driver_Identifier_(
   /* DATA::Packets::Bothways::C_int_to_DMI_Driver_Identifier::dmi_driver_identifier_int */ DMI_Driver_Identifier_int_array *dmi_driver_identifier_int,
-  /* DATA::Packets::Bothways::C_int_to_DMI_Driver_Identifier::dmi_driver_identifier_ct */ _24_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct)
+  /* DATA::Packets::Bothways::C_int_to_DMI_Driver_Identifier::dmi_driver_identifier_ct */ _26_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct)
 {
   (*dmi_driver_identifier_ct).systemTime = (*dmi_driver_identifier_int)[1];
   (*dmi_driver_identifier_ct).valid = /* 1 */
@@ -23,6 +23,6 @@ void C_int_to_DMI_Driver_Identifier_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_int_to_DMI_Driver_Identifier_.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _T_extract_nid_packet_from_meta
 #define _T_extract_nid_packet_from_meta
@@ -19,6 +19,6 @@ extern kcg_int T_extract_nid_packet_from_metad(
 #endif /* _T_extract_nid_packet_from_meta */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** T_extract_nid_packet_from_metad.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

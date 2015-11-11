@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,7 +21,7 @@ void MA_L23_Preprocessing_TA_MA(
   /* TA_MA::MA_L23_Preprocessing */
   static MovementAuthority_t_TrackAtlasT tmp;
   
-  /* 1 */ _206_MA_Convert_P15_to_Distance(p15, NV_in, &tmp);
+  /* 1 */ _210_MA_Convert_P15_to_Distance(p15, NV_in, &tmp);
   /* 1 */
   MoveMAAbsolute_TA_Lib_internal(
     &tmp,
@@ -34,6 +34,6 @@ void MA_L23_Preprocessing_TA_MA(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_L23_Preprocessing_TA_MA.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

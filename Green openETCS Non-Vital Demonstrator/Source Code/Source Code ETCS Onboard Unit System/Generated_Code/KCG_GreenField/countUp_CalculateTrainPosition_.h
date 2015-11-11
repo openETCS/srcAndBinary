@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _countUp_CalculateTrainPosition
 #define _countUp_CalculateTrainPosition
@@ -43,6 +43,6 @@ extern void countUp_init_CalculateTrainPosi(
 #endif /* _countUp_CalculateTrainPosition */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** countUp_CalculateTrainPosition_.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

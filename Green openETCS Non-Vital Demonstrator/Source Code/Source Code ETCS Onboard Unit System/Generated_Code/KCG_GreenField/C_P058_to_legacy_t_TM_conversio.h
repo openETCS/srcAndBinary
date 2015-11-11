@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _C_P058_to_legacy_t_TM_conversi
 #define _C_P058_to_legacy_t_TM_conversi
@@ -21,6 +21,6 @@ extern void C_P058_to_legacy_t_TM_conversio(
 #endif /* _C_P058_to_legacy_t_TM_conversi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P058_to_legacy_t_TM_conversio.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

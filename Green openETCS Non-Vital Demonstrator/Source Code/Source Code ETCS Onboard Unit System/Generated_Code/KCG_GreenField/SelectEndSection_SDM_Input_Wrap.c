@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* SDM_Input_Wrappers::SelectEndSection */
 void SelectEndSection_SDM_Input_Wrap(
   /* SDM_Input_Wrappers::SelectEndSection::I */ L_internal_Type_Obu_BasicTypes_ I,
-  /* SDM_Input_Wrappers::SelectEndSection::section */ _20_MovementAuthoritySection_t_ *section,
+  /* SDM_Input_Wrappers::SelectEndSection::section */ _22_MovementAuthoritySection_t_ *section,
   /* SDM_Input_Wrappers::SelectEndSection::go_on */ kcg_bool *go_on,
   /* SDM_Input_Wrappers::SelectEndSection::eoa */ L_internal_Type_Obu_BasicTypes_ *eoa)
 {
@@ -29,6 +29,6 @@ void SelectEndSection_SDM_Input_Wrap(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SelectEndSection_SDM_Input_Wrap.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

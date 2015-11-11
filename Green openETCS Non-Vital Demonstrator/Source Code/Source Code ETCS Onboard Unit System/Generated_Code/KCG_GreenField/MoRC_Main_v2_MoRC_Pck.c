@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -77,7 +77,7 @@ void MoRC_Main_v2_init_MoRC_Pck(outC_MoRC_Main_v2_MoRC_Pck *outC)
   outC->msgToRBC.header.xQ_MARQSTREASON = Q_MARQSTREASON_Start_selected_b;
   outC->msgToRBC.header.xT_TRAIN = 0;
   outC->msgToRBC.header.xNID_EM = 0;
-  outC->msgToRBC.header.xQ_EMERGENCYSTOP = _31_Q_EMERGENCYSTOP_Conditional;
+  outC->msgToRBC.header.xQ_EMERGENCYSTOP = _32_Q_EMERGENCYSTOP_Conditional;
   outC->msgToRBC.header.xNID_TEXTMESSAGE = 0;
   outC->msgToRBC.packets.p0.valid = kcg_true;
   outC->msgToRBC.packets.p0.packet0.NID_PACKET = 0;
@@ -399,6 +399,6 @@ void MoRC_Main_v2_MoRC_Pck(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_Main_v2_MoRC_Pck.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

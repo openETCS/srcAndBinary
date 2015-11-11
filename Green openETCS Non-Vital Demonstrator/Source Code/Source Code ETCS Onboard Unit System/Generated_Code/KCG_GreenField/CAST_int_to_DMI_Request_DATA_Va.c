@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -170,34 +170,34 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                             _24_else_clock_IfBlock1 = dmi_request_int ==
                               INT_DMI_Request_T_Request_for_r;
                             /* ck_anon_activ */ if (_24_else_clock_IfBlock1) {
-                              dmi_reqest_ct = _56_ENUM_DMI_Request_T_Request_;
+                              dmi_reqest_ct = _57_ENUM_DMI_Request_T_Request_;
                             }
                             else {
                               _23_else_clock_IfBlock1 = dmi_request_int ==
                                 INT_DMI_Request_T_Request_for_S;
                               /* ck_anon_activ */ if (_23_else_clock_IfBlock1) {
-                                dmi_reqest_ct = _57_ENUM_DMI_Request_T_Request_;
+                                dmi_reqest_ct = _58_ENUM_DMI_Request_T_Request_;
                               }
                               else {
                                 _22_else_clock_IfBlock1 = dmi_request_int ==
-                                  _68_INT_DMI_Request_T_Request_f;
+                                  _69_INT_DMI_Request_T_Request_f;
                                 /* ck_anon_activ */ if (_22_else_clock_IfBlock1) {
                                   dmi_reqest_ct =
-                                    _58_ENUM_DMI_Request_T_Request_;
+                                    _59_ENUM_DMI_Request_T_Request_;
                                 }
                                 else {
                                   _21_else_clock_IfBlock1 = dmi_request_int ==
                                     INT_DMI_Request_T_Request_for_s;
                                   /* ck_anon_activ */ if (_21_else_clock_IfBlock1) {
                                     dmi_reqest_ct =
-                                      _59_ENUM_DMI_Request_T_Request_;
+                                      _60_ENUM_DMI_Request_T_Request_;
                                   }
                                   else {
                                     _20_else_clock_IfBlock1 = dmi_request_int ==
-                                      _67_INT_DMI_Request_T_Request_f;
+                                      _68_INT_DMI_Request_T_Request_f;
                                     /* ck_anon_activ */ if (_20_else_clock_IfBlock1) {
                                       dmi_reqest_ct =
-                                        _60_ENUM_DMI_Request_T_Request_;
+                                        _61_ENUM_DMI_Request_T_Request_;
                                     }
                                     else {
                                       _19_else_clock_IfBlock1 =
@@ -205,7 +205,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                                         INT_DMI_Request_T_Request_for_t;
                                       /* ck_anon_activ */ if (_19_else_clock_IfBlock1) {
                                         dmi_reqest_ct =
-                                          _61_ENUM_DMI_Request_T_Request_;
+                                          _62_ENUM_DMI_Request_T_Request_;
                                       }
                                       else {
                                         _18_else_clock_IfBlock1 =
@@ -226,7 +226,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                                           else {
                                             _16_else_clock_IfBlock1 =
                                               dmi_request_int ==
-                                              _66_INT_DMI_Request_T_Request_t;
+                                              _67_INT_DMI_Request_T_Request_t;
                                             /* ck_anon_activ */ if (_16_else_clock_IfBlock1) {
                                               dmi_reqest_ct =
                                                 ENUM_DMI_Request_T_Request_to_h;
@@ -237,7 +237,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                                                 INT_DMI_Request_T_Request_to_hi;
                                               /* ck_anon_activ */ if (_15_else_clock_IfBlock1) {
                                                 dmi_reqest_ct =
-                                                  _62_ENUM_DMI_Request_T_Request_;
+                                                  _63_ENUM_DMI_Request_T_Request_;
                                               }
                                               else {
                                                 _14_else_clock_IfBlock1 =
@@ -333,7 +333,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                                                                         INT_DMI_Request_T_Scroll_text_d;
                                                                       /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
                                                                         dmi_reqest_ct =
-                                                                          _63_ENUM_DMI_Request_T_Scroll_t;
+                                                                          _64_ENUM_DMI_Request_T_Scroll_t;
                                                                       }
                                                                       else {
                                                                         _2_else_clock_IfBlock1 =
@@ -346,7 +346,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                                                                         else {
                                                                           _1_else_clock_IfBlock1 =
                                                                             dmi_request_int ==
-                                                                            _65_INT_DMI_Request_T_Request_t;
+                                                                            _66_INT_DMI_Request_T_Request_t;
                                                                           /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
                                                                             dmi_reqest_ct =
                                                                               ENUM_DMI_Request_T_Request_to_s;
@@ -357,7 +357,7 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
                                                                               INT_DMI_Request_T_Request_to_sh;
                                                                             /* ck_anon_activ */ if (else_clock_IfBlock1) {
                                                                               dmi_reqest_ct =
-                                                                                _64_ENUM_DMI_Request_T_Request_;
+                                                                                _65_ENUM_DMI_Request_T_Request_;
                                                                             }
                                                                             else {
                                                                               dmi_reqest_ct =
@@ -405,6 +405,6 @@ DMI_Request_T_DMI_Types_Pkg CAST_int_to_DMI_Request_DATA_Va(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_DMI_Request_DATA_Va.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

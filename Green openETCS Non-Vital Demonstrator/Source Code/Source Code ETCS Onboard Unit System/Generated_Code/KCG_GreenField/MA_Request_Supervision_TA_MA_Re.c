@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -56,9 +56,9 @@ void MA_Request_Supervision_TA_MA_Re(
   /* TA_MA_Request::MA_Request_Supervision */
   static kcg_bool tmp;
   /* TA_MA_Request::MA_Request_Supervision::SM1 */
-  static _167_SSM_ST_SM1 SM1_state_sel;
+  static _171_SSM_ST_SM1 SM1_state_sel;
   /* TA_MA_Request::MA_Request_Supervision::SM1 */
-  static _167_SSM_ST_SM1 SM1_state_act;
+  static _171_SSM_ST_SM1 SM1_state_act;
   /* TA_MA_Request::MA_Request_Supervision::_L81 */
   static kcg_bool _L81;
   
@@ -151,6 +151,6 @@ void MA_Request_Supervision_TA_MA_Re(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Request_Supervision_TA_MA_Re.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

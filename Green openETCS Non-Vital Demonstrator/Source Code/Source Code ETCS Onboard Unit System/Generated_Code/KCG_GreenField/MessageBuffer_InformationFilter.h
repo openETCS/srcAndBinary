@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _MessageBuffer_InformationFilte
 #define _MessageBuffer_InformationFilte
@@ -49,6 +49,6 @@ extern void MessageBuffer_init_InformationF(
 #endif /* _MessageBuffer_InformationFilte */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MessageBuffer_InformationFilter.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

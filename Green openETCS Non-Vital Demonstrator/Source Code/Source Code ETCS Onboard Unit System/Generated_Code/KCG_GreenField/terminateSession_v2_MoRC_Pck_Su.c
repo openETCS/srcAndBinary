@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -57,13 +57,13 @@ void terminateSession_v2_MoRC_Pck_Su(
   /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1::waitForAckTerminationOfCommunicationSessionReceived */
   static kcg_bool br_2_guard_SM1_waitForAckTermin;
   /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1 */
-  static _143_SSM_ST_SM1 SM1_state_sel;
+  static _147_SSM_ST_SM1 SM1_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1 */
-  static _143_SSM_ST_SM1 SM1_state_act;
+  static _147_SSM_ST_SM1 SM1_state_act;
   /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1 */
   static kcg_bool SM1_reset_act;
   /* MoRC_Pck::Subfunc_Pkg::terminateSession_v2::SM1 */
-  static _146_SSM_TR_SM1 SM1_fired_strong;
+  static _150_SSM_TR_SM1 SM1_fired_strong;
   
   outC->sessionStatus.valid = kcg_true;
   outC->sessionStatus.phase = sp_terminating_RCM_Session_Type;
@@ -81,7 +81,7 @@ void terminateSession_v2_MoRC_Pck_Su(
       }
       else {
         SM1_state_act = SSM_st_terminated_SM1;
-        SM1_fired_strong = _145_SSM_TR_no_trans_SM1;
+        SM1_fired_strong = _149_SSM_TR_no_trans_SM1;
       }
       SM1_reset_act = reset;
       tmp1 = kcg_false;
@@ -89,11 +89,11 @@ void terminateSession_v2_MoRC_Pck_Su(
     case SSM_st_waitForAckTerminationOfC :
       if (reset) {
         SM1_state_act = SSM_st_idle_SM1;
-        SM1_fired_strong = _144_SSM_TR_waitForAckTerminati;
+        SM1_fired_strong = _148_SSM_TR_waitForAckTerminati;
       }
       else {
         SM1_state_act = SSM_st_waitForAckTerminationOfC;
-        SM1_fired_strong = _145_SSM_TR_no_trans_SM1;
+        SM1_fired_strong = _149_SSM_TR_no_trans_SM1;
       }
       SM1_reset_act = reset;
       tmp1 = kcg_false;
@@ -107,7 +107,7 @@ void terminateSession_v2_MoRC_Pck_Su(
       }
       else {
         SM1_state_act = SSM_st_idle_SM1;
-        SM1_fired_strong = _145_SSM_TR_no_trans_SM1;
+        SM1_fired_strong = _149_SSM_TR_no_trans_SM1;
         tmp1 = kcg_false;
       }
       break;
@@ -122,7 +122,7 @@ void terminateSession_v2_MoRC_Pck_Su(
       break;
     case SSM_st_waitForAckTerminationOfC :
       waitForAckTerminationOfCommunic = SM1_fired_strong !=
-        _145_SSM_TR_no_trans_SM1;
+        _149_SSM_TR_no_trans_SM1;
       if (SM1_reset_act) {
         /* 1 */ waitAndRepeatTimer_reset_MoRC_P(&outC->Context_1);
       }
@@ -177,6 +177,6 @@ void terminateSession_v2_MoRC_Pck_Su(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** terminateSession_v2_MoRC_Pck_Su.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

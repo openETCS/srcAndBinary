@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _establishSession_v2_MoRC_Pck_S
 #define _establishSession_v2_MoRC_Pck_S
@@ -29,7 +29,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _148_SSM_ST_SM1 /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */ SM1_state_nxt;
+  _152_SSM_ST_SM1 /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */ SM1_state_nxt;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_establishSessionFromRBC_v2 /* 1 */ _1_Context_1;
   outC_establishSessionFromOBU_v2 /* 1 */ Context_1;
@@ -56,6 +56,6 @@ extern void establishSession_v2_init_MoRC_P(
 #endif /* _establishSession_v2_MoRC_Pck_S */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** establishSession_v2_MoRC_Pck_Su.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

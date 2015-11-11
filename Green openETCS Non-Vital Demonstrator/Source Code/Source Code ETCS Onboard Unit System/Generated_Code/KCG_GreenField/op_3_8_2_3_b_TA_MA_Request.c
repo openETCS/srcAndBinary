@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,6 +28,6 @@ kcg_bool op_3_8_2_3_b_TA_MA_Request(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_8_2_3_b_TA_MA_Request.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

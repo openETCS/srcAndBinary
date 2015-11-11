@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* TA_Export::GradientProfile_to_DMI_loop */
 void GradientProfile_to_DMI_loop_TA_(
   /* TA_Export::GradientProfile_to_DMI_loop::Gradient_section_in */ Gradient_section_t_TrackAtlasTy *Gradient_section_in,
-  /* TA_Export::GradientProfile_to_DMI_loop::Gradiient_section_for_DMI_out */ _21_GradientProfile_for_DMI_sec *Gradiient_section_for_DMI_out)
+  /* TA_Export::GradientProfile_to_DMI_loop::Gradiient_section_for_DMI_out */ _23_GradientProfile_for_DMI_sec *Gradiient_section_for_DMI_out)
 {
   (*Gradiient_section_for_DMI_out).valid = (*Gradient_section_in).valid;
   (*Gradiient_section_for_DMI_out).begin_section =
@@ -27,6 +27,6 @@ void GradientProfile_to_DMI_loop_TA_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GradientProfile_to_DMI_loop_TA_.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

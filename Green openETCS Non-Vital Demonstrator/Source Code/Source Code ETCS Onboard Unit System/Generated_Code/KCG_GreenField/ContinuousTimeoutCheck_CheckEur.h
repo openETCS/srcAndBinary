@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _ContinuousTimeoutCheck_CheckEu
 #define _ContinuousTimeoutCheck_CheckEu
@@ -22,6 +22,6 @@ extern kcg_bool ContinuousTimeoutCheck_CheckEur(
 #endif /* _ContinuousTimeoutCheck_CheckEu */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ContinuousTimeoutCheck_CheckEur.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

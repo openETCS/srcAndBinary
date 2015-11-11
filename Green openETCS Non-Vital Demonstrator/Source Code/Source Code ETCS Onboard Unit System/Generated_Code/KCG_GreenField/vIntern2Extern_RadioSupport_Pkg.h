@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _vIntern2Extern_RadioSupport_Pk
 #define _vIntern2Extern_RadioSupport_Pk
@@ -19,6 +19,6 @@ extern V_TRAIN vIntern2Extern_RadioSupport_Pkg(
 #endif /* _vIntern2Extern_RadioSupport_Pk */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** vIntern2Extern_RadioSupport_Pkg.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

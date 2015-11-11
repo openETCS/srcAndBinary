@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -233,18 +233,18 @@ void collectDMIPackets_manage_DMI_Ou(
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_dynamic */ DMI_Dynamic_T_DMI_Messages_EVC_ *dmi_dynamic,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_menuRequest */ DMI_Menu_Request_T_DMI_Messages *dmi_menuRequest,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_entryRequest */ DMI_Entry_Request_T_DMI_Message *dmi_entryRequest,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_evc_coded_train_data */ _27_DMI_EVC_Coded_Train_Data_T_ *dmi_evc_coded_train_data,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_evc_coded_train_data */ _29_DMI_EVC_Coded_Train_Data_T_ *dmi_evc_coded_train_data,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_text_message */ DMI_Text_Message_T_DMI_Messages *dmi_text_message,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trackDescription */ DMI_Track_Description_T_DMI_Mes *dmi_trackDescription,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_identifierRequest */ _26_DMI_Identifier_Request_T_DM *dmi_identifierRequest,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_identifierRequest */ _28_DMI_Identifier_Request_T_DM *dmi_identifierRequest,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_systemVersion */ DMI_System_Version_T_DMI_Messag *dmi_systemVersion,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_displayControl */ DMI_Display_Control_T_DMI_Messa *dmi_displayControl,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_levelData */ DMI_EVC_Level_Data_T_DMI_Messag *dmi_EVC_levelData,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_radioNet */ _25_DMI_EVC_Radio_Net_Data_T_DM *dmi_EVC_radioNet,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_driverIdentifier */ _24_DMI_Driver_Identifier_T_DMI *dmi_driverIdentifier,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainRunningNumber */ _23_DMI_Train_Running_Number_T_ *dmi_trainRunningNumber,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_EVC_radioNet */ _27_DMI_EVC_Radio_Net_Data_T_DM *dmi_EVC_radioNet,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_driverIdentifier */ _26_DMI_Driver_Identifier_T_DMI *dmi_driverIdentifier,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainRunningNumber */ _25_DMI_Train_Running_Number_T_ *dmi_trainRunningNumber,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_trainData */ DMI_Train_Data_T_DMI_Messages_B *dmi_trainData,
-  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_adhesionFactor */ _22_DMI_Adhesion_Factor_Data_T_ *dmi_adhesionFactor,
+  /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_adhesionFactor */ _24_DMI_Adhesion_Factor_Data_T_ *dmi_adhesionFactor,
   /* manage_DMI_Output_Pkg::collectDMIPackets::dmi_iconRequest */ DMI_Icons_T_DMI_Messages_EVC_to *dmi_iconRequest,
   /* manage_DMI_Output_Pkg::collectDMIPackets::systemTime */ T_internal_Type_Obu_BasicTypes_ systemTime,
   outC_collectDMIPackets_manage_D *outC)
@@ -265,7 +265,7 @@ void collectDMIPackets_manage_DMI_Ou(
   kcg_copy_DMI_Entry_Request_T_DM(
     &outC->to_DMI.entry_request,
     dmi_entryRequest);
-  kcg_copy__27_DMI_EVC_Coded_Trai(
+  kcg_copy__29_DMI_EVC_Coded_Trai(
     &outC->to_DMI.evc_coded_train_data,
     dmi_evc_coded_train_data);
   kcg_copy_DMI_Text_Message_T_DMI(&outC->to_DMI.textMessage, dmi_text_message);
@@ -281,17 +281,17 @@ void collectDMIPackets_manage_DMI_Ou(
   kcg_copy_DMI_EVC_Level_Data_T_D(
     &outC->to_DMI.EVC_levelData,
     dmi_EVC_levelData);
-  kcg_copy__25_DMI_EVC_Radio_Net_(
+  kcg_copy__27_DMI_EVC_Radio_Net_(
     &outC->to_DMI.EVC_radioNetData,
     dmi_EVC_radioNet);
-  kcg_copy__24_DMI_Driver_Identif(
+  kcg_copy__26_DMI_Driver_Identif(
     &outC->to_DMI.driverIdentifier,
     dmi_driverIdentifier);
-  kcg_copy__23_DMI_Train_Running_(
+  kcg_copy__25_DMI_Train_Running_(
     &outC->to_DMI.trainRunningNumber,
     dmi_trainRunningNumber);
   kcg_copy_DMI_Train_Data_T_DMI_M(&outC->to_DMI.trainData, dmi_trainData);
-  kcg_copy__22_DMI_Adhesion_Facto(
+  kcg_copy__24_DMI_Adhesion_Facto(
     &outC->to_DMI.adhesionFactor,
     dmi_adhesionFactor);
   kcg_copy_DMI_Icons_T_DMI_Messag(&outC->to_DMI.iconRequest, dmi_iconRequest);
@@ -316,6 +316,6 @@ void collectDMIPackets_manage_DMI_Ou(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** collectDMIPackets_manage_DMI_Ou.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

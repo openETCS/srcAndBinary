@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* DATA::Packets::Bothways::C_int_to_DMI_Adhesion_Factor_Data */
 void C_int_to_DMI_Adhesion_Factor_Da(
   /* DATA::Packets::Bothways::C_int_to_DMI_Adhesion_Factor_Data::dmi_adhesion_factor_data_int */ DMI_Adhesion_Factor_Data_int_ar *dmi_adhesion_factor_data_int,
-  /* DATA::Packets::Bothways::C_int_to_DMI_Adhesion_Factor_Data::dmi_adhesion_factor_data_ct */ _22_DMI_Adhesion_Factor_Data_T_ *dmi_adhesion_factor_data_ct)
+  /* DATA::Packets::Bothways::C_int_to_DMI_Adhesion_Factor_Data::dmi_adhesion_factor_data_ct */ _24_DMI_Adhesion_Factor_Data_T_ *dmi_adhesion_factor_data_ct)
 {
   (*dmi_adhesion_factor_data_ct).systemTime =
     (*dmi_adhesion_factor_data_int)[1];
@@ -22,6 +22,6 @@ void C_int_to_DMI_Adhesion_Factor_Da(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_int_to_DMI_Adhesion_Factor_Da.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

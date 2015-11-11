@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -112,7 +112,7 @@ void handOverSequencer_init_Handover(outC_handOverSequencer_Handover *outC)
   outC->p131_transitionOrder_mem.sendingRBC.nid_c = 0;
   outC->p131_transitionOrder_mem.sendingRBC.rbc_id = 0;
   outC->p131_transitionOrder_mem.sendingRBC.device_id = 0;
-  outC->handOver_with_1_Session_SM_stat = _126_SSM_st_WaitForTransitionOr;
+  outC->handOver_with_1_Session_SM_stat = _130_SSM_st_WaitForTransitionOr;
   outC->p131_transitionOrder_loc_IfBloc.valid = kcg_true;
   outC->p131_transitionOrder_loc_IfBloc.source =
     msrc_undefined_Common_Types_Pkg;
@@ -1486,7 +1486,7 @@ void handOverSequencer_Handover_Pkg_(
     outC->bufferInformationFromAcceptingR = kcg_false;
     outC->useInformationFromAcceptingRBC = kcg_false;
     /* last_init_ck_p131_transitionOrder_loc */ if (outC->init2) {
-      handOver_with_1_Session_SM_stat = _126_SSM_st_WaitForTransitionOr;
+      handOver_with_1_Session_SM_stat = _130_SSM_st_WaitForTransitionOr;
       handOver_with_1_Session_SM_rese = kcg_false;
       kcg_copy_msgFromTrack_T_RCM_Msg(
         &last_p45_radioNetworkRegistrati,
@@ -1541,15 +1541,15 @@ void handOverSequencer_Handover_Pkg_(
         if ((*p131_transitionOrder).valid) {
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _123_SSM_st_WaitForSessionWithA;
+            _127_SSM_st_WaitForSessionWithA;
         }
         break;
-      case _120_SSM_st_WaitForHandingOverR :
+      case _124_SSM_st_WaitForHandingOverR :
         outC->handoverFinished = kcg_false;
         _6_handingOverRBCReregistered_I = mrs_registered_RCM_Types_Pkg ==
           (*morcStatusFromHandingOverRBC).registration.status;
@@ -1576,7 +1576,7 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           if (_6_handingOverRBCReregistered_I) {
@@ -1587,7 +1587,7 @@ void handOverSequencer_Handover_Pkg_(
           else {
             outC->notReady = kcg_false;
             outC->handOver_with_1_Session_SM_stat =
-              _120_SSM_st_WaitForHandingOverR;
+              _124_SSM_st_WaitForHandingOverR;
           }
           outC->handOver_with_1_Session_SM_rese =
             _6_handingOverRBCReregistered_I;
@@ -1655,13 +1655,13 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           if (_7_unregistered_or_noReregister) {
             outC->notReady = kcg_true;
             outC->handOver_with_1_Session_SM_stat =
-              _120_SSM_st_WaitForHandingOverR;
+              _124_SSM_st_WaitForHandingOverR;
           }
           else {
             outC->notReady = kcg_false;
@@ -1673,7 +1673,7 @@ void handOverSequencer_Handover_Pkg_(
         }
         outC->init1 = kcg_false;
         break;
-      case _121_SSM_st_WaitForHandingOverR :
+      case _125_SSM_st_WaitForHandingOverR :
         _8_sessionWithHandingOverRBC_te =
           (*morcStatusFromHandingOverRBC).session.phase ==
           sp_terminated_RCM_Session_Types;
@@ -1701,7 +1701,7 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           /* cb_anon_sm */ if (_8_sessionWithHandingOverRBC_te) {
@@ -1716,13 +1716,13 @@ void handOverSequencer_Handover_Pkg_(
           }
           else {
             outC->handOver_with_1_Session_SM_stat =
-              _121_SSM_st_WaitForHandingOverR;
+              _125_SSM_st_WaitForHandingOverR;
           }
           outC->handOver_with_1_Session_SM_rese =
             _8_sessionWithHandingOverRBC_te;
         }
         break;
-      case _122_SSM_st_WaitForTerminationO :
+      case _126_SSM_st_WaitForTerminationO :
         /* 11 */
         checkSessionCmd_Handover_Pkg_ha(
           p42_terminateCmd_from_handingOv,
@@ -1770,7 +1770,7 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           /* cb_anon_sm */ if (_9_terminationWithHandingOverRB) {
@@ -1781,17 +1781,17 @@ void handOverSequencer_Handover_Pkg_(
           }
           if (_9_terminationWithHandingOverRB) {
             outC->handOver_with_1_Session_SM_stat =
-              _121_SSM_st_WaitForHandingOverR;
+              _125_SSM_st_WaitForHandingOverR;
           }
           else {
             outC->handOver_with_1_Session_SM_stat =
-              _122_SSM_st_WaitForTerminationO;
+              _126_SSM_st_WaitForTerminationO;
           }
           outC->handOver_with_1_Session_SM_rese =
             _9_terminationWithHandingOverRB;
         }
         break;
-      case _123_SSM_st_WaitForSessionWithA :
+      case _127_SSM_st_WaitForSessionWithA :
         sessionWithAcceptingRBCEstablis =
           (*morcStatusFromHandingOverRBC).session.phase ==
           sp_maintaining_RCM_Session_Type;
@@ -1820,7 +1820,7 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           /* cb_anon_sm */ if (sessionWithAcceptingRBCEstablis) {
@@ -1833,17 +1833,17 @@ void handOverSequencer_Handover_Pkg_(
           }
           if (sessionWithAcceptingRBCEstablis) {
             outC->handOver_with_1_Session_SM_stat =
-              _126_SSM_st_WaitForTransitionOr;
+              _130_SSM_st_WaitForTransitionOr;
           }
           else {
             outC->handOver_with_1_Session_SM_stat =
-              _123_SSM_st_WaitForSessionWithA;
+              _127_SSM_st_WaitForSessionWithA;
           }
           outC->handOver_with_1_Session_SM_rese =
             sessionWithAcceptingRBCEstablis;
         }
         break;
-      case _124_SSM_st_WaitForMinSafeRearE :
+      case _128_SSM_st_WaitForMinSafeRearE :
         if (handOver_with_1_Session_SM_rese) {
           /* 28 */ RisingEdge_reset_digital(&outC->Context_28);
         }
@@ -1878,7 +1878,7 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           /* cb_anon_sm */ if (outC->Context_28.RE_Output) {
@@ -1889,16 +1889,16 @@ void handOverSequencer_Handover_Pkg_(
           }
           if (outC->Context_28.RE_Output) {
             outC->handOver_with_1_Session_SM_stat =
-              _122_SSM_st_WaitForTerminationO;
+              _126_SSM_st_WaitForTerminationO;
           }
           else {
             outC->handOver_with_1_Session_SM_stat =
-              _124_SSM_st_WaitForMinSafeRearE;
+              _128_SSM_st_WaitForMinSafeRearE;
           }
           outC->handOver_with_1_Session_SM_rese = outC->Context_28.RE_Output;
         }
         break;
-      case _125_SSM_st_WaitForMaxSafeFront :
+      case _129_SSM_st_WaitForMaxSafeFront :
         if (handOver_with_1_Session_SM_rese) {
           /* 26 */ RisingEdge_reset_digital(&outC->Context_26);
         }
@@ -1933,7 +1933,7 @@ void handOverSequencer_Handover_Pkg_(
           outC->notReady = kcg_true;
           outC->handOver_with_1_Session_SM_rese = kcg_true;
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         else {
           /* cb_anon_sm */ if (outC->Context_26.RE_Output) {
@@ -1944,16 +1944,16 @@ void handOverSequencer_Handover_Pkg_(
           }
           if (outC->Context_26.RE_Output) {
             outC->handOver_with_1_Session_SM_stat =
-              _124_SSM_st_WaitForMinSafeRearE;
+              _128_SSM_st_WaitForMinSafeRearE;
           }
           else {
             outC->handOver_with_1_Session_SM_stat =
-              _125_SSM_st_WaitForMaxSafeFront;
+              _129_SSM_st_WaitForMaxSafeFront;
           }
           outC->handOver_with_1_Session_SM_rese = outC->Context_26.RE_Output;
         }
         break;
-      case _126_SSM_st_WaitForTransitionOr :
+      case _130_SSM_st_WaitForTransitionOr :
         outC->handoverFinished = kcg_false;
         outC->sendTrainData_2_acceptingRBC = kcg_false;
         outC->sendPositionReport_2_acceptingR = kcg_false;
@@ -1987,7 +1987,7 @@ void handOverSequencer_Handover_Pkg_(
             &outC->p131_transitionOrder_loc_IfBloc,
             &outC->p131_transitionOrder_mem);
           outC->handOver_with_1_Session_SM_stat =
-            _125_SSM_st_WaitForMaxSafeFront;
+            _129_SSM_st_WaitForMaxSafeFront;
         }
         else {
           outC->notReady = kcg_false;
@@ -1995,7 +1995,7 @@ void handOverSequencer_Handover_Pkg_(
             &outC->p131_transitionOrder_loc_IfBloc,
             &last_p131_transitionOrder_loc_I);
           outC->handOver_with_1_Session_SM_stat =
-            _126_SSM_st_WaitForTransitionOr;
+            _130_SSM_st_WaitForTransitionOr;
         }
         outC->handOver_with_1_Session_SM_rese =
           outC->p131_transitionOrder_mem.valid;
@@ -2007,6 +2007,6 @@ void handOverSequencer_Handover_Pkg_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** handOverSequencer_Handover_Pkg_.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

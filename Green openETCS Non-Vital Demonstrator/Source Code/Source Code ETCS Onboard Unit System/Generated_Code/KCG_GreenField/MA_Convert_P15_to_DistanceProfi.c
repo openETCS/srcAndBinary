@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -27,7 +27,7 @@ void MA_Convert_P15_to_DistanceProfi(
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L227 */
   static P015_section_enum_T_TM _L227;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L252 */
-  static _20_MovementAuthoritySection_t_ _L252;
+  static _22_MovementAuthoritySection_t_ _L252;
   /* TA_MA::MA_Convert_P15_to_DistanceProfile_loop::_L281 */
   static kcg_bool _L281;
   
@@ -40,12 +40,12 @@ void MA_Convert_P15_to_DistanceProfi(
       (P015_section_enum_T_TM *) &DEFAULT_P015_OBU_section_TM);
   }
   if ((0 <= i - 1) & (i - 1 < 10)) {
-    kcg_copy__20_MovementAuthorityS(&_L252, &(*ProfileAccu).sections[i - 1]);
+    kcg_copy__22_MovementAuthorityS(&_L252, &(*ProfileAccu).sections[i - 1]);
   }
   else {
-    kcg_copy__20_MovementAuthorityS(
+    kcg_copy__22_MovementAuthorityS(
       &_L252,
-      (_20_MovementAuthoritySection_t_ *) &DefaultMA_section_TA_MA);
+      (_22_MovementAuthoritySection_t_ *) &DefaultMA_section_TA_MA);
   }
   _L281 = n_iter == i;
   kcg_copy_MovementAuthoritySecti(
@@ -84,6 +84,6 @@ void MA_Convert_P15_to_DistanceProfi(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Convert_P15_to_DistanceProfi.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

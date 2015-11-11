@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _scaledDistance_2_distance_Inpu
 #define _scaledDistance_2_distance_Inpu
@@ -20,6 +20,6 @@ extern L_internal_Type_Obu_BasicTypes_ scaledDistance_2_distance_Input(
 #endif /* _scaledDistance_2_distance_Inpu */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** scaledDistance_2_distance_Input.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

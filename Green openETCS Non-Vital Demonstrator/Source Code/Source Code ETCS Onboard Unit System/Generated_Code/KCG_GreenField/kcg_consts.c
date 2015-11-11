@@ -1,9 +1,46 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:18
 *************************************************************$ */
 
 #include "kcg_consts.h"
+
+/* cDataStorage_ForInit1 */
+const ps_dataForStartOfMission_T_API_ cDataStorage_ForInit1 = { kcg_true,
+  M_LEVEL_Level_NTC_specified_by_, 1, { 4, { { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_1, 0 }, { M_LEVEL_Level_2, 0 }, {
+        M_LEVEL_Level_NTC_specified_by_, 1 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0,
+        0 } } } };
+
+/* cInitialOdometrieValue */
+const odometry_T_Obu_BasicTypes_Pkg cInitialOdometrieValue = { kcg_false, 0, {
+    0, 0, 0 }, { 0, 0, 0, 0 }, 0, noMotion_Obu_BasicTypes_Pkg,
+  unknownDirection_Obu_BasicTypes };
+
+/* cInit_API_toTIU1 */
+const TIU_Output_msg_API_TIU_Pkg cInit_API_toTIU1 = { kcg_false, { { kcg_false,
+      on_board_equipment_is_isolated_ }, { kcg_false,
+      brake_signal_command_not_define, brake_signal_command_not_define }, {
+      kcg_false, brake_inhibit_not_defined_TIU_T,
+      eddy_current_brake_inhibition_n, brake_inhibit_not_defined_TIU_T }, {
+      kcg_false, pantograph_command_not_defined_,
+      airtightness_command_not_define, open_main_power_swicth_TIU_Type,
+      traction_cutoff_command_not_def }, { kcg_false, { 0, 0 }, {
+        line_not_fitted_with_any_tracti, 0 } }, { kcg_false, 0 }, { kcg_false, {
+        0, 0 }, { kcg_false, 0 } } } };
+
+/* cInitRTMManagement */
+const RadioManagement_T_API_RadioComm cInitRTMManagement = { kcg_false,
+  cmdr_not_relevant_API_RadioComm, 0 };
 
 /* cEmptyChangeTractionSystem */
 const Change_traction_system_T_TIU_Ty cEmptyChangeTractionSystem = { kcg_false,
@@ -18,26 +55,26 @@ const Change_of_allowed_current_consu cEmptyChangeOfAllowedCurrentCon = {
   kcg_false, { 0, 0 }, { kcg_false, 0 } };
 
 /* cEmptyDMIAdhesionFactorData */
-const _22_DMI_Adhesion_Factor_Data_T_ cEmptyDMIAdhesionFactorData = { kcg_false,
+const _24_DMI_Adhesion_Factor_Data_T_ cEmptyDMIAdhesionFactorData = { kcg_false,
   0, M_ADHESION_Slippery_rail };
 
 /* cEmptyDMITrainRunningNumber */
-const _23_DMI_Train_Running_Number_T_ cEmptyDMITrainRunningNumber = { kcg_false,
+const _25_DMI_Train_Running_Number_T_ cEmptyDMITrainRunningNumber = { kcg_false,
   0, 0 };
 
 /* cEmptyDMIDriverIdentifier */
-const _24_DMI_Driver_Identifier_T_DMI cEmptyDMIDriverIdentifier = { kcg_false,
+const _26_DMI_Driver_Identifier_T_DMI cEmptyDMIDriverIdentifier = { kcg_false,
   0, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
 
 /* cEmptyDMIRadioNet */
-const _25_DMI_EVC_Radio_Net_Data_T_DM cEmptyDMIRadioNet = { kcg_false, 0, 0 };
+const _27_DMI_EVC_Radio_Net_Data_T_DM cEmptyDMIRadioNet = { kcg_false, 0, 0 };
 
 /* cEmptyDMIDisplayControl */
 const DMI_Display_Control_T_DMI_Messa cEmptyDMIDisplayControl = { kcg_false,
   kcg_false, 0 };
 
 /* cEmptyDMIEVCcodedTrainData */
-const _27_DMI_EVC_Coded_Train_Data_T_ cEmptyDMIEVCcodedTrainData = { kcg_false,
+const _29_DMI_EVC_Coded_Train_Data_T_ cEmptyDMIEVCcodedTrainData = { kcg_false,
   0, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 },
   M_AXLELOADCAT_A, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 
@@ -80,87 +117,87 @@ const passedBG_T_BG_Types_Pkg cEmptyPassedBG = { kcg_false, { kcg_false,
       unknownDirection_Obu_BasicTypes }, { 0, 0, 0 }, 0, kcg_false,
     Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } };
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } };
 
 /* cEmtpyIsolationStatus */
 const Isolation_Status_T_TIU_Types_Pk cEmtpyIsolationStatus = { kcg_false,
@@ -197,7 +234,7 @@ const trainPosition_T_TrainPosition_T cEmptyTrainPosition = { kcg_false, 0,
   kcg_false, kcg_false, { 0, 0, 0 }, 0, 0, 0, { kcg_false, 0, 0,
     Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0,
         0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
         Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
         Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked,
@@ -206,107 +243,107 @@ const trainPosition_T_TrainPosition_T cEmptyTrainPosition = { kcg_false, 0,
           0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -315,103 +352,103 @@ const trainPosition_T_TrainPosition_T cEmptyTrainPosition = { kcg_false, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, Q_DLRBG_Reverse, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse,
   kcg_false, 0, 0, 0 };
 
@@ -431,7 +468,7 @@ const connection_ids_T_Handover_Pkg cNoSupervisingRBC = { kcg_false, 0, 0, 0, 0,
 const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
     Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0,
         0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
         Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
         Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked,
@@ -440,107 +477,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
           0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -549,107 +586,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -658,107 +695,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -767,107 +804,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -876,107 +913,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -985,107 +1022,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1094,107 +1131,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1203,107 +1240,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1312,107 +1349,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1421,107 +1458,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1530,107 +1567,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1639,107 +1676,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1748,107 +1785,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1857,107 +1894,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -1966,107 +2003,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2075,107 +2112,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2184,107 +2221,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2293,107 +2330,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2402,107 +2439,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2511,107 +2548,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2620,107 +2657,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2729,107 +2766,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2838,107 +2875,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -2947,107 +2984,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3056,107 +3093,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3165,107 +3202,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3274,107 +3311,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3383,107 +3420,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3492,107 +3529,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3601,107 +3638,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3710,107 +3747,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3819,107 +3856,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -3928,107 +3965,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4037,107 +4074,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4146,107 +4183,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4255,107 +4292,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4364,107 +4401,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4473,107 +4510,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4582,107 +4619,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4691,107 +4728,107 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -4800,103 +4837,103 @@ const positionedBGs_T_TrainPosition_T cEmptyPositionedBGs = { { kcg_false, 0, 0,
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false } };
 
 /* cEmptyTrainProperties */
@@ -4993,97 +5030,97 @@ const T_Data_From_Track_Packet_Level_ cNoPacketsForML = { { { kcg_false,
       Q_GDIR_downhill, 0 }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
       Q_GDIR_downhill, 0 } }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale,
     0, 0, Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-        Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+        Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
         0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-        _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-        Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+        _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+        Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
         0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-        _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-        Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+        _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+        Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
         0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-        _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-        Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+        _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+        Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
         0 } }, { { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
             kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
         Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 } } }, { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
             kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
         Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 } } }, { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
             kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
         Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 } } }, { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
             kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-            Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+            Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
             0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-            _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } } } }, { { kcg_false,
+            _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } } } }, { { kcg_false,
       Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0, 0 }, {
       kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0,
       0 }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
@@ -5127,7 +5164,7 @@ const dmiOutputs_T_manage_DMI_Output_ cOutputStatus_manage_DMI_Output = {
   kcg_false, kcg_false };
 
 /* manage_DMI_Output_Pkg::cEmptyInitRequest */
-const _26_DMI_Identifier_Request_T_DM cEmptyInitRequest_manage_DMI_Ou = {
+const _28_DMI_Identifier_Request_T_DM cEmptyInitRequest_manage_DMI_Ou = {
   kcg_false, 0, M_VERSION_Previous_versions_acc,
   M_VERSION_Previous_versions_acc, 0, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -5149,7 +5186,7 @@ const _26_DMI_Identifier_Request_T_DM cEmptyInitRequest_manage_DMI_Ou = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, 0 };
 
 /* manage_DMI_Output_Pkg::cSendInitRequest */
-const _26_DMI_Identifier_Request_T_DM cSendInitRequest_manage_DMI_Out = {
+const _28_DMI_Identifier_Request_T_DM cSendInitRequest_manage_DMI_Out = {
   kcg_false, 0, M_VERSION_Previous_versions_acc,
   M_VERSION_Previous_versions_acc, 10, { 'o', 'p', 'e', 'n', 'E', 'T', 'C', 'S',
     ' ', 'E', 'V', 'C', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -5274,7 +5311,7 @@ const DMI_gradientProfileElement_T_DM cEmptyGradientProfileElement_ma = {
   kcg_false, 0, 0, 0 };
 
 /* manage_DMI_Output_Pkg::cEmptyIdentifierRequest */
-const _26_DMI_Identifier_Request_T_DM cEmptyIdentifierRequest_manage_ = {
+const _28_DMI_Identifier_Request_T_DM cEmptyIdentifierRequest_manage_ = {
   kcg_false, 0, M_VERSION_Previous_versions_acc,
   M_VERSION_Previous_versions_acc, 0, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -5296,7 +5333,7 @@ const _26_DMI_Identifier_Request_T_DM cEmptyIdentifierRequest_manage_ = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, 0 };
 
 /* manage_DMI_Output_Pkg::cEVCIdentifierRequest */
-const _26_DMI_Identifier_Request_T_DM cEVCIdentifierRequest_manage_DM = {
+const _28_DMI_Identifier_Request_T_DM cEVCIdentifierRequest_manage_DM = {
   kcg_true, 0, M_VERSION_Previous_versions_acc, M_VERSION_Previous_versions_acc,
   7, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -5359,7 +5396,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Level_0_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Level_1 */
 const DMI_Text_Message_T_DMI_Messages cText_Level_1_manage_TextMessag = {
@@ -5381,7 +5418,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Level_1_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Level_2 */
 const DMI_Text_Message_T_DMI_Messages cText_Level_2_manage_TextMessag = {
@@ -5403,7 +5440,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Level_2_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Level_3 */
 const DMI_Text_Message_T_DMI_Messages cText_Level_3_manage_TextMessag = {
@@ -5425,7 +5462,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Level_3_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Level_NTC */
 const DMI_Text_Message_T_DMI_Messages cText_Level_NTC_manage_TextMess = {
@@ -5447,7 +5484,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Level_NTC_manage_TextMess = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_SR */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_SR_manage_TextMessag = {
@@ -5469,7 +5506,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_SR_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_OS */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_OS_manage_TextMessag = {
@@ -5491,7 +5528,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_OS_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_SH */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_SH_manage_TextMessag = {
@@ -5513,7 +5550,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_SH_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_LS */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_LS_manage_TextMessag = {
@@ -5535,7 +5572,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_LS_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_SN */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_SN_manage_TextMessag = {
@@ -5557,7 +5594,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_SN_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_UN */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_UN_manage_TextMessag = {
@@ -5579,7 +5616,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_UN_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_TextMessages_Pkg::cText_Mode_TR */
 const DMI_Text_Message_T_DMI_Messages cText_Mode_TR_manage_TextMessag = {
@@ -5601,7 +5638,7 @@ const DMI_Text_Message_T_DMI_Messages cText_Mode_TR_manage_TextMessag = {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-  Q_TEXTCLASS_Important_Informati, _54_Q_TEXTCONFIRM_Confirmation_ };
+  Q_TEXTCLASS_Important_Informati, _55_Q_TEXTCONFIRM_Confirmation_ };
 
 /* manage_DMI_Output_Pkg::cDefaultText */
 const DMI_Text_Message_T_DMI_Messages cDefaultText_manage_DMI_Output_ = {
@@ -5668,7 +5705,7 @@ const EVC_to_DMI_Message_int_T_API_DM cEVC_DMI_int_array_Messages = { 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0 };
 
 /* DATA::Packets::EVC_to_DMI::cDMI_Track_Description_in */
-const _50_DMI_Track_Description_int_a cDMI_Track_Description_in_DATA_ = { 0, 0,
+const _51_DMI_Track_Description_int_a cDMI_Track_Description_in_DATA_ = { 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -5688,7 +5725,7 @@ const DMI_Driver_Identifier_int_array cDMI_Driver_Identifier_int_DATA = { 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 /* ManageProcedure_Pkg::cNID_BG_Radio_Header */
-const Radio_TrackTrain_Header_T_Radio cNID_BG_Radio_Header_ManageProc = { 0, 0,
+const _11_Radio_TrackTrain_Header_T_R cNID_BG_Radio_Header_ManageProc = { 0, 0,
   0, 0, M_ACK_No_acknowledgement_requir, 0, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0,
   Q_DIR_Reverse, 0, M_VERSION_Previous_versions_acc };
 
@@ -5992,7 +6029,7 @@ const DMI_to_EVC_Message_T_API_DMI_Pk cDMI_EVC_CT_Messages = { kcg_false, {
       M_LEVEL_Level_0, 0 } } };
 
 /* DATA::Packets::Bothways::cDMI_Driver_Identifier */
-const _24_DMI_Driver_Identifier_T_DMI cDMI_Driver_Identifier_DATA_Pac = {
+const _26_DMI_Driver_Identifier_T_DMI cDMI_Driver_Identifier_DATA_Pac = {
   kcg_false, 0, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
 
 /* DATA::Packets::DMI_to_EVC::cDMI_Status */
@@ -6076,11 +6113,11 @@ const DMI_Identifier_T_DMI_Messages_D cDMIIdentifierDefault_manage_DM = {
   M_VERSION_Previous_versions_acc };
 
 /* manage_DMI_Input_Pkg::cDMIDriverIdentifierDefault */
-const _24_DMI_Driver_Identifier_T_DMI cDMIDriverIdentifierDefault_man = {
+const _26_DMI_Driver_Identifier_T_DMI cDMIDriverIdentifierDefault_man = {
   kcg_false, 0, { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
 
 /* manage_DMI_Input_Pkg::cDMITrainRunningNumberDefault */
-const _23_DMI_Train_Running_Number_T_ cDMITrainRunningNumberDefault_m = {
+const _25_DMI_Train_Running_Number_T_ cDMITrainRunningNumberDefault_m = {
   kcg_false, 0, 0 };
 
 /* manage_DMI_Input_Pkg::cDMIRadioNetDataDefault */
@@ -6097,7 +6134,7 @@ const DMI_Train_Data_Ack_T_DMI_Messag cDMITrainDataAckDefault_manage_ = {
   kcg_false, 0, kcg_false };
 
 /* manage_DMI_Input_Pkg::cDMIAdhesionFactorDefault */
-const _22_DMI_Adhesion_Factor_Data_T_ cDMIAdhesionFactorDefault_manag = {
+const _24_DMI_Adhesion_Factor_Data_T_ cDMIAdhesionFactorDefault_manag = {
   kcg_false, 0, M_ADHESION_Slippery_rail };
 
 /* manage_DMI_Input_Pkg::cAckModesAndLevels */
@@ -7114,7 +7151,7 @@ const RadioMetadata_T_Common_Types_Pk cRadioMetadata_CheckBGConsisten = {
   kcg_false, kcg_false };
 
 /* CheckBGConsistency_Pkg::cNoRadioHeader */
-const Radio_TrackTrain_Header_T_Radio cNoRadioHeader_CheckBGConsisten = { 0, 0,
+const _11_Radio_TrackTrain_Header_T_R cNoRadioHeader_CheckBGConsisten = { 0, 0,
   0, 0, M_ACK_No_acknowledgement_requir, 0, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0,
   Q_DIR_Reverse, 0, M_VERSION_Previous_versions_acc };
 
@@ -7149,7 +7186,7 @@ const Metadata_T_Common_Types_Pkg cMetaData_CheckBGConsistency_Pk = { { 0,
 const positionedBG_T_TrainPosition_Ty cNoStoredBG_CheckBGConsistency_ = {
   kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
       0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
       Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
       Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
@@ -7157,94 +7194,94 @@ const positionedBG_T_TrainPosition_Ty cNoStoredBG_CheckBGConsistency_ = {
         noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
         0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } } }, kcg_false };
 
 /* ValidateDataDirection_Pkg::cEmptyLRBG */
 const positionedBG_T_TrainPosition_Ty cEmptyLRBG_ValidateDataDirectio = {
   kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
       0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
       Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
       Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
@@ -7252,87 +7289,87 @@ const positionedBG_T_TrainPosition_Ty cEmptyLRBG_ValidateDataDirectio = {
         noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
         0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } } }, kcg_false };
 
 /* BG_Types_Pkg::cEmptyBG_Header */
@@ -12543,7 +12580,7 @@ const P63_ListofBalisesinSRAuthority_ Default_P63_legacy_xdebugSuppor = { {
     kcg_false, Q_DIR_Reverse, Q_NEWCOUNTRY_Same_country__or__, 0, 0 } };
 
 /* xdebugSupport_Pkg::Default_P12_legacy */
-const _6_P12_Level1MovementAuthoritie Default_P12_legacy_xdebugSuppor = { {
+const _7_P12_Level1MovementAuthoritie Default_P12_legacy_xdebugSuppor = { {
     kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, 0, 0, 0,
     Q_SECTIONTIMER_No_Section_Timer, 0, 0, 0, Q_SECTIONTIMER_No_Section_Timer,
     0, 0, Q_ENDTIMER_No_End_section_timer, 0, 0,
@@ -12662,9 +12699,9 @@ const ReportedBGList_T_ProvidePositio cReportedBGList_ProvidePosition = { {
     { 0, 0, 0 } } };
 
 /* ProvidePositionReport_Pkg::emptyHeader */
-const _9_Radio_TrainTrack_Header_T_Ra emptyHeader_ProvidePositionRepo = {
+const _10_Radio_TrainTrack_Header_T_R emptyHeader_ProvidePositionRepo = {
   kcg_false, 0, 0, 0, Q_MARQSTREASON_Start_selected_b, 0, 0,
-  _31_Q_EMERGENCYSTOP_Conditional, 0 };
+  _32_Q_EMERGENCYSTOP_Conditional, 0 };
 
 /* ProvidePositionReport_Pkg::emptyPacket5 */
 const PT5_TrainRunningNumber_Packet_T emptyPacket5_ProvidePositionRep = {
@@ -12678,7 +12715,7 @@ const PT4_ErrorReporting_T_Packet_Tra emptyPacket4_ProvidePositionRep = {
 const positionedBG_T_TrainPosition_Ty cPositionedBG_T_ProvidePosition = {
   kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
       0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
       Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
       Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
@@ -12686,87 +12723,87 @@ const positionedBG_T_TrainPosition_Ty cPositionedBG_T_ProvidePosition = {
         noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
         0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } } }, kcg_false };
 
 /* ProvidePositionReport_Pkg::cLocationBasedEvents_T */
@@ -12823,7 +12860,7 @@ const ModeLevel2PositionReport_T_Prov cModeAndLevelStatus_ProvidePosi = {
 const positionedBG_T_TrainPosition_Ty cPassedBG_ProvidePositionReport = {
   kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
       0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
       Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
       Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
@@ -12831,87 +12868,87 @@ const positionedBG_T_TrainPosition_Ty cPassedBG_ProvidePositionReport = {
         noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
         0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } } }, kcg_false };
 
 /* radioOutput_Pkg::noP000 */
@@ -13452,7 +13489,7 @@ const DP_or_OL_t_TrackAtlasTypes DEFAULT_DP_TrackAtlasTypes = { 0, 0,
   kcg_false };
 
 /* TrackAtlasTypes::DEFAULT_MA_section */
-const _20_MovementAuthoritySection_t_ DEFAULT_MA_section_TrackAtlasTy = {
+const _22_MovementAuthoritySection_t_ DEFAULT_MA_section_TrackAtlasTy = {
   kcg_false, kcg_false, 0, kcg_false, 0, 0 };
 
 /* TrackAtlasTypes::DEFAULT_MovementAuthority */
@@ -13468,7 +13505,7 @@ const MovementAuthority_t_TrackAtlasT DEFAULT_MovementAuthority_Track = {
     kcg_false }, kcg_false, { 0, 0, kcg_false }, kcg_false, { 0, 0 } };
 
 /* TA_MA::DefaultMA_section */
-const _20_MovementAuthoritySection_t_ DefaultMA_section_TA_MA = { kcg_false,
+const _22_MovementAuthoritySection_t_ DefaultMA_section_TA_MA = { kcg_false,
   kcg_false, 0, kcg_false, 0, 0 };
 
 /* TA_MRSP::XSSPold */
@@ -13622,7 +13659,7 @@ const P003V1_OBU_T_TM_baseline2 INIT_P3V1_TA_Storage = { kcg_false,
       0 }, { kcg_false, 0 }, { kcg_false, 0 }, { kcg_false, 0 }, { kcg_false,
       0 }, { kcg_false, 0 }, { kcg_false, 0 }, { kcg_false, 0 }, { kcg_false,
       0 }, { kcg_false, 0 }, { kcg_false, 0 } }, 0, 0, 0, 0, 0, 0,
-  Q_NVSBTSMPERM_No, _49_Q_NVEMRRLS_Revoke_emergency, 0, 0, 0, 0, 0,
+  Q_NVSBTSMPERM_No, _50_Q_NVEMRRLS_Revoke_emergency, 0, 0, 0, 0, 0,
   M_NVCONTACT_Train_trip, 0, M_NVDERUN_No, 0, Q_NVDRIVER_ADHES_Not_allowed };
 
 /* TA_Export::DEFAULT_MRSP_section */
@@ -13634,7 +13671,7 @@ const P046_section_enum_T_TM DEFAULT_P046_OBU_section_TM = { kcg_false,
   M_LEVELTR_Level_0, 0 };
 
 /* TM_specific::DEFAULT_P046_legacy */
-const _7_P46_ConditionalLevelTransiti DEFAULT_P046_legacy_TM_specific = { {
+const _8_P46_ConditionalLevelTransiti DEFAULT_P046_legacy_TM_specific = { {
     kcg_false, Q_DIR_Reverse, M_LEVELTR_Level_0, 0 }, { kcg_false,
     Q_DIR_Reverse, M_LEVELTR_Level_0, 0 }, { kcg_false, Q_DIR_Reverse,
     M_LEVELTR_Level_0, 0 }, { kcg_false, Q_DIR_Reverse, M_LEVELTR_Level_0, 0 },
@@ -13682,104 +13719,104 @@ const P027V1_section_enum_qdiff_T_TM_ DEFAULT_P027v1_OBU_section_qdif = {
 const P27_InternationalStaticSpeedPro DEFAULT_P027V1_legacy_TM_baseli = {
   kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, 0,
   Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-      Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 },
+      Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 },
     { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-      _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-      Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 },
+      _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+      Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 },
     { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-      _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-      Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 },
+      _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+      Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 },
     { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-      _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-      Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+      _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+      Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
       0 } }, { { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
           kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
       Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 } } }, { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
           kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
       Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 } } }, { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
           kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } }, { kcg_false, 0, 0,
       Q_FRONT_Train_length_delay_on_v, { { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 } } }, { kcg_false, 0, 0, Q_FRONT_Train_length_delay_on_v, { {
           kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
-          Q_DIFF_Cant_Deficiency_specific, _41_NC_CDDIFF_Specific_SSP_appl, 0,
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 }, { kcg_false,
+          Q_DIFF_Cant_Deficiency_specific, _42_NC_CDDIFF_Specific_SSP_appl, 0,
           0 }, { kcg_false, Q_DIFF_Cant_Deficiency_specific,
-          _41_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } } } };
+          _42_NC_CDDIFF_Specific_SSP_appl, 0, 0 } } } } };
 
 /* TM::DEFAULT_P139_legacy */
 const P139_ReversingSupervisionInform DEFAULT_P139_legacy_TM = { kcg_false,
   Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, 0 };
 
 /* TM_specific::DEFAULT_P015_legacy */
-const _5_P15_Level23MovementAuthoriti DEFAULT_P015_legacy_TM_specific = { {
+const _6_P15_Level23MovementAuthoriti DEFAULT_P015_legacy_TM_specific = { {
     kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, 0, 0,
     Q_SECTIONTIMER_No_Section_Timer, 0, 0, 0, Q_SECTIONTIMER_No_Section_Timer,
     0, 0, Q_ENDTIMER_No_End_section_timer, 0, 0,
@@ -13835,7 +13872,7 @@ const P80_ModeProfiles_T_Packet_Types Default_P80_legacy_TA_Export = { {
     Q_MAMODE_as_the_EOA } };
 
 /* TA_Export::Default_P12_legacy */
-const _6_P12_Level1MovementAuthoritie Default_P12_legacy_TA_Export = { {
+const _7_P12_Level1MovementAuthoritie Default_P12_legacy_TA_Export = { {
     kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, 0, 0, 0,
     Q_SECTIONTIMER_No_Section_Timer, 0, 0, 0, Q_SECTIONTIMER_No_Section_Timer,
     0, 0, Q_ENDTIMER_No_End_section_timer, 0, 0,
@@ -13867,9 +13904,9 @@ const StaticSpeedSection_t_TrackAtlas DEFAULT_StaticSpeedSection_Trac = {
   kcg_false, 0, 0, kcg_false, 0 };
 
 /* TA_EmergencyStop::cMSG147_NONE */
-const _8_Radio_TrainTrack_Message_T_R cMSG147_NONE_TA_EmergencyStop = {
+const _9_Radio_TrainTrack_Message_T_R cMSG147_NONE_TA_EmergencyStop = {
   kcg_false, { kcg_false, 0, 0, 0, Q_MARQSTREASON_Start_selected_b, 0, 0,
-    _31_Q_EMERGENCYSTOP_Conditional, 0 }, { { kcg_false, { 0, 0,
+    _32_Q_EMERGENCYSTOP_Conditional, 0 }, { { kcg_false, { 0, 0,
         Q_SCALE_10_cm_scale, 0, 0, Q_DIRLRBG_Reverse, Q_DLRBG_Reverse, 0, 0,
         Q_LENGTH_No_train_integrity_inf, 0, 0, Q_DIRTRAIN_Reverse,
         M_MODE_Full_Supervision, M_LEVEL_Level_0, 0 } }, { kcg_false, { 0, 0,
@@ -13888,7 +13925,7 @@ const _8_Radio_TrainTrack_Message_T_R cMSG147_NONE_TA_EmergencyStop = {
 
 /* TA_EmergencyStop::DEFAULT_M147 */
 const M_147_T_TM_radio_messages DEFAULT_M147_TA_EmergencyStop = { kcg_false, 0,
-  0, 0, 0, 0, _31_Q_EMERGENCYSTOP_Conditional };
+  0, 0, 0, 0, _32_Q_EMERGENCYSTOP_Conditional };
 
 /* MA_Request::cPT11_ValidateTrainData */
 const PT11_ValidatedTrainData_T_Packe cPT11_ValidateTrainData_MA_Requ = {
@@ -13971,7 +14008,7 @@ const positionErrors_T_TrainPosition_ cNoPositionErrors_CalculateTrai = {
   kcg_false, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0,
       0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -13980,110 +14017,110 @@ const positionErrors_T_TrainPosition_ cNoPositionErrors_CalculateTrai = {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false } };
 
 /* CalculateTrainPosition_Pkg::cNoPositionedBGs */
 const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
     kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
         0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
         Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
         Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked,
@@ -14092,107 +14129,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
           0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14201,107 +14238,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14310,107 +14347,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14419,107 +14456,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14528,107 +14565,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14637,107 +14674,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14746,107 +14783,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14855,107 +14892,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -14964,107 +15001,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15073,107 +15110,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15182,107 +15219,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15291,107 +15328,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15400,107 +15437,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15509,107 +15546,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15618,107 +15655,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15727,107 +15764,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15836,107 +15873,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -15945,107 +15982,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16054,107 +16091,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16163,107 +16200,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16272,107 +16309,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16381,107 +16418,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16490,107 +16527,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16599,107 +16636,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16708,107 +16745,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16817,107 +16854,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -16926,107 +16963,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17035,107 +17072,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17144,107 +17181,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17253,107 +17290,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17362,107 +17399,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17471,107 +17508,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17580,107 +17617,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17689,107 +17726,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17798,107 +17835,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -17907,107 +17944,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18016,107 +18053,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18125,107 +18162,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18234,107 +18271,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18343,107 +18380,107 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18452,103 +18489,103 @@ const positionedBGs_T_TrainPosition_T cNoPositionedBGs_CalculateTrain = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false } };
 
 /* Obu_BasicTypes_Pkg::cOdometryInitialValue */
@@ -18563,99 +18600,99 @@ const passedBG_T_BG_Types_Pkg cNoPassedBG_CalculateTrainPosit = { kcg_false, {
       unknownDirection_Obu_BasicTypes }, { 0, 0, 0 }, 0, kcg_false,
     Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
       kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
       Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-      _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } };
+      _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } };
 
 /* CalculateTrainPosition_Pkg::cNoInfoFromLinking */
 const infoFromLinking_T_TrainPosition cNoInfoFromLinking_CalculateTra = {
   kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } };
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } };
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::cNoRefPrevBGs */
 const refBGs_T_CalculateTrainPosition cNoRefPrevBGs_CalculateTrainPos = { {
     kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
         0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
         Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
         Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked,
@@ -18664,107 +18701,107 @@ const refBGs_T_CalculateTrainPosition cNoRefPrevBGs_CalculateTrainPos = { {
           0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18773,107 +18810,107 @@ const refBGs_T_CalculateTrainPosition cNoRefPrevBGs_CalculateTrainPos = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, {
       kcg_false, 0, 0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } }, {
       kcg_false, { kcg_false, Q_UPDOWN_Down_link_telegram,
         M_VERSION_Previous_versions_acc, Q_MEDIA_Balise,
         N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, { kcg_false, 0,
@@ -18882,103 +18919,103 @@ const refBGs_T_CalculateTrainPosition cNoRefPrevBGs_CalculateTrainPos = { {
         Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { { kcg_false, 0,
           Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
           kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
           Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-          _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
     kcg_false }, kcg_false, { 0, 0, 0 } };
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::cNoLinkedBG_index */
@@ -18997,7 +19034,7 @@ const BG_find_T_CalculateTrainPositio cBG_find_0_CalculateTrainPositi = {
 const positionedBG_T_TrainPosition_Ty cEmptyPositionedBG_CalculateTra = {
   kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
       0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
       Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
       Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
@@ -19005,185 +19042,185 @@ const positionedBG_T_TrainPosition_Ty cEmptyPositionedBG_CalculateTra = {
         noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
         0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } } }, kcg_false };
 
 /* TM_lib_internal::DEFAULT_P005_OBU_section */
 const P005_section_enum_T_TM DEFAULT_P005_OBU_section_TM_lib = { kcg_false, 0,
-  Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+  Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
   Q_LINKREACTION_Train_trip, 0 };
 
 /* TM_specific::DEFAULT_LinkedBGs_T */
 const LinkedBGs_T_BG_Types_Pkg DEFAULT_LinkedBGs_T_TM_specific = { { kcg_false,
     0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__,
-    0, 0, _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    0, 0, _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
     kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+    Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
     Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
     Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-    _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } };
+    _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } };
 
 /* EVC_PermanentData_Pkg::cP3NationalValuesUtrechtAmsterdam */
 const P3_NationalValues_T_Packet_Type cP3NationalValuesUtrechtAmsterd = {
   kcg_true, Q_DIR_Both_directions, 0, { { kcg_false, 0 }, { kcg_false, 0 }, {
       kcg_false, 0 }, { kcg_false, 0 }, { kcg_false, 0 }, { kcg_false, 0 }, {
       kcg_false, 0 } }, 40, 40, 40, 100, 10, 15, 5, Q_NVSBTSMPERM_Yes,
-  _49_Q_NVEMRRLS_Revoke_emergency, Q_NVGUIPERM_No, Q_NVSBFBPERM_No,
+  _50_Q_NVEMRRLS_Revoke_emergency, Q_NVGUIPERM_No, Q_NVSBFBPERM_No,
   Q_NVINHSMICPERM_No, 0, 40, 200, 60, 60, M_NVCONTACT_Train_trip, 35,
   M_NVDERUN_Yes, 0, Q_NVDRIVER_ADHES_Not_allowed, 1.0, 0.7, 0.7, 12, 0.0,
   M_NVEBCL_Confidence_level_99_99, Q_NVKINT_No_integrated_correcti, { {
@@ -19845,7 +19882,7 @@ const msgFromTrack_T_RCM_MsgTypes_Pkg cNoMessageFromTrack_Handover_Pk = {
 const positionedBG_T_TrainPosition_Ty cNoPositionedBG_CalculateTrainP = {
   kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
       0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+      Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
       Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
       Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
       Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
@@ -19853,87 +19890,87 @@ const positionedBG_T_TrainPosition_Ty cNoPositionedBG_CalculateTrainP = {
         noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
         0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
         Q_SCALE_10_cm_scale, 0, Q_NEWCOUNTRY_Same_country__or__, 0, 0,
-        _55_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+        _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
         kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
-        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _55_Q_LINKORIENTATION_The_balis,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
         Q_LINKREACTION_Train_trip, 0 } } }, kcg_false };
 
 /* Handover_Pkg::handoverUtils_Pkg::cIdleBus */
@@ -19992,9 +20029,9 @@ const mobileRegistrationContext_T_RCM cNoMobileRegistrationContext_RC = {
   kcg_false, 0, mhs_nok_RCM_Types_Pkg, mrs_unregistered_RCM_Types_Pkg, 0 };
 
 /* MoRC_Pck::cNoMessageToRBC */
-const _8_Radio_TrainTrack_Message_T_R cNoMessageToRBC_MoRC_Pck = { kcg_false, {
+const _9_Radio_TrainTrack_Message_T_R cNoMessageToRBC_MoRC_Pck = { kcg_false, {
     kcg_false, 0, 0, 0, Q_MARQSTREASON_Start_selected_b, 0, 0,
-    _31_Q_EMERGENCYSTOP_Conditional, 0 }, { { kcg_false, { 0, 0,
+    _32_Q_EMERGENCYSTOP_Conditional, 0 }, { { kcg_false, { 0, 0,
         Q_SCALE_10_cm_scale, 0, 0, Q_DIRLRBG_Reverse, Q_DLRBG_Reverse, 0, 0,
         Q_LENGTH_No_train_integrity_inf, 0, 0, Q_DIRTRAIN_Reverse,
         M_MODE_Full_Supervision, M_LEVEL_Level_0, 0 } }, { kcg_false, { 0, 0,
@@ -20085,8 +20122,111 @@ const CompressedPacketData_T_Common_T DEFAULT_CompressedPackets_TM = { 0, 0, 0,
 const MetadataElement_T_Common_Types_ DEFAULT_PHeader_TM = { 0, Q_DIR_Reverse,
   kcg_false, 0, 0 };
 
+/* Toolbox::cOdometryFactors */
+const odometryFactors_T_Toolbox cOdometryFactors_Toolbox = { 1.001, 0.991,
+  1.01 };
+
+/* Toolbox::cEmptyBrakeStatus */
+const Brake_status_T_TIU_Types_Pkg cEmptyBrakeStatus_Toolbox = { kcg_true,
+  is_not_active_TIU_Types_Pkg, is_not_active_TIU_Types_Pkg,
+  is_not_active_TIU_Types_Pkg, is_not_active_TIU_Types_Pkg,
+  is_not_active_TIU_Types_Pkg };
+
+/* Toolbox::cEmptyType_I_train_and_brake_inhibition_with_distance_T */
+const Type_I_train_and_brake_inhibiti cEmptyType_I_train_and_brake_in = {
+  kcg_false, { { 0, 0 }, { 0, 0 }, non_stopping_area_TIU_Types_Pkg }, { 0,
+    0 } };
+
+/* Toolbox::cICE3TrainData */
+const trainData_T_TIU_Types_Pkg cICE3TrainData_Toolbox = { kcg_true, kcg_false,
+  NC_TRAIN_Passenger_train, NC_CDTRAIN_Cant_Deficiency_80_m, 20084, 198, 330,
+  M_LOADINGGAUGE_G1, M_AXLELOADCAT_HS17, M_AIRTIGHT_Not_fitted, 332, 2, { 1, 2,
+    0, 0, 0 }, 3, { { M_VOLTAGE_AC_15_kV_16_7_Hz, 0 }, {
+      M_VOLTAGE_AC_25_kV_50_Hz, 1 }, { M_VOLTAGE_DC_1_5_kV, 2 }, {
+      M_VOLTAGE_Line_not_fitted_with_, 0 } } };
+
+/* MoRC_Pck::cMobileHWStatus_notRegistered */
+const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_notRegistered_M = { kcg_true,
+  mhwc_notRegistered_MoRC_Pck, kcg_false, kcg_false };
+
+/* MoRC_Pck::cMobileHWStatus_Registered */
+const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_Registered_MoRC = { kcg_true,
+  mhwc_registered_MoRC_Pck, kcg_false, kcg_false };
+
+/* MoRC_Pck::cMobileHWStatus_Connected */
+const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_Connected_MoRC_ = { kcg_true,
+  mhwc_connected_MoRC_Pck, kcg_false, kcg_false };
+
+/* Toolbox::cEmptyBtmMessageHeader */
+const API_TelegramHeader_T_API_Msg_Pk cEmptyBtmMessageHeader_Toolbox = {
+  kcg_false, kcg_false, kcg_false, { Q_UPDOWN_Down_link_telegram,
+    M_VERSION_Previous_versions_acc, Q_MEDIA_Balise, N_PIG_I_am_the_1st,
+    N_TOTAL_1_balise_in_the_group, M_DUP_No_duplicates, 0, 0, 0,
+    Q_LINK_Unlinked }, { { kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0,
+      noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0, 0,
+      0 } } };
+
+/* Toolbox::cEmptyRadioMsgHeader */
+const API_RadioMsgHeader_T_API_Msg_Pk cEmptyRadioMsgHeader_Toolbox = {
+  kcg_false, kcg_false, { 0, 0, 0, 0, M_ACK_No_acknowledgement_requir, 0, 0, 0,
+    Q_SCALE_10_cm_scale, 0, 0, 0, Q_DIR_Reverse, 0,
+    M_VERSION_Previous_versions_acc }, { kcg_false, kcg_false, kcg_false,
+    kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false }, {
+    kcg_false, 0, 0, 0 } };
+
+/* Toolbox::cEmtpyTrackSideInputMessage */
+const API_TrackSideInput_T_API_Msg_Pk cEmtpyTrackSideInputMessage_Too = {
+  kcg_false, 0, msrc_undefined_Common_Types_Pkg, { kcg_false, kcg_false,
+    kcg_false, { Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
+      Q_MEDIA_Balise, N_PIG_I_am_the_1st, N_TOTAL_1_balise_in_the_group,
+      M_DUP_No_duplicates, 0, 0, 0, Q_LINK_Unlinked }, { { kcg_false, 0, { 0, 0,
+          0 }, { 0, 0, 0, 0 }, 0, noMotion_Obu_BasicTypes_Pkg,
+        unknownDirection_Obu_BasicTypes }, { 0, 0, 0 } } }, { kcg_false,
+    kcg_false, { 0, 0, 0, 0, M_ACK_No_acknowledgement_requir, 0, 0, 0,
+      Q_SCALE_10_cm_scale, 0, 0, 0, Q_DIR_Reverse, 0,
+      M_VERSION_Previous_versions_acc }, { kcg_false, kcg_false, kcg_false,
+      kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false }, {
+      kcg_false, 0, 0, 0 } }, { { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 } }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } } };
+
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.c
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:18
 *************************************************************$ */
 

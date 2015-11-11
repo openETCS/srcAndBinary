@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _doIdentifierRequest_manage_DMI
 #define _doIdentifierRequest_manage_DMI
@@ -14,7 +14,7 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  _26_DMI_Identifier_Request_T_DM /* manage_DMI_Output_Pkg::doIdentifierRequest::identifierRequest */ identifierRequest;
+  _28_DMI_Identifier_Request_T_DM /* manage_DMI_Output_Pkg::doIdentifierRequest::identifierRequest */ identifierRequest;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -44,6 +44,6 @@ extern void doIdentifierRequest_init_manage(
 #endif /* _doIdentifierRequest_manage_DMI */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** doIdentifierRequest_manage_DMI_.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

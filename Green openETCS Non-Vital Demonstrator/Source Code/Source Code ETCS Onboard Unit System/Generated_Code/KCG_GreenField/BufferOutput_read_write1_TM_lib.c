@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -40,11 +40,11 @@ void BufferOutput_read_write1_TM_lib(
         (M_TrainTrack_Message_T_TM_radio *) &EMPTY_TrainTrackMessage_TM_lib_);
     }
   }
-  kcg_copy_array_97163(&(*Buffer_Out)[1], (array_97163 *) &(*Buffer_In)[0]);
+  kcg_copy_array_101449(&(*Buffer_Out)[1], (array_101449 *) &(*Buffer_In)[0]);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_read_write1_TM_lib.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

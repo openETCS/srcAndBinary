@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _checkGeneralMessage_trainData_
 #define _checkGeneralMessage_trainData_
@@ -43,6 +43,6 @@ extern void checkGeneralMessage_init_trainD(
 #endif /* _checkGeneralMessage_trainData_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** checkGeneralMessage_trainData_p.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

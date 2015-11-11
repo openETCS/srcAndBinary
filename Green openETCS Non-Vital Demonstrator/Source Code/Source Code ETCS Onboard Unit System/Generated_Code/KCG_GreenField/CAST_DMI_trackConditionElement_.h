@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _CAST_DMI_trackConditionElement
 #define _CAST_DMI_trackConditionElement
@@ -23,6 +23,6 @@ extern void CAST_DMI_trackConditionElement_(
 #endif /* _CAST_DMI_trackConditionElement */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_trackConditionElement_.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

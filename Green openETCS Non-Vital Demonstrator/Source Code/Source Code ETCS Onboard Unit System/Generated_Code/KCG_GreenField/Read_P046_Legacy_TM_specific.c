@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* TM_specific::Read_P046_Legacy */
 void Read_P046_Legacy_TM_specific(
   /* TM_specific::Read_P046_Legacy::Message_IN */ CompressedPackets_T_Common_Type *Message_IN,
-  /* TM_specific::Read_P046_Legacy::P046_legacy_out */ _7_P46_ConditionalLevelTransiti *P046_legacy_out)
+  /* TM_specific::Read_P046_Legacy::P046_legacy_out */ _8_P46_ConditionalLevelTransiti *P046_legacy_out)
 {
   /* TM_specific::Read_P046_Legacy::_L2 */
   static P046_OBU_T_TM _L2;
@@ -22,14 +22,14 @@ void Read_P046_Legacy_TM_specific(
     /* 1 */ C_P046_to_legacy_t_TM_conversio(&_L2, P046_legacy_out);
   }
   else {
-    kcg_copy__7_P46_ConditionalLeve(
+    kcg_copy__8_P46_ConditionalLeve(
       P046_legacy_out,
-      (_7_P46_ConditionalLevelTransiti *) &DEFAULT_P046_legacy_TM_specific);
+      (_8_P46_ConditionalLevelTransiti *) &DEFAULT_P046_legacy_TM_specific);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P046_Legacy_TM_specific.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

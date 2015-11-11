@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -33,9 +33,9 @@ void changeoverSwitch_Handover_Pkg_h(
   outC_changeoverSwitch_Handover_ *outC)
 {
   /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */
-  static _111_SSM_ST_SM1 SM1_state_sel;
+  static _115_SSM_ST_SM1 SM1_state_sel;
   /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::SM1 */
-  static _111_SSM_ST_SM1 SM1_state_act;
+  static _115_SSM_ST_SM1 SM1_state_act;
   /* Handover_Pkg::handoverUtils_Pkg::changeoverSwitch::toogle */
   static kcg_bool toogle;
   
@@ -83,6 +83,6 @@ void changeoverSwitch_Handover_Pkg_h(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** changeoverSwitch_Handover_Pkg_h.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

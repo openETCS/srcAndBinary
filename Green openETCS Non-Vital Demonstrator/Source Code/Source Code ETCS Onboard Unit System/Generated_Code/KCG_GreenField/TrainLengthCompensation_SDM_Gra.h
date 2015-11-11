@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _TrainLengthCompensation_SDM_Gr
 #define _TrainLengthCompensation_SDM_Gr
@@ -26,6 +26,6 @@ extern void TrainLengthCompensation_SDM_Gra(
 #endif /* _TrainLengthCompensation_SDM_Gr */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrainLengthCompensation_SDM_Gra.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

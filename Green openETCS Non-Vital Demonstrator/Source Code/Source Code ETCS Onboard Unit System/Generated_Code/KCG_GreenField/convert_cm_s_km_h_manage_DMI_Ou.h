@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _convert_cm_s_km_h_manage_DMI_O
 #define _convert_cm_s_km_h_manage_DMI_O
@@ -19,6 +19,6 @@ extern V_internal_Type_Obu_BasicTypes_ convert_cm_s_km_h_manage_DMI_Ou(
 #endif /* _convert_cm_s_km_h_manage_DMI_O */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** convert_cm_s_km_h_manage_DMI_Ou.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

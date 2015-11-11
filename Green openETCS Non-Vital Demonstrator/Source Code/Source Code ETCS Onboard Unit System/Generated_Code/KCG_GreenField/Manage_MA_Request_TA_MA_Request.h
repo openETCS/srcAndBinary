@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _Manage_MA_Request_TA_MA_Reques
 #define _Manage_MA_Request_TA_MA_Reques
@@ -18,8 +18,7 @@
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   M_TrainTrackMessageBus_t_TM_Tra /* TA_MA_Request::Manage_MA_Request::bus_out */ bus_out;
-  /* -----------------------   local probes  ------------------------- */
-  kcg_bool /* TA_MA_Request::Manage_MA_Request::exception */ exception;
+  /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
@@ -63,6 +62,6 @@ extern void Manage_MA_Request_init_TA_MA_Re(
 #endif /* _Manage_MA_Request_TA_MA_Reques */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_MA_Request_TA_MA_Request.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

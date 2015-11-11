@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _extractTargetsFromMRSP_TargetM
 #define _extractTargetsFromMRSP_TargetM
@@ -21,6 +21,6 @@ extern void extractTargetsFromMRSP_TargetMa(
 #endif /* _extractTargetsFromMRSP_TargetM */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** extractTargetsFromMRSP_TargetMa.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

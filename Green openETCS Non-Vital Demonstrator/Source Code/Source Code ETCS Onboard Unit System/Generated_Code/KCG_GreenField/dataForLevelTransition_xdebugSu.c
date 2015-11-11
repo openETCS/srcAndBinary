@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -43,17 +43,21 @@ void dataForLevelTransition_xdebugSu(
       &(*actualMessage).packets.PacketHeaders,
       cp041_Level_Transition_Order_Id);
   _L71 = positionNeeded | tmp1;
+  /* ck_p41Valid */ if (tmp1) {
+    _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pk(actualMessage);
+  }
+  else {
+    _L116 = (*storedData).LRBG;
+  }
   /* 1 */ Read_P015_TM(&(*actualMessage).packets, &_L3, &_L4);
   /* 1 */ Read_P041_Legacy_TM_specific(&(*actualMessage).packets, &_L18);
   /* 1 */ Read_P021_TM(&(*actualMessage).packets, &_L20, &_L21);
   kcg_copy_dataCollectionForLevel(outstoredData, storedData);
   /* 2 */ if (tmp1) {
-    _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pk(actualMessage);
     ntcRequested = /* 2 */ checkNTCPriority_xdebugSupport_(&_L18);
     kcg_copy_P41_LevelTransistionOr(&(*outstoredData).p41, &_L18);
   }
   else {
-    _L116 = (*storedData).LRBG;
     ntcRequested = kcg_false;
     /* 4 */ if (actualLevel == M_LEVEL_Level_0) {
       kcg_copy_P41_LevelTransistionOr(
@@ -77,7 +81,7 @@ void dataForLevelTransition_xdebugSu(
       &(*outstoredData).p46);
   }
   else {
-    kcg_copy__7_P46_ConditionalLeve(&(*outstoredData).p46, &(*storedData).p46);
+    kcg_copy__8_P46_ConditionalLeve(&(*outstoredData).p46, &(*storedData).p46);
   }
   (*outstoredData).p15_received = _L3 | (*storedData).p15_received |
     ntcRequested;
@@ -103,6 +107,6 @@ void dataForLevelTransition_xdebugSu(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** dataForLevelTransition_xdebugSu.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -40,7 +40,7 @@ void Manage_EmergencyStop_init_TA_Em(outC_Manage_EmergencyStop_TA_Em *outC)
   outC->message147.header.xQ_MARQSTREASON = Q_MARQSTREASON_Start_selected_b;
   outC->message147.header.xT_TRAIN = 0;
   outC->message147.header.xNID_EM = 0;
-  outC->message147.header.xQ_EMERGENCYSTOP = _31_Q_EMERGENCYSTOP_Conditional;
+  outC->message147.header.xQ_EMERGENCYSTOP = _32_Q_EMERGENCYSTOP_Conditional;
   outC->message147.header.xNID_TEXTMESSAGE = 0;
   outC->message147.packets.p0.valid = kcg_true;
   outC->message147.packets.p0.packet0.NID_PACKET = 0;
@@ -249,6 +249,6 @@ void Manage_EmergencyStop_TA_Emergen(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_EmergencyStop_TA_Emergen.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

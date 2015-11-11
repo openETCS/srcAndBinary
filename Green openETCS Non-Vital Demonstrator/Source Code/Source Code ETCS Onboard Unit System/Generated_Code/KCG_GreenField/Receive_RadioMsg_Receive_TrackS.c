@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,7 +23,7 @@ void Receive_RadioMsg_Receive_TrackS(
     (*API_TrackSide_Msg).rtm_msg.present;
   (*outTrackMessage_for_check).radio_Msg.consistencyError =
     (*API_TrackSide_Msg).rtm_msg.apiConsistencyError;
-  kcg_copy_Radio_TrackTrain_Heade(
+  kcg_copy__11_Radio_TrackTrain_H(
     &(*outTrackMessage_for_check).radio_Msg.header,
     &(*API_TrackSide_Msg).rtm_msg.Radio_Common_Header);
   kcg_copy_RadioMetadata_T_Common(
@@ -39,6 +39,6 @@ void Receive_RadioMsg_Receive_TrackS(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Receive_RadioMsg_Receive_TrackS.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

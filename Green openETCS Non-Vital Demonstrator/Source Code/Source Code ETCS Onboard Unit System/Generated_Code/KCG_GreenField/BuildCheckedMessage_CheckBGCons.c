@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,9 +21,9 @@ void BuildCheckedMessage_CheckBGCons(
   kcg_copy_RadioMetadata_T_Common(
     &(*checkedMessage).radioMetadata,
     (RadioMetadata_T_Common_Types_Pk *) &cRadioMetadata_CheckBGConsisten);
-  kcg_copy_Radio_TrackTrain_Heade(
+  kcg_copy__11_Radio_TrackTrain_H(
     &(*checkedMessage).Radio_Common_Header,
-    (Radio_TrackTrain_Header_T_Radio *) &cNoRadioHeader_CheckBGConsisten);
+    (_11_Radio_TrackTrain_Header_T_R *) &cNoRadioHeader_CheckBGConsisten);
   kcg_copy_RBC_Id_T_Common_Types_(
     &(*checkedMessage).sendingRBC,
     (RBC_Id_T_Common_Types_Pkg *) &cSendingRBC_CheckBGConsistency_);
@@ -41,6 +41,6 @@ void BuildCheckedMessage_CheckBGCons(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BuildCheckedMessage_CheckBGCons.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

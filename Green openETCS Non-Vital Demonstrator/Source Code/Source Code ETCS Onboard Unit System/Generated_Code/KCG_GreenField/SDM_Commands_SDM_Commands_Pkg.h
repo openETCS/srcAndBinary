@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _SDM_Commands_SDM_Commands_Pkg_
 #define _SDM_Commands_SDM_Commands_Pkg_
@@ -8,9 +8,9 @@
 #include "kcg_types.h"
 #include "CalcDriverOutput_SDM_Commands_P.h"
 #include "CalcModeTransOutput_SDM_Command.h"
-#include "CalcDMI_output_SDM_Commands_Pkg.h"
 #include "CmdTrainSupervisionStatus_SDM_C.h"
 #include "MergeMLRequests_SDM_Commands_Pk.h"
+#include "CalcDMI_output_SDM_Commands_Pkg.h"
 #include "CalcBrakeCmd_SDM_Commands_Pkg.h"
 
 /* =====================  no input structure  ====================== */
@@ -29,7 +29,8 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_CalcBrakeCmd_SDM_Commands_ /* 1 */ _1_Context_1;
+  outC_CalcBrakeCmd_SDM_Commands_ /* 1 */ _2_Context_1;
+  outC_CalcDMI_output_SDM_Command /* 1 */ _1_Context_1;
   outC_MergeMLRequests_SDM_Comman /* 2 */ Context_2;
   outC_CmdTrainSupervisionStatus_ /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
@@ -63,6 +64,6 @@ extern void SDM_Commands_init_SDM_Commands_(
 #endif /* _SDM_Commands_SDM_Commands_Pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_Commands_SDM_Commands_Pkg.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

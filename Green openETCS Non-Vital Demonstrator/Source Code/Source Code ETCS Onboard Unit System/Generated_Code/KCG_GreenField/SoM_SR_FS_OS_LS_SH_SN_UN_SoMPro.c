@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,9 +31,9 @@ void SoM_SR_FS_OS_LS_SH_SN_UN_SoMPro(
   outC_SoM_SR_FS_OS_LS_SH_SN_UN_S *outC)
 {
   /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */
-  static _196_SSM_ST_SM1 SM1_state_sel;
+  static _200_SSM_ST_SM1 SM1_state_sel;
   /* SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN::SM1 */
-  static _196_SSM_ST_SM1 SM1_state_act;
+  static _200_SSM_ST_SM1 SM1_state_act;
   
   outC->request_Mode_Change_SB_to_FS_to = kcg_false;
   /* init_SM1 */ if (outC->init) {
@@ -95,6 +95,6 @@ void SoM_SR_FS_OS_LS_SH_SN_UN_SoMPro(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SoM_SR_FS_OS_LS_SH_SN_UN_SoMPro.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

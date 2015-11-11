@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _DECODE_NID_LRBG_TM_conversions
 #define _DECODE_NID_LRBG_TM_conversions
@@ -23,6 +23,6 @@ extern void DECODE_NID_LRBG_TM_conversions(
 #endif /* _DECODE_NID_LRBG_TM_conversions */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** DECODE_NID_LRBG_TM_conversions.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

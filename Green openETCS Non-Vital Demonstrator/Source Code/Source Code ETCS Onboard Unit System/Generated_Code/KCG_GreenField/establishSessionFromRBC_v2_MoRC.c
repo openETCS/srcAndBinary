@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -43,7 +43,7 @@ void establishSessionFromRBC_v2_init(outC_establishSessionFromRBC_v2 *outC)
   outC->sessionEstablishCmd_mem.p42.origin.nid_c = 0;
   outC->sessionEstablishCmd_mem.p42.origin.rbc_id = 0;
   outC->sessionEstablishCmd_mem.p42.origin.device_id = 0;
-  outC->SM1_state_nxt = _152_SSM_st_idle_SM1;
+  outC->SM1_state_nxt = _156_SSM_st_idle_SM1;
   outC->sessionStatus.valid = kcg_true;
   outC->sessionStatus.phase = sp_terminated_RCM_Session_Types;
   outC->sessionStatus.nid_c = 0;
@@ -66,15 +66,15 @@ void establishSessionFromRBC_v2_MoRC(
   outC_establishSessionFromRBC_v2 *outC)
 {
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::SM1 */
-  static _153_SSM_ST_SM1 SM1_state_sel;
+  static _157_SSM_ST_SM1 SM1_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::SM1 */
-  static _153_SSM_ST_SM1 SM1_state_act;
+  static _157_SSM_ST_SM1 SM1_state_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::initiatedByRBC */
   static kcg_bool initiatedByRBC;
   
   outC->sessionStatus.valid = kcg_true;
   /* init_SM1 */ if (outC->init) {
-    SM1_state_sel = _152_SSM_st_idle_SM1;
+    SM1_state_sel = _156_SSM_st_idle_SM1;
   }
   else {
     SM1_state_sel = outC->SM1_state_nxt;
@@ -87,20 +87,20 @@ void establishSessionFromRBC_v2_MoRC(
     case SSM_st_sessionEstablished_SM1 :
       outC->send_m159_sessionEstablishedRep = kcg_false;
       if (reset) {
-        SM1_state_act = _152_SSM_st_idle_SM1;
+        SM1_state_act = _156_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_sessionEstablished_SM1;
       }
       break;
-    case _152_SSM_st_idle_SM1 :
+    case _156_SSM_st_idle_SM1 :
       if (initiatedByRBC) {
         outC->send_m159_sessionEstablishedRep = kcg_true;
         SM1_state_act = SSM_st_sessionEstablished_SM1;
       }
       else {
         outC->send_m159_sessionEstablishedRep = kcg_false;
-        SM1_state_act = _152_SSM_st_idle_SM1;
+        SM1_state_act = _156_SSM_st_idle_SM1;
       }
       break;
     
@@ -130,8 +130,8 @@ void establishSessionFromRBC_v2_MoRC(
       outC->SM1_state_nxt = SSM_st_sessionEstablished_SM1;
       outC->sessionStatus.phase = sp_establishing_RCM_Session_Typ;
       break;
-    case _152_SSM_st_idle_SM1 :
-      outC->SM1_state_nxt = _152_SSM_st_idle_SM1;
+    case _156_SSM_st_idle_SM1 :
+      outC->SM1_state_nxt = _156_SSM_st_idle_SM1;
       outC->sessionStatus.phase = sp_terminated_RCM_Session_Types;
       break;
     
@@ -140,6 +140,6 @@ void establishSessionFromRBC_v2_MoRC(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** establishSessionFromRBC_v2_MoRC.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

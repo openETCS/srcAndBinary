@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _Normalize_DP_and_OL_LRBG_TA_MA
 #define _Normalize_DP_and_OL_LRBG_TA_MA
@@ -22,6 +22,6 @@ extern void Normalize_DP_and_OL_LRBG_TA_MA(
 #endif /* _Normalize_DP_and_OL_LRBG_TA_MA */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_DP_and_OL_LRBG_TA_MA.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

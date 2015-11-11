@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _sendDynamic_manage_DMI_Output_
 #define _sendDynamic_manage_DMI_Output_
@@ -31,6 +31,6 @@ extern void sendDynamic_manage_DMI_Output_P(
 #endif /* _sendDynamic_manage_DMI_Output_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendDynamic_manage_DMI_Output_P.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

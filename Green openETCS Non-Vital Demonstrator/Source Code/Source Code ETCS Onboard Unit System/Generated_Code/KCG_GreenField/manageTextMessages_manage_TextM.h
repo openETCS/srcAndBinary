@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _manageTextMessages_manage_Text
 #define _manageTextMessages_manage_Text
@@ -27,6 +27,6 @@ extern void manageTextMessages_manage_TextM(
 #endif /* _manageTextMessages_manage_Text */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTextMessages_manage_TextM.h
-** Generation date: 2015-11-03T14:28:10
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

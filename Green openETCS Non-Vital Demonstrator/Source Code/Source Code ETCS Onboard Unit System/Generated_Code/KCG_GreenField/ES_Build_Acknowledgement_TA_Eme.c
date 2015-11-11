@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -50,7 +50,7 @@ void ES_Build_Acknowledgement_TA_Eme(
   }
   else /* 2 */ if (cesAccepted) {
     /* 3 */ if (updateEOA) {
-      (*message147).header.xQ_EMERGENCYSTOP = _31_Q_EMERGENCYSTOP_Conditional;
+      (*message147).header.xQ_EMERGENCYSTOP = _32_Q_EMERGENCYSTOP_Conditional;
     }
     else {
       (*message147).header.xQ_EMERGENCYSTOP = Q_EMERGENCYSTOP_Conditional_Eme;
@@ -63,6 +63,6 @@ void ES_Build_Acknowledgement_TA_Eme(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ES_Build_Acknowledgement_TA_Eme.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

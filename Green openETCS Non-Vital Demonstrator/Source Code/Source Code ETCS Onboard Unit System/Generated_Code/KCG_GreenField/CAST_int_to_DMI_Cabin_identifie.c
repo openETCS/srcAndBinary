@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,9 +18,9 @@ DMI_Cabin_Identifier_T_DMI_Type CAST_int_to_DMI_Cabin_identifie(
   /* DATA::Variables::CAST_int_to_DMI_Cabin_identifier::dmi_cabin_identifier_ct */
   static DMI_Cabin_Identifier_T_DMI_Type dmi_cabin_identifier_ct;
   
-  IfBlock1_clock = dmi_cabin_identifier_int == _70_INT_DMI_Cabin_Identifier_T_;
+  IfBlock1_clock = dmi_cabin_identifier_int == _71_INT_DMI_Cabin_Identifier_T_;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    dmi_cabin_identifier_ct = _69_ENUM_DMI_Cabin_Identifier_T;
+    dmi_cabin_identifier_ct = _70_ENUM_DMI_Cabin_Identifier_T;
   }
   else {
     else_clock_IfBlock1 = dmi_cabin_identifier_int ==
@@ -29,7 +29,7 @@ DMI_Cabin_Identifier_T_DMI_Type CAST_int_to_DMI_Cabin_identifie(
       dmi_cabin_identifier_ct = ENUM_DMI_Cabin_Identifier_T_cab;
     }
     else {
-      dmi_cabin_identifier_ct = _69_ENUM_DMI_Cabin_Identifier_T;
+      dmi_cabin_identifier_ct = _70_ENUM_DMI_Cabin_Identifier_T;
     }
   }
   return dmi_cabin_identifier_ct;
@@ -37,6 +37,6 @@ DMI_Cabin_Identifier_T_DMI_Type CAST_int_to_DMI_Cabin_identifie(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_DMI_Cabin_identifie.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

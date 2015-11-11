@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _recalculate_BG_location_astern
 #define _recalculate_BG_location_astern
@@ -29,6 +29,6 @@ extern void recalculate_BG_location_astern_(
 #endif /* _recalculate_BG_location_astern */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** recalculate_BG_location_astern_.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

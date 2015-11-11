@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void SSP_Preprocessing_TA_SSP(
   /* TA_SSP::SSP_Preprocessing */
   static StaticSpeedProfile_t_TrackAtlas tmp;
   
-  /* 1 */ _203_SSP_Convert_P27V1_to_Dista(p27v1, &tmp);
+  /* 1 */ _207_SSP_Convert_P27V1_to_Dista(p27v1, &tmp);
   /* 1 */
   MoveSSPSectionsAbsolute_TA_Lib_(
     &tmp,
@@ -33,6 +33,6 @@ void SSP_Preprocessing_TA_SSP(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Preprocessing_TA_SSP.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

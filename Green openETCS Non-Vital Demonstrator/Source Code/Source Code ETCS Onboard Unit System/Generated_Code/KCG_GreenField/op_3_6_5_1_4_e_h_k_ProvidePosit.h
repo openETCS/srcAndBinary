@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _op_3_6_5_1_4_e_h_k_ProvidePosi
 #define _op_3_6_5_1_4_e_h_k_ProvidePosi
@@ -45,6 +45,6 @@ extern void op_3_6_5_1_4_e_h_k_init_Provide(
 #endif /* _op_3_6_5_1_4_e_h_k_ProvidePosi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_6_5_1_4_e_h_k_ProvidePosit.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

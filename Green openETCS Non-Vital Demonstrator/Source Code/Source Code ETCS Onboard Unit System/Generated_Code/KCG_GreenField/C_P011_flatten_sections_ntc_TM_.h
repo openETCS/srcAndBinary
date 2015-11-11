@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _C_P011_flatten_sections_ntc_TM
 #define _C_P011_flatten_sections_ntc_TM
@@ -21,6 +21,6 @@ extern void C_P011_flatten_sections_ntc_TM_(
 #endif /* _C_P011_flatten_sections_ntc_TM */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P011_flatten_sections_ntc_TM_.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

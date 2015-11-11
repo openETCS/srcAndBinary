@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,6 +19,7 @@ void InputTIUManagement_Interfaces(
   /* Interfaces::InputTIUManagement::OnBoard_Powered */ kcg_bool *OnBoard_Powered,
   /* Interfaces::InputTIUManagement::Valid_Train_Data_Stored */ kcg_bool *Valid_Train_Data_Stored)
 {
+  *OnBoard_Powered = (*Data_from_TIU).train_status.valid;
   switch ((*Data_from_TIU).train_status.m_nonleading_st) {
     case non_leading_permitted_TIU_Types :
       *Train_Permitted_NL = kcg_true;
@@ -48,36 +49,31 @@ void InputTIUManagement_Interfaces(
       break;
     
   }
-  *All_Desks_Closed = (*Data_from_TIU).train_status.m_cab_st ==
-    both_desks_are_closed_TIU_Types;
-  *Valid_Train_Data_Stored =
-    (*Data_from_TIU).train_data_info.acknowledgedByDriver;
   switch ((*Data_from_TIU).train_status.m_cab_st) {
-    case both_desks_are_open_TIU_Types_P :
-      *Desk_Open = kcg_true;
-      *OnBoard_Powered = kcg_true;
-      break;
-    case desk_B_is_open_TIU_Types_Pkg :
-      *Desk_Open = Cab == CabB_TIU_Types_Pkg;
-      *OnBoard_Powered = kcg_true;
+    case both_desks_are_closed_TIU_Types :
+      *Desk_Open = kcg_false;
       break;
     case desk_A_is_open_TIU_Types_Pkg :
       *Desk_Open = Cab == CabA_TIU_Types_Pkg;
-      *OnBoard_Powered = kcg_true;
       break;
-    case both_desks_are_closed_TIU_Types :
-      *Desk_Open = kcg_false;
-      *OnBoard_Powered = kcg_false;
+    case desk_B_is_open_TIU_Types_Pkg :
+      *Desk_Open = Cab == CabB_TIU_Types_Pkg;
+      break;
+    case both_desks_are_open_TIU_Types_P :
+      *Desk_Open = kcg_true;
       break;
     
     default :
       *Desk_Open = kcg_false;
-      *OnBoard_Powered = kcg_false;
   }
+  *All_Desks_Closed = (*Data_from_TIU).train_status.m_cab_st ==
+    both_desks_are_closed_TIU_Types;
+  *Valid_Train_Data_Stored =
+    (*Data_from_TIU).train_data_info.acknowledgedByDriver;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputTIUManagement_Interfaces.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

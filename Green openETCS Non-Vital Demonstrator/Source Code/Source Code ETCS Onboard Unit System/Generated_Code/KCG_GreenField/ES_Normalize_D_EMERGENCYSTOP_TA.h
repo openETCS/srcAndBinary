@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _ES_Normalize_D_EMERGENCYSTOP_T
 #define _ES_Normalize_D_EMERGENCYSTOP_T
@@ -20,6 +20,6 @@ extern L_internal_Type_Obu_BasicTypes_ ES_Normalize_D_EMERGENCYSTOP_TA(
 #endif /* _ES_Normalize_D_EMERGENCYSTOP_T */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ES_Normalize_D_EMERGENCYSTOP_TA.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

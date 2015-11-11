@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -38,7 +38,7 @@ void ExitLevel2or3_OutputToRBC(
   /* OutputToRBC::ExitLevel2or3::Loc_Position */
   static M_POSITION last_Loc_Position;
   /* OutputToRBC::ExitLevel2or3::SM1 */
-  static _173_SSM_ST_SM1 SM1_state_act;
+  static _177_SSM_ST_SM1 SM1_state_act;
   
   /* last_init_ck_Loc_Position */ if (outC->init) {
     outC->init = kcg_false;
@@ -82,6 +82,6 @@ void ExitLevel2or3_OutputToRBC(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ExitLevel2or3_OutputToRBC.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

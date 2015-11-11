@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _keepP42_EVC_Support_Pkg_H_
 #define _keepP42_EVC_Support_Pkg_H_
@@ -42,6 +42,6 @@ extern void keepP42_init_EVC_Support_Pkg(outC_keepP42_EVC_Support_Pkg *outC);
 #endif /* _keepP42_EVC_Support_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** keepP42_EVC_Support_Pkg.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

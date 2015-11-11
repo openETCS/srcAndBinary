@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _updateDMIStatus_manage_DMI_Inp
 #define _updateDMIStatus_manage_DMI_Inp
@@ -22,6 +22,6 @@ extern void updateDMIStatus_manage_DMI_Inpu(
 #endif /* _updateDMIStatus_manage_DMI_Inp */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** updateDMIStatus_manage_DMI_Inpu.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

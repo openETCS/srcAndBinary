@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _TransformA_realToA_int_SDM_Typ
 #define _TransformA_realToA_int_SDM_Typ
@@ -19,6 +19,6 @@ extern A_internal_Type_Obu_BasicTypes_ TransformA_realToA_int_SDM_Type(
 #endif /* _TransformA_realToA_int_SDM_Typ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TransformA_realToA_int_SDM_Type.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

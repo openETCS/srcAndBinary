@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _RequestAck_Acknowledgement_H_
 #define _RequestAck_Acknowledgement_H_
@@ -21,7 +21,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  _170_SSM_ST_SM1 /* Acknowledgement::RequestAck::SM1 */ SM1_state_nxt;
+  _174_SSM_ST_SM1 /* Acknowledgement::RequestAck::SM1 */ SM1_state_nxt;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
 } outC_RequestAck_Acknowledgement;
@@ -49,6 +49,6 @@ extern void RequestAck_init_Acknowledgement(
 #endif /* _RequestAck_Acknowledgement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RequestAck_Acknowledgement.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _SH_Initiated_By_Driver_On_Proc
 #define _SH_Initiated_By_Driver_On_Proc
@@ -49,6 +49,6 @@ extern void SH_Initiated_By_Driver_On_init_(
 #endif /* _SH_Initiated_By_Driver_On_Proc */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SH_Initiated_By_Driver_On_Proce.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

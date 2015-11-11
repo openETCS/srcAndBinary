@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,9 +22,9 @@ Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_D(
   /* DATA::Variables::CAST_Icon_control_flag_to_int::Output1 */
   static Icon_control_flag_INT_T_DATA Output1;
   
-  IfBlock1_clock = Input1 == _74_ENUM_Icon_control_flag_T_sh;
+  IfBlock1_clock = Input1 == _75_ENUM_Icon_control_flag_T_sh;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    Output1 = _72_INT_Icon_control_flag_T_sho;
+    Output1 = _73_INT_Icon_control_flag_T_sho;
   }
   else {
     _2_else_clock_IfBlock1 = Input1 == ENUM_Icon_control_flag_T_clear_;
@@ -32,17 +32,17 @@ Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_D(
       Output1 = INT_Icon_control_flag_T_clear_a;
     }
     else {
-      _1_else_clock_IfBlock1 = Input1 == _73_ENUM_Icon_control_flag_T_sh;
+      _1_else_clock_IfBlock1 = Input1 == _74_ENUM_Icon_control_flag_T_sh;
       /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
         Output1 = INT_Icon_control_flag_T_show_ic;
       }
       else {
         else_clock_IfBlock1 = Input1 == ENUM_Icon_control_flag_T_show_i;
         /* ck_anon_activ */ if (else_clock_IfBlock1) {
-          Output1 = _71_INT_Icon_control_flag_T_sho;
+          Output1 = _72_INT_Icon_control_flag_T_sho;
         }
         else {
-          Output1 = _72_INT_Icon_control_flag_T_sho;
+          Output1 = _73_INT_Icon_control_flag_T_sho;
         }
       }
     }
@@ -52,6 +52,6 @@ Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_D(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Icon_control_flag_to_int_D.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

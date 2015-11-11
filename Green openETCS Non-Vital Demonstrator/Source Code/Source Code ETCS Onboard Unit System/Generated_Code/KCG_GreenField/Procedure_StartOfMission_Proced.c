@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -203,7 +203,7 @@ void Procedure_StartOfMission_Proced(
           }
           else if (Driver_Req_SH) {
             SM_SoM_On_reset_act_SM_StartOfM = kcg_true;
-            SM_SoM_On_state_act_SM_StartOfM = _181_SSM_st_Procedure_SH_Initia;
+            SM_SoM_On_state_act_SM_StartOfM = _185_SSM_st_Procedure_SH_Initia;
           }
           else {
             if (Valid_Train_Data_Stored) {
@@ -219,9 +219,9 @@ void Procedure_StartOfMission_Proced(
           SM_SoM_On_reset_act_SM_StartOfM = kcg_false;
           SM_SoM_On_state_act_SM_StartOfM = SSM_st_NL_Mode_SM_StartOfMissio;
           break;
-        case _181_SSM_st_Procedure_SH_Initia :
+        case _185_SSM_st_Procedure_SH_Initia :
           SM_SoM_On_reset_act_SM_StartOfM = kcg_false;
-          SM_SoM_On_state_act_SM_StartOfM = _181_SSM_st_Procedure_SH_Initia;
+          SM_SoM_On_state_act_SM_StartOfM = _185_SSM_st_Procedure_SH_Initia;
           break;
         case SSM_st_Waiting_Driver_Strating_ :
           br_1_guard_SM_StartOfMissionPro = (Current_Level == M_LEVEL_Level_1) |
@@ -233,7 +233,7 @@ void Procedure_StartOfMission_Proced(
                 M_LEVEL_Level_NTC_specified_by_));
           if (br_1_guard_SM_StartOfMissionPro) {
             SM_SoM_On_reset_act_SM_StartOfM = kcg_true;
-            SM_SoM_On_state_act_SM_StartOfM = _180_SSM_st_Waiting_Driver_Sele;
+            SM_SoM_On_state_act_SM_StartOfM = _184_SSM_st_Waiting_Driver_Sele;
           }
           else {
             if (br_2_guard_SM_StartOfMissionPro) {
@@ -278,14 +278,14 @@ void Procedure_StartOfMission_Proced(
           SM_SoM_On_reset_act_SM_StartOfM = kcg_false;
           SM_SoM_On_state_act_SM_StartOfM = SSM_st_UN_Mode_SM_StartOfMissio;
           break;
-        case _180_SSM_st_Waiting_Driver_Sele :
+        case _184_SSM_st_Waiting_Driver_Sele :
           SM_SoM_On_reset_act_SM_StartOfM = kcg_false;
-          SM_SoM_On_state_act_SM_StartOfM = _180_SSM_st_Waiting_Driver_Sele;
+          SM_SoM_On_state_act_SM_StartOfM = _184_SSM_st_Waiting_Driver_Sele;
           break;
         
       }
       /* act_SM_SoM_On */ switch (SM_SoM_On_state_act_SM_StartOfM) {
-        case _180_SSM_st_Waiting_Driver_Sele :
+        case _184_SSM_st_Waiting_Driver_Sele :
           if (SM_SoM_On_reset_act_SM_StartOfM) {
             /* 1 */ Procedure_Start_L1_L2_L3_reset_(&outC->Context_1);
           }
@@ -312,7 +312,7 @@ void Procedure_StartOfMission_Proced(
           outC->Ack_OS_Req_To_Driver = kcg_false;
           outC->Ack_LS_Req_To_Driver = kcg_false;
           break;
-        case _181_SSM_st_Procedure_SH_Initia :
+        case _185_SSM_st_Procedure_SH_Initia :
           outC->Ack_UN_Req_To_Driver = kcg_false;
           outC->Ack_SR_Req_To_Driver = kcg_false;
           outC->Ack_SN_Req_To_Driver = kcg_false;
@@ -363,7 +363,7 @@ void Procedure_StartOfMission_Proced(
           outC->Ack_OS_Req_To_Driver = kcg_false;
           outC->Ack_LS_Req_To_Driver = kcg_false;
           break;
-        case _180_SSM_st_Waiting_Driver_Sele :
+        case _184_SSM_st_Waiting_Driver_Sele :
           outC->Ack_UN_Req_To_Driver = kcg_false;
           outC->Ack_SN_Req_To_Driver = kcg_false;
           /* 1 */
@@ -396,7 +396,7 @@ void Procedure_StartOfMission_Proced(
       }
       outC->SM_StartOfMissionProcedure_stat = SSM_st_Procedure_On_SM_StartOfM;
       /* act_SM_SoM_On */ switch (SM_SoM_On_state_act_SM_StartOfM) {
-        case _180_SSM_st_Waiting_Driver_Sele :
+        case _184_SSM_st_Waiting_Driver_Sele :
           outC->Condition_60 = kcg_false;
           outC->Condition_58 = kcg_false;
           outC->Condition_46 = kcg_false;
@@ -413,7 +413,7 @@ void Procedure_StartOfMission_Proced(
           outC->End_Of_Mission_Procedure_Req = kcg_false;
           outC->MA_Req_To_RBC = _L10_SM_StartOfMissionProcedure;
           outC->SM_SoM_On_state_nxt_SM_StartOfM =
-            _180_SSM_st_Waiting_Driver_Sele;
+            _184_SSM_st_Waiting_Driver_Sele;
           break;
         case SSM_st_UN_Mode_SM_StartOfMissio :
           outC->Condition_70 = kcg_false;
@@ -510,7 +510,7 @@ void Procedure_StartOfMission_Proced(
           outC->SM_SoM_On_state_nxt_SM_StartOfM =
             SSM_st_Waiting_Driver_Strating_;
           break;
-        case _181_SSM_st_Procedure_SH_Initia :
+        case _185_SSM_st_Procedure_SH_Initia :
           outC->Condition_70 = kcg_false;
           outC->Condition_60 = kcg_false;
           outC->Condition_58 = kcg_false;
@@ -538,7 +538,7 @@ void Procedure_StartOfMission_Proced(
           outC->SH_Refused_By_RBC_To_DMI =
             outC->_1_Context_1.SH_Refused_By_RBC_To_DMI;
           outC->SM_SoM_On_state_nxt_SM_StartOfM =
-            _181_SSM_st_Procedure_SH_Initia;
+            _185_SSM_st_Procedure_SH_Initia;
           break;
         case SSM_st_NL_Mode_SM_StartOfMissio :
           outC->Condition_70 = kcg_false;
@@ -612,6 +612,6 @@ void Procedure_StartOfMission_Proced(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_StartOfMission_Proced.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

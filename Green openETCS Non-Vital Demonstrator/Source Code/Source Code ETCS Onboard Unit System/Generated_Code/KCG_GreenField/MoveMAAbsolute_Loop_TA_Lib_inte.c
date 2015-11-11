@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,7 +18,7 @@ void MoveMAAbsolute_Loop_TA_Lib_inte(
   /* TA_Lib_internal::MoveMAAbsolute_Loop::ProfileOut */ MovementAuthoritySectionlist_t_ *ProfileOut)
 {
   /* TA_Lib_internal::MoveMAAbsolute_Loop */
-  static _20_MovementAuthoritySection_t_ tmp1;
+  static _22_MovementAuthoritySection_t_ tmp1;
   /* TA_Lib_internal::MoveMAAbsolute_Loop */
   static kcg_int tmp;
   /* TA_Lib_internal::MoveMAAbsolute_Loop::IfBlock1::else */
@@ -26,15 +26,15 @@ void MoveMAAbsolute_Loop_TA_Lib_inte(
   /* TA_Lib_internal::MoveMAAbsolute_Loop::IfBlock1 */
   static kcg_bool IfBlock1_clock;
   /* TA_Lib_internal::MoveMAAbsolute_Loop::_L6 */
-  static _20_MovementAuthoritySection_t_ _L6;
+  static _22_MovementAuthoritySection_t_ _L6;
   
   if ((0 <= i) & (i < 10)) {
-    kcg_copy__20_MovementAuthorityS(&_L6, &(*ProfileIn)[i]);
+    kcg_copy__22_MovementAuthorityS(&_L6, &(*ProfileIn)[i]);
   }
   else {
-    kcg_copy__20_MovementAuthorityS(
+    kcg_copy__22_MovementAuthorityS(
       &_L6,
-      (_20_MovementAuthoritySection_t_ *) &DEFAULT_MA_section_TrackAtlasTy);
+      (_22_MovementAuthoritySection_t_ *) &DEFAULT_MA_section_TrackAtlasTy);
   }
   IfBlock1_clock = msg_LRBG & !msg_prvLRBG;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
@@ -43,7 +43,7 @@ void MoveMAAbsolute_Loop_TA_Lib_inte(
     else_clock_IfBlock1 = !msg_LRBG & msg_prvLRBG;
   }
   kcg_copy_MovementAuthoritySecti(ProfileOut, ProfileIn);
-  kcg_copy__20_MovementAuthorityS(&tmp1, &_L6);
+  kcg_copy__22_MovementAuthorityS(&tmp1, &_L6);
   /* 1 */ if (_L6.valid) {
     /* ck_IfBlock1 */ if (IfBlock1_clock) {
       tmp = pos_LRBG;
@@ -60,12 +60,12 @@ void MoveMAAbsolute_Loop_TA_Lib_inte(
   }
   tmp1.l_section = _L6.l_section + tmp;
   if ((0 <= i) & (i < 10)) {
-    kcg_copy__20_MovementAuthorityS(&(*ProfileOut)[i], &tmp1);
+    kcg_copy__22_MovementAuthorityS(&(*ProfileOut)[i], &tmp1);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoveMAAbsolute_Loop_TA_Lib_inte.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

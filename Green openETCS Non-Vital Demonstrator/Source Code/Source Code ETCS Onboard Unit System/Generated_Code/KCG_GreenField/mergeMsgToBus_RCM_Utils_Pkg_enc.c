@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -52,9 +52,9 @@ void mergeMsgToBus_RCM_Utils_Pkg_enc(
   /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1::notRequested */
   static kcg_bool br_1_guard_SM1_notRequested;
   /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */
-  static SSM_ST_SM1 SM1_state_sel;
+  static _112_SSM_ST_SM1 SM1_state_sel;
   /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */
-  static SSM_ST_SM1 SM1_state_act;
+  static _112_SSM_ST_SM1 SM1_state_act;
   /* RCM_Utils_Pkg::encoders::mergeMsgToBus::_L5 */
   static kcg_int _L5;
   /* RCM_Utils_Pkg::encoders::mergeMsgToBus::_L9 */
@@ -128,6 +128,6 @@ void mergeMsgToBus_RCM_Utils_Pkg_enc(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_enc.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

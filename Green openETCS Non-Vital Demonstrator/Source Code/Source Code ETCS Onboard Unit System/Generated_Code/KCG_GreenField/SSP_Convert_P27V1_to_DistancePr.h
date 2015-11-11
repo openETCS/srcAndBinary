@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _SSP_Convert_P27V1_to_DistanceP
 #define _SSP_Convert_P27V1_to_DistanceP
@@ -25,6 +25,6 @@ extern void SSP_Convert_P27V1_to_DistancePr(
 #endif /* _SSP_Convert_P27V1_to_DistanceP */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Convert_P27V1_to_DistancePr.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

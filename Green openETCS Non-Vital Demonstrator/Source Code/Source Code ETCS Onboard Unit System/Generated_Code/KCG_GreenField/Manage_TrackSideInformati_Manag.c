@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,10 +17,6 @@ void Manage_TrackSideInformati_init_(outC_Manage_TrackSideInformati_ *outC)
   outC->BadBaliseMessageToDMI = kcg_true;
   outC->rem_transitionPositionPassed = kcg_true;
   outC->init = kcg_true;
-  outC->debug_ErrorMSG = kcg_true;
-  outC->errorBG = kcg_true;
-  outC->countPackets = 0;
-  outC->positionM = 0.0;
   for (i = 0; i < 5; i++) {
     outC->Data_to_From_Track_Packets_at_M.P_12[i].valid = kcg_true;
     outC->Data_to_From_Track_Packets_at_M.P_12[i].q_dir = Q_DIR_Reverse;
@@ -120,7 +116,7 @@ void Manage_TrackSideInformati_init_(outC_Manage_TrackSideInformati_ *outC)
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].q_diff =
       Q_DIFF_Cant_Deficiency_specific;
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].nc_cddiff =
-      _41_NC_CDDIFF_Specific_SSP_appl;
+      _42_NC_CDDIFF_Specific_SSP_appl;
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].nc_diff = 0;
     outC->Data_to_From_Track_Packets_at_M.P_27.diffArray[i].v_diff = 0;
   }
@@ -136,7 +132,7 @@ void Manage_TrackSideInformati_init_(outC_Manage_TrackSideInformati_ *outC)
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].q_diff =
         Q_DIFF_Cant_Deficiency_specific;
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].nc_cddiff =
-        _41_NC_CDDIFF_Specific_SSP_appl;
+        _42_NC_CDDIFF_Specific_SSP_appl;
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].nc_diff =
         0;
       outC->Data_to_From_Track_Packets_at_M.P_27.SSPArray[i].diffArray[i1].v_diff =
@@ -572,19 +568,11 @@ void Manage_TrackSideInformati_Manag(
     tmp = cUnknownBG_BG_Types_Pkg;
   }
   outC->outCheckErrors.nid_errorbg = tmp;
-  outC->positionM = (kcg_real) (*ActualOdometry).odo.o_nominal / 100.0;
-  /* 1 */
-  checkOnErrors_xdebugSupport_Pkg(
-    &outC->outCheckErrors,
-    &outC->debug_ErrorMSG,
-    &outC->errorBG);
-  outC->countPackets = /* 1 */
-    countPackets_xdebugSupport_Pkg(API_trackSide_Message);
   outC->rem_transitionPositionPassed = transitionPositionPassed;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_TrackSideInformati_Manag.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

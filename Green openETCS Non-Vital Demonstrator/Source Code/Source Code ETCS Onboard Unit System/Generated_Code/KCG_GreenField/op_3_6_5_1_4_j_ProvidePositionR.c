@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -41,7 +41,7 @@ void op_3_6_5_1_4_j_init_ProvidePosi(outC_op_3_6_5_1_4_j_ProvidePosi *outC)
   outC->rem_LRBG.infoFromLinking.linkingInfo.nid_c = 0;
   outC->rem_LRBG.infoFromLinking.linkingInfo.nid_bg = 0;
   outC->rem_LRBG.infoFromLinking.linkingInfo.q_linkorientation =
-    _55_Q_LINKORIENTATION_The_balis;
+    _56_Q_LINKORIENTATION_The_balis;
   outC->rem_LRBG.infoFromLinking.linkingInfo.q_linkreaction =
     Q_LINKREACTION_Train_trip;
   outC->rem_LRBG.infoFromLinking.linkingInfo.q_locacc = 0;
@@ -96,7 +96,7 @@ void op_3_6_5_1_4_j_init_ProvidePosi(outC_op_3_6_5_1_4_j_ProvidePosi *outC)
     outC->rem_LRBG.infoFromPassing.linkedBGs[i].nid_c = 0;
     outC->rem_LRBG.infoFromPassing.linkedBGs[i].nid_bg = 0;
     outC->rem_LRBG.infoFromPassing.linkedBGs[i].q_linkorientation =
-      _55_Q_LINKORIENTATION_The_balis;
+      _56_Q_LINKORIENTATION_The_balis;
     outC->rem_LRBG.infoFromPassing.linkedBGs[i].q_linkreaction =
       Q_LINKREACTION_Train_trip;
     outC->rem_LRBG.infoFromPassing.linkedBGs[i].q_locacc = 0;
@@ -147,6 +147,6 @@ void op_3_6_5_1_4_j_ProvidePositionR(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_6_5_1_4_j_ProvidePositionR.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

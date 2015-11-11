@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,7 @@ void C_P003V1_OBU_P003_OBU_TM_conver(
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::P003_onbaord_out */ P003_OBU_T_TM *P003_onbaord_out)
 {
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::_L59 */
-  static _4_P003_OBU_nid_c_sectionlist_e _L59;
+  static _5_P003_OBU_nid_c_sectionlist_e _L59;
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU::_L60 */
   static N_ITER _L60;
   
@@ -81,11 +81,11 @@ void C_P003V1_OBU_P003_OBU_TM_conver(
     &_L60,
     &_L59);
   (*P003_onbaord_out).n_iter_nid_c = _L60;
-  kcg_copy__4_P003_OBU_nid_c_sect(&(*P003_onbaord_out).nid_c_list, &_L59);
+  kcg_copy__5_P003_OBU_nid_c_sect(&(*P003_onbaord_out).nid_c_list, &_L59);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_OBU_P003_OBU_TM_conver.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

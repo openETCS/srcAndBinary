@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _RECV_ReadPacketKernelLoop_TM_l
 #define _RECV_ReadPacketKernelLoop_TM_l
@@ -24,6 +24,6 @@ extern void RECV_ReadPacketKernelLoop_TM_li(
 #endif /* _RECV_ReadPacketKernelLoop_TM_l */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RECV_ReadPacketKernelLoop_TM_li.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

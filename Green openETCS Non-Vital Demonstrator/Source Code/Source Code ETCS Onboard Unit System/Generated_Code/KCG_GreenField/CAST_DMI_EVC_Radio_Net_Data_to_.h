@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _CAST_DMI_EVC_Radio_Net_Data_to
 #define _CAST_DMI_EVC_Radio_Net_Data_to
@@ -16,12 +16,12 @@
 
 /* DATA::Packets::EVC_to_DMI::CAST_DMI_EVC_Radio_Net_Data_to_int */
 extern void CAST_DMI_EVC_Radio_Net_Data_to_(
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_EVC_Radio_Net_Data_to_int::dmi_evc_radio_net_data_ct */ _25_DMI_EVC_Radio_Net_Data_T_DM *dmi_evc_radio_net_data_ct,
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_EVC_Radio_Net_Data_to_int::dmi_evc_radio_net_data_ct */ _27_DMI_EVC_Radio_Net_Data_T_DM *dmi_evc_radio_net_data_ct,
   /* DATA::Packets::EVC_to_DMI::CAST_DMI_EVC_Radio_Net_Data_to_int::dmi_evc_radio_net_data_int */ DMI_EVC_Radio_Net_Data_int_arra *dmi_evc_radio_net_data_int);
 
 #endif /* _CAST_DMI_EVC_Radio_Net_Data_to */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_EVC_Radio_Net_Data_to_.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -126,31 +126,27 @@ void trainData_trainData_pkg(
   else {
     kcg_copy_trainDataStatus_T_trai(&statusAfterCheck, &_L45);
   }
+  /* ck__L21 */ if (statusAfterCheck.validatedbyRBC) {
+    /* 1 */ checkAcknowledgmentGeneral_trai(trackMessages, &ackRequested, &tmp);
+  }
+  else {
+    ackRequested = kcg_false;
+    tmp = kcg_false;
+  }
   /* ck__L46 */ if (_L45.waitingForRBCResponse) {
     /* 1 */
     checkRadioMessages_trainData_pk(
       trackMessages,
       &statusAfterCheck,
       &IfBlock1_clock,
-      &tmp);
-  }
-  else {
-    IfBlock1_clock = kcg_false;
-    tmp = kcg_false;
-  }
-  /* ck__L21 */ if (statusAfterCheck.validatedbyRBC) {
-    /* 1 */
-    checkAcknowledgmentGeneral_trai(
-      trackMessages,
-      &ackRequested,
       &else_clock_IfBlock1);
   }
   else {
-    ackRequested = kcg_false;
+    IfBlock1_clock = kcg_false;
     else_clock_IfBlock1 = kcg_false;
   }
   ackReceived = IfBlock1_clock | ackRequested;
-  ackRequested = tmp | else_clock_IfBlock1;
+  ackRequested = else_clock_IfBlock1 | tmp;
   IfBlock1_clock = ackReceived & ackRequested;
   /* 1 */
   trainDataStorage_trainData_pkg(
@@ -229,6 +225,6 @@ void trainData_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainData_trainData_pkg.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

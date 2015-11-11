@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -129,21 +129,21 @@ kcg_int CAST_DMI_Q_TEXT_to_int_DATA_Var(
                       }
                       else {
                         _15_else_clock_IfBlock1 = q_text_ct ==
-                          _78_ENUM_DMI_Q_TEXT_route_unsui;
+                          _79_ENUM_DMI_Q_TEXT_route_unsui;
                         /* ck_anon_activ */ if (_15_else_clock_IfBlock1) {
                           q_text_int = INT_DMI_Q_TEXT_route_unsuitable;
                         }
                         else {
                           _14_else_clock_IfBlock1 = q_text_ct ==
-                            _77_ENUM_DMI_Q_TEXT_route_unsui;
+                            _78_ENUM_DMI_Q_TEXT_route_unsui;
                           /* ck_anon_activ */ if (_14_else_clock_IfBlock1) {
-                            q_text_int = _75_INT_DMI_Q_TEXT_route_unsuit;
+                            q_text_int = _76_INT_DMI_Q_TEXT_route_unsuit;
                           }
                           else {
                             _13_else_clock_IfBlock1 = q_text_ct ==
                               ENUM_DMI_Q_TEXT_route_unsuitabl;
                             /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
-                              q_text_int = _76_INT_DMI_Q_TEXT_route_unsuit;
+                              q_text_int = _77_INT_DMI_Q_TEXT_route_unsuit;
                             }
                             else {
                               _12_else_clock_IfBlock1 = q_text_ct ==
@@ -274,6 +274,6 @@ kcg_int CAST_DMI_Q_TEXT_to_int_DATA_Var(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Q_TEXT_to_int_DATA_Var.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

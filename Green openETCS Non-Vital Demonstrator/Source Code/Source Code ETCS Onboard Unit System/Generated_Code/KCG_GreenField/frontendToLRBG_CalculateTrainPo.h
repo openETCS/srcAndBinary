@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _frontendToLRBG_CalculateTrainP
 #define _frontendToLRBG_CalculateTrainP
@@ -23,6 +23,6 @@ extern Q_DLRBG frontendToLRBG_CalculateTrainPo(
 #endif /* _frontendToLRBG_CalculateTrainP */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** frontendToLRBG_CalculateTrainPo.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

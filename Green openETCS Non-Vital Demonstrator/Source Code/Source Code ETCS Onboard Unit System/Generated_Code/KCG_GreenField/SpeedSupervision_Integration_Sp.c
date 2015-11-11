@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -54,6 +54,7 @@ void SpeedSupervision_Integration_in(outC_SpeedSupervision_Integrati *outC)
   outC->sdmToDMI.sup_status = CSM_DMI_Types_Pkg;
   outC->sdmToDMI.supervisionDisplay = supDis_normal_DMI_Types_Pkg;
   outC->sdmToDMI.distanceIndicationPoint = 0;
+  /* 1 */ ProbeSDM_init_EnvSim(&outC->_4_Context_1);
   /* 1 */ SDM_Commands_init_SDM_Commands_(&outC->_3_Context_1);
   /* 1 */ CalcBrakingCurves_integration_i(&outC->_2_Context_1);
   /* 1 */ AGradient_init_SDM_GradientAcce(&outC->_1_Context_1);
@@ -66,6 +67,7 @@ void SpeedSupervision_Integration_in(outC_SpeedSupervision_Integrati *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void SpeedSupervision_Integration_re(outC_SpeedSupervision_Integrati *outC)
 {
+  /* 1 */ ProbeSDM_reset_EnvSim(&outC->_4_Context_1);
   /* 1 */ SDM_Commands_reset_SDM_Commands(&outC->_3_Context_1);
   /* 1 */ CalcBrakingCurves_integration_r(&outC->_2_Context_1);
   /* 1 */ AGradient_reset_SDM_GradientAcc(&outC->_1_Context_1);
@@ -102,6 +104,8 @@ void SpeedSupervision_Integration_Sp(
   static trainData_internal_t_SDM_Types_ trainData_extras;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::T_b */
   static t_Brake_t_SDMModelPkg T_b;
+  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::CurveCollection */
+  static CurveCollection_T_CalcBrakingCu CurveCollection;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L114 */
   static kcg_bool _L114;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L112 */
@@ -150,14 +154,6 @@ void SpeedSupervision_Integration_Sp(
     &targetCollection,
     &outC->_1_Context_1);
   kcg_copy_A_gradient_t_SDM_Gradi(&_L190, &outC->_1_Context_1.A_gradient);
-  switch ((*NationalValues).q_nvsbfbperm) {
-    case Q_NVSBFBPERM_Yes :
-      trainData_extras.isSB_FBAvailable = kcg_true;
-      break;
-    
-    default :
-      trainData_extras.isSB_FBAvailable = kcg_false;
-  }
   /* 3 */ addGradient_SDMModelPkg(&tmp, &_L190, &tmp1);
   /* 1 */ addGradient_SDMModelPkg(&_L187, &_L190, &tmp);
   /* 1 */
@@ -167,13 +163,24 @@ void SpeedSupervision_Integration_Sp(
     &tmp1,
     &tmp,
     &outC->_2_Context_1);
+  kcg_copy_CurveCollection_T_Calc(
+    &CurveCollection,
+    &outC->_2_Context_1.curveCollection);
+  switch ((*NationalValues).q_nvsbfbperm) {
+    case Q_NVSBFBPERM_Yes :
+      trainData_extras.isSB_FBAvailable = kcg_true;
+      break;
+    
+    default :
+      trainData_extras.isSB_FBAvailable = kcg_false;
+  }
   /* 4 */
   SDMLimitLocations_TargetLimits_(
     &MRSP_internal,
     odometry,
     &Trainlocations_internal,
     &targetCollection,
-    &outC->_2_Context_1.curveCollection,
+    &CurveCollection,
     &MA_internal,
     &T_b,
     NationalValues,
@@ -213,10 +220,16 @@ void SpeedSupervision_Integration_Sp(
   kcg_copy_Brake_command_T_TIU_Ty(
     &outC->brakeCmd,
     &outC->_3_Context_1.brakeCmd);
+  /* 1 */
+  ProbeSDM_EnvSim(
+    &targetCollection,
+    &CurveCollection,
+    &outC->target,
+    &outC->_4_Context_1);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_Sp.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

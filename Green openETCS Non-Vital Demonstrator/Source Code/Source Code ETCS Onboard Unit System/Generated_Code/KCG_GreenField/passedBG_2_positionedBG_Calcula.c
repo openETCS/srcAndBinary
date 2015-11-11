@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -72,7 +72,7 @@ void passedBG_2_positionedBG_Calcula(
         (Q_LINKORIENTATION_The_balise_gr ==
           (*passedBG_asAnnounced).infoFromLinking.linkingInfo.q_linkorientation)) |
       (((*passedBG).BG_Header.trainOrientationToBG == Q_DIRLRBG_Reverse) &
-        (_55_Q_LINKORIENTATION_The_balis ==
+        (_56_Q_LINKORIENTATION_The_balis ==
           (*passedBG_asAnnounced).infoFromLinking.linkingInfo.q_linkorientation)));
   /* ck_ifAnnouncedOrABGWasPreviouslyPassed */ if (ifAnnouncedOrABGWasPreviouslyPa) {
     *foundNotWhereAnnounced = kcg_false;
@@ -193,6 +193,6 @@ void passedBG_2_positionedBG_Calcula(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** passedBG_2_positionedBG_Calcula.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

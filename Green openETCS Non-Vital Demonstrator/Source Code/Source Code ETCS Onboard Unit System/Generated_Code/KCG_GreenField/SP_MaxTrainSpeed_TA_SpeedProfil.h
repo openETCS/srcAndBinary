@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _SP_MaxTrainSpeed_TA_SpeedProfi
 #define _SP_MaxTrainSpeed_TA_SpeedProfi
@@ -21,6 +21,6 @@ extern void SP_MaxTrainSpeed_TA_SpeedProfil(
 #endif /* _SP_MaxTrainSpeed_TA_SpeedProfi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SP_MaxTrainSpeed_TA_SpeedProfil.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

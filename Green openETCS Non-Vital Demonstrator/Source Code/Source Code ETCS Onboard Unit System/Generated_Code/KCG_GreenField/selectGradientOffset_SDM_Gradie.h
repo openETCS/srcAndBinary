@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _selectGradientOffset_SDM_Gradi
 #define _selectGradientOffset_SDM_Gradi
@@ -22,6 +22,6 @@ extern void selectGradientOffset_SDM_Gradie(
 #endif /* _selectGradientOffset_SDM_Gradi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** selectGradientOffset_SDM_Gradie.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

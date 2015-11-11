@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _mobileBusRouter_out_Handover_P
 #define _mobileBusRouter_out_Handover_P
@@ -67,6 +67,6 @@ extern void mobileBusRouter_out_init_Handov(
 #endif /* _mobileBusRouter_out_Handover_P */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mobileBusRouter_out_Handover_Pk.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

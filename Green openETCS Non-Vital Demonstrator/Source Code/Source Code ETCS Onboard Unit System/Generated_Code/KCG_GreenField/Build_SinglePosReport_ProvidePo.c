@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void Build_SinglePosReport_ProvidePo(
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::in_packet0 */ PT0_PositionReport_T_Packet_Tra *in_packet0,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::in_packet1 */ PT1_PositionReport_2BG_T_Packet *in_packet1,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::t_train */ T_TRAIN t_train,
-  /* ProvidePositionReport_Pkg::Build_SinglePosReport::posRepHeader */ _9_Radio_TrainTrack_Header_T_Ra *posRepHeader,
+  /* ProvidePositionReport_Pkg::Build_SinglePosReport::posRepHeader */ _10_Radio_TrainTrack_Header_T_R *posRepHeader,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::packet0 */ PT0_PositionReport_T_Packet_Tra *packet0,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::packet1 */ PT1_PositionReport_2BG_T_Packet *packet1,
   /* ProvidePositionReport_Pkg::Build_SinglePosReport::packet4 */ PT4_ErrorReporting_T_Packet_Tra *packet4,
@@ -36,6 +36,6 @@ void Build_SinglePosReport_ProvidePo(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_SinglePosReport_ProvidePo.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

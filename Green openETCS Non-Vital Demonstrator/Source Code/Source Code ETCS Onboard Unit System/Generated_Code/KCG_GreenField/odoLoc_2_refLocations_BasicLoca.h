@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _odoLoc_2_refLocations_BasicLoc
 #define _odoLoc_2_refLocations_BasicLoc
@@ -26,6 +26,6 @@ extern void odoLoc_2_refLocations_BasicLoca(
 #endif /* _odoLoc_2_refLocations_BasicLoc */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** odoLoc_2_refLocations_BasicLoca.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

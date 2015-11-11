@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -37,7 +37,7 @@ void TrackAtlas_init_TrackAtlas(outC_TrackAtlas_TrackAtlas *outC)
   outC->message147.header.xQ_MARQSTREASON = Q_MARQSTREASON_Start_selected_b;
   outC->message147.header.xT_TRAIN = 0;
   outC->message147.header.xNID_EM = 0;
-  outC->message147.header.xQ_EMERGENCYSTOP = _31_Q_EMERGENCYSTOP_Conditional;
+  outC->message147.header.xQ_EMERGENCYSTOP = _32_Q_EMERGENCYSTOP_Conditional;
   outC->message147.header.xNID_TEXTMESSAGE = 0;
   outC->message147.packets.p0.valid = kcg_true;
   outC->message147.packets.p0.packet0.NID_PACKET = 0;
@@ -294,7 +294,7 @@ void TrackAtlas_init_TrackAtlas(outC_TrackAtlas_TrackAtlas *outC)
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i1].q_diff =
       Q_DIFF_Cant_Deficiency_specific;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i1].nc_cddiff =
-      _41_NC_CDDIFF_Specific_SSP_appl;
+      _42_NC_CDDIFF_Specific_SSP_appl;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i1].nc_diff = 0;
     outC->To_ModeAndLevel.train_packets.P_27.diffArray[i1].v_diff = 0;
   }
@@ -310,7 +310,7 @@ void TrackAtlas_init_TrackAtlas(outC_TrackAtlas_TrackAtlas *outC)
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i1].diffArray[i].q_diff =
         Q_DIFF_Cant_Deficiency_specific;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i1].diffArray[i].nc_cddiff =
-        _41_NC_CDDIFF_Specific_SSP_appl;
+        _42_NC_CDDIFF_Specific_SSP_appl;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i1].diffArray[i].nc_diff =
         0;
       outC->To_ModeAndLevel.train_packets.P_27.SSPArray[i1].diffArray[i].v_diff =
@@ -382,7 +382,7 @@ void TrackAtlas_init_TrackAtlas(outC_TrackAtlas_TrackAtlas *outC)
   outC->NV_raw_out.v_nvrel = 0;
   outC->NV_raw_out.d_nvroll = 0;
   outC->NV_raw_out.q_nvsbtsmperm = Q_NVSBTSMPERM_No;
-  outC->NV_raw_out.q_nvemrrls = _49_Q_NVEMRRLS_Revoke_emergency;
+  outC->NV_raw_out.q_nvemrrls = _50_Q_NVEMRRLS_Revoke_emergency;
   outC->NV_raw_out.q_nvguiperm = Q_NVGUIPERM_No;
   outC->NV_raw_out.q_nvsbfbperm = Q_NVSBFBPERM_No;
   outC->NV_raw_out.q_nvinhsnicperm = Q_NVINHSMICPERM_No;
@@ -527,6 +527,6 @@ void TrackAtlas_TrackAtlas(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlas_TrackAtlas.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

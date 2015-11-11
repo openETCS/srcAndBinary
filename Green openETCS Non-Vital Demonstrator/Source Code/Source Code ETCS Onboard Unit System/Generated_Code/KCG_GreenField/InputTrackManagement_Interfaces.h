@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _InputTrackManagement_Interface
 #define _InputTrackManagement_Interface
@@ -30,6 +30,6 @@ extern void InputTrackManagement_Interfaces(
 #endif /* _InputTrackManagement_Interface */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputTrackManagement_Interfaces.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

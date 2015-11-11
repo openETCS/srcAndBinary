@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -46,14 +46,14 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conv(
       m_trackcond_int = INT_M_TRACKCOND_Non_stopping_ar;
     }
     else {
-      _8_else_clock_IfBlock1 = m_trackcond == _15_ENUM_M_TRACKCOND_Powerless_;
+      _8_else_clock_IfBlock1 = m_trackcond == _17_ENUM_M_TRACKCOND_Powerless_;
       /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
         m_trackcond_int = INT_M_TRACKCOND_Powerless_secti;
       }
       else {
         _7_else_clock_IfBlock1 = m_trackcond == ENUM_M_TRACKCOND_Powerless_sect;
         /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
-          m_trackcond_int = _12_INT_M_TRACKCOND_Powerless_s;
+          m_trackcond_int = _14_INT_M_TRACKCOND_Powerless_s;
         }
         else {
           _6_else_clock_IfBlock1 = m_trackcond ==
@@ -69,7 +69,7 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conv(
             }
             else {
               _4_else_clock_IfBlock1 = m_trackcond ==
-                _14_ENUM_M_TRACKCOND_Switch_off;
+                _16_ENUM_M_TRACKCOND_Switch_off;
               /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
                 m_trackcond_int = INT_M_TRACKCOND_Switch_off_eddy;
               }
@@ -77,7 +77,7 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conv(
                 _3_else_clock_IfBlock1 = m_trackcond ==
                   ENUM_M_TRACKCOND_Switch_off_edd;
                 /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
-                  m_trackcond_int = _13_INT_M_TRACKCOND_Switch_off_;
+                  m_trackcond_int = _15_INT_M_TRACKCOND_Switch_off_;
                 }
                 else {
                   _2_else_clock_IfBlock1 = m_trackcond ==
@@ -115,6 +115,6 @@ kcg_int CAST_M_TRACKCOND_to_int_TM_conv(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_M_TRACKCOND_to_int_TM_conv.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

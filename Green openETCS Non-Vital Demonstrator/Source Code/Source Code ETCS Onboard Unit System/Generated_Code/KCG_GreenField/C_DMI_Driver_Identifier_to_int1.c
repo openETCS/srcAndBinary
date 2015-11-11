@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DATA::Packets::Bothways::C_DMI_Driver_Identifier_to_int1 */
 void C_DMI_Driver_Identifier_to_int1(
-  /* DATA::Packets::Bothways::C_DMI_Driver_Identifier_to_int1::dmi_driver_identifier_ct */ _24_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct,
+  /* DATA::Packets::Bothways::C_DMI_Driver_Identifier_to_int1::dmi_driver_identifier_ct */ _26_DMI_Driver_Identifier_T_DMI *dmi_driver_identifier_ct,
   /* DATA::Packets::Bothways::C_DMI_Driver_Identifier_to_int1::dmi_driver_identifier_int */ DMI_Driver_Identifier_int_array *dmi_driver_identifier_int)
 {
   (&(*dmi_driver_identifier_int)[0])[1] =
@@ -24,6 +24,6 @@ void C_DMI_Driver_Identifier_to_int1(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_DMI_Driver_Identifier_to_int1.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

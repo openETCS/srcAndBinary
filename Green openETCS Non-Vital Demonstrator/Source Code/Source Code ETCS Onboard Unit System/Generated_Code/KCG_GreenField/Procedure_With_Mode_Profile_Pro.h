@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _Procedure_With_Mode_Profile_Pr
 #define _Procedure_With_Mode_Profile_Pr
@@ -65,6 +65,6 @@ extern void Procedure_With_Mode_Profile_ini(
 #endif /* _Procedure_With_Mode_Profile_Pr */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_With_Mode_Profile_Pro.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _setArc_CalcBrakingCurves_Pkg_i
 #define _setArc_CalcBrakingCurves_Pkg_i
@@ -22,6 +22,6 @@ extern void setArc_CalcBrakingCurves_Pkg_in(
 #endif /* _setArc_CalcBrakingCurves_Pkg_i */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** setArc_CalcBrakingCurves_Pkg_in.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

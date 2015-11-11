@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _CAST_Int_to_Q_LINKORIENTATION_
 #define _CAST_Int_to_Q_LINKORIENTATION_
@@ -19,6 +19,6 @@ extern Q_LINKORIENTATION CAST_Int_to_Q_LINKORIENTATION_T(
 #endif /* _CAST_Int_to_Q_LINKORIENTATION_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Int_to_Q_LINKORIENTATION_T.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

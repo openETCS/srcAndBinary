@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -124,11 +124,11 @@ void ProvidePositionReport_ProvidePo(
   outC_ProvidePositionReport_Prov *outC)
 {
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static struct_96877 mk_struct;
+  static struct_101187 mk_struct;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static array_98287 tmp6;
+  static array_104094 tmp6;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static _9_Radio_TrainTrack_Header_T_Ra tmp5;
+  static _10_Radio_TrainTrack_Header_T_R tmp5;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
   static outPackets_T_Common_Types_Pkg tmp4;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
@@ -214,9 +214,9 @@ void ProvidePositionReport_ProvidePo(
       &tmp);
   }
   else {
-    kcg_copy__9_Radio_TrainTrack_He(
+    kcg_copy__10_Radio_TrainTrack_H(
       &tmp5,
-      (_9_Radio_TrainTrack_Header_T_Ra *) &emptyHeader_ProvidePositionRepo);
+      (_10_Radio_TrainTrack_Header_T_R *) &emptyHeader_ProvidePositionRepo);
     kcg_copy_PT0_PositionReport_T_P(
       &tmp3,
       (PT0_PositionReport_T_Packet_Tra *) &emptyPacket0_ProvidePositionRep);
@@ -232,7 +232,7 @@ void ProvidePositionReport_ProvidePo(
   }
   /* 1 */ AggregatePackets_ProvidePositio(&tmp3, &tmp2, &tmp1, &tmp, &tmp4);
   mk_struct.present = _L312;
-  kcg_copy__9_Radio_TrainTrack_He(&mk_struct.header, &tmp5);
+  kcg_copy__10_Radio_TrainTrack_H(&mk_struct.header, &tmp5);
   kcg_copy_outPackets_T_Common_Ty(&mk_struct.packets, &tmp4);
   /* 1 */
   nextGen_Msg136_radioOutput_Pkg(
@@ -249,6 +249,6 @@ void ProvidePositionReport_ProvidePo(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProvidePositionReport_ProvidePo.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

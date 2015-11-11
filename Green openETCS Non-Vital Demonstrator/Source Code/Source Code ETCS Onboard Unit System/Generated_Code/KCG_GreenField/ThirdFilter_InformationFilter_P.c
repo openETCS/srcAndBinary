@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,7 +26,7 @@ void ThirdFilter_InformationFilter_P(
   kcg_copy_BG_Header_T_BG_Types_P(
     &(*outMessage).BG_Common_Header,
     &(*inMessage).BG_Common_Header);
-  kcg_copy_Radio_TrackTrain_Heade(
+  kcg_copy__11_Radio_TrackTrain_H(
     &(*outMessage).Radio_Common_Header,
     &(*inMessage).Radio_Common_Header);
   kcg_copy_RBC_Id_T_Common_Types_(
@@ -53,6 +53,6 @@ void ThirdFilter_InformationFilter_P(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ThirdFilter_InformationFilter_P.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

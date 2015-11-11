@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -75,7 +75,7 @@ void initiateTerminatingSession_v2_M(
       TrainExitedFromRBCArea_SM_reset = tmp;
       if (tmp) {
         _1_TrainExitedFromRBCArea_SM_st = SSM_st_Idle_TrainExitedFromRBCA;
-        TrainExitedFromRBCArea_SM_fired = _142_SSM_TR_WaitForOrderToTermi;
+        TrainExitedFromRBCArea_SM_fired = _146_SSM_TR_WaitForOrderToTermi;
       }
       else {
         _1_TrainExitedFromRBCArea_SM_st = SSM_st_WaitForOrderToTerminateT;
@@ -151,6 +151,6 @@ void initiateTerminatingSession_v2_M(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** initiateTerminatingSession_v2_M.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

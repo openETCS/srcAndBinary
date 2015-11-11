@@ -1,3 +1,0 @@
--target_dir "D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrackside" -target C -O 3 -static -name_length 31 -significance_length 31 -user_config "./user_macros.h" 
--node GreenDemonstrator::Trackside::Trackside
-"D:/DB-Data/Github/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrackside/scade_model_without_unused.scade"

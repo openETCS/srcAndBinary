@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 /* DATA::Packets::EVC_to_DMI::Write_DMI_Track_Description_to_int */
 void Write_DMI_Track_Description_to_(
   /* DATA::Packets::EVC_to_DMI::Write_DMI_Track_Description_to_int::dmi_track_description_ct */ DMI_Track_Description_T_DMI_Mes *dmi_track_description_ct,
-  /* DATA::Packets::EVC_to_DMI::Write_DMI_Track_Description_to_int::dmi_track_description_int */ _50_DMI_Track_Description_int_a *dmi_track_description_int)
+  /* DATA::Packets::EVC_to_DMI::Write_DMI_Track_Description_to_int::dmi_track_description_int */ _51_DMI_Track_Description_int_a *dmi_track_description_int)
 {
   /* ck__L14 */ if ((*dmi_track_description_ct).valid) {
     /* 1 */
@@ -19,14 +19,14 @@ void Write_DMI_Track_Description_to_(
       dmi_track_description_int);
   }
   else {
-    kcg_copy__50_DMI_Track_Descript(
+    kcg_copy__51_DMI_Track_Descript(
       dmi_track_description_int,
-      (_50_DMI_Track_Description_int_a *) &cDMI_Track_Description_in_DATA_);
+      (_51_DMI_Track_Description_int_a *) &cDMI_Track_Description_in_DATA_);
   }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_DMI_Track_Description_to_.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

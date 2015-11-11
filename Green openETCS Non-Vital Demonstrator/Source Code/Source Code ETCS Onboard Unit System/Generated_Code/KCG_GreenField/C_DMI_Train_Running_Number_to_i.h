@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 #ifndef _C_DMI_Train_Running_Number_to_
 #define _C_DMI_Train_Running_Number_to_
@@ -16,12 +16,12 @@
 
 /* DATA::Packets::Bothways::C_DMI_Train_Running_Number_to_int */
 extern void C_DMI_Train_Running_Number_to_i(
-  /* DATA::Packets::Bothways::C_DMI_Train_Running_Number_to_int::dmi_train_running_number_ct */ _23_DMI_Train_Running_Number_T_ *dmi_train_running_number_ct,
+  /* DATA::Packets::Bothways::C_DMI_Train_Running_Number_to_int::dmi_train_running_number_ct */ _25_DMI_Train_Running_Number_T_ *dmi_train_running_number_ct,
   /* DATA::Packets::Bothways::C_DMI_Train_Running_Number_to_int::dmi_train_running_number_int */ DMI_Train_Running_Number_int_ar *dmi_train_running_number_int);
 
 #endif /* _C_DMI_Train_Running_Number_to_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_DMI_Train_Running_Number_to_i.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:19
 *************************************************************$ */
 

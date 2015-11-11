@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,7 +18,7 @@ void establishSession_v2_init_MoRC_P(outC_establishSession_v2_MoRC_P *outC)
   outC->infomDriverNoCompatibleVersionS = kcg_true;
   outC->established = kcg_true;
   outC->init = kcg_true;
-  outC->SM1_state_nxt = _147_SSM_st_idle_SM1;
+  outC->SM1_state_nxt = _151_SSM_st_idle_SM1;
   outC->sessionStatus.valid = kcg_true;
   outC->sessionStatus.phase = sp_terminated_RCM_Session_Types;
   outC->sessionStatus.nid_c = 0;
@@ -59,9 +59,9 @@ void establishSession_v2_MoRC_Pck_Su(
   outC_establishSession_v2_MoRC_P *outC)
 {
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
-  static _148_SSM_ST_SM1 SM1_state_sel;
+  static _152_SSM_ST_SM1 SM1_state_sel;
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
-  static _148_SSM_ST_SM1 SM1_state_act;
+  static _152_SSM_ST_SM1 SM1_state_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::SM1 */
   static kcg_bool SM1_reset_act;
   /* MoRC_Pck::Subfunc_Pkg::establishSession_v2::initiatedByOBU */
@@ -73,7 +73,7 @@ void establishSession_v2_MoRC_Pck_Su(
     (*sessionEstablishCmd_in).initiatedByOBU;
   /* init_SM1 */ if (outC->init) {
     outC->init = kcg_false;
-    SM1_state_sel = _147_SSM_st_idle_SM1;
+    SM1_state_sel = _151_SSM_st_idle_SM1;
   }
   else {
     SM1_state_sel = outC->SM1_state_nxt;
@@ -83,7 +83,7 @@ void establishSession_v2_MoRC_Pck_Su(
     (*sessionEstablishCmd_in).m38.valid & ((*connectionStatus).valid &
       ((*connectionStatus).status == mcs_connected_RCM_Types_Pkg));
   /* sel_SM1 */ switch (SM1_state_sel) {
-    case _147_SSM_st_idle_SM1 :
+    case _151_SSM_st_idle_SM1 :
       if (initiatedByOBU) {
         SM1_reset_act = kcg_true;
         SM1_state_act = SSM_st_establishingByOBU_SM1;
@@ -93,14 +93,14 @@ void establishSession_v2_MoRC_Pck_Su(
           SM1_state_act = SSM_st_establishingByRBC_SM1;
         }
         else {
-          SM1_state_act = _147_SSM_st_idle_SM1;
+          SM1_state_act = _151_SSM_st_idle_SM1;
         }
         SM1_reset_act = initiatedByRBC;
       }
       break;
     case SSM_st_establishingByOBU_SM1 :
       if (reset) {
-        SM1_state_act = _147_SSM_st_idle_SM1;
+        SM1_state_act = _151_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_establishingByOBU_SM1;
@@ -109,7 +109,7 @@ void establishSession_v2_MoRC_Pck_Su(
       break;
     case SSM_st_establishingByRBC_SM1 :
       if (reset) {
-        SM1_state_act = _147_SSM_st_idle_SM1;
+        SM1_state_act = _151_SSM_st_idle_SM1;
       }
       else {
         SM1_state_act = SSM_st_establishingByRBC_SM1;
@@ -119,7 +119,7 @@ void establishSession_v2_MoRC_Pck_Su(
     
   }
   /* act_SM1 */ switch (SM1_state_act) {
-    case _147_SSM_st_idle_SM1 :
+    case _151_SSM_st_idle_SM1 :
       outC->established = kcg_false;
       outC->infomDriverNoCompatibleVersionS = kcg_false;
       outC->terminateCommunicationSession = kcg_false;
@@ -134,7 +134,7 @@ void establishSession_v2_MoRC_Pck_Su(
         &outC->sessionStatus,
         (sessionStatus_T_RCM_Session_Typ *) &cNoSessionStatus_RCM_Session_Ty);
       outC->sessionStatus.valid = kcg_true;
-      outC->SM1_state_nxt = _147_SSM_st_idle_SM1;
+      outC->SM1_state_nxt = _151_SSM_st_idle_SM1;
       break;
     case SSM_st_establishingByOBU_SM1 :
       if (SM1_reset_act) {
@@ -200,6 +200,6 @@ void establishSession_v2_MoRC_Pck_Su(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** establishSession_v2_MoRC_Pck_Su.c
-** Generation date: 2015-11-03T14:28:14
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 

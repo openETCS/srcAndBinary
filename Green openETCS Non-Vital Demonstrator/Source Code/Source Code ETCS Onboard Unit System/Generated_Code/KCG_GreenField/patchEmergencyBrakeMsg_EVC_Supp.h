@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _patchEmergencyBrakeMsg_EVC_Sup
 #define _patchEmergencyBrakeMsg_EVC_Sup
@@ -20,6 +20,6 @@ extern void patchEmergencyBrakeMsg_EVC_Supp(
 #endif /* _patchEmergencyBrakeMsg_EVC_Sup */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** patchEmergencyBrakeMsg_EVC_Supp.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

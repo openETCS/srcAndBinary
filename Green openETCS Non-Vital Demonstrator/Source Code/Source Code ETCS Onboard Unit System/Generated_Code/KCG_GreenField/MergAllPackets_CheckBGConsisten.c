@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -35,7 +35,7 @@ void MergAllPackets_CheckBGConsisten(
     N_PIG2int_CheckBGConsistency_Pk((*telegramACC).telegramheader.n_pig) -
     /* 3 */ N_PIG2int_CheckBGConsistency_Pk((*telegram).telegramheader.n_pig);
   IfBlock1_clock = (diff == - 1) & (((*telegramACC).telegramheader.m_dup ==
-        _43_M_DUP_This_balise_is_a_dupl) & ((*telegram).telegramheader.m_dup ==
+        _44_M_DUP_This_balise_is_a_dupl) & ((*telegram).telegramheader.m_dup ==
         M_DUP_This_balise_is_a_duplicat)) & *go_on;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     kcg_copy_Telegram_T_BG_Types_Pk(telegram_out, telegram);
@@ -46,7 +46,7 @@ void MergAllPackets_CheckBGConsisten(
   else {
     else_clock_IfBlock1 = (diff == 1) & (((*telegramACC).telegramheader.m_dup ==
           M_DUP_This_balise_is_a_duplicat) &
-        ((*telegram).telegramheader.m_dup == _43_M_DUP_This_balise_is_a_dupl)) &
+        ((*telegram).telegramheader.m_dup == _44_M_DUP_This_balise_is_a_dupl)) &
       *go_on;
     /* ck_anon_activ */ if (else_clock_IfBlock1) {
       kcg_copy_Telegram_T_BG_Types_Pk(telegram_out, telegram);
@@ -85,6 +85,6 @@ void MergAllPackets_CheckBGConsisten(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MergAllPackets_CheckBGConsisten.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

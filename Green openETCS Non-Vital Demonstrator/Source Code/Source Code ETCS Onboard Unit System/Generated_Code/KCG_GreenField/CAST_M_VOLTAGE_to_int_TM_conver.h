@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _CAST_M_VOLTAGE_to_int_TM_conve
 #define _CAST_M_VOLTAGE_to_int_TM_conve
@@ -19,6 +19,6 @@ extern kcg_int CAST_M_VOLTAGE_to_int_TM_conver(
 #endif /* _CAST_M_VOLTAGE_to_int_TM_conve */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_M_VOLTAGE_to_int_TM_conver.h
-** Generation date: 2015-11-03T14:28:11
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

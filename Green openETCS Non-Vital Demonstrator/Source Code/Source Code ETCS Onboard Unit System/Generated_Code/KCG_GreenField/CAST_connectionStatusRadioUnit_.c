@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,30 +23,30 @@ connectionStatusRadioUnit_INT_T CAST_connectionStatusRadioUnit_(
   static connectionStatusRadioUnit_INT_T connectionStatusRadioUnit_int;
   
   IfBlock1_clock = connectionStatusRadioUnit_ct ==
-    _102_ENUM_connectionStatusRadio;
+    _103_ENUM_connectionStatusRadio;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
-    connectionStatusRadioUnit_int = _99_INT_connectionStatusRadioUn;
+    connectionStatusRadioUnit_int = _100_INT_connectionStatusRadioU;
   }
   else {
     _2_else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
-      _101_ENUM_connectionStatusRadio;
+      _102_ENUM_connectionStatusRadio;
     /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
       connectionStatusRadioUnit_int = INT_connectionStatusRadioUnit_T;
     }
     else {
       _1_else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
-        _100_ENUM_connectionStatusRadio;
+        _101_ENUM_connectionStatusRadio;
       /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
-        connectionStatusRadioUnit_int = _97_INT_connectionStatusRadioUn;
+        connectionStatusRadioUnit_int = _98_INT_connectionStatusRadioUn;
       }
       else {
         else_clock_IfBlock1 = connectionStatusRadioUnit_ct ==
           ENUM_connectionStatusRadioUnit_;
         /* ck_anon_activ */ if (else_clock_IfBlock1) {
-          connectionStatusRadioUnit_int = _98_INT_connectionStatusRadioUn;
+          connectionStatusRadioUnit_int = _99_INT_connectionStatusRadioUn;
         }
         else {
-          connectionStatusRadioUnit_int = _99_INT_connectionStatusRadioUn;
+          connectionStatusRadioUnit_int = _100_INT_connectionStatusRadioU;
         }
       }
     }
@@ -56,6 +56,6 @@ connectionStatusRadioUnit_INT_T CAST_connectionStatusRadioUnit_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_connectionStatusRadioUnit_.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

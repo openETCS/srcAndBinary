@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _posInRangeOfBG_itr_CalculateTr
 #define _posInRangeOfBG_itr_CalculateTr
@@ -26,6 +26,6 @@ extern void posInRangeOfBG_itr_CalculateTra(
 #endif /* _posInRangeOfBG_itr_CalculateTr */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** posInRangeOfBG_itr_CalculateTra.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

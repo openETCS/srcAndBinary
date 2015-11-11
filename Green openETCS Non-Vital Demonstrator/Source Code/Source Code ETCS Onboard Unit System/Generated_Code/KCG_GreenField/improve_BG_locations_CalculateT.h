@@ -1,13 +1,13 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 #ifndef _improve_BG_locations_Calculate
 #define _improve_BG_locations_Calculate
 
 #include "kcg_types.h"
-#include "_200_recalculate_BG_locations_a.h"
-#include "_199_recalculate_BG_locations_a.h"
+#include "_204_recalculate_BG_locations_a.h"
+#include "_203_recalculate_BG_locations_a.h"
 #include "improveUnlinkedBGLocations_Calc.h"
 
 /* =====================  no input structure  ====================== */
@@ -25,6 +25,6 @@ extern void improve_BG_locations_CalculateT(
 #endif /* _improve_BG_locations_Calculate */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** improve_BG_locations_CalculateT.h
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

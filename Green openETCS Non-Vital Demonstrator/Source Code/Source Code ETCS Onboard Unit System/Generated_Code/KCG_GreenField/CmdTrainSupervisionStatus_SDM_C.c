@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -264,8 +264,6 @@ void CmdTrainSupervisionStatus_SDM_C(
       notInt2Int_modeInterplay_RSM = (last_status !=
           Indication_Supervision_SDM_Type) & t2_modeInterplay_RSM &
         (last_status != Intervention_Supervision_SDM_Ty);
-      outC->triggeredTCO = kcg_false;
-      outC->revokedTCO = kcg_false;
       /* sel_RSM */ switch (RSM_state_sel_modeInterplay_RSM) {
         case SSM_st_InterventionStatus_modeI :
           outC->triggeredSupervisionStatus = cSupervisionStatus_SDM_Commands;
@@ -358,6 +356,8 @@ void CmdTrainSupervisionStatus_SDM_C(
           break;
         
       }
+      outC->triggeredTCO = kcg_false;
+      outC->revokedTCO = kcg_false;
       outC->modeInterplay_state_nxt = SSM_st_RSM_modeInterplay;
       /* act_RSM */ switch (RSM_state_act_modeInterplay_RSM) {
         case SSM_st_InterventionStatus_modeI :
@@ -882,7 +882,7 @@ void CmdTrainSupervisionStatus_SDM_C(
         ((Indication_Supervision_SDM_Type == last_status) &
           !_L58_modeInterplay_CSM & t2_modeInterplay_CSM);
       /* sel_CSM */ switch (CSM_state_sel_modeInterplay_CSM) {
-        case _189_SSM_st_InterventionStatus_ :
+        case _193_SSM_st_InterventionStatus_ :
           outC->triggeredSB = kcg_false;
           outC->triggeredSupervisionStatus = cSupervisionStatus_SDM_Commands;
           /* guard_InterventionStatus */ if ((*speeds).OdoStandStill) {
@@ -895,7 +895,7 @@ void CmdTrainSupervisionStatus_SDM_C(
               CSM_state_act_modeInterplay_CSM = SSM_st_NormalStatus_modeInterpl;
             }
             else {
-              CSM_state_act_modeInterplay_CSM = _189_SSM_st_InterventionStatus_;
+              CSM_state_act_modeInterplay_CSM = _193_SSM_st_InterventionStatus_;
             }
             /* cb_anon_sm */ if (t1_modeInterplay_CSM) {
               outC->revokedSupervisionStatus = Intervention_Supervision_SDM_Ty;
@@ -911,7 +911,7 @@ void CmdTrainSupervisionStatus_SDM_C(
           br_1_guard_modeInterplay_CSM_CS = t4_modeInterplay_CSM |
             t5_modeInterplay_CSM;
           /* guard_WarningStatus */ if (br_1_guard_modeInterplay_CSM_CS) {
-            CSM_state_act_modeInterplay_CSM = _189_SSM_st_InterventionStatus_;
+            CSM_state_act_modeInterplay_CSM = _193_SSM_st_InterventionStatus_;
             outC->revokedSB = kcg_false;
             outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands;
             outC->triggeredSupervisionStatus = Intervention_Supervision_SDM_Ty;
@@ -936,7 +936,7 @@ void CmdTrainSupervisionStatus_SDM_C(
           _8_br_1_guard_modeInterplay_CSM = t4_modeInterplay_CSM |
             t5_modeInterplay_CSM;
           /* guard_OverspeedStatus */ if (_8_br_1_guard_modeInterplay_CSM) {
-            CSM_state_act_modeInterplay_CSM = _189_SSM_st_InterventionStatus_;
+            CSM_state_act_modeInterplay_CSM = _193_SSM_st_InterventionStatus_;
             outC->revokedSB = kcg_false;
             outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands;
             outC->triggeredSupervisionStatus = Intervention_Supervision_SDM_Ty;
@@ -975,7 +975,7 @@ void CmdTrainSupervisionStatus_SDM_C(
           outC->revokedSB = kcg_false;
           outC->revokedSupervisionStatus = cSupervisionStatus_SDM_Commands;
           /* guard_NormalStatus */ if (_9_br_1_guard_modeInterplay_CSM) {
-            CSM_state_act_modeInterplay_CSM = _189_SSM_st_InterventionStatus_;
+            CSM_state_act_modeInterplay_CSM = _193_SSM_st_InterventionStatus_;
             outC->triggeredSupervisionStatus = Intervention_Supervision_SDM_Ty;
             outC->triggeredSB = t4_modeInterplay_CSM;
           }
@@ -1026,7 +1026,7 @@ void CmdTrainSupervisionStatus_SDM_C(
                 Warning_Supervision_SDM_Types_P;
             }
             else /* cb_anon_sm */ if (c5_modeInterplay_CSM) {
-              CSM_state_act_modeInterplay_CSM = _189_SSM_st_InterventionStatus_;
+              CSM_state_act_modeInterplay_CSM = _193_SSM_st_InterventionStatus_;
               outC->triggeredSupervisionStatus =
                 Intervention_Supervision_SDM_Ty;
             }
@@ -1052,7 +1052,7 @@ void CmdTrainSupervisionStatus_SDM_C(
               }
               else if (last_status == Intervention_Supervision_SDM_Ty) {
                 CSM_state_act_modeInterplay_CSM =
-                  _189_SSM_st_InterventionStatus_;
+                  _193_SSM_st_InterventionStatus_;
               }
               else {
                 CSM_state_act_modeInterplay_CSM =
@@ -1069,13 +1069,13 @@ void CmdTrainSupervisionStatus_SDM_C(
       outC->revokedTCO = kcg_false;
       outC->modeInterplay_state_nxt = SSM_st_CSM_modeInterplay;
       /* act_CSM */ switch (CSM_state_act_modeInterplay_CSM) {
-        case _189_SSM_st_InterventionStatus_ :
+        case _193_SSM_st_InterventionStatus_ :
           outC->sdmType = CSM_SDM_Types_Pkg;
           outC->revokedEB = kcg_false;
           outC->triggeredEB = t5_modeInterplay_CSM | last_triggeredEB;
           outC->supVisStatus = Intervention_Supervision_SDM_Ty;
           outC->CSM_state_nxt_modeInterplay_CSM =
-            _189_SSM_st_InterventionStatus_;
+            _193_SSM_st_InterventionStatus_;
           break;
         case SSM_st_WarningStatus_modeInterp :
           outC->sdmType = CSM_SDM_Types_Pkg;
@@ -1120,6 +1120,6 @@ void CmdTrainSupervisionStatus_SDM_C(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CmdTrainSupervisionStatus_SDM_C.c
-** Generation date: 2015-11-03T14:28:12
+** Generation date: 2015-11-11T16:04:20
 *************************************************************$ */
 

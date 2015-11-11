@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,14 +22,14 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_(
   /* TM_conversions::CAST_Q_EMERGENCYSTOP_to_int::q_emergencystop_int */
   static kcg_int q_emergencystop_int;
   
-  IfBlock1_clock = q_emergencystop == _11_ENUM_Q_EMERGENCYSTOP_cond_a;
+  IfBlock1_clock = q_emergencystop == _13_ENUM_Q_EMERGENCYSTOP_cond_a;
   /* ck_IfBlock1 */ if (IfBlock1_clock) {
     q_emergencystop_int = INT_Q_EMERGENCYSTOP_cond_accept;
   }
   else {
     _2_else_clock_IfBlock1 = q_emergencystop == ENUM_Q_EMERGENCYSTOP_cond_accep;
     /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
-      q_emergencystop_int = _10_INT_Q_EMERGENCYSTOP_cond_ac;
+      q_emergencystop_int = _12_INT_Q_EMERGENCYSTOP_cond_ac;
     }
     else {
       _1_else_clock_IfBlock1 = q_emergencystop ==
@@ -54,6 +54,6 @@ kcg_int CAST_Q_EMERGENCYSTOP_to_int_TM_(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Q_EMERGENCYSTOP_to_int_TM_.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:21
 *************************************************************$ */
 

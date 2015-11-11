@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config D:/Github/modeling/model/Scade/System/OBU_PreIntegrations/openETCS_EVC/KCG_GreenField/config.txt
-** Generation date: 2015-11-03T14:28:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -49,7 +49,7 @@ void insertBG_atIndex_CalculateTrain(
     kcg_copy_positionedBG_T_TrainPo(
       &(&tmp[0])[0],
       (positionedBG_T_TrainPosition_Ty *) &cNoPositionedBG_CalculateTrainP);
-    kcg_copy_array_97350(&tmp[1], (array_97350 *) &(*BGs_in)[0]);
+    kcg_copy_array_101659(&tmp[1], (array_101659 *) &(*BGs_in)[0]);
   }
   if (_L34) {
     for (i = 0; i < 41; i++) {
@@ -90,6 +90,6 @@ void insertBG_atIndex_CalculateTrain(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** insertBG_atIndex_CalculateTrain.c
-** Generation date: 2015-11-03T14:28:13
+** Generation date: 2015-11-11T16:04:22
 *************************************************************$ */
 
