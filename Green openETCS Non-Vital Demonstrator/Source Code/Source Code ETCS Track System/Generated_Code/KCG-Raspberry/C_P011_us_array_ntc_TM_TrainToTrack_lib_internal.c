@@ -1,0 +1,24 @@
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrackside\kcg_s2c_config.txt
+** Generation date: 2015-11-10T18:22:12
+*************************************************************$ */
+
+#include "kcg_consts.h"
+#include "kcg_sensors.h"
+#include "C_P011_us_array_ntc_TM_TrainToTrack_lib_internal.h"
+
+/* TM_TrainToTrack_lib_internal::C_P011_us_array_ntc */
+NID_NTC C_P011_us_array_ntc_TM_TrainToTrack_lib_internal(
+  /* TM_TrainToTrack_lib_internal::C_P011_us_array_ntc::flat */kcg_int flat)
+{
+  /* TM_TrainToTrack_lib_internal::C_P011_us_array_ntc::sections */ NID_NTC sections;
+  
+  sections = /* 1 */ CAST_Int_to_NID_NTC_TM_conversions(flat);
+  return sections;
+}
+
+/* $*************** KCG Version 6.1.3 (build i6) ****************
+** C_P011_us_array_ntc_TM_TrainToTrack_lib_internal.c
+** Generation date: 2015-11-10T18:22:12
+*************************************************************$ */
+
