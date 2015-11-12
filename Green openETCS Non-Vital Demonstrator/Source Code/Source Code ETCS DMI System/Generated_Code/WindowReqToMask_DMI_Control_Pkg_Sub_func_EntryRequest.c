@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,14 +12,11 @@ void WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest(
   /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::dmi_entry_request */DMI_List_Entry_Request_T_DMI_Types_Pkg dmi_entry_request,
   /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::window_mask */array_bool_15 *window_mask)
 {
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::_L18 */
-  static kcg_int _L18;
-  /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::_L19 */
-  static kcg_int _L19;
-  /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::_L25 */
-  static kcg_int _L25;
+  kcg_bool tmp;
+  kcg_int i;
+  /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::_L18 */ kcg_int _L18;
+  /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::_L19 */ kcg_int _L19;
+  /* DMI_Control_Pkg::Sub_func::EntryRequest::WindowReqToMask::_L25 */ kcg_int _L25;
   
   _L19 = 0;
   for (i = 0; i < 15; i++) {
@@ -48,6 +45,6 @@ void WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

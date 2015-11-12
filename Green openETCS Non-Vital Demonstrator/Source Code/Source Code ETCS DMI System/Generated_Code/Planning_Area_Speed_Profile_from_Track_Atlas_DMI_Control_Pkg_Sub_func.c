@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,10 +13,9 @@ void Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func(
   /* DMI_Control_Pkg::Sub_func::Planning_Area_Speed_Profile_from_Track_Atlas::Loc_Abs_to_DMI */array_real_32 *Loc_Abs_to_DMI,
   /* DMI_Control_Pkg::Sub_func::Planning_Area_Speed_Profile_from_Track_Atlas::MRSP_to_DMI */array_real_32 *MRSP_to_DMI)
 {
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* DMI_Control_Pkg::Sub_func::Planning_Area_Speed_Profile_from_Track_Atlas::_L6 */
-  static kcg_int _L6;
+  kcg_bool tmp;
+  kcg_int i;
+  /* DMI_Control_Pkg::Sub_func::Planning_Area_Speed_Profile_from_Track_Atlas::_L6 */ kcg_int _L6;
   
   for (i = 0; i < 32; i++) {
     /* 1 */
@@ -43,6 +42,6 @@ void Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

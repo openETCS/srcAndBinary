@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,23 +23,16 @@ void countDownTimer_MoRC_Pck_Utils(
   /* MoRC_Pck::Utils::countDownTimer::interval */time_Type_MoRC_Pck interval,
   outC_countDownTimer_MoRC_Pck_Utils *outC)
 {
-  static SSM_TR_TimerStatus_SM tmp2;
-  static kcg_bool tmp1;
-  static kcg_bool tmp;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting */
-  static kcg_bool Counting_weakb_clock_TimerStatus_SM;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting */
-  static kcg_bool br_2_guard_TimerStatus_SM_Counting;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Expired */
-  static kcg_bool br_2_guard_TimerStatus_SM_Expired;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Stopped */
-  static kcg_bool br_2_guard_TimerStatus_SM_Stopped;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */
-  static SSM_ST_TimerStatus_SM TimerStatus_SM_state_sel;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */
-  static SSM_ST_TimerStatus_SM TimerStatus_SM_state_act;
-  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */
-  static kcg_bool TimerStatus_SM_reset_sel;
+  SSM_TR_TimerStatus_SM tmp2;
+  kcg_bool tmp1;
+  kcg_bool tmp;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting */ kcg_bool Counting_weakb_clock_TimerStatus_SM;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Counting */ kcg_bool br_2_guard_TimerStatus_SM_Counting;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Expired */ kcg_bool br_2_guard_TimerStatus_SM_Expired;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM::Stopped */ kcg_bool br_2_guard_TimerStatus_SM_Stopped;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */ SSM_ST_TimerStatus_SM TimerStatus_SM_state_sel;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */ SSM_ST_TimerStatus_SM TimerStatus_SM_state_act;
+  /* MoRC_Pck::Utils::countDownTimer::TimerStatus_SM */ kcg_bool TimerStatus_SM_reset_sel;
   
   if (outC->init1) {
     TimerStatus_SM_state_sel = SSM_st_Stopped_TimerStatus_SM;
@@ -248,6 +241,6 @@ void countDownTimer_MoRC_Pck_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** countDownTimer_MoRC_Pck_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

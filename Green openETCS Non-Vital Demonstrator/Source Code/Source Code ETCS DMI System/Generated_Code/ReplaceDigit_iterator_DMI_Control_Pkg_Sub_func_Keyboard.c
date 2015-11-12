@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,8 +15,7 @@ void ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard(
   /* DMI_Control_Pkg::Sub_func::Keyboard::ReplaceDigit_iterator::condition */kcg_bool *condition,
   /* DMI_Control_Pkg::Sub_func::Keyboard::ReplaceDigit_iterator::out_array */kcg_int *out_array)
 {
-  /* DMI_Control_Pkg::Sub_func::Keyboard::ReplaceDigit_iterator::_L4 */
-  static kcg_bool _L4;
+  /* DMI_Control_Pkg::Sub_func::Keyboard::ReplaceDigit_iterator::_L4 */ kcg_bool _L4;
   
   _L4 = index == Calc_index - 1;
   if (_L4) {
@@ -30,6 +29,6 @@ void ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ReplaceDigit_iterator_DMI_Control_Pkg_Sub_func_Keyboard.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

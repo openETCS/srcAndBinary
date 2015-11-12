@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,8 +11,7 @@
 kcg_char ASCII_to_Char_iterator_DMI_Control_Pkg_Utils(
   /* DMI_Control_Pkg::Utils::ASCII_to_Char_iterator::ascii */kcg_int ascii)
 {
-  /* DMI_Control_Pkg::Utils::ASCII_to_Char_iterator::outChar */
-  static kcg_char outChar;
+  /* DMI_Control_Pkg::Utils::ASCII_to_Char_iterator::outChar */ kcg_char outChar;
   
   switch (ascii) {
     case 49 :
@@ -51,6 +50,6 @@ kcg_char ASCII_to_Char_iterator_DMI_Control_Pkg_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ASCII_to_Char_iterator_DMI_Control_Pkg_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

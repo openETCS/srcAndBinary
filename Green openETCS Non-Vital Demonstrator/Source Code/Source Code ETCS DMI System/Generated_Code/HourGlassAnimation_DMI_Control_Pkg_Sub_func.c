@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,7 +22,7 @@ void HourGlassAnimation_DMI_Control_Pkg_Sub_func(
   /* DMI_Control_Pkg::Sub_func::HourGlassAnimation::actualtime */time_Type_MoRC_Pck actualtime,
   outC_HourGlassAnimation_DMI_Control_Pkg_Sub_func *outC)
 {
-  static kcg_int tmp;
+  kcg_int tmp;
   
   /* 1 */
   countDownTimer_MoRC_Pck_Utils(
@@ -45,6 +45,6 @@ void HourGlassAnimation_DMI_Control_Pkg_Sub_func(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** HourGlassAnimation_DMI_Control_Pkg_Sub_func.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,12 +21,9 @@ void StatusPlanningArea_DMI_Control_Pkg_Sub_func(
   /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::MousePressed */kcg_bool MousePressed,
   outC_StatusPlanningArea_DMI_Control_Pkg_Sub_func *outC)
 {
-  /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::PlanningAreaStatus */
-  static SSM_ST_PlanningAreaStatus PlanningAreaStatus_state_sel;
-  /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::PlanningAreaStatus */
-  static SSM_ST_PlanningAreaStatus PlanningAreaStatus_state_act;
-  /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::_L4 */
-  static kcg_bool _L4;
+  /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::PlanningAreaStatus */ SSM_ST_PlanningAreaStatus PlanningAreaStatus_state_sel;
+  /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::PlanningAreaStatus */ SSM_ST_PlanningAreaStatus PlanningAreaStatus_state_act;
+  /* DMI_Control_Pkg::Sub_func::StatusPlanningArea::_L4 */ kcg_bool _L4;
   
   _L4 = ModeIndex == cMODE_Full_Supervision_DMI_Control_Pkg;
   if (outC->init) {
@@ -38,7 +35,7 @@ void StatusPlanningArea_DMI_Control_Pkg_Sub_func(
   }
   switch (PlanningAreaStatus_state_sel) {
     case SSM_st_NotVisible_PlanningAreaStatus :
-      if (_L4 & MousePressed & show) {
+      if (_L4) {
         PlanningAreaStatus_state_act = SSM_st_Visible_PlanningAreaStatus;
       }
       else {
@@ -46,11 +43,11 @@ void StatusPlanningArea_DMI_Control_Pkg_Sub_func(
       }
       break;
     case SSM_st_Visible_PlanningAreaStatus :
-      if ((Hide & MousePressed) | !_L4) {
-        PlanningAreaStatus_state_act = SSM_st_NotVisible_PlanningAreaStatus;
+      if (_L4) {
+        PlanningAreaStatus_state_act = SSM_st_Visible_PlanningAreaStatus;
       }
       else {
-        PlanningAreaStatus_state_act = SSM_st_Visible_PlanningAreaStatus;
+        PlanningAreaStatus_state_act = SSM_st_NotVisible_PlanningAreaStatus;
       }
       break;
     
@@ -70,6 +67,6 @@ void StatusPlanningArea_DMI_Control_Pkg_Sub_func(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** StatusPlanningArea_DMI_Control_Pkg_Sub_func.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,9 +13,9 @@ void FindIndexEmptyLoc_DMI_Control_Pkg_Utils(
   /* DMI_Control_Pkg::Utils::FindIndexEmptyLoc::index */kcg_int *index,
   /* DMI_Control_Pkg::Utils::FindIndexEmptyLoc::DigitFull */kcg_bool *DigitFull)
 {
-  static kcg_bool tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
+  kcg_bool tmp1;
+  kcg_bool tmp;
+  kcg_int i;
   
   *DigitFull = kcg_false;
   for (i = 0; i < 9; i++) {
@@ -36,6 +36,6 @@ void FindIndexEmptyLoc_DMI_Control_Pkg_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FindIndexEmptyLoc_DMI_Control_Pkg_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

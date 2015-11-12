@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 #ifndef _Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func_H_
 #define _Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func_H_
@@ -20,6 +20,6 @@ extern void Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_fun
 #endif /* _Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.h
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

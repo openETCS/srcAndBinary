@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,8 +22,7 @@ void Area_D_DMI_Control_Pkg_Sub_func_PlanningArea(
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::CeilingPermittedSpeed */kcg_real *CeilingPermittedSpeed,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsValue */array_real_12 *GradientsValue)
 {
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::_L14 */
-  static array_real_10 _L14;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::_L14 */ array_real_10 _L14;
   
   *CeilingPermittedSpeed = inCeilingPermittedSpeed;
   /* 1 */
@@ -47,6 +46,6 @@ void Area_D_DMI_Control_Pkg_Sub_func_PlanningArea(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

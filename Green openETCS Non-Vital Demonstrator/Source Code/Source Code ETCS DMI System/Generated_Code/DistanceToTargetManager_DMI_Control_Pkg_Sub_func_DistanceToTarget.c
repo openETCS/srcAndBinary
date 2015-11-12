@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,11 +18,8 @@ void DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget(
   /* DMI_Control_Pkg::Sub_func::DistanceToTarget::DistanceToTargetManager::DMI_dynamic */DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *DMI_dynamic,
   outC_DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget *outC)
 {
-  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::DistanceToTargetManager::localDistanceToTarget */
-  static kcg_real localDistanceToTarget;
+  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::DistanceToTargetManager::localDistanceToTarget */ kcg_real localDistanceToTarget;
   
-  localDistanceToTarget = (kcg_real) (*DMI_dynamic).location_brake_target /
-    100.0;
   if ((*DMI_dynamic).valid) {
     outC->ConditionTargetBar = /* 1 */
       ConditionDistanceToTargetBar_DMI_Control_Pkg_Sub_func_DistanceToTarget(
@@ -35,6 +32,8 @@ void DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget(
     outC->ConditionTargetBar = kcg_false;
     outC->ConditionDistanceToTarget = kcg_false;
   }
+  localDistanceToTarget = (kcg_real) (*DMI_dynamic).location_brake_target /
+    100.0;
   if (outC->ConditionTargetBar) {
     outC->DistanceToTargetBarVisibility_toDisplay = kcg_true;
     outC->InterpolatedDistanceToTarget_toDisplay = /* 1 */
@@ -62,6 +61,6 @@ void DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

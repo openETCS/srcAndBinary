@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 #ifndef _DMI_Controller_DMI_Control_Pkg_H_
 #define _DMI_Controller_DMI_Control_Pkg_H_
@@ -17,8 +17,8 @@
 #include "Set_level_data_DMI_Control_Pkg_Sub_func.h"
 #include "Gradient_from_Track_DMI_Control_Pkg_Sub_func.h"
 #include "Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.h"
+#include "DMI_Speed_and_CPS_for_Planning_Area_DMI_Control_Pkg_Sub_func.h"
 #include "Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func.h"
-#include "CheckDeskStatus_DMI_Control_Pkg_Sub_func.h"
 #include "CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.h"
 #include "CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h"
 #include "AddDigit_DMI_Control_Pkg_Sub_func_Keyboard.h"
@@ -28,57 +28,23 @@
 #include "TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData.h"
 #include "DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed.h"
 #include "Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.h"
+#include "NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.h"
 #include "LevelAdapter_DMI_Control_Pkg_Utils.h"
 #include "CheckElem_iterator_DMI_Control_Pkg_Utils.h"
 #include "LevelListAdapter_DMI_Control_Pkg_Utils.h"
-#include "ImpMsgManager_DMI_Control_Pkg_Utils.h"
+#include "Write_int_to_EVC_to_DMI_Messages.h"
+#include "Write_DMI_to_EVC_to_int_Messages.h"
 #include "D_behavior.h"
 #include "HourGlassAnimation_DMI_Control_Pkg_Sub_func.h"
 #include "DMI_status_DMI_Control_Pkg_Sub_func.h"
 #include "StatusPlanningArea_DMI_Control_Pkg_Sub_func.h"
+#include "CheckDeskStatus_DMI_Control_Pkg_Sub_func.h"
 #include "DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.h"
-#include "TextMessagesDispatcher_DMI_Control_Pkg_Utils.h"
-#include "AckMsgManager_DMI_Control_Pkg_Utils.h"
+#include "TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages.h"
+#include "AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.h"
 #include "FlashingIconsOperator_DMI_Control_Pkg_Utils.h"
 
-/* ========================  input structure  ====================== */
-typedef struct {
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::MousePressed */ MousePressed;
-  array_bool_12 /* DMI_Control_Pkg::DMI_Controller::VisibleGradients */ VisibleGradients;
-  kcg_real /* DMI_Control_Pkg::DMI_Controller::Brake */ Brake;
-  array_bool_12 /* DMI_Control_Pkg::DMI_Controller::keypad_fromDisplay */ keypad_fromDisplay;
-  DMI_Entry_Request_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_entry_request */ DMI_entry_request;
-  DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_identifier_request */ DMI_identifier_request;
-  DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_menu_request */ DMI_menu_request;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::confirmTrainData_fromDisplay */ confirmTrainData_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::openTrainDataWindow_fromDisplay */ openTrainDataWindow_fromDisplay;
-  DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_dynamic */ DMI_dynamic;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::startRequest_fromDisplay */ startRequest_fromDisplay;
-  DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_text_message */ DMI_text_message;
-  DMI_Train_Data_T_DMI_Messages_Bothways_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_train_data */ DMI_train_data;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::traindataAck_fromDisplay */ traindataAck_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::traindataYesAck_fromDisplay */ traindataYesAck_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::traindataNoAck_fromDisplay */ traindataNoAck_fromDisplay;
-  T_internal_Type_Obu_BasicTypes_Pkg /* DMI_Control_Pkg::DMI_Controller::SystemTime */ SystemTime;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::textMsgAck_fromDisplay */ textMsgAck_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::openDriverID_fromDisplay */ openDriverID_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::openTrainRN_fromDisplay */ openTrainRN_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::closeButton_fromDisplay */ closeButton_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::closeButtonMain_fromDisplay */ closeButtonMain_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::openMainMenu_fromDisplay */ openMainMenu_fromDisplay;
-  TIU_trainStatus_T_TIU_Types_Pkg /* DMI_Control_Pkg::DMI_Controller::TIU_trainStatus */ TIU_trainStatus;
-  DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_icons */ DMI_icons;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::brakeStatusSymbolAck_fromDisplay */ brakeStatusSymbolAck_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::C1AreaAck_fromDisplay */ C1AreaAck_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::openLevelMenu_fromDisplay */ openLevelMenu_fromDisplay;
-  DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_evc_level_data */ DMI_evc_level_data;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::InputFieldAck_fromDisplay */ InputFieldAck_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::OverD9_fromDisplay */ OverD9_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::OverD12_frpmDisplay */ OverD12_frpmDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::HidePlanningArea_fromDisplay */ HidePlanningArea_fromDisplay;
-  kcg_bool /* DMI_Control_Pkg::DMI_Controller::ShowPlanningArea_fromDisplay */ ShowPlanningArea_fromDisplay;
-  DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::Track_Atlas_Information */ Track_Atlas_Information;
-} inC_DMI_Controller_DMI_Control_Pkg;
+/* =====================  no input structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -104,16 +70,12 @@ typedef struct {
   array_int_9 /* DMI_Control_Pkg::DMI_Controller::TrainRN_Display_toDisplay */ TrainRN_Display_toDisplay;
   array_bool_15 /* DMI_Control_Pkg::DMI_Controller::window_mask_visibility__toDisplay */ window_mask_visibility__toDisplay;
   array_int_30 /* DMI_Control_Pkg::DMI_Controller::ArrayButtonsEnabler_toDisplay */ ArrayButtonsEnabler_toDisplay;
-  DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_identifier */ DMI_identifier;
-  DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_driver_identifier */ DMI_driver_identifier;
-  DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_train_running_number_id */ DMI_train_running_number_id;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::CloseButtonEnabler_toDisplay */ CloseButtonEnabler_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::StatusSymbolVisibility_toDisplay */ StatusSymbolVisibility_toDisplay;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::RBC_status_symbol_toDisplay */ RBC_status_symbol_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::DistanceToTargetBarVisibility_toDisplay */ DistanceToTargetBarVisibility_toDisplay;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::ModeSymbol_toDisplay */ ModeSymbol_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::ModeSymbolVisibility_toDisplay */ ModeSymbolVisibility_toDisplay;
-  DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_driver_request */ DMI_driver_request;
   array_int_5 /* DMI_Control_Pkg::DMI_Controller::ArrayOfMsgIndex_toDisplay */ ArrayOfMsgIndex_toDisplay;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::trainCategoryIndex_toDisplay */ trainCategoryIndex_toDisplay;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::trainAxleloadIndex_toDisplay */ trainAxleloadIndex_toDisplay;
@@ -124,9 +86,6 @@ typedef struct {
   kcg_real /* DMI_Control_Pkg::DMI_Controller::trainMaxspeed_toDisplay */ trainMaxspeed_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::traindataValidWinVisibility_toDisplay */ traindataValidWinVisibility_toDisplay;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::traindataYesNoIndex_toDisplay */ traindataYesNoIndex_toDisplay;
-  DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_train_data_ack */ DMI_train_data_ack;
-  DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_status_report */ DMI_status_report;
-  DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_text_message_ack */ DMI_text_message_ack;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::yellowBorderMsg_toDisplay */ yellowBorderMsg_toDisplay;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::closeButtonIndex_toDisplay */ closeButtonIndex_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::openDesk_toDisplay */ openDesk_toDisplay;
@@ -157,6 +116,7 @@ typedef struct {
   array_bool_10 /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangeSymbolsVisible_toDisplay */ D_SPDI_SpeedChangeSymbolsVisible_toDisplay;
   array_int_10 /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangeIndex_toDisplay */ D_SPDI_SpeedChangeIndex_toDisplay;
   array_real_10 /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangePosition_toDisplay */ D_SPDI_SpeedChangePosition_toDisplay;
+  array_real_1 /* DMI_Control_Pkg::DMI_Controller::D_PASP_IndicatorMarker_toDisplay */ D_PASP_IndicatorMarker_toDisplay;
   array_real_4 /* DMI_Control_Pkg::DMI_Controller::D_PASP_Speeds_toDisplay */ D_PASP_Speeds_toDisplay;
   array_real_4 /* DMI_Control_Pkg::DMI_Controller::D_PASP_Distances_toDisplay */ D_PASP_Distances_toDisplay;
   array_bool_12 /* DMI_Control_Pkg::DMI_Controller::D_GradientVisible_toDisplay */ D_GradientVisible_toDisplay;
@@ -165,12 +125,13 @@ typedef struct {
   tScale /* DMI_Control_Pkg::DMI_Controller::D_Scale_toDisplay */ D_Scale_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::PlanningAreaVisibility_toDisplay */ PlanningAreaVisibility_toDisplay;
   array_real_12 /* DMI_Control_Pkg::DMI_Controller::D_GradientsValue_toDisplay */ D_GradientsValue_toDisplay;
+  DMI_to_EVC_Message_int_T_API_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::Output83 */ Output83;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
+  kcg_bool init8;
   kcg_bool init7;
   kcg_bool init6;
   kcg_bool init5;
-  kcg_bool init4;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   SSM_ST_HandshakeSM_CabinSM_DeskIsOpen /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */ HandshakeSM_state_nxt_CabinSM_DeskIsOpen;
@@ -183,9 +144,8 @@ typedef struct {
   SSM_ST_SymbolsAcknowledgmentSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SymbolsAcknowledgmentSM */ SymbolsAcknowledgmentSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   SSM_ST_SM17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM17 */ SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   SSM_ST_HourGlassSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::HourGlassSM */ HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  SSM_ST_SM11_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM11 */ SM11_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   SSM_ST_SpeedSupervisionSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM */ SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  SSM_ST_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM13 */ SM13_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  SSM_ST_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM3 */ SM3_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::HideMainmenu */ HideMainmenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YellowBorder_C9 */ YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   Area_group_T_DMI_Types_Pkg /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::dmiCommand_NID_AreaGroup */ dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
@@ -197,12 +157,15 @@ typedef struct {
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::LevelMenu */ LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_int /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::LocalModeSymbolIndex */ LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::LocalModeSymbolVisibility */ LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  kcg_real /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::PermittedSpeed_CPS */ PermittedSpeed_CPS_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  kcg_real /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::TrainPosition */ TrainPosition_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Local_DMI_evc_data */ Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   array_real_32 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Track_Atlas_Gradient_Value */ Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   array_real_32 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Track_Atlas_Gradient_End */ Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   array_real_32 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Track_Atlas_Gradient_Begin */ Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   array_real_32 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Track_Atlas_Loc_LRBG */ Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   array_real_32 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Track_Atlas_MRSP */ Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  array_bool_32 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Gradient_Visible_Flag */ Gradient_Visible_Flag_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L159 */ _L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L161 */ _L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L162 */ _L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
@@ -221,22 +184,51 @@ typedef struct {
   kcg_int /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L369 */ _L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   array_int_12 /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L427 */ _L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
   SSM_ST_CabinSM /* DMI_Control_Pkg::DMI_Controller::CabinSM */ CabinSM_state_nxt;
+  DMI_Level_Data_T_DMI_Messages_Bothways_Pkg /* DMI_Control_Pkg::DMI_Controller::DMI_Level_Data */ DMI_Level_Data;
+  kcg_bool /* DMI_Control_Pkg::DMI_Controller::_L156 */ _L156;
+  kcg_bool /* DMI_Control_Pkg::DMI_Controller::_L170 */ _L170;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget /* 5 */ _3_Context_5;
-  outC_DMI_status_DMI_Control_Pkg_Sub_func /* 5 */ Context_5;
-  outC_TextMessagesDispatcher_DMI_Control_Pkg_Utils /* 1 */ _2_Context_1;
-  outC_AckMsgManager_DMI_Control_Pkg_Utils /* 2 */ Context_2;
-  outC_FlashingIconsOperator_DMI_Control_Pkg_Utils /* FlashingIconsOperator */ Context_FlashingIconsOperator;
-  outC_HourGlassAnimation_DMI_Control_Pkg_Sub_func /* HourGlassAnimation */ Context_HourGlassAnimation;
-  outC_D_behavior /* 1 */ _1_Context_1;
-  outC_StatusPlanningArea_DMI_Control_Pkg_Sub_func /* 1 */ Context_1;
+  outC_CheckDeskStatus_DMI_Control_Pkg_Sub_func /* CheckDeskStatus */ Context_CheckDeskStatus;
+  outC_DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget /* 7 */ _4_Context_7;
+  outC_DMI_status_DMI_Control_Pkg_Sub_func /* 7 */ Context_7;
+  outC_TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages /* 4 */ _3_Context_4;
+  outC_D_behavior /* 4 */ Context_4;
+  outC_AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages /* 2 */ _2_Context_2;
+  outC_FlashingIconsOperator_DMI_Control_Pkg_Utils /* 2 */ _1_Context_2;
+  outC_StatusPlanningArea_DMI_Control_Pkg_Sub_func /* 3 */ Context_3;
+  outC_HourGlassAnimation_DMI_Control_Pkg_Sub_func /* 2 */ Context_2;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_DMI_Controller_DMI_Control_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* DMI_Control_Pkg::DMI_Controller */
 extern void DMI_Controller_DMI_Control_Pkg(
-  inC_DMI_Controller_DMI_Control_Pkg *inC,
+  /* DMI_Control_Pkg::DMI_Controller::MousePressed */kcg_bool MousePressed,
+  /* DMI_Control_Pkg::DMI_Controller::VisibleGradients */array_bool_12 *VisibleGradients,
+  /* DMI_Control_Pkg::DMI_Controller::Brake */kcg_real Brake,
+  /* DMI_Control_Pkg::DMI_Controller::keypad_fromDisplay */array_bool_12 *keypad_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::confirmTrainData_fromDisplay */kcg_bool confirmTrainData_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openTrainDataWindow_fromDisplay */kcg_bool openTrainDataWindow_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::startRequest_fromDisplay */kcg_bool startRequest_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::traindataAck_fromDisplay */kcg_bool traindataAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::traindataYesAck_fromDisplay */kcg_bool traindataYesAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::traindataNoAck_fromDisplay */kcg_bool traindataNoAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::textMsgAck_fromDisplay */kcg_bool textMsgAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openDriverID_fromDisplay */kcg_bool openDriverID_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openTrainRN_fromDisplay */kcg_bool openTrainRN_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::closeButton_fromDisplay */kcg_bool closeButton_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::closeButtonMain_fromDisplay */kcg_bool closeButtonMain_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openMainMenu_fromDisplay */kcg_bool openMainMenu_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::TIU_trainStatus */TIU_trainStatus_T_TIU_Types_Pkg *TIU_trainStatus,
+  /* DMI_Control_Pkg::DMI_Controller::brakeStatusSymbolAck_fromDisplay */kcg_bool brakeStatusSymbolAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::C1AreaAck_fromDisplay */kcg_bool C1AreaAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openLevelMenu_fromDisplay */kcg_bool openLevelMenu_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::InputFieldAck_fromDisplay */kcg_bool InputFieldAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::OverD9_fromDisplay */kcg_bool OverD9_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::OverD12_frpmDisplay */kcg_bool OverD12_frpmDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::HidePlanningArea_fromDisplay */kcg_bool HidePlanningArea_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::ShowPlanningArea_fromDisplay */kcg_bool ShowPlanningArea_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::EVC_to_DMI */EVC_to_DMI_Message_int_T_API_DMI_Pkg *EVC_to_DMI,
   outC_DMI_Controller_DMI_Control_Pkg *outC);
 
 extern void DMI_Controller_reset_DMI_Control_Pkg(
@@ -245,6 +237,6 @@ extern void DMI_Controller_reset_DMI_Control_Pkg(
 #endif /* _DMI_Controller_DMI_Control_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Controller_DMI_Control_Pkg.h
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

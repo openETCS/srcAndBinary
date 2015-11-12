@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,8 +11,7 @@
 kcg_int TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData(
   /* DMI_Control_Pkg::Sub_func::TrainData::TrainCategoryInfoConverter::TrainCatEnum */NC_TRAIN TrainCatEnum)
 {
-  /* DMI_Control_Pkg::Sub_func::TrainData::TrainCategoryInfoConverter::TrainCatIndex */
-  static kcg_int TrainCatIndex;
+  /* DMI_Control_Pkg::Sub_func::TrainData::TrainCategoryInfoConverter::TrainCatIndex */ kcg_int TrainCatIndex;
   
   switch (TrainCatEnum) {
     case NC_TRAIN_Passenger_train :
@@ -33,6 +32,6 @@ kcg_int TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TrainCategoryInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

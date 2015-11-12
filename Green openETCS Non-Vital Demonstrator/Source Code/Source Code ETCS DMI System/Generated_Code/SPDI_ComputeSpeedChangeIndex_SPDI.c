@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,10 +18,8 @@ void SPDI_ComputeSpeedChangeIndex_SPDI(
   /* SPDI::SPDI_ComputeSpeedChangeIndex::SpeedChangeIndex */kcg_int *SpeedChangeIndex,
   /* SPDI::SPDI_ComputeSpeedChangeIndex::SpeedChangeSymbolVisible */kcg_bool *SpeedChangeSymbolVisible)
 {
-  /* SPDI::SPDI_ComputeSpeedChangeIndex::IfBlock1::else */
-  static kcg_bool else_clock_IfBlock1;
-  /* SPDI::SPDI_ComputeSpeedChangeIndex::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
+  /* SPDI::SPDI_ComputeSpeedChangeIndex::IfBlock1::else */ kcg_bool else_clock_IfBlock1;
+  /* SPDI::SPDI_ComputeSpeedChangeIndex::IfBlock1 */ kcg_bool IfBlock1_clock;
   
   *Acc_EndOfLogPart_Out = Acc_EndOfLogPart;
   *Acc_Speed_Out = Speed;
@@ -43,6 +41,6 @@ void SPDI_ComputeSpeedChangeIndex_SPDI(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SPDI_ComputeSpeedChangeIndex_SPDI.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

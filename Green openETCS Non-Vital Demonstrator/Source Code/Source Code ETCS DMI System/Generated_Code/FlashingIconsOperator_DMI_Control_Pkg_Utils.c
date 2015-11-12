@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,8 +23,7 @@ void FlashingIconsOperator_DMI_Control_Pkg_Utils(
   /* DMI_Control_Pkg::Utils::FlashingIconsOperator::Input7 */kcg_real Input7,
   outC_FlashingIconsOperator_DMI_Control_Pkg_Utils *outC)
 {
-  /* DMI_Control_Pkg::Utils::FlashingIconsOperator::_L14 */
-  static kcg_bool _L14;
+  /* DMI_Control_Pkg::Utils::FlashingIconsOperator::_L14 */ kcg_bool _L14;
   
   _L14 = Input7 != 0.0;
   if (_L14) {
@@ -46,6 +45,6 @@ void FlashingIconsOperator_DMI_Control_Pkg_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FlashingIconsOperator_DMI_Control_Pkg_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

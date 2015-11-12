@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,8 +11,7 @@
 kcg_int LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData(
   /* DMI_Control_Pkg::Sub_func::TrainData::LoadingGougeInfoConverter::loadingGougeEnum */M_LOADINGGAUGE loadingGougeEnum)
 {
-  /* DMI_Control_Pkg::Sub_func::TrainData::LoadingGougeInfoConverter::loadingGougeIndex */
-  static kcg_int loadingGougeIndex;
+  /* DMI_Control_Pkg::Sub_func::TrainData::LoadingGougeInfoConverter::loadingGougeIndex */ kcg_int loadingGougeIndex;
   
   switch (loadingGougeEnum) {
     case M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles :
@@ -36,6 +35,6 @@ kcg_int LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** LoadingGougeInfoConverter_DMI_Control_Pkg_Sub_func_TrainData.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

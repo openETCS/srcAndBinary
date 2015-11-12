@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,6 +9,7 @@
 
 void D_behavior_reset(outC_D_behavior *outC)
 {
+  outC->init = kcg_true;
   /* 1 */ ZoomLevel_reset(&outC->Context_1);
 }
 
@@ -22,19 +23,21 @@ void D_behavior(
   /* D_behavior::GradientsEnd */array_real_12 *GradientsEnd,
   /* D_behavior::PASP_SpeedPoints */tSpeedPoints *PASP_SpeedPoints,
   /* D_behavior::CPS */kcg_real CPS,
+  /* D_behavior::Indicationlocation */kcg_int Indicationlocation,
   outC_D_behavior *outC)
 {
-  static kcg_real tmp;
-  static kcg_int i;
-  /* D_behavior::_L35 */
-  static tScale _L35;
-  /* D_behavior::_L159 */
-  static tPASP_Array _L159;
-  /* D_behavior::_L202 */
-  static kcg_real _L202;
-  /* D_behavior::_L204 */
-  static array_real_10 _L204;
+  kcg_real tmp;
+  kcg_int i;
+  /* D_behavior::IfBlock1::else */ kcg_bool _2_else_clock_IfBlock1;
+  /* D_behavior::IfBlock1::else::else::else */ kcg_bool else_clock_IfBlock1;
+  /* D_behavior::IfBlock1::else::else */ kcg_bool _1_else_clock_IfBlock1;
+  /* D_behavior::IfBlock1 */ kcg_bool IfBlock1_clock;
+  /* D_behavior::_L35 */ tScale _L35;
+  /* D_behavior::_L158 */ tPASPOutput_Array _L158;
+  /* D_behavior::_L202 */ kcg_real _L202;
+  /* D_behavior::_L204 */ array_real_10 _L204;
   
+  tmp = (kcg_real) Indicationlocation / (kcg_real) 100;
   /* 1 */
   ZoomLevel(
     (kcg_bool) (OverD9 & MousePressed),
@@ -47,49 +50,43 @@ void D_behavior(
   else {
     kcg_copy_tScale(&_L35, (tScale *) &illegalScalesIndex);
   }
-  for (i = 0; i < 12; i++) {
-    outC->GradientStartInterpolated[i] = /* 1 */
-      ComputeDistDisplay(
-        _L35[5],
-        _L35[8],
-        (*GradientsStart)[i],
-        TrainPosition,
-        outC->Context_1.zoomlevel);
-    outC->GradientEndInterpolated[i] = /* 2 */
-      ComputeDistDisplay(
-        _L35[5],
-        _L35[8],
-        (*GradientsEnd)[i],
-        TrainPosition,
-        outC->Context_1.zoomlevel);
-    outC->GradientVisible[i] = kcg_true;
+  IfBlock1_clock = (tmp <= _L35[5]) & (tmp > 0.0);
+  if (IfBlock1_clock) {
+    if ((0 <= outC->Context_1.zoomlevel) & (outC->Context_1.zoomlevel < 6)) {
+      _L202 = LinearScaleFactors[outC->Context_1.zoomlevel];
+    }
+    else {
+      _L202 = - 1.0;
+    }
+    outC->toDisplay[0] = tmp / _L202;
   }
-  /* 1 */
-  impPASPgetRelavantBreakingValues_PASP(
-    CPS,
-    &(*PASP_SpeedPoints)[0],
-    &(*PASP_SpeedPoints)[1],
-    &_L204,
-    &_L159);
-  for (i = 0; i < 4; i++) {
-    outC->PASP_Distances[i] = /* 3 */
-      ComputeDistDisplay(
-        _L35[5],
-        _L35[8],
-        _L204[i + 0],
-        TrainPosition,
-        outC->Context_1.zoomlevel);
+  else {
+    _2_else_clock_IfBlock1 = tmp == 0.0;
+    if (_2_else_clock_IfBlock1) {
+      if (outC->init) {
+        outC->toDisplay[0] = 0.0;
+      }
+    }
+    else {
+      _1_else_clock_IfBlock1 = tmp < 0.0;
+      if (_1_else_clock_IfBlock1) {
+        outC->toDisplay[0] = 0.0;
+      }
+      else {
+        else_clock_IfBlock1 = tmp > _L35[8];
+        if (else_clock_IfBlock1) {
+          outC->toDisplay[0] = 262.0;
+        }
+        else {
+          outC->toDisplay[0] = logScaleFactor * (/* 1 */ LogR_mathext(tmp) -
+              /* 2 */ LogR_mathext(_L35[5])) + ScaleLine5;
+        }
+      }
+    }
   }
-  kcg_copy_array_real_4(&outC->PASP_Speeds, (array_real_4 *) &_L159[0]);
+  outC->init = kcg_false;
   _L202 = CPS;
   for (i = 0; i < 10; i++) {
-    outC->SPDI_SpeedChangePosition[i] = /* 4 */
-      ComputeDistDisplay(
-        _L35[5],
-        _L35[8],
-        (*PASP_SpeedPoints)[0][i],
-        TrainPosition,
-        outC->Context_1.zoomlevel);
     tmp = _L202;
     /* 1 */
     SPDI_ComputeSpeedChangeIndex_SPDI(
@@ -101,11 +98,51 @@ void D_behavior(
       &_L204[i],
       &outC->SPDI_SpeedChangeIndex[i],
       &outC->SPDI_SpeedChangeSymbolsVisible[i]);
+    outC->SPDI_SpeedChangePosition[i] = /* 4 */
+      ComputeDistDisplay(
+        _L35[5],
+        _L35[8],
+        (*PASP_SpeedPoints)[0][i],
+        TrainPosition,
+        outC->Context_1.zoomlevel);
+  }
+  /* 1 */
+  impPASPgetRelavantBreakingValues_PASP(
+    CPS,
+    &(*PASP_SpeedPoints)[0],
+    &(*PASP_SpeedPoints)[1],
+    &_L158,
+    &outC->PASP_Speeds);
+  for (i = 0; i < 4; i++) {
+    outC->PASP_Distances[i] = /* 3 */
+      ComputeDistDisplay(
+        _L35[5],
+        _L35[8],
+        _L158[i],
+        TrainPosition,
+        outC->Context_1.zoomlevel);
+  }
+  for (i = 0; i < 12; i++) {
+    outC->GradientVisible[i] = kcg_true;
+    outC->GradientEndInterpolated[i] = /* 2 */
+      ComputeDistDisplay(
+        _L35[5],
+        _L35[8],
+        (*GradientsEnd)[i],
+        TrainPosition,
+        outC->Context_1.zoomlevel);
+    outC->GradientStartInterpolated[i] = /* 1 */
+      ComputeDistDisplay(
+        _L35[5],
+        _L35[8],
+        (*GradientsStart)[i],
+        TrainPosition,
+        outC->Context_1.zoomlevel);
   }
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** D_behavior.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

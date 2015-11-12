@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,12 +12,10 @@ void LevelListAdapter_DMI_Control_Pkg_Utils(
   /* DMI_Control_Pkg::Utils::LevelListAdapter::DMI_evc_level_data */DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *DMI_evc_level_data,
   /* DMI_Control_Pkg::Utils::LevelListAdapter::ArrayLevelIndex_toDisplay */array_int_12 *ArrayLevelIndex_toDisplay)
 {
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* DMI_Control_Pkg::Utils::LevelListAdapter::_L8 */
-  static kcg_int _L8;
-  /* DMI_Control_Pkg::Utils::LevelListAdapter::_L9 */
-  static array_int_32 _L9;
+  kcg_bool tmp;
+  kcg_int i;
+  /* DMI_Control_Pkg::Utils::LevelListAdapter::_L8 */ kcg_int _L8;
+  /* DMI_Control_Pkg::Utils::LevelListAdapter::_L9 */ array_int_32 _L9;
   
   if (((*DMI_evc_level_data).levelList.number != 0) &
     (*DMI_evc_level_data).valid) {
@@ -50,6 +48,6 @@ void LevelListAdapter_DMI_Control_Pkg_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** LevelListAdapter_DMI_Control_Pkg_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

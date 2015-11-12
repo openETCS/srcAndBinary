@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,17 +15,12 @@ kcg_real ComputeDistDisplay(
   /* ComputeDistDisplay::TrainPosition */kcg_real TrainPosition,
   /* ComputeDistDisplay::Zoomlevel */kcg_int Zoomlevel)
 {
-  static kcg_real tmp;
-  /* ComputeDistDisplay::IfBlock1::else */
-  static kcg_bool _1_else_clock_IfBlock1;
-  /* ComputeDistDisplay::IfBlock1::else::else */
-  static kcg_bool else_clock_IfBlock1;
-  /* ComputeDistDisplay::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
-  /* ComputeDistDisplay::l_objectDistance */
-  static kcg_real l_objectDistance;
-  /* ComputeDistDisplay::ObjectScreenYPosition */
-  static kcg_real ObjectScreenYPosition;
+  kcg_real tmp;
+  /* ComputeDistDisplay::IfBlock1::else */ kcg_bool _1_else_clock_IfBlock1;
+  /* ComputeDistDisplay::IfBlock1::else::else */ kcg_bool else_clock_IfBlock1;
+  /* ComputeDistDisplay::IfBlock1 */ kcg_bool IfBlock1_clock;
+  /* ComputeDistDisplay::l_objectDistance */ kcg_real l_objectDistance;
+  /* ComputeDistDisplay::ObjectScreenYPosition */ kcg_real ObjectScreenYPosition;
   
   l_objectDistance = ObjectPosition - TrainPosition;
   IfBlock1_clock = l_objectDistance <= MaxLinearDistance;
@@ -60,6 +55,6 @@ kcg_real ComputeDistDisplay(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ComputeDistDisplay.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

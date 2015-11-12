@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,9 +16,8 @@ void ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils(
   /* DMI_Control_Pkg::Utils::ASCII_to_INTEGER_iterator::condition */kcg_bool *condition,
   /* DMI_Control_Pkg::Utils::ASCII_to_INTEGER_iterator::outInt */kcg_int *outInt)
 {
-  static kcg_int tmp;
-  /* DMI_Control_Pkg::Utils::ASCII_to_INTEGER_iterator::_L19 */
-  static kcg_int _L19;
+  kcg_int tmp;
+  /* DMI_Control_Pkg::Utils::ASCII_to_INTEGER_iterator::_L19 */ kcg_int _L19;
   
   _L19 = power - 2 - index;
   *condition = !(_L19 == 0);
@@ -59,6 +58,6 @@ void ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ASCII_to_INTEGER_iterator_DMI_Control_Pkg_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,15 +12,12 @@ kcg_bool LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func(
   /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::GroupIndex */kcg_int GroupIndex,
   /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::SymbolIndex */kcg_int SymbolIndex)
 {
-  static kcg_bool tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::_L21 */
-  static kcg_bool _L21;
-  /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::_L23 */
-  static kcg_bool _L23;
-  /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::CheckResult */
-  static kcg_bool CheckResult;
+  kcg_bool tmp1;
+  kcg_bool tmp;
+  kcg_int i;
+  /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::_L21 */ kcg_bool _L21;
+  /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::_L23 */ kcg_bool _L23;
+  /* DMI_Control_Pkg::Sub_func::LevelModeSymolsChecker::CheckResult */ kcg_bool CheckResult;
   
   _L23 = kcg_false;
   for (i = 0; i < 5; i++) {
@@ -57,6 +54,6 @@ kcg_bool LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

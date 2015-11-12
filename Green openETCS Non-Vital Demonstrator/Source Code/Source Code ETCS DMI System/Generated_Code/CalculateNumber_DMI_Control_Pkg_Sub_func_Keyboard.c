@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,15 +12,12 @@ kcg_int CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
   /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::start */kcg_bool start,
   /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::in_arraykey */array_bool_12 *in_arraykey)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::_L4 */
-  static kcg_int _L4;
-  /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::_L5 */
-  static kcg_int _L5;
-  /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::out_KeyNumber */
-  static kcg_int out_KeyNumber;
+  kcg_int tmp1;
+  kcg_bool tmp;
+  kcg_int i;
+  /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::_L4 */ kcg_int _L4;
+  /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::_L5 */ kcg_int _L5;
+  /* DMI_Control_Pkg::Sub_func::Keyboard::CalculateNumber::out_KeyNumber */ kcg_int out_KeyNumber;
   
   _L5 = 0;
   if (start) {
@@ -64,6 +61,6 @@ kcg_int CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

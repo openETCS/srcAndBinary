@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,12 +14,9 @@ void SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed(
   /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::SpeedDigitTwo */kcg_real *SpeedDigitTwo,
   /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::SpeedDigitThree */kcg_real *SpeedDigitThree)
 {
-  /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::_L2 */
-  static kcg_int _L2;
-  /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::_L5 */
-  static kcg_int _L5;
-  /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::_L8 */
-  static kcg_int _L8;
+  /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::_L2 */ kcg_int _L2;
+  /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::_L5 */ kcg_int _L5;
+  /* DMI_Control_Pkg::Sub_func::Speed::SpeedToDigit::_L8 */ kcg_int _L8;
   
   _L5 = (kcg_int) TrainSpeed;
   _L8 = _L5 % 100;
@@ -31,6 +28,6 @@ void SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SpeedToDigit_DMI_Control_Pkg_Sub_func_Speed.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

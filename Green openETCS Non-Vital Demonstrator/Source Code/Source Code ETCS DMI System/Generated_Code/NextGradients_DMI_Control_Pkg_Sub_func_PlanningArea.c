@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,14 +17,11 @@ void NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea(
   /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::GradientsEndDMI */array_real_12 *GradientsEndDMI,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::GradientsValueDMI */array_real_12 *GradientsValueDMI)
 {
-  static kcg_real tmp1;
-  static kcg_bool tmp;
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::lGradientsFirstIndex */
-  static kcg_int lGradientsFirstIndex;
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::_L6 */
-  static int32 _L6;
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::_L51 */
-  static kcg_real _L51;
+  kcg_real tmp1;
+  kcg_bool tmp;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::lGradientsFirstIndex */ kcg_int lGradientsFirstIndex;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::_L6 */ kcg_int _L6;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextGradients::_L51 */ kcg_real _L51;
   
   _L51 = inTrainPosition;
   for (
@@ -63,6 +60,6 @@ void NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

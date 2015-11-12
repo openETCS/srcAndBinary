@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,14 +11,10 @@
 kcg_real CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget(
   /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::DistanceToTarget */kcg_real DistanceToTarget)
 {
-  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::IfBlock1::else */
-  static kcg_bool _1_else_clock_IfBlock1;
-  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::IfBlock1::else::else */
-  static kcg_bool else_clock_IfBlock1;
-  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
-  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::InterpolatedDistanceToTarget */
-  static kcg_real InterpolatedDistanceToTarget;
+  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::IfBlock1::else */ kcg_bool _1_else_clock_IfBlock1;
+  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::IfBlock1::else::else */ kcg_bool else_clock_IfBlock1;
+  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::IfBlock1 */ kcg_bool IfBlock1_clock;
+  /* DMI_Control_Pkg::Sub_func::DistanceToTarget::CalculateDistanceToTarget::InterpolatedDistanceToTarget */ kcg_real InterpolatedDistanceToTarget;
   
   IfBlock1_clock = DistanceToTarget < 0.0;
   if (IfBlock1_clock) {
@@ -45,6 +41,6 @@ kcg_real CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CalculateDistanceToTarget_DMI_Control_Pkg_Sub_func_DistanceToTarget.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

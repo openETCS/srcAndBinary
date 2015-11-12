@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,14 +15,11 @@ void NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea(
   /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::SpeedProfile_Distance_DMI */array_real_10 *SpeedProfile_Distance_DMI,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::SpeedProfile_Speed_DMI */array_real_10 *SpeedProfile_Speed_DMI)
 {
-  static kcg_real tmp1;
-  static kcg_bool tmp;
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::lSpeedProfileFirstIndex */
-  static kcg_int lSpeedProfileFirstIndex;
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::_L6 */
-  static int32 _L6;
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::_L51 */
-  static kcg_real _L51;
+  kcg_real tmp1;
+  kcg_bool tmp;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::lSpeedProfileFirstIndex */ kcg_int lSpeedProfileFirstIndex;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::_L6 */ kcg_int _L6;
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::NextSpeedProfiles::_L51 */ kcg_real _L51;
   
   _L51 = inTrainPosition;
   for (
@@ -56,6 +53,6 @@ void NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** NextSpeedProfiles_DMI_Control_Pkg_Sub_func_PlanningArea.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 

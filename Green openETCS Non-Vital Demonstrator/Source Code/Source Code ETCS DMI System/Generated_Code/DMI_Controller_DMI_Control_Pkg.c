@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:32:00
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,440 +11,482 @@ void DMI_Controller_reset_DMI_Control_Pkg(
   outC_DMI_Controller_DMI_Control_Pkg *outC)
 {
   outC->init = kcg_true;
-  outC->init4 = kcg_true;
   outC->init5 = kcg_true;
   outC->init6 = kcg_true;
   outC->init7 = kcg_true;
-  /* 1 */ StatusPlanningArea_reset_DMI_Control_Pkg_Sub_func(&outC->Context_1);
-  /* 1 */ D_behavior_reset(&outC->_1_Context_1);
-  /* HourGlassAnimation */
-  HourGlassAnimation_reset_DMI_Control_Pkg_Sub_func(
-    &outC->Context_HourGlassAnimation);
-  /* FlashingIconsOperator */
-  FlashingIconsOperator_reset_DMI_Control_Pkg_Utils(
-    &outC->Context_FlashingIconsOperator);
-  /* 2 */ AckMsgManager_reset_DMI_Control_Pkg_Utils(&outC->Context_2);
-  /* 1 */
-  TextMessagesDispatcher_reset_DMI_Control_Pkg_Utils(&outC->_2_Context_1);
-  /* 5 */ DMI_status_reset_DMI_Control_Pkg_Sub_func(&outC->Context_5);
-  /* 5 */
+  outC->init8 = kcg_true;
+  /* 2 */ HourGlassAnimation_reset_DMI_Control_Pkg_Sub_func(&outC->Context_2);
+  /* 3 */ StatusPlanningArea_reset_DMI_Control_Pkg_Sub_func(&outC->Context_3);
+  /* 2 */
+  FlashingIconsOperator_reset_DMI_Control_Pkg_Utils(&outC->_1_Context_2);
+  /* 2 */
+  AckMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
+    &outC->_2_Context_2);
+  /* 4 */ D_behavior_reset(&outC->Context_4);
+  /* 4 */
+  TextMessagesDipatcher_reset_DMI_Control_Pkg_Sub_func_TextMessages(
+    &outC->_3_Context_4);
+  /* 7 */ DMI_status_reset_DMI_Control_Pkg_Sub_func(&outC->Context_7);
+  /* 7 */
   DistanceToTargetManager_reset_DMI_Control_Pkg_Sub_func_DistanceToTarget(
-    &outC->_3_Context_5);
+    &outC->_4_Context_7);
+  /* CheckDeskStatus */
+  CheckDeskStatus_reset_DMI_Control_Pkg_Sub_func(
+    &outC->Context_CheckDeskStatus);
 }
 
 /* DMI_Control_Pkg::DMI_Controller */
 void DMI_Controller_DMI_Control_Pkg(
-  inC_DMI_Controller_DMI_Control_Pkg *inC,
+  /* DMI_Control_Pkg::DMI_Controller::MousePressed */kcg_bool MousePressed,
+  /* DMI_Control_Pkg::DMI_Controller::VisibleGradients */array_bool_12 *VisibleGradients,
+  /* DMI_Control_Pkg::DMI_Controller::Brake */kcg_real Brake,
+  /* DMI_Control_Pkg::DMI_Controller::keypad_fromDisplay */array_bool_12 *keypad_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::confirmTrainData_fromDisplay */kcg_bool confirmTrainData_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openTrainDataWindow_fromDisplay */kcg_bool openTrainDataWindow_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::startRequest_fromDisplay */kcg_bool startRequest_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::traindataAck_fromDisplay */kcg_bool traindataAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::traindataYesAck_fromDisplay */kcg_bool traindataYesAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::traindataNoAck_fromDisplay */kcg_bool traindataNoAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::textMsgAck_fromDisplay */kcg_bool textMsgAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openDriverID_fromDisplay */kcg_bool openDriverID_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openTrainRN_fromDisplay */kcg_bool openTrainRN_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::closeButton_fromDisplay */kcg_bool closeButton_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::closeButtonMain_fromDisplay */kcg_bool closeButtonMain_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openMainMenu_fromDisplay */kcg_bool openMainMenu_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::TIU_trainStatus */TIU_trainStatus_T_TIU_Types_Pkg *TIU_trainStatus,
+  /* DMI_Control_Pkg::DMI_Controller::brakeStatusSymbolAck_fromDisplay */kcg_bool brakeStatusSymbolAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::C1AreaAck_fromDisplay */kcg_bool C1AreaAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::openLevelMenu_fromDisplay */kcg_bool openLevelMenu_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::InputFieldAck_fromDisplay */kcg_bool InputFieldAck_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::OverD9_fromDisplay */kcg_bool OverD9_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::OverD12_frpmDisplay */kcg_bool OverD12_frpmDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::HidePlanningArea_fromDisplay */kcg_bool HidePlanningArea_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::ShowPlanningArea_fromDisplay */kcg_bool ShowPlanningArea_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::EVC_to_DMI */EVC_to_DMI_Message_int_T_API_DMI_Pkg *EVC_to_DMI,
   outC_DMI_Controller_DMI_Control_Pkg *outC)
 {
-  static Icon_group_T_DMI_Types_Pkg tmp12;
-  static kcg_bool tmp11;
-  static kcg_bool tmp10;
-  static kcg_bool tmp9;
-  static kcg_bool tmp8;
-  static kcg_bool tmp7;
-  static kcg_bool tmp6;
-  static DMI_Train_Data_T_DMI_Messages_Bothways_Pkg tmp5;
-  static SSM_TR_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu tmp4;
-  static kcg_int tmp3;
-  static kcg_bool tmp2;
-  static kcg_bool tmp1;
-  static kcg_int i;
-  static SSM_TR_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive tmp;
-  static kcg_bool tmp16;
-  static kcg_bool tmp17;
-  static kcg_bool tmp14;
-  static kcg_bool tmp15;
-  static kcg_bool tmp13;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */
-  static kcg_bool HandshakeSM_reset_act_CabinSM_DeskIsOpen;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */
-  static SSM_ST_HandshakeSM_CabinSM_DeskIsOpen HandshakeSM_state_act_CabinSM_DeskIsOpen;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */
-  static SSM_ST_HandshakeSM_CabinSM_DeskIsOpen HandshakeSM_state_sel_CabinSM_DeskIsOpen;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock5::then::_L9 */
-  static array_real_5 _L9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock5::then::_L8 */
-  static array_real_5 _L8_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock5::then::_L6 */
-  static array_char_30_5 _L6_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock5::then::_L2 */
-  static array_int_5 _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::vPermitted */
-  static kcg_real _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::else */
-  static kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::PIM::vPermitted */
-  static kcg_real vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::vPermitted */
-  static kcg_real vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::isOrange */
-  static kcg_bool isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::isDarkGrey */
-  static kcg_bool isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::IfBlock1::else */
-  static kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM_IfBlock1;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::_L45 */
-  static kcg_bool _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isOrange */
-  static kcg_bool isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isWhite */
-  static kcg_bool isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isDarkGrey */
-  static kcg_bool isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isMediumGrey */
-  static kcg_bool isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::IfBlock4::else */
-  static kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isOrange */
-  static kcg_bool isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isYellow */
-  static kcg_bool isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isMediumGrey */
-  static kcg_bool isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::Vtarget */
-  static kcg_real Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isDarkGrey */
-  static kcg_bool isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::IfBlock4::else */
-  static kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM_IfBlock4;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::isYellow */
-  static kcg_bool isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::isMediumGrey */
-  static kcg_bool isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1 */
-  static M_SUPERVISION_STATUS_DMI_Types_Pkg WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM11::TextMsgToBeAck */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11_TextMsgToBeAck;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock */
-  static Icon_control_flag_T_DMI_Types_Pkg IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2::C::IfBlock1::else::then::CheckResult */
-  static kcg_bool CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2 */
-  static Area_group_T_DMI_Types_Pkg WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::clear_area::WhenBlock2::C::IfBlock1 */
-  static kcg_bool IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area_WhenBlock2_C;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::clear_area::WhenBlock2 */
-  static Area_group_T_DMI_Types_Pkg WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock::C::AreaRankIfBlock */
-  static kcg_bool AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area_AreaGroupWhenBlock_C;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock */
-  static Area_group_T_DMI_Types_Pkg AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID::_L60 */
-  static kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID::_L53 */
-  static kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::_L60 */
-  static kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::_L56 */
-  static kcg_int _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::_L53 */
-  static kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::TrainRNKeyboardController::else */
-  static kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::_L4 */
-  static DMI_Request_T_DMI_Types_Pkg _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::levelMenuVisibility_toDisplay */
-  static kcg_bool levelMenuVisibility_toDisplay_strong;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM */
-  static SSM_ST_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM */
-  static SSM_ST_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN */
-  static kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */
-  static kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */
-  static kcg_bool br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */
-  static kcg_bool br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */
-  static kcg_bool br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */
-  static kcg_bool br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataWindow */
-  static kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataWindow */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataWindow */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled */
-  static kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */
-  static kcg_bool br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::TrainRNKeyboardController::else */
-  static kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::_L53 */
-  static kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::_L56 */
-  static kcg_int _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::_L60 */
-  static kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled::_L53 */
-  static kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled::_L60 */
-  static kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::WaitingForReq */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::WaitingForReq */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */
-  static kcg_bool br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */
-  static kcg_bool br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */
-  static kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::LevelWindow */
-  static kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SelectedLevel */
-  static DMI_level_T_DMI_Types_Pkg last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::DMI_request */
-  static DMI_Request_T_DMI_Types_Pkg last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::dmiCommand_NID_AreaGroup */
-  static Area_group_T_DMI_Types_Pkg last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM */
-  static SSM_ST_RequestSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM */
-  static SSM_ST_RequestSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::TrainDataSM */
-  static SSM_ST_TrainDataSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::TrainDataSM */
-  static SSM_ST_TrainDataSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YesNoTrainDataValidationSM */
-  static SSM_ST_YesNoTrainDataValidationSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YesNoTrainDataValidationSM */
-  static SSM_ST_YesNoTrainDataValidationSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM */
-  static SSM_ST_IconSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM */
-  static SSM_ST_IconSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SymbolsAcknowledgmentSM */
-  static SSM_ST_SymbolsAcknowledgmentSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM17 */
-  static SSM_ST_SM17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM17 */
-  static SSM_ST_SM17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::HourGlassSM */
-  static SSM_ST_HourGlassSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::HourGlassSM */
-  static SSM_ST_HourGlassSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM11 */
-  static SSM_ST_SM11_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM11_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM11 */
-  static SSM_ST_SM11_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM11_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM */
-  static SSM_ST_SpeedSupervisionSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM */
-  static SSM_ST_SpeedSupervisionSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM13 */
-  static SSM_ST_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM13_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM13 */
-  static SSM_ST_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM13_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::EntryRequestIsValid */
-  static kcg_bool EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::NID_AreaGroup */
-  static Area_group_T_DMI_Types_Pkg NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Local_ImpMsgQueue */
-  static array__15402 Local_ImpMsgQueue_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L475 */
-  static array_real_4 _L475_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L474 */
-  static array_bool_12 _L474_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L473 */
-  static array_real_12 _L473_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L472 */
-  static array_real_12 _L472_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L471 */
-  static tScale _L471_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L512 */
-  static array_real_10_2 _L512_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L508 */
-  static array_real_12 _L508_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-  /* DMI_Control_Pkg::DMI_Controller::traindataYesNoIndex_toDisplay */
-  static kcg_int traindataYesNoIndex_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_Scale_toDisplay */
-  static tScale last_D_Scale_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_GradientStartInterpolated_toDisplay */
-  static array_real_12 last_D_GradientStartInterpolated_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_GradientEndInterpolated_toDisplay */
-  static array_real_12 last_D_GradientEndInterpolated_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_GradientVisible_toDisplay */
-  static array_bool_12 last_D_GradientVisible_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_PASP_Distances_toDisplay */
-  static array_real_4 last_D_PASP_Distances_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangePosition_toDisplay */
-  static array_real_10 last_D_SPDI_SpeedChangePosition_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangeIndex_toDisplay */
-  static array_int_10 last_D_SPDI_SpeedChangeIndex_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangeSymbolsVisible_toDisplay */
-  static array_bool_10 last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::DMI_level_data */
-  static DMI_Level_Data_T_DMI_Messages_Bothways_Pkg last_DMI_level_data;
-  /* DMI_Control_Pkg::DMI_Controller::ArrayLevelIndex_toDisplay */
-  static array_int_12 last_ArrayLevelIndex_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::Vinterv_Color_toDisplay */
-  static kcg_int last_Vinterv_Color_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::vtarget_permColor_toDisplay */
-  static kcg_int last_vtarget_permColor_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::iconGroupIndex_toDisplay */
-  static kcg_int last_iconGroupIndex_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::trainLoadingGougeIndex_toDisplay */
-  static kcg_int last_trainLoadingGougeIndex_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::ModeSymbolVisibility_toDisplay */
-  static kcg_bool last_ModeSymbolVisibility_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::DistanceToTargetBarVisibility_toDisplay */
-  static kcg_bool last_DistanceToTargetBarVisibility_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::ArrayButtonsEnabler_toDisplay */
-  static array_int_30 last_ArrayButtonsEnabler_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::window_mask_visibility__toDisplay */
-  static array_bool_15 last_window_mask_visibility__toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::TrainRN_Display_toDisplay */
-  static array_int_9 last_TrainRN_Display_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::DriverID_Display_toDisplay */
-  static array_int_9 last_DriverID_Display_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::DistanceToTargetVisibilityDigital_toDisplay */
-  static kcg_bool last_DistanceToTargetVisibilityDigital_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::SpeedPermitted_toDisplay */
-  static kcg_real last_SpeedPermitted_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::SpeedDigitThree_toDisplay */
-  static kcg_real last_SpeedDigitThree_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::SpeedDigitTwo_toDisplay */
-  static kcg_real last_SpeedDigitTwo_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::TrainDataWindowVisibility_toDisplay */
-  static kcg_bool last_TrainDataWindowVisibility_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::TrainSpeed_toDisplay */
-  static kcg_real last_TrainSpeed_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::LevelSymbolVisibility_toDisplay */
-  static kcg_bool last_LevelSymbolVisibility_toDisplay;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM */
-  static SSM_ST_CabinSM CabinSM_state_sel;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM */
-  static SSM_ST_CabinSM CabinSM_state_act;
-  /* DMI_Control_Pkg::DMI_Controller::CabinSM */
-  static kcg_bool CabinSM_reset_act;
-  static DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg default_DMI_driver_identifier;
-  static DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg default_DMI_train_running_number_id;
-  static DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_driver_request;
-  static DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_train_data_ack;
-  static DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_status_report;
-  static DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_text_message_ack;
-  static array_int_5 default_IndexFixedMsg_toDisplay;
-  static array_real_5 default_Array_mm_toDisplay;
+  struct__29934 tmp;
+  kcg_bool tmp14;
+  kcg_bool tmp13;
+  SSM_TR_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive tmp12;
+  Icon_group_T_DMI_Types_Pkg tmp11;
+  kcg_int tmp10;
+  SSM_TR_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu tmp9;
+  kcg_bool tmp8;
+  kcg_bool tmp7;
+  kcg_bool tmp6;
+  kcg_bool tmp5;
+  kcg_bool tmp4;
+  kcg_bool tmp3;
+  kcg_bool tmp2;
+  DMI_Train_Data_T_DMI_Messages_Bothways_Pkg tmp1;
+  kcg_int i;
+  kcg_bool tmp23;
+  kcg_bool tmp22;
+  kcg_real tmp21;
+  kcg_real tmp20;
+  kcg_int tmp19;
+  kcg_int tmp18;
+  array_real_32 tmp17;
+  array_real_32 tmp16;
+  kcg_real tmp15;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */ kcg_bool HandshakeSM_reset_act_CabinSM_DeskIsOpen;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */ SSM_ST_HandshakeSM_CabinSM_DeskIsOpen HandshakeSM_state_act_CabinSM_DeskIsOpen;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */ SSM_ST_HandshakeSM_CabinSM_DeskIsOpen HandshakeSM_state_sel_CabinSM_DeskIsOpen;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM3::AckOn */ kcg_bool AckOn_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::then::_L29 */ array_int_5 _L29_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::then::_L30 */ array_char_30_5 _L30_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::then::_L31 */ array_real_5 _L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::then::_L32 */ array_real_5 _L32_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::then::_L33 */ kcg_bool _L33_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::else::then::_L19 */ kcg_bool _L19_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::else::then::_L18 */ array_real_5 _L18_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::else::then::_L17 */ array_real_5 _L17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::else::then::_L16 */ array_char_30_5 _L16_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IfBlock6::else::then::_L15 */ array_int_5 _L15_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock */ kcg_bool ModeCheckIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpe;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2 */ kcg_bool IfBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1 */ M_SUPERVISION_STATUS_DMI_Types_Pkg _38_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::PointerColor::else */ kcg_bool _34_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::PointerColor::else::else::else */ kcg_bool _32_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::PointerColor::else::else */ kcg_bool _33_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::vPermitted */ kcg_real _78_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::isOrange */ kcg_bool _77_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::_L37 */ kcg_bool _L3776_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInf;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::TSM::_L5 */ kcg_bool _L575_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::PIM::PointerColor::else */ kcg_bool _36_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::PIM::PointerColor::else::else */ kcg_bool _35_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::PIM::isOrange */ kcg_bool _80_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::PIM::vPermitted */ kcg_real _79_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::PIM::_L13 */ kcg_bool _L13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::CSM::PointerColor::else */ kcg_bool _37_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::CSM::isOrange */ kcg_bool _81_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::then::WhenBlock1::CSM::_L2 */ kcg_bool _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else */ kcg_bool _31_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::else::else */ kcg_bool _27_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::else::else::then::isRed */ kcg_bool isRed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::else */ kcg_bool _28_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::then::WhenBlock1::CSM::_L2 */ kcg_bool _L282_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::then::WhenBlock1::CSM::isOrange */ kcg_bool _83_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::then::WhenBlock1::CSM::PointerColor::else */ kcg_bool _29_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else::else::then::WhenBlock1 */ M_SUPERVISION_STATUS_DMI_Types_Pkg _30_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::else */ kcg_bool _39_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::CSM::_L31 */ kcg_bool _L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::CSM::isOrange */ kcg_bool _74_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::CSM::PointerColor::else */ kcg_bool _46_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::PIM::_L55 */ kcg_bool _L55_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::PIM::vPermitted */ kcg_real _72_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::PIM::isOrange */ kcg_bool _73_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::PIM::PointerColor::else::else */ kcg_bool _44_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::PIM::PointerColor::else */ kcg_bool _45_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::_L5 */ kcg_bool _L5_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::_L37 */ kcg_bool _L37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::isOrange */ kcg_bool _70_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::vPermitted */ kcg_real _71_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::PointerColor::else::else */ kcg_bool _42_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::PointerColor::else::else::else */ kcg_bool _41_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::TSM::PointerColor::else */ kcg_bool _43_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::RSM::vRelease */ kcg_real vRelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::RSM::isYellow */ kcg_bool _69_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1::RSM::PointerColor::else */ kcg_bool _40_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::ModeCheckIfBlock::then::WhenBlock1 */ M_SUPERVISION_STATUS_DMI_Types_Pkg _47_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::_L36 */ kcg_bool _L36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::isOrange */ kcg_bool _66_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::vIntervention */ kcg_real _67_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::isDarkGrey */ kcg_bool _68_isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::vPermitted */ kcg_real vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::CSM::IfBlock1::else */ kcg_bool _26_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::_L75 */ kcg_bool _L75_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::_L45 */ kcg_bool _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::vIntervention */ kcg_real _59_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isOrange */ kcg_bool _60_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isWhite */ kcg_bool isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::Vperm */ kcg_real Vperm61_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isDarkGrey */ kcg_bool _62_isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::Vtarget */ kcg_real _63_Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisi;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::Vrelease */ kcg_real _64_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::isMediumGrey */ kcg_bool _65_isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::PIM::IfBlock4::else */ kcg_bool _25_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::_L92 */ kcg_bool _L92_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::_L54 */ kcg_bool _L54_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::vIntervention */ kcg_real vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervi;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isOrange */ kcg_bool isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isYellow */ kcg_bool _55_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::Vperm */ kcg_real Vperm56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isMediumGrey */ kcg_bool _57_isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::Vrelease */ kcg_real _58_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::Vtarget */ kcg_real Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::isDarkGrey */ kcg_bool isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::IfBlock4::else */ kcg_bool _24_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::TSM::IfBlock3::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::_L22 */ kcg_bool _L22_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::isYellow */ kcg_bool isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::Vperm */ kcg_real Vperm_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::isMediumGrey */ kcg_bool isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1::RSM::Vrelease */ kcg_real Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM::ReadSpeedSupervisionInfo::IfBlock2::then::WhenBlock1 */ M_SUPERVISION_STATUS_DMI_Types_Pkg WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SymbolsAcknowledgmentSM::radyToBeAck */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SymbolsAcknowledgmentSM::radyToBeAck */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SymbolsAcknowledgmentSM::radyToBeAck */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock */ Icon_control_flag_T_DMI_Types_Pkg IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2::C::IfBlock1 */ kcg_bool IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2::C::IfBlock1::else::then::_L2 */ kcg_bool _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlo;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2::C::IfBlock1::else::then::CheckResult */ kcg_bool CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFla;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2::C::IfBlock1::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlag;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_in_area::WhenBlock2 */ Area_group_T_DMI_Types_Pkg WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContr;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::clear_area::WhenBlock2::C::IfBlock1 */ kcg_bool _49_IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconCon;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::clear_area::WhenBlock2::C::IfBlock1::else */ kcg_bool _48_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::clear_area::WhenBlock2 */ Area_group_T_DMI_Types_Pkg _50_WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconC;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock::C::AreaRankIfBlock */ kcg_bool AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_Icon;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock::C::AreaRankIfBlock::else::then::CheckResult */ kcg_bool _85_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock::C::AreaRankIfBlock::else */ kcg_bool _51_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock::C::AreaRankIfBlock::then::CheckResult */ kcg_bool _84_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM::IconPacketValid::IconControlFlagWhenBlock::show_icon_with_yellow_flashing_frame_in_area::AreaGroupWhenBlock */ Area_group_T_DMI_Types_Pkg AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_I;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID::_L60 */ kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID::_L56 */ kcg_int _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID::_L53 */ kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID::DriverIDKeyboardController::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID_DriverIDKeyb;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::_L60 */ kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::_L56 */ kcg_int _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::_L53 */ kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN::TrainRNKeyboardController::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboa;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::_L4 */ DMI_Request_T_DMI_Types_Pkg _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::levelMenuVisibility_toDisplay */ kcg_bool levelMenuVisibility_toDisplay_strong;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM */ SSM_ST_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM */ SSM_ST_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataValidationWindow */ kcg_bool br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataWindow */ kcg_bool _52_br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataWindow */ kcg_bool _53_br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::TrainDataWindow */ kcg_bool _54_br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::MainMenu */ kcg_bool br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow::CatchButtonLevel_IfBlock::then::_L10 */ DMI_level_T_DMI_Types_Pkg _L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow_Cat;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::LevelWindow::KeyPressed */ kcg_bool KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::WaitingLevelInformation */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_WaitingLe;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::WaitingLevelInformation */ kcg_bool WaitingLevelInformation_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Mai;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::TrainRNKeyboardController::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::_L53 */ kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::_L56 */ kcg_int _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::Insert_TrainRN::_L60 */ kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled::DriverIDKeyboardController::else */ kcg_bool else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled::_L53 */ kcg_bool _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled::_L56 */ kcg_int _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu::WindowsSM::DriverID_DMI_controlled::_L60 */ kcg_bool _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::LevelWindow::KeyPressed */ kcg_bool KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::LevelWindow::CatchButtonLevel_IfBlock::then::_L10 */ DMI_level_T_DMI_Types_Pkg _L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow_CatchButtonLevel_IfBlo;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_DriverID */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::WaitingForReq */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::WaitingForReq */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::WaitingForReq */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::Insert_TrainRN */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM::MainMenu */ kcg_bool br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SelectedLevel */ DMI_level_T_DMI_Types_Pkg last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::DMI_request */ DMI_Request_T_DMI_Types_Pkg last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::NID_c9 */ kcg_int last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::NID_C1 */ kcg_int last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YellowBorder_C1 */ kcg_bool last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::dmiCommand_NID_AreaGroup */ Area_group_T_DMI_Types_Pkg last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YellowBorder_C9 */ kcg_bool last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM */ SSM_ST_RequestSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::RequestSM */ SSM_ST_RequestSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::TrainDataSM */ SSM_ST_TrainDataSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::TrainDataSM */ SSM_ST_TrainDataSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::TrainDataSM */ kcg_bool TrainDataSM_reset_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YesNoTrainDataValidationSM */ SSM_ST_YesNoTrainDataValidationSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::YesNoTrainDataValidationSM */ SSM_ST_YesNoTrainDataValidationSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM */ SSM_ST_IconSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconSM */ SSM_ST_IconSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SymbolsAcknowledgmentSM */ SSM_ST_SymbolsAcknowledgmentSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM17 */ SSM_ST_SM17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM17 */ SSM_ST_SM17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::HourGlassSM */ SSM_ST_HourGlassSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::HourGlassSM */ SSM_ST_HourGlassSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM */ SSM_ST_SpeedSupervisionSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SpeedSupervisionSM */ SSM_ST_SpeedSupervisionSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM3 */ SSM_ST_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM3_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::SM3 */ SSM_ST_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive SM3_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::EntryRequestIsValid */ kcg_bool EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::IconGroupIndex */ kcg_int IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::NID_AreaGroup */ Area_group_T_DMI_Types_Pkg NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::NID_AreaRank */ kcg_int NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::NID_Icon_Rank */ kcg_int NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::DMI_DynamicIsValid */ kcg_bool DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::Localtext_ack_from_Display */ kcg_bool Localtext_ack_from_Display_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::showAck */ kcg_bool showAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L221 */ kcg_int _L221_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L222 */ kcg_int _L222_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L223 */ kcg_real _L223_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L224 */ kcg_real _L224_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L225 */ kcg_int _L225_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L226 */ kcg_int _L226_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L227 */ kcg_real _L227_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L325 */ kcg_bool _L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L349 */ kcg_bool _L349_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L354 */ kcg_bool _L354_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L431 */ DMI_Level_Data_T_DMI_Messages_Bothways_Pkg _L431_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L490 */ kcg_bool _L490_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L507 */ kcg_bool _L507_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L506 */ kcg_bool _L506_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L512 */ array_real_10_2 _L512_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L511 */ kcg_real _L511_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L510 */ array_real_12 _L510_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L509 */ array_real_12 _L509_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L508 */ array_real_12 _L508_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L669 */ kcg_bool _L669_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L678 */ kcg_bool _L678_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L859 */ array_real_1 _L859_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L858 */ array_bool_10 _L858_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L857 */ array_int_10 _L857_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L856 */ array_real_10 _L856_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L855 */ array_real_4 _L855_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L854 */ array_real_4 _L854_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L852 */ array_real_12 _L852_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L851 */ array_real_12 _L851_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM::CommunicationActive::_L850 */ tScale _L850_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+  /* DMI_Control_Pkg::DMI_Controller::traindataYesNoIndex_toDisplay */ kcg_int traindataYesNoIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Level_Data */ DMI_Level_Data_T_DMI_Messages_Bothways_Pkg last_DMI_Level_Data;
+  /* DMI_Control_Pkg::DMI_Controller::D_GradientsValue_toDisplay */ array_real_12 last_D_GradientsValue_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_Scale_toDisplay */ tScale last_D_Scale_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_GradientStartInterpolated_toDisplay */ array_real_12 last_D_GradientStartInterpolated_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_GradientEndInterpolated_toDisplay */ array_real_12 last_D_GradientEndInterpolated_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_GradientVisible_toDisplay */ array_bool_12 last_D_GradientVisible_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_PASP_Distances_toDisplay */ array_real_4 last_D_PASP_Distances_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_PASP_Speeds_toDisplay */ array_real_4 last_D_PASP_Speeds_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_PASP_IndicatorMarker_toDisplay */ array_real_1 last_D_PASP_IndicatorMarker_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangePosition_toDisplay */ array_real_10 last_D_SPDI_SpeedChangePosition_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangeIndex_toDisplay */ array_int_10 last_D_SPDI_SpeedChangeIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::D_SPDI_SpeedChangeSymbolsVisible_toDisplay */ array_bool_10 last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_level_data */ DMI_Level_Data_T_DMI_Messages_Bothways_Pkg last_DMI_level_data;
+  /* DMI_Control_Pkg::DMI_Controller::IndexLevel_toDisplay */ kcg_int last_IndexLevel_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::ArrayLevelIndex_toDisplay */ array_int_12 last_ArrayLevelIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::levelMenuVisibility_toDisplay */ kcg_bool last_levelMenuVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::Vinterv_Color_toDisplay */ kcg_int last_Vinterv_Color_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::vtarget_permColor_toDisplay */ kcg_int last_vtarget_permColor_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::Vinterv_Visibility_toDisplay */ kcg_bool last_Vinterv_Visibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::Vtarget_permVisibility_toDisplay */ kcg_bool last_Vtarget_permVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::VtargetColor_toDisplay */ kcg_int last_VtargetColor_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::VreleaseColor_toDisplay */ kcg_int last_VreleaseColor_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::VpermColor_toDisplay */ kcg_int last_VpermColor_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::modeSymbolAnnouncementIndex_toDisplay */ kcg_int last_modeSymbolAnnouncementIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::levelSymbolAnnouncementIndex_toDisplay */ kcg_int last_levelSymbolAnnouncementIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::iconGroupIndex_toDisplay */ kcg_int last_iconGroupIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::traindataYesNoIndex_toDisplay */ kcg_int last_traindataYesNoIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::traindataValidWinVisibility_toDisplay */ kcg_bool last_traindataValidWinVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainMaxspeed_toDisplay */ kcg_real last_trainMaxspeed_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainBrakePerc_toDisplay */ kcg_real last_trainBrakePerc_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainLenght_toDisplay */ kcg_real last_trainLenght_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainLoadingGougeIndex_toDisplay */ kcg_int last_trainLoadingGougeIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainAirtightIndex_toDisplay */ kcg_int last_trainAirtightIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainAxleloadIndex_toDisplay */ kcg_int last_trainAxleloadIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::trainCategoryIndex_toDisplay */ kcg_int last_trainCategoryIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::ArrayOfMsgIndex_toDisplay */ array_int_5 last_ArrayOfMsgIndex_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::ModeSymbolVisibility_toDisplay */ kcg_bool last_ModeSymbolVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::ModeSymbol_toDisplay */ kcg_int last_ModeSymbol_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::DistanceToTargetBarVisibility_toDisplay */ kcg_bool last_DistanceToTargetBarVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::ArrayButtonsEnabler_toDisplay */ array_int_30 last_ArrayButtonsEnabler_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::window_mask_visibility__toDisplay */ array_bool_15 last_window_mask_visibility__toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::TrainRN_Display_toDisplay */ array_int_9 last_TrainRN_Display_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::DriverID_Display_toDisplay */ array_int_9 last_DriverID_Display_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::PointerColor_toDisplay */ kcg_int last_PointerColor_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::StatusSymbolBrake_toDisplay */ kcg_bool last_StatusSymbolBrake_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::InterpolatedDistanceToTarget_toDisplay */ kcg_real last_InterpolatedDistanceToTarget_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::DistanceToTargetVisibilityDigital_toDisplay */ kcg_bool last_DistanceToTargetVisibilityDigital_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::DistanceToTarget_toDisplay */ kcg_real last_DistanceToTarget_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedIntervention_toDisplay */ kcg_real last_SpeedIntervention_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedRelease_toDisplay */ kcg_real last_SpeedRelease_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedPermitted_toDisplay */ kcg_real last_SpeedPermitted_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedTarget_toDisplay */ kcg_real last_SpeedTarget_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedDigitThree_toDisplay */ kcg_real last_SpeedDigitThree_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedDigitTwo_toDisplay */ kcg_real last_SpeedDigitTwo_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::SpeedDigitOne_toDisplay */ kcg_real last_SpeedDigitOne_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::TrainDataWindowVisibility_toDisplay */ kcg_bool last_TrainDataWindowVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::TrainSpeed_toDisplay */ kcg_real last_TrainSpeed_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::LevelSymbolVisibility_toDisplay */ kcg_bool last_LevelSymbolVisibility_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::ETCS_LevelSymbol_toDisplay */ kcg_int last_ETCS_LevelSymbol_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::TrainPosition_toDisplay */ kcg_real last_TrainPosition_toDisplay;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM */ SSM_ST_CabinSM CabinSM_state_sel;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM */ SSM_ST_CabinSM CabinSM_state_act;
+  /* DMI_Control_Pkg::DMI_Controller::CabinSM */ kcg_bool CabinSM_reset_act;
+  array_int_5 default_IndexFixedMsg_toDisplay;
+  array_real_5 default_Array_mm_toDisplay;
+  DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_Status;
+  DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_Driver_Request;
+  DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg default_DMI_Driver_Identifier;
+  DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg default_DMI_Train_Running_Number;
+  DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_Text_Message;
+  DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg default_DMI_Train_Data_Ack;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Status */ DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg DMI_Status;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Identifier */ DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg DMI_Identifier;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Driver_Request */ DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg DMI_Driver_Request;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Driver_Identifier */ DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg DMI_Driver_Identifier;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Train_Running_Number */ DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg DMI_Train_Running_Number;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Text_Message */ DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg DMI_Text_Message;
+  /* DMI_Control_Pkg::DMI_Controller::DMI_Train_Data_Ack */ DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg DMI_Train_Data_Ack;
+  /* DMI_Control_Pkg::DMI_Controller::_L72 */ EVC_to_DMI_Message_T_API_DMI_Pkg _L72;
   
-  default_Array_mm_toDisplay[0] = - 1.0;
-  default_Array_mm_toDisplay[1] = - 1.0;
-  default_Array_mm_toDisplay[2] = - 1.0;
-  default_Array_mm_toDisplay[3] = - 1.0;
-  default_Array_mm_toDisplay[4] = - 1.0;
+  default_DMI_Train_Data_Ack.valid = kcg_false;
+  default_DMI_Train_Data_Ack.systemTime = 0;
+  default_DMI_Train_Data_Ack.acknowledged = kcg_false;
+  default_DMI_Text_Message.valid = kcg_false;
+  default_DMI_Text_Message.systemTime = 0;
+  default_DMI_Text_Message.textMessage_ID = 0;
+  default_DMI_Text_Message.acknowledged = kcg_false;
+  default_DMI_Train_Running_Number.valid = kcg_false;
+  default_DMI_Train_Running_Number.systemTime = 0;
+  default_DMI_Train_Running_Number.trainRunningNumber = 1234;
+  default_DMI_Driver_Identifier.valid = kcg_false;
+  default_DMI_Driver_Identifier.systemTime = 0;
+  default_DMI_Driver_Identifier.driverIdentifier[0] = '1';
+  default_DMI_Driver_Identifier.driverIdentifier[1] = '2';
+  default_DMI_Driver_Identifier.driverIdentifier[2] = '3';
+  default_DMI_Driver_Identifier.driverIdentifier[3] = '4';
+  default_DMI_Driver_Identifier.driverIdentifier[4] = '0';
+  default_DMI_Driver_Identifier.driverIdentifier[5] = '0';
+  default_DMI_Driver_Identifier.driverIdentifier[6] = '0';
+  default_DMI_Driver_Identifier.driverIdentifier[7] = '0';
+  default_DMI_Driver_Identifier.driverIdentifier[8] = '0';
+  default_DMI_Driver_Request.valid = kcg_false;
+  default_DMI_Driver_Request.systemTime = 0;
+  default_DMI_Driver_Request.m_request = Start_of_mission_DMI_Types_Pkg;
+  default_DMI_Status.valid = kcg_false;
+  default_DMI_Status.systemTime = 0;
+  default_DMI_Status.statusSet = Running_state_DMI_Types_Pkg;
+  default_DMI_Status.nAlive = 0;
   default_IndexFixedMsg_toDisplay[0] = 0;
   default_IndexFixedMsg_toDisplay[1] = 0;
   default_IndexFixedMsg_toDisplay[2] = 0;
   default_IndexFixedMsg_toDisplay[3] = 0;
   default_IndexFixedMsg_toDisplay[4] = 0;
-  default_DMI_text_message_ack.valid = kcg_false;
-  default_DMI_text_message_ack.systemTime = 0;
-  default_DMI_text_message_ack.textMessage_ID = 0;
-  default_DMI_text_message_ack.acknowledged = kcg_false;
-  default_DMI_status_report.valid = kcg_false;
-  default_DMI_status_report.systemTime = 0;
-  default_DMI_status_report.statusSet = Running_state_DMI_Types_Pkg;
-  default_DMI_status_report.nAlive = 0;
-  default_DMI_train_data_ack.valid = kcg_false;
-  default_DMI_train_data_ack.systemTime = 0;
-  default_DMI_train_data_ack.acknowledged = kcg_false;
-  default_DMI_driver_request.valid = kcg_false;
-  default_DMI_driver_request.systemTime = 0;
-  default_DMI_driver_request.m_request = Start_of_mission_DMI_Types_Pkg;
-  default_DMI_train_running_number_id.valid = kcg_false;
-  default_DMI_train_running_number_id.systemTime = 0;
-  default_DMI_train_running_number_id.trainRunningNumber = 1234;
-  default_DMI_driver_identifier.valid = kcg_false;
-  default_DMI_driver_identifier.systemTime = 0;
-  default_DMI_driver_identifier.driverIdentifier[0] = '1';
-  default_DMI_driver_identifier.driverIdentifier[1] = '2';
-  default_DMI_driver_identifier.driverIdentifier[2] = '3';
-  default_DMI_driver_identifier.driverIdentifier[3] = '4';
-  default_DMI_driver_identifier.driverIdentifier[4] = '0';
-  default_DMI_driver_identifier.driverIdentifier[5] = '0';
-  default_DMI_driver_identifier.driverIdentifier[6] = '0';
-  default_DMI_driver_identifier.driverIdentifier[7] = '0';
-  default_DMI_driver_identifier.driverIdentifier[8] = '0';
   /* CheckDeskStatus */
   CheckDeskStatus_DMI_Control_Pkg_Sub_func(
-    &inC->TIU_trainStatus,
-    &tmp17,
-    &tmp16);
-  if (outC->init6) {
+    TIU_trainStatus,
+    &outC->Context_CheckDeskStatus);
+  /* 1 */ Write_int_to_EVC_to_DMI_Messages(EVC_to_DMI, &_L72);
+  if (outC->init7) {
     CabinSM_state_sel = SSM_st_DeskIsClose_CabinSM;
-    last_TrainSpeed_toDisplay = 0.0;
-    traindataYesNoIndex_toDisplay = 4;
+    outC->_L156 = kcg_false;
+    outC->_L170 = kcg_false;
   }
   else {
     CabinSM_state_sel = outC->CabinSM_state_nxt;
-    last_TrainSpeed_toDisplay = outC->TrainPosition_toDisplay;
-    traindataYesNoIndex_toDisplay = outC->ETCS_LevelSymbol_toDisplay;
+    outC->_L156 = (_L72.dynamic.valid & (_L72.dynamic.mode ==
+          M_MODE_No_Power)) | (!(_L72.dynamic.valid & (_L72.dynamic.mode !=
+            M_MODE_No_Power)) & outC->_L156);
+    outC->_L170 = (_L72.dynamic.valid & (_L72.dynamic.mode ==
+          M_MODE_No_Power)) | (!(_L72.dynamic.valid & (_L72.dynamic.mode !=
+            M_MODE_No_Power)) & outC->_L170);
   }
+  tmp23 = outC->Context_CheckDeskStatus.Output1 & outC->_L156;
+  tmp22 = outC->Context_CheckDeskStatus.Output2 & outC->_L170;
   switch (CabinSM_state_sel) {
     case SSM_st_DeskIsOpen_CabinSM :
-      if (tmp16) {
+      if (tmp22) {
         CabinSM_state_act = SSM_st_DeskIsClose_CabinSM;
       }
       else {
         CabinSM_state_act = SSM_st_DeskIsOpen_CabinSM;
       }
-      CabinSM_reset_act = tmp16;
+      CabinSM_reset_act = tmp22;
       break;
     case SSM_st_DeskIsClose_CabinSM :
-      if (tmp17) {
+      if (tmp23) {
         CabinSM_state_act = SSM_st_DeskIsOpen_CabinSM;
       }
       else {
         CabinSM_state_act = SSM_st_DeskIsClose_CabinSM;
       }
-      CabinSM_reset_act = tmp17;
+      CabinSM_reset_act = tmp23;
       break;
     
   }
   switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      levelMenuVisibility_toDisplay_strong = kcg_false;
-      outC->TrainPosition_toDisplay = last_TrainSpeed_toDisplay;
-      outC->ETCS_LevelSymbol_toDisplay = traindataYesNoIndex_toDisplay;
-      break;
     case SSM_st_DeskIsOpen_CabinSM :
       if (CabinSM_reset_act) {
         outC->init = kcg_true;
@@ -458,15 +500,10 @@ void DMI_Controller_DMI_Control_Pkg(
           outC->HandshakeSM_state_nxt_CabinSM_DeskIsOpen;
       }
       switch (HandshakeSM_state_sel_CabinSM_DeskIsOpen) {
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          HandshakeSM_reset_act_CabinSM_DeskIsOpen = kcg_false;
-          HandshakeSM_state_act_CabinSM_DeskIsOpen =
-            SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM;
-          break;
         case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1 =
-            inC->DMI_identifier_request.valid;
-          if (CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1) {
+          br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+            _L72.identifierRequest.valid;
+          if (br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
             HandshakeSM_state_act_CabinSM_DeskIsOpen =
               SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM;
           }
@@ -475,1056 +512,255 @@ void DMI_Controller_DMI_Control_Pkg(
               SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM;
           }
           HandshakeSM_reset_act_CabinSM_DeskIsOpen =
-            CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1;
+            br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
+          break;
+        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
+          HandshakeSM_state_act_CabinSM_DeskIsOpen =
+            SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM;
+          HandshakeSM_reset_act_CabinSM_DeskIsOpen = kcg_false;
           break;
         
       }
       switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
         case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
+          EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            _L72.entry_request.valid;
+          if (EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            /* 6 */
+            DMI_entry_requested_DMI_Control_Pkg_Sub_func_EntryRequest(
+              &_L72.entry_request,
+              &br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_,
+              &last_Vtarget_permVisibility_toDisplay,
+              &last_Vinterv_Visibility_toDisplay,
+              &last_levelMenuVisibility_toDisplay,
+              &tmp23);
+          }
           if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            outC->init7 = kcg_true;
+            outC->init8 = kcg_true;
           }
           break;
         
       }
       if (CabinSM_reset_act) {
-        outC->init7 = kcg_true;
+        outC->init8 = kcg_true;
+        /* 7 */
+        DistanceToTargetManager_reset_DMI_Control_Pkg_Sub_func_DistanceToTarget(
+          &outC->_4_Context_7);
       }
       switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          levelMenuVisibility_toDisplay_strong = kcg_false;
-          outC->TrainPosition_toDisplay = last_TrainSpeed_toDisplay;
-          outC->ETCS_LevelSymbol_toDisplay = traindataYesNoIndex_toDisplay;
-          break;
         case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (outC->init7) {
-            TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
-            RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-            SM11_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11;
-          }
-          else {
-            TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->TrainDataSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            SM11_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->SM11_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          }
-          switch (TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              if (inC->DMI_train_data.valid) {
-                TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
-              }
-              else {
-                TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
-              }
-              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-                inC->DMI_train_data.valid;
-              break;
-            case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-                kcg_false;
-              TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
-              break;
-            
-          }
-          switch (TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                outC->init5 = kcg_true;
-              }
-              break;
-            
-          }
-          EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-            inC->DMI_entry_request.valid;
           if (EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            /* 4 */
-            DMI_entry_requested_DMI_Control_Pkg_Sub_func_EntryRequest(
-              &inC->DMI_entry_request,
-              &last_TrainDataWindowVisibility_toDisplay,
-              &last_LevelSymbolVisibility_toDisplay,
-              &tmp17,
-              &outC->HideMainmenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &tmp16);
-            outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              last_LevelSymbolVisibility_toDisplay;
             outC->LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              tmp16;
-            outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              last_TrainDataWindowVisibility_toDisplay;
+              tmp23;
+            outC->HideMainmenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              last_levelMenuVisibility_toDisplay;
             outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              tmp17;
+              last_Vinterv_Visibility_toDisplay;
+            outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              last_Vtarget_permVisibility_toDisplay;
           }
-          else if (outC->init7) {
+          else if (outC->init8) {
+            outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
+            outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
             outC->HideMainmenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               kcg_false;
-            outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              kcg_false;
             outC->LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               kcg_false;
-            outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              kcg_false;
-            outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              kcg_false;
           }
-          switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow =
-                inC->InputFieldAck_fromDisplay & inC->MousePressed;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow) {
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else {
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                outC->HideMainmenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive |
-                (inC->closeButtonMain_fromDisplay & inC->MousePressed);
-              br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                outC->LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  kcg_true;
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  kcg_true;
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  kcg_true;
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else {
-                if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-                }
-                else {
-                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-                }
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-              }
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                inC->InputFieldAck_fromDisplay & inC->MousePressed;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else {
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq =
-                outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq =
-                outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                (outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                  EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) |
-                (inC->openMainMenu_fromDisplay & inC->MousePressed);
-              br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                outC->LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  kcg_true;
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  kcg_true;
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  kcg_true;
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else {
-                if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-                }
-                else {
-                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-                }
-                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                  br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-              }
-              break;
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                inC->InputFieldAck_fromDisplay & inC->MousePressed;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              else {
-                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
-              }
-              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-              break;
-            
-          }
-          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                outC->init4 = kcg_true;
-              }
-              break;
-            
-          }
+          DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            _L72.dynamic.valid;
           if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            outC->init5 = kcg_true;
-            outC->init4 = kcg_true;
-          }
-          tmp2 = inC->textMsgAck_fromDisplay & inC->MousePressed;
-          switch (SM11_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11 :
-              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11_TextMsgToBeAck =
-                tmp2;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11_TextMsgToBeAck) {
-                levelMenuVisibility_toDisplay_strong = kcg_true;
-              }
-              else {
-                levelMenuVisibility_toDisplay_strong = kcg_false;
-              }
-              break;
-            case SSM_st_TextMsgAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11 :
-              levelMenuVisibility_toDisplay_strong = kcg_false;
-              break;
-            
-          }
-          outC->TrainPosition_toDisplay = 0.0;
-          tmp17 = inC->DMI_dynamic.valid;
-          if (tmp17) {
             /* 7 */
-            LevelSymbolToIndex_DMI_Control_Pkg_Sub_func(
-              inC->DMI_dynamic.level.level,
-              &tmp16,
-              &outC->_L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+            DistanceToTargetManager_reset_DMI_Control_Pkg_Sub_func_DistanceToTarget(
+              &outC->_4_Context_7);
           }
-          else if (outC->init7) {
-            outC->_L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = 4;
-          }
-          outC->ETCS_LevelSymbol_toDisplay =
-            outC->_L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          break;
-        
-      }
-      if (CabinSM_reset_act) {
-        outC->init5 = kcg_true;
-        outC->init4 = kcg_true;
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    last_LevelSymbolVisibility_toDisplay = kcg_false;
-    last_TrainSpeed_toDisplay = 0.0;
-    last_TrainDataWindowVisibility_toDisplay = kcg_false;
-    last_SpeedDigitThree_toDisplay = 0.0;
-  }
-  else {
-    last_LevelSymbolVisibility_toDisplay =
-      outC->LevelSymbolVisibility_toDisplay;
-    last_TrainSpeed_toDisplay = outC->TrainSpeed_toDisplay;
-    last_TrainDataWindowVisibility_toDisplay =
-      outC->TrainDataWindowVisibility_toDisplay;
-    last_SpeedDigitThree_toDisplay = outC->SpeedDigitOne_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->LevelSymbolVisibility_toDisplay =
-        last_LevelSymbolVisibility_toDisplay;
-      outC->TrainSpeed_toDisplay = last_TrainSpeed_toDisplay;
-      outC->TrainDataWindowVisibility_toDisplay =
-        last_TrainDataWindowVisibility_toDisplay;
-      outC->SpeedDigitOne_toDisplay = last_SpeedDigitThree_toDisplay;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->LevelSymbolVisibility_toDisplay =
-            last_LevelSymbolVisibility_toDisplay;
-          outC->TrainSpeed_toDisplay = last_TrainSpeed_toDisplay;
-          outC->TrainDataWindowVisibility_toDisplay =
-            last_TrainDataWindowVisibility_toDisplay;
-          outC->SpeedDigitOne_toDisplay = last_SpeedDigitThree_toDisplay;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (tmp17) {
-            outC->_L368_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              tmp16;
+          _L669_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            _L72.trackDescription.gradientProfiles.profileChanged;
+          if (_L669_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             /* 3 */
-            DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed(
-              &inC->DMI_dynamic,
-              &last_SpeedDigitTwo_toDisplay,
-              &Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM,
-              &last_SpeedPermitted_toDisplay,
-              &outC->_L381_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-            outC->_L378_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              last_SpeedDigitTwo_toDisplay;
+            Gradient_from_Track_DMI_Control_Pkg_Sub_func(
+              &_L72.trackDescription.gradientProfiles.gradientProfiles,
+              &tmp17,
+              &outC->Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &outC->Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &outC->Gradient_Visible_Flag_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
           }
-          else if (outC->init7) {
-            outC->_L368_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              kcg_false;
+          else if (outC->init8) {
+            kcg_copy_array_bool_32(
+              &outC->Gradient_Visible_Flag_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_bool_32 *)
+                &cDMI_Gradient_Visible_Flag_init_DMI_Control_Pkg);
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_real_32 *) &cDMI_GradientsInit_DMI_Control_Pkg);
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_real_32 *) &cDMI_GradientsInit_DMI_Control_Pkg);
+          }
+          _L678_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            _L72.trackDescription.speedProfiles.profileChanged;
+          if (_L678_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            /* 3 */
+            Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func(
+              &_L72.trackDescription.speedProfiles.speedProfiles,
+              &tmp16,
+              &outC->Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          }
+          else if (outC->init8) {
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_real_32 *) &cDMI_SpeedProfile_Init_DMI_Control_Pkg);
+          }
+          if (DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            /* 9 */
+            LevelSymbolToIndex_DMI_Control_Pkg_Sub_func(
+              _L72.dynamic.level.level,
+              &tmp22,
+              &outC->_L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+            /* 5 */
+            DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed(
+              &_L72.dynamic,
+              &tmp21,
+              &outC->_L379_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &outC->_L380_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &outC->_L381_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+            /* 7 */
+            DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget(
+              &_L72.dynamic,
+              &outC->_4_Context_7);
+            tmp20 = outC->_4_Context_7.DistanceToTarget_toDisplay;
+            outC->_L389_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->_4_Context_7.DistanceToTargetVisibilityDigital_toDisplay;
+            outC->_L388_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->_4_Context_7.DistanceToTargetBarVisibility_toDisplay;
+            outC->_L387_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->_4_Context_7.InterpolatedDistanceToTarget_toDisplay;
+            /* 7 */
+            RBC_SymbolsToIndex_DMI_Control_Pkg_Sub_func(
+              _L72.dynamic.radioConnectionStatus,
+              &tmp19,
+              &outC->_L394_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+            /* 6 */
+            ModeSymbolToIndex_B7_DMI_Control_Pkg_Sub_func(
+              &_L72.dynamic,
+              &tmp18,
+              &outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+            /* 3 */
+            DMI_Speed_and_CPS_for_Planning_Area_DMI_Control_Pkg_Sub_func(
+              &_L72.dynamic,
+              &tmp15,
+              &outC->TrainPosition_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          }
+          else if (outC->init8) {
+            outC->_L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = 4;
             outC->_L381_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               0.0;
-            outC->_L378_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              0.0;
-          }
-          outC->LevelSymbolVisibility_toDisplay =
-            outC->_L368_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->TrainSpeed_toDisplay =
-            outC->_L381_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          if (outC->init7) {
-            YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-          }
-          else {
-            YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          }
-          _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-            inC->MousePressed & inC->traindataNoAck_fromDisplay;
-          isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-            inC->traindataYesAck_fromDisplay & inC->MousePressed;
-          switch (YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM &
-                !_L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-              }
-              else {
-                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-              }
-              break;
-            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              if (_L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM &
-                !isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-              }
-              else {
-                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-              }
-              break;
-            
-          }
-          switch (YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              traindataYesNoIndex_toDisplay = 2;
-              break;
-            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              traindataYesNoIndex_toDisplay = 1;
-              break;
-            
-          }
-          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->TrainDataWindowVisibility_toDisplay =
-                last_TrainDataWindowVisibility_toDisplay;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              if (outC->init4) {
-                WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                  SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-              }
-              else {
-                WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-              }
-              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->TrainDataWindowVisibility_toDisplay =
-                    last_TrainDataWindowVisibility_toDisplay;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->TrainDataWindowVisibility_toDisplay =
-                    last_TrainDataWindowVisibility_toDisplay;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->TrainDataWindowVisibility_toDisplay =
-                    last_TrainDataWindowVisibility_toDisplay;
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp16 = inC->closeButton_fromDisplay & inC->MousePressed;
-                  last_LevelSymbolVisibility_toDisplay =
-                    outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
-                    EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                    (traindataYesNoIndex_toDisplay == 1) &
-                    inC->traindataAck_fromDisplay & inC->MousePressed;
-                  br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                    (traindataYesNoIndex_toDisplay == 2) &
-                    inC->traindataAck_fromDisplay & inC->MousePressed;
-                  if (tmp16) {
-                    outC->TrainDataWindowVisibility_toDisplay = kcg_true;
-                  }
-                  else {
-                    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                      last_LevelSymbolVisibility_toDisplay;
-                    if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                      outC->TrainDataWindowVisibility_toDisplay = kcg_false;
-                    }
-                    else {
-                      br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                        br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-                      if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                        outC->TrainDataWindowVisibility_toDisplay = kcg_false;
-                      }
-                      else {
-                        br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                          br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-                        if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                          outC->TrainDataWindowVisibility_toDisplay = kcg_false;
-                        }
-                        else {
-                          outC->TrainDataWindowVisibility_toDisplay =
-                            last_TrainDataWindowVisibility_toDisplay;
-                        }
-                      }
-                    }
-                  }
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-                    inC->closeButton_fromDisplay & inC->MousePressed;
-                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-                    inC->confirmTrainData_fromDisplay & inC->MousePressed;
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                    outC->TrainDataWindowVisibility_toDisplay = kcg_false;
-                  }
-                  else {
-                    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-                      br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow;
-                    if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                      outC->TrainDataWindowVisibility_toDisplay = kcg_false;
-                    }
-                    else {
-                      outC->TrainDataWindowVisibility_toDisplay =
-                        last_TrainDataWindowVisibility_toDisplay;
-                    }
-                  }
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->TrainDataWindowVisibility_toDisplay =
-                    last_TrainDataWindowVisibility_toDisplay;
-                  break;
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                    inC->openTrainDataWindow_fromDisplay & inC->MousePressed;
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    outC->TrainDataWindowVisibility_toDisplay = kcg_true;
-                  }
-                  else {
-                    outC->TrainDataWindowVisibility_toDisplay =
-                      last_TrainDataWindowVisibility_toDisplay;
-                  }
-                  break;
-                
-              }
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->TrainDataWindowVisibility_toDisplay =
-                last_TrainDataWindowVisibility_toDisplay;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->TrainDataWindowVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->TrainDataWindowVisibility_toDisplay =
-                last_TrainDataWindowVisibility_toDisplay;
-              break;
-            
-          }
-          outC->SpeedDigitOne_toDisplay =
-            outC->_L378_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    last_SpeedDigitTwo_toDisplay = 0.0;
-    last_SpeedDigitThree_toDisplay = 0.0;
-  }
-  else {
-    last_SpeedDigitTwo_toDisplay = outC->SpeedDigitTwo_toDisplay;
-    last_SpeedDigitThree_toDisplay = outC->SpeedDigitThree_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->SpeedDigitTwo_toDisplay = last_SpeedDigitTwo_toDisplay;
-      outC->SpeedDigitThree_toDisplay = last_SpeedDigitThree_toDisplay;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->SpeedDigitTwo_toDisplay = last_SpeedDigitTwo_toDisplay;
-          outC->SpeedDigitThree_toDisplay = last_SpeedDigitThree_toDisplay;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (tmp17) {
-            outC->_L379_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-            outC->_L380_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              last_SpeedPermitted_toDisplay;
-          }
-          else if (outC->init7) {
-            outC->_L379_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              0.0;
             outC->_L380_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               0.0;
-          }
-          outC->SpeedDigitTwo_toDisplay =
-            outC->_L379_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->SpeedDigitThree_toDisplay =
-            outC->_L380_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    last_SpeedDigitTwo_toDisplay = 0.0;
-    last_SpeedPermitted_toDisplay = 0.0;
-  }
-  else {
-    last_SpeedDigitTwo_toDisplay = outC->SpeedTarget_toDisplay;
-    last_SpeedPermitted_toDisplay = outC->SpeedPermitted_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->SpeedTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-      outC->SpeedPermitted_toDisplay = last_SpeedPermitted_toDisplay;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->SpeedTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-          outC->SpeedPermitted_toDisplay = last_SpeedPermitted_toDisplay;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (outC->init7) {
-            SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
-          }
-          else {
-            SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          }
-          switch (SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              if (tmp17) {
-                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
-              }
-              else {
-                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
-              }
-              break;
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              if (tmp17) {
-                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
-              }
-              else {
-                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
-              }
-              break;
-            
-          }
-          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->SpeedTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-              outC->SpeedPermitted_toDisplay = last_SpeedPermitted_toDisplay;
-              break;
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              last_TrainDataWindowVisibility_toDisplay =
-                inC->DMI_dynamic.mode == M_MODE_Full_Supervision;
-              if (last_TrainDataWindowVisibility_toDisplay) {
-                WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2 =
-                  inC->DMI_dynamic.sup_status;
-                switch (WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2) {
-                  case supervision_status_unknown_DMI_Types_Pkg :
-                    outC->SpeedTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-                    outC->SpeedPermitted_toDisplay =
-                      last_SpeedPermitted_toDisplay;
-                    break;
-                  case RSM_DMI_Types_Pkg :
-                    outC->SpeedTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4 =
-                      (supDis_intervention_DMI_Types_Pkg ==
-                        inC->DMI_dynamic.m_warning) |
-                      (inC->DMI_dynamic.m_warning ==
-                        supDis_indication_DMI_Types_Pkg);
-                    last_SpeedDigitTwo_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_permitted;
-                    isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM =
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4 &
-                      (last_SpeedDigitTwo_toDisplay >= (kcg_real)
-                          inC->DMI_dynamic.v_target);
-                    if (isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM) {
-                      outC->SpeedPermitted_toDisplay =
-                        last_SpeedDigitTwo_toDisplay;
-                    }
-                    else {
-                      outC->SpeedPermitted_toDisplay = 0.0;
-                    }
-                    break;
-                  case TSM_DMI_Types_Pkg :
-                    Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      (kcg_real) inC->DMI_dynamic.v_target;
-                    isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM >=
-                      0.0;
-                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->SpeedTarget_toDisplay =
-                        Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-                    }
-                    else {
-                      outC->SpeedTarget_toDisplay = 0.0;
-                    }
-                    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-                      (kcg_real) inC->DMI_dynamic.v_permitted;
-                    isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM =
-                      vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM >=
-                      Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-                    isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM &
-                      (inC->DMI_dynamic.m_warning !=
-                        supDis_normal_DMI_Types_Pkg);
-                    if (isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->SpeedPermitted_toDisplay =
-                        vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                    }
-                    else {
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM_IfBlock4 =
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_normal_DMI_Types_Pkg) &
-                        isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM;
-                      if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM_IfBlock4) {
-                        outC->SpeedPermitted_toDisplay =
-                          vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                      }
-                      else {
-                        outC->SpeedPermitted_toDisplay = 0.0;
-                      }
-                    }
-                    break;
-                  case PIM_DMI_Types_Pkg :
-                    last_SpeedDigitThree_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_target;
-                    _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-                      inC->DMI_dynamic.m_warning !=
-                      supDis_indication_DMI_Types_Pkg;
-                    isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-                      (last_SpeedDigitThree_toDisplay >= 0.0) &
-                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->SpeedTarget_toDisplay =
-                        last_SpeedDigitThree_toDisplay;
-                    }
-                    else {
-                      outC->SpeedTarget_toDisplay = 0.0;
-                    }
-                    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM =
-                      (kcg_real) inC->DMI_dynamic.v_permitted;
-                    isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM &
-                      (vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM >=
-                        last_SpeedDigitThree_toDisplay);
-                    if (isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->SpeedPermitted_toDisplay =
-                        vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM;
-                    }
-                    else {
-                      outC->SpeedPermitted_toDisplay =
-                        last_SpeedPermitted_toDisplay;
-                    }
-                    break;
-                  case CSM_DMI_Types_Pkg :
-                    outC->SpeedTarget_toDisplay = 0.0;
-                    _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-                      (kcg_real) inC->DMI_dynamic.v_permitted;
-                    isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM =
-                      (_18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM >=
-                        0.0) & (inC->DMI_dynamic.m_warning !=
-                        supDis_indication_DMI_Types_Pkg);
-                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM) {
-                      outC->SpeedPermitted_toDisplay =
-                        _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                    }
-                    else {
-                      outC->SpeedPermitted_toDisplay = 0.0;
-                    }
-                    break;
-                  
-                }
-              }
-              else {
-                outC->SpeedTarget_toDisplay = 0.0;
-                outC->SpeedPermitted_toDisplay = 0.0;
-              }
-              break;
-            
-          }
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    last_SpeedDigitTwo_toDisplay = 0.0;
-  }
-  else {
-    last_SpeedDigitTwo_toDisplay = outC->SpeedRelease_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              if (last_TrainDataWindowVisibility_toDisplay) {
-                switch (WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2) {
-                  case CSM_DMI_Types_Pkg :
-                    outC->SpeedRelease_toDisplay = 0.0;
-                    break;
-                  case PIM_DMI_Types_Pkg :
-                    last_SpeedPermitted_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_release;
-                    isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-                      (last_SpeedPermitted_toDisplay >= 0.0) &
-                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM;
-                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->SpeedRelease_toDisplay =
-                        last_SpeedPermitted_toDisplay;
-                    }
-                    else {
-                      outC->SpeedRelease_toDisplay = 0.0;
-                    }
-                    break;
-                  case TSM_DMI_Types_Pkg :
-                    Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      (kcg_real) inC->DMI_dynamic.v_release;
-                    isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM >=
-                      0.0;
-                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->SpeedRelease_toDisplay =
-                        Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-                    }
-                    else {
-                      outC->SpeedRelease_toDisplay = 0.0;
-                    }
-                    break;
-                  case RSM_DMI_Types_Pkg :
-                    last_SpeedDigitThree_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_release;
-                    isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM =
-                      (last_SpeedDigitThree_toDisplay >= 0.0) &
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4;
-                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM) {
-                      outC->SpeedRelease_toDisplay =
-                        last_SpeedDigitThree_toDisplay;
-                    }
-                    else {
-                      outC->SpeedRelease_toDisplay = 0.0;
-                    }
-                    break;
-                  case supervision_status_unknown_DMI_Types_Pkg :
-                    outC->SpeedRelease_toDisplay = last_SpeedDigitTwo_toDisplay;
-                    break;
-                  
-                }
-              }
-              else {
-                outC->SpeedRelease_toDisplay = 0.0;
-              }
-              break;
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->SpeedRelease_toDisplay = last_SpeedDigitTwo_toDisplay;
-              break;
-            
-          }
-          break;
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->SpeedRelease_toDisplay = last_SpeedDigitTwo_toDisplay;
-          break;
-        
-      }
-      break;
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->SpeedRelease_toDisplay = last_SpeedDigitTwo_toDisplay;
-      break;
-    
-  }
-  if (outC->init6) {
-    last_SpeedDigitTwo_toDisplay = 0.0;
-  }
-  else {
-    last_SpeedDigitTwo_toDisplay = outC->SpeedIntervention_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              if (last_TrainDataWindowVisibility_toDisplay) {
-                switch (WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2) {
-                  case CSM_DMI_Types_Pkg :
-                    last_SpeedPermitted_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_intervention;
-                    last_DistanceToTargetVisibilityDigital_toDisplay =
-                      last_SpeedPermitted_toDisplay >
-                      _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                    isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM =
-                      last_DistanceToTargetVisibilityDigital_toDisplay &
-                      ((inC->DMI_dynamic.m_warning ==
-                          supDis_overspeed_DMI_Types_Pkg) |
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_warning_DMI_Types_Pkg));
-                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM) {
-                      outC->SpeedIntervention_toDisplay =
-                        last_SpeedPermitted_toDisplay;
-                    }
-                    else {
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM_IfBlock1 =
-                        last_DistanceToTargetVisibilityDigital_toDisplay &
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM_IfBlock1) {
-                        outC->SpeedIntervention_toDisplay =
-                          last_SpeedPermitted_toDisplay;
-                      }
-                      else {
-                        outC->SpeedIntervention_toDisplay = 0.0;
-                      }
-                    }
-                    break;
-                  case PIM_DMI_Types_Pkg :
-                    Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      (kcg_real) inC->DMI_dynamic.v_intervention;
-                    tmp15 =
-                      Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM >
-                      vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM;
-                    isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-                      tmp15 & ((inC->DMI_dynamic.m_warning ==
-                          supDis_overspeed_DMI_Types_Pkg) |
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_warning_DMI_Types_Pkg));
-                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->SpeedIntervention_toDisplay =
-                        Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-                    }
-                    else {
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4 =
-                        tmp15 & (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4) {
-                        outC->SpeedIntervention_toDisplay =
-                          Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-                      }
-                      else {
-                        outC->SpeedIntervention_toDisplay = 0.0;
-                      }
-                    }
-                    break;
-                  case TSM_DMI_Types_Pkg :
-                    last_SpeedDigitThree_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_intervention;
-                    tmp14 = last_SpeedDigitThree_toDisplay >
-                      vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                    isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-                      tmp14 & ((inC->DMI_dynamic.m_warning ==
-                          supDis_overspeed_DMI_Types_Pkg) |
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_warning_DMI_Types_Pkg));
-                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->SpeedIntervention_toDisplay =
-                        last_SpeedDigitThree_toDisplay;
-                    }
-                    else {
-                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM =
-                        tmp14 & (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (_L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                        outC->SpeedIntervention_toDisplay =
-                          last_SpeedDigitThree_toDisplay;
-                      }
-                      else {
-                        outC->SpeedIntervention_toDisplay = 0.0;
-                      }
-                    }
-                    break;
-                  case RSM_DMI_Types_Pkg :
-                    outC->SpeedIntervention_toDisplay = 0.0;
-                    break;
-                  case supervision_status_unknown_DMI_Types_Pkg :
-                    outC->SpeedIntervention_toDisplay =
-                      last_SpeedDigitTwo_toDisplay;
-                    break;
-                  
-                }
-              }
-              else {
-                outC->SpeedIntervention_toDisplay = 0.0;
-              }
-              break;
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->SpeedIntervention_toDisplay = last_SpeedDigitTwo_toDisplay;
-              break;
-            
-          }
-          break;
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->SpeedIntervention_toDisplay = last_SpeedDigitTwo_toDisplay;
-          break;
-        
-      }
-      break;
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->SpeedIntervention_toDisplay = last_SpeedDigitTwo_toDisplay;
-      break;
-    
-  }
-  if (outC->init6) {
-    last_SpeedDigitTwo_toDisplay = 0.0;
-    last_DistanceToTargetVisibilityDigital_toDisplay = kcg_false;
-    Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-      0.0;
-  }
-  else {
-    last_SpeedDigitTwo_toDisplay = outC->DistanceToTarget_toDisplay;
-    last_DistanceToTargetVisibilityDigital_toDisplay =
-      outC->DistanceToTargetVisibilityDigital_toDisplay;
-    Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM =
-      outC->InterpolatedDistanceToTarget_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->DistanceToTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-      outC->DistanceToTargetVisibilityDigital_toDisplay =
-        last_DistanceToTargetVisibilityDigital_toDisplay;
-      outC->InterpolatedDistanceToTarget_toDisplay =
-        Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      if (CabinSM_reset_act) {
-        /* 5 */
-        DistanceToTargetManager_reset_DMI_Control_Pkg_Sub_func_DistanceToTarget(
-          &outC->_3_Context_5);
-      }
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->DistanceToTarget_toDisplay = last_SpeedDigitTwo_toDisplay;
-          outC->DistanceToTargetVisibilityDigital_toDisplay =
-            last_DistanceToTargetVisibilityDigital_toDisplay;
-          outC->InterpolatedDistanceToTarget_toDisplay =
-            Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            /* 5 */
-            DistanceToTargetManager_reset_DMI_Control_Pkg_Sub_func_DistanceToTarget(
-              &outC->_3_Context_5);
-          }
-          if (tmp17) {
-            /* 5 */
-            DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget(
-              &inC->DMI_dynamic,
-              &outC->_3_Context_5);
-            tmp15 = outC->_3_Context_5.DistanceToTargetBarVisibility_toDisplay;
-            outC->_L386_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->_3_Context_5.DistanceToTarget_toDisplay;
-            outC->_L389_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->_3_Context_5.DistanceToTargetVisibilityDigital_toDisplay;
-            outC->_L387_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->_3_Context_5.InterpolatedDistanceToTarget_toDisplay;
-          }
-          else if (outC->init7) {
-            outC->_L386_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            outC->_L379_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               0.0;
+            outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
+            outC->_L394_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
+            outC->_L388_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
             outC->_L389_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               kcg_false;
             outC->_L387_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               0.0;
+            outC->TrainPosition_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              0.0;
           }
-          outC->DistanceToTarget_toDisplay =
-            outC->_L386_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->DistanceToTargetVisibilityDigital_toDisplay =
-            outC->_L389_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->InterpolatedDistanceToTarget_toDisplay =
-            outC->_L387_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
           break;
         
       }
       break;
     
   }
-  if (outC->init6) {
-    tmp14 = kcg_false;
-    i = cCOLOR_GREY_DMI_Control_Pkg;
-    kcg_copy_array_int_9(
-      &last_DriverID_Display_toDisplay,
-      (array_int_9 *) &InitText1_DMI_Control_Pkg);
-    kcg_copy_array_int_9(
-      &last_TrainRN_Display_toDisplay,
-      (array_int_9 *) &InitText1_DMI_Control_Pkg);
+  if (outC->init7) {
+    outC->init7 = kcg_false;
+    last_LevelSymbolVisibility_toDisplay = kcg_false;
+    last_TrainDataWindowVisibility_toDisplay = kcg_false;
+    last_DistanceToTargetVisibilityDigital_toDisplay = kcg_false;
+    last_StatusSymbolBrake_toDisplay = kcg_false;
+    last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
+    last_ModeSymbolVisibility_toDisplay = kcg_false;
+    last_traindataValidWinVisibility_toDisplay = kcg_false;
+    last_Vtarget_permVisibility_toDisplay = kcg_false;
+    last_Vinterv_Visibility_toDisplay = kcg_false;
+    last_levelMenuVisibility_toDisplay = kcg_false;
+    tmp23 = kcg_false;
+    last_ArrayLevelIndex_toDisplay[0] = 0;
+    last_ArrayLevelIndex_toDisplay[1] = 0;
+    last_ArrayLevelIndex_toDisplay[2] = 0;
+    last_ArrayLevelIndex_toDisplay[3] = 0;
+    last_ArrayLevelIndex_toDisplay[4] = 0;
+    last_ArrayLevelIndex_toDisplay[5] = 0;
+    last_ArrayLevelIndex_toDisplay[6] = 0;
+    last_ArrayLevelIndex_toDisplay[7] = 0;
+    last_ArrayLevelIndex_toDisplay[8] = 0;
+    last_ArrayLevelIndex_toDisplay[9] = 0;
+    last_ArrayLevelIndex_toDisplay[10] = 0;
+    last_ArrayLevelIndex_toDisplay[11] = 0;
+    last_D_PASP_IndicatorMarker_toDisplay[0] = 0.0;
+    kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+      &last_DMI_Level_Data,
+      (DMI_Level_Data_T_DMI_Messages_Bothways_Pkg *)
+        &cDMI_Level_data_DMI_Control_Pkg);
+    kcg_copy_array_real_12(
+      &last_D_GradientsValue_toDisplay,
+      (array_real_12 *) &cD_GradientsValue_DMI_Control_Pkg);
+    kcg_copy_tScale(
+      &last_D_Scale_toDisplay,
+      (tScale *) &cD_tScale_DMI_Control_Pkg);
+    kcg_copy_array_real_12(
+      &last_D_GradientStartInterpolated_toDisplay,
+      (array_real_12 *) &cD_GradientStartInterpolated_DMI_Control_Pkg);
+    kcg_copy_array_real_12(
+      &last_D_GradientEndInterpolated_toDisplay,
+      (array_real_12 *) &cD_GradientStartInterpolated_DMI_Control_Pkg);
+    kcg_copy_array_bool_12(
+      &last_D_GradientVisible_toDisplay,
+      (array_bool_12 *) &cD_GradientVisible_DMI_Control_Pkg);
+    kcg_copy_array_real_4(
+      &last_D_PASP_Distances_toDisplay,
+      (array_real_4 *) &cD_PASP_Distances_DMI_Control_Pkg);
+    kcg_copy_array_real_4(
+      &last_D_PASP_Speeds_toDisplay,
+      (array_real_4 *) &cD_PASP_Speeds_DMI_Control_Pkg);
+    kcg_copy_array_real_10(
+      &last_D_SPDI_SpeedChangePosition_toDisplay,
+      (array_real_10 *) &cD_SPDI_SpeedChangePosition_DMI_Control_Pkg);
+    kcg_copy_array_int_10(
+      &last_D_SPDI_SpeedChangeIndex_toDisplay,
+      (array_int_10 *) &cD_SPDI_SpeedChangeIndex_DMI_Control_Pkg);
+    kcg_copy_array_bool_10(
+      &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
+      (array_bool_10 *) &cD_SPDI_SpeedChangeSymbolsVisible_DMI_Control_Pkg);
+    kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+      &last_DMI_level_data,
+      (DMI_Level_Data_T_DMI_Messages_Bothways_Pkg *)
+        &cDMI_Level_data_DMI_Control_Pkg);
+    last_IndexLevel_toDisplay = 0;
+    last_Vinterv_Color_toDisplay = 1;
+    last_vtarget_permColor_toDisplay = 1;
+    last_VtargetColor_toDisplay = 0;
+    last_VreleaseColor_toDisplay = 0;
+    last_VpermColor_toDisplay = 0;
+    last_modeSymbolAnnouncementIndex_toDisplay = 0;
+    last_levelSymbolAnnouncementIndex_toDisplay = 0;
+    last_iconGroupIndex_toDisplay = 0;
+    last_traindataYesNoIndex_toDisplay = 1;
+    last_trainMaxspeed_toDisplay = 0.0;
+    last_trainBrakePerc_toDisplay = 0.0;
+    last_trainLenght_toDisplay = 0.0;
+    last_trainLoadingGougeIndex_toDisplay = 1;
+    last_trainAirtightIndex_toDisplay = 1;
+    last_trainAxleloadIndex_toDisplay = 1;
+    last_trainCategoryIndex_toDisplay = 1;
     last_window_mask_visibility__toDisplay[0] = kcg_false;
     last_window_mask_visibility__toDisplay[1] = kcg_false;
     last_window_mask_visibility__toDisplay[2] = kcg_false;
@@ -1570,1606 +806,215 @@ void DMI_Controller_DMI_Control_Pkg(
     last_ArrayButtonsEnabler_toDisplay[27] = 0;
     last_ArrayButtonsEnabler_toDisplay[28] = 0;
     last_ArrayButtonsEnabler_toDisplay[29] = 0;
-  }
-  else {
-    tmp14 = outC->StatusSymbolBrake_toDisplay;
-    i = outC->PointerColor_toDisplay;
-    kcg_copy_array_int_9(
-      &last_DriverID_Display_toDisplay,
-      &outC->DriverID_Display_toDisplay);
+    kcg_copy_array_int_5(
+      &last_ArrayOfMsgIndex_toDisplay,
+      &default_IndexFixedMsg_toDisplay);
+    last_ModeSymbol_toDisplay = 13;
     kcg_copy_array_int_9(
       &last_TrainRN_Display_toDisplay,
-      &outC->TrainRN_Display_toDisplay);
-    kcg_copy_array_bool_15(
-      &last_window_mask_visibility__toDisplay,
-      &outC->window_mask_visibility__toDisplay);
+      (array_int_9 *) &InitText1_DMI_Control_Pkg);
+    kcg_copy_array_int_9(
+      &last_DriverID_Display_toDisplay,
+      (array_int_9 *) &InitText1_DMI_Control_Pkg);
+    last_PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+    last_InterpolatedDistanceToTarget_toDisplay = 0.0;
+    last_DistanceToTarget_toDisplay = 0.0;
+    last_SpeedIntervention_toDisplay = 0.0;
+    last_SpeedRelease_toDisplay = 0.0;
+    last_SpeedPermitted_toDisplay = 0.0;
+    last_SpeedTarget_toDisplay = 0.0;
+    last_SpeedDigitThree_toDisplay = 0.0;
+    last_SpeedDigitTwo_toDisplay = 0.0;
+    last_SpeedDigitOne_toDisplay = 0.0;
+    last_TrainSpeed_toDisplay = 0.0;
+    last_ETCS_LevelSymbol_toDisplay = 4;
+    last_TrainPosition_toDisplay = 0.0;
+  }
+  else {
+    kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+      &last_DMI_Level_Data,
+      &outC->DMI_Level_Data);
+    kcg_copy_array_real_12(
+      &last_D_GradientsValue_toDisplay,
+      &outC->D_GradientsValue_toDisplay);
+    tmp23 = outC->PlanningAreaVisibility_toDisplay;
+    kcg_copy_tScale(&last_D_Scale_toDisplay, &outC->D_Scale_toDisplay);
+    kcg_copy_array_real_12(
+      &last_D_GradientStartInterpolated_toDisplay,
+      &outC->D_GradientStartInterpolated_toDisplay);
+    kcg_copy_array_real_12(
+      &last_D_GradientEndInterpolated_toDisplay,
+      &outC->D_GradientEndInterpolated_toDisplay);
+    kcg_copy_array_bool_12(
+      &last_D_GradientVisible_toDisplay,
+      &outC->D_GradientVisible_toDisplay);
+    kcg_copy_array_real_4(
+      &last_D_PASP_Distances_toDisplay,
+      &outC->D_PASP_Distances_toDisplay);
+    kcg_copy_array_real_4(
+      &last_D_PASP_Speeds_toDisplay,
+      &outC->D_PASP_Speeds_toDisplay);
+    kcg_copy_array_real_1(
+      &last_D_PASP_IndicatorMarker_toDisplay,
+      &outC->D_PASP_IndicatorMarker_toDisplay);
+    kcg_copy_array_real_10(
+      &last_D_SPDI_SpeedChangePosition_toDisplay,
+      &outC->D_SPDI_SpeedChangePosition_toDisplay);
+    kcg_copy_array_int_10(
+      &last_D_SPDI_SpeedChangeIndex_toDisplay,
+      &outC->D_SPDI_SpeedChangeIndex_toDisplay);
+    kcg_copy_array_bool_10(
+      &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
+      &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay);
+    kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+      &last_DMI_level_data,
+      &outC->DMI_level_data);
+    last_IndexLevel_toDisplay = outC->IndexLevel_toDisplay;
+    kcg_copy_array_int_12(
+      &last_ArrayLevelIndex_toDisplay,
+      &outC->ArrayLevelIndex_toDisplay);
+    last_levelMenuVisibility_toDisplay = outC->levelMenuVisibility_toDisplay;
+    last_Vinterv_Color_toDisplay = outC->Vinterv_Color_toDisplay;
+    last_vtarget_permColor_toDisplay = outC->vtarget_permColor_toDisplay;
+    last_Vinterv_Visibility_toDisplay = outC->Vinterv_Visibility_toDisplay;
+    last_Vtarget_permVisibility_toDisplay =
+      outC->Vtarget_permVisibility_toDisplay;
+    last_VtargetColor_toDisplay = outC->VtargetColor_toDisplay;
+    last_VreleaseColor_toDisplay = outC->VreleaseColor_toDisplay;
+    last_VpermColor_toDisplay = outC->VpermColor_toDisplay;
+    last_modeSymbolAnnouncementIndex_toDisplay =
+      outC->modeSymbolAnnouncementIndex_toDisplay;
+    last_levelSymbolAnnouncementIndex_toDisplay =
+      outC->levelSymbolAnnouncementIndex_toDisplay;
+    last_iconGroupIndex_toDisplay = outC->iconGroupIndex_toDisplay;
+    last_traindataYesNoIndex_toDisplay = outC->traindataYesNoIndex_toDisplay;
+    last_traindataValidWinVisibility_toDisplay =
+      outC->traindataValidWinVisibility_toDisplay;
+    last_trainMaxspeed_toDisplay = outC->trainMaxspeed_toDisplay;
+    last_trainBrakePerc_toDisplay = outC->trainBrakePerc_toDisplay;
+    last_trainLenght_toDisplay = outC->trainLenght_toDisplay;
+    last_trainLoadingGougeIndex_toDisplay =
+      outC->trainLoadingGougeIndex_toDisplay;
+    last_trainAirtightIndex_toDisplay = outC->trainAirtightIndex_toDisplay;
+    last_trainAxleloadIndex_toDisplay = outC->trainAxleloadIndex_toDisplay;
+    last_trainCategoryIndex_toDisplay = outC->trainCategoryIndex_toDisplay;
+    kcg_copy_array_int_5(
+      &last_ArrayOfMsgIndex_toDisplay,
+      &outC->ArrayOfMsgIndex_toDisplay);
+    last_ModeSymbolVisibility_toDisplay = outC->ModeSymbolVisibility_toDisplay;
+    last_ModeSymbol_toDisplay = outC->ModeSymbol_toDisplay;
+    last_DistanceToTargetBarVisibility_toDisplay =
+      outC->DistanceToTargetBarVisibility_toDisplay;
     kcg_copy_array_int_30(
       &last_ArrayButtonsEnabler_toDisplay,
       &outC->ArrayButtonsEnabler_toDisplay);
+    kcg_copy_array_bool_15(
+      &last_window_mask_visibility__toDisplay,
+      &outC->window_mask_visibility__toDisplay);
+    kcg_copy_array_int_9(
+      &last_TrainRN_Display_toDisplay,
+      &outC->TrainRN_Display_toDisplay);
+    kcg_copy_array_int_9(
+      &last_DriverID_Display_toDisplay,
+      &outC->DriverID_Display_toDisplay);
+    last_PointerColor_toDisplay = outC->PointerColor_toDisplay;
+    last_StatusSymbolBrake_toDisplay = outC->StatusSymbolBrake_toDisplay;
+    last_InterpolatedDistanceToTarget_toDisplay =
+      outC->InterpolatedDistanceToTarget_toDisplay;
+    last_DistanceToTargetVisibilityDigital_toDisplay =
+      outC->DistanceToTargetVisibilityDigital_toDisplay;
+    last_DistanceToTarget_toDisplay = outC->DistanceToTarget_toDisplay;
+    last_SpeedIntervention_toDisplay = outC->SpeedIntervention_toDisplay;
+    last_SpeedRelease_toDisplay = outC->SpeedRelease_toDisplay;
+    last_SpeedPermitted_toDisplay = outC->SpeedPermitted_toDisplay;
+    last_SpeedTarget_toDisplay = outC->SpeedTarget_toDisplay;
+    last_SpeedDigitThree_toDisplay = outC->SpeedDigitThree_toDisplay;
+    last_SpeedDigitTwo_toDisplay = outC->SpeedDigitTwo_toDisplay;
+    last_SpeedDigitOne_toDisplay = outC->SpeedDigitOne_toDisplay;
+    last_TrainDataWindowVisibility_toDisplay =
+      outC->TrainDataWindowVisibility_toDisplay;
+    last_TrainSpeed_toDisplay = outC->TrainSpeed_toDisplay;
+    last_LevelSymbolVisibility_toDisplay =
+      outC->LevelSymbolVisibility_toDisplay;
+    last_ETCS_LevelSymbol_toDisplay = outC->ETCS_LevelSymbol_toDisplay;
+    last_TrainPosition_toDisplay = outC->TrainPosition_toDisplay;
   }
   switch (CabinSM_state_act) {
     case SSM_st_DeskIsClose_CabinSM :
-      outC->StatusSymbolBrake_toDisplay = tmp14;
-      outC->PointerColor_toDisplay = i;
-      kcg_copy_array_int_9(
-        &outC->DriverID_Display_toDisplay,
-        &last_DriverID_Display_toDisplay);
-      kcg_copy_array_int_9(
-        &outC->TrainRN_Display_toDisplay,
-        &last_TrainRN_Display_toDisplay);
-      kcg_copy_array_bool_15(
-        &outC->window_mask_visibility__toDisplay,
-        &last_window_mask_visibility__toDisplay);
-      outC->StatusSymbolVisibility_toDisplay = kcg_false;
-      outC->DMI_identifier.valid = kcg_false;
-      outC->DMI_identifier.systemTime = 0;
-      outC->DMI_identifier.DMI_Identifier = DMI_1_DMI_Types_Pkg;
-      outC->DMI_identifier.Cabin_Identifier = cabin_A_DMI_Types_Pkg;
-      outC->DMI_identifier.l_name = 0;
-      outC->DMI_identifier.DMI_name[0] = ' ';
-      outC->DMI_identifier.DMI_name[1] = ' ';
-      outC->DMI_identifier.DMI_name[2] = ' ';
-      outC->DMI_identifier.DMI_name[3] = ' ';
-      outC->DMI_identifier.DMI_name[4] = ' ';
-      outC->DMI_identifier.DMI_name[5] = ' ';
-      outC->DMI_identifier.DMI_name[6] = ' ';
-      outC->DMI_identifier.DMI_name[7] = ' ';
-      outC->DMI_identifier.DMI_name[8] = ' ';
-      outC->DMI_identifier.DMI_name[9] = ' ';
-      outC->DMI_identifier.DMI_name[10] = ' ';
-      outC->DMI_identifier.DMI_name[11] = ' ';
-      outC->DMI_identifier.DMI_name[12] = ' ';
-      outC->DMI_identifier.DMI_name[13] = ' ';
-      outC->DMI_identifier.DMI_name[14] = ' ';
-      outC->DMI_identifier.DMI_name[15] = ' ';
-      outC->DMI_identifier.DMI_name[16] = ' ';
-      outC->DMI_identifier.DMI_name[17] = ' ';
-      outC->DMI_identifier.DMI_name[18] = ' ';
-      outC->DMI_identifier.DMI_name[19] = ' ';
-      outC->DMI_identifier.DMI_name[20] = ' ';
-      outC->DMI_identifier.DMI_name[21] = ' ';
-      outC->DMI_identifier.DMI_name[22] = ' ';
-      outC->DMI_identifier.DMI_name[23] = ' ';
-      outC->DMI_identifier.DMI_name[24] = ' ';
-      outC->DMI_identifier.DMI_name[25] = ' ';
-      outC->DMI_identifier.DMI_name[26] = ' ';
-      outC->DMI_identifier.DMI_name[27] = ' ';
-      outC->DMI_identifier.DMI_name[28] = ' ';
-      outC->DMI_identifier.DMI_name[29] = ' ';
-      outC->DMI_identifier.DMI_name[30] = ' ';
-      outC->DMI_identifier.DMI_name[31] = ' ';
-      outC->DMI_identifier.DMI_name[32] = ' ';
-      outC->DMI_identifier.DMI_name[33] = ' ';
-      outC->DMI_identifier.DMI_name[34] = ' ';
-      outC->DMI_identifier.DMI_name[35] = ' ';
-      outC->DMI_identifier.DMI_name[36] = ' ';
-      outC->DMI_identifier.DMI_name[37] = ' ';
-      outC->DMI_identifier.DMI_name[38] = ' ';
-      outC->DMI_identifier.DMI_name[39] = ' ';
-      outC->DMI_identifier.DMI_name[40] = ' ';
-      outC->DMI_identifier.DMI_name[41] = ' ';
-      outC->DMI_identifier.DMI_name[42] = ' ';
-      outC->DMI_identifier.DMI_name[43] = ' ';
-      outC->DMI_identifier.DMI_name[44] = ' ';
-      outC->DMI_identifier.DMI_name[45] = ' ';
-      outC->DMI_identifier.DMI_name[46] = ' ';
-      outC->DMI_identifier.DMI_name[47] = ' ';
-      outC->DMI_identifier.DMI_name[48] = ' ';
-      outC->DMI_identifier.DMI_name[49] = ' ';
-      outC->DMI_identifier.DMI_name[50] = ' ';
-      outC->DMI_identifier.DMI_name[51] = ' ';
-      outC->DMI_identifier.DMI_name[52] = ' ';
-      outC->DMI_identifier.DMI_name[53] = ' ';
-      outC->DMI_identifier.DMI_name[54] = ' ';
-      outC->DMI_identifier.DMI_name[55] = ' ';
-      outC->DMI_identifier.DMI_name[56] = ' ';
-      outC->DMI_identifier.DMI_name[57] = ' ';
-      outC->DMI_identifier.DMI_name[58] = ' ';
-      outC->DMI_identifier.DMI_name[59] = ' ';
-      outC->DMI_identifier.DMI_name[60] = ' ';
-      outC->DMI_identifier.DMI_name[61] = ' ';
-      outC->DMI_identifier.DMI_name[62] = ' ';
-      outC->DMI_identifier.DMI_name[63] = ' ';
-      outC->DMI_identifier.DMI_name[64] = ' ';
-      outC->DMI_identifier.DMI_name[65] = ' ';
-      outC->DMI_identifier.DMI_name[66] = ' ';
-      outC->DMI_identifier.DMI_name[67] = ' ';
-      outC->DMI_identifier.DMI_name[68] = ' ';
-      outC->DMI_identifier.DMI_name[69] = ' ';
-      outC->DMI_identifier.DMI_name[70] = ' ';
-      outC->DMI_identifier.DMI_name[71] = ' ';
-      outC->DMI_identifier.DMI_name[72] = ' ';
-      outC->DMI_identifier.DMI_name[73] = ' ';
-      outC->DMI_identifier.DMI_name[74] = ' ';
-      outC->DMI_identifier.DMI_name[75] = ' ';
-      outC->DMI_identifier.DMI_name[76] = ' ';
-      outC->DMI_identifier.DMI_name[77] = ' ';
-      outC->DMI_identifier.DMI_name[78] = ' ';
-      outC->DMI_identifier.DMI_name[79] = ' ';
-      outC->DMI_identifier.DMI_name[80] = ' ';
-      outC->DMI_identifier.DMI_name[81] = ' ';
-      outC->DMI_identifier.DMI_name[82] = ' ';
-      outC->DMI_identifier.DMI_name[83] = ' ';
-      outC->DMI_identifier.DMI_name[84] = ' ';
-      outC->DMI_identifier.DMI_name[85] = ' ';
-      outC->DMI_identifier.DMI_name[86] = ' ';
-      outC->DMI_identifier.DMI_name[87] = ' ';
-      outC->DMI_identifier.DMI_name[88] = ' ';
-      outC->DMI_identifier.DMI_name[89] = ' ';
-      outC->DMI_identifier.DMI_name[90] = ' ';
-      outC->DMI_identifier.DMI_name[91] = ' ';
-      outC->DMI_identifier.DMI_name[92] = ' ';
-      outC->DMI_identifier.DMI_name[93] = ' ';
-      outC->DMI_identifier.DMI_name[94] = ' ';
-      outC->DMI_identifier.DMI_name[95] = ' ';
-      outC->DMI_identifier.DMI_name[96] = ' ';
-      outC->DMI_identifier.DMI_name[97] = ' ';
-      outC->DMI_identifier.DMI_name[98] = ' ';
-      outC->DMI_identifier.DMI_name[99] = ' ';
-      outC->DMI_identifier.DMI_name[100] = ' ';
-      outC->DMI_identifier.DMI_name[101] = ' ';
-      outC->DMI_identifier.DMI_name[102] = ' ';
-      outC->DMI_identifier.DMI_name[103] = ' ';
-      outC->DMI_identifier.DMI_name[104] = ' ';
-      outC->DMI_identifier.DMI_name[105] = ' ';
-      outC->DMI_identifier.DMI_name[106] = ' ';
-      outC->DMI_identifier.DMI_name[107] = ' ';
-      outC->DMI_identifier.DMI_name[108] = ' ';
-      outC->DMI_identifier.DMI_name[109] = ' ';
-      outC->DMI_identifier.DMI_name[110] = ' ';
-      outC->DMI_identifier.DMI_name[111] = ' ';
-      outC->DMI_identifier.DMI_name[112] = ' ';
-      outC->DMI_identifier.DMI_name[113] = ' ';
-      outC->DMI_identifier.DMI_name[114] = ' ';
-      outC->DMI_identifier.DMI_name[115] = ' ';
-      outC->DMI_identifier.DMI_name[116] = ' ';
-      outC->DMI_identifier.DMI_name[117] = ' ';
-      outC->DMI_identifier.DMI_name[118] = ' ';
-      outC->DMI_identifier.DMI_name[119] = ' ';
-      outC->DMI_identifier.DMI_name[120] = ' ';
-      outC->DMI_identifier.DMI_name[121] = ' ';
-      outC->DMI_identifier.DMI_name[122] = ' ';
-      outC->DMI_identifier.DMI_name[123] = ' ';
-      outC->DMI_identifier.DMI_name[124] = ' ';
-      outC->DMI_identifier.DMI_name[125] = ' ';
-      outC->DMI_identifier.DMI_name[126] = ' ';
-      outC->DMI_identifier.DMI_name[127] = ' ';
-      outC->DMI_identifier.DMI_name[128] = ' ';
-      outC->DMI_identifier.DMI_name[129] = ' ';
-      outC->DMI_identifier.DMI_name[130] = ' ';
-      outC->DMI_identifier.DMI_name[131] = ' ';
-      outC->DMI_identifier.DMI_name[132] = ' ';
-      outC->DMI_identifier.DMI_name[133] = ' ';
-      outC->DMI_identifier.DMI_name[134] = ' ';
-      outC->DMI_identifier.DMI_name[135] = ' ';
-      outC->DMI_identifier.DMI_name[136] = ' ';
-      outC->DMI_identifier.DMI_name[137] = ' ';
-      outC->DMI_identifier.DMI_name[138] = ' ';
-      outC->DMI_identifier.DMI_name[139] = ' ';
-      outC->DMI_identifier.DMI_name[140] = ' ';
-      outC->DMI_identifier.DMI_name[141] = ' ';
-      outC->DMI_identifier.DMI_name[142] = ' ';
-      outC->DMI_identifier.DMI_name[143] = ' ';
-      outC->DMI_identifier.DMI_name[144] = ' ';
-      outC->DMI_identifier.DMI_name[145] = ' ';
-      outC->DMI_identifier.DMI_name[146] = ' ';
-      outC->DMI_identifier.DMI_name[147] = ' ';
-      outC->DMI_identifier.DMI_name[148] = ' ';
-      outC->DMI_identifier.DMI_name[149] = ' ';
-      outC->DMI_identifier.DMI_name[150] = ' ';
-      outC->DMI_identifier.DMI_name[151] = ' ';
-      outC->DMI_identifier.DMI_name[152] = ' ';
-      outC->DMI_identifier.DMI_name[153] = ' ';
-      outC->DMI_identifier.DMI_name[154] = ' ';
-      outC->DMI_identifier.DMI_name[155] = ' ';
-      outC->DMI_identifier.DMI_name[156] = ' ';
-      outC->DMI_identifier.DMI_name[157] = ' ';
-      outC->DMI_identifier.DMI_name[158] = ' ';
-      outC->DMI_identifier.DMI_name[159] = ' ';
-      outC->DMI_identifier.DMI_name[160] = ' ';
-      outC->DMI_identifier.DMI_name[161] = ' ';
-      outC->DMI_identifier.DMI_name[162] = ' ';
-      outC->DMI_identifier.DMI_name[163] = ' ';
-      outC->DMI_identifier.DMI_name[164] = ' ';
-      outC->DMI_identifier.DMI_name[165] = ' ';
-      outC->DMI_identifier.DMI_name[166] = ' ';
-      outC->DMI_identifier.DMI_name[167] = ' ';
-      outC->DMI_identifier.DMI_name[168] = ' ';
-      outC->DMI_identifier.DMI_name[169] = ' ';
-      outC->DMI_identifier.DMI_name[170] = ' ';
-      outC->DMI_identifier.DMI_name[171] = ' ';
-      outC->DMI_identifier.DMI_name[172] = ' ';
-      outC->DMI_identifier.DMI_name[173] = ' ';
-      outC->DMI_identifier.DMI_name[174] = ' ';
-      outC->DMI_identifier.DMI_name[175] = ' ';
-      outC->DMI_identifier.DMI_name[176] = ' ';
-      outC->DMI_identifier.DMI_name[177] = ' ';
-      outC->DMI_identifier.DMI_name[178] = ' ';
-      outC->DMI_identifier.DMI_name[179] = ' ';
-      outC->DMI_identifier.DMI_name[180] = ' ';
-      outC->DMI_identifier.DMI_name[181] = ' ';
-      outC->DMI_identifier.DMI_name[182] = ' ';
-      outC->DMI_identifier.DMI_name[183] = ' ';
-      outC->DMI_identifier.DMI_name[184] = ' ';
-      outC->DMI_identifier.DMI_name[185] = ' ';
-      outC->DMI_identifier.DMI_name[186] = ' ';
-      outC->DMI_identifier.DMI_name[187] = ' ';
-      outC->DMI_identifier.DMI_name[188] = ' ';
-      outC->DMI_identifier.DMI_name[189] = ' ';
-      outC->DMI_identifier.DMI_name[190] = ' ';
-      outC->DMI_identifier.DMI_name[191] = ' ';
-      outC->DMI_identifier.DMI_name[192] = ' ';
-      outC->DMI_identifier.DMI_name[193] = ' ';
-      outC->DMI_identifier.DMI_name[194] = ' ';
-      outC->DMI_identifier.DMI_name[195] = ' ';
-      outC->DMI_identifier.DMI_name[196] = ' ';
-      outC->DMI_identifier.DMI_name[197] = ' ';
-      outC->DMI_identifier.DMI_name[198] = ' ';
-      outC->DMI_identifier.DMI_name[199] = ' ';
-      outC->DMI_identifier.DMI_name[200] = ' ';
-      outC->DMI_identifier.DMI_name[201] = ' ';
-      outC->DMI_identifier.DMI_name[202] = ' ';
-      outC->DMI_identifier.DMI_name[203] = ' ';
-      outC->DMI_identifier.DMI_name[204] = ' ';
-      outC->DMI_identifier.DMI_name[205] = ' ';
-      outC->DMI_identifier.DMI_name[206] = ' ';
-      outC->DMI_identifier.DMI_name[207] = ' ';
-      outC->DMI_identifier.DMI_name[208] = ' ';
-      outC->DMI_identifier.DMI_name[209] = ' ';
-      outC->DMI_identifier.DMI_name[210] = ' ';
-      outC->DMI_identifier.DMI_name[211] = ' ';
-      outC->DMI_identifier.DMI_name[212] = ' ';
-      outC->DMI_identifier.DMI_name[213] = ' ';
-      outC->DMI_identifier.DMI_name[214] = ' ';
-      outC->DMI_identifier.DMI_name[215] = ' ';
-      outC->DMI_identifier.DMI_name[216] = ' ';
-      outC->DMI_identifier.DMI_name[217] = ' ';
-      outC->DMI_identifier.DMI_name[218] = ' ';
-      outC->DMI_identifier.DMI_name[219] = ' ';
-      outC->DMI_identifier.DMI_name[220] = ' ';
-      outC->DMI_identifier.DMI_name[221] = ' ';
-      outC->DMI_identifier.DMI_name[222] = ' ';
-      outC->DMI_identifier.DMI_name[223] = ' ';
-      outC->DMI_identifier.DMI_name[224] = ' ';
-      outC->DMI_identifier.DMI_name[225] = ' ';
-      outC->DMI_identifier.DMI_name[226] = ' ';
-      outC->DMI_identifier.DMI_name[227] = ' ';
-      outC->DMI_identifier.DMI_name[228] = ' ';
-      outC->DMI_identifier.DMI_name[229] = ' ';
-      outC->DMI_identifier.DMI_name[230] = ' ';
-      outC->DMI_identifier.DMI_name[231] = ' ';
-      outC->DMI_identifier.DMI_name[232] = ' ';
-      outC->DMI_identifier.DMI_name[233] = ' ';
-      outC->DMI_identifier.DMI_name[234] = ' ';
-      outC->DMI_identifier.DMI_name[235] = ' ';
-      outC->DMI_identifier.DMI_name[236] = ' ';
-      outC->DMI_identifier.DMI_name[237] = ' ';
-      outC->DMI_identifier.DMI_name[238] = ' ';
-      outC->DMI_identifier.DMI_name[239] = ' ';
-      outC->DMI_identifier.DMI_name[240] = ' ';
-      outC->DMI_identifier.DMI_name[241] = ' ';
-      outC->DMI_identifier.DMI_name[242] = ' ';
-      outC->DMI_identifier.DMI_name[243] = ' ';
-      outC->DMI_identifier.DMI_name[244] = ' ';
-      outC->DMI_identifier.DMI_name[245] = ' ';
-      outC->DMI_identifier.DMI_name[246] = ' ';
-      outC->DMI_identifier.DMI_name[247] = ' ';
-      outC->DMI_identifier.DMI_name[248] = ' ';
-      outC->DMI_identifier.DMI_name[249] = ' ';
-      outC->DMI_identifier.DMI_name[250] = ' ';
-      outC->DMI_identifier.DMI_name[251] = ' ';
-      outC->DMI_identifier.DMI_name[252] = ' ';
-      outC->DMI_identifier.DMI_name[253] = ' ';
-      outC->DMI_identifier.DMI_name[254] = ' ';
-      outC->DMI_identifier.M_VERSION =
-        M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS;
-      kcg_copy_array_int_30(
-        &outC->ArrayButtonsEnabler_toDisplay,
-        &last_ArrayButtonsEnabler_toDisplay);
+      kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(
+        &DMI_Status,
+        &default_DMI_Status);
+      kcg_copy_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg(
+        &DMI_Identifier,
+        (DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg *)
+          &cEmptyIdentifer_DMI_Control_Pkg);
+      kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
+        &DMI_Driver_Request,
+        &default_DMI_Driver_Request);
       kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
-        &outC->DMI_driver_identifier,
-        &default_DMI_driver_identifier);
+        &DMI_Driver_Identifier,
+        &default_DMI_Driver_Identifier);
       kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
-        &outC->DMI_train_running_number_id,
-        &default_DMI_train_running_number_id);
-      outC->CloseButtonEnabler_toDisplay = 26;
-      outC->RBC_status_symbol_toDisplay = 4;
+        &DMI_Train_Running_Number,
+        &default_DMI_Train_Running_Number);
+      kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+        &DMI_Text_Message,
+        &default_DMI_Text_Message);
+      kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+        &DMI_Train_Data_Ack,
+        &default_DMI_Train_Data_Ack);
+      kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+        &outC->DMI_Level_Data,
+        &last_DMI_Level_Data);
+      outC->isAuxiliarMsg_toDisplay = kcg_true;
+      outC->CabinSM_state_nxt = SSM_st_DeskIsClose_CabinSM;
+      kcg_copy_array_real_12(
+        &outC->D_GradientsValue_toDisplay,
+        &last_D_GradientsValue_toDisplay);
+      outC->PlanningAreaVisibility_toDisplay = tmp23;
+      kcg_copy_tScale(&outC->D_Scale_toDisplay, &last_D_Scale_toDisplay);
+      kcg_copy_array_real_12(
+        &outC->D_GradientStartInterpolated_toDisplay,
+        &last_D_GradientStartInterpolated_toDisplay);
+      kcg_copy_array_real_12(
+        &outC->D_GradientEndInterpolated_toDisplay,
+        &last_D_GradientEndInterpolated_toDisplay);
+      kcg_copy_array_bool_12(
+        &outC->D_GradientVisible_toDisplay,
+        &last_D_GradientVisible_toDisplay);
+      kcg_copy_array_real_4(
+        &outC->D_PASP_Distances_toDisplay,
+        &last_D_PASP_Distances_toDisplay);
+      kcg_copy_array_real_4(
+        &outC->D_PASP_Speeds_toDisplay,
+        &last_D_PASP_Speeds_toDisplay);
+      kcg_copy_array_real_1(
+        &outC->D_PASP_IndicatorMarker_toDisplay,
+        &last_D_PASP_IndicatorMarker_toDisplay);
+      kcg_copy_array_real_10(
+        &outC->D_SPDI_SpeedChangePosition_toDisplay,
+        &last_D_SPDI_SpeedChangePosition_toDisplay);
+      kcg_copy_array_int_10(
+        &outC->D_SPDI_SpeedChangeIndex_toDisplay,
+        &last_D_SPDI_SpeedChangeIndex_toDisplay);
+      kcg_copy_array_bool_10(
+        &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
+        &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay);
       break;
     case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->StatusSymbolBrake_toDisplay = tmp14;
-          outC->PointerColor_toDisplay = i;
-          kcg_copy_array_int_9(
-            &outC->DriverID_Display_toDisplay,
-            &last_DriverID_Display_toDisplay);
-          kcg_copy_array_int_9(
-            &outC->TrainRN_Display_toDisplay,
-            &last_TrainRN_Display_toDisplay);
-          kcg_copy_array_bool_15(
-            &outC->window_mask_visibility__toDisplay,
-            &last_window_mask_visibility__toDisplay);
-          kcg_copy_array_int_30(
-            &outC->ArrayButtonsEnabler_toDisplay,
-            &last_ArrayButtonsEnabler_toDisplay);
-          outC->StatusSymbolVisibility_toDisplay = kcg_false;
-          kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
-            &outC->DMI_driver_identifier,
-            &default_DMI_driver_identifier);
-          kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
-            &outC->DMI_train_running_number_id,
-            &default_DMI_train_running_number_id);
-          outC->CloseButtonEnabler_toDisplay = 26;
-          outC->RBC_status_symbol_toDisplay = 4;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (outC->init7) {
-            IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
-            SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM;
-            last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              C_DMI_Types_Pkg;
-          }
-          else {
-            IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->IconSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->SymbolsAcknowledgmentSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          }
-          switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                kcg_false;
-              break;
-            case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                kcg_true;
-              break;
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                kcg_false;
-              break;
-            case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                kcg_true;
-              break;
-            
-          }
-          switch (IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              if (inC->DMI_icons.valid) {
-                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
-              }
-              else {
-                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
-              }
-              break;
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              if (inC->DMI_icons.valid |
-                else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
-              }
-              else {
-                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
-              }
-              break;
-            
-          }
-          switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              break;
-            case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_area_group;
-              break;
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              break;
-            case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_area_group;
-              break;
-            
-          }
-          if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-            NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-              case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                last_vtarget_permColor_toDisplay =
-                  cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_area_rank;
-                tmp12 = cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_icon_group;
-                tmp3 = cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_icon_rank;
-                break;
-              case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                last_vtarget_permColor_toDisplay = 0;
-                tmp12 = status_symbols_DMI_Types_Pkg;
-                tmp3 = 0;
-                break;
-              case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                last_vtarget_permColor_toDisplay =
-                  cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_area_rank;
-                tmp12 =
-                  cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_icon_group;
-                tmp3 =
-                  cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_icon_rank;
-                break;
-              case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                last_vtarget_permColor_toDisplay = 0;
-                tmp12 = status_symbols_DMI_Types_Pkg;
-                tmp3 = 0;
-                break;
-              
-            }
-          }
-          else {
-            NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              inC->DMI_icons.DMI_nid_area_group;
-            last_vtarget_permColor_toDisplay = inC->DMI_icons.DMI_nid_area_rank;
-            tmp12 = inC->DMI_icons.DMI_nid_icon_group;
-            tmp3 = inC->DMI_icons.DMI_nid_icon_rank;
-          }
-          switch (tmp12) {
-            case level_symbol_DMI_Types_Pkg :
-              last_Vinterv_Color_toDisplay =
-                cLevelSymbol_IconGroup_DMI_Control_Pkg;
-              break;
-            case mode_symbols_DMI_Types_Pkg :
-              last_Vinterv_Color_toDisplay =
-                cModeSymbol_IconGroup_DMI_Control_Pkg;
-              break;
-            case status_symbols_DMI_Types_Pkg :
-              last_Vinterv_Color_toDisplay =
-                cStatusSymbol_IconGroup_DMI_Control_Pkg;
-              break;
-            case order_an_announcements_symbols_DMI_Types_Pkg :
-              last_Vinterv_Color_toDisplay = 0;
-              break;
-            case planning_information_symbols_DMI_Types_Pkg :
-              last_Vinterv_Color_toDisplay = 0;
-              break;
-            case navigation_symbols_DMI_Types_Pkg :
-              last_Vinterv_Color_toDisplay = 0;
-              break;
-            
-            default :
-              last_Vinterv_Color_toDisplay = 0;
-          }
-          switch (IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              outC->StatusSymbolBrake_toDisplay = tmp14;
-              break;
-            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-                switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-                  case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid =
-                      clear_area_DMI_Types_Pkg;
-                    break;
-                  case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid =
-                      cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_m_icon_control_flag;
-                    break;
-                  case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid =
-                      clear_area_DMI_Types_Pkg;
-                    break;
-                  case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid =
-                      cClearC1AreaSymbol_DMI_Control_Pkg.DMI_m_icon_control_flag;
-                    break;
-                  
-                }
-              }
-              else {
-                IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid =
-                  inC->DMI_icons.DMI_m_icon_control_flag;
-              }
-              switch (IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid) {
-                case show_icon_with_yellow_flashing_frame_in_area_DMI_Types_Pkg :
-                  AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area =
-                    NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  switch (AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area) {
-                    case A_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area_AreaGroupWhenBlock_C =
-                        last_vtarget_permColor_toDisplay == 9;
-                      if (AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area_AreaGroupWhenBlock_C) {
-                        tmp1 = (last_Vinterv_Color_toDisplay ==
-                            cStatusSymbol_IconGroup_DMI_Control_Pkg) & (tmp3 ==
-                            cSTATUS_Emergency_brake_DMI_Control_Pkg);
-                        if (tmp1) {
-                          outC->StatusSymbolBrake_toDisplay = kcg_true;
-                        }
-                        else {
-                          outC->StatusSymbolBrake_toDisplay = tmp14;
-                        }
-                      }
-                      else {
-                        outC->StatusSymbolBrake_toDisplay = tmp14;
-                      }
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case H_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    
-                  }
-                  break;
-                case show_icon_flashing_in_area_DMI_Types_Pkg :
-                  outC->StatusSymbolBrake_toDisplay = tmp14;
-                  break;
-                case clear_area_DMI_Types_Pkg :
-                  WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area =
-                    NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area) {
-                    case A_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area_WhenBlock2_C =
-                        last_vtarget_permColor_toDisplay == 9;
-                      if (IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area_WhenBlock2_C) {
-                        outC->StatusSymbolBrake_toDisplay =
-                          !((last_Vinterv_Color_toDisplay == 3) & (tmp3 ==
-                              cSTATUS_Emergency_brake_DMI_Control_Pkg));
-                      }
-                      else {
-                        outC->StatusSymbolBrake_toDisplay = tmp14;
-                      }
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case H_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    
-                  }
-                  break;
-                case show_icon_in_area_DMI_Types_Pkg :
-                  WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area =
-                    NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area) {
-                    case H_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      last_DistanceToTargetVisibilityDigital_toDisplay =
-                        last_vtarget_permColor_toDisplay == 9;
-                      if (last_DistanceToTargetVisibilityDigital_toDisplay) {
-                        outC->StatusSymbolBrake_toDisplay =
-                          (last_Vinterv_Color_toDisplay == 3) & (tmp3 ==
-                            cSTATUS_Emergency_brake_DMI_Control_Pkg);
-                      }
-                      else {
-                        outC->StatusSymbolBrake_toDisplay = tmp14;
-                      }
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    case A_DMI_Types_Pkg :
-                      outC->StatusSymbolBrake_toDisplay = tmp14;
-                      break;
-                    
-                  }
-                  break;
-                
-              }
-              break;
-            
-          }
-          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                (inC->DMI_dynamic.mode == M_MODE_Full_Supervision) |
-                (inC->DMI_dynamic.mode == M_MODE_Limited_Supervision) |
-                (inC->DMI_dynamic.mode == M_MODE_On_Sight);
-              if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                switch (inC->DMI_dynamic.sup_status) {
-                  case CSM_DMI_Types_Pkg :
-                    tmp11 = last_TrainSpeed_toDisplay > (kcg_real)
-                        inC->DMI_dynamic.v_permitted;
-                    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                      tmp11 & ((supDis_overspeed_DMI_Types_Pkg ==
-                          inC->DMI_dynamic.m_warning) |
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_warning_DMI_Types_Pkg));
-                    if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_ORANGE_DMI_Control_Pkg;
-                    }
-                    else {
-                      _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                        tmp11 & (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_RED_DMI_Control_Pkg;
-                      }
-                      else {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                      }
-                    }
-                    break;
-                  case PIM_DMI_Types_Pkg :
-                    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM =
-                      (kcg_real) inC->DMI_dynamic.v_permitted;
-                    tmp9 = last_TrainSpeed_toDisplay >
-                      vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM;
-                    tmp10 = tmp9 & ((supDis_overspeed_DMI_Types_Pkg ==
-                          inC->DMI_dynamic.m_warning) |
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_warning_DMI_Types_Pkg));
-                    if (tmp10) {
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_ORANGE_DMI_Control_Pkg;
-                    }
-                    else {
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController =
-                        tmp9 & (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_RED_DMI_Control_Pkg;
-                      }
-                      else {
-                        else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController =
-                          (last_TrainSpeed_toDisplay >= (kcg_real)
-                              inC->DMI_dynamic.v_target) &
-                          (last_TrainSpeed_toDisplay <=
-                            vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM) &
-                          ((supDis_normal_DMI_Types_Pkg ==
-                              inC->DMI_dynamic.m_warning) |
-                            (inC->DMI_dynamic.m_warning ==
-                              supDis_intervention_DMI_Types_Pkg));
-                        if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController) {
-                          outC->PointerColor_toDisplay =
-                            ccOLOR_WHITE_DMI_Control_Pkg;
-                        }
-                        else {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_GREY_DMI_Control_Pkg;
-                        }
-                      }
-                    }
-                    break;
-                  case TSM_DMI_Types_Pkg :
-                    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-                      (kcg_real) inC->DMI_dynamic.v_permitted;
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                      last_TrainSpeed_toDisplay >
-                      vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                    tmp8 =
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN &
-                      ((supDis_overspeed_DMI_Types_Pkg ==
-                          inC->DMI_dynamic.m_warning) |
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_warning_DMI_Types_Pkg));
-                    tmp7 = (last_TrainSpeed_toDisplay >= (kcg_real)
-                          inC->DMI_dynamic.v_target) &
-                      (last_TrainSpeed_toDisplay <=
-                        vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM);
-                    if (tmp8) {
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_ORANGE_DMI_Control_Pkg;
-                    }
-                    else {
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN &
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_RED_DMI_Control_Pkg;
-                      }
-                      else {
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                          tmp7 & (supDis_normal_DMI_Types_Pkg ==
-                            inC->DMI_dynamic.m_warning);
-                        if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-                          outC->PointerColor_toDisplay =
-                            ccOLOR_WHITE_DMI_Control_Pkg;
-                        }
-                        else {
-                          _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                            tmp7 & ((inC->DMI_dynamic.m_warning ==
-                                supDis_indication_DMI_Types_Pkg) |
-                              (inC->DMI_dynamic.m_warning ==
-                                supDis_intervention_DMI_Types_Pkg));
-                          if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                            outC->PointerColor_toDisplay =
-                              cCOLOR_YELLOW_DMI_Control_Pkg;
-                          }
-                          else {
-                            outC->PointerColor_toDisplay =
-                              cCOLOR_GREY_DMI_Control_Pkg;
-                          }
-                        }
-                      }
-                    }
-                    break;
-                  case RSM_DMI_Types_Pkg :
-                    last_SpeedPermitted_toDisplay = (kcg_real)
-                        inC->DMI_dynamic.v_release;
-                    if (last_SpeedPermitted_toDisplay != - 1.0) {
-                      _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                        (last_TrainSpeed_toDisplay >= 0.0) &
-                        (last_TrainSpeed_toDisplay <=
-                          last_SpeedPermitted_toDisplay) &
-                        ((inC->DMI_dynamic.m_warning ==
-                            supDis_indication_DMI_Types_Pkg) |
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_intervention_DMI_Types_Pkg));
-                    }
-                    else {
-                      _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                        kcg_false;
-                    }
-                    if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_YELLOW_DMI_Control_Pkg;
-                    }
-                    else {
-                      _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                        (last_TrainSpeed_toDisplay > (kcg_real)
-                            inC->DMI_dynamic.v_permitted) &
-                        (inC->DMI_dynamic.m_warning ==
-                          supDis_intervention_DMI_Types_Pkg);
-                      if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_RED_DMI_Control_Pkg;
-                      }
-                      else {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                      }
-                    }
-                    break;
-                  case supervision_status_unknown_DMI_Types_Pkg :
-                    outC->PointerColor_toDisplay = i;
-                    break;
-                  
-                }
-              }
-              else {
-                br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                  (inC->DMI_dynamic.mode == M_MODE_Staff_Responsible) |
-                  (inC->DMI_dynamic.mode == M_MODE_Unfitted);
-                if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                  switch (inC->DMI_dynamic.sup_status) {
-                    case CSM_DMI_Types_Pkg :
-                      br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                        last_TrainSpeed_toDisplay > (kcg_real)
-                          inC->DMI_dynamic.v_permitted;
-                      br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                        br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu &
-                        ((supDis_overspeed_DMI_Types_Pkg ==
-                            inC->DMI_dynamic.m_warning) |
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_warning_DMI_Types_Pkg));
-                      if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_ORANGE_DMI_Control_Pkg;
-                      }
-                      else {
-                        br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                          br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu &
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_intervention_DMI_Types_Pkg);
-                        if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_RED_DMI_Control_Pkg;
-                        }
-                        else {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_GREY_DMI_Control_Pkg;
-                        }
-                      }
-                      break;
-                    case PIM_DMI_Types_Pkg :
-                      last_SpeedDigitTwo_toDisplay = (kcg_real)
-                          inC->DMI_dynamic.v_permitted;
-                      last_ModeSymbolVisibility_toDisplay =
-                        last_TrainSpeed_toDisplay >=
-                        last_SpeedDigitTwo_toDisplay;
-                      tmp6 = last_ModeSymbolVisibility_toDisplay &
-                        ((supDis_overspeed_DMI_Types_Pkg ==
-                            inC->DMI_dynamic.m_warning) |
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_warning_DMI_Types_Pkg));
-                      if (tmp6) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_ORANGE_DMI_Control_Pkg;
-                      }
-                      else {
-                        br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                          last_ModeSymbolVisibility_toDisplay &
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_intervention_DMI_Types_Pkg);
-                        if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_RED_DMI_Control_Pkg;
-                        }
-                        else {
-                          br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                            (last_TrainSpeed_toDisplay >= (kcg_real)
-                                inC->DMI_dynamic.v_target) &
-                            (last_TrainSpeed_toDisplay <=
-                              last_SpeedDigitTwo_toDisplay) &
-                            ((supDis_normal_DMI_Types_Pkg ==
-                                inC->DMI_dynamic.m_warning) |
-                              (inC->DMI_dynamic.m_warning ==
-                                supDis_intervention_DMI_Types_Pkg));
-                          if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                            outC->PointerColor_toDisplay =
-                              ccOLOR_WHITE_DMI_Control_Pkg;
-                          }
-                          else {
-                            outC->PointerColor_toDisplay =
-                              cCOLOR_GREY_DMI_Control_Pkg;
-                          }
-                        }
-                      }
-                      break;
-                    case TSM_DMI_Types_Pkg :
-                      _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-                        (kcg_real) inC->DMI_dynamic.v_permitted;
-                      br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                        last_TrainSpeed_toDisplay >=
-                        _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-                      tmp13 =
-                        br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled &
-                        ((supDis_overspeed_DMI_Types_Pkg ==
-                            inC->DMI_dynamic.m_warning) |
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_warning_DMI_Types_Pkg));
-                      last_DistanceToTargetBarVisibility_toDisplay =
-                        (last_TrainSpeed_toDisplay >= (kcg_real)
-                            inC->DMI_dynamic.v_target) &
-                        (last_TrainSpeed_toDisplay <=
-                          _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM);
-                      if (tmp13) {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_ORANGE_DMI_Control_Pkg;
-                      }
-                      else {
-                        br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                          br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled &
-                          (inC->DMI_dynamic.m_warning ==
-                            supDis_intervention_DMI_Types_Pkg);
-                        if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_RED_DMI_Control_Pkg;
-                        }
-                        else {
-                          br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                            last_DistanceToTargetBarVisibility_toDisplay &
-                            (supDis_normal_DMI_Types_Pkg ==
-                              inC->DMI_dynamic.m_warning);
-                          if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                            outC->PointerColor_toDisplay =
-                              ccOLOR_WHITE_DMI_Control_Pkg;
-                          }
-                          else {
-                            br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                              last_DistanceToTargetBarVisibility_toDisplay &
-                              ((inC->DMI_dynamic.m_warning ==
-                                  supDis_indication_DMI_Types_Pkg) |
-                                (inC->DMI_dynamic.m_warning ==
-                                  supDis_intervention_DMI_Types_Pkg));
-                            if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                              outC->PointerColor_toDisplay =
-                                cCOLOR_YELLOW_DMI_Control_Pkg;
-                            }
-                            else {
-                              outC->PointerColor_toDisplay =
-                                cCOLOR_GREY_DMI_Control_Pkg;
-                            }
-                          }
-                        }
-                      }
-                      break;
-                    case RSM_DMI_Types_Pkg :
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_GREY_DMI_Control_Pkg;
-                      break;
-                    case supervision_status_unknown_DMI_Types_Pkg :
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_GREY_DMI_Control_Pkg;
-                      break;
-                    
-                  }
-                }
-                else {
-                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow =
-                    (inC->DMI_dynamic.mode == M_MODE_Shunting) |
-                    (inC->DMI_dynamic.mode == M_MODE_Reversing);
-                  if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                    switch (inC->DMI_dynamic.sup_status) {
-                      case CSM_DMI_Types_Pkg :
-                        br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                          last_TrainSpeed_toDisplay > (kcg_real)
-                            inC->DMI_dynamic.v_permitted;
-                        br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                          br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu &
-                          ((supDis_overspeed_DMI_Types_Pkg ==
-                              inC->DMI_dynamic.m_warning) |
-                            (inC->DMI_dynamic.m_warning ==
-                              supDis_warning_DMI_Types_Pkg));
-                        if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_ORANGE_DMI_Control_Pkg;
-                        }
-                        else {
-                          br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow =
-                            br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu &
-                            (inC->DMI_dynamic.m_warning ==
-                              supDis_intervention_DMI_Types_Pkg);
-                          if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                            outC->PointerColor_toDisplay =
-                              cCOLOR_RED_DMI_Control_Pkg;
-                          }
-                          else {
-                            outC->PointerColor_toDisplay =
-                              cCOLOR_GREY_DMI_Control_Pkg;
-                          }
-                        }
-                        break;
-                      case PIM_DMI_Types_Pkg :
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                        break;
-                      case TSM_DMI_Types_Pkg :
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                        break;
-                      case RSM_DMI_Types_Pkg :
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                        break;
-                      case supervision_status_unknown_DMI_Types_Pkg :
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                        break;
-                      
-                    }
-                  }
-                  else {
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                      (inC->DMI_dynamic.mode == M_MODE_Non_Leading) |
-                      (inC->DMI_dynamic.mode == M_MODE_Stand_By) |
-                      (inC->DMI_dynamic.mode == M_MODE_Post_Trip);
-                    if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-                      outC->PointerColor_toDisplay =
-                        cCOLOR_GREY_DMI_Control_Pkg;
-                    }
-                    else {
-                      tmp14 = (inC->DMI_dynamic.mode == M_MODE_Trip) & tmp17;
-                      if (tmp14) {
-                        br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                          ((last_TrainSpeed_toDisplay > (kcg_real)
-                                inC->DMI_dynamic.v_permitted) &
-                            ((inC->DMI_dynamic.sup_status ==
-                                CSM_DMI_Types_Pkg) |
-                              (inC->DMI_dynamic.sup_status ==
-                                TSM_DMI_Types_Pkg) |
-                              (inC->DMI_dynamic.sup_status ==
-                                PIM_DMI_Types_Pkg))) |
-                          ((inC->DMI_dynamic.sup_status == RSM_DMI_Types_Pkg) &
-                            (last_TrainSpeed_toDisplay > (kcg_real)
-                                inC->DMI_dynamic.v_release));
-                        if (br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_RED_DMI_Control_Pkg;
-                        }
-                        else {
-                          outC->PointerColor_toDisplay =
-                            cCOLOR_GREY_DMI_Control_Pkg;
-                        }
-                      }
-                      else {
-                        outC->PointerColor_toDisplay =
-                          cCOLOR_GREY_DMI_Control_Pkg;
-                      }
-                    }
-                  }
-                }
-              }
-              break;
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->PointerColor_toDisplay = i;
-              break;
-            
-          }
-          if (inC->DMI_menu_request.valid) {
-            /* 7 */
-            DMI_menu_req_To_ButtonEnabler_DMI_Control_Pkg_Sub_func_MenuRequest(
-              &inC->DMI_menu_request,
-              &outC->_L184_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          }
-          else if (outC->init7) {
-            kcg_copy_array_int_30(
-              &outC->_L184_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (array_int_30 *) &AllMenuButtonsDisabled_DMI_Control_Pkg);
-          }
-          kcg_copy_array_int_30(
-            &outC->ArrayButtonsEnabler_toDisplay,
-            &outC->_L184_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_array_int_9(
-                &outC->DriverID_Display_toDisplay,
-                &last_DriverID_Display_toDisplay);
-              kcg_copy_array_int_9(
-                &outC->TrainRN_Display_toDisplay,
-                &last_TrainRN_Display_toDisplay);
-              kcg_copy_array_bool_15(
-                &outC->window_mask_visibility__toDisplay,
-                (array_bool_15 *) &cETCS_Level_Menu_mask_DMI_Control_Pkg);
-              tmp9 = kcg_false;
-              tmp7 = kcg_false;
-              outC->CloseButtonEnabler_toDisplay = 26;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow =
-                    inC->closeButton_fromDisplay & inC->MousePressed;
-                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow =
-                    inC->InputFieldAck_fromDisplay & inC->MousePressed;
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  tmp9 = kcg_false;
-                  tmp7 = kcg_false;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                    SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  tmp9 = kcg_false;
-                  tmp7 = kcg_false;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                    inC->closeButton_fromDisplay & inC->MousePressed;
-                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                    inC->InputFieldAck_fromDisplay & inC->MousePressed;
-                  tmp9 = kcg_false;
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                    tmp7 = kcg_false;
-                  }
-                  else {
-                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                    }
-                    else {
-                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                        SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                    }
-                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                      tmp7 = kcg_true;
-                    }
-                    else {
-                      tmp7 = kcg_false;
-                    }
-                  }
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (tmp16) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (last_LevelSymbolVisibility_toDisplay) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  tmp9 = kcg_false;
-                  tmp7 = kcg_false;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  tmp9 = kcg_false;
-                  tmp7 = kcg_false;
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    inC->closeButton_fromDisplay & inC->MousePressed;
-                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    inC->InputFieldAck_fromDisplay & inC->MousePressed;
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                    tmp9 = kcg_false;
-                  }
-                  else {
-                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                    }
-                    else {
-                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                        SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                    }
-                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                      tmp9 = kcg_true;
-                    }
-                    else {
-                      tmp9 = kcg_false;
-                    }
-                  }
-                  tmp7 = kcg_false;
-                  break;
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                    inC->openDriverID_fromDisplay & inC->MousePressed;
-                  br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                    inC->openTrainRN_fromDisplay & inC->MousePressed;
-                  br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                    inC->openLevelMenu_fromDisplay & inC->MousePressed;
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  else {
-                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  }
-                  tmp9 = kcg_false;
-                  tmp7 = kcg_false;
-                  break;
-                
-              }
-              switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    &last_window_mask_visibility__toDisplay);
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    &last_window_mask_visibility__toDisplay);
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                    kcg_false;
-                  for (i = 0; i < 12; i++) {
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN |
-                      inC->keypad_fromDisplay[i];
-                  }
-                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                    /* 13 */
-                    CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
-                      &inC->keypad_fromDisplay);
-                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                    (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN ==
-                      ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                  if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                    /* 19 */
-                    RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                      &last_TrainRN_Display_toDisplay,
-                      &outC->TrainRN_Display_toDisplay);
-                  }
-                  else {
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController =
-                      (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN !=
-                        ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                    if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController) {
-                      /* 18 */
-                      AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                        &last_TrainRN_Display_toDisplay,
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
-                        &outC->TrainRN_Display_toDisplay);
-                    }
-                    else {
-                      kcg_copy_array_int_9(
-                        &outC->TrainRN_Display_toDisplay,
-                        &last_TrainRN_Display_toDisplay);
-                    }
-                  }
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    (array_bool_15 *) &TrainRN_window_mask_DMI_Control_Pkg);
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    &last_window_mask_visibility__toDisplay);
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    &last_window_mask_visibility__toDisplay);
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    kcg_false;
-                  for (i = 0; i < 12; i++) {
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled |
-                      inC->keypad_fromDisplay[i];
-                  }
-                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                    /* 12 */
-                    CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled,
-                      &inC->keypad_fromDisplay);
-                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN ==
-                      ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                  if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                    /* 18 */
-                    RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                      &last_DriverID_Display_toDisplay,
-                      &outC->DriverID_Display_toDisplay);
-                  }
-                  else {
-                    tmp14 =
-                      (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN !=
-                        ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                    if (tmp14) {
-                      /* 17 */
-                      AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                        &last_DriverID_Display_toDisplay,
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
-                        &outC->DriverID_Display_toDisplay);
-                    }
-                    else {
-                      kcg_copy_array_int_9(
-                        &outC->DriverID_Display_toDisplay,
-                        &last_DriverID_Display_toDisplay);
-                    }
-                  }
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    (array_bool_15 *) &DriverID_window_mask_DMI_Control_Pkg);
-                  break;
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                  kcg_copy_array_bool_15(
-                    &outC->window_mask_visibility__toDisplay,
-                    (array_bool_15 *) &Mainmenu_window_mask_DMI_Control_Pkg);
-                  break;
-                
-              }
-              outC->CloseButtonEnabler_toDisplay =
-                cCloseButtonEnabledSymbol_DMI_Control_Pkg;
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_array_int_9(
-                &outC->DriverID_Display_toDisplay,
-                &last_DriverID_Display_toDisplay);
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                kcg_false;
-              for (i = 0; i < 12; i++) {
-                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN |
-                  inC->keypad_fromDisplay[i];
-              }
-              _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                /* 8 */
-                CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN,
-                  &inC->keypad_fromDisplay);
-              _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN ==
-                  ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                /* 16 */
-                RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                  &last_TrainRN_Display_toDisplay,
-                  &outC->TrainRN_Display_toDisplay);
-              }
-              else {
-                else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController =
-                  (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN !=
-                    ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController) {
-                  /* 15 */
-                  AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                    &last_TrainRN_Display_toDisplay,
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN,
-                    &outC->TrainRN_Display_toDisplay);
-                }
-                else {
-                  kcg_copy_array_int_9(
-                    &outC->TrainRN_Display_toDisplay,
-                    &last_TrainRN_Display_toDisplay);
-                }
-              }
-              kcg_copy_array_bool_15(
-                &outC->window_mask_visibility__toDisplay,
-                (array_bool_15 *) &TrainRN_window_mask_DMI_Control_Pkg);
-              tmp9 = kcg_false;
-              tmp7 = kcg_false;
-              outC->CloseButtonEnabler_toDisplay = 26;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_array_int_9(
-                &outC->DriverID_Display_toDisplay,
-                &last_DriverID_Display_toDisplay);
-              kcg_copy_array_int_9(
-                &outC->TrainRN_Display_toDisplay,
-                &last_TrainRN_Display_toDisplay);
-              kcg_copy_array_bool_15(
-                &outC->window_mask_visibility__toDisplay,
-                (array_bool_15 *) &HideMainmenu_window_mask_DMI_Control_Pkg);
-              tmp9 = kcg_false;
-              tmp7 = kcg_false;
-              outC->CloseButtonEnabler_toDisplay = 26;
-              break;
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                kcg_false;
-              for (i = 0; i < 12; i++) {
-                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID |
-                  inC->keypad_fromDisplay[i];
-              }
-              _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                /* 7 */
-                CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID,
-                  &inC->keypad_fromDisplay);
-              _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN ==
-                  ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-                /* 15 */
-                RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                  &last_DriverID_Display_toDisplay,
-                  &outC->DriverID_Display_toDisplay);
-              }
-              else {
-                else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                  (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN !=
-                    ASCII_Backsp_DMI_Control_Pkg) & inC->MousePressed &
-                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-                  /* 14 */
-                  AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
-                    &last_DriverID_Display_toDisplay,
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN,
-                    &outC->DriverID_Display_toDisplay);
-                }
-                else {
-                  kcg_copy_array_int_9(
-                    &outC->DriverID_Display_toDisplay,
-                    &last_DriverID_Display_toDisplay);
-                }
-              }
-              kcg_copy_array_int_9(
-                &outC->TrainRN_Display_toDisplay,
-                &last_TrainRN_Display_toDisplay);
-              kcg_copy_array_bool_15(
-                &outC->window_mask_visibility__toDisplay,
-                (array_bool_15 *) &DriverID_window_mask_DMI_Control_Pkg);
-              tmp9 = kcg_false;
-              tmp7 = kcg_false;
-              outC->CloseButtonEnabler_toDisplay = 26;
-              break;
-            
-          }
-          switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp10 = kcg_false;
-              tmp8 = kcg_false;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp10 = kcg_false;
-              tmp8 = kcg_false;
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp10 = kcg_false;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                tmp8 = kcg_true;
-              }
-              else {
-                tmp8 = kcg_false;
-              }
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp10 = kcg_false;
-              tmp8 = kcg_false;
-              break;
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-                tmp10 = kcg_true;
-              }
-              else {
-                tmp10 = kcg_false;
-              }
-              tmp8 = kcg_false;
-              break;
-            
-          }
-          /* Set_DriverID_packet */
-          Set_DriverID_packet_DMI_Control_Pkg_Sub_func(
-            &last_DriverID_Display_toDisplay,
-            (kcg_bool) (tmp10 | tmp9),
-            inC->SystemTime,
-            &outC->DMI_driver_identifier);
-          /* Set_TrainRN_packet */
-          Set_TrainRN_packet_DMI_Control_Pkg_Sub_func(
-            (kcg_bool) (tmp8 | tmp7),
-            &last_TrainRN_Display_toDisplay,
-            inC->SystemTime,
-            &outC->DMI_train_running_number_id);
-          if (tmp17) {
-            /* 5 */
-            RBC_SymbolsToIndex_DMI_Control_Pkg_Sub_func(
-              inC->DMI_dynamic.radioConnectionStatus,
-              &_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
-              &outC->_L394_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-            outC->_L393_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-          }
-          else if (outC->init7) {
-            outC->_L394_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              kcg_false;
-            outC->_L393_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = 0;
-          }
-          outC->StatusSymbolVisibility_toDisplay =
-            outC->_L394_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->RBC_status_symbol_toDisplay =
-            outC->_L393_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          break;
-        
+      if (CabinSM_reset_act) {
+        /* 7 */ DMI_status_reset_DMI_Control_Pkg_Sub_func(&outC->Context_7);
       }
       switch (HandshakeSM_state_sel_CabinSM_DeskIsOpen) {
         case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          tmp11 = kcg_false;
+          tmp14 = kcg_false;
           break;
         case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          if (CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1) {
-            tmp11 = kcg_true;
+          if (br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+            tmp14 = kcg_true;
           }
           else {
-            tmp11 = kcg_false;
+            tmp14 = kcg_false;
           }
           break;
         
@@ -3177,147 +1022,300 @@ void DMI_Controller_DMI_Control_Pkg(
       /* 4 */
       Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func(
         (array_char_12 *) &DMI_name_DMI_Control_Pkg,
-        inC->SystemTime,
-        tmp11,
-        &outC->DMI_identifier);
-      break;
-    
-  }
-  if (outC->init6) {
-    last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-      13;
-    last_ModeSymbolVisibility_toDisplay = kcg_false;
-    kcg_copy_array_int_5(
-      &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5,
-      &default_IndexFixedMsg_toDisplay);
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      1;
-  }
-  else {
-    last_DistanceToTargetBarVisibility_toDisplay =
-      outC->DistanceToTargetBarVisibility_toDisplay;
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-      outC->ModeSymbol_toDisplay;
-    last_ModeSymbolVisibility_toDisplay = outC->ModeSymbolVisibility_toDisplay;
-    kcg_copy_array_int_5(
-      &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5,
-      &outC->ArrayOfMsgIndex_toDisplay);
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      outC->trainCategoryIndex_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->DistanceToTargetBarVisibility_toDisplay =
-        last_DistanceToTargetBarVisibility_toDisplay;
-      outC->ModeSymbol_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-      outC->ModeSymbolVisibility_toDisplay =
-        last_ModeSymbolVisibility_toDisplay;
-      kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
-        &outC->DMI_driver_request,
-        &default_DMI_driver_request);
-      kcg_copy_array_int_5(
-        &outC->ArrayOfMsgIndex_toDisplay,
-        &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5);
-      outC->trainCategoryIndex_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
+        _L72.dynamic.system_clock,
+        tmp14,
+        &DMI_Identifier);
       switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
         case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->DistanceToTargetBarVisibility_toDisplay =
-            last_DistanceToTargetBarVisibility_toDisplay;
-          outC->ModeSymbol_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-          outC->ModeSymbolVisibility_toDisplay =
-            last_ModeSymbolVisibility_toDisplay;
-          kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
-            &outC->DMI_driver_request,
-            &default_DMI_driver_request);
-          kcg_copy_array_int_5(
-            &outC->ArrayOfMsgIndex_toDisplay,
-            &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5);
-          outC->trainCategoryIndex_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
+          kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(
+            &DMI_Status,
+            &default_DMI_Status);
           break;
         case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (tmp17) {
-            outC->_L388_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              tmp15;
-            /* 4 */
-            ModeSymbolToIndex_B7_DMI_Control_Pkg_Sub_func(
-              &inC->DMI_dynamic,
-              &outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &tmp13);
-            outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              tmp13;
+          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
+            /* 7 */ DMI_status_reset_DMI_Control_Pkg_Sub_func(&outC->Context_7);
           }
-          else if (outC->init7) {
-            outC->_L388_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              kcg_false;
-            outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              13;
-            outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+          /* 7 */
+          DMI_status_DMI_Control_Pkg_Sub_func(
+            _L72.dynamic.system_clock,
+            &outC->Context_7);
+          kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(
+            &DMI_Status,
+            &outC->Context_7.StatusOutput);
+          if (outC->init8) {
+            RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+          }
+          else {
+            RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          }
+          if (EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_;
+          }
+          else if (outC->init8) {
+            outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               kcg_false;
           }
-          outC->DistanceToTargetBarVisibility_toDisplay =
-            outC->_L388_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->ModeSymbol_toDisplay =
-            outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          outC->ModeSymbolVisibility_toDisplay =
-            outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          if (outC->init7) {
+          switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              tmp7 = InputFieldAck_fromDisplay & MousePressed;
+              if (tmp7) {
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else {
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              tmp13 = tmp7;
+              break;
+            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                outC->HideMainmenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive |
+                (closeButtonMain_fromDisplay & MousePressed);
+              br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                outC->LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp13 = kcg_true;
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp13 = kcg_true;
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp13 = kcg_true;
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else {
+                if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+                }
+                else {
+                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+                }
+                tmp13 =
+                  br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+              }
+              break;
+            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+                InputFieldAck_fromDisplay & MousePressed;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else {
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              tmp13 =
+                br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+              break;
+            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq =
+                outC->_L161_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq =
+                outC->_L159_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_ =
+                (outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                  EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) |
+                (openMainMenu_fromDisplay & MousePressed);
+              br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_ =
+                outC->LevelMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
+                tmp13 = kcg_true;
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
+                tmp13 = kcg_true;
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                tmp13 = kcg_true;
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else {
+                if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+                }
+                else {
+                  RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+                }
+                tmp13 =
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_;
+              }
+              break;
+            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
+                InputFieldAck_fromDisplay & MousePressed;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              else {
+                RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              }
+              tmp13 =
+                br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+              break;
+            
+          }
+          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              if (tmp13) {
+                outC->init5 = kcg_true;
+              }
+              break;
+            
+          }
+          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
+            outC->init5 = kcg_true;
+          }
+          break;
+        
+      }
+      if (CabinSM_reset_act) {
+        outC->init5 = kcg_true;
+        /* 4 */
+        TextMessagesDipatcher_reset_DMI_Control_Pkg_Sub_func_TextMessages(
+          &outC->_3_Context_4);
+        /* 4 */ D_behavior_reset(&outC->Context_4);
+        /* 2 */
+        AckMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
+          &outC->_2_Context_2);
+        /* 2 */
+        FlashingIconsOperator_reset_DMI_Control_Pkg_Utils(&outC->_1_Context_2);
+        /* 3 */
+        StatusPlanningArea_reset_DMI_Control_Pkg_Sub_func(&outC->Context_3);
+      }
+      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
+        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
+          kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
+            &DMI_Driver_Request,
+            &default_DMI_Driver_Request);
+          kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
+            &DMI_Driver_Identifier,
+            &default_DMI_Driver_Identifier);
+          kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
+            &DMI_Train_Running_Number,
+            &default_DMI_Train_Running_Number);
+          kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+            &DMI_Text_Message,
+            &default_DMI_Text_Message);
+          kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+            &DMI_Train_Data_Ack,
+            &default_DMI_Train_Data_Ack);
+          kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+            &outC->DMI_Level_Data,
+            &last_DMI_Level_Data);
+          break;
+        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
+          if (outC->init8) {
             last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               Start_of_mission_DMI_Types_Pkg;
+            SM3_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+            YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
+            kcg_copy_DMI_level_T_DMI_Types_Pkg(
+              &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (DMI_level_T_DMI_Types_Pkg *) &cDefLevelT_DMI_Control_Pkg);
           }
           else {
             last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
               outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            SM3_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->SM3_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            kcg_copy_DMI_level_T_DMI_Types_Pkg(
+              &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
           }
           switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_driver_request,
-                &default_DMI_driver_request);
+                &DMI_Driver_Request,
+                &default_DMI_Driver_Request);
+              tmp14 = kcg_false;
               break;
             case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              if (outC->init5) {
+                WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                  SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+              }
+              else {
+                WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+              }
               switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
                 case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp6 = kcg_false;
+                  tmp14 = kcg_false;
                   _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp6 = kcg_false;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  tmp14 = kcg_false;
                   _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp6 = kcg_false;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  tmp14 = kcg_false;
                   _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp6 = kcg_false;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  tmp14 = kcg_false;
                   _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp6 = kcg_false;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  tmp14 = kcg_false;
                   _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp6 = kcg_false;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  tmp14 = kcg_false;
                   _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   break;
                 case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                    openTrainDataWindow_fromDisplay & MousePressed;
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                    openDriverID_fromDisplay & MousePressed;
+                  br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                    openTrainRN_fromDisplay & MousePressed;
+                  br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                    openLevelMenu_fromDisplay & MousePressed;
                   br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
-                    inC->MousePressed & inC->startRequest_fromDisplay;
+                    MousePressed & startRequest_fromDisplay;
                   if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    tmp6 = kcg_false;
+                    tmp14 = kcg_false;
                     _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                       last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   }
@@ -3325,7 +1323,7 @@ void DMI_Controller_DMI_Control_Pkg(
                     br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
                       br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
                     if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                      tmp6 = kcg_false;
+                      tmp14 = kcg_false;
                       _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                         last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                     }
@@ -3333,7 +1331,7 @@ void DMI_Controller_DMI_Control_Pkg(
                       br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
                         br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
                       if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        tmp6 = kcg_false;
+                        tmp14 = kcg_false;
                         _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                           last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                       }
@@ -3341,17 +1339,17 @@ void DMI_Controller_DMI_Control_Pkg(
                         br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
                           br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu;
                         if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                          tmp6 = kcg_true;
+                          tmp14 = kcg_true;
                           _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                             Level_entry_request_DMI_Types_Pkg;
                         }
                         else if (br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                          tmp6 = kcg_true;
+                          tmp14 = kcg_true;
                           _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                             Start_of_mission_DMI_Types_Pkg;
                         }
                         else {
-                          tmp6 = kcg_false;
+                          tmp14 = kcg_false;
                           _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                             last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                         }
@@ -3363,2002 +1361,342 @@ void DMI_Controller_DMI_Control_Pkg(
               }
               /* 2 */
               DMI_request_trigger_DMI_Control_Pkg_Sub_func(
-                tmp6,
-                inC->SystemTime,
+                tmp14,
+                _L72.dynamic.system_clock,
                 _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu,
-                &outC->DMI_driver_request);
+                &DMI_Driver_Request);
+              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  tmp14 = kcg_false;
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  tmp14 = kcg_false;
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  tmp14 = kcg_false;
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  tmp14 = kcg_false;
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  tmp14 = kcg_false;
+                  break;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_ =
+                    closeButton_fromDisplay & MousePressed;
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_ =
+                    InputFieldAck_fromDisplay & MousePressed;
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    tmp14 = kcg_false;
+                  }
+                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    tmp14 = kcg_true;
+                  }
+                  else {
+                    tmp14 = kcg_false;
+                  }
+                  break;
+                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  tmp14 = kcg_false;
+                  break;
+                
+              }
               break;
             case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_driver_request,
-                &default_DMI_driver_request);
+                &DMI_Driver_Request,
+                &default_DMI_Driver_Request);
+              tmp14 = kcg_false;
               break;
             case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_driver_request,
-                &default_DMI_driver_request);
+                &DMI_Driver_Request,
+                &default_DMI_Driver_Request);
+              tmp14 = kcg_false;
               break;
             case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_driver_request,
-                &default_DMI_driver_request);
-              break;
-            
-          }
-          outC->ArrayOfMsgIndex_toDisplay[0] = 0;
-          outC->ArrayOfMsgIndex_toDisplay[1] = 0;
-          outC->ArrayOfMsgIndex_toDisplay[2] = 0;
-          outC->ArrayOfMsgIndex_toDisplay[3] = 0;
-          outC->ArrayOfMsgIndex_toDisplay[4] = 0;
-          switch (TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
-                &tmp5,
-                (DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *)
-                  &DMI_train_data_constant_DMI_Control_Pkg);
-              break;
-            case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              if (inC->DMI_train_data.valid) {
-                kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
-                  &outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues,
-                  &inC->DMI_train_data);
-              }
-              else if (outC->init5) {
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.valid =
-                  kcg_false;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.systemTime =
-                  0;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.trainCategory =
-                  NC_TRAIN_Passenger_train;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.l_train =
-                  0;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_brakeperct =
-                  0;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.v_maxTrain =
-                  0;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_axleLoad =
-                  M_AXLELOADCAT_E5;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_airTight =
-                  M_AIRTIGHT_Not_fitted;
-                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_loadingGauge =
-                  M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles;
-              }
-              kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
-                &tmp5,
-                &outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues);
-              break;
-            
-          }
-          /* 1 */
-          TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData(
-            &tmp5,
-            &outC->trainCategoryIndex_toDisplay,
-            &last_trainLoadingGougeIndex_toDisplay,
-            &last_TrainSpeed_toDisplay,
-            &Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM,
-            &last_iconGroupIndex_toDisplay,
-            &_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN,
-            &last_SpeedDigitThree_toDisplay);
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      1;
-  }
-  else {
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      outC->trainAxleloadIndex_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->trainAxleloadIndex_toDisplay =
-            last_trainLoadingGougeIndex_toDisplay;
-          break;
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->trainAxleloadIndex_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-          break;
-        
-      }
-      break;
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->trainAxleloadIndex_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-      break;
-    
-  }
-  if (outC->init6) {
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      1;
-    last_trainLoadingGougeIndex_toDisplay = 1;
-    last_SpeedDigitTwo_toDisplay = 0.0;
-    last_SpeedPermitted_toDisplay = 0.0;
-    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-      0.0;
-    tmp14 = kcg_false;
-  }
-  else {
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      outC->trainAirtightIndex_toDisplay;
-    last_trainLoadingGougeIndex_toDisplay =
-      outC->trainLoadingGougeIndex_toDisplay;
-    last_SpeedDigitTwo_toDisplay = outC->trainLenght_toDisplay;
-    last_SpeedPermitted_toDisplay = outC->trainBrakePerc_toDisplay;
-    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-      outC->trainMaxspeed_toDisplay;
-    tmp14 = outC->traindataValidWinVisibility_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->trainAirtightIndex_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-      outC->trainLoadingGougeIndex_toDisplay =
-        last_trainLoadingGougeIndex_toDisplay;
-      outC->trainLenght_toDisplay = last_SpeedDigitTwo_toDisplay;
-      outC->trainBrakePerc_toDisplay = last_SpeedPermitted_toDisplay;
-      outC->trainMaxspeed_toDisplay =
-        vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-      outC->traindataValidWinVisibility_toDisplay = tmp14;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->trainAirtightIndex_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-          outC->trainLoadingGougeIndex_toDisplay =
-            last_trainLoadingGougeIndex_toDisplay;
-          outC->trainLenght_toDisplay = last_SpeedDigitTwo_toDisplay;
-          outC->trainBrakePerc_toDisplay = last_SpeedPermitted_toDisplay;
-          outC->trainMaxspeed_toDisplay =
-            vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM;
-          outC->traindataValidWinVisibility_toDisplay = tmp14;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->trainAirtightIndex_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-          outC->trainLoadingGougeIndex_toDisplay =
-            last_iconGroupIndex_toDisplay;
-          outC->trainLenght_toDisplay = last_TrainSpeed_toDisplay / 100.0;
-          outC->trainBrakePerc_toDisplay = last_SpeedDigitThree_toDisplay;
-          outC->trainMaxspeed_toDisplay =
-            Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM;
-          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->traindataValidWinVisibility_toDisplay = tmp14;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->traindataValidWinVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->traindataValidWinVisibility_toDisplay = tmp14;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                    outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  }
-                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                    outC->traindataValidWinVisibility_toDisplay = kcg_true;
-                  }
-                  else {
-                    outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  }
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (tmp16) {
-                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
-                  }
-                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
-                  }
-                  else if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
-                  }
-                  else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
-                  }
-                  else {
-                    outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  }
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  break;
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->traindataValidWinVisibility_toDisplay = tmp14;
-                  break;
-                
-              }
-              break;
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->traindataValidWinVisibility_toDisplay = tmp14;
-              break;
-            
-          }
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      1;
-    last_iconGroupIndex_toDisplay = 0;
-  }
-  else {
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      outC->traindataYesNoIndex_toDisplay;
-    last_iconGroupIndex_toDisplay = outC->iconGroupIndex_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->yellowBorderC1Area_toDisplay = kcg_false;
-      outC->yellowBorderBrakeSymbol_toDisplay = kcg_false;
-      outC->openDesk_toDisplay = kcg_false;
-      outC->yellowBorderMsg_toDisplay = kcg_false;
-      outC->traindataYesNoIndex_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-      kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-        &outC->DMI_train_data_ack,
-        &default_DMI_train_data_ack);
-      kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(
-        &outC->DMI_status_report,
-        &default_DMI_status_report);
-      kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-        &outC->DMI_text_message_ack,
-        &default_DMI_text_message_ack);
-      outC->closeButtonIndex_toDisplay = 26;
-      kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-        &outC->DMI_icons_ack,
-        (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
-          &cDMI_Icons_Ack_DMI_Control_Pkg);
-      outC->iconGroupIndex_toDisplay = last_iconGroupIndex_toDisplay;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      outC->openDesk_toDisplay = kcg_true;
-      if (CabinSM_reset_act) {
-        /* 5 */ DMI_status_reset_DMI_Control_Pkg_Sub_func(&outC->Context_5);
-        /* 1 */
-        TextMessagesDispatcher_reset_DMI_Control_Pkg_Utils(&outC->_2_Context_1);
-        /* 2 */ AckMsgManager_reset_DMI_Control_Pkg_Utils(&outC->Context_2);
-        /* FlashingIconsOperator */
-        FlashingIconsOperator_reset_DMI_Control_Pkg_Utils(
-          &outC->Context_FlashingIconsOperator);
-      }
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->traindataYesNoIndex_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-          kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-            &outC->DMI_train_data_ack,
-            &default_DMI_train_data_ack);
-          kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(
-            &outC->DMI_status_report,
-            &default_DMI_status_report);
-          kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-            &outC->DMI_text_message_ack,
-            &default_DMI_text_message_ack);
-          outC->yellowBorderMsg_toDisplay = kcg_false;
-          outC->closeButtonIndex_toDisplay = 26;
-          outC->yellowBorderC1Area_toDisplay = kcg_false;
-          outC->yellowBorderBrakeSymbol_toDisplay = kcg_false;
-          kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-            &outC->DMI_icons_ack,
-            (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
-              &cDMI_Icons_Ack_DMI_Control_Pkg);
-          outC->iconGroupIndex_toDisplay = last_iconGroupIndex_toDisplay;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->traindataYesNoIndex_toDisplay = traindataYesNoIndex_toDisplay;
-          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            /* 5 */ DMI_status_reset_DMI_Control_Pkg_Sub_func(&outC->Context_5);
-            /* 1 */
-            TextMessagesDispatcher_reset_DMI_Control_Pkg_Utils(
-              &outC->_2_Context_1);
-            /* 2 */ AckMsgManager_reset_DMI_Control_Pkg_Utils(&outC->Context_2);
-            /* FlashingIconsOperator */
-            FlashingIconsOperator_reset_DMI_Control_Pkg_Utils(
-              &outC->Context_FlashingIconsOperator);
-          }
-          /* 5 */
-          DMI_status_DMI_Control_Pkg_Sub_func(
-            inC->SystemTime,
-            &outC->Context_5);
-          kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(
-            &outC->DMI_status_report,
-            &outC->Context_5.StatusOutput);
-          if (levelMenuVisibility_toDisplay_strong) {
-            outC->DMI_text_message_ack.valid =
-              levelMenuVisibility_toDisplay_strong;
-            outC->DMI_text_message_ack.systemTime = inC->SystemTime;
-            outC->DMI_text_message_ack.textMessage_ID =
-              inC->DMI_text_message.textMessage_ID;
-            outC->DMI_text_message_ack.acknowledged = kcg_true;
-          }
-          else {
-            kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-              &outC->DMI_text_message_ack,
-              (DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
-                &cDMI_text_message_ack_DMI_Control_Pkg);
-          }
-          /* 1 */
-          TextMessagesDispatcher_DMI_Control_Pkg_Utils(
-            &inC->DMI_text_message,
-            tmp2,
-            inC->SystemTime,
-            &outC->_2_Context_1);
-          tmp8 = outC->_2_Context_1.AckMsgQ_isEmpty;
-          kcg_copy_array__15402(
-            &Local_ImpMsgQueue_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->_2_Context_1.ImpMsgQueue);
-          tmp9 = outC->_2_Context_1.ImpMsgQ_isEmpty;
-          if (outC->init7) {
-            SM13_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-            _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-              kcg_false;
-            _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-              kcg_false;
-            SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-            last_trainLoadingGougeIndex_toDisplay = 0;
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-              0;
-          }
-          else {
-            SM13_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->SM13_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-              outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-              outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            last_trainLoadingGougeIndex_toDisplay =
-              outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-              outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-          }
-          switch (SM13_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                tmp2 | tmp8;
-              if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                SM13_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              }
-              else {
-                SM13_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              }
-              break;
-            case SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-              SM13_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              break;
-            
-          }
-          switch (SM13_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                kcg_true;
-              break;
-            case SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-                kcg_false;
-              break;
-            
-          }
-          if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-            /* 2 */
-            AckMsgManager_DMI_Control_Pkg_Utils(
-              &outC->_2_Context_1.AckMsgQueue,
-              inC->SystemTime,
-              &outC->Context_2);
-            kcg_copy_array_int_5(
-              &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5,
-              &outC->Context_2.IndexFixedMsg);
-            kcg_copy_array_char_30_5(
-              &_L6_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5,
-              &outC->Context_2.ArrayPlainText);
-            kcg_copy_array_real_5(
-              &_L8_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5,
-              &outC->Context_2.Array_hh);
-            kcg_copy_array_real_5(
-              &_L9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5,
-              &outC->Context_2.Array_mm);
-            outC->yellowBorderMsg_toDisplay = outC->Context_2.FlashingBorderMsg;
-          }
-          else {
-            outC->yellowBorderMsg_toDisplay = kcg_false;
-          }
-          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_train_data_ack,
-                &default_DMI_train_data_ack);
-              outC->closeButtonIndex_toDisplay =
-                closeButtonActiveSymbol_DMI_Control_Pkg;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                    &outC->DMI_train_data_ack,
-                    &default_DMI_train_data_ack);
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                    &outC->DMI_train_data_ack,
-                    &default_DMI_train_data_ack);
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                    &outC->DMI_train_data_ack,
-                    &default_DMI_train_data_ack);
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (tmp16) {
-                    kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                      &outC->DMI_train_data_ack,
-                      &default_DMI_train_data_ack);
-                  }
-                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                      &outC->DMI_train_data_ack,
-                      &default_DMI_train_data_ack);
-                  }
-                  else if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                      &outC->DMI_train_data_ack,
-                      (DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
-                        &DMI_train_data_ack_positive_DMI_Control_Pkg);
-                  }
-                  else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                    kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                      &outC->DMI_train_data_ack,
-                      (DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
-                        &DMI_train_data_ack_negative_DMI_Control_Pkg);
-                  }
-                  else {
-                    kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                      &outC->DMI_train_data_ack,
-                      &default_DMI_train_data_ack);
-                  }
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                    &outC->DMI_train_data_ack,
-                    &default_DMI_train_data_ack);
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                    &outC->DMI_train_data_ack,
-                    &default_DMI_train_data_ack);
-                  break;
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                    &outC->DMI_train_data_ack,
-                    &default_DMI_train_data_ack);
-                  break;
-                
-              }
-              switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay = 26;
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay =
-                    closeButtonActiveSymbol_DMI_Control_Pkg;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay = 26;
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay = 26;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay =
-                    closeButtonActiveSymbol_DMI_Control_Pkg;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay = 26;
-                  break;
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->closeButtonIndex_toDisplay =
-                    closeButtonActiveSymbol_DMI_Control_Pkg;
-                  break;
-                
-              }
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_train_data_ack,
-                &default_DMI_train_data_ack);
-              outC->closeButtonIndex_toDisplay = 26;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_train_data_ack,
-                &default_DMI_train_data_ack);
-              outC->closeButtonIndex_toDisplay = 26;
-              break;
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_train_data_ack,
-                &default_DMI_train_data_ack);
-              outC->closeButtonIndex_toDisplay = 26;
-              break;
-            
-          }
-          switch (IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-              outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-              outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                last_trainLoadingGougeIndex_toDisplay;
-              outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-              outC->iconGroupIndex_toDisplay = last_iconGroupIndex_toDisplay;
-              break;
-            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              switch (IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid) {
-                case show_icon_with_yellow_flashing_frame_in_area_DMI_Types_Pkg :
-                  switch (AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area) {
-                    case H_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      if (AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area_AreaGroupWhenBlock_C) {
-                        outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                        outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          last_trainLoadingGougeIndex_toDisplay;
-                        if (tmp1) {
-                          outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            kcg_true;
-                          outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            inC->DMI_icons.DMI_nid_icon_identifier;
-                        }
-                        else {
-                          outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                          outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                        }
-                        outC->iconGroupIndex_toDisplay =
-                          last_iconGroupIndex_toDisplay;
-                      }
-                      else {
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                          last_vtarget_permColor_toDisplay == 1;
-                        outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                        outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                        if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                          tmp7 = /* LevelModeSymolsChecker */
-                            LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func(
-                              last_Vinterv_Color_toDisplay,
-                              tmp3);
-                          if (tmp7) {
-                            outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                              kcg_true;
-                            outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                              inC->DMI_icons.DMI_nid_icon_identifier;
-                            outC->iconGroupIndex_toDisplay =
-                              last_Vinterv_Color_toDisplay;
-                          }
-                          else {
-                            outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                            outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                              last_trainLoadingGougeIndex_toDisplay;
-                            outC->iconGroupIndex_toDisplay =
-                              last_iconGroupIndex_toDisplay;
-                          }
-                        }
-                        else {
-                          outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                          outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            last_trainLoadingGougeIndex_toDisplay;
-                          outC->iconGroupIndex_toDisplay =
-                            last_iconGroupIndex_toDisplay;
-                        }
-                      }
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case A_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        last_trainLoadingGougeIndex_toDisplay;
-                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    
-                  }
-                  break;
-                case show_icon_flashing_in_area_DMI_Types_Pkg :
-                  outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                  outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    last_trainLoadingGougeIndex_toDisplay;
-                  outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                  outC->iconGroupIndex_toDisplay =
-                    last_iconGroupIndex_toDisplay;
-                  break;
-                case clear_area_DMI_Types_Pkg :
-                  outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    last_trainLoadingGougeIndex_toDisplay;
-                  outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area) {
-                    case H_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      if (IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area_WhenBlock2_C) {
-                        outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                        outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          kcg_false;
-                        outC->iconGroupIndex_toDisplay =
-                          last_iconGroupIndex_toDisplay;
-                      }
-                      else {
-                        else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController =
-                          last_vtarget_permColor_toDisplay == 1;
-                        outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                          _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                        if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController) {
-                          outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            kcg_false;
-                          outC->iconGroupIndex_toDisplay = 0;
-                        }
-                        else {
-                          outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                            _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                          outC->iconGroupIndex_toDisplay =
-                            last_iconGroupIndex_toDisplay;
-                        }
-                      }
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case A_DMI_Types_Pkg :
-                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    
-                  }
-                  break;
-                case show_icon_in_area_DMI_Types_Pkg :
-                  outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                  outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    last_trainLoadingGougeIndex_toDisplay;
-                  outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area) {
-                    case A_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      if (last_DistanceToTargetVisibilityDigital_toDisplay) {
-                        outC->iconGroupIndex_toDisplay =
-                          last_iconGroupIndex_toDisplay;
-                      }
-                      else {
-                        br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                          last_vtarget_permColor_toDisplay == 1;
-                        if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                          br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                            kcg_false;
-                          for (i = 0; i < 5; i++) {
-                            tmp11 =
-                              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                            /* 1 */
-                            CheckElem_iterator_DMI_Control_Pkg_Utils(
-                              tmp11,
-                              ArrayOfIndex_LevelAnnouncementNoAck_DMI_Control_Pkg[i],
-                              tmp3,
-                              &tmp10,
-                              &br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled);
-                            if (!tmp10) {
-                              break;
-                            }
-                          }
-                          CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1 =
-                            (last_Vinterv_Color_toDisplay ==
-                              cLevelSymbol_IconGroup_DMI_Control_Pkg) &
-                            br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                          if (CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1) {
-                            outC->iconGroupIndex_toDisplay =
-                              last_Vinterv_Color_toDisplay;
-                          }
-                          else {
-                            outC->iconGroupIndex_toDisplay =
-                              last_iconGroupIndex_toDisplay;
-                          }
-                        }
-                        else {
-                          outC->iconGroupIndex_toDisplay =
-                            last_iconGroupIndex_toDisplay;
-                        }
-                      }
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    case H_DMI_Types_Pkg :
-                      outC->iconGroupIndex_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                      break;
-                    
-                  }
-                  break;
-                
-              }
-              break;
-            
-          }
-          /* FlashingIconsOperator */
-          FlashingIconsOperator_DMI_Control_Pkg_Utils(
-            outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            inC->DMI_icons.DMI_m_icon_flashing_freq,
-            inC->SystemTime,
-            inC->DMI_icons.DMI_m_icon_flashing_freq,
-            &outC->Context_FlashingIconsOperator);
-          outC->yellowBorderBrakeSymbol_toDisplay =
-            outC->Context_FlashingIconsOperator.yellowBorderBrakeSymbol_toDisplay;
-          switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                inC->C1AreaAck_fromDisplay & inC->MousePressed;
-              _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-                inC->brakeStatusSymbolAck_fromDisplay & inC->MousePressed;
-              if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-              }
-              else {
-                else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController =
-                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-              }
-              break;
-            
-          }
-          switch (SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-                case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                  if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                      kcg_false;
-                  }
-                  else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController) {
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                      kcg_true;
-                  }
-                  else {
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                      kcg_false;
-                  }
-                  break;
-                case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    kcg_false;
-                  break;
-                case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    kcg_false;
-                  break;
-                case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                    kcg_false;
-                  break;
-                
-              }
-              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-              }
-              else {
-                switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-                  case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                        kcg_true;
-                    }
-                    else {
-                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                        kcg_false;
-                    }
-                    break;
-                  case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                      kcg_false;
-                    break;
-                  case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                      kcg_false;
-                    break;
-                  case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-                      kcg_false;
-                    break;
-                  
-                }
-                if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-                  SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-                }
-                else {
-                  SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                    SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-                }
-              }
-              break;
-            case SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-              break;
-            case SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-              break;
-            
-          }
-          switch (SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
-                &outC->DMI_icons_ack,
-                (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
-                  &cDMI_Icons_Ack_DMI_Control_Pkg);
-              break;
-            case SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              /* 1 */
-              Set_IconAck_DMI_Control_Pkg_Sub_func(
-                kcg_true,
-                inC->SystemTime,
-                outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                &outC->DMI_icons_ack);
-              break;
-            case SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              /* 2 */
-              Set_IconAck_DMI_Control_Pkg_Sub_func(
-                kcg_true,
-                inC->SystemTime,
-                outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                &outC->DMI_icons_ack);
-              break;
-            
-          }
-          outC->yellowBorderC1Area_toDisplay =
-            outC->Context_FlashingIconsOperator.yellowBorderC1Area_toDisplay;
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    traindataYesNoIndex_toDisplay = 0;
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      0;
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-      0;
-    last_trainLoadingGougeIndex_toDisplay = 0;
-    last_iconGroupIndex_toDisplay = 0;
-    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-      kcg_false;
-    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-      kcg_false;
-    last_vtarget_permColor_toDisplay = 1;
-    last_Vinterv_Color_toDisplay = 1;
-    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-      kcg_false;
-    last_ArrayLevelIndex_toDisplay[0] = 0;
-    last_ArrayLevelIndex_toDisplay[1] = 0;
-    last_ArrayLevelIndex_toDisplay[2] = 0;
-    last_ArrayLevelIndex_toDisplay[3] = 0;
-    last_ArrayLevelIndex_toDisplay[4] = 0;
-    last_ArrayLevelIndex_toDisplay[5] = 0;
-    last_ArrayLevelIndex_toDisplay[6] = 0;
-    last_ArrayLevelIndex_toDisplay[7] = 0;
-    last_ArrayLevelIndex_toDisplay[8] = 0;
-    last_ArrayLevelIndex_toDisplay[9] = 0;
-    last_ArrayLevelIndex_toDisplay[10] = 0;
-    last_ArrayLevelIndex_toDisplay[11] = 0;
-  }
-  else {
-    traindataYesNoIndex_toDisplay =
-      outC->levelSymbolAnnouncementIndex_toDisplay;
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-      outC->modeSymbolAnnouncementIndex_toDisplay;
-    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
-      outC->VpermColor_toDisplay;
-    last_trainLoadingGougeIndex_toDisplay = outC->VreleaseColor_toDisplay;
-    last_iconGroupIndex_toDisplay = outC->VtargetColor_toDisplay;
-    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-      outC->Vtarget_permVisibility_toDisplay;
-    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-      outC->Vinterv_Visibility_toDisplay;
-    last_vtarget_permColor_toDisplay = outC->vtarget_permColor_toDisplay;
-    last_Vinterv_Color_toDisplay = outC->Vinterv_Color_toDisplay;
-    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
-      outC->levelMenuVisibility_toDisplay;
-    kcg_copy_array_int_12(
-      &last_ArrayLevelIndex_toDisplay,
-      &outC->ArrayLevelIndex_toDisplay);
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->levelSymbolAnnouncementIndex_toDisplay =
-        traindataYesNoIndex_toDisplay;
-      outC->hourGlassVisibility_toDisplay = kcg_false;
-      outC->modeSymbolAnnouncementIndex_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-      outC->hourGlassCounter_toDisplay = 0.0;
-      outC->VpermColor_toDisplay =
-        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-      outC->VreleaseColor_toDisplay = last_trainLoadingGougeIndex_toDisplay;
-      outC->VtargetColor_toDisplay = last_iconGroupIndex_toDisplay;
-      outC->Vtarget_permVisibility_toDisplay =
-        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-      outC->Vinterv_Visibility_toDisplay =
-        _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-      outC->vtarget_permColor_toDisplay = last_vtarget_permColor_toDisplay;
-      outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
-      outC->levelMenuVisibility_toDisplay =
-        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-      kcg_copy_array_int_12(
-        &outC->ArrayLevelIndex_toDisplay,
-        &last_ArrayLevelIndex_toDisplay);
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      if (CabinSM_reset_act) {
-        /* HourGlassAnimation */
-        HourGlassAnimation_reset_DMI_Control_Pkg_Sub_func(
-          &outC->Context_HourGlassAnimation);
-      }
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->levelSymbolAnnouncementIndex_toDisplay =
-            traindataYesNoIndex_toDisplay;
-          outC->modeSymbolAnnouncementIndex_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-          outC->hourGlassVisibility_toDisplay = kcg_false;
-          outC->hourGlassCounter_toDisplay = 0.0;
-          outC->VpermColor_toDisplay =
-            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-          outC->VreleaseColor_toDisplay = last_trainLoadingGougeIndex_toDisplay;
-          outC->VtargetColor_toDisplay = last_iconGroupIndex_toDisplay;
-          outC->Vtarget_permVisibility_toDisplay =
-            _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-          outC->Vinterv_Visibility_toDisplay =
-            _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-          outC->vtarget_permColor_toDisplay = last_vtarget_permColor_toDisplay;
-          outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
-          outC->levelMenuVisibility_toDisplay =
-            _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-          kcg_copy_array_int_12(
-            &outC->ArrayLevelIndex_toDisplay,
-            &last_ArrayLevelIndex_toDisplay);
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          switch (IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              outC->levelSymbolAnnouncementIndex_toDisplay =
-                traindataYesNoIndex_toDisplay;
-              outC->modeSymbolAnnouncementIndex_toDisplay =
-                _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-              break;
-            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              switch (IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid) {
-                case show_icon_with_yellow_flashing_frame_in_area_DMI_Types_Pkg :
-                  switch (AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area) {
-                    case H_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      if (AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_with_yellow_flashing_frame_in_area_AreaGroupWhenBlock_C) {
-                        outC->levelSymbolAnnouncementIndex_toDisplay =
-                          traindataYesNoIndex_toDisplay;
-                        outC->modeSymbolAnnouncementIndex_toDisplay =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      }
-                      else if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                        if (tmp7) {
-                          outC->levelSymbolAnnouncementIndex_toDisplay = tmp3;
-                          outC->modeSymbolAnnouncementIndex_toDisplay = tmp3;
-                        }
-                        else {
-                          outC->levelSymbolAnnouncementIndex_toDisplay =
-                            traindataYesNoIndex_toDisplay;
-                          outC->modeSymbolAnnouncementIndex_toDisplay =
-                            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                        }
-                      }
-                      else {
-                        outC->levelSymbolAnnouncementIndex_toDisplay =
-                          traindataYesNoIndex_toDisplay;
-                        outC->modeSymbolAnnouncementIndex_toDisplay =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      }
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case A_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    
-                  }
-                  break;
-                case show_icon_flashing_in_area_DMI_Types_Pkg :
-                  outC->levelSymbolAnnouncementIndex_toDisplay =
-                    traindataYesNoIndex_toDisplay;
-                  outC->modeSymbolAnnouncementIndex_toDisplay =
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                  break;
-                case clear_area_DMI_Types_Pkg :
-                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area) {
-                    case H_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      if (IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_clear_area_WhenBlock2_C) {
-                        outC->levelSymbolAnnouncementIndex_toDisplay =
-                          traindataYesNoIndex_toDisplay;
-                        outC->modeSymbolAnnouncementIndex_toDisplay =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      }
-                      else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboardController) {
-                        outC->levelSymbolAnnouncementIndex_toDisplay = 0;
-                        outC->modeSymbolAnnouncementIndex_toDisplay = 0;
-                      }
-                      else {
-                        outC->levelSymbolAnnouncementIndex_toDisplay =
-                          traindataYesNoIndex_toDisplay;
-                        outC->modeSymbolAnnouncementIndex_toDisplay =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      }
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case A_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    
-                  }
-                  break;
-                case show_icon_in_area_DMI_Types_Pkg :
-                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area) {
-                    case H_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case G_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case F_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case E_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case D_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case C_DMI_Types_Pkg :
-                      if (last_DistanceToTargetVisibilityDigital_toDisplay) {
-                        outC->levelSymbolAnnouncementIndex_toDisplay =
-                          traindataYesNoIndex_toDisplay;
-                        outC->modeSymbolAnnouncementIndex_toDisplay =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      }
-                      else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                        if (CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlock_show_icon_in_area_WhenBlock2_C_IfBlock1) {
-                          outC->levelSymbolAnnouncementIndex_toDisplay = tmp3;
-                          outC->modeSymbolAnnouncementIndex_toDisplay = tmp3;
-                        }
-                        else {
-                          outC->levelSymbolAnnouncementIndex_toDisplay =
-                            traindataYesNoIndex_toDisplay;
-                          outC->modeSymbolAnnouncementIndex_toDisplay =
-                            _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                        }
-                      }
-                      else {
-                        outC->levelSymbolAnnouncementIndex_toDisplay =
-                          traindataYesNoIndex_toDisplay;
-                        outC->modeSymbolAnnouncementIndex_toDisplay =
-                          _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      }
-                      break;
-                    case B_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    case A_DMI_Types_Pkg :
-                      outC->levelSymbolAnnouncementIndex_toDisplay =
-                        traindataYesNoIndex_toDisplay;
-                      outC->modeSymbolAnnouncementIndex_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
-                      break;
-                    
-                  }
-                  break;
-                
-              }
-              break;
-            
-          }
-          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp17 = kcg_false;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    tmp17 = kcg_false;
-                  }
-                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    tmp17 = kcg_false;
-                  }
-                  else if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    tmp17 = kcg_false;
-                  }
-                  else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                    tmp17 = kcg_true;
-                  }
-                  else {
-                    tmp17 = kcg_false;
-                  }
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                
-              }
-              switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                    case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        tmp4 =
-                          SSM_TR_MainMenu_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        tmp4 =
-                          SSM_TR_MainMenu_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        tmp4 =
-                          SSM_TR_MainMenu_3_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        tmp4 =
-                          SSM_TR_MainMenu_4_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
-                        tmp4 =
-                          SSM_TR_MainMenu_5_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else {
-                        tmp4 =
-                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      break;
-                    case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                        tmp4 =
-                          SSM_TR_DriverID_DMI_controlled_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                        tmp4 =
-                          SSM_TR_DriverID_DMI_controlled_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else {
-                        tmp4 =
-                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      break;
-                    case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                        tmp4 =
-                          SSM_TR_TrainDataWindow_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow) {
-                        tmp4 =
-                          SSM_TR_TrainDataWindow_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else {
-                        tmp4 =
-                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      break;
-                    case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      if (tmp16) {
-                        tmp4 =
-                          SSM_TR_TrainDataValidationWindow_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (last_LevelSymbolVisibility_toDisplay) {
-                        tmp4 =
-                          SSM_TR_TrainDataValidationWindow_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                        tmp4 =
-                          SSM_TR_TrainDataValidationWindow_3_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                        tmp4 =
-                          SSM_TR_TrainDataValidationWindow_4_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else {
-                        tmp4 =
-                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      break;
-                    case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                        tmp4 =
-                          SSM_TR_Insert_TrainRN_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
-                        tmp4 =
-                          SSM_TR_Insert_TrainRN_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else {
-                        tmp4 =
-                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      break;
-                    case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      tmp4 =
-                        SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      break;
-                    case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                        tmp4 =
-                          SSM_TR_LevelWindow_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                        tmp4 =
-                          SSM_TR_LevelWindow_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      else {
-                        tmp4 =
-                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                      }
-                      break;
-                    
-                  }
-                  last_ModeSymbolVisibility_toDisplay = tmp4 !=
-                    SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-                  break;
-                
-              }
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp17 = kcg_false;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp17 = kcg_false;
-              break;
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp17 = kcg_false;
+                &DMI_Driver_Request,
+                &default_DMI_Driver_Request);
+              tmp14 = kcg_false;
               break;
             
           }
           switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp13 = kcg_false;
-              last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp13 = kcg_false;
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
-              }
-              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_true;
-              }
-              else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_true;
-              }
-              else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_true;
+            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
+                br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                  kcg_true;
               }
               else {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
+                br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                  kcg_false;
+              }
+              break;
+            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                kcg_false;
+              break;
+            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                kcg_false;
+              break;
+            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                kcg_false;
+              break;
+            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                kcg_false;
+              break;
+            
+          }
+          /* 2 */
+          Set_DriverID_packet_DMI_Control_Pkg_Sub_func(
+            &last_DriverID_Display_toDisplay,
+            (kcg_bool)
+              (br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu |
+                tmp14),
+            _L72.dynamic.system_clock,
+            &DMI_Driver_Identifier);
+          switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              tmp14 = kcg_false;
+              if (tmp7) {
+                tmp2 = kcg_true;
+              }
+              else {
+                tmp2 = kcg_false;
+              }
+              break;
+            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              tmp14 = kcg_false;
+              tmp2 = kcg_false;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+              }
+              else {
+                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                }
+                else {
+                  br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                    br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                  }
+                  else {
+                    br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  }
+                }
               }
               break;
             case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                tmp13 = kcg_true;
+                tmp14 = kcg_true;
               }
               else {
-                tmp13 = kcg_false;
+                tmp14 = kcg_false;
               }
-              last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
+              tmp2 = kcg_false;
               break;
             case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp13 = kcg_false;
+              tmp14 = kcg_false;
+              tmp2 = kcg_false;
               if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_true;
-              }
-              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_true;
               }
               else {
-                last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
+                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq =
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq;
               }
               break;
             case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-                tmp13 = kcg_true;
-              }
-              else {
-                tmp13 = kcg_false;
-              }
-              last_DistanceToTargetBarVisibility_toDisplay = kcg_false;
+              tmp14 = kcg_false;
+              tmp2 = kcg_false;
               break;
             
           }
-          else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock =
-            tmp13 | tmp17;
-          br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-            inC->DMI_evc_level_data.valid;
           switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp15 = kcg_false;
-              outC->levelMenuVisibility_toDisplay = kcg_true;
+              tmp13 = kcg_false;
               break;
             case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  levelMenuVisibility_toDisplay_strong =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  levelMenuVisibility_toDisplay_strong =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  levelMenuVisibility_toDisplay_strong =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  levelMenuVisibility_toDisplay_strong =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  levelMenuVisibility_toDisplay_strong =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  levelMenuVisibility_toDisplay_strong =
-                    _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                  break;
                 case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                    levelMenuVisibility_toDisplay_strong = kcg_false;
+                  tmp13 = kcg_false;
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  tmp13 = kcg_false;
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_ =
+                    closeButton_fromDisplay & MousePressed;
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr =
+                    InputFieldAck_fromDisplay & MousePressed;
+                  if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    tmp13 = kcg_false;
+                  }
+                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr) {
+                    tmp13 = kcg_true;
                   }
                   else {
-                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController =
-                      br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow;
-                    if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController) {
-                      levelMenuVisibility_toDisplay_strong = kcg_false;
-                    }
-                    else {
-                      levelMenuVisibility_toDisplay_strong =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
-                    }
+                    tmp13 = kcg_false;
                   }
                   break;
-                
-              }
-              switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp15 = kcg_false;
-                  outC->levelMenuVisibility_toDisplay =
-                    levelMenuVisibility_toDisplay_strong;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (last_ModeSymbolVisibility_toDisplay) {
-                    tmp15 = kcg_false;
-                    outC->levelMenuVisibility_toDisplay =
-                      levelMenuVisibility_toDisplay_strong;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  tmp13 = kcg_false;
+                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                    closeButton_fromDisplay & MousePressed;
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                    outC->_L162_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                    EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
                   }
                   else {
-                    br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-                      br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow;
-                    if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-                      tmp15 = kcg_true;
-                      outC->levelMenuVisibility_toDisplay = kcg_true;
-                    }
-                    else {
-                      tmp15 = kcg_false;
-                      outC->levelMenuVisibility_toDisplay =
-                        levelMenuVisibility_toDisplay_strong;
-                    }
+                    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                      br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
                   }
                   break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp15 = kcg_false;
-                  outC->levelMenuVisibility_toDisplay =
-                    levelMenuVisibility_toDisplay_strong;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  tmp13 = kcg_false;
                   break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp15 = kcg_false;
-                  outC->levelMenuVisibility_toDisplay =
-                    levelMenuVisibility_toDisplay_strong;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp15 = kcg_false;
-                  outC->levelMenuVisibility_toDisplay =
-                    levelMenuVisibility_toDisplay_strong;
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp15 = kcg_false;
-                  outC->levelMenuVisibility_toDisplay =
-                    levelMenuVisibility_toDisplay_strong;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  tmp13 = kcg_false;
                   break;
                 case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp15 = kcg_false;
-                  outC->levelMenuVisibility_toDisplay =
-                    levelMenuVisibility_toDisplay_strong;
+                  tmp13 = kcg_false;
                   break;
                 
               }
               break;
             case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp15 = kcg_false;
-              outC->levelMenuVisibility_toDisplay =
-                _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+              tmp13 = kcg_false;
               break;
             case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp15 = kcg_false;
-              outC->levelMenuVisibility_toDisplay = kcg_false;
+              tmp13 = kcg_false;
               break;
             case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp15 = kcg_false;
-              outC->levelMenuVisibility_toDisplay =
-                _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+              tmp13 = kcg_false;
               break;
             
           }
-          br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-            last_DistanceToTargetBarVisibility_toDisplay | tmp15;
+          /* 2 */
+          Set_TrainRN_packet_DMI_Control_Pkg_Sub_func(
+            (kcg_bool) (tmp14 | tmp13),
+            &last_TrainRN_Display_toDisplay,
+            _L72.dynamic.system_clock,
+            &DMI_Train_Running_Number);
+          Localtext_ack_from_Display_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            MousePressed & textMsgAck_fromDisplay;
           if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            /* HourGlassAnimation */
-            HourGlassAnimation_reset_DMI_Control_Pkg_Sub_func(
-              &outC->Context_HourGlassAnimation);
+            /* 4 */
+            TextMessagesDipatcher_reset_DMI_Control_Pkg_Sub_func_TextMessages(
+              &outC->_3_Context_4);
+            /* 4 */ D_behavior_reset(&outC->Context_4);
+            /* 2 */
+            AckMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
+              &outC->_2_Context_2);
+            /* 2 */
+            FlashingIconsOperator_reset_DMI_Control_Pkg_Utils(
+              &outC->_1_Context_2);
+            /* 3 */
+            StatusPlanningArea_reset_DMI_Control_Pkg_Sub_func(&outC->Context_3);
           }
-          /* HourGlassAnimation */
-          HourGlassAnimation_DMI_Control_Pkg_Sub_func(
-            else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock,
-            br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow,
-            inC->SystemTime,
-            &outC->Context_HourGlassAnimation);
-          outC->hourGlassCounter_toDisplay = (kcg_real)
-              outC->Context_HourGlassAnimation.Output1;
-          if (outC->init7) {
-            HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+          /* 4 */
+          TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
+            &_L72.textMessage,
+            _L72.dynamic.system_clock,
+            Localtext_ack_from_Display_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->_3_Context_4);
+          switch (SM3_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 :
+              tmp14 = kcg_false;
+              SM3_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              break;
+            case SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 :
+              br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu =
+                !outC->_3_Context_4.AckisEmpty;
+              if (br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                tmp14 = kcg_true;
+                SM3_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              }
+              else {
+                tmp14 = kcg_false;
+                SM3_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              }
+              break;
+            
+          }
+          if (tmp14) {
+            DMI_Text_Message.valid = tmp14;
+            DMI_Text_Message.systemTime = _L72.dynamic.system_clock;
+            DMI_Text_Message.textMessage_ID = _L72.textMessage.textMessage_ID;
+            DMI_Text_Message.acknowledged = kcg_true;
           }
           else {
-            HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-              outC->HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+              &DMI_Text_Message,
+              (DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+                &cDMI_text_message_ack_DMI_Control_Pkg);
           }
-          switch (HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
-              if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock) {
-                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+          last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            MousePressed & traindataNoAck_fromDisplay;
+          tmp8 = traindataYesAck_fromDisplay & MousePressed;
+          switch (YesNoTrainDataValidationSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
+              if (tmp8 &
+                !last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
               }
               else {
-                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
               }
               break;
-            case SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
-              if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow |
-                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
+              if (last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive &
+                !tmp8) {
+                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
               }
               else {
-                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+                YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
               }
               break;
             
           }
-          switch (HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
-              outC->hourGlassVisibility_toDisplay = kcg_false;
+          switch (YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
+              traindataYesNoIndex_toDisplay = 1;
+              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
               break;
-            case SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
-              outC->hourGlassVisibility_toDisplay = kcg_true;
-              break;
-            
-          }
-          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->VpermColor_toDisplay =
-                _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-              outC->VreleaseColor_toDisplay =
-                last_trainLoadingGougeIndex_toDisplay;
-              outC->VtargetColor_toDisplay = last_iconGroupIndex_toDisplay;
-              outC->Vtarget_permVisibility_toDisplay =
-                _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-              outC->Vinterv_Visibility_toDisplay =
-                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-              outC->vtarget_permColor_toDisplay =
-                last_vtarget_permColor_toDisplay;
-              outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
-              break;
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              if (last_TrainDataWindowVisibility_toDisplay) {
-                switch (WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2) {
-                  case supervision_status_unknown_DMI_Types_Pkg :
-                    outC->VpermColor_toDisplay =
-                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                    outC->VreleaseColor_toDisplay =
-                      last_trainLoadingGougeIndex_toDisplay;
-                    outC->VtargetColor_toDisplay =
-                      last_iconGroupIndex_toDisplay;
-                    outC->Vtarget_permVisibility_toDisplay =
-                      _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                    outC->Vinterv_Visibility_toDisplay =
-                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                    outC->vtarget_permColor_toDisplay =
-                      last_vtarget_permColor_toDisplay;
-                    outC->Vinterv_Color_toDisplay =
-                      last_Vinterv_Color_toDisplay;
-                    break;
-                  case RSM_DMI_Types_Pkg :
-                    outC->VpermColor_toDisplay =
-                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM) {
-                      outC->VreleaseColor_toDisplay =
-                        cCOLOR_MEDIUM_GREY_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->VreleaseColor_toDisplay =
-                        last_trainLoadingGougeIndex_toDisplay;
-                    }
-                    outC->VtargetColor_toDisplay =
-                      last_iconGroupIndex_toDisplay;
-                    outC->Vinterv_Visibility_toDisplay = kcg_false;
-                    if (isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_RSM) {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
-                      outC->vtarget_permColor_toDisplay =
-                        cCOLOR_YELLOW_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
-                      outC->vtarget_permColor_toDisplay =
-                        last_vtarget_permColor_toDisplay;
-                    }
-                    outC->Vinterv_Color_toDisplay =
-                      last_Vinterv_Color_toDisplay;
-                    break;
-                  case TSM_DMI_Types_Pkg :
-                    outC->VpermColor_toDisplay =
-                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->VreleaseColor_toDisplay =
-                        cCOLOR_MEDIUM_GREY_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->VreleaseColor_toDisplay =
-                        last_trainLoadingGougeIndex_toDisplay;
-                    }
-                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->VtargetColor_toDisplay =
-                        cCOLOR_DARK_GREY_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->VtargetColor_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                    }
-                    if (isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
-                      outC->vtarget_permColor_toDisplay =
-                        cCOLOR_YELLOW_DMI_Control_Pkg;
-                    }
-                    else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM_IfBlock4) {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
-                      outC->vtarget_permColor_toDisplay =
-                        ccOLOR_WHITE_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
-                      outC->vtarget_permColor_toDisplay =
-                        last_vtarget_permColor_toDisplay;
-                    }
-                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_TSM) {
-                      outC->Vinterv_Visibility_toDisplay = kcg_true;
-                      outC->Vinterv_Color_toDisplay =
-                        cCOLOR_ORANGE_DMI_Control_Pkg;
-                    }
-                    else if (_L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->Vinterv_Visibility_toDisplay = kcg_true;
-                      outC->Vinterv_Color_toDisplay =
-                        cCOLOR_RED_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->Vinterv_Visibility_toDisplay = kcg_false;
-                      outC->Vinterv_Color_toDisplay =
-                        last_Vinterv_Color_toDisplay;
-                    }
-                    break;
-                  case PIM_DMI_Types_Pkg :
-                    outC->VpermColor_toDisplay =
-                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->VreleaseColor_toDisplay =
-                        cCOLOR_MEDIUM_GREY_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->VreleaseColor_toDisplay =
-                        last_trainLoadingGougeIndex_toDisplay;
-                    }
-                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->VtargetColor_toDisplay =
-                        cCOLOR_DARK_GREY_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->VtargetColor_toDisplay =
-                        last_iconGroupIndex_toDisplay;
-                    }
-                    if (isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
-                    }
-                    else {
-                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
-                    }
-                    outC->vtarget_permColor_toDisplay =
-                      last_vtarget_permColor_toDisplay;
-                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM) {
-                      outC->Vinterv_Visibility_toDisplay = kcg_true;
-                      outC->Vinterv_Color_toDisplay =
-                        cCOLOR_ORANGE_DMI_Control_Pkg;
-                    }
-                    else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_PIM_IfBlock4) {
-                      outC->Vinterv_Visibility_toDisplay = kcg_true;
-                      outC->Vinterv_Color_toDisplay =
-                        cCOLOR_RED_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->Vinterv_Visibility_toDisplay = kcg_false;
-                      outC->Vinterv_Color_toDisplay =
-                        last_Vinterv_Color_toDisplay;
-                    }
-                    break;
-                  case CSM_DMI_Types_Pkg :
-                    outC->VreleaseColor_toDisplay =
-                      last_trainLoadingGougeIndex_toDisplay;
-                    outC->VtargetColor_toDisplay =
-                      last_iconGroupIndex_toDisplay;
-                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM) {
-                      outC->VpermColor_toDisplay =
-                        cCOLOR_DARK_GREY_DMI_Control_Pkg;
-                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
-                    }
-                    else {
-                      outC->VpermColor_toDisplay =
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                      outC->Vtarget_permVisibility_toDisplay =
-                        _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled;
-                    }
-                    outC->vtarget_permColor_toDisplay =
-                      last_vtarget_permColor_toDisplay;
-                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM) {
-                      outC->Vinterv_Visibility_toDisplay = kcg_true;
-                      outC->Vinterv_Color_toDisplay =
-                        cCOLOR_ORANGE_DMI_Control_Pkg;
-                    }
-                    else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_IfBlock2_WhenBlock1_CSM_IfBlock1) {
-                      outC->Vinterv_Visibility_toDisplay = kcg_true;
-                      outC->Vinterv_Color_toDisplay =
-                        cCOLOR_RED_DMI_Control_Pkg;
-                    }
-                    else {
-                      outC->Vinterv_Visibility_toDisplay = kcg_false;
-                      outC->Vinterv_Color_toDisplay =
-                        last_Vinterv_Color_toDisplay;
-                    }
-                    break;
-                  
-                }
-              }
-              else {
-                outC->VpermColor_toDisplay =
-                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
-                outC->VreleaseColor_toDisplay = 0;
-                outC->VtargetColor_toDisplay = 0;
-                outC->Vtarget_permVisibility_toDisplay = kcg_false;
-                outC->Vinterv_Visibility_toDisplay = kcg_false;
-                outC->vtarget_permColor_toDisplay =
-                  last_vtarget_permColor_toDisplay;
-                outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
-              }
+            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
+              traindataYesNoIndex_toDisplay = 2;
+              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
               break;
             
           }
-          if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-            /* 4 */
+          if (_L72.EVC_levelData.valid) {
+            kcg_copy_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg(
+              &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &_L72.EVC_levelData);
+            /* 6 */
             LevelListAdapter_DMI_Control_Pkg_Utils(
-              &inC->DMI_evc_level_data,
+              &_L72.EVC_levelData,
               &outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
           }
-          else if (outC->init7) {
+          else if (outC->init8) {
+            kcg_copy_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg(
+              &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
+                &cDMI_evc_Display_List_DMI_Control_Pkg);
             outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive[0] =
               0;
             outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive[1] =
@@ -5384,685 +1722,1914 @@ void DMI_Controller_DMI_Control_Pkg(
             outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive[11] =
               0;
           }
-          kcg_copy_array_int_12(
-            &outC->ArrayLevelIndex_toDisplay,
-            &outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    traindataYesNoIndex_toDisplay = 0;
-    kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
-      &last_DMI_level_data,
-      (DMI_Level_Data_T_DMI_Messages_Bothways_Pkg *)
-        &cDMI_Level_data_DMI_Control_Pkg);
-    kcg_copy_array_bool_10(
-      &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
-      (array_bool_10 *) &cD_SPDI_SpeedChangeSymbolsVisible_DMI_Control_Pkg);
-    kcg_copy_array_int_10(
-      &last_D_SPDI_SpeedChangeIndex_toDisplay,
-      (array_int_10 *) &cD_SPDI_SpeedChangeIndex_DMI_Control_Pkg);
-    kcg_copy_array_real_10(
-      &last_D_SPDI_SpeedChangePosition_toDisplay,
-      (array_real_10 *) &cD_SPDI_SpeedChangePosition_DMI_Control_Pkg);
-    kcg_copy_array_real_4(
-      &last_D_PASP_Distances_toDisplay,
-      (array_real_4 *) &cD_PASP_Speeds_DMI_Control_Pkg);
-  }
-  else {
-    traindataYesNoIndex_toDisplay = outC->IndexLevel_toDisplay;
-    kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
-      &last_DMI_level_data,
-      &outC->DMI_level_data);
-    kcg_copy_array_bool_10(
-      &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
-      &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay);
-    kcg_copy_array_int_10(
-      &last_D_SPDI_SpeedChangeIndex_toDisplay,
-      &outC->D_SPDI_SpeedChangeIndex_toDisplay);
-    kcg_copy_array_real_10(
-      &last_D_SPDI_SpeedChangePosition_toDisplay,
-      &outC->D_SPDI_SpeedChangePosition_toDisplay);
-    kcg_copy_array_real_4(
-      &last_D_PASP_Distances_toDisplay,
-      &outC->D_PASP_Speeds_toDisplay);
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-      outC->isAuxiliarMsg_toDisplay = kcg_true;
-      kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
-        &outC->DMI_level_data,
-        &last_DMI_level_data);
-      kcg_copy_array_int_5(
-        &outC->IndexFixedMsg_toDisplay,
-        &default_IndexFixedMsg_toDisplay);
-      kcg_copy_array_char_30_5(
-        &outC->PlainText_toDisplay,
-        (array_char_30_5 *) &cPlainText_DMI_Control_Pkg);
-      kcg_copy_array_real_5(
-        &outC->Array_hh_toDisplay,
-        &default_Array_mm_toDisplay);
-      kcg_copy_array_real_5(
-        &outC->Array_mm_toDisplay,
-        &default_Array_mm_toDisplay);
-      kcg_copy_array_bool_10(
-        &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
-        &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay);
-      kcg_copy_array_int_10(
-        &outC->D_SPDI_SpeedChangeIndex_toDisplay,
-        &last_D_SPDI_SpeedChangeIndex_toDisplay);
-      kcg_copy_array_real_10(
-        &outC->D_SPDI_SpeedChangePosition_toDisplay,
-        &last_D_SPDI_SpeedChangePosition_toDisplay);
-      kcg_copy_array_real_4(
-        &outC->D_PASP_Speeds_toDisplay,
-        &last_D_PASP_Distances_toDisplay);
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      if (CabinSM_reset_act) {
-        /* 1 */ D_behavior_reset(&outC->_1_Context_1);
-      }
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-          outC->isAuxiliarMsg_toDisplay = kcg_true;
-          kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
-            &outC->DMI_level_data,
-            &last_DMI_level_data);
-          kcg_copy_array_int_5(
-            &outC->IndexFixedMsg_toDisplay,
-            &default_IndexFixedMsg_toDisplay);
-          kcg_copy_array_char_30_5(
-            &outC->PlainText_toDisplay,
-            (array_char_30_5 *) &cPlainText_DMI_Control_Pkg);
-          kcg_copy_array_real_5(
-            &outC->Array_hh_toDisplay,
-            &default_Array_mm_toDisplay);
-          kcg_copy_array_real_5(
-            &outC->Array_mm_toDisplay,
-            &default_Array_mm_toDisplay);
-          kcg_copy_array_bool_10(
-            &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
-            &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay);
-          kcg_copy_array_int_10(
-            &outC->D_SPDI_SpeedChangeIndex_toDisplay,
-            &last_D_SPDI_SpeedChangeIndex_toDisplay);
-          kcg_copy_array_real_10(
-            &outC->D_SPDI_SpeedChangePosition_toDisplay,
-            &last_D_SPDI_SpeedChangePosition_toDisplay);
-          kcg_copy_array_real_4(
-            &outC->D_PASP_Speeds_toDisplay,
-            &last_D_PASP_Distances_toDisplay);
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-            kcg_copy_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg(
-              &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &inC->DMI_evc_level_data);
-          }
-          else if (outC->init7) {
-            kcg_copy_DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg(
-              &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *)
-                &cDMI_evc_Display_List_DMI_Control_Pkg);
-          }
-          if (outC->init7) {
-            kcg_copy_DMI_level_T_DMI_Types_Pkg(
-              &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (DMI_level_T_DMI_Types_Pkg *) &cDefLevelT_DMI_Control_Pkg);
-          }
-          else {
-            kcg_copy_DMI_level_T_DMI_Types_Pkg(
-              &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          }
-          switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              last_LevelSymbolVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              last_LevelSymbolVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              last_LevelSymbolVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              last_LevelSymbolVisibility_toDisplay = kcg_false;
-              break;
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow) {
-                last_LevelSymbolVisibility_toDisplay = kcg_true;
-              }
-              else {
-                last_LevelSymbolVisibility_toDisplay = kcg_false;
-              }
-              break;
-            
-          }
           switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              tmp11 = kcg_false;
+              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                &DMI_Train_Data_Ack,
+                &default_DMI_Train_Data_Ack);
+              tmp6 = kcg_false;
               for (i = 0; i < 12; i++) {
-                tmp11 = tmp11 | inC->keypad_fromDisplay[i];
+                tmp6 = tmp6 | (*keypad_fromDisplay)[i];
               }
-              br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled =
-                tmp11 & inC->MousePressed;
-              if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_controlled) {
-                _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+              KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow =
+                tmp6 & MousePressed;
+              if (KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow) {
+                last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
                   0;
                 for (i = 0; i < 12; i++) {
-                  tmp3 =
-                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+                  last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
                   /* 4 */
                   CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard(
-                    tmp3,
-                    inC->keypad_fromDisplay[i],
-                    &tmp10,
-                    &_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN);
-                  last_trainLoadingGougeIndex_toDisplay = i + 1;
-                  if (!tmp10) {
+                    last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    (*keypad_fromDisplay)[i],
+                    &tmp5,
+                    &last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
+                    i + 1;
+                  if (!tmp5) {
                     break;
                   }
                 }
-                if ((0 <= last_trainLoadingGougeIndex_toDisplay - 1) &
-                  (last_trainLoadingGougeIndex_toDisplay - 1 < 32)) {
+                if ((0 <=
+                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN -
+                    1) &
+                  (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN -
+                    1 < 32)) {
                   kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                    &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive.levelList.levelList[last_trainLoadingGougeIndex_toDisplay -
+                    &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow_CatchButtonLevel_IfBlo,
+                    &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive.levelList.levelList[_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN -
                     1]);
                 }
                 else {
                   kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow_CatchButtonLevel_IfBlo,
                     (DMI_level_T_DMI_Types_Pkg *) &cDefLevelT_DMI_Control_Pkg);
                 }
-                outC->IndexLevel_toDisplay = /* 3 */
-                  LevelAdapter_DMI_Control_Pkg_Utils(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                  &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                  &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow_CatchButtonLevel_IfBlo);
               }
               else {
-                outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
                 kcg_copy_DMI_level_T_DMI_Types_Pkg(
                   &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
                   &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
               }
-              tmp17 = kcg_false;
+              tmp14 = kcg_false;
+              tmp7 = kcg_false;
+              tmp5 = kcg_false;
               break;
             case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                    &DMI_Train_Data_Ack,
+                    &default_DMI_Train_Data_Ack);
+                  br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind =
+                    closeButton_fromDisplay & MousePressed;
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind =
+                    InputFieldAck_fromDisplay & MousePressed;
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    tmp14 = kcg_false;
+                  }
+                  else {
+                    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind =
+                      br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind;
+                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    }
+                    else {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    }
+                    if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                      tmp14 = kcg_true;
+                    }
+                    else {
+                      tmp14 = kcg_false;
+                    }
+                  }
+                  tmp5 = kcg_false;
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                    &DMI_Train_Data_Ack,
+                    &default_DMI_Train_Data_Ack);
+                  WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                    SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  tmp14 = kcg_false;
+                  tmp5 = kcg_false;
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                    &DMI_Train_Data_Ack,
+                    &default_DMI_Train_Data_Ack);
+                  if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                  }
+                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                  }
+                  else {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS;
+                  }
+                  tmp14 = kcg_false;
+                  tmp5 = kcg_false;
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                    (traindataYesNoIndex_toDisplay == 1) &
+                    traindataAck_fromDisplay & MousePressed;
+                  br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                    (traindataYesNoIndex_toDisplay == 2) &
+                    traindataAck_fromDisplay & MousePressed;
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                    kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                      &DMI_Train_Data_Ack,
+                      &default_DMI_Train_Data_Ack);
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows;
+                  }
+                  else {
+                    if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                      kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                        &DMI_Train_Data_Ack,
+                        &default_DMI_Train_Data_Ack);
+                    }
+                    else {
+                      br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                        br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+                      if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                        kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                          &DMI_Train_Data_Ack,
+                          (DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+                            &DMI_train_data_ack_positive_DMI_Control_Pkg);
+                      }
+                      else {
+                        br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData =
+                          br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData;
+                        if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                          kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                            &DMI_Train_Data_Ack,
+                            (DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+                              &DMI_train_data_ack_negative_DMI_Control_Pkg);
+                        }
+                        else {
+                          kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                            &DMI_Train_Data_Ack,
+                            &default_DMI_Train_Data_Ack);
+                        }
+                      }
+                    }
+                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    }
+                    else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    }
+                    else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    }
+                    else {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe;
+                    }
+                  }
+                  tmp14 = kcg_false;
+                  tmp5 = kcg_false;
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                    &DMI_Train_Data_Ack,
+                    &default_DMI_Train_Data_Ack);
+                  _53_br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train =
+                    closeButton_fromDisplay & MousePressed;
+                  _54_br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train =
+                    confirmTrainData_fromDisplay & MousePressed;
+                  if (_53_br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                  }
+                  else if (_54_br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe;
+                  }
+                  else {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows;
+                  }
+                  tmp14 = kcg_false;
+                  tmp5 = kcg_false;
+                  break;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                    &DMI_Train_Data_Ack,
+                    &default_DMI_Train_Data_Ack);
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                  }
+                  else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                  }
+                  else {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  }
+                  tmp14 = kcg_false;
+                  tmp5 = kcg_false;
+                  break;
+                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                    &DMI_Train_Data_Ack,
+                    &default_DMI_Train_Data_Ack);
+                  tmp14 = kcg_false;
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                    WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows;
+                    tmp5 = kcg_false;
+                  }
+                  else {
+                    if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                    }
+                    else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS;
+                    }
+                    else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                    }
+                    else {
+                      WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                        SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                    }
+                    if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                      tmp5 = kcg_false;
+                    }
+                    else if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                      tmp5 = kcg_false;
+                    }
+                    else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                      tmp5 = kcg_true;
+                    }
+                    else {
+                      tmp5 = kcg_false;
+                    }
+                  }
+                  break;
+                
+              }
               switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
                 case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp2 = kcg_false;
+                  tmp4 = kcg_false;
                   for (i = 0; i < 12; i++) {
-                    tmp2 = tmp2 | inC->keypad_fromDisplay[i];
+                    tmp4 = tmp4 | (*keypad_fromDisplay)[i];
                   }
-                  tmp16 = tmp2 & inC->MousePressed;
-                  if (tmp16) {
-                    last_iconGroupIndex_toDisplay = 0;
+                  KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind =
+                    tmp4 & MousePressed;
+                  if (KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                    _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co =
+                      0;
                     for (i = 0; i < 12; i++) {
-                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
-                        last_iconGroupIndex_toDisplay;
+                      tmp10 =
+                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co;
                       /* 2 */
                       CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard(
-                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
-                        inC->keypad_fromDisplay[i],
-                        &tmp1,
-                        &last_iconGroupIndex_toDisplay);
-                      last_vtarget_permColor_toDisplay = i + 1;
-                      if (!tmp1) {
+                        tmp10,
+                        (*keypad_fromDisplay)[i],
+                        &tmp3,
+                        &_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co);
+                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+                        i + 1;
+                      if (!tmp3) {
                         break;
                       }
                     }
-                    if ((0 <= last_vtarget_permColor_toDisplay - 1) &
-                      (last_vtarget_permColor_toDisplay - 1 < 32)) {
+                    if ((0 <=
+                        _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN -
+                        1) &
+                      (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN -
+                        1 < 32)) {
                       kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                        &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                        &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive.levelList.levelList[last_vtarget_permColor_toDisplay -
+                        &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow_Cat,
+                        &outC->Local_DMI_evc_data_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive.levelList.levelList[_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN -
                         1]);
                     }
                     else {
                       kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                        &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                        &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow_Cat,
                         (DMI_level_T_DMI_Types_Pkg *)
                           &cDefLevelT_DMI_Control_Pkg);
                     }
-                    outC->IndexLevel_toDisplay = /* 1 */
-                      LevelAdapter_DMI_Control_Pkg_Utils(
-                        &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                    kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                      &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                      &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow_Cat);
                   }
                   else {
-                    outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
                     kcg_copy_DMI_level_T_DMI_Types_Pkg(
                       &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
                       &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
                   }
+                  tmp7 = kcg_false;
                   break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
                   kcg_copy_DMI_level_T_DMI_Types_Pkg(
                     &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
                     &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-                  break;
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
-                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
-                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-                  break;
-                
-              }
-              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
-                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  tmp17 = kcg_false;
-                  break;
-                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow) {
-                    tmp17 = kcg_false;
+                  switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                    case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                        tmp9 =
+                          SSM_TR_MainMenu_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                        tmp9 =
+                          SSM_TR_MainMenu_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                        tmp9 =
+                          SSM_TR_MainMenu_3_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                        tmp9 =
+                          SSM_TR_MainMenu_4_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else if (br_5_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                        tmp9 =
+                          SSM_TR_MainMenu_5_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else {
+                        tmp9 =
+                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      break;
+                    case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                        tmp9 =
+                          SSM_TR_DriverID_DMI_controlled_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_Reques;
+                      }
+                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                        tmp9 =
+                          SSM_TR_DriverID_DMI_controlled_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_Reques;
+                      }
+                      else {
+                        tmp9 =
+                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      break;
+                    case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                      if (_53_br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                        tmp9 =
+                          SSM_TR_TrainDataWindow_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Main;
+                      }
+                      else if (_54_br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                        tmp9 =
+                          SSM_TR_TrainDataWindow_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Main;
+                      }
+                      else {
+                        tmp9 =
+                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      break;
+                    case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                        tmp9 =
+                          SSM_TR_TrainDataValidationWindow_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_Requ;
+                      }
+                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                        tmp9 =
+                          SSM_TR_TrainDataValidationWindow_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_Requ;
+                      }
+                      else if (br_3_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                        tmp9 =
+                          SSM_TR_TrainDataValidationWindow_3_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_Requ;
+                      }
+                      else if (br_4_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                        tmp9 =
+                          SSM_TR_TrainDataValidationWindow_4_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_Requ;
+                      }
+                      else {
+                        tmp9 =
+                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      break;
+                    case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                      if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                        tmp9 =
+                          SSM_TR_Insert_TrainRN_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainM;
+                      }
+                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr) {
+                        tmp9 =
+                          SSM_TR_Insert_TrainRN_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainM;
+                      }
+                      else {
+                        tmp9 =
+                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      break;
+                    case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                      tmp9 =
+                        SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      break;
+                    case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                      if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                        tmp9 =
+                          SSM_TR_LevelWindow_1_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                        tmp9 =
+                          SSM_TR_LevelWindow_2_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      else {
+                        tmp9 =
+                          SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                      }
+                      break;
+                    
                   }
-                  else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN_TrainRNKeyboardController) {
-                    tmp17 = kcg_true;
+                  WaitingLevelInformation_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Mai =
+                    tmp9 !=
+                    SSM_TR_no_trans_WindowsSM_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  if (WaitingLevelInformation_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Mai) {
+                    tmp7 = kcg_false;
                   }
                   else {
-                    tmp17 = kcg_false;
+                    br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_WaitingLe =
+                      _L72.EVC_levelData.valid;
+                    if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_WaitingLe) {
+                      tmp7 = kcg_true;
+                    }
+                    else {
+                      tmp7 = kcg_false;
+                    }
                   }
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                  tmp7 = kcg_false;
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                  tmp7 = kcg_false;
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                  tmp7 = kcg_false;
+                  break;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                  tmp7 = kcg_false;
+                  break;
+                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  kcg_copy_DMI_level_T_DMI_Types_Pkg(
+                    &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                    &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                  tmp7 = kcg_false;
                   break;
                 
               }
               break;
             case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
+              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                &DMI_Train_Data_Ack,
+                &default_DMI_Train_Data_Ack);
               kcg_copy_DMI_level_T_DMI_Types_Pkg(
                 &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
                 &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-              tmp17 = kcg_false;
+              tmp14 = kcg_false;
+              tmp7 = kcg_false;
+              tmp5 = kcg_false;
               break;
             case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
+              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                &DMI_Train_Data_Ack,
+                &default_DMI_Train_Data_Ack);
               kcg_copy_DMI_level_T_DMI_Types_Pkg(
                 &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
                 &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-              tmp17 = kcg_false;
+              tmp14 = kcg_false;
+              tmp7 = kcg_false;
+              tmp5 = kcg_false;
               break;
             case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->IndexLevel_toDisplay = traindataYesNoIndex_toDisplay;
+              kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                &DMI_Train_Data_Ack,
+                &default_DMI_Train_Data_Ack);
               kcg_copy_DMI_level_T_DMI_Types_Pkg(
                 &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
                 &last_SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-              tmp17 = kcg_false;
+              tmp14 = kcg_false;
+              tmp7 = kcg_false;
+              tmp5 = kcg_false;
+              break;
+            
+          }
+          /* 4 */
+          Set_level_data_DMI_Control_Pkg_Sub_func(
+            (kcg_bool) (tmp2 | tmp14),
+            _L72.dynamic.system_clock,
+            &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L431_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+            &outC->DMI_Level_Data,
+            &_L431_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          if (_L669_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &tmp17);
+          }
+          else if (outC->init8) {
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_real_32 *) &cDMI_GradientsInit_DMI_Control_Pkg);
+          }
+          if (_L678_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              &tmp16);
+          }
+          else if (outC->init8) {
+            kcg_copy_array_real_32(
+              &outC->Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_real_32 *) &cDMI_SpeedProfile_Init_DMI_Control_Pkg);
+          }
+          if (DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            outC->PermittedSpeed_CPS_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              tmp15;
+            outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              tmp18;
+            outC->_L393_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              tmp19;
+            outC->_L386_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              tmp20;
+            outC->_L378_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              tmp21;
+            outC->_L368_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              tmp22;
+          }
+          else if (outC->init8) {
+            outC->PermittedSpeed_CPS_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              0.0;
+            outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              13;
+            outC->_L368_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
+            outC->_L393_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = 0;
+            outC->_L386_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              0.0;
+            outC->_L378_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              0.0;
+          }
+          /* 3 */
+          Area_D_DMI_Control_Pkg_Sub_func_PlanningArea(
+            outC->TrainPosition_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            outC->PermittedSpeed_CPS_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L510_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L509_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L512_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L511_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L508_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          /* 4 */
+          D_behavior(
+            MousePressed,
+            OverD9_fromDisplay,
+            OverD12_frpmDisplay,
+            outC->TrainPosition_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L510_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L509_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L512_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            _L511_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            _L72.dynamic.distanceIndicationPoint,
+            &outC->Context_4);
+          kcg_copy_tScale(
+            &_L850_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.Scale);
+          kcg_copy_array_real_12(
+            &_L851_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.GradientStartInterpolated);
+          kcg_copy_array_real_12(
+            &_L852_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.GradientEndInterpolated);
+          kcg_copy_array_real_4(
+            &_L854_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.PASP_Distances);
+          kcg_copy_array_real_4(
+            &_L855_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.PASP_Speeds);
+          kcg_copy_array_real_10(
+            &_L856_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.SPDI_SpeedChangePosition);
+          kcg_copy_array_int_10(
+            &_L857_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.SPDI_SpeedChangeIndex);
+          kcg_copy_array_bool_10(
+            &_L858_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.SPDI_SpeedChangeSymbolsVisible);
+          kcg_copy_array_real_1(
+            &_L859_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &outC->Context_4.toDisplay);
+          switch (SM3_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 :
+              showAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_false;
+              outC->SM3_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              break;
+            case SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 :
+              showAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_true;
+              switch (SM3_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                case SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 :
+                  if (br_5_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                    tmp12 =
+                      SSM_TR_AckOff_1_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  }
+                  else {
+                    tmp12 =
+                      SSM_TR_no_trans_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  }
+                  break;
+                case SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 :
+                  tmp12 =
+                    SSM_TR_no_trans_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  break;
+                
+              }
+              AckOn_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3 =
+                tmp12 !=
+                SSM_TR_no_trans_SM3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              if (AckOn_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3) {
+                outC->SM3_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              }
+              else if (outC->_3_Context_4.AckisEmpty |
+                Localtext_ack_from_Display_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                outC->SM3_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_AckOff_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              }
+              else {
+                outC->SM3_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_AckOn_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM3;
+              }
+              break;
+            
+          }
+          if (showAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            /* 2 */
+            AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
+              &outC->_3_Context_4.AckMsgQueue,
+              _L72.dynamic.system_clock,
+              &outC->_3_Context_4.ack_hh_array,
+              &outC->_3_Context_4.ack_mm_array,
+              outC->_3_Context_4.NumAckMsg,
+              &outC->_2_Context_2);
+            kcg_copy_array_int_5(
+              &_L29_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+              &outC->_2_Context_2.IndexFixedMsg);
+            kcg_copy_array_char_30_5(
+              &_L30_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+              &outC->_2_Context_2.ArrayPlainText);
+            kcg_copy_array_real_5(
+              &_L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+              &outC->_2_Context_2.Array_hh);
+            kcg_copy_array_real_5(
+              &_L32_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+              &outC->_2_Context_2.Array_mm);
+            _L33_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6 =
+              outC->_2_Context_2.FlashingBorderMsg;
+          }
+          else {
+            else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6 =
+              !outC->_3_Context_4.isEmpty;
+            if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6) {
+              /* 2 */
+              NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
+                &outC->_3_Context_4.MsgQueue,
+                &outC->_3_Context_4.hh_array,
+                &outC->_3_Context_4.mm_array,
+                outC->_3_Context_4.NumE,
+                &_L15_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+                &_L16_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+                &_L17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+                &_L18_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6,
+                &_L19_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+            }
+          }
+          if (outC->init8) {
+            last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
+            last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              kcg_false;
+            last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = 0;
+            last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = 0;
+            last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              C_DMI_Types_Pkg;
+            IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+            SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM;
+            SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
+            HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+            SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+            TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
+          }
+          else {
+            last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->IconSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->SymbolsAcknowledgmentSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->TrainDataSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          }
+          switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+              _L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_true;
+              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_area_group;
+              break;
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+              _L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_false;
+              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              break;
+            case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+              _L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_true;
+              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_area_group;
+              break;
+            case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+              _L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_false;
+              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck =
+                C1AreaAck_fromDisplay & MousePressed;
+              br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck =
+                brakeStatusSymbolAck_fromDisplay & MousePressed;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck) {
+              }
+              else {
+                br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck =
+                  br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck;
+              }
+              break;
+            
+          }
+          switch (IconSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
+              if (_L72.iconRequest.valid) {
+                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+              }
+              else {
+                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+              }
+              break;
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
+              if (_L72.iconRequest.valid |
+                _L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+              }
+              else {
+                IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+              }
+              break;
+            
+          }
+          if (_L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              outC->dmiCommand_NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+            switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+              case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_area_rank;
+                tmp11 = cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_icon_group;
+                NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  cClearC1AreaSymbol_DMI_Control_Pkg.DMI_nid_icon_rank;
+                break;
+              case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  0;
+                tmp11 = status_symbols_DMI_Types_Pkg;
+                NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  0;
+                break;
+              case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_area_rank;
+                tmp11 =
+                  cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_icon_group;
+                NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_nid_icon_rank;
+                break;
+              case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  0;
+                tmp11 = status_symbols_DMI_Types_Pkg;
+                NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  0;
+                break;
+              
+            }
+          }
+          else {
+            NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              _L72.iconRequest.DMI_nid_area_group;
+            NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              _L72.iconRequest.DMI_nid_area_rank;
+            tmp11 = _L72.iconRequest.DMI_nid_icon_group;
+            NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+              _L72.iconRequest.DMI_nid_icon_rank;
+          }
+          switch (tmp11) {
+            case level_symbol_DMI_Types_Pkg :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                cLevelSymbol_IconGroup_DMI_Control_Pkg;
+              break;
+            case mode_symbols_DMI_Types_Pkg :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                cModeSymbol_IconGroup_DMI_Control_Pkg;
+              break;
+            case status_symbols_DMI_Types_Pkg :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                cStatusSymbol_IconGroup_DMI_Control_Pkg;
+              break;
+            case order_an_announcements_symbols_DMI_Types_Pkg :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                0;
+              break;
+            case planning_information_symbols_DMI_Types_Pkg :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                0;
+              break;
+            case navigation_symbols_DMI_Types_Pkg :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                0;
+              break;
+            
+            default :
+              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                0;
+          }
+          switch (IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
+              outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              outC->IconSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+              outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              break;
+            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
+              if (_L325_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                  case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV =
+                      clear_area_DMI_Types_Pkg;
+                    break;
+                  case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV =
+                      cClearBrakeStatusSymbol_DMI_Control_Pkg.DMI_m_icon_control_flag;
+                    break;
+                  case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV =
+                      clear_area_DMI_Types_Pkg;
+                    break;
+                  case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV =
+                      cClearC1AreaSymbol_DMI_Control_Pkg.DMI_m_icon_control_flag;
+                    break;
+                  
+                }
+              }
+              else {
+                IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV =
+                  _L72.iconRequest.DMI_m_icon_control_flag;
+              }
+              outC->IconSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+              switch (IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV) {
+                case show_icon_with_yellow_flashing_frame_in_area_DMI_Types_Pkg :
+                  AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_I =
+                    NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  switch (AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_I) {
+                    case H_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case G_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case F_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case E_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case D_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case C_DMI_Types_Pkg :
+                      AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_Icon =
+                        NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                        9;
+                      if (AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_Icon) {
+                        outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                        _84_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro =
+                          (IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                            cStatusSymbol_IconGroup_DMI_Control_Pkg) &
+                          (NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                            cSTATUS_Emergency_brake_DMI_Control_Pkg);
+                        if (_84_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro) {
+                          outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            kcg_true;
+                          outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            _L72.iconRequest.DMI_nid_icon_identifier;
+                        }
+                        else {
+                          outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                          outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                        }
+                        outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      }
+                      else {
+                        _51_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl =
+                          NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                          1;
+                        outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                        outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                        if (_51_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl) {
+                          _85_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro =
+                            /* LevelModeSymolsChecker */
+                            LevelModeSymolsChecker_DMI_Control_Pkg_Sub_func(
+                              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                              NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+                          if (_85_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro) {
+                            outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                              kcg_true;
+                            outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                              _L72.iconRequest.DMI_nid_icon_identifier;
+                          }
+                          else {
+                            outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                              last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                            outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                              last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                          }
+                        }
+                        else {
+                          outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                          outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                        }
+                      }
+                      break;
+                    case B_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case A_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    
+                  }
+                  break;
+                case show_icon_flashing_in_area_DMI_Types_Pkg :
+                  outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  break;
+                case clear_area_DMI_Types_Pkg :
+                  _50_WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconC =
+                    NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  switch (_50_WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconC) {
+                    case H_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case G_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case F_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case E_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case D_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case C_DMI_Types_Pkg :
+                      _49_IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconCon =
+                        NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                        9;
+                      if (_49_IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconCon) {
+                        outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          kcg_false;
+                        outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      }
+                      else {
+                        _48_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl =
+                          NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                          1;
+                        if (_48_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl) {
+                          outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            kcg_false;
+                        }
+                        else {
+                          outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                            last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                        }
+                        outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                          last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      }
+                      break;
+                    case B_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    case A_DMI_Types_Pkg :
+                      outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                        last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      break;
+                    
+                  }
+                  outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  break;
+                case show_icon_in_area_DMI_Types_Pkg :
+                  outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContr =
+                    NID_AreaGroup_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContr) {
+                    case C_DMI_Types_Pkg :
+                      IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl =
+                        NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                        9;
+                      if (IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl) {
+                      }
+                      else {
+                        else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlag =
+                          NID_AreaRank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                          1;
+                        if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlag) {
+                          _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlo =
+                            kcg_false;
+                          for (i = 0; i < 5; i++) {
+                            tmp2 =
+                              _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlo;
+                            /* 1 */
+                            CheckElem_iterator_DMI_Control_Pkg_Utils(
+                              tmp2,
+                              ArrayOfIndex_LevelAnnouncementNoAck_DMI_Control_Pkg[i],
+                              NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                              &tmp14,
+                              &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlo);
+                            if (!tmp14) {
+                              break;
+                            }
+                          }
+                          CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFla =
+                            (IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                              cLevelSymbol_IconGroup_DMI_Control_Pkg) &
+                            _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlagWhenBlo;
+                        }
+                      }
+                      break;
+                    
+                  }
+                  outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    last_NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                  break;
+                
+              }
               break;
             
           }
           /* 2 */
-          Set_level_data_DMI_Control_Pkg_Sub_func(
-            (kcg_bool) (last_LevelSymbolVisibility_toDisplay | tmp17),
-            inC->SystemTime,
-            &outC->SelectedLevel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->DMI_level_data);
-          if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
-            outC->isAuxiliarMsg_toDisplay = kcg_true;
-            kcg_copy_array_int_5(
-              &outC->IndexFixedMsg_toDisplay,
-              &_L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5);
-            kcg_copy_array_char_30_5(
-              &outC->PlainText_toDisplay,
-              &_L6_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5);
-            kcg_copy_array_real_5(
-              &outC->Array_hh_toDisplay,
-              &_L8_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5);
-            kcg_copy_array_real_5(
-              &outC->Array_mm_toDisplay,
-              &_L9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock5);
-          }
-          else {
-            br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow =
-              !tmp9;
-            if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
-              /* 1 */
-              ImpMsgManager_DMI_Control_Pkg_Utils(
-                &Local_ImpMsgQueue_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-                &outC->IndexFixedMsg_toDisplay,
-                &outC->PlainText_toDisplay,
-                &outC->Array_hh_toDisplay,
-                &outC->Array_mm_toDisplay,
-                &outC->isAuxiliarMsg_toDisplay);
-            }
-            else {
-              outC->isAuxiliarMsg_toDisplay = kcg_true;
-              kcg_copy_array_int_5(
-                &outC->IndexFixedMsg_toDisplay,
-                &default_IndexFixedMsg_toDisplay);
-              kcg_copy_array_char_30_5(
-                &outC->PlainText_toDisplay,
-                (array_char_30_5 *) &cPlainText_DMI_Control_Pkg);
-              kcg_copy_array_real_5(
-                &outC->Array_hh_toDisplay,
-                &default_Array_mm_toDisplay);
-              kcg_copy_array_real_5(
-                &outC->Array_mm_toDisplay,
-                &default_Array_mm_toDisplay);
-            }
-          }
-          _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM =
-            (kcg_real) inC->DMI_dynamic.location_front_train;
-          if (inC->Track_Atlas_Information.gradientProfiles.profileChanged) {
-            /* 1 */
-            Gradient_from_Track_DMI_Control_Pkg_Sub_func(
-              &inC->Track_Atlas_Information.gradientProfiles.gradientProfiles,
-              &outC->Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &outC->Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &outC->Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          }
-          else if (outC->init7) {
-            kcg_copy_array_real_32(
-              &outC->Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (array_real_32 *) &cDMI_GradientsInit_DMI_Control_Pkg);
-            kcg_copy_array_real_32(
-              &outC->Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (array_real_32 *) &cDMI_GradientsInit_DMI_Control_Pkg);
-            kcg_copy_array_real_32(
-              &outC->Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (array_real_32 *) &cDMI_GradientsInit_DMI_Control_Pkg);
-          }
-          if (inC->Track_Atlas_Information.speedProfiles.profileChanged) {
-            /* 1 */
-            Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func(
-              &inC->Track_Atlas_Information.speedProfiles.speedProfiles,
-              &outC->Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              &outC->Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          }
-          else if (outC->init7) {
-            kcg_copy_array_real_32(
-              &outC->Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (array_real_32 *) &cDMI_SpeedProfile_Init_DMI_Control_Pkg);
-            kcg_copy_array_real_32(
-              &outC->Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-              (array_real_32 *) &cDMI_SpeedProfile_Init_DMI_Control_Pkg);
-          }
-          /* 1 */
-          Area_D_DMI_Control_Pkg_Sub_func_PlanningArea(
-            _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM,
-            &outC->Track_Atlas_Gradient_Value_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->Track_Atlas_Gradient_End_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->Track_Atlas_Gradient_Begin_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            (kcg_real) inC->DMI_dynamic.v_permitted,
-            &outC->Track_Atlas_Loc_LRBG_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->Track_Atlas_MRSP_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &last_D_GradientStartInterpolated_toDisplay,
-            &last_D_GradientEndInterpolated_toDisplay,
-            &_L512_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM,
-            &_L508_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            /* 1 */ D_behavior_reset(&outC->_1_Context_1);
-          }
-          /* 1 */
-          D_behavior(
-            inC->MousePressed,
-            inC->OverD9_fromDisplay,
-            inC->OverD12_frpmDisplay,
-            _18_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_TSM,
-            &last_D_GradientStartInterpolated_toDisplay,
-            &last_D_GradientEndInterpolated_toDisplay,
-            &_L512_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ModeCheckIfBlock_WhenBlock1_PIM,
-            &outC->_1_Context_1);
-          kcg_copy_tScale(
-            &_L471_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->_1_Context_1.Scale);
-          kcg_copy_array_real_12(
-            &_L472_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->_1_Context_1.GradientStartInterpolated);
-          kcg_copy_array_real_12(
-            &_L473_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->_1_Context_1.GradientEndInterpolated);
-          kcg_copy_array_bool_12(
-            &_L474_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->_1_Context_1.GradientVisible);
-          kcg_copy_array_real_4(
-            &_L475_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
-            &outC->_1_Context_1.PASP_Distances);
-          kcg_copy_array_bool_10(
-            &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
-            &outC->_1_Context_1.SPDI_SpeedChangeSymbolsVisible);
-          kcg_copy_array_int_10(
-            &outC->D_SPDI_SpeedChangeIndex_toDisplay,
-            &outC->_1_Context_1.SPDI_SpeedChangeIndex);
-          kcg_copy_array_real_10(
-            &outC->D_SPDI_SpeedChangePosition_toDisplay,
-            &outC->_1_Context_1.SPDI_SpeedChangePosition);
-          kcg_copy_array_real_4(
-            &outC->D_PASP_Speeds_toDisplay,
-            &outC->_1_Context_1.PASP_Speeds);
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    kcg_copy_array_real_4(
-      &last_D_PASP_Distances_toDisplay,
-      (array_real_4 *) &cD_PASP_Distances_DMI_Control_Pkg);
-    kcg_copy_array_bool_12(
-      &last_D_GradientVisible_toDisplay,
-      (array_bool_12 *) &cD_GradientVisible_DMI_Control_Pkg);
-    kcg_copy_array_real_12(
-      &last_D_GradientEndInterpolated_toDisplay,
-      (array_real_12 *) &cD_GradientStartInterpolated_DMI_Control_Pkg);
-    kcg_copy_array_real_12(
-      &last_D_GradientStartInterpolated_toDisplay,
-      (array_real_12 *) &cD_GradientStartInterpolated_DMI_Control_Pkg);
-    kcg_copy_tScale(
-      &last_D_Scale_toDisplay,
-      (tScale *) &cD_tScale_DMI_Control_Pkg);
-    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-      kcg_false;
-  }
-  else {
-    kcg_copy_array_real_4(
-      &last_D_PASP_Distances_toDisplay,
-      &outC->D_PASP_Distances_toDisplay);
-    kcg_copy_array_bool_12(
-      &last_D_GradientVisible_toDisplay,
-      &outC->D_GradientVisible_toDisplay);
-    kcg_copy_array_real_12(
-      &last_D_GradientEndInterpolated_toDisplay,
-      &outC->D_GradientEndInterpolated_toDisplay);
-    kcg_copy_array_real_12(
-      &last_D_GradientStartInterpolated_toDisplay,
-      &outC->D_GradientStartInterpolated_toDisplay);
-    kcg_copy_tScale(&last_D_Scale_toDisplay, &outC->D_Scale_toDisplay);
-    br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow =
-      outC->PlanningAreaVisibility_toDisplay;
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      kcg_copy_array_real_4(
-        &outC->D_PASP_Distances_toDisplay,
-        &last_D_PASP_Distances_toDisplay);
-      kcg_copy_array_bool_12(
-        &outC->D_GradientVisible_toDisplay,
-        &last_D_GradientVisible_toDisplay);
-      kcg_copy_array_real_12(
-        &outC->D_GradientEndInterpolated_toDisplay,
-        &last_D_GradientEndInterpolated_toDisplay);
-      kcg_copy_array_real_12(
-        &outC->D_GradientStartInterpolated_toDisplay,
-        &last_D_GradientStartInterpolated_toDisplay);
-      kcg_copy_tScale(&outC->D_Scale_toDisplay, &last_D_Scale_toDisplay);
-      outC->PlanningAreaVisibility_toDisplay =
-        br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      if (CabinSM_reset_act) {
-        /* 1 */
-        StatusPlanningArea_reset_DMI_Control_Pkg_Sub_func(&outC->Context_1);
-      }
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          kcg_copy_array_real_4(
-            &outC->D_PASP_Distances_toDisplay,
-            &last_D_PASP_Distances_toDisplay);
-          kcg_copy_array_bool_12(
-            &outC->D_GradientVisible_toDisplay,
-            &last_D_GradientVisible_toDisplay);
-          kcg_copy_array_real_12(
-            &outC->D_GradientEndInterpolated_toDisplay,
-            &last_D_GradientEndInterpolated_toDisplay);
-          kcg_copy_array_real_12(
-            &outC->D_GradientStartInterpolated_toDisplay,
-            &last_D_GradientStartInterpolated_toDisplay);
-          kcg_copy_tScale(&outC->D_Scale_toDisplay, &last_D_Scale_toDisplay);
-          outC->PlanningAreaVisibility_toDisplay =
-            br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataWindow;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          kcg_copy_array_real_4(
-            &outC->D_PASP_Distances_toDisplay,
-            &_L475_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          kcg_copy_array_bool_12(
-            &outC->D_GradientVisible_toDisplay,
-            &_L474_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          kcg_copy_array_real_12(
-            &outC->D_GradientEndInterpolated_toDisplay,
-            &_L473_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          kcg_copy_array_real_12(
-            &outC->D_GradientStartInterpolated_toDisplay,
-            &_L472_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          kcg_copy_tScale(
-            &outC->D_Scale_toDisplay,
-            &_L471_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
-            /* 1 */
-            StatusPlanningArea_reset_DMI_Control_Pkg_Sub_func(&outC->Context_1);
-          }
+          FlashingIconsOperator_DMI_Control_Pkg_Utils(
+            outC->YellowBorder_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            outC->YellowBorder_C9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            _L72.iconRequest.DMI_m_icon_flashing_freq,
+            _L72.dynamic.system_clock,
+            _L72.iconRequest.DMI_m_icon_flashing_freq,
+            &outC->_1_Context_2);
+          _L506_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            outC->_1_Context_2.yellowBorderC1Area_toDisplay;
+          _L507_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            outC->_1_Context_2.yellowBorderBrakeSymbol_toDisplay;
           if (outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            last_Vinterv_Color_toDisplay =
+            tmp10 =
               outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
           }
           else {
-            last_Vinterv_Color_toDisplay = 0;
+            tmp10 = 0;
           }
-          /* 1 */
+          /* 3 */
           StatusPlanningArea_DMI_Control_Pkg_Sub_func(
-            last_Vinterv_Color_toDisplay,
-            inC->HidePlanningArea_fromDisplay,
-            inC->ShowPlanningArea_fromDisplay,
-            inC->MousePressed,
-            &outC->Context_1);
-          outC->PlanningAreaVisibility_toDisplay = outC->Context_1.Visibility;
-          break;
-        
-      }
-      break;
-    
-  }
-  if (outC->init6) {
-    outC->init6 = kcg_false;
-    kcg_copy_array_real_12(
-      &last_D_GradientEndInterpolated_toDisplay,
-      (array_real_12 *) &cD_GradientsValue_DMI_Control_Pkg);
-  }
-  else {
-    kcg_copy_array_real_12(
-      &last_D_GradientEndInterpolated_toDisplay,
-      &outC->D_GradientsValue_toDisplay);
-  }
-  switch (CabinSM_state_act) {
-    case SSM_st_DeskIsClose_CabinSM :
-      kcg_copy_array_real_12(
-        &outC->D_GradientsValue_toDisplay,
-        &last_D_GradientEndInterpolated_toDisplay);
-      outC->CabinSM_state_nxt = SSM_st_DeskIsClose_CabinSM;
-      break;
-    case SSM_st_DeskIsOpen_CabinSM :
-      outC->init = kcg_false;
-      outC->CabinSM_state_nxt = SSM_st_DeskIsOpen_CabinSM;
-      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
-        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
-          kcg_copy_array_real_12(
-            &outC->D_GradientsValue_toDisplay,
-            &last_D_GradientEndInterpolated_toDisplay);
-          outC->HandshakeSM_state_nxt_CabinSM_DeskIsOpen =
-            SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM;
-          break;
-        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
-          kcg_copy_array_real_12(
-            &outC->D_GradientsValue_toDisplay,
-            &_L508_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
-          outC->HandshakeSM_state_nxt_CabinSM_DeskIsOpen =
-            SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM;
-          switch (YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
+            tmp10,
+            HidePlanningArea_fromDisplay,
+            kcg_true,
+            MousePressed,
+            &outC->Context_3);
+          _L490_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+            outC->Context_3.Visibility;
+          switch (SpeedSupervisionSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionS :
+              if (DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionS;
+              }
+              else {
+                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
+              }
               break;
-            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
+            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
+              if (DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionS;
+              }
+              else {
+                SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
+              }
               break;
             
           }
-          switch (IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              outC->IconSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionS :
+              IfBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                _L72.dynamic.mode == M_MODE_Full_Supervision;
+              if (IfBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe =
+                  _L72.dynamic.sup_status;
+                switch (WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe) {
+                  case CSM_DMI_Types_Pkg :
+                    _67_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup =
+                      (kcg_real) _L72.dynamic.v_intervention;
+                    vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio =
+                      (kcg_real) _L72.dynamic.v_permitted;
+                    _L36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      _67_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup >
+                      vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio;
+                    _66_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      _L36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      ((_L72.dynamic.m_warning ==
+                          supDis_overspeed_DMI_Types_Pkg) |
+                        (_L72.dynamic.m_warning ==
+                          supDis_warning_DMI_Types_Pkg));
+                    if (_66_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _26_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        _L36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                    }
+                    _68_isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                      (vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio >=
+                        0.0) & (_L72.dynamic.m_warning !=
+                        supDis_indication_DMI_Types_Pkg);
+                    break;
+                  case PIM_DMI_Types_Pkg :
+                    _59_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup =
+                      (kcg_real) _L72.dynamic.v_intervention;
+                    Vperm61_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn =
+                      (kcg_real) _L72.dynamic.v_permitted;
+                    _L75_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      _59_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup >
+                      Vperm61_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    _60_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      _L75_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      ((_L72.dynamic.m_warning ==
+                          supDis_overspeed_DMI_Types_Pkg) |
+                        (_L72.dynamic.m_warning ==
+                          supDis_warning_DMI_Types_Pkg));
+                    if (_60_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _25_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        _L75_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                    }
+                    _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      _L72.dynamic.m_warning != supDis_indication_DMI_Types_Pkg;
+                    _63_Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisi =
+                      (kcg_real) _L72.dynamic.v_target;
+                    isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn =
+                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      (Vperm61_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn >=
+                        _63_Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisi);
+                    _62_isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                      (_63_Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisi >=
+                        0.0) &
+                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+                    _64_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      (kcg_real) _L72.dynamic.v_release;
+                    _65_isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe =
+                      (_64_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis >=
+                        0.0) &
+                      _L45_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+                    break;
+                  case TSM_DMI_Types_Pkg :
+                    vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervi =
+                      (kcg_real) _L72.dynamic.v_intervention;
+                    Vperm56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn =
+                      (kcg_real) _L72.dynamic.v_permitted;
+                    _L92_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervi >
+                      Vperm56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI =
+                      _L92_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      ((_L72.dynamic.m_warning ==
+                          supDis_overspeed_DMI_Types_Pkg) |
+                        (_L72.dynamic.m_warning ==
+                          supDis_warning_DMI_Types_Pkg));
+                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI) {
+                    }
+                    else {
+                      else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio =
+                        _L92_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                    }
+                    Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn =
+                      (kcg_real) _L72.dynamic.v_target;
+                    _L54_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      Vperm56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn >=
+                      Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    _55_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      _L54_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      (_L72.dynamic.m_warning != supDis_normal_DMI_Types_Pkg);
+                    if (_55_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _24_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        (_L72.dynamic.m_warning ==
+                          supDis_normal_DMI_Types_Pkg) &
+                        _L54_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+                    }
+                    isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio =
+                      Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn >=
+                      0.0;
+                    _58_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      (kcg_real) _L72.dynamic.v_release;
+                    _57_isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe =
+                      _58_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis >=
+                      0.0;
+                    break;
+                  case RSM_DMI_Types_Pkg :
+                    Vperm_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo =
+                      (kcg_real) _L72.dynamic.v_permitted;
+                    _L22_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      (supDis_intervention_DMI_Types_Pkg ==
+                        _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                        supDis_indication_DMI_Types_Pkg);
+                    isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI =
+                      _L22_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      (Vperm_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo >=
+                        (kcg_real) _L72.dynamic.v_target);
+                    Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI =
+                      (kcg_real) _L72.dynamic.v_release;
+                    isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      (Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI >=
+                        0.0) &
+                      _L22_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_;
+                    break;
+                  
+                }
+              }
+              ModeCheckIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpe =
+                (_L72.dynamic.mode == M_MODE_Full_Supervision) |
+                (_L72.dynamic.mode == M_MODE_Limited_Supervision) |
+                (_L72.dynamic.mode == M_MODE_On_Sight);
+              if (ModeCheckIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpe) {
+                _47_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed =
+                  _L72.dynamic.sup_status;
+                switch (_47_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed) {
+                  case CSM_DMI_Types_Pkg :
+                    _L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      last_TrainSpeed_toDisplay > (kcg_real)
+                        _L72.dynamic.v_permitted;
+                    _74_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      _L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      ((supDis_overspeed_DMI_Types_Pkg ==
+                          _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                          supDis_warning_DMI_Types_Pkg));
+                    if (_74_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _46_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        _L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                    }
+                    break;
+                  case PIM_DMI_Types_Pkg :
+                    _72_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                      (kcg_real) _L72.dynamic.v_permitted;
+                    _L55_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      last_TrainSpeed_toDisplay >
+                      _72_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+                    _73_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      _L55_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                      ((supDis_overspeed_DMI_Types_Pkg ==
+                          _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                          supDis_warning_DMI_Types_Pkg));
+                    if (_73_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _45_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        _L55_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                      if (_45_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      }
+                      else {
+                        _44_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                          (last_TrainSpeed_toDisplay >= (kcg_real)
+                              _L72.dynamic.v_target) &
+                          (last_TrainSpeed_toDisplay <=
+                            _72_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) &
+                          ((supDis_normal_DMI_Types_Pkg ==
+                              _L72.dynamic.m_warning) |
+                            (_L72.dynamic.m_warning ==
+                              supDis_intervention_DMI_Types_Pkg));
+                      }
+                    }
+                    break;
+                  case TSM_DMI_Types_Pkg :
+                    _71_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                      (kcg_real) _L72.dynamic.v_permitted;
+                    _L5_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M =
+                      last_TrainSpeed_toDisplay >
+                      _71_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+                    _70_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                      _L5_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M &
+                      ((supDis_overspeed_DMI_Types_Pkg ==
+                          _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                          supDis_warning_DMI_Types_Pkg));
+                    _L37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                      (last_TrainSpeed_toDisplay >= (kcg_real)
+                          _L72.dynamic.v_target) & (last_TrainSpeed_toDisplay <=
+                        _71_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv);
+                    if (_70_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _43_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        _L5_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                      if (_43_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      }
+                      else {
+                        _42_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                          _L37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                          (supDis_normal_DMI_Types_Pkg ==
+                            _L72.dynamic.m_warning);
+                        if (_42_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                        }
+                        else {
+                          _41_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                            _L37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                            ((_L72.dynamic.m_warning ==
+                                supDis_indication_DMI_Types_Pkg) |
+                              (_L72.dynamic.m_warning ==
+                                supDis_intervention_DMI_Types_Pkg));
+                        }
+                      }
+                    }
+                    break;
+                  case RSM_DMI_Types_Pkg :
+                    vRelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI =
+                      (kcg_real) _L72.dynamic.v_release;
+                    if (vRelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI !=
+                      - 1.0) {
+                      _69_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                        (last_TrainSpeed_toDisplay >= 0.0) &
+                        (last_TrainSpeed_toDisplay <=
+                          vRelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI) &
+                        ((_L72.dynamic.m_warning ==
+                            supDis_indication_DMI_Types_Pkg) |
+                          (_L72.dynamic.m_warning ==
+                            supDis_intervention_DMI_Types_Pkg));
+                    }
+                    else {
+                      _69_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                        kcg_false;
+                    }
+                    if (_69_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                    }
+                    else {
+                      _40_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        (last_TrainSpeed_toDisplay > (kcg_real)
+                            _L72.dynamic.v_permitted) &
+                        (_L72.dynamic.m_warning ==
+                          supDis_intervention_DMI_Types_Pkg);
+                    }
+                    break;
+                  
+                }
+              }
+              else {
+                _39_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                  (_L72.dynamic.mode == M_MODE_Staff_Responsible) |
+                  (_L72.dynamic.mode == M_MODE_Unfitted);
+                if (_39_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                  _38_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed =
+                    _L72.dynamic.sup_status;
+                  switch (_38_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed) {
+                    case CSM_DMI_Types_Pkg :
+                      _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M =
+                        last_TrainSpeed_toDisplay > (kcg_real)
+                          _L72.dynamic.v_permitted;
+                      _81_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                        _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M &
+                        ((supDis_overspeed_DMI_Types_Pkg ==
+                            _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                            supDis_warning_DMI_Types_Pkg));
+                      if (_81_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      }
+                      else {
+                        _37_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                          _L2_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_M &
+                          (_L72.dynamic.m_warning ==
+                            supDis_intervention_DMI_Types_Pkg);
+                      }
+                      break;
+                    case PIM_DMI_Types_Pkg :
+                      _79_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        (kcg_real) _L72.dynamic.v_permitted;
+                      _L13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ =
+                        last_TrainSpeed_toDisplay >=
+                        _79_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+                      _80_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                        _L13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                        ((supDis_overspeed_DMI_Types_Pkg ==
+                            _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                            supDis_warning_DMI_Types_Pkg));
+                      if (_80_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      }
+                      else {
+                        _36_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                          _L13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo_ &
+                          (_L72.dynamic.m_warning ==
+                            supDis_intervention_DMI_Types_Pkg);
+                        if (_36_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                        }
+                        else {
+                          _35_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                            (last_TrainSpeed_toDisplay >= (kcg_real)
+                                _L72.dynamic.v_target) &
+                            (last_TrainSpeed_toDisplay <=
+                              _79_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) &
+                            ((supDis_normal_DMI_Types_Pkg ==
+                                _L72.dynamic.m_warning) |
+                              (_L72.dynamic.m_warning ==
+                                supDis_intervention_DMI_Types_Pkg));
+                        }
+                      }
+                      break;
+                    case TSM_DMI_Types_Pkg :
+                      _78_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        (kcg_real) _L72.dynamic.v_permitted;
+                      _L575_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo =
+                        last_TrainSpeed_toDisplay >=
+                        _78_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv;
+                      _77_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                        _L575_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo &
+                        ((supDis_overspeed_DMI_Types_Pkg ==
+                            _L72.dynamic.m_warning) | (_L72.dynamic.m_warning ==
+                            supDis_warning_DMI_Types_Pkg));
+                      _L3776_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInf =
+                        (last_TrainSpeed_toDisplay >= (kcg_real)
+                            _L72.dynamic.v_target) &
+                        (last_TrainSpeed_toDisplay <=
+                          _78_vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv);
+                      if (_77_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      }
+                      else {
+                        _34_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                          _L575_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo &
+                          (_L72.dynamic.m_warning ==
+                            supDis_intervention_DMI_Types_Pkg);
+                        if (_34_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                        }
+                        else {
+                          _33_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                            _L3776_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInf &
+                            (supDis_normal_DMI_Types_Pkg ==
+                              _L72.dynamic.m_warning);
+                          if (_33_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                          }
+                          else {
+                            _32_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                              _L3776_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInf &
+                              ((_L72.dynamic.m_warning ==
+                                  supDis_indication_DMI_Types_Pkg) |
+                                (_L72.dynamic.m_warning ==
+                                  supDis_intervention_DMI_Types_Pkg));
+                          }
+                        }
+                      }
+                      break;
+                    
+                  }
+                }
+                else {
+                  _31_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                    (_L72.dynamic.mode == M_MODE_Shunting) |
+                    (_L72.dynamic.mode == M_MODE_Reversing);
+                  if (_31_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                    _30_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed =
+                      _L72.dynamic.sup_status;
+                    switch (_30_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed) {
+                      case CSM_DMI_Types_Pkg :
+                        _L282_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo =
+                          last_TrainSpeed_toDisplay > (kcg_real)
+                            _L72.dynamic.v_permitted;
+                        _83_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis =
+                          _L282_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo &
+                          ((supDis_overspeed_DMI_Types_Pkg ==
+                              _L72.dynamic.m_warning) |
+                            (_L72.dynamic.m_warning ==
+                              supDis_warning_DMI_Types_Pkg));
+                        if (_83_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                        }
+                        else {
+                          _29_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                            _L282_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo &
+                            (_L72.dynamic.m_warning ==
+                              supDis_intervention_DMI_Types_Pkg);
+                        }
+                        break;
+                      
+                    }
+                  }
+                  else {
+                    _28_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                      (_L72.dynamic.mode == M_MODE_Non_Leading) |
+                      (_L72.dynamic.mode == M_MODE_Stand_By) |
+                      (_L72.dynamic.mode == M_MODE_Post_Trip);
+                    if (_28_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                    }
+                    else {
+                      _27_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv =
+                        (_L72.dynamic.mode == M_MODE_Trip) &
+                        DMI_DynamicIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                      if (_27_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                        isRed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo =
+                          ((last_TrainSpeed_toDisplay > (kcg_real)
+                                _L72.dynamic.v_permitted) &
+                            ((_L72.dynamic.sup_status == CSM_DMI_Types_Pkg) |
+                              (_L72.dynamic.sup_status == TSM_DMI_Types_Pkg) |
+                              (_L72.dynamic.sup_status == PIM_DMI_Types_Pkg))) |
+                          ((_L72.dynamic.sup_status == RSM_DMI_Types_Pkg) &
+                            (last_TrainSpeed_toDisplay > (kcg_real)
+                                _L72.dynamic.v_release));
+                      }
+                    }
+                  }
+                }
+              }
+              outC->SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionS;
               break;
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
-              outC->IconSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM;
+            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
+              outC->SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
+              break;
+            
+          }
+          switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              tmp8 = kcg_false;
+              tmp6 = kcg_false;
+              break;
+            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp8 = kcg_false;
+              }
+              else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp8 = kcg_true;
+              }
+              else if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp8 = kcg_true;
+              }
+              else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                tmp8 = kcg_true;
+              }
+              else {
+                tmp8 = kcg_false;
+              }
+              tmp6 = kcg_false;
+              break;
+            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              tmp8 = kcg_false;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
+                tmp6 = kcg_true;
+              }
+              else {
+                tmp6 = kcg_false;
+              }
+              break;
+            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
+                tmp8 = kcg_true;
+              }
+              else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_WaitingForReq) {
+                tmp8 = kcg_true;
+              }
+              else {
+                tmp8 = kcg_false;
+              }
+              tmp6 = kcg_false;
+              break;
+            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              tmp8 = kcg_false;
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
+                tmp6 = kcg_true;
+              }
+              else {
+                tmp6 = kcg_false;
+              }
+              break;
+            
+          }
+          _L354_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = tmp8 |
+            tmp7;
+          _L349_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive = tmp6 |
+            tmp5;
+          switch (HourGlassSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
+              if (_L349_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+              }
+              else {
+                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+              }
+              break;
+            case SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
+              if (_L354_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive |
+                EntryRequestIsValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+              }
+              else {
+                HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+              }
+              break;
+            
+          }
+          switch (HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
+              outC->HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+              break;
+            case SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
+              outC->HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
+              break;
+            
+          }
+          switch (SM17_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck) {
+                    tmp4 = kcg_false;
+                  }
+                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck) {
+                    tmp4 = kcg_true;
+                  }
+                  else {
+                    tmp4 = kcg_false;
+                  }
+                  break;
+                case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                  tmp4 = kcg_false;
+                  break;
+                case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                  tmp4 = kcg_false;
+                  break;
+                case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                  tmp4 = kcg_false;
+                  break;
+                
+              }
+              if (tmp4) {
+                SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+              }
+              else {
+                switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                  case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck) {
+                      tmp3 = kcg_true;
+                    }
+                    else {
+                      tmp3 = kcg_false;
+                    }
+                    break;
+                  case SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    tmp3 = kcg_false;
+                    break;
+                  case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    tmp3 = kcg_false;
+                    break;
+                  case SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
+                    tmp3 = kcg_false;
+                    break;
+                  
+                }
+                if (tmp3) {
+                  SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+                }
+                else {
+                  SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                    SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+                }
+              }
+              break;
+            case SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+              break;
+            case SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+              break;
+            
+          }
+          switch (SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+              break;
+            case SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
+              break;
+            case SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
               break;
             
           }
           switch (SymbolsAcknowledgmentSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_radyToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM :
-              if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
+              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck) {
                 outC->SymbolsAcknowledgmentSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
                   SSM_st_C1AreaAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM;
               }
-              else if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
+              else if (br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM_radyToBeAck) {
                 outC->SymbolsAcknowledgmentSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
                   SSM_st_brakeSymbolAcked_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SymbolsAcknowledgmentSM;
               }
@@ -6092,156 +3659,297 @@ void DMI_Controller_DMI_Control_Pkg(
               break;
             
           }
-          switch (SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-              break;
-            case SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-              break;
-            case SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
-              outC->SM17_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17;
-              break;
-            
-          }
-          switch (HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
-              outC->HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
-              break;
-            case SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
-              outC->HourGlassSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM;
-              break;
-            
-          }
-          switch (SM11_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11 :
-              if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11_TextMsgToBeAck) {
-                SM11_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_TextMsgAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11;
+          switch (TrainDataSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
+              if (_L72.trainData.valid) {
+                TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
               }
               else {
-                SM11_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11;
+                TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                  SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
               }
+              TrainDataSM_reset_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                _L72.trainData.valid;
               break;
-            case SSM_st_TextMsgAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11 :
-              SM11_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11;
+            case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
+              TrainDataSM_reset_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                kcg_false;
+              TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
               break;
             
           }
-          switch (SM11_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11 :
-              outC->SM11_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_TextMsgToBeAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11;
-              break;
-            case SSM_st_TextMsgAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11 :
-              outC->SM11_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_TextMsgAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM11;
+          switch (TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
+              if (TrainDataSM_reset_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+                outC->init6 = kcg_true;
+              }
               break;
             
           }
-          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
+          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
+            outC->init6 = kcg_true;
+          }
+          break;
+        
+      }
+      if (CabinSM_reset_act) {
+        outC->init6 = kcg_true;
+      }
+      outC->CabinSM_state_nxt = SSM_st_DeskIsOpen_CabinSM;
+      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
+        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
+          outC->HandshakeSM_state_nxt_CabinSM_DeskIsOpen =
+            SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM;
+          outC->isAuxiliarMsg_toDisplay = kcg_true;
+          kcg_copy_array_real_12(
+            &outC->D_GradientsValue_toDisplay,
+            &last_D_GradientsValue_toDisplay);
+          outC->PlanningAreaVisibility_toDisplay = tmp23;
+          kcg_copy_tScale(&outC->D_Scale_toDisplay, &last_D_Scale_toDisplay);
+          kcg_copy_array_real_12(
+            &outC->D_GradientStartInterpolated_toDisplay,
+            &last_D_GradientStartInterpolated_toDisplay);
+          kcg_copy_array_real_12(
+            &outC->D_GradientEndInterpolated_toDisplay,
+            &last_D_GradientEndInterpolated_toDisplay);
+          kcg_copy_array_bool_12(
+            &outC->D_GradientVisible_toDisplay,
+            &last_D_GradientVisible_toDisplay);
+          kcg_copy_array_real_4(
+            &outC->D_PASP_Distances_toDisplay,
+            &last_D_PASP_Distances_toDisplay);
+          kcg_copy_array_real_4(
+            &outC->D_PASP_Speeds_toDisplay,
+            &last_D_PASP_Speeds_toDisplay);
+          kcg_copy_array_real_1(
+            &outC->D_PASP_IndicatorMarker_toDisplay,
+            &last_D_PASP_IndicatorMarker_toDisplay);
+          kcg_copy_array_real_10(
+            &outC->D_SPDI_SpeedChangePosition_toDisplay,
+            &last_D_SPDI_SpeedChangePosition_toDisplay);
+          kcg_copy_array_int_10(
+            &outC->D_SPDI_SpeedChangeIndex_toDisplay,
+            &last_D_SPDI_SpeedChangeIndex_toDisplay);
+          kcg_copy_array_bool_10(
+            &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
+            &last_D_SPDI_SpeedChangeSymbolsVisible_toDisplay);
+          break;
+        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
+          switch (TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
+              outC->TrainDataSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
+              kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
+                &tmp1,
+                (DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *)
+                  &DMI_train_data_constant_DMI_Control_Pkg);
               break;
-            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
-              outC->SpeedSupervisionSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM;
+            case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
+              if (_L72.trainData.valid) {
+                kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
+                  &outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues,
+                  &_L72.trainData);
+              }
+              else if (outC->init6) {
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.valid =
+                  kcg_false;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.systemTime =
+                  0;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.trainCategory =
+                  NC_TRAIN_Passenger_train;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.l_train =
+                  0;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_brakeperct =
+                  0;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.v_maxTrain =
+                  0;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_axleLoad =
+                  M_AXLELOADCAT_E5;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_airTight =
+                  M_AIRTIGHT_Not_fitted;
+                outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues.m_loadingGauge =
+                  M_LOADINGGAUGE_The_train_does_not_fit_to_any_of_the_interoperable_loading_gauge_profiles;
+              }
+              outC->TrainDataSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
+              kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
+                &tmp1,
+                &outC->_L3_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM_Incoming_TrainDataValues);
               break;
             
           }
-          switch (SM13_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-              outC->SM13_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              break;
-            case SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-              switch (SM13_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-                case SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-                  if (_L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
-                    tmp =
-                      SSM_TR_State36_1_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  }
-                  else {
-                    tmp =
-                      SSM_TR_no_trans_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  }
-                  break;
-                case SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13 :
-                  tmp =
-                    SSM_TR_no_trans_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-                  break;
-                
-              }
-              tmp14 = tmp !=
-                SSM_TR_no_trans_SM13_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              if (tmp14) {
-                outC->SM13_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              }
-              else if (tmp8) {
-                outC->SM13_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_State37_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              }
-              else {
-                outC->SM13_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                  SSM_st_State36_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM13;
-              }
-              break;
-            
+          /* 3 */
+          TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData(
+            &tmp1,
+            &_L221_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L222_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L223_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L224_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L225_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L226_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            &_L227_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          if (_L72.menu_request.valid) {
+            /* 9 */
+            DMI_menu_req_To_ButtonEnabler_DMI_Control_Pkg_Sub_func_MenuRequest(
+              &_L72.menu_request,
+              &outC->_L184_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          }
+          else if (outC->init8) {
+            kcg_copy_array_int_30(
+              &outC->_L184_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+              (array_int_30 *) &AllMenuButtonsDisabled_DMI_Control_Pkg);
           }
           switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+            case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
+                kcg_false;
+              for (i = 0; i < 12; i++) {
+                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID |
+                  (*keypad_fromDisplay)[i];
+              }
+              _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
+                /* 7 */
+                CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID,
+                  keypad_fromDisplay);
+              _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID =
+                (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID ==
+                  ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
+              }
+              else {
+                else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID_DriverIDKeyb =
+                  (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID !=
+                    ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID;
+              }
+              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
               outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
                 last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              break;
+            case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+                SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              break;
+            case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+                kcg_false;
+              for (i = 0; i < 12; i++) {
+                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN |
+                  (*keypad_fromDisplay)[i];
+              }
+              _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+                /* 8 */
+                CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN,
+                  keypad_fromDisplay);
+              _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN =
+                (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN ==
+                  ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
+              }
+              else {
+                else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboa =
+                  (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN !=
+                    ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN;
+              }
+              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
               break;
             case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
-              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
               switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
                 case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
                   outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                     SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
                   break;
-                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                    SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  break;
-                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                    SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  break;
-                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                    SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  break;
-                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                    SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
-                  break;
-                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
-                  if (last_ModeSymbolVisibility_toDisplay) {
-                    outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co =
+                    kcg_false;
+                  for (i = 0; i < 12; i++) {
+                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co =
+                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co |
+                      (*keypad_fromDisplay)[i];
                   }
-                  else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainDataValidationWindow) {
+                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co =
+                    /* 12 */
+                    CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
+                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co,
+                      keypad_fromDisplay);
+                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co =
+                    (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co ==
+                      ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co;
+                  if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co) {
+                  }
+                  else {
+                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_ =
+                      (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co !=
+                        ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co;
+                  }
+                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                    SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                    SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows;
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                    SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe;
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
+                    kcg_false;
+                  for (i = 0; i < 12; i++) {
+                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
+                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN |
+                      (*keypad_fromDisplay)[i];
+                  }
+                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
+                    /* 13 */
+                    CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard(
+                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
+                      keypad_fromDisplay);
+                  _L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN =
+                    (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN ==
+                      ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                    _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
+                  if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
+                  }
+                  else {
+                    else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr =
+                      (_L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN !=
+                        ASCII_Backsp_DMI_Control_Pkg) & MousePressed &
+                      _L53_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN;
+                  }
+                  outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                    SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS;
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  if (WaitingLevelInformation_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Mai) {
+                    outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
+                      SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+                  }
+                  else if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_WaitingLe) {
                     outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
                       SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
                   }
                   else {
                     outC->WindowsSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu =
-                      SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM;
+                      SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
                   }
                   break;
                 case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
@@ -6250,41 +3958,1715 @@ void DMI_Controller_DMI_Control_Pkg(
                   break;
                 
               }
-              outC->init4 = kcg_false;
+              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  levelMenuVisibility_toDisplay_strong =
+                    last_levelMenuVisibility_toDisplay;
+                  break;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  levelMenuVisibility_toDisplay_strong =
+                    last_levelMenuVisibility_toDisplay;
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  if (_53_br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                  }
+                  else {
+                    _52_br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train =
+                      _54_br_2_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train;
+                  }
+                  levelMenuVisibility_toDisplay_strong =
+                    last_levelMenuVisibility_toDisplay;
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  levelMenuVisibility_toDisplay_strong =
+                    last_levelMenuVisibility_toDisplay;
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  levelMenuVisibility_toDisplay_strong =
+                    last_levelMenuVisibility_toDisplay;
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  levelMenuVisibility_toDisplay_strong =
+                    last_levelMenuVisibility_toDisplay;
+                  break;
+                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                    levelMenuVisibility_toDisplay_strong = kcg_false;
+                  }
+                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                    levelMenuVisibility_toDisplay_strong = kcg_false;
+                  }
+                  else {
+                    levelMenuVisibility_toDisplay_strong =
+                      last_levelMenuVisibility_toDisplay;
+                  }
+                  break;
+                
+              }
+              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                _L4_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu;
+              break;
+            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+              break;
+            
+          }
+          outC->HandshakeSM_state_nxt_CabinSM_DeskIsOpen =
+            SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM;
+          kcg_copy_array_real_12(
+            &outC->D_GradientsValue_toDisplay,
+            &_L508_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          outC->PlanningAreaVisibility_toDisplay =
+            _L490_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          kcg_copy_tScale(
+            &outC->D_Scale_toDisplay,
+            &_L850_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_real_12(
+            &outC->D_GradientStartInterpolated_toDisplay,
+            &_L851_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_real_12(
+            &outC->D_GradientEndInterpolated_toDisplay,
+            &_L852_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_bool_12(
+            &outC->D_GradientVisible_toDisplay,
+            (array_bool_12 *)
+              &outC->Gradient_Visible_Flag_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive[0]);
+          kcg_copy_array_real_4(
+            &outC->D_PASP_Distances_toDisplay,
+            &_L854_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_real_4(
+            &outC->D_PASP_Speeds_toDisplay,
+            &_L855_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_real_1(
+            &outC->D_PASP_IndicatorMarker_toDisplay,
+            &_L859_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_real_10(
+            &outC->D_SPDI_SpeedChangePosition_toDisplay,
+            &_L856_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_int_10(
+            &outC->D_SPDI_SpeedChangeIndex_toDisplay,
+            &_L857_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_bool_10(
+            &outC->D_SPDI_SpeedChangeSymbolsVisible_toDisplay,
+            &_L858_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          if (showAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            outC->isAuxiliarMsg_toDisplay = kcg_true;
+          }
+          else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6) {
+            outC->isAuxiliarMsg_toDisplay =
+              _L19_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+          }
+          else {
+            outC->isAuxiliarMsg_toDisplay = kcg_true;
+          }
+          break;
+        
+      }
+      break;
+    
+  }
+  tmp.present = DMI_Status.valid | DMI_Identifier.valid |
+    DMI_Driver_Request.valid | DMI_Driver_Identifier.valid |
+    DMI_Train_Running_Number.valid | DMI_Text_Message.valid |
+    DMI_Train_Data_Ack.valid | outC->DMI_Level_Data.valid;
+  kcg_copy_DMI_Status_T_DMI_Messages_DMI_to_EVC_Pkg(&tmp.status, &DMI_Status);
+  kcg_copy_DMI_Identifier_T_DMI_Messages_DMI_to_EVC_Pkg(
+    &tmp.identifier,
+    &DMI_Identifier);
+  kcg_copy_DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg(
+    &tmp.driverRequest,
+    &DMI_Driver_Request);
+  kcg_copy_DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg(
+    &tmp.driverIdentifier,
+    &DMI_Driver_Identifier);
+  kcg_copy_DMI_Train_Running_Number_T_DMI_Messages_Bothways_Pkg(
+    &tmp.trainRunningNumber,
+    &DMI_Train_Running_Number);
+  kcg_copy_DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg(
+    &tmp.radioNetData,
+    (DMI_Radio_Net_Data_T_DMI_Messages_DMI_to_EVC_Pkg *)
+      &cEmptyDMIRadioNetData_DMI_Control_Pkg);
+  kcg_copy_DMI_Text_Message_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+    &tmp.textMessageAck,
+    &DMI_Text_Message);
+  kcg_copy_DMI_Train_Data_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+    &tmp.trainDataAck,
+    &DMI_Train_Data_Ack);
+  kcg_copy_DMI_Train_Data_T_DMI_Messages_Bothways_Pkg(
+    &tmp.trainData,
+    (DMI_Train_Data_T_DMI_Messages_Bothways_Pkg *)
+      &cEmptyDMITrainData_DMI_Control_Pkg);
+  kcg_copy_DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg(
+    &tmp.adhesionFactor,
+    (DMI_Adhesion_Factor_Data_T_DMI_Messages_Bothways_Pkg *)
+      &cEmptyDMIAdhesionFactorData_DMI_Control_Pkg);
+  kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+    &tmp.iconAck,
+    (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+      &cEmptyDMIIconAck_DMI_Control_Pkg);
+  kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+    &tmp.selectedLevel,
+    &outC->DMI_Level_Data);
+  /* 1 */ Write_DMI_to_EVC_to_int_Messages(&tmp, &outC->Output83);
+  default_Array_mm_toDisplay[0] = - 1.0;
+  default_Array_mm_toDisplay[1] = - 1.0;
+  default_Array_mm_toDisplay[2] = - 1.0;
+  default_Array_mm_toDisplay[3] = - 1.0;
+  default_Array_mm_toDisplay[4] = - 1.0;
+  switch (CabinSM_state_act) {
+    case SSM_st_DeskIsClose_CabinSM :
+      outC->StatusSymbolVisibility_toDisplay = kcg_false;
+      outC->yellowBorderMsg_toDisplay = kcg_false;
+      outC->openDesk_toDisplay = kcg_false;
+      outC->yellowBorderBrakeSymbol_toDisplay = kcg_false;
+      outC->yellowBorderC1Area_toDisplay = kcg_false;
+      outC->hourGlassVisibility_toDisplay = kcg_false;
+      kcg_copy_array_real_5(
+        &outC->Array_mm_toDisplay,
+        &default_Array_mm_toDisplay);
+      kcg_copy_array_real_5(
+        &outC->Array_hh_toDisplay,
+        &default_Array_mm_toDisplay);
+      kcg_copy_array_char_30_5(
+        &outC->PlainText_toDisplay,
+        (array_char_30_5 *) &cPlainText_DMI_Control_Pkg);
+      kcg_copy_array_int_5(
+        &outC->IndexFixedMsg_toDisplay,
+        &default_IndexFixedMsg_toDisplay);
+      kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+        &outC->DMI_level_data,
+        &last_DMI_level_data);
+      outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+      kcg_copy_array_int_12(
+        &outC->ArrayLevelIndex_toDisplay,
+        &last_ArrayLevelIndex_toDisplay);
+      outC->levelMenuVisibility_toDisplay = last_levelMenuVisibility_toDisplay;
+      outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
+      outC->vtarget_permColor_toDisplay = last_vtarget_permColor_toDisplay;
+      outC->Vinterv_Visibility_toDisplay = last_Vinterv_Visibility_toDisplay;
+      outC->Vtarget_permVisibility_toDisplay =
+        last_Vtarget_permVisibility_toDisplay;
+      outC->VtargetColor_toDisplay = last_VtargetColor_toDisplay;
+      outC->VreleaseColor_toDisplay = last_VreleaseColor_toDisplay;
+      outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+      outC->hourGlassCounter_toDisplay = 0.0;
+      outC->modeSymbolAnnouncementIndex_toDisplay =
+        last_modeSymbolAnnouncementIndex_toDisplay;
+      outC->levelSymbolAnnouncementIndex_toDisplay =
+        last_levelSymbolAnnouncementIndex_toDisplay;
+      outC->iconGroupIndex_toDisplay = last_iconGroupIndex_toDisplay;
+      kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+        &outC->DMI_icons_ack,
+        (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+          &cDMI_Icons_Ack_DMI_Control_Pkg);
+      outC->closeButtonIndex_toDisplay = 26;
+      outC->traindataYesNoIndex_toDisplay = last_traindataYesNoIndex_toDisplay;
+      outC->traindataValidWinVisibility_toDisplay =
+        last_traindataValidWinVisibility_toDisplay;
+      outC->trainMaxspeed_toDisplay = last_trainMaxspeed_toDisplay;
+      outC->trainBrakePerc_toDisplay = last_trainBrakePerc_toDisplay;
+      outC->trainLenght_toDisplay = last_trainLenght_toDisplay;
+      outC->trainLoadingGougeIndex_toDisplay =
+        last_trainLoadingGougeIndex_toDisplay;
+      outC->trainAirtightIndex_toDisplay = last_trainAirtightIndex_toDisplay;
+      outC->trainAxleloadIndex_toDisplay = last_trainAxleloadIndex_toDisplay;
+      outC->trainCategoryIndex_toDisplay = last_trainCategoryIndex_toDisplay;
+      kcg_copy_array_int_5(
+        &outC->ArrayOfMsgIndex_toDisplay,
+        &last_ArrayOfMsgIndex_toDisplay);
+      outC->ModeSymbolVisibility_toDisplay =
+        last_ModeSymbolVisibility_toDisplay;
+      outC->ModeSymbol_toDisplay = last_ModeSymbol_toDisplay;
+      outC->DistanceToTargetBarVisibility_toDisplay =
+        last_DistanceToTargetBarVisibility_toDisplay;
+      outC->RBC_status_symbol_toDisplay = 4;
+      outC->CloseButtonEnabler_toDisplay = 26;
+      kcg_copy_array_int_30(
+        &outC->ArrayButtonsEnabler_toDisplay,
+        &last_ArrayButtonsEnabler_toDisplay);
+      kcg_copy_array_bool_15(
+        &outC->window_mask_visibility__toDisplay,
+        &last_window_mask_visibility__toDisplay);
+      kcg_copy_array_int_9(
+        &outC->TrainRN_Display_toDisplay,
+        &last_TrainRN_Display_toDisplay);
+      kcg_copy_array_int_9(
+        &outC->DriverID_Display_toDisplay,
+        &last_DriverID_Display_toDisplay);
+      outC->PointerColor_toDisplay = last_PointerColor_toDisplay;
+      outC->StatusSymbolBrake_toDisplay = last_StatusSymbolBrake_toDisplay;
+      outC->InterpolatedDistanceToTarget_toDisplay =
+        last_InterpolatedDistanceToTarget_toDisplay;
+      outC->DistanceToTargetVisibilityDigital_toDisplay =
+        last_DistanceToTargetVisibilityDigital_toDisplay;
+      outC->DistanceToTarget_toDisplay = last_DistanceToTarget_toDisplay;
+      outC->SpeedIntervention_toDisplay = last_SpeedIntervention_toDisplay;
+      outC->SpeedRelease_toDisplay = last_SpeedRelease_toDisplay;
+      outC->SpeedPermitted_toDisplay = last_SpeedPermitted_toDisplay;
+      outC->SpeedTarget_toDisplay = last_SpeedTarget_toDisplay;
+      outC->SpeedDigitThree_toDisplay = last_SpeedDigitThree_toDisplay;
+      outC->SpeedDigitTwo_toDisplay = last_SpeedDigitTwo_toDisplay;
+      outC->SpeedDigitOne_toDisplay = last_SpeedDigitOne_toDisplay;
+      outC->TrainDataWindowVisibility_toDisplay =
+        last_TrainDataWindowVisibility_toDisplay;
+      outC->TrainSpeed_toDisplay = last_TrainSpeed_toDisplay;
+      outC->LevelSymbolVisibility_toDisplay =
+        last_LevelSymbolVisibility_toDisplay;
+      outC->ETCS_LevelSymbol_toDisplay = last_ETCS_LevelSymbol_toDisplay;
+      outC->TrainPosition_toDisplay = last_TrainPosition_toDisplay;
+      break;
+    case SSM_st_DeskIsOpen_CabinSM :
+      outC->init = kcg_false;
+      outC->openDesk_toDisplay = kcg_true;
+      if (CabinSM_reset_act) {
+        /* 2 */
+        HourGlassAnimation_reset_DMI_Control_Pkg_Sub_func(&outC->Context_2);
+      }
+      switch (HandshakeSM_state_act_CabinSM_DeskIsOpen) {
+        case SSM_st_WaitingForIdentifierRequest_CabinSM_DeskIsOpen_HandshakeSM :
+          outC->hourGlassVisibility_toDisplay = kcg_false;
+          kcg_copy_array_real_5(
+            &outC->Array_mm_toDisplay,
+            &default_Array_mm_toDisplay);
+          kcg_copy_array_real_5(
+            &outC->Array_hh_toDisplay,
+            &default_Array_mm_toDisplay);
+          kcg_copy_array_char_30_5(
+            &outC->PlainText_toDisplay,
+            (array_char_30_5 *) &cPlainText_DMI_Control_Pkg);
+          kcg_copy_array_int_5(
+            &outC->IndexFixedMsg_toDisplay,
+            &default_IndexFixedMsg_toDisplay);
+          kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+            &outC->DMI_level_data,
+            &last_DMI_level_data);
+          outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+          kcg_copy_array_int_12(
+            &outC->ArrayLevelIndex_toDisplay,
+            &last_ArrayLevelIndex_toDisplay);
+          outC->levelMenuVisibility_toDisplay =
+            last_levelMenuVisibility_toDisplay;
+          outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
+          outC->vtarget_permColor_toDisplay = last_vtarget_permColor_toDisplay;
+          outC->Vinterv_Visibility_toDisplay =
+            last_Vinterv_Visibility_toDisplay;
+          outC->Vtarget_permVisibility_toDisplay =
+            last_Vtarget_permVisibility_toDisplay;
+          outC->VtargetColor_toDisplay = last_VtargetColor_toDisplay;
+          outC->VreleaseColor_toDisplay = last_VreleaseColor_toDisplay;
+          outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+          outC->yellowBorderBrakeSymbol_toDisplay = kcg_false;
+          outC->yellowBorderC1Area_toDisplay = kcg_false;
+          outC->hourGlassCounter_toDisplay = 0.0;
+          outC->modeSymbolAnnouncementIndex_toDisplay =
+            last_modeSymbolAnnouncementIndex_toDisplay;
+          outC->levelSymbolAnnouncementIndex_toDisplay =
+            last_levelSymbolAnnouncementIndex_toDisplay;
+          outC->iconGroupIndex_toDisplay = last_iconGroupIndex_toDisplay;
+          kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+            &outC->DMI_icons_ack,
+            (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+              &cDMI_Icons_Ack_DMI_Control_Pkg);
+          outC->StatusSymbolVisibility_toDisplay = kcg_false;
+          outC->yellowBorderMsg_toDisplay = kcg_false;
+          outC->closeButtonIndex_toDisplay = 26;
+          outC->traindataYesNoIndex_toDisplay =
+            last_traindataYesNoIndex_toDisplay;
+          outC->traindataValidWinVisibility_toDisplay =
+            last_traindataValidWinVisibility_toDisplay;
+          outC->trainMaxspeed_toDisplay = last_trainMaxspeed_toDisplay;
+          outC->trainBrakePerc_toDisplay = last_trainBrakePerc_toDisplay;
+          outC->trainLenght_toDisplay = last_trainLenght_toDisplay;
+          outC->trainLoadingGougeIndex_toDisplay =
+            last_trainLoadingGougeIndex_toDisplay;
+          outC->trainAirtightIndex_toDisplay =
+            last_trainAirtightIndex_toDisplay;
+          outC->trainAxleloadIndex_toDisplay =
+            last_trainAxleloadIndex_toDisplay;
+          outC->trainCategoryIndex_toDisplay =
+            last_trainCategoryIndex_toDisplay;
+          kcg_copy_array_int_5(
+            &outC->ArrayOfMsgIndex_toDisplay,
+            &last_ArrayOfMsgIndex_toDisplay);
+          outC->ModeSymbolVisibility_toDisplay =
+            last_ModeSymbolVisibility_toDisplay;
+          outC->ModeSymbol_toDisplay = last_ModeSymbol_toDisplay;
+          outC->DistanceToTargetBarVisibility_toDisplay =
+            last_DistanceToTargetBarVisibility_toDisplay;
+          outC->RBC_status_symbol_toDisplay = 4;
+          outC->CloseButtonEnabler_toDisplay = 26;
+          kcg_copy_array_int_30(
+            &outC->ArrayButtonsEnabler_toDisplay,
+            &last_ArrayButtonsEnabler_toDisplay);
+          kcg_copy_array_bool_15(
+            &outC->window_mask_visibility__toDisplay,
+            &last_window_mask_visibility__toDisplay);
+          kcg_copy_array_int_9(
+            &outC->TrainRN_Display_toDisplay,
+            &last_TrainRN_Display_toDisplay);
+          kcg_copy_array_int_9(
+            &outC->DriverID_Display_toDisplay,
+            &last_DriverID_Display_toDisplay);
+          outC->PointerColor_toDisplay = last_PointerColor_toDisplay;
+          outC->StatusSymbolBrake_toDisplay = last_StatusSymbolBrake_toDisplay;
+          outC->InterpolatedDistanceToTarget_toDisplay =
+            last_InterpolatedDistanceToTarget_toDisplay;
+          outC->DistanceToTargetVisibilityDigital_toDisplay =
+            last_DistanceToTargetVisibilityDigital_toDisplay;
+          outC->DistanceToTarget_toDisplay = last_DistanceToTarget_toDisplay;
+          outC->SpeedIntervention_toDisplay = last_SpeedIntervention_toDisplay;
+          outC->SpeedRelease_toDisplay = last_SpeedRelease_toDisplay;
+          outC->SpeedPermitted_toDisplay = last_SpeedPermitted_toDisplay;
+          outC->SpeedTarget_toDisplay = last_SpeedTarget_toDisplay;
+          outC->SpeedDigitThree_toDisplay = last_SpeedDigitThree_toDisplay;
+          outC->SpeedDigitTwo_toDisplay = last_SpeedDigitTwo_toDisplay;
+          outC->SpeedDigitOne_toDisplay = last_SpeedDigitOne_toDisplay;
+          outC->TrainDataWindowVisibility_toDisplay =
+            last_TrainDataWindowVisibility_toDisplay;
+          outC->TrainSpeed_toDisplay = last_TrainSpeed_toDisplay;
+          outC->LevelSymbolVisibility_toDisplay =
+            last_LevelSymbolVisibility_toDisplay;
+          outC->ETCS_LevelSymbol_toDisplay = last_ETCS_LevelSymbol_toDisplay;
+          outC->TrainPosition_toDisplay = last_TrainPosition_toDisplay;
+          break;
+        case SSM_st_CommunicationActive_CabinSM_DeskIsOpen_HandshakeSM :
+          kcg_copy_DMI_Level_Data_T_DMI_Messages_Bothways_Pkg(
+            &outC->DMI_level_data,
+            &_L431_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          kcg_copy_array_int_12(
+            &outC->ArrayLevelIndex_toDisplay,
+            &outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          switch (HourGlassSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_HideHourglass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
+              outC->hourGlassVisibility_toDisplay = kcg_false;
+              break;
+            case SSM_st_ShowHourGlass_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_HourGlassSM :
+              outC->hourGlassVisibility_toDisplay = kcg_true;
+              break;
+            
+          }
+          if (HandshakeSM_reset_act_CabinSM_DeskIsOpen) {
+            /* 2 */
+            HourGlassAnimation_reset_DMI_Control_Pkg_Sub_func(&outC->Context_2);
+          }
+          /* 2 */
+          HourGlassAnimation_DMI_Control_Pkg_Sub_func(
+            _L349_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            _L354_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+            _L72.dynamic.system_clock,
+            &outC->Context_2);
+          outC->hourGlassCounter_toDisplay = (kcg_real) outC->Context_2.Output1;
+          outC->yellowBorderC1Area_toDisplay =
+            _L506_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          switch (SM17_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
+                &outC->DMI_icons_ack,
+                (DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg *)
+                  &cDMI_Icons_Ack_DMI_Control_Pkg);
+              break;
+            case SSM_st_SendC9Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              /* 1 */
+              Set_IconAck_DMI_Control_Pkg_Sub_func(
+                kcg_true,
+                _L72.dynamic.system_clock,
+                outC->NID_c9_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                &outC->DMI_icons_ack);
+              break;
+            case SSM_st_SendC1Ack_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SM17 :
+              /* 2 */
+              Set_IconAck_DMI_Control_Pkg_Sub_func(
+                kcg_true,
+                _L72.dynamic.system_clock,
+                outC->NID_C1_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive,
+                &outC->DMI_icons_ack);
+              break;
+            
+          }
+          outC->yellowBorderBrakeSymbol_toDisplay =
+            _L507_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->ArrayOfMsgIndex_toDisplay[0] = 0;
+          outC->ArrayOfMsgIndex_toDisplay[1] = 0;
+          outC->ArrayOfMsgIndex_toDisplay[2] = 0;
+          outC->ArrayOfMsgIndex_toDisplay[3] = 0;
+          outC->ArrayOfMsgIndex_toDisplay[4] = 0;
+          if (showAck_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            kcg_copy_array_real_5(
+              &outC->Array_mm_toDisplay,
+              &_L32_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+            kcg_copy_array_real_5(
+              &outC->Array_hh_toDisplay,
+              &_L31_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+            kcg_copy_array_char_30_5(
+              &outC->PlainText_toDisplay,
+              &_L30_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+            kcg_copy_array_int_5(
+              &outC->IndexFixedMsg_toDisplay,
+              &_L29_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+            outC->yellowBorderMsg_toDisplay =
+              _L33_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6;
+          }
+          else {
+            if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6) {
+              kcg_copy_array_real_5(
+                &outC->Array_mm_toDisplay,
+                &_L18_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+              kcg_copy_array_real_5(
+                &outC->Array_hh_toDisplay,
+                &_L17_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+              kcg_copy_array_char_30_5(
+                &outC->PlainText_toDisplay,
+                &_L16_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+              kcg_copy_array_int_5(
+                &outC->IndexFixedMsg_toDisplay,
+                &_L15_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IfBlock6);
+            }
+            else {
+              kcg_copy_array_real_5(
+                &outC->Array_mm_toDisplay,
+                &default_Array_mm_toDisplay);
+              kcg_copy_array_real_5(
+                &outC->Array_hh_toDisplay,
+                &default_Array_mm_toDisplay);
+              kcg_copy_array_char_30_5(
+                &outC->PlainText_toDisplay,
+                (array_char_30_5 *) &cPlainText_DMI_Control_Pkg);
+              kcg_copy_array_int_5(
+                &outC->IndexFixedMsg_toDisplay,
+                &default_IndexFixedMsg_toDisplay);
+            }
+            outC->yellowBorderMsg_toDisplay = kcg_false;
+          }
+          outC->traindataYesNoIndex_toDisplay = traindataYesNoIndex_toDisplay;
+          outC->trainMaxspeed_toDisplay =
+            _L224_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->trainBrakePerc_toDisplay =
+            _L227_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->trainLenght_toDisplay =
+            _L223_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive / 100.0;
+          outC->trainLoadingGougeIndex_toDisplay =
+            _L225_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->trainAirtightIndex_toDisplay =
+            _L226_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->trainAxleloadIndex_toDisplay =
+            _L222_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->trainCategoryIndex_toDisplay =
+            _L221_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->ModeSymbolVisibility_toDisplay =
+            outC->LocalModeSymbolVisibility_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->ModeSymbol_toDisplay =
+            outC->LocalModeSymbolIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->DistanceToTargetBarVisibility_toDisplay =
+            outC->_L388_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->RBC_status_symbol_toDisplay =
+            outC->_L393_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->StatusSymbolVisibility_toDisplay =
+            outC->_L394_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          kcg_copy_array_int_30(
+            &outC->ArrayButtonsEnabler_toDisplay,
+            &outC->_L184_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive);
+          switch (IconSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_Idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
+              outC->modeSymbolAnnouncementIndex_toDisplay =
+                last_modeSymbolAnnouncementIndex_toDisplay;
+              outC->levelSymbolAnnouncementIndex_toDisplay =
+                last_levelSymbolAnnouncementIndex_toDisplay;
+              outC->iconGroupIndex_toDisplay = last_iconGroupIndex_toDisplay;
+              outC->StatusSymbolBrake_toDisplay =
+                last_StatusSymbolBrake_toDisplay;
+              break;
+            case SSM_st_IconPacketValid_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM :
+              switch (IconControlFlagWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketV) {
+                case show_icon_with_yellow_flashing_frame_in_area_DMI_Types_Pkg :
+                  switch (AreaGroupWhenBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_I) {
+                    case H_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case G_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case F_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case E_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case D_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case C_DMI_Types_Pkg :
+                      if (AreaRankIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_Icon) {
+                        outC->modeSymbolAnnouncementIndex_toDisplay =
+                          last_modeSymbolAnnouncementIndex_toDisplay;
+                        outC->levelSymbolAnnouncementIndex_toDisplay =
+                          last_levelSymbolAnnouncementIndex_toDisplay;
+                        outC->iconGroupIndex_toDisplay =
+                          last_iconGroupIndex_toDisplay;
+                        if (_84_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro) {
+                          outC->StatusSymbolBrake_toDisplay = kcg_true;
+                        }
+                        else {
+                          outC->StatusSymbolBrake_toDisplay =
+                            last_StatusSymbolBrake_toDisplay;
+                        }
+                      }
+                      else {
+                        if (_51_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl) {
+                          if (_85_CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContro) {
+                            outC->modeSymbolAnnouncementIndex_toDisplay =
+                              NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                            outC->levelSymbolAnnouncementIndex_toDisplay =
+                              NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                            outC->iconGroupIndex_toDisplay =
+                              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                          }
+                          else {
+                            outC->modeSymbolAnnouncementIndex_toDisplay =
+                              last_modeSymbolAnnouncementIndex_toDisplay;
+                            outC->levelSymbolAnnouncementIndex_toDisplay =
+                              last_levelSymbolAnnouncementIndex_toDisplay;
+                            outC->iconGroupIndex_toDisplay =
+                              last_iconGroupIndex_toDisplay;
+                          }
+                        }
+                        else {
+                          outC->modeSymbolAnnouncementIndex_toDisplay =
+                            last_modeSymbolAnnouncementIndex_toDisplay;
+                          outC->levelSymbolAnnouncementIndex_toDisplay =
+                            last_levelSymbolAnnouncementIndex_toDisplay;
+                          outC->iconGroupIndex_toDisplay =
+                            last_iconGroupIndex_toDisplay;
+                        }
+                        outC->StatusSymbolBrake_toDisplay =
+                          last_StatusSymbolBrake_toDisplay;
+                      }
+                      break;
+                    case B_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case A_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    
+                  }
+                  break;
+                case show_icon_flashing_in_area_DMI_Types_Pkg :
+                  outC->modeSymbolAnnouncementIndex_toDisplay =
+                    last_modeSymbolAnnouncementIndex_toDisplay;
+                  outC->levelSymbolAnnouncementIndex_toDisplay =
+                    last_levelSymbolAnnouncementIndex_toDisplay;
+                  outC->iconGroupIndex_toDisplay =
+                    last_iconGroupIndex_toDisplay;
+                  outC->StatusSymbolBrake_toDisplay =
+                    last_StatusSymbolBrake_toDisplay;
+                  break;
+                case clear_area_DMI_Types_Pkg :
+                  switch (_50_WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconC) {
+                    case H_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case G_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case F_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case E_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case D_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case C_DMI_Types_Pkg :
+                      if (_49_IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconCon) {
+                        outC->modeSymbolAnnouncementIndex_toDisplay =
+                          last_modeSymbolAnnouncementIndex_toDisplay;
+                        outC->levelSymbolAnnouncementIndex_toDisplay =
+                          last_levelSymbolAnnouncementIndex_toDisplay;
+                        outC->iconGroupIndex_toDisplay =
+                          last_iconGroupIndex_toDisplay;
+                        outC->StatusSymbolBrake_toDisplay =
+                          !((IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                              3) &
+                            (NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                              cSTATUS_Emergency_brake_DMI_Control_Pkg));
+                      }
+                      else {
+                        if (_48_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl) {
+                          outC->modeSymbolAnnouncementIndex_toDisplay = 0;
+                          outC->levelSymbolAnnouncementIndex_toDisplay = 0;
+                          outC->iconGroupIndex_toDisplay = 0;
+                        }
+                        else {
+                          outC->modeSymbolAnnouncementIndex_toDisplay =
+                            last_modeSymbolAnnouncementIndex_toDisplay;
+                          outC->levelSymbolAnnouncementIndex_toDisplay =
+                            last_levelSymbolAnnouncementIndex_toDisplay;
+                          outC->iconGroupIndex_toDisplay =
+                            last_iconGroupIndex_toDisplay;
+                        }
+                        outC->StatusSymbolBrake_toDisplay =
+                          last_StatusSymbolBrake_toDisplay;
+                      }
+                      break;
+                    case B_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case A_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    
+                  }
+                  break;
+                case show_icon_in_area_DMI_Types_Pkg :
+                  switch (WhenBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconContr) {
+                    case H_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case G_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case F_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case E_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case D_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case C_DMI_Types_Pkg :
+                      if (IfBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControl) {
+                        outC->modeSymbolAnnouncementIndex_toDisplay =
+                          last_modeSymbolAnnouncementIndex_toDisplay;
+                        outC->levelSymbolAnnouncementIndex_toDisplay =
+                          last_levelSymbolAnnouncementIndex_toDisplay;
+                        outC->iconGroupIndex_toDisplay =
+                          last_iconGroupIndex_toDisplay;
+                        outC->StatusSymbolBrake_toDisplay =
+                          (IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                            3) &
+                          (NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive ==
+                            cSTATUS_Emergency_brake_DMI_Control_Pkg);
+                      }
+                      else {
+                        if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFlag) {
+                          if (CheckResult_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_IconSM_IconPacketValid_IconControlFla) {
+                            outC->modeSymbolAnnouncementIndex_toDisplay =
+                              NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                            outC->levelSymbolAnnouncementIndex_toDisplay =
+                              NID_Icon_Rank_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                            outC->iconGroupIndex_toDisplay =
+                              IconGroupIndex_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+                          }
+                          else {
+                            outC->modeSymbolAnnouncementIndex_toDisplay =
+                              last_modeSymbolAnnouncementIndex_toDisplay;
+                            outC->levelSymbolAnnouncementIndex_toDisplay =
+                              last_levelSymbolAnnouncementIndex_toDisplay;
+                            outC->iconGroupIndex_toDisplay =
+                              last_iconGroupIndex_toDisplay;
+                          }
+                        }
+                        else {
+                          outC->modeSymbolAnnouncementIndex_toDisplay =
+                            last_modeSymbolAnnouncementIndex_toDisplay;
+                          outC->levelSymbolAnnouncementIndex_toDisplay =
+                            last_levelSymbolAnnouncementIndex_toDisplay;
+                          outC->iconGroupIndex_toDisplay =
+                            last_iconGroupIndex_toDisplay;
+                        }
+                        outC->StatusSymbolBrake_toDisplay =
+                          last_StatusSymbolBrake_toDisplay;
+                      }
+                      break;
+                    case B_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    case A_DMI_Types_Pkg :
+                      outC->modeSymbolAnnouncementIndex_toDisplay =
+                        last_modeSymbolAnnouncementIndex_toDisplay;
+                      outC->levelSymbolAnnouncementIndex_toDisplay =
+                        last_levelSymbolAnnouncementIndex_toDisplay;
+                      outC->iconGroupIndex_toDisplay =
+                        last_iconGroupIndex_toDisplay;
+                      outC->StatusSymbolBrake_toDisplay =
+                        last_StatusSymbolBrake_toDisplay;
+                      break;
+                    
+                  }
+                  break;
+                
+              }
+              break;
+            
+          }
+          outC->InterpolatedDistanceToTarget_toDisplay =
+            outC->_L387_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->DistanceToTargetVisibilityDigital_toDisplay =
+            outC->_L389_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->DistanceToTarget_toDisplay =
+            outC->_L386_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          switch (SpeedSupervisionSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_idle_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM :
+              outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
+              outC->vtarget_permColor_toDisplay =
+                last_vtarget_permColor_toDisplay;
+              outC->Vinterv_Visibility_toDisplay =
+                last_Vinterv_Visibility_toDisplay;
+              outC->Vtarget_permVisibility_toDisplay =
+                last_Vtarget_permVisibility_toDisplay;
+              outC->VtargetColor_toDisplay = last_VtargetColor_toDisplay;
+              outC->VreleaseColor_toDisplay = last_VreleaseColor_toDisplay;
+              outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+              outC->PointerColor_toDisplay = last_PointerColor_toDisplay;
+              outC->SpeedIntervention_toDisplay =
+                last_SpeedIntervention_toDisplay;
+              outC->SpeedRelease_toDisplay = last_SpeedRelease_toDisplay;
+              outC->SpeedPermitted_toDisplay = last_SpeedPermitted_toDisplay;
+              outC->SpeedTarget_toDisplay = last_SpeedTarget_toDisplay;
+              break;
+            case SSM_st_ReadSpeedSupervisionInfo_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionS :
+              if (ModeCheckIfBlock_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpe) {
+                switch (_47_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed) {
+                  case CSM_DMI_Types_Pkg :
+                    if (_74_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_46_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case PIM_DMI_Types_Pkg :
+                    if (_73_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_45_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else if (_44_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay =
+                        ccOLOR_WHITE_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case TSM_DMI_Types_Pkg :
+                    if (_70_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_43_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else if (_42_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay =
+                        ccOLOR_WHITE_DMI_Control_Pkg;
+                    }
+                    else if (_41_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_YELLOW_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case RSM_DMI_Types_Pkg :
+                    if (_69_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_YELLOW_DMI_Control_Pkg;
+                    }
+                    else if (_40_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case supervision_status_unknown_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = last_PointerColor_toDisplay;
+                    break;
+                  
+                }
+              }
+              else if (_39_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                switch (_38_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed) {
+                  case CSM_DMI_Types_Pkg :
+                    if (_81_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_37_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case PIM_DMI_Types_Pkg :
+                    if (_80_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_36_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else if (_35_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay =
+                        ccOLOR_WHITE_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case TSM_DMI_Types_Pkg :
+                    if (_77_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_34_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else if (_33_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay =
+                        ccOLOR_WHITE_DMI_Control_Pkg;
+                    }
+                    else if (_32_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_YELLOW_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case RSM_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                    break;
+                  case supervision_status_unknown_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                    break;
+                  
+                }
+              }
+              else if (_31_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                switch (_30_WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeed) {
+                  case CSM_DMI_Types_Pkg :
+                    if (_83_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                    }
+                    else if (_29_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                    }
+                    else {
+                      outC->PointerColor_toDisplay =
+                        cCOLOR_GREY_DMI_Control_Pkg;
+                    }
+                    break;
+                  case PIM_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                    break;
+                  case TSM_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                    break;
+                  case RSM_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                    break;
+                  case supervision_status_unknown_DMI_Types_Pkg :
+                    outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                    break;
+                  
+                }
+              }
+              else if (_28_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+              }
+              else if (_27_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                if (isRed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo) {
+                  outC->PointerColor_toDisplay = cCOLOR_RED_DMI_Control_Pkg;
+                }
+                else {
+                  outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+                }
+              }
+              else {
+                outC->PointerColor_toDisplay = cCOLOR_GREY_DMI_Control_Pkg;
+              }
+              if (IfBlock2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                switch (WhenBlock1_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe) {
+                  case supervision_status_unknown_DMI_Types_Pkg :
+                    outC->Vinterv_Color_toDisplay =
+                      last_Vinterv_Color_toDisplay;
+                    outC->vtarget_permColor_toDisplay =
+                      last_vtarget_permColor_toDisplay;
+                    outC->Vinterv_Visibility_toDisplay =
+                      last_Vinterv_Visibility_toDisplay;
+                    outC->Vtarget_permVisibility_toDisplay =
+                      last_Vtarget_permVisibility_toDisplay;
+                    outC->VtargetColor_toDisplay = last_VtargetColor_toDisplay;
+                    outC->VreleaseColor_toDisplay =
+                      last_VreleaseColor_toDisplay;
+                    outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+                    outC->SpeedIntervention_toDisplay =
+                      last_SpeedIntervention_toDisplay;
+                    outC->SpeedRelease_toDisplay = last_SpeedRelease_toDisplay;
+                    outC->SpeedPermitted_toDisplay =
+                      last_SpeedPermitted_toDisplay;
+                    outC->SpeedTarget_toDisplay = last_SpeedTarget_toDisplay;
+                    break;
+                  case RSM_DMI_Types_Pkg :
+                    outC->Vinterv_Visibility_toDisplay = kcg_false;
+                    outC->Vinterv_Color_toDisplay =
+                      last_Vinterv_Color_toDisplay;
+                    outC->VtargetColor_toDisplay = last_VtargetColor_toDisplay;
+                    outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+                    outC->SpeedIntervention_toDisplay = 0.0;
+                    if (isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->VreleaseColor_toDisplay =
+                        cCOLOR_MEDIUM_GREY_DMI_Control_Pkg;
+                      outC->SpeedRelease_toDisplay =
+                        Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI;
+                    }
+                    else {
+                      outC->VreleaseColor_toDisplay =
+                        last_VreleaseColor_toDisplay;
+                      outC->SpeedRelease_toDisplay = 0.0;
+                    }
+                    if (isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI) {
+                      outC->vtarget_permColor_toDisplay =
+                        cCOLOR_YELLOW_DMI_Control_Pkg;
+                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
+                      outC->SpeedPermitted_toDisplay =
+                        Vperm_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionInfo;
+                    }
+                    else {
+                      outC->vtarget_permColor_toDisplay =
+                        last_vtarget_permColor_toDisplay;
+                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
+                      outC->SpeedPermitted_toDisplay = 0.0;
+                    }
+                    outC->SpeedTarget_toDisplay = last_SpeedTarget_toDisplay;
+                    break;
+                  case TSM_DMI_Types_Pkg :
+                    outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+                    if (isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionI) {
+                      outC->Vinterv_Color_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                      outC->Vinterv_Visibility_toDisplay = kcg_true;
+                      outC->SpeedIntervention_toDisplay =
+                        vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervi;
+                    }
+                    else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio) {
+                      outC->Vinterv_Color_toDisplay =
+                        cCOLOR_RED_DMI_Control_Pkg;
+                      outC->Vinterv_Visibility_toDisplay = kcg_true;
+                      outC->SpeedIntervention_toDisplay =
+                        vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervi;
+                    }
+                    else {
+                      outC->Vinterv_Color_toDisplay =
+                        last_Vinterv_Color_toDisplay;
+                      outC->Vinterv_Visibility_toDisplay = kcg_false;
+                      outC->SpeedIntervention_toDisplay = 0.0;
+                    }
+                    if (_57_isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe) {
+                      outC->VreleaseColor_toDisplay =
+                        cCOLOR_MEDIUM_GREY_DMI_Control_Pkg;
+                      outC->SpeedRelease_toDisplay =
+                        _58_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+                    }
+                    else {
+                      outC->VreleaseColor_toDisplay =
+                        last_VreleaseColor_toDisplay;
+                      outC->SpeedRelease_toDisplay = 0.0;
+                    }
+                    if (_55_isYellow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->vtarget_permColor_toDisplay =
+                        cCOLOR_YELLOW_DMI_Control_Pkg;
+                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
+                      outC->SpeedPermitted_toDisplay =
+                        Vperm56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    }
+                    else if (_24_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->vtarget_permColor_toDisplay =
+                        ccOLOR_WHITE_DMI_Control_Pkg;
+                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
+                      outC->SpeedPermitted_toDisplay =
+                        Vperm56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    }
+                    else {
+                      outC->vtarget_permColor_toDisplay =
+                        last_vtarget_permColor_toDisplay;
+                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
+                      outC->SpeedPermitted_toDisplay = 0.0;
+                    }
+                    if (isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio) {
+                      outC->VtargetColor_toDisplay =
+                        cCOLOR_DARK_GREY_DMI_Control_Pkg;
+                      outC->SpeedTarget_toDisplay =
+                        Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    }
+                    else {
+                      outC->VtargetColor_toDisplay =
+                        last_VtargetColor_toDisplay;
+                      outC->SpeedTarget_toDisplay = 0.0;
+                    }
+                    break;
+                  case PIM_DMI_Types_Pkg :
+                    outC->vtarget_permColor_toDisplay =
+                      last_vtarget_permColor_toDisplay;
+                    outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+                    if (_60_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->Vinterv_Color_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                      outC->Vinterv_Visibility_toDisplay = kcg_true;
+                      outC->SpeedIntervention_toDisplay =
+                        _59_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup;
+                    }
+                    else if (_25_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->Vinterv_Color_toDisplay =
+                        cCOLOR_RED_DMI_Control_Pkg;
+                      outC->Vinterv_Visibility_toDisplay = kcg_true;
+                      outC->SpeedIntervention_toDisplay =
+                        _59_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup;
+                    }
+                    else {
+                      outC->Vinterv_Color_toDisplay =
+                        last_Vinterv_Color_toDisplay;
+                      outC->Vinterv_Visibility_toDisplay = kcg_false;
+                      outC->SpeedIntervention_toDisplay = 0.0;
+                    }
+                    if (_65_isMediumGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupe) {
+                      outC->VreleaseColor_toDisplay =
+                        cCOLOR_MEDIUM_GREY_DMI_Control_Pkg;
+                      outC->SpeedRelease_toDisplay =
+                        _64_Vrelease_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis;
+                    }
+                    else {
+                      outC->VreleaseColor_toDisplay =
+                        last_VreleaseColor_toDisplay;
+                      outC->SpeedRelease_toDisplay = 0.0;
+                    }
+                    if (isWhite_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn) {
+                      outC->Vtarget_permVisibility_toDisplay = kcg_true;
+                      outC->SpeedPermitted_toDisplay =
+                        Vperm61_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisionIn;
+                    }
+                    else {
+                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
+                      outC->SpeedPermitted_toDisplay =
+                        last_SpeedPermitted_toDisplay;
+                    }
+                    if (_62_isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->VtargetColor_toDisplay =
+                        cCOLOR_DARK_GREY_DMI_Control_Pkg;
+                      outC->SpeedTarget_toDisplay =
+                        _63_Vtarget_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisi;
+                    }
+                    else {
+                      outC->VtargetColor_toDisplay =
+                        last_VtargetColor_toDisplay;
+                      outC->SpeedTarget_toDisplay = 0.0;
+                    }
+                    break;
+                  case CSM_DMI_Types_Pkg :
+                    outC->vtarget_permColor_toDisplay =
+                      last_vtarget_permColor_toDisplay;
+                    outC->VtargetColor_toDisplay = last_VtargetColor_toDisplay;
+                    outC->VreleaseColor_toDisplay =
+                      last_VreleaseColor_toDisplay;
+                    if (_66_isOrange_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervis) {
+                      outC->Vinterv_Color_toDisplay =
+                        cCOLOR_ORANGE_DMI_Control_Pkg;
+                      outC->Vinterv_Visibility_toDisplay = kcg_true;
+                      outC->SpeedIntervention_toDisplay =
+                        _67_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup;
+                    }
+                    else if (_26_else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->Vinterv_Color_toDisplay =
+                        cCOLOR_RED_DMI_Control_Pkg;
+                      outC->Vinterv_Visibility_toDisplay = kcg_true;
+                      outC->SpeedIntervention_toDisplay =
+                        _67_vIntervention_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSup;
+                    }
+                    else {
+                      outC->Vinterv_Color_toDisplay =
+                        last_Vinterv_Color_toDisplay;
+                      outC->Vinterv_Visibility_toDisplay = kcg_false;
+                      outC->SpeedIntervention_toDisplay = 0.0;
+                    }
+                    outC->SpeedRelease_toDisplay = 0.0;
+                    if (_68_isDarkGrey_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSuperv) {
+                      outC->Vtarget_permVisibility_toDisplay = kcg_false;
+                      outC->VpermColor_toDisplay =
+                        cCOLOR_DARK_GREY_DMI_Control_Pkg;
+                      outC->SpeedPermitted_toDisplay =
+                        vPermitted_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_SpeedSupervisionSM_ReadSpeedSupervisio;
+                    }
+                    else {
+                      outC->Vtarget_permVisibility_toDisplay =
+                        last_Vtarget_permVisibility_toDisplay;
+                      outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+                      outC->SpeedPermitted_toDisplay = 0.0;
+                    }
+                    outC->SpeedTarget_toDisplay = 0.0;
+                    break;
+                  
+                }
+              }
+              else {
+                outC->Vtarget_permVisibility_toDisplay = kcg_false;
+                outC->Vinterv_Visibility_toDisplay = kcg_false;
+                outC->Vinterv_Color_toDisplay = last_Vinterv_Color_toDisplay;
+                outC->vtarget_permColor_toDisplay =
+                  last_vtarget_permColor_toDisplay;
+                outC->VtargetColor_toDisplay = 0;
+                outC->VreleaseColor_toDisplay = 0;
+                outC->VpermColor_toDisplay = last_VpermColor_toDisplay;
+                outC->SpeedIntervention_toDisplay = 0.0;
+                outC->SpeedRelease_toDisplay = 0.0;
+                outC->SpeedPermitted_toDisplay = 0.0;
+                outC->SpeedTarget_toDisplay = 0.0;
+              }
+              break;
+            
+          }
+          outC->SpeedDigitThree_toDisplay =
+            outC->_L380_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->SpeedDigitTwo_toDisplay =
+            outC->_L379_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->SpeedDigitOne_toDisplay =
+            outC->_L378_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->TrainSpeed_toDisplay =
+            outC->_L381_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->LevelSymbolVisibility_toDisplay =
+            outC->_L368_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->ETCS_LevelSymbol_toDisplay =
+            outC->_L369_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
+          outC->TrainPosition_toDisplay = 0.0;
+          switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              if (KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow) {
+                outC->IndexLevel_toDisplay = /* 3 */
+                  LevelAdapter_DMI_Control_Pkg_Utils(
+                    &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_LevelWindow_CatchButtonLevel_IfBlo);
+              }
+              else {
+                outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+              }
+              outC->levelMenuVisibility_toDisplay = kcg_true;
+              outC->closeButtonIndex_toDisplay =
+                closeButtonActiveSymbol_DMI_Control_Pkg;
+              outC->traindataValidWinVisibility_toDisplay =
+                last_traindataValidWinVisibility_toDisplay;
+              outC->CloseButtonEnabler_toDisplay = 26;
+              kcg_copy_array_bool_15(
+                &outC->window_mask_visibility__toDisplay,
+                (array_bool_15 *) &cETCS_Level_Menu_mask_DMI_Control_Pkg);
+              kcg_copy_array_int_9(
+                &outC->TrainRN_Display_toDisplay,
+                &last_TrainRN_Display_toDisplay);
+              kcg_copy_array_int_9(
+                &outC->DriverID_Display_toDisplay,
+                &last_DriverID_Display_toDisplay);
+              outC->TrainDataWindowVisibility_toDisplay =
+                last_TrainDataWindowVisibility_toDisplay;
+              break;
+            case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
+              outC->CloseButtonEnabler_toDisplay =
+                cCloseButtonEnabledSymbol_DMI_Control_Pkg;
+              switch (WindowsSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  if (KeyPressed_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWind) {
+                    outC->IndexLevel_toDisplay = /* 1 */
+                      LevelAdapter_DMI_Control_Pkg_Utils(
+                        &_L10_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_LevelWindow_Cat);
+                  }
+                  else {
+                    outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  }
+                  outC->levelMenuVisibility_toDisplay =
+                    levelMenuVisibility_toDisplay_strong;
+                  outC->closeButtonIndex_toDisplay =
+                    closeButtonActiveSymbol_DMI_Control_Pkg;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    &last_window_mask_visibility__toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->TrainRN_Display_toDisplay,
+                    &last_TrainRN_Display_toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->DriverID_Display_toDisplay,
+                    &last_DriverID_Display_toDisplay);
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  if (WaitingLevelInformation_weakb_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Mai) {
+                    outC->levelMenuVisibility_toDisplay =
+                      levelMenuVisibility_toDisplay_strong;
+                  }
+                  else if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_WaitingLe) {
+                    outC->levelMenuVisibility_toDisplay = kcg_true;
+                  }
+                  else {
+                    outC->levelMenuVisibility_toDisplay =
+                      levelMenuVisibility_toDisplay_strong;
+                  }
+                  outC->closeButtonIndex_toDisplay = 26;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    &last_window_mask_visibility__toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->TrainRN_Display_toDisplay,
+                    &last_TrainRN_Display_toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->DriverID_Display_toDisplay,
+                    &last_DriverID_Display_toDisplay);
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  outC->levelMenuVisibility_toDisplay =
+                    levelMenuVisibility_toDisplay_strong;
+                  outC->closeButtonIndex_toDisplay =
+                    closeButtonActiveSymbol_DMI_Control_Pkg;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    (array_bool_15 *) &TrainRN_window_mask_DMI_Control_Pkg);
+                  if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN) {
+                    /* 19 */
+                    RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                      &last_TrainRN_Display_toDisplay,
+                      &outC->TrainRN_Display_toDisplay);
+                  }
+                  else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_Tr) {
+                    /* 18 */
+                    AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                      &last_TrainRN_Display_toDisplay,
+                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Insert_TrainRN,
+                      &outC->TrainRN_Display_toDisplay);
+                  }
+                  else {
+                    kcg_copy_array_int_9(
+                      &outC->TrainRN_Display_toDisplay,
+                      &last_TrainRN_Display_toDisplay);
+                  }
+                  kcg_copy_array_int_9(
+                    &outC->DriverID_Display_toDisplay,
+                    &last_DriverID_Display_toDisplay);
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  outC->levelMenuVisibility_toDisplay =
+                    levelMenuVisibility_toDisplay_strong;
+                  outC->closeButtonIndex_toDisplay = 26;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    &last_window_mask_visibility__toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->TrainRN_Display_toDisplay,
+                    &last_TrainRN_Display_toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->DriverID_Display_toDisplay,
+                    &last_DriverID_Display_toDisplay);
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  outC->levelMenuVisibility_toDisplay =
+                    levelMenuVisibility_toDisplay_strong;
+                  outC->closeButtonIndex_toDisplay = 26;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    &last_window_mask_visibility__toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->TrainRN_Display_toDisplay,
+                    &last_TrainRN_Display_toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->DriverID_Display_toDisplay,
+                    &last_DriverID_Display_toDisplay);
+                  break;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  outC->levelMenuVisibility_toDisplay =
+                    levelMenuVisibility_toDisplay_strong;
+                  outC->closeButtonIndex_toDisplay =
+                    closeButtonActiveSymbol_DMI_Control_Pkg;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    (array_bool_15 *) &DriverID_window_mask_DMI_Control_Pkg);
+                  kcg_copy_array_int_9(
+                    &outC->TrainRN_Display_toDisplay,
+                    &last_TrainRN_Display_toDisplay);
+                  if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co) {
+                    /* 18 */
+                    RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                      &last_DriverID_Display_toDisplay,
+                      &outC->DriverID_Display_toDisplay);
+                  }
+                  else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_) {
+                    /* 17 */
+                    AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                      &last_DriverID_Display_toDisplay,
+                      _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_DriverID_DMI_co,
+                      &outC->DriverID_Display_toDisplay);
+                  }
+                  else {
+                    kcg_copy_array_int_9(
+                      &outC->DriverID_Display_toDisplay,
+                      &last_DriverID_Display_toDisplay);
+                  }
+                  break;
+                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+                  outC->levelMenuVisibility_toDisplay =
+                    levelMenuVisibility_toDisplay_strong;
+                  outC->closeButtonIndex_toDisplay = 26;
+                  kcg_copy_array_bool_15(
+                    &outC->window_mask_visibility__toDisplay,
+                    (array_bool_15 *) &Mainmenu_window_mask_DMI_Control_Pkg);
+                  kcg_copy_array_int_9(
+                    &outC->TrainRN_Display_toDisplay,
+                    &last_TrainRN_Display_toDisplay);
+                  kcg_copy_array_int_9(
+                    &outC->DriverID_Display_toDisplay,
+                    &last_DriverID_Display_toDisplay);
+                  break;
+                
+              }
+              switch (WindowsSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu) {
+                case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  outC->traindataValidWinVisibility_toDisplay =
+                    last_traindataValidWinVisibility_toDisplay;
+                  outC->TrainDataWindowVisibility_toDisplay =
+                    last_TrainDataWindowVisibility_toDisplay;
+                  break;
+                case SSM_st_WaitingLevelInformation_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  outC->traindataValidWinVisibility_toDisplay =
+                    last_traindataValidWinVisibility_toDisplay;
+                  outC->TrainDataWindowVisibility_toDisplay =
+                    last_TrainDataWindowVisibility_toDisplay;
+                  break;
+                case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsS :
+                  outC->traindataValidWinVisibility_toDisplay =
+                    last_traindataValidWinVisibility_toDisplay;
+                  outC->TrainDataWindowVisibility_toDisplay =
+                    last_TrainDataWindowVisibility_toDisplay;
+                  break;
+                case SSM_st_TrainDataValidationWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMe :
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_true;
+                  }
+                  else if (br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_false;
+                  }
+                  else if (br_3_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_false;
+                  }
+                  else if (br_4_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_TrainData) {
+                    outC->traindataValidWinVisibility_toDisplay = kcg_false;
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_false;
+                  }
+                  else {
+                    outC->traindataValidWinVisibility_toDisplay =
+                      last_traindataValidWinVisibility_toDisplay;
+                    outC->TrainDataWindowVisibility_toDisplay =
+                      last_TrainDataWindowVisibility_toDisplay;
+                  }
+                  break;
+                case SSM_st_TrainDataWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_Windows :
+                  if (_53_br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                    outC->traindataValidWinVisibility_toDisplay =
+                      last_traindataValidWinVisibility_toDisplay;
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_false;
+                  }
+                  else if (_52_br_2_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_Train) {
+                    outC->traindataValidWinVisibility_toDisplay = kcg_true;
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_false;
+                  }
+                  else {
+                    outC->traindataValidWinVisibility_toDisplay =
+                      last_traindataValidWinVisibility_toDisplay;
+                    outC->TrainDataWindowVisibility_toDisplay =
+                      last_TrainDataWindowVisibility_toDisplay;
+                  }
+                  break;
+                case SSM_st_DriverID_DMI_controlled_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu :
+                  outC->traindataValidWinVisibility_toDisplay =
+                    last_traindataValidWinVisibility_toDisplay;
+                  outC->TrainDataWindowVisibility_toDisplay =
+                    last_TrainDataWindowVisibility_toDisplay;
+                  break;
+                case SSM_st_MainMenu_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM :
+                  outC->traindataValidWinVisibility_toDisplay =
+                    last_traindataValidWinVisibility_toDisplay;
+                  if (br_1_guard_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_MainMenu_WindowsSM_MainMenu) {
+                    outC->TrainDataWindowVisibility_toDisplay = kcg_true;
+                  }
+                  else {
+                    outC->TrainDataWindowVisibility_toDisplay =
+                      last_TrainDataWindowVisibility_toDisplay;
+                  }
+                  break;
+                
+              }
+              outC->init5 = kcg_false;
               break;
             case SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Insert_TrainRN_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+              outC->levelMenuVisibility_toDisplay =
+                last_levelMenuVisibility_toDisplay;
+              outC->closeButtonIndex_toDisplay = 26;
+              outC->traindataValidWinVisibility_toDisplay =
+                last_traindataValidWinVisibility_toDisplay;
+              outC->CloseButtonEnabler_toDisplay = 26;
+              kcg_copy_array_bool_15(
+                &outC->window_mask_visibility__toDisplay,
+                (array_bool_15 *) &TrainRN_window_mask_DMI_Control_Pkg);
+              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN) {
+                /* 16 */
+                RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                  &last_TrainRN_Display_toDisplay,
+                  &outC->TrainRN_Display_toDisplay);
+              }
+              else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN_TrainRNKeyboa) {
+                /* 15 */
+                AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                  &last_TrainRN_Display_toDisplay,
+                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_TrainRN,
+                  &outC->TrainRN_Display_toDisplay);
+              }
+              else {
+                kcg_copy_array_int_9(
+                  &outC->TrainRN_Display_toDisplay,
+                  &last_TrainRN_Display_toDisplay);
+              }
+              kcg_copy_array_int_9(
+                &outC->DriverID_Display_toDisplay,
+                &last_DriverID_Display_toDisplay);
+              outC->TrainDataWindowVisibility_toDisplay =
+                last_TrainDataWindowVisibility_toDisplay;
               break;
             case SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_WaitingForReq_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+              outC->levelMenuVisibility_toDisplay = kcg_false;
+              outC->closeButtonIndex_toDisplay = 26;
+              outC->traindataValidWinVisibility_toDisplay = kcg_false;
+              outC->CloseButtonEnabler_toDisplay = 26;
+              kcg_copy_array_bool_15(
+                &outC->window_mask_visibility__toDisplay,
+                (array_bool_15 *) &HideMainmenu_window_mask_DMI_Control_Pkg);
+              kcg_copy_array_int_9(
+                &outC->TrainRN_Display_toDisplay,
+                &last_TrainRN_Display_toDisplay);
+              kcg_copy_array_int_9(
+                &outC->DriverID_Display_toDisplay,
+                &last_DriverID_Display_toDisplay);
+              outC->TrainDataWindowVisibility_toDisplay = kcg_false;
               break;
             case SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
-              outC->DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                last_DMI_request_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive;
-              outC->RequestSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Insert_DriverID_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM;
+              outC->IndexLevel_toDisplay = last_IndexLevel_toDisplay;
+              outC->levelMenuVisibility_toDisplay =
+                last_levelMenuVisibility_toDisplay;
+              outC->closeButtonIndex_toDisplay = 26;
+              outC->traindataValidWinVisibility_toDisplay =
+                last_traindataValidWinVisibility_toDisplay;
+              outC->CloseButtonEnabler_toDisplay = 26;
+              kcg_copy_array_bool_15(
+                &outC->window_mask_visibility__toDisplay,
+                (array_bool_15 *) &DriverID_window_mask_DMI_Control_Pkg);
+              kcg_copy_array_int_9(
+                &outC->TrainRN_Display_toDisplay,
+                &last_TrainRN_Display_toDisplay);
+              if (_L60_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID) {
+                /* 15 */
+                RmDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                  &last_DriverID_Display_toDisplay,
+                  &outC->DriverID_Display_toDisplay);
+              }
+              else if (else_clock_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID_DriverIDKeyb) {
+                /* 14 */
+                AddDigit_DMI_Control_Pkg_Sub_func_Keyboard(
+                  &last_DriverID_Display_toDisplay,
+                  _L56_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM_Insert_DriverID,
+                  &outC->DriverID_Display_toDisplay);
+              }
+              else {
+                kcg_copy_array_int_9(
+                  &outC->DriverID_Display_toDisplay,
+                  &last_DriverID_Display_toDisplay);
+              }
+              outC->TrainDataWindowVisibility_toDisplay =
+                last_TrainDataWindowVisibility_toDisplay;
               break;
             
           }
           switch (TrainDataSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              outC->TrainDataSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_Incoming_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
-              outC->init5 = kcg_false;
-              break;
-            case SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM :
-              outC->TrainDataSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_InternalDMI_TrainDataValues_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_TrainDataSM;
+              outC->init6 = kcg_false;
               break;
             
           }
-          outC->init7 = kcg_false;
+          outC->init8 = kcg_false;
           break;
         
       }
@@ -6295,6 +5677,6 @@ void DMI_Controller_DMI_Control_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Controller_DMI_Control_Pkg.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:32:00
 *************************************************************$ */
 

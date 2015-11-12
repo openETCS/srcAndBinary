@@ -1,3 +1,3 @@
--target_dir "D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release" -target C -O 3 -static -name_length 200 -significance_length 200 -user_config "./user_macros.h" 
--node DMI_Control_Pkg::DMI_Controller
-"D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release/scade_model_without_unused.scade"
+-target_dir "R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone" -target C -O 3 -name_length 100 -significance_length 100 -user_config "./user_macros.h" 
+-node Testbench_Integration::RemoteDMI
+"R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone/scade_model_without_unused.scade"

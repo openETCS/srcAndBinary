@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/GitHub/modeling/model/Scade/System/DMI_Control/KCG-Release\kcg_s2c_config.txt
-** Generation date: 2015-07-31T17:27:04
+** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,8 +11,7 @@
 kcg_int LevelAdapter_DMI_Control_Pkg_Utils(
   /* DMI_Control_Pkg::Utils::LevelAdapter::level */DMI_level_T_DMI_Types_Pkg *level)
 {
-  /* DMI_Control_Pkg::Utils::LevelAdapter::LevelIndex */
-  static kcg_int LevelIndex;
+  /* DMI_Control_Pkg::Utils::LevelAdapter::LevelIndex */ kcg_int LevelIndex;
   
   if ((*level).level == M_LEVEL_Level_NTC_specified_by_NID_NTC) {
     switch ((*level).nid_stm) {
@@ -48,6 +47,6 @@ kcg_int LevelAdapter_DMI_Control_Pkg_Utils(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** LevelAdapter_DMI_Control_Pkg_Utils.c
-** Generation date: 2015-07-31T17:27:04
+** Generation date: 2015-11-12T10:31:59
 *************************************************************$ */
 
