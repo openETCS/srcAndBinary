@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _InputSpeedAndSupervision_Inter
 #define _InputSpeedAndSupervision_Inter
@@ -25,6 +25,6 @@ extern void InputSpeedAndSupervision_Interf(
 #endif /* _InputSpeedAndSupervision_Inter */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputSpeedAndSupervision_Interf.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

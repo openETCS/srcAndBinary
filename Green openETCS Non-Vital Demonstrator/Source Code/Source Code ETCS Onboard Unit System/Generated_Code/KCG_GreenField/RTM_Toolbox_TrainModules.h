@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _RTM_Toolbox_TrainModules_H_
 #define _RTM_Toolbox_TrainModules_H_
@@ -23,8 +23,8 @@ typedef struct {
   kcg_bool init;
   kcg_bool init3;
   /* ----------------------- local memories  ------------------------- */
-  struct_101540 /* Toolbox::TrainModules::RTM */ _1_fby_RTM_Toolbox_TrainModules;
-  struct_101540 /* Toolbox::TrainModules::RTM */ fby_RTM_Toolbox_TrainModules;
+  struct_101684 /* Toolbox::TrainModules::RTM */ _1_fby_RTM_Toolbox_TrainModules;
+  struct_101684 /* Toolbox::TrainModules::RTM */ fby_RTM_Toolbox_TrainModules;
   SSM_ST_GSM_R_MobileManagement /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement */ GSM_R_MobileManagement_state_nx;
   kcg_bool /* Toolbox::TrainModules::RTM::registrationFinished */ registrationFinished;
   kcg_bool /* Toolbox::TrainModules::RTM::connectionEstablished */ connectionEstablished;
@@ -52,6 +52,6 @@ extern void RTM_init_Toolbox_TrainModules(outC_RTM_Toolbox_TrainModules *outC);
 #endif /* _RTM_Toolbox_TrainModules_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RTM_Toolbox_TrainModules.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

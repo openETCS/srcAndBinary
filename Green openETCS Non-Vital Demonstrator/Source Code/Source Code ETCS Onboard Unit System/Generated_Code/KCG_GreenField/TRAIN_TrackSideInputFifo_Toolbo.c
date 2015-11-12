@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -336,7 +336,7 @@ void TRAIN_TrackSideInputFifo_Toolbo(
     if ((0 <= entry) & (entry < 5)) {
       kcg_copy_API_TrackSideInput_T_A(&outC->_L4_IfBlock1[entry], inData);
     }
-    kcg_copy_array_102324(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array_102442(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (entry + 1) % 5;
     tmp1 = 1;
     outC->init1 = kcg_false;
@@ -397,6 +397,6 @@ void TRAIN_TrackSideInputFifo_Toolbo(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TRAIN_TrackSideInputFifo_Toolbo.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

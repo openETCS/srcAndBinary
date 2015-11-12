@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _headerMsg146_ng_trainData_pkg_
 #define _headerMsg146_ng_trainData_pkg_
@@ -22,6 +22,6 @@ extern void headerMsg146_ng_trainData_pkg(
 #endif /* _headerMsg146_ng_trainData_pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** headerMsg146_ng_trainData_pkg.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

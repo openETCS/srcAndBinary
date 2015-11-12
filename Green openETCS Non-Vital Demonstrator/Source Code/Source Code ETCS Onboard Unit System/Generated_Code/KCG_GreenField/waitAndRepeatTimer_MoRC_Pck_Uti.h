@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _waitAndRepeatTimer_MoRC_Pck_Ut
 #define _waitAndRepeatTimer_MoRC_Pck_Ut
@@ -48,6 +48,6 @@ extern void waitAndRepeatTimer_init_MoRC_Pc(
 #endif /* _waitAndRepeatTimer_MoRC_Pck_Ut */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** waitAndRepeatTimer_MoRC_Pck_Uti.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

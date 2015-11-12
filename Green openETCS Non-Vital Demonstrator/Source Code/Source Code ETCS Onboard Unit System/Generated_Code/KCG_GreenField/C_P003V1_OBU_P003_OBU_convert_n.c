@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,9 +16,9 @@ void C_P003V1_OBU_P003_OBU_convert_n(
 {
   *n_iter_out = (*P003V1_onboard).n_iter;
   *nid_c1 = (*P003V1_onboard).SECTIONS[0].nid_c;
-  kcg_copy_array_101427(
+  kcg_copy_array_101571(
     &(*nid_c_list)[0],
-    (array_101427 *) &(*P003V1_onboard).SECTIONS[1]);
+    (array_101571 *) &(*P003V1_onboard).SECTIONS[1]);
   kcg_copy_P003_OBU_nid_c_section(
     &(&(*nid_c_list)[31])[0],
     (P003_OBU_nid_c_section_enum_T_T *) &DEFAULT_P003V1_OBU_section_TM_b);
@@ -26,6 +26,6 @@ void C_P003V1_OBU_P003_OBU_convert_n(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_OBU_P003_OBU_convert_n.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

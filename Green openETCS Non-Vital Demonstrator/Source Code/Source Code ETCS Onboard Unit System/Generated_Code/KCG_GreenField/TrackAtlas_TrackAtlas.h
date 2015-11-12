@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _TrackAtlas_TrackAtlas_H_
 #define _TrackAtlas_TrackAtlas_H_
@@ -66,6 +66,6 @@ extern void TrackAtlas_init_TrackAtlas(outC_TrackAtlas_TrackAtlas *outC);
 #endif /* _TrackAtlas_TrackAtlas_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlas_TrackAtlas.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

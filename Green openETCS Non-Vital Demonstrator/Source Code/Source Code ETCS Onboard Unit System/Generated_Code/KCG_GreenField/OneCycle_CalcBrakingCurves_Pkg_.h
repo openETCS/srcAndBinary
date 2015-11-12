@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _OneCycle_CalcBrakingCurves_Pkg
 #define _OneCycle_CalcBrakingCurves_Pkg
@@ -33,6 +33,6 @@ extern void OneCycle_CalcBrakingCurves_Pkg_(
 #endif /* _OneCycle_CalcBrakingCurves_Pkg */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** OneCycle_CalcBrakingCurves_Pkg_.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

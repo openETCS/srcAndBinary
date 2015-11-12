@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _trainDataStorage_trainData_pkg
 #define _trainDataStorage_trainData_pkg
@@ -50,6 +50,6 @@ extern void trainDataStorage_init_trainData(
 #endif /* _trainDataStorage_trainData_pkg */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainDataStorage_trainData_pkg.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _CAST_Int_to_Q_NEWCOUNTRY_TM_co
 #define _CAST_Int_to_Q_NEWCOUNTRY_TM_co
@@ -19,6 +19,6 @@ extern Q_NEWCOUNTRY CAST_Int_to_Q_NEWCOUNTRY_TM_con(
 #endif /* _CAST_Int_to_Q_NEWCOUNTRY_TM_co */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Int_to_Q_NEWCOUNTRY_TM_con.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

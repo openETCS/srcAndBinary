@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _replaceTelegram_Receive_TrackS
 #define _replaceTelegram_Receive_TrackS
@@ -24,6 +24,6 @@ extern void replaceTelegram_Receive_TrackSi(
 #endif /* _replaceTelegram_Receive_TrackS */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** replaceTelegram_Receive_TrackSi.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

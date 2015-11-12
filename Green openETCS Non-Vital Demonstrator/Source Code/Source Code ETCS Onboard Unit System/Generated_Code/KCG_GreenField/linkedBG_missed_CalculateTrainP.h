@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _linkedBG_missed_CalculateTrain
 #define _linkedBG_missed_CalculateTrain
@@ -56,6 +56,6 @@ extern void linkedBG_missed_init_CalculateT(
 #endif /* _linkedBG_missed_CalculateTrain */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** linkedBG_missed_CalculateTrainP.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

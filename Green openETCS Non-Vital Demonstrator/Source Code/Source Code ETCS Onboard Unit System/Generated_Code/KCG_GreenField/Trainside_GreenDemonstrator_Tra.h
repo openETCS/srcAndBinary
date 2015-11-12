@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _Trainside_GreenDemonstrator_Tr
 #define _Trainside_GreenDemonstrator_Tr
@@ -33,6 +33,7 @@ typedef struct {
   kcg_int /* GreenDemonstrator::Trainside::Trainside::TrainPosition */ TrainPosition;
   EVC_to_DMI_Message_int_T_API_DM /* GreenDemonstrator::Trainside::Trainside::API_toDMI */ API_toDMI;
   EVC_to_GUI_EnvSim /* GreenDemonstrator::Trainside::Trainside::API_toGUI */ API_toGUI;
+  TIU_Input_msg_API_TIU_Pkg /* GreenDemonstrator::Trainside::Trainside::TIU_toDMI */ TIU_toDMI;
   kcg_bool /* GreenDemonstrator::Trainside::Trainside::EVC_ready */ EVC_ready;
   DebugData_T /* GreenDemonstrator::Trainside::Trainside::Debug */ Debug;
   /* -----------------------  no local probes  ----------------------- */
@@ -73,6 +74,6 @@ extern void Trainside_init_GreenDemonstrato(
 #endif /* _Trainside_GreenDemonstrator_Tr */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Trainside_GreenDemonstrator_Tra.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _Master_Procedure_ManageProcedu
 #define _Master_Procedure_ManageProcedu
@@ -29,8 +29,8 @@ typedef struct {
   kcg_bool init3;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  struct_101838 /* ManageProcedure_Pkg::Master_Procedure */ _2_fby_ck_fby;
-  struct_101838 /* ManageProcedure_Pkg::Master_Procedure */ fby_ck_fby;
+  struct_101977 /* ManageProcedure_Pkg::Master_Procedure */ _2_fby_ck_fby;
+  struct_101977 /* ManageProcedure_Pkg::Master_Procedure */ fby_ck_fby;
   SSM_ST_SM3_SM1_Awakness_of_Trai /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */ SM3_state_nxt_SM1_Awakness_of_T;
   _197_SSM_ST_SM1 /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_state_nxt;
   kcg_bool /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_reset_nxt;
@@ -69,6 +69,6 @@ extern void Master_Procedure_init_ManagePro(
 #endif /* _Master_Procedure_ManageProcedu */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Master_Procedure_ManageProcedur.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

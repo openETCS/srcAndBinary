@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _simpleTelegramCheck_Receive_Tr
 #define _simpleTelegramCheck_Receive_Tr
@@ -24,6 +24,6 @@ extern void simpleTelegramCheck_Receive_Tra(
 #endif /* _simpleTelegramCheck_Receive_Tr */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** simpleTelegramCheck_Receive_Tra.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

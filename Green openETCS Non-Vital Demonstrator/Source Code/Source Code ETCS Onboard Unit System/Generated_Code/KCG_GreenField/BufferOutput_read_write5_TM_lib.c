@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,18 +21,18 @@ void BufferOutput_read_write5_TM_lib(
   
   _L34 = Stacksize_old == 0;
   /* 2 */ if (_L34) {
-    kcg_copy_array_101707(
+    kcg_copy_array_101856(
       &(*Buffer_Out)[0],
-      (array_101707 *) &(*Message_In)[1]);
+      (array_101856 *) &(*Message_In)[1]);
     kcg_copy_M_TrainTrack_Message_T(
       &(&(&(*Buffer_Out)[0])[4])[0],
       (M_TrainTrack_Message_T_TM_radio *) &EMPTY_TrainTrackMessage_TM_lib_);
     kcg_copy_M_TrainTrack_Message_T(Message_out, &(*Message_In)[0]);
   }
   else {
-    kcg_copy_array_101920(
+    kcg_copy_array_102047(
       &(*Buffer_Out)[0],
-      (array_101920 *) &(*Message_In)[0]);
+      (array_102047 *) &(*Message_In)[0]);
     if ((0 <= Stacksize_old - 1) & (Stacksize_old - 1 < 100)) {
       kcg_copy_M_TrainTrack_Message_T(
         Message_out,
@@ -44,12 +44,12 @@ void BufferOutput_read_write5_TM_lib(
         (M_TrainTrack_Message_T_TM_radio *) &EMPTY_TrainTrackMessage_TM_lib_);
     }
   }
-  kcg_copy_array_102398(&(*Buffer_Out)[5], (array_102398 *) &(*Buffer_In)[0]);
+  kcg_copy_array_102518(&(*Buffer_Out)[5], (array_102518 *) &(*Buffer_In)[0]);
   *Stacksize_new = Stacksize_old + 4;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_read_write5_TM_lib.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

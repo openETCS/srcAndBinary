@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -383,6 +383,9 @@ void Procedure_With_Mode_Profile_Pro(
               outC->Condition_40_51_72 = kcg_false;
             }
           }
+          if (SM_Current_Location_reset_act_S) {
+            /* 8 */ Counter_reset_pwlinear_int(&outC->Context_8);
+          }
           break;
         case SSM_st_Req_Current_Location_SM_ :
           tmp2 = kcg_false;
@@ -395,14 +398,6 @@ void Procedure_With_Mode_Profile_Pro(
         
       }
       outC->Ack_Req_To_Driver = tmp | tmp2;
-      /* act_SM_Current_Location */ switch (SM_Current_Location_state_act_S) {
-        case SSM_st_Switch_Autorized_Waiting :
-          if (SM_Current_Location_reset_act_S) {
-            /* 8 */ Counter_reset_pwlinear_int(&outC->Context_8);
-          }
-          break;
-        
-      }
       if (SM_Mode_Profile_By_Trackside_re) {
         /* 8 */ Counter_reset_pwlinear_int(&outC->Context_8);
       }
@@ -453,6 +448,6 @@ void Procedure_With_Mode_Profile_Pro(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_With_Mode_Profile_Pro.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _manageTextMessages_manage_Text
 #define _manageTextMessages_manage_Text
@@ -27,6 +27,6 @@ extern void manageTextMessages_manage_TextM(
 #endif /* _manageTextMessages_manage_Text */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTextMessages_manage_TextM.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

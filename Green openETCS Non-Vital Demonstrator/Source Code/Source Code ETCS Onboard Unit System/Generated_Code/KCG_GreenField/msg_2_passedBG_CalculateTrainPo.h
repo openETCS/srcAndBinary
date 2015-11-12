@@ -1,11 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _msg_2_passedBG_CalculateTrainP
 #define _msg_2_passedBG_CalculateTrainP
 
 #include "kcg_types.h"
+#include "DECODE_NID_LRBG_TM_conversions.h"
 #include "Read_P005_ForCalcTrainPos_TM_sp.h"
 #include "nidC_nidBG_2_NIDLRBG_CalculateT.h"
 #include "NIDLRBG_2_nidC_nidBG_CalculateT.h"
@@ -25,6 +26,6 @@ extern void msg_2_passedBG_CalculateTrainPo(
 #endif /* _msg_2_passedBG_CalculateTrainP */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** msg_2_passedBG_CalculateTrainPo.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

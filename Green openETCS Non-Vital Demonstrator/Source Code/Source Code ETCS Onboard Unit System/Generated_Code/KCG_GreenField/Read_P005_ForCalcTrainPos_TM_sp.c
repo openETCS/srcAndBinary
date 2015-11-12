@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -33,6 +33,6 @@ void Read_P005_ForCalcTrainPos_TM_sp(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P005_ForCalcTrainPos_TM_sp.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

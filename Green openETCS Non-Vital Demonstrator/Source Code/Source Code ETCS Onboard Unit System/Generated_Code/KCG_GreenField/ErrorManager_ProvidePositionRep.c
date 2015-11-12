@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,7 +18,7 @@ void ErrorManager_ProvidePositionRep(
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::SafetyCriticalFailure */ kcg_bool SafetyCriticalFailure,
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::DoubleLinkingError */ kcg_bool DoubleLinkingError,
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::DoubleRepositioningError */ kcg_bool DoubleRepositioningError,
-  /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::errorVector */ array_104094 *errorVector)
+  /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::errorVector */ array_102250 *errorVector)
 {
   (*errorVector)[0].present = BG_LinkingConsistencyError;
   (*errorVector)[0].errorType = M_ERROR_Balise_group_linking_co;
@@ -42,6 +42,6 @@ void ErrorManager_ProvidePositionRep(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ErrorManager_ProvidePositionRep.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 

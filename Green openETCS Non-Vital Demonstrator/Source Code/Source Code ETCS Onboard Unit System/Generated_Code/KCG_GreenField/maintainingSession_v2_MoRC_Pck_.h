@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _maintainingSession_v2_MoRC_Pck
 #define _maintainingSession_v2_MoRC_Pck
@@ -41,6 +41,6 @@ extern void maintainingSession_v2_init_MoRC(
 #endif /* _maintainingSession_v2_MoRC_Pck */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** maintainingSession_v2_MoRC_Pck_.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

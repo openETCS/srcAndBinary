@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -85,6 +85,9 @@ extern const mobileConnectionContext_T_RCM_T cNoMobileConnectionContext;
 /* cNoMobileRegistrationContext */
 extern const mobileRegistrationContext_T_RCM cNoMobileRegistrationContext;
 
+/* cNoPositioningErrors */
+extern const positionErrors_T_TrainPosition_ cNoPositioningErrors;
+
 /* cNoRadioCmd */
 extern const radioManagementMessage_T_Common cNoRadioCmd;
 
@@ -138,6 +141,9 @@ extern const T_Data_From_Track_Packet_Level_ cNoPacketsForML;
 
 /* Level_And_Mode_Types_Pkg::M_Max_TransitionInPriorityTable */
 #define M_Max_TransitionInPriorityTable 7
+
+/* cEmptyBrakeCmd */
+extern const Brake_command_T_TIU_Types_Pkg cEmptyBrakeCmd;
 
 /* manage_DMI_Output_Pkg::cDefaultTrainData */
 extern const DMI_Train_Data_T_DMI_Messages_B cDefaultTrainData_manage_DMI_Ou;
@@ -1873,9 +1879,6 @@ extern const LocWithInAcc_T_Obu_BasicTypes_P cD_FE2RE;
 /* cLocationAccuracyDefault */
 extern const LocWithInAcc_T_Obu_BasicTypes_P cLocationAccuracyDefault;
 
-/* EVC_Support_Pkg::cNoTrackMsg */
-extern const ReceivedMessage_T_Common_Types_ cNoTrackMsg_EVC_Support_Pkg;
-
 /* trainData_pkg::cNoBus */
 extern const M_TrainTrackMessageBus_t_TM_Tra cNoBus_trainData_pkg;
 
@@ -3241,6 +3244,12 @@ extern const p42_sessionManagement_T_RCM_Msg cNo_p42_SessionManagement_RCM_M;
 /* MoRC_Pck::Coder_Pkg::cEmptyOutPackets */
 extern const outPackets_T_Common_Types_Pkg cEmptyOutPackets_MoRC_Pck_Coder;
 
+/* Packet_TrainTypes_Pkg::cmaxNumberTelephoneNumbers */
+#define cmaxNumberTelephoneNumbers_Pack 1
+
+/* Packet_TrainTypes_Pkg::cDigitsInTelephoneNumber */
+#define cDigitsInTelephoneNumber_Packet 15
+
 /* Id_Pkg::cm32_RBC_RIU_System_Version */
 #define cm32_RBC_RIU_System_Version_Id_ 32
 
@@ -3294,12 +3303,6 @@ extern const MetadataElement_T_Common_Types_ DEFAULT_PHeader_TM;
 
 /* TM_lib_internal::DIM_offset_metadata_id */
 #define DIM_offset_metadata_id_TM_lib_i 1
-
-/* Packet_TrainTypes_Pkg::cmaxNumberTelephoneNumbers */
-#define cmaxNumberTelephoneNumbers_Pack 1
-
-/* Packet_TrainTypes_Pkg::cDigitsInTelephoneNumber */
-#define cDigitsInTelephoneNumber_Packet 15
 
 /* API_DMI_Pkg::cMessage_EVC_to_DMI_size */
 #define cMessage_EVC_to_DMI_size_API_DM 999
@@ -3467,7 +3470,7 @@ extern const MetadataElement_T_Common_Types_ DEFAULT_PHeader_TM;
 #define cDeltaSimulationTime_Toolbox 10
 
 /* Toolbox::cMaximumAcceleration */
-#define cMaximumAcceleration_Toolbox 5.0
+#define cMaximumAcceleration_Toolbox 0.5
 
 /* Toolbox::cOdometryFactors */
 extern const odometryFactors_T_Toolbox cOdometryFactors_Toolbox;
@@ -3607,6 +3610,6 @@ extern const API_TrackSideInput_T_API_Msg_Pk cEmtpyTrackSideInputMessage_Too;
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

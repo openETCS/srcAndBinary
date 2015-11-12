@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _Procedure_LimitedSupervision_P
 #define _Procedure_LimitedSupervision_P
@@ -53,6 +53,6 @@ extern void Procedure_LimitedSupervision_in(
 #endif /* _Procedure_LimitedSupervision_P */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_LimitedSupervision_Pr.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

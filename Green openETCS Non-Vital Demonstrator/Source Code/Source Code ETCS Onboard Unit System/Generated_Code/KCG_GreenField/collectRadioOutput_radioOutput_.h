@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _collectRadioOutput_radioOutput
 #define _collectRadioOutput_radioOutput
@@ -38,7 +38,7 @@ extern void collectRadioOutput_radioOutput_(
   /* radioOutput_Pkg::collectRadioOutput::MessageBus */ M_TrainTrackMessageBus_t_TM_Tra *MessageBus,
   /* radioOutput_Pkg::collectRadioOutput::insafeSessionEstablished */ kcg_bool insafeSessionEstablished,
   /* radioOutput_Pkg::collectRadioOutput::inModeAndLevel */ T_Mode_Level_Level_And_Mode_Typ *inModeAndLevel,
-  /* radioOutput_Pkg::collectRadioOutput::mobileHWStatus */ mobileHWStatus_Type_MoRC_Pck *mobileHWStatus,
+  /* radioOutput_Pkg::collectRadioOutput::mobileRadioStatus */ morcStatus_T_RCM_Session_Types_ *mobileRadioStatus,
   /* radioOutput_Pkg::collectRadioOutput::mobileConnectionCMD */ mobileConnectionCmd_T_RCM_Types *mobileConnectionCMD,
   /* radioOutput_Pkg::collectRadioOutput::mobileRegistrationCMD */ mobileRegistrationCmd_T_RCM_Typ *mobileRegistrationCMD,
   /* radioOutput_Pkg::collectRadioOutput::inVersion */ M_VERSION inVersion,
@@ -58,6 +58,6 @@ extern void collectRadioOutput_init_radioOu(
 #endif /* _collectRadioOutput_radioOutput */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** collectRadioOutput_radioOutput_.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

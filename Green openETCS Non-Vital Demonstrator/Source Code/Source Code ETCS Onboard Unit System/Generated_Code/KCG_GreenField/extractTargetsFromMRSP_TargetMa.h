@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _extractTargetsFromMRSP_TargetM
 #define _extractTargetsFromMRSP_TargetM
@@ -21,6 +21,6 @@ extern void extractTargetsFromMRSP_TargetMa(
 #endif /* _extractTargetsFromMRSP_TargetM */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** extractTargetsFromMRSP_TargetMa.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

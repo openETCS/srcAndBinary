@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:45
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:52:21
 *************************************************************$-->
-<Model date="2015-11-11T16:04:45" commandLine="kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt">
+<Model date="2015-11-12T17:52:21" commandLine="kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt">
   <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
   <Option name="xml_filter" value="#off#"/>
   <Option name="state_vector" value="#off#"/>
@@ -12,7 +12,7 @@
   <Option name="no_bitwise" value="#off#"/>
   <Option name="wrap_c_ops" value="#off#"/>
   <Option name="input_file"
-      value="R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/scade_model_without_unused.scade"/>
+      value="S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/scade_model_without_unused.scade"/>
   <Option name="probes" value="#off#"/>
   <Option name="debug" value="#off#"/>
   <Option name="no_observe" value="#off#"/>
@@ -29,11 +29,12 @@
   <Option name="expall" value="#off#"/>
   <Option name="noexp" value="#off#"/>
   <Option name="exp" value="#off#"/>
-  <Option name="target_dir"
-      value="R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside"/>
+  <Option name="target_dir" value="S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside"/>
   <Option name="target" value="C"/>
   <Option name="node" value="GreenDemonstrator::Trainside::Trainside"/>
   <Option name="auth" value="#off#"/>
+  <Constant scadeName="cEmptyBrakeCmd" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="cEmptyBrakeCmd"
+      targetType="Brake_command_T_TIU_Types_Pkg"/>
   <Constant scadeName="cEmptyChangeTractionSystem" scadeType="TIU_Types_Pkg::Change_traction_system_T"
       targetName="cEmptyChangeTractionSystem" targetType="Change_traction_system_T_TIU_Ty"/>
   <Constant scadeName="cPassengerDoorControlInfo" scadeType="TIU_Types_Pkg::Passenger_door_control_info_T"
@@ -640,6 +641,8 @@
       targetName="cNoMobileConnectionContext" targetType="mobileConnectionContext_T_RCM_T"/>
   <Constant scadeName="cNoMobileRegistrationContext" scadeType="RCM_Types_Pkg::mobileRegistrationContext_T"
       targetName="cNoMobileRegistrationContext" targetType="mobileRegistrationContext_T_RCM"/>
+  <Constant scadeName="cNoPositioningErrors" scadeType="TrainPosition_Types_Pck::positionErrors_T"
+      targetName="cNoPositioningErrors" targetType="positionErrors_T_TrainPosition_"/>
   <Constant scadeName="cNoRadioCmd" scadeType="Common_Types_Pkg::radioManagementMessage_T" targetName="cNoRadioCmd"
       targetType="radioManagementMessage_T_Common"/>
   <Constant scadeName="cEmptyTrainPosition" scadeType="TrainPosition_Types_Pck::trainPosition_T"
@@ -1318,7 +1321,7 @@
         targetType="PT0_PositionReport_T_Packet_Tra" inCtx="true"/>
     <Memory scadeName="td_status" scadeType="trainData_Types_pkg::trainDataStatus_T" targetName="td_status"
         targetType="trainDataStatus_T_trainData_Typ" inCtx="true"/>
-    <Local scadeName="EVC_cabIsOpen" scadeType="bool" targetName="EVC_cabIsOpen" targetType="kcg_bool"/>
+    <Local scadeName="EVC_cabIsOpen" scadeType="bool" targetName="_L1754" targetType="kcg_bool" reused="true"/>
     <Memory scadeName="rep_P1" scadeType="Packet_TrainTypes_Pkg::PT1_PositionReport_2BG_T" targetName="rep_P1"
         targetType="PT1_PositionReport_2BG_T_Packet" inCtx="true"/>
     <Local scadeName="EVC_t_Train" scadeType="T_TRAIN" targetName="API_SystemTime"
@@ -1465,6 +1468,7 @@
         targetType="trainData_T_TIU_Types_Pkg"/>
     <Local scadeName="_L1230" scadeType="trainData_Types_pkg::trainDataStatus_T" targetName="_L1230"
         targetType="trainDataStatus_T_trainData_Typ"/>
+    <Local scadeName="_L1243" scadeType="bool" targetName="_L1754" targetType="kcg_bool" reused="true"/>
     <Memory scadeName="_L1254" scadeType="TrainPosition_Types_Pck::trainPosition_T" targetName="CALC_TrainPosition"
         targetType="trainPosition_T_TrainPosition_T" inCtx="true"/>
     <Memory scadeName="_L1255" scadeType="TrainPosition_Types_Pck::positionedBGs_T" targetName="CALC_BGs"
@@ -1560,8 +1564,6 @@
         targetType="T_internal_Type_Obu_BasicTypes_"/>
     <Local scadeName="_L1692" scadeType="T_TRAIN" targetName="API_SystemTime"
         targetType="T_internal_Type_Obu_BasicTypes_"/>
-    <Local scadeName="_L1703" scadeType="MoRC_Pck::mobileHWStatus_Type" targetName="API_mobileHWStatus"
-        targetType="mobileHWStatus_Type_MoRC_Pck"/>
     <Memory scadeName="_L1712" scadeType="NID_MN" targetName="MoRC_MN_1" targetType="NID_MN" inCtx="true"/>
     <Memory scadeName="_L1711" scadeType="NID_RADIO" targetName="MoRC_RadioID_1" targetType="NID_RADIO" inCtx="true"/>
     <Memory scadeName="_L1724" scadeType="RCM_Session_Types_Pkg::morcStatus_T" targetName="MoRC_RadioStatus_1"
@@ -1570,17 +1572,20 @@
         inCtx="true"/>
     <Memory scadeName="_L1742" scadeType="RCM_Session_Types_Pkg::morcStatus_T" targetName="MoRC_RadioStatus_1"
         targetType="morcStatus_T_RCM_Session_Types_" inCtx="true"/>
+    <Local scadeName="_L1754" scadeType="bool" targetName="_L1754" targetType="kcg_bool" reused="true"/>
+    <Memory scadeName="_L1759" scadeType="RCM_Session_Types_Pkg::morcStatus_T" targetName="MoRC_RadioStatus_1"
+        targetType="morcStatus_T_RCM_Session_Types_" inCtx="true"/>
     <NodeInstance scadeName="output_to_TIU_API_Pkg::TIU_OutputIntegration" instName="2"
         refName="TIU_OutputIntegration_output_to">
       <OutCtxVar targetName="_6_Context_2"/>
     </NodeInstance>
     <NodeInstance scadeName="manage_DMI_Output_Pkg::manageDMI_Output" instName="2"
         refName="manageDMI_Output_manage_DMI_Out">
-      <OutCtxVar targetName="_10_Context_2"/>
+      <OutCtxVar targetName="_9_Context_2"/>
     </NodeInstance>
     <NodeInstance scadeName="ManageProcedure_Pkg::Master_Procedure" instName="2"
         refName="Master_Procedure_ManageProcedur">
-      <OutCtxVar targetName="_9_Context_2"/>
+      <OutCtxVar targetName="_8_Context_2"/>
     </NodeInstance>
     <Last>
       <Memory targetName="DMI_currentDMIStatus" targetType="DMI_EVC_status_T_DMI_Types_Pkg" inCtx="true"/>
@@ -1590,7 +1595,7 @@
     </Last>
     <FbyOp instName="2">
       <Memory targetName="_L477" targetType="kcg_bool" inCtx="true"/>
-      <Init targetName="init13" targetType="kcg_bool" inCtx="true"/>
+      <Init targetName="init12" targetType="kcg_bool" inCtx="true"/>
     </FbyOp>
     <NodeInstance scadeName="SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration" instName="2"
         refName="SpeedSupervision_Integration_Sp">
@@ -1679,10 +1684,11 @@
     </Last>
     <NodeInstance scadeName="and" instName="11"/>
     <ActivateIf scadeName="IfBlock1">
+      <Condition targetName="_L1754" reused="true"/>
       <Else/>
       <Then>
         <InitOp instName="2">
-          <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+          <Init targetName="init" targetType="kcg_bool" clockVar="_L1754" clockVal="kcg_true" inCtx="true"/>
         </InitOp>
         <Last>
           <Memory targetName="EVC_PersistentData" targetType="ps_dataForStartOfMission_T_API_" inCtx="true"/>
@@ -1691,7 +1697,7 @@
           <Memory targetName="ML_ModeAndLevel" targetType="T_Mode_Level_Level_And_Mode_Typ" inCtx="true"/>
         </Last>
         <InitOp instName="3">
-          <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+          <Init targetName="init" targetType="kcg_bool" clockVar="_L1754" clockVal="kcg_true" inCtx="true"/>
         </InitOp>
       </Then>
     </ActivateIf>
@@ -1753,7 +1759,7 @@
       <Memory targetName="ML_ModeAndLevel" targetType="T_Mode_Level_Level_And_Mode_Typ" inCtx="true"/>
     </Last>
     <NodeInstance scadeName="MoRC_HO_Pkg::MoRC_HO" instName="1" refName="MoRC_HO_MoRC_HO_Pkg">
-      <OutCtxVar targetName="_8_Context_1"/>
+      <OutCtxVar targetName="Context_1"/>
     </NodeInstance>
     <NodeInstance scadeName="EVC_Support_Pkg::maintainMobileConnectionContext" instName="1"
         refName="maintainMobileConnectionContext"/>
@@ -1779,10 +1785,10 @@
     </Last>
     <NodeInstance scadeName="radioOutput_Pkg::collectRadioOutput" instName="1"
         refName="collectRadioOutput_radioOutput_">
-      <OutCtxVar targetName="_12_Context_1"/>
+      <OutCtxVar targetName="_11_Context_1"/>
     </NodeInstance>
     <NodeInstance scadeName="trainData_pkg::checkGeneralMessage" instName="3" refName="checkGeneralMessage_trainData_p">
-      <OutCtxVar targetName="_11_Context_3"/>
+      <OutCtxVar targetName="_10_Context_3"/>
     </NodeInstance>
     <Last>
       <Memory targetName="PROC_radioCmdFromProcedures" targetType="radioManagementMessage_T_Common" inCtx="true"/>
@@ -1793,16 +1799,13 @@
     <Last>
       <Memory targetName="MoRC_RadioID_1" targetType="NID_RADIO" inCtx="true"/>
     </Last>
-    <NodeInstance scadeName="EVC_Support_Pkg::keepP42" instName="1" refName="keepP42_EVC_Support_Pkg">
-      <OutCtxVar targetName="Context_1"/>
-    </NodeInstance>
     <Last>
       <Memory targetName="MoRC_RadioStatus_1" targetType="morcStatus_T_RCM_Session_Types_" inCtx="true"/>
     </Last>
     <NodeInstance scadeName="=" instName="17"/>
     <NodeInstance scadeName="not" instName="2"/>
-    <Init targetName="init13" targetType="kcg_bool" inCtx="true"/>
-    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <Init targetName="init12" targetType="kcg_bool" inCtx="true"/>
+    <Init targetName="init" targetType="kcg_bool" clockVar="_L1754" clockVal="kcg_true" inCtx="true"/>
     <OutCtxType targetName="outC_EVC"/>
   </NoExpNode>
   <NoExpNode scadeName="ManageLevelAndMode" headerFile="ManageLevelAndMode.h" targetCycleFct="ManageLevelAndMode"
@@ -3406,10 +3409,14 @@
             targetType="EVC_to_DMI_Message_int_T_API_DM" inCtx="true"/>
         <Output scadeName="API_toGUI" scadeType="EnvSim::EVC_to_GUI" targetName="API_toGUI"
             targetType="EVC_to_GUI_EnvSim" inCtx="true"/>
+        <Output scadeName="TIU_toDMI" scadeType="API_TIU_Pkg::TIU_Input_msg" targetName="TIU_toDMI"
+            targetType="TIU_Input_msg_API_TIU_Pkg" inCtx="true"/>
         <Output scadeName="EVC_ready" scadeType="bool" targetName="EVC_ready" targetType="kcg_bool" inCtx="true"/>
         <Output scadeName="Debug" scadeType="DebugData_T" targetName="Debug" targetType="DebugData_T" inCtx="true"/>
         <Memory scadeName="API_currentTimestamp" scadeType="Obu_BasicTypes_Pkg::T_internal_Type"
             targetName="API_currentTimestamp" targetType="T_internal_Type_Obu_BasicTypes_" inCtx="true"/>
+        <Local scadeName="EVC_fromTIU" scadeType="API_TIU_Pkg::TIU_Input_msg" targetName="TIU_toDMI"
+            targetType="TIU_Input_msg_API_TIU_Pkg" inCtx="true"/>
         <Memory scadeName="EVC_MessageToTIU" scadeType="API_TIU_Pkg::TIU_Output_msg" targetName="EVC_MessageToTIU"
             targetType="TIU_Output_msg_API_TIU_Pkg" inCtx="true"/>
         <Memory scadeName="PHY_VelocityInKmH" scadeType="real" targetName="PHY_VelocityInKmH" targetType="kcg_real"
@@ -3429,6 +3436,10 @@
         <Local scadeName="_L21" scadeType="int" targetName="TrainPosition" targetType="kcg_int" inCtx="true"/>
         <Memory scadeName="_L40" scadeType="Obu_BasicTypes_Pkg::T_internal_Type" targetName="API_currentTimestamp"
             targetType="T_internal_Type_Obu_BasicTypes_" inCtx="true"/>
+        <Local scadeName="_L46" scadeType="API_TIU_Pkg::TIU_Input_msg" targetName="TIU_toDMI"
+            targetType="TIU_Input_msg_API_TIU_Pkg" inCtx="true"/>
+        <Local scadeName="_L58" scadeType="API_TIU_Pkg::TIU_Input_msg" targetName="TIU_toDMI"
+            targetType="TIU_Input_msg_API_TIU_Pkg" inCtx="true"/>
         <Local scadeName="_L106" scadeType="Obu_BasicTypes_Pkg::T_internal_Type" targetName="_L106"
             targetType="T_internal_Type_Obu_BasicTypes_"/>
         <Local scadeName="_L94" scadeType="Obu_BasicTypes_Pkg::T_internal_Type" targetName="_L106"
@@ -3557,7 +3568,9 @@
       <Local scadeName="_L13" scadeType="Level_And_Mode_Types_Pkg::T_Mode_Level" targetName="inModeAndLevel"
           targetType="T_Mode_Level_Level_And_Mode_Typ"/>
       <NodeInstance scadeName="output_to_TIU_API_Pkg::manageTIU_output" instName="1"
-          refName="manageTIU_output_output_to_TIU_"/>
+          refName="manageTIU_output_output_to_TIU_">
+        <OutCtxVar targetName="_1_Context_1"/>
+      </NodeInstance>
       <NodeInstance scadeName="output_to_TIU_API_Pkg::handleTraction" instName="1"
           refName="handleTraction_output_to_TIU_AP">
         <OutCtxVar targetName="Context_1"/>
@@ -3565,7 +3578,8 @@
       <OutCtxType targetName="outC_TIU_OutputIntegration_outp"/>
     </NoExpNode>
     <NoExpNode scadeName="manageTIU_output" headerFile="manageTIU_output_output_to_TIU_.h"
-        targetCycleFct="manageTIU_output_output_to_TIU_">
+        targetCycleFct="manageTIU_output_output_to_TIU_" targetInitFct="manageTIU_output_reset_output_t"
+        targetInitializationFct="manageTIU_output_init_output_to">
       <Input scadeName="in_IsolationStatus" scadeType="TIU_Types_Pkg::Isolation_Status_T"
           targetName="in_IsolationStatus" targetType="Isolation_Status_T_TIU_Types_Pk"/>
       <Input scadeName="in_brake_command" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="in_brake_command"
@@ -3582,9 +3596,9 @@
           scadeType="TIU_Types_Pkg::Change_of_allowed_current_consumption_T"
           targetName="in_change_of_allowed_current_co" targetType="Change_of_allowed_current_consu"/>
       <Output scadeName="outTIU_to_API" scadeType="API_TIU_Pkg::TIU_Output_msg" targetName="outTIU_to_API"
-          targetType="TIU_Output_msg_API_TIU_Pkg"/>
+          targetType="TIU_Output_msg_API_TIU_Pkg" inCtx="true"/>
       <Output scadeName="outCommandStatusforEVC" scadeType="TIU_Types_Pkg::TIU_commandStatus_T"
-          targetName="outCommandStatusforEVC" targetType="TIU_commandStatus_T_TIU_Types_P"/>
+          targetName="outCommandStatusforEVC" targetType="TIU_commandStatus_T_TIU_Types_P" inCtx="true"/>
       <Local scadeName="_L1" scadeType="TIU_Types_Pkg::Isolation_Status_T" targetName="in_IsolationStatus"
           targetType="Isolation_Status_T_TIU_Types_Pk"/>
       <Local scadeName="_L2" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="in_brake_command"
@@ -3600,16 +3614,21 @@
       <Local scadeName="_L7" scadeType="TIU_Types_Pkg::Change_of_allowed_current_consumption_T"
           targetName="in_change_of_allowed_current_co" targetType="Change_of_allowed_current_consu"/>
       <Local scadeName="_L8" scadeType="API_TIU_Pkg::TIU_Output_msg" targetName="outTIU_to_API"
-          targetType="TIU_Output_msg_API_TIU_Pkg"/>
+          targetType="TIU_Output_msg_API_TIU_Pkg" inCtx="true"/>
       <Local scadeName="_L22" scadeType="TIU_Types_Pkg::Isolation_Status_T" targetName="in_IsolationStatus"
           targetType="Isolation_Status_T_TIU_Types_Pk"/>
       <Local scadeName="_L23" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="in_brake_command"
           targetType="Brake_command_T_TIU_Types_Pkg"/>
       <Local scadeName="_L24" scadeType="TIU_Types_Pkg::TIU_commandStatus_T" targetName="outCommandStatusforEVC"
-          targetType="TIU_commandStatus_T_TIU_Types_P"/>
+          targetType="TIU_commandStatus_T_TIU_Types_P" inCtx="true"/>
       <NodeInstance scadeName="or" instName="1"/>
       <NodeInstance scadeName="output_to_TIU_API_Pkg::getTIUStatusFromCommand" instName="1"
           refName="getTIUStatusFromCommand_output_"/>
+      <NodeInstance scadeName="output_to_TIU_API_Pkg::handleBrakeCommand" instName="1"
+          refName="handleBrakeCommand_output_to_TI">
+        <OutCtxVar targetName="Context_1"/>
+      </NodeInstance>
+      <OutCtxType targetName="outC_manageTIU_output_output_to"/>
     </NoExpNode>
     <NoExpNode scadeName="getTIUStatusFromCommand" headerFile="getTIUStatusFromCommand_output_.h"
         targetCycleFct="getTIUStatusFromCommand_output_">
@@ -3630,6 +3649,30 @@
       <NodeInstance scadeName="and" instName="1"/>
       <NodeInstance scadeName="and" instName="2"/>
       <NodeInstance scadeName="or" instName="1"/>
+    </NoExpNode>
+    <NoExpNode scadeName="handleBrakeCommand" headerFile="handleBrakeCommand_output_to_TI.h"
+        targetCycleFct="handleBrakeCommand_output_to_TI" targetInitFct="handleBrakeCommand_reset_output"
+        targetInitializationFct="handleBrakeCommand_init_output_">
+      <Input scadeName="in_brake_command" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="in_brake_command"
+          targetType="Brake_command_T_TIU_Types_Pkg"/>
+      <Output scadeName="out_brake_command" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="out_brake_command"
+          targetType="Brake_command_T_TIU_Types_Pkg" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="in_brake_command"
+          targetType="Brake_command_T_TIU_Types_Pkg"/>
+      <Local scadeName="_L7" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="out_brake_command"
+          targetType="Brake_command_T_TIU_Types_Pkg" inCtx="true"/>
+      <Local scadeName="_L8" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="in_brake_command"
+          targetType="Brake_command_T_TIU_Types_Pkg"/>
+      <Last>
+        <Memory targetName="rem_in_brake_command" targetType="Brake_command_T_TIU_Types_Pkg" inCtx="true"/>
+      </Last>
+      <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+      <NodeInstance scadeName="and" instName="1"/>
+      <NodeInstance scadeName="if" instName="1"/>
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      <Memory scadeName="in_brake_command" scadeType="TIU_Types_Pkg::Brake_command_T" targetName="rem_in_brake_command"
+          targetType="Brake_command_T_TIU_Types_Pkg" inCtx="true"/>
+      <OutCtxType targetName="outC_handleBrakeCommand_output_"/>
     </NoExpNode>
     <NoExpNode scadeName="handleTraction" headerFile="handleTraction_output_to_TIU_AP.h"
         targetCycleFct="handleTraction_output_to_TIU_AP" targetInitFct="handleTraction_reset_output_to_"
@@ -3756,8 +3799,8 @@
     </EnumType>
     <NamedType scadeName="Change_traction_system_T" targetName="Change_traction_system_T_TIU_Ty"
         refType="Change_traction_system_T_TIU_Ty"/>
-    <NamedType scadeName="D_test_traction_T" targetName="D_test_traction_T_TIU_Types_Pkg" refType="struct_102052"/>
-    <NamedType scadeName="D_test_distance_T" targetName="D_test_distance_T_TIU_Types_Pkg" refType="struct_102052"/>
+    <NamedType scadeName="D_test_traction_T" targetName="D_test_traction_T_TIU_Types_Pkg" refType="struct_102169"/>
+    <NamedType scadeName="D_test_distance_T" targetName="D_test_distance_T_TIU_Types_Pkg" refType="struct_102169"/>
     <NamedType scadeName="M_voltage_T" targetName="M_voltage_T_TIU_Types_Pkg" refType="M_voltage_T_TIU_Types_Pkg"/>
     <EnumType scadeName="M_voltage_types_T" targetName="M_voltage_types_T_TIU_Types_Pkg">
       <EnumVal scadeName="line_not_fitted_with_any_traction_system" targetName="line_not_fitted_with_any_tracti"/>
@@ -3772,7 +3815,7 @@
         refType="Passenger_door_control_info_T_T"/>
     <NamedType scadeName="Change_of_allowed_current_consumption_T" targetName="Change_of_allowed_current_consu"
         refType="Change_of_allowed_current_consu"/>
-    <NamedType scadeName="D_test_current_T" targetName="D_test_current_T_TIU_Types_Pkg" refType="struct_102052"/>
+    <NamedType scadeName="D_test_current_T" targetName="D_test_current_T_TIU_Types_Pkg" refType="struct_102169"/>
     <NamedType scadeName="M_current_T" targetName="M_current_T_TIU_Types_Pkg" refType="M_current_T_TIU_Types_Pkg"/>
     <NamedType scadeName="TIU_commandStatus_T" targetName="TIU_commandStatus_T_TIU_Types_P"
         refType="TIU_commandStatus_T_TIU_Types_P"/>
@@ -3840,8 +3883,8 @@
         targetName="Type_I_train_and_brake_inhibiti" refType="Type_I_train_and_brake_inhibiti"/>
     <NamedType scadeName="nothing_to_resume_profile_follow_T" targetName="nothing_to_resume_profile_follo"
         refType="nothing_to_resume_profile_follo"/>
-    <NamedType scadeName="D_test_trackcond_T" targetName="D_test_trackcond_T_TIU_Types_Pk" refType="struct_102052"/>
-    <NamedType scadeName="L_test_trackcond_T" targetName="L_test_trackcond_T_TIU_Types_Pk" refType="struct_102052"/>
+    <NamedType scadeName="D_test_trackcond_T" targetName="D_test_trackcond_T_TIU_Types_Pk" refType="struct_102169"/>
+    <NamedType scadeName="L_test_trackcond_T" targetName="L_test_trackcond_T_TIU_Types_Pk" refType="struct_102169"/>
     <EnumType scadeName="M_trackcond_T" targetName="M_trackcond_T_TIU_Types_Pkg">
       <EnumVal scadeName="non_stopping_area" targetName="non_stopping_area_TIU_Types_Pkg"/>
       <EnumVal scadeName="tunnel_stopping_area" targetName="tunnel_stopping_area_TIU_Types_"/>
@@ -3857,7 +3900,7 @@
       <EnumVal scadeName="switch_off_eddy_current_brake_for_emergency_brake"
           targetName="switch_off_eddy_current_brake_f"/>
     </EnumType>
-    <NamedType scadeName="D_test_trackinit_T" targetName="D_test_trackinit_T_TIU_Types_Pk" refType="struct_102052"/>
+    <NamedType scadeName="D_test_trackinit_T" targetName="D_test_trackinit_T_TIU_Types_Pk" refType="struct_102169"/>
   </Package>
   <Package scadeName="Level_And_Mode_Types_Pkg">
     <Constant scadeName="M_Default_Transition" scadeType="Level_And_Mode_Types_Pkg::T_LevelTransition"
@@ -4866,10 +4909,10 @@
     <NamedType scadeName="BCD" targetName="BCD_DMI_Types_Pkg" refType="kcg_int"/>
     <NamedType scadeName="DMI_train_length_T" targetName="DMI_train_length_T_DMI_Types_Pk"
         refType="DMI_train_length_T_DMI_Types_Pk"/>
-    <NamedType scadeName="DMI_brakeModel_id_T" targetName="DMI_brakeModel_id_T_DMI_Types_P" refType="struct_101780"/>
-    <NamedType scadeName="DMI_vMax_id_T" targetName="DMI_vMax_id_T_DMI_Types_Pkg" refType="struct_101780"/>
-    <NamedType scadeName="DMI_airtightSystem_T" targetName="DMI_airtightSystem_T_DMI_Types_" refType="struct_101780"/>
-    <NamedType scadeName="DMI_loadingGauge_T" targetName="DMI_loadingGauge_T_DMI_Types_Pk" refType="struct_101780"/>
+    <NamedType scadeName="DMI_brakeModel_id_T" targetName="DMI_brakeModel_id_T_DMI_Types_P" refType="struct_101923"/>
+    <NamedType scadeName="DMI_vMax_id_T" targetName="DMI_vMax_id_T_DMI_Types_Pkg" refType="struct_101923"/>
+    <NamedType scadeName="DMI_airtightSystem_T" targetName="DMI_airtightSystem_T_DMI_Types_" refType="struct_101923"/>
+    <NamedType scadeName="DMI_loadingGauge_T" targetName="DMI_loadingGauge_T_DMI_Types_Pk" refType="struct_101923"/>
     <NamedType scadeName="DMI_TextMessage_ID_T" targetName="DMI_TextMessage_ID_T_DMI_Types_" refType="kcg_int"/>
     <EnumType scadeName="DMI_Q_TEXT" targetName="DMI_Q_TEXT_DMI_Types_Pkg">
       <EnumVal scadeName="balise_read_error" targetName="balise_read_error_DMI_Types_Pkg"/>
@@ -4905,13 +4948,13 @@
     <NamedType scadeName="DMI_SpeedProfileArray_T" targetName="DMI_SpeedProfileArray_T_DMI_Typ"
         refType="DMI_SpeedProfileArray_T_DMI_Typ"/>
     <NamedType scadeName="DMI_speedProfileElement_T" targetName="DMI_speedProfileElement_T_DMI_T"
-        refType="struct_101691"/>
+        refType="struct_101845"/>
     <NamedType scadeName="DMI_gradientProfile_T" targetName="DMI_gradientProfile_T_DMI_Types"
         refType="DMI_gradientProfile_T_DMI_Types"/>
     <NamedType scadeName="DMI_gradientProfileArray_T" targetName="DMI_gradientProfileArray_T_DMI_"
         refType="DMI_gradientProfileArray_T_DMI_"/>
     <NamedType scadeName="DMI_gradientProfileElement_T" targetName="DMI_gradientProfileElement_T_DM"
-        refType="struct_102106"/>
+        refType="struct_102235"/>
     <NamedType scadeName="DMI_trackCondition_T" targetName="DMI_trackCondition_T_DMI_Types_"
         refType="DMI_trackCondition_T_DMI_Types_"/>
     <NamedType scadeName="DMI_trackConditionArray_T" targetName="DMI_trackConditionArray_T_DMI_T"
@@ -5267,8 +5310,8 @@
     <Constant scadeName="cDigitsInTelephoneNumber" scadeType="int" targetName="cDigitsInTelephoneNumber_Packet"
         targetType="kcg_int" macroDef="true"/>
     <NamedType scadeName="aNID_NTC_T" targetName="aNID_NTC_T_Packet_TrainTypes_Pk" refType="array_int_5"/>
-    <NamedType scadeName="aTractionIdentity_T" targetName="aTractionIdentity_T_Packet_Trai" refType="array_101874"/>
-    <NamedType scadeName="sTractionIdentity_T" targetName="sTractionIdentity_T_Packet_Trai" refType="struct_101491"/>
+    <NamedType scadeName="aTractionIdentity_T" targetName="aTractionIdentity_T_Packet_Trai" refType="array_102001"/>
+    <NamedType scadeName="sTractionIdentity_T" targetName="sTractionIdentity_T_Packet_Trai" refType="struct_102743"/>
     <NamedType scadeName="PT4_ErrorReporting_T" targetName="PT4_ErrorReporting_T_Packet_Tra"
         refType="PT4_ErrorReporting_T_Packet_Tra"/>
     <NamedType scadeName="PT5_TrainRunningNumber" targetName="PT5_TrainRunningNumber_Packet_T"
@@ -5663,9 +5706,9 @@
         targetName="DEFAULT_GradientProfile_TrackAt" targetType="GradientProfile_t_TrackAtlasTyp"/>
     <Constant scadeName="DEFAULT_GradientSection" scadeType="TrackAtlasTypes::Gradient_section_t"
         targetName="DEFAULT_GradientSection_TrackAt" targetType="Gradient_section_t_TrackAtlasTy"/>
-    <NamedType scadeName="MRSP_section_t" targetName="MRSP_section_t_TrackAtlasTypes" refType="struct_101691"/>
+    <NamedType scadeName="MRSP_section_t" targetName="MRSP_section_t_TrackAtlasTypes" refType="struct_101845"/>
     <NamedType scadeName="GradientProfile_for_DMI_section_t" targetName="_23_GradientProfile_for_DMI_sec"
-        refType="struct_102106"/>
+        refType="struct_102235"/>
     <NamedType scadeName="DataForDMI_t" targetName="DataForDMI_t_TrackAtlasTypes"
         refType="DataForDMI_t_TrackAtlasTypes"/>
     <NamedType scadeName="GradientProfile_for_DMI_t" targetName="GradientProfile_for_DMI_t_Track"
@@ -12688,8 +12731,8 @@
       <Signal scadeName="requestSoM_to_DMI" targetName="_L261"/>
       <Signal scadeName="requestTrainNumber_to_DMI" targetName="_L252"/>
       <Signal scadeName="requestLevel_NL_SH_TraindDataEntry_Menu_to_DMI" targetName="_L262"/>
-      <Local scadeName="statusCabOpen_from_TIU" scadeType="bool" targetName="M_LEVEL_Level1" targetType="kcg_bool"
-          reused="true"/>
+      <Local scadeName="statusCabOpen_from_TIU" scadeType="bool" targetName="_3_br_1_guard_SM1_Awakness_of_T"
+          targetType="kcg_bool" reused="true"/>
       <Local scadeName="statusValid_position_from_Positon_Calculation" scadeType="bool"
           targetName="statusValid_Position_from_Posit" targetType="kcg_bool"/>
       <Memory scadeName="sendingPositionReport_to_RBC" scadeType="bool" targetName="sendingPositionReport_to_RBC"
@@ -12697,14 +12740,12 @@
       <Memory scadeName="sendingTrainData_to_RBC" scadeType="bool" targetName="sendingTrainData_to_RBC"
           targetType="kcg_bool" inCtx="true"/>
       <Local scadeName="M_LEVEL_Level_NTC" scadeType="bool" targetName="M_LEVEL_Level_NTC" targetType="kcg_bool"/>
-      <Local scadeName="M_LEVEL_Level2" scadeType="bool" targetName="M_LEVEL_Level2" targetType="kcg_bool"
-          reused="true"/>
-      <Local scadeName="M_LEVEL_Level3" scadeType="bool" targetName="M_LEVEL_Level3" targetType="kcg_bool"
-          reused="true"/>
-      <Local scadeName="M_LEVEL_Level0" scadeType="bool" targetName="M_LEVEL_Level0" targetType="kcg_bool"
-          reused="true"/>
-      <Local scadeName="M_LEVEL_Level1" scadeType="bool" targetName="M_LEVEL_Level1" targetType="kcg_bool"
-          reused="true"/>
+      <Local scadeName="M_LEVEL_Level2" scadeType="bool" targetName="M_LEVEL_Level2" targetType="kcg_bool"/>
+      <Local scadeName="M_LEVEL_Level3" scadeType="bool" targetName="M_LEVEL_Level3" targetType="kcg_bool"/>
+      <Local scadeName="M_LEVEL_Level0" scadeType="bool" targetName="br_3_guard_SM1_Awakness_of_Trai"
+          targetType="kcg_bool" clockVar="Awakness_of_Train_weakb_clock_S" clockVal="kcg_false" reused="true"/>
+      <Local scadeName="M_LEVEL_Level1" scadeType="bool" targetName="br_2_guard_SM1_Awakness_of_Trai"
+          targetType="kcg_bool" clockVar="Awakness_of_Train_weakb_clock_S" clockVal="kcg_false" reused="true"/>
       <Local scadeName="Mode_and_Level_is_valid_from_Mode_and_Level_Management" scadeType="bool"
           targetName="LevelValid_from_Level_and_Mode_" targetType="kcg_bool"/>
       <Local scadeName="_L67" scadeType="bool" targetName="_L67" targetType="kcg_bool"/>
@@ -12714,7 +12755,8 @@
       <Local scadeName="_L71" scadeType="RCM_Session_Types_Pkg::morcStatus_T" targetName="mobileStatus"
           targetType="morcStatus_T_RCM_Session_Types_"/>
       <Local scadeName="_L91" scadeType="bool" targetName="powerUp_to_MoRC" targetType="kcg_bool" inCtx="true"/>
-      <Local scadeName="_L96" scadeType="bool" targetName="M_LEVEL_Level1" targetType="kcg_bool" reused="true"/>
+      <Local scadeName="_L96" scadeType="bool" targetName="_3_br_1_guard_SM1_Awakness_of_T" targetType="kcg_bool"
+          reused="true"/>
       <Local scadeName="_L97" scadeType="TIU_Types_Pkg::TIU_trainStatus_T" targetName="cabStatus_from_TIU"
           targetType="TIU_trainStatus_T_TIU_Types_Pkg"/>
       <Local scadeName="_L130" scadeType="bool" targetName="statusValid_Position_from_Posit" targetType="kcg_bool"/>
@@ -12726,10 +12768,12 @@
       <Local scadeName="_L220" scadeType="Level_And_Mode_Types_Pkg::T_Mode_Level"
           targetName="StatusModeandLevel_from_Level_a" targetType="T_Mode_Level_Level_And_Mode_Typ"/>
       <Local scadeName="_L227" scadeType="bool" targetName="M_LEVEL_Level_NTC" targetType="kcg_bool"/>
-      <Local scadeName="_L230" scadeType="bool" targetName="M_LEVEL_Level2" targetType="kcg_bool" reused="true"/>
-      <Local scadeName="_L231" scadeType="bool" targetName="M_LEVEL_Level3" targetType="kcg_bool" reused="true"/>
-      <Local scadeName="_L234" scadeType="bool" targetName="M_LEVEL_Level0" targetType="kcg_bool" reused="true"/>
-      <Local scadeName="_L235" scadeType="bool" targetName="M_LEVEL_Level1" targetType="kcg_bool" reused="true"/>
+      <Local scadeName="_L230" scadeType="bool" targetName="M_LEVEL_Level2" targetType="kcg_bool"/>
+      <Local scadeName="_L231" scadeType="bool" targetName="M_LEVEL_Level3" targetType="kcg_bool"/>
+      <Local scadeName="_L234" scadeType="bool" targetName="br_3_guard_SM1_Awakness_of_Trai" targetType="kcg_bool"
+          clockVar="Awakness_of_Train_weakb_clock_S" clockVal="kcg_false" reused="true"/>
+      <Local scadeName="_L235" scadeType="bool" targetName="br_2_guard_SM1_Awakness_of_Trai" targetType="kcg_bool"
+          clockVar="Awakness_of_Train_weakb_clock_S" clockVal="kcg_false" reused="true"/>
       <Local scadeName="_L261" scadeType="bool" targetName="_L261" targetType="kcg_bool"/>
       <Local scadeName="_L256" scadeType="DMI_Types_Pkg::DMI_EVC_status_T" targetName="statusDMI_from_DMI"
           targetType="DMI_EVC_status_T_DMI_Types_Pkg"/>
@@ -12903,7 +12947,7 @@
             <Action/>
           </Fork>
           <Clock targetName="Awakness_of_Train_weakb_clock_S" targetType="kcg_bool" clockVar="SM1_state_act"
-              clockVal="SSM_st_Awakness_of_Train_SM1"/>
+              clockVal="SSM_st_Awakness_of_Train_SM1" reused="true"/>
         </State>
         <State scadeName="SoM_L2_3_FS_SR_OS_LS_SH" targetName="SSM_st_SoM_L2_3_FS_SR_OS_LS_SH_">
           <NodeInstance scadeName="SoMProcedure_Pkg::SoM_SR_FS_OS_LS_SH_SN_UN" instName="1"
@@ -12921,9 +12965,9 @@
         <ActiveState targetName="SM1_state_act"/>
         <NextState targetName="SM1_state_nxt" mem="true" inCtx="true"/>
         <SelectedState targetName="SM1_state_sel"/>
-        <ResetActiveState targetName="SM1_reset_act"/>
+        <ResetActiveState targetName="Awakness_of_Train_weakb_clock_S" reused="true"/>
         <ResetNextState targetName="SM1_reset_nxt" mem="true" inCtx="true"/>
-        <ResetSelectedState targetName="M_LEVEL_Level0" reused="true"/>
+        <ResetSelectedState targetName="_2_br_1_guard_SM1_Awakness_of_T" reused="true"/>
         <StrongTransition targetName="SM1_fired_strong"/>
       </Automaton>
       <NodeInstance scadeName="if" instName="3"/>
@@ -12936,7 +12980,7 @@
       </FbyOp>
       <FbyOp instName="2">
         <Init targetName="init3" targetType="kcg_bool" inCtx="true"/>
-        <Fby targetName="fby_ck_fby" targetType="struct_101838" inCtx="true"/>
+        <Fby targetName="fby_ck_fby" targetType="struct_101977" inCtx="true"/>
       </FbyOp>
       <NodeInstance scadeName="=" instName="24"/>
       <NodeInstance scadeName="=" instName="25"/>
@@ -12953,8 +12997,8 @@
       <Init targetName="init3" targetType="kcg_bool" inCtx="true"/>
       <Init targetName="init" targetType="kcg_bool" clockVar="SM1_state_act" clockVal="SSM_st_Awakness_of_Train_SM1"
           inCtx="true"/>
-      <Fby targetName="_2_fby_ck_fby" targetType="struct_101838" inCtx="true"/>
-      <Fby targetName="fby_ck_fby" targetType="struct_101838" inCtx="true"/>
+      <Fby targetName="_2_fby_ck_fby" targetType="struct_101977" inCtx="true"/>
+      <Fby targetName="fby_ck_fby" targetType="struct_101977" inCtx="true"/>
       <OutCtxType targetName="outC_Master_Procedure_ManagePro"/>
     </NoExpNode>
   </Package>
@@ -13079,7 +13123,7 @@
         refType="TrackSide_ForCheck_T_Common_Typ"/>
     <NamedType scadeName="RadioMetadata_T" targetName="RadioMetadata_T_Common_Types_Pk"
         refType="RadioMetadata_T_Common_Types_Pk"/>
-    <NamedType scadeName="ReceivedMessage_T" targetName="ReceivedMessage_T_Common_Types_" refType="struct_104036"/>
+    <NamedType scadeName="ReceivedMessage_T" targetName="ReceivedMessage_T_Common_Types_" refType="struct_104168"/>
     <NamedType scadeName="filterRelatedEvents_T" targetName="filterRelatedEvents_T_Common_Ty"
         refType="filterRelatedEvents_T_Common_Ty"/>
     <NamedType scadeName="MSG_Errors_T" targetName="MSG_Errors_T_Common_Types_Pkg"
@@ -13091,13 +13135,13 @@
     <Constant scadeName="cEmptyRadioMsg" scadeType="Radio_Types_Pkg::RadioMessage_T"
         targetName="cEmptyRadioMsg_Radio_Types_Pkg" targetType="RadioMessage_T_Radio_Types_Pkg"/>
     <NamedType scadeName="Radio_TrackTrain_Header_T" targetName="_11_Radio_TrackTrain_Header_T_R"
-        refType="struct_103634"/>
+        refType="struct_103761"/>
     <NamedType scadeName="RadioMessage_T" targetName="RadioMessage_T_Radio_Types_Pkg"
         refType="RadioMessage_T_Radio_Types_Pkg"/>
     <NamedType scadeName="Radio_TrainTrack_Header_T" targetName="_10_Radio_TrainTrack_Header_T_R"
-        refType="struct_103959"/>
+        refType="struct_104059"/>
     <NamedType scadeName="Radio_TrainTrack_Message_T" targetName="_9_Radio_TrainTrack_Message_T_R"
-        refType="struct_101187"/>
+        refType="struct_101311"/>
   </Package>
   <Package scadeName="Packet_Types_Pkg">
     <Constant scadeName="cNIterMax" scadeType="int" targetName="cNIterMax_Packet_Types_Pkg" targetType="kcg_int"
@@ -13116,7 +13160,7 @@
         refType="P3_NationalValues_T_Packet_Type"/>
     <NamedType scadeName="nidCArray_T" targetName="nidCArray_T_Packet_Types_Pkg"
         refType="nidCArray_T_Packet_Types_Pkg"/>
-    <NamedType scadeName="nidC_T" targetName="nidC_T_Packet_Types_Pkg" refType="struct_102216"/>
+    <NamedType scadeName="nidC_T" targetName="nidC_T_Packet_Types_Pkg" refType="struct_102341"/>
     <NamedType scadeName="nvkvintsetArray_T" targetName="nvkvintsetArray_T_Packet_Types_"
         refType="nvkvintsetArray_T_Packet_Types_"/>
     <NamedType scadeName="nvkvintset_T" targetName="nvkvintset_T_Packet_Types_Pkg"
@@ -13147,7 +13191,7 @@
     <NamedType scadeName="P80_ModeProfile_T" targetName="P80_ModeProfile_T_Packet_Types_"
         refType="P80_ModeProfile_T_Packet_Types_"/>
     <NamedType scadeName="P135_StopShuntingOnDeskOpening_T" targetName="P135_StopShuntingOnDeskOpening_"
-        refType="struct_102238"/>
+        refType="struct_101140"/>
     <NamedType scadeName="P12_Level1MovementAuthorities_T" targetName="_7_P12_Level1MovementAuthoritie"
         refType="_7_P12_Level1MovementAuthoritie"/>
     <NamedType scadeName="P12_Level1MovementAuthority_T" targetName="P12_Level1MovementAuthority_T_P"
@@ -13155,9 +13199,9 @@
     <NamedType scadeName="P137_StopIfInStaffResponsible_T" targetName="P137_StopIfInStaffResponsible_T"
         refType="P137_StopIfInStaffResponsible_T"/>
     <NamedType scadeName="P138_ReversingAreaInformation_T" targetName="P138_ReversingAreaInformation_T"
-        refType="struct_101771"/>
+        refType="struct_101914"/>
     <NamedType scadeName="P139_ReversingSupervisionInformation_T" targetName="P139_ReversingSupervisionInform"
-        refType="struct_102494"/>
+        refType="struct_102614"/>
     <NamedType scadeName="P15_Level23MovementAuthorities_T" targetName="_6_P15_Level23MovementAuthoriti"
         refType="_6_P15_Level23MovementAuthoriti"/>
     <NamedType scadeName="P15_Level23MovementAuthority_T" targetName="P15_Level23MovementAuthority_T_"
@@ -13179,7 +13223,7 @@
     <NamedType scadeName="P57_MovementAuthorityRequestParameters_T" targetName="P57_MovementAuthorityRequestPar"
         refType="P57_MovementAuthorityRequestPar"/>
     <NamedType scadeName="P131_RBCTransitionOrder_T" targetName="P131_RBCTransitionOrder_T_Packe"
-        refType="struct_103913"/>
+        refType="struct_104035"/>
   </Package>
   <Package scadeName="SpeedSupervision_Integration_Pkg">
     <NoExpNode scadeName="SpeedSupervision_Integration" headerFile="SpeedSupervision_Integration_Sp.h"
@@ -19739,7 +19783,7 @@
         targetName="cPT9_Level23_MA_Request" targetType="PT9_Level23_TransitionInformati"/>
     <Constant scadeName="cM_version" scadeType="M_VERSION" targetName="cM_version_MA_Request" targetType="M_VERSION"
         macroDef="true"/>
-    <NamedType scadeName="Driver2MAR_T" targetName="Driver2MAR_T_MA_Request" refType="struct_101118"/>
+    <NamedType scadeName="Driver2MAR_T" targetName="Driver2MAR_T_MA_Request" refType="struct_101254"/>
   </Package>
   <Package scadeName="Manage_TrackSideInformation_Integration_Pkg">
     <NoExpNode scadeName="Manage_TrackSideInformation_Integration" headerFile="Manage_TrackSideInformati_Manag.h"
@@ -22340,7 +22384,7 @@
     <Constant scadeName="DEFAULT_BaliseData" scadeType="Common_Types_Pkg::CompressedPackets_T"
         targetName="DEFAULT_BaliseData_TM" targetType="CompressedPackets_T_Common_Type"/>
     <NamedType scadeName="Array06" targetName="Array06_TM" refType="array_int_6"/>
-    <NamedType scadeName="P015_section_enum_T" targetName="P015_section_enum_T_TM" refType="struct_101678"/>
+    <NamedType scadeName="P015_section_enum_T" targetName="P015_section_enum_T_TM" refType="struct_101832"/>
     <NamedType scadeName="P015_sections_array_flat_T" targetName="P015_sections_array_flat_T_TM"
         refType="array_int_128"/>
     <NamedType scadeName="P015_OBU_sectionlist_enum_T" targetName="P015_OBU_sectionlist_enum_T_TM"
@@ -22369,13 +22413,13 @@
     <NamedType scadeName="Array05" targetName="Array05_TM" refType="array_int_5"/>
     <NamedType scadeName="Array03" targetName="Array03_TM" refType="array_int_3"/>
     <NamedType scadeName="Array07" targetName="Array07_TM" refType="array_int_7"/>
-    <NamedType scadeName="P012_section_enum_T" targetName="P012_section_enum_T_TM" refType="struct_101678"/>
+    <NamedType scadeName="P012_section_enum_T" targetName="P012_section_enum_T_TM" refType="struct_101832"/>
     <NamedType scadeName="P012_sections_array_flat_T" targetName="P012_sections_array_flat_T_TM"
         refType="array_int_128"/>
     <NamedType scadeName="P012_OBU_T" targetName="P012_OBU_T_TM" refType="P012_OBU_T_TM"/>
-    <NamedType scadeName="P139_OBU_T" targetName="P139_OBU_T_TM" refType="struct_102494"/>
-    <NamedType scadeName="P135_OBU_T" targetName="P135_OBU_T_TM" refType="struct_102238"/>
-    <NamedType scadeName="P138_OBU_T" targetName="P138_OBU_T_TM" refType="struct_101771"/>
+    <NamedType scadeName="P139_OBU_T" targetName="P139_OBU_T_TM" refType="struct_102614"/>
+    <NamedType scadeName="P135_OBU_T" targetName="P135_OBU_T_TM" refType="struct_101140"/>
+    <NamedType scadeName="P138_OBU_T" targetName="P138_OBU_T_TM" refType="struct_101914"/>
     <NamedType scadeName="P058_section_enum_T" targetName="P058_section_enum_T_TM" refType="P058_section_enum_T_TM"/>
     <NamedType scadeName="P058_sections_array_flat_T" targetName="P058_sections_array_flat_T_TM"
         refType="array_int_64"/>
@@ -22386,29 +22430,29 @@
     <NamedType scadeName="Array24" targetName="Array24_TM" refType="array_int_24"/>
     <NamedType scadeName="P003_OBU_T" targetName="P003_OBU_T_TM" refType="P003_OBU_T_TM"/>
     <NamedType scadeName="P003_OBU_nid_c_sectionlist_enum_T" targetName="_5_P003_OBU_nid_c_sectionlist_e"
-        refType="array_101201"/>
+        refType="array_101324"/>
     <NamedType scadeName="P003_OBU_nid_c_section_enum_T" targetName="P003_OBU_nid_c_section_enum_T_T"
-        refType="struct_102216"/>
+        refType="struct_102341"/>
     <NamedType scadeName="P003_OBU_n_sectionlist_enum_T" targetName="P003_OBU_n_sectionlist_enum_T_T"
-        refType="array_102222"/>
-    <NamedType scadeName="P003_OBU_n_section_enum_T" targetName="P003_OBU_n_section_enum_T_TM" refType="struct_102260"/>
+        refType="array_102347"/>
+    <NamedType scadeName="P003_OBU_n_section_enum_T" targetName="P003_OBU_n_section_enum_T_TM" refType="struct_102384"/>
     <NamedType scadeName="P003_OBU_k_sectionlist_enum_T" targetName="P003_OBU_k_sectionlist_enum_T_T"
-        refType="array_101423"/>
-    <NamedType scadeName="P003_OBU_k_section_enum_T" targetName="P003_OBU_k_section_enum_T_TM" refType="struct_103888"/>
+        refType="array_101567"/>
+    <NamedType scadeName="P003_OBU_k_section_enum_T" targetName="P003_OBU_k_section_enum_T_TM" refType="struct_104010"/>
     <NamedType scadeName="P003_OBU_k_m_sectionlist_enum_T" targetName="P003_OBU_k_m_sectionlist_enum_T"
-        refType="array_102226"/>
+        refType="array_102351"/>
     <NamedType scadeName="P003_OBU_k_m_section_enum_T" targetName="P003_OBU_k_m_section_enum_T_TM"
-        refType="struct_101968"/>
+        refType="struct_102095"/>
     <NamedType scadeName="P003_OBU_l_sectionlist_enum_T" targetName="P003_OBU_l_sectionlist_enum_T_T"
-        refType="array_101817"/>
-    <NamedType scadeName="P003_OBU_l_section_enum_T" targetName="P003_OBU_l_section_enum_T_TM" refType="struct_101194"/>
+        refType="array_101960"/>
+    <NamedType scadeName="P003_OBU_l_section_enum_T" targetName="P003_OBU_l_section_enum_T_TM" refType="struct_101328"/>
     <NamedType scadeName="P005_section_enum_T" targetName="P005_section_enum_T_TM" refType="P005_section_enum_T_TM"/>
     <NamedType scadeName="P005_sections_array_flat_T" targetName="P005_sections_array_flat_T_TM"
         refType="P005_sections_array_flat_T_TM"/>
     <NamedType scadeName="P005_OBU_sectionlist_enum_T" targetName="P005_OBU_sectionlist_enum_T_TM"
         refType="P005_OBU_sectionlist_enum_T_TM"/>
     <NamedType scadeName="P005_OBU_T" targetName="P005_OBU_T_TM" refType="P005_OBU_T_TM"/>
-    <NamedType scadeName="P131_OBU_T" targetName="P131_OBU_T_TM" refType="struct_103913"/>
+    <NamedType scadeName="P131_OBU_T" targetName="P131_OBU_T_TM" refType="struct_104035"/>
     <NamedType scadeName="Array09" targetName="Array09_TM" refType="array_int_9"/>
     <NamedType scadeName="P042_trackside_int_T" targetName="P042_trackside_int_T_TM" refType="P042_trackside_int_T_TM"/>
     <NamedType scadeName="nid_packet_meta" targetName="nid_packet_meta_TM" refType="kcg_int"/>
@@ -23144,7 +23188,7 @@
     <Constant scadeName="DEFAULT_output_buffer" scadeType="TM_lib_internal::M_TrainTrackRadioOutputBuffer_t"
         targetName="DEFAULT_output_buffer_TM_lib_in" targetType="M_TrainTrackRadioOutputBuffer_t"/>
     <NamedType scadeName="M_TrainTrackMessage_buffer_t" targetName="M_TrainTrackMessage_buffer_t_TM"
-        refType="array_101920"/>
+        refType="array_102047"/>
     <NamedType scadeName="M_TrainTrackRadioOutputBuffer_t" targetName="M_TrainTrackRadioOutputBuffer_t"
         refType="M_TrainTrackRadioOutputBuffer_t"/>
     <NoExpNode scadeName="RECV_ReadPackets" headerFile="RECV_ReadPackets_TM_lib_interna.h"
@@ -25522,13 +25566,13 @@
         <Local scadeName="l_size" scadeType="int" targetName="size" targetType="kcg_int" inCtx="true"/>
         <Memory scadeName="buffer"
             scadeType="Common_Types_Pkg::ReceivedMessage_T^(InformationFilter_Pkg::Common::FIFO::SIZE)"
-            targetName="buffer" targetType="array_102167" inCtx="true"/>
+            targetName="buffer" targetType="array_102295" inCtx="true"/>
         <Local scadeName="entry" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
         <Local scadeName="_L18" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="outData"
             targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
         <Memory scadeName="_L19"
             scadeType="Common_Types_Pkg::ReceivedMessage_T^(InformationFilter_Pkg::Common::FIFO::SIZE)"
-            targetName="buffer" targetType="array_102167" inCtx="true"/>
+            targetName="buffer" targetType="array_102295" inCtx="true"/>
         <Local scadeName="_L22" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
         <Memory scadeName="_L32" scadeType="int" targetName="_L32" targetType="kcg_int" inCtx="true"/>
         <Local scadeName="_L33" scadeType="int" targetName="size" targetType="kcg_int" inCtx="true"/>
@@ -25547,13 +25591,13 @@
           <Then>
             <Memory scadeName="_L4"
                 scadeType="Common_Types_Pkg::ReceivedMessage_T^(InformationFilter_Pkg::Common::FIFO::SIZE)"
-                targetName="_L4_IfBlock1" targetType="array_102167" inCtx="true"/>
+                targetName="_L4_IfBlock1" targetType="array_102295" inCtx="true"/>
             <Local scadeName="_L9" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
             <Local scadeName="_L14" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
             <Memory scadeName="_L20" scadeType="int" targetName="_L20_IfBlock1" targetType="kcg_int" inCtx="true"/>
             <Memory scadeName="_L1"
                 scadeType="Common_Types_Pkg::ReceivedMessage_T^(InformationFilter_Pkg::Common::FIFO::SIZE)"
-                targetName="_L4_IfBlock1" targetType="array_102167" inCtx="true"/>
+                targetName="_L4_IfBlock1" targetType="array_102295" inCtx="true"/>
             <NodeInstance scadeName="+" instName="2"/>
             <FbyOp instName="1">
               <Memory targetName="_L20_IfBlock1" targetType="kcg_int" inCtx="true"/>
@@ -25561,10 +25605,10 @@
             </FbyOp>
             <NodeInstance scadeName="mod" instName="3"/>
             <FbyOp instName="8">
-              <Memory targetName="_L4_IfBlock1" targetType="array_102167" inCtx="true"/>
+              <Memory targetName="_L4_IfBlock1" targetType="array_102295" inCtx="true"/>
               <Init targetName="init1" targetType="kcg_bool" inCtx="true"/>
             </FbyOp>
-            <Memory targetName="_L4_IfBlock1" targetType="array_102167" inCtx="true"/>
+            <Memory targetName="_L4_IfBlock1" targetType="array_102295" inCtx="true"/>
           </Then>
         </ActivateIf>
         <NodeInstance scadeName="if" instName="4"/>
@@ -26343,29 +26387,29 @@
         refType="P027V1_OBU_sectionlist_enum_T_T"/>
     <NamedType scadeName="P003V1_OBU_T" targetName="P003V1_OBU_T_TM_baseline2" refType="P003V1_OBU_T_TM_baseline2"/>
     <NamedType scadeName="P003V1_sectionlist_enum_T" targetName="P003V1_sectionlist_enum_T_TM_ba"
-        refType="array_101201"/>
-    <NamedType scadeName="P003V1_section_enum_T" targetName="P003V1_section_enum_T_TM_baseli" refType="struct_102216"/>
+        refType="array_101324"/>
+    <NamedType scadeName="P003V1_section_enum_T" targetName="P003V1_section_enum_T_TM_baseli" refType="struct_102341"/>
     <NamedType scadeName="P003V1_OBU_sectionlist_int_T" targetName="P003V1_OBU_sectionlist_int_T_TM"
         refType="array_int_32"/>
     <NamedType scadeName="P003_permanent_data_T" targetName="P003_permanent_data_T_TM_baseli"
         refType="P003_permanent_data_T_TM_baseli"/>
     <NamedType scadeName="P203V1_OBU_T" targetName="P203V1_OBU_T_TM_baseline2" refType="P203V1_OBU_T_TM_baseline2"/>
     <NamedType scadeName="P203V1_OBU_n_sectionlist_enum_T" targetName="P203V1_OBU_n_sectionlist_enum_T"
-        refType="array_102222"/>
+        refType="array_102347"/>
     <NamedType scadeName="P203V1_OBU_n_section_enum_T" targetName="P203V1_OBU_n_section_enum_T_TM_"
-        refType="struct_102260"/>
+        refType="struct_102384"/>
     <NamedType scadeName="P203V1_OBU_k_sectionlist_enum_T" targetName="P203V1_OBU_k_sectionlist_enum_T"
-        refType="array_101423"/>
+        refType="array_101567"/>
     <NamedType scadeName="P203V1_OBU_k_section_enum_T" targetName="P203V1_OBU_k_section_enum_T_TM_"
-        refType="struct_103888"/>
+        refType="struct_104010"/>
     <NamedType scadeName="P203V1_OBU_k_m_sectionlist_enum_T" targetName="_2_P203V1_OBU_k_m_sectionlist_e"
-        refType="array_102226"/>
+        refType="array_102351"/>
     <NamedType scadeName="P203V1_OBU_k_m_section_enum_T" targetName="P203V1_OBU_k_m_section_enum_T_T"
-        refType="struct_101968"/>
+        refType="struct_102095"/>
     <NamedType scadeName="P203V1_OBU_l_sectionlist_enum_T" targetName="P203V1_OBU_l_sectionlist_enum_T"
-        refType="array_101817"/>
+        refType="array_101960"/>
     <NamedType scadeName="P203V1_OBU_l_section_enum_T" targetName="P203V1_OBU_l_section_enum_T_TM_"
-        refType="struct_101194"/>
+        refType="struct_101328"/>
     <NoExpNode scadeName="Read_P027V1" headerFile="Read_P027V1_TM_baseline2.h"
         targetCycleFct="Read_P027V1_TM_baseline2">
       <Input scadeName="Message_IN" scadeType="Common_Types_Pkg::CompressedPackets_T" targetName="Message_IN"
@@ -28387,7 +28431,7 @@
       <Input scadeName="in_packet1" scadeType="Packet_TrainTypes_Pkg::PT1_PositionReport_2BG_T" targetName="in_packet1"
           targetType="PT1_PositionReport_2BG_T_Packet"/>
       <Input scadeName="errorVector" scadeType="ProvidePositionReport_Pkg::ErrorMessage_T^(9)" targetName="errorVector"
-          targetType="array_104094"/>
+          targetType="array_102250"/>
       <Input scadeName="t_train" scadeType="T_TRAIN" targetName="t_train" targetType="T_TRAIN"/>
       <Output scadeName="posRepHeader" scadeType="Radio_Types_Pkg::Radio_TrainTrack_Header_T" targetName="posRepHeader"
           targetType="_10_Radio_TrainTrack_Header_T_R"/>
@@ -28400,7 +28444,7 @@
       <Output scadeName="packet5" scadeType="Packet_TrainTypes_Pkg::PT5_TrainRunningNumber" targetName="packet5"
           targetType="PT5_TrainRunningNumber_Packet_T"/>
       <Local scadeName="_L10" scadeType="ProvidePositionReport_Pkg::ErrorMessage_T^(9)" targetName="errorVector"
-          targetType="array_104094"/>
+          targetType="array_102250"/>
       <Local scadeName="_L26" scadeType="Packet_TrainTypes_Pkg::PT0_PositionReport_T" targetName="packet0"
           targetType="PT0_PositionReport_T_Packet_Tra"/>
       <Local scadeName="_L25" scadeType="Packet_TrainTypes_Pkg::PT5_TrainRunningNumber" targetName="packet5"
@@ -29364,7 +29408,7 @@
         <Input scadeName="DoubleRepositioningError" scadeType="bool" targetName="DoubleRepositioningError"
             targetType="kcg_bool"/>
         <Output scadeName="errorVector" scadeType="ProvidePositionReport_Pkg::ErrorMessage_T^(9)"
-            targetName="errorVector" targetType="array_104094"/>
+            targetName="errorVector" targetType="array_102250"/>
         <Local scadeName="_L40" scadeType="bool" targetName="BG_LinkingConsistencyError" targetType="kcg_bool"/>
         <Local scadeName="_L41" scadeType="bool" targetName="LinkedBG_MessageConsistencyErro" targetType="kcg_bool"/>
         <Local scadeName="_L42" scadeType="bool" targetName="UnlinkedBG_MessageConsistencyEr" targetType="kcg_bool"/>
@@ -29375,7 +29419,7 @@
         <Local scadeName="_L47" scadeType="bool" targetName="RadioSequenceError" targetType="kcg_bool"/>
         <Local scadeName="_L48" scadeType="bool" targetName="RadioMessageConsistencyError" targetType="kcg_bool"/>
         <Local scadeName="_L50" scadeType="ProvidePositionReport_Pkg::ErrorMessage_T^(9)" targetName="errorVector"
-            targetType="array_104094"/>
+            targetType="array_102250"/>
       </NoExpNode>
     </Package>
   </Package>
@@ -29489,8 +29533,8 @@
           targetType="kcg_bool"/>
       <Input scadeName="inModeAndLevel" scadeType="Level_And_Mode_Types_Pkg::T_Mode_Level" targetName="inModeAndLevel"
           targetType="T_Mode_Level_Level_And_Mode_Typ"/>
-      <Input scadeName="mobileHWStatus" scadeType="MoRC_Pck::mobileHWStatus_Type" targetName="mobileHWStatus"
-          targetType="mobileHWStatus_Type_MoRC_Pck"/>
+      <Input scadeName="mobileRadioStatus" scadeType="RCM_Session_Types_Pkg::morcStatus_T"
+          targetName="mobileRadioStatus" targetType="morcStatus_T_RCM_Session_Types_"/>
       <Input scadeName="mobileConnectionCMD" scadeType="RCM_Types_Pkg::mobileConnectionCmd_T"
           targetName="mobileConnectionCMD" targetType="mobileConnectionCmd_T_RCM_Types"/>
       <Input scadeName="mobileRegistrationCMD" scadeType="RCM_Types_Pkg::mobileRegistrationCmd_T"
@@ -29510,8 +29554,8 @@
       <Local scadeName="_L20" scadeType="T_TRAIN" targetName="inT_TRAIN" targetType="T_TRAIN"/>
       <Local scadeName="_L22" scadeType="API_RadioCommunication_Pkg::RadioManagement_T" targetName="API_RTM_management"
           targetType="RadioManagement_T_API_RadioComm" inCtx="true"/>
-      <Local scadeName="_L24" scadeType="MoRC_Pck::mobileHWStatus_Type" targetName="mobileHWStatus"
-          targetType="mobileHWStatus_Type_MoRC_Pck"/>
+      <Local scadeName="_L24" scadeType="RCM_Session_Types_Pkg::morcStatus_T" targetName="mobileRadioStatus"
+          targetType="morcStatus_T_RCM_Session_Types_"/>
       <Memory scadeName="_L29" scadeType="bool" targetName="RTMisActive" targetType="kcg_bool" inCtx="true"/>
       <Memory scadeName="_L32" scadeType="bool" targetName="RTMisActive" targetType="kcg_bool" inCtx="true"/>
       <Local scadeName="_L33" scadeType="TM_radio_messages::M_TrainTrack_Message_T" targetName="toRBC"
@@ -29563,6 +29607,8 @@
         <OutCtxVar targetName="Context_1"/>
       </NodeInstance>
       <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+      <NodeInstance scadeName="if" instName="1"/>
+      <NodeInstance scadeName="if" instName="2"/>
       <OutCtxType targetName="outC_mapCMDToRTM_radioOutput_Pk"/>
     </NoExpNode>
     <NoExpNode scadeName="mapnewCMD_toCmd" headerFile="mapnewCMD_toCmd_radioOutput_Pkg.h"
@@ -29622,7 +29668,7 @@
     <Constant scadeName="Time_10ms" scadeType="Obu_BasicTypes_Pkg::T_internal_Type"
         targetName="Time_10ms_TM_TrainTrack_Bus" targetType="T_internal_Type_Obu_BasicTypes_" macroDef="true"/>
     <NamedType scadeName="M_TrainTrackMessageBus_t" targetName="M_TrainTrackMessageBus_t_TM_Tra"
-        refType="array_101920"/>
+        refType="array_102047"/>
     <NoExpNode scadeName="MergeMessageToBus" headerFile="MergeMessageToBus_TM_TrainTrack.h"
         targetCycleFct="MergeMessageToBus_TM_TrainTrack">
       <Input scadeName="Message_in" scadeType="TM_radio_messages::M_TrainTrack_Message_T" targetName="Message_in"
@@ -29713,15 +29759,15 @@
         refType="M_TrainTrack_MessageHd_T_TM_rad"/>
     <NamedType scadeName="M_TrainTrack_compressed_packets_T" targetName="M_TrainTrack_compressed_packets"
         refType="M_TrainTrack_compressed_packets"/>
-    <NamedType scadeName="M_136_T" targetName="M_136_T_TM_radio_messages" refType="struct_102188"/>
-    <NamedType scadeName="M_129_T" targetName="M_129_T_TM_radio_messages" refType="struct_102188"/>
+    <NamedType scadeName="M_136_T" targetName="M_136_T_TM_radio_messages" refType="struct_102313"/>
+    <NamedType scadeName="M_129_T" targetName="M_129_T_TM_radio_messages" refType="struct_102313"/>
     <NamedType scadeName="M_146_T" targetName="M_146_T_TM_radio_messages" refType="M_146_T_TM_radio_messages"/>
     <NamedType scadeName="M_147_T" targetName="M_147_T_TM_radio_messages" refType="M_147_T_TM_radio_messages"/>
     <NamedType scadeName="M_132_T" targetName="M_132_T_TM_radio_messages" refType="M_132_T_TM_radio_messages"/>
-    <NamedType scadeName="M_154_T" targetName="M_154_T_TM_radio_messages" refType="struct_102188"/>
-    <NamedType scadeName="M_159_T" targetName="M_159_T_TM_radio_messages" refType="struct_102188"/>
-    <NamedType scadeName="M_156_T" targetName="M_156_T_TM_radio_messages" refType="struct_102188"/>
-    <NamedType scadeName="M_155_T" targetName="M_155_T_TM_radio_messages" refType="struct_102188"/>
+    <NamedType scadeName="M_154_T" targetName="M_154_T_TM_radio_messages" refType="struct_102313"/>
+    <NamedType scadeName="M_159_T" targetName="M_159_T_TM_radio_messages" refType="struct_102313"/>
+    <NamedType scadeName="M_156_T" targetName="M_156_T_TM_radio_messages" refType="struct_102313"/>
+    <NamedType scadeName="M_155_T" targetName="M_155_T_TM_radio_messages" refType="struct_102313"/>
     <NoExpNode scadeName="Send_M136" headerFile="Send_M136_TM_radio_messages.h"
         targetCycleFct="Send_M136_TM_radio_messages" targetInitFct="Send_M136_reset_TM_radio_messag"
         targetInitializationFct="Send_M136_init_TM_radio_message">
@@ -30185,8 +30231,8 @@
     <NamedType scadeName="P000" targetName="P000_TM_TrainToTrack" refType="P000_TM_TrainToTrack"/>
     <NamedType scadeName="P000_TrainTrack_int" targetName="P000_TrainTrack_int_TM_TrainToT" refType="array_int_17"/>
     <NamedType scadeName="P011" targetName="P011_TM_TrainToTrack" refType="P011_TM_TrainToTrack"/>
-    <NamedType scadeName="P011_voltage_list" targetName="P011_voltage_list_TM_TrainToTra" refType="array_101874"/>
-    <NamedType scadeName="P011_voltage" targetName="P011_voltage_TM_TrainToTrack" refType="struct_101491"/>
+    <NamedType scadeName="P011_voltage_list" targetName="P011_voltage_list_TM_TrainToTra" refType="array_102001"/>
+    <NamedType scadeName="P011_voltage" targetName="P011_voltage_TM_TrainToTrack" refType="struct_102743"/>
     <NamedType scadeName="P011_ntc_list" targetName="P011_ntc_list_TM_TrainToTrack" refType="array_int_5"/>
     <NamedType scadeName="P011_voltage_sections_array_flat_t" targetName="P011_voltage_sections_array_fla"
         refType="array_int_8"/>
@@ -30750,8 +30796,6 @@
     </NoExpNode>
   </Package>
   <Package scadeName="EVC_Support_Pkg">
-    <Constant scadeName="cNoTrackMsg" scadeType="Common_Types_Pkg::ReceivedMessage_T"
-        targetName="cNoTrackMsg_EVC_Support_Pkg" targetType="ReceivedMessage_T_Common_Types_"/>
     <NoExpNode scadeName="maintainTrainProperties" headerFile="maintainTrainProperties_EVC_Sup.h"
         targetCycleFct="maintainTrainProperties_EVC_Sup">
       <Input scadeName="trainProperties" scadeType="TrainPosition_Types_Pck::trainProperties_T"
@@ -30858,47 +30902,6 @@
           targetType="mobileHWConnectionStatus_Type_M"/>
       <Local scadeName="_L2" scadeType="RCM_Types_Pkg::mobileRegistrationStatus_T" targetName="MobileRegistrationStatus"
           targetType="mobileRegistrationStatus_T_RCM_"/>
-    </NoExpNode>
-    <NoExpNode scadeName="keepP42" headerFile="keepP42_EVC_Support_Pkg.h" targetCycleFct="keepP42_EVC_Support_Pkg"
-        targetInitFct="keepP42_reset_EVC_Support_Pkg" targetInitializationFct="keepP42_init_EVC_Support_Pkg">
-      <Input scadeName="fromTrack" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="fromTrack"
-          targetType="ReceivedMessage_T_Common_Types_"/>
-      <Output scadeName="toMoRC" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="toMoRC"
-          targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
-      <Memory scadeName="store" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="store"
-          targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
-      <Memory scadeName="storeMsg" scadeType="bool" targetName="storeMsg" targetType="kcg_bool" inCtx="true"/>
-      <Local scadeName="_L1" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="fromTrack"
-          targetType="ReceivedMessage_T_Common_Types_"/>
-      <Local scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
-      <Local scadeName="_L6" scadeType="bool" targetName="_L6" targetType="kcg_bool"/>
-      <Local scadeName="_L12" scadeType="bool" targetName="_L6" targetType="kcg_bool"/>
-      <Memory scadeName="_L13" scadeType="bool" targetName="storeMsg" targetType="kcg_bool" inCtx="true"/>
-      <Memory scadeName="_L15" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="store"
-          targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
-      <Local scadeName="_L17" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="toMoRC"
-          targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
-      <Memory scadeName="_L18" scadeType="bool" targetName="storeMsg" targetType="kcg_bool" inCtx="true"/>
-      <Memory scadeName="_L19" scadeType="Common_Types_Pkg::ReceivedMessage_T" targetName="store"
-          targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
-      <NodeInstance scadeName="=" instName="1"/>
-      <Last>
-        <Memory targetName="storeMsg" targetType="kcg_bool" inCtx="true"/>
-      </Last>
-      <NodeInstance scadeName="if" instName="1"/>
-      <NodeInstance scadeName="and" instName="1"/>
-      <NodeInstance scadeName="not" instName="1"/>
-      <Last>
-        <Memory targetName="storeMsg" targetType="kcg_bool" inCtx="true"/>
-      </Last>
-      <NodeInstance scadeName="if" instName="2"/>
-      <NodeInstance scadeName="if" instName="3"/>
-      <Last>
-        <Memory targetName="store" targetType="ReceivedMessage_T_Common_Types_" inCtx="true"/>
-      </Last>
-      <NodeInstance scadeName="if" instName="4"/>
-      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
-      <OutCtxType targetName="outC_keepP42_EVC_Support_Pkg"/>
     </NoExpNode>
   </Package>
   <Package scadeName="Conditions">
@@ -38199,7 +38202,7 @@
             <Then>
               <Local scadeName="_L2"
                   scadeType="TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Item_T^(TA_EmergencyStop::NID_EM_Store::cNID_EM_STORE_SIZE)"
-                  targetName="_L24_IfBlock1" targetType="array_102340" clockVar="else_clock_IfBlock1"
+                  targetName="_L24_IfBlock1" targetType="array_102458" clockVar="else_clock_IfBlock1"
                   clockVal="kcg_true"/>
               <Local scadeName="_L1" scadeType="TA_EmergencyStop::NID_EM_Store::NID_EM_STORE_Acc_T"
                   targetName="_L13_IfBlock1" targetType="NID_EM_STORE_Acc_T_TA_Emergency" clockVar="else_clock_IfBlock1"
@@ -38216,7 +38219,7 @@
                 clockVal="kcg_true"/>
             <Local scadeName="_L2"
                 scadeType="TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Item_T^(TA_EmergencyStop::NID_EM_Store::cNID_EM_STORE_SIZE)"
-                targetName="_L2_IfBlock1" targetType="array_102340" clockVar="IfBlock1_clock" clockVal="kcg_true"/>
+                targetName="_L2_IfBlock1" targetType="array_102458" clockVar="IfBlock1_clock" clockVal="kcg_true"/>
             <Iterator instName="6" iteratorKind="mapfold" scadeSize="8" targetSize="8">
               <NodeInstance scadeName="TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Add" instName="2"
                   refName="NID_EM_Store_Add_TA_EmergencySt" clockVar="IfBlock1_clock" clockVal="kcg_true"/>
@@ -38316,11 +38319,11 @@
   </Package>
   <Package scadeName="TM_transitional">
     <NamedType scadeName="Radio_TrainTrack_Message_T" targetName="Radio_TrainTrack_Message_T_TM_t"
-        refType="struct_101187"/>
+        refType="struct_101311"/>
     <NamedType scadeName="Radio_TrainTrack_Header_T" targetName="Radio_TrainTrack_Header_T_TM_tr"
-        refType="struct_103959"/>
+        refType="struct_104059"/>
     <NamedType scadeName="Radio_TrackTrain_Header_T" targetName="Radio_TrackTrain_Header_T_TM_tr"
-        refType="struct_103634"/>
+        refType="struct_103761"/>
   </Package>
   <Package scadeName="TM_conversions_TrainToTrack">
     <NoExpNode scadeName="C_legacy_P001" headerFile="C_legacy_P001_TM_conversions_Tr.h"
@@ -38759,7 +38762,7 @@
         targetType="L_internal_Type_Obu_BasicTypes_" macroDef="true"/>
     <Constant scadeName="cCycleTime" scadeType="int" targetName="cCycleTime_TA_MA_Request" targetType="kcg_int"
         macroDef="true"/>
-    <NamedType scadeName="Driver2MAR_T" targetName="Driver2MAR_T_TA_MA_Request" refType="struct_101118"/>
+    <NamedType scadeName="Driver2MAR_T" targetName="Driver2MAR_T_TA_MA_Request" refType="struct_101254"/>
     <NoExpNode scadeName="Manage_MA_Request" headerFile="Manage_MA_Request_TA_MA_Request.h"
         targetCycleFct="Manage_MA_Request_TA_MA_Request" targetInitFct="Manage_MA_Request_reset_TA_MA_R"
         targetInitializationFct="Manage_MA_Request_init_TA_MA_Re">
@@ -41971,8 +41974,10 @@
         <Local scadeName="_L295" scadeType="BG_Types_Pkg::LinkedBGs_T" targetName="_L295"
             targetType="LinkedBGs_T_BG_Types_Pkg"/>
         <Local scadeName="_L296" scadeType="NID_LRBG" targetName="_L296" targetType="NID_LRBG"/>
-        <Local scadeName="_L306" scadeType="NID_BG" targetName="_L306" targetType="NID_BG"/>
-        <Local scadeName="_L305" scadeType="NID_C" targetName="_L305" targetType="NID_C"/>
+        <Local scadeName="_L306" scadeType="NID_BG" targetName="_L306" targetType="NID_BG" reused="true"/>
+        <Local scadeName="_L305" scadeType="NID_C" targetName="_L305" targetType="NID_C" reused="true"/>
+        <Local scadeName="_L324" scadeType="NID_BG" targetName="_L306" targetType="NID_BG" reused="true"/>
+        <Local scadeName="_L323" scadeType="NID_C" targetName="_L305" targetType="NID_C" reused="true"/>
         <NodeInstance scadeName="and" instName="1"/>
         <NodeInstance scadeName="and" instName="2"/>
         <NodeInstance scadeName="or" instName="1"/>
@@ -41988,6 +41993,11 @@
             refName="nidC_nidBG_2_NIDLRBG_CalculateT"/>
         <NodeInstance scadeName="CalculateTrainPosition_Pkg::BG_utilities_Pkg::NIDLRBG_2_nidC_nidBG" instName="3"
             refName="NIDLRBG_2_nidC_nidBG_CalculateT"/>
+        <NodeInstance scadeName="TM_conversions::DECODE_NID_LRBG" instName="1"
+            refName="DECODE_NID_LRBG_TM_conversions"/>
+        <NodeInstance scadeName="CalculateTrainPosition_Pkg::BG_utilities_Pkg::nidC_nidBG_2_NIDLRBG" instName="2"
+            refName="nidC_nidBG_2_NIDLRBG_CalculateT"/>
+        <NodeInstance scadeName="mod" instName="1"/>
       </NoExpNode>
     </Package>
   </Package>
@@ -42740,6 +42750,8 @@
             targetName="registrationStatus" targetType="mobileRegistrationStatus_T_RCM_" reused="true"/>
         <Local scadeName="registrationStatus" scadeType="RCM_Types_Pkg::mobileRegistrationStatus_T"
             targetName="registrationStatus" targetType="mobileRegistrationStatus_T_RCM_" reused="true"/>
+        <Local scadeName="p45_registrationOrderReceived_p" scadeType="bool" targetName="_L242" targetType="kcg_bool"
+            reused="true"/>
         <Local scadeName="_L132" scadeType="RCM_MsgTypes_Pkg::msgFromTrack_T" targetName="p45_registrationOrder"
             targetType="msgFromTrack_T_RCM_MsgTypes_Pkg"/>
         <Local scadeName="_L148" scadeType="bool" targetName="_L185" targetType="kcg_bool" reused="true"/>
@@ -43728,6 +43740,7 @@
         <NodeInstance scadeName="=" instName="5"/>
         <NodeInstance scadeName="=" instName="6"/>
         <NodeInstance scadeName="=" instName="7"/>
+        <NodeInstance scadeName="&lt;&gt;" instName="1"/>
         <NodeInstance scadeName="and" instName="3"/>
         <NodeInstance scadeName="not" instName="1"/>
         <NodeInstance scadeName="and" instName="4"/>
@@ -44101,6 +44114,14 @@
           targetType="morcStatus_T_RCM_Session_Types_" inCtx="true"/>
       <Local scadeName="sendTrainData_2_acceptingRBC" scadeType="bool" targetName="triggerTrainData"
           targetType="kcg_bool" inCtx="true"/>
+      <Local scadeName="mode_p" scadeType="M_MODE" targetName="mode" targetType="M_MODE"/>
+      <Local scadeName="level_p" scadeType="M_LEVEL" targetName="level" targetType="M_LEVEL"/>
+      <Local scadeName="mobileRegistrationContext_1_p" scadeType="RCM_Types_Pkg::mobileRegistrationContext_T"
+          targetName="mobileRegistrationContext_1" targetType="mobileRegistrationContext_T_RCM"/>
+      <Local scadeName="mobileConnectionContext_1_p" scadeType="RCM_Types_Pkg::mobileConnectionContext_T"
+          targetName="mobileConnectionContext_1" targetType="mobileConnectionContext_T_RCM_T"/>
+      <Local scadeName="eventsAndPhases_p" scadeType="RCM_Session_Types_Pkg::obuEventsAndPhases_T"
+          targetName="eventsAndPhases" targetType="obuEventsAndPhases_T_RCM_Sessio"/>
       <Local scadeName="_L9" scadeType="RCM_Types_Pkg::mobileRegistrationCmd_T" targetName="mobileRegistrationCmd_1"
           targetType="mobileRegistrationCmd_T_RCM_Typ" inCtx="true"/>
       <Local scadeName="_L8" scadeType="RCM_Types_Pkg::mobileConnectionCmd_T" targetName="mobileConnectionCmd_1"
@@ -44198,6 +44219,16 @@
       <Local scadeName="_L160" scadeType="TM_TrainToTrack::P003" targetName="onboardPhoneNumbers_b"
           targetType="P003_TM_TrainToTrack"/>
       <Local scadeName="_L161" scadeType="M_VERSION" targetName="m_version" targetType="M_VERSION"/>
+      <Local scadeName="_L178" scadeType="RCM_MsgTypes_Pkg::msgFromTrack_T" targetName="dataFromTrack_in"
+          targetType="msgFromTrack_T_RCM_MsgTypes_Pkg"/>
+      <Local scadeName="_L183" scadeType="RCM_Session_Types_Pkg::obuEventsAndPhases_T" targetName="eventsAndPhases"
+          targetType="obuEventsAndPhases_T_RCM_Sessio"/>
+      <Local scadeName="_L182" scadeType="M_MODE" targetName="mode" targetType="M_MODE"/>
+      <Local scadeName="_L181" scadeType="RCM_Types_Pkg::mobileRegistrationContext_T"
+          targetName="mobileRegistrationContext_1" targetType="mobileRegistrationContext_T_RCM"/>
+      <Local scadeName="_L180" scadeType="RCM_Types_Pkg::mobileConnectionContext_T"
+          targetName="mobileConnectionContext_1" targetType="mobileConnectionContext_T_RCM_T"/>
+      <Local scadeName="_L179" scadeType="M_LEVEL" targetName="level" targetType="M_LEVEL"/>
       <NodeInstance scadeName="MoRC_Pck::MoRC_Main_v2" instName="1" refName="MoRC_Main_v2_MoRC_Pck">
         <OutCtxVar targetName="_1_Context_1"/>
       </NodeInstance>
@@ -44238,14 +44269,16 @@
         refType="p42_sessionManagement_T_RCM_Msg"/>
     <NamedType scadeName="m38_initiationOfACommunicationSession_T" targetName="m38_initiationOfACommunicationS"
         refType="m38_initiationOfACommunicationS"/>
-    <NamedType scadeName="msgFromTrack_T" targetName="msgFromTrack_T_RCM_MsgTypes_Pkg" refType="struct_104036"/>
+    <NamedType scadeName="msgFromTrack_T" targetName="msgFromTrack_T_RCM_MsgTypes_Pkg" refType="struct_104168"/>
     <NamedType scadeName="m32_RBC_RIU_SystemVersion_T" targetName="m32_RBC_RIU_SystemVersion_T_RCM"
         refType="m32_RBC_RIU_SystemVersion_T_RCM"/>
     <NamedType scadeName="m39_AckOfTerminationOfACommunicationSession_T" targetName="m39_AckOfTerminationOfACommunic"
         refType="m39_AckOfTerminationOfACommunic"/>
     <NamedType scadeName="msgToTrackTriggers_T" targetName="msgToTrackTriggers_T_RCM_MsgTyp"
         refType="msgToTrackTriggers_T_RCM_MsgTyp"/>
-    <NamedType scadeName="msgToTrack_T" targetName="msgToTrack_T_RCM_MsgTypes_Pkg" refType="struct_101187"/>
+    <NamedType scadeName="msgToTrack_T" targetName="msgToTrack_T_RCM_MsgTypes_Pkg" refType="struct_101311"/>
+    <NamedType scadeName="p45_radioNetworkRegistration_T" targetName="p45_radioNetworkRegistration_T_"
+        refType="p45_radioNetworkRegistration_T_"/>
   </Package>
   <Package scadeName="RCM_Utils_Pkg">
     <Package scadeName="decoders">
@@ -45079,7 +45112,7 @@
             targetType="T_internal_Type_Obu_BasicTypes_"/>
         <Local scadeName="_L6" scadeType="TM::Radio_TrackTrain_Header_T" targetName="RadioHeader"
             targetType="_4_Radio_TrackTrain_Header_T_TM"/>
-        <Local scadeName="_L30" scadeType="bool" targetName="IfBlock1_clock" targetType="kcg_bool" reused="true"/>
+        <Local scadeName="_L30" scadeType="bool" targetName="_L30" targetType="kcg_bool" reused="true"/>
         <Local scadeName="_L51" scadeType="TM_transitional::Radio_TrackTrain_Header_T" targetName="_L51"
             targetType="Radio_TrackTrain_Header_T_TM_tr"/>
         <NodeInstance scadeName="&lt;&gt;" instName="1"/>
@@ -45088,83 +45121,83 @@
             <NodeInstance scadeName="=" instName="1"/>
           </Condition>
           <Else>
-            <Condition targetName="_13_else_clock_IfBlock1">
+            <Condition targetName="_18_else_clock_IfBlock1">
               <NodeInstance scadeName="=" instName="3"/>
             </Condition>
             <Else>
-              <Condition targetName="_12_else_clock_IfBlock1">
+              <Condition targetName="_17_else_clock_IfBlock1">
                 <NodeInstance scadeName="=" instName="4"/>
               </Condition>
               <Else>
-                <Condition targetName="_11_else_clock_IfBlock1">
+                <Condition targetName="_16_else_clock_IfBlock1">
                   <NodeInstance scadeName="=" instName="5"/>
                 </Condition>
                 <Else>
-                  <Condition targetName="_10_else_clock_IfBlock1">
+                  <Condition targetName="_15_else_clock_IfBlock1">
                     <NodeInstance scadeName="=" instName="6"/>
                   </Condition>
                   <Else>
-                    <Condition targetName="_9_else_clock_IfBlock1">
+                    <Condition targetName="_14_else_clock_IfBlock1">
                       <NodeInstance scadeName="=" instName="7"/>
                     </Condition>
                     <Else>
-                      <Condition targetName="_8_else_clock_IfBlock1">
+                      <Condition targetName="_13_else_clock_IfBlock1">
                         <NodeInstance scadeName="=" instName="8"/>
                       </Condition>
                       <Else>
-                        <Condition targetName="_7_else_clock_IfBlock1">
+                        <Condition targetName="_12_else_clock_IfBlock1">
                           <NodeInstance scadeName="=" instName="9"/>
                         </Condition>
                         <Else>
-                          <Condition targetName="_6_else_clock_IfBlock1">
+                          <Condition targetName="_11_else_clock_IfBlock1">
                             <NodeInstance scadeName="=" instName="10"/>
                           </Condition>
                           <Else>
-                            <Condition targetName="_5_else_clock_IfBlock1">
+                            <Condition targetName="_10_else_clock_IfBlock1">
                               <NodeInstance scadeName="=" instName="11"/>
                             </Condition>
                             <Else>
-                              <Condition targetName="_4_else_clock_IfBlock1">
+                              <Condition targetName="_9_else_clock_IfBlock1">
                                 <NodeInstance scadeName="=" instName="12"/>
                               </Condition>
                               <Else>
-                                <Condition targetName="_3_else_clock_IfBlock1">
+                                <Condition targetName="_8_else_clock_IfBlock1">
                                   <NodeInstance scadeName="=" instName="13"/>
                                 </Condition>
                                 <Else>
-                                  <Condition targetName="_2_else_clock_IfBlock1">
+                                  <Condition targetName="_7_else_clock_IfBlock1">
                                     <NodeInstance scadeName="=" instName="14"/>
                                   </Condition>
                                   <Else>
-                                    <Condition targetName="_1_else_clock_IfBlock1">
+                                    <Condition targetName="_6_else_clock_IfBlock1">
                                       <NodeInstance scadeName="=" instName="15"/>
                                     </Condition>
                                     <Else>
-                                      <Condition targetName="else_clock_IfBlock1">
+                                      <Condition targetName="_5_else_clock_IfBlock1">
                                         <NodeInstance scadeName="=" instName="16"/>
                                       </Condition>
                                       <Else>
-                                        <Condition targetName="GSM_R_MobileManagement_reset_ac" reused="true">
+                                        <Condition targetName="_4_else_clock_IfBlock1">
                                           <NodeInstance scadeName="=" instName="17"/>
                                         </Condition>
                                         <Else>
-                                          <Condition targetName="_16_br_2_guard_GSM_R_MobileMana" reused="true">
+                                          <Condition targetName="_L30" reused="true">
                                             <NodeInstance scadeName="=" instName="18"/>
                                           </Condition>
                                           <Else>
-                                            <Condition targetName="_15_br_2_guard_GSM_R_MobileMana" reused="true">
+                                            <Condition targetName="_3_else_clock_IfBlock1" reused="true">
                                               <NodeInstance scadeName="=" instName="19"/>
                                             </Condition>
                                             <Else>
-                                              <Condition targetName="br_1_guard_GSM_R_MobileManageme" reused="true">
+                                              <Condition targetName="_2_else_clock_IfBlock1" reused="true">
                                                 <NodeInstance scadeName="=" instName="20"/>
                                               </Condition>
                                               <Else>
-                                                <Condition targetName="_14_br_2_guard_GSM_R_MobileMana" reused="true">
+                                                <Condition targetName="_1_else_clock_IfBlock1" reused="true">
                                                   <NodeInstance scadeName="=" instName="22"/>
                                                 </Condition>
                                                 <Else>
-                                                  <Condition targetName="br_2_guard_GSM_R_MobileManageme" reused="true">
+                                                  <Condition targetName="else_clock_IfBlock1" reused="true">
                                                     <NodeInstance scadeName="=" instName="23"/>
                                                   </Condition>
                                                   <Else/>
@@ -45227,7 +45260,7 @@
             <FbyOp instName="3">
               <Init targetName="init2" targetType="kcg_bool" clockVar="GSM_R_MobileManagement_state_ac"
                   clockVal="SSM_st_Registering_GSM_R_Mobile" inCtx="true"/>
-              <Fby targetName="_1_fby_RTM_Toolbox_TrainModules" targetType="struct_101540"
+              <Fby targetName="_1_fby_RTM_Toolbox_TrainModules" targetType="struct_101684"
                   clockVar="GSM_R_MobileManagement_state_ac" clockVal="SSM_st_Registering_GSM_R_Mobile" inCtx="true"/>
             </FbyOp>
             <Fork priority="1">
@@ -45268,7 +45301,7 @@
             <FbyOp instName="4">
               <Init targetName="init" targetType="kcg_bool" clockVar="GSM_R_MobileManagement_state_ac"
                   clockVal="SSM_st_Connecting_GSM_R_MobileM" inCtx="true"/>
-              <Fby targetName="fby_RTM_Toolbox_TrainModules" targetType="struct_101540"
+              <Fby targetName="fby_RTM_Toolbox_TrainModules" targetType="struct_101684"
                   clockVar="GSM_R_MobileManagement_state_ac" clockVal="SSM_st_Connecting_GSM_R_MobileM" inCtx="true"/>
             </FbyOp>
             <Fork priority="1">
@@ -45306,16 +45339,16 @@
           <ActiveState targetName="GSM_R_MobileManagement_state_ac"/>
           <NextState targetName="GSM_R_MobileManagement_state_nx" mem="true" inCtx="true"/>
           <SelectedState targetName="GSM_R_MobileManagement_state_se"/>
-          <ResetActiveState targetName="GSM_R_MobileManagement_reset_ac" reused="true"/>
+          <ResetActiveState targetName="GSM_R_MobileManagement_reset_ac"/>
         </Automaton>
         <Init targetName="init3" targetType="kcg_bool" inCtx="true"/>
         <Init targetName="init2" targetType="kcg_bool" clockVar="GSM_R_MobileManagement_state_ac"
             clockVal="SSM_st_Registering_GSM_R_Mobile" inCtx="true"/>
-        <Fby targetName="_1_fby_RTM_Toolbox_TrainModules" targetType="struct_101540"
+        <Fby targetName="_1_fby_RTM_Toolbox_TrainModules" targetType="struct_101684"
             clockVar="GSM_R_MobileManagement_state_ac" clockVal="SSM_st_Registering_GSM_R_Mobile" inCtx="true"/>
         <Init targetName="init" targetType="kcg_bool" clockVar="GSM_R_MobileManagement_state_ac"
             clockVal="SSM_st_Connecting_GSM_R_MobileM" inCtx="true"/>
-        <Fby targetName="fby_RTM_Toolbox_TrainModules" targetType="struct_101540"
+        <Fby targetName="fby_RTM_Toolbox_TrainModules" targetType="struct_101684"
             clockVar="GSM_R_MobileManagement_state_ac" clockVal="SSM_st_Connecting_GSM_R_MobileM" inCtx="true"/>
         <OutCtxType targetName="outC_RTM_Toolbox_TrainModules"/>
       </NoExpNode>
@@ -45486,13 +45519,13 @@
         <Local scadeName="l_size" scadeType="int" targetName="size" targetType="kcg_int" inCtx="true"/>
         <Memory scadeName="buffer"
             scadeType="API_Msg_Pkg::API_TrackSideInput_T^(Toolbox::Functions::TRAIN_TrackSideInputFifo::SIZE)"
-            targetName="buffer" targetType="array_102324" inCtx="true"/>
+            targetName="buffer" targetType="array_102442" inCtx="true"/>
         <Local scadeName="entry" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
         <Local scadeName="_L18" scadeType="API_Msg_Pkg::API_TrackSideInput_T" targetName="outData"
             targetType="API_TrackSideInput_T_API_Msg_Pk" inCtx="true"/>
         <Memory scadeName="_L19"
             scadeType="API_Msg_Pkg::API_TrackSideInput_T^(Toolbox::Functions::TRAIN_TrackSideInputFifo::SIZE)"
-            targetName="buffer" targetType="array_102324" inCtx="true"/>
+            targetName="buffer" targetType="array_102442" inCtx="true"/>
         <Local scadeName="_L22" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
         <Memory scadeName="_L32" scadeType="int" targetName="_L32" targetType="kcg_int" inCtx="true"/>
         <Local scadeName="_L33" scadeType="int" targetName="size" targetType="kcg_int" inCtx="true"/>
@@ -45511,13 +45544,13 @@
           <Then>
             <Memory scadeName="_L4"
                 scadeType="API_Msg_Pkg::API_TrackSideInput_T^(Toolbox::Functions::TRAIN_TrackSideInputFifo::SIZE)"
-                targetName="_L4_IfBlock1" targetType="array_102324" inCtx="true"/>
+                targetName="_L4_IfBlock1" targetType="array_102442" inCtx="true"/>
             <Local scadeName="_L9" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
             <Local scadeName="_L14" scadeType="int" targetName="entry" targetType="kcg_int" reused="true"/>
             <Memory scadeName="_L20" scadeType="int" targetName="_L20_IfBlock1" targetType="kcg_int" inCtx="true"/>
             <Memory scadeName="_L1"
                 scadeType="API_Msg_Pkg::API_TrackSideInput_T^(Toolbox::Functions::TRAIN_TrackSideInputFifo::SIZE)"
-                targetName="_L4_IfBlock1" targetType="array_102324" inCtx="true"/>
+                targetName="_L4_IfBlock1" targetType="array_102442" inCtx="true"/>
             <NodeInstance scadeName="+" instName="3"/>
             <FbyOp instName="3">
               <Memory targetName="_L20_IfBlock1" targetType="kcg_int" inCtx="true"/>
@@ -45525,10 +45558,10 @@
             </FbyOp>
             <NodeInstance scadeName="mod" instName="3"/>
             <FbyOp instName="8">
-              <Memory targetName="_L4_IfBlock1" targetType="array_102324" inCtx="true"/>
+              <Memory targetName="_L4_IfBlock1" targetType="array_102442" inCtx="true"/>
               <Init targetName="init1" targetType="kcg_bool" inCtx="true"/>
             </FbyOp>
-            <Memory targetName="_L4_IfBlock1" targetType="array_102324" inCtx="true"/>
+            <Memory targetName="_L4_IfBlock1" targetType="array_102442" inCtx="true"/>
           </Then>
         </ActivateIf>
         <NodeInstance scadeName="if" instName="2"/>
@@ -48376,9 +48409,9 @@
       targetCopyFct="kcg_copy_MetadataTruthtable_T1_" targetCompFct="kcg_comp_MetadataTruthtable_T1_"/>
   <ArrayType targetName="M_TrainTrackRadioOutputBuffer_t" cellType="M_TrainTrack_Message_T_TM_radio" size="100"
       targetCopyFct="kcg_copy_M_TrainTrackRadioOutpu" targetCompFct="kcg_comp_M_TrainTrackRadioOutpu"/>
-  <ArrayType targetName="LevelDecisionTableType_DataDict" cellType="array_104194" size="256"
+  <ArrayType targetName="LevelDecisionTableType_DataDict" cellType="array_104340" size="256"
       targetCopyFct="kcg_copy_LevelDecisionTableType" targetCompFct="kcg_comp_LevelDecisionTableType"/>
-  <ArrayType targetName="ModeDecisionTableType_DataDicti" cellType="array_102344" size="256"
+  <ArrayType targetName="ModeDecisionTableType_DataDicti" cellType="array_102467" size="256"
       targetCopyFct="kcg_copy_ModeDecisionTableType_" targetCompFct="kcg_comp_ModeDecisionTableType_"/>
   <StructType targetName="dataCollectionForLevelTransitio" targetCopyFct="kcg_copy_dataCollectionForLevel"
       targetCompFct="kcg_comp_dataCollectionForLevel">
@@ -48820,7 +48853,7 @@
       targetCompFct="kcg_comp_NID_EM_Store_T_TA_Emer">
     <Field scadeName="nfree" scadeType="int" targetName="nfree" targetType="kcg_int"/>
     <Field scadeName="items" scadeType="TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Item_T^8" targetName="items"
-        targetType="array_102340"/>
+        targetType="array_102458"/>
   </StructType>
   <StructType targetName="NID_EM_Store_Item_T_TA_Emergenc" targetCopyFct="kcg_copy_NID_EM_Store_Item_T_TA"
       targetCompFct="kcg_comp_NID_EM_Store_Item_T_TA">
@@ -48945,6 +48978,16 @@
     <Field scadeName="m154_noCompatibleVersionSupported" scadeType="bool" targetName="m154_noCompatibleVersionSupport"
         targetType="kcg_bool"/>
   </StructType>
+  <StructType targetName="p45_radioNetworkRegistration_T_" targetCopyFct="kcg_copy_p45_radioNetworkRegist"
+      targetCompFct="kcg_comp_p45_radioNetworkRegist">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="msgSrc" scadeType="Common_Types_Pkg::MsgSource_T" targetName="msgSrc"
+        targetType="MsgSource_T_Common_Types_Pkg"/>
+    <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
+    <Field scadeName="nid_mn" scadeType="NID_MN" targetName="nid_mn" targetType="NID_MN"/>
+    <Field scadeName="origin" scadeType="Common_Types_Pkg::RBC_Id_T" targetName="origin"
+        targetType="RBC_Id_T_Common_Types_Pkg"/>
+  </StructType>
   <StructType targetName="odometryFactors_T_Toolbox" targetCopyFct="kcg_copy_odometryFactors_T_Tool"
       targetCompFct="kcg_comp_odometryFactors_T_Tool">
     <Field scadeName="o_nominal" scadeType="real" targetName="o_nominal" targetType="kcg_real"/>
@@ -48959,21 +49002,25 @@
       targetCompFct="kcg_comp_array_bool_4"/>
   <ArrayType targetName="array_int_4" cellType="kcg_int" size="4" targetCopyFct="kcg_copy_array_int_4"
       targetCompFct="kcg_comp_array_int_4"/>
+  <StructType targetName="struct_101140" targetCopyFct="kcg_copy_struct_101140" targetCompFct="kcg_comp_struct_101140">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
+  </StructType>
   <ArrayType targetName="array_int_492" cellType="kcg_int" size="492" targetCopyFct="kcg_copy_array_int_492"
       targetCompFct="kcg_comp_array_int_492"/>
-  <ArrayType targetName="array_101097" cellType="M_TrainTrack_Message_T_TM_radio" size="2"
-      targetCopyFct="kcg_copy_array_101097" targetCompFct="kcg_comp_array_101097"/>
-  <ArrayType targetName="array_101104" cellType="Target_real_T_TargetManagement_" size="1"
-      targetCopyFct="kcg_copy_array_101104" targetCompFct="kcg_comp_array_101104"/>
+  <ArrayType targetName="array_101236" cellType="M_TrainTrack_Message_T_TM_radio" size="2"
+      targetCopyFct="kcg_copy_array_101236" targetCompFct="kcg_comp_array_101236"/>
+  <ArrayType targetName="array_101243" cellType="Target_real_T_TargetManagement_" size="1"
+      targetCopyFct="kcg_copy_array_101243" targetCompFct="kcg_comp_array_101243"/>
   <ArrayType targetName="array_int_894" cellType="kcg_int" size="894" targetCopyFct="kcg_copy_array_int_894"
       targetCompFct="kcg_comp_array_int_894"/>
-  <StructType targetName="struct_101118" targetCopyFct="kcg_copy_struct_101118" targetCompFct="kcg_comp_struct_101118">
+  <StructType targetName="struct_101254" targetCopyFct="kcg_copy_struct_101254" targetCompFct="kcg_comp_struct_101254">
     <Field scadeName="trackAheadFree" scadeType="bool" targetName="trackAheadFree" targetType="kcg_bool"/>
     <Field scadeName="driverSelectsStart" scadeType="bool" targetName="driverSelectsStart" targetType="kcg_bool"/>
   </StructType>
-  <ArrayType targetName="array_101157" cellType="M_TrainTrack_Message_T_TM_radio" size="98"
-      targetCopyFct="kcg_copy_array_101157" targetCompFct="kcg_comp_array_101157"/>
-  <StructType targetName="struct_101187" targetCopyFct="kcg_copy_struct_101187" targetCompFct="kcg_comp_struct_101187">
+  <ArrayType targetName="array_101287" cellType="M_TrainTrack_Message_T_TM_radio" size="98"
+      targetCopyFct="kcg_copy_array_101287" targetCompFct="kcg_comp_array_101287"/>
+  <StructType targetName="struct_101311" targetCopyFct="kcg_copy_struct_101311" targetCompFct="kcg_comp_struct_101311">
     <Field scadeName="present" scadeType="bool" targetName="present" targetType="kcg_bool"/>
     <Field scadeName="header"
         scadeType="{
@@ -48987,7 +49034,7 @@
   xQ_EMERGENCYSTOP : Q_EMERGENCYSTOP,
   xNID_TEXTMESSAGE : int
 }"
-        targetName="header" targetType="struct_103959"/>
+        targetName="header" targetType="struct_104059"/>
     <Field scadeName="packets"
         scadeType="{
   p0 : {
@@ -49074,13 +49121,13 @@
 }"
         targetName="packets" targetType="outPackets_T_Common_Types_Pkg"/>
   </StructType>
-  <StructType targetName="struct_101194" targetCopyFct="kcg_copy_struct_101194" targetCompFct="kcg_comp_struct_101194">
+  <ArrayType targetName="array_101324" cellType="struct_102341" size="32" targetCopyFct="kcg_copy_array_101324"
+      targetCompFct="kcg_comp_array_101324"/>
+  <StructType targetName="struct_101328" targetCopyFct="kcg_copy_struct_101328" targetCompFct="kcg_comp_struct_101328">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="l_nvkrint_l" scadeType="L_NVKRINT" targetName="l_nvkrint_l" targetType="L_NVKRINT"/>
     <Field scadeName="m_nvkrint_l" scadeType="real" targetName="m_nvkrint_l" targetType="kcg_real"/>
   </StructType>
-  <ArrayType targetName="array_101201" cellType="struct_102216" size="32" targetCopyFct="kcg_copy_array_101201"
-      targetCompFct="kcg_comp_array_101201"/>
   <ArrayType targetName="array_bool_113" cellType="kcg_bool" size="113" targetCopyFct="kcg_copy_array_bool_113"
       targetCompFct="kcg_comp_array_bool_113"/>
   <ArrayType targetName="array_real_113" cellType="kcg_real" size="113" targetCopyFct="kcg_copy_array_real_113"
@@ -49091,33 +49138,29 @@
       targetCompFct="kcg_comp_array_int_964"/>
   <ArrayType targetName="array_int_23" cellType="kcg_int" size="23" targetCopyFct="kcg_copy_array_int_23"
       targetCompFct="kcg_comp_array_int_23"/>
-  <ArrayType targetName="array_101362" cellType="Target_real_T_TargetManagement_" size="199"
-      targetCopyFct="kcg_copy_array_101362" targetCompFct="kcg_comp_array_101362"/>
-  <ArrayType targetName="array_101372" cellType="M_TrainTrack_Message_T_TM_radio" size="3"
-      targetCopyFct="kcg_copy_array_101372" targetCompFct="kcg_comp_array_101372"/>
+  <ArrayType targetName="array_101506" cellType="Target_real_T_TargetManagement_" size="199"
+      targetCopyFct="kcg_copy_array_101506" targetCompFct="kcg_comp_array_101506"/>
+  <ArrayType targetName="array_101516" cellType="M_TrainTrack_Message_T_TM_radio" size="3"
+      targetCopyFct="kcg_copy_array_101516" targetCompFct="kcg_comp_array_101516"/>
   <ArrayType targetName="array_int_261" cellType="kcg_int" size="261" targetCopyFct="kcg_copy_array_int_261"
       targetCompFct="kcg_comp_array_int_261"/>
   <ArrayType targetName="array_int_97" cellType="kcg_int" size="97" targetCopyFct="kcg_copy_array_int_97"
       targetCompFct="kcg_comp_array_int_97"/>
   <ArrayType targetName="array_int_15" cellType="kcg_int" size="15" targetCopyFct="kcg_copy_array_int_15"
       targetCompFct="kcg_comp_array_int_15"/>
-  <ArrayType targetName="array_101423" cellType="struct_103888" size="32" targetCopyFct="kcg_copy_array_101423"
-      targetCompFct="kcg_comp_array_101423"/>
-  <ArrayType targetName="array_101427" cellType="struct_102216" size="31" targetCopyFct="kcg_copy_array_101427"
-      targetCompFct="kcg_comp_array_101427"/>
-  <ArrayType targetName="array_101449" cellType="M_TrainTrack_Message_T_TM_radio" size="99"
-      targetCopyFct="kcg_copy_array_101449" targetCompFct="kcg_comp_array_101449"/>
-  <ArrayType targetName="array_101479" cellType="P003_OBU_nid_c_section_enum_T_T" size="1"
-      targetCopyFct="kcg_copy_array_101479" targetCompFct="kcg_comp_array_101479"/>
-  <StructType targetName="struct_101491" targetCopyFct="kcg_copy_struct_101491" targetCompFct="kcg_comp_struct_101491">
-    <Field scadeName="m_voltage" scadeType="M_VOLTAGE" targetName="m_voltage" targetType="M_VOLTAGE"/>
-    <Field scadeName="nid_ctraction" scadeType="int" targetName="nid_ctraction" targetType="kcg_int"/>
-  </StructType>
+  <ArrayType targetName="array_101567" cellType="struct_104010" size="32" targetCopyFct="kcg_copy_array_101567"
+      targetCompFct="kcg_comp_array_101567"/>
+  <ArrayType targetName="array_101571" cellType="struct_102341" size="31" targetCopyFct="kcg_copy_array_101571"
+      targetCompFct="kcg_comp_array_101571"/>
+  <ArrayType targetName="array_101599" cellType="M_TrainTrack_Message_T_TM_radio" size="99"
+      targetCopyFct="kcg_copy_array_101599" targetCompFct="kcg_comp_array_101599"/>
+  <ArrayType targetName="array_101624" cellType="P003_OBU_nid_c_section_enum_T_T" size="1"
+      targetCopyFct="kcg_copy_array_101624" targetCompFct="kcg_comp_array_101624"/>
   <ArrayType targetName="array_real_100_8" cellType="ASafeRow_T_CalcBrakingCurves_ty" size="8"
       targetCopyFct="kcg_copy_array_real_100_8" targetCompFct="kcg_comp_array_real_100_8"/>
   <ArrayType targetName="array_int_987" cellType="kcg_int" size="987" targetCopyFct="kcg_copy_array_int_987"
       targetCompFct="kcg_comp_array_int_987"/>
-  <StructType targetName="struct_101540" targetCopyFct="kcg_copy_struct_101540" targetCompFct="kcg_comp_struct_101540">
+  <StructType targetName="struct_101684" targetCopyFct="kcg_copy_struct_101684" targetCompFct="kcg_comp_struct_101684">
     <Field scadeName="idx" scadeType="int" targetName="idx" targetType="kcg_int"/>
     <Field scadeName="items" scadeType="bool^5" targetName="items" targetType="array_bool_5"/>
   </StructType>
@@ -49133,9 +49176,9 @@
       targetCompFct="kcg_comp_array_real_3"/>
   <ArrayType targetName="array_int_42" cellType="kcg_int" size="42" targetCopyFct="kcg_copy_array_int_42"
       targetCompFct="kcg_comp_array_int_42"/>
-  <ArrayType targetName="array_101659" cellType="positionedBG_T_TrainPosition_Ty" size="40"
-      targetCopyFct="kcg_copy_array_101659" targetCompFct="kcg_comp_array_101659"/>
-  <StructType targetName="struct_101678" targetCopyFct="kcg_copy_struct_101678" targetCompFct="kcg_comp_struct_101678">
+  <ArrayType targetName="array_101808" cellType="positionedBG_T_TrainPosition_Ty" size="40"
+      targetCopyFct="kcg_copy_array_101808" targetCompFct="kcg_comp_array_101808"/>
+  <StructType targetName="struct_101832" targetCopyFct="kcg_copy_struct_101832" targetCompFct="kcg_comp_struct_101832">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="l_section" scadeType="int" targetName="l_section" targetType="kcg_int"/>
     <Field scadeName="q_sectiontimer" scadeType="Q_SECTIONTIMER" targetName="q_sectiontimer"
@@ -49145,24 +49188,24 @@
   </StructType>
   <ArrayType targetName="array_int_975" cellType="kcg_int" size="975" targetCopyFct="kcg_copy_array_int_975"
       targetCompFct="kcg_comp_array_int_975"/>
-  <StructType targetName="struct_101691" targetCopyFct="kcg_copy_struct_101691" targetCompFct="kcg_comp_struct_101691">
+  <StructType targetName="struct_101845" targetCopyFct="kcg_copy_struct_101845" targetCompFct="kcg_comp_struct_101845">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="Loc_Abs" scadeType="int" targetName="Loc_Abs" targetType="kcg_int"/>
     <Field scadeName="Loc_LRBG" scadeType="int" targetName="Loc_LRBG" targetType="kcg_int"/>
     <Field scadeName="MRS" scadeType="int" targetName="MRS" targetType="kcg_int"/>
   </StructType>
-  <ArrayType targetName="array_101707" cellType="M_TrainTrack_Message_T_TM_radio" size="4"
-      targetCopyFct="kcg_copy_array_101707" targetCompFct="kcg_comp_array_101707"/>
+  <ArrayType targetName="array_101856" cellType="M_TrainTrack_Message_T_TM_radio" size="4"
+      targetCopyFct="kcg_copy_array_101856" targetCompFct="kcg_comp_array_101856"/>
   <ArrayType targetName="array_real_100_1" cellType="ASafeRow_T_CalcBrakingCurves_ty" size="1"
       targetCopyFct="kcg_copy_array_real_100_1" targetCompFct="kcg_comp_array_real_100_1"/>
-  <StructType targetName="struct_101771" targetCopyFct="kcg_copy_struct_101771" targetCompFct="kcg_comp_struct_101771">
+  <StructType targetName="struct_101914" targetCopyFct="kcg_copy_struct_101914" targetCompFct="kcg_comp_struct_101914">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
     <Field scadeName="q_scale" scadeType="Q_SCALE" targetName="q_scale" targetType="Q_SCALE"/>
     <Field scadeName="d_startreverse" scadeType="int" targetName="d_startreverse" targetType="kcg_int"/>
     <Field scadeName="l_reversearea" scadeType="int" targetName="l_reversearea" targetType="kcg_int"/>
   </StructType>
-  <StructType targetName="struct_101780" targetCopyFct="kcg_copy_struct_101780" targetCompFct="kcg_comp_struct_101780">
+  <StructType targetName="struct_101923" targetCopyFct="kcg_copy_struct_101923" targetCompFct="kcg_comp_struct_101923">
     <Field scadeName="number" scadeType="int" targetName="number" targetType="kcg_int"/>
     <Field scadeName="dig1" scadeType="int" targetName="dig1" targetType="kcg_int"/>
     <Field scadeName="dig2" scadeType="int" targetName="dig2" targetType="kcg_int"/>
@@ -49172,18 +49215,18 @@
       targetCompFct="kcg_comp_array_bool_30"/>
   <ArrayType targetName="array_int_30" cellType="kcg_int" size="30" targetCopyFct="kcg_copy_array_int_30"
       targetCompFct="kcg_comp_array_int_30"/>
-  <ArrayType targetName="array_101817" cellType="struct_101194" size="32" targetCopyFct="kcg_copy_array_101817"
-      targetCompFct="kcg_comp_array_101817"/>
+  <ArrayType targetName="array_101960" cellType="struct_101328" size="32" targetCopyFct="kcg_copy_array_101960"
+      targetCompFct="kcg_comp_array_101960"/>
   <ArrayType targetName="array_real_100_6" cellType="ASafeRow_T_CalcBrakingCurves_ty" size="6"
       targetCopyFct="kcg_copy_array_real_100_6" targetCompFct="kcg_comp_array_real_100_6"/>
-  <StructType targetName="struct_101838" targetCopyFct="kcg_copy_struct_101838" targetCompFct="kcg_comp_struct_101838">
+  <StructType targetName="struct_101977" targetCopyFct="kcg_copy_struct_101977" targetCompFct="kcg_comp_struct_101977">
     <Field scadeName="idx" scadeType="int" targetName="idx" targetType="kcg_int"/>
     <Field scadeName="items" scadeType="bool^4" targetName="items" targetType="array_bool_4"/>
   </StructType>
   <ArrayType targetName="array_int_65" cellType="kcg_int" size="65" targetCopyFct="kcg_copy_array_int_65"
       targetCompFct="kcg_comp_array_int_65"/>
-  <ArrayType targetName="array_101874" cellType="struct_101491" size="4" targetCopyFct="kcg_copy_array_101874"
-      targetCompFct="kcg_comp_array_101874"/>
+  <ArrayType targetName="array_102001" cellType="struct_102743" size="4" targetCopyFct="kcg_copy_array_102001"
+      targetCompFct="kcg_comp_array_102001"/>
   <ArrayType targetName="array_real_100" cellType="kcg_real" size="100" targetCopyFct="kcg_copy_array_real_100"
       targetCompFct="kcg_comp_array_real_100"/>
   <ArrayType targetName="array_int_221" cellType="kcg_int" size="221" targetCopyFct="kcg_copy_array_int_221"
@@ -49192,13 +49235,13 @@
       targetCompFct="kcg_comp_array_int_627"/>
   <ArrayType targetName="array_int_260" cellType="kcg_int" size="260" targetCopyFct="kcg_copy_array_int_260"
       targetCompFct="kcg_comp_array_int_260"/>
-  <ArrayType targetName="array_101920" cellType="M_TrainTrack_Message_T_TM_radio" size="5"
-      targetCopyFct="kcg_copy_array_101920" targetCompFct="kcg_comp_array_101920"/>
+  <ArrayType targetName="array_102047" cellType="M_TrainTrack_Message_T_TM_radio" size="5"
+      targetCopyFct="kcg_copy_array_102047" targetCompFct="kcg_comp_array_102047"/>
   <ArrayType targetName="array_bool_256" cellType="kcg_bool" size="256" targetCopyFct="kcg_copy_array_bool_256"
       targetCompFct="kcg_comp_array_bool_256"/>
   <ArrayType targetName="array_int_990" cellType="kcg_int" size="990" targetCopyFct="kcg_copy_array_int_990"
       targetCompFct="kcg_comp_array_int_990"/>
-  <StructType targetName="struct_101968" targetCopyFct="kcg_copy_struct_101968" targetCompFct="kcg_comp_struct_101968">
+  <StructType targetName="struct_102095" targetCopyFct="kcg_copy_struct_102095" targetCompFct="kcg_comp_struct_102095">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="v_nvkvint_k_m" scadeType="int" targetName="v_nvkvint_k_m" targetType="kcg_int"/>
     <Field scadeName="m_nvkvint_km_12" scadeType="real" targetName="m_nvkvint_km_12" targetType="kcg_real"/>
@@ -49210,44 +49253,42 @@
       targetCompFct="kcg_comp_array_int_6"/>
   <ArrayType targetName="array_real_6" cellType="V_internal_real_Type_SDM_Types_" size="6"
       targetCopyFct="kcg_copy_array_real_6" targetCompFct="kcg_comp_array_real_6"/>
-  <StructType targetName="struct_102052" targetCopyFct="kcg_copy_struct_102052" targetCompFct="kcg_comp_struct_102052">
+  <StructType targetName="struct_102169" targetCopyFct="kcg_copy_struct_102169" targetCompFct="kcg_comp_struct_102169">
     <Field scadeName="now" scadeType="int" targetName="now" targetType="kcg_int"/>
     <Field scadeName="distance" scadeType="int" targetName="distance" targetType="kcg_int"/>
   </StructType>
-  <StructType targetName="struct_102106" targetCopyFct="kcg_copy_struct_102106" targetCompFct="kcg_comp_struct_102106">
+  <StructType targetName="struct_102235" targetCopyFct="kcg_copy_struct_102235" targetCompFct="kcg_comp_struct_102235">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="begin_section" scadeType="int" targetName="begin_section" targetType="kcg_int"/>
     <Field scadeName="end_section" scadeType="int" targetName="end_section" targetType="kcg_int"/>
     <Field scadeName="gradient" scadeType="int" targetName="gradient" targetType="kcg_int"/>
   </StructType>
+  <ArrayType targetName="array_102250" cellType="ErrorMessage_T_ProvidePositionR" size="9"
+      targetCopyFct="kcg_copy_array_102250" targetCompFct="kcg_comp_array_102250"/>
   <ArrayType targetName="array_int_2" cellType="kcg_int" size="2" targetCopyFct="kcg_copy_array_int_2"
       targetCompFct="kcg_comp_array_int_2"/>
   <ArrayType targetName="array_int_6_221" cellType="array_int_6" size="221" targetCopyFct="kcg_copy_array_int_6_221"
       targetCompFct="kcg_comp_array_int_6_221"/>
   <ArrayType targetName="array_int_978" cellType="kcg_int" size="978" targetCopyFct="kcg_copy_array_int_978"
       targetCompFct="kcg_comp_array_int_978"/>
-  <ArrayType targetName="array_102167" cellType="ReceivedMessage_T_Common_Types_" size="3"
-      targetCopyFct="kcg_copy_array_102167" targetCompFct="kcg_comp_array_102167"/>
-  <StructType targetName="struct_102188" targetCopyFct="kcg_copy_struct_102188" targetCompFct="kcg_comp_struct_102188">
+  <ArrayType targetName="array_102295" cellType="ReceivedMessage_T_Common_Types_" size="3"
+      targetCopyFct="kcg_copy_array_102295" targetCompFct="kcg_comp_array_102295"/>
+  <StructType targetName="struct_102313" targetCopyFct="kcg_copy_struct_102313" targetCompFct="kcg_comp_struct_102313">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="nid_message" scadeType="int" targetName="nid_message" targetType="kcg_int"/>
     <Field scadeName="l_message" scadeType="int" targetName="l_message" targetType="kcg_int"/>
     <Field scadeName="t_train" scadeType="int" targetName="t_train" targetType="kcg_int"/>
     <Field scadeName="nid_engine" scadeType="int" targetName="nid_engine" targetType="kcg_int"/>
   </StructType>
-  <StructType targetName="struct_102216" targetCopyFct="kcg_copy_struct_102216" targetCompFct="kcg_comp_struct_102216">
+  <StructType targetName="struct_102341" targetCopyFct="kcg_copy_struct_102341" targetCompFct="kcg_comp_struct_102341">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="nid_c" scadeType="int" targetName="nid_c" targetType="kcg_int"/>
   </StructType>
-  <ArrayType targetName="array_102222" cellType="struct_102260" size="32" targetCopyFct="kcg_copy_array_102222"
-      targetCompFct="kcg_comp_array_102222"/>
-  <ArrayType targetName="array_102226" cellType="struct_101968" size="32" targetCopyFct="kcg_copy_array_102226"
-      targetCompFct="kcg_comp_array_102226"/>
-  <StructType targetName="struct_102238" targetCopyFct="kcg_copy_struct_102238" targetCompFct="kcg_comp_struct_102238">
-    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
-    <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
-  </StructType>
-  <StructType targetName="struct_102260" targetCopyFct="kcg_copy_struct_102260" targetCompFct="kcg_comp_struct_102260">
+  <ArrayType targetName="array_102347" cellType="struct_102384" size="32" targetCopyFct="kcg_copy_array_102347"
+      targetCompFct="kcg_comp_array_102347"/>
+  <ArrayType targetName="array_102351" cellType="struct_102095" size="32" targetCopyFct="kcg_copy_array_102351"
+      targetCompFct="kcg_comp_array_102351"/>
+  <StructType targetName="struct_102384" targetCopyFct="kcg_copy_struct_102384" targetCompFct="kcg_comp_struct_102384">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="v_nvkvint_n" scadeType="int" targetName="v_nvkvint_n" targetType="kcg_int"/>
     <Field scadeName="m_nvkvint_n_12" scadeType="real" targetName="m_nvkvint_n_12" targetType="kcg_real"/>
@@ -49257,18 +49298,18 @@
       targetCompFct="kcg_comp_array_int_33"/>
   <ArrayType targetName="array_int_888" cellType="kcg_int" size="888" targetCopyFct="kcg_copy_array_int_888"
       targetCompFct="kcg_comp_array_int_888"/>
-  <ArrayType targetName="array_102324" cellType="API_TrackSideInput_T_API_Msg_Pk" size="5"
-      targetCopyFct="kcg_copy_array_102324" targetCompFct="kcg_comp_array_102324"/>
-  <ArrayType targetName="array_102340" cellType="NID_EM_Store_Item_T_TA_Emergenc" size="8"
-      targetCopyFct="kcg_copy_array_102340" targetCompFct="kcg_comp_array_102340"/>
-  <ArrayType targetName="array_102344" cellType="ModeDecisionTableActionKind_Dat" size="17"
-      targetCopyFct="kcg_copy_array_102344" targetCompFct="kcg_comp_array_102344"/>
+  <ArrayType targetName="array_102442" cellType="API_TrackSideInput_T_API_Msg_Pk" size="5"
+      targetCopyFct="kcg_copy_array_102442" targetCompFct="kcg_comp_array_102442"/>
+  <ArrayType targetName="array_102458" cellType="NID_EM_Store_Item_T_TA_Emergenc" size="8"
+      targetCopyFct="kcg_copy_array_102458" targetCompFct="kcg_comp_array_102458"/>
+  <ArrayType targetName="array_102467" cellType="ModeDecisionTableActionKind_Dat" size="17"
+      targetCopyFct="kcg_copy_array_102467" targetCompFct="kcg_comp_array_102467"/>
   <ArrayType targetName="array_int_25" cellType="kcg_int" size="25" targetCopyFct="kcg_copy_array_int_25"
       targetCompFct="kcg_comp_array_int_25"/>
   <ArrayType targetName="array_int_64" cellType="kcg_int" size="64" targetCopyFct="kcg_copy_array_int_64"
       targetCompFct="kcg_comp_array_int_64"/>
-  <ArrayType targetName="array_102398" cellType="M_TrainTrack_Message_T_TM_radio" size="95"
-      targetCopyFct="kcg_copy_array_102398" targetCompFct="kcg_comp_array_102398"/>
+  <ArrayType targetName="array_102518" cellType="M_TrainTrack_Message_T_TM_radio" size="95"
+      targetCopyFct="kcg_copy_array_102518" targetCompFct="kcg_comp_array_102518"/>
   <ArrayType targetName="array_int_99" cellType="kcg_int" size="99" targetCopyFct="kcg_copy_array_int_99"
       targetCompFct="kcg_comp_array_int_99"/>
   <ArrayType targetName="array_int_17" cellType="kcg_int" size="17" targetCopyFct="kcg_copy_array_int_17"
@@ -49279,7 +49320,7 @@
       targetCompFct="kcg_comp_array_int_13"/>
   <ArrayType targetName="array_real_13" cellType="V_internal_real_Type_SDM_Types_" size="13"
       targetCopyFct="kcg_copy_array_real_13" targetCompFct="kcg_comp_array_real_13"/>
-  <StructType targetName="struct_102494" targetCopyFct="kcg_copy_struct_102494" targetCompFct="kcg_comp_struct_102494">
+  <StructType targetName="struct_102614" targetCopyFct="kcg_copy_struct_102614" targetCompFct="kcg_comp_struct_102614">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
     <Field scadeName="q_scale" scadeType="Q_SCALE" targetName="q_scale" targetType="Q_SCALE"/>
@@ -49290,8 +49331,8 @@
       targetCompFct="kcg_comp_array_int_9"/>
   <ArrayType targetName="array_int_48" cellType="kcg_int" size="48" targetCopyFct="kcg_copy_array_int_48"
       targetCompFct="kcg_comp_array_int_48"/>
-  <ArrayType targetName="array_102535" cellType="positionedBG_T_TrainPosition_Ty" size="1"
-      targetCopyFct="kcg_copy_array_102535" targetCompFct="kcg_comp_array_102535"/>
+  <ArrayType targetName="array_102655" cellType="positionedBG_T_TrainPosition_Ty" size="1"
+      targetCopyFct="kcg_copy_array_102655" targetCompFct="kcg_comp_array_102655"/>
   <ArrayType targetName="array_bool_5" cellType="kcg_bool" size="5" targetCopyFct="kcg_copy_array_bool_5"
       targetCompFct="kcg_comp_array_bool_5"/>
   <ArrayType targetName="array_int_5" cellType="kcg_int" size="5" targetCopyFct="kcg_copy_array_int_5"
@@ -49302,8 +49343,12 @@
       targetCompFct="kcg_comp_array_real_1"/>
   <ArrayType targetName="array_int_40" cellType="kcg_int" size="40" targetCopyFct="kcg_copy_array_int_40"
       targetCompFct="kcg_comp_array_int_40"/>
-  <ArrayType targetName="array_102609" cellType="M_TrainTrack_Message_T_TM_radio" size="96"
-      targetCopyFct="kcg_copy_array_102609" targetCompFct="kcg_comp_array_102609"/>
+  <ArrayType targetName="array_102739" cellType="M_TrainTrack_Message_T_TM_radio" size="96"
+      targetCopyFct="kcg_copy_array_102739" targetCompFct="kcg_comp_array_102739"/>
+  <StructType targetName="struct_102743" targetCopyFct="kcg_copy_struct_102743" targetCompFct="kcg_comp_struct_102743">
+    <Field scadeName="m_voltage" scadeType="M_VOLTAGE" targetName="m_voltage" targetType="M_VOLTAGE"/>
+    <Field scadeName="nid_ctraction" scadeType="int" targetName="nid_ctraction" targetType="kcg_int"/>
+  </StructType>
   <ArrayType targetName="array_int_891" cellType="kcg_int" size="891" targetCopyFct="kcg_copy_array_int_891"
       targetCompFct="kcg_comp_array_int_891"/>
   <ArrayType targetName="array_real_114" cellType="kcg_real" size="114" targetCopyFct="kcg_copy_array_real_114"
@@ -49312,7 +49357,7 @@
       targetCompFct="kcg_comp_array_int_32"/>
   <ArrayType targetName="array_int_28" cellType="kcg_int" size="28" targetCopyFct="kcg_copy_array_int_28"
       targetCompFct="kcg_comp_array_int_28"/>
-  <StructType targetName="struct_103634" targetCopyFct="kcg_copy_struct_103634" targetCompFct="kcg_comp_struct_103634">
+  <StructType targetName="struct_103761" targetCopyFct="kcg_copy_struct_103761" targetCompFct="kcg_comp_struct_103761">
     <Field scadeName="radioDevice" scadeType="int" targetName="radioDevice" targetType="kcg_int"/>
     <Field scadeName="receivedSystemTime" scadeType="int" targetName="receivedSystemTime" targetType="kcg_int"/>
     <Field scadeName="nid_message" scadeType="int" targetName="nid_message" targetType="kcg_int"/>
@@ -49329,7 +49374,7 @@
     <Field scadeName="d_emergencystop" scadeType="int" targetName="d_emergencystop" targetType="kcg_int"/>
     <Field scadeName="m_version" scadeType="M_VERSION" targetName="m_version" targetType="M_VERSION"/>
   </StructType>
-  <StructType targetName="struct_103888" targetCopyFct="kcg_copy_struct_103888" targetCompFct="kcg_comp_struct_103888">
+  <StructType targetName="struct_104010" targetCopyFct="kcg_copy_struct_104010" targetCompFct="kcg_comp_struct_104010">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="q_nvkvintset_k" scadeType="Q_NVKVINTSET" targetName="q_nvkvintset_k" targetType="Q_NVKVINTSET"/>
     <Field scadeName="a_nvp12_k" scadeType="real" targetName="a_nvp12_k" targetType="kcg_real"/>
@@ -49345,9 +49390,9 @@
   m_nvkvint_km_12 : real,
   m_nvkvint_km_23 : real
 }^32"
-        targetName="n_iter_k_m_list" targetType="array_102226"/>
+        targetName="n_iter_k_m_list" targetType="array_102351"/>
   </StructType>
-  <StructType targetName="struct_103913" targetCopyFct="kcg_copy_struct_103913" targetCompFct="kcg_comp_struct_103913">
+  <StructType targetName="struct_104035" targetCopyFct="kcg_copy_struct_104035" targetCompFct="kcg_comp_struct_104035">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
     <Field scadeName="q_scale" scadeType="Q_SCALE" targetName="q_scale" targetType="Q_SCALE"/>
@@ -49358,7 +49403,7 @@
     <Field scadeName="q_sleepsession" scadeType="Q_SLEEPSESSION" targetName="q_sleepsession"
         targetType="Q_SLEEPSESSION"/>
   </StructType>
-  <StructType targetName="struct_103959" targetCopyFct="kcg_copy_struct_103959" targetCompFct="kcg_comp_struct_103959">
+  <StructType targetName="struct_104059" targetCopyFct="kcg_copy_struct_104059" targetCompFct="kcg_comp_struct_104059">
     <Field scadeName="present" scadeType="bool" targetName="present" targetType="kcg_bool"/>
     <Field scadeName="nid_message" scadeType="int" targetName="nid_message" targetType="kcg_int"/>
     <Field scadeName="t_train" scadeType="int" targetName="t_train" targetType="kcg_int"/>
@@ -49371,7 +49416,7 @@
         targetType="Q_EMERGENCYSTOP"/>
     <Field scadeName="xNID_TEXTMESSAGE" scadeType="int" targetName="xNID_TEXTMESSAGE" targetType="kcg_int"/>
   </StructType>
-  <StructType targetName="struct_104036" targetCopyFct="kcg_copy_struct_104036" targetCompFct="kcg_comp_struct_104036">
+  <StructType targetName="struct_104168" targetCopyFct="kcg_copy_struct_104168" targetCompFct="kcg_comp_struct_104168">
     <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
     <Field scadeName="source" scadeType="Common_Types_Pkg::MsgSource_T" targetName="source"
         targetType="MsgSource_T_Common_Types_Pkg"/>
@@ -49446,7 +49491,7 @@
   d_emergencystop : int,
   m_version : M_VERSION
 }"
-        targetName="Radio_Common_Header" targetType="struct_103634"/>
+        targetName="Radio_Common_Header" targetType="struct_103761"/>
     <Field scadeName="packets"
         scadeType="{
   PacketHeaders : {
@@ -49471,18 +49516,16 @@
       targetCompFct="kcg_comp_array_int_24"/>
   <ArrayType targetName="array_int_961" cellType="kcg_int" size="961" targetCopyFct="kcg_copy_array_int_961"
       targetCompFct="kcg_comp_array_int_961"/>
-  <ArrayType targetName="array_104094" cellType="ErrorMessage_T_ProvidePositionR" size="9"
-      targetCopyFct="kcg_copy_array_104094" targetCompFct="kcg_comp_array_104094"/>
   <ArrayType targetName="array_int_20" cellType="kcg_int" size="20" targetCopyFct="kcg_copy_array_int_20"
       targetCompFct="kcg_comp_array_int_20"/>
-  <ArrayType targetName="array_104130" cellType="M_TrainTrack_Message_T_TM_radio" size="1"
-      targetCopyFct="kcg_copy_array_104130" targetCompFct="kcg_comp_array_104130"/>
-  <ArrayType targetName="array_104156" cellType="M_TrainTrack_Message_T_TM_radio" size="97"
-      targetCopyFct="kcg_copy_array_104156" targetCompFct="kcg_comp_array_104156"/>
-  <ArrayType targetName="array_104194" cellType="LevelDecisionTableActionKind_Da" size="5"
-      targetCopyFct="kcg_copy_array_104194" targetCompFct="kcg_comp_array_104194"/>
-  <ArrayType targetName="array_104206" cellType="positionedBG_T_TrainPosition_Ty" size="8"
-      targetCopyFct="kcg_copy_array_104206" targetCompFct="kcg_comp_array_104206"/>
+  <ArrayType targetName="array_104262" cellType="M_TrainTrack_Message_T_TM_radio" size="1"
+      targetCopyFct="kcg_copy_array_104262" targetCompFct="kcg_comp_array_104262"/>
+  <ArrayType targetName="array_104282" cellType="M_TrainTrack_Message_T_TM_radio" size="97"
+      targetCopyFct="kcg_copy_array_104282" targetCompFct="kcg_comp_array_104282"/>
+  <ArrayType targetName="array_104340" cellType="LevelDecisionTableActionKind_Da" size="5"
+      targetCopyFct="kcg_copy_array_104340" targetCompFct="kcg_comp_array_104340"/>
+  <ArrayType targetName="array_104347" cellType="positionedBG_T_TrainPosition_Ty" size="8"
+      targetCopyFct="kcg_copy_array_104347" targetCompFct="kcg_comp_array_104347"/>
   <ArrayType targetName="array_bool_8" cellType="kcg_bool" size="8" targetCopyFct="kcg_copy_array_bool_8"
       targetCompFct="kcg_comp_array_bool_8"/>
   <ArrayType targetName="array_int_8" cellType="kcg_int" size="8" targetCopyFct="kcg_copy_array_int_8"
@@ -49494,5 +49537,5 @@
 </Model>
 <!--$**************** KCG Version 6.4 (build i21) ****************
 ** kcg_trace.xml
-** Generation date: 2015-11-11T16:04:45
+** Generation date: 2015-11-12T17:52:21
 *************************************************************$-->

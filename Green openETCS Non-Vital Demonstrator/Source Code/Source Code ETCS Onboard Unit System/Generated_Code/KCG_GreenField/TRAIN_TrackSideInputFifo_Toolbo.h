@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _TRAIN_TrackSideInputFifo_Toolb
 #define _TRAIN_TrackSideInputFifo_Toolb
@@ -23,8 +23,8 @@ typedef struct {
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   kcg_int /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L20 */ _L20_IfBlock1;
-  array_102324 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L4 */ _L4_IfBlock1;
-  array_102324 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::buffer */ buffer;
+  array_102442 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L4 */ _L4_IfBlock1;
+  array_102442 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::buffer */ buffer;
   kcg_int /* Toolbox::Functions::TRAIN_TrackSideInputFifo::_L32 */ _L32;
   kcg_int /* Toolbox::Functions::TRAIN_TrackSideInputFifo::_L50 */ _L50;
   /* -------------------- no sub nodes' contexts  -------------------- */
@@ -52,6 +52,6 @@ extern void TRAIN_TrackSideInputFifo_init_T(
 #endif /* _TRAIN_TrackSideInputFifo_Toolb */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TRAIN_TrackSideInputFifo_Toolbo.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

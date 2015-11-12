@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -294,7 +294,7 @@ void FIFO_InformationFilter_Pkg_Comm(
     if ((0 <= entry) & (entry < 3)) {
       kcg_copy_ReceivedMessage_T_Comm(&outC->_L4_IfBlock1[entry], inData);
     }
-    kcg_copy_array_102167(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array_102295(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (entry + 1) % 3;
     tmp1 = 1;
     outC->init1 = kcg_false;
@@ -355,6 +355,6 @@ void FIFO_InformationFilter_Pkg_Comm(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FIFO_InformationFilter_Pkg_Comm.c
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 

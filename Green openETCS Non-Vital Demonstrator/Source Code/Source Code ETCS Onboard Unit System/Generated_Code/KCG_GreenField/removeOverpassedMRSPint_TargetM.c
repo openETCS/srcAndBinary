@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,9 +17,9 @@ void removeOverpassedMRSPint_TargetM(
   *Cond = (MRSP_TargetManagement_types == (*Targets)[0].targetType) &
     ((*Targets)[0].distance <= d_safe_max_front);
   /* 1 */ if (*Cond) {
-    kcg_copy_array_101362(
+    kcg_copy_array_101506(
       &(*TargetsReduced)[0],
-      (array_101362 *) &(*Targets)[1]);
+      (array_101506 *) &(*Targets)[1]);
     kcg_copy_Target_real_T_TargetMa(
       &(&(*TargetsReduced)[199])[0],
       (Target_real_T_TargetManagement_ *) &emptyTarget_TargetManagement_pk);
@@ -31,6 +31,6 @@ void removeOverpassedMRSPint_TargetM(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** removeOverpassedMRSPint_TargetM.c
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

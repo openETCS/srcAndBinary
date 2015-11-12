@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -27,7 +27,7 @@ void deleteBG_atIndex_CalculateTrain(
   static kcg_int _L16;
   
   _L8 = del & (indexOfBG >= 0) & (indexOfBG < cMaxNoOfStoredBGs_TrainPosition);
-  kcg_copy_array_101659(&tmp[0], (array_101659 *) &(*BGs_in)[1]);
+  kcg_copy_array_101808(&tmp[0], (array_101808 *) &(*BGs_in)[1]);
   kcg_copy_positionedBG_T_TrainPo(
     &(&tmp[40])[0],
     (positionedBG_T_TrainPosition_Ty *) &cNoPositionedBG_CalculateTrainP);
@@ -69,6 +69,6 @@ void deleteBG_atIndex_CalculateTrain(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** deleteBG_atIndex_CalculateTrain.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

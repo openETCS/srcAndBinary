@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _mapnewCMD_toCmd_radioOutput_Pk
 #define _mapnewCMD_toCmd_radioOutput_Pk
@@ -45,6 +45,6 @@ extern void mapnewCMD_toCmd_init_radioOutpu(
 #endif /* _mapnewCMD_toCmd_radioOutput_Pk */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapnewCMD_toCmd_radioOutput_Pkg.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _sub_2_odoDistances_BasicLocati
 #define _sub_2_odoDistances_BasicLocati
@@ -21,6 +21,6 @@ extern void sub_2_odoDistances_BasicLocatio(
 #endif /* _sub_2_odoDistances_BasicLocati */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sub_2_odoDistances_BasicLocatio.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

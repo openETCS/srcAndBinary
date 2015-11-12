@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
@@ -20,7 +20,6 @@
 #include "ProvidePositionReport_ProvidePo.h"
 #include "collectRadioOutput_radioOutput_.h"
 #include "manageTIU_input_input_from_TIU_.h"
-#include "keepP42_EVC_Support_Pkg.h"
 #include "trainData_trainData_pkg.h"
 #include "checkGeneralMessage_trainData_p.h"
 #include "TrackAtlas_TrackAtlas.h"
@@ -49,41 +48,40 @@ typedef struct {
   M_LEVEL /* EVC::debugCurrentLevel */ debugCurrentLevel;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
-  kcg_bool init13;
   kcg_bool init;
+  kcg_bool init12;
   /* ----------------------- local memories  ------------------------- */
-  radioManagementMessage_T_Common /* EVC::PROC_radioCmdFromProcedures */ PROC_radioCmdFromProcedures;
-  kcg_bool /* EVC::PROC_powerUp_to_MoRC */ PROC_powerUp_to_MoRC;
-  kcg_bool /* EVC::PROC_statusstartofmissionongoing_to_MoRC */ PROC_statusstartofmissionongoin;
-  kcg_bool /* EVC::PROC_powerOff_to_MoRC */ PROC_powerOff_to_MoRC;
-  DMI_EVC_status_T_DMI_Types_Pkg /* EVC::DMI_currentDMIStatus */ DMI_currentDMIStatus;
-  trainPosition_T_TrainPosition_T /* EVC::CALC_TrainPosition */ CALC_TrainPosition;
-  speedSupervisionForDMI_T_DMI_Ty /* EVC::DMI_sdmToDMI */ DMI_sdmToDMI;
-  trainData_T_TIU_Types_Pkg /* EVC::td_trainData */ td_trainData;
-  connection_ids_T_Handover_Pkg /* EVC::MoRC_supervisingRBC_Id */ MoRC_supervisingRBC_Id;
-  positionedBGs_T_TrainPosition_T /* EVC::CALC_BGs */ CALC_BGs;
-  trainProperties_T_TrainPosition /* EVC::TIU_trainProperties */ TIU_trainProperties;
-  kcg_bool /* EVC::MoRC_newSessionEstablished */ MoRC_newSessionEstablished;
-  T_internal_Type_Obu_BasicTypes_ /* EVC::MSG_lastRadioMsgTimestamp */ MSG_lastRadioMsgTimestamp;
-  NID_NTC /* EVC::EVC_currentNTC */ EVC_currentNTC;
-  T_Mode_Level_Level_And_Mode_Typ /* EVC::ML_ModeAndLevel */ ML_ModeAndLevel;
-  ps_dataForStartOfMission_T_API_ /* EVC::EVC_PersistentData */ EVC_PersistentData;
-  DMI_TXT_MSGList_status_T_DMI_Ty /* EVC::EVC_TextMessageStatusList */ EVC_TextMessageStatusList;
-  trainData_Events_T_trainData_Ty /* EVC::td_events */ td_events;
-  PT0_PositionReport_T_Packet_Tra /* EVC::rep_P0 */ rep_P0;
-  trainDataStatus_T_trainData_Typ /* EVC::td_status */ td_status;
-  PT1_PositionReport_2BG_T_Packet /* EVC::rep_P1 */ rep_P1;
-  morcStatus_T_RCM_Session_Types_ /* EVC::MoRC_RadioStatus_1 */ MoRC_RadioStatus_1;
-  NID_RADIO /* EVC::MoRC_RadioID_1 */ MoRC_RadioID_1;
-  NID_MN /* EVC::MoRC_MN_1 */ MoRC_MN_1;
   kcg_bool /* EVC::_L477 */ _L477;
+  NID_MN /* EVC::MoRC_MN_1 */ MoRC_MN_1;
+  NID_RADIO /* EVC::MoRC_RadioID_1 */ MoRC_RadioID_1;
+  morcStatus_T_RCM_Session_Types_ /* EVC::MoRC_RadioStatus_1 */ MoRC_RadioStatus_1;
+  PT1_PositionReport_2BG_T_Packet /* EVC::rep_P1 */ rep_P1;
+  trainDataStatus_T_trainData_Typ /* EVC::td_status */ td_status;
+  PT0_PositionReport_T_Packet_Tra /* EVC::rep_P0 */ rep_P0;
+  trainData_Events_T_trainData_Ty /* EVC::td_events */ td_events;
+  DMI_TXT_MSGList_status_T_DMI_Ty /* EVC::EVC_TextMessageStatusList */ EVC_TextMessageStatusList;
+  ps_dataForStartOfMission_T_API_ /* EVC::EVC_PersistentData */ EVC_PersistentData;
+  T_Mode_Level_Level_And_Mode_Typ /* EVC::ML_ModeAndLevel */ ML_ModeAndLevel;
+  NID_NTC /* EVC::EVC_currentNTC */ EVC_currentNTC;
+  T_internal_Type_Obu_BasicTypes_ /* EVC::MSG_lastRadioMsgTimestamp */ MSG_lastRadioMsgTimestamp;
+  kcg_bool /* EVC::MoRC_newSessionEstablished */ MoRC_newSessionEstablished;
+  trainProperties_T_TrainPosition /* EVC::TIU_trainProperties */ TIU_trainProperties;
+  positionedBGs_T_TrainPosition_T /* EVC::CALC_BGs */ CALC_BGs;
+  connection_ids_T_Handover_Pkg /* EVC::MoRC_supervisingRBC_Id */ MoRC_supervisingRBC_Id;
+  trainData_T_TIU_Types_Pkg /* EVC::td_trainData */ td_trainData;
+  speedSupervisionForDMI_T_DMI_Ty /* EVC::DMI_sdmToDMI */ DMI_sdmToDMI;
+  trainPosition_T_TrainPosition_T /* EVC::CALC_TrainPosition */ CALC_TrainPosition;
+  DMI_EVC_status_T_DMI_Types_Pkg /* EVC::DMI_currentDMIStatus */ DMI_currentDMIStatus;
+  kcg_bool /* EVC::PROC_powerOff_to_MoRC */ PROC_powerOff_to_MoRC;
+  kcg_bool /* EVC::PROC_statusstartofmissionongoing_to_MoRC */ PROC_statusstartofmissionongoin;
+  kcg_bool /* EVC::PROC_powerUp_to_MoRC */ PROC_powerUp_to_MoRC;
+  radioManagementMessage_T_Common /* EVC::PROC_radioCmdFromProcedures */ PROC_radioCmdFromProcedures;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_collectRadioOutput_radioOu /* 1 */ _12_Context_1;
-  outC_checkGeneralMessage_trainD /* 3 */ _11_Context_3;
-  outC_manageDMI_Output_manage_DM /* 2 */ _10_Context_2;
-  outC_Master_Procedure_ManagePro /* 2 */ _9_Context_2;
-  outC_MoRC_HO_MoRC_HO_Pkg /* 1 */ _8_Context_1;
-  outC_keepP42_EVC_Support_Pkg /* 1 */ Context_1;
+  outC_collectRadioOutput_radioOu /* 1 */ _11_Context_1;
+  outC_checkGeneralMessage_trainD /* 3 */ _10_Context_3;
+  outC_manageDMI_Output_manage_DM /* 2 */ _9_Context_2;
+  outC_Master_Procedure_ManagePro /* 2 */ _8_Context_2;
+  outC_MoRC_HO_MoRC_HO_Pkg /* 1 */ Context_1;
   outC_ProvidePositionReport_Prov /* 2 */ _7_Context_2;
   outC_TIU_OutputIntegration_outp /* 2 */ _6_Context_2;
   outC_SpeedSupervision_Integrati /* 2 */ _5_Context_2;
@@ -121,6 +119,6 @@ extern void EVC_init(outC_EVC *outC);
 #endif /* _EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

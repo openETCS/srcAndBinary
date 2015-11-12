@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:18
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -219,6 +219,119 @@ const mobileConnectionContext_T_RCM_T cNoMobileConnectionContext = { kcg_false,
 /* cNoMobileRegistrationContext */
 const mobileRegistrationContext_T_RCM cNoMobileRegistrationContext = {
   kcg_false, 0, mhs_nok_RCM_Types_Pkg, mrs_unregistered_RCM_Types_Pkg, 0 };
+
+/* cNoPositioningErrors */
+const positionErrors_T_TrainPosition_ cNoPositioningErrors = { kcg_false,
+  kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, {
+    kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0, 0, { 0, 0,
+        0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+        Q_NEWCOUNTRY_Same_country__or__, 0, 0, _56_Q_LINKORIENTATION_The_balis,
+        Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
+        Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
+        Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked,
+        { kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0,
+          noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes }, { 0,
+          0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 }, {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__, 0, 0,
+          _56_Q_LINKORIENTATION_The_balis, Q_LINKREACTION_Train_trip, 0 } } },
+    kcg_false } };
 
 /* cNoRadioCmd */
 const radioManagementMessage_T_Common cNoRadioCmd = { kcg_false,
@@ -5147,6 +5260,10 @@ const T_Data_From_Track_Packet_Level_ cNoPacketsForML = { { { kcg_false,
       M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA }, { kcg_false,
       Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0, 0,
       Q_MAMODE_as_the_EOA } }, 0, 0 };
+
+/* cEmptyBrakeCmd */
+const Brake_command_T_TIU_Types_Pkg cEmptyBrakeCmd = { kcg_false,
+  brake_signal_command_not_define, brake_signal_command_not_define };
 
 /* manage_DMI_Output_Pkg::cDefaultTrainData */
 const DMI_Train_Data_T_DMI_Messages_B cDefaultTrainData_manage_DMI_Ou = {
@@ -13275,56 +13392,6 @@ const LocWithInAcc_T_Obu_BasicTypes_P cD_FE2RE = { 20084, 19900, 20200 };
 const LocWithInAcc_T_Obu_BasicTypes_P cLocationAccuracyDefault = { 0, - 100,
   100 };
 
-/* EVC_Support_Pkg::cNoTrackMsg */
-const ReceivedMessage_T_Common_Types_ cNoTrackMsg_EVC_Support_Pkg = { kcg_false,
-  msrc_undefined_Common_Types_Pkg, { kcg_false, kcg_false, kcg_false, kcg_false,
-    kcg_false, kcg_false, kcg_false, kcg_false, kcg_false }, { kcg_false,
-    Q_UPDOWN_Down_link_telegram, M_VERSION_Previous_versions_acc,
-    Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
-      kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0, noMotion_Obu_BasicTypes_Pkg,
-      unknownDirection_Obu_BasicTypes }, { 0, 0, 0 }, 0, kcg_false,
-    Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0, 0, 0,
-    M_ACK_No_acknowledgement_requir, 0, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0,
-    Q_DIR_Reverse, 0, M_VERSION_Previous_versions_acc }, { { { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 } }, { 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }, {
-    kcg_false, 0, 0, 0 } };
-
 /* trainData_pkg::cNoBus */
 const M_TrainTrackMessageBus_t_TM_Tra cNoBus_trainData_pkg = { { { kcg_false, 0,
       0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -20227,6 +20294,6 @@ const API_TrackSideInput_T_API_Msg_Pk cEmtpyTrackSideInputMessage_Too = {
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.c
-** Generation date: 2015-11-11T16:04:18
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

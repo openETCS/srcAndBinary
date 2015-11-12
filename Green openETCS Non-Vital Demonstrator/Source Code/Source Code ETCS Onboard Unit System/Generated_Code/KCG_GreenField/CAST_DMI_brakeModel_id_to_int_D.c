@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -32,6 +32,6 @@ DMI_brakeModel_id_INT_T_DATA CAST_DMI_brakeModel_id_to_int_D(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_brakeModel_id_to_int_D.c
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

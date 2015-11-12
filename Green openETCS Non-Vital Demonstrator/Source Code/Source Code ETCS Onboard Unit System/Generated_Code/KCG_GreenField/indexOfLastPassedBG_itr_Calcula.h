@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _indexOfLastPassedBG_itr_Calcul
 #define _indexOfLastPassedBG_itr_Calcul
@@ -24,6 +24,6 @@ extern void indexOfLastPassedBG_itr_Calcula(
 #endif /* _indexOfLastPassedBG_itr_Calcul */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** indexOfLastPassedBG_itr_Calcula.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

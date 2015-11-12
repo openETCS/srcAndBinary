@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _BufferOutput_TM_lib_internal_H
 #define _BufferOutput_TM_lib_internal_H
@@ -49,6 +49,6 @@ extern void BufferOutput_init_TM_lib_intern(
 #endif /* _BufferOutput_TM_lib_internal_H */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_TM_lib_internal.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

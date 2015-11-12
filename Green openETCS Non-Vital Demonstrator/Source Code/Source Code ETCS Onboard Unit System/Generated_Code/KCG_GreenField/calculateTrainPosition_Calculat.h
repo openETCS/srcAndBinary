@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _calculateTrainPosition_Calcula
 #define _calculateTrainPosition_Calcula
@@ -60,6 +60,6 @@ extern void calculateTrainPosition_init_Cal(
 #endif /* _calculateTrainPosition_Calcula */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** calculateTrainPosition_Calculat.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _selectTrainData_input_from_TIU
 #define _selectTrainData_input_from_TIU
@@ -21,6 +21,6 @@ extern void selectTrainData_input_from_TIU_(
 #endif /* _selectTrainData_input_from_TIU */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** selectTrainData_input_from_TIU_.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

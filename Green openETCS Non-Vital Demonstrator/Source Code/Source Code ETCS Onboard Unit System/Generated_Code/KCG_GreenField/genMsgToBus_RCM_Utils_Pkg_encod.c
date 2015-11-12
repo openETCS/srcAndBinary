@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -56,13 +56,13 @@ void genMsgToBus_RCM_Utils_Pkg_encod(
   outC_genMsgToBus_RCM_Utils_Pkg_ *outC)
 {
   /* RCM_Utils_Pkg::encoders::genMsgToBus */
-  static struct_102188 mk_struct;
+  static struct_102313 mk_struct;
   /* RCM_Utils_Pkg::encoders::genMsgToBus */
-  static struct_102188 _1_mk_struct;
+  static struct_102313 _1_mk_struct;
   /* RCM_Utils_Pkg::encoders::genMsgToBus */
-  static struct_102188 _2_mk_struct;
+  static struct_102313 _2_mk_struct;
   /* RCM_Utils_Pkg::encoders::genMsgToBus */
-  static struct_102188 _3_mk_struct;
+  static struct_102313 _3_mk_struct;
   /* RCM_Utils_Pkg::encoders::genMsgToBus::t_train_global_l */
   static T_internal_Type_Obu_BasicTypes_ t_train_global_l;
   
@@ -144,6 +144,6 @@ void genMsgToBus_RCM_Utils_Pkg_encod(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** genMsgToBus_RCM_Utils_Pkg_encod.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

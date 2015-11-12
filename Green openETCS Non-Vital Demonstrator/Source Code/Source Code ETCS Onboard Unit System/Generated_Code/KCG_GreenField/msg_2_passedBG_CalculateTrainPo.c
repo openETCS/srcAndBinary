@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,8 +29,14 @@ void msg_2_passedBG_CalculateTrainPo(
     &(*passedBG).BG_Header,
     &(*msgFromTrack).BG_Common_Header);
   _L114 = (*msgFromTrack).source == msrc_Euroradio_Common_Types_Pkg;
+  /* 1 */
+  DECODE_NID_LRBG_TM_conversions(
+    (*msgFromTrack).Radio_Common_Header.nid_lrbg,
+    &_L305,
+    &_L306);
   /* 1 */ if (_L114) {
-    _L296 = (*msgFromTrack).Radio_Common_Header.nid_lrbg;
+    _L296 = /* 2 */
+      nidC_nidBG_2_NIDLRBG_CalculateT(kcg_true, _L305, _L306 % 100000);
   }
   else {
     _L296 = /* 1 */
@@ -59,6 +65,6 @@ void msg_2_passedBG_CalculateTrainPo(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** msg_2_passedBG_CalculateTrainPo.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

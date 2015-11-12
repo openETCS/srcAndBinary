@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _FindIndexOfMetaData_CheckBGCon
 #define _FindIndexOfMetaData_CheckBGCon
@@ -22,6 +22,6 @@ extern void FindIndexOfMetaData_CheckBGCons(
 #endif /* _FindIndexOfMetaData_CheckBGCon */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FindIndexOfMetaData_CheckBGCons.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

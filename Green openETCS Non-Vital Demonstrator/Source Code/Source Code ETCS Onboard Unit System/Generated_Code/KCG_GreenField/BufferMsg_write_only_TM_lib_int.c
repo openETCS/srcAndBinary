@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,7 +23,7 @@ void BufferMsg_write_only_TM_lib_int(
     Message_out,
     (M_TrainTrack_Message_T_TM_radio *) &EMPTY_TrainTrackMessage_TM_lib_);
   kcg_copy_M_TrainTrack_Message_T(&(&(*Buffer_Out)[0])[0], Message_In);
-  kcg_copy_array_101707(&(*Buffer_Out)[1], (array_101707 *) &(*Buffer_In)[0]);
+  kcg_copy_array_101856(&(*Buffer_Out)[1], (array_101856 *) &(*Buffer_In)[0]);
   _L7 = Stacksize_old + 1;
   /* 1 */ if (_L7 > DIM_FIFO_TrainTrackMessage_TM_l) {
     *Stacksize_new = DIM_FIFO_TrainTrackMessage_TM_l;
@@ -35,6 +35,6 @@ void BufferMsg_write_only_TM_lib_int(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_write_only_TM_lib_int.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 

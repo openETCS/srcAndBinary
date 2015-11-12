@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -68,7 +68,8 @@ void initiateTerminatingSession_v2_M(
         !(((*p42_SessionManagement).nid_c == (*sessionStatus).nid_c) &
           ((*p42_SessionManagement).nid_RBC == (*sessionStatus).nid_rbc) &
           ((*p42_SessionManagement).nid_radio == (*sessionStatus).nid_radio) &
-          (*sessionStatus).valid)));
+          (*sessionStatus).valid & ((*sessionStatus).phase !=
+            sp_terminated_RCM_Session_Types))));
   /* sel_TrainExitedFromRBCArea_SM */ switch (TrainExitedFromRBCArea_SM_state) {
     case SSM_st_WaitForOrderToTerminateT :
       tmp = orderToTerminateTheSessionIsRec | reset;
@@ -151,6 +152,6 @@ void initiateTerminatingSession_v2_M(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** initiateTerminatingSession_v2_M.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

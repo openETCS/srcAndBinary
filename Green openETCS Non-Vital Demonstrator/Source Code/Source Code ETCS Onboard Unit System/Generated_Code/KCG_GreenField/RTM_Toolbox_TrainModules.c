@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -139,44 +139,44 @@ void RTM_Toolbox_TrainModules(
   outC_RTM_Toolbox_TrainModules *outC)
 {
   static kcg_int i;
-  /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement::Registering */
-  static kcg_bool _16_br_2_guard_GSM_R_MobileMana;
-  /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement::Registered */
-  static kcg_bool _15_br_2_guard_GSM_R_MobileMana;
-  /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement::Registered */
-  static kcg_bool br_1_guard_GSM_R_MobileManageme;
-  /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement::Connecting */
-  static kcg_bool _14_br_2_guard_GSM_R_MobileMana;
-  /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement::Connected */
-  static kcg_bool br_2_guard_GSM_R_MobileManageme;
   /* Toolbox::TrainModules::RTM::IfBlock1::else */
-  static kcg_bool _13_else_clock_IfBlock1;
+  static kcg_bool _18_else_clock_IfBlock1;
   /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else */
-  static kcg_bool _11_else_clock_IfBlock1;
+  static kcg_bool _16_else_clock_IfBlock1;
   /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else */
-  static kcg_bool _9_else_clock_IfBlock1;
+  static kcg_bool _14_else_clock_IfBlock1;
   /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else */
-  static kcg_bool _7_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else */
-  static kcg_bool _5_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else */
-  static kcg_bool _3_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else */
-  static kcg_bool _1_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
-  static kcg_bool else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else */
-  static kcg_bool _2_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else */
-  static kcg_bool _4_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else */
-  static kcg_bool _6_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else */
-  static kcg_bool _8_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else */
-  static kcg_bool _10_else_clock_IfBlock1;
-  /* Toolbox::TrainModules::RTM::IfBlock1::else::else */
   static kcg_bool _12_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _10_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _8_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _6_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _4_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _3_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _1_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _2_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _5_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _7_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else::else::else */
+  static kcg_bool _9_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else::else::else */
+  static kcg_bool _11_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else::else::else */
+  static kcg_bool _13_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else::else::else */
+  static kcg_bool _15_else_clock_IfBlock1;
+  /* Toolbox::TrainModules::RTM::IfBlock1::else::else */
+  static kcg_bool _17_else_clock_IfBlock1;
   /* Toolbox::TrainModules::RTM::connectionEstablished */
   static kcg_bool last_connectionEstablished;
   /* Toolbox::TrainModules::RTM::registrationFinished */
@@ -189,6 +189,8 @@ void RTM_Toolbox_TrainModules(
   static SSM_ST_GSM_R_MobileManagement GSM_R_MobileManagement_state_ac;
   /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement */
   static kcg_bool GSM_R_MobileManagement_reset_ac;
+  /* Toolbox::TrainModules::RTM::_L30 */
+  static kcg_bool _L30;
   /* Toolbox::TrainModules::RTM::_L51 */
   static Radio_TrackTrain_Header_T_TM_tr _L51;
   
@@ -209,10 +211,96 @@ void RTM_Toolbox_TrainModules(
     last_connectionEstablished = outC->connectionEstablished;
     last_registrationFinished = outC->registrationFinished;
   }
+  /* sel_GSM_R_MobileManagement */ switch (GSM_R_MobileManagement_state_se) {
+    case SSM_st_Connected_GSM_R_MobileMa :
+      _L30 = (*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
+          cmdr_disconnection_request_API_);
+      IfBlock1_clock = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio);
+      if (_L30) {
+        GSM_R_MobileManagement_state_ac = SSM_st_Registered_GSM_R_MobileM;
+        GSM_R_MobileManagement_reset_ac = kcg_true;
+      }
+      else {
+        if (IfBlock1_clock) {
+          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
+        }
+        else {
+          GSM_R_MobileManagement_state_ac = SSM_st_Connected_GSM_R_MobileMa;
+        }
+        GSM_R_MobileManagement_reset_ac = IfBlock1_clock;
+      }
+      break;
+    case SSM_st_Connecting_GSM_R_MobileM :
+      else_clock_IfBlock1 = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio);
+      if (last_connectionEstablished) {
+        GSM_R_MobileManagement_state_ac = SSM_st_Connected_GSM_R_MobileMa;
+        GSM_R_MobileManagement_reset_ac = kcg_true;
+      }
+      else {
+        if (else_clock_IfBlock1) {
+          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
+        }
+        else {
+          GSM_R_MobileManagement_state_ac = SSM_st_Connecting_GSM_R_MobileM;
+        }
+        GSM_R_MobileManagement_reset_ac = else_clock_IfBlock1;
+      }
+      break;
+    case SSM_st_Registered_GSM_R_MobileM :
+      _1_else_clock_IfBlock1 = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd == cmdr_connection_request_API_Rad);
+      _2_else_clock_IfBlock1 = ((*RadioManagementMessage).valid &
+          ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio)) |
+        ((*RadioManagementMessage).cmd == cmdr_networkUnregister_API_Radi);
+      if (_1_else_clock_IfBlock1) {
+        GSM_R_MobileManagement_state_ac = SSM_st_Connecting_GSM_R_MobileM;
+        GSM_R_MobileManagement_reset_ac = kcg_true;
+      }
+      else {
+        if (_2_else_clock_IfBlock1) {
+          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
+        }
+        else {
+          GSM_R_MobileManagement_state_ac = SSM_st_Registered_GSM_R_MobileM;
+        }
+        GSM_R_MobileManagement_reset_ac = _2_else_clock_IfBlock1;
+      }
+      break;
+    case SSM_st_Registering_GSM_R_Mobile :
+      _3_else_clock_IfBlock1 = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio);
+      if (last_registrationFinished) {
+        GSM_R_MobileManagement_state_ac = SSM_st_Registered_GSM_R_MobileM;
+        GSM_R_MobileManagement_reset_ac = kcg_true;
+      }
+      else {
+        if (_3_else_clock_IfBlock1) {
+          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
+        }
+        else {
+          GSM_R_MobileManagement_state_ac = SSM_st_Registering_GSM_R_Mobile;
+        }
+        GSM_R_MobileManagement_reset_ac = _3_else_clock_IfBlock1;
+      }
+      break;
+    case SSM_st_Not_registered_GSM_R_Mob :
+      GSM_R_MobileManagement_reset_ac = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd == cmdr_networkRegister_API_RadioC);
+      if (GSM_R_MobileManagement_reset_ac) {
+        GSM_R_MobileManagement_state_ac = SSM_st_Registering_GSM_R_Mobile;
+      }
+      else {
+        GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
+      }
+      break;
+    
+  }
   /* 1 */ C_Int_TrackTrainMessage_TM_conv(RadioHeader, &_L51);
-  IfBlock1_clock = _L51.nid_message != 0;
-  outC->TrackMessage.valid = IfBlock1_clock;
-  outC->TrackMessage.rtm_msg.present = IfBlock1_clock;
+  _L30 = _L51.nid_message != 0;
+  outC->TrackMessage.valid = _L30;
+  outC->TrackMessage.rtm_msg.present = _L30;
   outC->TrackMessage.rtm_msg.apiConsistencyError = kcg_false;
   kcg_copy__11_Radio_TrackTrain_H(
     &outC->TrackMessage.rtm_msg.Radio_Common_Header,
@@ -234,8 +322,8 @@ void RTM_Toolbox_TrainModules(
     outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
   }
   else {
-    _13_else_clock_IfBlock1 = (*RadioHeader).nid_message == 3;
-    /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
+    _18_else_clock_IfBlock1 = (*RadioHeader).nid_message == 3;
+    /* ck_anon_activ */ if (_18_else_clock_IfBlock1) {
       outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference = kcg_false;
       outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
       outC->TrackMessage.rtm_msg.Radio_MetaData.q_scale = kcg_false;
@@ -247,8 +335,8 @@ void RTM_Toolbox_TrainModules(
       outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
     }
     else {
-      _12_else_clock_IfBlock1 = (*RadioHeader).nid_message == 6;
-      /* ck_anon_activ */ if (_12_else_clock_IfBlock1) {
+      _17_else_clock_IfBlock1 = (*RadioHeader).nid_message == 6;
+      /* ck_anon_activ */ if (_17_else_clock_IfBlock1) {
         outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference = kcg_false;
         outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
         outC->TrackMessage.rtm_msg.Radio_MetaData.q_scale = kcg_false;
@@ -260,8 +348,8 @@ void RTM_Toolbox_TrainModules(
         outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
       }
       else {
-        _11_else_clock_IfBlock1 = (*RadioHeader).nid_message == 8;
-        /* ck_anon_activ */ if (_11_else_clock_IfBlock1) {
+        _16_else_clock_IfBlock1 = (*RadioHeader).nid_message == 8;
+        /* ck_anon_activ */ if (_16_else_clock_IfBlock1) {
           outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
             kcg_true;
           outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
@@ -274,8 +362,8 @@ void RTM_Toolbox_TrainModules(
           outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
         }
         else {
-          _10_else_clock_IfBlock1 = (*RadioHeader).nid_message == 9;
-          /* ck_anon_activ */ if (_10_else_clock_IfBlock1) {
+          _15_else_clock_IfBlock1 = (*RadioHeader).nid_message == 9;
+          /* ck_anon_activ */ if (_15_else_clock_IfBlock1) {
             outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
               kcg_false;
             outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
@@ -289,8 +377,8 @@ void RTM_Toolbox_TrainModules(
             outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
           }
           else {
-            _9_else_clock_IfBlock1 = (*RadioHeader).nid_message == 15;
-            /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
+            _14_else_clock_IfBlock1 = (*RadioHeader).nid_message == 15;
+            /* ck_anon_activ */ if (_14_else_clock_IfBlock1) {
               outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                 kcg_false;
               outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_true;
@@ -304,8 +392,8 @@ void RTM_Toolbox_TrainModules(
               outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
             }
             else {
-              _8_else_clock_IfBlock1 = (*RadioHeader).nid_message == 16;
-              /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
+              _13_else_clock_IfBlock1 = (*RadioHeader).nid_message == 16;
+              /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
                 outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                   kcg_false;
                 outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_true;
@@ -319,8 +407,8 @@ void RTM_Toolbox_TrainModules(
                 outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
               }
               else {
-                _7_else_clock_IfBlock1 = (*RadioHeader).nid_message == 18;
-                /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
+                _12_else_clock_IfBlock1 = (*RadioHeader).nid_message == 18;
+                /* ck_anon_activ */ if (_12_else_clock_IfBlock1) {
                   outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                     kcg_false;
                   outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_true;
@@ -336,8 +424,8 @@ void RTM_Toolbox_TrainModules(
                     kcg_false;
                 }
                 else {
-                  _6_else_clock_IfBlock1 = (*RadioHeader).nid_message == 24;
-                  /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
+                  _11_else_clock_IfBlock1 = (*RadioHeader).nid_message == 24;
+                  /* ck_anon_activ */ if (_11_else_clock_IfBlock1) {
                     outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                       kcg_false;
                     outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -355,8 +443,8 @@ void RTM_Toolbox_TrainModules(
                       kcg_false;
                   }
                   else {
-                    _5_else_clock_IfBlock1 = (*RadioHeader).nid_message == 27;
-                    /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
+                    _10_else_clock_IfBlock1 = (*RadioHeader).nid_message == 27;
+                    /* ck_anon_activ */ if (_10_else_clock_IfBlock1) {
                       outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                         kcg_true;
                       outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -377,8 +465,8 @@ void RTM_Toolbox_TrainModules(
                         kcg_false;
                     }
                     else {
-                      _4_else_clock_IfBlock1 = (*RadioHeader).nid_message == 28;
-                      /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+                      _9_else_clock_IfBlock1 = (*RadioHeader).nid_message == 28;
+                      /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
                         outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                           kcg_true;
                         outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -399,9 +487,9 @@ void RTM_Toolbox_TrainModules(
                           kcg_false;
                       }
                       else {
-                        _3_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
+                        _8_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
                           32;
-                        /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+                        /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
                           outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                             kcg_false;
                           outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -422,9 +510,9 @@ void RTM_Toolbox_TrainModules(
                             kcg_true;
                         }
                         else {
-                          _2_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
+                          _7_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
                             33;
-                          /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+                          /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
                             outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                               kcg_false;
                             outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -445,9 +533,9 @@ void RTM_Toolbox_TrainModules(
                               kcg_false;
                           }
                           else {
-                            _1_else_clock_IfBlock1 =
+                            _6_else_clock_IfBlock1 =
                               (*RadioHeader).nid_message == 34;
-                            /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+                            /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
                               outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                 kcg_false;
                               outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -468,9 +556,9 @@ void RTM_Toolbox_TrainModules(
                                 kcg_false;
                             }
                             else {
-                              else_clock_IfBlock1 =
+                              _5_else_clock_IfBlock1 =
                                 (*RadioHeader).nid_message == 37;
-                              /* ck_anon_activ */ if (else_clock_IfBlock1) {
+                              /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
                                 outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                   kcg_false;
                                 outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -491,9 +579,9 @@ void RTM_Toolbox_TrainModules(
                                   kcg_false;
                               }
                               else {
-                                GSM_R_MobileManagement_reset_ac =
+                                _4_else_clock_IfBlock1 =
                                   (*RadioHeader).nid_message == 38;
-                                /* ck_anon_activ */ if (GSM_R_MobileManagement_reset_ac) {
+                                /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
                                   outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                     kcg_false;
                                   outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -514,9 +602,8 @@ void RTM_Toolbox_TrainModules(
                                     kcg_false;
                                 }
                                 else {
-                                  _16_br_2_guard_GSM_R_MobileMana =
-                                    (*RadioHeader).nid_message == 39;
-                                  /* ck_anon_activ */ if (_16_br_2_guard_GSM_R_MobileMana) {
+                                  _L30 = (*RadioHeader).nid_message == 39;
+                                  /* ck_anon_activ */ if (_L30) {
                                     outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                       kcg_false;
                                     outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -537,9 +624,9 @@ void RTM_Toolbox_TrainModules(
                                       kcg_false;
                                   }
                                   else {
-                                    _15_br_2_guard_GSM_R_MobileMana =
+                                    _3_else_clock_IfBlock1 =
                                       (*RadioHeader).nid_message == 40;
-                                    /* ck_anon_activ */ if (_15_br_2_guard_GSM_R_MobileMana) {
+                                    /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
                                       outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                         kcg_false;
                                       outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -560,9 +647,9 @@ void RTM_Toolbox_TrainModules(
                                         kcg_false;
                                     }
                                     else {
-                                      br_1_guard_GSM_R_MobileManageme =
+                                      _2_else_clock_IfBlock1 =
                                         (*RadioHeader).nid_message == 41;
-                                      /* ck_anon_activ */ if (br_1_guard_GSM_R_MobileManageme) {
+                                      /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
                                         outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                           kcg_false;
                                         outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -583,9 +670,9 @@ void RTM_Toolbox_TrainModules(
                                           kcg_false;
                                       }
                                       else {
-                                        _14_br_2_guard_GSM_R_MobileMana =
+                                        _1_else_clock_IfBlock1 =
                                           (*RadioHeader).nid_message == 43;
-                                        /* ck_anon_activ */ if (_14_br_2_guard_GSM_R_MobileMana) {
+                                        /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
                                           outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                             kcg_false;
                                           outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -606,9 +693,9 @@ void RTM_Toolbox_TrainModules(
                                             kcg_false;
                                         }
                                         else {
-                                          br_2_guard_GSM_R_MobileManageme =
+                                          else_clock_IfBlock1 =
                                             (*RadioHeader).nid_message == 45;
-                                          /* ck_anon_activ */ if (br_2_guard_GSM_R_MobileManageme) {
+                                          /* ck_anon_activ */ if (else_clock_IfBlock1) {
                                             outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                               kcg_false;
                                             outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -667,92 +754,6 @@ void RTM_Toolbox_TrainModules(
         }
       }
     }
-  }
-  /* sel_GSM_R_MobileManagement */ switch (GSM_R_MobileManagement_state_se) {
-    case SSM_st_Connected_GSM_R_MobileMa :
-      IfBlock1_clock = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd == cmdr_disconnection_request_API_);
-      br_2_guard_GSM_R_MobileManageme = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio);
-      if (IfBlock1_clock) {
-        GSM_R_MobileManagement_state_ac = SSM_st_Registered_GSM_R_MobileM;
-        GSM_R_MobileManagement_reset_ac = kcg_true;
-      }
-      else {
-        if (br_2_guard_GSM_R_MobileManageme) {
-          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
-        }
-        else {
-          GSM_R_MobileManagement_state_ac = SSM_st_Connected_GSM_R_MobileMa;
-        }
-        GSM_R_MobileManagement_reset_ac = br_2_guard_GSM_R_MobileManageme;
-      }
-      break;
-    case SSM_st_Connecting_GSM_R_MobileM :
-      _14_br_2_guard_GSM_R_MobileMana = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio);
-      if (last_connectionEstablished) {
-        GSM_R_MobileManagement_state_ac = SSM_st_Connected_GSM_R_MobileMa;
-        GSM_R_MobileManagement_reset_ac = kcg_true;
-      }
-      else {
-        if (_14_br_2_guard_GSM_R_MobileMana) {
-          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
-        }
-        else {
-          GSM_R_MobileManagement_state_ac = SSM_st_Connecting_GSM_R_MobileM;
-        }
-        GSM_R_MobileManagement_reset_ac = _14_br_2_guard_GSM_R_MobileMana;
-      }
-      break;
-    case SSM_st_Registered_GSM_R_MobileM :
-      br_1_guard_GSM_R_MobileManageme = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd == cmdr_connection_request_API_Rad);
-      _15_br_2_guard_GSM_R_MobileMana = ((*RadioManagementMessage).valid &
-          ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio)) |
-        ((*RadioManagementMessage).cmd == cmdr_networkUnregister_API_Radi);
-      if (br_1_guard_GSM_R_MobileManageme) {
-        GSM_R_MobileManagement_state_ac = SSM_st_Connecting_GSM_R_MobileM;
-        GSM_R_MobileManagement_reset_ac = kcg_true;
-      }
-      else {
-        if (_15_br_2_guard_GSM_R_MobileMana) {
-          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
-        }
-        else {
-          GSM_R_MobileManagement_state_ac = SSM_st_Registered_GSM_R_MobileM;
-        }
-        GSM_R_MobileManagement_reset_ac = _15_br_2_guard_GSM_R_MobileMana;
-      }
-      break;
-    case SSM_st_Registering_GSM_R_Mobile :
-      _16_br_2_guard_GSM_R_MobileMana = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd == cmdr_reset_connection_API_Radio);
-      if (last_registrationFinished) {
-        GSM_R_MobileManagement_state_ac = SSM_st_Registered_GSM_R_MobileM;
-        GSM_R_MobileManagement_reset_ac = kcg_true;
-      }
-      else {
-        if (_16_br_2_guard_GSM_R_MobileMana) {
-          GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
-        }
-        else {
-          GSM_R_MobileManagement_state_ac = SSM_st_Registering_GSM_R_Mobile;
-        }
-        GSM_R_MobileManagement_reset_ac = _16_br_2_guard_GSM_R_MobileMana;
-      }
-      break;
-    case SSM_st_Not_registered_GSM_R_Mob :
-      GSM_R_MobileManagement_reset_ac = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd == cmdr_networkRegister_API_RadioC);
-      if (GSM_R_MobileManagement_reset_ac) {
-        GSM_R_MobileManagement_state_ac = SSM_st_Registering_GSM_R_Mobile;
-      }
-      else {
-        GSM_R_MobileManagement_state_ac = SSM_st_Not_registered_GSM_R_Mob;
-      }
-      break;
-    
   }
   /* act_GSM_R_MobileManagement */ switch (GSM_R_MobileManagement_state_ac) {
     case SSM_st_Connected_GSM_R_MobileMa :
@@ -831,6 +832,6 @@ void RTM_Toolbox_TrainModules(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RTM_Toolbox_TrainModules.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -33,7 +33,6 @@ void mapCMDToRTM_radioOutput_Pkg(
   /* radioOutput_Pkg::mapCMDToRTM::mobileRegistrationCMD */ mobileRegistrationCmd_T_RCM_Typ *mobileRegistrationCMD,
   outC_mapCMDToRTM_radioOutput_Pk *outC)
 {
-  outC->toRTM.networkID = (*mobileRegistrationCMD).network_id;
   /* 1 */
   mapnewCMD_toCmd_radioOutput_Pkg(
     mobileConnectionCMD,
@@ -44,10 +43,19 @@ void mapCMDToRTM_radioOutput_Pkg(
   outC->toRTM.cmd = outC->Context_1.toRTMCMD;
   outC->outRadio = outC->Context_1.outRadio;
   outC->outMN = outC->Context_1.outMN;
+  /* 1 */ if ((*mobileRegistrationCMD).valid) {
+    outC->toRTM.networkID = (*mobileRegistrationCMD).network_id;
+  }
+  else /* 2 */ if ((*mobileConnectionCMD).valid) {
+    outC->toRTM.networkID = (*mobileConnectionCMD).nid_radio;
+  }
+  else {
+    outC->toRTM.networkID = 0;
+  }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapCMDToRTM_radioOutput_Pkg.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

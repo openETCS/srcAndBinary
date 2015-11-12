@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _CAST_NID_CTRACTION_to_int_TM_c
 #define _CAST_NID_CTRACTION_to_int_TM_c
@@ -19,6 +19,6 @@ extern kcg_int CAST_NID_CTRACTION_to_int_TM_co(
 #endif /* _CAST_NID_CTRACTION_to_int_TM_c */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_NID_CTRACTION_to_int_TM_co.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

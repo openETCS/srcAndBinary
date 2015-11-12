@@ -37,7 +37,6 @@ PHYSICS_simulateAccelerat_Toolb.h
 m_s_To_km_h_Toolbox_Converters.h
 AFB_Toolbox_Physics.h
 EVC.h
-keepP42_EVC_Support_Pkg.h
 checkGeneralMessage_trainData_p.h
 collectRadioOutput_radioOutput_.h
 patchMsgFlow_RadioSupport_Pkg.h
@@ -1104,6 +1103,7 @@ TIU_OutputIntegration_output_to.h
 handleTraction_output_to_TIU_AP.h
 mapModeToTractionCutOff_output_.h
 manageTIU_output_output_to_TIU_.h
+handleBrakeCommand_output_to_TI.h
 getTIUStatusFromCommand_output_.h
 kcg_types.h
 kcg_consts.h
@@ -1150,7 +1150,6 @@ PHYSICS_simulateAccelerat_Toolb.c
 m_s_To_km_h_Toolbox_Converters.c
 AFB_Toolbox_Physics.c
 EVC.c
-keepP42_EVC_Support_Pkg.c
 checkGeneralMessage_trainData_p.c
 collectRadioOutput_radioOutput_.c
 patchMsgFlow_RadioSupport_Pkg.c
@@ -2217,6 +2216,7 @@ TIU_OutputIntegration_output_to.c
 handleTraction_output_to_TIU_AP.c
 mapModeToTractionCutOff_output_.c
 manageTIU_output_output_to_TIU_.c
+handleBrakeCommand_output_to_TI.c
 getTIUStatusFromCommand_output_.c
 kcg_types.c
 kcg_consts.c

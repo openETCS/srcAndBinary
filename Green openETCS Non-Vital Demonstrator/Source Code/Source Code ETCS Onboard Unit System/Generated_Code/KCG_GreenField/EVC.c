@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,252 +15,69 @@ void EVC_init(outC_EVC *outC)
   
   outC->resetOut = kcg_true;
   outC->EVC_ready = kcg_true;
-  outC->PROC_powerUp_to_MoRC = kcg_true;
-  outC->PROC_statusstartofmissionongoin = kcg_true;
-  outC->PROC_powerOff_to_MoRC = kcg_true;
-  outC->MoRC_newSessionEstablished = kcg_true;
   outC->_L477 = kcg_true;
-  outC->init13 = kcg_true;
+  outC->MoRC_newSessionEstablished = kcg_true;
+  outC->PROC_powerOff_to_MoRC = kcg_true;
+  outC->PROC_statusstartofmissionongoin = kcg_true;
+  outC->PROC_powerUp_to_MoRC = kcg_true;
   outC->init = kcg_true;
-  outC->MoRC_MN_1 = 0;
-  outC->MoRC_RadioID_1 = 0;
-  outC->MoRC_RadioStatus_1.registration.valid = kcg_true;
-  outC->MoRC_RadioStatus_1.registration.mobileDeviceNo = 0;
-  outC->MoRC_RadioStatus_1.registration.healthStatus = mhs_nok_RCM_Types_Pkg;
-  outC->MoRC_RadioStatus_1.registration.status = mrs_unregistered_RCM_Types_Pkg;
-  outC->MoRC_RadioStatus_1.registration.nid_mn = 0;
-  outC->MoRC_RadioStatus_1.connection.valid = kcg_true;
-  outC->MoRC_RadioStatus_1.connection.mobileDeviceNo = 0;
-  outC->MoRC_RadioStatus_1.connection.status = mcs_disconnected_RCM_Types_Pkg;
-  outC->MoRC_RadioStatus_1.connection.nid_radio = 0;
-  outC->MoRC_RadioStatus_1.connection.settingUpConnectionHasFailed = kcg_true;
-  outC->MoRC_RadioStatus_1.connection.connectionLost = kcg_true;
-  outC->MoRC_RadioStatus_1.connection.isInRadioHole = kcg_true;
-  outC->MoRC_RadioStatus_1.session.valid = kcg_true;
-  outC->MoRC_RadioStatus_1.session.phase = sp_terminated_RCM_Session_Types;
-  outC->MoRC_RadioStatus_1.session.nid_c = 0;
-  outC->MoRC_RadioStatus_1.session.nid_rbc = 0;
-  outC->MoRC_RadioStatus_1.session.nid_radio = 0;
-  outC->rep_P1.valid = kcg_true;
-  outC->rep_P1.packet1.NID_PACKET = 0;
-  outC->rep_P1.packet1.L_PACKET = 0;
-  outC->rep_P1.packet1.qscale = Q_SCALE_10_cm_scale;
-  outC->rep_P1.packet1.NID_LRBG = 0;
-  outC->rep_P1.packet1.NID_PRVLRBG = 0;
-  outC->rep_P1.packet1.D_LRBG = 0;
-  outC->rep_P1.packet1.dirlrbg = Q_DIRLRBG_Reverse;
-  outC->rep_P1.packet1.dlrbg = Q_DLRBG_Reverse;
-  outC->rep_P1.packet1.L_DOUBTOVER = 0;
-  outC->rep_P1.packet1.L_DOUBTUNDER = 0;
-  outC->rep_P1.packet1.length = Q_LENGTH_No_train_integrity_inf;
-  outC->rep_P1.packet1.L_TRAININT = 0;
-  outC->rep_P1.packet1.V_TRAIN = 0;
-  outC->rep_P1.packet1.dirtrain = Q_DIRTRAIN_Reverse;
-  outC->rep_P1.packet1.mode = M_MODE_Full_Supervision;
-  outC->rep_P1.packet1.level = M_LEVEL_Level_0;
-  outC->rep_P1.packet1.NID_NTC = 0;
-  outC->td_status.valid = kcg_true;
-  outC->td_status.validatedByDriver = kcg_true;
-  outC->td_status.RBCsystemVersionOnboard = kcg_true;
-  outC->td_status.validatedbyRBC = kcg_true;
-  outC->td_status.waitingForRBCResponse = kcg_true;
-  outC->td_status.driverIsModificationTrainData = kcg_true;
-  outC->td_status.timeStampValidateToRBC = 0;
-  outC->rep_P0.valid = kcg_true;
-  outC->rep_P0.packet0.NID_PACKET = 0;
-  outC->rep_P0.packet0.L_PACKET = 0;
-  outC->rep_P0.packet0.qscale = Q_SCALE_10_cm_scale;
-  outC->rep_P0.packet0.NID_LRBG = 0;
-  outC->rep_P0.packet0.D_LRBG = 0;
-  outC->rep_P0.packet0.dirlrbg = Q_DIRLRBG_Reverse;
-  outC->rep_P0.packet0.dlrbg = Q_DLRBG_Reverse;
-  outC->rep_P0.packet0.L_DOUBTOVER = 0;
-  outC->rep_P0.packet0.L_DOUBTUNDER = 0;
-  outC->rep_P0.packet0.length = Q_LENGTH_No_train_integrity_inf;
-  outC->rep_P0.packet0.L_TRAININT = 0;
-  outC->rep_P0.packet0.V_TRAIN = 0;
-  outC->rep_P0.packet0.dirtrain = Q_DIRTRAIN_Reverse;
-  outC->rep_P0.packet0.mode = M_MODE_Full_Supervision;
-  outC->rep_P0.packet0.level = M_LEVEL_Level_0;
-  outC->rep_P0.packet0.NID_NTC = 0;
-  outC->td_events.trainStandStill = kcg_true;
-  outC->td_events.driverRequestModify = kcg_true;
-  outC->td_events.communicationSessionEstablished = kcg_true;
-  outC->td_events.safeRadioConnectionLost = kcg_true;
-  outC->td_events.approachingRBCarea = kcg_true;
-  outC->td_events.MoRCreadyFlag = kcg_true;
-  for (i = 0; i < 31; i++) {
-    outC->EVC_TextMessageStatusList[i].valid = kcg_true;
-    outC->EVC_TextMessageStatusList[i].dmi_textMessageID = 0;
-    outC->EVC_TextMessageStatusList[i].timeStamp = 0;
-    outC->EVC_TextMessageStatusList[i].textReport =
-      Q_TEXTREPORT_No_driver_acknowle;
-    outC->EVC_TextMessageStatusList[i].context = con_undefined_DMI_Types_Pkg;
-    outC->EVC_TextMessageStatusList[i].nid_textmessage = 0;
-    outC->EVC_TextMessageStatusList[i].whichLevel = M_LEVEL_Level_0;
-    outC->EVC_TextMessageStatusList[i].whichMode = M_MODE_Full_Supervision;
+  outC->init12 = kcg_true;
+  outC->PROC_radioCmdFromProcedures.valid = kcg_true;
+  outC->PROC_radioCmdFromProcedures.messageSource =
+    msrc_undefined_Common_Types_Pkg;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.radioDevice = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.receivedSystemTime = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.nid_message = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.t_train = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.m_ack =
+    M_ACK_No_acknowledgement_requir;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.nid_lrbg = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.t_train_reference = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.nid_em = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.q_scale =
+    Q_SCALE_10_cm_scale;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.d_sr = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.t_sh_rqst = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.d_ref = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.q_dir = Q_DIR_Reverse;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.d_emergencystop = 0;
+  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.m_version =
+    M_VERSION_Previous_versions_acc;
+  outC->PROC_radioCmdFromProcedures.p42.valid = kcg_true;
+  outC->PROC_radioCmdFromProcedures.p42.q_dir = Q_DIR_Reverse;
+  outC->PROC_radioCmdFromProcedures.p42.q_rbc = Q_RBC_Terminate_communication_s;
+  outC->PROC_radioCmdFromProcedures.p42.nid_c = 0;
+  outC->PROC_radioCmdFromProcedures.p42.nid_rbc = 0;
+  outC->PROC_radioCmdFromProcedures.p42.nid_radio = 0;
+  outC->PROC_radioCmdFromProcedures.p42.q_sleepsession =
+    Q_SLEEPSESSION_Ignore_session_e;
+  outC->PROC_radioCmdFromProcedures.p45.valid = kcg_true;
+  outC->PROC_radioCmdFromProcedures.p45.q_dir = Q_DIR_Reverse;
+  outC->PROC_radioCmdFromProcedures.p45.nid_mn = 0;
+  outC->PROC_radioCmdFromProcedures.sendingRBC.valid = kcg_true;
+  outC->PROC_radioCmdFromProcedures.sendingRBC.nid_c = 0;
+  outC->PROC_radioCmdFromProcedures.sendingRBC.rbc_id = 0;
+  outC->PROC_radioCmdFromProcedures.sendingRBC.device_id = 0;
+  outC->DMI_currentDMIStatus.DMI_Active = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_Error = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_DriverIdValidated = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_LevelSelectedByDirver = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_TrainRunningNumberFirstVali = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_TrainRunningNumberValidated = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_TrainDataValidated = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_StartReceived = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_Identifier.valid = kcg_true;
+  outC->DMI_currentDMIStatus.DMI_Identifier.systemTime = 0;
+  outC->DMI_currentDMIStatus.DMI_Identifier.DMI_Identifier =
+    DMI_1_DMI_Types_Pkg;
+  outC->DMI_currentDMIStatus.DMI_Identifier.Cabin_Identifier =
+    cabin_A_DMI_Types_Pkg;
+  outC->DMI_currentDMIStatus.DMI_Identifier.l_name = 0;
+  for (i = 0; i < 255; i++) {
+    outC->DMI_currentDMIStatus.DMI_Identifier.DMI_name[i] = ' ';
   }
-  outC->EVC_PersistentData.valid = kcg_true;
-  outC->EVC_PersistentData.lastActiveLevel = M_LEVEL_Level_0;
-  outC->EVC_PersistentData.lastActiveNTC = 0;
-  outC->EVC_PersistentData.availableLevelsList.number = 0;
-  for (i = 0; i < 32; i++) {
-    outC->EVC_PersistentData.availableLevelsList.levelList[i].level =
-      M_LEVEL_Level_0;
-    outC->EVC_PersistentData.availableLevelsList.levelList[i].nid_stm = 0;
-  }
-  outC->ML_ModeAndLevel.compatibleModeAndLevel = kcg_true;
-  outC->ML_ModeAndLevel.level = M_LEVEL_Level_0;
-  outC->ML_ModeAndLevel.newLevel = kcg_true;
-  outC->ML_ModeAndLevel.Mode = M_MODE_Full_Supervision;
-  outC->ML_ModeAndLevel.newMode = kcg_true;
-  outC->EVC_currentNTC = 0;
-  outC->MSG_lastRadioMsgTimestamp = 0;
-  outC->TIU_trainProperties.nid_engine = 0;
-  outC->TIU_trainProperties.nid_operational = 0;
-  outC->TIU_trainProperties.l_train = 0;
-  outC->TIU_trainProperties.d_baliseAntenna_2_frontend.nominal = 0;
-  outC->TIU_trainProperties.d_baliseAntenna_2_frontend.d_min = 0;
-  outC->TIU_trainProperties.d_baliseAntenna_2_frontend.d_max = 0;
-  outC->TIU_trainProperties.d_frontend_2_rearend.nominal = 0;
-  outC->TIU_trainProperties.d_frontend_2_rearend.d_min = 0;
-  outC->TIU_trainProperties.d_frontend_2_rearend.d_max = 0;
-  outC->TIU_trainProperties.locationAccuracy_DefaultValue.nominal = 0;
-  outC->TIU_trainProperties.locationAccuracy_DefaultValue.d_min = 0;
-  outC->TIU_trainProperties.locationAccuracy_DefaultValue.d_max = 0;
-  outC->TIU_trainProperties.centerDetectionAcc_DefaultValue.nominal = 0;
-  outC->TIU_trainProperties.centerDetectionAcc_DefaultValue.d_min = 0;
-  outC->TIU_trainProperties.centerDetectionAcc_DefaultValue.d_max = 0;
-  for (i = 0; i < 41; i++) {
-    outC->CALC_BGs[i].valid = kcg_true;
-    outC->CALC_BGs[i].nid_c = 0;
-    outC->CALC_BGs[i].nid_bg = 0;
-    outC->CALC_BGs[i].q_link = Q_LINK_Unlinked;
-    outC->CALC_BGs[i].location.nominal = 0;
-    outC->CALC_BGs[i].location.d_min = 0;
-    outC->CALC_BGs[i].location.d_max = 0;
-    outC->CALC_BGs[i].seqNoOnTrack = 0;
-    outC->CALC_BGs[i].infoFromLinking.valid = kcg_true;
-    outC->CALC_BGs[i].infoFromLinking.nid_bg_fromLinkingBG = 0;
-    outC->CALC_BGs[i].infoFromLinking.nid_c_fromLinkingBG = 0;
-    outC->CALC_BGs[i].infoFromLinking.expectedLocation.nominal = 0;
-    outC->CALC_BGs[i].infoFromLinking.expectedLocation.d_min = 0;
-    outC->CALC_BGs[i].infoFromLinking.expectedLocation.d_max = 0;
-    outC->CALC_BGs[i].infoFromLinking.d_link.nominal = 0;
-    outC->CALC_BGs[i].infoFromLinking.d_link.d_min = 0;
-    outC->CALC_BGs[i].infoFromLinking.d_link.d_max = 0;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.valid = kcg_true;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.nid_LRBG = 0;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_dir = Q_DIR_Reverse;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_scale = Q_SCALE_10_cm_scale;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.d_link = 0;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_newcountry =
-      Q_NEWCOUNTRY_Same_country__or__;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.nid_c = 0;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.nid_bg = 0;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_linkorientation =
-      _56_Q_LINKORIENTATION_The_balis;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_linkreaction =
-      Q_LINKREACTION_Train_trip;
-    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_locacc = 0;
-    outC->CALC_BGs[i].infoFromPassing.valid = kcg_true;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.valid = kcg_true;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_updown =
-      Q_UPDOWN_Down_link_telegram;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.m_version =
-      M_VERSION_Previous_versions_acc;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_media = Q_MEDIA_Balise;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.n_total =
-      N_TOTAL_1_balise_in_the_group;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.m_mcount = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.nid_c = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.nid_bg = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_link = Q_LINK_Unlinked;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.valid = kcg_true;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.timestamp = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.odo.o_nominal = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.odo.o_min = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.odo.o_max = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_safeNominal =
-      0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_rawNominal =
-      0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_lower = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_upper = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.acceleration = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.motionState =
-      noMotion_Obu_BasicTypes_Pkg;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.motionDirection =
-      unknownDirection_Obu_BasicTypes;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.BG_centerDetectionInaccuraccura.nominal =
-      0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.BG_centerDetectionInaccuraccura.d_min =
-      0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.BG_centerDetectionInaccuraccura.d_max =
-      0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_nvlocacc = 0;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.noCoordinateSystemHasBeenAssign =
-      kcg_true;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.trainOrientationToBG =
-      Q_DIRLRBG_Reverse;
-    outC->CALC_BGs[i].infoFromPassing.BG_Header.trainRunningDirectionToBG =
-      Q_DIRTRAIN_Reverse;
-    for (i1 = 0; i1 < 33; i1++) {
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].valid = kcg_true;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].nid_LRBG = 0;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_dir = Q_DIR_Reverse;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_scale =
-        Q_SCALE_10_cm_scale;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].d_link = 0;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_newcountry =
-        Q_NEWCOUNTRY_Same_country__or__;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].nid_c = 0;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].nid_bg = 0;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_linkorientation =
-        _56_Q_LINKORIENTATION_The_balis;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_linkreaction =
-        Q_LINKREACTION_Train_trip;
-      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_locacc = 0;
-    }
-    outC->CALC_BGs[i].missed = kcg_true;
-  }
-  outC->MoRC_supervisingRBC_Id.valid = kcg_true;
-  outC->MoRC_supervisingRBC_Id.mobileDeviceNo = 0;
-  outC->MoRC_supervisingRBC_Id.nid_c = 0;
-  outC->MoRC_supervisingRBC_Id.nid_RBC = 0;
-  outC->MoRC_supervisingRBC_Id.nid_radio = 0;
-  outC->MoRC_supervisingRBC_Id.nid_mn = 0;
-  outC->td_trainData.valid = kcg_true;
-  outC->td_trainData.acknowledgedByDriver = kcg_true;
-  outC->td_trainData.trainCategory = NC_TRAIN_Train_does_not_belong_;
-  outC->td_trainData.cantDeficientcy = NC_CDTRAIN_Cant_Deficiency_80_m;
-  outC->td_trainData.trainLength = 0;
-  outC->td_trainData.brakePerctage = 0;
-  outC->td_trainData.maxTrainSpeed = 0;
-  outC->td_trainData.loadingGauge = M_LOADINGGAUGE_The_train_does_n;
-  outC->td_trainData.axleLoadCategory = M_AXLELOADCAT_A;
-  outC->td_trainData.airtightSystem = M_AIRTIGHT_Not_fitted;
-  outC->td_trainData.axleNumber = 0;
-  outC->td_trainData.numberNationalSystems = 0;
-  for (i = 0; i < 5; i++) {
-    outC->td_trainData.nationSystems[i] = 0;
-  }
-  outC->td_trainData.numberTractionSystems = 0;
-  for (i = 0; i < 4; i++) {
-    outC->td_trainData.tractionSystem[i].m_voltage =
-      M_VOLTAGE_Line_not_fitted_with_;
-    outC->td_trainData.tractionSystem[i].nid_ctraction = 0;
-  }
-  outC->DMI_sdmToDMI.valid = kcg_true;
-  outC->DMI_sdmToDMI.targetSpeed = 0;
-  outC->DMI_sdmToDMI.permittedSpeed = 0;
-  outC->DMI_sdmToDMI.releaseSpeed = 0;
-  outC->DMI_sdmToDMI.locationBrakeTarget = 0;
-  outC->DMI_sdmToDMI.location_brake_curve_starting_p = 0;
-  outC->DMI_sdmToDMI.interventionSpeed = 0;
-  outC->DMI_sdmToDMI.sup_status = CSM_DMI_Types_Pkg;
-  outC->DMI_sdmToDMI.supervisionDisplay = supDis_normal_DMI_Types_Pkg;
-  outC->DMI_sdmToDMI.distanceIndicationPoint = 0;
+  outC->DMI_currentDMIStatus.DMI_Identifier.m_version =
+    M_VERSION_Previous_versions_acc;
   outC->CALC_TrainPosition.valid = kcg_true;
   outC->CALC_TrainPosition.timestamp = 0;
   outC->CALC_TrainPosition.trainPositionIsUnknown = kcg_true;
@@ -487,62 +304,245 @@ void EVC_init(outC_EVC *outC)
   outC->CALC_TrainPosition.estimatedRearEndPosition = 0;
   outC->CALC_TrainPosition.minSafeRearEndPosition = 0;
   outC->CALC_TrainPosition.maxSafeRearEndPosition = 0;
-  outC->DMI_currentDMIStatus.DMI_Active = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_Error = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_DriverIdValidated = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_LevelSelectedByDirver = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_TrainRunningNumberFirstVali = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_TrainRunningNumberValidated = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_TrainDataValidated = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_StartReceived = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_Identifier.valid = kcg_true;
-  outC->DMI_currentDMIStatus.DMI_Identifier.systemTime = 0;
-  outC->DMI_currentDMIStatus.DMI_Identifier.DMI_Identifier =
-    DMI_1_DMI_Types_Pkg;
-  outC->DMI_currentDMIStatus.DMI_Identifier.Cabin_Identifier =
-    cabin_A_DMI_Types_Pkg;
-  outC->DMI_currentDMIStatus.DMI_Identifier.l_name = 0;
-  for (i = 0; i < 255; i++) {
-    outC->DMI_currentDMIStatus.DMI_Identifier.DMI_name[i] = ' ';
+  outC->DMI_sdmToDMI.valid = kcg_true;
+  outC->DMI_sdmToDMI.targetSpeed = 0;
+  outC->DMI_sdmToDMI.permittedSpeed = 0;
+  outC->DMI_sdmToDMI.releaseSpeed = 0;
+  outC->DMI_sdmToDMI.locationBrakeTarget = 0;
+  outC->DMI_sdmToDMI.location_brake_curve_starting_p = 0;
+  outC->DMI_sdmToDMI.interventionSpeed = 0;
+  outC->DMI_sdmToDMI.sup_status = CSM_DMI_Types_Pkg;
+  outC->DMI_sdmToDMI.supervisionDisplay = supDis_normal_DMI_Types_Pkg;
+  outC->DMI_sdmToDMI.distanceIndicationPoint = 0;
+  outC->td_trainData.valid = kcg_true;
+  outC->td_trainData.acknowledgedByDriver = kcg_true;
+  outC->td_trainData.trainCategory = NC_TRAIN_Train_does_not_belong_;
+  outC->td_trainData.cantDeficientcy = NC_CDTRAIN_Cant_Deficiency_80_m;
+  outC->td_trainData.trainLength = 0;
+  outC->td_trainData.brakePerctage = 0;
+  outC->td_trainData.maxTrainSpeed = 0;
+  outC->td_trainData.loadingGauge = M_LOADINGGAUGE_The_train_does_n;
+  outC->td_trainData.axleLoadCategory = M_AXLELOADCAT_A;
+  outC->td_trainData.airtightSystem = M_AIRTIGHT_Not_fitted;
+  outC->td_trainData.axleNumber = 0;
+  outC->td_trainData.numberNationalSystems = 0;
+  for (i = 0; i < 5; i++) {
+    outC->td_trainData.nationSystems[i] = 0;
   }
-  outC->DMI_currentDMIStatus.DMI_Identifier.m_version =
-    M_VERSION_Previous_versions_acc;
-  outC->PROC_radioCmdFromProcedures.valid = kcg_true;
-  outC->PROC_radioCmdFromProcedures.messageSource =
-    msrc_undefined_Common_Types_Pkg;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.radioDevice = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.receivedSystemTime = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.nid_message = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.t_train = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.m_ack =
-    M_ACK_No_acknowledgement_requir;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.nid_lrbg = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.t_train_reference = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.nid_em = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.q_scale =
-    Q_SCALE_10_cm_scale;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.d_sr = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.t_sh_rqst = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.d_ref = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.q_dir = Q_DIR_Reverse;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.d_emergencystop = 0;
-  outC->PROC_radioCmdFromProcedures.Radio_Common_Header.m_version =
-    M_VERSION_Previous_versions_acc;
-  outC->PROC_radioCmdFromProcedures.p42.valid = kcg_true;
-  outC->PROC_radioCmdFromProcedures.p42.q_dir = Q_DIR_Reverse;
-  outC->PROC_radioCmdFromProcedures.p42.q_rbc = Q_RBC_Terminate_communication_s;
-  outC->PROC_radioCmdFromProcedures.p42.nid_c = 0;
-  outC->PROC_radioCmdFromProcedures.p42.nid_rbc = 0;
-  outC->PROC_radioCmdFromProcedures.p42.nid_radio = 0;
-  outC->PROC_radioCmdFromProcedures.p42.q_sleepsession =
-    Q_SLEEPSESSION_Ignore_session_e;
-  outC->PROC_radioCmdFromProcedures.p45.valid = kcg_true;
-  outC->PROC_radioCmdFromProcedures.p45.q_dir = Q_DIR_Reverse;
-  outC->PROC_radioCmdFromProcedures.p45.nid_mn = 0;
-  outC->PROC_radioCmdFromProcedures.sendingRBC.valid = kcg_true;
-  outC->PROC_radioCmdFromProcedures.sendingRBC.nid_c = 0;
-  outC->PROC_radioCmdFromProcedures.sendingRBC.rbc_id = 0;
-  outC->PROC_radioCmdFromProcedures.sendingRBC.device_id = 0;
+  outC->td_trainData.numberTractionSystems = 0;
+  for (i = 0; i < 4; i++) {
+    outC->td_trainData.tractionSystem[i].m_voltage =
+      M_VOLTAGE_Line_not_fitted_with_;
+    outC->td_trainData.tractionSystem[i].nid_ctraction = 0;
+  }
+  outC->MoRC_supervisingRBC_Id.valid = kcg_true;
+  outC->MoRC_supervisingRBC_Id.mobileDeviceNo = 0;
+  outC->MoRC_supervisingRBC_Id.nid_c = 0;
+  outC->MoRC_supervisingRBC_Id.nid_RBC = 0;
+  outC->MoRC_supervisingRBC_Id.nid_radio = 0;
+  outC->MoRC_supervisingRBC_Id.nid_mn = 0;
+  for (i = 0; i < 41; i++) {
+    outC->CALC_BGs[i].valid = kcg_true;
+    outC->CALC_BGs[i].nid_c = 0;
+    outC->CALC_BGs[i].nid_bg = 0;
+    outC->CALC_BGs[i].q_link = Q_LINK_Unlinked;
+    outC->CALC_BGs[i].location.nominal = 0;
+    outC->CALC_BGs[i].location.d_min = 0;
+    outC->CALC_BGs[i].location.d_max = 0;
+    outC->CALC_BGs[i].seqNoOnTrack = 0;
+    outC->CALC_BGs[i].infoFromLinking.valid = kcg_true;
+    outC->CALC_BGs[i].infoFromLinking.nid_bg_fromLinkingBG = 0;
+    outC->CALC_BGs[i].infoFromLinking.nid_c_fromLinkingBG = 0;
+    outC->CALC_BGs[i].infoFromLinking.expectedLocation.nominal = 0;
+    outC->CALC_BGs[i].infoFromLinking.expectedLocation.d_min = 0;
+    outC->CALC_BGs[i].infoFromLinking.expectedLocation.d_max = 0;
+    outC->CALC_BGs[i].infoFromLinking.d_link.nominal = 0;
+    outC->CALC_BGs[i].infoFromLinking.d_link.d_min = 0;
+    outC->CALC_BGs[i].infoFromLinking.d_link.d_max = 0;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.valid = kcg_true;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.nid_LRBG = 0;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_dir = Q_DIR_Reverse;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_scale = Q_SCALE_10_cm_scale;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.d_link = 0;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_newcountry =
+      Q_NEWCOUNTRY_Same_country__or__;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.nid_c = 0;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.nid_bg = 0;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_linkorientation =
+      _56_Q_LINKORIENTATION_The_balis;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_linkreaction =
+      Q_LINKREACTION_Train_trip;
+    outC->CALC_BGs[i].infoFromLinking.linkingInfo.q_locacc = 0;
+    outC->CALC_BGs[i].infoFromPassing.valid = kcg_true;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.valid = kcg_true;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_updown =
+      Q_UPDOWN_Down_link_telegram;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.m_version =
+      M_VERSION_Previous_versions_acc;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_media = Q_MEDIA_Balise;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.n_total =
+      N_TOTAL_1_balise_in_the_group;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.m_mcount = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.nid_c = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.nid_bg = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_link = Q_LINK_Unlinked;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.valid = kcg_true;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.timestamp = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.odo.o_nominal = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.odo.o_min = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.odo.o_max = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_safeNominal =
+      0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_rawNominal =
+      0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_lower = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.speed.v_upper = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.acceleration = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.motionState =
+      noMotion_Obu_BasicTypes_Pkg;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.bgPosition.motionDirection =
+      unknownDirection_Obu_BasicTypes;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.BG_centerDetectionInaccuraccura.nominal =
+      0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.BG_centerDetectionInaccuraccura.d_min =
+      0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.BG_centerDetectionInaccuraccura.d_max =
+      0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.q_nvlocacc = 0;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.noCoordinateSystemHasBeenAssign =
+      kcg_true;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.trainOrientationToBG =
+      Q_DIRLRBG_Reverse;
+    outC->CALC_BGs[i].infoFromPassing.BG_Header.trainRunningDirectionToBG =
+      Q_DIRTRAIN_Reverse;
+    for (i1 = 0; i1 < 33; i1++) {
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].valid = kcg_true;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].nid_LRBG = 0;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_dir = Q_DIR_Reverse;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_scale =
+        Q_SCALE_10_cm_scale;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].d_link = 0;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_newcountry =
+        Q_NEWCOUNTRY_Same_country__or__;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].nid_c = 0;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].nid_bg = 0;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_linkorientation =
+        _56_Q_LINKORIENTATION_The_balis;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_linkreaction =
+        Q_LINKREACTION_Train_trip;
+      outC->CALC_BGs[i].infoFromPassing.linkedBGs[i1].q_locacc = 0;
+    }
+    outC->CALC_BGs[i].missed = kcg_true;
+  }
+  outC->TIU_trainProperties.nid_engine = 0;
+  outC->TIU_trainProperties.nid_operational = 0;
+  outC->TIU_trainProperties.l_train = 0;
+  outC->TIU_trainProperties.d_baliseAntenna_2_frontend.nominal = 0;
+  outC->TIU_trainProperties.d_baliseAntenna_2_frontend.d_min = 0;
+  outC->TIU_trainProperties.d_baliseAntenna_2_frontend.d_max = 0;
+  outC->TIU_trainProperties.d_frontend_2_rearend.nominal = 0;
+  outC->TIU_trainProperties.d_frontend_2_rearend.d_min = 0;
+  outC->TIU_trainProperties.d_frontend_2_rearend.d_max = 0;
+  outC->TIU_trainProperties.locationAccuracy_DefaultValue.nominal = 0;
+  outC->TIU_trainProperties.locationAccuracy_DefaultValue.d_min = 0;
+  outC->TIU_trainProperties.locationAccuracy_DefaultValue.d_max = 0;
+  outC->TIU_trainProperties.centerDetectionAcc_DefaultValue.nominal = 0;
+  outC->TIU_trainProperties.centerDetectionAcc_DefaultValue.d_min = 0;
+  outC->TIU_trainProperties.centerDetectionAcc_DefaultValue.d_max = 0;
+  outC->MSG_lastRadioMsgTimestamp = 0;
+  outC->EVC_currentNTC = 0;
+  outC->ML_ModeAndLevel.compatibleModeAndLevel = kcg_true;
+  outC->ML_ModeAndLevel.level = M_LEVEL_Level_0;
+  outC->ML_ModeAndLevel.newLevel = kcg_true;
+  outC->ML_ModeAndLevel.Mode = M_MODE_Full_Supervision;
+  outC->ML_ModeAndLevel.newMode = kcg_true;
+  outC->EVC_PersistentData.valid = kcg_true;
+  outC->EVC_PersistentData.lastActiveLevel = M_LEVEL_Level_0;
+  outC->EVC_PersistentData.lastActiveNTC = 0;
+  outC->EVC_PersistentData.availableLevelsList.number = 0;
+  for (i = 0; i < 32; i++) {
+    outC->EVC_PersistentData.availableLevelsList.levelList[i].level =
+      M_LEVEL_Level_0;
+    outC->EVC_PersistentData.availableLevelsList.levelList[i].nid_stm = 0;
+  }
+  for (i = 0; i < 31; i++) {
+    outC->EVC_TextMessageStatusList[i].valid = kcg_true;
+    outC->EVC_TextMessageStatusList[i].dmi_textMessageID = 0;
+    outC->EVC_TextMessageStatusList[i].timeStamp = 0;
+    outC->EVC_TextMessageStatusList[i].textReport =
+      Q_TEXTREPORT_No_driver_acknowle;
+    outC->EVC_TextMessageStatusList[i].context = con_undefined_DMI_Types_Pkg;
+    outC->EVC_TextMessageStatusList[i].nid_textmessage = 0;
+    outC->EVC_TextMessageStatusList[i].whichLevel = M_LEVEL_Level_0;
+    outC->EVC_TextMessageStatusList[i].whichMode = M_MODE_Full_Supervision;
+  }
+  outC->td_events.trainStandStill = kcg_true;
+  outC->td_events.driverRequestModify = kcg_true;
+  outC->td_events.communicationSessionEstablished = kcg_true;
+  outC->td_events.safeRadioConnectionLost = kcg_true;
+  outC->td_events.approachingRBCarea = kcg_true;
+  outC->td_events.MoRCreadyFlag = kcg_true;
+  outC->rep_P0.valid = kcg_true;
+  outC->rep_P0.packet0.NID_PACKET = 0;
+  outC->rep_P0.packet0.L_PACKET = 0;
+  outC->rep_P0.packet0.qscale = Q_SCALE_10_cm_scale;
+  outC->rep_P0.packet0.NID_LRBG = 0;
+  outC->rep_P0.packet0.D_LRBG = 0;
+  outC->rep_P0.packet0.dirlrbg = Q_DIRLRBG_Reverse;
+  outC->rep_P0.packet0.dlrbg = Q_DLRBG_Reverse;
+  outC->rep_P0.packet0.L_DOUBTOVER = 0;
+  outC->rep_P0.packet0.L_DOUBTUNDER = 0;
+  outC->rep_P0.packet0.length = Q_LENGTH_No_train_integrity_inf;
+  outC->rep_P0.packet0.L_TRAININT = 0;
+  outC->rep_P0.packet0.V_TRAIN = 0;
+  outC->rep_P0.packet0.dirtrain = Q_DIRTRAIN_Reverse;
+  outC->rep_P0.packet0.mode = M_MODE_Full_Supervision;
+  outC->rep_P0.packet0.level = M_LEVEL_Level_0;
+  outC->rep_P0.packet0.NID_NTC = 0;
+  outC->td_status.valid = kcg_true;
+  outC->td_status.validatedByDriver = kcg_true;
+  outC->td_status.RBCsystemVersionOnboard = kcg_true;
+  outC->td_status.validatedbyRBC = kcg_true;
+  outC->td_status.waitingForRBCResponse = kcg_true;
+  outC->td_status.driverIsModificationTrainData = kcg_true;
+  outC->td_status.timeStampValidateToRBC = 0;
+  outC->rep_P1.valid = kcg_true;
+  outC->rep_P1.packet1.NID_PACKET = 0;
+  outC->rep_P1.packet1.L_PACKET = 0;
+  outC->rep_P1.packet1.qscale = Q_SCALE_10_cm_scale;
+  outC->rep_P1.packet1.NID_LRBG = 0;
+  outC->rep_P1.packet1.NID_PRVLRBG = 0;
+  outC->rep_P1.packet1.D_LRBG = 0;
+  outC->rep_P1.packet1.dirlrbg = Q_DIRLRBG_Reverse;
+  outC->rep_P1.packet1.dlrbg = Q_DLRBG_Reverse;
+  outC->rep_P1.packet1.L_DOUBTOVER = 0;
+  outC->rep_P1.packet1.L_DOUBTUNDER = 0;
+  outC->rep_P1.packet1.length = Q_LENGTH_No_train_integrity_inf;
+  outC->rep_P1.packet1.L_TRAININT = 0;
+  outC->rep_P1.packet1.V_TRAIN = 0;
+  outC->rep_P1.packet1.dirtrain = Q_DIRTRAIN_Reverse;
+  outC->rep_P1.packet1.mode = M_MODE_Full_Supervision;
+  outC->rep_P1.packet1.level = M_LEVEL_Level_0;
+  outC->rep_P1.packet1.NID_NTC = 0;
+  outC->MoRC_RadioStatus_1.registration.valid = kcg_true;
+  outC->MoRC_RadioStatus_1.registration.mobileDeviceNo = 0;
+  outC->MoRC_RadioStatus_1.registration.healthStatus = mhs_nok_RCM_Types_Pkg;
+  outC->MoRC_RadioStatus_1.registration.status = mrs_unregistered_RCM_Types_Pkg;
+  outC->MoRC_RadioStatus_1.registration.nid_mn = 0;
+  outC->MoRC_RadioStatus_1.connection.valid = kcg_true;
+  outC->MoRC_RadioStatus_1.connection.mobileDeviceNo = 0;
+  outC->MoRC_RadioStatus_1.connection.status = mcs_disconnected_RCM_Types_Pkg;
+  outC->MoRC_RadioStatus_1.connection.nid_radio = 0;
+  outC->MoRC_RadioStatus_1.connection.settingUpConnectionHasFailed = kcg_true;
+  outC->MoRC_RadioStatus_1.connection.connectionLost = kcg_true;
+  outC->MoRC_RadioStatus_1.connection.isInRadioHole = kcg_true;
+  outC->MoRC_RadioStatus_1.session.valid = kcg_true;
+  outC->MoRC_RadioStatus_1.session.phase = sp_terminated_RCM_Session_Types;
+  outC->MoRC_RadioStatus_1.session.nid_c = 0;
+  outC->MoRC_RadioStatus_1.session.nid_rbc = 0;
+  outC->MoRC_RadioStatus_1.session.nid_radio = 0;
+  outC->MoRC_RadioID_1 = 0;
+  outC->MoRC_MN_1 = 0;
   outC->debugCurrentLevel = M_LEVEL_Level_0;
   outC->debugCurrentMode = M_MODE_Full_Supervision;
   outC->debugIinterventionSpeed = 0.0;
@@ -608,12 +608,11 @@ void EVC_init(outC_EVC *outC)
   for (i = 0; i < 50; i++) {
     outC->API_toRBC.OptionalPackets[i] = 0;
   }
-  /* 1 */ collectRadioOutput_init_radioOu(&outC->_12_Context_1);
-  /* 3 */ checkGeneralMessage_init_trainD(&outC->_11_Context_3);
-  /* 2 */ manageDMI_Output_init_manage_DM(&outC->_10_Context_2);
-  /* 2 */ Master_Procedure_init_ManagePro(&outC->_9_Context_2);
-  /* 1 */ MoRC_HO_init_MoRC_HO_Pkg(&outC->_8_Context_1);
-  /* 1 */ keepP42_init_EVC_Support_Pkg(&outC->Context_1);
+  /* 1 */ collectRadioOutput_init_radioOu(&outC->_11_Context_1);
+  /* 3 */ checkGeneralMessage_init_trainD(&outC->_10_Context_3);
+  /* 2 */ manageDMI_Output_init_manage_DM(&outC->_9_Context_2);
+  /* 2 */ Master_Procedure_init_ManagePro(&outC->_8_Context_2);
+  /* 1 */ MoRC_HO_init_MoRC_HO_Pkg(&outC->Context_1);
   /* 2 */ ProvidePositionReport_init_Prov(&outC->_7_Context_2);
   /* 2 */ TIU_OutputIntegration_init_outp(&outC->_6_Context_2);
   /* 2 */ SpeedSupervision_Integration_in(&outC->_5_Context_2);
@@ -631,14 +630,13 @@ void EVC_init(outC_EVC *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void EVC_reset(outC_EVC *outC)
 {
-  outC->init13 = kcg_true;
   outC->init = kcg_true;
-  /* 1 */ collectRadioOutput_reset_radioO(&outC->_12_Context_1);
-  /* 3 */ checkGeneralMessage_reset_train(&outC->_11_Context_3);
-  /* 2 */ manageDMI_Output_reset_manage_D(&outC->_10_Context_2);
-  /* 2 */ Master_Procedure_reset_ManagePr(&outC->_9_Context_2);
-  /* 1 */ MoRC_HO_reset_MoRC_HO_Pkg(&outC->_8_Context_1);
-  /* 1 */ keepP42_reset_EVC_Support_Pkg(&outC->Context_1);
+  outC->init12 = kcg_true;
+  /* 1 */ collectRadioOutput_reset_radioO(&outC->_11_Context_1);
+  /* 3 */ checkGeneralMessage_reset_train(&outC->_10_Context_3);
+  /* 2 */ manageDMI_Output_reset_manage_D(&outC->_9_Context_2);
+  /* 2 */ Master_Procedure_reset_ManagePr(&outC->_8_Context_2);
+  /* 1 */ MoRC_HO_reset_MoRC_HO_Pkg(&outC->Context_1);
   /* 2 */ ProvidePositionReport_reset_Pro(&outC->_7_Context_2);
   /* 2 */ TIU_OutputIntegration_reset_out(&outC->_6_Context_2);
   /* 2 */ SpeedSupervision_Integration_re(&outC->_5_Context_2);
@@ -720,39 +718,39 @@ void EVC(
   static kcg_bool tmp10;
   /* EVC */
   static DMI_LevelList_T_DMI_Types_Pkg tmp;
-  /* EVC::EVC_PersistentData */
-  static ps_dataForStartOfMission_T_API_ last_EVC_PersistentData;
-  /* EVC::DMI_trainRunningNumber */
-  static _25_DMI_Train_Running_Number_T_ DMI_trainRunningNumber;
-  /* EVC::EVC_cabIsOpen */
-  static kcg_bool EVC_cabIsOpen;
-  /* EVC::_L523 */
-  static DMI_EVC_status_T_DMI_Types_Pkg _L523;
-  /* EVC::_L772 */
-  static trainPosition_T_TrainPosition_T _L772;
-  /* EVC::_L794 */
-  static positionedBGs_T_TrainPosition_T _L794;
-  /* EVC::_L813 */
-  static kcg_bool _L813;
-  /* EVC::_L938 */
-  static T_internal_Type_Obu_BasicTypes_ _L938;
-  /* EVC::_L950 */
-  static trainProperties_T_TrainPosition _L950;
-  /* EVC::_L952 */
-  static trainData_T_TIU_Types_Pkg _L952;
-  /* EVC::_L993 */
-  static T_Mode_Level_Level_And_Mode_Typ _L993;
-  /* EVC::_L1219 */
-  static PT0_PositionReport_T_Packet_Tra _L1219;
-  /* EVC::_L1230 */
-  static trainDataStatus_T_trainData_Typ _L1230;
-  /* EVC::_L1321 */
-  static PT1_PositionReport_2BG_T_Packet _L1321;
+  /* EVC::_L1754 */
+  static kcg_bool _L1754;
   /* EVC::_L1678 */
   static kcg_bool _L1678;
+  /* EVC::_L1321 */
+  static PT1_PositionReport_2BG_T_Packet _L1321;
+  /* EVC::_L1230 */
+  static trainDataStatus_T_trainData_Typ _L1230;
+  /* EVC::_L1219 */
+  static PT0_PositionReport_T_Packet_Tra _L1219;
+  /* EVC::_L993 */
+  static T_Mode_Level_Level_And_Mode_Typ _L993;
+  /* EVC::_L952 */
+  static trainData_T_TIU_Types_Pkg _L952;
+  /* EVC::_L950 */
+  static trainProperties_T_TrainPosition _L950;
+  /* EVC::_L938 */
+  static T_internal_Type_Obu_BasicTypes_ _L938;
+  /* EVC::_L813 */
+  static kcg_bool _L813;
+  /* EVC::_L794 */
+  static positionedBGs_T_TrainPosition_T _L794;
+  /* EVC::_L772 */
+  static trainPosition_T_TrainPosition_T _L772;
+  /* EVC::_L523 */
+  static DMI_EVC_status_T_DMI_Types_Pkg _L523;
+  /* EVC::DMI_trainRunningNumber */
+  static _25_DMI_Train_Running_Number_T_ DMI_trainRunningNumber;
+  /* EVC::EVC_PersistentData */
+  static ps_dataForStartOfMission_T_API_ last_EVC_PersistentData;
   
   outC->resetOut = _27_EVC_reset;
-  /* fby_1_init_2 */ if (outC->init13) {
+  /* fby_1_init_2 */ if (outC->init12) {
     kcg_copy_trainPosition_T_TrainP(
       &_L772,
       (trainPosition_T_TrainPosition_T *) &cEmptyTrainPosition);
@@ -806,7 +804,7 @@ void EVC(
     tmp15 = cNoRadioCmd.valid;
     tmp13 = 0;
     tmp11 = 0;
-    outC->init13 = kcg_false;
+    outC->init12 = kcg_false;
     tmp10 = kcg_false;
   }
   else {
@@ -948,11 +946,11 @@ void EVC(
     &_L952,
     4065801,
     &outC->TIU_trainProperties);
-  EVC_cabIsOpen = outC->Context_5.outTIUStatus.valid &
+  _L1754 = outC->Context_5.outTIUStatus.valid &
     outC->Context_5.outTIUStatus.deskOpen;
   /* 2 */
   patchEmergencyBrakeMsg_EVC_Supp(&outC->_3_Context_2.To_ModeAndLevel, &tmp20);
-  /* ck_EVC_cabIsOpen */ if (EVC_cabIsOpen) {
+  /* ck_EVC_cabIsOpen */ if (_L1754) {
     /* 3 */ if (outC->init) {
       kcg_copy_ps_dataForStartOfMissi(
         &outC->EVC_PersistentData,
@@ -1000,7 +998,7 @@ void EVC(
   _5_mk_struct.BG_In_List_Expected_BG_In_SH = kcg_false;
   kcg_copy_positionErrors_T_Train(
     &_5_mk_struct.PositionErrors,
-    &outC->Context_3.errors);
+    (positionErrors_T_TrainPosition_ *) &cNoPositioningErrors);
   kcg_copy_trainPosition_T_TrainP(
     &_5_mk_struct.Train_Position,
     &outC->CALC_TrainPosition);
@@ -1058,6 +1056,7 @@ void EVC(
     &outC->_6_Context_2.outTIU_to_API);
   outC->td_events.communicationSessionEstablished = _L813;
   outC->td_events.MoRCreadyFlag = tmp18;
+  _L1754 = !outC->Context_5.outTIUStatus.deskOpen;
   outC->debugCurrentMode = outC->ML_ModeAndLevel.Mode;
   outC->debugCurrentLevel = outC->ML_ModeAndLevel.level;
   _4_mk_struct.currMode = outC->debugCurrentMode;
@@ -1078,15 +1077,15 @@ void EVC(
     &_2_mk_struct,
     &_3_mk_struct,
     outC->CALC_TrainPosition.trainRunningDirectionToLRBG,
-    outC->Context_3.errors.BG_LinkingConsistencyError,
+    cNoPositioningErrors.BG_LinkingConsistencyError,
     outC->Context_2.outCheckErrors.linkedBGError,
     outC->Context_2.outCheckErrors.unlinkedBGError,
     outC->Context_2.outCheckErrors.radioMessageConsistencyError,
     outC->Context_2.outCheckErrors.radioSequenceError,
     kcg_false,
     kcg_false,
-    outC->Context_3.errors.twoConsecutiveLinkedBGs_missed,
-    outC->Context_3.errors.doubleRepositioningError,
+    cNoPositioningErrors.twoConsecutiveLinkedBGs_missed,
+    cNoPositioningErrors.doubleRepositioningError,
     &_4_mk_struct,
     (ReportedBGList_T_ProvidePositio *) &cReportedBGList_ProvidePosition,
     &outC->_3_Context_2.bus_out,
@@ -1103,8 +1102,6 @@ void EVC(
     tmp11,
     kcg_false,
     &tmp12);
-  /* 1 */
-  keepP42_EVC_Support_Pkg(&outC->Context_2.outputMessage, &outC->Context_1);
   _1_mk_struct.atPowerUp = tmp17;
   _1_mk_struct.atPowerDown = tmp16;
   _1_mk_struct.atStartOfMission = kcg_false;
@@ -1118,11 +1115,11 @@ void EVC(
   _1_mk_struct.startOfMissionProcedureComplete = kcg_false;
   _1_mk_struct.isPartOfAnOngoingStartOfMission = tmp15;
   _1_mk_struct.startOfMissionProcedureIsGoingO = _L1678;
-  _1_mk_struct.endOfMissionIsExecuted = !outC->Context_5.outTIUStatus.deskOpen;
+  _1_mk_struct.endOfMissionIsExecuted = _L1754;
   _1_mk_struct.triggerDecisionThatNoRadioNetwo = kcg_false;
   _1_mk_struct.errorConditionRequiringTerminat = kcg_false;
   _1_mk_struct.trainIsRejectedByRBC_duringStar = kcg_false;
-  _1_mk_struct.driverClosesTheDeskduringStartO = kcg_false;
+  _1_mk_struct.driverClosesTheDeskduringStartO = _L1754;
   _1_mk_struct.trainExitedFromAnRBCArea = kcg_false;
   _1_mk_struct.isInCommunicationSessionWithAnR = kcg_false;
   _1_mk_struct.level_1_isLeft = kcg_false;
@@ -1137,7 +1134,7 @@ void EVC(
     (mobileRegistrationContext_T_RCM *) &cNoMobileRegistrationContext,
     &tmp12,
     (mobileConnectionContext_T_RCM_T *) &cNoMobileConnectionContext,
-    &outC->Context_1.toMoRC,
+    &outC->Context_2.outputMessage,
     &outC->_7_Context_2.posReport,
     &_L772,
     &_L794,
@@ -1150,14 +1147,14 @@ void EVC(
     (morc_configData_T_RCM_Session_T *) &cMoRC_ConfigData_EVC_PermanentD,
     (P003_TM_TrainToTrack *) &cMoRC_own_P3ng_EVC_PermanentDat,
     cOwnVersion,
-    &outC->_8_Context_1);
+    &outC->Context_1);
   kcg_copy_morcStatus_T_RCM_Sessi(
     &outC->MoRC_RadioStatus_1,
-    &outC->_8_Context_1.radioStatus_1);
+    &outC->Context_1.radioStatus_1);
   kcg_copy_connection_ids_T_Hando(
     &outC->MoRC_supervisingRBC_Id,
-    &outC->_8_Context_1.supervisingRBC);
-  outC->EVC_ready = outC->_8_Context_1.ready;
+    &outC->Context_1.supervisingRBC);
+  outC->EVC_ready = outC->Context_1.ready;
   /* 2 */
   Master_Procedure_ManageProcedur(
     &_L523,
@@ -1169,15 +1166,15 @@ void EVC(
     outC->CALC_TrainPosition.LRBG.valid,
     &outC->_1_Context_3.outDriverRequest,
     _L523.DMI_LevelSelectedByDirver,
-    &outC->_9_Context_2);
+    &outC->_8_Context_2);
   kcg_copy_radioManagementMessage(
     &outC->PROC_radioCmdFromProcedures,
-    &outC->_9_Context_2.request_Start_Mobile_Terminal_a);
-  outC->PROC_powerUp_to_MoRC = outC->_9_Context_2.powerUp_to_MoRC;
+    &outC->_8_Context_2.request_Start_Mobile_Terminal_a);
+  outC->PROC_powerUp_to_MoRC = outC->_8_Context_2.powerUp_to_MoRC;
   outC->PROC_statusstartofmissionongoin =
-    outC->_9_Context_2.statusstartofmissionongoing_to_;
-  outC->PROC_powerOff_to_MoRC = outC->_9_Context_2.powerOff_to_MoRC;
-  outC->_L477 = outC->_9_Context_2.request_MA_FS_SR_OS_LS_SH_to_MA;
+    outC->_8_Context_2.statusstartofmissionongoing_to_;
+  outC->PROC_powerOff_to_MoRC = outC->_8_Context_2.powerOff_to_MoRC;
+  outC->_L477 = outC->_8_Context_2.request_MA_FS_SR_OS_LS_SH_to_MA;
   mk_struct.valid = kcg_true;
   mk_struct.nid_c = cP3NationalValuesUtrechtAmsterd.nid_cArray[0].nid_c;
   mk_struct.nid_c_valid = kcg_true;
@@ -1195,7 +1192,7 @@ void EVC(
     (movementAuthorityForDMI_T_DMI_T *) &cEmptyDMIMA,
     &outC->MoRC_RadioStatus_1,
     &outC->td_trainData,
-    &outC->_9_Context_2.DMI_Entry_Request_to_DMI,
+    &outC->_8_Context_2.DMI_Entry_Request_to_DMI,
     (_29_DMI_EVC_Coded_Train_Data_T_ *) &cEmptyDMIEVCcodedTrainData,
     &outC->_3_Context_2.to_DMI,
     cOwnVersion,
@@ -1211,16 +1208,14 @@ void EVC(
     &outC->_4_Context_2.announcedLevel,
     outC->EVC_currentNTC,
     &outC->_1_Context_3.outStatusList,
-    &outC->_10_Context_2);
-  kcg_copy_EVC_to_DMI_Message_int(
-    &outC->API_toDMI,
-    &outC->_10_Context_2.to_DMI);
+    &outC->_9_Context_2);
+  kcg_copy_EVC_to_DMI_Message_int(&outC->API_toDMI, &outC->_9_Context_2.to_DMI);
   kcg_copy_DMI_TXT_MSGList_status(
     &outC->EVC_TextMessageStatusList,
-    &outC->_10_Context_2.outStatusList);
+    &outC->_9_Context_2.outStatusList);
   outC->debugIinterventionSpeed = (kcg_real)
       outC->DMI_sdmToDMI.interventionSpeed;
-  /* 14 */ if (outC->_9_Context_2.start_ack_to_TIU) {
+  /* 14 */ if (outC->_8_Context_2.start_ack_to_TIU) {
     outC->debugPermittedSpeed = (kcg_real) outC->DMI_sdmToDMI.permittedSpeed;
   }
   else {
@@ -1244,30 +1239,30 @@ void EVC(
   /* 3 */
   checkGeneralMessage_trainData_p(
     &outC->Context_2.outputMessage,
-    &outC->_11_Context_3);
+    &outC->_10_Context_3);
   /* 1 */
   collectRadioOutput_radioOutput_(
-    &outC->_8_Context_1.msgBus_2_RBC_1,
-    outC->_11_Context_3.genMessageReceived,
+    &outC->Context_1.msgBus_2_RBC_1,
+    outC->_10_Context_3.genMessageReceived,
     &outC->ML_ModeAndLevel,
-    API_mobileHWStatus,
-    &outC->_8_Context_1.mobileConnectionCmd_1,
-    &outC->_8_Context_1.mobileRegistrationCmd_1,
+    &outC->MoRC_RadioStatus_1,
+    &outC->Context_1.mobileConnectionCmd_1,
+    &outC->Context_1.mobileRegistrationCmd_1,
     cOwnVersion,
     API_SystemTime,
-    &outC->_12_Context_1);
-  kcg_copy_M_TrainTrack_Message_T(&outC->API_toRBC, &outC->_12_Context_1.toRBC);
+    &outC->_11_Context_1);
+  kcg_copy_M_TrainTrack_Message_T(&outC->API_toRBC, &outC->_11_Context_1.toRBC);
   kcg_copy_RadioManagement_T_API_(
     &outC->API_RTM_management,
-    &outC->_12_Context_1.API_RTM_management);
-  outC->MoRC_RadioID_1 = outC->_12_Context_1.outRadio;
-  outC->MoRC_MN_1 = outC->_12_Context_1.outMN;
+    &outC->_11_Context_1.API_RTM_management);
+  outC->MoRC_RadioID_1 = outC->_11_Context_1.outRadio;
+  outC->MoRC_MN_1 = outC->_11_Context_1.outMN;
   outC->MoRC_newSessionEstablished = sp_maintaining_RCM_Session_Type ==
     outC->MoRC_RadioStatus_1.session.phase;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

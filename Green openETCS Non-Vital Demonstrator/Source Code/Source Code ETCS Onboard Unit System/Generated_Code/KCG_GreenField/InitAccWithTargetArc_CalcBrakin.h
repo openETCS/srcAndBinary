@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _InitAccWithTargetArc_CalcBraki
 #define _InitAccWithTargetArc_CalcBraki
@@ -27,6 +27,6 @@ extern void InitAccWithTargetArc_CalcBrakin(
 #endif /* _InitAccWithTargetArc_CalcBraki */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InitAccWithTargetArc_CalcBrakin.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

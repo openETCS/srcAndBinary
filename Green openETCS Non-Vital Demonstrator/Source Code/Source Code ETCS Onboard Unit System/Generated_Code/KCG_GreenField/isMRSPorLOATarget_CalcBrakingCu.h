@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _isMRSPorLOATarget_CalcBrakingC
 #define _isMRSPorLOATarget_CalcBrakingC
@@ -19,6 +19,6 @@ extern kcg_bool isMRSPorLOATarget_CalcBrakingCu(
 #endif /* _isMRSPorLOATarget_CalcBrakingC */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** isMRSPorLOATarget_CalcBrakingCu.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

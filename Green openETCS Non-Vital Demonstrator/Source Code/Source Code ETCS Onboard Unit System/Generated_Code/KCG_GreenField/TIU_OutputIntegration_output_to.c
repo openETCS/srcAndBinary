@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -55,6 +55,7 @@ void TIU_OutputIntegration_init_outp(outC_TIU_OutputIntegration_outp *outC)
     kcg_true;
   outC->outTIU_to_API.info.change_of_allowed_current_consu.m_current.restriction =
     0;
+  /* 1 */ manageTIU_output_init_output_to(&outC->_1_Context_1);
   /* 1 */ handleTraction_init_output_to_T(&outC->Context_1);
 }
 #endif /* KCG_USER_DEFINED_INIT */
@@ -63,6 +64,7 @@ void TIU_OutputIntegration_init_outp(outC_TIU_OutputIntegration_outp *outC)
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void TIU_OutputIntegration_reset_out(outC_TIU_OutputIntegration_outp *outC)
 {
+  /* 1 */ manageTIU_output_reset_output_t(&outC->_1_Context_1);
   /* 1 */ handleTraction_reset_output_to_(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
@@ -93,12 +95,17 @@ void TIU_OutputIntegration_output_to(
     in_change_traction_system,
     in_passenger_door_control_info,
     in_change_of_allowed_current_co,
+    &outC->_1_Context_1);
+  kcg_copy_TIU_Output_msg_API_TIU(
     &outC->outTIU_to_API,
-    &outC->outCommandStatusforEVC);
+    &outC->_1_Context_1.outTIU_to_API);
+  kcg_copy_TIU_commandStatus_T_TI(
+    &outC->outCommandStatusforEVC,
+    &outC->_1_Context_1.outCommandStatusforEVC);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TIU_OutputIntegration_output_to.c
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

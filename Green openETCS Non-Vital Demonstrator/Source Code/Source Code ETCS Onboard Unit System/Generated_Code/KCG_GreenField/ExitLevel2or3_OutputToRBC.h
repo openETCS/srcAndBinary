@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _ExitLevel2or3_OutputToRBC_H_
 #define _ExitLevel2or3_OutputToRBC_H_
@@ -47,6 +47,6 @@ extern void ExitLevel2or3_init_OutputToRBC(
 #endif /* _ExitLevel2or3_OutputToRBC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ExitLevel2or3_OutputToRBC.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

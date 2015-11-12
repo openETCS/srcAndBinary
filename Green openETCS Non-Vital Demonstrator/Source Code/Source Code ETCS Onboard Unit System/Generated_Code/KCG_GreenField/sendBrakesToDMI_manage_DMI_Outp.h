@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _sendBrakesToDMI_manage_DMI_Out
 #define _sendBrakesToDMI_manage_DMI_Out
@@ -44,6 +44,6 @@ extern void sendBrakesToDMI_init_manage_DMI(
 #endif /* _sendBrakesToDMI_manage_DMI_Out */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendBrakesToDMI_manage_DMI_Outp.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

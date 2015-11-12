@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _CAST_M_SupervisionDisplay_to_i
 #define _CAST_M_SupervisionDisplay_to_i
@@ -19,6 +19,6 @@ extern M_SupervisionDisplay_INT_T_DATA CAST_M_SupervisionDisplay_to_in(
 #endif /* _CAST_M_SupervisionDisplay_to_i */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_M_SupervisionDisplay_to_in.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,13 +24,13 @@ void Manage_NID_EM_Store_TA_Emergenc(
   static NID_EM_STORE_Acc_T_TA_Emergency acc;
   static kcg_int i;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::then::_L2 */
-  static array_102340 _L2_IfBlock1;
+  static array_102458 _L2_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::then::_L1 */
   static NID_EM_STORE_Acc_T_TA_Emergency _L1_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::else */
   static kcg_bool else_clock_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::else::then::_L2 */
-  static array_102340 _L24_IfBlock1;
+  static array_102458 _L24_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1::else::then::_L1 */
   static NID_EM_STORE_Acc_T_TA_Emergency _L13_IfBlock1;
   /* TA_EmergencyStop::NID_EM_Store::Manage_NID_EM_Store::IfBlock1 */
@@ -59,7 +59,7 @@ void Manage_NID_EM_Store_TA_Emergenc(
         &_L2_IfBlock1[i]);
     }
     (*outStore).nfree = _L1_IfBlock1.nfree;
-    kcg_copy_array_102340(&(*outStore).items, &_L2_IfBlock1);
+    kcg_copy_array_102458(&(*outStore).items, &_L2_IfBlock1);
     *handled = _L1_IfBlock1.handled;
   }
   else {
@@ -79,7 +79,7 @@ void Manage_NID_EM_Store_TA_Emergenc(
           &_L24_IfBlock1[i]);
       }
       (*outStore).nfree = _L13_IfBlock1.nfree;
-      kcg_copy_array_102340(&(*outStore).items, &_L24_IfBlock1);
+      kcg_copy_array_102458(&(*outStore).items, &_L24_IfBlock1);
       *handled = _L13_IfBlock1.handled;
     }
     else {
@@ -91,6 +91,6 @@ void Manage_NID_EM_Store_TA_Emergenc(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_NID_EM_Store_TA_Emergenc.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

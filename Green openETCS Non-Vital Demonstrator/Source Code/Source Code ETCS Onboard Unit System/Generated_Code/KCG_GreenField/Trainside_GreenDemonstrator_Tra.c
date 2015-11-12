@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:22
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -92,6 +92,72 @@ void Trainside_init_GreenDemonstrato(outC_Trainside_GreenDemonstrato *outC)
   outC->Debug.interventionSpeed = 0.0;
   outC->Debug.mode = M_MODE_Full_Supervision;
   outC->Debug.level = M_LEVEL_Level_0;
+  outC->TIU_toDMI.valid = kcg_true;
+  outC->TIU_toDMI.info.train_status.valid = kcg_true;
+  outC->TIU_toDMI.info.train_status.m_sleeping_st = signal_active_TIU_Types_Pkg;
+  outC->TIU_toDMI.info.train_status.m_passiveshunting_st =
+    passive_shunting_permitted_TIU_;
+  outC->TIU_toDMI.info.train_status.m_nonleading_st =
+    non_leading_signall_status_not_;
+  outC->TIU_toDMI.info.train_status.m_cab_st = cab_signal_status_not_defined_T;
+  outC->TIU_toDMI.info.train_status.m_directioncontroller_st =
+    direction_controller_in_neutral;
+  outC->TIU_toDMI.info.train_status.m_trainintegrity_st =
+    train_is_not_integer_TIU_Types_;
+  outC->TIU_toDMI.info.train_status.m_traction_st = traction_on_TIU_Types_Pkg;
+  outC->TIU_toDMI.info.brake_status.valid = kcg_true;
+  outC->TIU_toDMI.info.brake_status.m_regenerativebrake_st =
+    brake_status_not_defined_TIU_Ty;
+  outC->TIU_toDMI.info.brake_status.m_eddycurrentbrake_st =
+    brake_status_not_defined_TIU_Ty;
+  outC->TIU_toDMI.info.brake_status.m_magneticshoebrake_st =
+    brake_status_not_defined_TIU_Ty;
+  outC->TIU_toDMI.info.brake_status.m_electropneumaticbrake_st =
+    brake_status_not_defined_TIU_Ty;
+  outC->TIU_toDMI.info.brake_status.m_additionalbrake_st =
+    brake_status_not_defined_TIU_Ty;
+  outC->TIU_toDMI.info.brake_pressure.valid = kcg_true;
+  outC->TIU_toDMI.info.brake_pressure.pressure = 0;
+  outC->TIU_toDMI.info.train_data_entry_type = fixed_entry_type_TIU_Types_Pkg;
+  outC->TIU_toDMI.info.train_data_info.valid = kcg_true;
+  outC->TIU_toDMI.info.train_data_info.acknowledgedByDriver = kcg_true;
+  outC->TIU_toDMI.info.train_data_info.trainCategory =
+    NC_TRAIN_Train_does_not_belong_;
+  outC->TIU_toDMI.info.train_data_info.cantDeficientcy =
+    NC_CDTRAIN_Cant_Deficiency_80_m;
+  outC->TIU_toDMI.info.train_data_info.trainLength = 0;
+  outC->TIU_toDMI.info.train_data_info.brakePerctage = 0;
+  outC->TIU_toDMI.info.train_data_info.maxTrainSpeed = 0;
+  outC->TIU_toDMI.info.train_data_info.loadingGauge =
+    M_LOADINGGAUGE_The_train_does_n;
+  outC->TIU_toDMI.info.train_data_info.axleLoadCategory = M_AXLELOADCAT_A;
+  outC->TIU_toDMI.info.train_data_info.airtightSystem = M_AIRTIGHT_Not_fitted;
+  outC->TIU_toDMI.info.train_data_info.axleNumber = 0;
+  outC->TIU_toDMI.info.train_data_info.numberNationalSystems = 0;
+  for (i = 0; i < 5; i++) {
+    outC->TIU_toDMI.info.train_data_info.nationSystems[i] = 0;
+  }
+  outC->TIU_toDMI.info.train_data_info.numberTractionSystems = 0;
+  for (i = 0; i < 4; i++) {
+    outC->TIU_toDMI.info.train_data_info.tractionSystem[i].m_voltage =
+      M_VOLTAGE_Line_not_fitted_with_;
+    outC->TIU_toDMI.info.train_data_info.tractionSystem[i].nid_ctraction = 0;
+  }
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.valid = kcg_true;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.nothing_to_resume_profile_follo.d_test_trackcond.now =
+    0;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.nothing_to_resume_profile_follo.d_test_trackcond.distance =
+    0;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.nothing_to_resume_profile_follo.l_test_trackcond.now =
+    0;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.nothing_to_resume_profile_follo.l_test_trackcond.distance =
+    0;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.nothing_to_resume_profile_follo.m_trackcond =
+    non_stopping_area_TIU_Types_Pkg;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.empty_profile_initial_state_to_.now =
+    0;
+  outC->TIU_toDMI.info.type_I_train_and_brake_inhibiti.empty_profile_initial_state_to_.distance =
+    0;
   outC->API_toGUI.emergencyBrake = kcg_true;
   outC->API_toGUI.serviceBrake = kcg_true;
   outC->API_toGUI.tractionCutOff = kcg_true;
@@ -220,6 +286,9 @@ void Trainside_GreenDemonstrator_Tra(
     outC->Context_1.serviceBrakeActivated_To_Enviro;
   outC->API_toGUI.tractionCutOff =
     outC->Context_1.tractionCutOff_To_Environment;
+  kcg_copy_TIU_Input_msg_API_TIU_(
+    &outC->TIU_toDMI,
+    &outC->Context_1.output_To_EVC);
   /* 1 */
   AFB_Toolbox_Physics(
     inC->API_fromGUI.targetSpeed,
@@ -277,7 +346,7 @@ void Trainside_GreenDemonstrator_Tra(
     outC->API_currentTimestamp,
     &outC->_4_Context_1.TrackMessageToEVC,
     &inC->API_fromDMI,
-    &outC->Context_1.output_To_EVC,
+    &outC->TIU_toDMI,
     &outC->_3_Context_1.mobileHWStatus,
     (ps_dataForStartOfMission_T_API_ *) &cDataStorage_ForInit1,
     &outC->_5_Context_1);
@@ -313,6 +382,6 @@ void Trainside_GreenDemonstrator_Tra(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Trainside_GreenDemonstrator_Tra.c
-** Generation date: 2015-11-11T16:04:22
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

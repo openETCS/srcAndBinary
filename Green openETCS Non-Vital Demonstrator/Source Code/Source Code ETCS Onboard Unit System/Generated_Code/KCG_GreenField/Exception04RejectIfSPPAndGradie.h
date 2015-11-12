@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _Exception04RejectIfSPPAndGradi
 #define _Exception04RejectIfSPPAndGradi
@@ -22,6 +22,6 @@ extern void Exception04RejectIfSPPAndGradie(
 #endif /* _Exception04RejectIfSPPAndGradi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Exception04RejectIfSPPAndGradie.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

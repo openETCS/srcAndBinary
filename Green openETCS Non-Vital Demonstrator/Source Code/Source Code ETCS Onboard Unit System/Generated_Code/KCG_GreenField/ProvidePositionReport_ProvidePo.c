@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -124,9 +124,9 @@ void ProvidePositionReport_ProvidePo(
   outC_ProvidePositionReport_Prov *outC)
 {
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static struct_101187 mk_struct;
+  static struct_101311 mk_struct;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
-  static array_104094 tmp6;
+  static array_102250 tmp6;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
   static _10_Radio_TrainTrack_Header_T_R tmp5;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */
@@ -249,6 +249,6 @@ void ProvidePositionReport_ProvidePo(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProvidePositionReport_ProvidePo.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 

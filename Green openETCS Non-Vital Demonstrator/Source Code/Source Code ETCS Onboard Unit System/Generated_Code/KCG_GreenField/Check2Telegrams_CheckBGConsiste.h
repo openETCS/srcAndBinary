@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _Check2Telegrams_CheckBGConsist
 #define _Check2Telegrams_CheckBGConsist
@@ -23,6 +23,6 @@ extern void Check2Telegrams_CheckBGConsiste(
 #endif /* _Check2Telegrams_CheckBGConsist */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Check2Telegrams_CheckBGConsiste.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

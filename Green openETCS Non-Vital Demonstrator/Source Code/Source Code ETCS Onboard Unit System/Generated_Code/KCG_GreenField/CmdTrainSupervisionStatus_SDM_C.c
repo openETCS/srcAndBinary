@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -264,6 +264,8 @@ void CmdTrainSupervisionStatus_SDM_C(
       notInt2Int_modeInterplay_RSM = (last_status !=
           Indication_Supervision_SDM_Type) & t2_modeInterplay_RSM &
         (last_status != Intervention_Supervision_SDM_Ty);
+      outC->triggeredTCO = kcg_false;
+      outC->revokedTCO = kcg_false;
       /* sel_RSM */ switch (RSM_state_sel_modeInterplay_RSM) {
         case SSM_st_InterventionStatus_modeI :
           outC->triggeredSupervisionStatus = cSupervisionStatus_SDM_Commands;
@@ -356,8 +358,6 @@ void CmdTrainSupervisionStatus_SDM_C(
           break;
         
       }
-      outC->triggeredTCO = kcg_false;
-      outC->revokedTCO = kcg_false;
       outC->modeInterplay_state_nxt = SSM_st_RSM_modeInterplay;
       /* act_RSM */ switch (RSM_state_act_modeInterplay_RSM) {
         case SSM_st_InterventionStatus_modeI :
@@ -1120,6 +1120,6 @@ void CmdTrainSupervisionStatus_SDM_C(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CmdTrainSupervisionStatus_SDM_C.c
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

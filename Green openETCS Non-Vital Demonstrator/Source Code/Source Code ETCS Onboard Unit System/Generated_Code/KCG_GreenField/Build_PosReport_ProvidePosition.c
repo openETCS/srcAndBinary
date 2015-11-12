@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void Build_PosReport_ProvidePosition(
   /* ProvidePositionReport_Pkg::Build_PosReport::trainProps */ trainProperties_T_TrainPosition *trainProps,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet0 */ PT0_PositionReport_T_Packet_Tra *in_packet0,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet1 */ PT1_PositionReport_2BG_T_Packet *in_packet1,
-  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */ array_104094 *errorVector,
+  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */ array_102250 *errorVector,
   /* ProvidePositionReport_Pkg::Build_PosReport::t_train */ T_TRAIN t_train,
   /* ProvidePositionReport_Pkg::Build_PosReport::posRepHeader */ _10_Radio_TrainTrack_Header_T_R *posRepHeader,
   /* ProvidePositionReport_Pkg::Build_PosReport::packet0 */ PT0_PositionReport_T_Packet_Tra *packet0,
@@ -36,6 +36,6 @@ void Build_PosReport_ProvidePosition(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_PosReport_ProvidePosition.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:54
 *************************************************************$ */
 

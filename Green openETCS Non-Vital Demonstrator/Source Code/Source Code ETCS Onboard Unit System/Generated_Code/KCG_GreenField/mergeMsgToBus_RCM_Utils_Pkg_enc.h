@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:20
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 #ifndef _mergeMsgToBus_RCM_Utils_Pkg_en
 #define _mergeMsgToBus_RCM_Utils_Pkg_en
@@ -50,6 +50,6 @@ extern void mergeMsgToBus_init_RCM_Utils_Pk(
 #endif /* _mergeMsgToBus_RCM_Utils_Pkg_en */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_enc.h
-** Generation date: 2015-11-11T16:04:20
+** Generation date: 2015-11-12T17:51:53
 *************************************************************$ */
 

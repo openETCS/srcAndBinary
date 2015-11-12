@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _CAST_Icon_group_to_int_DATA_Va
 #define _CAST_Icon_group_to_int_DATA_Va
@@ -19,6 +19,6 @@ extern Icon_group_INT_T_DATA CAST_Icon_group_to_int_DATA_Var(
 #endif /* _CAST_Icon_group_to_int_DATA_Va */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Icon_group_to_int_DATA_Var.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

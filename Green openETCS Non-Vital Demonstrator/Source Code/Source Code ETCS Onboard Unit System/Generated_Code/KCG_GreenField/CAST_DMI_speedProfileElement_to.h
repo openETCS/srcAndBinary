@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _CAST_DMI_speedProfileElement_t
 #define _CAST_DMI_speedProfileElement_t
@@ -24,6 +24,6 @@ extern void CAST_DMI_speedProfileElement_to(
 #endif /* _CAST_DMI_speedProfileElement_t */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_speedProfileElement_to.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 

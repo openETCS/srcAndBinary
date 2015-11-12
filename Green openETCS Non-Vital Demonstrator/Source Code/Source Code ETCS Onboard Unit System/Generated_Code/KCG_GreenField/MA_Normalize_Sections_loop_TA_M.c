@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:21
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -44,6 +44,6 @@ void MA_Normalize_Sections_loop_TA_M(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_Normalize_Sections_loop_TA_M.c
-** Generation date: 2015-11-11T16:04:21
+** Generation date: 2015-11-12T17:51:55
 *************************************************************$ */
 

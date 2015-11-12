@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-11T16:04:19
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 #ifndef _TIU_OutputIntegration_output_t
 #define _TIU_OutputIntegration_output_t
@@ -22,6 +22,7 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_manageTIU_output_output_to /* 1 */ _1_Context_1;
   outC_handleTraction_output_to_T /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_TIU_OutputIntegration_outp;
@@ -52,6 +53,6 @@ extern void TIU_OutputIntegration_init_outp(
 #endif /* _TIU_OutputIntegration_output_t */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TIU_OutputIntegration_output_to.h
-** Generation date: 2015-11-11T16:04:19
+** Generation date: 2015-11-12T17:51:52
 *************************************************************$ */
 
