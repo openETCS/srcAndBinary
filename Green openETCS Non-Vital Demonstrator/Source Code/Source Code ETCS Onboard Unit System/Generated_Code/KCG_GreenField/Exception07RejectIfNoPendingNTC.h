@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _Exception07RejectIfNoPendingNT
 #define _Exception07RejectIfNoPendingNT
@@ -21,6 +21,6 @@ extern void Exception07RejectIfNoPendingNTC(
 #endif /* _Exception07RejectIfNoPendingNT */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Exception07RejectIfNoPendingNTC.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _passing_a_BG_CalculateTrainPos
 #define _passing_a_BG_CalculateTrainPos
@@ -33,6 +33,6 @@ extern void passing_a_BG_CalculateTrainPosi(
 #endif /* _passing_a_BG_CalculateTrainPos */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** passing_a_BG_CalculateTrainPosi.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

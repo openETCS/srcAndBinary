@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -11976,6 +11976,6 @@ extern kcg_bool kcg_comp_array_int_129(
 #endif /* _KCG_TYPES_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_types.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

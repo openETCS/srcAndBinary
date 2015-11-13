@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -3470,7 +3470,7 @@ extern const MetadataElement_T_Common_Types_ DEFAULT_PHeader_TM;
 #define cDeltaSimulationTime_Toolbox 10
 
 /* Toolbox::cMaximumAcceleration */
-#define cMaximumAcceleration_Toolbox 0.5
+#define cMaximumAcceleration_Toolbox 5.0
 
 /* Toolbox::cOdometryFactors */
 extern const odometryFactors_T_Toolbox cOdometryFactors_Toolbox;
@@ -3610,6 +3610,6 @@ extern const API_TrackSideInput_T_API_Msg_Pk cEmtpyTrackSideInputMessage_Too;
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

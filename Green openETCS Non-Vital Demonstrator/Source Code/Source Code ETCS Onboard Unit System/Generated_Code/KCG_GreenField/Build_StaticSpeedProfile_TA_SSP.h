@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _Build_StaticSpeedProfile_TA_SS
 #define _Build_StaticSpeedProfile_TA_SS
@@ -54,6 +54,6 @@ extern void Build_StaticSpeedProfile_init_T(
 #endif /* _Build_StaticSpeedProfile_TA_SS */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_StaticSpeedProfile_TA_SSP.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

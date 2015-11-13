@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _Normalize_Dangerpoint_TA_MA_H_
 #define _Normalize_Dangerpoint_TA_MA_H_
@@ -26,6 +26,6 @@ extern void Normalize_Dangerpoint_TA_MA(
 #endif /* _Normalize_Dangerpoint_TA_MA_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_Dangerpoint_TA_MA.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

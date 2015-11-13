@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _dV_sbi_for_V_SDM_Types_Pkg_H_
 #define _dV_sbi_for_V_SDM_Types_Pkg_H_
@@ -19,6 +19,6 @@ extern V_internal_real_Type_SDM_Types_ dV_sbi_for_V_SDM_Types_Pkg(
 #endif /* _dV_sbi_for_V_SDM_Types_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** dV_sbi_for_V_SDM_Types_Pkg.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

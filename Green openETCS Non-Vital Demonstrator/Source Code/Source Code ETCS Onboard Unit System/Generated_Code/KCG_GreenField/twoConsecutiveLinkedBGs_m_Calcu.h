@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _twoConsecutiveLinkedBGs_m_Calc
 #define _twoConsecutiveLinkedBGs_m_Calc
@@ -47,6 +47,6 @@ extern void twoConsecutiveLinkedBGs_m_init_(
 #endif /* _twoConsecutiveLinkedBGs_m_Calc */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** twoConsecutiveLinkedBGs_m_Calcu.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

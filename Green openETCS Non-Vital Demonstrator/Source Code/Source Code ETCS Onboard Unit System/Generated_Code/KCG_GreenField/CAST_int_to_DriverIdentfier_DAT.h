@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _CAST_int_to_DriverIdentfier_DA
 #define _CAST_int_to_DriverIdentfier_DA
@@ -21,6 +21,6 @@ extern void CAST_int_to_DriverIdentfier_DAT(
 #endif /* _CAST_int_to_DriverIdentfier_DA */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_DriverIdentfier_DAT.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

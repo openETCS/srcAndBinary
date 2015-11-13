@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _getMobileRegStatus_EVC_Support
 #define _getMobileRegStatus_EVC_Support
@@ -19,6 +19,6 @@ extern mobileRegistrationStatus_T_RCM_ getMobileRegStatus_EVC_Support_(
 #endif /* _getMobileRegStatus_EVC_Support */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getMobileRegStatus_EVC_Support_.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

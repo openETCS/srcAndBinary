@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _findLinkedBG_bckwd_itr_Calcula
 #define _findLinkedBG_bckwd_itr_Calcula
@@ -23,6 +23,6 @@ extern void findLinkedBG_bckwd_itr_Calculat(
 #endif /* _findLinkedBG_bckwd_itr_Calcula */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** findLinkedBG_bckwd_itr_Calculat.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

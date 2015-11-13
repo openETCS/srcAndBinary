@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _MA_L23_Postprocessing_TA_MA_H_
 #define _MA_L23_Postprocessing_TA_MA_H_
@@ -47,6 +47,6 @@ extern void MA_L23_Postprocessing_init_TA_M(
 #endif /* _MA_L23_Postprocessing_TA_MA_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_L23_Postprocessing_TA_MA.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _extractPositionReportFromBus_R
 #define _extractPositionReportFromBus_R
@@ -22,6 +22,6 @@ extern void extractPositionReportFromBus_RC(
 #endif /* _extractPositionReportFromBus_R */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** extractPositionReportFromBus_RC.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

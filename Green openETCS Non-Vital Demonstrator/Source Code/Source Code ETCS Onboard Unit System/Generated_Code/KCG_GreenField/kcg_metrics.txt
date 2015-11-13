@@ -1,6 +1,6 @@
 $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:52:13
+** Generation date: 2015-11-13T13:31:39
 *************************************************************$
 Data structures
   Structures
@@ -25,5 +25,5 @@ Program size
     Max number of extern identifiers in one translation unit: 2198
 $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_metrics.txt
-** Generation date: 2015-11-12T17:52:13
+** Generation date: 2015-11-13T13:31:39
 *************************************************************$

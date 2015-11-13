@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _op_3_8_2_3_a_TA_MA_Request_H_
 #define _op_3_8_2_3_a_TA_MA_Request_H_
@@ -50,6 +50,6 @@ extern void op_3_8_2_3_a_init_TA_MA_Request(
 #endif /* _op_3_8_2_3_a_TA_MA_Request_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_8_2_3_a_TA_MA_Request.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

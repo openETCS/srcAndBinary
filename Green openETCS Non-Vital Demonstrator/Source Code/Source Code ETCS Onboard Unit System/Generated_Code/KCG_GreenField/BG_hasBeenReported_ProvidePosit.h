@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _BG_hasBeenReported_ProvidePosi
 #define _BG_hasBeenReported_ProvidePosi
@@ -24,6 +24,6 @@ extern void BG_hasBeenReported_ProvidePosit(
 #endif /* _BG_hasBeenReported_ProvidePosi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BG_hasBeenReported_ProvidePosit.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

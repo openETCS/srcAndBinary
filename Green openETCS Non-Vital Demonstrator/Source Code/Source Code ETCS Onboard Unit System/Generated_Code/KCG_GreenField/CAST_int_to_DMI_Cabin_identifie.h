@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _CAST_int_to_DMI_Cabin_identifi
 #define _CAST_int_to_DMI_Cabin_identifi
@@ -19,6 +19,6 @@ extern DMI_Cabin_Identifier_T_DMI_Type CAST_int_to_DMI_Cabin_identifie(
 #endif /* _CAST_int_to_DMI_Cabin_identifi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_DMI_Cabin_identifie.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

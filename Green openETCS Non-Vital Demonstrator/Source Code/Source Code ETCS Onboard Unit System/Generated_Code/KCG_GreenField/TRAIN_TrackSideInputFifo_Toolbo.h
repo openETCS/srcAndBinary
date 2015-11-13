@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _TRAIN_TrackSideInputFifo_Toolb
 #define _TRAIN_TrackSideInputFifo_Toolb
@@ -52,6 +52,6 @@ extern void TRAIN_TrackSideInputFifo_init_T(
 #endif /* _TRAIN_TrackSideInputFifo_Toolb */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TRAIN_TrackSideInputFifo_Toolbo.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

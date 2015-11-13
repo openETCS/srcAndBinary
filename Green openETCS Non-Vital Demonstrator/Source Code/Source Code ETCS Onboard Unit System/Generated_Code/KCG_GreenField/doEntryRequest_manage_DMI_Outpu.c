@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -69,6 +69,6 @@ void doEntryRequest_manage_DMI_Outpu(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** doEntryRequest_manage_DMI_Outpu.c
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

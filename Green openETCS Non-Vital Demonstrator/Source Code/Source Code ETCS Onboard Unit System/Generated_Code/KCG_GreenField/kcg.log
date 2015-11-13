@@ -1,6 +1,6 @@
 $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:34
+** Generation date: 2015-11-13T13:30:48
 *************************************************************$
 *** Code Generation Warning (WAR_604): Renaming interface identifier
   at file S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/scade_model_without_unused.scade, line 655272, character 0
@@ -8493,5 +8493,5 @@ No error was found
 No failure occurred
 $**************** KCG Version 6.4 (build i21) ****************
 ** S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside\kcg.log
-** Generation date: 2015-11-12T17:52:21
+** Generation date: 2015-11-13T13:31:49
 *************************************************************$

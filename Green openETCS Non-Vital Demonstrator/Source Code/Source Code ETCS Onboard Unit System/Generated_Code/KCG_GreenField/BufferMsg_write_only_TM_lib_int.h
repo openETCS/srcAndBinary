@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _BufferMsg_write_only_TM_lib_in
 #define _BufferMsg_write_only_TM_lib_in
@@ -24,6 +24,6 @@ extern void BufferMsg_write_only_TM_lib_int(
 #endif /* _BufferMsg_write_only_TM_lib_in */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_write_only_TM_lib_int.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

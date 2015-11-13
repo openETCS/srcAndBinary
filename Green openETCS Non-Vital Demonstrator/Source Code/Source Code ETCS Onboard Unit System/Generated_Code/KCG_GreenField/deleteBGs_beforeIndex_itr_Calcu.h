@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _deleteBGs_beforeIndex_itr_Calc
 #define _deleteBGs_beforeIndex_itr_Calc
@@ -23,6 +23,6 @@ extern void deleteBGs_beforeIndex_itr_Calcu(
 #endif /* _deleteBGs_beforeIndex_itr_Calc */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** deleteBGs_beforeIndex_itr_Calcu.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

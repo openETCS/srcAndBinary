@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _checkRBCSystemVersion_trainDat
 #define _checkRBCSystemVersion_trainDat
@@ -21,6 +21,6 @@ extern void checkRBCSystemVersion_trainData(
 #endif /* _checkRBCSystemVersion_trainDat */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** checkRBCSystemVersion_trainData.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

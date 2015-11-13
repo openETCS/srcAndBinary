@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _odoLoc_2_refLocations_BasicLoc
 #define _odoLoc_2_refLocations_BasicLoc
@@ -26,6 +26,6 @@ extern void odoLoc_2_refLocations_BasicLoca(
 #endif /* _odoLoc_2_refLocations_BasicLoc */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** odoLoc_2_refLocations_BasicLoca.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:54
+** Generation date: 2015-11-13T13:31:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -52,6 +52,6 @@ kcg_int CAST_Q_LENGTH_to_int_TM_convers(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Q_LENGTH_to_int_TM_convers.c
-** Generation date: 2015-11-12T17:51:54
+** Generation date: 2015-11-13T13:31:15
 *************************************************************$ */
 

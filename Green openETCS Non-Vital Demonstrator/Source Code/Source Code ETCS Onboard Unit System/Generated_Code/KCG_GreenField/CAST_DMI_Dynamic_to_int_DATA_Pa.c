@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -54,6 +54,6 @@ void CAST_DMI_Dynamic_to_int_DATA_Pa(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Dynamic_to_int_DATA_Pa.c
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

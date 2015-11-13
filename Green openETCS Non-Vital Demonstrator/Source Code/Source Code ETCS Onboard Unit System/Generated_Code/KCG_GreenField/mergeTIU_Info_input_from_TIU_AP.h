@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _mergeTIU_Info_input_from_TIU_A
 #define _mergeTIU_Info_input_from_TIU_A
@@ -23,6 +23,6 @@ extern void mergeTIU_Info_input_from_TIU_AP(
 #endif /* _mergeTIU_Info_input_from_TIU_A */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeTIU_Info_input_from_TIU_AP.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _setIntervalBGPosition_Receive_
 #define _setIntervalBGPosition_Receive_
@@ -21,6 +21,6 @@ extern void setIntervalBGPosition_Receive_T(
 #endif /* _setIntervalBGPosition_Receive_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** setIntervalBGPosition_Receive_T.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

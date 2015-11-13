@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _CheckMandatoryVariablesAndMA_C
 #define _CheckMandatoryVariablesAndMA_C
@@ -20,6 +20,6 @@ extern kcg_bool CheckMandatoryVariablesAndMA_Ch(
 #endif /* _CheckMandatoryVariablesAndMA_C */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckMandatoryVariablesAndMA_Ch.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

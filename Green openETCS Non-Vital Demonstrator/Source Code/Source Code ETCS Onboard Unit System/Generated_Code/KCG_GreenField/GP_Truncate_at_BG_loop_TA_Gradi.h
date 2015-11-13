@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _GP_Truncate_at_BG_loop_TA_Grad
 #define _GP_Truncate_at_BG_loop_TA_Grad
@@ -24,6 +24,6 @@ extern void GP_Truncate_at_BG_loop_TA_Gradi(
 #endif /* _GP_Truncate_at_BG_loop_TA_Grad */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GP_Truncate_at_BG_loop_TA_Gradi.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _CAST_Icon_control_flag_to_int_
 #define _CAST_Icon_control_flag_to_int_
@@ -19,6 +19,6 @@ extern Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_D(
 #endif /* _CAST_Icon_control_flag_to_int_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Icon_control_flag_to_int_D.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

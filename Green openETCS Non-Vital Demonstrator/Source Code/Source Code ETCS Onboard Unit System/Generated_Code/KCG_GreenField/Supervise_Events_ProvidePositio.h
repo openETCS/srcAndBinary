@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _Supervise_Events_ProvidePositi
 #define _Supervise_Events_ProvidePositi
@@ -60,6 +60,6 @@ extern void Supervise_Events_init_ProvidePo(
 #endif /* _Supervise_Events_ProvidePositi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Supervise_Events_ProvidePositio.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

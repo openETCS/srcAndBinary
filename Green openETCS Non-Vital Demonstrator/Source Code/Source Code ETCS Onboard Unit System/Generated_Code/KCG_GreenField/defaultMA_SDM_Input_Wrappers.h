@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _defaultMA_SDM_Input_Wrappers_H
 #define _defaultMA_SDM_Input_Wrappers_H
@@ -19,6 +19,6 @@ extern void defaultMA_SDM_Input_Wrappers(
 #endif /* _defaultMA_SDM_Input_Wrappers_H */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** defaultMA_SDM_Input_Wrappers.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

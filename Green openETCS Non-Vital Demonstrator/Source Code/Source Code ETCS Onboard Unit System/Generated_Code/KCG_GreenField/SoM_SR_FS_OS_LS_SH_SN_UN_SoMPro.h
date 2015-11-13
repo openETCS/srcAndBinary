@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _SoM_SR_FS_OS_LS_SH_SN_UN_SoMPr
 #define _SoM_SR_FS_OS_LS_SH_SN_UN_SoMPr
@@ -44,6 +44,6 @@ extern void SoM_SR_FS_OS_LS_SH_SN_UN_init_S(
 #endif /* _SoM_SR_FS_OS_LS_SH_SN_UN_SoMPr */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SoM_SR_FS_OS_LS_SH_SN_UN_SoMPro.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

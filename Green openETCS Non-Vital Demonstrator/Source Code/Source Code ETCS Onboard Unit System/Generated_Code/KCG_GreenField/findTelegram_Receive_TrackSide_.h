@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _findTelegram_Receive_TrackSide
 #define _findTelegram_Receive_TrackSide
@@ -22,6 +22,6 @@ extern kcg_bool findTelegram_Receive_TrackSide_(
 #endif /* _findTelegram_Receive_TrackSide */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** findTelegram_Receive_TrackSide_.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

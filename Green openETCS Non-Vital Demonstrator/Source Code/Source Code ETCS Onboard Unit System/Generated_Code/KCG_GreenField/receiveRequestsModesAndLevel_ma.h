@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _receiveRequestsModesAndLevel_m
 #define _receiveRequestsModesAndLevel_m
@@ -28,6 +28,6 @@ extern void receiveRequestsModesAndLevel_ma(
 #endif /* _receiveRequestsModesAndLevel_m */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** receiveRequestsModesAndLevel_ma.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

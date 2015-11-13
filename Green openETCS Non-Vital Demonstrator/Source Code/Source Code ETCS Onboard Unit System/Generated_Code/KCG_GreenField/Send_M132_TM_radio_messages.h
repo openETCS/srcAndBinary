@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _Send_M132_TM_radio_messages_H_
 #define _Send_M132_TM_radio_messages_H_
@@ -57,6 +57,6 @@ extern void Send_M132_init_TM_radio_message(
 #endif /* _Send_M132_TM_radio_messages_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M132_TM_radio_messages.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

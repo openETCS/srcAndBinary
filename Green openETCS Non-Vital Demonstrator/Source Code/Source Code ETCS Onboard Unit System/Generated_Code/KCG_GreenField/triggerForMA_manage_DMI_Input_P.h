@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _triggerForMA_manage_DMI_Input_
 #define _triggerForMA_manage_DMI_Input_
@@ -20,6 +20,6 @@ extern void triggerForMA_manage_DMI_Input_P(
 #endif /* _triggerForMA_manage_DMI_Input_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** triggerForMA_manage_DMI_Input_P.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

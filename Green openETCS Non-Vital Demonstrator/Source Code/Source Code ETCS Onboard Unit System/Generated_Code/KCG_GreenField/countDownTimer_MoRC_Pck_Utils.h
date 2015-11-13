@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _countDownTimer_MoRC_Pck_Utils_
 #define _countDownTimer_MoRC_Pck_Utils_
@@ -49,6 +49,6 @@ extern void countDownTimer_init_MoRC_Pck_Ut(
 #endif /* _countDownTimer_MoRC_Pck_Utils_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** countDownTimer_MoRC_Pck_Utils.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

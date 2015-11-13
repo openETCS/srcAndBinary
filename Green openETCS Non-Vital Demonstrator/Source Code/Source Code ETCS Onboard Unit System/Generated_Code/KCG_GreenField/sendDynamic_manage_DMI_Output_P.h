@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _sendDynamic_manage_DMI_Output_
 #define _sendDynamic_manage_DMI_Output_
@@ -31,6 +31,6 @@ extern void sendDynamic_manage_DMI_Output_P(
 #endif /* _sendDynamic_manage_DMI_Output_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendDynamic_manage_DMI_Output_P.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

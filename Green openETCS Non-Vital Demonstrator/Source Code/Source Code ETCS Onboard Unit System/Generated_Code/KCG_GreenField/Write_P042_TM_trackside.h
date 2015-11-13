@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _Write_P042_TM_trackside_H_
 #define _Write_P042_TM_trackside_H_
@@ -25,6 +25,6 @@ extern void Write_P042_TM_trackside(
 #endif /* _Write_P042_TM_trackside_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_P042_TM_trackside.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

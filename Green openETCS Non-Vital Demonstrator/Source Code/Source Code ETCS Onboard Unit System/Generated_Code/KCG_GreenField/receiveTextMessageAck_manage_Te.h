@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _receiveTextMessageAck_manage_T
 #define _receiveTextMessageAck_manage_T
@@ -24,6 +24,6 @@ extern void receiveTextMessageAck_manage_Te(
 #endif /* _receiveTextMessageAck_manage_T */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** receiveTextMessageAck_manage_Te.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

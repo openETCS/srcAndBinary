@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _CalcBrakeCmd_SDM_Commands_Pkg_
 #define _CalcBrakeCmd_SDM_Commands_Pkg_
@@ -47,6 +47,6 @@ extern void CalcBrakeCmd_init_SDM_Commands_(
 #endif /* _CalcBrakeCmd_SDM_Commands_Pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcBrakeCmd_SDM_Commands_Pkg.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

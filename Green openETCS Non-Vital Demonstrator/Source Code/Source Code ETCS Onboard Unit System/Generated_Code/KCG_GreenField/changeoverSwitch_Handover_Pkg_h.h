@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _changeoverSwitch_Handover_Pkg_
 #define _changeoverSwitch_Handover_Pkg_
@@ -46,6 +46,6 @@ extern void changeoverSwitch_init_Handover_(
 #endif /* _changeoverSwitch_Handover_Pkg_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** changeoverSwitch_Handover_Pkg_h.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

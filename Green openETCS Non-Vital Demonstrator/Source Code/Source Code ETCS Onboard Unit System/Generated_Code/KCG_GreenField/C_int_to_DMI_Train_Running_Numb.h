@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _C_int_to_DMI_Train_Running_Num
 #define _C_int_to_DMI_Train_Running_Num
@@ -22,6 +22,6 @@ extern void C_int_to_DMI_Train_Running_Numb(
 #endif /* _C_int_to_DMI_Train_Running_Num */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_int_to_DMI_Train_Running_Numb.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

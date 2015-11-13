@@ -1,5 +1,5 @@
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-12T17:50:40
+** Generation date: 2015-11-13T13:29:50
 ** Command: scade -code "S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\Demonstrators.etp" -root GreenDemonstrator::Trainside::Trainside -conf GreenTrainside
 *************************************************************$
 *** Generated Files Information (GENFIL): KCG- Generated files
@@ -4451,6 +4451,6 @@ $**************  SCADETOC Version R16 (build i21) **************
  ~sc2c_integration_files.txt
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\GreenTrainside\sc2c_integration_files.txt, line 0, character 0
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-12T17:52:22
+** Generation date: 2015-11-13T13:31:50
 ** sc2c.log
 *************************************************************$

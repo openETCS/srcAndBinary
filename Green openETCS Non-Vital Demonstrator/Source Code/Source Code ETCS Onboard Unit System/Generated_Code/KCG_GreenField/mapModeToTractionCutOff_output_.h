@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _mapModeToTractionCutOff_output
 #define _mapModeToTractionCutOff_output
@@ -19,6 +19,6 @@ extern M_traction_cutoff_command_T_TIU mapModeToTractionCutOff_output_(
 #endif /* _mapModeToTractionCutOff_output */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapModeToTractionCutOff_output_.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

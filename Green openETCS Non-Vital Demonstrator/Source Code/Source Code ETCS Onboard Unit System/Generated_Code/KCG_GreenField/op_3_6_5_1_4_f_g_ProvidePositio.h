@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _op_3_6_5_1_4_f_g_ProvidePositi
 #define _op_3_6_5_1_4_f_g_ProvidePositi
@@ -43,6 +43,6 @@ extern void op_3_6_5_1_4_f_g_init_ProvidePo(
 #endif /* _op_3_6_5_1_4_f_g_ProvidePositi */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_6_5_1_4_f_g_ProvidePositio.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _patchEmergencyBrakeMsg_EVC_Sup
 #define _patchEmergencyBrakeMsg_EVC_Sup
@@ -20,6 +20,6 @@ extern void patchEmergencyBrakeMsg_EVC_Supp(
 #endif /* _patchEmergencyBrakeMsg_EVC_Sup */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** patchEmergencyBrakeMsg_EVC_Supp.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

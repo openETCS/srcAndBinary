@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _T_extract_nid_packet_from_meta
 #define _T_extract_nid_packet_from_meta
@@ -19,6 +19,6 @@ extern kcg_int T_extract_nid_packet_from_metad(
 #endif /* _T_extract_nid_packet_from_meta */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** T_extract_nid_packet_from_metad.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

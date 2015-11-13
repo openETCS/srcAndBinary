@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _Procedure_SH_Initiated_By_Proc
 #define _Procedure_SH_Initiated_By_Proc
@@ -55,6 +55,6 @@ extern void Procedure_SH_Initiated_By_init_(
 #endif /* _Procedure_SH_Initiated_By_Proc */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_SH_Initiated_By_Proce.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

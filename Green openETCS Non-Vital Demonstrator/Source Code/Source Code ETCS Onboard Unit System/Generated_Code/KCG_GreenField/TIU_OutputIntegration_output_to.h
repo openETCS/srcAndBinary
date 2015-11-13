@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _TIU_OutputIntegration_output_t
 #define _TIU_OutputIntegration_output_t
@@ -53,6 +53,6 @@ extern void TIU_OutputIntegration_init_outp(
 #endif /* _TIU_OutputIntegration_output_t */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TIU_OutputIntegration_output_to.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

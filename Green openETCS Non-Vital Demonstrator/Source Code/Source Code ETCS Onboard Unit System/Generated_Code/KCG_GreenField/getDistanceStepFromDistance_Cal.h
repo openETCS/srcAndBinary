@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _getDistanceStepFromDistance_Ca
 #define _getDistanceStepFromDistance_Ca
@@ -22,6 +22,6 @@ extern void getDistanceStepFromDistance_Cal(
 #endif /* _getDistanceStepFromDistance_Ca */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getDistanceStepFromDistance_Cal.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

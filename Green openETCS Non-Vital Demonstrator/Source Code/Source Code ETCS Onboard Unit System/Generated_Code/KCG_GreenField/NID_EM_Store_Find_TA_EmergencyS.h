@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 #ifndef _NID_EM_Store_Find_TA_Emergency
 #define _NID_EM_Store_Find_TA_Emergency
@@ -21,6 +21,6 @@ extern void NID_EM_Store_Find_TA_EmergencyS(
 #endif /* _NID_EM_Store_Find_TA_Emergency */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** NID_EM_Store_Find_TA_EmergencyS.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:13
 *************************************************************$ */
 

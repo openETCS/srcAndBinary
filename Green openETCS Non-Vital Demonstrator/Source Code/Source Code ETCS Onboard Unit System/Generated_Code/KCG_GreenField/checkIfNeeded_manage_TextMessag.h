@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _checkIfNeeded_manage_TextMessa
 #define _checkIfNeeded_manage_TextMessa
@@ -23,6 +23,6 @@ extern kcg_bool checkIfNeeded_manage_TextMessag(
 #endif /* _checkIfNeeded_manage_TextMessa */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** checkIfNeeded_manage_TextMessag.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _CompletenessFirstCheck_CheckBG
 #define _CompletenessFirstCheck_CheckBG
@@ -25,6 +25,6 @@ extern void CompletenessFirstCheck_CheckBGC(
 #endif /* _CompletenessFirstCheck_CheckBG */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CompletenessFirstCheck_CheckBGC.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _recalculate_BG_location_astern
 #define _recalculate_BG_location_astern
@@ -29,6 +29,6 @@ extern void recalculate_BG_location_astern_(
 #endif /* _recalculate_BG_location_astern */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** recalculate_BG_location_astern_.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

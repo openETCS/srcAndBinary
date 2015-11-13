@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _Master_Procedure_ManageProcedu
 #define _Master_Procedure_ManageProcedu
@@ -69,6 +69,6 @@ extern void Master_Procedure_init_ManagePro(
 #endif /* _Master_Procedure_ManageProcedu */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Master_Procedure_ManageProcedur.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

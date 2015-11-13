@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _getSpeedOnCurve_CalcBrakingCur
 #define _getSpeedOnCurve_CalcBrakingCur
@@ -23,6 +23,6 @@ extern void getSpeedOnCurve_CalcBrakingCurv(
 #endif /* _getSpeedOnCurve_CalcBrakingCur */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getSpeedOnCurve_CalcBrakingCurv.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 

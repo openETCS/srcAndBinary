@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _sessionSequencer_v2_MoRC_Pck_S
 #define _sessionSequencer_v2_MoRC_Pck_S
@@ -70,6 +70,6 @@ extern void sessionSequencer_v2_init_MoRC_P(
 #endif /* _sessionSequencer_v2_MoRC_Pck_S */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sessionSequencer_v2_MoRC_Pck_Su.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

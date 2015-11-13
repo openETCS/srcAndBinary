@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 #ifndef _MergAllPackets_Iter_CheckBGCon
 #define _MergAllPackets_Iter_CheckBGCon
@@ -21,6 +21,6 @@ extern void MergAllPackets_Iter_CheckBGCons(
 #endif /* _MergAllPackets_Iter_CheckBGCon */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MergAllPackets_Iter_CheckBGCons.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:12
 *************************************************************$ */
 

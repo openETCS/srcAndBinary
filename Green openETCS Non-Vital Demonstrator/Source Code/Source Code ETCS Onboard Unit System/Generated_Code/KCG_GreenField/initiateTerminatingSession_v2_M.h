@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _initiateTerminatingSession_v2_
 #define _initiateTerminatingSession_v2_
@@ -54,6 +54,6 @@ extern void initiateTerminatingSession_v2_i(
 #endif /* _initiateTerminatingSession_v2_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** initiateTerminatingSession_v2_M.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

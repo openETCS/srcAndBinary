@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:52:21
+** Generation date: 2015-11-13T13:31:48
 *************************************************************$-->
-<Model date="2015-11-12T17:52:21" commandLine="kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt">
+<Model date="2015-11-13T13:31:48" commandLine="kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt">
   <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
   <Option name="xml_filter" value="#off#"/>
   <Option name="state_vector" value="#off#"/>
@@ -49537,5 +49537,5 @@
 </Model>
 <!--$**************** KCG Version 6.4 (build i21) ****************
 ** kcg_trace.xml
-** Generation date: 2015-11-12T17:52:21
+** Generation date: 2015-11-13T13:31:48
 *************************************************************$-->

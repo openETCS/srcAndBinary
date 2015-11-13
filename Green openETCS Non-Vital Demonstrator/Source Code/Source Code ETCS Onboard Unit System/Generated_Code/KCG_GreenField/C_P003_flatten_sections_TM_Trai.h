@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _C_P003_flatten_sections_TM_Tra
 #define _C_P003_flatten_sections_TM_Tra
@@ -21,6 +21,6 @@ extern void C_P003_flatten_sections_TM_Trai(
 #endif /* _C_P003_flatten_sections_TM_Tra */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003_flatten_sections_TM_Trai.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

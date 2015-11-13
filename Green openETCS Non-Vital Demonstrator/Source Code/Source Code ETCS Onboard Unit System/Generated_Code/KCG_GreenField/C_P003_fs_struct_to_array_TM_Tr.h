@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 #ifndef _C_P003_fs_struct_to_array_TM_T
 #define _C_P003_fs_struct_to_array_TM_T
@@ -20,6 +20,6 @@ extern kcg_int C_P003_fs_struct_to_array_TM_Tr(
 #endif /* _C_P003_fs_struct_to_array_TM_T */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003_fs_struct_to_array_TM_Tr.h
-** Generation date: 2015-11-12T17:51:53
+** Generation date: 2015-11-13T13:31:14
 *************************************************************$ */
 

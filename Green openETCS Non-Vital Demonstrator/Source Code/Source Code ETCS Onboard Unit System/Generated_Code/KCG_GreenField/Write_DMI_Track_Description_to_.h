@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 #ifndef _Write_DMI_Track_Description_to
 #define _Write_DMI_Track_Description_to
@@ -21,6 +21,6 @@ extern void Write_DMI_Track_Description_to_(
 #endif /* _Write_DMI_Track_Description_to */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_DMI_Track_Description_to_.h
-** Generation date: 2015-11-12T17:51:52
+** Generation date: 2015-11-13T13:31:11
 *************************************************************$ */
 
