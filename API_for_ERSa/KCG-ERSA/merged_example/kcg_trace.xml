@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config C:/GITHUB/modeling/model/Scade/System/ObuFunctions/ETCS_Messaging/TrackMessages/KCG-ERSA/merged_example\kcg_s2c_config.txt
+** Generation date: 2015-11-16T11:33:59
+*************************************************************$-->
+<Model date="2015-11-16T11:33:59" commandLine="s2c613 -config C:/GITHUB/modeling/model/Scade/System/ObuFunctions/ETCS_Messaging/TrackMessages/KCG-ERSA/merged_example\kcg_s2c_config.txt">
+  <NamedType scadeName="NID_PACKET" targetName="NID_PACKET" refType="kcg_int"/>
+  <EnumType scadeName="Q_DIR" targetName="Q_DIR">
+    <EnumVal scadeName="Q_DIR_Reverse" targetName="Q_DIR_Reverse"/>
+    <EnumVal scadeName="Q_DIR_Nominal" targetName="Q_DIR_Nominal"/>
+    <EnumVal scadeName="Q_DIR_Both_directions" targetName="Q_DIR_Both_directions"/>
+  </EnumType>
+  <Package scadeName="TM_old_versions">
+    <RootNode scadeName="SEND_MergeRadioPackets" headerFile="SEND_MergeRadioPackets_TM_old_versions.h"
+        targetCycleFct="SEND_MergeRadioPackets_TM_old_versions"
+        targetInitFct="SEND_MergeRadioPackets_reset_TM_old_versions">
+      <Input scadeName="Header" scadeType="TM::Radio_TrackTrain_Header_T" targetName="Header"
+          targetType="Radio_TrackTrain_Header_T_TM" inCtx="true"/>
+      <Input scadeName="M03" scadeType="TM_baseline2::P003V1_trackside_int_T" targetName="M03"
+          targetType="P003V1_trackside_int_T_TM_baseline2" inCtx="true"/>
+      <Input scadeName="M05" scadeType="TM::P005_trackside_int_T" targetName="M05" targetType="P005_trackside_int_T_TM"
+          inCtx="true"/>
+      <Input scadeName="M15" scadeType="TM::P015_trackside_int_T" targetName="M15" targetType="P015_trackside_int_T_TM"
+          inCtx="true"/>
+      <Input scadeName="M21" scadeType="TM::P021_trackside_int_T" targetName="M21" targetType="P021_trackside_int_T_TM"
+          inCtx="true"/>
+      <Input scadeName="M27" scadeType="TM_baseline2::P027V1_trackside_int_T" targetName="M27"
+          targetType="P027V1_trackside_int_T_TM_baseline2" inCtx="true"/>
+      <Input scadeName="M41" scadeType="TM::P041_trackside_int_T" targetName="M41" targetType="P041_trackside_int_T_TM"
+          inCtx="true"/>
+      <Input scadeName="M57" scadeType="TM::P057_trackside_int_T" targetName="M57" targetType="P057_trackside_int_T_TM"
+          inCtx="true"/>
+      <Input scadeName="M58" scadeType="TM::P058_trackside_int_T" targetName="M58" targetType="P058_trackside_int_T_TM"
+          inCtx="true"/>
+      <Output scadeName="MessageOUT" scadeType="TM::CompressedRadioMessage" targetName="MessageOUT"
+          targetType="CompressedRadioMessage_TM" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="TM_baseline2::P003V1_trackside_int_T" targetName="M03"
+          targetType="P003V1_trackside_int_T_TM_baseline2"/>
+      <Local scadeName="_L2" scadeType="TM::P005_trackside_int_T" targetName="M05"
+          targetType="P005_trackside_int_T_TM"/>
+      <Local scadeName="_L3" scadeType="TM::P015_trackside_int_T" targetName="M15"
+          targetType="P015_trackside_int_T_TM"/>
+      <Local scadeName="_L22" scadeType="TM_baseline2::P027V1_trackside_int_T" targetName="M27"
+          targetType="P027V1_trackside_int_T_TM_baseline2"/>
+      <Local scadeName="_L21" scadeType="TM::P021_trackside_int_T" targetName="M21"
+          targetType="P021_trackside_int_T_TM"/>
+      <Local scadeName="_L24" scadeType="Common_Types_Pkg::CompressedPackets_T" targetName="_L24"
+          targetType="CompressedPackets_T_Common_Types_Pkg"/>
+      <Local scadeName="_L34" scadeType="Common_Types_Pkg::CompressedPackets_T" targetName="DEFAULT_Packets_TM"
+          targetType="CompressedPackets_T_Common_Types_Pkg"/>
+      <Local scadeName="_L35" scadeType="Common_Types_Pkg::CompressedPackets_T" targetName="DEFAULT_Packets_TM"
+          targetType="CompressedPackets_T_Common_Types_Pkg"/>
+      <Local scadeName="_L51" scadeType="TM::P041_trackside_int_T" targetName="M41"
+          targetType="P041_trackside_int_T_TM"/>
+      <Local scadeName="_L52" scadeType="TM::P057_trackside_int_T" targetName="M57"
+          targetType="P057_trackside_int_T_TM"/>
+      <Local scadeName="_L64" scadeType="TM::P041_trackside_int_T" targetName="M41"
+          targetType="P041_trackside_int_T_TM"/>
+      <Local scadeName="_L59" scadeType="TM::Radio_TrackTrain_Header_T" targetName="Header"
+          targetType="Radio_TrackTrain_Header_T_TM"/>
+      <Local scadeName="_L54" scadeType="TM::CompressedRadioMessage" targetName="MessageOUT"
+          targetType="CompressedRadioMessage_TM" inCtx="true"/>
+      <Local scadeName="_L68" scadeType="TM::P058_trackside_int_T" targetName="M58"
+          targetType="P058_trackside_int_T_TM"/>
+      <NodeInlining scadeName="TM_trackside_baseline2::Write_P003V1" instName="1">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions_baseline2::C_P003V1_tracksim_compr" instName="1">
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM_baseline2::DIM_MaxElementsPacket003V1))"
+              targetName="_35__L209_1_1" targetType="array_int_444"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInstance scadeName="+" instName="4"/>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="2">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P005" instName="1">
+        <Local scadeName="_L10" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_29__L406_1_1"
+            targetType="array_int_500"/>
+        <Local scadeName="_L21" scadeType="int" targetName="_28__L407_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L22" scadeType="int" targetName="_27__L408_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L44" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_31__L383_1_1"
+            targetType="array_int_500"/>
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <Output scadeName="NewStartAddr" scadeType="int" targetName="_28__L407_1_1" targetType="kcg_int"/>
+          <Output scadeName="NewEndAddr" scadeType="int" targetName="_27__L408_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L22" scadeType="int" targetName="_27__L408_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L31" scadeType="int" targetName="_28__L407_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L7" scadeType="int" targetName="_26__L7_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_25__L3_1_1" targetType="kcg_int"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Input scadeName="StartAddress" scadeType="int" targetName="_28__L407_1_1" targetType="kcg_int"/>
+          <Input scadeName="EndAddress" scadeType="int" targetName="_27__L408_1_1" targetType="kcg_int"/>
+          <Input scadeName="DataElementIn" scadeType="Common_Types_Pkg::CompressedPacketData_T"
+              targetName="_31__L383_1_1" targetType="array_int_500"/>
+          <Output scadeName="DataOut" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_29__L406_1_1"
+              targetType="array_int_500"/>
+          <Local scadeName="_L402" scadeType="int" targetName="_30_noname_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L404" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_31__L383_1_1"
+              targetType="array_int_500"/>
+          <Local scadeName="_L406" scadeType="int^(Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)"
+              targetName="_29__L406_1_1" targetType="array_int_500"/>
+          <Local scadeName="_L407" scadeType="int" targetName="_28__L407_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L408" scadeType="int" targetName="_27__L408_1_1" targetType="kcg_int"/>
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P005_tracksim_compr" instName="1">
+          <Output scadeName="P005_compressed" scadeType="Common_Types_Pkg::CompressedPacketData_T"
+              targetName="_31__L383_1_1" targetType="array_int_500"/>
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket005))"
+              targetName="_32__L209_1_1" targetType="array_int_264"/>
+          <Local scadeName="_L383"
+              scadeType="int^((((4)
+   +
+   (1))
+  +
+  (((TM::DIM_N_ITER)
+    +
+    (1))
+   *
+   (7)))
+ +
+ ((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+  -
+  (TM::DIM_MaxElementsPacket005)))"
+              targetName="_31__L383_1_1" targetType="array_int_500"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition targetName="IfBlock1_clock_1_1_1">
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition targetName="_33_else_clock_1_1_1_IfBlock1">
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition targetName="else_clock_1_1_1_IfBlock1">
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInstance scadeName="+" instName="3"/>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::C_P005_flatten_sections" instName="1">
+            <Local scadeName="_L74" scadeType="TM::P005_section_array_T^((TM::DIM_N_ITER)
+ +
+ (1))"
+                targetName="_34__L74_1_1_1" targetType="array_int_7_33"/>
+            <Iterator iteratorKind="foldi" scadeSize="231" targetSize="231">
+              <NodeInlining scadeName="TM_lib_internal::C_P005_fs_flatten_array" instName="2">
+                <NodeInstance scadeName="mod" instName="1"/>
+                <NodeInstance scadeName="div" instName="1"/>
+              </NodeInlining>
+            </Iterator>
+            <Iterator iteratorKind="map" scadeSize="33" targetSize="33">
+              <NodeInlining scadeName="TM_lib_internal::C_P005_fs_struct_to_array" instName="2">
+              </NodeInlining>
+            </Iterator>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P015" instName="1">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P015_tracksim_compr" instName="1">
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket015))"
+              targetName="_23__L209_1_1" targetType="array_int_350"/>
+          <Local scadeName="_L403" scadeType="int^(1)" targetName="_L403_1_1" targetType="array_int_1"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInstance scadeName="+" instName="2"/>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::C_P015_flatten_sections" instName="1">
+            <Local scadeName="_L74" scadeType="TM::P015_section_array_T^(TM::DIM_N_ITER)" targetName="_24__L74_1_1_1"
+                targetType="array_int_4_32"/>
+            <Iterator iteratorKind="foldi" scadeSize="128" targetSize="128">
+              <NodeInlining scadeName="TM_lib_internal::C_P015_fs_flatten_array" instName="1">
+                <NodeInstance scadeName="mod" instName="1"/>
+                <NodeInstance scadeName="div" instName="1"/>
+              </NodeInlining>
+            </Iterator>
+            <Iterator iteratorKind="map" scadeSize="32" targetSize="32">
+              <NodeInlining scadeName="TM_lib_internal::C_P015_fs_struct_to_array" instName="2">
+              </NodeInlining>
+            </Iterator>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P021" instName="1">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P021_tracksim_compr" instName="1">
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket021))"
+              targetName="_22__L209_1_1" targetType="array_int_396"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::C_P021_flatten_sections" instName="1">
+            <Iterator iteratorKind="foldi" scadeSize="231" targetSize="231">
+              <NodeInlining scadeName="TM_lib_internal::C_P021_fs_flatten_array" instName="1">
+                <NodeInstance scadeName="mod" instName="1"/>
+                <NodeInstance scadeName="div" instName="1"/>
+              </NodeInlining>
+            </Iterator>
+            <Iterator iteratorKind="map" scadeSize="33" targetSize="33">
+              <NodeInlining scadeName="TM_lib_internal::C_P021_fs_struct_to_array" instName="1">
+              </NodeInlining>
+            </Iterator>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside_baseline2::Write_P027V1" instName="1">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions_baseline2::C_P027V1_tracksim_compr_body" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="3">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+        <Iterator iteratorKind="foldwi" scadeSize="33" targetSize="33">
+          <NodeInlining scadeName="TM_conversions_baseline2::C_P027V1_tracksim_merge_sections" instName="1">
+            <NodeInlining scadeName="TM_conversions_baseline2::C_P027V1_tracksim_compr_one_section" instName="2">
+              <Local scadeName="_L448"
+                  scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket027v1_section))"
+                  targetName="_L448_2_1_1" targetType="array_int_432"/>
+              <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="2">
+                <NodeInstance scadeName="*" instName="2"/>
+                <NodeInstance scadeName="+" instName="1"/>
+              </NodeInlining>
+              <NodeInlining scadeName="TM_lib_internal::C_P027_flatten_sections_qdiff" instName="2">
+                <Iterator iteratorKind="foldi" scadeSize="32" targetSize="32">
+                  <NodeInlining scadeName="TM_lib_internal::C_P027V1_fs_flatten_array_qdiff" instName="1">
+                    <NodeInstance scadeName="mod" instName="1"/>
+                    <NodeInstance scadeName="div" instName="1"/>
+                  </NodeInlining>
+                </Iterator>
+                <Iterator iteratorKind="map" scadeSize="32" targetSize="32">
+                  <NodeInlining scadeName="TM_lib_internal::C_P027V1_fs_struct_to_array_qdiff" instName="1">
+                  </NodeInlining>
+                </Iterator>
+              </NodeInlining>
+              <NodeInstance scadeName="-" instName="2"/>
+              <NodeInstance scadeName="+" instName="2"/>
+            </NodeInlining>
+            <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+              <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+                <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+                  <NodeInstance scadeName="&gt;=" instName="1"/>
+                  <NodeInstance scadeName="&gt;=" instName="2"/>
+                  <NodeInstance scadeName="and" instName="1"/>
+                  <NodeInstance scadeName="-" instName="1"/>
+                </NodeInlining>
+              </Iterator>
+            </NodeInlining>
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteMessageHeader" instName="1">
+              <NodeInstance scadeName="-" instName="1"/>
+              <NodeInstance scadeName="-" instName="2"/>
+              <NodeInstance scadeName="+" instName="1"/>
+              <NodeInstance scadeName="=" instName="1"/>
+              <NodeInstance scadeName="+" instName="2"/>
+              <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+                <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+                  <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+                </NodeInlining>
+              </Iterator>
+            </NodeInlining>
+            <NodeInstance scadeName="&gt;" instName="1"/>
+          </NodeInlining>
+        </Iterator>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P057" instName="1">
+        <Local scadeName="_L10" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_L406_1_1"
+            targetType="array_int_500"/>
+        <Local scadeName="_L21" scadeType="int" targetName="_L407_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L22" scadeType="int" targetName="_L408_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L44" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_L383_1_1"
+            targetType="array_int_500"/>
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <Output scadeName="NewStartAddr" scadeType="int" targetName="_L407_1_1" targetType="kcg_int"/>
+          <Output scadeName="NewEndAddr" scadeType="int" targetName="_L408_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L22" scadeType="int" targetName="_L408_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L31" scadeType="int" targetName="_L407_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L7" scadeType="int" targetName="_L7_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_1_1" targetType="kcg_int"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Input scadeName="StartAddress" scadeType="int" targetName="_L407_1_1" targetType="kcg_int"/>
+          <Input scadeName="EndAddress" scadeType="int" targetName="_L408_1_1" targetType="kcg_int"/>
+          <Input scadeName="DataElementIn" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_L383_1_1"
+              targetType="array_int_500"/>
+          <Output scadeName="DataOut" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_L406_1_1"
+              targetType="array_int_500"/>
+          <Local scadeName="_L402" scadeType="int" targetName="noname_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L404" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="_L383_1_1"
+              targetType="array_int_500"/>
+          <Local scadeName="_L406" scadeType="int^(Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)"
+              targetName="_L406_1_1" targetType="array_int_500"/>
+          <Local scadeName="_L407" scadeType="int" targetName="_L407_1_1" targetType="kcg_int"/>
+          <Local scadeName="_L408" scadeType="int" targetName="_L408_1_1" targetType="kcg_int"/>
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P057_tracksim_compr" instName="1">
+          <Output scadeName="P005_compressed" scadeType="Common_Types_Pkg::CompressedPacketData_T"
+              targetName="_L383_1_1" targetType="array_int_500"/>
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket057))"
+              targetName="_21__L209_1_1" targetType="array_int_494"/>
+          <Local scadeName="_L383"
+              scadeType="int^((6)
+ +
+ ((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+  -
+  (TM::DIM_MaxElementsPacket057)))"
+              targetName="_L383_1_1" targetType="array_int_500"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="2">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P041" instName="4">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P041_tracksim_compr" instName="1">
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket041))"
+              targetName="_L209_1_4" targetType="array_int_395"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInstance scadeName="+" instName="2"/>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::C_P041_flatten_sections" instName="1">
+            <Local scadeName="_L74" scadeType="TM::P041_section_array_T^((TM::DIM_N_ITER)
+ +
+ (1))"
+                targetName="_L74_1_1_4" targetType="array_int_3_33"/>
+            <Iterator iteratorKind="foldi" scadeSize="99" targetSize="99">
+              <NodeInlining scadeName="TM_lib_internal::C_P041_fs_flatten_array" instName="1">
+                <NodeInstance scadeName="mod" instName="1"/>
+                <NodeInstance scadeName="div" instName="1"/>
+              </NodeInlining>
+            </Iterator>
+            <Iterator iteratorKind="map" scadeSize="33" targetSize="33">
+              <NodeInlining scadeName="TM_lib_internal::C_P041_fs_struct_to_array" instName="1">
+              </NodeInlining>
+            </Iterator>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P041" instName="3">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P041_tracksim_compr" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInstance scadeName="+" instName="2"/>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::C_P041_flatten_sections" instName="1">
+            <Iterator iteratorKind="foldi" scadeSize="99" targetSize="99">
+              <NodeInlining scadeName="TM_lib_internal::C_P041_fs_flatten_array" instName="1">
+                <NodeInstance scadeName="mod" instName="1"/>
+                <NodeInstance scadeName="div" instName="1"/>
+              </NodeInlining>
+            </Iterator>
+            <Iterator iteratorKind="map" scadeSize="33" targetSize="33">
+              <NodeInlining scadeName="TM_lib_internal::C_P041_fs_struct_to_array" instName="1">
+              </NodeInlining>
+            </Iterator>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <NodeInlining scadeName="TM_trackside::Write_P058" instName="1">
+        <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseMessageHeader" instName="1">
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInstance scadeName="-" instName="2"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <NodeInstance scadeName="=" instName="1"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <Iterator iteratorKind="foldw" scadeSize="30" targetSize="30">
+            <NodeInlining scadeName="TM_lib_internal::SEND_FindSlot" instName="1">
+              <NodeInstance scadeName="&lt;&gt;" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_lib_internal::SEND_MessageData" instName="1">
+          <Iterator iteratorKind="mapwi" scadeSize="500" targetSize="500">
+            <NodeInlining scadeName="TM_lib_internal::SEND_WriteBaliseDataElement" instName="1">
+              <NodeInstance scadeName="&gt;=" instName="1"/>
+              <NodeInstance scadeName="&gt;=" instName="2"/>
+              <NodeInstance scadeName="and" instName="1"/>
+              <NodeInstance scadeName="-" instName="1"/>
+            </NodeInlining>
+          </Iterator>
+        </NodeInlining>
+        <NodeInlining scadeName="TM_conversions::C_P058_tracksim_compr" instName="1">
+          <Local scadeName="_L209"
+              scadeType="int^((Common_Types_Pkg::cDIM_MaxDataElementsInRMessage)
+ -
+ (TM::DIM_MaxElementsPacket058))"
+              targetName="_L209_1_1" targetType="array_int_428"/>
+          <NodeInstance scadeName="-" instName="1"/>
+          <NodeInlining scadeName="TM_conversions::CAST_Int_to_Q_DIR" instName="1">
+            <ActivateIf scadeName="IfBlock1">
+              <Condition>
+                <NodeInstance scadeName="=" instName="14"/>
+              </Condition>
+              <Then>
+              </Then>
+              <Else>
+                <Condition>
+                  <NodeInstance scadeName="=" instName="15"/>
+                </Condition>
+                <Then>
+                </Then>
+                <Else>
+                  <Condition>
+                    <NodeInstance scadeName="=" instName="16"/>
+                  </Condition>
+                  <Then>
+                  </Then>
+                  <Else>
+                  </Else>
+                </Else>
+              </Else>
+            </ActivateIf>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_DeterminePacketSizeInt" instName="1">
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="+" instName="1"/>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::C_P058_flatten_sections" instName="1">
+            <Local scadeName="_L74" scadeType="TM::P058_section_array_T^(TM::DIM_N_ITER)" targetName="_L74_1_1_1"
+                targetType="array_int_2_32"/>
+            <Iterator iteratorKind="foldi" scadeSize="64" targetSize="64">
+              <NodeInlining scadeName="TM_lib_internal::C_P058_fs_flatten_array" instName="1">
+                <NodeInstance scadeName="mod" instName="1"/>
+                <NodeInstance scadeName="div" instName="1"/>
+              </NodeInlining>
+            </Iterator>
+            <Iterator iteratorKind="map" scadeSize="32" targetSize="32">
+              <NodeInlining scadeName="TM_lib_internal::C_P058_fs_struct_to_array" instName="1">
+              </NodeInlining>
+            </Iterator>
+          </NodeInlining>
+          <NodeInlining scadeName="TM_lib_internal::T_Build_Metadata_Packet_ID" instName="1">
+            <NodeInstance scadeName="=" instName="1"/>
+            <NodeInstance scadeName="not" instName="1"/>
+            <NodeInstance scadeName="*" instName="1"/>
+            <NodeInstance scadeName="+" instName="1"/>
+            <NodeInstance scadeName="*" instName="2"/>
+            <NodeInstance scadeName="*" instName="4"/>
+            <NodeInstance scadeName="*" instName="3"/>
+          </NodeInlining>
+        </NodeInlining>
+      </NodeInlining>
+      <OutCtxType targetName="outC_SEND_MergeRadioPackets_TM_old_versions"/>
+      <InCtxType targetName="inC_SEND_MergeRadioPackets_TM_old_versions"/>
+    </RootNode>
+  </Package>
+  <Package scadeName="TM_trackside_baseline2">
+    <ExpNode scadeName="Write_P003V1"/>
+    <ExpNode scadeName="Write_P027V1"/>
+  </Package>
+  <Package scadeName="TM_lib_internal">
+    <Constant scadeName="DIM_offset_metadata_nid_packet" scadeType="int"
+        targetName="DIM_offset_metadata_nid_packet_TM_lib_internal" targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DIM_offset_metadata_m_version" scadeType="int"
+        targetName="DIM_offset_metadata_m_version_TM_lib_internal" targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DIM_offset_metadata_id" scadeType="int" targetName="DIM_offset_metadata_id_TM_lib_internal"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DIM_offset_metadata_q_dir" scadeType="int"
+        targetName="DIM_offset_metadata_q_dir_TM_lib_internal" targetType="kcg_int" macroDef="true"/>
+    <ExpNode scadeName="SEND_WriteBaliseMessageHeader"/>
+    <ExpNode scadeName="SEND_FindSlot"/>
+    <ExpNode scadeName="SEND_MessageData"/>
+    <ExpNode scadeName="SEND_WriteBaliseDataElement"/>
+    <ExpNode scadeName="T_DeterminePacketSizeInt"/>
+    <ExpNode scadeName="T_Build_Metadata_Packet_ID"/>
+    <ExpNode scadeName="C_P005_flatten_sections"/>
+    <ExpNode scadeName="C_P005_fs_flatten_array"/>
+    <ExpNode scadeName="C_P005_fs_struct_to_array"/>
+    <ExpNode scadeName="C_P015_flatten_sections"/>
+    <ExpNode scadeName="C_P015_fs_flatten_array"/>
+    <ExpNode scadeName="C_P015_fs_struct_to_array"/>
+    <ExpNode scadeName="C_P021_flatten_sections"/>
+    <ExpNode scadeName="C_P021_fs_flatten_array"/>
+    <ExpNode scadeName="C_P021_fs_struct_to_array"/>
+    <ExpNode scadeName="SEND_WriteMessageHeader"/>
+    <ExpNode scadeName="C_P027_flatten_sections_qdiff"/>
+    <ExpNode scadeName="C_P027V1_fs_flatten_array_qdiff"/>
+    <ExpNode scadeName="C_P027V1_fs_struct_to_array_qdiff"/>
+    <ExpNode scadeName="C_P041_flatten_sections"/>
+    <ExpNode scadeName="C_P041_fs_flatten_array"/>
+    <ExpNode scadeName="C_P041_fs_struct_to_array"/>
+    <ExpNode scadeName="C_P058_flatten_sections"/>
+    <ExpNode scadeName="C_P058_fs_flatten_array"/>
+    <ExpNode scadeName="C_P058_fs_struct_to_array"/>
+  </Package>
+  <Package scadeName="TM">
+    <Constant scadeName="DEFAULT_Headers" scadeType="Common_Types_Pkg::Metadata_T" targetName="DEFAULT_Headers_TM"
+        targetType="Metadata_T_Common_Types_Pkg"/>
+    <Constant scadeName="DIM_MaxRMessages" scadeType="int" targetName="DIM_MaxRMessages_TM" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="DIM_N_ITER" scadeType="int" targetName="DIM_N_ITER_TM" targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="INT_M_VERSION_1_0" scadeType="int" targetName="INT_M_VERSION_1_0_TM" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="ERROR_nid_packet" scadeType="int" targetName="ERROR_nid_packet_TM" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="DIM_MaxElementsPacket005" scadeType="int" targetName="DIM_MaxElementsPacket005_TM"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_P005_sections_array_flat" scadeType="TM::P005_sections_array_flat_T"
+        targetName="DEFAULT_P005_sections_array_flat_TM" targetType="P005_sections_array_flat_T_TM"/>
+    <Constant scadeName="INT_M_VERSION_2_0" scadeType="int" targetName="INT_M_VERSION_2_0_TM" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="DIM_MaxElementsPacket015" scadeType="int" targetName="DIM_MaxElementsPacket015_TM"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_P015_sections_array_flat" scadeType="TM::P015_sections_array_flat_T"
+        targetName="DEFAULT_P015_sections_array_flat_TM" targetType="P015_sections_array_flat_T_TM"/>
+    <Constant scadeName="DIM_MaxElementsPacket021" scadeType="int" targetName="DIM_MaxElementsPacket021_TM"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_P021_sections_array_flat" scadeType="TM::P021_sections_array_flat_T"
+        targetName="DEFAULT_P021_sections_array_flat_TM" targetType="P021_sections_array_flat_T_TM"/>
+    <Constant scadeName="DIM_MaxElementsPacket027v1_body" scadeType="int"
+        targetName="DIM_MaxElementsPacket027v1_body_TM" targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DIM_MaxElementsPacket027v1_section" scadeType="int"
+        targetName="DIM_MaxElementsPacket027v1_section_TM" targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_Packets" scadeType="Common_Types_Pkg::CompressedPackets_T"
+        targetName="DEFAULT_Packets_TM" targetType="CompressedPackets_T_Common_Types_Pkg"/>
+    <Constant scadeName="DIM_MaxElementsPacket057" scadeType="int" targetName="DIM_MaxElementsPacket057_TM"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DIM_MaxElementsPacket041" scadeType="int" targetName="DIM_MaxElementsPacket041_TM"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_P041_sections_array_flat" scadeType="TM::P041_sections_array_flat_T"
+        targetName="DEFAULT_P041_sections_array_flat_TM" targetType="P041_sections_array_flat_T_TM"/>
+    <Constant scadeName="DIM_MaxElementsPacket058" scadeType="int" targetName="DIM_MaxElementsPacket058_TM"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_P058_sections_array_flat" scadeType="TM::P058_sections_array_flat_T"
+        targetName="DEFAULT_P058_sections_array_flat_TM" targetType="P058_sections_array_flat_T_TM"/>
+    <NamedType scadeName="nid_packet_meta" targetName="nid_packet_meta_TM" refType="kcg_int"/>
+    <NamedType scadeName="P005_trackside_int_T" targetName="P005_trackside_int_T_TM" refType="struct__11214"/>
+    <NamedType scadeName="P005_trackide_sectionlist_T" targetName="P005_trackide_sectionlist_T_TM"
+        refType="array__11211"/>
+    <NamedType scadeName="P005_section_int_T" targetName="P005_section_int_T_TM" refType="struct__11201"/>
+    <NamedType scadeName="P005_sections_array_flat_T" targetName="P005_sections_array_flat_T_TM"
+        refType="array_int_231"/>
+    <NamedType scadeName="P005_OBU_sectionlist_array_T" targetName="P005_OBU_sectionlist_array_T_TM"
+        refType="array_int_7_33"/>
+    <NamedType scadeName="P005_section_array_T" targetName="P005_section_array_T_TM" refType="array_int_7"/>
+    <NamedType scadeName="P005_OBU_sectionlist_int_T" targetName="P005_OBU_sectionlist_int_T_TM"
+        refType="array__11231"/>
+    <NamedType scadeName="P015_trackside_int_T" targetName="P015_trackside_int_T_TM" refType="struct__11165"/>
+    <NamedType scadeName="P015_trackide_sectionlist_T" targetName="P015_trackide_sectionlist_T_TM"
+        refType="array__11162"/>
+    <NamedType scadeName="P015_section_int_T" targetName="P015_section_int_T_TM" refType="struct__11155"/>
+    <NamedType scadeName="P015_sections_array_flat_T" targetName="P015_sections_array_flat_T_TM"
+        refType="array_int_128"/>
+    <NamedType scadeName="P015_OBU_sectionlist_array_T" targetName="P015_OBU_sectionlist_array_T_TM"
+        refType="array_int_4_32"/>
+    <NamedType scadeName="P015_section_array_T" targetName="P015_section_array_T_TM" refType="array_int_4"/>
+    <NamedType scadeName="P015_OBU_sectionlist_int_T" targetName="P015_OBU_sectionlist_int_T_TM"
+        refType="array__11162"/>
+    <NamedType scadeName="P021_trackside_int_T" targetName="P021_trackside_int_T_TM" refType="struct__11136"/>
+    <NamedType scadeName="P021_trackide_sectionlist_T" targetName="P021_trackide_sectionlist_T_TM"
+        refType="array__11133"/>
+    <NamedType scadeName="P021_section_int_T" targetName="P021_section_int_T_TM" refType="struct__11127"/>
+    <NamedType scadeName="P021_sections_array_flat_T" targetName="P021_sections_array_flat_T_TM"
+        refType="array_int_99"/>
+    <NamedType scadeName="P021_OBU_sectionlist_array_T" targetName="P021_OBU_sectionlist_array_T_TM"
+        refType="array_int_3_33"/>
+    <NamedType scadeName="P021_section_array_T" targetName="P021_section_array_T_TM" refType="array_int_3"/>
+    <NamedType scadeName="P021_OBU_sectionlist_int_T" targetName="P021_OBU_sectionlist_int_T_TM"
+        refType="array__11149"/>
+    <NamedType scadeName="P057_trackside_int_T" targetName="P057_trackside_int_T_TM" refType="struct__11117"/>
+    <NamedType scadeName="P041_trackside_int_T" targetName="P041_trackside_int_T_TM" refType="struct__11094"/>
+    <NamedType scadeName="P041_trackide_sectionlist_T" targetName="P041_trackide_sectionlist_T_TM"
+        refType="array__11091"/>
+    <NamedType scadeName="P041_section_int_T" targetName="P041_section_int_T_TM" refType="struct__11085"/>
+    <NamedType scadeName="P041_sections_array_flat_T" targetName="P041_sections_array_flat_T_TM"
+        refType="array_int_99"/>
+    <NamedType scadeName="P041_OBU_sectionlist_array_T" targetName="P041_OBU_sectionlist_array_T_TM"
+        refType="array_int_3_33"/>
+    <NamedType scadeName="P041_section_array_T" targetName="P041_section_array_T_TM" refType="array_int_3"/>
+    <NamedType scadeName="P041_OBU_sectionlist_int_T" targetName="P041_OBU_sectionlist_int_T_TM"
+        refType="array__11108"/>
+    <NamedType scadeName="P058_trackside_int_T" targetName="P058_trackside_int_T_TM" refType="struct__11055"/>
+    <NamedType scadeName="P058_trackide_sectionlist_T" targetName="P058_trackide_sectionlist_T_TM"
+        refType="array__11052"/>
+    <NamedType scadeName="P058_section_int_T" targetName="P058_section_int_T_TM" refType="struct__11047"/>
+    <NamedType scadeName="P058_sections_array_flat_T" targetName="P058_sections_array_flat_T_TM"
+        refType="array_int_64"/>
+    <NamedType scadeName="P058_OBU_sectionlist_array_T" targetName="P058_OBU_sectionlist_array_T_TM"
+        refType="array_int_2_32"/>
+    <NamedType scadeName="P058_section_array_T" targetName="P058_section_array_T_TM" refType="array_int_2"/>
+    <NamedType scadeName="P058_OBU_sectionlist_int_T" targetName="P058_OBU_sectionlist_int_T_TM"
+        refType="array__11052"/>
+    <NamedType scadeName="CompressedRadioMessage" targetName="CompressedRadioMessage_TM" refType="struct__11324"/>
+    <NamedType scadeName="Radio_TrackTrain_Header_T" targetName="Radio_TrackTrain_Header_T_TM" refType="struct__11306"/>
+  </Package>
+  <Package scadeName="Common_Types_Pkg">
+    <Constant scadeName="cMetadataArraySize" scadeType="int" targetName="cMetadataArraySize_Common_Types_Pkg"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="cDIM_MaxRMessages" scadeType="int" targetName="cDIM_MaxRMessages_Common_Types_Pkg"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="cDIM_MaxDataElementsInRMessage" scadeType="int"
+        targetName="cDIM_MaxDataElementsInRMessage_Common_Types_Pkg" targetType="kcg_int" macroDef="true"/>
+    <NamedType scadeName="Metadata_T" targetName="Metadata_T_Common_Types_Pkg" refType="array__11074"/>
+    <NamedType scadeName="MetadataElement_T" targetName="MetadataElement_T_Common_Types_Pkg" refType="struct__11036"/>
+    <NamedType scadeName="CompressedPacketData_T" targetName="CompressedPacketData_T_Common_Types_Pkg"
+        refType="array_int_500"/>
+    <NamedType scadeName="CompressedPackets_T" targetName="CompressedPackets_T_Common_Types_Pkg"
+        refType="struct__11077"/>
+  </Package>
+  <Package scadeName="TM_conversions_baseline2">
+    <ExpNode scadeName="C_P003V1_tracksim_compr"/>
+    <ExpNode scadeName="C_P027V1_tracksim_compr_body"/>
+    <ExpNode scadeName="C_P027V1_tracksim_merge_sections"/>
+    <ExpNode scadeName="C_P027V1_tracksim_compr_one_section"/>
+  </Package>
+  <Package scadeName="TM_baseline2">
+    <Constant scadeName="DIM_MaxElementsPacket003V1" scadeType="int"
+        targetName="DIM_MaxElementsPacket003V1_TM_baseline2" targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="DEFAULT_P027V1_sections_array_qdiff_flat"
+        scadeType="TM_baseline2::P027V1_sections_array_flat_qdiff_T"
+        targetName="DEFAULT_P027V1_sections_array_qdiff_flat_TM_baseline2"
+        targetType="P027V1_sections_array_flat_qdiff_T_TM_baseline2"/>
+    <NamedType scadeName="P003V1_trackside_int_T" targetName="P003V1_trackside_int_T_TM_baseline2"
+        refType="struct__11277"/>
+    <NamedType scadeName="P003V1_trackide_sectionlist_T" targetName="P003V1_trackide_sectionlist_T_TM_baseline2"
+        refType="array_int_32"/>
+    <NamedType scadeName="P027V1_trackside_int_T" targetName="P027V1_trackside_int_T_TM_baseline2"
+        refType="struct__11259"/>
+    <NamedType scadeName="P027V1_trackside_qdifflist_T" targetName="P027V1_trackside_qdifflist_T_TM_baseline2"
+        refType="array__11245"/>
+    <NamedType scadeName="P027V1_section_int_qdiff_T" targetName="P027V1_section_int_qdiff_T_TM_baseline2"
+        refType="struct__11240"/>
+    <NamedType scadeName="P027V1_trackside_sectionlist_T" targetName="P027V1_trackside_sectionlist_T_TM_baseline2"
+        refType="array__11256"/>
+    <NamedType scadeName="P027V1_section_int_T" targetName="P027V1_section_int_T_TM_baseline2" refType="struct__11248"/>
+    <NamedType scadeName="P027V1_OBU_sectionlist_int_T" targetName="P027V1_OBU_sectionlist_int_T_TM_baseline2"
+        refType="array__11329"/>
+    <NamedType scadeName="P027V1_sections_array_flat_qdiff_T"
+        targetName="P027V1_sections_array_flat_qdiff_T_TM_baseline2" refType="array_int_64"/>
+    <NamedType scadeName="P027V1_OBU_sectionlist_array_qdiff_T"
+        targetName="P027V1_OBU_sectionlist_array_qdiff_T_TM_baseline2" refType="array_int_2_32"/>
+    <NamedType scadeName="P027V1_section_array_qdiff_T" targetName="P027V1_section_array_qdiff_T_TM_baseline2"
+        refType="array_int_2"/>
+    <NamedType scadeName="P027V1_OBU_sectionlist_int_qdiff_T"
+        targetName="P027V1_OBU_sectionlist_int_qdiff_T_TM_baseline2" refType="array__11245"/>
+  </Package>
+  <Package scadeName="TM_conversions">
+    <Constant scadeName="INT_Q_DIR_nomiinal" scadeType="int" targetName="INT_Q_DIR_nomiinal_TM_conversions"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="INT_Q_DIR_reverse" scadeType="int" targetName="INT_Q_DIR_reverse_TM_conversions"
+        targetType="kcg_int" macroDef="true"/>
+    <Constant scadeName="INT_Q_DIR_both" scadeType="int" targetName="INT_Q_DIR_both_TM_conversions" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="ENUM_Q_DIR_both" scadeType="Q_DIR" targetName="ENUM_Q_DIR_both_TM_conversions"
+        targetType="Q_DIR" macroDef="true"/>
+    <Constant scadeName="ENUM_Q_DIR_reverse" scadeType="Q_DIR" targetName="ENUM_Q_DIR_reverse_TM_conversions"
+        targetType="Q_DIR" macroDef="true"/>
+    <Constant scadeName="ENUM_Q_DIR_nominal" scadeType="Q_DIR" targetName="ENUM_Q_DIR_nominal_TM_conversions"
+        targetType="Q_DIR" macroDef="true"/>
+    <ExpNode scadeName="CAST_Int_to_Q_DIR"/>
+    <ExpNode scadeName="C_P005_tracksim_compr"/>
+    <ExpNode scadeName="C_P015_tracksim_compr"/>
+    <ExpNode scadeName="C_P021_tracksim_compr"/>
+    <ExpNode scadeName="C_P057_tracksim_compr"/>
+    <ExpNode scadeName="C_P041_tracksim_compr"/>
+    <ExpNode scadeName="C_P058_tracksim_compr"/>
+  </Package>
+  <Package scadeName="TM_trackside">
+    <ExpNode scadeName="Write_P005"/>
+    <ExpNode scadeName="Write_P015"/>
+    <ExpNode scadeName="Write_P021"/>
+    <ExpNode scadeName="Write_P057"/>
+    <ExpNode scadeName="Write_P041"/>
+    <ExpNode scadeName="Write_P058"/>
+  </Package>
+  <Option name="root_node_name" value="TM_old_versions::SEND_MergeRadioPackets"/>
+  <Option name="target" value="C"/>
+  <Option name="target_dir"
+      value="C:/GITHUB/modeling/model/Scade/System/ObuFunctions/ETCS_Messaging/TrackMessages/KCG-ERSA/merged_example"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="optimization_level" value="1"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="global_prefix" value="#off#"/>
+  <Option name="name_length" value="200"/>
+  <Option name="significance_length" value="200"/>
+  <Option name="header" value="#off#"/>
+  <Option name="input_threshold" value="#off#"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="input_file"
+      value="C:/GITHUB/modeling/model/Scade/System/ObuFunctions/ETCS_Messaging/TrackMessages/KCG-ERSA/merged_example/scade_model_without_unused.scade"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+  <ArrayType targetName="array_int_500" cellType="kcg_int" size="500" targetCopyFct="kcg_copy_array_int_500"
+      targetCompFct="kcg_comp_array_int_500"/>
+  <StructType targetName="struct__11036" targetCopyFct="kcg_copy_struct__11036" targetCompFct="kcg_comp_struct__11036">
+    <Field scadeName="nid_packet" scadeType="NID_PACKET" targetName="nid_packet" targetType="kcg_int"/>
+    <Field scadeName="q_dir" scadeType="Q_DIR" targetName="q_dir" targetType="Q_DIR"/>
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="startAddress" scadeType="int" targetName="startAddress" targetType="kcg_int"/>
+    <Field scadeName="endAddress" scadeType="int" targetName="endAddress" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array_int_64" cellType="kcg_int" size="64" targetCopyFct="kcg_copy_array_int_64"
+      targetCompFct="kcg_comp_array_int_64"/>
+  <StructType targetName="struct__11047" targetCopyFct="kcg_copy_struct__11047" targetCompFct="kcg_comp_struct__11047">
+    <Field scadeName="D_LOC" scadeType="int" targetName="D_LOC" targetType="kcg_int"/>
+    <Field scadeName="Q_LGTLOC" scadeType="int" targetName="Q_LGTLOC" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array__11052" cellType="struct__11047" size="32" targetCopyFct="kcg_copy_array__11052"
+      targetCompFct="kcg_comp_array__11052"/>
+  <StructType targetName="struct__11055" targetCopyFct="kcg_copy_struct__11055" targetCompFct="kcg_comp_struct__11055">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="T_CYCLOC" scadeType="int" targetName="T_CYCLOC" targetType="kcg_int"/>
+    <Field scadeName="D_CYCLOC" scadeType="int" targetName="D_CYCLOC" targetType="kcg_int"/>
+    <Field scadeName="M_LOC" scadeType="int" targetName="M_LOC" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS" scadeType="TM::P058_trackide_sectionlist_T" targetName="SECTIONS"
+        targetType="array__11052"/>
+  </StructType>
+  <ArrayType targetName="array_int_2" cellType="kcg_int" size="2" targetCopyFct="kcg_copy_array_int_2"
+      targetCompFct="kcg_comp_array_int_2"/>
+  <ArrayType targetName="array_int_2_32" cellType="array_int_2" size="32" targetCopyFct="kcg_copy_array_int_2_32"
+      targetCompFct="kcg_comp_array_int_2_32"/>
+  <ArrayType targetName="array__11074" cellType="struct__11036" size="30" targetCopyFct="kcg_copy_array__11074"
+      targetCompFct="kcg_comp_array__11074"/>
+  <StructType targetName="struct__11077" targetCopyFct="kcg_copy_struct__11077" targetCompFct="kcg_comp_struct__11077">
+    <Field scadeName="PacketHeaders" scadeType="Common_Types_Pkg::Metadata_T" targetName="PacketHeaders"
+        targetType="array__11074"/>
+    <Field scadeName="PacketData" scadeType="Common_Types_Pkg::CompressedPacketData_T" targetName="PacketData"
+        targetType="array_int_500"/>
+  </StructType>
+  <ArrayType targetName="array_int_99" cellType="kcg_int" size="99" targetCopyFct="kcg_copy_array_int_99"
+      targetCompFct="kcg_comp_array_int_99"/>
+  <StructType targetName="struct__11085" targetCopyFct="kcg_copy_struct__11085" targetCompFct="kcg_comp_struct__11085">
+    <Field scadeName="M_LEVELTR" scadeType="int" targetName="M_LEVELTR" targetType="kcg_int"/>
+    <Field scadeName="NID_NTC" scadeType="int" targetName="NID_NTC" targetType="kcg_int"/>
+    <Field scadeName="L_ACKLEVELTR" scadeType="int" targetName="L_ACKLEVELTR" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array__11091" cellType="struct__11085" size="32" targetCopyFct="kcg_copy_array__11091"
+      targetCompFct="kcg_comp_array__11091"/>
+  <StructType targetName="struct__11094" targetCopyFct="kcg_copy_struct__11094" targetCompFct="kcg_comp_struct__11094">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="D_LEVELTR" scadeType="int" targetName="D_LEVELTR" targetType="kcg_int"/>
+    <Field scadeName="M_LEVELTR" scadeType="int" targetName="M_LEVELTR" targetType="kcg_int"/>
+    <Field scadeName="NID_NTC" scadeType="int" targetName="NID_NTC" targetType="kcg_int"/>
+    <Field scadeName="L_ACKLEVELTR" scadeType="int" targetName="L_ACKLEVELTR" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS" scadeType="TM::P041_trackide_sectionlist_T" targetName="SECTIONS"
+        targetType="array__11091"/>
+  </StructType>
+  <ArrayType targetName="array__11108" cellType="struct__11085" size="33" targetCopyFct="kcg_copy_array__11108"
+      targetCompFct="kcg_comp_array__11108"/>
+  <ArrayType targetName="array_int_3" cellType="kcg_int" size="3" targetCopyFct="kcg_copy_array_int_3"
+      targetCompFct="kcg_comp_array_int_3"/>
+  <ArrayType targetName="array_int_3_33" cellType="array_int_3" size="33" targetCopyFct="kcg_copy_array_int_3_33"
+      targetCompFct="kcg_comp_array_int_3_33"/>
+  <StructType targetName="struct__11117" targetCopyFct="kcg_copy_struct__11117" targetCompFct="kcg_comp_struct__11117">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="T_MAR" scadeType="int" targetName="T_MAR" targetType="kcg_int"/>
+    <Field scadeName="T_TIMEOUTRQST" scadeType="int" targetName="T_TIMEOUTRQST" targetType="kcg_int"/>
+    <Field scadeName="T_CYCRQST" scadeType="int" targetName="T_CYCRQST" targetType="kcg_int"/>
+  </StructType>
+  <StructType targetName="struct__11127" targetCopyFct="kcg_copy_struct__11127" targetCompFct="kcg_comp_struct__11127">
+    <Field scadeName="D_GRADIENT" scadeType="int" targetName="D_GRADIENT" targetType="kcg_int"/>
+    <Field scadeName="Q_GDIR" scadeType="int" targetName="Q_GDIR" targetType="kcg_int"/>
+    <Field scadeName="G_A" scadeType="int" targetName="G_A" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array__11133" cellType="struct__11127" size="32" targetCopyFct="kcg_copy_array__11133"
+      targetCompFct="kcg_comp_array__11133"/>
+  <StructType targetName="struct__11136" targetCopyFct="kcg_copy_struct__11136" targetCompFct="kcg_comp_struct__11136">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="D_GRADIENT" scadeType="int" targetName="D_GRADIENT" targetType="kcg_int"/>
+    <Field scadeName="Q_GDIR" scadeType="int" targetName="Q_GDIR" targetType="kcg_int"/>
+    <Field scadeName="G_A" scadeType="int" targetName="G_A" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS" scadeType="TM::P021_trackide_sectionlist_T" targetName="SECTIONS"
+        targetType="array__11133"/>
+  </StructType>
+  <ArrayType targetName="array__11149" cellType="struct__11127" size="33" targetCopyFct="kcg_copy_array__11149"
+      targetCompFct="kcg_comp_array__11149"/>
+  <ArrayType targetName="array_int_128" cellType="kcg_int" size="128" targetCopyFct="kcg_copy_array_int_128"
+      targetCompFct="kcg_comp_array_int_128"/>
+  <StructType targetName="struct__11155" targetCopyFct="kcg_copy_struct__11155" targetCompFct="kcg_comp_struct__11155">
+    <Field scadeName="L_SECTION" scadeType="int" targetName="L_SECTION" targetType="kcg_int"/>
+    <Field scadeName="Q_SECTIONTIMER" scadeType="int" targetName="Q_SECTIONTIMER" targetType="kcg_int"/>
+    <Field scadeName="T_SECTIONTIMER" scadeType="int" targetName="T_SECTIONTIMER" targetType="kcg_int"/>
+    <Field scadeName="D_SECTIONTIMERSTOPLOC" scadeType="int" targetName="D_SECTIONTIMERSTOPLOC" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array__11162" cellType="struct__11155" size="32" targetCopyFct="kcg_copy_array__11162"
+      targetCompFct="kcg_comp_array__11162"/>
+  <StructType targetName="struct__11165" targetCopyFct="kcg_copy_struct__11165" targetCompFct="kcg_comp_struct__11165">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="V_LOA" scadeType="int" targetName="V_LOA" targetType="kcg_int"/>
+    <Field scadeName="T_LOA" scadeType="int" targetName="T_LOA" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS" scadeType="TM::P015_trackide_sectionlist_T" targetName="SECTIONS"
+        targetType="array__11162"/>
+    <Field scadeName="L_ENDSECTION" scadeType="int" targetName="L_ENDSECTION" targetType="kcg_int"/>
+    <Field scadeName="Q_SECTIONTIMER" scadeType="int" targetName="Q_SECTIONTIMER" targetType="kcg_int"/>
+    <Field scadeName="T_SECTIONTIMER" scadeType="int" targetName="T_SECTIONTIMER" targetType="kcg_int"/>
+    <Field scadeName="D_SECTIONTIMERSTOPLOC" scadeType="int" targetName="D_SECTIONTIMERSTOPLOC" targetType="kcg_int"/>
+    <Field scadeName="Q_ENDTIMER" scadeType="int" targetName="Q_ENDTIMER" targetType="kcg_int"/>
+    <Field scadeName="T_ENDTIMER" scadeType="int" targetName="T_ENDTIMER" targetType="kcg_int"/>
+    <Field scadeName="D_ENDTIMERSTARTLOC" scadeType="int" targetName="D_ENDTIMERSTARTLOC" targetType="kcg_int"/>
+    <Field scadeName="Q_DANGERPOINT" scadeType="int" targetName="Q_DANGERPOINT" targetType="kcg_int"/>
+    <Field scadeName="D_DP" scadeType="int" targetName="D_DP" targetType="kcg_int"/>
+    <Field scadeName="V_RELEASEDP" scadeType="int" targetName="V_RELEASEDP" targetType="kcg_int"/>
+    <Field scadeName="Q_OVERLAP" scadeType="int" targetName="Q_OVERLAP" targetType="kcg_int"/>
+    <Field scadeName="D_STARTOL" scadeType="int" targetName="D_STARTOL" targetType="kcg_int"/>
+    <Field scadeName="T_OL" scadeType="int" targetName="T_OL" targetType="kcg_int"/>
+    <Field scadeName="D_OL" scadeType="int" targetName="D_OL" targetType="kcg_int"/>
+    <Field scadeName="V_RELEASEOL" scadeType="int" targetName="V_RELEASEOL" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array_int_4" cellType="kcg_int" size="4" targetCopyFct="kcg_copy_array_int_4"
+      targetCompFct="kcg_comp_array_int_4"/>
+  <ArrayType targetName="array_int_4_32" cellType="array_int_4" size="32" targetCopyFct="kcg_copy_array_int_4_32"
+      targetCompFct="kcg_comp_array_int_4_32"/>
+  <ArrayType targetName="array_int_231" cellType="kcg_int" size="231" targetCopyFct="kcg_copy_array_int_231"
+      targetCompFct="kcg_comp_array_int_231"/>
+  <StructType targetName="struct__11201" targetCopyFct="kcg_copy_struct__11201" targetCompFct="kcg_comp_struct__11201">
+    <Field scadeName="D_LINK" scadeType="int" targetName="D_LINK" targetType="kcg_int"/>
+    <Field scadeName="Q_NEWCOUNTRY" scadeType="int" targetName="Q_NEWCOUNTRY" targetType="kcg_int"/>
+    <Field scadeName="NID_C" scadeType="int" targetName="NID_C" targetType="kcg_int"/>
+    <Field scadeName="NID_BG" scadeType="int" targetName="NID_BG" targetType="kcg_int"/>
+    <Field scadeName="Q_LINKORIENTATION" scadeType="int" targetName="Q_LINKORIENTATION" targetType="kcg_int"/>
+    <Field scadeName="Q_LINKREACTION" scadeType="int" targetName="Q_LINKREACTION" targetType="kcg_int"/>
+    <Field scadeName="Q_LOCACC" scadeType="int" targetName="Q_LOCACC" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array__11211" cellType="struct__11201" size="32" targetCopyFct="kcg_copy_array__11211"
+      targetCompFct="kcg_comp_array__11211"/>
+  <StructType targetName="struct__11214" targetCopyFct="kcg_copy_struct__11214" targetCompFct="kcg_comp_struct__11214">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="D_LINK" scadeType="int" targetName="D_LINK" targetType="kcg_int"/>
+    <Field scadeName="Q_NEWCOUNTRY" scadeType="int" targetName="Q_NEWCOUNTRY" targetType="kcg_int"/>
+    <Field scadeName="NID_C" scadeType="int" targetName="NID_C" targetType="kcg_int"/>
+    <Field scadeName="NID_BG" scadeType="int" targetName="NID_BG" targetType="kcg_int"/>
+    <Field scadeName="Q_LINKORIENTATION" scadeType="int" targetName="Q_LINKORIENTATION" targetType="kcg_int"/>
+    <Field scadeName="Q_LINKREACTION" scadeType="int" targetName="Q_LINKREACTION" targetType="kcg_int"/>
+    <Field scadeName="Q_LOCACC" scadeType="int" targetName="Q_LOCACC" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS" scadeType="TM::P005_trackide_sectionlist_T" targetName="SECTIONS"
+        targetType="array__11211"/>
+  </StructType>
+  <ArrayType targetName="array__11231" cellType="struct__11201" size="33" targetCopyFct="kcg_copy_array__11231"
+      targetCompFct="kcg_comp_array__11231"/>
+  <ArrayType targetName="array_int_7" cellType="kcg_int" size="7" targetCopyFct="kcg_copy_array_int_7"
+      targetCompFct="kcg_comp_array_int_7"/>
+  <ArrayType targetName="array_int_7_33" cellType="array_int_7" size="33" targetCopyFct="kcg_copy_array_int_7_33"
+      targetCompFct="kcg_comp_array_int_7_33"/>
+  <StructType targetName="struct__11240" targetCopyFct="kcg_copy_struct__11240" targetCompFct="kcg_comp_struct__11240">
+    <Field scadeName="NC_DIFF" scadeType="int" targetName="NC_DIFF" targetType="kcg_int"/>
+    <Field scadeName="V_DIFF" scadeType="int" targetName="V_DIFF" targetType="kcg_int"/>
+  </StructType>
+  <ArrayType targetName="array__11245" cellType="struct__11240" size="32" targetCopyFct="kcg_copy_array__11245"
+      targetCompFct="kcg_comp_array__11245"/>
+  <StructType targetName="struct__11248" targetCopyFct="kcg_copy_struct__11248" targetCompFct="kcg_comp_struct__11248">
+    <Field scadeName="D_STATIC" scadeType="int" targetName="D_STATIC" targetType="kcg_int"/>
+    <Field scadeName="V_STATIC" scadeType="int" targetName="V_STATIC" targetType="kcg_int"/>
+    <Field scadeName="Q_FRONT" scadeType="int" targetName="Q_FRONT" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS_q_diff" scadeType="TM_baseline2::P027V1_trackside_qdifflist_T"
+        targetName="SECTIONS_q_diff" targetType="array__11245"/>
+  </StructType>
+  <ArrayType targetName="array__11256" cellType="struct__11248" size="32" targetCopyFct="kcg_copy_array__11256"
+      targetCompFct="kcg_comp_array__11256"/>
+  <StructType targetName="struct__11259" targetCopyFct="kcg_copy_struct__11259" targetCompFct="kcg_comp_struct__11259">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="D_STATIC" scadeType="int" targetName="D_STATIC" targetType="kcg_int"/>
+    <Field scadeName="V_STATIC" scadeType="int" targetName="V_STATIC" targetType="kcg_int"/>
+    <Field scadeName="Q_FRONT" scadeType="int" targetName="Q_FRONT" targetType="kcg_int"/>
+    <Field scadeName="N_ITER_n" scadeType="int" targetName="N_ITER_n" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS_q_diff" scadeType="TM_baseline2::P027V1_trackside_qdifflist_T"
+        targetName="SECTIONS_q_diff" targetType="array__11245"/>
+    <Field scadeName="N_ITER_k" scadeType="int" targetName="N_ITER_k" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS_SSP" scadeType="TM_baseline2::P027V1_trackside_sectionlist_T" targetName="SECTIONS_SSP"
+        targetType="array__11256"/>
+  </StructType>
+  <ArrayType targetName="array_int_32" cellType="kcg_int" size="32" targetCopyFct="kcg_copy_array_int_32"
+      targetCompFct="kcg_comp_array_int_32"/>
+  <StructType targetName="struct__11277" targetCopyFct="kcg_copy_struct__11277" targetCompFct="kcg_comp_struct__11277">
+    <Field scadeName="valid" scadeType="bool" targetName="valid" targetType="kcg_bool"/>
+    <Field scadeName="NID_PACKET" scadeType="int" targetName="NID_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_DIR" scadeType="int" targetName="Q_DIR" targetType="kcg_int"/>
+    <Field scadeName="L_PACKET" scadeType="int" targetName="L_PACKET" targetType="kcg_int"/>
+    <Field scadeName="Q_SCALE" scadeType="int" targetName="Q_SCALE" targetType="kcg_int"/>
+    <Field scadeName="D_VALIDNV" scadeType="int" targetName="D_VALIDNV" targetType="kcg_int"/>
+    <Field scadeName="N_ITER" scadeType="int" targetName="N_ITER" targetType="kcg_int"/>
+    <Field scadeName="SECTIONS" scadeType="TM_baseline2::P003V1_trackide_sectionlist_T" targetName="SECTIONS"
+        targetType="array_int_32"/>
+    <Field scadeName="V_NVSHUNT" scadeType="int" targetName="V_NVSHUNT" targetType="kcg_int"/>
+    <Field scadeName="V_NVSTFF" scadeType="int" targetName="V_NVSTFF" targetType="kcg_int"/>
+    <Field scadeName="V_NVONSIGHT" scadeType="int" targetName="V_NVONSIGHT" targetType="kcg_int"/>
+    <Field scadeName="V_NVUNFIT" scadeType="int" targetName="V_NVUNFIT" targetType="kcg_int"/>
+    <Field scadeName="V_NVREL" scadeType="int" targetName="V_NVREL" targetType="kcg_int"/>
+    <Field scadeName="D_NVROLL" scadeType="int" targetName="D_NVROLL" targetType="kcg_int"/>
+    <Field scadeName="Q_NVSRBKTRG" scadeType="int" targetName="Q_NVSRBKTRG" targetType="kcg_int"/>
+    <Field scadeName="Q_NVEMRRLS" scadeType="int" targetName="Q_NVEMRRLS" targetType="kcg_int"/>
+    <Field scadeName="V_NVALLOWOVTRP" scadeType="int" targetName="V_NVALLOWOVTRP" targetType="kcg_int"/>
+    <Field scadeName="V_NVSUPOVTRP" scadeType="int" targetName="V_NVSUPOVTRP" targetType="kcg_int"/>
+    <Field scadeName="D_NVOVTRP" scadeType="int" targetName="D_NVOVTRP" targetType="kcg_int"/>
+    <Field scadeName="T_NVOVTRP" scadeType="int" targetName="T_NVOVTRP" targetType="kcg_int"/>
+    <Field scadeName="D_NVPOTRP" scadeType="int" targetName="D_NVPOTRP" targetType="kcg_int"/>
+    <Field scadeName="M_NVCONTACT" scadeType="int" targetName="M_NVCONTACT" targetType="kcg_int"/>
+    <Field scadeName="T_NVCONTACT" scadeType="int" targetName="T_NVCONTACT" targetType="kcg_int"/>
+    <Field scadeName="M_NVDERUN" scadeType="int" targetName="M_NVDERUN" targetType="kcg_int"/>
+    <Field scadeName="D_NVSTFF" scadeType="int" targetName="D_NVSTFF" targetType="kcg_int"/>
+    <Field scadeName="Q_NVDRIVER_ADHES" scadeType="int" targetName="Q_NVDRIVER_ADHES" targetType="kcg_int"/>
+  </StructType>
+  <StructType targetName="struct__11306" targetCopyFct="kcg_copy_struct__11306" targetCompFct="kcg_comp_struct__11306">
+    <Field scadeName="radioDevice" scadeType="int" targetName="radioDevice" targetType="kcg_int"/>
+    <Field scadeName="receivedSystemTime" scadeType="int" targetName="receivedSystemTime" targetType="kcg_int"/>
+    <Field scadeName="nid_message" scadeType="int" targetName="nid_message" targetType="kcg_int"/>
+    <Field scadeName="t_train" scadeType="int" targetName="t_train" targetType="kcg_int"/>
+    <Field scadeName="m_ack" scadeType="int" targetName="m_ack" targetType="kcg_int"/>
+    <Field scadeName="nid_lrbg" scadeType="int" targetName="nid_lrbg" targetType="kcg_int"/>
+    <Field scadeName="t_train_reference" scadeType="int" targetName="t_train_reference" targetType="kcg_int"/>
+    <Field scadeName="nid_em" scadeType="int" targetName="nid_em" targetType="kcg_int"/>
+    <Field scadeName="q_scale" scadeType="int" targetName="q_scale" targetType="kcg_int"/>
+    <Field scadeName="d_sr" scadeType="int" targetName="d_sr" targetType="kcg_int"/>
+    <Field scadeName="t_sh_rqst" scadeType="int" targetName="t_sh_rqst" targetType="kcg_int"/>
+    <Field scadeName="d_ref" scadeType="int" targetName="d_ref" targetType="kcg_int"/>
+    <Field scadeName="q_dir" scadeType="int" targetName="q_dir" targetType="kcg_int"/>
+    <Field scadeName="d_emergencystop" scadeType="int" targetName="d_emergencystop" targetType="kcg_int"/>
+    <Field scadeName="m_version" scadeType="int" targetName="m_version" targetType="kcg_int"/>
+  </StructType>
+  <StructType targetName="struct__11324" targetCopyFct="kcg_copy_struct__11324" targetCompFct="kcg_comp_struct__11324">
+    <Field scadeName="Header" scadeType="TM::Radio_TrackTrain_Header_T" targetName="Header" targetType="struct__11306"/>
+    <Field scadeName="Messages" scadeType="Common_Types_Pkg::CompressedPackets_T" targetName="Messages"
+        targetType="struct__11077"/>
+  </StructType>
+  <ArrayType targetName="array__11329" cellType="struct__11248" size="33" targetCopyFct="kcg_copy_array__11329"
+      targetCompFct="kcg_comp_array__11329"/>
+  <ArrayType targetName="array_int_432" cellType="kcg_int" size="432" targetCopyFct="kcg_copy_array_int_432"
+      targetCompFct="kcg_comp_array_int_432"/>
+  <ArrayType targetName="array_int_444" cellType="kcg_int" size="444" targetCopyFct="kcg_copy_array_int_444"
+      targetCompFct="kcg_comp_array_int_444"/>
+  <ArrayType targetName="array_int_264" cellType="kcg_int" size="264" targetCopyFct="kcg_copy_array_int_264"
+      targetCompFct="kcg_comp_array_int_264"/>
+  <ArrayType targetName="array_int_350" cellType="kcg_int" size="350" targetCopyFct="kcg_copy_array_int_350"
+      targetCompFct="kcg_comp_array_int_350"/>
+  <ArrayType targetName="array_int_1" cellType="kcg_int" size="1" targetCopyFct="kcg_copy_array_int_1"
+      targetCompFct="kcg_comp_array_int_1"/>
+  <ArrayType targetName="array_int_396" cellType="kcg_int" size="396" targetCopyFct="kcg_copy_array_int_396"
+      targetCompFct="kcg_comp_array_int_396"/>
+  <ArrayType targetName="array_int_494" cellType="kcg_int" size="494" targetCopyFct="kcg_copy_array_int_494"
+      targetCompFct="kcg_comp_array_int_494"/>
+  <ArrayType targetName="array_int_395" cellType="kcg_int" size="395" targetCopyFct="kcg_copy_array_int_395"
+      targetCompFct="kcg_comp_array_int_395"/>
+  <ArrayType targetName="array_int_428" cellType="kcg_int" size="428" targetCopyFct="kcg_copy_array_int_428"
+      targetCompFct="kcg_comp_array_int_428"/>
+</Model>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** kcg_trace.xml
+** Generation date: 2015-11-16T11:33:59
+*************************************************************$-->
