@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/modeling/test/EnvSim/Scade/Simulation/config.txt
-** Generation date: 2015-10-29T09:08:52
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/GreenTrainside/config.txt
+** Generation date: 2015-11-13T15:17:34
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -35,12 +35,13 @@ void ProbeSDM_reset_EnvSim(outC_ProbeSDM_EnvSim *outC)
 
 /* EnvSim::ProbeSDM */
 void ProbeSDM_EnvSim(
-  /* EnvSim::ProbeSDM::targetCollection */ TargetCollection_T_TargetManagement_types *targetCollection,
-  /* EnvSim::ProbeSDM::curveCollection */ CurveCollection_T_CalcBrakingCurves_types *curveCollection,
+  /* EnvSim::ProbeSDM::targetCollection */ TargetCollection_T_TargetManage *targetCollection,
+  /* EnvSim::ProbeSDM::curveCollection */ CurveCollection_T_CalcBrakingCu *curveCollection,
   /* EnvSim::ProbeSDM::target */ Target_T_TargetManagement_types *target,
   outC_ProbeSDM_EnvSim *outC)
 {
-#ifdef WITH_SCADE
+  /* The body of this function must be provided */
+  #ifdef WITH_SCADE
   if(!ProbeSDM_initialized_EnvSim) {
     ProbeSDM_init_EnvSim(outC);
   }
@@ -50,6 +51,5 @@ void ProbeSDM_EnvSim(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProbeSDM_EnvSim.dc
-** Generation date: 2015-10-29T09:08:52
+** Generation date: 2015-11-13T15:17:34
 *************************************************************$ */
-
