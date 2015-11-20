@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -54,11 +54,11 @@ void BufferMsg_read_write_TM_lib_internal(
           &EMPTY_TrainTrackMessage_TM_lib_internal);
     }
   }
-  kcg_copy_array__136078(&(*Buffer_Out)[1], (array__136078 *) &(*Buffer_In)[0]);
+  kcg_copy_array__136753(&(*Buffer_Out)[1], (array__136753 *) &(*Buffer_In)[0]);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** BufferMsg_read_write_TM_lib_internal.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

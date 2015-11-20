@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,18 +20,28 @@ void Supervision_T_Cycloc_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::Supervision_T_Cycloc::systemTime */SystemTime_T_ProvidePositionReport_Pkg systemTime,
   outC_Supervision_T_Cycloc_ProvidePositionReport_Pkg *outC)
 {
-  if (present) {
-    outC->_L5 = systemTime;
+  /* ProvidePositionReport_Pkg::Supervision_T_Cycloc::_L27 */
+  static T_internal_Type_Obu_BasicTypes_Pkg _L27;
+  
+  if (outC->init) {
+    outC->init = kcg_false;
+    _L27 = 0;
   }
-  else if (outC->init) {
-    outC->_L5 = 0;
+  else {
+    _L27 = outC->lastTime;
   }
-  outC->init = kcg_false;
-  outC->trigger = ((systemTime - outC->_L5) % tcycloc == 0) & (255 != tcycloc);
+  outC->trigger = (tcycloc > 0) & (tcycloc < 255) & (systemTime - _L27 >=
+      tcycloc * cTimeToElapse_ProvidePositionReport_Pkg);
+  if (outC->trigger) {
+    outC->lastTime = systemTime;
+  }
+  else {
+    outC->lastTime = _L27;
+  }
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Supervision_T_Cycloc_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -47,7 +47,7 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
       passedBG_out);
     (*passedBG_out).BG_Common_Header.noCoordinateSystemHasBeenAssigned =
       kcg_true;
-    *nid_errorBG = 0;
+    *nid_errorBG = 16383;
     *nid_c = 0;
   }
   else if (isComplete) {
@@ -68,7 +68,7 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
       (kcg_bool) (tmp2 > tmp1),
       &tmp,
       passedBG_out);
-    *nid_errorBG = 0;
+    *nid_errorBG = 16383;
     *nid_c = 0;
   }
   else {
@@ -88,6 +88,6 @@ void CaseLinkingNotInUse_CheckBGConsistency_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CaseLinkingNotInUse_CheckBGConsistency_Pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

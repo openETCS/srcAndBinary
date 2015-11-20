@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,36 +20,48 @@ void AFB_Toolbox_Physics(
   /* Toolbox::Physics::AFB::currentSpeed */kcg_real currentSpeed,
   outC_AFB_Toolbox_Physics *outC)
 {
-  outC->IfBlock1_clock = targetSpeed > 0.0;
-  outC->afbActive = outC->IfBlock1_clock;
-  outC->realTargetSpeed = targetSpeed - 0.8;
-  if (outC->IfBlock1_clock) {
-    outC->_1_IfBlock2_clock_IfBlock1 = (currentSpeed < outC->realTargetSpeed +
-        0.5) & (currentSpeed > outC->realTargetSpeed - 0.5);
-    if (outC->_1_IfBlock2_clock_IfBlock1) {
+  /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2 */
+  static kcg_bool IfBlock2_clock_IfBlock1;
+  /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else::then::_L7 */
+  static kcg_real _L7_IfBlock1_IfBlock2;
+  /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else::else::_L19 */
+  static kcg_real _L19_IfBlock1_IfBlock2;
+  /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else::else::_L9 */
+  static kcg_real _L9_IfBlock1_IfBlock2;
+  /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else */
+  static kcg_bool else_clock_IfBlock1_IfBlock2;
+  /* Toolbox::Physics::AFB::realTargetSpeed */
+  static kcg_real realTargetSpeed;
+  
+  realTargetSpeed = targetSpeed - 0.8;
+  outC->afbActive = targetSpeed > 0.0;
+  if (outC->afbActive) {
+    IfBlock2_clock_IfBlock1 = (currentSpeed < realTargetSpeed + 0.5) &
+      (currentSpeed > realTargetSpeed - 0.5);
+    if (IfBlock2_clock_IfBlock1) {
       outC->calculatedAcceleration = 0.0;
     }
     else {
-      outC->else_clock_IfBlock1_IfBlock2 = currentSpeed < outC->realTargetSpeed;
-      if (outC->else_clock_IfBlock1_IfBlock2) {
-        outC->_L7_IfBlock1_IfBlock2 = outC->realTargetSpeed - currentSpeed;
-        if (outC->_L7_IfBlock1_IfBlock2 > 5.5) {
+      else_clock_IfBlock1_IfBlock2 = currentSpeed < realTargetSpeed;
+      if (else_clock_IfBlock1_IfBlock2) {
+        _L7_IfBlock1_IfBlock2 = realTargetSpeed - currentSpeed;
+        if (_L7_IfBlock1_IfBlock2 > 5.5) {
           outC->calculatedAcceleration = traction;
         }
         else {
-          outC->calculatedAcceleration = traction *
-            (outC->_L7_IfBlock1_IfBlock2 / 5.5);
+          outC->calculatedAcceleration = traction * (_L7_IfBlock1_IfBlock2 /
+              5.5);
         }
       }
       else {
-        outC->_L19_IfBlock1_IfBlock2 = - 300.0;
-        outC->_L9_IfBlock1_IfBlock2 = currentSpeed - outC->realTargetSpeed;
-        if (outC->_L9_IfBlock1_IfBlock2 > 5.5) {
-          outC->calculatedAcceleration = outC->_L19_IfBlock1_IfBlock2;
+        _L19_IfBlock1_IfBlock2 = - 300.0;
+        _L9_IfBlock1_IfBlock2 = currentSpeed - realTargetSpeed;
+        if (_L9_IfBlock1_IfBlock2 > 5.5) {
+          outC->calculatedAcceleration = _L19_IfBlock1_IfBlock2;
         }
         else {
-          outC->calculatedAcceleration = outC->_L19_IfBlock1_IfBlock2 *
-            (outC->_L9_IfBlock1_IfBlock2 / 5.5);
+          outC->calculatedAcceleration = _L19_IfBlock1_IfBlock2 *
+            (_L9_IfBlock1_IfBlock2 / 5.5);
         }
       }
     }
@@ -57,13 +69,13 @@ void AFB_Toolbox_Physics(
   else {
     if (outC->init) {
       outC->init = kcg_false;
-      outC->IfBlock2_clock_IfBlock1 = kcg_false;
+      outC->needZeroPosition_IfBlock1 = kcg_false;
     }
     else {
-      outC->IfBlock2_clock_IfBlock1 = (brake > 0.0) | (!(traction == 0.0) &
-          outC->IfBlock2_clock_IfBlock1);
+      outC->needZeroPosition_IfBlock1 = (brake > 0.0) | (!(traction == 0.0) &
+          outC->needZeroPosition_IfBlock1);
     }
-    if (outC->IfBlock2_clock_IfBlock1) {
+    if (outC->needZeroPosition_IfBlock1) {
       outC->calculatedAcceleration = - brake;
     }
     else {
@@ -74,6 +86,6 @@ void AFB_Toolbox_Physics(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** AFB_Toolbox_Physics.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 

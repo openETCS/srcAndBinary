@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,20 +22,22 @@ void TIU_Toolbox_TrainModules(
   outC_TIU_Toolbox_TrainModules *outC)
 {
   static M_traction_signal_status_T_TIU_Types_Pkg tmp;
+  /* Toolbox::TrainModules::TIU::_L57 */
+  static kcg_bool _L57;
   
   outC->output_To_EVC.valid = kcg_true;
   if (outC->init) {
-    outC->_L98 = kcg_false;
+    _L57 = kcg_false;
   }
   else {
-    outC->_L98 = outC->powerOn;
+    _L57 = outC->powerOn;
   }
-  if (!outC->_L98 & !((cabStatus == both_desks_are_closed_TIU_Types_Pkg) |
+  if (!_L57 & !((cabStatus == both_desks_are_closed_TIU_Types_Pkg) |
       (cabStatus == cab_signal_status_not_defined_TIU_Types_Pkg))) {
     outC->powerOn = kcg_true;
   }
   else {
-    outC->powerOn = outC->_L98;
+    outC->powerOn = _L57;
   }
   if ((*Input_TIU_From_API).valid &
     (*Input_TIU_From_API).info.type_I_train_commands.valid) {
@@ -47,9 +49,9 @@ void TIU_Toolbox_TrainModules(
   }
   outC->tractionCutOff_To_Environment = outC->cutoffCommand ==
     apply_traction_cutoff_TIU_Types_Pkg;
-  outC->_L57 = (*Input_TIU_From_API).valid &
+  _L57 = (*Input_TIU_From_API).valid &
     (*Input_TIU_From_API).info.brake_command.valid;
-  if (outC->_L57) {
+  if (_L57) {
     outC->emergencyBrakeCommandTmp =
       (*Input_TIU_From_API).info.brake_command.m_emergencybrake_cm;
     outC->serviceBrakeCommandTmp =
@@ -101,6 +103,6 @@ void TIU_Toolbox_TrainModules(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TIU_Toolbox_TrainModules.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void MRSPPreindicationSelector_TargetLimits_Pkg(
   /* TargetLimits_Pkg::MRSPPreindicationSelector::D_I_V_MRSP */L_internal_real_Type_SDM_Types_Pkg *D_I_V_MRSP,
   /* TargetLimits_Pkg::MRSPPreindicationSelector::valid */kcg_bool *valid)
 {
-  static struct__130066 tmp1;
+  static struct__130763 tmp1;
   static kcg_bool tmp;
   static kcg_int i;
   /* TargetLimits_Pkg::MRSPPreindicationSelector::_L1 */
@@ -44,7 +44,7 @@ void MRSPPreindicationSelector_TargetLimits_Pkg(
     kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types(&_L69, EBDcurve);
     kcg_copy_T_trac_t_TargetLimits_Pkg(&_L75, T);
   }
-  for (i = 0; i < 200; i++) {
+  for (i = 0; i < 110; i++) {
     kcg_copy_MRSP_internal_section_T_TargetManagement_types(&tmp1, &_L1);
     /* 1 */
     MRSPPreindicationIterator_TargetLimits_Pkg(
@@ -68,6 +68,6 @@ void MRSPPreindicationSelector_TargetLimits_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MRSPPreindicationSelector_TargetLimits_Pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

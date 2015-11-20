@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,8 @@
 void TIU_OutputIntegration_reset_output_to_TIU_API_Pkg(
   outC_TIU_OutputIntegration_output_to_TIU_API_Pkg *outC)
 {
-  /* 1 */ handleTraction_reset_output_to_TIU_API_Pkg(&outC->Context_1);
+  /* 1 */ manageTIU_output_reset_output_to_TIU_API_Pkg(&outC->Context_1);
+  /* 1 */ handleTraction_reset_output_to_TIU_API_Pkg(&outC->_1_Context_1);
 }
 
 /* output_to_TIU_API_Pkg::TIU_OutputIntegration */
@@ -29,22 +30,27 @@ void TIU_OutputIntegration_output_to_TIU_API_Pkg(
   handleTraction_output_to_TIU_API_Pkg(
     in_train_commands,
     inModeAndLevel,
-    &outC->Context_1);
+    &outC->_1_Context_1);
   /* 1 */
   manageTIU_output_output_to_TIU_API_Pkg(
     in_IsolationStatus,
     SpeedSup_brakeCommand,
     in_brake_inhibition,
-    &outC->Context_1.outTrainCommands,
+    &outC->_1_Context_1.outTrainCommands,
     in_change_traction_system,
     in_passenger_door_control_info,
     in_change_of_allowed_current_consumption,
+    &outC->Context_1);
+  kcg_copy_TIU_Output_msg_API_TIU_Pkg(
     &outC->outTIU_to_API,
-    &outC->outCommandStatusforEVC);
+    &outC->Context_1.outTIU_to_API);
+  kcg_copy_TIU_commandStatus_T_TIU_Types_Pkg(
+    &outC->outCommandStatusforEVC,
+    &outC->Context_1.outCommandStatusforEVC);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TIU_OutputIntegration_output_to_TIU_API_Pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

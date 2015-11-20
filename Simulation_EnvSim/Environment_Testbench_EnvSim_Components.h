@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 #ifndef _Environment_Testbench_EnvSim_Components_H_
 #define _Environment_Testbench_EnvSim_Components_H_
@@ -8,13 +8,13 @@
 #include "kcg_types.h"
 #include "CASTLIB_BaliseHeaders_TM_conversions.h"
 #include "GUI_Settings_Toolbox_Functions.h"
+#include "BTM_Toolbox_TrainModules.h"
 #include "ScriptedTrack_EnvSim.h"
 #include "ProbeTracksideInput_EnvSim.h"
 #include "EVC_InputBuffer_Toolbox_Functions.h"
 #include "PHYSICS_MovementSimulation_Toolbox_Physics.h"
 #include "AFB_Toolbox_Physics.h"
 #include "TIU_Toolbox_TrainModules.h"
-#include "BTM_Toolbox_TrainModules.h"
 #include "RTM_Toolbox_TrainModules.h"
 #include "RBC_New_RBC_Model_Pkg.h"
 
@@ -43,14 +43,13 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   odometry_T_Obu_BasicTypes_Pkg /* Testbench_EnvSim::Components::Environment::EVC_Odometry */ rem_EVC_Odometry;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_AFB_Toolbox_Physics /* 1 */ _7_Context_1;
-  outC_TIU_Toolbox_TrainModules /* 1 */ _6_Context_1;
-  outC_PHYSICS_MovementSimulation_Toolbox_Physics /* 1 */ _5_Context_1;
-  outC_ScriptedTrack_EnvSim /* 1 */ _4_Context_1;
-  outC_RBC_New_RBC_Model_Pkg /* 1 */ _3_Context_1;
+  outC_AFB_Toolbox_Physics /* 1 */ _6_Context_1;
+  outC_TIU_Toolbox_TrainModules /* 1 */ _5_Context_1;
+  outC_PHYSICS_MovementSimulation_Toolbox_Physics /* 1 */ _4_Context_1;
+  outC_ScriptedTrack_EnvSim /* 1 */ _3_Context_1;
+  outC_RBC_New_RBC_Model_Pkg /* 1 */ _2_Context_1;
   outC_ProbeTracksideInput_EnvSim /* 3 */ Context_3;
-  outC_RTM_Toolbox_TrainModules /* 1 */ _2_Context_1;
-  outC_BTM_Toolbox_TrainModules /* 1 */ _1_Context_1;
+  outC_RTM_Toolbox_TrainModules /* 1 */ _1_Context_1;
   outC_EVC_InputBuffer_Toolbox_Functions /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_Environment_Testbench_EnvSim_Components;
@@ -82,6 +81,6 @@ extern void Environment_reset_Testbench_EnvSim_Components(
 #endif /* _Environment_Testbench_EnvSim_Components_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Environment_Testbench_EnvSim_Components.h
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

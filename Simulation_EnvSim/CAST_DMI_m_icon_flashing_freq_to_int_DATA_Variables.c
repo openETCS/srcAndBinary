@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -21,6 +21,6 @@ DMI_m_icon_flashing_freq_INT_T_DATA CAST_DMI_m_icon_flashing_freq_to_int_DATA_Va
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_DMI_m_icon_flashing_freq_to_int_DATA_Variables.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

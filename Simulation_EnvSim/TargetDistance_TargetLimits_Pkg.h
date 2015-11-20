@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:55
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _TargetDistance_TargetLimits_Pkg_H_
 #define _TargetDistance_TargetLimits_Pkg_H_
@@ -23,6 +23,6 @@ extern L_internal_real_Type_SDM_Types_Pkg TargetDistance_TargetLimits_Pkg(
 #endif /* _TargetDistance_TargetLimits_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TargetDistance_TargetLimits_Pkg.h
-** Generation date: 2015-11-12T10:46:55
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 

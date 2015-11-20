@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:26
 *************************************************************$ */
 #ifndef _InputSpeedAndSupervision_Interfaces_H_
 #define _InputSpeedAndSupervision_Interfaces_H_
@@ -23,6 +23,6 @@ extern void InputSpeedAndSupervision_Interfaces(
 #endif /* _InputSpeedAndSupervision_Interfaces_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** InputSpeedAndSupervision_Interfaces.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:26
 *************************************************************$ */
 

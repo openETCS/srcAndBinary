@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -38,14 +38,14 @@ void TrackAtlasETCS_TrackAtlas(
   /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
   outC_TrackAtlasETCS_TrackAtlas *outC)
 {
-  static kcg_bool tmp;
   static kcg_int i;
+  static MRSP_Profile_t_TrackAtlasTypes tmp;
   /* TrackAtlas::TrackAtlasETCS::valid_MA */
   static kcg_bool valid_MA;
+  /* TrackAtlas::TrackAtlasETCS::valid_GP */
+  static kcg_bool valid_GP;
   /* TrackAtlas::TrackAtlasETCS::MRSP_export */
   static MRSP_Profile_t_TrackAtlasTypes MRSP_export;
-  /* TrackAtlas::TrackAtlasETCS::MRSP_to_DMI */
-  static MRSP_Profile_t_TrackAtlasTypes MRSP_to_DMI;
   /* TrackAtlas::TrackAtlasETCS::_L21 */
   static P003V1_OBU_T_TM_baseline2 _L21;
   /* TrackAtlas::TrackAtlasETCS::_L78 */
@@ -58,15 +58,13 @@ void TrackAtlasETCS_TrackAtlas(
   static kcg_bool _L84;
   /* TrackAtlas::TrackAtlasETCS::_L85 */
   static kcg_bool _L85;
-  /* TrackAtlas::TrackAtlasETCS::_L126 */
-  static kcg_int _L126;
   
   if (outC->init) {
     outC->init = kcg_false;
     i = 0;
   }
   else {
-    i = outC->_L94;
+    i = outC->EoA;
   }
   /* 1 */
   Manage_EmergencyStop_TA_EmergencyStop(
@@ -105,7 +103,7 @@ void TrackAtlasETCS_TrackAtlas(
   kcg_copy_MovementAuthority_t_TrackAtlasTypes(
     &outC->to_Supervision.MA,
     &outC->MA_onboard_out);
-  outC->_L94 = outC->Context_6.currentEOA;
+  outC->EoA = outC->Context_6.currentEOA;
   /* 1 */
   Manage_MA_Request_TA_MA_Request(
     TrainPositionIn,
@@ -140,40 +138,22 @@ void TrackAtlasETCS_TrackAtlas(
   kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
     &MRSP_export,
     (MRSP_Profile_t_TrackAtlasTypes *) &DEFAULT_MRSP_Profile_TA_MRSP);
-  for (i = 0; i < 200; i++) {
-    kcg_copy_MRSP_Profile_t_TrackAtlasTypes(&MRSP_to_DMI, &MRSP_export);
+  for (i = 0; i < 110; i++) {
+    kcg_copy_MRSP_Profile_t_TrackAtlasTypes(&tmp, &MRSP_export);
     /* 1 */
     SSP_to_MRSP_TA_Export(
       i,
-      &MRSP_to_DMI,
-      &outC->_1_Context_1.SSP,
       &tmp,
+      &outC->_1_Context_1.SSP,
+      &valid_GP,
       &MRSP_export);
-    if (!tmp) {
+    if (!valid_GP) {
       break;
     }
   }
   kcg_copy_MRSP_Profile_t_TrackAtlasTypes(
     &outC->to_Supervision.MRSP,
     &MRSP_export);
-  for (i = 0; i < 200; i++) {
-    /* 1 */
-    MRSP_to_MRSP_to_DMI_TA_Export(i, &MRSP_export[i], &tmp, &MRSP_to_DMI[i]);
-    _L126 = i + 1;
-    if (!tmp) {
-      break;
-    }
-  }
-#ifdef KCG_MAPW_CPY
-  
-  for (i = _L126; i < 200; i++) {
-    kcg_copy_MRSP_section_t_TrackAtlasTypes(
-      &MRSP_to_DMI[i],
-      (MRSP_section_t_TrackAtlasTypes *) &DEFAULT_MRSP_section_TA_Export);
-  }
-#endif /* KCG_MAPW_CPY */
-  
-  kcg_copy_MRSP_Profile_t_TrackAtlasTypes(&outC->to_DMI.MRSP, &MRSP_to_DMI);
   /* 1 */
   Build_GradientProfile_TA_Gradient(
     kcg_false,
@@ -185,12 +165,12 @@ void TrackAtlasETCS_TrackAtlas(
     &outC->to_Supervision.GradientProfile,
     &outC->Context_1.GP);
   outC->to_DMI.Gradient_profile_updated = outC->Context_1.updated;
-  tmp = outC->Context_1.available;
+  valid_GP = outC->Context_1.available;
   /* 1 */
   TA_to_ML_TA_Export(
     MessageIn,
     kcg_false,
-    tmp,
+    valid_GP,
     valid_MA,
     outC->SSP_available,
     &outC->To_ModeAndLevel.train_packets,
@@ -214,12 +194,14 @@ void TrackAtlasETCS_TrackAtlas(
     &outC->NV_raw_out);
   /* 1 */
   GradientProfile_to_DMI_TA_Export(
+    outC->EoA,
     &outC->Context_1.GP,
     &outC->to_DMI.GradientProfile);
+  /* 1 */ MRSP_to_DMI_TA_Export(outC->EoA, &MRSP_export, &outC->to_DMI.MRSP);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TrackAtlasETCS_TrackAtlas.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

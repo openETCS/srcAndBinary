@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ void indexOfPassedBG_by_id_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::indexOfPassedBG_by_id::BG_found */kcg_bool *BG_found,
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::indexOfPassedBG_by_id::indexValid */kcg_bool *indexValid)
 {
-  static struct__128455 tmp;
+  static struct__129144 tmp;
   
   tmp.valid = (*BG).valid & (*BG).BG_Header.valid;
   tmp.nid_c = (*BG).BG_Header.nid_c;
@@ -44,6 +44,6 @@ void indexOfPassedBG_by_id_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** indexOfPassedBG_by_id_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

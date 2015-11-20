@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,9 +16,9 @@ void RadioTrackTrainMessageQueue__Take_RBC_Collections_Pkg(
   static RadioTrackTrainMessageQueueEntries_T tmp5;
   static kcg_int tmp4;
   static kcg_bool tmp3;
-  static array__127619 tmp2;
-  static array__127619 tmp1;
-  static array__127619 tmp;
+  static array__128300 tmp2;
+  static array__128300 tmp1;
+  static array__128300 tmp;
   static kcg_int i;
   /* RBC_Collections_Pkg::RadioTrackTrainMessageQueue__Take::IfBlock1::then::_L2 */
   static RadioTrackTrainMessageQueueEntries_T _L2_IfBlock1;
@@ -42,7 +42,7 @@ void RadioTrackTrainMessageQueue__Take_RBC_Collections_Pkg(
     RadioTrackTrainMessageQueue__GetEntries_RBC_Collections_Pkg(
       inRadioTrackTrainMessageQueue,
       &_L2_IfBlock1);
-    kcg_copy_array__136673(&tmp2[0], (array__136673 *) &_L2_IfBlock1[0]);
+    kcg_copy_array__137354(&tmp2[0], (array__137354 *) &_L2_IfBlock1[0]);
     kcg_copy_RadioTrackTrainMessageQueueEntry_T(
       &(&tmp2[7])[0],
       (RadioTrackTrainMessageQueueEntry_T *)
@@ -132,6 +132,6 @@ void RadioTrackTrainMessageQueue__Take_RBC_Collections_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RadioTrackTrainMessageQueue__Take_RBC_Collections_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 

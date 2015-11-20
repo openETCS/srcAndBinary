@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,15 +14,14 @@ void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out,
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::overrun */kcg_bool *overrun)
 {
-  static positionedBGs_T_TrainPosition_Types_Pck tmp;
+  static positionedBGs_T_TrainPosition_Types_Pck tmp1;
+  static kcg_int tmp;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::indexOfBGInBGs */
   static kcg_int indexOfBGInBGs;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::bgFound */
   static kcg_bool bgFound;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::bg_loc */
   static positionedBG_T_TrainPosition_Types_Pck bg_loc;
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::_L3 */
-  static kcg_bool _L3;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::_L6 */
   static kcg_bool _L6;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::mergeBG_onTrack::_L5 */
@@ -39,7 +38,7 @@ void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     (*BG).valid,
     &indexOfBGInBGs,
     &bgFound,
-    &_L3);
+    &_L5);
   if ((0 <= indexOfBGInBGs) & (indexOfBGInBGs < 41)) {
     kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
       &_L61,
@@ -74,13 +73,19 @@ void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     BGs_in,
     indexOfBGInBGs,
-    (kcg_bool) ((indexOfBGInBGs != _L4) & bgFound & _L3 & _L6),
-    &tmp);
+    kcg_false,
+    &tmp1);
+  if (bgFound) {
+    tmp = indexOfBGInBGs;
+  }
+  else {
+    tmp = _L4;
+  }
   /* 1 */
   insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     &bg_loc,
-    &tmp,
-    _L4,
+    &tmp1,
+    tmp,
     (kcg_bool) ((*BG).valid & _L6),
     BGs_out,
     overrun);
@@ -88,6 +93,6 @@ void mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mergeBG_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

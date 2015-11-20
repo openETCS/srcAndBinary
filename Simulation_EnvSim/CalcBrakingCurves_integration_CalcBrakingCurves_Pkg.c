@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,14 +22,14 @@ void CalcBrakingCurves_integration_CalcBrakingCurves_Pkg(
   outC_CalcBrakingCurves_integration_CalcBrakingCurves_Pkg *outC)
 {
   static kcg_int i;
-  static array__129887 tmp;
+  static array__130584 tmp;
   static kcg_bool tmp1;
   /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::emptyCurve */
   static ParabolaCurve_T_CalcBrakingCurves_types emptyCurve;
   /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::_L72 */
   static kcg_int _L72;
   /* CalcBrakingCurves_Pkg::CalcBrakingCurves_integration::_L83 */
-  static array__129887 _L83;
+  static array__130584 _L83;
   
   outC->curveCollection.GUI_curve_enabled = kcg_false;
   /* 1 */ makeEmptyParabolaCurve_CalcBrakingCurves_types(&emptyCurve);
@@ -51,7 +51,7 @@ void CalcBrakingCurves_integration_CalcBrakingCurves_Pkg(
       (*TrainLocations).d_est_frontendPos,
       &tmp1,
       &outC->_L99);
-    for (i = 0; i < 200; i++) {
+    for (i = 0; i < 110; i++) {
       /* 1 */
       CalculateBrakingCurve_CalcBrakingCurves_Pkg(
         A_Safe,
@@ -84,12 +84,12 @@ void CalcBrakingCurves_integration_CalcBrakingCurves_Pkg(
     &outC->_L99);
 #ifdef KCG_MAPW_CPY
   
-  for (i = _L72; i < 200; i++) {
+  for (i = _L72; i < 110; i++) {
     kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types(&_L83[i], &emptyCurve);
   }
 #endif /* KCG_MAPW_CPY */
   
-  for (i = 0; i < 200; i++) {
+  for (i = 0; i < 110; i++) {
     kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types(&tmp[i], &emptyCurve);
   }
   if ((*targetCollection).updatedTargetList) {
@@ -110,6 +110,6 @@ void CalcBrakingCurves_integration_CalcBrakingCurves_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CalcBrakingCurves_integration_CalcBrakingCurves_Pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 #ifndef _AFB_Toolbox_Physics_H_
 #define _AFB_Toolbox_Physics_H_
@@ -18,18 +18,9 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  kcg_bool /* Toolbox::Physics::AFB::IfBlock1::else::IfBlock2 */ IfBlock2_clock_IfBlock1;
+  kcg_bool /* Toolbox::Physics::AFB::IfBlock1::else::needZeroPosition */ needZeroPosition_IfBlock1;
   /* -------------------- no sub nodes' contexts  -------------------- */
-  /* ------------------ clocks of observable data -------------------- */
-  kcg_bool /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2 */ _1_IfBlock2_clock_IfBlock1;
-  kcg_bool /* Toolbox::Physics::AFB::IfBlock1 */ IfBlock1_clock;
-  /* -------------------- (-debug) no assertions  -------------------- */
-  /* ------------------- (-debug) local variables -------------------- */
-  kcg_real /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else::then::_L7 */ _L7_IfBlock1_IfBlock2;
-  kcg_real /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else::else::_L19 */ _L19_IfBlock1_IfBlock2;
-  kcg_real /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else::else::_L9 */ _L9_IfBlock1_IfBlock2;
-  kcg_bool /* Toolbox::Physics::AFB::IfBlock1::then::IfBlock2::else */ else_clock_IfBlock1_IfBlock2;
-  kcg_real /* Toolbox::Physics::AFB::realTargetSpeed */ realTargetSpeed;
+  /* ----------------- no clocks of observable data ------------------ */
 } outC_AFB_Toolbox_Physics;
 
 /* ===========  node initialization and cycle functions  =========== */
@@ -46,6 +37,6 @@ extern void AFB_reset_Toolbox_Physics(outC_AFB_Toolbox_Physics *outC);
 #endif /* _AFB_Toolbox_Physics_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** AFB_Toolbox_Physics.h
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

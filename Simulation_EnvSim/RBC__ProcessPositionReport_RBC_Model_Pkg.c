@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -115,16 +115,16 @@ void RBC__ProcessPositionReport_RBC_Model_Pkg(
   _L36 = /* 2 */ PosData__Get_M_LEVEL_RBC_Session_Pkg(&tmp);
   _L45 = (_L36 == M_LEVEL_Level_3) | (_L36 == M_LEVEL_Level_2);
   _L52 = (radioTrainTrackMessageId != 136) | _L45 | !_L57;
-  outC->terminateSessionInCaseOfLevelLoss = (_L57 & _L52) | _L45;
   kcg_copy_RBC_Data_T_RBC_DataBus_Pkg(&_L30, inDataBus);
   kcg_copy_SessionManagement_T(&_L30.session, &session);
   /* 1 */
   RBC__PingTrain_RBC_Model_Pkg(
-    (P042_trackside_int_T_TM *) &P042_RequestSessionTermination,
+    (kcg_bool) !_L52,
     &_L30,
     &outC->outRadioTrainTrackMessage,
     &outC->outTriggeredRadioTrackTrainMessage,
     &outC->Context_1);
+  outC->terminateSessionInCaseOfLevelLoss = (_L57 & _L52) | _L45;
   if (_L52) {
     kcg_copy_RBC_Data_T_RBC_DataBus_Pkg(&outC->outDataBus, &_L30);
   }
@@ -137,6 +137,6 @@ void RBC__ProcessPositionReport_RBC_Model_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RBC__ProcessPositionReport_RBC_Model_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 

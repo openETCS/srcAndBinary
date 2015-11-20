@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _PosReport_Supervision_ProvidePositionReport_Pkg_H_
 #define _PosReport_Supervision_ProvidePositionReport_Pkg_H_
@@ -16,10 +16,8 @@ typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   kcg_bool /* ProvidePositionReport_Pkg::PosReport_Supervision::trigger */ trigger;
   /* -----------------------  no local probes  ----------------------- */
-  /* -------------------- initialization variables  ------------------ */
-  kcg_bool init;
-  /* ----------------------- local memories  ------------------------- */
-  kcg_bool /* ProvidePositionReport_Pkg::PosReport_Supervision::_L52 */ _L52;
+  /* -----------------  no initialization variables  ----------------- */
+  /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_Supervise_PosRepParam_ProvidePositionReport_Pkg /* Supervise_PosRepParam */ Context_Supervise_PosRepParam;
   outC_Supervise_Events_ProvidePositionReport_Pkg /* 1 */ Context_1;
@@ -47,6 +45,6 @@ extern void PosReport_Supervision_reset_ProvidePositionReport_Pkg(
 #endif /* _PosReport_Supervision_ProvidePositionReport_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** PosReport_Supervision_ProvidePositionReport_Pkg.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 

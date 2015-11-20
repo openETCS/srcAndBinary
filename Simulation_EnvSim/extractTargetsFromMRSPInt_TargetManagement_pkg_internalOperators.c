@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,7 +22,7 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
   /* TargetManagement_pkg::internalOperators::extractTargetsFromMRSPInt::_L34 */
   static kcg_int _L34;
   
-  if ((0 <= index + 1) & (index + 1 < 200)) {
+  if ((0 <= index + 1) & (index + 1 < 110)) {
     kcg_copy_MRSP_internal_section_T_TargetManagement_types(
       &_L15,
       &(*MRSP)[index + 1]);
@@ -35,7 +35,7 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
   }
   *endCondition = _L15.valid;
   _L34 = 1 + (*ACCU).lastInsertedTargetIndex;
-  if ((0 <= index) & (index < 200)) {
+  if ((0 <= index) & (index < 110)) {
     kcg_copy_MRSP_internal_section_T_TargetManagement_types(
       &_L14,
       &(*MRSP)[index]);
@@ -51,7 +51,7 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
     kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
       &(*ACCUout).targetList,
       &(*ACCU).targetList);
-    if ((0 <= _L34) & (_L34 < 200)) {
+    if ((0 <= _L34) & (_L34 < 110)) {
       (*ACCUout).targetList[_L34].targetType = MRSP_TargetManagement_types;
       (*ACCUout).targetList[_L34].distance = _L15.Loc_Abs;
       (*ACCUout).targetList[_L34].speed = _L15.MRS;
@@ -64,6 +64,6 @@ void extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** extractTargetsFromMRSPInt_TargetManagement_pkg_internalOperators.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -80,7 +80,7 @@ void TargetSelector_TargetLimits_Pkg(
   _L29.T.bs2 = 0.0;
   _L29.T.inhComp = tmp4;
   _L29.T.indication = 0.0;
-  for (tmp1 = 0; tmp1 < 200; tmp1++) {
+  for (tmp1 = 0; tmp1 < 110; tmp1++) {
     kcg_copy_TargetIteratorAkku_TargetLimits_Pkg(&_L60, &_L29);
     /* 2 */
     TargetIterator_TargetLimits_Pkg(
@@ -116,7 +116,7 @@ void TargetSelector_TargetLimits_Pkg(
     &_L60);
   *D_SvL = (*Targets).SvL_LoA_target.distance;
   *D_EOA = (*Targets).EOA_target.distance;
-  if ((0 <= _L60.V_P_MRDT_index) & (_L60.V_P_MRDT_index < 200)) {
+  if ((0 <= _L60.V_P_MRDT_index) & (_L60.V_P_MRDT_index < 110)) {
     kcg_copy_Target_real_T_TargetManagement_types(
       &_L157,
       &(*Targets).MRSP_targetList[_L60.V_P_MRDT_index]);
@@ -126,7 +126,7 @@ void TargetSelector_TargetLimits_Pkg(
       &_L157,
       &(*Targets).SvL_LoA_target);
   }
-  if ((0 <= _L60.index) & (_L60.index < 200)) {
+  if ((0 <= _L60.index) & (_L60.index < 110)) {
     kcg_copy_ParabolaCurve_T_CalcBrakingCurves_types(
       MostRestrictiveEBDCurve,
       &(*Curves).MRSP_EBD_curves[_L60.index]);
@@ -194,6 +194,6 @@ void TargetSelector_TargetLimits_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TargetSelector_TargetLimits_Pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,9 +23,14 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
 {
   static kcg_int tmp1;
   static kcg_int tmp;
-  static array__130657 tmp2;
+  static array__131354 tmp2;
+  /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L19 */
+  static array__131354 _L19_IfBlock1;
+  /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L9 */
+  static kcg_int _L9_IfBlock1;
+  /* Toolbox::Functions::TRAIN_TrackSideInputFifo::_L44 */
+  static kcg_bool _L44;
   
-  outC->IfBlock1_clock = inValid;
   for (tmp1 = 0; tmp1 < 5; tmp1++) {
     kcg_copy_API_TrackSideInput_T_API_Msg_Pkg(
       &tmp2[tmp1],
@@ -33,13 +38,13 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
         &cEmtpyTrackSideInputMessage_Toolbox);
   }
   if (outC->init1) {
-    outC->_L38 = 0;
+    _L9_IfBlock1 = 0;
   }
   else {
-    outC->_L38 = outC->_L32;
+    _L9_IfBlock1 = outC->_L32;
   }
-  if (outC->_L38 <= 5) {
-    outC->size = outC->_L38;
+  if (_L9_IfBlock1 <= 5) {
+    outC->size = _L9_IfBlock1;
   }
   else {
     outC->size = 5;
@@ -47,40 +52,44 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
   if (inValid) {
     for (tmp1 = 0; tmp1 < 5; tmp1++) {
       kcg_copy_API_TrackSideInput_T_API_Msg_Pkg(
-        &outC->_L19_IfBlock1[tmp1],
+        &_L19_IfBlock1[tmp1],
         (API_TrackSideInput_T_API_Msg_Pkg *)
           &cEmtpyTrackSideInputMessage_Toolbox);
     }
     if (outC->init) {
-      outC->_L9_IfBlock1 = 0;
-      kcg_copy_array__130657(&outC->_L4_IfBlock1, &outC->_L19_IfBlock1);
+      _L9_IfBlock1 = 0;
+      kcg_copy_array__131354(&outC->_L4_IfBlock1, &_L19_IfBlock1);
     }
     else {
-      outC->_L9_IfBlock1 = outC->_L20_IfBlock1;
+      _L9_IfBlock1 = outC->_L20_IfBlock1;
     }
-    if ((0 <= outC->_L9_IfBlock1) & (outC->_L9_IfBlock1 < 5)) {
+    if ((0 <= _L9_IfBlock1) & (_L9_IfBlock1 < 5)) {
       kcg_copy_API_TrackSideInput_T_API_Msg_Pkg(
-        &outC->_L4_IfBlock1[outC->_L9_IfBlock1],
+        &outC->_L4_IfBlock1[_L9_IfBlock1],
         inData);
     }
-    kcg_copy_array__130657(&outC->buffer, &outC->_L4_IfBlock1);
-    outC->_L20_IfBlock1 = (outC->_L9_IfBlock1 + 1) % 5;
+    kcg_copy_array__131354(&outC->buffer, &outC->_L4_IfBlock1);
+    outC->_L20_IfBlock1 = (_L9_IfBlock1 + 1) % 5;
+    tmp1 = 1;
     outC->init = kcg_false;
   }
-  else if (outC->init1) {
-    kcg_copy_array__130657(&outC->buffer, &tmp2);
+  else {
+    if (outC->init1) {
+      kcg_copy_array__131354(&outC->buffer, &tmp2);
+    }
+    tmp1 = 0;
   }
   if (outC->init1) {
     outC->init1 = kcg_false;
-    outC->entry = 0;
+    _L9_IfBlock1 = 0;
   }
   else {
-    outC->entry = outC->_L50;
+    _L9_IfBlock1 = outC->_L50;
   }
-  if ((0 <= outC->entry) & (outC->entry < 5)) {
+  if ((0 <= _L9_IfBlock1) & (_L9_IfBlock1 < 5)) {
     kcg_copy_API_TrackSideInput_T_API_Msg_Pkg(
       &outC->outData,
-      &outC->buffer[outC->entry]);
+      &outC->buffer[_L9_IfBlock1]);
   }
   else {
     kcg_copy_API_TrackSideInput_T_API_Msg_Pkg(
@@ -88,27 +97,21 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
       (API_TrackSideInput_T_API_Msg_Pkg *)
         &cEmtpyTrackSideInputMessage_Toolbox);
   }
-  outC->_L44 = inReady & (outC->size > 0);
-  if (outC->IfBlock1_clock) {
-    tmp1 = 1;
-  }
-  else {
-    tmp1 = 0;
-  }
-  if (outC->_L44) {
+  _L44 = inReady & (outC->size > 0);
+  if (_L44) {
     tmp = - 1;
   }
   else {
     tmp = 0;
   }
   outC->_L32 = outC->size + tmp1 + tmp;
-  if (outC->IfBlock1_clock & (outC->size == 5)) {
+  if (inValid & (outC->size == 5)) {
     tmp = 1;
   }
   else {
     tmp = 0;
   }
-  if (outC->_L44) {
+  if (_L44) {
     tmp1 = 1;
     outC->outValid = kcg_true;
   }
@@ -116,11 +119,11 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
     tmp1 = 0;
     outC->outValid = kcg_false;
   }
-  outC->_L50 = (outC->entry + tmp1 + tmp) % 5;
+  outC->_L50 = (_L9_IfBlock1 + tmp1 + tmp) % 5;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TRAIN_TrackSideInputFifo_Toolbox_Functions_5.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 

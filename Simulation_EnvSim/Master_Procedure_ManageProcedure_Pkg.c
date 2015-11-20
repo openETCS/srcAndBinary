@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,7 +30,7 @@ void Master_Procedure_ManageProcedure_Pkg(
   outC_Master_Procedure_ManageProcedure_Pkg *outC)
 {
   static kcg_int i;
-  static _38_SSM_TR_SM1 tmp;
+  static _43_SSM_TR_SM1 tmp;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */
   static SSM_ST_SM3_SM1_Awakness_of_Train SM3_state_act_SM1_Awakness_of_Train;
   /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */
@@ -78,9 +78,9 @@ void Master_Procedure_ManageProcedure_Pkg(
   /* ManageProcedure_Pkg::Master_Procedure::sendingPositionReport_to_RBC */
   static kcg_bool last_sendingPositionReport_to_RBC;
   /* ManageProcedure_Pkg::Master_Procedure::SM1 */
-  static _36_SSM_ST_SM1 SM1_state_sel;
+  static _41_SSM_ST_SM1 SM1_state_sel;
   /* ManageProcedure_Pkg::Master_Procedure::SM1 */
-  static _36_SSM_ST_SM1 SM1_state_act;
+  static _41_SSM_ST_SM1 SM1_state_act;
   /* ManageProcedure_Pkg::Master_Procedure::M_LEVEL_Level_NTC */
   static kcg_bool M_LEVEL_Level_NTC;
   /* ManageProcedure_Pkg::Master_Procedure::M_LEVEL_Level3 */
@@ -664,7 +664,7 @@ void Master_Procedure_ManageProcedure_Pkg(
             tmp = SSM_TR_NP_1_SM1;
           }
           else {
-            tmp = _37_SSM_TR_no_trans_SM1;
+            tmp = _42_SSM_TR_no_trans_SM1;
           }
           break;
         case SSM_st_Awakness_of_Train_SM1 :
@@ -672,18 +672,18 @@ void Master_Procedure_ManageProcedure_Pkg(
             tmp = SSM_TR_Awakness_of_Train_1_SM1;
           }
           else {
-            tmp = _37_SSM_TR_no_trans_SM1;
+            tmp = _42_SSM_TR_no_trans_SM1;
           }
           break;
         case SSM_st_SoM_L2_3_FS_SR_OS_LS_SH_SM1 :
-          tmp = _37_SSM_TR_no_trans_SM1;
+          tmp = _42_SSM_TR_no_trans_SM1;
           break;
         case SSM_st_SoM_NTC_SN_SM1 :
-          tmp = _37_SSM_TR_no_trans_SM1;
+          tmp = _42_SSM_TR_no_trans_SM1;
           break;
         
       }
-      Awakness_of_Train_weakb_clock_SM1 = tmp != _37_SSM_TR_no_trans_SM1;
+      Awakness_of_Train_weakb_clock_SM1 = tmp != _42_SSM_TR_no_trans_SM1;
       switch (SM3_state_sel_SM1_Awakness_of_Train) {
         case SSM_st_Waiting_for_driver_selection_E10_E11_or_E12_SM1_Awakness_of_Train_SM3 :
           if (br_1_guard_SM1_Awakness_of_Train_SM3_Waiting_for_driver_selection_E10_E11_or_E12) {
@@ -960,6 +960,6 @@ void Master_Procedure_ManageProcedure_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Master_Procedure_ManageProcedure_Pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

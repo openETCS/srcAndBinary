@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:55
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -46,9 +46,6 @@ extern const Brake_inhibition_command_T_TIU_Types_Pkg cEmptyBrakeInhibitionComma
 /* cEmptyTrainCommand */
 extern const Type_I_train_commands_T_TIU_Types_Pkg cEmptyTrainCommand;
 
-/* cNo_Levels */
-extern const DMI_LevelList_T_DMI_Types_Pkg cNo_Levels;
-
 /* cOwnVersion */
 #define cOwnVersion M_VERSION_Version_2_0_introduced_in_SRS_3_3_0
 
@@ -69,6 +66,12 @@ extern const mobileConnectionContext_T_RCM_Types_Pkg cNoMobileConnectionContext;
 
 /* cNoMobileRegistrationContext */
 extern const mobileRegistrationContext_T_RCM_Types_Pkg cNoMobileRegistrationContext;
+
+/* cNoPositioningErrors */
+extern const positionErrors_T_TrainPosition_Types_Pck cNoPositioningErrors;
+
+/* cNoMsgErrors */
+extern const MSG_Errors_T_Common_Types_Pkg cNoMsgErrors;
 
 /* cNoRadioCmd */
 extern const radioManagementMessage_T_Common_Types_Pkg cNoRadioCmd;
@@ -97,6 +100,9 @@ extern const T_Mode_Level_Level_And_Mode_Types_Pkg cMLInitialModesAndLevel;
 /* cNoPersistentData */
 extern const ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg cNoPersistentData;
 
+/* cNo_Levels */
+extern const DMI_LevelList_T_DMI_Types_Pkg cNo_Levels;
+
 /* cNoTDEvents */
 extern const trainData_Events_T_trainData_Types_pkg cNoTDEvents;
 
@@ -123,6 +129,9 @@ extern const T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg cNoPacketsForML;
 
 /* Level_And_Mode_Types_Pkg::M_Max_TransitionInPriorityTable */
 #define M_Max_TransitionInPriorityTable_Level_And_Mode_Types_Pkg 7
+
+/* cEmptyBrakeCmd */
+extern const Brake_command_T_TIU_Types_Pkg cEmptyBrakeCmd;
 
 /* manage_DMI_Output_Pkg::cDefaultTrainData */
 extern const DMI_Train_Data_T_DMI_Messages_Bothways_Pkg cDefaultTrainData_manage_DMI_Output_Pkg;
@@ -1588,6 +1597,15 @@ extern const ModeDecisionTableType_DataDictionary_Pkg ModeDecisionTable_DataDict
 /* Config_Pkg::MAX_PACKAGES */
 #define MAX_PACKAGES_Config_Pkg 30
 
+/* Common_Types_Pkg::cDefaultRM */
+extern const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg;
+
+/* InformationFilter_Pkg::DEFAULT_TransitionBuffer_t */
+extern const TransitionBuffer_T_InformationFilter_Pkg DEFAULT_TransitionBuffer_t_InformationFilter_Pkg;
+
+/* InformationFilter_Pkg::DIM_TransitionBuffer */
+#define DIM_TransitionBuffer_InformationFilter_Pkg 3
+
 /* xdebugSupport_Pkg::cNoML */
 extern const dataCollectionForLevelTransition_T_xdebugSupport_Pkg cNoML_xdebugSupport_Pkg;
 
@@ -1614,9 +1632,6 @@ extern const P41_LevelTransitionOrder_T_Packet_Types_Pkg cNoP41Element_xdebugSup
 
 /* Id_Pkg::cp046_Conditional_Level_Transition_Order */
 #define cp046_Conditional_Level_Transition_Order_Id_Pkg 46
-
-/* Common_Types_Pkg::cDefaultRM */
-extern const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg;
 
 /* CheckEuroradioMessage::cTTrainUnknown1 */
 #define cTTrainUnknown1_CheckEuroradioMessage (- 1)
@@ -1665,6 +1680,9 @@ extern const PT4_ErrorReporting_T_Packet_TrainTypes_Pkg emptyPacket4_ProvidePosi
 
 /* ProvidePositionReport_Pkg::cxQ_EMERGENCYSTOP */
 #define cxQ_EMERGENCYSTOP_ProvidePositionReport_Pkg Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA
+
+/* ProvidePositionReport_Pkg::cTimeToElapse */
+#define cTimeToElapse_ProvidePositionReport_Pkg 10
 
 /* Packet_Types_Pkg::cIterPacket58 */
 #define cIterPacket58_Packet_Types_Pkg 2
@@ -1762,9 +1780,6 @@ extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cD_FE2RE;
 /* cLocationAccuracyDefault */
 extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocationAccuracyDefault;
 
-/* EVC_Support_Pkg::cNoTrackMsg */
-extern const ReceivedMessage_T_Common_Types_Pkg cNoTrackMsg_EVC_Support_Pkg;
-
 /* trainData_pkg::cNoBus */
 extern const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus cNoBus_trainData_pkg;
 
@@ -1854,6 +1869,9 @@ extern const MovementAuthority_t_TrackAtlasTypes DEFAULT_MovementAuthority_Track
 
 /* TA_MA::DefaultMA_section */
 extern const MovementAuthoritySection_t_TrackAtlasTypes DefaultMA_section_TA_MA;
+
+/* TA_MA::DEFAULT_loc */
+#define DEFAULT_loc_TA_MA 0
 
 /* TA_MRSP::XSSPold */
 extern const SSP_cat_t_TA_MRSP XSSPold_TA_MRSP;
@@ -1951,8 +1969,8 @@ extern const P003V1_section_enum_T_TM_baseline2 DEFAULT_P003V1_OBU_section_TM_ba
 /* TA_Storage::INIT_P3V1 */
 extern const P003V1_OBU_T_TM_baseline2 INIT_P3V1_TA_Storage;
 
-/* TA_Export::DEFAULT_MRSP_section */
-extern const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_Export;
+/* TA_Export::ZERO */
+#define ZERO_TA_Export 0
 
 /* TM_radio_messages::nid_message_TrackTrain_015 */
 #define nid_message_TrackTrain_015_TM_radio_messages 15
@@ -2125,8 +2143,14 @@ extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_lega
 /* TrackAtlasTypes::DEFAULT_StaticSpeedSection */
 extern const StaticSpeedSection_t_TrackAtlasTypes DEFAULT_StaticSpeedSection_TrackAtlasTypes;
 
+/* TA_Export::DEFAULT_MRSP_reduction_acc */
+extern const MRSP_reduction_acc_TA_Export DEFAULT_MRSP_reduction_acc_TA_Export;
+
 /* TrackAtlasTypes::MRSPMaxSections */
-#define MRSPMaxSections_TrackAtlasTypes 200
+#define MRSPMaxSections_TrackAtlasTypes 110
+
+/* TA_Export::DEFAULT_MRSP_section */
+extern const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_Export;
 
 /* TA_Export::END_OF_SSP */
 #define END_OF_SSP_TA_Export 635
@@ -2792,7 +2816,7 @@ extern const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_Disconnected_MoRC_Pck;
 extern const API_TrackSideInput_T_API_Msg_Pkg cEmtpyTrackSideInputMessage_Toolbox;
 
 /* Toolbox::cMaximumAcceleration */
-#define cMaximumAcceleration_Toolbox 0.5
+#define cMaximumAcceleration_Toolbox 5.0
 
 /* Toolbox::cOdometryFactors */
 extern const odometryFactors_T_Toolbox cOdometryFactors_Toolbox;
@@ -3764,7 +3788,7 @@ extern const Clock_T CLOCK_DEFAULT;
 #define CYCLE_TIME 20
 
 /* RBC_Diagnostic_Pkg::DIAG_MSG_DEFAULT_ARRAY */
-extern const array__127733 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg;
+extern const array__128414 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg;
 
 /* RBC_Messaging_Pkg::Empty_RadioTrackTrainMessage */
 extern const CompressedRadioMessage_TM Empty_RadioTrackTrainMessage_RBC_Messaging_Pkg;
@@ -3844,6 +3868,6 @@ extern const GUI_to_EVC_EnvSim cEMPTY_GUI2EVC_EnvSim_Internal;
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-12T10:46:55
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 

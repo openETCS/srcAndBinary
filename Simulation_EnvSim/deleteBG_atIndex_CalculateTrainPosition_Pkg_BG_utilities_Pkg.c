@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,15 +14,15 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::del */kcg_bool del,
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
 {
-  static array__128467 tmp1;
+  static array__129156 tmp1;
   static kcg_bool tmp;
   static kcg_int i;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L8 */
   static kcg_bool _L8;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L12 */
-  static array__130627 _L12;
+  static array__131324 _L12;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L15 */
-  static array__128467 _L15;
+  static array__129156 _L15;
   /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::deleteBG_atIndex::_L16 */
   static kcg_int _L16;
   
@@ -32,8 +32,8 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     &_L12[0],
     (positionedBG_T_TrainPosition_Types_Pck *)
       &cNoPositionedBG_CalculateTrainPosition_Pkg);
-  kcg_copy_array__136412(&tmp1[0], (array__136412 *) &(*BGs_in)[1]);
-  kcg_copy_array__130627(&tmp1[40], &_L12);
+  kcg_copy_array__137091(&tmp1[0], (array__137091 *) &(*BGs_in)[1]);
+  kcg_copy_array__131324(&tmp1[40], &_L12);
   if (_L8) {
     for (i = 0; i < 41; i++) {
       /* 1 */
@@ -73,6 +73,6 @@ void deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** deleteBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

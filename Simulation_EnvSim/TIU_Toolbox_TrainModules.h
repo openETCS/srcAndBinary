@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 #ifndef _TIU_Toolbox_TrainModules_H_
 #define _TIU_Toolbox_TrainModules_H_
@@ -26,10 +26,6 @@ typedef struct {
   kcg_bool /* Toolbox::TrainModules::TIU::powerOn */ powerOn;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-  /* -------------------- (-debug) no assertions  -------------------- */
-  /* ------------------- (-debug) local variables -------------------- */
-  kcg_bool /* Toolbox::TrainModules::TIU::_L57 */ _L57;
-  kcg_bool /* Toolbox::TrainModules::TIU::_L98 */ _L98;
 } outC_TIU_Toolbox_TrainModules;
 
 /* ===========  node initialization and cycle functions  =========== */
@@ -47,6 +43,6 @@ extern void TIU_reset_Toolbox_TrainModules(outC_TIU_Toolbox_TrainModules *outC);
 #endif /* _TIU_Toolbox_TrainModules_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TIU_Toolbox_TrainModules.h
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

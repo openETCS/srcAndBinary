@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -68,7 +68,7 @@ void RBC__ProcessController_RBC_Model_Pkg(
   static D_CYCLOC tmp21;
   static M_LOC tmp20;
   static N_ITER tmp19;
-  static array__127640 tmp18;
+  static array__128321 tmp18;
   static SessionManagement_T tmp17;
   static TrainData_T tmp16;
   static TrainData_T tmp15;
@@ -504,7 +504,7 @@ void RBC__ProcessController_RBC_Model_Pkg(
           }
           /* 2 */
           RBC__PingTrain_RBC_Model_Pkg(
-            (P042_trackside_int_T_TM *) &P042_RequestSessionTermination,
+            kcg_true,
             inDataBus,
             inRadioTrainTrackMessage,
             inTriggeredRadioTrackTrainMessage,
@@ -736,7 +736,7 @@ void RBC__ProcessController_RBC_Model_Pkg(
             &outC->_6_Context_1);
           /* 1 */
           RBC__PingTrain_RBC_Model_Pkg(
-            (P042_trackside_int_T_TM *) &P042_DEFAULT,
+            kcg_false,
             &outC->_6_Context_1.outDataBus,
             &outC->_6_Context_1.outRadioTrainTrackMessage,
             &outC->_6_Context_1.outTriggeredRadioTrackTrainMessage,
@@ -1104,6 +1104,6 @@ void RBC__ProcessController_RBC_Model_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RBC__ProcessController_RBC_Model_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 

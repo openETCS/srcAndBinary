@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,7 @@ void BufferOutput_read_write4_TM_lib_internal(
   /* TM_lib_internal::BufferOutput_read_write4::_L34 */
   static kcg_bool _L34;
   /* TM_lib_internal::BufferOutput_read_write4::_L40 */
-  static array__130636 _L40;
+  static array__131333 _L40;
   
   _L34 = Stacksize_old == 0;
   kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
@@ -31,10 +31,10 @@ void BufferOutput_read_write4_TM_lib_internal(
     kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
       Message_out,
       &(*Message_In)[0]);
-    kcg_copy_array__136573(
+    kcg_copy_array__137254(
       &(*Buffer_Out)[0],
-      (array__136573 *) &(*Message_In)[1]);
-    kcg_copy_array__130636(&(*Buffer_Out)[3], &_L40);
+      (array__137254 *) &(*Message_In)[1]);
+    kcg_copy_array__131333(&(*Buffer_Out)[3], &_L40);
   }
   else {
     if ((0 <= Stacksize_old - 1) & (Stacksize_old - 1 < 100)) {
@@ -48,15 +48,15 @@ void BufferOutput_read_write4_TM_lib_internal(
         (M_TrainTrack_Message_T_TM_radio_messages *)
           &EMPTY_TrainTrackMessage_TM_lib_internal);
     }
-    kcg_copy_array__136078(
+    kcg_copy_array__136753(
       &(*Buffer_Out)[0],
-      (array__136078 *) &(*Message_In)[0]);
+      (array__136753 *) &(*Message_In)[0]);
   }
-  kcg_copy_array__136569(&(*Buffer_Out)[4], (array__136569 *) &(*Buffer_In)[0]);
+  kcg_copy_array__137250(&(*Buffer_Out)[4], (array__137250 *) &(*Buffer_In)[0]);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** BufferOutput_read_write4_TM_lib_internal.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

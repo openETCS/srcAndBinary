@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _combineForLevelChange_xdebugSupport_Pkg_H_
 #define _combineForLevelChange_xdebugSupport_Pkg_H_
@@ -41,6 +41,7 @@ extern void combineForLevelChange_xdebugSupport_Pkg(
   /* xdebugSupport_Pkg::combineForLevelChange::transitionPositionPassed */kcg_bool transitionPositionPassed,
   /* xdebugSupport_Pkg::combineForLevelChange::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
   /* xdebugSupport_Pkg::combineForLevelChange::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
+  /* xdebugSupport_Pkg::combineForLevelChange::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
   outC_combineForLevelChange_xdebugSupport_Pkg *outC);
 
 extern void combineForLevelChange_reset_xdebugSupport_Pkg(
@@ -49,6 +50,6 @@ extern void combineForLevelChange_reset_xdebugSupport_Pkg(
 #endif /* _combineForLevelChange_xdebugSupport_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** combineForLevelChange_xdebugSupport_Pkg.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 

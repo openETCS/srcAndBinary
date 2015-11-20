@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:26
 *************************************************************$ */
 #ifndef _initiateSession_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _initiateSession_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -28,6 +28,6 @@ extern void initiateSession_v2_MoRC_Pck_Subfunc_Pkg(
 #endif /* _initiateSession_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** initiateSession_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:26
 *************************************************************$ */
 

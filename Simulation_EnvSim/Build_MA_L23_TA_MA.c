@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -84,13 +84,13 @@ void Build_MA_L23_TA_MA(
     outC->available = outC->rem_available;
   }
   outC->init = kcg_false;
-  outC->currentEOA = 0;
+  outC->currentEOA = /* 1 */ Get_EOA_TA_MA(&outC->MA_absolute);
   outC->rem_available = outC->available;
   outC->rem__L111 = (*train_position).LRBG.nid_bg;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_MA_L23_TA_MA.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

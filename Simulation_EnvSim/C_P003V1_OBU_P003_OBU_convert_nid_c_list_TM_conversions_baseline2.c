@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,22 +15,22 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::nid_c_list */P003_OBU_nid_c_sectionlist_enum_T_TM *nid_c_list)
 {
   /* TM_conversions_baseline2::C_P003V1_OBU_P003_OBU_convert_nid_c_list::_L116 */
-  static array__130618 _L116;
+  static array__131315 _L116;
   
   kcg_copy_P003V1_section_enum_T_TM_baseline2(
     &_L116[0],
     (P003V1_section_enum_T_TM_baseline2 *)
       &DEFAULT_P003V1_OBU_section_TM_baseline2);
-  kcg_copy_array__136315(
+  kcg_copy_array__136992(
     &(*nid_c_list)[0],
-    (array__136315 *) &(*P003V1_onboard).SECTIONS[1]);
-  kcg_copy_array__130618(&(*nid_c_list)[31], &_L116);
+    (array__136992 *) &(*P003V1_onboard).SECTIONS[1]);
+  kcg_copy_array__131315(&(*nid_c_list)[31], &_L116);
   *nid_c1 = (*P003V1_onboard).SECTIONS[0].nid_c;
   *n_iter_out = (*P003V1_onboard).n_iter;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

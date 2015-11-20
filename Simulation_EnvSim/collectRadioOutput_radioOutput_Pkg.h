@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 #ifndef _collectRadioOutput_radioOutput_Pkg_H_
 #define _collectRadioOutput_radioOutput_Pkg_H_
@@ -36,7 +36,7 @@ extern void collectRadioOutput_radioOutput_Pkg(
   /* radioOutput_Pkg::collectRadioOutput::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
   /* radioOutput_Pkg::collectRadioOutput::insafeSessionEstablished */kcg_bool insafeSessionEstablished,
   /* radioOutput_Pkg::collectRadioOutput::inModeAndLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
-  /* radioOutput_Pkg::collectRadioOutput::mobileHWStatus */mobileHWStatus_Type_MoRC_Pck *mobileHWStatus,
+  /* radioOutput_Pkg::collectRadioOutput::mobileRadioStatus */morcStatus_T_RCM_Session_Types_Pkg *mobileRadioStatus,
   /* radioOutput_Pkg::collectRadioOutput::mobileConnectionCMD */mobileConnectionCmd_T_RCM_Types_Pkg *mobileConnectionCMD,
   /* radioOutput_Pkg::collectRadioOutput::mobileRegistrationCMD */mobileRegistrationCmd_T_RCM_Types_Pkg *mobileRegistrationCMD,
   /* radioOutput_Pkg::collectRadioOutput::inVersion */M_VERSION inVersion,
@@ -49,6 +49,6 @@ extern void collectRadioOutput_reset_radioOutput_Pkg(
 #endif /* _collectRadioOutput_radioOutput_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** collectRadioOutput_radioOutput_Pkg.h
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

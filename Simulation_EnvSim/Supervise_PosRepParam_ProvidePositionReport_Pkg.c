@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,6 @@
 void Supervise_PosRepParam_reset_ProvidePositionReport_Pkg(
   outC_Supervise_PosRepParam_ProvidePositionReport_Pkg *outC)
 {
-  outC->init = kcg_true;
   /* 1 */ Supervision_M_Loc_reset_ProvidePositionReport_Pkg(&outC->Context_1);
   /* 1 */
   Supervision_T_Cycloc_reset_ProvidePositionReport_Pkg(&outC->_1_Context_1);
@@ -26,21 +25,10 @@ void Supervise_PosRepParam_ProvidePositionReport_Pkg(
   outC_Supervise_PosRepParam_ProvidePositionReport_Pkg *outC)
 {
   static kcg_bool tmp;
+  /* ProvidePositionReport_Pkg::Supervise_PosRepParam::_L17 */
+  static kcg_bool _L17;
   
-  tmp = 0 != (*posRepParam).t_cycloc;
-  if (tmp) {
-    /* 1 */
-    Supervision_T_Cycloc_ProvidePositionReport_Pkg(
-      present,
-      (*posRepParam).t_cycloc,
-      systemTime,
-      &outC->_1_Context_1);
-    outC->_L11 = outC->_1_Context_1.trigger;
-  }
-  else if (outC->init) {
-    outC->_L11 = kcg_false;
-  }
-  outC->init = kcg_false;
+  _L17 = 0 != (*posRepParam).t_cycloc;
   /* 1 */
   Supervision_M_Loc_ProvidePositionReport_Pkg(
     trainPos,
@@ -48,16 +36,28 @@ void Supervise_PosRepParam_ProvidePositionReport_Pkg(
     (*posRepParam).m_loc,
     present,
     &outC->Context_1);
+  if (_L17) {
+    /* 1 */
+    Supervision_T_Cycloc_ProvidePositionReport_Pkg(
+      present,
+      (*posRepParam).t_cycloc,
+      systemTime,
+      &outC->_1_Context_1);
+    tmp = outC->_1_Context_1.trigger;
+  }
+  else {
+    tmp = kcg_false;
+  }
   outC->trigger = outC->Context_1.trigger | /* 1 */
     Supervision_D_Cycloc_ProvidePositionReport_Pkg((*posRepParam).d_cycloc) |
     /* 1 */
     Supervision_N_Iter_ProvidePositionReport_Pkg(
       (*posRepParam).n_iter,
-      &(*posRepParam).iterPacket58List) | outC->_L11;
+      &(*posRepParam).iterPacket58List) | tmp;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Supervise_PosRepParam_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

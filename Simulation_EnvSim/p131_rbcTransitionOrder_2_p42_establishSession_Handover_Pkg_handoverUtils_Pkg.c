@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void p131_rbcTransitionOrder_2_p42_establishSession_Handover_Pkg_handoverUtils_P
   /* Handover_Pkg::handoverUtils_Pkg::p131_rbcTransitionOrder_2_p42_establishSession::p131_transitionOrder */msgFromTrack_T_RCM_MsgTypes_Pkg *p131_transitionOrder,
   /* Handover_Pkg::handoverUtils_Pkg::p131_rbcTransitionOrder_2_p42_establishSession::p42_establishSession */msgFromTrack_T_RCM_MsgTypes_Pkg *p42_establishSession)
 {
-  static struct__128273 tmp;
+  static struct__128961 tmp;
   /* Handover_Pkg::handoverUtils_Pkg::p131_rbcTransitionOrder_2_p42_establishSession::_L53 */
   static kcg_bool _L53;
   /* Handover_Pkg::handoverUtils_Pkg::p131_rbcTransitionOrder_2_p42_establishSession::_L54 */
@@ -46,6 +46,6 @@ void p131_rbcTransitionOrder_2_p42_establishSession_Handover_Pkg_handoverUtils_P
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** p131_rbcTransitionOrder_2_p42_establishSession_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

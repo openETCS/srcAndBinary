@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:26
 *************************************************************$ */
 #ifndef _Build_MA_L23_TA_MA_H_
 #define _Build_MA_L23_TA_MA_H_
@@ -8,6 +8,7 @@
 #include "kcg_types.h"
 #include "Read_P015_TM.h"
 #include "MA_L23_Preprocessing_TA_MA.h"
+#include "Get_EOA_TA_MA.h"
 #include "Eval_LRBG_TA_Lib_internal.h"
 #include "MA_L23_Postprocessing_TA_MA.h"
 
@@ -49,6 +50,6 @@ extern void Build_MA_L23_reset_TA_MA(outC_Build_MA_L23_TA_MA *outC);
 #endif /* _Build_MA_L23_TA_MA_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_MA_L23_TA_MA.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:26
 *************************************************************$ */
 

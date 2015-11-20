@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,7 +29,7 @@ void SSP_to_MRSP_TA_Export(
   }
   *cont = _L7.valid;
   kcg_copy_MRSP_Profile_t_TrackAtlasTypes(MRSP, MRSP_init);
-  if ((0 <= i) & (i < 200)) {
+  if ((0 <= i) & (i < 110)) {
     (*MRSP)[i].valid = *cont;
     (*MRSP)[i].Loc_Abs = _L7.d_static_abs;
     (*MRSP)[i].Loc_LRBG = _L7.d_static_LRBG;
@@ -39,6 +39,6 @@ void SSP_to_MRSP_TA_Export(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_to_MRSP_TA_Export.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

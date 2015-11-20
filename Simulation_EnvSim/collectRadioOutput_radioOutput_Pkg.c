@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,16 +20,16 @@ void collectRadioOutput_radioOutput_Pkg(
   /* radioOutput_Pkg::collectRadioOutput::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
   /* radioOutput_Pkg::collectRadioOutput::insafeSessionEstablished */kcg_bool insafeSessionEstablished,
   /* radioOutput_Pkg::collectRadioOutput::inModeAndLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
-  /* radioOutput_Pkg::collectRadioOutput::mobileHWStatus */mobileHWStatus_Type_MoRC_Pck *mobileHWStatus,
+  /* radioOutput_Pkg::collectRadioOutput::mobileRadioStatus */morcStatus_T_RCM_Session_Types_Pkg *mobileRadioStatus,
   /* radioOutput_Pkg::collectRadioOutput::mobileConnectionCMD */mobileConnectionCmd_T_RCM_Types_Pkg *mobileConnectionCMD,
   /* radioOutput_Pkg::collectRadioOutput::mobileRegistrationCMD */mobileRegistrationCmd_T_RCM_Types_Pkg *mobileRegistrationCMD,
   /* radioOutput_Pkg::collectRadioOutput::inVersion */M_VERSION inVersion,
   /* radioOutput_Pkg::collectRadioOutput::inT_TRAIN */T_TRAIN inT_TRAIN,
   outC_collectRadioOutput_radioOutput_Pkg *outC)
 {
-  if ((*mobileHWStatus).valid) {
-    outC->RTMisActive = (*mobileHWStatus).connectionStatus !=
-      mhwc_notRegistered_MoRC_Pck;
+  if ((*mobileRadioStatus).session.valid) {
+    outC->RTMisActive = (*mobileRadioStatus).session.phase !=
+      sp_terminated_RCM_Session_Types_Pkg;
   }
   else if (outC->init) {
     outC->RTMisActive = kcg_false;
@@ -60,6 +60,6 @@ void collectRadioOutput_radioOutput_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** collectRadioOutput_radioOutput_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -51,7 +51,8 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
         !(((*p42_SessionManagement).nid_c == (*sessionStatus).nid_c) &
           ((*p42_SessionManagement).nid_RBC == (*sessionStatus).nid_rbc) &
           ((*p42_SessionManagement).nid_radio == (*sessionStatus).nid_radio) &
-          (*sessionStatus).valid)));
+          (*sessionStatus).valid & ((*sessionStatus).phase !=
+            sp_terminated_RCM_Session_Types_Pkg))));
   if (outC->init) {
     outC->init = kcg_false;
     TrainExitedFromRBCArea_SM_state_sel = SSM_st_Idle_TrainExitedFromRBCArea_SM;
@@ -176,6 +177,6 @@ void initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** initiateTerminatingSession_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

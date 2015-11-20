@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,14 +30,14 @@ void BufferOutput_write_only5_TM_lib_internal(
   else {
     *Stacksize_new = _L7;
   }
-  kcg_copy_array__128412(
+  kcg_copy_array__129101(
     &(*Buffer_Out)[0],
-    (array__128412 *) &(*Message_In)[0]);
-  kcg_copy_array__136565(&(*Buffer_Out)[5], (array__136565 *) &(*Buffer_In)[0]);
+    (array__129101 *) &(*Message_In)[0]);
+  kcg_copy_array__137246(&(*Buffer_Out)[5], (array__137246 *) &(*Buffer_In)[0]);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** BufferOutput_write_only5_TM_lib_internal.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,6 +20,7 @@ void combineForLevelChange_xdebugSupport_Pkg(
   /* xdebugSupport_Pkg::combineForLevelChange::transitionPositionPassed */kcg_bool transitionPositionPassed,
   /* xdebugSupport_Pkg::combineForLevelChange::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
   /* xdebugSupport_Pkg::combineForLevelChange::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
+  /* xdebugSupport_Pkg::combineForLevelChange::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
   outC_combineForLevelChange_xdebugSupport_Pkg *outC)
 {
   static M_LEVEL tmp2;
@@ -79,6 +80,7 @@ void combineForLevelChange_xdebugSupport_Pkg(
       trainPosition,
       tmp,
       (*ModeLevel).level,
+      trainProperties,
       &outC->infoForLevelTransition,
       &outC->rem_LRBGpositionNeeded);
   }
@@ -171,6 +173,6 @@ void combineForLevelChange_xdebugSupport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** combineForLevelChange_xdebugSupport_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

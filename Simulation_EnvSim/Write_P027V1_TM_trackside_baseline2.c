@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void Write_P027V1_TM_trackside_baseline2(
   /* TM_trackside_baseline2::Write_P027V1::Error */kcg_bool *Error,
   /* TM_trackside_baseline2::Write_P027V1::PacketsOut */CompressedPackets_T_Common_Types_Pkg *PacketsOut)
 {
-  static struct__127366 tmp1;
+  static struct__128047 tmp1;
   static kcg_bool tmp;
   static kcg_int i;
   /* TM_trackside_baseline2::Write_P027V1::_L21 */
@@ -76,6 +76,6 @@ void Write_P027V1_TM_trackside_baseline2(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Write_P027V1_TM_trackside_baseline2.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:30
 *************************************************************$ */
 

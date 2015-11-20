@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _Supervision_T_Cycloc_ProvidePositionReport_Pkg_H_
 #define _Supervision_T_Cycloc_ProvidePositionReport_Pkg_H_
@@ -17,7 +17,7 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  SystemTime_T_ProvidePositionReport_Pkg /* ProvidePositionReport_Pkg::Supervision_T_Cycloc::_L5 */ _L5;
+  T_internal_Type_Obu_BasicTypes_Pkg /* ProvidePositionReport_Pkg::Supervision_T_Cycloc::lastTime */ lastTime;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
 } outC_Supervision_T_Cycloc_ProvidePositionReport_Pkg;
@@ -36,6 +36,6 @@ extern void Supervision_T_Cycloc_reset_ProvidePositionReport_Pkg(
 #endif /* _Supervision_T_Cycloc_ProvidePositionReport_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Supervision_T_Cycloc_ProvidePositionReport_Pkg.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 

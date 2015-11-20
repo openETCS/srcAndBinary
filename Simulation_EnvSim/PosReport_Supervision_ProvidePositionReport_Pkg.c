@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,6 @@
 void PosReport_Supervision_reset_ProvidePositionReport_Pkg(
   outC_PosReport_Supervision_ProvidePositionReport_Pkg *outC)
 {
-  outC->init = kcg_true;
   /* 1 */ Supervise_Events_reset_ProvidePositionReport_Pkg(&outC->Context_1);
   /* Supervise_PosRepParam */
   Supervise_PosRepParam_reset_ProvidePositionReport_Pkg(
@@ -31,6 +30,8 @@ void PosReport_Supervision_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::PosReport_Supervision::posBGs */positionedBGs_T_TrainPosition_Types_Pck *posBGs,
   outC_PosReport_Supervision_ProvidePositionReport_Pkg *outC)
 {
+  static kcg_bool tmp;
+  
   if ((*posRepParam).valid) {
     /* Supervise_PosRepParam */
     Supervise_PosRepParam_ProvidePositionReport_Pkg(
@@ -40,12 +41,11 @@ void PosReport_Supervision_ProvidePositionReport_Pkg(
       trainPos,
       posBGs,
       &outC->Context_Supervise_PosRepParam);
-    outC->_L52 = outC->Context_Supervise_PosRepParam.trigger;
+    tmp = outC->Context_Supervise_PosRepParam.trigger;
   }
-  else if (outC->init) {
-    outC->_L52 = kcg_false;
+  else {
+    tmp = kcg_false;
   }
-  outC->init = kcg_false;
   /* 1 */
   Supervise_Events_ProvidePositionReport_Pkg(
     posBGs,
@@ -56,11 +56,11 @@ void PosReport_Supervision_ProvidePositionReport_Pkg(
     rbcComm,
     trackInfo,
     &outC->Context_1);
-  outC->trigger = outC->_L52 | outC->Context_1.result;
+  outC->trigger = tmp | outC->Context_1.result;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** PosReport_Supervision_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

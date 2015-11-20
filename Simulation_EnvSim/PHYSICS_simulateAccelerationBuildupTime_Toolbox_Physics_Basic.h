@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 #ifndef _PHYSICS_simulateAccelerationBuildupTime_Toolbox_Physics_Basic_H_
 #define _PHYSICS_simulateAccelerationBuildupTime_Toolbox_Physics_Basic_H_
@@ -19,8 +19,6 @@ typedef struct {
   /* -----------------------  no local memory  ----------------------- */
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-  /* -------------------- (-debug) no assertions  -------------------- */
-  /* ----------------- (-debug) no local variables ------------------- */
 } outC_PHYSICS_simulateAccelerationBuildupTime_Toolbox_Physics_Basic;
 
 /* ===========  node initialization and cycle functions  =========== */
@@ -35,6 +33,6 @@ extern void PHYSICS_simulateAccelerationBuildupTime_reset_Toolbox_Physics_Basic(
 #endif /* _PHYSICS_simulateAccelerationBuildupTime_Toolbox_Physics_Basic_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** PHYSICS_simulateAccelerationBuildupTime_Toolbox_Physics_Basic.h
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

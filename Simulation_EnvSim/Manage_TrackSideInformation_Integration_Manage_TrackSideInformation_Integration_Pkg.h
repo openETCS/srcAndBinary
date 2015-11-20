@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:56
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
 #define _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
@@ -9,7 +9,6 @@
 #include "CheckBGConsistency_CheckBGConsistency_Pkg.h"
 #include "validateDataDirection_ValidateDataDirection_Pkg.h"
 #include "ContinuousTimeoutCheck_CheckEuroradioMessage.h"
-#include "bypassGeneralMessage_xdebugSupport_Pkg.h"
 #include "Receive_TrackSide_Msg_Receive_TrackSide_Msg_Pkg.h"
 #include "CheckEuroRadioMessage_CheckEuroradioMessage.h"
 #include "InformationFilter_InformationFilter_Pkg.h"
@@ -60,6 +59,7 @@ extern void Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inTrainDataValid */kcg_bool inTrainDataValid,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::inFilterEvents */filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
   /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::transitionPositionPassed */kcg_bool transitionPositionPassed,
+  /* Manage_TrackSideInformation_Integration_Pkg::Manage_TrackSideInformation_Integration::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
   outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg *outC);
 
 extern void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInformation_Integration_Pkg(
@@ -68,6 +68,6 @@ extern void Manage_TrackSideInformation_Integration_reset_Manage_TrackSideInform
 #endif /* _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h
-** Generation date: 2015-11-12T10:46:56
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 

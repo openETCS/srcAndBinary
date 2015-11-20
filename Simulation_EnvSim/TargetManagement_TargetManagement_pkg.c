@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,12 +22,12 @@ void TargetManagement_TargetManagement_pkg(
   /* TargetManagement_pkg::TargetManagement::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
   outC_TargetManagement_TargetManagement_pkg *outC)
 {
-  static struct__130116 tmp;
+  static struct__130813 tmp;
   static kcg_int i;
   static Target_list_MRSP_real_T_TargetManagement_types tmp3;
   static extractTargetsMRSPACC_TargetManagement_pkg tmp2;
-  static array__129904 tmp1;
-  static array__129904 tmp4;
+  static array__130601 tmp1;
+  static array__130601 tmp4;
   /* TargetManagement_pkg::TargetManagement::_L88 */
   static kcg_bool _L88;
   
@@ -51,7 +51,7 @@ void TargetManagement_TargetManagement_pkg(
   kcg_copy_Target_real_T_TargetManagement_types(
     &outC->targetCollection.SvL_LoA_target,
     &outC->_L93);
-  for (i = 0; i < 200; i++) {
+  for (i = 0; i < 110; i++) {
     kcg_copy_Target_real_T_TargetManagement_types(
       &tmp4[i],
       (Target_real_T_TargetManagement_types *)
@@ -66,14 +66,14 @@ void TargetManagement_TargetManagement_pkg(
   }
   else {
     if (outC->init) {
-      kcg_copy_array__129904(&tmp1, &tmp4);
+      kcg_copy_array__130601(&tmp1, &tmp4);
     }
     else {
       kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
         &tmp1,
         &outC->rem_MRSPTargetList);
     }
-    kcg_copy_array__129904(&tmp.targetList, &tmp1);
+    kcg_copy_array__130601(&tmp.targetList, &tmp1);
     tmp.lastInsertedTargetIndex = - 1;
     kcg_copy_Target_list_MRSP_real_T_TargetManagement_types(
       &tmp3,
@@ -97,6 +97,6 @@ void TargetManagement_TargetManagement_pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TargetManagement_TargetManagement_pkg.c
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:28
 *************************************************************$ */
 

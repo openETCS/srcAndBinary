@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,14 +12,13 @@ void Environment_reset_Testbench_EnvSim_Components(
 {
   outC->init = kcg_true;
   /* 1 */ EVC_InputBuffer_reset_Toolbox_Functions(&outC->Context_1);
-  /* 1 */ BTM_reset_Toolbox_TrainModules(&outC->_1_Context_1);
-  /* 1 */ RTM_reset_Toolbox_TrainModules(&outC->_2_Context_1);
+  /* 1 */ RTM_reset_Toolbox_TrainModules(&outC->_1_Context_1);
   /* 3 */ ProbeTracksideInput_reset_EnvSim(&outC->Context_3);
-  /* 1 */ RBC_New_reset_RBC_Model_Pkg(&outC->_3_Context_1);
-  /* 1 */ ScriptedTrack_reset_EnvSim(&outC->_4_Context_1);
-  /* 1 */ PHYSICS_MovementSimulation_reset_Toolbox_Physics(&outC->_5_Context_1);
-  /* 1 */ TIU_reset_Toolbox_TrainModules(&outC->_6_Context_1);
-  /* 1 */ AFB_reset_Toolbox_Physics(&outC->_7_Context_1);
+  /* 1 */ RBC_New_reset_RBC_Model_Pkg(&outC->_2_Context_1);
+  /* 1 */ ScriptedTrack_reset_EnvSim(&outC->_3_Context_1);
+  /* 1 */ PHYSICS_MovementSimulation_reset_Toolbox_Physics(&outC->_4_Context_1);
+  /* 1 */ TIU_reset_Toolbox_TrainModules(&outC->_5_Context_1);
+  /* 1 */ AFB_reset_Toolbox_Physics(&outC->_6_Context_1);
 }
 
 /* Testbench_EnvSim::Components::Environment */
@@ -42,7 +41,8 @@ void Environment_Testbench_EnvSim_Components(
   /* Testbench_EnvSim::Components::Environment::EVC_radioMessageToRBC_nextGen */M_TrainTrack_Message_T_TM_radio_messages *EVC_radioMessageToRBC_nextGen,
   outC_Environment_Testbench_EnvSim_Components *outC)
 {
-  static kcg_real tmp2;
+  static kcg_real tmp3;
+  static API_TrackSideInput_T_API_Msg_Pkg tmp2;
   static odometry_T_Obu_BasicTypes_Pkg tmp1;
   static TelegramHeader_T_BG_Types_Pkg tmp;
   /* Testbench_EnvSim::Components::Environment::API_tmpDirection */
@@ -59,12 +59,14 @@ void Environment_Testbench_EnvSim_Components(
   static M_LEVEL _L197;
   /* Testbench_EnvSim::Components::Environment::_L196 */
   static M_MODE _L196;
+  /* Testbench_EnvSim::Components::Environment::_L217 */
+  static CompressedBaliseMessage_TM _L217;
   
   outC->EVC_cycleEVC = kcg_true;
   outC->EVC_reset = GUI_reset;
   if (outC->init) {
     _L46 = 0;
-    tmp2 = GUI_initialVelocity;
+    tmp3 = GUI_initialVelocity;
     outC->init = kcg_false;
     kcg_copy_odometry_T_Obu_BasicTypes_Pkg(
       &tmp1,
@@ -73,7 +75,7 @@ void Environment_Testbench_EnvSim_Components(
   }
   else {
     _L46 = outC->EVC_SystemTime;
-    tmp2 = outC->GUI_currentVelocityInKmH;
+    tmp3 = outC->GUI_currentVelocityInKmH;
     kcg_copy_odometry_T_Obu_BasicTypes_Pkg(&tmp1, &outC->rem_EVC_Odometry);
   }
   /* 1 */
@@ -81,9 +83,9 @@ void Environment_Testbench_EnvSim_Components(
     GUI_targetSpeed,
     GUI_traction,
     GUI_brake,
-    tmp2,
-    &outC->_7_Context_1);
-  outC->GUI_AFBActive = outC->_7_Context_1.afbActive;
+    tmp3,
+    &outC->_6_Context_1);
+  outC->GUI_AFBActive = outC->_6_Context_1.afbActive;
   /* 1 */
   GUI_Settings_Toolbox_Functions(
     GUI_mode,
@@ -104,19 +106,19 @@ void Environment_Testbench_EnvSim_Components(
     API_tmpDirection,
     (kcg_bool) (GUI_traction > 0.0),
     190,
-    &outC->_6_Context_1);
+    &outC->_5_Context_1);
   kcg_copy_TIU_Input_msg_API_TIU_Pkg(
     &outC->EVC_fromTIU,
-    &outC->_6_Context_1.output_To_EVC);
+    &outC->_5_Context_1.output_To_EVC);
   outC->GUI_serviceBrake =
-    outC->_6_Context_1.serviceBrakeActivated_To_Environment;
+    outC->_5_Context_1.serviceBrakeActivated_To_Environment;
   outC->GUI_emergencyBrake =
-    outC->_6_Context_1.emergencyBrakeActivated_To_Environment;
-  outC->GUI_TractionCutOff = outC->_6_Context_1.tractionCutOff_To_Environment;
+    outC->_5_Context_1.emergencyBrakeActivated_To_Environment;
+  outC->GUI_TractionCutOff = outC->_5_Context_1.tractionCutOff_To_Environment;
   /* 1 */
   PHYSICS_MovementSimulation_Toolbox_Physics(
     outC->EVC_reset,
-    outC->_7_Context_1.calculatedAcceleration,
+    outC->_6_Context_1.calculatedAcceleration,
     outC->GUI_TractionCutOff,
     outC->GUI_serviceBrake,
     outC->GUI_emergencyBrake,
@@ -126,56 +128,50 @@ void Environment_Testbench_EnvSim_Components(
     activateBrakeBuildupTime,
     activateAirResistance,
     cMaximumAcceleration_Testbench_EnvSim_Components,
-    &outC->_5_Context_1);
-  outC->GUI_currentPositionInM = outC->_5_Context_1.position;
-  outC->GUI_currentVelocityInKmH = outC->_5_Context_1.velocity;
-  outC->EVC_SystemTime = outC->_5_Context_1.timestamp;
+    &outC->_4_Context_1);
+  outC->GUI_currentPositionInM = outC->_4_Context_1.position;
+  outC->GUI_currentVelocityInKmH = outC->_4_Context_1.velocity;
+  outC->EVC_SystemTime = outC->_4_Context_1.timestamp;
   kcg_copy_odometry_T_Obu_BasicTypes_Pkg(
     &outC->EVC_Odometry,
-    &outC->_5_Context_1.odometry);
+    &outC->_4_Context_1.odometry);
   /* 1 */
   ScriptedTrack_EnvSim(
     outC->GUI_currentPositionInM,
     outC->GUI_currentPositionInM,
-    &outC->_4_Context_1);
+    &outC->_3_Context_1);
+  kcg_copy_CompressedBaliseMessage_TM(
+    &_L217,
+    &outC->_3_Context_1.baliseMessage);
   /* 1 */
   RBC_New_RBC_Model_Pkg(
     (DynamicConfig_T *) &DYNAMIC_CONFIG_UTRECHT_AMSTERDAM,
     EVC_radioMessageToRBC_nextGen,
-    &outC->_4_Context_1.radioMessage,
-    &outC->_3_Context_1);
+    &outC->_3_Context_1.radioMessage,
+    &outC->_2_Context_1);
   /* 3 */
   ProbeTracksideInput_EnvSim(
     outC->GUI_currentPositionInM,
-    &outC->_4_Context_1.baliseMessage,
-    &outC->_3_Context_1.outRadioTrackTrainMessage,
+    &_L217,
+    &outC->_2_Context_1.outRadioTrackTrainMessage,
     EVC_radioMessageToRBC_nextGen,
     &outC->Context_3);
   /* 1 */
   RTM_Toolbox_TrainModules(
     _L46,
-    &outC->_3_Context_1.outRadioTrackTrainMessage.Messages,
-    &outC->_3_Context_1.outRadioTrackTrainMessage.Header,
+    &outC->_2_Context_1.outRadioTrackTrainMessage.Messages,
+    &outC->_2_Context_1.outRadioTrackTrainMessage.Header,
     EVC_RTM_Management,
-    &outC->_2_Context_1);
+    &outC->_1_Context_1);
   kcg_copy_mobileHWStatus_Type_MoRC_Pck(
     &outC->EVC_mobileHWStatus,
-    &outC->_2_Context_1.mobileHWStatus);
-  /* 1 */
-  CASTLIB_BaliseHeaders_TM_conversions(
-    &outC->_4_Context_1.baliseMessage.Header,
-    &tmp);
-  /* 1 */
-  BTM_Toolbox_TrainModules(
-    _L46,
-    &tmp1,
-    &outC->_4_Context_1.baliseMessage.Messages,
-    &tmp,
-    &outC->_1_Context_1);
+    &outC->_1_Context_1.mobileHWStatus);
+  /* 1 */ CASTLIB_BaliseHeaders_TM_conversions(&_L217.Header, &tmp);
+  /* 1 */ BTM_Toolbox_TrainModules(_L46, &tmp1, &_L217.Messages, &tmp, &tmp2);
   /* 1 */
   EVC_InputBuffer_Toolbox_Functions(
+    &tmp2,
     &outC->_1_Context_1.TrackMessage,
-    &outC->_2_Context_1.TrackMessage,
     &outC->Context_1);
   kcg_copy_API_TrackSideInput_T_API_Msg_Pkg(
     &outC->EVC_fromTrack,
@@ -189,6 +185,6 @@ void Environment_Testbench_EnvSim_Components(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Environment_Testbench_EnvSim_Components.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:32
 *************************************************************$ */
 

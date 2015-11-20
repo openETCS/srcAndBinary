@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:58
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void Build_PosReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::Build_PosReport::trainProps */trainProperties_T_TrainPosition_Types_Pck *trainProps,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *in_packet0,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet1 */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *in_packet1,
-  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */array__130615 *errorVector,
+  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */array__131312 *errorVector,
   /* ProvidePositionReport_Pkg::Build_PosReport::t_train */T_TRAIN t_train,
   /* ProvidePositionReport_Pkg::Build_PosReport::posRepHeader */Radio_TrainTrack_Header_T_Radio_Types_Pkg *posRepHeader,
   /* ProvidePositionReport_Pkg::Build_PosReport::packet0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
@@ -36,6 +36,6 @@ void Build_PosReport_ProvidePositionReport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_PosReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-12T10:46:58
+** Generation date: 2015-11-20T13:23:29
 *************************************************************$ */
 

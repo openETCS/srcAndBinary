@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:57
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 #ifndef _EVC_InputBuffer_Toolbox_Functions_H_
 #define _EVC_InputBuffer_Toolbox_Functions_H_
@@ -23,9 +23,6 @@ typedef struct {
   outC_TRAIN_TrackSideInputFifo_Toolbox_Functions_5 /* 2 */ Context_2;
   outC_TRAIN_TrackSideInputFifo_Toolbox_Functions_5 /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
-  /* -------------------- (-debug) no assertions  -------------------- */
-  /* ------------------- (-debug) local variables -------------------- */
-  kcg_bool /* Toolbox::Functions::EVC_InputBuffer::_L16 */ _L16;
 } outC_EVC_InputBuffer_Toolbox_Functions;
 
 /* ===========  node initialization and cycle functions  =========== */
@@ -41,6 +38,6 @@ extern void EVC_InputBuffer_reset_Toolbox_Functions(
 #endif /* _EVC_InputBuffer_Toolbox_Functions_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** EVC_InputBuffer_Toolbox_Functions.h
-** Generation date: 2015-11-12T10:46:57
+** Generation date: 2015-11-20T13:23:27
 *************************************************************$ */
 

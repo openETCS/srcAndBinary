@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void DataBusFactory_RBC_DataBus_Pkg(
   outC_DataBusFactory_RBC_DataBus_Pkg *outC)
 {
   static DynamicConfig_T tmp4;
-  static array__127733 tmp3;
+  static array__128414 tmp3;
   static RadioTrackTrainMessageQueue_T tmp2;
   static Clock_T tmp1;
   static CompressedRadioMessage_TM tmp;
@@ -47,9 +47,9 @@ void DataBusFactory_RBC_DataBus_Pkg(
       &outC->outDataBus.session,
       (SessionManagement_T *) &SESSION_MANAGEMENT_DEFAULT);
     kcg_copy_DynamicConfig_T(&tmp4, initConfig);
-    kcg_copy_array__127733(
+    kcg_copy_array__128414(
       &tmp3,
-      (array__127733 *) &DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg);
+      (array__128414 *) &DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg);
     kcg_copy_RadioTrackTrainMessageQueue_T(
       &tmp2,
       (RadioTrackTrainMessageQueue_T *)
@@ -65,7 +65,7 @@ void DataBusFactory_RBC_DataBus_Pkg(
       &outC->outDataBus.session,
       &(*inDataBus).session);
     kcg_copy_DynamicConfig_T(&tmp4, &(*inDataBus).config);
-    kcg_copy_array__127733(&tmp3, &(*inDataBus).diagnostic);
+    kcg_copy_array__128414(&tmp3, &(*inDataBus).diagnostic);
     kcg_copy_RadioTrackTrainMessageQueue_T(&tmp2, &(*inDataBus).messageQueue);
     /* 1 */ Clock__Limit_RBC_Time_Pkg(&(*inDataBus).clockk, &tmp1);
     kcg_copy_CompressedRadioMessage_TM(
@@ -73,7 +73,7 @@ void DataBusFactory_RBC_DataBus_Pkg(
       &(*inDataBus).lastSentTrackTrainMessage);
   }
   kcg_copy_DynamicConfig_T(&outC->outDataBus.config, &tmp4);
-  kcg_copy_array__127733(&outC->outDataBus.diagnostic, &tmp3);
+  kcg_copy_array__128414(&outC->outDataBus.diagnostic, &tmp3);
   kcg_copy_RadioTrackTrainMessageQueue_T(&outC->outDataBus.messageQueue, &tmp2);
   kcg_copy_Clock_T(&outC->outDataBus.clockk, &tmp1);
   kcg_copy_CompressedRadioMessage_TM(
@@ -83,6 +83,6 @@ void DataBusFactory_RBC_DataBus_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DataBusFactory_RBC_DataBus_Pkg.c
-** Generation date: 2015-11-12T10:46:59
+** Generation date: 2015-11-20T13:23:31
 *************************************************************$ */
 

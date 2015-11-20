@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:54
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -61,20 +61,6 @@ const Type_I_train_commands_T_TIU_Types_Pkg cEmptyTrainCommand = { kcg_false,
   pantograph_command_not_defined_TIU_Types_Pkg,
   airtightness_command_not_defined_TIU_Types_Pkg,
   open_main_power_swicth_TIU_Types_Pkg, release_traction_cutoff_TIU_Types_Pkg };
-
-/* cNo_Levels */
-const DMI_LevelList_T_DMI_Types_Pkg cNo_Levels = { 0, { { M_LEVEL_Level_0, 0 },
-    { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
-      M_LEVEL_Level_0, 0 } } };
 
 /* cEmptyPassedBG */
 const passedBG_T_BG_Types_Pkg cEmptyPassedBG = { kcg_false, { kcg_false,
@@ -271,6 +257,192 @@ const mobileConnectionContext_T_RCM_Types_Pkg cNoMobileConnectionContext = {
 /* cNoMobileRegistrationContext */
 const mobileRegistrationContext_T_RCM_Types_Pkg cNoMobileRegistrationContext = {
   kcg_false, 0, mhs_nok_RCM_Types_Pkg, mrs_unregistered_RCM_Types_Pkg, 0 };
+
+/* cNoPositioningErrors */
+const positionErrors_T_TrainPosition_Types_Pck cNoPositioningErrors = {
+  kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false,
+  kcg_false, { kcg_false, 0, 0, Q_LINK_Unlinked, { 0, 0, 0 }, 0, { kcg_false, 0,
+      0, { 0, 0, 0 }, { 0, 0, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+        Q_SCALE_10_cm_scale, 0,
+        Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+        0, 0,
+        Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+        Q_LINKREACTION_Train_trip, 0 } }, { kcg_false, { kcg_false,
+        Q_UPDOWN_Down_link_telegram,
+        M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
+        Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked,
+        { kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0,
+          noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes_Pkg }, {
+          0, 0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { {
+          kcg_false, 0, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 }, { kcg_false, 0, Q_DIR_Reverse,
+          Q_SCALE_10_cm_scale, 0,
+          Q_NEWCOUNTRY_Same_country__or__railway_administration_no_NID_C_follows,
+          0, 0,
+          Q_LINKORIENTATION_The_balise_group_is_seen_by_the_train_in_reverse_direction,
+          Q_LINKREACTION_Train_trip, 0 } } }, kcg_false } };
+
+/* cNoMsgErrors */
+const MSG_Errors_T_Common_Types_Pkg cNoMsgErrors = { kcg_false, kcg_false,
+  kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, 0, 0 };
 
 /* cNoRadioCmd */
 const radioManagementMessage_T_Common_Types_Pkg cNoRadioCmd = { kcg_false,
@@ -7938,6 +8110,20 @@ const ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg cNoPersistentData = 
         M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
         M_LEVEL_Level_0, 0 } } } };
 
+/* cNo_Levels */
+const DMI_LevelList_T_DMI_Types_Pkg cNo_Levels = { 0, { { M_LEVEL_Level_0, 0 },
+    { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+      M_LEVEL_Level_0, 0 } } };
+
 /* cNoTDEvents */
 const trainData_Events_T_trainData_Types_pkg cNoTDEvents = { kcg_false,
   kcg_false, kcg_false, kcg_false, kcg_false, kcg_false };
@@ -8186,6 +8372,11 @@ const T_Data_From_Track_Packet_Level_And_Mode_Types_Pkg cNoPacketsForML = { { {
       Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0, 0,
       Q_MAMODE_as_the_EOA }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
       M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA } }, 0, 0 };
+
+/* cEmptyBrakeCmd */
+const Brake_command_T_TIU_Types_Pkg cEmptyBrakeCmd = { kcg_false,
+  brake_signal_command_not_defined_TIU_Types_Pkg,
+  brake_signal_command_not_defined_TIU_Types_Pkg };
 
 /* manage_DMI_Output_Pkg::cDefaultTrainData */
 const DMI_Train_Data_T_DMI_Messages_Bothways_Pkg cDefaultTrainData_manage_DMI_Output_Pkg = {
@@ -15928,6 +16119,212 @@ const ModeDecisionTableType_DataDictionary_Pkg ModeDecisionTable_DataDictionary_
     MD_Invalid_DataDictionary_Pkg, MD_Invalid_DataDictionary_Pkg,
     MD_Invalid_DataDictionary_Pkg, MD_Invalid_DataDictionary_Pkg } };
 
+/* Common_Types_Pkg::cDefaultRM */
+const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg = {
+  kcg_false, msrc_undefined_Common_Types_Pkg, { kcg_false, kcg_false, kcg_false,
+    kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false }, {
+    kcg_false, Q_UPDOWN_Down_link_telegram,
+    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
+    Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
+      kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0, noMotion_Obu_BasicTypes_Pkg,
+      unknownDirection_Obu_BasicTypes_Pkg }, { 0, 0, 0 }, 0, kcg_false,
+    Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0, 0, 0,
+    M_ACK_No_acknowledgement_required, 0, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0,
+    Q_DIR_Reverse, 0,
+    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS }, {
+    { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
+      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+        0 } }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0 } }, { kcg_false, 0, 0, 0 } };
+
+/* InformationFilter_Pkg::DEFAULT_TransitionBuffer_t */
+const TransitionBuffer_T_InformationFilter_Pkg DEFAULT_TransitionBuffer_t_InformationFilter_Pkg = {
+  { kcg_false, msrc_undefined_Common_Types_Pkg, { kcg_false, kcg_false,
+      kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false,
+      kcg_false }, { kcg_false, Q_UPDOWN_Down_link_telegram,
+      M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
+      Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
+        kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0,
+        noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes_Pkg }, { 0,
+        0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0,
+      0, 0, M_ACK_No_acknowledgement_required, 0, 0, 0, Q_SCALE_10_cm_scale, 0,
+      0, 0, Q_DIR_Reverse, 0,
+      M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS },
+    { { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 } }, { 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }, { kcg_false, 0,
+      0, 0 } }, { kcg_false, msrc_undefined_Common_Types_Pkg, { kcg_false,
+      kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false,
+      kcg_false, kcg_false }, { kcg_false, Q_UPDOWN_Down_link_telegram,
+      M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
+      Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
+        kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0,
+        noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes_Pkg }, { 0,
+        0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0,
+      0, 0, M_ACK_No_acknowledgement_required, 0, 0, 0, Q_SCALE_10_cm_scale, 0,
+      0, 0, Q_DIR_Reverse, 0,
+      M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS },
+    { { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 } }, { 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }, { kcg_false, 0,
+      0, 0 } }, { kcg_false, msrc_undefined_Common_Types_Pkg, { kcg_false,
+      kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false,
+      kcg_false, kcg_false }, { kcg_false, Q_UPDOWN_Down_link_telegram,
+      M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
+      Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
+        kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0,
+        noMotion_Obu_BasicTypes_Pkg, unknownDirection_Obu_BasicTypes_Pkg }, { 0,
+        0, 0 }, 0, kcg_false, Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0,
+      0, 0, M_ACK_No_acknowledgement_required, 0, 0, 0, Q_SCALE_10_cm_scale, 0,
+      0, 0, Q_DIR_Reverse, 0,
+      M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS },
+    { { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
+          Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
+          0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
+          kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 } }, { 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } }, { kcg_false, 0,
+      0, 0 } } };
+
 /* xdebugSupport_Pkg::cNoML */
 const dataCollectionForLevelTransition_T_xdebugSupport_Pkg cNoML_xdebugSupport_Pkg = {
   { { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0,
@@ -16023,58 +16420,6 @@ const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_xdebugSupport_Pkg = {
 /* xdebugSupport_Pkg::cNoP41Element */
 const P41_LevelTransitionOrder_T_Packet_Types_Pkg cNoP41Element_xdebugSupport_Pkg = {
   kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0, 0 };
-
-/* Common_Types_Pkg::cDefaultRM */
-const ReceivedMessage_T_Common_Types_Pkg cDefaultRM_Common_Types_Pkg = {
-  kcg_false, msrc_undefined_Common_Types_Pkg, { kcg_false, kcg_false, kcg_false,
-    kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false }, {
-    kcg_false, Q_UPDOWN_Down_link_telegram,
-    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
-    Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
-      kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0, noMotion_Obu_BasicTypes_Pkg,
-      unknownDirection_Obu_BasicTypes_Pkg }, { 0, 0, 0 }, 0, kcg_false,
-    Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0, 0, 0,
-    M_ACK_No_acknowledgement_required, 0, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0,
-    Q_DIR_Reverse, 0,
-    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS }, {
-    { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 } }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0 } }, { kcg_false, 0, 0, 0 } };
 
 /* xdebugSupport_Pkg::cNoPro */
 const probesBalises_T_xdebugSupport_Pkg cNoPro_xdebugSupport_Pkg = { kcg_false,
@@ -16870,58 +17215,6 @@ const LocWithInAcc_T_Obu_BasicTypes_Pkg cD_FE2RE = { 20084, 19900, 20200 };
 const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocationAccuracyDefault = { 0, - 100,
   100 };
 
-/* EVC_Support_Pkg::cNoTrackMsg */
-const ReceivedMessage_T_Common_Types_Pkg cNoTrackMsg_EVC_Support_Pkg = {
-  kcg_false, msrc_undefined_Common_Types_Pkg, { kcg_false, kcg_false, kcg_false,
-    kcg_false, kcg_false, kcg_false, kcg_false, kcg_false, kcg_false }, {
-    kcg_false, Q_UPDOWN_Down_link_telegram,
-    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS,
-    Q_MEDIA_Balise, N_TOTAL_1_balise_in_the_group, 0, 0, 0, Q_LINK_Unlinked, {
-      kcg_false, 0, { 0, 0, 0 }, { 0, 0, 0, 0 }, 0, noMotion_Obu_BasicTypes_Pkg,
-      unknownDirection_Obu_BasicTypes_Pkg }, { 0, 0, 0 }, 0, kcg_false,
-    Q_DIRLRBG_Reverse, Q_DIRTRAIN_Reverse }, { 0, 0, 0, 0,
-    M_ACK_No_acknowledgement_required, 0, 0, 0, Q_SCALE_10_cm_scale, 0, 0, 0,
-    Q_DIR_Reverse, 0,
-    M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS }, {
-    { { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse,
-        kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0,
-        Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0, 0 },
-      { 0, Q_DIR_Reverse, kcg_false, 0, 0 }, { 0, Q_DIR_Reverse, kcg_false, 0,
-        0 } }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0 } }, { kcg_false, 0, 0, 0 } };
-
 /* trainData_pkg::cNoBus */
 const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus cNoBus_trainData_pkg = { { {
       kcg_false, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -17001,36 +17294,6 @@ const DataForSupervision_nextGen_t_TrackAtlasTypes NTC_values_to_supervision_Tra
       kcg_false, 0, 0, 0, 0 }, { kcg_false, 0, 0, 0, 0 }, { kcg_false, 0, 0, 0,
       0 } }, kcg_true, { { kcg_true, 0, 0, 140 }, { kcg_true, 50000 * 100,
       50000 * 100, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
       kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
       kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
       kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
@@ -17154,36 +17417,6 @@ const MRSP_Profile_t_TrackAtlasTypes DEFAULT_MRSP_Profile_TA_MRSP = { {
     kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
     kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
     kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
-    kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
     kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 } };
 
 /* TA_MRSP::SP_NTC */
@@ -17265,10 +17498,6 @@ const P003V1_OBU_T_TM_baseline2 INIT_P3V1_TA_Storage = { kcg_false,
   Q_NVSBTSMPERM_No, Q_NVEMRRLS_Revoke_emergency_brake_command_at_standstill, 0,
   0, 0, 0, 0, M_NVCONTACT_Train_trip, 0, M_NVDERUN_No, 0,
   Q_NVDRIVER_ADHES_Not_allowed };
-
-/* TA_Export::DEFAULT_MRSP_section */
-const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_Export = {
-  kcg_false, 0, 0, 0 };
 
 /* TM::DEFAULT_P046_OBU_section */
 const P046_section_enum_T_TM DEFAULT_P046_OBU_section_TM = { kcg_false,
@@ -17566,6 +17795,50 @@ const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_TA_E
 /* TrackAtlasTypes::DEFAULT_StaticSpeedSection */
 const StaticSpeedSection_t_TrackAtlasTypes DEFAULT_StaticSpeedSection_TrackAtlasTypes = {
   kcg_false, 0, 0, kcg_false, 0 };
+
+/* TA_Export::DEFAULT_MRSP_reduction_acc */
+const MRSP_reduction_acc_TA_Export DEFAULT_MRSP_reduction_acc_TA_Export = { 0, {
+    { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 }, {
+      kcg_false, 0, 0, 0 }, { kcg_false, 0, 0, 0 } } };
+
+/* TA_Export::DEFAULT_MRSP_section */
+const MRSP_section_t_TrackAtlasTypes DEFAULT_MRSP_section_TA_Export = {
+  kcg_false, 0, 0, 0 };
 
 /* TA_EmergencyStop::cMSG147_NONE */
 const Radio_TrainTrack_Message_T_Radio_Types_Pkg cMSG147_NONE_TA_EmergencyStop = {
@@ -28386,7 +28659,7 @@ const SessionManagement_T SESSION_MANAGEMENT_DEFAULT = { { 0, 0, { { kcg_false,
 const Clock_T CLOCK_DEFAULT = { T_TRAIN_DEFAULT };
 
 /* RBC_Diagnostic_Pkg::DIAG_MSG_DEFAULT_ARRAY */
-const array__127733 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg = { { kcg_false,
+const array__128414 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg = { { kcg_false,
     0, T_TRAIN_DEFAULT, DIAG_MSG_TYPE_Empty_RBC_Diagnostic_Pkg,
     DIAG_MSG_SRC_Empty_RBC_Diagnostic_Pkg, DIAG_MSG_Empty_RBC_Diagnostic_Pkg },
   { kcg_false, 0, T_TRAIN_DEFAULT, DIAG_MSG_TYPE_Empty_RBC_Diagnostic_Pkg,
@@ -28909,6 +29182,6 @@ const GUI_to_EVC_EnvSim cEMPTY_GUI2EVC_EnvSim_Internal = { kcg_false, 0.0, 0.0,
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.c
-** Generation date: 2015-11-12T10:46:55
+** Generation date: 2015-11-20T13:23:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:46:55
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 #ifndef _TIU_OutputIntegration_output_to_TIU_API_Pkg_H_
 #define _TIU_OutputIntegration_output_to_TIU_API_Pkg_H_
@@ -20,7 +20,8 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_handleTraction_output_to_TIU_API_Pkg /* 1 */ Context_1;
+  outC_handleTraction_output_to_TIU_API_Pkg /* 1 */ _1_Context_1;
+  outC_manageTIU_output_output_to_TIU_API_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_TIU_OutputIntegration_output_to_TIU_API_Pkg;
 
@@ -43,6 +44,6 @@ extern void TIU_OutputIntegration_reset_output_to_TIU_API_Pkg(
 #endif /* _TIU_OutputIntegration_output_to_TIU_API_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TIU_OutputIntegration_output_to_TIU_API_Pkg.h
-** Generation date: 2015-11-12T10:46:55
+** Generation date: 2015-11-20T13:23:25
 *************************************************************$ */
 
