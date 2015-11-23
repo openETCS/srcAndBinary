@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -48,16 +48,16 @@ void EVC(
   /* EVC::API_persistentData */ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *API_persistentData,
   outC_EVC *outC)
 {
-  static struct__130935 tmp;
-  static struct__129004 tmp1;
-  static struct__130221 tmp2;
-  static struct__130207 tmp3;
-  static struct__130201 tmp4;
-  static struct__131160 tmp5;
-  static struct__131178 tmp6;
-  static struct__131140 tmp7;
-  static struct__131148 tmp8;
-  static struct__130296 tmp9;
+  static struct__130904 tmp;
+  static struct__128973 tmp1;
+  static struct__130190 tmp2;
+  static struct__130176 tmp3;
+  static struct__130170 tmp4;
+  static struct__131129 tmp5;
+  static struct__131147 tmp6;
+  static struct__131109 tmp7;
+  static struct__131117 tmp8;
+  static struct__130265 tmp9;
   static morcStatus_T_RCM_Session_Types_Pkg tmp21;
   static connection_ids_T_Handover_Pkg tmp20;
   static DMI_TXT_MSGList_status_T_DMI_Types_Pkg tmp19;
@@ -447,15 +447,15 @@ void EVC(
     &tmp2,
     &tmp3,
     outC->CALC_TrainPosition.trainRunningDirectionToLRBG,
-    cNoPositioningErrors.BG_LinkingConsistencyError,
-    cNoMsgErrors.linkedBGError,
-    cNoMsgErrors.unlinkedBGError,
-    cNoMsgErrors.radioMessageConsistencyError,
-    cNoMsgErrors.radioSequenceError,
+    outC->_11_Context_3.errors.BG_LinkingConsistencyError,
+    outC->_12_Context_2.outCheckErrors.linkedBGError,
+    outC->_12_Context_2.outCheckErrors.unlinkedBGError,
+    outC->_12_Context_2.outCheckErrors.radioMessageConsistencyError,
+    outC->_12_Context_2.outCheckErrors.radioSequenceError,
     kcg_false,
     kcg_false,
-    cNoPositioningErrors.twoConsecutiveLinkedBGs_missed,
-    cNoPositioningErrors.doubleRepositioningError,
+    outC->_11_Context_3.errors.twoConsecutiveLinkedBGs_missed,
+    outC->_11_Context_3.errors.doubleRepositioningError,
     &tmp4,
     (ReportedBGList_T_ProvidePositionReport_Pkg *)
       &cReportedBGList_ProvidePositionReport_Pkg,
@@ -682,14 +682,14 @@ void EVC(
     outC->MoRC_RadioStatus_1.session.phase;
   /* 1 */
   ProbeEVC_EnvSim(
-    (MSG_Errors_T_Common_Types_Pkg *) &cNoMsgErrors,
-    (positionErrors_T_TrainPosition_Types_Pck *) &cNoPositioningErrors,
+    &outC->_12_Context_2.outCheckErrors,
+    &outC->_11_Context_3.errors,
     &outC->MoRC_RadioStatus_1,
     &outC->Context_1);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** EVC.c
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 

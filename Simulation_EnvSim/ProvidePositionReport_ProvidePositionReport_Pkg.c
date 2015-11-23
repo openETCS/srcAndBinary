@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -47,8 +47,8 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::ProvidePositionReport::t_train */T_TRAIN t_train,
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
-  static struct__128534 tmp;
-  static array__131312 tmp7;
+  static struct__128503 tmp;
+  static array__131281 tmp7;
   static Radio_TrainTrack_Header_T_Radio_Types_Pkg tmp6;
   static outPackets_T_Common_Types_Pkg tmp5;
   static PT0_PositionReport_T_Packet_TrainTypes_Pkg tmp4;
@@ -186,6 +186,6 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 

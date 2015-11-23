@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,7 +13,7 @@ void DetermineBufferMessage_InformationFilter_Pkg_SecondFilter(
   /* InformationFilter_Pkg::SecondFilter::DetermineBufferMessage::inMessageForBuffer */ReceivedMessage_T_Common_Types_Pkg *inMessageForBuffer,
   /* InformationFilter_Pkg::SecondFilter::DetermineBufferMessage::outMessageForBuffer */ReceivedMessage_T_Common_Types_Pkg *outMessageForBuffer)
 {
-  static array__128044 tmp;
+  static array__128013 tmp;
   static kcg_int i;
   
   (*outMessageForBuffer).valid = (*messageForFilter2).valid;
@@ -47,6 +47,6 @@ void DetermineBufferMessage_InformationFilter_Pkg_SecondFilter(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DetermineBufferMessage_InformationFilter_Pkg_SecondFilter.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

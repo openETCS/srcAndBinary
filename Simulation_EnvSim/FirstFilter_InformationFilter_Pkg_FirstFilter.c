@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ void FirstFilter_InformationFilter_Pkg_FirstFilter(
   /* InformationFilter_Pkg::FirstFilter::FirstFilter::storeInBuffer1 */kcg_bool *storeInBuffer1)
 {
   static kcg_int tmp_1;
-  static array__128044 tmp;
+  static array__128013 tmp;
   static kcg_int i;
   /* InformationFilter_Pkg::FirstFilter::FirstFilter::_L1 */
   static array_bool_30 _L1;
@@ -104,6 +104,6 @@ void FirstFilter_InformationFilter_Pkg_FirstFilter(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FirstFilter_InformationFilter_Pkg_FirstFilter.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

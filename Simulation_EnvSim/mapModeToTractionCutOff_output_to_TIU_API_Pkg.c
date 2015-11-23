@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:27
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -54,6 +54,6 @@ M_traction_cutoff_command_T_TIU_Types_Pkg mapModeToTractionCutOff_output_to_TIU_
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** mapModeToTractionCutOff_output_to_TIU_API_Pkg.c
-** Generation date: 2015-11-20T13:23:27
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 

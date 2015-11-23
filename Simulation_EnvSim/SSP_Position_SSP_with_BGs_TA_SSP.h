@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:26
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 #ifndef _SSP_Position_SSP_with_BGs_TA_SSP_H_
 #define _SSP_Position_SSP_with_BGs_TA_SSP_H_
@@ -29,6 +29,6 @@ extern void SSP_Position_SSP_with_BGs_TA_SSP(
 #endif /* _SSP_Position_SSP_with_BGs_TA_SSP_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SSP_Position_SSP_with_BGs_TA_SSP.h
-** Generation date: 2015-11-20T13:23:26
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ void validateDataDirection_General_ValidateDataDirectionGeneral_Pkg(
   /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::coordinateSystemAssigned */kcg_bool coordinateSystemAssigned,
   /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage)
 {
-  static array__128044 tmp;
+  static array__128013 tmp;
   static kcg_int i;
   /* ValidateDataDirectionGeneral_Pkg::validateDataDirection_General::trainPositionKnown */
   static kcg_bool trainPositionKnown;
@@ -70,6 +70,6 @@ void validateDataDirection_General_ValidateDataDirectionGeneral_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** validateDataDirection_General_ValidateDataDirectionGeneral_Pkg.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

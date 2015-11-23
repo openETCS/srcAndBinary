@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void getLocationOnCurve_CalcBrakingCurves_types(
   /* CalcBrakingCurves_types::getLocationOnCurve::valid */kcg_bool *valid,
   /* CalcBrakingCurves_types::getLocationOnCurve::location */L_internal_real_Type_SDM_Types_Pkg *location)
 {
-  static struct__130714 tmp;
+  static struct__130683 tmp;
   static kcg_int tmp4;
   static kcg_int i;
   static kcg_real tmp3;
@@ -76,6 +76,6 @@ void getLocationOnCurve_CalcBrakingCurves_types(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getLocationOnCurve_CalcBrakingCurves_types.c
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

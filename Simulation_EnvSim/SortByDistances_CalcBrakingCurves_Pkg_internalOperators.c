@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,7 +15,7 @@ void SortByDistances_CalcBrakingCurves_Pkg_internalOperators(
   static ParabolaCurveSpeeds_T_CalcBrakingCurves_types tmp4;
   static ParabolaCurveAccelerations_T_CalcBrakingCurves_types tmp3;
   static ParabolaCurveValid_T_CalcBrakingCurves_types tmp2;
-  static struct__130577 tmp1;
+  static struct__130546 tmp1;
   static kcg_bool tmp;
   static kcg_int i;
   
@@ -49,6 +49,6 @@ void SortByDistances_CalcBrakingCurves_Pkg_internalOperators(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SortByDistances_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

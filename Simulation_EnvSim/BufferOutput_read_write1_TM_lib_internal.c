@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,11 +17,11 @@ void BufferOutput_read_write1_TM_lib_internal(
   /* TM_lib_internal::BufferOutput_read_write1::Message_out */M_TrainTrack_Message_T_TM_radio_messages *Message_out)
 {
   /* TM_lib_internal::BufferOutput_read_write1::_L32 */
-  static array__131333 _L32;
+  static array__131302 _L32;
   /* TM_lib_internal::BufferOutput_read_write1::_L35 */
   static kcg_bool _L35;
   /* TM_lib_internal::BufferOutput_read_write1::_L37 */
-  static array__131333 _L37;
+  static array__131302 _L37;
   
   *Stacksize_new = Stacksize_old;
   kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
@@ -36,7 +36,7 @@ void BufferOutput_read_write1_TM_lib_internal(
     kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
       Message_out,
       &(*Message_In)[0]);
-    kcg_copy_array__131333(&(*Buffer_Out)[0], &_L32);
+    kcg_copy_array__131302(&(*Buffer_Out)[0], &_L32);
   }
   else {
     if ((0 <= *Stacksize_new - 1) & (*Stacksize_new - 1 < 100)) {
@@ -50,13 +50,13 @@ void BufferOutput_read_write1_TM_lib_internal(
         (M_TrainTrack_Message_T_TM_radio_messages *)
           &EMPTY_TrainTrackMessage_TM_lib_internal);
     }
-    kcg_copy_array__131333(&(*Buffer_Out)[0], &_L37);
+    kcg_copy_array__131302(&(*Buffer_Out)[0], &_L37);
   }
-  kcg_copy_array__137268(&(*Buffer_Out)[1], (array__137268 *) &(*Buffer_In)[0]);
+  kcg_copy_array__137237(&(*Buffer_Out)[1], (array__137237 *) &(*Buffer_In)[0]);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** BufferOutput_read_write1_TM_lib_internal.c
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 

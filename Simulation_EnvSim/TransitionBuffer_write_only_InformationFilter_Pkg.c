@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ void TransitionBuffer_write_only_InformationFilter_Pkg(
   /* InformationFilter_Pkg::TransitionBuffer_write_only::Stacksize_new */kcg_int *Stacksize_new,
   /* InformationFilter_Pkg::TransitionBuffer_write_only::Message_out */ReceivedMessage_T_Common_Types_Pkg *Message_out)
 {
-  static array__131309 tmp;
+  static array__131278 tmp;
   /* InformationFilter_Pkg::TransitionBuffer_write_only::_L2 */
   static kcg_int _L2;
   
@@ -26,13 +26,13 @@ void TransitionBuffer_write_only_InformationFilter_Pkg(
     (ReceivedMessage_T_Common_Types_Pkg *) &cDefaultRM_Common_Types_Pkg);
   if (Reset) {
     _L2 = 0 + 1;
-    kcg_copy_array__131309(
+    kcg_copy_array__131278(
       &tmp,
-      (array__131309 *) &DEFAULT_TransitionBuffer_t_InformationFilter_Pkg[0]);
+      (array__131278 *) &DEFAULT_TransitionBuffer_t_InformationFilter_Pkg[0]);
   }
   else {
     _L2 = Stacksize_old + 1;
-    kcg_copy_array__131309(&tmp, (array__131309 *) &(*Buffer_In)[0]);
+    kcg_copy_array__131278(&tmp, (array__131278 *) &(*Buffer_In)[0]);
   }
   if (_L2 > DIM_TransitionBuffer_InformationFilter_Pkg) {
     *Stacksize_new = DIM_TransitionBuffer_InformationFilter_Pkg;
@@ -43,11 +43,11 @@ void TransitionBuffer_write_only_InformationFilter_Pkg(
   kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
     &(&(*Buffer_Out)[0])[0],
     Message_In);
-  kcg_copy_array__131309(&(*Buffer_Out)[1], &tmp);
+  kcg_copy_array__131278(&(*Buffer_Out)[1], &tmp);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TransitionBuffer_write_only_InformationFilter_Pkg.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 #ifndef _Master_Procedure_ManageProcedure_Pkg_H_
 #define _Master_Procedure_ManageProcedure_Pkg_H_
@@ -27,8 +27,8 @@ typedef struct {
   kcg_bool init3;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  struct__131271 _2_fby_tmp;
-  struct__131271 fby_tmp;
+  struct__131240 _2_fby_tmp;
+  struct__131240 fby_tmp;
   SSM_ST_SM3_SM1_Awakness_of_Train /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */ SM3_state_nxt_SM1_Awakness_of_Train;
   _41_SSM_ST_SM1 /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_state_nxt;
   kcg_bool /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_reset_nxt;
@@ -60,6 +60,6 @@ extern void Master_Procedure_reset_ManageProcedure_Pkg(
 #endif /* _Master_Procedure_ManageProcedure_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Master_Procedure_ManageProcedure_Pkg.h
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 

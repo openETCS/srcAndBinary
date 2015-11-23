@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,7 +23,7 @@ void addTelegram_Receive_TrackSide_Msg_Pkg(
   static kcg_bool tmp;
   static kcg_int i;
   /* Receive_TrackSide_Msg_Pkg::addTelegram::IfBlock1::then::_L36 */
-  static array__130351 _L36_IfBlock1;
+  static array__130320 _L36_IfBlock1;
   /* Receive_TrackSide_Msg_Pkg::addTelegram::IfBlock1::then::_L35 */
   static kcg_int _L35_IfBlock1;
   /* Receive_TrackSide_Msg_Pkg::addTelegram::IfBlock1::then::_L1 */
@@ -31,7 +31,7 @@ void addTelegram_Receive_TrackSide_Msg_Pkg(
   /* Receive_TrackSide_Msg_Pkg::addTelegram::IfBlock1::else::_L21 */
   static array_bool_8 _L21_IfBlock1;
   /* Receive_TrackSide_Msg_Pkg::addTelegram::IfBlock1::else::_L15 */
-  static array__130351 _L15_IfBlock1;
+  static array__130320 _L15_IfBlock1;
   /* Receive_TrackSide_Msg_Pkg::addTelegram::IfBlock1::else::_L14 */
   static kcg_int _L14_IfBlock1;
   
@@ -118,6 +118,6 @@ void addTelegram_Receive_TrackSide_Msg_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** addTelegram_Receive_TrackSide_Msg_Pkg.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

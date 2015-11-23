@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:32
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -99,12 +99,6 @@ void PHYSICS_MovementSimulation_Toolbox_Physics(
   outC->timestamp = outC->Context_1.timestamp;
   switch (SM1_state_act) {
     case SSM_st_Driving_SM1 :
-      if (SM1_reset_act) {
-        outC->init2 = kcg_true;
-        /* 1 */
-        PHYSICS_simulateAccelerationBuildupTime_reset_Toolbox_Physics_Basic(
-          &outC->_1_Context_1);
-      }
       if (activateEmergencyBrakeFromEVC) {
         tmp3 = - 300.0;
       }
@@ -118,6 +112,12 @@ void PHYSICS_MovementSimulation_Toolbox_Physics(
         tmp3 = accelerationInPercent;
       }
       _L28_SM1_Driving = maximumAcceleration * (tmp3 / 100.0);
+      if (SM1_reset_act) {
+        outC->init2 = kcg_true;
+        /* 1 */
+        PHYSICS_simulateAccelerationBuildupTime_reset_Toolbox_Physics_Basic(
+          &outC->_1_Context_1);
+      }
       if (activateBrakeBuildupTime) {
         /* 1 */
         PHYSICS_simulateAccelerationBuildupTime_Toolbox_Physics_Basic(
@@ -182,6 +182,6 @@ void PHYSICS_MovementSimulation_Toolbox_Physics(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** PHYSICS_MovementSimulation_Toolbox_Physics.c
-** Generation date: 2015-11-20T13:23:32
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 

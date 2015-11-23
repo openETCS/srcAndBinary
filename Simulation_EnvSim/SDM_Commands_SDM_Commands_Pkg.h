@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 #ifndef _SDM_Commands_SDM_Commands_Pkg_H_
 #define _SDM_Commands_SDM_Commands_Pkg_H_
@@ -28,6 +28,7 @@ typedef struct {
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg /* 1 */ _2_Context_1;
+  outC_MergeMLRequests_SDM_Commands_Pkg /* 4 */ Context_4;
   outC_MergeMLRequests_SDM_Commands_Pkg /* 2 */ Context_2;
   outC_CalcBrakeCmd_SDM_Commands_Pkg /* 1 */ _1_Context_1;
   outC_CalcDMI_output_SDM_Commands_Pkg /* 1 */ Context_1;
@@ -55,6 +56,6 @@ extern void SDM_Commands_reset_SDM_Commands_Pkg(
 #endif /* _SDM_Commands_SDM_Commands_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SDM_Commands_SDM_Commands_Pkg.h
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 

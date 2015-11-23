@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:27
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 #ifndef _RadioTrackTrainHeader__Set_M_VERSION_RBC_Messaging_Pkg_RBC_RadioTrackTrain_Pkg_H_
 #define _RadioTrackTrainHeader__Set_M_VERSION_RBC_Messaging_Pkg_RBC_RadioTrackTrain_Pkg_H_
@@ -20,6 +20,6 @@ extern void RadioTrackTrainHeader__Set_M_VERSION_RBC_Messaging_Pkg_RBC_RadioTrac
 #endif /* _RadioTrackTrainHeader__Set_M_VERSION_RBC_Messaging_Pkg_RBC_RadioTrackTrain_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RadioTrackTrainHeader__Set_M_VERSION_RBC_Messaging_Pkg_RBC_RadioTrackTrain_Pkg.h
-** Generation date: 2015-11-20T13:23:27
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 

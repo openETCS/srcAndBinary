@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:26
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 #ifndef _Output_To_DMI_OutputManagement_H_
 #define _Output_To_DMI_OutputManagement_H_
@@ -39,6 +39,6 @@ extern void Output_To_DMI_reset_OutputManagement(
 #endif /* _Output_To_DMI_OutputManagement_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Output_To_DMI_OutputManagement.h
-** Generation date: 2015-11-20T13:23:26
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 

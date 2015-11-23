@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,7 +10,7 @@
 void Build_MRSP_reset_TA_MRSP(outC_Build_MRSP_TA_MRSP *outC)
 {
   outC->init = kcg_true;
-  /* 1 */ Build_StaticSpeedProfile_reset_TA_SSP(&outC->Context_1);
+  /* 2 */ Build_StaticSpeedProfile_reset_TA_SSP(&outC->Context_2);
 }
 
 /* TA_MRSP::Build_MRSP */
@@ -37,18 +37,18 @@ void Build_MRSP_TA_MRSP(
   /* TA_MRSP::Build_MRSP::_L21 */
   static kcg_bool _L21;
   
-  /* 1 */
+  /* 2 */
   Build_StaticSpeedProfile_TA_SSP(
     kcg_false,
     MessageIn,
     train_position,
     train_length,
-    &outC->Context_1);
+    &outC->Context_2);
   kcg_copy_StaticSpeedProfile_t_TrackAtlasTypes(
     &outC->SSP,
-    &outC->Context_1.SSP);
-  _L21 = outC->Context_1.updated;
-  outC->SSP_available = outC->Context_1.available;
+    &outC->Context_2.SSP);
+  _L21 = outC->Context_2.updated;
+  outC->SSP_available = outC->Context_2.available;
   /* 1 */ SP_ASP_TA_SpeedProfiles(kcg_false, MessageIn, &tmp9);
   /* 1 */ SP_LX_SR_TA_SpeedProfiles(kcg_false, MessageIn, &tmp8);
   /* 1 */ SP_MaxTrainSpeed_TA_SpeedProfiles(kcg_false, 0, &tmp7);
@@ -94,6 +94,6 @@ void Build_MRSP_TA_MRSP(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Build_MRSP_TA_MRSP.c
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 

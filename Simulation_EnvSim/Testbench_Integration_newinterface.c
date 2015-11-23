@@ -1,7 +1,7 @@
 #include "Testbench_Integration_newinterface.h"
 const int  rt_version = Srtv62;
 
-const char* _SCSIM_CheckSum = "e76326347cceba739fbc5d7f9b39d136";
+const char* _SCSIM_CheckSum = "b5ae8e508394264ad9c1567abd2b916b";
 const char* _SCSIM_SmuTypesCheckSum = "f79c40cc4a28a84eb05b013596813063";
 
 /*******************************

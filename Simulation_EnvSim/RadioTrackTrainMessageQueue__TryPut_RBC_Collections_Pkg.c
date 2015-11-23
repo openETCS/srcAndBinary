@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,7 +13,7 @@ void RadioTrackTrainMessageQueue__TryPut_RBC_Collections_Pkg(
   /* RBC_Collections_Pkg::RadioTrackTrainMessageQueue__TryPut::inRadioTrackTrainMessageQueueEntry */RadioTrackTrainMessageQueueEntry_T *inRadioTrackTrainMessageQueueEntry,
   /* RBC_Collections_Pkg::RadioTrackTrainMessageQueue__TryPut::outRadioTrackTrainMessageQueue */RadioTrackTrainMessageQueue_T *outRadioTrackTrainMessageQueue)
 {
-  static array__128300 tmp1;
+  static array__128269 tmp1;
   static RadioTrackTrainMessageQueueEntries_T tmp;
   /* RBC_Collections_Pkg::RadioTrackTrainMessageQueue__TryPut::hasCapacity */
   static kcg_bool hasCapacity;
@@ -29,7 +29,7 @@ void RadioTrackTrainMessageQueue__TryPut_RBC_Collections_Pkg(
     RadioTrackTrainMessageQueue__GetEntries_RBC_Collections_Pkg(
       inRadioTrackTrainMessageQueue,
       &tmp);
-    kcg_copy_array__137354(&tmp1[1], (array__137354 *) &tmp[0]);
+    kcg_copy_array__137323(&tmp1[1], (array__137323 *) &tmp[0]);
     /* 1 */
     RadioTrackTrainMessageQueue__SetEntries_RBC_Collections_Pkg(
       &tmp1,
@@ -44,6 +44,6 @@ void RadioTrackTrainMessageQueue__TryPut_RBC_Collections_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RadioTrackTrainMessageQueue__TryPut_RBC_Collections_Pkg.c
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 

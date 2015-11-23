@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:32
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,7 +20,7 @@ void ROOT_Scripted_reset_Testbench_EnvSim(
 /* Testbench_EnvSim::ROOT_Scripted */
 void ROOT_Scripted_Testbench_EnvSim(outC_ROOT_Scripted_Testbench_EnvSim *outC)
 {
-  static struct__128074 tmp;
+  static struct__128043 tmp;
   static TIU_Input_msg_API_TIU_Pkg tmp3;
   static TIU_Input_msg_API_TIU_Pkg tmp2;
   static EVC_to_DMI_Message_int_T_API_DMI_Pkg tmp1;
@@ -163,6 +163,6 @@ void ROOT_Scripted_Testbench_EnvSim(outC_ROOT_Scripted_Testbench_EnvSim *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ROOT_Scripted_Testbench_EnvSim.c
-** Generation date: 2015-11-20T13:23:32
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:32
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,9 +23,9 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
 {
   static kcg_int tmp1;
   static kcg_int tmp;
-  static array__131354 tmp2;
+  static array__131323 tmp2;
   /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L19 */
-  static array__131354 _L19_IfBlock1;
+  static array__131323 _L19_IfBlock1;
   /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L9 */
   static kcg_int _L9_IfBlock1;
   /* Toolbox::Functions::TRAIN_TrackSideInputFifo::_L44 */
@@ -58,7 +58,7 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
     }
     if (outC->init) {
       _L9_IfBlock1 = 0;
-      kcg_copy_array__131354(&outC->_L4_IfBlock1, &_L19_IfBlock1);
+      kcg_copy_array__131323(&outC->_L4_IfBlock1, &_L19_IfBlock1);
     }
     else {
       _L9_IfBlock1 = outC->_L20_IfBlock1;
@@ -68,14 +68,14 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
         &outC->_L4_IfBlock1[_L9_IfBlock1],
         inData);
     }
-    kcg_copy_array__131354(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array__131323(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (_L9_IfBlock1 + 1) % 5;
     tmp1 = 1;
     outC->init = kcg_false;
   }
   else {
     if (outC->init1) {
-      kcg_copy_array__131354(&outC->buffer, &tmp2);
+      kcg_copy_array__131323(&outC->buffer, &tmp2);
     }
     tmp1 = 0;
   }
@@ -124,6 +124,6 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TRAIN_TrackSideInputFifo_Toolbox_Functions_5.c
-** Generation date: 2015-11-20T13:23:32
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 

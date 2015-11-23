@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:24
+** Generation date: 2015-11-23T09:24:19
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28659,7 +28659,7 @@ const SessionManagement_T SESSION_MANAGEMENT_DEFAULT = { { 0, 0, { { kcg_false,
 const Clock_T CLOCK_DEFAULT = { T_TRAIN_DEFAULT };
 
 /* RBC_Diagnostic_Pkg::DIAG_MSG_DEFAULT_ARRAY */
-const array__128414 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg = { { kcg_false,
+const array__128383 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg = { { kcg_false,
     0, T_TRAIN_DEFAULT, DIAG_MSG_TYPE_Empty_RBC_Diagnostic_Pkg,
     DIAG_MSG_SRC_Empty_RBC_Diagnostic_Pkg, DIAG_MSG_Empty_RBC_Diagnostic_Pkg },
   { kcg_false, 0, T_TRAIN_DEFAULT, DIAG_MSG_TYPE_Empty_RBC_Diagnostic_Pkg,
@@ -29182,6 +29182,6 @@ const GUI_to_EVC_EnvSim cEMPTY_GUI2EVC_EnvSim_Internal = { kcg_false, 0.0, 0.0,
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.c
-** Generation date: 2015-11-20T13:23:24
+** Generation date: 2015-11-23T09:24:19
 *************************************************************$ */
 

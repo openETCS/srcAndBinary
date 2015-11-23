@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,6 +13,7 @@ void SDM_Commands_reset_SDM_Commands_Pkg(
   /* 1 */ CalcDMI_output_reset_SDM_Commands_Pkg(&outC->Context_1);
   /* 1 */ CalcBrakeCmd_reset_SDM_Commands_Pkg(&outC->_1_Context_1);
   /* 2 */ MergeMLRequests_reset_SDM_Commands_Pkg(&outC->Context_2);
+  /* 4 */ MergeMLRequests_reset_SDM_Commands_Pkg(&outC->Context_4);
   /* 1 */ CmdTrainSupervisionStatus_reset_SDM_Commands_Pkg(&outC->_2_Context_1);
 }
 
@@ -70,11 +71,17 @@ void SDM_Commands_SDM_Commands_Pkg(
     outC->_2_Context_1.revokedSupervisionStatus;
   outC->sdmCmd.triggeredSupervisionStatus =
     outC->_2_Context_1.triggeredSupervisionStatus;
-  outC->sdmCmd.revokedEB = outC->_2_Context_1.revokedEB;
-  outC->sdmCmd.triggeredEB = outC->_2_Context_1.triggeredEB;
   outC->sdmCmd.revokedTCO = outC->_2_Context_1.revokedTCO;
   outC->sdmCmd.triggeredTCO = outC->_2_Context_1.triggeredTCO;
-  outC->sdmCmd.ebCmd = outC->_2_Context_1.ebCmd | MLrequestEB;
+  outC->sdmCmd.ebCmd = outC->_2_Context_1.ebCmd;
+  /* 4 */
+  MergeMLRequests_SDM_Commands_Pkg(
+    outC->_2_Context_1.revokedEB,
+    MLrequestEB,
+    outC->_2_Context_1.triggeredEB,
+    &outC->Context_4);
+  outC->sdmCmd.revokedEB = outC->Context_4.revoked;
+  outC->sdmCmd.triggeredEB = outC->Context_4.triggered;
   /* 1 */
   CalcDriverOutput_SDM_Commands_Pkg(
     outC->_2_Context_1.sdmType,
@@ -111,8 +118,8 @@ void SDM_Commands_SDM_Commands_Pkg(
     MLrequestSB,
     outC->_2_Context_1.triggeredSB,
     &outC->Context_2);
-  outC->sdmCmd.revokedSB = outC->Context_2.revokedSB;
-  outC->sdmCmd.triggeredSB = outC->Context_2.triggeredSB;
+  outC->sdmCmd.revokedSB = outC->Context_2.revoked;
+  outC->sdmCmd.triggeredSB = outC->Context_2.triggered;
   /* 1 */
   CalcBrakeCmd_SDM_Commands_Pkg(
     &outC->sdmCmd,
@@ -145,6 +152,6 @@ void SDM_Commands_SDM_Commands_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SDM_Commands_SDM_Commands_Pkg.c
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:27
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 #ifndef _RTM_Toolbox_TrainModules_H_
 #define _RTM_Toolbox_TrainModules_H_
@@ -21,8 +21,8 @@ typedef struct {
   kcg_bool init;
   kcg_bool init3;
   /* ----------------------- local memories  ------------------------- */
-  struct__131360 /* Toolbox::TrainModules::RTM */ _1_fby_RTM_Toolbox_TrainModules;
-  struct__131360 /* Toolbox::TrainModules::RTM */ fby_RTM_Toolbox_TrainModules;
+  struct__131329 /* Toolbox::TrainModules::RTM */ _1_fby_RTM_Toolbox_TrainModules;
+  struct__131329 /* Toolbox::TrainModules::RTM */ fby_RTM_Toolbox_TrainModules;
   SSM_ST_GSM_R_MobileManagement /* Toolbox::TrainModules::RTM::GSM_R_MobileManagement */ GSM_R_MobileManagement_state_nxt;
   kcg_bool /* Toolbox::TrainModules::RTM::registrationFinished */ registrationFinished;
   kcg_bool /* Toolbox::TrainModules::RTM::connectionEstablished */ connectionEstablished;
@@ -44,6 +44,6 @@ extern void RTM_reset_Toolbox_TrainModules(outC_RTM_Toolbox_TrainModules *outC);
 #endif /* _RTM_Toolbox_TrainModules_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RTM_Toolbox_TrainModules.h
-** Generation date: 2015-11-20T13:23:27
+** Generation date: 2015-11-23T09:24:21
 *************************************************************$ */
 

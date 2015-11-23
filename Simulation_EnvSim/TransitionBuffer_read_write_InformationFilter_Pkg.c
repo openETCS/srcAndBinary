@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -47,7 +47,7 @@ void TransitionBuffer_read_write_InformationFilter_Pkg(
       &(&(*Buffer_Out)[0])[0],
       Message_In);
   }
-  kcg_copy_array__131309(&(*Buffer_Out)[1], (array__131309 *) &_L20[0]);
+  kcg_copy_array__131278(&(*Buffer_Out)[1], (array__131278 *) &_L20[0]);
   _L7 = *Stacksize_new - 1;
   if (_L11) {
     kcg_copy_ReceivedMessage_T_Common_Types_Pkg(Message_out, Message_In);
@@ -72,6 +72,6 @@ void TransitionBuffer_read_write_InformationFilter_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TransitionBuffer_read_write_InformationFilter_Pkg.c
-** Generation date: 2015-11-20T13:23:29
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 #ifndef _getMRSFromMRSP_SDM_Types_Pkg_H_
 #define _getMRSFromMRSP_SDM_Types_Pkg_H_
@@ -18,6 +18,6 @@ extern V_internal_real_Type_SDM_Types_Pkg getMRSFromMRSP_SDM_Types_Pkg(
 #endif /* _getMRSFromMRSP_SDM_Types_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getMRSFromMRSP_SDM_Types_Pkg.h
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 

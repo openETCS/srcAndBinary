@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -14,7 +14,7 @@ void A_brake_safe_SDMConversionModelPkg(
   /* SDMConversionModelPkg::A_brake_safe::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
   /* SDMConversionModelPkg::A_brake_safe::aBrakeSafe_cm */av_MergedMap_t_SDMConversionModelPkg *aBrakeSafe_cm)
 {
-  static struct__130664 tmp;
+  static struct__130633 tmp;
   static kcg_int tmp3;
   static kcg_int tmp2;
   static kcg_int i;
@@ -47,6 +47,6 @@ void A_brake_safe_SDMConversionModelPkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** A_brake_safe_SDMConversionModelPkg.c
-** Generation date: 2015-11-20T13:23:28
+** Generation date: 2015-11-23T09:24:22
 *************************************************************$ */
 

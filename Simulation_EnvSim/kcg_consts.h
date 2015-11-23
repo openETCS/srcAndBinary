@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -3788,7 +3788,7 @@ extern const Clock_T CLOCK_DEFAULT;
 #define CYCLE_TIME 20
 
 /* RBC_Diagnostic_Pkg::DIAG_MSG_DEFAULT_ARRAY */
-extern const array__128414 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg;
+extern const array__128383 DIAG_MSG_DEFAULT_ARRAY_RBC_Diagnostic_Pkg;
 
 /* RBC_Messaging_Pkg::Empty_RadioTrackTrainMessage */
 extern const CompressedRadioMessage_TM Empty_RadioTrackTrainMessage_RBC_Messaging_Pkg;
@@ -3868,6 +3868,6 @@ extern const GUI_to_EVC_EnvSim cEMPTY_GUI2EVC_EnvSim_Internal;
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-20T13:23:25
+** Generation date: 2015-11-23T09:24:20
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:31
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -68,7 +68,7 @@ void RBC__ProcessController_RBC_Model_Pkg(
   static D_CYCLOC tmp21;
   static M_LOC tmp20;
   static N_ITER tmp19;
-  static array__128321 tmp18;
+  static array__128290 tmp18;
   static SessionManagement_T tmp17;
   static TrainData_T tmp16;
   static TrainData_T tmp15;
@@ -1104,6 +1104,6 @@ void RBC__ProcessController_RBC_Model_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RBC__ProcessController_RBC_Model_Pkg.c
-** Generation date: 2015-11-20T13:23:31
+** Generation date: 2015-11-23T09:24:24
 *************************************************************$ */
 

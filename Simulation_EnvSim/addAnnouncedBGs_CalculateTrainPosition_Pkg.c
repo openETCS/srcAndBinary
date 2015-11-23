@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/Simulation_EnvSim\kcg_s2c_config.txt
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,7 +16,7 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::overrun */kcg_bool *overrun)
 {
   static kcg_int i;
-  static array__129156 tmp1;
+  static array__129125 tmp1;
   static positionedBG_T_TrainPosition_Types_Pck tmp;
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::_L11 */
   static kcg_bool _L11;
@@ -29,7 +29,7 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::_L33 */
   static positionedBGs_T_TrainPosition_Types_Pck _L33;
   /* CalculateTrainPosition_Pkg::addAnnouncedBGs::_L26 */
-  static array__131327 _L26;
+  static array__131296 _L26;
   
   _L11 = (*passedBG).valid & (*passedBG).linkedBGs[0].valid;
   /* 1 */
@@ -74,7 +74,7 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
     &(*passedBG).linkedBGs,
     trainProperties,
     (linkedBGs_asPositionedBGs_T_TrainPosition_Types_Pck *) &tmp1[0]);
-  kcg_copy_array__131327(&tmp1[33], &_L26);
+  kcg_copy_array__131296(&tmp1[33], &_L26);
   /* 1 */
   mergeBGs_onTrack_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
     BGs_in,
@@ -87,6 +87,6 @@ void addAnnouncedBGs_CalculateTrainPosition_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** addAnnouncedBGs_CalculateTrainPosition_Pkg.c
-** Generation date: 2015-11-20T13:23:30
+** Generation date: 2015-11-23T09:24:23
 *************************************************************$ */
 
