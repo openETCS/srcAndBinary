@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _nextIndex_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _nextIndex_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -9,16 +9,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* CalcBrakingCurves_Pkg::internalOperators::nextIndex */
 extern kcg_int nextIndex_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::upwards */kcg_bool upwards,
-  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::currentIndex */kcg_int currentIndex,
-  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::limit */kcg_int limit);
+  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::upwards */ kcg_bool upwards,
+  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::currentIndex */ kcg_int currentIndex,
+  /* CalcBrakingCurves_Pkg::internalOperators::nextIndex::limit */ kcg_int limit);
 
 #endif /* _nextIndex_CalcBrakingCurves_Pkg_internalOperators_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** nextIndex_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

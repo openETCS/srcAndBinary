@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree */
 void setFirstFree_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::newTelegram */Telegram_T_BG_Types_Pkg *newTelegram,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::inTelegramArray */Telegram_T_BG_Types_Pkg *inTelegramArray,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::cont */kcg_bool *cont,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::outTelegrams */Telegram_T_BG_Types_Pkg *outTelegrams)
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::newTelegram */ Telegram_T_BG_Types_Pkg *newTelegram,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::inTelegramArray */ Telegram_T_BG_Types_Pkg *inTelegramArray,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::cont */ kcg_bool *cont,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::setFirstFree::outTelegrams */ Telegram_T_BG_Types_Pkg *outTelegrams)
 {
   *cont = (*inTelegramArray).valid;
-  if (*cont) {
+  /* 1 */ if (*cont) {
     kcg_copy_Telegram_T_BG_Types_Pkg(outTelegrams, inTelegramArray);
   }
   else {
@@ -23,8 +23,8 @@ void setFirstFree_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** setFirstFree_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

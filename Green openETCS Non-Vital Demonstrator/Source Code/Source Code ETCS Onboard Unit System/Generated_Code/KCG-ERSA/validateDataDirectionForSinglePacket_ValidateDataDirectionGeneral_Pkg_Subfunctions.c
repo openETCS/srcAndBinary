@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,19 @@
 
 /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket */
 void validateDataDirectionForSinglePacket_ValidateDataDirectionGeneral_Pkg_Subfunctions(
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::inMetadataElement */MetadataElement_T_Common_Types_Pkg *inMetadataElement,
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::inTrainRunningDirection */Q_DIRTRAIN inTrainRunningDirection,
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::LRBGKnown */kcg_bool LRBGKnown,
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::coordinateSystemAssigned */kcg_bool coordinateSystemAssigned,
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::outMetadataElement */MetadataElement_T_Common_Types_Pkg *outMetadataElement)
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::inMetadataElement */ MetadataElement_T_Common_Types_Pkg *inMetadataElement,
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::inTrainRunningDirection */ Q_DIRTRAIN inTrainRunningDirection,
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::LRBGKnown */ kcg_bool LRBGKnown,
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::coordinateSystemAssigned */ kcg_bool coordinateSystemAssigned,
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::outMetadataElement */ MetadataElement_T_Common_Types_Pkg *outMetadataElement)
 {
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
-  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::trainPositionKnown */
-  static kcg_bool trainPositionKnown;
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::IfBlock1 */ kcg_bool IfBlock1_clock;
+  /* ValidateDataDirectionGeneral_Pkg::Subfunctions::validateDataDirectionForSinglePacket::trainPositionKnown */ kcg_bool trainPositionKnown;
   
-  trainPositionKnown = !(*trainPosition).trainPositionIsUnknown;
   IfBlock1_clock = (*inMetadataElement).nid_packet != 44;
-  if (IfBlock1_clock) {
+  trainPositionKnown = !(*trainPosition).trainPositionIsUnknown;
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     (*outMetadataElement).nid_packet = (*inMetadataElement).nid_packet;
     (*outMetadataElement).q_dir = (*inMetadataElement).q_dir;
     (*outMetadataElement).valid = (*inMetadataElement).valid &
@@ -44,8 +42,8 @@ void validateDataDirectionForSinglePacket_ValidateDataDirectionGeneral_Pkg_Subfu
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** validateDataDirectionForSinglePacket_ValidateDataDirectionGeneral_Pkg_Subfunctions.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

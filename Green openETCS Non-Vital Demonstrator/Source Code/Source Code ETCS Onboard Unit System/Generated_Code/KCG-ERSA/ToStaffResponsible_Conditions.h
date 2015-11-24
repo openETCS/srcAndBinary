@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _ToStaffResponsible_Conditions_H_
 #define _ToStaffResponsible_Conditions_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -27,19 +29,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* Conditions::ToStaffResponsible */
 extern void ToStaffResponsible_Conditions(
-  /* Conditions::ToStaffResponsible::Current_Level */M_LEVEL Current_Level,
-  /* Conditions::ToStaffResponsible::Driver_Req_Override */kcg_bool Driver_Req_Override,
-  /* Conditions::ToStaffResponsible::Train_Speed_Under_Override_Limit */kcg_bool Train_Speed_Under_Override_Limit,
-  /* Conditions::ToStaffResponsible::Override_Function_Active */kcg_bool Override_Function_Active,
-  /* Conditions::ToStaffResponsible::Emergency_Stop_Message_Received */kcg_bool Emergency_Stop_Message_Received,
+  /* Conditions::ToStaffResponsible::Current_Level */ M_LEVEL Current_Level,
+  /* Conditions::ToStaffResponsible::Driver_Req_Override */ kcg_bool Driver_Req_Override,
+  /* Conditions::ToStaffResponsible::Train_Speed_Under_Override_Limit */ kcg_bool Train_Speed_Under_Override_Limit,
+  /* Conditions::ToStaffResponsible::Override_Function_Active */ kcg_bool Override_Function_Active,
+  /* Conditions::ToStaffResponsible::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
   outC_ToStaffResponsible_Conditions *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void ToStaffResponsible_reset_Conditions(
   outC_ToStaffResponsible_Conditions *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void ToStaffResponsible_init_Conditions(
+  outC_ToStaffResponsible_Conditions *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _ToStaffResponsible_Conditions_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ToStaffResponsible_Conditions.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

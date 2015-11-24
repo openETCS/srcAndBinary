@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,13 @@
 
 /* manage_DMI_Input_Pkg::doDriverRequests */
 void doDriverRequests_manage_DMI_Input_Pkg(
-  /* manage_DMI_Input_Pkg::doDriverRequests::inDriverRequest */DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg *inDriverRequest,
-  /* manage_DMI_Input_Pkg::doDriverRequests::outDriverRequestToModes */DMI_DriverRequest_T_DMI_Types_Pkg *outDriverRequestToModes,
-  /* manage_DMI_Input_Pkg::doDriverRequests::outDriverRequestToLevels */kcg_bool *outDriverRequestToLevels)
+  /* manage_DMI_Input_Pkg::doDriverRequests::inDriverRequest */ DMI_Driver_Request_T_DMI_Messages_DMI_to_EVC_Pkg *inDriverRequest,
+  /* manage_DMI_Input_Pkg::doDriverRequests::outDriverRequestToModes */ DMI_DriverRequest_T_DMI_Types_Pkg *outDriverRequestToModes,
+  /* manage_DMI_Input_Pkg::doDriverRequests::outDriverRequestToLevels */ kcg_bool *outDriverRequestToLevels)
 {
-  if ((*inDriverRequest).valid) {
+  *outDriverRequestToLevels = (*inDriverRequest).valid &
+    ((*inDriverRequest).m_request == Level_entry_request_DMI_Types_Pkg);
+  /* ck_isValid */ if ((*inDriverRequest).valid) {
     (*outDriverRequestToModes).valid = (*inDriverRequest).valid;
     (*outDriverRequestToModes).Req_Exit_SH = (*inDriverRequest).m_request ==
       Shunting_exit_DMI_Types_Pkg;
@@ -34,12 +36,10 @@ void doDriverRequests_manage_DMI_Input_Pkg(
       (DMI_DriverRequest_T_DMI_Types_Pkg *)
         &cNoDriverRequestToModes_manage_DMI_Input_Pkg);
   }
-  *outDriverRequestToLevels = (*inDriverRequest).valid &
-    ((*inDriverRequest).m_request == Level_entry_request_DMI_Types_Pkg);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** doDriverRequests_manage_DMI_Input_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

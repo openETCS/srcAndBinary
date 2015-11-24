@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,9 @@
 
 /* InformationFilter_Pkg::CheckModeExceptions */
 kcg_bool CheckModeExceptions_InformationFilter_Pkg(
-  /* InformationFilter_Pkg::CheckModeExceptions::inAction */ModeDecisionTableActionKind_DataDictionary_Pkg inAction)
+  /* InformationFilter_Pkg::CheckModeExceptions::inAction */ ModeDecisionTableActionKind_DataDictionary_Pkg inAction)
 {
-  /* InformationFilter_Pkg::CheckModeExceptions::outAccept */
-  static kcg_bool outAccept;
+  /* InformationFilter_Pkg::CheckModeExceptions::outAccept */ kcg_bool outAccept;
   
   switch (inAction) {
     case MD_Invalid_DataDictionary_Pkg :
@@ -65,8 +64,8 @@ kcg_bool CheckModeExceptions_InformationFilter_Pkg(
   return outAccept;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckModeExceptions_InformationFilter_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

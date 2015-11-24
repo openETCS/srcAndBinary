@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,16 @@
 
 /* Conditions::ToSystemFailure */
 kcg_bool ToSystemFailure_Conditions(
-  /* Conditions::ToSystemFailure::Safety_Failure_Occured */kcg_bool Safety_Failure_Occured)
+  /* Conditions::ToSystemFailure::Safety_Failure_Occured */ kcg_bool Safety_Failure_Occured)
 {
-  /* Conditions::ToSystemFailure::Condition13 */
-  static kcg_bool Condition13;
+  /* Conditions::ToSystemFailure::Condition13 */ kcg_bool Condition13;
   
   Condition13 = Safety_Failure_Occured;
   return Condition13;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ToSystemFailure_Conditions.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

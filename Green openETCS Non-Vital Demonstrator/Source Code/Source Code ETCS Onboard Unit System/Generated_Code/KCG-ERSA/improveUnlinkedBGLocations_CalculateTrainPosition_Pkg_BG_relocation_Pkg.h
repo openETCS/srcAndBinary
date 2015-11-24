@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg_H_
 #define _improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg_H_
@@ -11,15 +11,17 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations */
 extern void improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out);
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_out */ positionedBGs_T_TrainPosition_Types_Pck *BGs_out);
 
 #endif /* _improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

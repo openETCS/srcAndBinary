@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,17 @@
 
 /* SDM_GradientAcceleration_Pkg::MoveTrainPosition */
 void MoveTrainPosition_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::distanceStep */kcg_real distanceStep,
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::Accu */ACC_SDM_GradientAcceleration_Pkg *Accu,
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newFront */kcg_real *newFront,
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newRear */kcg_real *newRear)
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::distanceStep */ kcg_real distanceStep,
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::Accu */ ACC_SDM_GradientAcceleration_Pkg *Accu,
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newFront */ kcg_real *newFront,
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newRear */ kcg_real *newRear)
 {
-  *newRear = distanceStep + (*Accu).rearPos;
   *newFront = (*Accu).frontPos + distanceStep;
+  *newRear = distanceStep + (*Accu).rearPos;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** MoveTrainPosition_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

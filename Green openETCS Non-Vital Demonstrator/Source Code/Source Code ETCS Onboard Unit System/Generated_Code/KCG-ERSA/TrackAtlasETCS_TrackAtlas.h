@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _TrackAtlasETCS_TrackAtlas_H_
 #define _TrackAtlasETCS_TrackAtlas_H_
@@ -10,15 +10,17 @@
 #include "GradientProfile_to_DMI_TA_Export.h"
 #include "TA_to_ML_TA_Export.h"
 #include "SSP_to_MRSP_TA_Export.h"
-#include "MRSP_to_MRSP_to_DMI_TA_Export.h"
-#include "Build_MA_L23_TA_MA.h"
-#include "Build_MRSP_TA_MRSP.h"
+#include "MRSP_to_DMI_TA_Export.h"
+#include "Build_MA_L23_TA_MA_new.h"
+#include "Build_MRSP_TA_MRSP_new.h"
 #include "StoreRaw_NV_TA_Storage.h"
 #include "Manage_EmergencyStop_TA_EmergencyStop.h"
-#include "Build_GradientProfile_TA_Gradient.h"
+#include "Build_GradientProfile_TA_Gradient_new.h"
 #include "Manage_MA_Request_TA_MA_Request.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -38,44 +40,52 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  L_internal_Type_Obu_BasicTypes_Pkg /* TrackAtlas::TrackAtlasETCS::_L94 */ _L94;
+  L_internal_Type_Obu_BasicTypes_Pkg /* TrackAtlas::TrackAtlasETCS::EoA */ EoA;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_Manage_EmergencyStop_TA_EmergencyStop /* 1 */ _4_Context_1;
-  outC_StoreRaw_NV_TA_Storage /* 1 */ _3_Context_1;
-  outC_Build_MA_L23_TA_MA /* 6 */ Context_6;
-  outC_Manage_MA_Request_TA_MA_Request /* 1 */ _2_Context_1;
-  outC_Build_MRSP_TA_MRSP /* 1 */ _1_Context_1;
-  outC_Build_GradientProfile_TA_Gradient /* 1 */ Context_1;
+  outC_Manage_MA_Request_TA_MA_Request /* 1 */ _5_Context_1;
+  outC_Build_GradientProfile_TA_Gradient_new /* 1 */ _4_Context_1;
+  outC_Build_MRSP_TA_MRSP_new /* 1 */ _3_Context_1;
+  outC_Build_MA_L23_TA_MA_new /* 1 */ _2_Context_1;
+  outC_StoreRaw_NV_TA_Storage /* 1 */ _1_Context_1;
+  outC_Manage_EmergencyStop_TA_EmergencyStop /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_TrackAtlasETCS_TrackAtlas;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* TrackAtlas::TrackAtlasETCS */
 extern void TrackAtlasETCS_TrackAtlas(
-  /* TrackAtlas::TrackAtlasETCS::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TrackAtlas::TrackAtlasETCS::ModeAndLevel_in */T_Mode_Level_Level_And_Mode_Types_Pkg *ModeAndLevel_in,
-  /* TrackAtlas::TrackAtlasETCS::TrainData_in */FromTIU_t_TrackAtlasTypes TrainData_in,
-  /* TrackAtlas::TrackAtlasETCS::TrainPositionIn */trainPosition_T_TrainPosition_Types_Pck *TrainPositionIn,
-  /* TrackAtlas::TrackAtlasETCS::train_length */L_internal_Type_Obu_BasicTypes_Pkg train_length,
-  /* TrackAtlas::TrackAtlasETCS::SystemTime */T_internal_Type_Obu_BasicTypes_Pkg SystemTime,
-  /* TrackAtlas::TrackAtlasETCS::preindicationLocation */L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
-  /* TrackAtlas::TrackAtlasETCS::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* TrackAtlas::TrackAtlasETCS::fromDriverToMA_R */Driver2MAR_T_MA_Request *fromDriverToMA_R,
-  /* TrackAtlas::TrackAtlasETCS::trainProps */trainProperties_T_TrainPosition_Types_Pck *trainProps,
-  /* TrackAtlas::TrackAtlasETCS::packet0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
-  /* TrackAtlas::TrackAtlasETCS::packet1 */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
-  /* TrackAtlas::TrackAtlasETCS::t_train */T_TRAIN t_train,
-  /* TrackAtlas::TrackAtlasETCS::bus_in */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
-  /* TrackAtlas::TrackAtlasETCS::P203V1_onboard */P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
-  /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
+  /* TrackAtlas::TrackAtlasETCS::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TrackAtlas::TrackAtlasETCS::ModeAndLevel_in */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeAndLevel_in,
+  /* TrackAtlas::TrackAtlasETCS::TrainData_in */ FromTIU_t_TrackAtlasTypes TrainData_in,
+  /* TrackAtlas::TrackAtlasETCS::TrainPositionIn */ trainPosition_T_TrainPosition_Types_Pck *TrainPositionIn,
+  /* TrackAtlas::TrackAtlasETCS::train_length */ L_internal_Type_Obu_BasicTypes_Pkg train_length,
+  /* TrackAtlas::TrackAtlasETCS::SystemTime */ T_internal_Type_Obu_BasicTypes_Pkg SystemTime,
+  /* TrackAtlas::TrackAtlasETCS::preindicationLocation */ L_internal_Type_Obu_BasicTypes_Pkg preindicationLocation,
+  /* TrackAtlas::TrackAtlasETCS::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* TrackAtlas::TrackAtlasETCS::fromDriverToMA_R */ Driver2MAR_T_MA_Request *fromDriverToMA_R,
+  /* TrackAtlas::TrackAtlasETCS::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
+  /* TrackAtlas::TrackAtlasETCS::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
+  /* TrackAtlas::TrackAtlasETCS::packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *packet1,
+  /* TrackAtlas::TrackAtlasETCS::t_train */ T_TRAIN t_train,
+  /* TrackAtlas::TrackAtlasETCS::bus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *bus_in,
+  /* TrackAtlas::TrackAtlasETCS::P203V1_onboard */ P203V1_OBU_T_TM_baseline2 *P203V1_onboard,
+  /* TrackAtlas::TrackAtlasETCS::PermanentDataP003 */ P003_permanent_data_T_TM_baseline2 *PermanentDataP003,
+  /* TrackAtlas::TrackAtlasETCS::balisegroups */ positionedBGs_T_TrainPosition_Types_Pck *balisegroups,
   outC_TrackAtlasETCS_TrackAtlas *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void TrackAtlasETCS_reset_TrackAtlas(
   outC_TrackAtlasETCS_TrackAtlas *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void TrackAtlasETCS_init_TrackAtlas(
+  outC_TrackAtlasETCS_TrackAtlas *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _TrackAtlasETCS_TrackAtlas_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlasETCS_TrackAtlas.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

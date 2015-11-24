@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,31 +9,29 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::isStored_iter */
 void isStored_iter_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::storedBGs */positionedBGs_T_TrainPosition_Types_Pck *storedBGs,
-  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::bgHeader */BG_Header_T_BG_Types_Pkg *bgHeader,
-  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::index */kcg_int *index,
-  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::isStored */kcg_bool *isStored)
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::storedBGs */ positionedBGs_T_TrainPosition_Types_Pck *storedBGs,
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::bgHeader */ BG_Header_T_BG_Types_Pkg *bgHeader,
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::index */ kcg_int *index,
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::isStored */ kcg_bool *isStored)
 {
-  static BG_Header_T_BG_Types_Pkg tmp2;
-  static kcg_bool tmp1;
-  static kcg_int i;
-  static positionedBG_T_TrainPosition_Types_Pck tmp;
-  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::_L9 */
-  static BG_Header_T_BG_Types_Pkg _L9;
-  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::_L11 */
-  static kcg_int _L11;
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter */ BG_Header_T_BG_Types_Pkg acc;
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter */ kcg_bool cond_iterw;
+  kcg_int i;
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter */ positionedBG_T_TrainPosition_Types_Pck tmp;
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::_L9 */ BG_Header_T_BG_Types_Pkg _L9;
+  /* CheckBGConsistency_Pkg::SubFunction::isStored_iter::_L11 */ kcg_int _L11;
   
   kcg_copy_BG_Header_T_BG_Types_Pkg(&_L9, bgHeader);
   for (i = 0; i < 41; i++) {
-    kcg_copy_BG_Header_T_BG_Types_Pkg(&tmp2, &_L9);
+    kcg_copy_BG_Header_T_BG_Types_Pkg(&acc, &_L9);
     /* 1 */
     isStored_CheckBGConsistency_Pkg_SubFunction(
-      &tmp2,
+      &acc,
       &(*storedBGs)[i],
-      &tmp1,
+      &cond_iterw,
       &_L9);
     _L11 = i + 1;
-    if (!tmp1) {
+    if (!cond_iterw) {
       break;
     }
   }
@@ -52,8 +50,8 @@ void isStored_iter_CheckBGConsistency_Pkg_SubFunction(
   *isStored = tmp.valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** isStored_iter_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

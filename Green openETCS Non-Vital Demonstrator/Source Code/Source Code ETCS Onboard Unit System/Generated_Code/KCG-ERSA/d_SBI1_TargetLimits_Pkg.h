@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _d_SBI1_TargetLimits_Pkg_H_
 #define _d_SBI1_TargetLimits_Pkg_H_
@@ -10,18 +10,20 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TargetLimits_Pkg::d_SBI1 */
 extern void d_SBI1_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::d_SBI1::SBDcurve */ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
-  /* TargetLimits_Pkg::d_SBI1::V */V_internal_real_Type_SDM_Types_Pkg V,
-  /* TargetLimits_Pkg::d_SBI1::T */T_trac_t_TargetLimits_Pkg *T,
-  /* TargetLimits_Pkg::d_SBI1::valid */kcg_bool *valid,
-  /* TargetLimits_Pkg::d_SBI1::D_SBD1 */L_internal_real_Type_SDM_Types_Pkg *D_SBD1);
+  /* TargetLimits_Pkg::d_SBI1::SBDcurve */ ParabolaCurve_T_CalcBrakingCurves_types *SBDcurve,
+  /* TargetLimits_Pkg::d_SBI1::V */ V_internal_real_Type_SDM_Types_Pkg V,
+  /* TargetLimits_Pkg::d_SBI1::T */ T_trac_t_TargetLimits_Pkg *T,
+  /* TargetLimits_Pkg::d_SBI1::valid */ kcg_bool *valid,
+  /* TargetLimits_Pkg::d_SBI1::D_SBD1 */ L_internal_real_Type_SDM_Types_Pkg *D_SBD1);
 
 #endif /* _d_SBI1_TargetLimits_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** d_SBI1_TargetLimits_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,16 @@
 
 /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance */
 kcg_bool checkMaxAbsOdoDistance_BasicLocationFunctions_Pkg(
-  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::odo_2 */OdometryLocations_T_Obu_BasicTypes_Pkg *odo_2,
-  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::odo_1 */OdometryLocations_T_Obu_BasicTypes_Pkg *odo_1,
-  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::maxDelta */OdometryLocations_T_Obu_BasicTypes_Pkg *maxDelta)
+  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::odo_2 */ OdometryLocations_T_Obu_BasicTypes_Pkg *odo_2,
+  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::odo_1 */ OdometryLocations_T_Obu_BasicTypes_Pkg *odo_1,
+  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::maxDelta */ OdometryLocations_T_Obu_BasicTypes_Pkg *maxDelta)
 {
-  static kcg_int tmp;
-  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::_L6 */
-  static kcg_int _L6;
-  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::isLessThanOrEqual */
-  static kcg_bool isLessThanOrEqual;
+  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance */ kcg_int tmp;
+  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::_L6 */ kcg_int _L6;
+  /* BasicLocationFunctions_Pkg::checkMaxAbsOdoDistance::isLessThanOrEqual */ kcg_bool isLessThanOrEqual;
   
   _L6 = (*odo_2).o_nominal - (*odo_1).o_nominal;
-  if (0 <= _L6) {
+  /* 2 */ if (0 <= _L6) {
     tmp = _L6;
   }
   else {
@@ -30,8 +28,8 @@ kcg_bool checkMaxAbsOdoDistance_BasicLocationFunctions_Pkg(
   return isLessThanOrEqual;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** checkMaxAbsOdoDistance_BasicLocationFunctions_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

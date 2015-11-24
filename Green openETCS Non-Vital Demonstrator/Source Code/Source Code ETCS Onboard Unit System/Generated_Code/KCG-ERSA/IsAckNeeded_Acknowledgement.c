@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,12 @@
 
 /* Acknowledgement::IsAckNeeded */
 kcg_bool IsAckNeeded_Acknowledgement(
-  /* Acknowledgement::IsAckNeeded::selected_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* Acknowledgement::IsAckNeeded::last_level */M_LEVEL last_level)
+  /* Acknowledgement::IsAckNeeded::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
+  /* Acknowledgement::IsAckNeeded::last_level */ M_LEVEL last_level)
 {
-  /* Acknowledgement::IsAckNeeded::_L16 */
-  static kcg_bool _L16;
-  /* Acknowledgement::IsAckNeeded::_L27 */
-  static kcg_bool _L27;
-  /* Acknowledgement::IsAckNeeded::isAckNeeded */
-  static kcg_bool isAckNeeded;
+  /* Acknowledgement::IsAckNeeded::_L16 */ kcg_bool _L16;
+  /* Acknowledgement::IsAckNeeded::_L27 */ kcg_bool _L27;
+  /* Acknowledgement::IsAckNeeded::isAckNeeded */ kcg_bool isAckNeeded;
   
   _L27 = (*selected_level_transition).transition.level ==
     M_LEVEL_Level_NTC_specified_by_NID_NTC;
@@ -28,8 +25,8 @@ kcg_bool IsAckNeeded_Acknowledgement(
   return isAckNeeded;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** IsAckNeeded_Acknowledgement.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

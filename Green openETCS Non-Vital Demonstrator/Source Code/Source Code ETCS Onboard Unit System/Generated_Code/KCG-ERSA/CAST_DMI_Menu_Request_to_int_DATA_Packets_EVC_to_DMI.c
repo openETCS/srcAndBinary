@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* DATA::Packets::EVC_to_DMI::CAST_DMI_Menu_Request_to_int */
 void CAST_DMI_Menu_Request_to_int_DATA_Packets_EVC_to_DMI(
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Menu_Request_to_int::dmi_menu_request_ct */DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_menu_request_ct,
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Menu_Request_to_int::dmi_menu_request_int */DMI_Menu_Request_int_array_T_DATA *dmi_menu_request_int)
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Menu_Request_to_int::dmi_menu_request_ct */ DMI_Menu_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_menu_request_ct,
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Menu_Request_to_int::dmi_menu_request_int */ DMI_Menu_Request_int_array_T_DATA *dmi_menu_request_int)
 {
   (*dmi_menu_request_int)[1] = (*dmi_menu_request_ct).system_clock;
   (*dmi_menu_request_int)[0] = /* 1 */
@@ -20,8 +20,8 @@ void CAST_DMI_Menu_Request_to_int_DATA_Packets_EVC_to_DMI(
       &(*dmi_menu_request_ct).available_menu);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Menu_Request_to_int_DATA_Packets_EVC_to_DMI.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

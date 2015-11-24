@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,12 @@
 
 /* manage_DMI_Output_Pkg::calcDistances */
 void calcDistances_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::calcDistances::inTrainPosition */trainPosition_T_TrainPosition_Types_Pck *inTrainPosition,
-  /* manage_DMI_Output_Pkg::calcDistances::outLocationKP_Balise_Track */L_internal_Type_Obu_BasicTypes_Pkg *outLocationKP_Balise_Track,
-  /* manage_DMI_Output_Pkg::calcDistances::ouDistanceKP_Balise */L_internal_Type_Obu_BasicTypes_Pkg *ouDistanceKP_Balise,
-  /* manage_DMI_Output_Pkg::calcDistances::outDistance_ToTSA */L_internal_Type_Obu_BasicTypes_Pkg *outDistance_ToTSA)
+  /* manage_DMI_Output_Pkg::calcDistances::inTrainPosition */ trainPosition_T_TrainPosition_Types_Pck *inTrainPosition,
+  /* manage_DMI_Output_Pkg::calcDistances::outLocationKP_Balise_Track */ L_internal_Type_Obu_BasicTypes_Pkg *outLocationKP_Balise_Track,
+  /* manage_DMI_Output_Pkg::calcDistances::ouDistanceKP_Balise */ L_internal_Type_Obu_BasicTypes_Pkg *ouDistanceKP_Balise,
+  /* manage_DMI_Output_Pkg::calcDistances::outDistance_ToTSA */ L_internal_Type_Obu_BasicTypes_Pkg *outDistance_ToTSA)
 {
-  /* manage_DMI_Output_Pkg::calcDistances::doCalc */
-  static kcg_bool doCalc;
+  /* manage_DMI_Output_Pkg::calcDistances::doCalc */ kcg_bool doCalc;
   
   *outLocationKP_Balise_Track = - 1;
   *outDistance_ToTSA = *outLocationKP_Balise_Track;
@@ -23,16 +22,16 @@ void calcDistances_manage_DMI_Output_Pkg(
     !(*inTrainPosition).trainPositionIsUnknown &
     !(*inTrainPosition).noCoordinateSystemHasBeenAssigned &
     (*inTrainPosition).LRBG.valid;
-  if (doCalc) {
-    *ouDistanceKP_Balise = *outDistance_ToTSA;
+  /* ck_doCalc */ if (doCalc) {
+    *ouDistanceKP_Balise = *outLocationKP_Balise_Track;
   }
   else {
-    *ouDistanceKP_Balise = *outDistance_ToTSA;
+    *ouDistanceKP_Balise = *outLocationKP_Balise_Track;
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** calcDistances_manage_DMI_Output_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

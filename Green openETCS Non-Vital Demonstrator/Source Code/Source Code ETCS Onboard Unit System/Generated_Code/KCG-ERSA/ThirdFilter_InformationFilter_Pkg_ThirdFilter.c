@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* InformationFilter_Pkg::ThirdFilter::ThirdFilter */
 void ThirdFilter_InformationFilter_Pkg_ThirdFilter(
-  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inMessage */ReceivedMessage_T_Common_Types_Pkg *inMessage,
-  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inModus */M_MODE inModus,
-  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage)
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inMessage */ ReceivedMessage_T_Common_Types_Pkg *inMessage,
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::inModus */ M_MODE inModus,
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter::outMessage */ ReceivedMessage_T_Common_Types_Pkg *outMessage)
 {
-  static array__105500 tmp;
-  static kcg_int i;
-  static kcg_bool tmp_1_1;
+  /* InformationFilter_Pkg::ThirdFilter::ThirdFilter */ Metadata_T_Common_Types_Pkg tmp;
+  kcg_int i;
+  kcg_bool tmp_1_1;
   
   (*outMessage).valid = (*inMessage).valid;
   (*outMessage).source = (*inMessage).source;
@@ -52,8 +52,8 @@ void ThirdFilter_InformationFilter_Pkg_ThirdFilter(
     &tmp);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ThirdFilter_InformationFilter_Pkg_ThirdFilter.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

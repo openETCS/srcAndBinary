@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* manage_DMI_Output_Pkg::sendLevelListPkg */
 void sendLevelListPkg_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::sendLevelListPkg::levelList */DMI_LevelList_T_DMI_Types_Pkg *levelList,
-  /* manage_DMI_Output_Pkg::sendLevelListPkg::UpdateLevelsRequested */kcg_bool UpdateLevelsRequested,
-  /* manage_DMI_Output_Pkg::sendLevelListPkg::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_DMI_Output_Pkg::sendLevelListPkg::levelDataPkg */DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *levelDataPkg)
+  /* manage_DMI_Output_Pkg::sendLevelListPkg::levelList */ DMI_LevelList_T_DMI_Types_Pkg *levelList,
+  /* manage_DMI_Output_Pkg::sendLevelListPkg::UpdateLevelsRequested */ kcg_bool UpdateLevelsRequested,
+  /* manage_DMI_Output_Pkg::sendLevelListPkg::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_DMI_Output_Pkg::sendLevelListPkg::levelDataPkg */ DMI_EVC_Level_Data_T_DMI_Messages_EVC_to_DMI_Pkg *levelDataPkg)
 {
-  if (UpdateLevelsRequested) {
+  /* 1 */ if (UpdateLevelsRequested) {
     (*levelDataPkg).valid = kcg_true;
     (*levelDataPkg).system_clock = inSystemTime;
     kcg_copy_DMI_LevelList_T_DMI_Types_Pkg(
@@ -29,8 +29,8 @@ void sendLevelListPkg_manage_DMI_Output_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** sendLevelListPkg_manage_DMI_Output_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

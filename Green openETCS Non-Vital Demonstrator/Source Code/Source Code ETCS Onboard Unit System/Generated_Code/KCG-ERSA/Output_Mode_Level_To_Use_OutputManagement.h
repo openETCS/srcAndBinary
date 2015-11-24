@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _Output_Mode_Level_To_Use_OutputManagement_H_
 #define _Output_Mode_Level_To_Use_OutputManagement_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -25,18 +27,25 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* OutputManagement::Output_Mode_Level_To_Use */
 extern void Output_Mode_Level_To_Use_OutputManagement(
-  /* OutputManagement::Output_Mode_Level_To_Use::next_level */M_LEVEL next_level,
-  /* OutputManagement::Output_Mode_Level_To_Use::currentMode */T_Mode_Level_And_Mode_Types_Pkg currentMode,
-  /* OutputManagement::Output_Mode_Level_To_Use::Level_Mode_Compatible */kcg_bool Level_Mode_Compatible,
-  /* OutputManagement::Output_Mode_Level_To_Use::isNewLevel */kcg_bool isNewLevel,
+  /* OutputManagement::Output_Mode_Level_To_Use::next_level */ M_LEVEL next_level,
+  /* OutputManagement::Output_Mode_Level_To_Use::currentMode */ T_Mode_Level_And_Mode_Types_Pkg currentMode,
+  /* OutputManagement::Output_Mode_Level_To_Use::Level_Mode_Compatible */ kcg_bool Level_Mode_Compatible,
+  /* OutputManagement::Output_Mode_Level_To_Use::isNewLevel */ kcg_bool isNewLevel,
   outC_Output_Mode_Level_To_Use_OutputManagement *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Output_Mode_Level_To_Use_reset_OutputManagement(
   outC_Output_Mode_Level_To_Use_OutputManagement *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void Output_Mode_Level_To_Use_init_OutputManagement(
+  outC_Output_Mode_Level_To_Use_OutputManagement *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Output_Mode_Level_To_Use_OutputManagement_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Output_Mode_Level_To_Use_OutputManagement.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

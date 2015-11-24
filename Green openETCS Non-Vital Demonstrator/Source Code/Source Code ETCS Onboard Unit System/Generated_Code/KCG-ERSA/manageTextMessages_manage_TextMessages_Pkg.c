@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,24 +9,21 @@
 
 /* manage_TextMessages_Pkg::manageTextMessages */
 void manageTextMessages_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::manageTextMessages::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_TextMessages_Pkg::manageTextMessages::inStatusList */DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
-  /* manage_TextMessages_Pkg::manageTextMessages::dmi_FromBG */kcg_bool dmi_FromBG,
-  /* manage_TextMessages_Pkg::manageTextMessages::inModeLevel_Ack */T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
-  /* manage_TextMessages_Pkg::manageTextMessages::announcedLevelTransition */T_AnnouncedLevel_Level_And_Mode_Types_Pkg *announcedLevelTransition,
-  /* manage_TextMessages_Pkg::manageTextMessages::dmi_textMessage */DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_textMessage,
-  /* manage_TextMessages_Pkg::manageTextMessages::outStatusList */DMI_TXT_MSGList_status_T_DMI_Types_Pkg *outStatusList)
+  /* manage_TextMessages_Pkg::manageTextMessages::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_TextMessages_Pkg::manageTextMessages::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
+  /* manage_TextMessages_Pkg::manageTextMessages::dmi_FromBG */ kcg_bool dmi_FromBG,
+  /* manage_TextMessages_Pkg::manageTextMessages::inModeLevel_Ack */ T_AcknoledgementRequest_Level_And_Mode_Types_Pkg *inModeLevel_Ack,
+  /* manage_TextMessages_Pkg::manageTextMessages::announcedLevelTransition */ T_AnnouncedLevel_Level_And_Mode_Types_Pkg *announcedLevelTransition,
+  /* manage_TextMessages_Pkg::manageTextMessages::dmi_textMessage */ DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_textMessage,
+  /* manage_TextMessages_Pkg::manageTextMessages::outStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *outStatusList)
 {
-  static DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg tmp1;
-  static DMI_context_TXT_MSG_T_DMI_Types_Pkg tmp;
-  /* manage_TextMessages_Pkg::manageTextMessages::levelNeedsAck */
-  static kcg_bool levelNeedsAck;
-  /* manage_TextMessages_Pkg::manageTextMessages::modeChange */
-  static kcg_bool modeChange;
-  /* manage_TextMessages_Pkg::manageTextMessages::_L29 */
-  static kcg_bool _L29;
+  /* manage_TextMessages_Pkg::manageTextMessages */ DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg tmp1;
+  /* manage_TextMessages_Pkg::manageTextMessages */ DMI_context_TXT_MSG_T_DMI_Types_Pkg tmp;
+  /* manage_TextMessages_Pkg::manageTextMessages::levelNeedsAck */ kcg_bool levelNeedsAck;
+  /* manage_TextMessages_Pkg::manageTextMessages::modeChange */ kcg_bool modeChange;
+  /* manage_TextMessages_Pkg::manageTextMessages::_L29 */ kcg_bool _L29;
   
-  if ((*inModeLevel_Ack).valid) {
+  /* ck__L6 */ if ((*inModeLevel_Ack).valid) {
     _L29 = /* 1 */
       checkIfNeeded_manage_TextMessages_Pkg(
         inModeLevel_Ack,
@@ -38,7 +35,7 @@ void manageTextMessages_manage_TextMessages_Pkg(
   }
   levelNeedsAck = (*inModeLevel_Ack).LevelNeedsAck & _L29;
   modeChange = _L29 & !levelNeedsAck;
-  if (modeChange) {
+  /* ck_modeChange */ if (modeChange) {
     switch ((*inModeLevel_Ack).whichMode) {
       case M_MODE_Staff_Responsible :
         kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
@@ -91,7 +88,7 @@ void manageTextMessages_manage_TextMessages_Pkg(
     }
     tmp = con_modeChange_DMI_Types_Pkg;
   }
-  else if (levelNeedsAck) {
+  else /* ck_anon_activ */ if (levelNeedsAck) {
     switch ((*announcedLevelTransition).LevelTransition.transition.level) {
       case M_LEVEL_Level_0 :
         kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
@@ -125,7 +122,7 @@ void manageTextMessages_manage_TextMessages_Pkg(
         break;
       
     }
-    if ((*inModeLevel_Ack).LevelNeedsAck) {
+    /* 1 */ if ((*inModeLevel_Ack).LevelNeedsAck) {
       tmp1.q_textConfirm = Q_TEXTCONFIRM_Confirmation_required;
     }
     else {
@@ -133,7 +130,7 @@ void manageTextMessages_manage_TextMessages_Pkg(
     }
     tmp = con_levelMgmt_DMI_Types_Pkg;
   }
-  else if (dmi_FromBG) {
+  else /* ck_anon_activ */ if (dmi_FromBG) {
     kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
       &tmp1,
       (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
@@ -161,8 +158,8 @@ void manageTextMessages_manage_TextMessages_Pkg(
     dmi_textMessage);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTextMessages_manage_TextMessages_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

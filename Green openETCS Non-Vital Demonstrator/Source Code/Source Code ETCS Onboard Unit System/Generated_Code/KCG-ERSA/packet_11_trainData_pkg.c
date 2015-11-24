@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* trainData_pkg::packet_11 */
 void packet_11_trainData_pkg(
-  /* trainData_pkg::packet_11::trainData */trainData_T_TIU_Types_Pkg *trainData,
-  /* trainData_pkg::packet_11::p11 */P011_TM_TrainToTrack *p11)
+  /* trainData_pkg::packet_11::trainData */ trainData_T_TIU_Types_Pkg *trainData,
+  /* trainData_pkg::packet_11::p11 */ P011_TM_TrainToTrack *p11)
 {
   (*p11).valid = kcg_true;
   (*p11).nid_packet = cp011_ValidatedTrainData_ids;
@@ -34,8 +34,8 @@ void packet_11_trainData_pkg(
     vIntern2Extern_RadioSupport_Pkg((*trainData).maxTrainSpeed);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** packet_11_trainData_pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

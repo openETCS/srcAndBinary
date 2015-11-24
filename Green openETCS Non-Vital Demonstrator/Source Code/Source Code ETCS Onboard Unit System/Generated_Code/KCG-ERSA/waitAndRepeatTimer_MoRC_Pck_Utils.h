@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _waitAndRepeatTimer_MoRC_Pck_Utils_H_
 #define _waitAndRepeatTimer_MoRC_Pck_Utils_H_
@@ -9,6 +9,8 @@
 #include "countDownTimer_MoRC_Pck_Utils.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,19 +30,24 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Utils::waitAndRepeatTimer */
 extern void waitAndRepeatTimer_MoRC_Pck_Utils(
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::actualTime */time_Type_MoRC_Pck actualTime,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::re_start */kcg_bool re_start,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::stop */kcg_bool stop,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::repeatInterval */time_Type_MoRC_Pck repeatInterval,
-  /* MoRC_Pck::Utils::waitAndRepeatTimer::maxNoOfRepetitions */kcg_int maxNoOfRepetitions,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::actualTime */ time_Type_MoRC_Pck actualTime,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::re_start */ kcg_bool re_start,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::stop */ kcg_bool stop,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::repeatInterval */ time_Type_MoRC_Pck repeatInterval,
+  /* MoRC_Pck::Utils::waitAndRepeatTimer::maxNoOfRepetitions */ kcg_int maxNoOfRepetitions,
   outC_waitAndRepeatTimer_MoRC_Pck_Utils *outC);
 
 extern void waitAndRepeatTimer_reset_MoRC_Pck_Utils(
   outC_waitAndRepeatTimer_MoRC_Pck_Utils *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void waitAndRepeatTimer_init_MoRC_Pck_Utils(
+  outC_waitAndRepeatTimer_MoRC_Pck_Utils *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _waitAndRepeatTimer_MoRC_Pck_Utils_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** waitAndRepeatTimer_MoRC_Pck_Utils.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

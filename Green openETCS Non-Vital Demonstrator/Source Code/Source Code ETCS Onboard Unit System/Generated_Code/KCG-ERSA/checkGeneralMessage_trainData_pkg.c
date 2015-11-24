@@ -1,32 +1,51 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "checkGeneralMessage_trainData_pkg.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void checkGeneralMessage_init_trainData_pkg(
+  outC_checkGeneralMessage_trainData_pkg *outC)
+{
+  outC->genMessageReceived = kcg_true;
+  outC->ackRequested = kcg_true;
+  outC->init = kcg_true;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void checkGeneralMessage_reset_trainData_pkg(
   outC_checkGeneralMessage_trainData_pkg *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* trainData_pkg::checkGeneralMessage */
 void checkGeneralMessage_trainData_pkg(
-  /* trainData_pkg::checkGeneralMessage::trackMessages */ReceivedMessage_T_Common_Types_Pkg *trackMessages,
+  /* trainData_pkg::checkGeneralMessage::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
   outC_checkGeneralMessage_trainData_pkg *outC)
 {
-  static kcg_bool tmp;
-  /* trainData_pkg::checkGeneralMessage::_L16 */
-  static kcg_bool _L16;
+  /* trainData_pkg::checkGeneralMessage */ kcg_bool tmp;
+  /* trainData_pkg::checkGeneralMessage::_L16 */ kcg_bool _L16;
   
   _L16 = (*trackMessages).valid & ((*trackMessages).source ==
       msrc_Euroradio_Common_Types_Pkg) &
     ((*trackMessages).Radio_Common_Header.nid_message ==
       cm24_General_Message_Id_Pkg);
-  if (outC->init) {
+  /* 1 */ if (_L16) {
+    outC->ackRequested = (*trackMessages).Radio_Common_Header.m_ack ==
+      M_ACK_Acknowledgement_required;
+  }
+  else {
+    outC->ackRequested = kcg_false;
+  }
+  /* last_init_ck_GeneralMsgReceived */ if (outC->init) {
     outC->init = kcg_false;
     tmp = kcg_false;
   }
@@ -34,17 +53,10 @@ void checkGeneralMessage_trainData_pkg(
     tmp = outC->genMessageReceived;
   }
   outC->genMessageReceived = tmp | _L16;
-  if (_L16) {
-    outC->ackRequested = (*trackMessages).Radio_Common_Header.m_ack ==
-      M_ACK_Acknowledgement_required;
-  }
-  else {
-    outC->ackRequested = kcg_false;
-  }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** checkGeneralMessage_trainData_pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

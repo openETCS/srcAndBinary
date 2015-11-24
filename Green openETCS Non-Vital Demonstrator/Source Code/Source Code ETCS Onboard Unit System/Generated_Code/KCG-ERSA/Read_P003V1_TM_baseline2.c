@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,12 @@
 
 /* TM_baseline2::Read_P003V1 */
 void Read_P003V1_TM_baseline2(
-  /* TM_baseline2::Read_P003V1::Message_IN */CompressedPackets_T_Common_Types_Pkg *Message_IN,
-  /* TM_baseline2::Read_P003V1::received */kcg_bool *received,
-  /* TM_baseline2::Read_P003V1::P003V1_OBU_out */P003V1_OBU_T_TM_baseline2 *P003V1_OBU_out)
+  /* TM_baseline2::Read_P003V1::Message_IN */ CompressedPackets_T_Common_Types_Pkg *Message_IN,
+  /* TM_baseline2::Read_P003V1::received */ kcg_bool *received,
+  /* TM_baseline2::Read_P003V1::P003V1_OBU_out */ P003V1_OBU_T_TM_baseline2 *P003V1_OBU_out)
 {
-  /* TM_baseline2::Read_P003V1::_L30 */
-  static MetadataElement_T_Common_Types_Pkg _L30;
-  /* TM_baseline2::Read_P003V1::_L5 */
-  static array_int_500 _L5;
+  /* TM_baseline2::Read_P003V1::_L5 */ CompressedPacketData_T_Common_Types_Pkg _L5;
+  /* TM_baseline2::Read_P003V1::_L30 */ MetadataElement_T_Common_Types_Pkg _L30;
   
   /* 1 */
   RECV_ReadPackets_TM_lib_internal(
@@ -31,8 +29,8 @@ void Read_P003V1_TM_baseline2(
   C_P003V1_compr_onboard_TM_conversions_baseline2(&_L5, &_L30, P003V1_OBU_out);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P003V1_TM_baseline2.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

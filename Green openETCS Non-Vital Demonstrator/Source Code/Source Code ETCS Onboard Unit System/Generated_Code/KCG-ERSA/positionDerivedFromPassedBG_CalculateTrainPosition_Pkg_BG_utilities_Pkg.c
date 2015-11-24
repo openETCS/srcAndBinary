@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,14 @@
 
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG */
 void positionDerivedFromPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::odoPosition */OdometryLocations_T_Obu_BasicTypes_Pkg *odoPosition,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::passedRefBG */positionedBG_T_TrainPosition_Types_Pck *passedRefBG,
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::position */LocWithInAcc_T_Obu_BasicTypes_Pkg *position)
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::odoPosition */ OdometryLocations_T_Obu_BasicTypes_Pkg *odoPosition,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::passedRefBG */ positionedBG_T_TrainPosition_Types_Pck *passedRefBG,
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::position */ LocWithInAcc_T_Obu_BasicTypes_Pkg *position)
 {
-  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
+  /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::positionDerivedFromPassedBG::IfBlock1 */ kcg_bool IfBlock1_clock;
   
   IfBlock1_clock = (*passedRefBG).valid & (*passedRefBG).infoFromPassing.valid;
-  if (IfBlock1_clock) {
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     /* 6 */
     add_odo_2_Location_BasicLocationFunctions_Pkg(
       &(*passedRefBG).location,
@@ -35,8 +34,8 @@ void positionDerivedFromPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** positionDerivedFromPassedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

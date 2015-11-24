@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,10 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader */
 kcg_bool CheckTelegramHeader_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader::telegramHeader_in */TelegramHeader_T_BG_Types_Pkg *telegramHeader_in)
+  /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader::telegramHeader_in */ TelegramHeader_T_BG_Types_Pkg *telegramHeader_in)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader::_L48 */
-  static kcg_int _L48;
-  /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader::isConsistent */
-  static kcg_bool isConsistent;
+  /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader::_L48 */ kcg_int _L48;
+  /* CheckBGConsistency_Pkg::SubFunction::CheckTelegramHeader::isConsistent */ kcg_bool isConsistent;
   
   _L48 = /* 1 */
     N_TOTAL2int_CheckBGConsistency_Pkg_SubFunction(
@@ -28,8 +26,8 @@ kcg_bool CheckTelegramHeader_CheckBGConsistency_Pkg_SubFunction(
   return isConsistent;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckTelegramHeader_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

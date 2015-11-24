@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,16 @@
 
 /* SDM_Types_Pkg::dV_ebi_for_V */
 V_internal_real_Type_SDM_Types_Pkg dV_ebi_for_V_SDM_Types_Pkg(
-  /* SDM_Types_Pkg::dV_ebi_for_V::V_input */V_internal_real_Type_SDM_Types_Pkg V_input)
+  /* SDM_Types_Pkg::dV_ebi_for_V::V_input */ V_internal_real_Type_SDM_Types_Pkg V_input)
 {
-  /* SDM_Types_Pkg::dV_ebi_for_V::_L8 */
-  static kcg_real _L8;
-  /* SDM_Types_Pkg::dV_ebi_for_V::dv_ebi */
-  static V_internal_real_Type_SDM_Types_Pkg dv_ebi;
+  /* SDM_Types_Pkg::dV_ebi_for_V::_L8 */ kcg_real _L8;
+  /* SDM_Types_Pkg::dV_ebi_for_V::dv_ebi */ V_internal_real_Type_SDM_Types_Pkg dv_ebi;
   
   _L8 = (V_input - V_ebi_min_SDM_Types_Pkg) * ((dV_ebi_max_SDM_Types_Pkg -
         dV_ebi_min_SDM_Types_Pkg) / (V_ebi_max_SDM_Types_Pkg -
         V_ebi_min_SDM_Types_Pkg)) + dV_ebi_min_SDM_Types_Pkg;
-  if (V_input > V_ebi_min_SDM_Types_Pkg) {
-    if (_L8 <= dV_ebi_max_SDM_Types_Pkg) {
+  /* 1 */ if (V_input > V_ebi_min_SDM_Types_Pkg) {
+    /* 1 */ if (_L8 <= dV_ebi_max_SDM_Types_Pkg) {
       dv_ebi = _L8;
     }
     else {
@@ -33,8 +31,8 @@ V_internal_real_Type_SDM_Types_Pkg dV_ebi_for_V_SDM_Types_Pkg(
   return dv_ebi;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** dV_ebi_for_V_SDM_Types_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

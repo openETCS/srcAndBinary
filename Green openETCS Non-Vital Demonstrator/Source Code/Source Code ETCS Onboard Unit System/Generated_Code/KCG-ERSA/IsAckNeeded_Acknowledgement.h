@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _IsAckNeeded_Acknowledgement_H_
 #define _IsAckNeeded_Acknowledgement_H_
@@ -9,15 +9,17 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* Acknowledgement::IsAckNeeded */
 extern kcg_bool IsAckNeeded_Acknowledgement(
-  /* Acknowledgement::IsAckNeeded::selected_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
-  /* Acknowledgement::IsAckNeeded::last_level */M_LEVEL last_level);
+  /* Acknowledgement::IsAckNeeded::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition,
+  /* Acknowledgement::IsAckNeeded::last_level */ M_LEVEL last_level);
 
 #endif /* _IsAckNeeded_Acknowledgement_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** IsAckNeeded_Acknowledgement.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

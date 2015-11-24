@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,23 @@
 
 /* manage_DMI_Output_Pkg::synchWithDMI */
 void synchWithDMI_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::synchWithDMI::dmi_identifierRequest */DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_identifierRequest,
-  /* manage_DMI_Output_Pkg::synchWithDMI::TIU_TrainStatus */TIU_trainStatus_T_TIU_Types_Pkg *TIU_TrainStatus,
-  /* manage_DMI_Output_Pkg::synchWithDMI::outputStatus */dmiOutputs_T_manage_DMI_Output_Pkg *outputStatus,
-  /* manage_DMI_Output_Pkg::synchWithDMI::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  /* manage_DMI_Output_Pkg::synchWithDMI::send_dmi_identifierRequest */DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *send_dmi_identifierRequest,
-  /* manage_DMI_Output_Pkg::synchWithDMI::updatedOutputStatus */dmiOutputs_T_manage_DMI_Output_Pkg *updatedOutputStatus)
+  /* manage_DMI_Output_Pkg::synchWithDMI::dmi_identifierRequest */ DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_identifierRequest,
+  /* manage_DMI_Output_Pkg::synchWithDMI::TIU_TrainStatus */ TIU_trainStatus_T_TIU_Types_Pkg *TIU_TrainStatus,
+  /* manage_DMI_Output_Pkg::synchWithDMI::outputStatus */ dmiOutputs_T_manage_DMI_Output_Pkg *outputStatus,
+  /* manage_DMI_Output_Pkg::synchWithDMI::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* manage_DMI_Output_Pkg::synchWithDMI::send_dmi_identifierRequest */ DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *send_dmi_identifierRequest,
+  /* manage_DMI_Output_Pkg::synchWithDMI::updatedOutputStatus */ dmiOutputs_T_manage_DMI_Output_Pkg *updatedOutputStatus)
 {
-  /* manage_DMI_Output_Pkg::synchWithDMI::doSend */
-  static kcg_bool doSend;
+  /* manage_DMI_Output_Pkg::synchWithDMI::doSend */ kcg_bool doSend;
   
   doSend = !(*dmi_identifierRequest).valid & (*TIU_TrainStatus).valid &
     (*TIU_TrainStatus).deskOpen & (*outputStatus).NO_initrequestSent;
-  kcg_copy_dmiOutputs_T_manage_DMI_Output_Pkg(
-    updatedOutputStatus,
-    outputStatus);
-  (*updatedOutputStatus).NO_initrequestSent = doSend;
-  if ((*dmi_identifierRequest).valid) {
+  /* 1 */ if ((*dmi_identifierRequest).valid) {
     kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
       send_dmi_identifierRequest,
       dmi_identifierRequest);
   }
-  else if (doSend) {
+  else /* 2 */ if (doSend) {
     kcg_copy_DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg(
       send_dmi_identifierRequest,
       (DMI_Identifier_Request_T_DMI_Messages_EVC_to_DMI_Pkg *)
@@ -43,10 +38,14 @@ void synchWithDMI_manage_DMI_Output_Pkg(
         &cEmptyInitRequest_manage_DMI_Output_Pkg);
   }
   (*send_dmi_identifierRequest).system_clock = systemTime;
+  kcg_copy_dmiOutputs_T_manage_DMI_Output_Pkg(
+    updatedOutputStatus,
+    outputStatus);
+  (*updatedOutputStatus).NO_initrequestSent = doSend;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** synchWithDMI_manage_DMI_Output_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

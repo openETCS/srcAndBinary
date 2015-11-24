@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,16 @@
 
 /* TA_Lib_internal::EVAL_Q_OVERLAP */
 kcg_bool EVAL_Q_OVERLAP_TA_Lib_internal(
-  /* TA_Lib_internal::EVAL_Q_OVERLAP::q_overlap */Q_OVERLAP q_overlap)
+  /* TA_Lib_internal::EVAL_Q_OVERLAP::q_overlap */ Q_OVERLAP q_overlap)
 {
-  /* TA_Lib_internal::EVAL_Q_OVERLAP::q_dp_bool */
-  static kcg_bool q_dp_bool;
+  /* TA_Lib_internal::EVAL_Q_OVERLAP::q_dp_bool */ kcg_bool q_dp_bool;
   
   q_dp_bool = ENUM_Q_OVERLAP_overlap_info_TM_conversions == q_overlap;
   return q_dp_bool;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_Q_OVERLAP_TA_Lib_internal.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

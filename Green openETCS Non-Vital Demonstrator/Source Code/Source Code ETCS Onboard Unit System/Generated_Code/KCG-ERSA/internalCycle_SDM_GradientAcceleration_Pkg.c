@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,75 +9,74 @@
 
 /* SDM_GradientAcceleration_Pkg::internalCycle */
 void internalCycle_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::internalCycle::index */kcg_int index,
-  /* SDM_GradientAcceleration_Pkg::internalCycle::Accu */ACC_SDM_GradientAcceleration_Pkg *Accu,
-  /* SDM_GradientAcceleration_Pkg::internalCycle::SvLPosition */L_internal_real_Type_SDM_Types_Pkg SvLPosition,
-  /* SDM_GradientAcceleration_Pkg::internalCycle::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::internalCycle::condition */kcg_bool *condition,
-  /* SDM_GradientAcceleration_Pkg::internalCycle::AccuOut */ACC_SDM_GradientAcceleration_Pkg *AccuOut)
+  /* SDM_GradientAcceleration_Pkg::internalCycle::index */ kcg_int index,
+  /* SDM_GradientAcceleration_Pkg::internalCycle::Accu */ ACC_SDM_GradientAcceleration_Pkg *Accu,
+  /* SDM_GradientAcceleration_Pkg::internalCycle::SvLPosition */ L_internal_real_Type_SDM_Types_Pkg SvLPosition,
+  /* SDM_GradientAcceleration_Pkg::internalCycle::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::internalCycle::condition */ kcg_bool *condition,
+  /* SDM_GradientAcceleration_Pkg::internalCycle::AccuOut */ ACC_SDM_GradientAcceleration_Pkg *AccuOut)
 {
-  static Gradient_section_real_t_SDM_GradientAcceleration_types tmp2;
-  static Gradient_real_t_SDM_GradientAcceleration_types tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* SDM_GradientAcceleration_Pkg::internalCycle::_L45 */
-  static Gradient_real_t_SDM_GradientAcceleration_types _L45;
-  /* SDM_GradientAcceleration_Pkg::internalCycle::_L77 */
-  static kcg_bool _L77;
-  /* SDM_GradientAcceleration_Pkg::internalCycle::_L78 */
-  static kcg_real _L78;
+  /* SDM_GradientAcceleration_Pkg::internalCycle */ Gradient_section_real_t_SDM_GradientAcceleration_types tmp;
+  /* SDM_GradientAcceleration_Pkg::internalCycle */ Gradient_real_t_SDM_GradientAcceleration_types acc;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L45 */ Gradient_real_t_SDM_GradientAcceleration_types _L45;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L74 */ kcg_int _L74;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L77 */ kcg_bool _L77;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L76 */ kcg_real _L76;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L75 */ kcg_bool _L75;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L79 */ kcg_real _L79;
+  /* SDM_GradientAcceleration_Pkg::internalCycle::_L78 */ kcg_real _L78;
   
-  /* CalcNearestDistance */
-  CalcNearestDistance_SDM_GradientAcceleration_Pkg(
-    Accu,
-    GradientProfile,
-    &tmp,
-    &_L45,
-    &_L77);
-  /* MoveTrainPosition */
-  MoveTrainPosition_SDM_GradientAcceleration_Pkg(_L45, Accu, &_L78, &tmp1);
-  (*AccuOut).frontPos = _L78;
-  (*AccuOut).rearPos = tmp1;
-  *condition = tmp & (_L78 < SvLPosition);
-  /* DetermineNewIndices */
-  DetermineNewIndices_SDM_GradientAcceleration_Pkg(
-    Accu,
-    _L77,
-    &(*AccuOut).frontIndex,
-    &i);
-  (*AccuOut).rearIndex = i;
   /* 1 */
   selectGradientOffset_SDM_GradientAcceleration_Pkg(
     GradientProfile,
     (*Accu).rearIndex,
     0,
-    &tmp2);
-  _L45 = tmp2.gradient;
-  for (i = 0; i < 50; i++) {
-    tmp1 = _L45;
+    &tmp);
+  _L45 = tmp.gradient;
+  for (_L74 = 0; _L74 < 50; _L74++) {
+    acc = _L45;
     /* 1 */
     lowestGradient_SDM_GradientAcceleration_Pkg(
-      i,
-      tmp1,
+      _L74,
+      acc,
       GradientProfile,
       (*Accu).rearIndex,
       (*Accu).frontIndex,
-      &tmp,
+      &_L75,
       &_L45);
-    if (!tmp) {
+    if (!_L75) {
       break;
     }
   }
+  /* CalcNearestDistance */
+  CalcNearestDistance_SDM_GradientAcceleration_Pkg(
+    Accu,
+    GradientProfile,
+    &_L75,
+    &_L76,
+    &_L77);
+  /* MoveTrainPosition */
+  MoveTrainPosition_SDM_GradientAcceleration_Pkg(_L76, Accu, &_L78, &_L79);
+  (*AccuOut).frontPos = _L78;
+  (*AccuOut).rearPos = _L79;
+  /* DetermineNewIndices */
+  DetermineNewIndices_SDM_GradientAcceleration_Pkg(
+    Accu,
+    _L77,
+    &(*AccuOut).frontIndex,
+    &_L74);
+  (*AccuOut).rearIndex = _L74;
   /* addNewSection */
   addNewSection_SDM_GradientAcceleration_Pkg(
     _L45,
     index,
     Accu,
     &(*AccuOut).compensatedGradientProfile);
+  *condition = _L75 & (_L78 < SvLPosition);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** internalCycle_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

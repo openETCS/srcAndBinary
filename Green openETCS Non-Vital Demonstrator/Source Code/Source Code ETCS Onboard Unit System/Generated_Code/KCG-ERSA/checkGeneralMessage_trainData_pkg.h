@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _checkGeneralMessage_trainData_pkg_H_
 #define _checkGeneralMessage_trainData_pkg_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -25,15 +27,22 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* trainData_pkg::checkGeneralMessage */
 extern void checkGeneralMessage_trainData_pkg(
-  /* trainData_pkg::checkGeneralMessage::trackMessages */ReceivedMessage_T_Common_Types_Pkg *trackMessages,
+  /* trainData_pkg::checkGeneralMessage::trackMessages */ ReceivedMessage_T_Common_Types_Pkg *trackMessages,
   outC_checkGeneralMessage_trainData_pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void checkGeneralMessage_reset_trainData_pkg(
   outC_checkGeneralMessage_trainData_pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void checkGeneralMessage_init_trainData_pkg(
+  outC_checkGeneralMessage_trainData_pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _checkGeneralMessage_trainData_pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** checkGeneralMessage_trainData_pkg.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

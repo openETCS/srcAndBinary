@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,15 @@
 
 /* SDMConversionModelPkg::InflateABrakeRow */
 void InflateABrakeRow_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::InflateABrakeRow::Akku */A_internal_Type_Obu_BasicTypes_Pkg Akku,
-  /* SDMConversionModelPkg::InflateABrakeRow::A */A_internal_Type_Obu_BasicTypes_Pkg A,
-  /* SDMConversionModelPkg::InflateABrakeRow::Akku_out */A_internal_Type_Obu_BasicTypes_Pkg *Akku_out,
-  /* SDMConversionModelPkg::InflateABrakeRow::ASafeRow */ASafeRow_T_CalcBrakingCurves_types *ASafeRow)
+  /* SDMConversionModelPkg::InflateABrakeRow::Akku */ A_internal_Type_Obu_BasicTypes_Pkg Akku,
+  /* SDMConversionModelPkg::InflateABrakeRow::A */ A_internal_Type_Obu_BasicTypes_Pkg A,
+  /* SDMConversionModelPkg::InflateABrakeRow::Akku_out */ A_internal_Type_Obu_BasicTypes_Pkg *Akku_out,
+  /* SDMConversionModelPkg::InflateABrakeRow::ASafeRow */ ASafeRow_T_CalcBrakingCurves_types *ASafeRow)
 {
-  static kcg_int i;
-  /* SDMConversionModelPkg::InflateABrakeRow::_L2 */
-  static A_internal_real_Type_SDM_Types_Pkg _L2;
+  /* SDMConversionModelPkg::InflateABrakeRow::_L2 */ A_internal_real_Type_SDM_Types_Pkg _L2;
+  kcg_int i;
   
-  if (A > 0) {
+  /* 1 */ if (A > 0) {
     *Akku_out = A;
   }
   else {
@@ -30,8 +29,8 @@ void InflateABrakeRow_SDMConversionModelPkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** InflateABrakeRow_SDMConversionModelPkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

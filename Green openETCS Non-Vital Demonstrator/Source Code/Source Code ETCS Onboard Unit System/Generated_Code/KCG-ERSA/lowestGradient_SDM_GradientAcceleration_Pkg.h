@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _lowestGradient_SDM_GradientAcceleration_Pkg_H_
 #define _lowestGradient_SDM_GradientAcceleration_Pkg_H_
@@ -10,20 +10,22 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* SDM_GradientAcceleration_Pkg::lowestGradient */
 extern void lowestGradient_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::Index */kcg_int Index,
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::lowestGradientAccu */Gradient_real_t_SDM_GradientAcceleration_types lowestGradientAccu,
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::BeginIndex */kcg_int BeginIndex,
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::EndIndex */kcg_int EndIndex,
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::cond */kcg_bool *cond,
-  /* SDM_GradientAcceleration_Pkg::lowestGradient::lowestGradientOut */Gradient_real_t_SDM_GradientAcceleration_types *lowestGradientOut);
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::Index */ kcg_int Index,
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::lowestGradientAccu */ Gradient_real_t_SDM_GradientAcceleration_types lowestGradientAccu,
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::BeginIndex */ kcg_int BeginIndex,
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::EndIndex */ kcg_int EndIndex,
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::cond */ kcg_bool *cond,
+  /* SDM_GradientAcceleration_Pkg::lowestGradient::lowestGradientOut */ Gradient_real_t_SDM_GradientAcceleration_types *lowestGradientOut);
 
 #endif /* _lowestGradient_SDM_GradientAcceleration_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** lowestGradient_SDM_GradientAcceleration_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

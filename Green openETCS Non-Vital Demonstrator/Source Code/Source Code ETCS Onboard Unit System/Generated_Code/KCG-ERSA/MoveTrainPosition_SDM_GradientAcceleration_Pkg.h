@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _MoveTrainPosition_SDM_GradientAcceleration_Pkg_H_
 #define _MoveTrainPosition_SDM_GradientAcceleration_Pkg_H_
@@ -9,17 +9,19 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* SDM_GradientAcceleration_Pkg::MoveTrainPosition */
 extern void MoveTrainPosition_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::distanceStep */kcg_real distanceStep,
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::Accu */ACC_SDM_GradientAcceleration_Pkg *Accu,
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newFront */kcg_real *newFront,
-  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newRear */kcg_real *newRear);
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::distanceStep */ kcg_real distanceStep,
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::Accu */ ACC_SDM_GradientAcceleration_Pkg *Accu,
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newFront */ kcg_real *newFront,
+  /* SDM_GradientAcceleration_Pkg::MoveTrainPosition::newRear */ kcg_real *newRear);
 
 #endif /* _MoveTrainPosition_SDM_GradientAcceleration_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** MoveTrainPosition_SDM_GradientAcceleration_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

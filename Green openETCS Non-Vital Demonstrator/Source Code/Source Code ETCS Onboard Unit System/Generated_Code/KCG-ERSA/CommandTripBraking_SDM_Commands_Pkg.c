@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,23 +9,26 @@
 
 /* SDM_Commands_Pkg::CommandTripBraking */
 EB_command_T_SDM_Commands_Pkg CommandTripBraking_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CommandTripBraking::trainLocations */trainPosition_T_TrainPosition_Types_Pck *trainLocations,
-  /* SDM_Commands_Pkg::CommandTripBraking::mrdt */Target_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::CommandTripBraking::TrainData_int */trainData_internal_t_SDM_Types_Pkg *TrainData_int)
+  /* SDM_Commands_Pkg::CommandTripBraking::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
+  /* SDM_Commands_Pkg::CommandTripBraking::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::CommandTripBraking::TrainData_int */ trainData_internal_t_SDM_Types_Pkg *TrainData_int)
 {
-  /* SDM_Commands_Pkg::CommandTripBraking::eb */
-  static EB_command_T_SDM_Commands_Pkg eb;
+  /* SDM_Commands_Pkg::CommandTripBraking::_L44 */ L_internal_Type_Obu_BasicTypes_Pkg _L44;
+  /* SDM_Commands_Pkg::CommandTripBraking::eb */ EB_command_T_SDM_Commands_Pkg eb;
   
-  eb = !(*trainLocations).trainPositionIsUnknown & (*trainLocations).valid &
-    ((*trainLocations).minSafeFrontEndPosition -
-      (*TrainData_int).offsetAntennaL1 > (*mrdt).distance) &
-    ((EoA_TargetManagement_types == (*mrdt).targetType) | ((*mrdt).targetType ==
-        SvL_TargetManagement_types));
+  /* 1 */ if ((*locations).d_eoa <= (*locations).d_svl) {
+    _L44 = (*locations).d_eoa;
+  }
+  else {
+    _L44 = (*locations).d_svl;
+  }
+  eb = ((*trainLocations).minSafeFrontEndPosition -
+      (*TrainData_int).offsetAntennaL1 > _L44) & (_L44 > 0);
   return eb;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CommandTripBraking_SDM_Commands_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

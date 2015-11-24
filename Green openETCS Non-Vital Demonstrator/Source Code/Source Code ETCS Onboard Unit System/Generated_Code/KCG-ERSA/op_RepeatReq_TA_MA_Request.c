@@ -1,29 +1,41 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "op_RepeatReq_TA_MA_Request.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void op_RepeatReq_init_TA_MA_Request(outC_op_RepeatReq_TA_MA_Request *outC)
+{
+  outC->trigger = kcg_true;
+  outC->exception = kcg_true;
+  outC->init = kcg_true;
+  outC->lastSystemTime = 0;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void op_RepeatReq_reset_TA_MA_Request(outC_op_RepeatReq_TA_MA_Request *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* TA_MA_Request::op_RepeatReq */
 void op_RepeatReq_TA_MA_Request(
-  /* TA_MA_Request::op_RepeatReq::tcycreq */T_CYCLOC tcycreq,
-  /* TA_MA_Request::op_RepeatReq::setRepeater */kcg_bool setRepeater,
-  /* TA_MA_Request::op_RepeatReq::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* TA_MA_Request::op_RepeatReq::tcycreq */ T_CYCLOC tcycreq,
+  /* TA_MA_Request::op_RepeatReq::setRepeater */ kcg_bool setRepeater,
+  /* TA_MA_Request::op_RepeatReq::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
   outC_op_RepeatReq_TA_MA_Request *outC)
 {
-  /* TA_MA_Request::op_RepeatReq::_L21 */
-  static T_internal_Type_Obu_BasicTypes_Pkg _L21;
+  /* TA_MA_Request::op_RepeatReq::_L21 */ T_internal_Type_Obu_BasicTypes_Pkg _L21;
   
   outC->exception = kcg_false;
-  if (outC->init) {
+  /* last_init_ck_lastSystemTime */ if (outC->init) {
     outC->init = kcg_false;
     _L21 = 0;
   }
@@ -31,7 +43,7 @@ void op_RepeatReq_TA_MA_Request(
     _L21 = outC->lastSystemTime;
   }
   outC->trigger = systemTime - _L21 >= cCycleTime_TA_MA_Request * tcycreq;
-  if (outC->trigger | setRepeater) {
+  /* 1 */ if (outC->trigger | setRepeater) {
     outC->lastSystemTime = systemTime;
   }
   else {
@@ -39,8 +51,8 @@ void op_RepeatReq_TA_MA_Request(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** op_RepeatReq_TA_MA_Request.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

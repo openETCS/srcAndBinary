@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::initCollector */
 void initCollector_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::initCollector::newTelegram */Telegram_T_BG_Types_Pkg *newTelegram,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::initCollector::outCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector)
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::initCollector::newTelegram */ Telegram_T_BG_Types_Pkg *newTelegram,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::initCollector::outCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector)
 {
   (*outCollector).badBaliseFlag = kcg_false;
   (*outCollector).BGMessageSent = kcg_true;
@@ -28,8 +28,8 @@ void initCollector_Receive_TrackSide_Msg_Pkg_BaliseSupport(
       (*newTelegram).telegramheader.n_total);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** initCollector_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

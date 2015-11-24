@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,41 +9,48 @@
 
 /* InformationFilter_Pkg::FirstFilter::FirstFilter */
 void FirstFilter_InformationFilter_Pkg_FirstFilter(
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMessage */ReceivedMessage_T_Common_Types_Pkg *inMessage,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLevel */M_LEVEL inLevel,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingL1Transition */kcg_bool inPendingL1Transition,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingL2L3Transition */kcg_bool inPendingL2L3Transition,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingAckOfTrainData */kcg_bool inPendingAckOfTrainData,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inEmergencyStopAccepted */kcg_bool inEmergencyStopAccepted,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLastAckTextMessageId */kcg_int inLastAckTextMessageId,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inPendingNTCTransition */kcg_bool inPendingNTCTransition,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inSPPAndGradientOnBoard */kcg_bool inSPPAndGradientOnBoard,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMACoverNotFullLength */kcg_bool inMACoverNotFullLength,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::outMessage */ReceivedMessage_T_Common_Types_Pkg *outMessage,
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::outStoreInTransitionBuffer */kcg_bool *outStoreInTransitionBuffer)
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inMessage */ ReceivedMessage_T_Common_Types_Pkg *inMessage,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inLevel */ M_LEVEL inLevel,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::inFilterEvents */ filterRelatedEvents_T_Common_Types_Pkg *inFilterEvents,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::messageForFilter2 */ ReceivedMessage_T_Common_Types_Pkg *messageForFilter2,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::messageForBuffer */ ReceivedMessage_T_Common_Types_Pkg *messageForBuffer,
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::storeInBuffer1 */ kcg_bool *storeInBuffer1)
 {
-  static kcg_int tmp_1;
-  static array__105500 tmp;
-  static kcg_int i;
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::_L1 */
-  static array_bool_30 _L1;
-  /* InformationFilter_Pkg::FirstFilter::FirstFilter::_L114 */
-  static array_bool_30 _L114;
+  kcg_int tmp_1;
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter */ Metadata_T_Common_Types_Pkg tmp1;
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter */ Metadata_T_Common_Types_Pkg tmp;
+  kcg_int i;
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::_L1 */ DMI_Available_Menu_int_T_DATA _L1;
+  /* InformationFilter_Pkg::FirstFilter::FirstFilter::_L114 */ DMI_Available_Menu_int_T_DATA _L114;
   
-  *outStoreInTransitionBuffer = kcg_false;
-  (*outMessage).valid = (*inMessage).valid;
-  (*outMessage).source = (*inMessage).source;
+  *storeInBuffer1 = kcg_false;
+  (*messageForBuffer).valid = (*inMessage).valid;
+  (*messageForBuffer).source = (*inMessage).source;
   kcg_copy_RadioMetadata_T_Common_Types_Pkg(
-    &(*outMessage).radioMetadata,
+    &(*messageForBuffer).radioMetadata,
     &(*inMessage).radioMetadata);
   kcg_copy_BG_Header_T_BG_Types_Pkg(
-    &(*outMessage).BG_Common_Header,
+    &(*messageForBuffer).BG_Common_Header,
     &(*inMessage).BG_Common_Header);
   kcg_copy_Radio_TrackTrain_Header_T_Radio_Types_Pkg(
-    &(*outMessage).Radio_Common_Header,
+    &(*messageForBuffer).Radio_Common_Header,
     &(*inMessage).Radio_Common_Header);
   kcg_copy_RBC_Id_T_Common_Types_Pkg(
-    &(*outMessage).sendingRBC,
+    &(*messageForBuffer).sendingRBC,
+    &(*inMessage).sendingRBC);
+  (*messageForFilter2).valid = (*inMessage).valid;
+  (*messageForFilter2).source = (*inMessage).source;
+  kcg_copy_RadioMetadata_T_Common_Types_Pkg(
+    &(*messageForFilter2).radioMetadata,
+    &(*inMessage).radioMetadata);
+  kcg_copy_BG_Header_T_BG_Types_Pkg(
+    &(*messageForFilter2).BG_Common_Header,
+    &(*inMessage).BG_Common_Header);
+  kcg_copy_Radio_TrackTrain_Header_T_Radio_Types_Pkg(
+    &(*messageForFilter2).Radio_Common_Header,
+    &(*inMessage).Radio_Common_Header);
+  kcg_copy_RBC_Id_T_Common_Types_Pkg(
+    &(*messageForFilter2).sendingRBC,
     &(*inMessage).sendingRBC);
   for (i = 0; i < 30; i++) {
     tmp_1 = /* 1 */
@@ -51,14 +58,14 @@ void FirstFilter_InformationFilter_Pkg_FirstFilter(
         &(*inMessage).packets.PacketHeaders[i]);
     /* 1 */
     LevelFilter_InformationFilter_Pkg_FirstFilter(
-      inPendingL1Transition,
-      inPendingL2L3Transition,
-      inPendingAckOfTrainData,
-      inEmergencyStopAccepted,
-      inLastAckTextMessageId,
-      inPendingNTCTransition,
-      inSPPAndGradientOnBoard,
-      inMACoverNotFullLength,
+      (*inFilterEvents).pendingL1Transition,
+      (*inFilterEvents).pendingL12L3Transition,
+      (*inFilterEvents).pendingAckOfTrainDataFromRBC,
+      (*inFilterEvents).emergencyStopAccepted,
+      (*inFilterEvents).lastAckTextMessageId,
+      (*inFilterEvents).pendingNTCTransition,
+      (*inFilterEvents).SPPAndGradientOnBoard,
+      (*inFilterEvents).MACoverNotFullLength,
       inLevel,
       (*inMessage).source,
       tmp_1,
@@ -66,23 +73,34 @@ void FirstFilter_InformationFilter_Pkg_FirstFilter(
       &_L1[i]);
   }
   kcg_copy_CompressedPackets_T_Common_Types_Pkg(
-    &(*outMessage).packets,
+    &(*messageForFilter2).packets,
     &(*inMessage).packets);
-  for (i = 0; i < 30; i++) {
-    *outStoreInTransitionBuffer = *outStoreInTransitionBuffer | _L114[i];
-    /* SetValidFlag */
+  /* 2 */ for (i = 0; i < 30; i++) {
+    *storeInBuffer1 = *storeInBuffer1 | _L114[i];
+    /* 2 */
     SetValidFlag_InformationFilter_Pkg_Common(
       _L1[i],
+      &(*inMessage).packets.PacketHeaders[i],
+      &tmp1[i]);
+    /* 1 */
+    SetValidFlag_InformationFilter_Pkg_Common(
+      _L114[i],
       &(*inMessage).packets.PacketHeaders[i],
       &tmp[i]);
   }
   kcg_copy_Metadata_T_Common_Types_Pkg(
-    &(*outMessage).packets.PacketHeaders,
+    &(*messageForFilter2).packets.PacketHeaders,
+    &tmp1);
+  kcg_copy_CompressedPackets_T_Common_Types_Pkg(
+    &(*messageForBuffer).packets,
+    &(*inMessage).packets);
+  kcg_copy_Metadata_T_Common_Types_Pkg(
+    &(*messageForBuffer).packets.PacketHeaders,
     &tmp);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** FirstFilter_InformationFilter_Pkg_FirstFilter.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _Send_M132_TM_radio_messages_H_
 #define _Send_M132_TM_radio_messages_H_
@@ -16,6 +16,8 @@
 #include "BufferMsg_TM_lib_internal.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -33,21 +35,28 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TM_radio_messages::Send_M132 */
 extern void Send_M132_TM_radio_messages(
-  /* TM_radio_messages::Send_M132::t_train_global */T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
-  /* TM_radio_messages::Send_M132::MessageBus */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
-  /* TM_radio_messages::Send_M132::Message_132_in */M_132_T_TM_radio_messages *Message_132_in,
-  /* TM_radio_messages::Send_M132::P000 */P000_TM_TrainToTrack *P000,
-  /* TM_radio_messages::Send_M132::P001 */P001_TM_TrainToTrack *P001,
-  /* TM_radio_messages::Send_M132::P009 */P009_TM_TrainToTrack *P009,
-  /* TM_radio_messages::Send_M132::m_version */M_VERSION m_version,
+  /* TM_radio_messages::Send_M132::t_train_global */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
+  /* TM_radio_messages::Send_M132::MessageBus */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *MessageBus,
+  /* TM_radio_messages::Send_M132::Message_132_in */ M_132_T_TM_radio_messages *Message_132_in,
+  /* TM_radio_messages::Send_M132::P000 */ P000_TM_TrainToTrack *P000,
+  /* TM_radio_messages::Send_M132::P001 */ P001_TM_TrainToTrack *P001,
+  /* TM_radio_messages::Send_M132::P009 */ P009_TM_TrainToTrack *P009,
+  /* TM_radio_messages::Send_M132::m_version */ M_VERSION m_version,
   outC_Send_M132_TM_radio_messages *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void Send_M132_reset_TM_radio_messages(
   outC_Send_M132_TM_radio_messages *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void Send_M132_init_TM_radio_messages(
+  outC_Send_M132_TM_radio_messages *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _Send_M132_TM_radio_messages_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M132_TM_radio_messages.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

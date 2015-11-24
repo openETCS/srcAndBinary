@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,11 @@
 
 /* manage_TextMessages_Pkg::findElement */
 kcg_bool findElement_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::findElement::accu */kcg_bool accu,
-  /* manage_TextMessages_Pkg::findElement::fromStore */DMI_TXT_MSG_status_T_DMI_Types_Pkg *fromStore,
-  /* manage_TextMessages_Pkg::findElement::newRequest */DMI_TXT_MSG_status_T_DMI_Types_Pkg *newRequest)
+  /* manage_TextMessages_Pkg::findElement::accu */ kcg_bool accu,
+  /* manage_TextMessages_Pkg::findElement::fromStore */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *fromStore,
+  /* manage_TextMessages_Pkg::findElement::newRequest */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *newRequest)
 {
-  /* manage_TextMessages_Pkg::findElement::result */
-  static kcg_bool result;
+  /* manage_TextMessages_Pkg::findElement::result */ kcg_bool result;
   
   result = ((*fromStore).valid & ((*fromStore).context ==
         con_levelMgmt_DMI_Types_Pkg) & ((*fromStore).whichLevel ==
@@ -24,8 +23,8 @@ kcg_bool findElement_manage_TextMessages_Pkg(
   return result;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** findElement_manage_TextMessages_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,24 @@
 
 /* LevelTransitionSelection::IsSelectedTransition */
 void IsSelectedTransition_LevelTransitionSelection(
-  /* LevelTransitionSelection::IsSelectedTransition::last_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *last_level_transition,
-  /* LevelTransitionSelection::IsSelectedTransition::level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *level_transition,
-  /* LevelTransitionSelection::IsSelectedTransition::ERTMS_capabilities */T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities,
-  /* LevelTransitionSelection::IsSelectedTransition::available_transition_not_selected */kcg_bool *available_transition_not_selected,
-  /* LevelTransitionSelection::IsSelectedTransition::selected_level_transition */T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition)
+  /* LevelTransitionSelection::IsSelectedTransition::last_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *last_level_transition,
+  /* LevelTransitionSelection::IsSelectedTransition::level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *level_transition,
+  /* LevelTransitionSelection::IsSelectedTransition::ERTMS_capabilities */ T_ERTMS_capabilities_Level_And_Mode_Types_Pkg *ERTMS_capabilities,
+  /* LevelTransitionSelection::IsSelectedTransition::available_transition_not_selected */ kcg_bool *available_transition_not_selected,
+  /* LevelTransitionSelection::IsSelectedTransition::selected_level_transition */ T_LevelTransition_Level_And_Mode_Types_Pkg *selected_level_transition)
 {
-  static kcg_bool tmp;
+  /* LevelTransitionSelection::IsSelectedTransition */ kcg_bool tmp;
   
+  /* ck_Loc_is_valid */ if ((*level_transition).is_set) {
+    kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
+      selected_level_transition,
+      level_transition);
+  }
+  else {
+    kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
+      selected_level_transition,
+      last_level_transition);
+  }
   switch ((*level_transition).transition.level) {
     case M_LEVEL_Level_3 :
       tmp = (*ERTMS_capabilities).L3;
@@ -36,20 +46,10 @@ void IsSelectedTransition_LevelTransitionSelection(
     
   }
   *available_transition_not_selected = !((*level_transition).is_set & tmp);
-  if ((*level_transition).is_set) {
-    kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
-      selected_level_transition,
-      level_transition);
-  }
-  else {
-    kcg_copy_T_LevelTransition_Level_And_Mode_Types_Pkg(
-      selected_level_transition,
-      last_level_transition);
-  }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** IsSelectedTransition_LevelTransitionSelection.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

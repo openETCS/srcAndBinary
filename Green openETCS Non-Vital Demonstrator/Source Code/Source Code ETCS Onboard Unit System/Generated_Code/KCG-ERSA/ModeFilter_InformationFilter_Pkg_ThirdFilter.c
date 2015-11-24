@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,13 @@
 
 /* InformationFilter_Pkg::ThirdFilter::ModeFilter */
 kcg_bool ModeFilter_InformationFilter_Pkg_ThirdFilter(
-  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inOperationModus */M_MODE inOperationModus,
-  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inPacketId */kcg_int inPacketId)
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inOperationModus */ M_MODE inOperationModus,
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::inPacketId */ kcg_int inPacketId)
 {
-  static ModeDecisionTableActionKind_DataDictionary_Pkg tmp2;
-  static kcg_int tmp1;
-  static kcg_int tmp;
-  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::outPacketAccept */
-  static kcg_bool outPacketAccept;
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter */ ModeDecisionTableActionKind_DataDictionary_Pkg tmp2;
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter */ kcg_int tmp1;
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter */ kcg_int tmp;
+  /* InformationFilter_Pkg::ThirdFilter::ModeFilter::outPacketAccept */ kcg_bool outPacketAccept;
   
   tmp1 = /* 1 */ MapPacketIdToRow_InformationFilter_Pkg(inPacketId);
   tmp = /* 1 */ MapModeToColumn_InformationFilter_Pkg(inOperationModus);
@@ -30,8 +29,8 @@ kcg_bool ModeFilter_InformationFilter_Pkg_ThirdFilter(
   return outPacketAccept;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ModeFilter_InformationFilter_Pkg_ThirdFilter.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

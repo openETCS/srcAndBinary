@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,10 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::CheckMode */
 kcg_bool CheckMode_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::currentMode */M_MODE currentMode)
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::currentMode */ M_MODE currentMode)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::_L35 */
-  static kcg_bool _L35;
-  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::bgConsistansyIsActive */
-  static kcg_bool bgConsistansyIsActive;
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::_L35 */ kcg_bool _L35;
+  /* CheckBGConsistency_Pkg::SubFunction::CheckMode::bgConsistansyIsActive */ kcg_bool bgConsistansyIsActive;
   
   _L35 = currentMode == M_MODE_Post_Trip;
   bgConsistansyIsActive = (currentMode == M_MODE_Stand_By) | (currentMode ==
@@ -28,8 +26,8 @@ kcg_bool CheckMode_CheckBGConsistency_Pkg_SubFunction(
   return bgConsistansyIsActive;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckMode_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

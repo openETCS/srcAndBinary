@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* trainData_pkg::headerMsg129_ng */
 void headerMsg129_ng_trainData_pkg(
-  /* trainData_pkg::headerMsg129_ng::nidEngine */NID_ENGINE nidEngine,
-  /* trainData_pkg::headerMsg129_ng::t_train */T_TRAIN t_train,
-  /* trainData_pkg::headerMsg129_ng::header */M_129_T_TM_radio_messages *header)
+  /* trainData_pkg::headerMsg129_ng::nidEngine */ NID_ENGINE nidEngine,
+  /* trainData_pkg::headerMsg129_ng::t_train */ T_TRAIN t_train,
+  /* trainData_pkg::headerMsg129_ng::header */ M_129_T_TM_radio_messages *header)
 {
   (*header).valid = kcg_true;
   (*header).nid_message = co129_Validated_Train_Data_Id_Pkg;
@@ -20,8 +20,8 @@ void headerMsg129_ng_trainData_pkg(
   (*header).nid_engine = nidEngine;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** headerMsg129_ng_trainData_pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

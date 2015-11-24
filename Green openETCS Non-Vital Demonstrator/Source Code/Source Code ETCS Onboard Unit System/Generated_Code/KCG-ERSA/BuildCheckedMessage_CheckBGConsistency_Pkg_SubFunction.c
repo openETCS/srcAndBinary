@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage */
 void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::trackSideForCheck */TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::q_nvlocacc */Q_NVLOCACC q_nvlocacc,
-  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::checkedMessage */ReceivedMessage_T_Common_Types_Pkg *checkedMessage)
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::trackSideForCheck */ TrackSide_ForCheck_T_Common_Types_Pkg *trackSideForCheck,
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::q_nvlocacc */ Q_NVLOCACC q_nvlocacc,
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage::checkedMessage */ ReceivedMessage_T_Common_Types_Pkg *checkedMessage)
 {
-  static Telegram_T_BG_Types_Pkg tmp;
+  /* CheckBGConsistency_Pkg::SubFunction::BuildCheckedMessage */ Telegram_T_BG_Types_Pkg tmp;
   
   (*checkedMessage).valid = (*trackSideForCheck).telegramHeaders.present;
   (*checkedMessage).source = cEurobalise_CheckBGConsistency_Pkg;
@@ -42,8 +42,8 @@ void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
     &tmp.packets);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,24 +9,24 @@
 
 /* TA_Lib_internal::EVAL_T_LOA */
 void EVAL_T_LOA_TA_Lib_internal(
-  /* TA_Lib_internal::EVAL_T_LOA::t_loa */P015_OBU_T_TM *t_loa,
-  /* TA_Lib_internal::EVAL_T_LOA::t_loa_unlimited */kcg_bool *t_loa_unlimited,
-  /* TA_Lib_internal::EVAL_T_LOA::t_loa_out */T_internal_Type_Obu_BasicTypes_Pkg *t_loa_out)
+  /* TA_Lib_internal::EVAL_T_LOA::t_loa */ P015_OBU_T_TM *t_loa,
+  /* TA_Lib_internal::EVAL_T_LOA::t_loa_unlimited */ kcg_bool *t_loa_unlimited,
+  /* TA_Lib_internal::EVAL_T_LOA::t_loa_out */ T_internal_Type_Obu_BasicTypes_Pkg *t_loa_out)
 {
-  static kcg_int tmp;
+  /* TA_Lib_internal::EVAL_T_LOA */ kcg_int tmp;
   
-  *t_loa_unlimited = 1023 == (*t_loa).t_loa;
-  if ((*t_loa).t_loa < 1023) {
+  /* 1 */ if ((*t_loa).t_loa < 1023) {
     tmp = 1000;
   }
   else {
     tmp = 0;
   }
   *t_loa_out = (*t_loa).t_loa * tmp;
+  *t_loa_unlimited = 1023 == (*t_loa).t_loa;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_T_LOA_TA_Lib_internal.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

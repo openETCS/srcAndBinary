@@ -1,83 +1,84 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "ToTrip_Conditions.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void ToTrip_init_Conditions(outC_ToTrip_Conditions *outC)
+{
+  outC->Condition2Trip = kcg_true;
+  outC->init = kcg_true;
+  outC->rem_Current_Level = M_LEVEL_Level_0;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void ToTrip_reset_Conditions(outC_ToTrip_Conditions *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* Conditions::ToTrip */
 void ToTrip_Conditions(
-  /* Conditions::ToTrip::BG_In_Expected_List_In_SH */kcg_bool BG_In_Expected_List_In_SH,
-  /* Conditions::ToTrip::BG_In_Expected_List_In_SR */kcg_bool BG_In_Expected_List_In_SR,
-  /* Conditions::ToTrip::Current_Level */M_LEVEL Current_Level,
-  /* Conditions::ToTrip::Current_Mode */T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
-  /* Conditions::ToTrip::Driver_Select_SH */kcg_bool Driver_Select_SH,
-  /* Conditions::ToTrip::Emergency_Stop_Message_Received */kcg_bool Emergency_Stop_Message_Received,
-  /* Conditions::ToTrip::Error_BG_System_Version */kcg_bool Error_BG_System_Version,
-  /* Conditions::ToTrip::Estimated_Front_End_Overpass_SR_Distance */kcg_bool Estimated_Front_End_Overpass_SR_Distance,
-  /* Conditions::ToTrip::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
-  /* Conditions::ToTrip::Interface_To_National_System */kcg_bool Interface_To_National_System,
-  /* Conditions::ToTrip::Linked_BG_Pased_In_Wrong_Direction */kcg_bool Linked_BG_Pased_In_Wrong_Direction,
-  /* Conditions::ToTrip::Linking_Reaction_To_Trip */kcg_bool Linking_Reaction_To_Trip,
-  /* Conditions::ToTrip::List_BG_Related_To_SR_Empty */kcg_bool List_BG_Related_To_SR_Empty,
-  /* Conditions::ToTrip::MA_Available */kcg_bool MA_Available,
-  /* Conditions::ToTrip::National_Trip_Order */kcg_bool National_Trip_Order,
-  /* Conditions::ToTrip::Override_Function_Active */kcg_bool Override_Function_Active,
-  /* Conditions::ToTrip::Override_Function_Former_Active */kcg_bool Override_Function_Former_Active,
-  /* Conditions::ToTrip::Stop_If_In_Shunting */kcg_bool Stop_If_In_Shunting,
-  /* Conditions::ToTrip::Stop_If_In_SR */kcg_bool Stop_If_In_SR,
-  /* Conditions::ToTrip::T_NVCONTACT_Overpass */kcg_bool T_NVCONTACT_Overpass,
-  /* Conditions::ToTrip::Train_Overpass_EOA_Antenna */kcg_bool Train_Overpass_EOA_Antenna,
-  /* Conditions::ToTrip::Train_Overpass_EOA_Front_End */kcg_bool Train_Overpass_EOA_Front_End,
-  /* Conditions::ToTrip::Train_Overpass_Former_EOA_Antenna */kcg_bool Train_Overpass_Former_EOA_Antenna,
-  /* Conditions::ToTrip::Trip_Order_Given_By_Balise */kcg_bool Trip_Order_Given_By_Balise,
-  /* Conditions::ToTrip::TripModeFromLevel */kcg_bool TripModeFromLevel,
+  /* Conditions::ToTrip::BG_In_Expected_List_In_SH */ kcg_bool BG_In_Expected_List_In_SH,
+  /* Conditions::ToTrip::BG_In_Expected_List_In_SR */ kcg_bool BG_In_Expected_List_In_SR,
+  /* Conditions::ToTrip::Current_Level */ M_LEVEL Current_Level,
+  /* Conditions::ToTrip::Current_Mode */ T_Mode_Level_And_Mode_Types_Pkg Current_Mode,
+  /* Conditions::ToTrip::Driver_Select_SH */ kcg_bool Driver_Select_SH,
+  /* Conditions::ToTrip::Emergency_Stop_Message_Received */ kcg_bool Emergency_Stop_Message_Received,
+  /* Conditions::ToTrip::Error_BG_System_Version */ kcg_bool Error_BG_System_Version,
+  /* Conditions::ToTrip::Estimated_Front_End_Overpass_SR_Distance */ kcg_bool Estimated_Front_End_Overpass_SR_Distance,
+  /* Conditions::ToTrip::Estimated_Front_End_Rear_Location_SSP_Or_Gradient */ kcg_bool Estimated_Front_End_Rear_Location_SSP_Or_Gradient,
+  /* Conditions::ToTrip::Interface_To_National_System */ kcg_bool Interface_To_National_System,
+  /* Conditions::ToTrip::Linked_BG_Pased_In_Wrong_Direction */ kcg_bool Linked_BG_Pased_In_Wrong_Direction,
+  /* Conditions::ToTrip::Linking_Reaction_To_Trip */ kcg_bool Linking_Reaction_To_Trip,
+  /* Conditions::ToTrip::List_BG_Related_To_SR_Empty */ kcg_bool List_BG_Related_To_SR_Empty,
+  /* Conditions::ToTrip::MA_Available */ kcg_bool MA_Available,
+  /* Conditions::ToTrip::National_Trip_Order */ kcg_bool National_Trip_Order,
+  /* Conditions::ToTrip::Override_Function_Active */ kcg_bool Override_Function_Active,
+  /* Conditions::ToTrip::Override_Function_Former_Active */ kcg_bool Override_Function_Former_Active,
+  /* Conditions::ToTrip::Stop_If_In_Shunting */ kcg_bool Stop_If_In_Shunting,
+  /* Conditions::ToTrip::Stop_If_In_SR */ kcg_bool Stop_If_In_SR,
+  /* Conditions::ToTrip::T_NVCONTACT_Overpass */ kcg_bool T_NVCONTACT_Overpass,
+  /* Conditions::ToTrip::Train_Overpass_EOA_Antenna */ kcg_bool Train_Overpass_EOA_Antenna,
+  /* Conditions::ToTrip::Train_Overpass_EOA_Front_End */ kcg_bool Train_Overpass_EOA_Front_End,
+  /* Conditions::ToTrip::Train_Overpass_Former_EOA_Antenna */ kcg_bool Train_Overpass_Former_EOA_Antenna,
+  /* Conditions::ToTrip::Trip_Order_Given_By_Balise */ kcg_bool Trip_Order_Given_By_Balise,
+  /* Conditions::ToTrip::TripModeFromLevel */ kcg_bool TripModeFromLevel,
   outC_ToTrip_Conditions *outC)
 {
-  /* Conditions::ToTrip::Mode_FS_LS_OS */
-  static kcg_bool Mode_FS_LS_OS;
-  /* Conditions::ToTrip::Mode_SR */
-  static kcg_bool Mode_SR;
-  /* Conditions::ToTrip::Mode_SN */
-  static kcg_bool Mode_SN;
-  /* Conditions::ToTrip::Mode_SH */
-  static kcg_bool Mode_SH;
-  /* Conditions::ToTrip::Level_L1_L2_L3 */
-  static kcg_bool Level_L1_L2_L3;
-  /* Conditions::ToTrip::Level_L1 */
-  static kcg_bool Level_L1;
-  /* Conditions::ToTrip::_L45 */
-  static kcg_bool _L45;
-  /* Conditions::ToTrip::_L49 */
-  static kcg_bool _L49;
-  /* Conditions::ToTrip::_L156 */
-  static M_LEVEL _L156;
-  /* Conditions::ToTrip::_L193 */
-  static kcg_bool _L193;
-  /* Conditions::ToTrip::_L201 */
-  static kcg_bool _L201;
+  /* Conditions::ToTrip::Mode_FS_LS_OS */ kcg_bool Mode_FS_LS_OS;
+  /* Conditions::ToTrip::Mode_SR */ kcg_bool Mode_SR;
+  /* Conditions::ToTrip::Mode_SN */ kcg_bool Mode_SN;
+  /* Conditions::ToTrip::Mode_SH */ kcg_bool Mode_SH;
+  /* Conditions::ToTrip::Level_L1_L2_L3 */ kcg_bool Level_L1_L2_L3;
+  /* Conditions::ToTrip::Level_L1 */ kcg_bool Level_L1;
+  /* Conditions::ToTrip::_L45 */ kcg_bool _L45;
+  /* Conditions::ToTrip::_L49 */ kcg_bool _L49;
+  /* Conditions::ToTrip::_L156 */ M_LEVEL _L156;
+  /* Conditions::ToTrip::_L193 */ kcg_bool _L193;
+  /* Conditions::ToTrip::_L201 */ kcg_bool _L201;
   
-  _L49 = !BG_In_Expected_List_In_SR;
   _L45 = !Override_Function_Active;
+  _L49 = !BG_In_Expected_List_In_SR;
   Mode_FS_LS_OS = (Current_Mode == FS_Level_And_Mode_Types_Pkg) |
     (Current_Mode == LS_Level_And_Mode_Types_Pkg) | (Current_Mode ==
       OS_Level_And_Mode_Types_Pkg);
   Mode_SR = Current_Mode == SR_Level_And_Mode_Types_Pkg;
   Mode_SN = Current_Mode == SN_Level_And_Mode_Types_Pkg;
   Mode_SH = Current_Mode == SH_Level_And_Mode_Types_Pkg;
-  _L201 = Mode_FS_LS_OS | Mode_SR;
   _L193 = Mode_SN | (Current_Mode == UN_Level_And_Mode_Types_Pkg);
+  _L201 = Mode_FS_LS_OS | Mode_SR;
   Level_L1 = Current_Level == M_LEVEL_Level_1;
   Level_L1_L2_L3 = Level_L1 | (Current_Level == M_LEVEL_Level_2) |
     (Current_Level == M_LEVEL_Level_3);
-  if (outC->init) {
+  /* last_init_ck_Current_Level */ if (outC->init) {
     outC->init = kcg_false;
     _L156 = M_LEVEL_Level_0;
   }
@@ -108,8 +109,8 @@ void ToTrip_Conditions(
   outC->rem_Current_Level = Current_Level;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ToTrip_Conditions.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

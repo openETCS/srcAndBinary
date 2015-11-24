@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _addGradient_SDMModelPkg_H_
 #define _addGradient_SDMModelPkg_H_
@@ -11,16 +11,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* SDMModelPkg::addGradient */
 extern void addGradient_SDMModelPkg(
-  /* SDMModelPkg::addGradient::aBrakeSafe */ASafe_T_CalcBrakingCurves_types *aBrakeSafe,
-  /* SDMModelPkg::addGradient::aGradient */A_gradient_t_SDM_GradientAcceleration_types *aGradient,
-  /* SDMModelPkg::addGradient::aSafe */ASafe_T_CalcBrakingCurves_types *aSafe);
+  /* SDMModelPkg::addGradient::aBrakeSafe */ ASafe_T_CalcBrakingCurves_types *aBrakeSafe,
+  /* SDMModelPkg::addGradient::aGradient */ A_gradient_t_SDM_GradientAcceleration_types *aGradient,
+  /* SDMModelPkg::addGradient::aSafe */ ASafe_T_CalcBrakingCurves_types *aSafe);
 
 #endif /* _addGradient_SDMModelPkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** addGradient_SDMModelPkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

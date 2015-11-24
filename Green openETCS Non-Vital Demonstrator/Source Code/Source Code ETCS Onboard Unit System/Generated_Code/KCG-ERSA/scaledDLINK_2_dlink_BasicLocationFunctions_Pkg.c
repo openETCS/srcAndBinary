@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,12 @@
 
 /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink */
 void scaledDLINK_2_dlink_BasicLocationFunctions_Pkg(
-  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::q_scale */Q_SCALE q_scale,
-  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::d_link */D_LINK d_link,
-  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::q_locacc */Q_LOCACC q_locacc,
-  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::distance */LocWithInAcc_T_Obu_BasicTypes_Pkg *distance)
+  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::q_scale */ Q_SCALE q_scale,
+  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::d_link */ D_LINK d_link,
+  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::q_locacc */ Q_LOCACC q_locacc,
+  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::distance */ LocWithInAcc_T_Obu_BasicTypes_Pkg *distance)
 {
-  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::_L15 */
-  static kcg_int _L15;
+  /* BasicLocationFunctions_Pkg::scaledDLINK_2_dlink::_L15 */ kcg_int _L15;
   
   _L15 = q_locacc * cQLOCACC_resolution_TrainPosition_Types_Pck;
   (*distance).d_min = - _L15;
@@ -37,8 +36,8 @@ void scaledDLINK_2_dlink_BasicLocationFunctions_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** scaledDLINK_2_dlink_BasicLocationFunctions_Pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

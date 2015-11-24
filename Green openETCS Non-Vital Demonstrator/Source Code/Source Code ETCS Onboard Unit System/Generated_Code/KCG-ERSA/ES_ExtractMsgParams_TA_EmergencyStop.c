@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,28 @@
 
 /* TA_EmergencyStop::ES_ExtractMsgParams */
 void ES_ExtractMsgParams_TA_EmergencyStop(
-  /* TA_EmergencyStop::ES_ExtractMsgParams::messageIn */ReceivedMessage_T_Common_Types_Pkg *messageIn,
-  /* TA_EmergencyStop::ES_ExtractMsgParams::receivedESMsg */kcg_bool receivedESMsg,
-  /* TA_EmergencyStop::ES_ExtractMsgParams::nid_em */NID_EM *nid_em,
-  /* TA_EmergencyStop::ES_ExtractMsgParams::q_scale */Q_SCALE *q_scale,
-  /* TA_EmergencyStop::ES_ExtractMsgParams::d_ref */D_REF *d_ref,
-  /* TA_EmergencyStop::ES_ExtractMsgParams::q_dir */Q_DIR *q_dir,
-  /* TA_EmergencyStop::ES_ExtractMsgParams::d_emergencystop */D_EMERGENCYSTOP *d_emergencystop)
+  /* TA_EmergencyStop::ES_ExtractMsgParams::messageIn */ ReceivedMessage_T_Common_Types_Pkg *messageIn,
+  /* TA_EmergencyStop::ES_ExtractMsgParams::receivedESMsg */ kcg_bool receivedESMsg,
+  /* TA_EmergencyStop::ES_ExtractMsgParams::nid_em */ NID_EM *nid_em,
+  /* TA_EmergencyStop::ES_ExtractMsgParams::q_scale */ Q_SCALE *q_scale,
+  /* TA_EmergencyStop::ES_ExtractMsgParams::d_ref */ D_REF *d_ref,
+  /* TA_EmergencyStop::ES_ExtractMsgParams::q_dir */ Q_DIR *q_dir,
+  /* TA_EmergencyStop::ES_ExtractMsgParams::d_emergencystop */ D_EMERGENCYSTOP *d_emergencystop)
 {
-  *d_emergencystop = (*messageIn).Radio_Common_Header.d_emergencystop;
-  *q_dir = (*messageIn).Radio_Common_Header.q_dir;
-  *d_ref = (*messageIn).Radio_Common_Header.d_ref;
-  *q_scale = (*messageIn).Radio_Common_Header.q_scale;
-  if (receivedESMsg) {
+  /* 1 */ if (receivedESMsg) {
     *nid_em = (*messageIn).Radio_Common_Header.nid_em;
   }
   else {
     *nid_em = cNID_EM_NONE_TA_EmergencyStop;
   }
+  *q_scale = (*messageIn).Radio_Common_Header.q_scale;
+  *d_ref = (*messageIn).Radio_Common_Header.d_ref;
+  *q_dir = (*messageIn).Radio_Common_Header.q_dir;
+  *d_emergencystop = (*messageIn).Radio_Common_Header.d_emergencystop;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ES_ExtractMsgParams_TA_EmergencyStop.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

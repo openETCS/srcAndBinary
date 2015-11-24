@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* radioOutput_Pkg::nextGen_P05 */
 void nextGen_P05_radioOutput_Pkg(
-  /* radioOutput_Pkg::nextGen_P05::inP5 */PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *inP5,
-  /* radioOutput_Pkg::nextGen_P05::outP5 */P005_TM_TrainToTrack *outP5)
+  /* radioOutput_Pkg::nextGen_P05::inP5 */ PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *inP5,
+  /* radioOutput_Pkg::nextGen_P05::outP5 */ P005_TM_TrainToTrack *outP5)
 {
   (*outP5).valid = (*inP5).valid;
   (*outP5).nid_packet = cp005_TrainRunningNumber_ids;
@@ -18,8 +18,8 @@ void nextGen_P05_radioOutput_Pkg(
   (*outP5).nid_opeartional = (*inP5).TrainRunningNumber;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** nextGen_P05_radioOutput_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,59 +9,56 @@
 
 /* SDMConversionModelPkg::InflateABrakeService */
 void InflateABrakeService_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::InflateABrakeService::aBrake */a_Brake_t_SDMConversionModelPkg *aBrake,
-  /* SDMConversionModelPkg::InflateABrakeService::aBrakeService */ASafe_T_CalcBrakingCurves_types *aBrakeService)
+  /* SDMConversionModelPkg::InflateABrakeService::aBrake */ a_Brake_t_SDMConversionModelPkg *aBrake,
+  /* SDMConversionModelPkg::InflateABrakeService::aBrakeService */ ASafe_T_CalcBrakingCurves_types *aBrakeService)
 {
-  static kcg_int tmp;
-  static kcg_int i;
-  /* SDMConversionModelPkg::InflateABrakeService::_L14 */
-  static array_real_8 _L14;
-  /* SDMConversionModelPkg::InflateABrakeService::_L28 */
-  static array_real_100_8 _L28;
-  /* SDMConversionModelPkg::InflateABrakeService::_L36 */
-  static A_internal_Type_Obu_BasicTypes_Pkg _L36;
-  /* SDMConversionModelPkg::InflateABrakeService::_L37 */
-  static array_real_100_6 _L37;
-  /* SDMConversionModelPkg::InflateABrakeService::_L39 */
-  static array_real_6 _L39;
+  /* SDMConversionModelPkg::InflateABrakeService */ kcg_int acc2;
+  /* SDMConversionModelPkg::InflateABrakeService */ kcg_int acc;
+  /* SDMConversionModelPkg::InflateABrakeService */ ASafeSpeedDefinition_T_CalcBrakingCurves_types tmp1;
+  /* SDMConversionModelPkg::InflateABrakeService */ ASafe_Data_T_CalcBrakingCurves_types tmp;
+  /* SDMConversionModelPkg::InflateABrakeService::_L13 */ V_internal_Type_Obu_BasicTypes_Pkg _L13;
+  /* SDMConversionModelPkg::InflateABrakeService::_L36 */ A_internal_Type_Obu_BasicTypes_Pkg _L36;
+  /* SDMConversionModelPkg::InflateABrakeService::_L37 */ array_real_100_6 _L37;
+  /* SDMConversionModelPkg::InflateABrakeService::_L39 */ array_real_6 _L39;
+  kcg_int i;
   
-  tmp = 0;
-  for (i = 0; i < 6; i++) {
-    _L36 = tmp;
+  _L13 = 0;
+  _L36 = 0;
+  /* 1 */ for (i = 0; i < 6; i++) {
+    acc2 = _L13;
     /* 1 */
     InflateABrakeSpeeds_SDMConversionModelPkg(
-      _L36,
+      acc2,
       (*aBrake).service.v[i],
-      &tmp,
+      &_L13,
       &_L39[i]);
-  }
-  _L36 = 0;
-  for (i = 0; i < 6; i++) {
-    tmp = _L36;
+    acc = _L36;
     /* 1 */
     InflateABrakeRow_SDMConversionModelPkg(
-      tmp,
+      acc,
       (*aBrake).service.a[i],
       &_L36,
       &_L37[i]);
   }
+  kcg_copy_array_real_6(&tmp1[0], &_L39);
   for (i = 0; i < 8; i++) {
-    kcg_copy_ASafeRow_T_CalcBrakingCurves_types(&_L28[i], &_L37[5]);
+    (&tmp1[6])[i] = _L39[5];
   }
+  kcg_copy_ASafeSpeedDefinition_T_CalcBrakingCurves_types(
+    &(*aBrakeService).speed_definition,
+    &tmp1);
+  kcg_copy_array_real_100_6(&tmp[0], &_L37);
+  for (i = 0; i < 8; i++) {
+    kcg_copy_ASafeRow_T_CalcBrakingCurves_types(&(&tmp[6])[i], &_L37[5]);
+  }
+  kcg_copy_ASafe_Data_T_CalcBrakingCurves_types(&(*aBrakeService).data, &tmp);
   for (i = 0; i < 100; i++) {
     (*aBrakeService).distance_definition[i] = 0.0;
   }
-  for (i = 0; i < 8; i++) {
-    _L14[i] = _L39[5];
-  }
-  kcg_copy_array_real_6(&(*aBrakeService).speed_definition[0], &_L39);
-  kcg_copy_array_real_8(&(*aBrakeService).speed_definition[6], &_L14);
-  kcg_copy_array_real_100_6(&(*aBrakeService).data[0], &_L37);
-  kcg_copy_array_real_100_8(&(*aBrakeService).data[6], &_L28);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** InflateABrakeService_SDMConversionModelPkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

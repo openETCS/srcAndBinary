@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,9 @@
 
 /* InputManagement::LevelTR2Level */
 M_LEVEL LevelTR2Level_InputManagement(
-  /* InputManagement::LevelTR2Level::InLevelTR */M_LEVELTR InLevelTR)
+  /* InputManagement::LevelTR2Level::InLevelTR */ M_LEVELTR InLevelTR)
 {
-  /* InputManagement::LevelTR2Level::OutLevel */
-  static M_LEVEL OutLevel;
+  /* InputManagement::LevelTR2Level::OutLevel */ M_LEVEL OutLevel;
   
   switch (InLevelTR) {
     case M_LEVELTR_Level_0 :
@@ -35,8 +34,8 @@ M_LEVEL LevelTR2Level_InputManagement(
   return OutLevel;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** LevelTR2Level_InputManagement.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

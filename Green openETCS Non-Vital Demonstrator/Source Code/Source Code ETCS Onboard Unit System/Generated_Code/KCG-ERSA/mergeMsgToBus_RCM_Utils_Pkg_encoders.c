@@ -1,39 +1,63 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "mergeMsgToBus_RCM_Utils_Pkg_encoders.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void mergeMsgToBus_init_RCM_Utils_Pkg_encoders(
+  outC_mergeMsgToBus_RCM_Utils_Pkg_encoders *outC)
+{
+  kcg_int i1;
+  kcg_int i;
+  
+  outC->init = kcg_true;
+  outC->SM1_state_nxt = SSM_st_notRequested_SM1;
+  outC->t_train_assigned = 0;
+  for (i1 = 0; i1 < 5; i1++) {
+    outC->messageBus_out[i1].Message.valid = kcg_true;
+    outC->messageBus_out[i1].Message.nid_message = 0;
+    outC->messageBus_out[i1].Message.l_message = 0;
+    outC->messageBus_out[i1].Message.t_train = 0;
+    outC->messageBus_out[i1].Message.nid_engine = 0;
+    outC->messageBus_out[i1].Message.field1 = 0;
+    outC->messageBus_out[i1].Message.field2 = 0;
+    outC->messageBus_out[i1].Message.field3 = 0;
+    for (i = 0; i < 50; i++) {
+      outC->messageBus_out[i1].OptionalPackets[i] = 0;
+    }
+  }
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void mergeMsgToBus_reset_RCM_Utils_Pkg_encoders(
   outC_mergeMsgToBus_RCM_Utils_Pkg_encoders *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* RCM_Utils_Pkg::encoders::mergeMsgToBus */
 void mergeMsgToBus_RCM_Utils_Pkg_encoders(
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::request */kcg_bool request,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageAvailable */kcg_bool messageAvailable,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::message */M_TrainTrack_Message_T_TM_radio_messages *message,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageBus_in */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *messageBus_in,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::t_train_global */T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::request */ kcg_bool request,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageAvailable */ kcg_bool messageAvailable,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::message */ M_TrainTrack_Message_T_TM_radio_messages *message,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageBus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *messageBus_in,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::t_train_global */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
   outC_mergeMsgToBus_RCM_Utils_Pkg_encoders *outC)
 {
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1::notRequested */
-  static kcg_bool br_1_guard_SM1_notRequested;
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */
-  static SSM_ST_SM1 SM1_state_sel;
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */
-  static SSM_ST_SM1 SM1_state_act;
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::_L5 */
-  static kcg_int _L5;
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::_L9 */
-  static kcg_bool _L9;
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1::notRequested */ kcg_bool br_1_guard_SM1_notRequested;
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */ SSM_ST_SM1 SM1_state_sel;
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::SM1 */ SSM_ST_SM1 SM1_state_act;
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::_L5 */ kcg_int _L5;
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::_L9 */ kcg_bool _L9;
   
-  if (outC->init) {
+  /* init_SM1 */ if (outC->init) {
     outC->init = kcg_false;
     SM1_state_sel = SSM_st_notRequested_SM1;
   }
@@ -45,7 +69,7 @@ void mergeMsgToBus_RCM_Utils_Pkg_encoders(
     messageBus_in,
     &br_1_guard_SM1_notRequested,
     &_L5);
-  switch (SM1_state_sel) {
+  /* sel_SM1 */ switch (SM1_state_sel) {
     case SSM_st_requested_SM1 :
       if (messageAvailable) {
         _L9 = kcg_true;
@@ -74,7 +98,16 @@ void mergeMsgToBus_RCM_Utils_Pkg_encoders(
       break;
     
   }
-  if (_L9) {
+  /* act_SM1 */ switch (SM1_state_act) {
+    case SSM_st_notRequested_SM1 :
+      outC->SM1_state_nxt = SSM_st_notRequested_SM1;
+      break;
+    case SSM_st_requested_SM1 :
+      outC->SM1_state_nxt = SSM_st_requested_SM1;
+      break;
+    
+  }
+  /* ck__L9 */ if (_L9) {
     /* 1 */
     MergeMessageToBus_TM_TrainTrack_Bus(
       message,
@@ -90,19 +123,10 @@ void mergeMsgToBus_RCM_Utils_Pkg_encoders(
       &outC->messageBus_out,
       messageBus_in);
   }
-  switch (SM1_state_act) {
-    case SSM_st_notRequested_SM1 :
-      outC->SM1_state_nxt = SSM_st_notRequested_SM1;
-      break;
-    case SSM_st_requested_SM1 :
-      outC->SM1_state_nxt = SSM_st_requested_SM1;
-      break;
-    
-  }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_encoders.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

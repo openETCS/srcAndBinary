@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,14 @@
 
 /* ProvidePositionReport_Pkg::op_DOUBTOVER */
 L_DOUBTOVER op_DOUBTOVER_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::op_DOUBTOVER::trainPos */trainPosition_T_TrainPosition_Types_Pck *trainPos)
+  /* ProvidePositionReport_Pkg::op_DOUBTOVER::trainPos */ trainPosition_T_TrainPosition_Types_Pck *trainPos)
 {
-  /* ProvidePositionReport_Pkg::op_DOUBTOVER::_L11 */
-  static kcg_int _L11;
-  /* ProvidePositionReport_Pkg::op_DOUBTOVER::l_doubtover */
-  static L_DOUBTOVER l_doubtover;
+  /* ProvidePositionReport_Pkg::op_DOUBTOVER::_L11 */ kcg_int _L11;
+  /* ProvidePositionReport_Pkg::op_DOUBTOVER::l_doubtover */ L_DOUBTOVER l_doubtover;
   
   _L11 = (*trainPos).estimatedFrontEndPosition -
     (*trainPos).minSafeFrontEndPosition;
-  if (0 <= _L11) {
+  /* 2 */ if (0 <= _L11) {
     l_doubtover = _L11;
   }
   else {
@@ -27,8 +25,8 @@ L_DOUBTOVER op_DOUBTOVER_ProvidePositionReport_Pkg(
   return l_doubtover;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** op_DOUBTOVER_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

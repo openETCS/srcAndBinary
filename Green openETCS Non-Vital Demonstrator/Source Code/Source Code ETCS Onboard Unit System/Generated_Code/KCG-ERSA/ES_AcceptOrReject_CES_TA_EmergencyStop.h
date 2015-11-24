@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _ES_AcceptOrReject_CES_TA_EmergencyStop_H_
 #define _ES_AcceptOrReject_CES_TA_EmergencyStop_H_
@@ -10,22 +10,24 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TA_EmergencyStop::ES_AcceptOrReject_CES */
 extern void ES_AcceptOrReject_CES_TA_EmergencyStop(
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::q_scale */Q_SCALE q_scale,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::d_ref */D_REF d_ref,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::q_dir */Q_DIR q_dir,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::d_emergencystop */D_EMERGENCYSTOP d_emergencystop,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::TrainPositionIn */trainPosition_T_TrainPosition_Types_Pck *TrainPositionIn,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::currentEOA */L_internal_Type_Obu_BasicTypes_Pkg currentEOA,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::updateEOA */kcg_bool *updateEOA,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::newEOA */L_internal_Type_Obu_BasicTypes_Pkg *newEOA,
-  /* TA_EmergencyStop::ES_AcceptOrReject_CES::cesAccepted */kcg_bool *cesAccepted);
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::q_scale */ Q_SCALE q_scale,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::d_ref */ D_REF d_ref,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::q_dir */ Q_DIR q_dir,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::d_emergencystop */ D_EMERGENCYSTOP d_emergencystop,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::TrainPositionIn */ trainPosition_T_TrainPosition_Types_Pck *TrainPositionIn,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::currentEOA */ L_internal_Type_Obu_BasicTypes_Pkg currentEOA,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::updateEOA */ kcg_bool *updateEOA,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::newEOA */ L_internal_Type_Obu_BasicTypes_Pkg *newEOA,
+  /* TA_EmergencyStop::ES_AcceptOrReject_CES::cesAccepted */ kcg_bool *cesAccepted);
 
 #endif /* _ES_AcceptOrReject_CES_TA_EmergencyStop_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ES_AcceptOrReject_CES_TA_EmergencyStop.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

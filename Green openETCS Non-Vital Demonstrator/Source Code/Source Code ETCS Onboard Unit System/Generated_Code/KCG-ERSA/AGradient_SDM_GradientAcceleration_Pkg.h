@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _AGradient_SDM_GradientAcceleration_Pkg_H_
 #define _AGradient_SDM_GradientAcceleration_Pkg_H_
@@ -9,6 +9,8 @@
 #include "CalcA_Gradient_SDM_GradientAcceleration_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -25,19 +27,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* SDM_GradientAcceleration_Pkg::AGradient */
 extern void AGradient_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::AGradient::TrainLocations */TrainLocations_real_T_SDM_Types_Pkg *TrainLocations,
-  /* SDM_GradientAcceleration_Pkg::AGradient::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::AGradient::GradientProfile_updated */kcg_bool GradientProfile_updated,
-  /* SDM_GradientAcceleration_Pkg::AGradient::trainData */trainData_T_TIU_Types_Pkg *trainData,
-  /* SDM_GradientAcceleration_Pkg::AGradient::targetCollection */TargetCollection_T_TargetManagement_types *targetCollection,
+  /* SDM_GradientAcceleration_Pkg::AGradient::TrainLocations */ TrainLocations_real_T_SDM_Types_Pkg *TrainLocations,
+  /* SDM_GradientAcceleration_Pkg::AGradient::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::AGradient::GradientProfile_updated */ kcg_bool GradientProfile_updated,
+  /* SDM_GradientAcceleration_Pkg::AGradient::trainData */ trainData_T_TIU_Types_Pkg *trainData,
+  /* SDM_GradientAcceleration_Pkg::AGradient::targetCollection */ TargetCollection_T_TargetManagement_types *targetCollection,
   outC_AGradient_SDM_GradientAcceleration_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void AGradient_reset_SDM_GradientAcceleration_Pkg(
   outC_AGradient_SDM_GradientAcceleration_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void AGradient_init_SDM_GradientAcceleration_Pkg(
+  outC_AGradient_SDM_GradientAcceleration_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _AGradient_SDM_GradientAcceleration_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** AGradient_SDM_GradientAcceleration_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

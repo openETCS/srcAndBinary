@@ -1,26 +1,41 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void op_3_6_5_1_4_f_g_init_ProvidePositionReport_Pkg(
+  outC_op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg *outC)
+{
+  outC->trigger = kcg_true;
+  outC->init = kcg_true;
+  outC->rem_modeLevelStatus.currMode = M_MODE_Full_Supervision;
+  outC->rem_modeLevelStatus.currLevel = M_LEVEL_Level_0;
+  outC->rem_modeLevelStatus.levelTransitionBorderPassed = kcg_true;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void op_3_6_5_1_4_f_g_reset_ProvidePositionReport_Pkg(
   outC_op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* ProvidePositionReport_Pkg::op_3_6_5_1_4_f_g */
 void op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_f_g::modeLevelStatus */ModeLevel2PositionReport_T_ProvidePositionReport_Pkg *modeLevelStatus,
+  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_f_g::modeLevelStatus */ ModeLevel2PositionReport_T_ProvidePositionReport_Pkg *modeLevelStatus,
   outC_op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg *outC)
 {
-  static M_LEVEL tmp;
+  /* ProvidePositionReport_Pkg::op_3_6_5_1_4_f_g */ M_LEVEL tmp;
   
-  if (outC->init) {
+  /* last_init_ck_modeLevelStatus */ if (outC->init) {
     outC->init = kcg_false;
     tmp = cModeAndLevelStatus_ProvidePositionReport_Pkg.currLevel;
   }
@@ -34,8 +49,8 @@ void op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg(
     modeLevelStatus);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** op_3_6_5_1_4_f_g_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_
 #define _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_
@@ -10,6 +10,8 @@
 #include "CheckSpace_TM_TrainTrack_Bus.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,19 +30,26 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* RCM_Utils_Pkg::encoders::mergeMsgToBus */
 extern void mergeMsgToBus_RCM_Utils_Pkg_encoders(
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::request */kcg_bool request,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageAvailable */kcg_bool messageAvailable,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::message */M_TrainTrack_Message_T_TM_radio_messages *message,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageBus_in */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *messageBus_in,
-  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::t_train_global */T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::request */ kcg_bool request,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageAvailable */ kcg_bool messageAvailable,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::message */ M_TrainTrack_Message_T_TM_radio_messages *message,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::messageBus_in */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *messageBus_in,
+  /* RCM_Utils_Pkg::encoders::mergeMsgToBus::t_train_global */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global,
   outC_mergeMsgToBus_RCM_Utils_Pkg_encoders *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void mergeMsgToBus_reset_RCM_Utils_Pkg_encoders(
   outC_mergeMsgToBus_RCM_Utils_Pkg_encoders *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void mergeMsgToBus_init_RCM_Utils_Pkg_encoders(
+  outC_mergeMsgToBus_RCM_Utils_Pkg_encoders *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_encoders.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

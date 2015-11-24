@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,26 +9,25 @@
 
 /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations */
 void improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_in */positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_out */positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_in */ positionedBGs_T_TrainPosition_Types_Pck *BGs_in,
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::BGs_out */ positionedBGs_T_TrainPosition_Types_Pck *BGs_out)
 {
-  static linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::_L6 */
-  static kcg_int _L6;
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations */ linkedBGs_indices_T_CalculateTrainPosition_Pkg_BG_relocation_Pkg tmp;
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations */ kcg_bool cond_iterw;
+  kcg_int i;
+  /* CalculateTrainPosition_Pkg::BG_relocation_Pkg::improveUnlinkedBGLocations::_L6 */ kcg_int _L6;
   
   /* 1 */
-  findLinkedBGs_CalculateTrainPosition_Pkg_BG_relocation_Pkg(BGs_in, &tmp1);
+  findLinkedBGs_CalculateTrainPosition_Pkg_BG_relocation_Pkg(BGs_in, &tmp);
   for (i = 0; i < 41; i++) {
     /* 1 */
     improveUnlinkedBGLocations_itr_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
-      &tmp1[i],
+      &tmp[i],
       BGs_in,
-      &tmp,
+      &cond_iterw,
       &(*BGs_out)[i]);
     _L6 = i + 1;
-    if (!tmp) {
+    if (!cond_iterw) {
       break;
     }
   }
@@ -44,8 +43,8 @@ void improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg(
   
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** improveUnlinkedBGLocations_CalculateTrainPosition_Pkg_BG_relocation_Pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

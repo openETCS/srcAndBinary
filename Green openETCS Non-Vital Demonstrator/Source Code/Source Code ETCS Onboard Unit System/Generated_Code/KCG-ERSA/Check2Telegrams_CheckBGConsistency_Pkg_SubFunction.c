@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,22 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams */
 void Check2Telegrams_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::telegram1 */Telegram_T_BG_Types_Pkg *telegram1,
-  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::telegram2 */Telegram_T_BG_Types_Pkg *telegram2,
-  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::isConsistent */kcg_bool *isConsistent,
-  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::telegram_out */Telegram_T_BG_Types_Pkg *telegram_out)
+  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::telegram1 */ Telegram_T_BG_Types_Pkg *telegram1,
+  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::telegram2 */ Telegram_T_BG_Types_Pkg *telegram2,
+  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::isConsistent */ kcg_bool *isConsistent,
+  /* CheckBGConsistency_Pkg::SubFunction::Check2Telegrams::telegram_out */ Telegram_T_BG_Types_Pkg *telegram_out)
 {
   kcg_copy_Telegram_T_BG_Types_Pkg(telegram_out, telegram2);
   *isConsistent = (*telegram1).valid & /* 1 */
     Check2Headers_CheckBGConsistency_Pkg_SubFunction(
       &(*telegram1).telegramheader,
       (*telegram1).checkResult,
-      &(*telegram_out).telegramheader,
-      (*telegram_out).checkResult) & (*telegram_out).valid;
+      &(*telegram2).telegramheader,
+      (*telegram2).checkResult) & (*telegram2).valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Check2Telegrams_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

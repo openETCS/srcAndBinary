@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _EitherEdge_digital_H_
 #define _EitherEdge_digital_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -25,14 +27,20 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* digital::EitherEdge */
 extern void EitherEdge_digital(
-  /* digital::EitherEdge::EE_Input */kcg_bool EE_Input,
+  /* digital::EitherEdge::EE_Input */ kcg_bool EE_Input,
   outC_EitherEdge_digital *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void EitherEdge_reset_digital(outC_EitherEdge_digital *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void EitherEdge_init_digital(outC_EitherEdge_digital *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _EitherEdge_digital_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** EitherEdge_digital.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

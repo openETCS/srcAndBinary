@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,17 +9,16 @@
 
 /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove */
 void NID_EM_Store_Remove_TA_EmergencyStop_NID_EM_Store(
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::inAcc */NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *inAcc,
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::inEntry */NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *inEntry,
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::outAcc */NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *outAcc,
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::outEntry */NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *outEntry)
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::inAcc */ NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *inAcc,
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::inEntry */ NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *inEntry,
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::outAcc */ NID_EM_STORE_Acc_T_TA_EmergencyStop_NID_EM_Store *outAcc,
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::outEntry */ NID_EM_Store_Item_T_TA_EmergencyStop_NID_EM_Store *outEntry)
 {
-  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::_L1 */
-  static kcg_bool _L1;
+  /* TA_EmergencyStop::NID_EM_Store::NID_EM_Store_Remove::_L1 */ kcg_bool _L1;
   
   _L1 = !(*inAcc).handled & (*inEntry).valid & ((*inEntry).nid_em ==
       (*inAcc).nid_em);
-  if (_L1) {
+  /* 1 */ if (_L1) {
     (*outEntry).nid_em = 0;
     (*outEntry).valid = kcg_false;
     (*outAcc).handled = kcg_true;
@@ -34,8 +33,8 @@ void NID_EM_Store_Remove_TA_EmergencyStop_NID_EM_Store(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** NID_EM_Store_Remove_TA_EmergencyStop_NID_EM_Store.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

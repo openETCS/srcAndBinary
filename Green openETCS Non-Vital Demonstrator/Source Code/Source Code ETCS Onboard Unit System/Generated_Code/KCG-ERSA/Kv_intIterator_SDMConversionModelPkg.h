@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _Kv_intIterator_SDMConversionModelPkg_H_
 #define _Kv_intIterator_SDMConversionModelPkg_H_
@@ -11,21 +11,23 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* SDMConversionModelPkg::Kv_intIterator */
 extern void Kv_intIterator_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kv_intIterator::Kv_int */nvkvint_T_Packet_Types_Pkg *Kv_int,
-  /* SDMConversionModelPkg::Kv_intIterator::a */A_internal_Type_Obu_BasicTypes_Pkg a,
-  /* SDMConversionModelPkg::Kv_intIterator::a12 */A_internal_Type_Obu_BasicTypes_Pkg a12,
-  /* SDMConversionModelPkg::Kv_intIterator::a23 */A_internal_Type_Obu_BasicTypes_Pkg a23,
-  /* SDMConversionModelPkg::Kv_intIterator::P */kcg_bool P,
-  /* SDMConversionModelPkg::Kv_intIterator::goOn */kcg_bool *goOn,
-  /* SDMConversionModelPkg::Kv_intIterator::m */kcg_int *m,
-  /* SDMConversionModelPkg::Kv_intIterator::v */V_internal_Type_Obu_BasicTypes_Pkg *v);
+  /* SDMConversionModelPkg::Kv_intIterator::Kv_int */ nvkvint_T_Packet_Types_Pkg *Kv_int,
+  /* SDMConversionModelPkg::Kv_intIterator::a */ A_internal_Type_Obu_BasicTypes_Pkg a,
+  /* SDMConversionModelPkg::Kv_intIterator::a12 */ A_internal_Type_Obu_BasicTypes_Pkg a12,
+  /* SDMConversionModelPkg::Kv_intIterator::a23 */ A_internal_Type_Obu_BasicTypes_Pkg a23,
+  /* SDMConversionModelPkg::Kv_intIterator::P */ kcg_bool P,
+  /* SDMConversionModelPkg::Kv_intIterator::goOn */ kcg_bool *goOn,
+  /* SDMConversionModelPkg::Kv_intIterator::m */ kcg_int *m,
+  /* SDMConversionModelPkg::Kv_intIterator::v */ V_internal_Type_Obu_BasicTypes_Pkg *v);
 
 #endif /* _Kv_intIterator_SDMConversionModelPkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Kv_intIterator_SDMConversionModelPkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

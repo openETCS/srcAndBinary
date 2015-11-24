@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,19 @@
 
 /* manage_DMI_Output_Pkg::sendDynamic */
 void sendDynamic_manage_DMI_Output_Pkg(
-  /* manage_DMI_Output_Pkg::sendDynamic::inSystemTime */T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
-  /* manage_DMI_Output_Pkg::sendDynamic::inOdometry */odometry_T_Obu_BasicTypes_Pkg *inOdometry,
-  /* manage_DMI_Output_Pkg::sendDynamic::inTrainPosition */trainPosition_T_TrainPosition_Types_Pck *inTrainPosition,
-  /* manage_DMI_Output_Pkg::sendDynamic::inSpeedSupervision */speedSupervisionForDMI_T_DMI_Types_Pkg *inSpeedSupervision,
-  /* manage_DMI_Output_Pkg::sendDynamic::inModeAndLevel */T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
-  /* manage_DMI_Output_Pkg::sendDynamic::inNationalValues */nationValuesForDMI_T_DMI_Types_Pkg *inNationalValues,
-  /* manage_DMI_Output_Pkg::sendDynamic::inMoRC_status */morcStatus_T_RCM_Session_Types_Pkg *inMoRC_status,
-  /* manage_DMI_Output_Pkg::sendDynamic::inMovementAuthority */movementAuthorityForDMI_T_DMI_Types_Pkg *inMovementAuthority,
-  /* manage_DMI_Output_Pkg::sendDynamic::inNTC */NID_NTC inNTC,
-  /* manage_DMI_Output_Pkg::sendDynamic::packetDynamic */DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *packetDynamic)
+  /* manage_DMI_Output_Pkg::sendDynamic::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
+  /* manage_DMI_Output_Pkg::sendDynamic::inOdometry */ odometry_T_Obu_BasicTypes_Pkg *inOdometry,
+  /* manage_DMI_Output_Pkg::sendDynamic::inTrainPosition */ trainPosition_T_TrainPosition_Types_Pck *inTrainPosition,
+  /* manage_DMI_Output_Pkg::sendDynamic::inSpeedSupervision */ speedSupervisionForDMI_T_DMI_Types_Pkg *inSpeedSupervision,
+  /* manage_DMI_Output_Pkg::sendDynamic::inModeAndLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *inModeAndLevel,
+  /* manage_DMI_Output_Pkg::sendDynamic::inNationalValues */ nationValuesForDMI_T_DMI_Types_Pkg *inNationalValues,
+  /* manage_DMI_Output_Pkg::sendDynamic::inMoRC_status */ morcStatus_T_RCM_Session_Types_Pkg *inMoRC_status,
+  /* manage_DMI_Output_Pkg::sendDynamic::inMovementAuthority */ movementAuthorityForDMI_T_DMI_Types_Pkg *inMovementAuthority,
+  /* manage_DMI_Output_Pkg::sendDynamic::inNTC */ NID_NTC inNTC,
+  /* manage_DMI_Output_Pkg::sendDynamic::packetDynamic */ DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *packetDynamic)
 {
-  /* manage_DMI_Output_Pkg::sendDynamic::_L48 */
-  static L_internal_Type_Obu_BasicTypes_Pkg _L48;
-  /* manage_DMI_Output_Pkg::sendDynamic::_L47 */
-  static L_internal_Type_Obu_BasicTypes_Pkg _L47;
+  /* manage_DMI_Output_Pkg::sendDynamic::_L48 */ L_internal_Type_Obu_BasicTypes_Pkg _L48;
+  /* manage_DMI_Output_Pkg::sendDynamic::_L47 */ L_internal_Type_Obu_BasicTypes_Pkg _L47;
   
   (*packetDynamic).valid = kcg_true;
   (*packetDynamic).system_clock = inSystemTime;
@@ -68,8 +66,8 @@ void sendDynamic_manage_DMI_Output_Pkg(
     mapMoRCtoRadio_CS_manage_DMI_Output_Pkg(inMoRC_status);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** sendDynamic_manage_DMI_Output_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int */
 void CAST_DMI_Dynamic_to_int_DATA_Packets_EVC_to_DMI(
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int::dmi_dynamic_ct */DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_dynamic_ct,
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int::dmi_dynamic_int */DMI_Dynamic_int_array_T_DATA *dmi_dynamic_int)
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int::dmi_dynamic_ct */ DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *dmi_dynamic_ct,
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int::dmi_dynamic_int */ DMI_Dynamic_int_array_T_DATA *dmi_dynamic_int)
 {
-  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int::_L36 */
-  static kcg_int _L36;
+  /* DATA::Packets::EVC_to_DMI::CAST_DMI_Dynamic_to_int::_L36 */ kcg_int _L36;
   
   (*dmi_dynamic_int)[1] = (*dmi_dynamic_ct).system_clock;
   (*dmi_dynamic_int)[2] = (*dmi_dynamic_ct).v_train;
@@ -55,8 +54,8 @@ void CAST_DMI_Dynamic_to_int_DATA_Packets_EVC_to_DMI(
       (*dmi_dynamic_ct).radioConnectionStatus);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Dynamic_to_int_DATA_Packets_EVC_to_DMI.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

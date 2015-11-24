@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -13,16 +13,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc */
 extern void InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc::target */Target_real_T_TargetManagement_types *target,
-  /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc::aSafe */ASafe_T_CalcBrakingCurves_types *aSafe,
-  /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc::BCACCForEBDFoot */BCAccumulator_type_CalcBrakingCurves_Pkg *BCACCForEBDFoot);
+  /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc::target */ Target_real_T_TargetManagement_types *target,
+  /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc::aSafe */ ASafe_T_CalcBrakingCurves_types *aSafe,
+  /* CalcBrakingCurves_Pkg::internalOperators::InitilizeAccForEBDFootCalc::BCACCForEBDFoot */ BCAccumulator_type_CalcBrakingCurves_Pkg *BCACCForEBDFoot);
 
 #endif /* _InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

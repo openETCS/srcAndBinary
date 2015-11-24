@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_RBC_conversions::C_M136_to_header */
 void C_M136_to_header_TM_RBC_conversions(
-  /* TM_RBC_conversions::C_M136_to_header::Message_Data_in */M_136_T_TM_radio_messages *Message_Data_in,
-  /* TM_RBC_conversions::C_M136_to_header::Message_Header_Out */M_TrainTrack_MessageHd_T_TM_radio_messages *Message_Header_Out)
+  /* TM_RBC_conversions::C_M136_to_header::Message_Data_in */ M_136_T_TM_radio_messages *Message_Data_in,
+  /* TM_RBC_conversions::C_M136_to_header::Message_Header_Out */ M_TrainTrack_MessageHd_T_TM_radio_messages *Message_Header_Out)
 {
   (*Message_Header_Out).valid = (*Message_Data_in).valid;
   (*Message_Header_Out).field1 = 0;
@@ -26,8 +26,8 @@ void C_M136_to_header_TM_RBC_conversions(
     CAST_NID_ENGINE_to_int_TM_conversions((*Message_Data_in).nid_engine);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_M136_to_header_TM_RBC_conversions.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

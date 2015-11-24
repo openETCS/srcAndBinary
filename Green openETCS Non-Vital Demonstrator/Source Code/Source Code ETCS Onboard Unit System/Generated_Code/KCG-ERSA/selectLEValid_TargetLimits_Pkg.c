@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,16 @@
 
 /* TargetLimits_Pkg::selectLEValid */
 void selectLEValid_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::selectLEValid::valid1 */kcg_bool valid1,
-  /* TargetLimits_Pkg::selectLEValid::i1 */kcg_real i1,
-  /* TargetLimits_Pkg::selectLEValid::valid2 */kcg_bool valid2,
-  /* TargetLimits_Pkg::selectLEValid::i2 */kcg_real i2,
-  /* TargetLimits_Pkg::selectLEValid::isUpper */kcg_bool *isUpper,
-  /* TargetLimits_Pkg::selectLEValid::valid */kcg_bool *valid,
-  /* TargetLimits_Pkg::selectLEValid::o */kcg_real *o)
+  /* TargetLimits_Pkg::selectLEValid::valid1 */ kcg_bool valid1,
+  /* TargetLimits_Pkg::selectLEValid::i1 */ kcg_real i1,
+  /* TargetLimits_Pkg::selectLEValid::valid2 */ kcg_bool valid2,
+  /* TargetLimits_Pkg::selectLEValid::i2 */ kcg_real i2,
+  /* TargetLimits_Pkg::selectLEValid::isUpper */ kcg_bool *isUpper,
+  /* TargetLimits_Pkg::selectLEValid::valid */ kcg_bool *valid,
+  /* TargetLimits_Pkg::selectLEValid::o */ kcg_real *o)
 {
   *isUpper = /* 1 */ isLEValid_TargetLimits_Pkg(valid1, i1, valid2, i2);
-  if (*isUpper) {
+  /* 1 */ if (*isUpper) {
     *o = i1;
     *valid = valid1;
   }
@@ -28,8 +28,8 @@ void selectLEValid_TargetLimits_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** selectLEValid_TargetLimits_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* trainData_pkg::headerMsg146_ng */
 void headerMsg146_ng_trainData_pkg(
-  /* trainData_pkg::headerMsg146_ng::nidEngine */NID_ENGINE nidEngine,
-  /* trainData_pkg::headerMsg146_ng::t_train */T_TRAIN t_train,
-  /* trainData_pkg::headerMsg146_ng::RBC_timeStamp */T_TRAIN RBC_timeStamp,
-  /* trainData_pkg::headerMsg146_ng::header */M_146_T_TM_radio_messages *header)
+  /* trainData_pkg::headerMsg146_ng::nidEngine */ NID_ENGINE nidEngine,
+  /* trainData_pkg::headerMsg146_ng::t_train */ T_TRAIN t_train,
+  /* trainData_pkg::headerMsg146_ng::RBC_timeStamp */ T_TRAIN RBC_timeStamp,
+  /* trainData_pkg::headerMsg146_ng::header */ M_146_T_TM_radio_messages *header)
 {
   (*header).valid = kcg_true;
   (*header).nid_message = co146_Acknowledgement_Id_Pkg;
@@ -22,8 +22,8 @@ void headerMsg146_ng_trainData_pkg(
   (*header).t_train_req = RBC_timeStamp;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** headerMsg146_ng_trainData_pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

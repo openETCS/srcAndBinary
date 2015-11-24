@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,15 @@
 
 /* CalcBrakingCurves_types::getLocationOnCurveArc */
 void getLocationOnCurveArc_CalcBrakingCurves_types(
-  /* CalcBrakingCurves_types::getLocationOnCurveArc::arc */ParabolaArc_T_CalcBrakingCurves_types *arc,
-  /* CalcBrakingCurves_types::getLocationOnCurveArc::v_est */V_internal_real_Type_SDM_Types_Pkg v_est,
-  /* CalcBrakingCurves_types::getLocationOnCurveArc::location */L_internal_real_Type_SDM_Types_Pkg *location,
-  /* CalcBrakingCurves_types::getLocationOnCurveArc::valid */kcg_bool *valid)
+  /* CalcBrakingCurves_types::getLocationOnCurveArc::arc */ ParabolaArc_T_CalcBrakingCurves_types *arc,
+  /* CalcBrakingCurves_types::getLocationOnCurveArc::v_est */ V_internal_real_Type_SDM_Types_Pkg v_est,
+  /* CalcBrakingCurves_types::getLocationOnCurveArc::location */ L_internal_real_Type_SDM_Types_Pkg *location,
+  /* CalcBrakingCurves_types::getLocationOnCurveArc::valid */ kcg_bool *valid)
 {
-  static kcg_real tmp;
+  /* CalcBrakingCurves_types::getLocationOnCurveArc */ kcg_real tmp;
   
   *valid = 0.0 != (*arc).acceleration;
-  if (*valid) {
+  /* 1 */ if (*valid) {
     tmp = (*arc).acceleration * 2.0;
   }
   else {
@@ -27,8 +27,8 @@ void getLocationOnCurveArc_CalcBrakingCurves_types(
     tmp;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** getLocationOnCurveArc_CalcBrakingCurves_types.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

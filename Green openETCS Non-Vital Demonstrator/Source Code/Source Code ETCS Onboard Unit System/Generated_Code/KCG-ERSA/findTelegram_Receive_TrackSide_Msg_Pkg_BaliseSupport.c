@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,30 +9,29 @@
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram */
 kcg_bool findTelegram_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::which_pig */N_PIG which_pig,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::HeaderArray */TelegramArray_T_BG_Types_Pkg *HeaderArray,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::doSearch */kcg_bool doSearch)
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::which_pig */ N_PIG which_pig,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::HeaderArray */ TelegramArray_T_BG_Types_Pkg *HeaderArray,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::doSearch */ kcg_bool doSearch)
 {
-  static kcg_bool tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::telegramAlreadyInGroup */
-  static kcg_bool telegramAlreadyInGroup;
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram */ kcg_bool acc;
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram */ kcg_bool cond_iterw;
+  kcg_int i;
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::findTelegram::telegramAlreadyInGroup */ kcg_bool telegramAlreadyInGroup;
   
-  if ((*HeaderArray)[0].valid) {
+  /* ck_valid */ if ((*HeaderArray)[0].valid) {
     telegramAlreadyInGroup = kcg_true;
     if (doSearch) {
       for (i = 0; i < 8; i++) {
-        tmp1 = telegramAlreadyInGroup;
+        acc = telegramAlreadyInGroup;
         /* 7 */
         simpleTelegramCheck_Receive_TrackSide_Msg_Pkg_BaliseSupport(
           i,
-          tmp1,
+          acc,
           &(*HeaderArray)[i],
           which_pig,
-          &tmp,
+          &cond_iterw,
           &telegramAlreadyInGroup);
-        if (!tmp) {
+        if (!cond_iterw) {
           break;
         }
       }
@@ -44,8 +43,8 @@ kcg_bool findTelegram_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   return telegramAlreadyInGroup;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** findTelegram_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

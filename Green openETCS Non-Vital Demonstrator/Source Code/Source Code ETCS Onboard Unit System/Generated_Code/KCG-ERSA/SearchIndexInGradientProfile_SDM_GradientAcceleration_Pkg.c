@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,27 @@
 
 /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile */
 kcg_int SearchIndexInGradientProfile_SDM_GradientAcceleration_Pkg(
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile::GradientProfile */GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile::position */L_internal_real_Type_SDM_Types_Pkg position)
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile::GradientProfile */ GradientProfile_real_t_SDM_GradientAcceleration_types *GradientProfile,
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile::position */ L_internal_real_Type_SDM_Types_Pkg position)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile::index */
-  static kcg_int index;
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile */ kcg_int acc;
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile */ kcg_bool cond_iterw;
+  kcg_int i;
+  /* SDM_GradientAcceleration_Pkg::SearchIndexInGradientProfile::index */ kcg_int index;
   
   index = - 1;
-  if ((*GradientProfile)[0].valid) {
-    for (i = 0; i < 50; i++) {
-      tmp1 = index;
+  /* 1 */ if ((*GradientProfile)[0].valid) {
+    /* 1 */ for (i = 0; i < 50; i++) {
+      acc = index;
       /* 1 */
       SearchIndexInGradientprofileInternal_SDM_GradientAcceleration_Pkg(
         i,
-        tmp1,
+        acc,
         position,
         GradientProfile,
-        &tmp,
+        &cond_iterw,
         &index);
-      if (!tmp) {
+      /* 1 */ if (!cond_iterw) {
         break;
       }
     }
@@ -38,8 +37,8 @@ kcg_int SearchIndexInGradientProfile_SDM_GradientAcceleration_Pkg(
   return index;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** SearchIndexInGradientProfile_SDM_GradientAcceleration_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

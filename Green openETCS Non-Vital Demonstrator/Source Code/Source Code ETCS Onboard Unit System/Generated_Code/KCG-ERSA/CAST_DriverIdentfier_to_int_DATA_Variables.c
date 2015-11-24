@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,19 +9,19 @@
 
 /* DATA::Variables::CAST_DriverIdentfier_to_int */
 void CAST_DriverIdentfier_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_DriverIdentfier_to_int::driverIdentfier_string */driverIdentifier_T_DMI_Messages_Bothways_Pkg *driverIdentfier_string,
-  /* DATA::Variables::CAST_DriverIdentfier_to_int::driverIdentfier_int_array */DriverIdentifier_INT_T_DATA *driverIdentfier_int_array)
+  /* DATA::Variables::CAST_DriverIdentfier_to_int::driverIdentfier_string */ driverIdentifier_T_DMI_Messages_Bothways_Pkg *driverIdentfier_string,
+  /* DATA::Variables::CAST_DriverIdentfier_to_int::driverIdentfier_int_array */ DriverIdentifier_INT_T_DATA *driverIdentfier_int_array)
 {
-  static kcg_int i;
+  kcg_int i;
   
-  for (i = 0; i < 9; i++) {
+  /* 1 */ for (i = 0; i < 9; i++) {
     (*driverIdentfier_int_array)[i] = /* 1 */
       Char_to_Int_Utilities((*driverIdentfier_string)[i]);
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DriverIdentfier_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

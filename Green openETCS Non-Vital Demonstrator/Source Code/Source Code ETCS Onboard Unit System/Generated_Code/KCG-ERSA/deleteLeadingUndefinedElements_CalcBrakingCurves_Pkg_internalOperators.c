@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements */
 void deleteLeadingUndefinedElements_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements::oldCurve */ParabolaCurve_T_CalcBrakingCurves_types *oldCurve,
-  /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements::condition */kcg_bool *condition,
-  /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements::newCurve */ParabolaCurve_T_CalcBrakingCurves_types *newCurve)
+  /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements::oldCurve */ ParabolaCurve_T_CalcBrakingCurves_types *oldCurve,
+  /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements::condition */ kcg_bool *condition,
+  /* CalcBrakingCurves_Pkg::internalOperators::deleteLeadingUndefinedElements::newCurve */ ParabolaCurve_T_CalcBrakingCurves_types *newCurve)
 {
   *condition = !(*oldCurve).valid[0];
-  if (*condition) {
+  /* ck_condition */ if (*condition) {
     /* popLeadingArc */
     popLeadingArc_CalcBrakingCurves_Pkg_internalOperators(oldCurve, newCurve);
   }
@@ -23,8 +23,8 @@ void deleteLeadingUndefinedElements_CalcBrakingCurves_Pkg_internalOperators(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** deleteLeadingUndefinedElements_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

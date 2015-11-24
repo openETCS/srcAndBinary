@@ -1,26 +1,27 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
 
 #include "kcg_types.h"
-#include "maintainTrainProperties_EVC_Support_Pkg.h"
-#include "patchEmergencyBrakeMsg_EVC_Support_Pkg.h"
-#include "maintainMobileConnectionContext_EVC_Support_Pkg.h"
-#include "maintainMobileRegistrationContext_EVC_Support_Pkg.h"
+#include "maintainTrainProperties_EVC_MEM_Support_Pkg.h"
+#include "patchEmergencyBrakeMsg_EVC_MEM_Support_Pkg.h"
+#include "MEM_MobileConnectionContext_EVC_MEM_Support_Pkg.h"
+#include "MEM_MobileRegistrationContext_EVC_MEM_Support_Pkg.h"
 #include "ManageLevelAndMode.h"
 #include "TIU_OutputIntegration_output_to_TIU_API_Pkg.h"
 #include "manageDMI_Output_manage_DMI_Output_Pkg.h"
 #include "Master_Procedure_ManageProcedure_Pkg.h"
 #include "SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.h"
+#include "ProbeEVC_EnvSim.h"
 #include "manageDMI_Input_manage_DMI_Input_Pkg.h"
 #include "Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h"
 #include "ProvidePositionReport_ProvidePositionReport_Pkg.h"
 #include "collectRadioOutput_radioOutput_Pkg.h"
 #include "manageTIU_input_input_from_TIU_API_Pkg.h"
-#include "keepP42_EVC_Support_Pkg.h"
+#include "MEM_combineForLevelChange_EVC_MEM_Support_Pkg.h"
 #include "trainData_trainData_pkg.h"
 #include "checkGeneralMessage_trainData_pkg.h"
 #include "TrackAtlas_TrackAtlas.h"
@@ -28,6 +29,8 @@
 #include "MoRC_HO_MoRC_HO_Pkg.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -47,7 +50,7 @@ typedef struct {
   M_LEVEL /* EVC::debugCurrentLevel */ debugCurrentLevel;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
-  kcg_bool init13;
+  kcg_bool init14;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   radioManagementMessage_T_Common_Types_Pkg /* EVC::PROC_radioCmdFromProcedures */ PROC_radioCmdFromProcedures;
@@ -66,6 +69,7 @@ typedef struct {
   NID_NTC /* EVC::EVC_currentNTC */ EVC_currentNTC;
   T_Mode_Level_Level_And_Mode_Types_Pkg /* EVC::ML_ModeAndLevel */ ML_ModeAndLevel;
   ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg /* EVC::EVC_PersistentData */ EVC_PersistentData;
+  DMI_LevelList_T_DMI_Types_Pkg /* EVC::EVC_ActiveLevelList */ EVC_ActiveLevelList;
   DMI_TXT_MSGList_status_T_DMI_Types_Pkg /* EVC::EVC_TextMessageStatusList */ EVC_TextMessageStatusList;
   trainData_Events_T_trainData_Types_pkg /* EVC::td_events */ td_events;
   PT0_PositionReport_T_Packet_TrainTypes_Pkg /* EVC::rep_P0 */ rep_P0;
@@ -76,43 +80,50 @@ typedef struct {
   NID_MN /* EVC::MoRC_MN_1 */ MoRC_MN_1;
   kcg_bool /* EVC::_L477 */ _L477;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_ProbeEVC_EnvSim /* 1 */ _13_Context_1;
+  outC_collectRadioOutput_radioOutput_Pkg /* 1 */ _12_Context_1;
+  outC_checkGeneralMessage_trainData_pkg /* 3 */ _11_Context_3;
+  outC_manageDMI_Output_manage_DMI_Output_Pkg /* 2 */ _10_Context_2;
+  outC_Master_Procedure_ManageProcedure_Pkg /* 2 */ _9_Context_2;
+  outC_MoRC_HO_MoRC_HO_Pkg /* 1 */ _8_Context_1;
+  outC_ProvidePositionReport_ProvidePositionReport_Pkg /* 2 */ _7_Context_2;
+  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 2 */ _6_Context_2;
+  outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 2 */ _5_Context_2;
+  outC_ManageLevelAndMode /* 2 */ _4_Context_2;
+  outC_MEM_combineForLevelChange_EVC_MEM_Support_Pkg /* 1 */ Context_1;
+  outC_TrackAtlas_TrackAtlas /* 2 */ _3_Context_2;
+  outC_trainData_trainData_pkg /* 2 */ _2_Context_2;
+  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 3 */ _1_Context_3;
+  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 3 */ Context_3;
+  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 2 */ Context_2;
   outC_manageTIU_input_input_from_TIU_API_Pkg /* 5 */ Context_5;
-  outC_Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg /* 2 */ _12_Context_2;
-  outC_calculateTrainPosition_CalculateTrainPosition_Pkg /* 3 */ _11_Context_3;
-  outC_manageDMI_Input_manage_DMI_Input_Pkg /* 3 */ _10_Context_3;
-  outC_trainData_trainData_pkg /* 2 */ _9_Context_2;
-  outC_TrackAtlas_TrackAtlas /* 2 */ _8_Context_2;
-  outC_ManageLevelAndMode /* 2 */ _7_Context_2;
-  outC_SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg /* 2 */ _6_Context_2;
-  outC_TIU_OutputIntegration_output_to_TIU_API_Pkg /* 2 */ _5_Context_2;
-  outC_ProvidePositionReport_ProvidePositionReport_Pkg /* 2 */ _4_Context_2;
-  outC_keepP42_EVC_Support_Pkg /* 1 */ _3_Context_1;
-  outC_MoRC_HO_MoRC_HO_Pkg /* 1 */ _2_Context_1;
-  outC_Master_Procedure_ManageProcedure_Pkg /* 2 */ _1_Context_2;
-  outC_manageDMI_Output_manage_DMI_Output_Pkg /* 2 */ Context_2;
-  outC_checkGeneralMessage_trainData_pkg /* 3 */ Context_3;
-  outC_collectRadioOutput_radioOutput_Pkg /* 1 */ Context_1;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_EVC;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* EVC */
 extern void EVC(
-  /* EVC::EVC_reset */kcg_bool _22_EVC_reset,
-  /* EVC::API_Odometry */odometry_T_Obu_BasicTypes_Pkg *API_Odometry,
-  /* EVC::API_SystemTime */T_internal_Type_Obu_BasicTypes_Pkg API_SystemTime,
-  /* EVC::API_fromTrack */API_TrackSideInput_T_API_Msg_Pkg *API_fromTrack,
-  /* EVC::API_fromDMI */DMI_to_EVC_Message_int_T_API_DMI_Pkg *API_fromDMI,
-  /* EVC::API_fromTIU */TIU_Input_msg_API_TIU_Pkg *API_fromTIU,
-  /* EVC::API_mobileHWStatus */mobileHWStatus_Type_MoRC_Pck *API_mobileHWStatus,
-  /* EVC::API_persistentData */ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *API_persistentData,
+  /* EVC::EVC_reset */ kcg_bool _26_EVC_reset,
+  /* EVC::API_Odometry */ odometry_T_Obu_BasicTypes_Pkg *API_Odometry,
+  /* EVC::API_SystemTime */ T_internal_Type_Obu_BasicTypes_Pkg API_SystemTime,
+  /* EVC::API_fromTrack */ API_TrackSideInput_T_API_Msg_Pkg *API_fromTrack,
+  /* EVC::API_fromDMI */ DMI_to_EVC_Message_int_T_API_DMI_Pkg *API_fromDMI,
+  /* EVC::API_fromTIU */ TIU_Input_msg_API_TIU_Pkg *API_fromTIU,
+  /* EVC::API_mobileHWStatus */ mobileHWStatus_Type_MoRC_Pck *API_mobileHWStatus,
+  /* EVC::API_persistentData */ ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *API_persistentData,
   outC_EVC *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void EVC_reset(outC_EVC *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void EVC_init(outC_EVC *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _EVC_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB */
 void updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport(
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inSingleBadBalise */kcg_bool inSingleBadBalise,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *inCollector,
-  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::outCollector */BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector)
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inSingleBadBalise */ kcg_bool inSingleBadBalise,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::inCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *inCollector,
+  /* Receive_TrackSide_Msg_Pkg::BaliseSupport::updateCollectorSingleBB::outCollector */ BGCollector_T_Receive_TrackSide_Msg_Pkg *outCollector)
 {
   (*outCollector).BGMessageSent = (*inCollector).BGMessageSent;
   (*outCollector).C_ID = (*inCollector).C_ID;
@@ -24,7 +24,7 @@ void updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport(
     &(*inCollector).positionFirstContact);
   (*outCollector).collectedTelegrams = (*inCollector).collectedTelegrams;
   (*outCollector).totalTelegrams = (*inCollector).totalTelegrams;
-  if (inSingleBadBalise) {
+  /* 1 */ if (inSingleBadBalise) {
     (*outCollector).badBaliseFlag = kcg_false;
   }
   else {
@@ -32,8 +32,8 @@ void updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** updateCollectorSingleBB_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,14 @@
 
 /* digital::BoolVect2Int */
 kcg_int BoolVect2Int_digital_30(
-  /* digital::BoolVect2Int::BV */array_bool_30 *BV)
+  /* digital::BoolVect2Int::BV */ DMI_Available_Menu_int_T_DATA *BV)
 {
-  static kcg_int i;
-  /* digital::BoolVect2Int::Out */
-  static kcg_int Out;
+  kcg_int i;
+  /* digital::BoolVect2Int::Out */ kcg_int Out;
   
   Out = 0;
   for (i = 0; i < 30; i++) {
-    if ((*BV)[i]) {
+    /* 2 */ if ((*BV)[i]) {
       Out = 1 + Out * 2;
     }
     else {
@@ -27,8 +26,8 @@ kcg_int BoolVect2Int_digital_30(
   return Out;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BoolVect2Int_digital_30.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

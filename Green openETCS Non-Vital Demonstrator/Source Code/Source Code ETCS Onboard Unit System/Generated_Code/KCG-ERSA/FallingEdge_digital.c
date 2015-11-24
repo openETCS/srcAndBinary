@@ -1,25 +1,37 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "FallingEdge_digital.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void FallingEdge_init_digital(outC_FallingEdge_digital *outC)
+{
+  outC->FE_Output = kcg_true;
+  outC->rem_FE_Input = kcg_true;
+  outC->init = kcg_true;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void FallingEdge_reset_digital(outC_FallingEdge_digital *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* digital::FallingEdge */
 void FallingEdge_digital(
-  /* digital::FallingEdge::FE_Input */kcg_bool FE_Input,
+  /* digital::FallingEdge::FE_Input */ kcg_bool FE_Input,
   outC_FallingEdge_digital *outC)
 {
-  static kcg_bool tmp;
+  /* digital::FallingEdge */ kcg_bool tmp;
   
-  if (outC->init) {
+  /* fby_1_init_2 */ if (outC->init) {
     outC->init = kcg_false;
     tmp = FE_Input;
   }
@@ -30,8 +42,8 @@ void FallingEdge_digital(
   outC->rem_FE_Input = FE_Input;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** FallingEdge_digital.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

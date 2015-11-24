@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,11 @@
 
 /* RCM_Utils_Pkg::decoders::dec_p42 */
 void dec_p42_RCM_Utils_Pkg_decoders(
-  /* RCM_Utils_Pkg::decoders::dec_p42::msg_in */msgFromTrack_T_RCM_MsgTypes_Pkg *msg_in,
-  /* RCM_Utils_Pkg::decoders::dec_p42::p42_sessionManagement */p42_sessionManagement_T_RCM_MsgTypes_Pkg *p42_sessionManagement)
+  /* RCM_Utils_Pkg::decoders::dec_p42::msg_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *msg_in,
+  /* RCM_Utils_Pkg::decoders::dec_p42::p42_sessionManagement */ p42_sessionManagement_T_RCM_MsgTypes_Pkg *p42_sessionManagement)
 {
-  /* RCM_Utils_Pkg::decoders::dec_p42::_L29 */
-  static P42_SessionManagement_T_Packet_Types_Pkg _L29;
-  /* RCM_Utils_Pkg::decoders::dec_p42::_L28 */
-  static kcg_bool _L28;
+  /* RCM_Utils_Pkg::decoders::dec_p42::_L29 */ P42_SessionManagement_T_Packet_Types_Pkg _L29;
+  /* RCM_Utils_Pkg::decoders::dec_p42::_L28 */ kcg_bool _L28;
   
   (*p42_sessionManagement).msgSrc = (*msg_in).source;
   kcg_copy_RBC_Id_T_Common_Types_Pkg(
@@ -31,8 +29,8 @@ void dec_p42_RCM_Utils_Pkg_decoders(
   (*p42_sessionManagement).q_sleepsession = _L29.q_sleepsession;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** dec_p42_RCM_Utils_Pkg_decoders.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

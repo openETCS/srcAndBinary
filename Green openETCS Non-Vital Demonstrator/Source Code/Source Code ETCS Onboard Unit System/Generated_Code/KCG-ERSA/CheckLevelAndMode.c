@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,11 @@
 
 /* CheckLevelAndMode */
 kcg_bool CheckLevelAndMode(
-  /* CheckLevelAndMode::Level */M_LEVEL Level,
-  /* CheckLevelAndMode::Mode */T_Mode_Level_And_Mode_Types_Pkg Mode)
+  /* CheckLevelAndMode::Level */ M_LEVEL Level,
+  /* CheckLevelAndMode::Mode */ T_Mode_Level_And_Mode_Types_Pkg Mode)
 {
-  /* CheckLevelAndMode::_L7 */
-  static kcg_bool _L7;
-  /* CheckLevelAndMode::Level_Mode_Compatible */
-  static kcg_bool Level_Mode_Compatible;
+  /* CheckLevelAndMode::_L7 */ kcg_bool _L7;
+  /* CheckLevelAndMode::Level_Mode_Compatible */ kcg_bool Level_Mode_Compatible;
   
   _L7 = (Level == M_LEVEL_Level_1) | (Level == M_LEVEL_Level_2) | (Level ==
       M_LEVEL_Level_3);
@@ -51,8 +49,8 @@ kcg_bool CheckLevelAndMode(
   return Level_Mode_Compatible;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckLevelAndMode.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

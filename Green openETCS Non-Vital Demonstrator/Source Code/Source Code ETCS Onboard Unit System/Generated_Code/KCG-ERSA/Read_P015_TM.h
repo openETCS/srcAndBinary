@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _Read_P015_TM_H_
 #define _Read_P015_TM_H_
@@ -11,16 +11,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TM::Read_P015 */
 extern void Read_P015_TM(
-  /* TM::Read_P015::Message_IN */CompressedPackets_T_Common_Types_Pkg *Message_IN,
-  /* TM::Read_P015::received */kcg_bool *received,
-  /* TM::Read_P015::P015_OBU_out */P015_OBU_T_TM *P015_OBU_out);
+  /* TM::Read_P015::Message_IN */ CompressedPackets_T_Common_Types_Pkg *Message_IN,
+  /* TM::Read_P015::received */ kcg_bool *received,
+  /* TM::Read_P015::P015_OBU_out */ P015_OBU_T_TM *P015_OBU_out);
 
 #endif /* _Read_P015_TM_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P015_TM.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

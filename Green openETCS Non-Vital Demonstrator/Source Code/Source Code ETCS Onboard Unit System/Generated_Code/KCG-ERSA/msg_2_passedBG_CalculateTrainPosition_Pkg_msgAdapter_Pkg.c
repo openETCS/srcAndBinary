@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,28 +9,32 @@
 
 /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG */
 void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::msgFromTrack */ReceivedMessage_T_Common_Types_Pkg *msgFromTrack,
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::passedBG */passedBG_T_BG_Types_Pkg *passedBG,
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::BG_passed */kcg_bool *BG_passed,
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::onlyBGsAnnouncedViaRadio */kcg_bool *onlyBGsAnnouncedViaRadio)
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::msgFromTrack */ ReceivedMessage_T_Common_Types_Pkg *msgFromTrack,
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::passedBG */ passedBG_T_BG_Types_Pkg *passedBG,
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::BG_passed */ kcg_bool *BG_passed,
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::onlyBGsAnnouncedViaRadio */ kcg_bool *onlyBGsAnnouncedViaRadio)
 {
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L114 */
-  static kcg_bool _L114;
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L295 */
-  static LinkedBGs_T_BG_Types_Pkg _L295;
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L296 */
-  static NID_LRBG _L296;
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L306 */
-  static NID_BG _L306;
-  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L305 */
-  static NID_C _L305;
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L114 */ kcg_bool _L114;
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L295 */ LinkedBGs_T_BG_Types_Pkg _L295;
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L296 */ NID_LRBG _L296;
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L306 */ NID_BG _L306;
+  /* CalculateTrainPosition_Pkg::msgAdapter_Pkg::msg_2_passedBG::_L305 */ NID_C _L305;
   
   kcg_copy_BG_Header_T_BG_Types_Pkg(
     &(*passedBG).BG_Header,
     &(*msgFromTrack).BG_Common_Header);
   _L114 = (*msgFromTrack).source == msrc_Euroradio_Common_Types_Pkg;
-  if (_L114) {
-    _L296 = (*msgFromTrack).Radio_Common_Header.nid_lrbg;
+  /* 1 */
+  DECODE_NID_LRBG_TM_conversions(
+    (*msgFromTrack).Radio_Common_Header.nid_lrbg,
+    &_L305,
+    &_L306);
+  /* 1 */ if (_L114) {
+    _L296 = /* 2 */
+      nidC_nidBG_2_NIDLRBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
+        kcg_true,
+        _L305,
+        _L306 % 100000);
   }
   else {
     _L296 = /* 1 */
@@ -55,14 +59,14 @@ void msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg(
       (*msgFromTrack).BG_Common_Header.valid) | ((*msgFromTrack).valid &
       _L295[0].valid);
   kcg_copy_LinkedBGs_T_BG_Types_Pkg(&(*passedBG).linkedBGs, &_L295);
-  *onlyBGsAnnouncedViaRadio = (*msgFromTrack).valid &
-    !(*msgFromTrack).BG_Common_Header.valid & _L114 & _L295[0].valid;
   *BG_passed = (*msgFromTrack).valid & (msrc_Eurobalise_Common_Types_Pkg ==
       (*msgFromTrack).source) & (*msgFromTrack).BG_Common_Header.valid;
+  *onlyBGsAnnouncedViaRadio = (*msgFromTrack).valid &
+    !(*msgFromTrack).BG_Common_Header.valid & _L114 & _L295[0].valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** msg_2_passedBG_CalculateTrainPosition_Pkg_msgAdapter_Pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _processHandingOver_Handover_Pkg_handoverUtils_Pkg_H_
 #define _processHandingOver_Handover_Pkg_handoverUtils_Pkg_H_
@@ -24,6 +24,8 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
@@ -46,34 +48,41 @@ typedef struct {
   kcg_bool /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::handoverFinished */ handoverFinished;
   p131_q_rbcTransitionOrder_T_Handover_Pkg /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::_L200 */ _L200;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_changeoverSwitch_Handover_Pkg_handoverUtils_Pkg /* 3 */ Context_3;
-  outC_locReachedOrPassed_BasicLocationFunctions_Pkg /* 1 */ _3_Context_1;
-  outC_locReachedOrPassed_BasicLocationFunctions_Pkg /* 2 */ _2_Context_2;
+  outC_EitherEdge_digital /* 2 */ _3_Context_2;
+  outC_EitherEdge_digital /* 1 */ _2_Context_1;
   outC_handOverSequencer_Handover_Pkg_handoverUtils_Pkg /* 1 */ _1_Context_1;
-  outC_EitherEdge_digital /* 1 */ Context_1;
-  outC_EitherEdge_digital /* 2 */ Context_2;
+  outC_locReachedOrPassed_BasicLocationFunctions_Pkg /* 2 */ Context_2;
+  outC_locReachedOrPassed_BasicLocationFunctions_Pkg /* 1 */ Context_1;
+  outC_changeoverSwitch_Handover_Pkg_handoverUtils_Pkg /* 3 */ Context_3;
   /* ----------------- no clocks of observable data ------------------ */
 } outC_processHandingOver_Handover_Pkg_handoverUtils_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
 /* Handover_Pkg::handoverUtils_Pkg::processHandingOver */
 extern void processHandingOver_Handover_Pkg_handoverUtils_Pkg(
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::mode */M_MODE mode,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::morcStatus_1 */morcStatus_T_RCM_Session_Types_Pkg *morcStatus_1,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::morcStatus_2 */morcStatus_T_RCM_Session_Types_Pkg *morcStatus_2,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::dataFromTrack_in */msgFromTrack_T_RCM_MsgTypes_Pkg *dataFromTrack_in,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::trainPosition */trainPosition_T_TrainPosition_Types_Pck *trainPosition,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::BGs */positionedBGs_T_TrainPosition_Types_Pck *BGs,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::sessionManagementAbility */abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
-  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::trainProperties */trainProperties_T_TrainPosition_Types_Pck *trainProperties,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::mode */ M_MODE mode,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::morcStatus_1 */ morcStatus_T_RCM_Session_Types_Pkg *morcStatus_1,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::morcStatus_2 */ morcStatus_T_RCM_Session_Types_Pkg *morcStatus_2,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::dataFromTrack_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *dataFromTrack_in,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::BGs */ positionedBGs_T_TrainPosition_Types_Pck *BGs,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::sessionManagementAbility */ abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
+  /* Handover_Pkg::handoverUtils_Pkg::processHandingOver::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
   outC_processHandingOver_Handover_Pkg_handoverUtils_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void processHandingOver_reset_Handover_Pkg_handoverUtils_Pkg(
   outC_processHandingOver_Handover_Pkg_handoverUtils_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void processHandingOver_init_Handover_Pkg_handoverUtils_Pkg(
+  outC_processHandingOver_Handover_Pkg_handoverUtils_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _processHandingOver_Handover_Pkg_handoverUtils_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** processHandingOver_Handover_Pkg_handoverUtils_Pkg.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

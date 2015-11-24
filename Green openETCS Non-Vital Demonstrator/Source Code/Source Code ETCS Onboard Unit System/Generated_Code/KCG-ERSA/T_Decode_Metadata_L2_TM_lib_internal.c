@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,17 @@
 
 /* TM_lib_internal::T_Decode_Metadata_L2 */
 kcg_int T_Decode_Metadata_L2_TM_lib_internal(
-  /* TM_lib_internal::T_Decode_Metadata_L2::Metadata */kcg_int Metadata,
-  /* TM_lib_internal::T_Decode_Metadata_L2::i */kcg_int i)
+  /* TM_lib_internal::T_Decode_Metadata_L2::Metadata */ kcg_int Metadata,
+  /* TM_lib_internal::T_Decode_Metadata_L2::i */ kcg_int i)
 {
-  /* TM_lib_internal::T_Decode_Metadata_L2::nid_packet */
-  static kcg_int nid_packet;
+  /* TM_lib_internal::T_Decode_Metadata_L2::nid_packet */ kcg_int nid_packet;
   
   nid_packet = i + Metadata;
   return nid_packet;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** T_Decode_Metadata_L2_TM_lib_internal.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

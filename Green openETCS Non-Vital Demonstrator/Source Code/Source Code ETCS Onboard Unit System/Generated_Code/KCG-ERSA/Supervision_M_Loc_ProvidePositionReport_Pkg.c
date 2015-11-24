@@ -1,30 +1,40 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "Supervision_M_Loc_ProvidePositionReport_Pkg.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void Supervision_M_Loc_init_ProvidePositionReport_Pkg(
+  outC_Supervision_M_Loc_ProvidePositionReport_Pkg *outC)
+{
+  outC->trigger = kcg_true;
+  /* 1 */ op_3_6_5_1_4_j_init_ProvidePositionReport_Pkg(&outC->Context_1);
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void Supervision_M_Loc_reset_ProvidePositionReport_Pkg(
   outC_Supervision_M_Loc_ProvidePositionReport_Pkg *outC)
 {
   /* 1 */ op_3_6_5_1_4_j_reset_ProvidePositionReport_Pkg(&outC->Context_1);
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* ProvidePositionReport_Pkg::Supervision_M_Loc */
 void Supervision_M_Loc_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::Supervision_M_Loc::trainPos */trainPosition_T_TrainPosition_Types_Pck *trainPos,
-  /* ProvidePositionReport_Pkg::Supervision_M_Loc::posBGs */positionedBGs_T_TrainPosition_Types_Pck *posBGs,
-  /* ProvidePositionReport_Pkg::Supervision_M_Loc::mloc */M_LOC mloc,
-  /* ProvidePositionReport_Pkg::Supervision_M_Loc::present */kcg_bool present,
+  /* ProvidePositionReport_Pkg::Supervision_M_Loc::trainPos */ trainPosition_T_TrainPosition_Types_Pck *trainPos,
+  /* ProvidePositionReport_Pkg::Supervision_M_Loc::posBGs */ positionedBGs_T_TrainPosition_Types_Pck *posBGs,
+  /* ProvidePositionReport_Pkg::Supervision_M_Loc::mloc */ M_LOC mloc,
+  /* ProvidePositionReport_Pkg::Supervision_M_Loc::present */ kcg_bool present,
   outC_Supervision_M_Loc_ProvidePositionReport_Pkg *outC)
 {
-  /* ProvidePositionReport_Pkg::Supervision_M_Loc::_L16 */
-  static positionedBG_T_TrainPosition_Types_Pck _L16;
-  /* ProvidePositionReport_Pkg::Supervision_M_Loc::_L15 */
-  static kcg_bool _L15;
+  /* ProvidePositionReport_Pkg::Supervision_M_Loc::_L16 */ positionedBG_T_TrainPosition_Types_Pck _L16;
+  /* ProvidePositionReport_Pkg::Supervision_M_Loc::_L15 */ kcg_bool _L15;
   
   /* 1 */
   op_GetLRBGfromBGs_ProvidePositionReport_Pkg(posBGs, trainPos, &_L15, &_L16);
@@ -36,8 +46,8 @@ void Supervision_M_Loc_ProvidePositionReport_Pkg(
       (M_LOC_Every_LRBG_compliant_balise_group == mloc));
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Supervision_M_Loc_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

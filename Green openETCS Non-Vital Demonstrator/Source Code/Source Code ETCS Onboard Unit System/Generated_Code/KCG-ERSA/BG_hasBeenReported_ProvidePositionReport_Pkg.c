@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,21 @@
 
 /* ProvidePositionReport_Pkg::BG_hasBeenReported */
 void BG_hasBeenReported_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::BG_hasBeenReported::reportedBGs */ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
-  /* ProvidePositionReport_Pkg::BG_hasBeenReported::nidBg */NID_BG nidBg,
-  /* ProvidePositionReport_Pkg::BG_hasBeenReported::location */OdometryLocations_T_Obu_BasicTypes_Pkg *location,
-  /* ProvidePositionReport_Pkg::BG_hasBeenReported::found */kcg_bool *found,
-  /* ProvidePositionReport_Pkg::BG_hasBeenReported::updatedBGs */ReportedBGList_T_ProvidePositionReport_Pkg *updatedBGs)
+  /* ProvidePositionReport_Pkg::BG_hasBeenReported::reportedBGs */ ReportedBGList_T_ProvidePositionReport_Pkg *reportedBGs,
+  /* ProvidePositionReport_Pkg::BG_hasBeenReported::nidBg */ NID_BG nidBg,
+  /* ProvidePositionReport_Pkg::BG_hasBeenReported::location */ OdometryLocations_T_Obu_BasicTypes_Pkg *location,
+  /* ProvidePositionReport_Pkg::BG_hasBeenReported::found */ kcg_bool *found,
+  /* ProvidePositionReport_Pkg::BG_hasBeenReported::updatedBGs */ ReportedBGList_T_ProvidePositionReport_Pkg *updatedBGs)
 {
-  static kcg_bool tmp;
-  static kcg_int i;
+  /* ProvidePositionReport_Pkg::BG_hasBeenReported */ kcg_bool acc;
+  kcg_int i;
   
   *found = kcg_false;
   for (i = 0; i < 8; i++) {
-    tmp = *found;
+    acc = *found;
     /* 3 */
     UpdateReportedBG_ProvidePositionReport_Pkg(
-      tmp,
+      acc,
       &(*reportedBGs)[i],
       nidBg,
       location,
@@ -32,8 +32,8 @@ void BG_hasBeenReported_ProvidePositionReport_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BG_hasBeenReported_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

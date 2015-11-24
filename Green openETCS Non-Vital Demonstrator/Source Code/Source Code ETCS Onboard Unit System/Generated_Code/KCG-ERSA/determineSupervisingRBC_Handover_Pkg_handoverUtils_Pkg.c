@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,39 +9,31 @@
 
 /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC */
 void determineSupervisingRBC_Handover_Pkg_handoverUtils_Pkg(
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::morcStatus_1 */morcStatus_T_RCM_Session_Types_Pkg *morcStatus_1,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::morcStatus_2 */morcStatus_T_RCM_Session_Types_Pkg *morcStatus_2,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::handingOverMobile_is_mobile_1 */kcg_bool handingOverMobile_is_mobile_1,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::useInformationFromAcceptingRBC */kcg_bool useInformationFromAcceptingRBC,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::sessionManagementAbility */abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervisingRBC */connection_ids_T_Handover_Pkg *supervisingRBC,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervising_isMobile_1 */kcg_bool *supervising_isMobile_1,
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervising_isMobile_2 */kcg_bool *supervising_isMobile_2)
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::morcStatus_1 */ morcStatus_T_RCM_Session_Types_Pkg *morcStatus_1,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::morcStatus_2 */ morcStatus_T_RCM_Session_Types_Pkg *morcStatus_2,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::handingOverMobile_is_mobile_1 */ kcg_bool handingOverMobile_is_mobile_1,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::useInformationFromAcceptingRBC */ kcg_bool useInformationFromAcceptingRBC,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::sessionManagementAbility */ abilityToHandleCommunicationSessions_Handover_Pkg sessionManagementAbility,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervisingRBC */ connection_ids_T_Handover_Pkg *supervisingRBC,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervising_isMobile_1 */ kcg_bool *supervising_isMobile_1,
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervising_isMobile_2 */ kcg_bool *supervising_isMobile_2)
 {
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::IfBlock1::else::_L18 */
-  static kcg_bool _L18_IfBlock1;
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
-  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervisingStatusFromMobile */
-  static morcStatus_T_RCM_Session_Types_Pkg supervisingStatusFromMobile;
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::IfBlock1::else::_L18 */ kcg_bool _L18_IfBlock1;
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::IfBlock1 */ kcg_bool IfBlock1_clock;
+  /* Handover_Pkg::handoverUtils_Pkg::determineSupervisingRBC::supervisingStatusFromMobile */ morcStatus_T_RCM_Session_Types_Pkg supervisingStatusFromMobile;
   
   IfBlock1_clock = sessionManagementAbility ==
     isAbleToManageOneSession_Handover_Pkg;
-  if (IfBlock1_clock) {
-    *supervising_isMobile_2 = kcg_false;
-    *supervising_isMobile_1 = kcg_true;
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
     kcg_copy_morcStatus_T_RCM_Session_Types_Pkg(
       &supervisingStatusFromMobile,
       morcStatus_1);
+    *supervising_isMobile_2 = kcg_false;
+    *supervising_isMobile_1 = kcg_true;
   }
   else {
-    _L18_IfBlock1 = (handingOverMobile_is_mobile_1 &
-        !useInformationFromAcceptingRBC) | (!handingOverMobile_is_mobile_1 &
-        useInformationFromAcceptingRBC);
-    *supervising_isMobile_1 = _L18_IfBlock1;
-    *supervising_isMobile_2 = !_L18_IfBlock1;
-    if (useInformationFromAcceptingRBC) {
-      if (handingOverMobile_is_mobile_1) {
+    /* 3 */ if (useInformationFromAcceptingRBC) {
+      /* 2 */ if (handingOverMobile_is_mobile_1) {
         kcg_copy_morcStatus_T_RCM_Session_Types_Pkg(
           &supervisingStatusFromMobile,
           morcStatus_2);
@@ -52,7 +44,7 @@ void determineSupervisingRBC_Handover_Pkg_handoverUtils_Pkg(
           morcStatus_1);
       }
     }
-    else if (handingOverMobile_is_mobile_1) {
+    else /* 1 */ if (handingOverMobile_is_mobile_1) {
       kcg_copy_morcStatus_T_RCM_Session_Types_Pkg(
         &supervisingStatusFromMobile,
         morcStatus_1);
@@ -62,6 +54,11 @@ void determineSupervisingRBC_Handover_Pkg_handoverUtils_Pkg(
         &supervisingStatusFromMobile,
         morcStatus_2);
     }
+    _L18_IfBlock1 = (handingOverMobile_is_mobile_1 &
+        !useInformationFromAcceptingRBC) | (!handingOverMobile_is_mobile_1 &
+        useInformationFromAcceptingRBC);
+    *supervising_isMobile_1 = _L18_IfBlock1;
+    *supervising_isMobile_2 = !_L18_IfBlock1;
   }
   (*supervisingRBC).valid = supervisingStatusFromMobile.registration.valid &
     supervisingStatusFromMobile.connection.valid &
@@ -76,8 +73,8 @@ void determineSupervisingRBC_Handover_Pkg_handoverUtils_Pkg(
   (*supervisingRBC).nid_mn = supervisingStatusFromMobile.registration.nid_mn;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** determineSupervisingRBC_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,22 +9,20 @@
 
 /* input_from_TIU_API_Pkg::getTIUStatusFromData */
 void getTIUStatusFromData_input_from_TIU_API_Pkg(
-  /* input_from_TIU_API_Pkg::getTIUStatusFromData::inTIUActualData */Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *inTIUActualData,
-  /* input_from_TIU_API_Pkg::getTIUStatusFromData::outStatus */TIU_trainStatus_T_TIU_Types_Pkg *outStatus)
+  /* input_from_TIU_API_Pkg::getTIUStatusFromData::inTIUActualData */ Message_Train_Interface_to_EVC_T_TIU_Types_Pkg *inTIUActualData,
+  /* input_from_TIU_API_Pkg::getTIUStatusFromData::outStatus */ TIU_trainStatus_T_TIU_Types_Pkg *outStatus)
 {
-  /* input_from_TIU_API_Pkg::getTIUStatusFromData::isA */
-  static kcg_bool isA;
-  /* input_from_TIU_API_Pkg::getTIUStatusFromData::isB */
-  static kcg_bool isB;
+  /* input_from_TIU_API_Pkg::getTIUStatusFromData::isA */ kcg_bool isA;
+  /* input_from_TIU_API_Pkg::getTIUStatusFromData::isB */ kcg_bool isB;
   
   isA = (*inTIUActualData).train_status.m_cab_st ==
     desk_A_is_open_TIU_Types_Pkg;
   isB = (*inTIUActualData).train_status.m_cab_st ==
     desk_B_is_open_TIU_Types_Pkg;
-  if (isA) {
+  /* 1 */ if (isA) {
     (*outStatus).ownCab = CabA_TIU_Types_Pkg;
   }
-  else if (isB) {
+  else /* 2 */ if (isB) {
     (*outStatus).ownCab = CabB_TIU_Types_Pkg;
   }
   else {
@@ -36,8 +34,8 @@ void getTIUStatusFromData_input_from_TIU_API_Pkg(
       both_desks_are_open_TIU_Types_Pkg) | isA | isB;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** getTIUStatusFromData_input_from_TIU_API_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

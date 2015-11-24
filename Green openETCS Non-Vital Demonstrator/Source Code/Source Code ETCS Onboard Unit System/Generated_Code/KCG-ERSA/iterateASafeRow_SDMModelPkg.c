@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* SDMModelPkg::iterateASafeRow */
 void iterateASafeRow_SDMModelPkg(
-  /* SDMModelPkg::iterateASafeRow::last_gradient */A_internal_real_Type_SDM_Types_Pkg last_gradient,
-  /* SDMModelPkg::iterateASafeRow::A */A_internal_real_Type_SDM_Types_Pkg A,
-  /* SDMModelPkg::iterateASafeRow::AGradient */A_gradient_element_t_SDM_GradientAcceleration_types *AGradient,
-  /* SDMModelPkg::iterateASafeRow::keep_gradient */A_internal_real_Type_SDM_Types_Pkg *keep_gradient,
-  /* SDMModelPkg::iterateASafeRow::A_graded */A_internal_real_Type_SDM_Types_Pkg *A_graded)
+  /* SDMModelPkg::iterateASafeRow::last_gradient */ A_internal_real_Type_SDM_Types_Pkg last_gradient,
+  /* SDMModelPkg::iterateASafeRow::A */ A_internal_real_Type_SDM_Types_Pkg A,
+  /* SDMModelPkg::iterateASafeRow::AGradient */ A_gradient_element_t_SDM_GradientAcceleration_types *AGradient,
+  /* SDMModelPkg::iterateASafeRow::keep_gradient */ A_internal_real_Type_SDM_Types_Pkg *keep_gradient,
+  /* SDMModelPkg::iterateASafeRow::A_graded */ A_internal_real_Type_SDM_Types_Pkg *A_graded)
 {
-  if ((*AGradient).valid) {
+  /* 1 */ if ((*AGradient).valid) {
     *keep_gradient = (*AGradient).gradient_acceleration;
   }
   else {
@@ -24,8 +24,8 @@ void iterateASafeRow_SDMModelPkg(
   *A_graded = *keep_gradient + A;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** iterateASafeRow_SDMModelPkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

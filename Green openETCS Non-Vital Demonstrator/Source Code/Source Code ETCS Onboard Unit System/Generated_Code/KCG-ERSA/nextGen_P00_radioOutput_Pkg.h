@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _nextGen_P00_radioOutput_Pkg_H_
 #define _nextGen_P00_radioOutput_Pkg_H_
@@ -9,15 +9,17 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* radioOutput_Pkg::nextGen_P00 */
 extern void nextGen_P00_radioOutput_Pkg(
-  /* radioOutput_Pkg::nextGen_P00::inP0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *inP0,
-  /* radioOutput_Pkg::nextGen_P00::outP0 */P000_TM_TrainToTrack *outP0);
+  /* radioOutput_Pkg::nextGen_P00::inP0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *inP0,
+  /* radioOutput_Pkg::nextGen_P00::outP0 */ P000_TM_TrainToTrack *outP0);
 
 #endif /* _nextGen_P00_radioOutput_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** nextGen_P00_radioOutput_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

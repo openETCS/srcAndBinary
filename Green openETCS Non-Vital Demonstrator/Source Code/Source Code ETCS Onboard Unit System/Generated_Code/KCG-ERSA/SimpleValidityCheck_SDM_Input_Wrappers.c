@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,13 @@
 
 /* SDM_Input_Wrappers::SimpleValidityCheck */
 kcg_bool SimpleValidityCheck_SDM_Input_Wrappers(
-  /* SDM_Input_Wrappers::SimpleValidityCheck::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDM_Input_Wrappers::SimpleValidityCheck::odometry */odometry_T_Obu_BasicTypes_Pkg *odometry,
-  /* SDM_Input_Wrappers::SimpleValidityCheck::TrainPosition */trainPosition_T_TrainPosition_Types_Pck *TrainPosition,
-  /* SDM_Input_Wrappers::SimpleValidityCheck::trainData */trainData_T_TIU_Types_Pkg *trainData,
-  /* SDM_Input_Wrappers::SimpleValidityCheck::dataFromTrackAtlas */DataForSupervision_nextGen_t_TrackAtlasTypes *dataFromTrackAtlas)
+  /* SDM_Input_Wrappers::SimpleValidityCheck::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDM_Input_Wrappers::SimpleValidityCheck::odometry */ odometry_T_Obu_BasicTypes_Pkg *odometry,
+  /* SDM_Input_Wrappers::SimpleValidityCheck::TrainPosition */ trainPosition_T_TrainPosition_Types_Pck *TrainPosition,
+  /* SDM_Input_Wrappers::SimpleValidityCheck::trainData */ trainData_T_TIU_Types_Pkg *trainData,
+  /* SDM_Input_Wrappers::SimpleValidityCheck::dataFromTrackAtlas */ DataForSupervision_nextGen_t_TrackAtlasTypes *dataFromTrackAtlas)
 {
-  /* SDM_Input_Wrappers::SimpleValidityCheck::exception */
-  static kcg_bool exception;
+  /* SDM_Input_Wrappers::SimpleValidityCheck::exception */ kcg_bool exception;
   
   exception = !((*NationalValues).valid & (*odometry).valid &
       (*TrainPosition).valid & (*trainData).valid &
@@ -27,8 +26,8 @@ kcg_bool SimpleValidityCheck_SDM_Input_Wrappers(
   return exception;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** SimpleValidityCheck_SDM_Input_Wrappers.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

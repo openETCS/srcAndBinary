@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,16 +9,16 @@
 
 /* InputManagement::Input_ModeProfiles */
 void Input_ModeProfiles_InputManagement(
-  /* InputManagement::Input_ModeProfiles::P_80_One_Iter */P80_ModeProfile_T_Packet_Types_Pkg *P_80_One_Iter,
-  /* InputManagement::Input_ModeProfiles::referenceLocation */L_internal_Type_Obu_BasicTypes_Pkg referenceLocation,
-  /* InputManagement::Input_ModeProfiles::Mode_Profile_On_Borad */T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Borad)
+  /* InputManagement::Input_ModeProfiles::P_80_One_Iter */ P80_ModeProfile_T_Packet_Types_Pkg *P_80_One_Iter,
+  /* InputManagement::Input_ModeProfiles::referenceLocation */ L_internal_Type_Obu_BasicTypes_Pkg referenceLocation,
+  /* InputManagement::Input_ModeProfiles::Mode_Profile_On_Borad */ T_Mode_Profile_Level_And_Mode_Types_Pkg *Mode_Profile_On_Borad)
 {
   (*Mode_Profile_On_Borad).Distance = referenceLocation +
     (*P_80_One_Iter).d_mamode;
   (*Mode_Profile_On_Borad).Speed = (*P_80_One_Iter).v_mamode;
   (*Mode_Profile_On_Borad).Length = (*P_80_One_Iter).l_mamode;
   (*Mode_Profile_On_Borad).Length_Ack = (*P_80_One_Iter).l_ackmamode;
-  if ((*P_80_One_Iter).valid) {
+  /* ck_Loc_MO_Profile_Available */ if ((*P_80_One_Iter).valid) {
     switch ((*P_80_One_Iter).m_mamode) {
       case M_MAMODE_On_Sight :
         (*Mode_Profile_On_Borad).Mode = Profile_OS_Level_And_Mode_Types_Pkg;
@@ -37,8 +37,8 @@ void Input_ModeProfiles_InputManagement(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Input_ModeProfiles_InputManagement.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* TM_TrainToTrack::C_P004_train_compr */
 void C_P004_train_compr_TM_TrainToTrack(
-  /* TM_TrainToTrack::C_P004_train_compr::P004_in */P004_TM_TrainToTrack *P004_in,
-  /* TM_TrainToTrack::C_P004_train_compr::P004_int */P004_TrainTrack_int_TM_TrainToTrack *P004_int)
+  /* TM_TrainToTrack::C_P004_train_compr::P004_in */ P004_TM_TrainToTrack *P004_in,
+  /* TM_TrainToTrack::C_P004_train_compr::P004_int */ P004_TrainTrack_int_TM_TrainToTrack *P004_int)
 {
   (*P004_int)[0] = /* 1 */
     Encode_NID_PACKET_TM_TrainToTrack(
@@ -22,8 +22,8 @@ void C_P004_train_compr_TM_TrainToTrack(
     CAST_M_ERROR_to_int_TM_conversions((*P004_in).m_error);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P004_train_compr_TM_TrainToTrack.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

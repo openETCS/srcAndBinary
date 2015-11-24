@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _selectLEValid_TargetLimits_Pkg_H_
 #define _selectLEValid_TargetLimits_Pkg_H_
@@ -10,20 +10,22 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TargetLimits_Pkg::selectLEValid */
 extern void selectLEValid_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::selectLEValid::valid1 */kcg_bool valid1,
-  /* TargetLimits_Pkg::selectLEValid::i1 */kcg_real i1,
-  /* TargetLimits_Pkg::selectLEValid::valid2 */kcg_bool valid2,
-  /* TargetLimits_Pkg::selectLEValid::i2 */kcg_real i2,
-  /* TargetLimits_Pkg::selectLEValid::isUpper */kcg_bool *isUpper,
-  /* TargetLimits_Pkg::selectLEValid::valid */kcg_bool *valid,
-  /* TargetLimits_Pkg::selectLEValid::o */kcg_real *o);
+  /* TargetLimits_Pkg::selectLEValid::valid1 */ kcg_bool valid1,
+  /* TargetLimits_Pkg::selectLEValid::i1 */ kcg_real i1,
+  /* TargetLimits_Pkg::selectLEValid::valid2 */ kcg_bool valid2,
+  /* TargetLimits_Pkg::selectLEValid::i2 */ kcg_real i2,
+  /* TargetLimits_Pkg::selectLEValid::isUpper */ kcg_bool *isUpper,
+  /* TargetLimits_Pkg::selectLEValid::valid */ kcg_bool *valid,
+  /* TargetLimits_Pkg::selectLEValid::o */ kcg_real *o);
 
 #endif /* _selectLEValid_TargetLimits_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** selectLEValid_TargetLimits_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,34 +9,33 @@
 
 /* SDMConversionModelPkg::Kr_intLookUp */
 kcg_int Kr_intLookUp_SDMConversionModelPkg(
-  /* SDMConversionModelPkg::Kr_intLookUp::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDMConversionModelPkg::Kr_intLookUp::trainData */trainData_T_TIU_Types_Pkg *trainData)
+  /* SDMConversionModelPkg::Kr_intLookUp::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDMConversionModelPkg::Kr_intLookUp::trainData */ trainData_T_TIU_Types_Pkg *trainData)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* SDMConversionModelPkg::Kr_intLookUp::m_KrInt */
-  static kcg_int m_KrInt;
+  /* SDMConversionModelPkg::Kr_intLookUp */ kcg_int acc;
+  /* SDMConversionModelPkg::Kr_intLookUp */ kcg_bool cond_iterw;
+  kcg_int i;
+  /* SDMConversionModelPkg::Kr_intLookUp::m_KrInt */ kcg_int m_KrInt;
   
   m_KrInt = 100;
-  for (i = 0; i < 7; i++) {
-    tmp1 = m_KrInt;
+  /* 1 */ for (i = 0; i < 7; i++) {
+    acc = m_KrInt;
     /* 1 */
     Kr_intIterator_SDMConversionModelPkg(
-      tmp1,
+      acc,
       &(*NationalValues).nvkrintArray[i],
       (*trainData).trainLength,
-      &tmp,
+      &cond_iterw,
       &m_KrInt);
-    if (!tmp) {
+    /* 1 */ if (!cond_iterw) {
       break;
     }
   }
   return m_KrInt;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Kr_intLookUp_SDMConversionModelPkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

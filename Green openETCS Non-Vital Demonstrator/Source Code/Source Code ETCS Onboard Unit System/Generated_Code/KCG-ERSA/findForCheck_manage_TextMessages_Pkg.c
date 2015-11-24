@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,14 @@
 
 /* manage_TextMessages_Pkg::findForCheck */
 kcg_bool findForCheck_manage_TextMessages_Pkg(
-  /* manage_TextMessages_Pkg::findForCheck::inStatusList */DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
-  /* manage_TextMessages_Pkg::findForCheck::inCompareElement */DMI_TXT_MSG_status_T_DMI_Types_Pkg *inCompareElement)
+  /* manage_TextMessages_Pkg::findForCheck::inStatusList */ DMI_TXT_MSGList_status_T_DMI_Types_Pkg *inStatusList,
+  /* manage_TextMessages_Pkg::findForCheck::inCompareElement */ DMI_TXT_MSG_status_T_DMI_Types_Pkg *inCompareElement)
 {
-  static kcg_int i;
-  /* manage_TextMessages_Pkg::findForCheck::outFound */
-  static kcg_bool outFound;
+  kcg_int i;
+  /* manage_TextMessages_Pkg::findForCheck::outFound */ kcg_bool outFound;
   
   outFound = kcg_false;
-  for (i = 0; i < 31; i++) {
+  /* 2 */ for (i = 0; i < 31; i++) {
     outFound = /* 1 */
       findElement_manage_TextMessages_Pkg(
         outFound,
@@ -27,8 +26,8 @@ kcg_bool findForCheck_manage_TextMessages_Pkg(
   return outFound;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** findForCheck_manage_TextMessages_Pkg.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

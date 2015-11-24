@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,15 @@
 
 /* xdebugSupport_Pkg::getLRBGFromMsg */
 NID_LRBG getLRBGFromMsg_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::getLRBGFromMsg::actualMessage */ReceivedMessage_T_Common_Types_Pkg *actualMessage)
+  /* xdebugSupport_Pkg::getLRBGFromMsg::actualMessage */ ReceivedMessage_T_Common_Types_Pkg *actualMessage)
 {
-  /* xdebugSupport_Pkg::getLRBGFromMsg::LRBG */
-  static NID_LRBG LRBG;
+  /* xdebugSupport_Pkg::getLRBGFromMsg::LRBG */ NID_LRBG LRBG;
   
-  if ((*actualMessage).source == msrc_Euroradio_Common_Types_Pkg) {
+  /* 1 */ if ((*actualMessage).source == msrc_Euroradio_Common_Types_Pkg) {
     LRBG = (*actualMessage).Radio_Common_Header.nid_lrbg;
   }
-  else if ((*actualMessage).source == msrc_Eurobalise_Common_Types_Pkg) {
+  else /* 2 */ if ((*actualMessage).source ==
+    msrc_Eurobalise_Common_Types_Pkg) {
     LRBG = (*actualMessage).BG_Common_Header.nid_bg +
       (*actualMessage).BG_Common_Header.nid_c * 100000;
   }
@@ -27,8 +27,8 @@ NID_LRBG getLRBGFromMsg_xdebugSupport_Pkg(
   return LRBG;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** getLRBGFromMsg_xdebugSupport_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

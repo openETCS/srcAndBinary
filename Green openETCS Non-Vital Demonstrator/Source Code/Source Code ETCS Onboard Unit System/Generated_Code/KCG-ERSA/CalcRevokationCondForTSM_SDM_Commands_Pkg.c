@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* SDM_Commands_Pkg::CalcRevokationCondForTSM */
 void CalcRevokationCondForTSM_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::speeds */Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::locations */SDM_Locations_T_SDM_Types_Pkg *locations,
-  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::mrdt */Target_T_TargetManagement_types *mrdt,
-  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::trainLocations */trainPosition_T_TrainPosition_Types_Pck *trainLocations,
-  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::floiIsSB1 */kcg_bool floiIsSB1,
-  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::revokationConds */TSM_revokeCond_T_SDM_Commands_Pkg *revokationConds)
+  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::locations */ SDM_Locations_T_SDM_Types_Pkg *locations,
+  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::mrdt */ Target_T_TargetManagement_types *mrdt,
+  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::trainLocations */ trainPosition_T_TrainPosition_Types_Pck *trainLocations,
+  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::floiIsSB1 */ kcg_bool floiIsSB1,
+  /* SDM_Commands_Pkg::CalcRevokationCondForTSM::revokationConds */ TSM_revokeCond_T_SDM_Commands_Pkg *revokationConds)
 {
-  if ((EoA_TargetManagement_types == (*mrdt).targetType) |
+  /* 1 */ if ((EoA_TargetManagement_types == (*mrdt).targetType) |
     ((*mrdt).targetType == SvL_TargetManagement_types)) {
     /* 1 */
     CalcRevokCondForTSM_EOA_SvL_SDM_Commands_Pkg(
@@ -37,8 +37,8 @@ void CalcRevokationCondForTSM_SDM_Commands_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcRevokationCondForTSM_SDM_Commands_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,23 +9,20 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData */
 void Merg2MetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::ind */kcg_int ind,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::acc */Metadata_T_Common_Types_Pkg *acc,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::metadata_in */Metadata_T_Common_Types_Pkg *metadata_in,
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::metadata_out */Metadata_T_Common_Types_Pkg *metadata_out)
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::ind */ kcg_int ind,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::acc */ Metadata_T_Common_Types_Pkg *acc,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::metadata_in */ Metadata_T_Common_Types_Pkg *metadata_in,
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::metadata_out */ Metadata_T_Common_Types_Pkg *metadata_out)
 {
-  static MetadataElement_T_Common_Types_Pkg tmp1;
-  static MetadataElement_T_Common_Types_Pkg tmp;
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::IfBlock1::else::_L20 */
-  static kcg_int _L20_IfBlock1;
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::IfBlock1::else::_L15 */
-  static kcg_int _L15_IfBlock1;
-  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::dup */
-  static kcg_bool dup;
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData */ MetadataElement_T_Common_Types_Pkg tmp1;
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData */ MetadataElement_T_Common_Types_Pkg tmp;
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::IfBlock1::else::_L20 */ kcg_int _L20_IfBlock1;
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::IfBlock1::else::_L15 */ kcg_int _L15_IfBlock1;
+  /* CheckBGConsistency_Pkg::SubFunction::MergFunction::Merg2MetaData::dup */ kcg_bool dup;
   
   dup = ((*acc)[0].nid_packet == (*metadata_in)[0].nid_packet) &
     ((*acc)[0].q_dir == (*metadata_in)[0].q_dir);
-  if (dup) {
+  /* ck_dup */ if (dup) {
     kcg_copy_Metadata_T_Common_Types_Pkg(metadata_out, acc);
   }
   else {
@@ -57,8 +54,8 @@ void Merg2MetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Merg2MetaData_CheckBGConsistency_Pkg_SubFunction_MergFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

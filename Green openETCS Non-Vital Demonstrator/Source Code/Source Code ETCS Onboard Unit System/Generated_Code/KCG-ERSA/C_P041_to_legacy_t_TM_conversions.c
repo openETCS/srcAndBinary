@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* TM_conversions::C_P041_to_legacy_t */
 void C_P041_to_legacy_t_TM_conversions(
-  /* TM_conversions::C_P041_to_legacy_t::P041_in */P041_OBU_T_TM *P041_in,
-  /* TM_conversions::C_P041_to_legacy_t::P041_legacy_out */P41_LevelTransistionOrders_T_Packet_Types_Pkg *P041_legacy_out)
+  /* TM_conversions::C_P041_to_legacy_t::P041_in */ P041_OBU_T_TM *P041_in,
+  /* TM_conversions::C_P041_to_legacy_t::P041_legacy_out */ P41_LevelTransistionOrders_T_Packet_Types_Pkg *P041_legacy_out)
 {
-  static kcg_int i;
+  kcg_int i;
   
-  for (i = 0; i < 7; i++) {
+  /* 1 */ for (i = 0; i < 7; i++) {
     /* 1 */
     C_P041_to_legacy_loop_TM_conversions(
       i,
@@ -26,8 +26,8 @@ void C_P041_to_legacy_t_TM_conversions(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P041_to_legacy_t_TM_conversions.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

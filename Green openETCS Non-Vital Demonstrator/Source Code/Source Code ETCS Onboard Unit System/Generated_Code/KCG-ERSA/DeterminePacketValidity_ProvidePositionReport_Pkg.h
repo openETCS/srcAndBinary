@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _DeterminePacketValidity_ProvidePositionReport_Pkg_H_
 #define _DeterminePacketValidity_ProvidePositionReport_Pkg_H_
@@ -9,16 +9,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* ProvidePositionReport_Pkg::DeterminePacketValidity */
 extern void DeterminePacketValidity_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::DeterminePacketValidity::lrbg */positionedBG_T_TrainPosition_Types_Pck *lrbg,
-  /* ProvidePositionReport_Pkg::DeterminePacketValidity::sendPacket0 */kcg_bool *sendPacket0,
-  /* ProvidePositionReport_Pkg::DeterminePacketValidity::sendPacket1 */kcg_bool *sendPacket1);
+  /* ProvidePositionReport_Pkg::DeterminePacketValidity::lrbg */ positionedBG_T_TrainPosition_Types_Pck *lrbg,
+  /* ProvidePositionReport_Pkg::DeterminePacketValidity::sendPacket0 */ kcg_bool *sendPacket0,
+  /* ProvidePositionReport_Pkg::DeterminePacketValidity::sendPacket1 */ kcg_bool *sendPacket1);
 
 #endif /* _DeterminePacketValidity_ProvidePositionReport_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** DeterminePacketValidity_ProvidePositionReport_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

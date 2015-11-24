@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -28,17 +30,22 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2 */
 extern void establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg(
-  /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::sessionEstablishCmd_in */sessionCmd_T_RCM_Session_Types_Pkg *sessionEstablishCmd_in,
-  /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::connectionStatus */mobileConnectionContext_T_RCM_Types_Pkg *connectionStatus,
-  /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::reset */kcg_bool reset,
+  /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::sessionEstablishCmd_in */ sessionCmd_T_RCM_Session_Types_Pkg *sessionEstablishCmd_in,
+  /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::connectionStatus */ mobileConnectionContext_T_RCM_Types_Pkg *connectionStatus,
+  /* MoRC_Pck::Subfunc_Pkg::establishSessionFromRBC_v2::reset */ kcg_bool reset,
   outC_establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg *outC);
 
 extern void establishSessionFromRBC_v2_reset_MoRC_Pck_Subfunc_Pkg(
   outC_establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg *outC);
 
+#ifndef KCG_USER_DEFINED_INIT
+extern void establishSessionFromRBC_v2_init_MoRC_Pck_Subfunc_Pkg(
+  outC_establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
+
 #endif /* _establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

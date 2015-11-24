@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,11 @@
 
 /* xdebugSupport_Pkg::packetValidBasics */
 void packetValidBasics_xdebugSupport_Pkg(
-  /* xdebugSupport_Pkg::packetValidBasics::accu */kcg_bool accu,
-  /* xdebugSupport_Pkg::packetValidBasics::element */MetadataElement_T_Common_Types_Pkg *element,
-  /* xdebugSupport_Pkg::packetValidBasics::which_ID */NID_PACKET which_ID,
-  /* xdebugSupport_Pkg::packetValidBasics::continue */kcg_bool *_1_continue,
-  /* xdebugSupport_Pkg::packetValidBasics::packtIsValid */kcg_bool *packtIsValid)
+  /* xdebugSupport_Pkg::packetValidBasics::accu */ kcg_bool accu,
+  /* xdebugSupport_Pkg::packetValidBasics::element */ MetadataElement_T_Common_Types_Pkg *element,
+  /* xdebugSupport_Pkg::packetValidBasics::which_ID */ NID_PACKET which_ID,
+  /* xdebugSupport_Pkg::packetValidBasics::continue */ kcg_bool *_1_continue,
+  /* xdebugSupport_Pkg::packetValidBasics::packtIsValid */ kcg_bool *packtIsValid)
 {
   *packtIsValid = (*element).valid & (/* 1 */
       T_extract_nid_packet_from_metadata_selector_TM((*element).nid_packet) ==
@@ -21,8 +21,8 @@ void packetValidBasics_xdebugSupport_Pkg(
   *_1_continue = ((*element).nid_packet != 0) & !*packtIsValid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** packetValidBasics_xdebugSupport_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

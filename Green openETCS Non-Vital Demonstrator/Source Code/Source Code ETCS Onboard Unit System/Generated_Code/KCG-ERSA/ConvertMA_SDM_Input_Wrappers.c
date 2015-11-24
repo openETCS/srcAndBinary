@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,37 +9,35 @@
 
 /* SDM_Input_Wrappers::ConvertMA */
 void ConvertMA_SDM_Input_Wrappers(
-  /* SDM_Input_Wrappers::ConvertMA::Ma_in */MovementAuthority_t_TrackAtlasTypes *Ma_in,
-  /* SDM_Input_Wrappers::ConvertMA::Ma_out */MA_section_real_T_TargetManagement_types *Ma_out)
+  /* SDM_Input_Wrappers::ConvertMA::Ma_in */ MovementAuthority_t_TrackAtlasTypes *Ma_in,
+  /* SDM_Input_Wrappers::ConvertMA::Ma_out */ MA_section_real_T_TargetManagement_types *Ma_out)
 {
-  static kcg_int tmp1;
-  static kcg_bool tmp;
-  static kcg_int i;
-  /* SDM_Input_Wrappers::ConvertMA::_L129 */
-  static DP_or_OL_t_TrackAtlasTypes _L129;
-  /* SDM_Input_Wrappers::ConvertMA::_L200 */
-  static L_internal_Type_Obu_BasicTypes_Pkg _L200;
+  /* SDM_Input_Wrappers::ConvertMA */ kcg_int acc;
+  /* SDM_Input_Wrappers::ConvertMA */ kcg_bool cond_iterw;
+  kcg_int i;
+  /* SDM_Input_Wrappers::ConvertMA::_L129 */ DP_or_OL_t_TrackAtlasTypes _L129;
+  /* SDM_Input_Wrappers::ConvertMA::_L200 */ L_internal_Type_Obu_BasicTypes_Pkg _L200;
   
   (*Ma_out).DP_valid = (*Ma_in).q_dangerpoint;
   (*Ma_out).OL_valid = (*Ma_in).q_overlap;
   (*Ma_out).level = (*Ma_in).Level;
   _L200 = 0;
-  if ((*Ma_in).valid) {
-    for (i = 0; i < 10; i++) {
-      tmp1 = _L200;
+  /* 3 */ if ((*Ma_in).valid) {
+    /* 3 */ for (i = 0; i < 10; i++) {
+      acc = _L200;
       /* 2 */
       SelectEndSection_SDM_Input_Wrappers(
-        tmp1,
+        acc,
         &(*Ma_in).sections[i],
-        &tmp,
+        &cond_iterw,
         &_L200);
-      if (!tmp) {
+      /* 3 */ if (!cond_iterw) {
         break;
       }
     }
   }
   (*Ma_out).valid = (*Ma_in).valid & (_L200 > 0);
-  if ((*Ma_in).q_overlap) {
+  /* 1 */ if ((*Ma_in).q_overlap) {
     kcg_copy_DP_or_OL_t_TrackAtlasTypes(&_L129, &(*Ma_in).overlap);
   }
   else {
@@ -59,8 +57,8 @@ void ConvertMA_SDM_Input_Wrappers(
     TransformV_intToV_real_SDM_Types_Pkg(_L129.v_release);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ConvertMA_SDM_Input_Wrappers.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

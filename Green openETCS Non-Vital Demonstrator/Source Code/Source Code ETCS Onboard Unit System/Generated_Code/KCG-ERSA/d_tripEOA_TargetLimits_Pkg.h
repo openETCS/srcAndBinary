@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _d_tripEOA_TargetLimits_Pkg_H_
 #define _d_tripEOA_TargetLimits_Pkg_H_
@@ -10,16 +10,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* TargetLimits_Pkg::d_tripEOA */
 extern L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
-  /* TargetLimits_Pkg::d_tripEOA::D_EOA */L_internal_real_Type_SDM_Types_Pkg D_EOA,
-  /* TargetLimits_Pkg::d_tripEOA::trainLocations */TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
-  /* TargetLimits_Pkg::d_tripEOA::trainData_int */trainData_internal_t_SDM_Types_Pkg *trainData_int);
+  /* TargetLimits_Pkg::d_tripEOA::D_EOA */ L_internal_real_Type_SDM_Types_Pkg D_EOA,
+  /* TargetLimits_Pkg::d_tripEOA::trainLocations */ TrainLocations_real_T_SDM_Types_Pkg *trainLocations,
+  /* TargetLimits_Pkg::d_tripEOA::trainData_int */ trainData_internal_t_SDM_Types_Pkg *trainData_int);
 
 #endif /* _d_tripEOA_TargetLimits_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** d_tripEOA_TargetLimits_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

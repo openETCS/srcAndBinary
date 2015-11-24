@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _BufferMsg_TM_lib_internal_H_
 #define _BufferMsg_TM_lib_internal_H_
@@ -11,6 +11,8 @@
 #include "BufferMsg_read_only_TM_lib_internal.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -29,16 +31,23 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* TM_lib_internal::BufferMsg */
 extern void BufferMsg_TM_lib_internal(
-  /* TM_lib_internal::BufferMsg::In */M_TrainTrack_Message_T_TM_radio_messages *In,
-  /* TM_lib_internal::BufferMsg::Write */kcg_bool Write,
+  /* TM_lib_internal::BufferMsg::In */ M_TrainTrack_Message_T_TM_radio_messages *In,
+  /* TM_lib_internal::BufferMsg::Write */ kcg_bool Write,
   outC_BufferMsg_TM_lib_internal *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void BufferMsg_reset_TM_lib_internal(
   outC_BufferMsg_TM_lib_internal *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void BufferMsg_init_TM_lib_internal(
+  outC_BufferMsg_TM_lib_internal *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _BufferMsg_TM_lib_internal_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_TM_lib_internal.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,9 +9,9 @@
 
 /* CheckEuroradioMessage::BuildOutput */
 void BuildOutput_CheckEuroradioMessage(
-  /* CheckEuroradioMessage::BuildOutput::message */ReceivedMessage_T_Common_Types_Pkg *message,
-  /* CheckEuroradioMessage::BuildOutput::valid */kcg_bool valid,
-  /* CheckEuroradioMessage::BuildOutput::ReceivedMessage */ReceivedMessage_T_Common_Types_Pkg *ReceivedMessage)
+  /* CheckEuroradioMessage::BuildOutput::message */ ReceivedMessage_T_Common_Types_Pkg *message,
+  /* CheckEuroradioMessage::BuildOutput::valid */ kcg_bool valid,
+  /* CheckEuroradioMessage::BuildOutput::ReceivedMessage */ ReceivedMessage_T_Common_Types_Pkg *ReceivedMessage)
 {
   (*ReceivedMessage).valid = (*message).valid & valid;
   (*ReceivedMessage).source = (*message).source;
@@ -32,8 +32,8 @@ void BuildOutput_CheckEuroradioMessage(
     &(*message).sendingRBC);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BuildOutput_CheckEuroradioMessage.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

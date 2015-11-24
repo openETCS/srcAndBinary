@@ -1,38 +1,50 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
 #include "kcg_sensors.h"
 #include "countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg.h"
 
+#ifndef KCG_USER_DEFINED_INIT
+void countUp_init_CalculateTrainPosition_Pkg_gp_functions_Pkg(
+  outC_countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg *outC)
+{
+  outC->init = kcg_true;
+  outC->counter = 0;
+}
+#endif /* KCG_USER_DEFINED_INIT */
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 void countUp_reset_CalculateTrainPosition_Pkg_gp_functions_Pkg(
   outC_countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg *outC)
 {
   outC->init = kcg_true;
 }
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp */
 void countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg(
-  /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp::count */kcg_bool count,
-  /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp::reset */kcg_bool reset,
+  /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp::count */ kcg_bool count,
+  /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp::reset */ kcg_bool reset,
   outC_countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg *outC)
 {
-  static kcg_int tmp1;
-  static kcg_int tmp;
+  /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp */ kcg_int tmp1;
+  /* CalculateTrainPosition_Pkg::gp_functions_Pkg::countUp */ kcg_int tmp;
   
-  if (reset) {
+  /* 2 */ if (reset) {
     outC->counter = 0;
   }
   else {
-    if (outC->init) {
+    /* fby_1_init_1 */ if (outC->init) {
       tmp1 = 0;
     }
     else {
       tmp1 = outC->counter;
     }
-    if (count) {
+    /* 1 */ if (count) {
       tmp = 1;
     }
     else {
@@ -43,8 +55,8 @@ void countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg(
   outC->init = kcg_false;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** countUp_CalculateTrainPosition_Pkg_gp_functions_Pkg.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _AggregatePackets_ProvidePositionReport_Pkg_H_
 #define _AggregatePackets_ProvidePositionReport_Pkg_H_
@@ -9,18 +9,20 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* ProvidePositionReport_Pkg::AggregatePackets */
 extern void AggregatePackets_ProvidePositionReport_Pkg(
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket0 */PT0_PositionReport_T_Packet_TrainTypes_Pkg *inPacket0,
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket1 */PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *inPacket1,
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket4 */PT4_ErrorReporting_T_Packet_TrainTypes_Pkg *inPacket4,
-  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket5 */PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *inPacket5,
-  /* ProvidePositionReport_Pkg::AggregatePackets::outPackets */outPackets_T_Common_Types_Pkg *outPackets);
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *inPacket0,
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *inPacket1,
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket4 */ PT4_ErrorReporting_T_Packet_TrainTypes_Pkg *inPacket4,
+  /* ProvidePositionReport_Pkg::AggregatePackets::inPacket5 */ PT5_TrainRunningNumber_Packet_TrainTypes_Pkg *inPacket5,
+  /* ProvidePositionReport_Pkg::AggregatePackets::outPackets */ outPackets_T_Common_Types_Pkg *outPackets);
 
 #endif /* _AggregatePackets_ProvidePositionReport_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** AggregatePackets_ProvidePositionReport_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

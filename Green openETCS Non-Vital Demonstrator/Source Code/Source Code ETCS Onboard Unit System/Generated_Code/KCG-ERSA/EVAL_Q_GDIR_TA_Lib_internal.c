@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,17 @@
 
 /* TA_Lib_internal::EVAL_Q_GDIR */
 G_internal_Type_Obu_BasicTypes_Pkg EVAL_Q_GDIR_TA_Lib_internal(
-  /* TA_Lib_internal::EVAL_Q_GDIR::q_gdir */Q_GDIR q_gdir,
-  /* TA_Lib_internal::EVAL_Q_GDIR::g_a */G_A g_a)
+  /* TA_Lib_internal::EVAL_Q_GDIR::q_gdir */ Q_GDIR q_gdir,
+  /* TA_Lib_internal::EVAL_Q_GDIR::g_a */ G_A g_a)
 {
-  static kcg_int tmp;
-  /* TA_Lib_internal::EVAL_Q_GDIR::gradient */
-  static G_internal_Type_Obu_BasicTypes_Pkg gradient;
+  /* TA_Lib_internal::EVAL_Q_GDIR */ kcg_int tmp;
+  /* TA_Lib_internal::EVAL_Q_GDIR::gradient */ G_internal_Type_Obu_BasicTypes_Pkg gradient;
   
-  if (g_a == 255) {
+  /* 2 */ if (g_a == 255) {
     gradient = 255;
   }
   else {
-    if (ENUM_Q_GDIR_uphill_TM_conversions == q_gdir) {
+    /* 1 */ if (ENUM_Q_GDIR_uphill_TM_conversions == q_gdir) {
       tmp = 1;
     }
     else {
@@ -31,8 +30,8 @@ G_internal_Type_Obu_BasicTypes_Pkg EVAL_Q_GDIR_TA_Lib_internal(
   return gradient;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** EVAL_Q_GDIR_TA_Lib_internal.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

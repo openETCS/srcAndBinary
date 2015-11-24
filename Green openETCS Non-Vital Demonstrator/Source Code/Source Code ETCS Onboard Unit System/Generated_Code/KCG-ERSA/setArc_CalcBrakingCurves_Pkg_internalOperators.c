@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* CalcBrakingCurves_Pkg::internalOperators::setArc */
 void setArc_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::Arc */ParabolaArc_T_CalcBrakingCurves_types *Arc,
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::oldBC */ParabolaCurve_T_CalcBrakingCurves_types *oldBC,
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::index */kcg_int index,
-  /* CalcBrakingCurves_Pkg::internalOperators::setArc::newBC */ParabolaCurve_T_CalcBrakingCurves_types *newBC)
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::Arc */ ParabolaArc_T_CalcBrakingCurves_types *Arc,
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::oldBC */ ParabolaCurve_T_CalcBrakingCurves_types *oldBC,
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::index */ kcg_int index,
+  /* CalcBrakingCurves_Pkg::internalOperators::setArc::newBC */ ParabolaCurve_T_CalcBrakingCurves_types *newBC)
 {
   kcg_copy_ParabolaCurveDistances_T_CalcBrakingCurves_types(
     &(*newBC).distances,
@@ -40,8 +40,8 @@ void setArc_CalcBrakingCurves_Pkg_internalOperators(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** setArc_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

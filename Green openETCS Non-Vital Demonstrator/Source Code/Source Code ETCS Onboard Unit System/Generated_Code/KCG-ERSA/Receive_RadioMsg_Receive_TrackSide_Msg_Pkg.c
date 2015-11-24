@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,8 +9,8 @@
 
 /* Receive_TrackSide_Msg_Pkg::Receive_RadioMsg */
 void Receive_RadioMsg_Receive_TrackSide_Msg_Pkg(
-  /* Receive_TrackSide_Msg_Pkg::Receive_RadioMsg::API_TrackSide_Msg */API_TrackSideInput_T_API_Msg_Pkg *API_TrackSide_Msg,
-  /* Receive_TrackSide_Msg_Pkg::Receive_RadioMsg::outTrackMessage_for_check */TrackSide_ForCheck_T_Common_Types_Pkg *outTrackMessage_for_check)
+  /* Receive_TrackSide_Msg_Pkg::Receive_RadioMsg::API_TrackSide_Msg */ API_TrackSideInput_T_API_Msg_Pkg *API_TrackSide_Msg,
+  /* Receive_TrackSide_Msg_Pkg::Receive_RadioMsg::outTrackMessage_for_check */ TrackSide_ForCheck_T_Common_Types_Pkg *outTrackMessage_for_check)
 {
   (*outTrackMessage_for_check).valid = (*API_TrackSide_Msg).valid;
   (*outTrackMessage_for_check).systemTime =
@@ -37,8 +37,8 @@ void Receive_RadioMsg_Receive_TrackSide_Msg_Pkg(
     &(*API_TrackSide_Msg).rtm_msg.sendingRBC_Id);
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Receive_RadioMsg_Receive_TrackSide_Msg_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

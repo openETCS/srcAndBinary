@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,26 +9,23 @@
 
 /* TA_Lib_internal::Eval_LRBG */
 void Eval_LRBG_TA_Lib_internal(
-  /* TA_Lib_internal::Eval_LRBG::MessageIn */ReceivedMessage_T_Common_Types_Pkg *MessageIn,
-  /* TA_Lib_internal::Eval_LRBG::valid */kcg_bool *valid,
-  /* TA_Lib_internal::Eval_LRBG::C */kcg_int *C,
-  /* TA_Lib_internal::Eval_LRBG::BG */kcg_int *BG)
+  /* TA_Lib_internal::Eval_LRBG::MessageIn */ ReceivedMessage_T_Common_Types_Pkg *MessageIn,
+  /* TA_Lib_internal::Eval_LRBG::valid */ kcg_bool *valid,
+  /* TA_Lib_internal::Eval_LRBG::C */ kcg_int *C,
+  /* TA_Lib_internal::Eval_LRBG::BG */ kcg_int *BG)
 {
-  /* TA_Lib_internal::Eval_LRBG::IfBlock1::else */
-  static kcg_bool else_clock_IfBlock1;
-  /* TA_Lib_internal::Eval_LRBG::IfBlock1 */
-  static kcg_bool IfBlock1_clock;
+  /* TA_Lib_internal::Eval_LRBG::IfBlock1::else */ kcg_bool else_clock_IfBlock1;
+  /* TA_Lib_internal::Eval_LRBG::IfBlock1 */ kcg_bool IfBlock1_clock;
   
-  *valid = (*MessageIn).valid;
   IfBlock1_clock = (*MessageIn).source == ENUM_MsgSource_Balise_TA_Lib_internal;
-  if (IfBlock1_clock) {
-    *C = 0;
+  /* ck_IfBlock1 */ if (IfBlock1_clock) {
+    *C = (*MessageIn).BG_Common_Header.nid_c;
     *BG = (*MessageIn).BG_Common_Header.nid_bg;
   }
   else {
     else_clock_IfBlock1 = (*MessageIn).source ==
       ENUM_MsgSource_Euroradio_TA_Lib_internal;
-    if (else_clock_IfBlock1) {
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
       /* 2 */
       DECODE_NID_LRBG_TM_conversions(
         (*MessageIn).Radio_Common_Header.nid_lrbg,
@@ -40,10 +37,11 @@ void Eval_LRBG_TA_Lib_internal(
       *BG = 0;
     }
   }
+  *valid = (*MessageIn).valid;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Eval_LRBG_TA_Lib_internal.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

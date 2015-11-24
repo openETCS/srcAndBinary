@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,15 +9,18 @@
 
 /* CheckEuroradioMessage::ContinuousTimeoutCheck */
 kcg_bool ContinuousTimeoutCheck_CheckEuroradioMessage(
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::systemTime */T_internal_Type_Obu_BasicTypes_Pkg systemTime,
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContact */T_NVCONTACT tNvContact,
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::lastRelevantEventTimestamp */T_internal_Type_Obu_BasicTypes_Pkg lastRelevantEventTimestamp,
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::activateCheck */kcg_bool activateCheck)
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::systemTime */ T_internal_Type_Obu_BasicTypes_Pkg systemTime,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContact */ T_NVCONTACT tNvContact,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::lastRelevantEventTimestamp */ T_internal_Type_Obu_BasicTypes_Pkg lastRelevantEventTimestamp,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::activateCheck */ kcg_bool activateCheck,
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::radioStatus */ morcStatus_T_RCM_Session_Types_Pkg *radioStatus)
 {
-  /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContactError */
-  static kcg_bool tNvContactError;
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::doCheck */ kcg_bool doCheck;
+  /* CheckEuroradioMessage::ContinuousTimeoutCheck::tNvContactError */ kcg_bool tNvContactError;
   
-  if (activateCheck) {
+  doCheck = ((*radioStatus).session.phase ==
+      sp_maintaining_RCM_Session_Types_Pkg) & activateCheck;
+  /* ck_doCheck */ if (doCheck) {
     tNvContactError = systemTime - lastRelevantEventTimestamp > tNvContact *
       1000;
   }
@@ -27,8 +30,8 @@ kcg_bool ContinuousTimeoutCheck_CheckEuroradioMessage(
   return tNvContactError;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** ContinuousTimeoutCheck_CheckEuroradioMessage.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

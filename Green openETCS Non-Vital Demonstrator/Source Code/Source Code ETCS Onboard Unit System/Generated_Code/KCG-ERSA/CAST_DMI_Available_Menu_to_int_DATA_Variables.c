@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* DATA::Variables::CAST_DMI_Available_Menu_to_int */
 DMI_Available_Menu_INT_T_DATA CAST_DMI_Available_Menu_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_DMI_Available_Menu_to_int::dmi_available_menu_ct */DMI_Available_Menu_T_DMI_Types_Pkg *dmi_available_menu_ct)
+  /* DATA::Variables::CAST_DMI_Available_Menu_to_int::dmi_available_menu_ct */ DMI_Available_Menu_T_DMI_Types_Pkg *dmi_available_menu_ct)
 {
-  static array_bool_30 tmp;
-  /* DATA::Variables::CAST_DMI_Available_Menu_to_int::dmi_available_menu_int */
-  static DMI_Available_Menu_INT_T_DATA dmi_available_menu_int;
+  /* DATA::Variables::CAST_DMI_Available_Menu_to_int */ DMI_Available_Menu_int_T_DATA tmp;
+  /* DATA::Variables::CAST_DMI_Available_Menu_to_int::dmi_available_menu_int */ DMI_Available_Menu_INT_T_DATA dmi_available_menu_int;
   
   tmp[0] = (*dmi_available_menu_ct).Menu_button_start_of_mission;
   tmp[1] = (*dmi_available_menu_ct).Menu_button_shunting;
@@ -49,8 +48,8 @@ DMI_Available_Menu_INT_T_DATA CAST_DMI_Available_Menu_to_int_DATA_Variables(
   return dmi_available_menu_int;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_Available_Menu_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,12 +9,12 @@
 
 /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition */
 void setCoordinateSystemPosition_Receive_TrackSide_Msg_Pkg(
-  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::inOldPosition */centerOfBalisePosition_T_BG_Types_Pkg *inOldPosition,
-  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::newTelegram */Telegram_T_BG_Types_Pkg *newTelegram,
-  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::incenterOfBalisePosition */centerOfBalisePosition_T_BG_Types_Pkg *incenterOfBalisePosition,
-  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::outUpdateBGPosition */centerOfBalisePosition_T_BG_Types_Pkg *outUpdateBGPosition)
+  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::inOldPosition */ centerOfBalisePosition_T_BG_Types_Pkg *inOldPosition,
+  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::newTelegram */ Telegram_T_BG_Types_Pkg *newTelegram,
+  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::incenterOfBalisePosition */ centerOfBalisePosition_T_BG_Types_Pkg *incenterOfBalisePosition,
+  /* Receive_TrackSide_Msg_Pkg::setCoordinateSystemPosition::outUpdateBGPosition */ centerOfBalisePosition_T_BG_Types_Pkg *outUpdateBGPosition)
 {
-  if ((((*newTelegram).telegramheader.m_dup != M_DUP_No_duplicates) &
+  /* 1 */ if ((((*newTelegram).telegramheader.m_dup != M_DUP_No_duplicates) &
       (N_PIG_I_am_the_2nd == (*newTelegram).telegramheader.n_pig) &
       !(*inOldPosition).odometerOfBaliseDetection.valid) |
     ((*newTelegram).telegramheader.n_pig == N_PIG_I_am_the_1st)) {
@@ -29,8 +29,8 @@ void setCoordinateSystemPosition_Receive_TrackSide_Msg_Pkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** setCoordinateSystemPosition_Receive_TrackSide_Msg_Pkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,18 +9,17 @@
 
 /* DATA::Variables::CAST_DMI_m_icon_flashing_freq_to_int */
 DMI_m_icon_flashing_freq_INT_T_DATA CAST_DMI_m_icon_flashing_freq_to_int_DATA_Variables(
-  /* DATA::Variables::CAST_DMI_m_icon_flashing_freq_to_int::dmi_m_icon_flashing_freq_ct */kcg_real dmi_m_icon_flashing_freq_ct)
+  /* DATA::Variables::CAST_DMI_m_icon_flashing_freq_to_int::dmi_m_icon_flashing_freq_ct */ kcg_real dmi_m_icon_flashing_freq_ct)
 {
-  /* DATA::Variables::CAST_DMI_m_icon_flashing_freq_to_int::dmi_m_icon_flashing_freq_int */
-  static DMI_m_icon_flashing_freq_INT_T_DATA dmi_m_icon_flashing_freq_int;
+  /* DATA::Variables::CAST_DMI_m_icon_flashing_freq_to_int::dmi_m_icon_flashing_freq_int */ DMI_m_icon_flashing_freq_INT_T_DATA dmi_m_icon_flashing_freq_int;
   
   dmi_m_icon_flashing_freq_int = /* 1 */
     Real_to_Int_Utilities(dmi_m_icon_flashing_freq_ct, 0.1, 1.0, 22, 0);
   return dmi_m_icon_flashing_freq_int;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_m_icon_flashing_freq_to_int_DATA_Variables.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

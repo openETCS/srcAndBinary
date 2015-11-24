@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,9 @@
 
 /* CheckBGConsistency_Pkg::SubFunction::N_PIG2int */
 kcg_int N_PIG2int_CheckBGConsistency_Pkg_SubFunction(
-  /* CheckBGConsistency_Pkg::SubFunction::N_PIG2int::n_pig */N_PIG n_pig)
+  /* CheckBGConsistency_Pkg::SubFunction::N_PIG2int::n_pig */ N_PIG n_pig)
 {
-  /* CheckBGConsistency_Pkg::SubFunction::N_PIG2int::n_pig2int */
-  static kcg_int n_pig2int;
+  /* CheckBGConsistency_Pkg::SubFunction::N_PIG2int::n_pig2int */ kcg_int n_pig2int;
   
   switch (n_pig) {
     case N_PIG_I_am_the_1st :
@@ -44,8 +43,8 @@ kcg_int N_PIG2int_CheckBGConsistency_Pkg_SubFunction(
   return n_pig2int;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** N_PIG2int_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

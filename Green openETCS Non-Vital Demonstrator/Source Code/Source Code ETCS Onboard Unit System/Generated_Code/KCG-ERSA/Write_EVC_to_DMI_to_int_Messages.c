@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,10 +9,10 @@
 
 /* Messages::Write_EVC_to_DMI_to_int */
 void Write_EVC_to_DMI_to_int_Messages(
-  /* Messages::Write_EVC_to_DMI_to_int::evc_to_dmi_ct */EVC_to_DMI_Message_T_API_DMI_Pkg *evc_to_dmi_ct,
-  /* Messages::Write_EVC_to_DMI_to_int::evc_to_dmi_int */EVC_to_DMI_Message_int_T_API_DMI_Pkg *evc_to_dmi_int)
+  /* Messages::Write_EVC_to_DMI_to_int::evc_to_dmi_ct */ EVC_to_DMI_Message_T_API_DMI_Pkg *evc_to_dmi_ct,
+  /* Messages::Write_EVC_to_DMI_to_int::evc_to_dmi_int */ EVC_to_DMI_Message_int_T_API_DMI_Pkg *evc_to_dmi_int)
 {
-  if ((*evc_to_dmi_ct).present) {
+  /* ck__L3 */ if ((*evc_to_dmi_ct).present) {
     /* 1 */ CAST_EVC_to_DMI_to_int_Messages(evc_to_dmi_ct, evc_to_dmi_int);
   }
   else {
@@ -22,8 +22,8 @@ void Write_EVC_to_DMI_to_int_Messages(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_EVC_to_DMI_to_int_Messages.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

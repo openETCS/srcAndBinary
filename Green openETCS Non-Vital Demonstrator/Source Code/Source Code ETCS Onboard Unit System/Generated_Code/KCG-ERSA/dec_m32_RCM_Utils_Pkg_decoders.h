@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:54
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _dec_m32_RCM_Utils_Pkg_decoders_H_
 #define _dec_m32_RCM_Utils_Pkg_decoders_H_
@@ -9,16 +9,18 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* RCM_Utils_Pkg::decoders::dec_m32 */
 extern void dec_m32_RCM_Utils_Pkg_decoders(
-  /* RCM_Utils_Pkg::decoders::dec_m32::msg_in */msgFromTrack_T_RCM_MsgTypes_Pkg *msg_in,
-  /* RCM_Utils_Pkg::decoders::dec_m32::systemVersionFromTracksideSupported */kcg_bool systemVersionFromTracksideSupported,
-  /* RCM_Utils_Pkg::decoders::dec_m32::m32_RBC_or_RIU_System_Version */m32_RBC_RIU_SystemVersion_T_RCM_MsgTypes_Pkg *m32_RBC_or_RIU_System_Version);
+  /* RCM_Utils_Pkg::decoders::dec_m32::msg_in */ msgFromTrack_T_RCM_MsgTypes_Pkg *msg_in,
+  /* RCM_Utils_Pkg::decoders::dec_m32::systemVersionFromTracksideSupported */ kcg_bool systemVersionFromTracksideSupported,
+  /* RCM_Utils_Pkg::decoders::dec_m32::m32_RBC_or_RIU_System_Version */ m32_RBC_RIU_SystemVersion_T_RCM_MsgTypes_Pkg *m32_RBC_or_RIU_System_Version);
 
 #endif /* _dec_m32_RCM_Utils_Pkg_decoders_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** dec_m32_RCM_Utils_Pkg_decoders.h
-** Generation date: 2015-11-09T13:58:54
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

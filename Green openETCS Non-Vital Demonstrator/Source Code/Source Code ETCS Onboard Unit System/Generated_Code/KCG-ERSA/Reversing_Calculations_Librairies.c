@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,13 +9,13 @@
 
 /* Librairies::Reversing_Calculations */
 void Reversing_Calculations_Librairies(
-  /* Librairies::Reversing_Calculations::Reversing_Data */T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
-  /* Librairies::Reversing_Calculations::Train_Position */trainPosition_T_TrainPosition_Types_Pck *Train_Position,
-  /* Librairies::Reversing_Calculations::Max_Safe_Front_In_Reverse_Area */kcg_bool *Max_Safe_Front_In_Reverse_Area,
-  /* Librairies::Reversing_Calculations::RV_Data_Available */kcg_bool *RV_Data_Available)
+  /* Librairies::Reversing_Calculations::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data,
+  /* Librairies::Reversing_Calculations::Train_Position */ trainPosition_T_TrainPosition_Types_Pck *Train_Position,
+  /* Librairies::Reversing_Calculations::Max_Safe_Front_In_Reverse_Area */ kcg_bool *Max_Safe_Front_In_Reverse_Area,
+  /* Librairies::Reversing_Calculations::RV_Data_Available */ kcg_bool *RV_Data_Available)
 {
   *RV_Data_Available = (*Reversing_Data).Available;
-  if (*RV_Data_Available & (*Train_Position).valid) {
+  /* 1 */ if (*RV_Data_Available & (*Train_Position).valid) {
     *Max_Safe_Front_In_Reverse_Area = /* 1 */
       Position_In_Area_Librairies(
         (*Train_Position).maxSafeFrontEndPostion,
@@ -27,8 +27,8 @@ void Reversing_Calculations_Librairies(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** Reversing_Calculations_Librairies.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

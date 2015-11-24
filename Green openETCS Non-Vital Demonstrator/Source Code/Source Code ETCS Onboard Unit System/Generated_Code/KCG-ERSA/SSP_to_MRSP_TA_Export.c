@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:56
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,13 @@
 
 /* TA_Export::SSP_to_MRSP */
 void SSP_to_MRSP_TA_Export(
-  /* TA_Export::SSP_to_MRSP::i */kcg_int i,
-  /* TA_Export::SSP_to_MRSP::MRSP_init */MRSP_Profile_t_TrackAtlasTypes *MRSP_init,
-  /* TA_Export::SSP_to_MRSP::SSP */StaticSpeedProfile_t_TrackAtlasTypes *SSP,
-  /* TA_Export::SSP_to_MRSP::cont */kcg_bool *cont,
-  /* TA_Export::SSP_to_MRSP::MRSP */MRSP_Profile_t_TrackAtlasTypes *MRSP)
+  /* TA_Export::SSP_to_MRSP::i */ kcg_int i,
+  /* TA_Export::SSP_to_MRSP::MRSP_init */ MRSP_Profile_t_TrackAtlasTypes *MRSP_init,
+  /* TA_Export::SSP_to_MRSP::SSP */ StaticSpeedProfile_t_TrackAtlasTypes *SSP,
+  /* TA_Export::SSP_to_MRSP::cont */ kcg_bool *cont,
+  /* TA_Export::SSP_to_MRSP::MRSP */ MRSP_Profile_t_TrackAtlasTypes *MRSP)
 {
-  /* TA_Export::SSP_to_MRSP::_L7 */
-  static StaticSpeedSection_t_TrackAtlasTypes _L7;
+  /* TA_Export::SSP_to_MRSP::_L7 */ StaticSpeedSection_t_TrackAtlasTypes _L7;
   
   if ((0 <= i) & (i < 50)) {
     kcg_copy_StaticSpeedSection_t_TrackAtlasTypes(&_L7, &(*SSP)[i]);
@@ -29,7 +28,7 @@ void SSP_to_MRSP_TA_Export(
   }
   *cont = _L7.valid;
   kcg_copy_MRSP_Profile_t_TrackAtlasTypes(MRSP, MRSP_init);
-  if ((0 <= i) & (i < 200)) {
+  if ((0 <= i) & (i < 110)) {
     (*MRSP)[i].valid = *cont;
     (*MRSP)[i].Loc_Abs = _L7.d_static_abs;
     (*MRSP)[i].Loc_LRBG = _L7.d_static_LRBG;
@@ -37,8 +36,8 @@ void SSP_to_MRSP_TA_Export(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_to_MRSP_TA_Export.c
-** Generation date: 2015-11-09T13:58:56
+** Generation date: 2015-11-24T10:24:42
 *************************************************************$ */
 

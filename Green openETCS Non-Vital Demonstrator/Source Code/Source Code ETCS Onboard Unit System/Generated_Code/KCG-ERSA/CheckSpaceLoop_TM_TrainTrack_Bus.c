@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,14 +9,14 @@
 
 /* TM_TrainTrack_Bus::CheckSpaceLoop */
 void CheckSpaceLoop_TM_TrainTrack_Bus(
-  /* TM_TrainTrack_Bus::CheckSpaceLoop::i */kcg_int i,
-  /* TM_TrainTrack_Bus::CheckSpaceLoop::Acc */kcg_int Acc,
-  /* TM_TrainTrack_Bus::CheckSpaceLoop::Message */M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *Message,
-  /* TM_TrainTrack_Bus::CheckSpaceLoop::cont */kcg_bool *cont,
-  /* TM_TrainTrack_Bus::CheckSpaceLoop::Count */kcg_int *Count)
+  /* TM_TrainTrack_Bus::CheckSpaceLoop::i */ kcg_int i,
+  /* TM_TrainTrack_Bus::CheckSpaceLoop::Acc */ kcg_int Acc,
+  /* TM_TrainTrack_Bus::CheckSpaceLoop::Message */ M_TrainTrackMessageBus_t_TM_TrainTrack_Bus *Message,
+  /* TM_TrainTrack_Bus::CheckSpaceLoop::cont */ kcg_bool *cont,
+  /* TM_TrainTrack_Bus::CheckSpaceLoop::Count */ kcg_int *Count)
 {
-  static kcg_int tmp1;
-  static M_TrainTrack_Message_T_TM_radio_messages tmp;
+  /* TM_TrainTrack_Bus::CheckSpaceLoop */ kcg_int tmp1;
+  /* TM_TrainTrack_Bus::CheckSpaceLoop */ M_TrainTrack_Message_T_TM_radio_messages tmp;
   
   *cont = kcg_true;
   if ((0 <= i) & (i < 5)) {
@@ -28,7 +28,7 @@ void CheckSpaceLoop_TM_TrainTrack_Bus(
       (M_TrainTrack_Message_T_TM_radio_messages *)
         &DEFAULT_TrainToTrackMessage_TM_radio_messages);
   }
-  if (tmp.Message.valid) {
+  /* 1 */ if (tmp.Message.valid) {
     tmp1 = 1;
   }
   else {
@@ -37,8 +37,8 @@ void CheckSpaceLoop_TM_TrainTrack_Bus(
   *Count = tmp1 + Acc;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckSpaceLoop_TM_TrainTrack_Bus.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

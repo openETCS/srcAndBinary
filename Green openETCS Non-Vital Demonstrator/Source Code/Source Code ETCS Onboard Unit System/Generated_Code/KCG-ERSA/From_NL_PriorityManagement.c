@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,26 +9,24 @@
 
 /* PriorityManagement::From_NL */
 T_Mode_Level_And_Mode_Types_Pkg From_NL_PriorityManagement(
-  /* PriorityManagement::From_NL::Condition1 */kcg_bool Condition1,
-  /* PriorityManagement::From_NL::Condition28 */kcg_bool Condition28,
-  /* PriorityManagement::From_NL::Condition29 */kcg_bool Condition29,
-  /* PriorityManagement::From_NL::Condition47 */kcg_bool Condition47,
-  /* PriorityManagement::From_NL::previousMode_Loc */T_Mode_Level_And_Mode_Types_Pkg previousMode_Loc)
+  /* PriorityManagement::From_NL::Condition1 */ kcg_bool Condition1,
+  /* PriorityManagement::From_NL::Condition28 */ kcg_bool Condition28,
+  /* PriorityManagement::From_NL::Condition29 */ kcg_bool Condition29,
+  /* PriorityManagement::From_NL::Condition47 */ kcg_bool Condition47,
+  /* PriorityManagement::From_NL::previousMode_Loc */ T_Mode_Level_And_Mode_Types_Pkg previousMode_Loc)
 {
-  /* PriorityManagement::From_NL::IfBlock1::else::else */
-  static kcg_bool else_clock_IfBlock1;
-  /* PriorityManagement::From_NL::FromNL_To_NewMode */
-  static T_Mode_Level_And_Mode_Types_Pkg FromNL_To_NewMode;
+  /* PriorityManagement::From_NL::IfBlock1::else::else */ kcg_bool else_clock_IfBlock1;
+  /* PriorityManagement::From_NL::FromNL_To_NewMode */ T_Mode_Level_And_Mode_Types_Pkg FromNL_To_NewMode;
   
-  if (Condition1) {
+  /* ck_Condition1 */ if (Condition1) {
     FromNL_To_NewMode = IS_Level_And_Mode_Types_Pkg;
   }
-  else if (Condition29) {
+  else /* ck_anon_activ */ if (Condition29) {
     FromNL_To_NewMode = NP_Level_And_Mode_Types_Pkg;
   }
   else {
     else_clock_IfBlock1 = Condition28 | Condition47;
-    if (else_clock_IfBlock1) {
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
       FromNL_To_NewMode = SB_Level_And_Mode_Types_Pkg;
     }
     else {
@@ -38,8 +36,8 @@ T_Mode_Level_And_Mode_Types_Pkg From_NL_PriorityManagement(
   return FromNL_To_NewMode;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** From_NL_PriorityManagement.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

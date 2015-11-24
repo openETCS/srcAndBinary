@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,11 +9,10 @@
 
 /* InputManagement::scaledDistance_2_distance */
 L_internal_Type_Obu_BasicTypes_Pkg scaledDistance_2_distance_InputManagement(
-  /* InputManagement::scaledDistance_2_distance::q_scale */Q_SCALE q_scale,
-  /* InputManagement::scaledDistance_2_distance::d_in */kcg_int d_in)
+  /* InputManagement::scaledDistance_2_distance::q_scale */ Q_SCALE q_scale,
+  /* InputManagement::scaledDistance_2_distance::d_in */ kcg_int d_in)
 {
-  /* InputManagement::scaledDistance_2_distance::distance */
-  static L_internal_Type_Obu_BasicTypes_Pkg distance;
+  /* InputManagement::scaledDistance_2_distance::distance */ L_internal_Type_Obu_BasicTypes_Pkg distance;
   
   switch (q_scale) {
     case Q_SCALE_10_cm_scale :
@@ -30,8 +29,8 @@ L_internal_Type_Obu_BasicTypes_Pkg scaledDistance_2_distance_InputManagement(
   return distance;
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** scaledDistance_2_distance_InputManagement.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

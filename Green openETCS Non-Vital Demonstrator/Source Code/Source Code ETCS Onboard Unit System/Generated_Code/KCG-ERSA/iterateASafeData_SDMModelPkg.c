@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:55
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,21 +9,20 @@
 
 /* SDMModelPkg::iterateASafeData */
 void iterateASafeData_SDMModelPkg(
-  /* SDMModelPkg::iterateASafeData::ASafeRows */ASafeRow_T_CalcBrakingCurves_types *ASafeRows,
-  /* SDMModelPkg::iterateASafeData::AGradient */A_gradient_t_SDM_GradientAcceleration_types *AGradient,
-  /* SDMModelPkg::iterateASafeData::ASafeRows_graded */ASafeRow_T_CalcBrakingCurves_types *ASafeRows_graded)
+  /* SDMModelPkg::iterateASafeData::ASafeRows */ ASafeRow_T_CalcBrakingCurves_types *ASafeRows,
+  /* SDMModelPkg::iterateASafeData::AGradient */ A_gradient_t_SDM_GradientAcceleration_types *AGradient,
+  /* SDMModelPkg::iterateASafeData::ASafeRows_graded */ ASafeRow_T_CalcBrakingCurves_types *ASafeRows_graded)
 {
-  static kcg_real tmp;
-  static kcg_int i;
-  /* SDMModelPkg::iterateASafeData::_L5 */
-  static A_internal_real_Type_SDM_Types_Pkg _L5;
+  /* SDMModelPkg::iterateASafeData */ kcg_real acc;
+  kcg_int i;
+  /* SDMModelPkg::iterateASafeData::_L5 */ A_internal_real_Type_SDM_Types_Pkg _L5;
   
   _L5 = 0.0;
-  for (i = 0; i < 100; i++) {
-    tmp = _L5;
+  /* 1 */ for (i = 0; i < 100; i++) {
+    acc = _L5;
     /* 1 */
     iterateASafeRow_SDMModelPkg(
-      tmp,
+      acc,
       (*ASafeRows)[i],
       &(*AGradient)[i],
       &_L5,
@@ -31,8 +30,8 @@ void iterateASafeData_SDMModelPkg(
   }
 }
 
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** iterateASafeData_SDMModelPkg.c
-** Generation date: 2015-11-09T13:58:55
+** Generation date: 2015-11-24T10:24:41
 *************************************************************$ */
 

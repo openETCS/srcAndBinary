@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _BCFoldOperatorBackward_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _BCFoldOperatorBackward_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -11,19 +11,21 @@
 
 /* =====================  no input structure  ====================== */
 
+/* =====================  no output structure  ====================== */
+
 
 /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward */
 extern void BCFoldOperatorBackward_CalcBrakingCurves_Pkg_internalOperators(
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::Index */kcg_int Index,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::BC_acc */BCAccumulator_type_CalcBrakingCurves_Pkg *BC_acc,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::Asafe */ASafe_T_CalcBrakingCurves_types *Asafe,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::d_est_front */L_internal_real_Type_SDM_Types_Pkg d_est_front,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::exitCond */kcg_bool *exitCond,
-  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::BC */BCAccumulator_type_CalcBrakingCurves_Pkg *BC);
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::Index */ kcg_int Index,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::BC_acc */ BCAccumulator_type_CalcBrakingCurves_Pkg *BC_acc,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::Asafe */ ASafe_T_CalcBrakingCurves_types *Asafe,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::d_est_front */ L_internal_real_Type_SDM_Types_Pkg d_est_front,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::exitCond */ kcg_bool *exitCond,
+  /* CalcBrakingCurves_Pkg::internalOperators::BCFoldOperatorBackward::BC */ BCAccumulator_type_CalcBrakingCurves_Pkg *BC);
 
 #endif /* _BCFoldOperatorBackward_CalcBrakingCurves_Pkg_internalOperators_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** BCFoldOperatorBackward_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
-/* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/EVC_IP_DMI/KCG_ERSA\kcg_s2c_config.txt
-** Generation date: 2015-11-09T13:58:53
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 #ifndef _CalcBrakeCmd_SDM_Commands_Pkg_H_
 #define _CalcBrakeCmd_SDM_Commands_Pkg_H_
@@ -8,6 +8,8 @@
 #include "kcg_types.h"
 
 /* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
 
 /* ========================  context type  ========================= */
 typedef struct {
@@ -26,18 +28,25 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* SDM_Commands_Pkg::CalcBrakeCmd */
 extern void CalcBrakeCmd_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::CalcBrakeCmd::in_sdmCmd */SDM_Commands_T_SDM_Types_Pkg *in_sdmCmd,
-  /* SDM_Commands_Pkg::CalcBrakeCmd::speeds */Speeds_T_SDM_Types_Pkg *speeds,
-  /* SDM_Commands_Pkg::CalcBrakeCmd::NationalValues */P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
-  /* SDM_Commands_Pkg::CalcBrakeCmd::TrainData_int */trainData_internal_t_SDM_Types_Pkg *TrainData_int,
+  /* SDM_Commands_Pkg::CalcBrakeCmd::in_sdmCmd */ SDM_Commands_T_SDM_Types_Pkg *in_sdmCmd,
+  /* SDM_Commands_Pkg::CalcBrakeCmd::speeds */ Speeds_T_SDM_Types_Pkg *speeds,
+  /* SDM_Commands_Pkg::CalcBrakeCmd::NationalValues */ P3_NationalValues_T_Packet_Types_Pkg *NationalValues,
+  /* SDM_Commands_Pkg::CalcBrakeCmd::TrainData_int */ trainData_internal_t_SDM_Types_Pkg *TrainData_int,
   outC_CalcBrakeCmd_SDM_Commands_Pkg *outC);
 
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
 extern void CalcBrakeCmd_reset_SDM_Commands_Pkg(
   outC_CalcBrakeCmd_SDM_Commands_Pkg *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+#ifndef KCG_USER_DEFINED_INIT
+extern void CalcBrakeCmd_init_SDM_Commands_Pkg(
+  outC_CalcBrakeCmd_SDM_Commands_Pkg *outC);
+#endif /* KCG_USER_DEFINED_INIT */
 
 #endif /* _CalcBrakeCmd_SDM_Commands_Pkg_H_ */
-/* $*************** KCG Version 6.1.3 (build i6) ****************
+/* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcBrakeCmd_SDM_Commands_Pkg.h
-** Generation date: 2015-11-09T13:58:53
+** Generation date: 2015-11-24T10:24:40
 *************************************************************$ */
 
