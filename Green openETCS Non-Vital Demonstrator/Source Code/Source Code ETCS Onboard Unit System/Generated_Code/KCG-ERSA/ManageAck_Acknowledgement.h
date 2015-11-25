@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _ManageAck_Acknowledgement_H_
 #define _ManageAck_Acknowledgement_H_
@@ -49,6 +49,6 @@ extern void ManageAck_init_Acknowledgement(
 #endif /* _ManageAck_Acknowledgement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageAck_Acknowledgement.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

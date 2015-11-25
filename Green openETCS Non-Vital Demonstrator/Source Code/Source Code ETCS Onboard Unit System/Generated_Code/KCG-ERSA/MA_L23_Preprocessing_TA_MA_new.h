@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _MA_L23_Preprocessing_TA_MA_new_H_
 #define _MA_L23_Preprocessing_TA_MA_new_H_
@@ -25,6 +25,6 @@ extern void MA_L23_Preprocessing_TA_MA_new(
 #endif /* _MA_L23_Preprocessing_TA_MA_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MA_L23_Preprocessing_TA_MA_new.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

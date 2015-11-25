@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,6 +19,6 @@ void Move_DP_or_OL_new_TA_Lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Move_DP_or_OL_new_TA_Lib_internal.c
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

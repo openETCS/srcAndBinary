@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _ProceedOnLevelChange_LevelChangement_H_
 #define _ProceedOnLevelChange_LevelChangement_H_
@@ -27,6 +27,6 @@ extern void ProceedOnLevelChange_LevelChangement(
 #endif /* _ProceedOnLevelChange_LevelChangement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProceedOnLevelChange_LevelChangement.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

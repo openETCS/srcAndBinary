@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
 #define _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
@@ -56,6 +56,6 @@ extern void linkedBG_missed_init_CalculateTrainPosition_Pkg_Linking_Pkg(
 #endif /* _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

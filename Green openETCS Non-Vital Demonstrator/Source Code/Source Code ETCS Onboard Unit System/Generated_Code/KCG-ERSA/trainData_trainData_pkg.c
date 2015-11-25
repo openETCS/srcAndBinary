@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -125,31 +125,31 @@ void trainData_trainData_pkg(
   else {
     kcg_copy_trainDataStatus_T_trainData_Types_pkg(&statusAfterCheck, &_L45);
   }
+  /* ck__L21 */ if (statusAfterCheck.validatedbyRBC) {
+    /* 1 */
+    checkAcknowledgmentGeneral_trainData_pkg(
+      trackMessages,
+      &ackRequested,
+      &tmp);
+  }
+  else {
+    ackRequested = kcg_false;
+    tmp = kcg_false;
+  }
   /* ck__L46 */ if (_L45.waitingForRBCResponse) {
     /* 1 */
     checkRadioMessages_trainData_pkg(
       trackMessages,
       &statusAfterCheck,
       &IfBlock1_clock,
-      &tmp);
-  }
-  else {
-    IfBlock1_clock = kcg_false;
-    tmp = kcg_false;
-  }
-  /* ck__L21 */ if (statusAfterCheck.validatedbyRBC) {
-    /* 1 */
-    checkAcknowledgmentGeneral_trainData_pkg(
-      trackMessages,
-      &ackRequested,
       &else_clock_IfBlock1);
   }
   else {
-    ackRequested = kcg_false;
+    IfBlock1_clock = kcg_false;
     else_clock_IfBlock1 = kcg_false;
   }
   ackReceived = IfBlock1_clock | ackRequested;
-  ackRequested = tmp | else_clock_IfBlock1;
+  ackRequested = else_clock_IfBlock1 | tmp;
   IfBlock1_clock = ackReceived & ackRequested;
   /* 1 */
   trainDataStorage_trainData_pkg(
@@ -232,6 +232,6 @@ void trainData_trainData_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trainData_trainData_pkg.c
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

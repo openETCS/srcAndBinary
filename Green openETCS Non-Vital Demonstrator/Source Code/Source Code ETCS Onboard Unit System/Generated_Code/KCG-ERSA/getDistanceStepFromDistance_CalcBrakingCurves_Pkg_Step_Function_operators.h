@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators_H_
 #define _getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators_H_
@@ -22,6 +22,6 @@ extern void getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_oper
 #endif /* _getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

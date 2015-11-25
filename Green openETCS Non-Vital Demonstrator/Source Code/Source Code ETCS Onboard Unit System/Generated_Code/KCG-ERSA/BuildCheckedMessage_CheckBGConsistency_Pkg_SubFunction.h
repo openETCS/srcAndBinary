@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction_H_
 #define _BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction_H_
@@ -23,6 +23,6 @@ extern void BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction(
 #endif /* _BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BuildCheckedMessage_CheckBGConsistency_Pkg_SubFunction.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

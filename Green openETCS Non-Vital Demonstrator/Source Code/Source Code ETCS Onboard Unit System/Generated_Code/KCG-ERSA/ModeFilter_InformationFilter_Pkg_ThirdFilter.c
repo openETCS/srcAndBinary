@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,6 +31,6 @@ kcg_bool ModeFilter_InformationFilter_Pkg_ThirdFilter(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ModeFilter_InformationFilter_Pkg_ThirdFilter.c
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

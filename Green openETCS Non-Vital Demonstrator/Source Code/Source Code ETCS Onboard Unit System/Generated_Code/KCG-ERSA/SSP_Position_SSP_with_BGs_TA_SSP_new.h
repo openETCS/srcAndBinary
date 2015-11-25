@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _SSP_Position_SSP_with_BGs_TA_SSP_new_H_
 #define _SSP_Position_SSP_with_BGs_TA_SSP_new_H_
@@ -31,6 +31,6 @@ extern void SSP_Position_SSP_with_BGs_TA_SSP_new(
 #endif /* _SSP_Position_SSP_with_BGs_TA_SSP_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Position_SSP_with_BGs_TA_SSP_new.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

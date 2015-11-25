@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _TransformA_realToA_int_SDM_Types_Pkg_H_
 #define _TransformA_realToA_int_SDM_Types_Pkg_H_
@@ -19,6 +19,6 @@ extern A_internal_Type_Obu_BasicTypes_Pkg TransformA_realToA_int_SDM_Types_Pkg(
 #endif /* _TransformA_realToA_int_SDM_Types_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TransformA_realToA_int_SDM_Types_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

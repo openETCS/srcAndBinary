@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _splitT_bs_TargetLimits_Pkg_H_
 #define _splitT_bs_TargetLimits_Pkg_H_
@@ -23,6 +23,6 @@ extern void splitT_bs_TargetLimits_Pkg(
 #endif /* _splitT_bs_TargetLimits_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** splitT_bs_TargetLimits_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

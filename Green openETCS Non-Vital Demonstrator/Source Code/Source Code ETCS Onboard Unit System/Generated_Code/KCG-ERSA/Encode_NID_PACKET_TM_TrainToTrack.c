@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,6 +30,6 @@ kcg_int Encode_NID_PACKET_TM_TrainToTrack(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Encode_NID_PACKET_TM_TrainToTrack.c
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

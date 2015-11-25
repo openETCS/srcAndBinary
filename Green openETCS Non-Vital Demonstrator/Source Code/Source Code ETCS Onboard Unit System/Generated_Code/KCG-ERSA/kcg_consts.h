@@ -1,11 +1,14 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
 
 #include "kcg_types.h"
+
+/* cInitRTMManagement */
+extern const RadioManagement_T_API_RadioCommunication_Pkg cInitRTMManagement;
 
 /* cEmptyChangeTractionSystem */
 extern const Change_traction_system_T_TIU_Types_Pkg cEmptyChangeTractionSystem;
@@ -658,9 +661,6 @@ extern const MetadataElement_T_Common_Types_Pkg cNoMetaDataElement_Common_Types_
 /* TM_conversions::ENUM_M_LOC_every_LRBG */
 #define ENUM_M_LOC_every_LRBG_TM_conversions M_LOC_Every_LRBG_compliant_balise_group
 
-/* TM::DIM_MaxElementsPacket058 */
-#define DIM_MaxElementsPacket058_TM (DIM_N_ITER_TM * 2 + 8)
-
 /* TM::DEFAULT_P058_OBU_section */
 extern const P058_section_enum_T_TM DEFAULT_P058_OBU_section_TM;
 
@@ -1207,9 +1207,6 @@ extern const StaticSpeedProfile_t_TrackAtlasTypes DEFAULT_StaticSpeedProfile_Tra
 /* TM_baseline2::DEFAULT_P003V1_OBU_section */
 extern const P003V1_section_enum_T_TM_baseline2 DEFAULT_P003V1_OBU_section_TM_baseline2;
 
-/* TM_baseline2::DIM_MaxElementsPacket003V1 */
-#define DIM_MaxElementsPacket003V1_TM_baseline2 (DIM_N_ITER_TM * 1 + 6 + 18)
-
 /* TA_Storage::INIT_P3V1 */
 extern const P003V1_OBU_T_TM_baseline2 INIT_P3V1_TA_Storage;
 
@@ -1222,14 +1219,8 @@ extern const P003V1_OBU_T_TM_baseline2 INIT_P3V1_TA_Storage;
 /* TrackAtlasTypes::DEFAULT_Location_T */
 #define DEFAULT_Location_T_TrackAtlasTypes 0
 
-/* TM::DIM_MaxElementsPacket012 */
-#define DIM_MaxElementsPacket012_TM (DIM_N_ITER_TM * 4 + 15 + 1 + 7)
-
 /* TM_lib_internal::DIM_P012_n_sections */
 #define DIM_P012_n_sections_TM_lib_internal 4
-
-/* TM::DIM_MaxElementsPacket135 */
-#define DIM_MaxElementsPacket135_TM 3
 
 /* TM_baseline2::NID_META_P027V1_body */
 #define NID_META_P027V1_body_TM_baseline2 27016000
@@ -1248,9 +1239,6 @@ extern const P027V1_section_enum_T_TM_baseline2 DEFAULT_P027V1_section_enum_TM_b
 
 /* TM_conversions::ENUM_Q_FRONT_no_train_length_delay */
 #define ENUM_Q_FRONT_no_train_length_delay_TM_conversions Q_FRONT_No_train_length_delay_on_validity_end_point_of_profile_element
-
-/* TM::DIM_MaxElementsPacket027v1_section */
-#define DIM_MaxElementsPacket027v1_section_TM (DIM_N_ITER_TM * 2 + 4)
 
 /* TM_lib_internal::DIM_P027V1_n_sections_qdiff */
 #define DIM_P027V1_n_sections_qdiff_TM_lib_internal 7
@@ -1276,17 +1264,8 @@ extern const P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg DEFAULT_P027
 /* TM::DEFAULT_P138_legacy */
 extern const P138_ReversingAreaInformation_T_Packet_Types_Pkg DEFAULT_P138_legacy_TM;
 
-/* TM::DIM_MaxElementsPacket138 */
-#define DIM_MaxElementsPacket138_TM 6
-
 /* TM::DEFAULT_P139_legacy */
 extern const P139_ReversingSupervisionInformation_T_Packet_Types_Pkg DEFAULT_P139_legacy_TM;
-
-/* TM::DIM_MaxElementsPacket136 */
-#define DIM_MaxElementsPacket136_TM 6
-
-/* TM::DIM_MaxElementsPacket139 */
-#define DIM_MaxElementsPacket139_TM 6
 
 /* TM_specific::DEFAULT_P015_legacy */
 extern const P15_Level23MovementAuthorities_T_Packet_Types_Pkg DEFAULT_P015_legacy_TM_specific;
@@ -1297,9 +1276,6 @@ extern const P21_GradientProfiles_T_Packet_Types_Pkg DEFAULT_P021_legacy_TM_spec
 /* TM::DEFAULT_P041_OBU_section */
 extern const P041_section_enum_T_TM DEFAULT_P041_OBU_section_TM;
 
-/* TM::DIM_MaxElementsPacket041 */
-#define DIM_MaxElementsPacket041_TM ((DIM_N_ITER_TM + 1) * 3 + 6)
-
 /* TM_lib_internal::DEFAULT_P041_OBU_section */
 extern const P041_section_enum_T_TM DEFAULT_P041_OBU_section_TM_lib_internal;
 
@@ -1308,9 +1284,6 @@ extern const P041_section_enum_T_TM DEFAULT_P041_OBU_section_TM_lib_internal;
 
 /* TM_specific::DEFAULT_P041_legacy */
 extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg DEFAULT_P041_legacy_TM_specific;
-
-/* TM::DIM_MaxElementsPacket046 */
-#define DIM_MaxElementsPacket046_TM ((DIM_N_ITER_TM + 1) * 2 + 4)
 
 /* TM::DEFAULT_P046_OBU_section */
 extern const P046_section_enum_T_TM DEFAULT_P046_OBU_section_TM;
@@ -1480,9 +1453,6 @@ extern const NID_EM_Store_T_TA_EmergencyStop_NID_EM_Store cNID_EM_STORE_EMPTY_TA
 /* TA_EmergencyStop::NID_EM_Store::cNID_EM_STORE_SIZE */
 #define cNID_EM_STORE_SIZE_TA_EmergencyStop_NID_EM_Store 8
 
-/* TM::DIM_MaxElementsPacket021 */
-#define DIM_MaxElementsPacket021_TM ((DIM_N_ITER_TM + 1) * 3 + 4 + 1)
-
 /* TM_conversions::DIM_G_max */
 #define DIM_G_max_TM_conversions 255
 
@@ -1582,9 +1552,6 @@ extern const Gradient_section_t_TrackAtlasTypes DEFAULT_GP_Section_TA_Gradient_n
 /* TM_conversions::ENUM_Q_ENDTIMER_no_endsection_timer_info */
 #define ENUM_Q_ENDTIMER_no_endsection_timer_info_TM_conversions Q_ENDTIMER_No_End_section_timer_information
 
-/* TM::DIM_MaxElementsPacket015 */
-#define DIM_MaxElementsPacket015_TM (DIM_N_ITER_TM * 4 + 15 + 1 + 6)
-
 /* TM::DEFAULT_P015_OBU_section */
 extern const P015_section_enum_T_TM DEFAULT_P015_OBU_section_TM;
 
@@ -1644,12 +1611,6 @@ extern const P57_MovementAuthorityRequestParameters_T_Packet_Types_Pkg cMA_Reque
 
 /* TM_conversions::INT_Q_DLRBG_nominal */
 #define INT_Q_DLRBG_nominal_TM_conversions 1
-
-/* TM_conversions::DIM_L_max */
-#define DIM_L_max_TM_conversions 32767
-
-/* TM_conversions::DIM_L_min */
-#define DIM_L_min_TM_conversions 0
 
 /* TM_conversions::ENUM_Q_LENGTH_no_info_available */
 #define ENUM_Q_LENGTH_no_info_available_TM_conversions Q_LENGTH_No_train_integrity_information_available
@@ -1789,9 +1750,6 @@ extern const BG_find_T_CalculateTrainPosition_Pkg_BG_utilities_Pkg cBG_find_0_Ca
 /* CalculateTrainPosition_Pkg::BG_utilities_Pkg::cEmptyPositionedBG */
 extern const positionedBG_T_TrainPosition_Types_Pck cEmptyPositionedBG_CalculateTrainPosition_Pkg_BG_utilities_Pkg;
 
-/* TM::DIM_MaxElementsPacket005 */
-#define DIM_MaxElementsPacket005_TM ((DIM_N_ITER_TM + 1) * 7 + 5)
-
 /* TM_lib_internal::DEFAULT_P005_OBU_section */
 extern const P005_section_enum_T_TM DEFAULT_P005_OBU_section_TM_lib_internal;
 
@@ -1855,9 +1813,6 @@ extern const P003_permanent_data_T_TM_baseline2 cP003_PermanentData_EVC_Permanen
 /* EVC_PermanentData_Pkg::cP203_PermanentData */
 extern const P203V1_OBU_T_TM_baseline2 cP203_PermanentData_EVC_PermanentData_Pkg;
 
-/* TM::DIM_N_ITER */
-#define DIM_N_ITER_TM 32
-
 /* EVC_PermanentData_Pkg::cMoRC_own_P3ng */
 extern const P003_TM_TrainToTrack cMoRC_own_P3ng_EVC_PermanentData_Pkg;
 
@@ -1891,41 +1846,8 @@ extern const p131_q_rbcTransitionOrder_T_Handover_Pkg cNoP131_RBCTransitionOrder
 /* TM::DEFAULT_BaliseData */
 extern const CompressedPackets_T_Common_Types_Pkg DEFAULT_BaliseData_TM;
 
-/* TM::DIM_MaxElementsPacket042 */
-#define DIM_MaxElementsPacket042_TM 8
-
-/* TM::INT_M_VERSION_2_0 */
-#define INT_M_VERSION_2_0_TM 32
-
-/* TM::ERROR_nid_packet */
-#define ERROR_nid_packet_TM (- 1)
-
-/* TM::DEFAULT_Headers */
-extern const Metadata_T_Common_Types_Pkg DEFAULT_Headers_TM;
-
 /* Obu_BasicTypes_Pkg::cLocWithInAcc_0 */
 extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocWithInAcc_0_Obu_BasicTypes_Pkg;
-
-/* TM_conversions::INT_Q_SCALE_10cm */
-#define INT_Q_SCALE_10cm_TM_conversions 0
-
-/* TM_conversions::INT_Q_SCALE_1m */
-#define INT_Q_SCALE_1m_TM_conversions 1
-
-/* TM_conversions::INT_Q_SCALE_10m */
-#define INT_Q_SCALE_10m_TM_conversions 2
-
-/* TM_conversions::ENUM_Q_SCALE_10cm */
-#define ENUM_Q_SCALE_10cm_TM_conversions Q_SCALE_10_cm_scale
-
-/* TM_conversions::ENUM_Q_SCALE_10m */
-#define ENUM_Q_SCALE_10m_TM_conversions Q_SCALE_10_m_scale
-
-/* TM_conversions::ENUM_Q_SCALE_1m */
-#define ENUM_Q_SCALE_1m_TM_conversions Q_SCALE_1_m_scale
-
-/* TM::DIM_MaxElementsPacket131 */
-#define DIM_MaxElementsPacket131_TM 9
 
 /* MoRC_Pck::Coder_Pkg::cNID_RADIO_useTheShortNumberStoredOnboard */
 #define cNID_RADIO_useTheShortNumberStoredOnboard_MoRC_Pck_Coder_Pkg 0xFFFFFFFF
@@ -2086,44 +2008,26 @@ extern const outPackets_T_Common_Types_Pkg cEmptyOutPackets_MoRC_Pck_Coder_Pkg;
 /* TM_conversions::ENUM_Q_SLEEPSESSION_ignore */
 #define ENUM_Q_SLEEPSESSION_ignore_TM_conversions Q_SLEEPSESSION_Ignore_session_establishment_order
 
-/* TM_conversions::INT_Q_DIR_nomiinal */
-#define INT_Q_DIR_nomiinal_TM_conversions 1
-
-/* TM_conversions::INT_Q_DIR_reverse */
-#define INT_Q_DIR_reverse_TM_conversions 0
-
-/* TM_conversions::INT_Q_DIR_both */
-#define INT_Q_DIR_both_TM_conversions 2
-
-/* TM_conversions::ENUM_Q_DIR_both */
-#define ENUM_Q_DIR_both_TM_conversions Q_DIR_Both_directions
-
-/* TM_conversions::ENUM_Q_DIR_reverse */
-#define ENUM_Q_DIR_reverse_TM_conversions Q_DIR_Reverse
-
-/* TM_conversions::ENUM_Q_DIR_nominal */
-#define ENUM_Q_DIR_nominal_TM_conversions Q_DIR_Nominal
-
 /* TM::DEFAULT_CompressedPackets */
 extern const CompressedPacketData_T_Common_Types_Pkg DEFAULT_CompressedPackets_TM;
-
-/* TM::DIM_MaxRMessages */
-#define DIM_MaxRMessages_TM 30
 
 /* TM::DEFAULT_PHeader */
 extern const MetadataElement_T_Common_Types_Pkg DEFAULT_PHeader_TM;
 
-/* TM_lib_internal::DIM_offset_metadata_nid_packet */
-#define DIM_offset_metadata_nid_packet_TM_lib_internal 1000000
+/* MoRC_Pck::cMobileHWStatus_notRegistered */
+extern const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_notRegistered_MoRC_Pck;
 
-/* TM_lib_internal::DIM_offset_metadata_q_dir */
-#define DIM_offset_metadata_q_dir_TM_lib_internal 100000
+/* MoRC_Pck::cMobileHWStatus_Registered */
+extern const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_Registered_MoRC_Pck;
 
-/* TM_lib_internal::DIM_offset_metadata_m_version */
-#define DIM_offset_metadata_m_version_TM_lib_internal 1000
+/* MoRC_Pck::cMobileHWStatus_Connected */
+extern const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_Connected_MoRC_Pck;
 
-/* TM_lib_internal::DIM_offset_metadata_id */
-#define DIM_offset_metadata_id_TM_lib_internal 1
+/* Toolbox::cEmptyBtmMessageHeader */
+extern const API_TelegramHeader_T_API_Msg_Pkg cEmptyBtmMessageHeader_Toolbox;
+
+/* Toolbox::cMobileRegistrationDelayCycles */
+#define cMobileRegistrationDelayCycles_Toolbox 5
 
 /* Packet_TrainTypes_Pkg::cMaxNationalSystem */
 #define cMaxNationalSystem_Packet_TrainTypes_Pkg 5
@@ -2622,12 +2526,6 @@ extern const DMI_Track_Description_T_DMI_Messages_EVC_to_DMI_Pkg cDMI_Track_Desc
 
 /* DMI_Types_Pkg::cDMI_maxTrackCondProfile */
 #define cDMI_maxTrackCondProfile_DMI_Types_Pkg 32
-
-/* TM_conversions::DIM_D_min */
-#define DIM_D_min_TM_conversions 0
-
-/* TM_conversions::DIM_D_max */
-#define DIM_D_max_TM_conversions 32767
 
 /* TM_conversions::ENUM_M_TRACKCOND_Air_tightness */
 #define ENUM_M_TRACKCOND_Air_tightness_TM_conversions M_TRACKCOND_Switch_off_regenerative_brake_Initial_state_is_regenerative_brake_on
@@ -3172,30 +3070,6 @@ extern const DMI_Identifier_int_array_T_DATA cDMI_Identifier_int_array_DATA_Pack
 /* ENUM_DMI_Cabin_Identifier_T_cabin_B */
 #define ENUM_DMI_Cabin_Identifier_T_cabin_B cabin_B_DMI_Types_Pkg
 
-/* TM_conversions::ENUM_M_VERSION_Previous_versions */
-#define ENUM_M_VERSION_Previous_versions_TM_conversions M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS
-
-/* TM_conversions::ENUM_M_VERSION_Version_1_0 */
-#define ENUM_M_VERSION_Version_1_0_TM_conversions M_VERSION_Version_1_0_introduced_in_SRS_1_2_0_and_reused_in_SRSs_2_0_0_and_2_2_2_and_2_3_0
-
-/* TM_conversions::ENUM_M_VERSION_Version_1_1 */
-#define ENUM_M_VERSION_Version_1_1_TM_conversions M_VERSION_Version_1_1_introduced_in_SRS_3_3_0
-
-/* TM_conversions::ENUM_M_VERSION_Version_2_0 */
-#define ENUM_M_VERSION_Version_2_0_TM_conversions M_VERSION_Version_2_0_introduced_in_SRS_3_3_0
-
-/* TM_conversions::INT_M_VERSION_previous_M */
-#define INT_M_VERSION_previous_M_TM_conversions 15
-
-/* TM_conversions::INT_M_VERSION_2_0 */
-#define INT_M_VERSION_2_0_TM_conversions 32
-
-/* TM_conversions::INT_M_VERSION_1_1 */
-#define INT_M_VERSION_1_1_TM_conversions 17
-
-/* TM_conversions::INT_M_VERSION_1_0 */
-#define INT_M_VERSION_1_0_TM_conversions 16
-
 /* DATA::Packets::DMI_to_EVC::cDMI_Driver_Reqest_int_array */
 extern const DMI_Driver_Request_int_array_T_DATA cDMI_Driver_Reqest_int_array_DATA_Packets_DMI_to_EVC;
 
@@ -3454,6 +3328,480 @@ extern const DMI_Icon_Ack_int_array_T_DATA cDMI_Icon_Ack_int_array_DATA_Packets_
 /* DATA::cDMI_Icon_Ack_int_array_size */
 #define cDMI_Icon_Ack_int_array_size_DATA 3
 
+/* TM_conversions::INT_Q_UPDOWN_downlink */
+#define INT_Q_UPDOWN_downlink_TM_conversions 0
+
+/* TM_conversions::INT_Q_UPDOWN_uplink */
+#define INT_Q_UPDOWN_uplink_TM_conversions 1
+
+/* TM_conversions::ENUM_Q_UPDOWN_downlink */
+#define ENUM_Q_UPDOWN_downlink_TM_conversions Q_UPDOWN_Down_link_telegram
+
+/* TM_conversions::ENUM_Q_UPDOWN_uplink */
+#define ENUM_Q_UPDOWN_uplink_TM_conversions Q_UPDOWN_Up_link_telegram
+
+/* TM_conversions::INT_Q_MEDIA_Balise */
+#define INT_Q_MEDIA_Balise_TM_conversions 0
+
+/* TM_conversions::INT_Q_MEDIA_Loop */
+#define INT_Q_MEDIA_Loop_TM_conversions 1
+
+/* TM_conversions::ENUM_Q_MEDIA_Balise */
+#define ENUM_Q_MEDIA_Balise_TM_conversions Q_MEDIA_Balise
+
+/* TM_conversions::ENUM_Q_MEDIA_Loop */
+#define ENUM_Q_MEDIA_Loop_TM_conversions Q_MEDIA_Loop
+
+/* TM_conversions::INT_N_PIG_1st */
+#define INT_N_PIG_1st_TM_conversions 0
+
+/* TM_conversions::INT_N_PIG_2nd */
+#define INT_N_PIG_2nd_TM_conversions 1
+
+/* TM_conversions::INT_N_PIG_3rd */
+#define INT_N_PIG_3rd_TM_conversions 2
+
+/* TM_conversions::INT_N_PIG_4th */
+#define INT_N_PIG_4th_TM_conversions 3
+
+/* TM_conversions::INT_N_PIG_5th */
+#define INT_N_PIG_5th_TM_conversions 4
+
+/* TM_conversions::INT_N_PIG_6th */
+#define INT_N_PIG_6th_TM_conversions 5
+
+/* TM_conversions::INT_N_PIG_7th */
+#define INT_N_PIG_7th_TM_conversions 6
+
+/* TM_conversions::INT_N_PIG_8th */
+#define INT_N_PIG_8th_TM_conversions 7
+
+/* TM_conversions::ENUM_N_PIG_8th */
+#define ENUM_N_PIG_8th_TM_conversions N_PIG_I_am_the_8th
+
+/* TM_conversions::ENUM_N_PIG_7th */
+#define ENUM_N_PIG_7th_TM_conversions N_PIG_I_am_the_7th
+
+/* TM_conversions::ENUM_N_PIG_6th */
+#define ENUM_N_PIG_6th_TM_conversions N_PIG_I_am_the_6th
+
+/* TM_conversions::ENUM_N_PIG_5th */
+#define ENUM_N_PIG_5th_TM_conversions N_PIG_I_am_the_5th
+
+/* TM_conversions::ENUM_N_PIG_4th */
+#define ENUM_N_PIG_4th_TM_conversions N_PIG_I_am_the_4th
+
+/* TM_conversions::ENUM_N_PIG_3rd */
+#define ENUM_N_PIG_3rd_TM_conversions N_PIG_I_am_the_3rd
+
+/* TM_conversions::ENUM_N_PIG_2nd */
+#define ENUM_N_PIG_2nd_TM_conversions N_PIG_I_am_the_2nd
+
+/* TM_conversions::ENUM_N_PIG_1st */
+#define ENUM_N_PIG_1st_TM_conversions N_PIG_I_am_the_1st
+
+/* TM_conversions::INT_N_TOTAL_1 */
+#define INT_N_TOTAL_1_TM_conversions 0
+
+/* TM_conversions::INT_N_TOTAL_2 */
+#define INT_N_TOTAL_2_TM_conversions 1
+
+/* TM_conversions::INT_N_TOTAL_3 */
+#define INT_N_TOTAL_3_TM_conversions 2
+
+/* TM_conversions::INT_N_TOTAL_4 */
+#define INT_N_TOTAL_4_TM_conversions 3
+
+/* TM_conversions::INT_N_TOTAL_5 */
+#define INT_N_TOTAL_5_TM_conversions 4
+
+/* TM_conversions::INT_N_TOTAL_6 */
+#define INT_N_TOTAL_6_TM_conversions 5
+
+/* TM_conversions::INT_N_TOTAL_7 */
+#define INT_N_TOTAL_7_TM_conversions 6
+
+/* TM_conversions::INT_N_TOTAL_8 */
+#define INT_N_TOTAL_8_TM_conversions 7
+
+/* TM_conversions::ENUM_N_TOTAL_8 */
+#define ENUM_N_TOTAL_8_TM_conversions N_TOTAL_8_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_7 */
+#define ENUM_N_TOTAL_7_TM_conversions N_TOTAL_7_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_6 */
+#define ENUM_N_TOTAL_6_TM_conversions N_TOTAL_6_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_5 */
+#define ENUM_N_TOTAL_5_TM_conversions N_TOTAL_5_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_4 */
+#define ENUM_N_TOTAL_4_TM_conversions N_TOTAL_4_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_3 */
+#define ENUM_N_TOTAL_3_TM_conversions N_TOTAL_3_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_2 */
+#define ENUM_N_TOTAL_2_TM_conversions N_TOTAL_2_balises_in_the_group
+
+/* TM_conversions::ENUM_N_TOTAL_1 */
+#define ENUM_N_TOTAL_1_TM_conversions N_TOTAL_1_balise_in_the_group
+
+/* TM_conversions::INT_M_DUP_duplicate_of_next */
+#define INT_M_DUP_duplicate_of_next_TM_conversions 1
+
+/* TM_conversions::INT_M_DUP_duplicate_of_previous */
+#define INT_M_DUP_duplicate_of_previous_TM_conversions 2
+
+/* TM_conversions::INT_M_DUP_no_duplicates */
+#define INT_M_DUP_no_duplicates_TM_conversions 0
+
+/* TM_conversions::ENUM_M_DUP_duplicate_of_next */
+#define ENUM_M_DUP_duplicate_of_next_TM_conversions M_DUP_This_balise_is_a_duplicate_of_the_next_balise
+
+/* TM_conversions::ENUM_M_DUP_no_duplicates */
+#define ENUM_M_DUP_no_duplicates_TM_conversions M_DUP_No_duplicates
+
+/* TM_conversions::ENUM_M_DUP_duplicate_of_previous */
+#define ENUM_M_DUP_duplicate_of_previous_TM_conversions M_DUP_This_balise_is_a_duplicate_of_the_previous_balise
+
+/* TM_conversions::INT_Q_LINK_linked */
+#define INT_Q_LINK_linked_TM_conversions 1
+
+/* TM_conversions::INT_Q_LINK_unlinked */
+#define INT_Q_LINK_unlinked_TM_conversions 0
+
+/* TM_conversions::ENUM_Q_LINK_linked */
+#define ENUM_Q_LINK_linked_TM_conversions Q_LINK_Linked
+
+/* TM_conversions::ENUM_Q_LINK_unlinked */
+#define ENUM_Q_LINK_unlinked_TM_conversions Q_LINK_Unlinked
+
+/* TM_radio_messages::DIM_max_payload */
+#define DIM_max_payload_TM_radio_messages 50
+
+/* DMI_Types_Pkg::cDMI_maxLevels */
+#define cDMI_maxLevels_DMI_Types_Pkg 32
+
+/* TM::DEFAULT_Packets */
+extern const CompressedPackets_T_Common_Types_Pkg DEFAULT_Packets_TM;
+
+/* TM::DIM_MaxElementsPacket042 */
+#define DIM_MaxElementsPacket042_TM 8
+
+/* TM::DIM_MaxElementsPacket001 */
+#define DIM_MaxElementsPacket001_TM 2
+
+/* TM::DIM_MaxElementsPacket002 */
+#define DIM_MaxElementsPacket002_TM 4
+
+/* TM::DIM_MaxElementsPacket005 */
+#define DIM_MaxElementsPacket005_TM ((DIM_N_ITER_TM + 1) * 7 + 5)
+
+/* TM::DEFAULT_P005_sections_array_flat */
+extern const P005_sections_array_flat_T_TM DEFAULT_P005_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket012 */
+#define DIM_MaxElementsPacket012_TM (DIM_N_ITER_TM * 4 + 15 + 1 + 7)
+
+/* TM::DIM_MaxElementsPacket015 */
+#define DIM_MaxElementsPacket015_TM (DIM_N_ITER_TM * 4 + 15 + 1 + 6)
+
+/* TM::DEFAULT_P015_sections_array_flat */
+extern const P015_sections_array_flat_T_TM DEFAULT_P015_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket021 */
+#define DIM_MaxElementsPacket021_TM ((DIM_N_ITER_TM + 1) * 3 + 4 + 1)
+
+/* TM::DEFAULT_P021_sections_array_flat */
+extern const P021_sections_array_flat_T_TM DEFAULT_P021_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket016 */
+#define DIM_MaxElementsPacket016_TM 5
+
+/* TM::DIM_MaxElementsPacket041 */
+#define DIM_MaxElementsPacket041_TM ((DIM_N_ITER_TM + 1) * 3 + 6)
+
+/* TM::DEFAULT_P041_sections_array_flat */
+extern const P041_sections_array_flat_T_TM DEFAULT_P041_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket040 */
+#define DIM_MaxElementsPacket040_TM 6
+
+/* TM::DIM_MaxElementsPacket057 */
+#define DIM_MaxElementsPacket057_TM 6
+
+/* TM::DIM_MaxElementsPacket046 */
+#define DIM_MaxElementsPacket046_TM ((DIM_N_ITER_TM + 1) * 2 + 4)
+
+/* TM::DEFAULT_P046_sections_array_flat */
+extern const P046_sections_array_flat_T_TM DEFAULT_P046_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket045 */
+#define DIM_MaxElementsPacket045_TM 4
+
+/* TM::DIM_MaxElementsPacket065 */
+#define DIM_MaxElementsPacket065_TM 9
+
+/* TM::DIM_MaxElementsPacket064 */
+#define DIM_MaxElementsPacket064_TM 3
+
+/* TM::DIM_MaxElementsPacket058 */
+#define DIM_MaxElementsPacket058_TM (DIM_N_ITER_TM * 2 + 8)
+
+/* TM::DEFAULT_P058_sections_array_flat */
+extern const P058_sections_array_flat_T_TM DEFAULT_P058_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket071 */
+#define DIM_MaxElementsPacket071_TM 7
+
+/* TM::DIM_MaxElementsPacket066 */
+#define DIM_MaxElementsPacket066_TM 4
+
+/* TM::DIM_MaxElementsPacket132 */
+#define DIM_MaxElementsPacket132_TM 4
+
+/* TM::DIM_MaxElementsPacket131 */
+#define DIM_MaxElementsPacket131_TM 9
+
+/* TM::DIM_MaxElementsPacket080 */
+#define DIM_MaxElementsPacket080_TM (DIM_N_ITER_TM * 6 + 4 + 1 + 6)
+
+/* TM::DEFAULT_P080_sections_array_flat */
+extern const P080_sections_array_flat_T_TM DEFAULT_P080_sections_array_flat_TM;
+
+/* TM::DIM_MaxElementsPacket135 */
+#define DIM_MaxElementsPacket135_TM 3
+
+/* TM::DIM_MaxElementsPacket134 */
+#define DIM_MaxElementsPacket134_TM 9
+
+/* TM::DIM_MaxElementsPacket133 */
+#define DIM_MaxElementsPacket133_TM 11
+
+/* TM::DIM_MaxElementsPacket138 */
+#define DIM_MaxElementsPacket138_TM 6
+
+/* TM::DIM_MaxElementsPacket137 */
+#define DIM_MaxElementsPacket137_TM 4
+
+/* TM::DIM_MaxElementsPacket141 */
+#define DIM_MaxElementsPacket141_TM 5
+
+/* TM::DIM_MaxElementsPacket140 */
+#define DIM_MaxElementsPacket140_TM 4
+
+/* TM::DIM_MaxElementsPacket136 */
+#define DIM_MaxElementsPacket136_TM 6
+
+/* TM::DIM_MaxElementsPacket139 */
+#define DIM_MaxElementsPacket139_TM 6
+
+/* TM::DIM_MaxElementsPacket254 */
+#define DIM_MaxElementsPacket254_TM 3
+
+/* TM::DIM_MaxElementsPacket145 */
+#define DIM_MaxElementsPacket145_TM 3
+
+/* TM::DIM_MaxElementsPacket143 */
+#define DIM_MaxElementsPacket143_TM 7
+
+/* TM::INT_M_VERSION_2_0 */
+#define INT_M_VERSION_2_0_TM 32
+
+/* TM::DIM_MaxElementsPacket255 */
+#define DIM_MaxElementsPacket255_TM 1
+
+/* TM::INT_Q_DIR_both */
+#define INT_Q_DIR_both_TM 2
+
+/* TM_baseline2::DIM_MaxElementsPacket003V1 */
+#define DIM_MaxElementsPacket003V1_TM_baseline2 (DIM_N_ITER_TM * 1 + 6 + 18)
+
+/* TM::DIM_MaxElementsPacket027v1_body */
+#define DIM_MaxElementsPacket027v1_body_TM 6
+
+/* TM::DIM_MaxElementsPacket027v1_section */
+#define DIM_MaxElementsPacket027v1_section_TM (DIM_N_ITER_TM * 2 + 4)
+
+/* TM_baseline2::DEFAULT_P027V1_sections_array_qdiff_flat */
+extern const P027V1_sections_array_flat_qdiff_T_TM_baseline2 DEFAULT_P027V1_sections_array_qdiff_flat_TM_baseline2;
+
+/* TM::DIM_N_ITER */
+#define DIM_N_ITER_TM 32
+
+/* TM::DIM_MaxElementsPacket072V1 */
+#define DIM_MaxElementsPacket072V1_TM (DIM_X_TEXT_TM + 17)
+
+/* TM::DIM_X_TEXT */
+#define DIM_X_TEXT_TM 255
+
+/* TM::DIM_MaxRMessages */
+#define DIM_MaxRMessages_TM 30
+
+/* TM::DEFAULT_Headers */
+extern const Metadata_T_Common_Types_Pkg DEFAULT_Headers_TM;
+
+/* TM::INT_M_VERSION_1_0 */
+#define INT_M_VERSION_1_0_TM 16
+
+/* TM::DIM_MaxElementsPacket039V1 */
+#define DIM_MaxElementsPacket039V1_TM 6
+
+/* TM::ERROR_nid_packet */
+#define ERROR_nid_packet_TM (- 1)
+
+/* TM_lib_internal::DIM_offset_metadata_nid_packet */
+#define DIM_offset_metadata_nid_packet_TM_lib_internal 1000000
+
+/* TM_lib_internal::DIM_offset_metadata_q_dir */
+#define DIM_offset_metadata_q_dir_TM_lib_internal 100000
+
+/* TM_lib_internal::DIM_offset_metadata_m_version */
+#define DIM_offset_metadata_m_version_TM_lib_internal 1000
+
+/* TM_lib_internal::DIM_offset_metadata_id */
+#define DIM_offset_metadata_id_TM_lib_internal 1
+
+/* TM_conversions::INT_Q_ORIENTATION_reverse */
+#define INT_Q_ORIENTATION_reverse_TM_conversions 0
+
+/* TM_conversions::INT_Q_ORIENTATION_nominal */
+#define INT_Q_ORIENTATION_nominal_TM_conversions 1
+
+/* TM_conversions::ENUM_Q_ORIENTATION_reverse */
+#define ENUM_Q_ORIENTATION_reverse_TM_conversions Q_ORIENTATION_The_balise_group_has_been_passed_by_the_train_in_reverse_direction
+
+/* TM_conversions::ENUM_Q_ORIENTATION_nominal */
+#define ENUM_Q_ORIENTATION_nominal_TM_conversions Q_ORIENTATION_The_balise_group_has_been_passed_by_the_train_in_nominal_direction
+
+/* TM_conversions::INT_Q_DIR_nomiinal */
+#define INT_Q_DIR_nomiinal_TM_conversions 1
+
+/* TM_conversions::INT_Q_DIR_reverse */
+#define INT_Q_DIR_reverse_TM_conversions 0
+
+/* TM_conversions::INT_Q_DIR_both */
+#define INT_Q_DIR_both_TM_conversions 2
+
+/* TM_conversions::ENUM_Q_DIR_both */
+#define ENUM_Q_DIR_both_TM_conversions Q_DIR_Both_directions
+
+/* TM_conversions::ENUM_Q_DIR_reverse */
+#define ENUM_Q_DIR_reverse_TM_conversions Q_DIR_Reverse
+
+/* TM_conversions::ENUM_Q_DIR_nominal */
+#define ENUM_Q_DIR_nominal_TM_conversions Q_DIR_Nominal
+
+/* TM_conversions::DIM_L_max */
+#define DIM_L_max_TM_conversions 32767
+
+/* TM_conversions::DIM_L_min */
+#define DIM_L_min_TM_conversions 0
+
+/* TM_conversions::DIM_D_min */
+#define DIM_D_min_TM_conversions 0
+
+/* TM_conversions::INT_Q_SCALE_10cm */
+#define INT_Q_SCALE_10cm_TM_conversions 0
+
+/* TM_conversions::INT_Q_SCALE_1m */
+#define INT_Q_SCALE_1m_TM_conversions 1
+
+/* TM_conversions::INT_Q_SCALE_10m */
+#define INT_Q_SCALE_10m_TM_conversions 2
+
+/* TM_conversions::ENUM_Q_SCALE_10cm */
+#define ENUM_Q_SCALE_10cm_TM_conversions Q_SCALE_10_cm_scale
+
+/* TM_conversions::ENUM_Q_SCALE_10m */
+#define ENUM_Q_SCALE_10m_TM_conversions Q_SCALE_10_m_scale
+
+/* TM_conversions::ENUM_Q_SCALE_1m */
+#define ENUM_Q_SCALE_1m_TM_conversions Q_SCALE_1_m_scale
+
+/* TM_conversions::DIM_D_max */
+#define DIM_D_max_TM_conversions 32767
+
+/* TM_conversions::DIM_D_max_neg */
+#define DIM_D_max_neg_TM_conversions (- 32768)
+
+/* TM_conversions::ENUM_M_VERSION_Previous_versions */
+#define ENUM_M_VERSION_Previous_versions_TM_conversions M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS
+
+/* TM_conversions::ENUM_M_VERSION_Version_1_0 */
+#define ENUM_M_VERSION_Version_1_0_TM_conversions M_VERSION_Version_1_0_introduced_in_SRS_1_2_0_and_reused_in_SRSs_2_0_0_and_2_2_2_and_2_3_0
+
+/* TM_conversions::ENUM_M_VERSION_Version_1_1 */
+#define ENUM_M_VERSION_Version_1_1_TM_conversions M_VERSION_Version_1_1_introduced_in_SRS_3_3_0
+
+/* TM_conversions::ENUM_M_VERSION_Version_2_0 */
+#define ENUM_M_VERSION_Version_2_0_TM_conversions M_VERSION_Version_2_0_introduced_in_SRS_3_3_0
+
+/* TM_conversions::INT_M_VERSION_previous_M */
+#define INT_M_VERSION_previous_M_TM_conversions 15
+
+/* TM_conversions::INT_M_VERSION_2_0 */
+#define INT_M_VERSION_2_0_TM_conversions 32
+
+/* TM_conversions::INT_M_VERSION_1_1 */
+#define INT_M_VERSION_1_1_TM_conversions 17
+
+/* TM_conversions::INT_M_VERSION_1_0 */
+#define INT_M_VERSION_1_0_TM_conversions 16
+
+/* TM_conversions::ENUM_M_ACK_acknowledgement */
+#define ENUM_M_ACK_acknowledgement_TM_conversions M_ACK_Acknowledgement_required
+
+/* TM_conversions::ENUM_M_ACK_no_acknowledgement */
+#define ENUM_M_ACK_no_acknowledgement_TM_conversions M_ACK_No_acknowledgement_required
+
+/* TM_conversions::INT_M_ACK_acknowledgement */
+#define INT_M_ACK_acknowledgement_TM_conversions 1
+
+/* TM_conversions::INT_M_ACK_no_acknowledgement */
+#define INT_M_ACK_no_acknowledgement_TM_conversions 0
+
+/* TM_RBC_conversions_legacy::default_header */
+extern const Radio_TrackTrain_Header_T_Radio_Types_Pkg default_header_TM_RBC_conversions_legacy;
+
+/* TM_RBC_conversions_legacy::default_t_sh_rqst */
+#define default_t_sh_rqst_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_t_train_reference */
+#define default_t_train_reference_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_nid_em */
+#define default_nid_em_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_q_scale */
+#define default_q_scale_TM_RBC_conversions_legacy Q_SCALE_1_m_scale
+
+/* TM_RBC_conversions_legacy::default_d_sr */
+#define default_d_sr_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_d_ref */
+#define default_d_ref_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_q_dir */
+#define default_q_dir_TM_RBC_conversions_legacy Q_DIR_Reverse
+
+/* TM_RBC_conversions_legacy::default_d_emergencystop */
+#define default_d_emergencystop_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_m_version */
+#define default_m_version_TM_RBC_conversions_legacy M_VERSION_Previous_versions_according_to_e_g_EEIG_SRS_and_UIC_A200_SRS
+
+/* TM_RBC_conversions_legacy::default_radioDevice */
+#define default_radioDevice_TM_RBC_conversions_legacy 0
+
+/* TM_RBC_conversions_legacy::default_receivedSystemTime */
+#define default_receivedSystemTime_TM_RBC_conversions_legacy 0
+
+/* Toolbox::cEmtpyTrackSideInputMessage */
+extern const API_TrackSideInput_T_API_Msg_Pkg cEmtpyTrackSideInputMessage_Toolbox;
+
 /* Common_Types_Pkg::cMetadataArraySize */
 #define cMetadataArraySize_Common_Types_Pkg cDIM_MaxRMessages_Common_Types_Pkg
 
@@ -3463,15 +3811,12 @@ extern const DMI_Icon_Ack_int_array_T_DATA cDMI_Icon_Ack_int_array_DATA_Packets_
 /* Common_Types_Pkg::cDIM_MaxDataElementsInRMessage */
 #define cDIM_MaxDataElementsInRMessage_Common_Types_Pkg 500
 
-/* TM_radio_messages::DIM_max_payload */
-#define DIM_max_payload_TM_radio_messages 50
-
-/* DMI_Types_Pkg::cDMI_maxLevels */
-#define cDMI_maxLevels_DMI_Types_Pkg 32
+/* Toolbox::cEmptyRadioMsgHeader */
+extern const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox;
 
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

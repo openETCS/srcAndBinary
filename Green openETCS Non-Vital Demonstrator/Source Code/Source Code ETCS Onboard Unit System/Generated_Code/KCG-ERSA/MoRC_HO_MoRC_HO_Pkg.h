@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _MoRC_HO_MoRC_HO_Pkg_H_
 #define _MoRC_HO_MoRC_HO_Pkg_H_
@@ -86,6 +86,6 @@ extern void MoRC_HO_init_MoRC_HO_Pkg(outC_MoRC_HO_MoRC_HO_Pkg *outC);
 #endif /* _MoRC_HO_MoRC_HO_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_HO_MoRC_HO_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

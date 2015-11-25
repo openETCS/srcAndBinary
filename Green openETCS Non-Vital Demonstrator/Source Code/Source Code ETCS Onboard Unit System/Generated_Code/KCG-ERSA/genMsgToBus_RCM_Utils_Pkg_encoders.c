@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:42
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -57,10 +57,10 @@ void genMsgToBus_RCM_Utils_Pkg_encoders(
   /* RCM_Utils_Pkg::encoders::genMsgToBus::m_version */ M_VERSION m_version,
   outC_genMsgToBus_RCM_Utils_Pkg_encoders *outC)
 {
-  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_104270 mk_struct;
-  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_104270 _1_mk_struct;
-  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_104270 _2_mk_struct;
-  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_104270 _3_mk_struct;
+  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_120760 mk_struct;
+  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_120760 _1_mk_struct;
+  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_120760 _2_mk_struct;
+  /* RCM_Utils_Pkg::encoders::genMsgToBus */ struct_120760 _3_mk_struct;
   /* RCM_Utils_Pkg::encoders::genMsgToBus::t_train_global_l */ T_internal_Type_Obu_BasicTypes_Pkg t_train_global_l;
   
   t_train_global_l = (kcg_int)
@@ -145,6 +145,6 @@ void genMsgToBus_RCM_Utils_Pkg_encoders(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** genMsgToBus_RCM_Utils_Pkg_encoders.c
-** Generation date: 2015-11-24T10:24:42
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

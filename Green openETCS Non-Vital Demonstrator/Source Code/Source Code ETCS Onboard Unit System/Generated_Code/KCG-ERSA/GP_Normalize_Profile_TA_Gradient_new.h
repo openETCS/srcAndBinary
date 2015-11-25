@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _GP_Normalize_Profile_TA_Gradient_new_H_
 #define _GP_Normalize_Profile_TA_Gradient_new_H_
@@ -22,6 +22,6 @@ extern void GP_Normalize_Profile_TA_Gradient_new(
 #endif /* _GP_Normalize_Profile_TA_Gradient_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GP_Normalize_Profile_TA_Gradient_new.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

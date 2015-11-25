@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _BCD_to_Int_Utilities_H_
 #define _BCD_to_Int_Utilities_H_
@@ -22,6 +22,6 @@ extern void BCD_to_Int_Utilities(
 #endif /* _BCD_to_Int_Utilities_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BCD_to_Int_Utilities.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

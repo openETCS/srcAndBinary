@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _SelectLevelTransition_LevelTransitionSelection_H_
 #define _SelectLevelTransition_LevelTransitionSelection_H_
@@ -50,6 +50,6 @@ extern void SelectLevelTransition_init_LevelTransitionSelection(
 #endif /* _SelectLevelTransition_LevelTransitionSelection_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SelectLevelTransition_LevelTransitionSelection.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -71,6 +71,6 @@ Icon_group_INT_T_DATA CAST_Icon_group_to_int_DATA_Variables(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Icon_group_to_int_DATA_Variables.c
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

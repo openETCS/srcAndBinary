@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -25,7 +25,7 @@ void BufferMsg_write_only_TM_lib_internal(
   kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
     &(&(*Buffer_Out)[0])[0],
     Message_In);
-  kcg_copy_array_103784(&(*Buffer_Out)[1], (array_103784 *) &(*Buffer_In)[0]);
+  kcg_copy_array_120204(&(*Buffer_Out)[1], (array_120204 *) &(*Buffer_In)[0]);
   _L7 = Stacksize_old + 1;
   /* 1 */ if (_L7 > DIM_FIFO_TrainTrackMessage_TM_lib_internal) {
     *Stacksize_new = DIM_FIFO_TrainTrackMessage_TM_lib_internal;
@@ -37,6 +37,6 @@ void BufferMsg_write_only_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_write_only_TM_lib_internal.c
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

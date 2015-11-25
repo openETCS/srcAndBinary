@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _getMobileConStatus_EVC_MEM_Support_Pkg_H_
 #define _getMobileConStatus_EVC_MEM_Support_Pkg_H_
@@ -19,6 +19,6 @@ extern mobileConnectionStatus_T_RCM_Types_Pkg getMobileConStatus_EVC_MEM_Support
 #endif /* _getMobileConStatus_EVC_MEM_Support_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getMobileConStatus_EVC_MEM_Support_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

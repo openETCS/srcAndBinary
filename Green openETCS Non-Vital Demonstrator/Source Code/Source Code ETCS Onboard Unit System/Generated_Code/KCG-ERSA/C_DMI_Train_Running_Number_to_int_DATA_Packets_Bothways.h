@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _C_DMI_Train_Running_Number_to_int_DATA_Packets_Bothways_H_
 #define _C_DMI_Train_Running_Number_to_int_DATA_Packets_Bothways_H_
@@ -22,6 +22,6 @@ extern void C_DMI_Train_Running_Number_to_int_DATA_Packets_Bothways(
 #endif /* _C_DMI_Train_Running_Number_to_int_DATA_Packets_Bothways_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_DMI_Train_Running_Number_to_int_DATA_Packets_Bothways.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

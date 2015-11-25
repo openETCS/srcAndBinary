@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _Send_M129_TM_radio_messages_H_
 #define _Send_M129_TM_radio_messages_H_
@@ -57,6 +57,6 @@ extern void Send_M129_init_TM_radio_messages(
 #endif /* _Send_M129_TM_radio_messages_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Send_M129_TM_radio_messages.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

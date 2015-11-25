@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _InputF2Functions_Interfaces_H_
 #define _InputF2Functions_Interfaces_H_
@@ -25,6 +25,6 @@ extern void InputF2Functions_Interfaces(
 #endif /* _InputF2Functions_Interfaces_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputF2Functions_Interfaces.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:42
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -50,7 +50,7 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
       &(&tmp[0])[0],
       (positionedBG_T_TrainPosition_Types_Pck *)
         &cNoPositionedBG_CalculateTrainPosition_Pkg);
-    kcg_copy_array_103726(&tmp[1], (array_103726 *) &(*BGs_in)[0]);
+    kcg_copy_array_120143(&tmp[1], (array_120143 *) &(*BGs_in)[0]);
   }
   if (_L34) {
     for (i = 0; i < 41; i++) {
@@ -92,6 +92,6 @@ void insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** insertBG_atIndex_CalculateTrainPosition_Pkg_BG_utilities_Pkg.c
-** Generation date: 2015-11-24T10:24:42
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,13 +13,18 @@ kcg_int GetPacketId_InformationFilter_Pkg_Common(
 {
   /* InformationFilter_Pkg::Common::GetPacketId::outPacketId */ kcg_int outPacketId;
   
-  outPacketId = /* 1 */
-    T_extract_nid_packet_from_metadata_selector_TM((*inPacket).nid_packet);
+  /* 1 */ if ((*inPacket).valid) {
+    outPacketId = /* 1 */
+      T_extract_nid_packet_from_metadata_selector_TM((*inPacket).nid_packet);
+  }
+  else {
+    outPacketId = 255;
+  }
   return outPacketId;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GetPacketId_InformationFilter_Pkg_Common.c
-** Generation date: 2015-11-24T10:24:41
+** Generation date: 2015-11-25T12:17:42
 *************************************************************$ */
 

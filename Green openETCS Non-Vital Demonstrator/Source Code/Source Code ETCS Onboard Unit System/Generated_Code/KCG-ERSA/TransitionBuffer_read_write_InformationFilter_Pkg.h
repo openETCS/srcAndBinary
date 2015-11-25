@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _TransitionBuffer_read_write_InformationFilter_Pkg_H_
 #define _TransitionBuffer_read_write_InformationFilter_Pkg_H_
@@ -25,6 +25,6 @@ extern void TransitionBuffer_read_write_InformationFilter_Pkg(
 #endif /* _TransitionBuffer_read_write_InformationFilter_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TransitionBuffer_read_write_InformationFilter_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

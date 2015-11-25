@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _BufferOutput_write_only1_TM_lib_internal_H_
 #define _BufferOutput_write_only1_TM_lib_internal_H_
@@ -24,6 +24,6 @@ extern void BufferOutput_write_only1_TM_lib_internal(
 #endif /* _BufferOutput_write_only1_TM_lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_write_only1_TM_lib_internal.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

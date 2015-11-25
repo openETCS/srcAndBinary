@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _CAST_int_to_DMI_speedProfileElement_DATA_Variables_H_
 #define _CAST_int_to_DMI_speedProfileElement_DATA_Variables_H_
@@ -24,6 +24,6 @@ extern void CAST_int_to_DMI_speedProfileElement_DATA_Variables(
 #endif /* _CAST_int_to_DMI_speedProfileElement_DATA_Variables_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_DMI_speedProfileElement_DATA_Variables.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
 #define _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_
@@ -69,6 +69,6 @@ extern void Manage_TrackSideInformation_Integration_init_Manage_TrackSideInforma
 #endif /* _Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Manage_TrackSideInformation_Integration_Manage_TrackSideInformation_Integration_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

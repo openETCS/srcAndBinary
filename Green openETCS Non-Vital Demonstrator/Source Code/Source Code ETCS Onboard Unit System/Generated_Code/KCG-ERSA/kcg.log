@@ -1,31 +1,11 @@
 $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:22
+** Generation date: 2015-11-25T12:17:17
 *************************************************************$
-*** Post-namespace Warning (WAR_508): Unused flow
-  at file S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade, line 356438, character 0
-  at path TM_lib_internal::RECV_LookupPacketLoop/_L39/
- The local variable _L39 is never used
-*** Post-namespace Warning (WAR_508): Unused flow
-  at file S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade, line 356442, character 0
-  at path TM_lib_internal::RECV_LookupPacketLoop/_L38/
- The local variable _L38 is never used
-*** Post-namespace Warning (WAR_508): Unused flow
-  at file S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade, line 356446, character 0
-  at path TM_lib_internal::RECV_LookupPacketLoop/_L37/
- The local variable _L37 is never used
-*** Post-namespace Warning (WAR_508): Unused flow
-  at file S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade, line 356450, character 0
-  at path TM_lib_internal::RECV_LookupPacketLoop/_L36/
- The local variable _L36 is never used
-*** Post-namespace Warning (WAR_508): Unused flow
-  at file S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade, line 356454, character 0
-  at path TM_lib_internal::RECV_LookupPacketLoop/_L35/
- The local variable _L35 is never used
-5 warnings were found
+No warning was found
 No error was found
 No failure occurred
 $**************** KCG Version 6.4 (build i21) ****************
 ** S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner\kcg.log
-** Generation date: 2015-11-24T10:25:06
+** Generation date: 2015-11-25T12:18:20
 *************************************************************$

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 #ifndef _Output_To_DMI_Interfaces_H_
 #define _Output_To_DMI_Interfaces_H_
@@ -28,6 +28,6 @@ extern void Output_To_DMI_Interfaces(
 #endif /* _Output_To_DMI_Interfaces_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Output_To_DMI_Interfaces.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:40
 *************************************************************$ */
 

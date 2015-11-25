@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 #ifndef _collectRadioOutput_radioOutput_Pkg_H_
 #define _collectRadioOutput_radioOutput_Pkg_H_
@@ -58,6 +58,6 @@ extern void collectRadioOutput_init_radioOutput_Pkg(
 #endif /* _collectRadioOutput_radioOutput_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** collectRadioOutput_radioOutput_Pkg.h
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 

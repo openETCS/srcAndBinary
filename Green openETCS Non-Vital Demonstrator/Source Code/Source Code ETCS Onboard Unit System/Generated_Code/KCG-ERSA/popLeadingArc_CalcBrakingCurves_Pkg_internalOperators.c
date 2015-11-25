@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -32,6 +32,6 @@ void popLeadingArc_CalcBrakingCurves_Pkg_internalOperators(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** popLeadingArc_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-11-24T10:24:40
+** Generation date: 2015-11-25T12:17:41
 *************************************************************$ */
 
