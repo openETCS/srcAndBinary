@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ void TransitionBuffer_write_only_InformationFilter_Pkg(
   /* InformationFilter_Pkg::TransitionBuffer_write_only::Stacksize_new */ kcg_int *Stacksize_new,
   /* InformationFilter_Pkg::TransitionBuffer_write_only::Message_out */ ReceivedMessage_T_Common_Types_Pkg *Message_out)
 {
-  /* InformationFilter_Pkg::TransitionBuffer_write_only */ array_121048 tmp;
+  /* InformationFilter_Pkg::TransitionBuffer_write_only */ array_121056 tmp;
   /* InformationFilter_Pkg::TransitionBuffer_write_only::_L2 */ kcg_int _L2;
   
   kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
@@ -25,18 +25,18 @@ void TransitionBuffer_write_only_InformationFilter_Pkg(
     (ReceivedMessage_T_Common_Types_Pkg *) &cDefaultRM_Common_Types_Pkg);
   /* 2 */ if (Reset) {
     _L2 = 0 + 1;
-    kcg_copy_array_121048(
+    kcg_copy_array_121056(
       &tmp,
-      (array_121048 *) &DEFAULT_TransitionBuffer_t_InformationFilter_Pkg[0]);
+      (array_121056 *) &DEFAULT_TransitionBuffer_t_InformationFilter_Pkg[0]);
   }
   else {
     _L2 = Stacksize_old + 1;
-    kcg_copy_array_121048(&tmp, (array_121048 *) &(*Buffer_In)[0]);
+    kcg_copy_array_121056(&tmp, (array_121056 *) &(*Buffer_In)[0]);
   }
   kcg_copy_ReceivedMessage_T_Common_Types_Pkg(
     &(&(*Buffer_Out)[0])[0],
     Message_In);
-  kcg_copy_array_121048(&(*Buffer_Out)[1], &tmp);
+  kcg_copy_array_121056(&(*Buffer_Out)[1], &tmp);
   /* 1 */ if (_L2 > DIM_TransitionBuffer_InformationFilter_Pkg) {
     *Stacksize_new = DIM_TransitionBuffer_InformationFilter_Pkg;
   }
@@ -47,6 +47,6 @@ void TransitionBuffer_write_only_InformationFilter_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TransitionBuffer_write_only_InformationFilter_Pkg.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 

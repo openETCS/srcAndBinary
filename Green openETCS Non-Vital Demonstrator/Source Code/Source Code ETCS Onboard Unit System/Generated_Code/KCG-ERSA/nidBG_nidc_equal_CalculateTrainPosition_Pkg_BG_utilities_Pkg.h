@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _nidBG_nidc_equal_CalculateTrainPosition_Pkg_BG_utilities_Pkg_H_
 #define _nidBG_nidc_equal_CalculateTrainPosition_Pkg_BG_utilities_Pkg_H_
@@ -22,6 +22,6 @@ extern kcg_bool nidBG_nidc_equal_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 #endif /* _nidBG_nidc_equal_CalculateTrainPosition_Pkg_BG_utilities_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** nidBG_nidc_equal_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

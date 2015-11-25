@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -374,7 +374,7 @@ void InformationFilter_InformationFilter_Pkg(
   }
   else /* 5 */ if (!kcg_comp_ReceivedMessage_T_Common_Types_Pkg(
       &outC->_L108,
-      (struct_123171 *) &cDefaultRM_Common_Types_Pkg)) {
+      (struct_123195 *) &cDefaultRM_Common_Types_Pkg)) {
     kcg_copy_ReceivedMessage_T_Common_Types_Pkg(&_L99, &outC->_L108);
   }
   else {
@@ -413,6 +413,6 @@ void InformationFilter_InformationFilter_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InformationFilter_InformationFilter_Pkg.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 

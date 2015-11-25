@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,9 +16,9 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
 {
   *n_iter_out = (*P003V1_onboard).n_iter;
   *nid_c1 = (*P003V1_onboard).SECTIONS[0].nid_c;
-  kcg_copy_array_119855(
+  kcg_copy_array_119902(
     &(*nid_c_list)[0],
-    (array_119855 *) &(*P003V1_onboard).SECTIONS[1]);
+    (array_119902 *) &(*P003V1_onboard).SECTIONS[1]);
   kcg_copy_P003_OBU_nid_c_section_enum_T_TM(
     &(&(*nid_c_list)[31])[0],
     (P003_OBU_nid_c_section_enum_T_TM *)
@@ -27,6 +27,6 @@ void C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P003V1_OBU_P003_OBU_convert_nid_c_list_TM_conversions_baseline2.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:13
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _Normalize_Dangerpoint_TA_MA_new_H_
 #define _Normalize_Dangerpoint_TA_MA_new_H_
@@ -26,6 +26,6 @@ extern void Normalize_Dangerpoint_TA_MA_new(
 #endif /* _Normalize_Dangerpoint_TA_MA_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_Dangerpoint_TA_MA_new.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

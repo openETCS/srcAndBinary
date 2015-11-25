@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:11
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,6 +22,6 @@ void CAST_DMI_System_Version_to_int_DATA_Packets_EVC_to_DMI(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_System_Version_to_int_DATA_Packets_EVC_to_DMI.c
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:11
 *************************************************************$ */
 

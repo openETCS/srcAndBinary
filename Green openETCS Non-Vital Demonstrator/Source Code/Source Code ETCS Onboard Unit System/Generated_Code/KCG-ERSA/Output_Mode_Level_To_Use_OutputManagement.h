@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _Output_Mode_Level_To_Use_OutputManagement_H_
 #define _Output_Mode_Level_To_Use_OutputManagement_H_
@@ -46,6 +46,6 @@ extern void Output_Mode_Level_To_Use_init_OutputManagement(
 #endif /* _Output_Mode_Level_To_Use_OutputManagement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Output_Mode_Level_To_Use_OutputManagement.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

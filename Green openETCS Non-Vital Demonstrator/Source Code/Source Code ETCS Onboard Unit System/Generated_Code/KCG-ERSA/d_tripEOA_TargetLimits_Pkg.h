@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _d_tripEOA_TargetLimits_Pkg_H_
 #define _d_tripEOA_TargetLimits_Pkg_H_
@@ -22,6 +22,6 @@ extern L_internal_real_Type_SDM_Types_Pkg d_tripEOA_TargetLimits_Pkg(
 #endif /* _d_tripEOA_TargetLimits_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** d_tripEOA_TargetLimits_Pkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

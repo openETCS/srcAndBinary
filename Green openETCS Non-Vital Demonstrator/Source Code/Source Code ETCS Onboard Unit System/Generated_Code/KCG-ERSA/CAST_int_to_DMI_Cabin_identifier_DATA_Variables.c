@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -35,6 +35,6 @@ DMI_Cabin_Identifier_T_DMI_Types_Pkg CAST_int_to_DMI_Cabin_identifier_DATA_Varia
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_DMI_Cabin_identifier_DATA_Variables.c
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 

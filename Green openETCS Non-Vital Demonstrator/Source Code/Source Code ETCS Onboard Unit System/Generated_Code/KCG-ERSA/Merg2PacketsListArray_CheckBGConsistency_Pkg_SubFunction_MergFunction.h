@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
 #define _Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
@@ -23,6 +23,6 @@ extern void Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunctio
 #endif /* _Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Merg2PacketsListArray_CheckBGConsistency_Pkg_SubFunction_MergFunction.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

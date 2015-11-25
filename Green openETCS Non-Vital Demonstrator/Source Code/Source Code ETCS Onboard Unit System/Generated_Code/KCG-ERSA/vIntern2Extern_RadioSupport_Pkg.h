@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _vIntern2Extern_RadioSupport_Pkg_H_
 #define _vIntern2Extern_RadioSupport_Pkg_H_
@@ -19,6 +19,6 @@ extern V_TRAIN vIntern2Extern_RadioSupport_Pkg(
 #endif /* _vIntern2Extern_RadioSupport_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** vIntern2Extern_RadioSupport_Pkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

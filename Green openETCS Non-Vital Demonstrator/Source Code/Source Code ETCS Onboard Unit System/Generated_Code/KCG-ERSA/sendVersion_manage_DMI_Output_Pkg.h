@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _sendVersion_manage_DMI_Output_Pkg_H_
 #define _sendVersion_manage_DMI_Output_Pkg_H_
@@ -45,6 +45,6 @@ extern void sendVersion_init_manage_DMI_Output_Pkg(
 #endif /* _sendVersion_manage_DMI_Output_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendVersion_manage_DMI_Output_Pkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

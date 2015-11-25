@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -415,9 +415,6 @@ void Procedure_With_Mode_Profile_Procedures(
               outC->Condition_40_51_72 = kcg_false;
             }
           }
-          if (SM_Current_Location_reset_act_SM_Mode_Profile_By_Trackside_Current_Location) {
-            /* 8 */ Counter_reset_pwlinear_int(&outC->Context_8);
-          }
           break;
         case SSM_st_Req_Current_Location_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location :
           tmp2 = kcg_false;
@@ -430,6 +427,14 @@ void Procedure_With_Mode_Profile_Procedures(
         
       }
       outC->Ack_Req_To_Driver = tmp | tmp2;
+      /* act_SM_Current_Location */ switch (SM_Current_Location_state_act_SM_Mode_Profile_By_Trackside_Current_Location) {
+        case SSM_st_Switch_Autorized_Waiting_Ack_SM_Mode_Profile_By_Trackside_Current_Location_SM_Current_Location :
+          if (SM_Current_Location_reset_act_SM_Mode_Profile_By_Trackside_Current_Location) {
+            /* 8 */ Counter_reset_pwlinear_int(&outC->Context_8);
+          }
+          break;
+        
+      }
       if (SM_Mode_Profile_By_Trackside_reset_act) {
         /* 8 */ Counter_reset_pwlinear_int(&outC->Context_8);
       }
@@ -481,6 +486,6 @@ void Procedure_With_Mode_Profile_Procedures(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_With_Mode_Profile_Procedures.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 

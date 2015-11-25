@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _terminateSession_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _terminateSession_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -54,6 +54,6 @@ extern void terminateSession_v2_init_MoRC_Pck_Subfunc_Pkg(
 #endif /* _terminateSession_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** terminateSession_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

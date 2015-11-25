@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -32,6 +32,6 @@ void ProbeEVC_EnvSim(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProbeEVC_EnvSim.dc
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:14
 *************************************************************$ */
 

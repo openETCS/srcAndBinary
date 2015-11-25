@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,6 +20,6 @@ kcg_real CAST_to_int_DMI_m_icon_flashing_freq_DATA_Variables(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_to_int_DMI_m_icon_flashing_freq_DATA_Variables.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:14
 *************************************************************$ */
 

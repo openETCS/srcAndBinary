@@ -1,6 +1,7 @@
 kcg_trace.xml
 kcg_metrics.txt
 ROOT_EVC_ERSA_EVC_Testrunner.c
+RemoteDMIBus_EnvSim.dc
 CASTLIB_BaliseHeaders_TM_conversions.c
 CAST_Int_to_Q_LINK_TM_conversions.c
 CAST_Int_to_M_MCOUNT_TM_conversions.c
@@ -1328,6 +1329,7 @@ manageTIU_output_output_to_TIU_API_Pkg.c
 handleBrakeCommand_output_to_TIU_API_Pkg.c
 getTIUStatusFromCommand_output_to_TIU_API_Pkg.c
 ROOT_EVC_ERSA_EVC_Testrunner.h
+RemoteDMIBus_EnvSim.dh
 CASTLIB_BaliseHeaders_TM_conversions.h
 CAST_Int_to_Q_LINK_TM_conversions.h
 CAST_Int_to_M_MCOUNT_TM_conversions.h

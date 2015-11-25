@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _OutputManagement_Interfaces_H_
 #define _OutputManagement_Interfaces_H_
@@ -41,6 +41,6 @@ extern void OutputManagement_Interfaces(
 #endif /* _OutputManagement_Interfaces_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** OutputManagement_Interfaces.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

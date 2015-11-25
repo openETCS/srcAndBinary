@@ -1,6 +1,6 @@
 $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:18:11
+** Generation date: 2015-11-25T14:46:48
 *************************************************************$
 Data structures
   Structures
@@ -22,8 +22,8 @@ Program size
   Identifiers
     Max number of identifiers with block scope declared in one block: 53
     Max number of macro identifiers simultaneously defined in one preprocessing translation unit: 3270
-    Max number of extern identifiers in one translation unit: 2554
+    Max number of extern identifiers in one translation unit: 2555
 $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_metrics.txt
-** Generation date: 2015-11-25T12:18:11
+** Generation date: 2015-11-25T14:46:48
 *************************************************************$

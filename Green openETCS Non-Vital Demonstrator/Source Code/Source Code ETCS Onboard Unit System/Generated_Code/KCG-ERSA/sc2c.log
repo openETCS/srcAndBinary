@@ -1,5 +1,5 @@
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-25T12:16:16
+** Generation date: 2015-11-25T14:44:27
 ** Command: scade -code "S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\Demonstrators.etp" -root ERSA_EVC_Testrunner::ROOT_EVC -conf ERSA_Testrunner_CodeGeneration
 *************************************************************$
 *** Generated Files Information (GENFIL): KCG- Generated files
@@ -9,6 +9,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\kcg_metrics.txt, line 0, character 0
  ~ROOT_EVC_ERSA_EVC_Testrunner.c
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\ROOT_EVC_ERSA_EVC_Testrunner.c, line 0, character 0
+ ~RemoteDMIBus_EnvSim.dc
+  at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\RemoteDMIBus_EnvSim.dc, line 0, character 0
  ~CASTLIB_BaliseHeaders_TM_conversions.c
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CASTLIB_BaliseHeaders_TM_conversions.c, line 0, character 0
  ~CAST_Int_to_Q_LINK_TM_conversions.c
@@ -2663,6 +2665,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\getTIUStatusFromCommand_output_to_TIU_API_Pkg.c, line 0, character 0
  ~ROOT_EVC_ERSA_EVC_Testrunner.h
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\ROOT_EVC_ERSA_EVC_Testrunner.h, line 0, character 0
+ ~RemoteDMIBus_EnvSim.dh
+  at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\RemoteDMIBus_EnvSim.dh, line 0, character 0
  ~CASTLIB_BaliseHeaders_TM_conversions.h
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CASTLIB_BaliseHeaders_TM_conversions.h, line 0, character 0
  ~CAST_Int_to_Q_LINK_TM_conversions.h
@@ -5339,6 +5343,6 @@ $**************  SCADETOC Version R16 (build i21) **************
  ~sc2c_integration_files.txt
   at file S:\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\sc2c_integration_files.txt, line 0, character 0
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-25T12:18:21
+** Generation date: 2015-11-25T14:47:00
 ** sc2c.log
 *************************************************************$

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:11
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,6 +20,6 @@ void emptyBCAcc_CalcBrakingCurves_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** emptyBCAcc_CalcBrakingCurves_Pkg.c
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:11
 *************************************************************$ */
 

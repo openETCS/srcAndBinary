@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _KCG_IMPORTED_FUNCTIONS_H_
 #define _KCG_IMPORTED_FUNCTIONS_H_
@@ -27,6 +27,6 @@ extern kcg_int Char_to_Int_Utilities(
 #endif /* _KCG_IMPORTED_FUNCTIONS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_imported_functions.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

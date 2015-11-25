@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _MoRC_Main_v2_MoRC_Pck_H_
 #define _MoRC_Main_v2_MoRC_Pck_H_
@@ -82,6 +82,6 @@ extern void MoRC_Main_v2_init_MoRC_Pck(outC_MoRC_Main_v2_MoRC_Pck *outC);
 #endif /* _MoRC_Main_v2_MoRC_Pck_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MoRC_Main_v2_MoRC_Pck.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

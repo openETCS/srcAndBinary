@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -9,6 +9,9 @@
 
 /* cInitRTMManagement */
 extern const RadioManagement_T_API_RadioCommunication_Pkg cInitRTMManagement;
+
+/* cEmptyMessageFromTCPDMI */
+extern const DMI_to_EVC_Message_int_T_API_DMI_Pkg cEmptyMessageFromTCPDMI;
 
 /* cEmptyChangeTractionSystem */
 extern const Change_traction_system_T_TIU_Types_Pkg cEmptyChangeTractionSystem;
@@ -2029,17 +2032,8 @@ extern const API_TelegramHeader_T_API_Msg_Pkg cEmptyBtmMessageHeader_Toolbox;
 /* Toolbox::cMobileRegistrationDelayCycles */
 #define cMobileRegistrationDelayCycles_Toolbox 5
 
-/* Packet_TrainTypes_Pkg::cMaxNationalSystem */
-#define cMaxNationalSystem_Packet_TrainTypes_Pkg 5
-
-/* Packet_TrainTypes_Pkg::cMaxTractionIdentity */
-#define cMaxTractionIdentity_Packet_TrainTypes_Pkg 4
-
 /* Messages::cEVC_to_DMI_CT */
 extern const EVC_to_DMI_Message_T_API_DMI_Pkg cEVC_to_DMI_CT_Messages;
-
-/* API_DMI_Pkg::cMessage_EVC_to_DMI_size */
-#define cMessage_EVC_to_DMI_size_API_DMI_Pkg 999
 
 /* DATA::cDMI_Dynamic_int_array_size */
 #define cDMI_Dynamic_int_array_size_DATA 24
@@ -2727,9 +2721,6 @@ extern const DMI_Driver_Identifier_T_DMI_Messages_Bothways_Pkg cDMI_Driver_Ident
 
 /* Messages::cDMI_EVC_int_array */
 extern const DMI_to_EVC_Message_int_T_API_DMI_Pkg cDMI_EVC_int_array_Messages;
-
-/* API_DMI_Pkg::cMessage_DMI_to_EVC_size */
-#define cMessage_DMI_to_EVC_size_API_DMI_Pkg 311
 
 /* DATA::cDMI_Train_Running_Number_int_array_size */
 #define cDMI_Train_Running_Number_int_array_size_DATA 3
@@ -3478,6 +3469,18 @@ extern const DMI_Icon_Ack_int_array_T_DATA cDMI_Icon_Ack_int_array_DATA_Packets_
 /* TM_conversions::ENUM_Q_LINK_unlinked */
 #define ENUM_Q_LINK_unlinked_TM_conversions Q_LINK_Unlinked
 
+/* Packet_TrainTypes_Pkg::cMaxNationalSystem */
+#define cMaxNationalSystem_Packet_TrainTypes_Pkg 5
+
+/* Packet_TrainTypes_Pkg::cMaxTractionIdentity */
+#define cMaxTractionIdentity_Packet_TrainTypes_Pkg 4
+
+/* API_DMI_Pkg::cMessage_EVC_to_DMI_size */
+#define cMessage_EVC_to_DMI_size_API_DMI_Pkg 999
+
+/* API_DMI_Pkg::cMessage_DMI_to_EVC_size */
+#define cMessage_DMI_to_EVC_size_API_DMI_Pkg 311
+
 /* TM_radio_messages::DIM_max_payload */
 #define DIM_max_payload_TM_radio_messages 50
 
@@ -3817,6 +3820,6 @@ extern const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox;
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,6 +28,6 @@ kcg_bool CheckTelegramHeader_CheckBGConsistency_Pkg_SubFunction(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckTelegramHeader_CheckBGConsistency_Pkg_SubFunction.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 

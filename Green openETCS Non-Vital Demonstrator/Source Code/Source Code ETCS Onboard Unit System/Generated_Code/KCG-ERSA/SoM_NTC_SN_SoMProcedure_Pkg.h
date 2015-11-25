@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _SoM_NTC_SN_SoMProcedure_Pkg_H_
 #define _SoM_NTC_SN_SoMProcedure_Pkg_H_
@@ -41,6 +41,6 @@ extern void SoM_NTC_SN_init_SoMProcedure_Pkg(
 #endif /* _SoM_NTC_SN_SoMProcedure_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SoM_NTC_SN_SoMProcedure_Pkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

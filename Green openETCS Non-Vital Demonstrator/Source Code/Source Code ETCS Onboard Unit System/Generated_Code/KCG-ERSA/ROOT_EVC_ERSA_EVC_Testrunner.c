@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:43
+** Generation date: 2015-11-25T14:46:15
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,6 +15,9 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
   outC->resetOut = kcg_true;
   outC->EVC_ready = kcg_true;
   outC->init = kcg_true;
+  for (i = 0; i < 311; i++) {
+    outC->TCP_fromDMI[i] = 0;
+  }
   outC->API_RTM_management.valid = kcg_true;
   outC->API_RTM_management.cmd = cmdr_not_relevant_API_RadioCommunication_Pkg;
   outC->API_RTM_management.networkID = 0;
@@ -291,6 +294,7 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
   for (i = 0; i < 50; i++) {
     outC->API_toRBC.OptionalPackets[i] = 0;
   }
+  /* 1 */ RemoteDMIBus_init_EnvSim(&outC->_3_Context_1);
   /* 1 */ EVC_init(&outC->_2_Context_1);
   /* 1 */ EVC_InputBuffer_init_Toolbox_Functions(&outC->_1_Context_1);
   /* 1 */ RTM_ERSA_init_ERSA_EVC_Testrunner(&outC->Context_1);
@@ -302,6 +306,7 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
 void ROOT_EVC_reset_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
 {
   outC->init = kcg_true;
+  /* 1 */ RemoteDMIBus_reset_EnvSim(&outC->_3_Context_1);
   /* 1 */ EVC_reset(&outC->_2_Context_1);
   /* 1 */ EVC_InputBuffer_reset_Toolbox_Functions(&outC->_1_Context_1);
   /* 1 */ RTM_ERSA_reset_ERSA_EVC_Testrunner(&outC->Context_1);
@@ -322,6 +327,7 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L33 */ Radio_TrackTrain_Header_T_Radio_Types_Pkg _L33;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L32 */ CompressedPackets_T_Common_Types_Pkg _L32;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L31 */ CompressedRadioMessage_TM _L31;
+  /* ERSA_EVC_Testrunner::ROOT_EVC::_L174 */ DMI_to_EVC_Message_int_T_API_DMI_Pkg _L174;
   
   /* 1 */
   API_Frontend_radio_prelim_TM_API(
@@ -368,16 +374,20 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &_L31,
     &_L32,
     &_L33);
-  /* last_init_ck_API_RTM_management */ if (outC->init) {
-    outC->init = kcg_false;
+  /* last_init_ck_TCP_fromDMI */ if (outC->init) {
     kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg(
       &tmp3,
       (RadioManagement_T_API_RadioCommunication_Pkg *) &cInitRTMManagement);
+    outC->init = kcg_false;
+    kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(
+      &_L174,
+      (DMI_to_EVC_Message_int_T_API_DMI_Pkg *) &cEmptyMessageFromTCPDMI);
   }
   else {
     kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg(
       &tmp3,
       &outC->API_RTM_management);
+    kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(&_L174, &outC->TCP_fromDMI);
   }
   /* 1 */
   RTM_ERSA_ERSA_EVC_Testrunner(
@@ -442,7 +452,12 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &tmp2,
     &outC->Context_1.TrackMessage,
     &outC->_1_Context_1);
-  /* 1 */ Write_DMI_to_EVC_to_int_Messages(&inC->API_fromDMI, &tmp);
+  /* 1 */ if (_L174[0] != 0) {
+    kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(&tmp, &_L174);
+  }
+  else {
+    /* 1 */ Write_DMI_to_EVC_to_int_Messages(&inC->API_fromDMI, &tmp);
+  }
   /* 1 */
   EVC(
     inC->EVC_reset,
@@ -479,10 +494,14 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   outC->debugCurrentMode = outC->_2_Context_1.debugCurrentMode;
   outC->debugCurrentLevel = outC->_2_Context_1.debugCurrentLevel;
   /* 1 */ Write_int_to_EVC_to_DMI_Messages(&_L4, &outC->API_toDMI);
+  /* 1 */ RemoteDMIBus_EnvSim(&_L4, &inC->API_fromTIU, &outC->_3_Context_1);
+  kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(
+    &outC->TCP_fromDMI,
+    &outC->_3_Context_1.dmiToEVC);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.c
-** Generation date: 2015-11-25T12:17:43
+** Generation date: 2015-11-25T14:46:15
 *************************************************************$ */
 

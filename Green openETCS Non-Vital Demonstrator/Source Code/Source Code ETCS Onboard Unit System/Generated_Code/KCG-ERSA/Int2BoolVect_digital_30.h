@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _Int2BoolVect_digital_30_H_
 #define _Int2BoolVect_digital_30_H_
@@ -21,6 +21,6 @@ extern void Int2BoolVect_digital_30(
 #endif /* _Int2BoolVect_digital_30_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Int2BoolVect_digital_30.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

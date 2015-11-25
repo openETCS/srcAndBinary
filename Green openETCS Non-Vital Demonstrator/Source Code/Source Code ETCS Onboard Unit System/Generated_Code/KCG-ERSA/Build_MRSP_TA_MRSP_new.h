@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _Build_MRSP_TA_MRSP_new_H_
 #define _Build_MRSP_TA_MRSP_new_H_
@@ -62,6 +62,6 @@ extern void Build_MRSP_init_TA_MRSP_new(outC_Build_MRSP_TA_MRSP_new *outC);
 #endif /* _Build_MRSP_TA_MRSP_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MRSP_TA_MRSP_new.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

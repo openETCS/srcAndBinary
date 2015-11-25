@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _mergeTIU_Info_input_from_TIU_API_Pkg_H_
 #define _mergeTIU_Info_input_from_TIU_API_Pkg_H_
@@ -23,6 +23,6 @@ extern void mergeTIU_Info_input_from_TIU_API_Pkg(
 #endif /* _mergeTIU_Info_input_from_TIU_API_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeTIU_Info_input_from_TIU_API_Pkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

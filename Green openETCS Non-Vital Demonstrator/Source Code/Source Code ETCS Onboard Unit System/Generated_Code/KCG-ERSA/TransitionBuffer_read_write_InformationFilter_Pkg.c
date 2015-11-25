@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -60,11 +60,11 @@ void TransitionBuffer_read_write_InformationFilter_Pkg(
       &(&(*Buffer_Out)[0])[0],
       Message_In);
   }
-  kcg_copy_array_121048(&(*Buffer_Out)[1], (array_121048 *) &_L20[0]);
+  kcg_copy_array_121056(&(*Buffer_Out)[1], (array_121056 *) &_L20[0]);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TransitionBuffer_read_write_InformationFilter_Pkg.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:12
 *************************************************************$ */
 

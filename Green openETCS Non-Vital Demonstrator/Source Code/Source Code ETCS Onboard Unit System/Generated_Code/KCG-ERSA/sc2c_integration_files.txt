@@ -2668,6 +2668,7 @@ kcg_consts.c
 *****************************
 ..\..\..\DMI_Interfaces\Int_to_Char.c
 ..\..\..\DMI_Interfaces\Char_To_Int.c
+..\..\..\..\..\..\test\EnvSim\libenvsim\src\scade\RemoteDMIBus_EnvSim.c
 ..\..\..\..\..\..\test\EnvSim\libenvsim\src\scade\ProbeSDM_EnvSim.c
 ..\..\..\..\..\..\test\EnvSim\libenvsim\src\scade\ProbeEVC_EnvSim.c
 

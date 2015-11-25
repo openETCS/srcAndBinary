@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _A_brake_safe_SDMConversionModelPkg_H_
 #define _A_brake_safe_SDMConversionModelPkg_H_
@@ -24,6 +24,6 @@ extern void A_brake_safe_SDMConversionModelPkg(
 #endif /* _A_brake_safe_SDMConversionModelPkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** A_brake_safe_SDMConversionModelPkg.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

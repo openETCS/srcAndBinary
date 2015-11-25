@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _RTM_ERSA_ERSA_EVC_Testrunner_H_
 #define _RTM_ERSA_ERSA_EVC_Testrunner_H_
@@ -22,8 +22,8 @@ typedef struct {
   kcg_bool init;
   kcg_bool init3;
   /* ----------------------- local memories  ------------------------- */
-  struct_119976 /* ERSA_EVC_Testrunner::RTM_ERSA */ _1_fby_RTM_ERSA_ERSA_EVC_Testrunner;
-  struct_119976 /* ERSA_EVC_Testrunner::RTM_ERSA */ fby_RTM_ERSA_ERSA_EVC_Testrunner;
+  struct_120017 /* ERSA_EVC_Testrunner::RTM_ERSA */ _1_fby_RTM_ERSA_ERSA_EVC_Testrunner;
+  struct_120017 /* ERSA_EVC_Testrunner::RTM_ERSA */ fby_RTM_ERSA_ERSA_EVC_Testrunner;
   SSM_ST_GSM_R_MobileManagement /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement */ GSM_R_MobileManagement_state_nxt;
   kcg_bool /* ERSA_EVC_Testrunner::RTM_ERSA::registrationFinished */ registrationFinished;
   kcg_bool /* ERSA_EVC_Testrunner::RTM_ERSA::connectionEstablished */ connectionEstablished;
@@ -53,6 +53,6 @@ extern void RTM_ERSA_init_ERSA_EVC_Testrunner(
 #endif /* _RTM_ERSA_ERSA_EVC_Testrunner_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RTM_ERSA_ERSA_EVC_Testrunner.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _SP_ModeRelated_TA_SpeedProfiles_H_
 #define _SP_ModeRelated_TA_SpeedProfiles_H_
@@ -23,6 +23,6 @@ extern void SP_ModeRelated_TA_SpeedProfiles(
 #endif /* _SP_ModeRelated_TA_SpeedProfiles_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SP_ModeRelated_TA_SpeedProfiles.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

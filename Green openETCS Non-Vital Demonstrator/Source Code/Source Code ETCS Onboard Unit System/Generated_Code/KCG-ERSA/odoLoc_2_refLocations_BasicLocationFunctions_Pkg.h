@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _odoLoc_2_refLocations_BasicLocationFunctions_Pkg_H_
 #define _odoLoc_2_refLocations_BasicLocationFunctions_Pkg_H_
@@ -26,6 +26,6 @@ extern void odoLoc_2_refLocations_BasicLocationFunctions_Pkg(
 #endif /* _odoLoc_2_refLocations_BasicLocationFunctions_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** odoLoc_2_refLocations_BasicLocationFunctions_Pkg.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

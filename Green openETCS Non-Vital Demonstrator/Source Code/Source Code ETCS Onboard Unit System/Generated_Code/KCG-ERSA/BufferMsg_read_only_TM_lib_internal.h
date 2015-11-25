@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _BufferMsg_read_only_TM_lib_internal_H_
 #define _BufferMsg_read_only_TM_lib_internal_H_
@@ -24,6 +24,6 @@ extern void BufferMsg_read_only_TM_lib_internal(
 #endif /* _BufferMsg_read_only_TM_lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferMsg_read_only_TM_lib_internal.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

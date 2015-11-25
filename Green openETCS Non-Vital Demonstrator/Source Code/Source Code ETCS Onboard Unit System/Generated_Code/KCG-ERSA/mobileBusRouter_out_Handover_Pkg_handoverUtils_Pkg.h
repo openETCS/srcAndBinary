@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _mobileBusRouter_out_Handover_Pkg_handoverUtils_Pkg_H_
 #define _mobileBusRouter_out_Handover_Pkg_handoverUtils_Pkg_H_
@@ -67,6 +67,6 @@ extern void mobileBusRouter_out_init_Handover_Pkg_handoverUtils_Pkg(
 #endif /* _mobileBusRouter_out_Handover_Pkg_handoverUtils_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mobileBusRouter_out_Handover_Pkg_handoverUtils_Pkg.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

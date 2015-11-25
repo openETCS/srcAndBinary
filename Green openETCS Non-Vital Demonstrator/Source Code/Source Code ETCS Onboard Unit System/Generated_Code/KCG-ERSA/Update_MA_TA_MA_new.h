@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _Update_MA_TA_MA_new_H_
 #define _Update_MA_TA_MA_new_H_
@@ -40,6 +40,6 @@ extern void Update_MA_init_TA_MA_new(outC_Update_MA_TA_MA_new *outC);
 #endif /* _Update_MA_TA_MA_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Update_MA_TA_MA_new.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

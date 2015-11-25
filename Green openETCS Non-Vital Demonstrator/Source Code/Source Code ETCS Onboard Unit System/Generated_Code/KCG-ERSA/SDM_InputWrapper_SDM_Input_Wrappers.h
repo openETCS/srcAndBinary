@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 #ifndef _SDM_InputWrapper_SDM_Input_Wrappers_H_
 #define _SDM_InputWrapper_SDM_Input_Wrappers_H_
@@ -56,6 +56,6 @@ extern void SDM_InputWrapper_init_SDM_Input_Wrappers(
 #endif /* _SDM_InputWrapper_SDM_Input_Wrappers_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_InputWrapper_SDM_Input_Wrappers.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:08
 *************************************************************$ */
 

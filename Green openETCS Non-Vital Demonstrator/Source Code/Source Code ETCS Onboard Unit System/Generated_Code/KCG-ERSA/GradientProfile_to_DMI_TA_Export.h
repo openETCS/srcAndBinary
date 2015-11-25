@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _GradientProfile_to_DMI_TA_Export_H_
 #define _GradientProfile_to_DMI_TA_Export_H_
@@ -22,6 +22,6 @@ extern void GradientProfile_to_DMI_TA_Export(
 #endif /* _GradientProfile_to_DMI_TA_Export_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** GradientProfile_to_DMI_TA_Export.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

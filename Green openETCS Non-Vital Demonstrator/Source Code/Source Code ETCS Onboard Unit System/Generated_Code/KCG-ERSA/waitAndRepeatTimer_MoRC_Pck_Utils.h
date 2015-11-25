@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 #ifndef _waitAndRepeatTimer_MoRC_Pck_Utils_H_
 #define _waitAndRepeatTimer_MoRC_Pck_Utils_H_
@@ -48,6 +48,6 @@ extern void waitAndRepeatTimer_init_MoRC_Pck_Utils(
 #endif /* _waitAndRepeatTimer_MoRC_Pck_Utils_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** waitAndRepeatTimer_MoRC_Pck_Utils.h
-** Generation date: 2015-11-25T12:17:41
+** Generation date: 2015-11-25T14:46:10
 *************************************************************$ */
 

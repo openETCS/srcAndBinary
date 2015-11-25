@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _Procedure_Start_L1_L2_L3_Procedures_H_
 #define _Procedure_Start_L1_L2_L3_Procedures_H_
@@ -58,6 +58,6 @@ extern void Procedure_Start_L1_L2_L3_init_Procedures(
 #endif /* _Procedure_Start_L1_L2_L3_Procedures_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_Start_L1_L2_L3_Procedures.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

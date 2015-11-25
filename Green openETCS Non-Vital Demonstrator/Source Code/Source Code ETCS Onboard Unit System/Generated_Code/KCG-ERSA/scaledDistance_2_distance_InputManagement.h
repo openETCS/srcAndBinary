@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 #ifndef _scaledDistance_2_distance_InputManagement_H_
 #define _scaledDistance_2_distance_InputManagement_H_
@@ -20,6 +20,6 @@ extern L_internal_Type_Obu_BasicTypes_Pkg scaledDistance_2_distance_InputManagem
 #endif /* _scaledDistance_2_distance_InputManagement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** scaledDistance_2_distance_InputManagement.h
-** Generation date: 2015-11-25T12:17:40
+** Generation date: 2015-11-25T14:46:09
 *************************************************************$ */
 

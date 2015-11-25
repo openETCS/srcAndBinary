@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:13
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -39,6 +39,6 @@ void SSP_Find_First_Speed_Section_After_BG_loop_TA_SSP_new(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Find_First_Speed_Section_After_BG_loop_TA_SSP_new.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:13
 *************************************************************$ */
 

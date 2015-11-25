@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:14
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -20,9 +20,9 @@ void BufferOutput_read_write3_TM_lib_internal(
   
   _L34 = Stacksize_old == 0;
   /* 2 */ if (_L34) {
-    kcg_copy_array_119365(
+    kcg_copy_array_119401(
       &(*Buffer_Out)[0],
-      (array_119365 *) &(*Message_In)[1]);
+      (array_119401 *) &(*Message_In)[1]);
     kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
       &(&(&(*Buffer_Out)[0])[2])[0],
       (M_TrainTrack_Message_T_TM_radio_messages *)
@@ -32,9 +32,9 @@ void BufferOutput_read_write3_TM_lib_internal(
       &(*Message_In)[0]);
   }
   else {
-    kcg_copy_array_119797(
+    kcg_copy_array_119844(
       &(*Buffer_Out)[0],
-      (array_119797 *) &(*Message_In)[0]);
+      (array_119844 *) &(*Message_In)[0]);
     if ((0 <= Stacksize_old - 1) & (Stacksize_old - 1 < 100)) {
       kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
         Message_out,
@@ -47,12 +47,12 @@ void BufferOutput_read_write3_TM_lib_internal(
           &EMPTY_TrainTrackMessage_TM_lib_internal);
     }
   }
-  kcg_copy_array_123311(&(*Buffer_Out)[3], (array_123311 *) &(*Buffer_In)[0]);
+  kcg_copy_array_123330(&(*Buffer_Out)[3], (array_123330 *) &(*Buffer_In)[0]);
   *Stacksize_new = Stacksize_old + 2;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_read_write3_TM_lib_internal.c
-** Generation date: 2015-11-25T12:17:42
+** Generation date: 2015-11-25T14:46:14
 *************************************************************$ */
 
