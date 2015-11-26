@@ -1,6 +1,7 @@
 #!/bin/sh
 
 TESTRUNNER_SRC=../../../../../demonstrator/Sources/testrunner/evcglue/scade
+QMAKE_CMD=qmake-qt4
 
 ls $TESTRUNNER_SRC
 echo "--------------------------------------------"
@@ -26,6 +27,14 @@ echo "-   Copying code...                        -"
 echo "--------------------------------------------"
 
 cp -vr KCG-ERSA/* $TESTRUNNER_SRC
+
+echo "--------------------------------------------"
+echo "-   Building...                            -"
+echo "--------------------------------------------"
+
+cd $TESTRUNNER_SRC/../../
+$QMAKE_CMD -r
+make -j4
 
 echo "--------------------------------------------"
 echo "-   Script done                            -"
