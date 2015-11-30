@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ void AckMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager */
 void AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::Queue */array__30249 *Queue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::Queue */array__31763 *Queue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::SystemTime */kcg_int SystemTime,
   /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::array_hh_local */array_real_5 *array_hh_local,
   /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::array_mm_local */array_real_5 *array_mm_local,
@@ -111,7 +111,9 @@ void AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
   outC->Array_hh[4] = outC->Array_hh[3];
   outC->Array_hh[1] = _L37;
   outC->Array_hh[2] = outC->Array_hh[1];
-  kcg_copy_array_real_5(&tmp, (array_real_5 *) &cArray_hh_leer_DMI_Control_Pkg);
+  kcg_copy_array_real_5(
+    &tmp,
+    (array_real_5 *) &cArray_hh_leer5_DMI_Control_Pkg);
   for (i = 0; i < 5; i++) {
     kcg_copy_array_real_5(&tmp1, &tmp);
     /* 2 */
@@ -127,7 +129,7 @@ void AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
   num_mm = /* 1 */ Length_DMI_Control_Pkg_Sub_func_TextMessages(array_mm_local);
   kcg_copy_array_real_5(
     &tmp1,
-    (array_real_5 *) &cArray_mm_leer_DMI_Control_Pkg);
+    (array_real_5 *) &cArray_mm_leer5_DMI_Control_Pkg);
   for (i = 0; i < 5; i++) {
     kcg_copy_array_real_5(&tmp, &tmp1);
     /* 1 */
@@ -144,6 +146,6 @@ void AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

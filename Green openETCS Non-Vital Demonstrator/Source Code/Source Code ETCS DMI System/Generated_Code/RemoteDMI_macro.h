@@ -100,6 +100,12 @@ typedef struct {
 #define VARC_RemoteDMI_DMI_MousePressed(context) context.SAO_CTX_inC_RemoteDMI_Testbench_Integration.DMI_MousePressed  /* Testbench_Integration::RemoteDMI/DMI_MousePressed */
 #define VAR_RemoteDMI_DMI_MousePressed VARC_RemoteDMI_DMI_MousePressed(CTX_RemoteDMI_Testbench_Integration)
 
+#define VARC_RemoteDMI_DMI_ScrollDown(context) context.SAO_CTX_inC_RemoteDMI_Testbench_Integration.DMI_ScrollDown  /* Testbench_Integration::RemoteDMI/DMI_ScrollDown */
+#define VAR_RemoteDMI_DMI_ScrollDown VARC_RemoteDMI_DMI_ScrollDown(CTX_RemoteDMI_Testbench_Integration)
+
+#define VARC_RemoteDMI_DMI_ScrollUp(context) context.SAO_CTX_inC_RemoteDMI_Testbench_Integration.DMI_ScrollUp  /* Testbench_Integration::RemoteDMI/DMI_ScrollUp */
+#define VAR_RemoteDMI_DMI_ScrollUp VARC_RemoteDMI_DMI_ScrollUp(CTX_RemoteDMI_Testbench_Integration)
+
 
 /*$**********************************************************
 *                           OUTPUTS
@@ -336,6 +342,15 @@ typedef struct {
 #define VARC_RemoteDMI_DMI_D_PASP_IndicationMarker_toDisplay(context) context.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_D_PASP_IndicationMarker_toDisplay  /* Testbench_Integration::RemoteDMI/DMI_D_PASP_IndicationMarker_toDisplay */
 #define VAR_RemoteDMI_DMI_D_PASP_IndicationMarker_toDisplay VARC_RemoteDMI_DMI_D_PASP_IndicationMarker_toDisplay(CTX_RemoteDMI_Testbench_Integration)
 
+#define VARC_RemoteDMI_DMI_ScrollDownEnableIndex(context) context.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_ScrollDownEnableIndex  /* Testbench_Integration::RemoteDMI/DMI_ScrollDownEnableIndex */
+#define VAR_RemoteDMI_DMI_ScrollDownEnableIndex VARC_RemoteDMI_DMI_ScrollDownEnableIndex(CTX_RemoteDMI_Testbench_Integration)
+
+#define VARC_RemoteDMI_DMI_ScrollUpEnableIndex(context) context.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_ScrollUpEnableIndex  /* Testbench_Integration::RemoteDMI/DMI_ScrollUpEnableIndex */
+#define VAR_RemoteDMI_DMI_ScrollUpEnableIndex VARC_RemoteDMI_DMI_ScrollUpEnableIndex(CTX_RemoteDMI_Testbench_Integration)
+
+#define VARC_RemoteDMI_DMI_localTime(context) context.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_localTime  /* Testbench_Integration::RemoteDMI/DMI_localTime */
+#define VAR_RemoteDMI_DMI_localTime VARC_RemoteDMI_DMI_localTime(CTX_RemoteDMI_Testbench_Integration)
+
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -390,12 +405,16 @@ typedef struct {
 #define CPY_DMI_startRequest(DST, SRC) DST = SRC
 #define T_DMI_MousePressed kcg_bool
 #define CPY_DMI_MousePressed(DST, SRC) DST = SRC
+#define T_DMI_ScrollDown kcg_bool
+#define CPY_DMI_ScrollDown(DST, SRC) DST = SRC
+#define T_DMI_ScrollUp kcg_bool
+#define CPY_DMI_ScrollUp(DST, SRC) DST = SRC
 #define T_DMI_PlanningAreaVisibility_toDisplay kcg_bool
 #define CPY_DMI_PlanningAreaVisibility_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_D_Scale_toDisplay tScale
 #define CPY_DMI_D_Scale_toDisplay(DST, SRC) kcg_copy_tScale(DST, SRC)
-#define T_DMI_D_GradientVisible_toDisplay array_bool_12
-#define CPY_DMI_D_GradientVisible_toDisplay(DST, SRC) kcg_copy_array_bool_12(DST, SRC)
+#define T_DMI_D_GradientVisible_toDisplay array_bool_32
+#define CPY_DMI_D_GradientVisible_toDisplay(DST, SRC) kcg_copy_array_bool_32(DST, SRC)
 #define T_DMI_D_PASP_Distances_toDisplay array_real_4
 #define CPY_DMI_D_PASP_Distances_toDisplay(DST, SRC) kcg_copy_array_real_4(DST, SRC)
 #define T_DMI_D_PASP_Speeds_toDisplay array_real_4
@@ -440,8 +459,8 @@ typedef struct {
 #define CPY_DMI_traindataValidWinVisibility_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_Vtarget_permVisibility_toDisplay kcg_bool
 #define CPY_DMI_Vtarget_permVisibility_toDisplay(DST, SRC) DST = SRC
-#define T_DMI_GradientsStart_toDisplay array_real_12
-#define CPY_DMI_GradientsStart_toDisplay(DST, SRC) kcg_copy_array_real_12(DST, SRC)
+#define T_DMI_GradientsStart_toDisplay array_real_32
+#define CPY_DMI_GradientsStart_toDisplay(DST, SRC) kcg_copy_array_real_32(DST, SRC)
 #define T_DMI_trainAirtightIndex_toDisplay kcg_int
 #define CPY_DMI_trainAirtightIndex_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_yellowBorderC1Area_toDisplay kcg_bool
@@ -482,8 +501,8 @@ typedef struct {
 #define CPY_DMI_traindataYesNoIndex_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_vtarget_permColor_toDisplay kcg_int
 #define CPY_DMI_vtarget_permColor_toDisplay(DST, SRC) DST = SRC
-#define T_DMI_GradientsEnd_toDisplay array_real_12
-#define CPY_DMI_GradientsEnd_toDisplay(DST, SRC) kcg_copy_array_real_12(DST, SRC)
+#define T_DMI_GradientsEnd_toDisplay array_real_32
+#define CPY_DMI_GradientsEnd_toDisplay(DST, SRC) kcg_copy_array_real_32(DST, SRC)
 #define T_DMI_RBC_status_symbol_toDisplay kcg_int
 #define CPY_DMI_RBC_status_symbol_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_TrainRN_Display_toDisplay array_int_9
@@ -528,8 +547,8 @@ typedef struct {
 #define CPY_DMI_Vinterv_Visibility_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_TrainPosition_toDisplay kcg_real
 #define CPY_DMI_TrainPosition_toDisplay(DST, SRC) DST = SRC
-#define T_DMI_GradientsValue_toDisplay array_real_12
-#define CPY_DMI_GradientsValue_toDisplay(DST, SRC) kcg_copy_array_real_12(DST, SRC)
+#define T_DMI_GradientsValue_toDisplay array_real_32
+#define CPY_DMI_GradientsValue_toDisplay(DST, SRC) kcg_copy_array_real_32(DST, SRC)
 #define T_DMI_trainLenght_toDisplay kcg_real
 #define CPY_DMI_trainLenght_toDisplay(DST, SRC) DST = SRC
 #define T_DMI_VpermColor_toDisplay kcg_int
@@ -544,6 +563,12 @@ typedef struct {
 #define CPY_DMI_icons_ack(DST, SRC) kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(DST, SRC)
 #define T_DMI_D_PASP_IndicationMarker_toDisplay array_real_1
 #define CPY_DMI_D_PASP_IndicationMarker_toDisplay(DST, SRC) kcg_copy_array_real_1(DST, SRC)
+#define T_DMI_ScrollDownEnableIndex kcg_int
+#define CPY_DMI_ScrollDownEnableIndex(DST, SRC) DST = SRC
+#define T_DMI_ScrollUpEnableIndex kcg_int
+#define CPY_DMI_ScrollUpEnableIndex(DST, SRC) DST = SRC
+#define T_DMI_localTime array_real_4
+#define CPY_DMI_localTime(DST, SRC) kcg_copy_array_real_4(DST, SRC)
 
 
 /*$**********************************************************

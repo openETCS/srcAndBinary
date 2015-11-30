@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -9,7 +9,7 @@
 
 /* DMI_Control_Pkg::Sub_func::TextMessages::CheckTypeOfText */
 void CheckTypeOfText_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::CheckTypeOfText::Queue */array__30249 *Queue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::CheckTypeOfText::Queue */array__31763 *Queue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::CheckTypeOfText::Output1 */kcg_bool *Output1,
   /* DMI_Control_Pkg::Sub_func::TextMessages::CheckTypeOfText::Output2 */kcg_bool *Output2)
 {
@@ -22,6 +22,6 @@ void CheckTypeOfText_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CheckTypeOfText_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,8 +23,10 @@ void SPDI_ComputeSpeedChangeIndex_SPDI(
   
   *Acc_EndOfLogPart_Out = Acc_EndOfLogPart;
   *Acc_Speed_Out = Speed;
-  *SpeedChangeSymbolVisible = *Acc_EndOfLogPart_Out > Dist;
-  IfBlock1_clock = *Acc_Speed_Out == 0.0;
+  *SpeedChangeSymbolVisible = (*Acc_EndOfLogPart_Out > Dist) & (Dist > 0.0) &
+    (Acc_Last_Speed != *Acc_Speed_Out);
+  IfBlock1_clock = (*Acc_Speed_Out == 0.0) | (*Acc_Speed_Out < 0.0) |
+    (*Acc_Speed_Out == 635.0) | (*Acc_Speed_Out > 635.0);
   if (IfBlock1_clock) {
     *SpeedChangeIndex = 3;
   }
@@ -41,6 +43,6 @@ void SPDI_ComputeSpeedChangeIndex_SPDI(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SPDI_ComputeSpeedChangeIndex_SPDI.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

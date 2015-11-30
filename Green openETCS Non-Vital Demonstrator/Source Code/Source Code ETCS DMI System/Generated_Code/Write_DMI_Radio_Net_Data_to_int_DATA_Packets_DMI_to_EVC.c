@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:32:00
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,6 +28,6 @@ void Write_DMI_Radio_Net_Data_to_int_DATA_Packets_DMI_to_EVC(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Write_DMI_Radio_Net_Data_to_int_DATA_Packets_DMI_to_EVC.c
-** Generation date: 2015-11-12T10:32:00
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

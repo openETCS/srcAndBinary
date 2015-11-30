@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,24 +19,27 @@ void D_behavior(
   /* D_behavior::OverD9 */kcg_bool OverD9,
   /* D_behavior::OverD12 */kcg_bool OverD12,
   /* D_behavior::TrainPosition */kcg_real TrainPosition,
-  /* D_behavior::GradientsStart */array_real_12 *GradientsStart,
-  /* D_behavior::GradientsEnd */array_real_12 *GradientsEnd,
+  /* D_behavior::GradientsStart */array_real_32 *GradientsStart,
+  /* D_behavior::GradientsEnd */array_real_32 *GradientsEnd,
   /* D_behavior::PASP_SpeedPoints */tSpeedPoints *PASP_SpeedPoints,
   /* D_behavior::CPS */kcg_real CPS,
   /* D_behavior::Indicationlocation */kcg_int Indicationlocation,
+  /* D_behavior::sup_status */M_SUPERVISION_STATUS_DMI_Types_Pkg sup_status,
+  /* D_behavior::isValid */kcg_bool isValid,
   outC_D_behavior *outC)
 {
   kcg_real tmp;
   kcg_int i;
-  /* D_behavior::IfBlock1::else */ kcg_bool _2_else_clock_IfBlock1;
-  /* D_behavior::IfBlock1::else::else::else */ kcg_bool else_clock_IfBlock1;
-  /* D_behavior::IfBlock1::else::else */ kcg_bool _1_else_clock_IfBlock1;
+  /* D_behavior::IfBlock1::else */ kcg_bool _1_else_clock_IfBlock1;
+  /* D_behavior::IfBlock1::else::else */ kcg_bool else_clock_IfBlock1;
   /* D_behavior::IfBlock1 */ kcg_bool IfBlock1_clock;
+  /* D_behavior::isPIM */ kcg_bool isPIM;
   /* D_behavior::_L35 */ tScale _L35;
   /* D_behavior::_L158 */ tPASPOutput_Array _L158;
   /* D_behavior::_L202 */ kcg_real _L202;
   /* D_behavior::_L204 */ array_real_10 _L204;
   
+  isPIM = sup_status == cPIM;
   tmp = (kcg_real) Indicationlocation / (kcg_real) 100;
   /* 1 */
   ZoomLevel(
@@ -50,7 +53,7 @@ void D_behavior(
   else {
     kcg_copy_tScale(&_L35, (tScale *) &illegalScalesIndex);
   }
-  IfBlock1_clock = (tmp <= _L35[5]) & (tmp > 0.0);
+  IfBlock1_clock = (tmp <= _L35[5]) & (tmp > 0.0) & !isPIM & isValid;
   if (IfBlock1_clock) {
     if ((0 <= outC->Context_1.zoomlevel) & (outC->Context_1.zoomlevel < 6)) {
       _L202 = LinearScaleFactors[outC->Context_1.zoomlevel];
@@ -61,26 +64,20 @@ void D_behavior(
     outC->toDisplay[0] = tmp / _L202;
   }
   else {
-    _2_else_clock_IfBlock1 = tmp == 0.0;
-    if (_2_else_clock_IfBlock1) {
+    _1_else_clock_IfBlock1 = !isValid;
+    if (_1_else_clock_IfBlock1) {
       if (outC->init) {
         outC->toDisplay[0] = 0.0;
       }
     }
     else {
-      _1_else_clock_IfBlock1 = tmp < 0.0;
-      if (_1_else_clock_IfBlock1) {
-        outC->toDisplay[0] = 0.0;
+      else_clock_IfBlock1 = (tmp < 0.0) | (tmp > _L35[8]) | isPIM;
+      if (else_clock_IfBlock1) {
+        outC->toDisplay[0] = - 500.0;
       }
       else {
-        else_clock_IfBlock1 = tmp > _L35[8];
-        if (else_clock_IfBlock1) {
-          outC->toDisplay[0] = 262.0;
-        }
-        else {
-          outC->toDisplay[0] = logScaleFactor * (/* 1 */ LogR_mathext(tmp) -
-              /* 2 */ LogR_mathext(_L35[5])) + ScaleLine5;
-        }
+        outC->toDisplay[0] = logScaleFactor * (/* 4 */ LogR_mathext(tmp) -
+            /* 3 */ LogR_mathext(_L35[5])) + ScaleLine5;
       }
     }
   }
@@ -92,7 +89,7 @@ void D_behavior(
     SPDI_ComputeSpeedChangeIndex_SPDI(
       tmp,
       _L35[8],
-      (*PASP_SpeedPoints)[0][i],
+      (*PASP_SpeedPoints)[0][i] - TrainPosition,
       (*PASP_SpeedPoints)[1][i],
       &_L202,
       &_L204[i],
@@ -122,7 +119,7 @@ void D_behavior(
         TrainPosition,
         outC->Context_1.zoomlevel);
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 32; i++) {
     outC->GradientVisible[i] = kcg_true;
     outC->GradientEndInterpolated[i] = /* 2 */
       ComputeDistDisplay(
@@ -143,6 +140,6 @@ void D_behavior(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** D_behavior.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

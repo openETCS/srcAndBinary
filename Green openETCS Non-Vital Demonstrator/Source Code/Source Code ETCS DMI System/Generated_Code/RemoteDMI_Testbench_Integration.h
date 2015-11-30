@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 #ifndef _RemoteDMI_Testbench_Integration_H_
 #define _RemoteDMI_Testbench_Integration_H_
@@ -32,6 +32,8 @@ typedef struct {
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_openTrainRN */ DMI_openTrainRN;
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_startRequest */ DMI_startRequest;
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_MousePressed */ DMI_MousePressed;
+  kcg_bool /* Testbench_Integration::RemoteDMI::DMI_ScrollDown */ DMI_ScrollDown;
+  kcg_bool /* Testbench_Integration::RemoteDMI::DMI_ScrollUp */ DMI_ScrollUp;
 } inC_RemoteDMI_Testbench_Integration;
 
 /* ========================  context type  ========================= */
@@ -39,7 +41,7 @@ typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_PlanningAreaVisibility_toDisplay */ DMI_PlanningAreaVisibility_toDisplay;
   tScale /* Testbench_Integration::RemoteDMI::DMI_D_Scale_toDisplay */ DMI_D_Scale_toDisplay;
-  array_bool_12 /* Testbench_Integration::RemoteDMI::DMI_D_GradientVisible_toDisplay */ DMI_D_GradientVisible_toDisplay;
+  array_bool_32 /* Testbench_Integration::RemoteDMI::DMI_D_GradientVisible_toDisplay */ DMI_D_GradientVisible_toDisplay;
   array_real_4 /* Testbench_Integration::RemoteDMI::DMI_D_PASP_Distances_toDisplay */ DMI_D_PASP_Distances_toDisplay;
   array_real_4 /* Testbench_Integration::RemoteDMI::DMI_D_PASP_Speeds_toDisplay */ DMI_D_PASP_Speeds_toDisplay;
   array_real_10 /* Testbench_Integration::RemoteDMI::DMI_D_SPDI_SpeedChangePosition_toDisplay */ DMI_D_SPDI_SpeedChangePosition_toDisplay;
@@ -62,7 +64,7 @@ typedef struct {
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_StatusSymbolVisibility_toDisplay */ DMI_StatusSymbolVisibility_toDisplay;
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_traindataValidWinVisibility_toDisplay */ DMI_traindataValidWinVisibility_toDisplay;
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_Vtarget_permVisibility_toDisplay */ DMI_Vtarget_permVisibility_toDisplay;
-  array_real_12 /* Testbench_Integration::RemoteDMI::DMI_GradientsStart_toDisplay */ DMI_GradientsStart_toDisplay;
+  array_real_32 /* Testbench_Integration::RemoteDMI::DMI_GradientsStart_toDisplay */ DMI_GradientsStart_toDisplay;
   kcg_int /* Testbench_Integration::RemoteDMI::DMI_trainAirtightIndex_toDisplay */ DMI_trainAirtightIndex_toDisplay;
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_yellowBorderC1Area_toDisplay */ DMI_yellowBorderC1Area_toDisplay;
   kcg_real /* Testbench_Integration::RemoteDMI::DMI_SpeedDigitTwo_toDisplay */ DMI_SpeedDigitTwo_toDisplay;
@@ -83,7 +85,7 @@ typedef struct {
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_StatusSymbolBrake_toDisplay */ DMI_StatusSymbolBrake_toDisplay;
   kcg_int /* Testbench_Integration::RemoteDMI::DMI_traindataYesNoIndex_toDisplay */ DMI_traindataYesNoIndex_toDisplay;
   kcg_int /* Testbench_Integration::RemoteDMI::DMI_vtarget_permColor_toDisplay */ DMI_vtarget_permColor_toDisplay;
-  array_real_12 /* Testbench_Integration::RemoteDMI::DMI_GradientsEnd_toDisplay */ DMI_GradientsEnd_toDisplay;
+  array_real_32 /* Testbench_Integration::RemoteDMI::DMI_GradientsEnd_toDisplay */ DMI_GradientsEnd_toDisplay;
   kcg_int /* Testbench_Integration::RemoteDMI::DMI_RBC_status_symbol_toDisplay */ DMI_RBC_status_symbol_toDisplay;
   array_int_9 /* Testbench_Integration::RemoteDMI::DMI_TrainRN_Display_toDisplay */ DMI_TrainRN_Display_toDisplay;
   kcg_int /* Testbench_Integration::RemoteDMI::DMI_trainLoadingGougeIndex_toDisplay */ DMI_trainLoadingGougeIndex_toDisplay;
@@ -106,7 +108,7 @@ typedef struct {
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_DistanceToTargetBarVisibility_toDisplay */ DMI_DistanceToTargetBarVisibility_toDisplay;
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_Vinterv_Visibility_toDisplay */ DMI_Vinterv_Visibility_toDisplay;
   kcg_real /* Testbench_Integration::RemoteDMI::DMI_TrainPosition_toDisplay */ DMI_TrainPosition_toDisplay;
-  array_real_12 /* Testbench_Integration::RemoteDMI::DMI_GradientsValue_toDisplay */ DMI_GradientsValue_toDisplay;
+  array_real_32 /* Testbench_Integration::RemoteDMI::DMI_GradientsValue_toDisplay */ DMI_GradientsValue_toDisplay;
   kcg_real /* Testbench_Integration::RemoteDMI::DMI_trainLenght_toDisplay */ DMI_trainLenght_toDisplay;
   kcg_int /* Testbench_Integration::RemoteDMI::DMI_VpermColor_toDisplay */ DMI_VpermColor_toDisplay;
   kcg_real /* Testbench_Integration::RemoteDMI::DMI_SpeedTarget_toDisplay */ DMI_SpeedTarget_toDisplay;
@@ -114,6 +116,9 @@ typedef struct {
   kcg_bool /* Testbench_Integration::RemoteDMI::DMI_openDesk_toDisplay */ DMI_openDesk_toDisplay;
   DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg /* Testbench_Integration::RemoteDMI::DMI_icons_ack */ DMI_icons_ack;
   array_real_1 /* Testbench_Integration::RemoteDMI::DMI_D_PASP_IndicationMarker_toDisplay */ DMI_D_PASP_IndicationMarker_toDisplay;
+  kcg_int /* Testbench_Integration::RemoteDMI::DMI_ScrollDownEnableIndex */ DMI_ScrollDownEnableIndex;
+  kcg_int /* Testbench_Integration::RemoteDMI::DMI_ScrollUpEnableIndex */ DMI_ScrollUpEnableIndex;
+  array_real_4 /* Testbench_Integration::RemoteDMI::DMI_localTime */ DMI_localTime;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -138,6 +143,6 @@ extern void RemoteDMI_reset_Testbench_Integration(
 #endif /* _RemoteDMI_Testbench_Integration_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RemoteDMI_Testbench_Integration.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

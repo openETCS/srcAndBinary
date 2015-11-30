@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,7 +13,7 @@ void FIFO_Insert_Op_Normal_reset_DMI_Control_Pkg_Sub_func_TextMessages(
   kcg_int i;
   
   outC->init = kcg_true;
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < 10; i++) {
     /* 1 */
     InsertTime_iterator_reset_DMI_Control_Pkg_Sub_func_TextMessages(
       &outC->Context_1[i]);
@@ -29,21 +29,21 @@ void FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::isFull */kcg_bool isFull,
   outC_FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages *outC)
 {
-  array__30249 tmp;
+  array__31757 tmp;
   kcg_int i;
   /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::_L22 */ kcg_int _L22;
   
   if (outC->init) {
     outC->init = kcg_false;
-    kcg_copy_array__30249(
+    kcg_copy_array__31757(
       &outC->queue,
-      (array__30249 *) &cMsgStructQueue_DMI_Control_Pkg);
+      (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
   }
   else {
-    kcg_copy_array__30249(&outC->queue, &outC->rem_queue);
+    kcg_copy_array__31757(&outC->queue, &outC->rem_queue);
   }
-  for (i = 0; i < 5; i++) {
-    kcg_copy_array__30249(&tmp, &outC->queue);
+  for (i = 0; i < 10; i++) {
+    kcg_copy_array__31757(&tmp, &outC->queue);
     /* 1 */
     InsertStructMSGFIFO_iterator_normal_DMI_Control_Pkg_Sub_func_TextMessages(
       i,
@@ -53,7 +53,7 @@ void FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages(
       isFull,
       &outC->queue);
   }
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < 10; i++) {
     /* 1 */
     InsertTime_iterator_DMI_Control_Pkg_Sub_func_TextMessages(
       i,
@@ -70,17 +70,17 @@ void FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages(
   }
 #ifdef KCG_MAPW_CPY
   
-  for (i = _L22; i < 5; i++) {
+  for (i = _L22; i < 10; i++) {
     outC->hh_array[i] = - 1.0;
     outC->mm_array[i] = - 1.0;
   }
 #endif /* KCG_MAPW_CPY */
   
-  kcg_copy_array__30249(&outC->rem_queue, &outC->queue);
+  kcg_copy_array__31757(&outC->rem_queue, &outC->queue);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

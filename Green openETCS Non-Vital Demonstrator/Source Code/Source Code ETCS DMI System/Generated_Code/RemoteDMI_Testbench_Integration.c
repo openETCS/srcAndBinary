@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:32:00
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -63,6 +63,8 @@ void RemoteDMI_Testbench_Integration(
     inC->DMI_ShowPlanningArea_fromDisplay,
     inC->DMI_closeButtonMain,
     inC->DMI_C1AreaAck,
+    inC->DMI_ScrollUp,
+    inC->DMI_ScrollDown,
     &outC->_1_Context_1);
   kcg_copy_DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg(
     &outC->DMI_icons_ack,
@@ -76,7 +78,7 @@ void RemoteDMI_Testbench_Integration(
   outC->DMI_VpermColor_toDisplay = outC->_1_Context_1.DMI_VpermColor_toDisplay;
   outC->DMI_trainLenght_toDisplay =
     outC->_1_Context_1.DMI_trainLenght_toDisplay;
-  kcg_copy_array_real_12(
+  kcg_copy_array_real_32(
     &outC->DMI_GradientsValue_toDisplay,
     &outC->_1_Context_1.DMI_GradientsValue_toDisplay);
   outC->DMI_TrainPosition_toDisplay =
@@ -124,7 +126,7 @@ void RemoteDMI_Testbench_Integration(
     &outC->_1_Context_1.DMI_TrainRN_Display_toDisplay);
   outC->DMI_RBC_status_symbol_toDisplay =
     outC->_1_Context_1.DMI_RBC_status_symbol_toDisplay;
-  kcg_copy_array_real_12(
+  kcg_copy_array_real_32(
     &outC->DMI_GradientsEnd_toDisplay,
     &outC->_1_Context_1.DMI_GradientsEnd_toDisplay);
   outC->DMI_vtarget_permColor_toDisplay =
@@ -168,7 +170,7 @@ void RemoteDMI_Testbench_Integration(
     outC->_1_Context_1.DMI_yellowBorderC1Area_toDisplay;
   outC->DMI_trainAirtightIndex_toDisplay =
     outC->_1_Context_1.DMI_trainAirtightIndex_toDisplay;
-  kcg_copy_array_real_12(
+  kcg_copy_array_real_32(
     &outC->DMI_GradientsStart_toDisplay,
     &outC->_1_Context_1.DMI_GradientsStart_toDisplay);
   outC->DMI_Vtarget_permVisibility_toDisplay =
@@ -228,7 +230,7 @@ void RemoteDMI_Testbench_Integration(
   kcg_copy_array_real_1(
     &outC->DMI_D_PASP_IndicationMarker_toDisplay,
     &outC->_1_Context_1.DMI_D_PASP_IndicationMarker_toDisplay);
-  kcg_copy_array_bool_12(
+  kcg_copy_array_bool_32(
     &outC->DMI_D_GradientVisible_toDisplay,
     &outC->_1_Context_1.DMI_D_GradientVisible_toDisplay);
   kcg_copy_tScale(
@@ -236,6 +238,12 @@ void RemoteDMI_Testbench_Integration(
     &outC->_1_Context_1.DMI_D_Scale_toDisplay);
   outC->DMI_PlanningAreaVisibility_toDisplay =
     outC->_1_Context_1.DMI_PlanningAreaVisibility_toDisplay;
+  outC->DMI_ScrollDownEnableIndex =
+    outC->_1_Context_1.DMI_ScrollDownEnableIndex;
+  outC->DMI_ScrollUpEnableIndex = outC->_1_Context_1.DMI_ScrollUpEnableIndex;
+  kcg_copy_array_real_4(
+    &outC->DMI_localTime,
+    &outC->_1_Context_1.DMI_TimeArray);
   /* 1 */
   RemoteEVCBus_EnvSim(&outC->_1_Context_1.EVC_fromDMI, &outC->Context_1);
   kcg_copy_EVC_to_DMI_Message_int_T_API_DMI_Pkg(
@@ -248,6 +256,6 @@ void RemoteDMI_Testbench_Integration(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** RemoteDMI_Testbench_Integration.c
-** Generation date: 2015-11-12T10:32:00
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

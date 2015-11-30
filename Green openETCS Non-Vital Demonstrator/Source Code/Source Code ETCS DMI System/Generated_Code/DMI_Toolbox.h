@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 #ifndef _DMI_Toolbox_H_
 #define _DMI_Toolbox_H_
@@ -21,7 +21,7 @@ typedef struct {
   kcg_real /* Toolbox::DMI::DMI_SpeedTarget_toDisplay */ DMI_SpeedTarget_toDisplay;
   kcg_int /* Toolbox::DMI::DMI_VpermColor_toDisplay */ DMI_VpermColor_toDisplay;
   kcg_real /* Toolbox::DMI::DMI_trainLenght_toDisplay */ DMI_trainLenght_toDisplay;
-  array_real_12 /* Toolbox::DMI::DMI_GradientsValue_toDisplay */ DMI_GradientsValue_toDisplay;
+  array_real_32 /* Toolbox::DMI::DMI_GradientsValue_toDisplay */ DMI_GradientsValue_toDisplay;
   kcg_real /* Toolbox::DMI::DMI_TrainPosition_toDisplay */ DMI_TrainPosition_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_Vinterv_Visibility_toDisplay */ DMI_Vinterv_Visibility_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_DistanceToTargetBarVisibility_toDisplay */ DMI_DistanceToTargetBarVisibility_toDisplay;
@@ -44,7 +44,7 @@ typedef struct {
   kcg_int /* Toolbox::DMI::DMI_trainLoadingGougeIndex_toDisplay */ DMI_trainLoadingGougeIndex_toDisplay;
   array_int_9 /* Toolbox::DMI::DMI_TrainRN_Display_toDisplay */ DMI_TrainRN_Display_toDisplay;
   kcg_int /* Toolbox::DMI::DMI_RBC_status_symbol_toDisplay */ DMI_RBC_status_symbol_toDisplay;
-  array_real_12 /* Toolbox::DMI::DMI_GradientsEnd_toDisplay */ DMI_GradientsEnd_toDisplay;
+  array_real_32 /* Toolbox::DMI::DMI_GradientsEnd_toDisplay */ DMI_GradientsEnd_toDisplay;
   kcg_int /* Toolbox::DMI::DMI_vtarget_permColor_toDisplay */ DMI_vtarget_permColor_toDisplay;
   kcg_int /* Toolbox::DMI::DMI_traindataYesNoIndex_toDisplay */ DMI_traindataYesNoIndex_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_StatusSymbolBrake_toDisplay */ DMI_StatusSymbolBrake_toDisplay;
@@ -65,7 +65,7 @@ typedef struct {
   kcg_real /* Toolbox::DMI::DMI_SpeedDigitTwo_toDisplay */ DMI_SpeedDigitTwo_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_yellowBorderC1Area_toDisplay */ DMI_yellowBorderC1Area_toDisplay;
   kcg_int /* Toolbox::DMI::DMI_trainAirtightIndex_toDisplay */ DMI_trainAirtightIndex_toDisplay;
-  array_real_12 /* Toolbox::DMI::DMI_GradientsStart_toDisplay */ DMI_GradientsStart_toDisplay;
+  array_real_32 /* Toolbox::DMI::DMI_GradientsStart_toDisplay */ DMI_GradientsStart_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_Vtarget_permVisibility_toDisplay */ DMI_Vtarget_permVisibility_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_traindataValidWinVisibility_toDisplay */ DMI_traindataValidWinVisibility_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_StatusSymbolVisibility_toDisplay */ DMI_StatusSymbolVisibility_toDisplay;
@@ -89,9 +89,12 @@ typedef struct {
   array_real_4 /* Toolbox::DMI::DMI_D_PASP_Speeds_toDisplay */ DMI_D_PASP_Speeds_toDisplay;
   array_real_4 /* Toolbox::DMI::DMI_D_PASP_Distances_toDisplay */ DMI_D_PASP_Distances_toDisplay;
   array_real_1 /* Toolbox::DMI::DMI_D_PASP_IndicationMarker_toDisplay */ DMI_D_PASP_IndicationMarker_toDisplay;
-  array_bool_12 /* Toolbox::DMI::DMI_D_GradientVisible_toDisplay */ DMI_D_GradientVisible_toDisplay;
+  array_bool_32 /* Toolbox::DMI::DMI_D_GradientVisible_toDisplay */ DMI_D_GradientVisible_toDisplay;
   tScale /* Toolbox::DMI::DMI_D_Scale_toDisplay */ DMI_D_Scale_toDisplay;
   kcg_bool /* Toolbox::DMI::DMI_PlanningAreaVisibility_toDisplay */ DMI_PlanningAreaVisibility_toDisplay;
+  kcg_int /* Toolbox::DMI::DMI_ScrollDownEnableIndex */ DMI_ScrollDownEnableIndex;
+  kcg_int /* Toolbox::DMI::DMI_ScrollUpEnableIndex */ DMI_ScrollUpEnableIndex;
+  array_real_4 /* Toolbox::DMI::DMI_TimeArray */ DMI_TimeArray;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
@@ -128,6 +131,8 @@ extern void DMI_Toolbox(
   /* Toolbox::DMI::DMI_ShowPlanningArea_fromDisplay */kcg_bool DMI_ShowPlanningArea_fromDisplay,
   /* Toolbox::DMI::DMI_closeButtonMain */kcg_bool DMI_closeButtonMain,
   /* Toolbox::DMI::DMI_C1AreaAck */kcg_bool DMI_C1AreaAck,
+  /* Toolbox::DMI::DMI_ScrollUp */kcg_bool DMI_ScrollUp,
+  /* Toolbox::DMI::DMI_ScrollDown */kcg_bool DMI_ScrollDown,
   outC_DMI_Toolbox *outC);
 
 extern void DMI_reset_Toolbox(outC_DMI_Toolbox *outC);
@@ -135,6 +140,6 @@ extern void DMI_reset_Toolbox(outC_DMI_Toolbox *outC);
 #endif /* _DMI_Toolbox_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Toolbox.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,55 +10,42 @@
 /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal */
 void SortTimeTopDown_normal_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::index */kcg_int index,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::acc */array_real_5 *acc,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::TimeQueue */array_real_5 *TimeQueue,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::numArray */array_int_5 *numArray,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::acc */array_real_10 *acc,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::TimeQueue */array_real_10 *TimeQueue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::num */kcg_int num,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::outTimeArray */array_real_5 *outTimeArray)
+  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::outTimeArray */array_real_10 *outTimeArray)
 {
-  kcg_int tmp3;
-  kcg_int tmp2;
   kcg_real tmp1;
-  kcg_int tmp;
+  kcg_real tmp;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::SortTimeTopDown_normal::_L69 */ kcg_real _L69;
   
-  if ((0 <= index - 1) & (index - 1 < 5)) {
-    tmp3 = (*numArray)[index - 1];
+  _L69 = - 1.0;
+  if ((0 <= index) & (index < 10)) {
+    tmp1 = (*acc)[index];
   }
   else {
-    tmp3 = - 1;
+    tmp1 = _L69;
   }
-  if ((0 <= index) & (index < 5)) {
-    tmp2 = (*numArray)[index];
-  }
-  else {
-    tmp2 = 0;
-  }
-  if (tmp3 == tmp2) {
-    kcg_copy_array_real_5(outTimeArray, acc);
+  if (tmp1 != _L69) {
+    kcg_copy_array_real_10(outTimeArray, acc);
   }
   else {
-    kcg_copy_array_real_5(outTimeArray, acc);
-    if ((0 <= cDIM_MSGQueue_DMI_Control_Pkg - num + index) &
-      (cDIM_MSGQueue_DMI_Control_Pkg - num + index < 5)) {
-      tmp1 = (*TimeQueue)[cDIM_MSGQueue_DMI_Control_Pkg - num + index];
+    kcg_copy_array_real_10(outTimeArray, acc);
+    if ((0 <= cDIM_MSGQueueMax_DMI_Control_Pkg - num + index) &
+      (cDIM_MSGQueueMax_DMI_Control_Pkg - num + index < 10)) {
+      tmp = (*TimeQueue)[cDIM_MSGQueueMax_DMI_Control_Pkg - num + index];
     }
     else {
-      tmp1 = c_hh_DMI_Control_Pkg;
+      tmp = c_hh_DMI_Control_Pkg;
     }
-    if ((0 <= index - 1) & (index - 1 < 5)) {
-      tmp = (*numArray)[index - 1];
-    }
-    else {
-      tmp = 0;
-    }
-    if ((0 <= tmp) & (tmp < 5)) {
-      (*outTimeArray)[tmp] = tmp1;
+    if ((0 <= index) & (index < 10)) {
+      (*outTimeArray)[index] = tmp;
     }
   }
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** SortTimeTopDown_normal_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

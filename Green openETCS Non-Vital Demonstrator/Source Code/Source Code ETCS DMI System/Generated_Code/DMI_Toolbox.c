@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:32:00
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -39,6 +39,8 @@ void DMI_Toolbox(
   /* Toolbox::DMI::DMI_ShowPlanningArea_fromDisplay */kcg_bool DMI_ShowPlanningArea_fromDisplay,
   /* Toolbox::DMI::DMI_closeButtonMain */kcg_bool DMI_closeButtonMain,
   /* Toolbox::DMI::DMI_C1AreaAck */kcg_bool DMI_C1AreaAck,
+  /* Toolbox::DMI::DMI_ScrollUp */kcg_bool DMI_ScrollUp,
+  /* Toolbox::DMI::DMI_ScrollDown */kcg_bool DMI_ScrollDown,
   outC_DMI_Toolbox *outC)
 {
   kcg_int i;
@@ -81,6 +83,8 @@ void DMI_Toolbox(
     DMI_HidePlanningArea_fromDisplay,
     DMI_ShowPlanningArea_fromDisplay,
     EVC_toDMI,
+    DMI_ScrollUp,
+    DMI_ScrollDown,
     &outC->Context_2);
   outC->DMI_TrainPosition_toDisplay = outC->Context_2.TrainPosition_toDisplay;
   outC->DMI_ETCS_LevelSymbol_toDisplay =
@@ -220,13 +224,13 @@ void DMI_Toolbox(
   kcg_copy_array_real_4(
     &outC->DMI_D_PASP_Distances_toDisplay,
     &outC->Context_2.D_PASP_Distances_toDisplay);
-  kcg_copy_array_bool_12(
+  kcg_copy_array_bool_32(
     &outC->DMI_D_GradientVisible_toDisplay,
     &outC->Context_2.D_GradientVisible_toDisplay);
-  kcg_copy_array_real_12(
+  kcg_copy_array_real_32(
     &outC->DMI_GradientsEnd_toDisplay,
     &outC->Context_2.D_GradientEndInterpolated_toDisplay);
-  kcg_copy_array_real_12(
+  kcg_copy_array_real_32(
     &outC->DMI_GradientsStart_toDisplay,
     &outC->Context_2.D_GradientStartInterpolated_toDisplay);
   kcg_copy_tScale(
@@ -234,16 +238,19 @@ void DMI_Toolbox(
     &outC->Context_2.D_Scale_toDisplay);
   outC->DMI_PlanningAreaVisibility_toDisplay =
     outC->Context_2.PlanningAreaVisibility_toDisplay;
-  kcg_copy_array_real_12(
+  kcg_copy_array_real_32(
     &outC->DMI_GradientsValue_toDisplay,
     &outC->Context_2.D_GradientsValue_toDisplay);
+  outC->DMI_ScrollDownEnableIndex = outC->Context_2.ScrollDownEnableTypeIndex;
+  outC->DMI_ScrollUpEnableIndex = outC->Context_2.ScrollUpEnableTypeIndex;
   kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(
     &outC->EVC_fromDMI,
     &outC->Context_2.Output83);
+  kcg_copy_array_real_4(&outC->DMI_TimeArray, &outC->Context_2.TimeArray);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Toolbox.c
-** Generation date: 2015-11-12T10:32:00
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

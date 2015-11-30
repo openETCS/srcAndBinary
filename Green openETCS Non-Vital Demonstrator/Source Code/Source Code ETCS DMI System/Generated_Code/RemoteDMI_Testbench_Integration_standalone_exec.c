@@ -158,6 +158,16 @@ int main(int argc, char **argv){
 		v = SDY1_DMI_DMI_G_MousePressed(SDY1_DMI_L_DMI());
 			CTX_RemoteDMI_Testbench_Integration.SAO_CTX_inC_RemoteDMI_Testbench_Integration.DMI_MousePressed = v;
 		}
+		/* DMI_ScrollDown <= scrollDown */
+		{	SGLbool v; 
+		v = SDY1_DMI_DMI_G_scrollDown(SDY1_DMI_L_DMI());
+			CTX_RemoteDMI_Testbench_Integration.SAO_CTX_inC_RemoteDMI_Testbench_Integration.DMI_ScrollDown = v;
+		}
+		/* DMI_ScrollUp <= scrollUp */
+		{	SGLbool v; 
+		v = SDY1_DMI_DMI_G_scrollUp(SDY1_DMI_L_DMI());
+			CTX_RemoteDMI_Testbench_Integration.SAO_CTX_inC_RemoteDMI_Testbench_Integration.DMI_ScrollUp = v;
+		}
 		SDY1_DMI__unlockio();
 	{
 	}
@@ -183,9 +193,9 @@ int main(int argc, char **argv){
 			SDY1_DMI_DMI_S_D_Scale(SDY1_DMI_L_DMI(), v);
 		}
 		/* DMI_D_GradientVisible_toDisplay => D_GradientsVisible */
-		{	SGLbool v[12]; 
+		{	SGLbool v[32]; 
 			{	int i3;
-				for (i3 = 0; i3<12; i3++) {
+				for (i3 = 0; i3<32; i3++) {
 					v[i3] = CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_D_GradientVisible_toDisplay[i3];
 				}
 			}
@@ -315,9 +325,9 @@ int main(int argc, char **argv){
 		/* DMI_Vtarget_permVisibility_toDisplay => Vtarget_permVisible */
 		SDY1_DMI_DMI_S_Vtarget_permVisible(SDY1_DMI_L_DMI(), CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_Vtarget_permVisibility_toDisplay);
 		/* DMI_GradientsStart_toDisplay => D_GradientsStartInterpolated */
-		{	SGLfloat v[12]; 
+		{	SGLfloat v[32]; 
 			{	int i3;
-				for (i3 = 0; i3<12; i3++) {
+				for (i3 = 0; i3<32; i3++) {
 					v[i3] = CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_GradientsStart_toDisplay[i3];
 				}
 			}
@@ -378,18 +388,18 @@ int main(int argc, char **argv){
 		/* DMI_vtarget_permColor_toDisplay => Vtarget_permColor */
 		SDY1_DMI_DMI_S_Vtarget_permColor(SDY1_DMI_L_DMI(), CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_vtarget_permColor_toDisplay);
 		/* DMI_GradientsEnd_toDisplay => D_GradientEndInterpolated */
-		{	SGLfloat v[12]; 
+		{	SGLfloat v[32]; 
 			{	int i3;
-				for (i3 = 0; i3<12; i3++) {
+				for (i3 = 0; i3<32; i3++) {
 					v[i3] = CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_GradientsEnd_toDisplay[i3];
 				}
 			}
 			SDY1_DMI_DMI_S_D_GradientEndInterpolated(SDY1_DMI_L_DMI(), v);
 		}
 		/* DMI_GradientsEnd_toDisplay => D_GradientsEndInterpolated */
-		{	SGLfloat v[12]; 
+		{	SGLfloat v[32]; 
 			{	int i3;
-				for (i3 = 0; i3<12; i3++) {
+				for (i3 = 0; i3<32; i3++) {
 					v[i3] = CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_GradientsEnd_toDisplay[i3];
 				}
 			}
@@ -447,9 +457,9 @@ int main(int argc, char **argv){
 		/* DMI_TrainPosition_toDisplay => TrainPosition */
 		SDY1_DMI_DMI_S_TrainPosition(SDY1_DMI_L_DMI(), CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_TrainPosition_toDisplay);
 		/* DMI_GradientsValue_toDisplay => D_GradientsValue */
-		{	SGLfloat v[12]; 
+		{	SGLfloat v[32]; 
 			{	int i3;
-				for (i3 = 0; i3<12; i3++) {
+				for (i3 = 0; i3<32; i3++) {
 					v[i3] = CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_GradientsValue_toDisplay[i3];
 				}
 			}
@@ -480,6 +490,19 @@ int main(int argc, char **argv){
 				}
 			}
 			SDY1_DMI_DMI_S_D_PASP_IndicationMarkerPosition(SDY1_DMI_L_DMI(), v);
+		}
+		/* DMI_ScrollDownEnableIndex => scrollDownEnableTypeIndex */
+		SDY1_DMI_DMI_S_scrollDownEnableTypeIndex(SDY1_DMI_L_DMI(), CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_ScrollDownEnableIndex);
+		/* DMI_ScrollUpEnableIndex => scrollUpEnableTypeIndex */
+		SDY1_DMI_DMI_S_scrollUpEnableTypeIndex(SDY1_DMI_L_DMI(), CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_ScrollUpEnableIndex);
+		/* DMI_localTime => localTimeArray */
+		{	SGLfloat v[4]; 
+			{	int i3;
+				for (i3 = 0; i3<4; i3++) {
+					v[i3] = CTX_RemoteDMI_Testbench_Integration.SAO_CTX_outC_RemoteDMI_Testbench_Integration.DMI_localTime[i3];
+				}
+			}
+			SDY1_DMI_DMI_S_localTimeArray(SDY1_DMI_L_DMI(), v);
 		}
 
 		/* Perform Graphical Panels drawings */

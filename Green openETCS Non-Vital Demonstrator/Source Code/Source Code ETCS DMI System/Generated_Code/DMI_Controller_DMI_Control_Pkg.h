@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 #ifndef _DMI_Controller_DMI_Control_Pkg_H_
 #define _DMI_Controller_DMI_Control_Pkg_H_
@@ -18,6 +18,7 @@
 #include "Gradient_from_Track_DMI_Control_Pkg_Sub_func.h"
 #include "Planning_Area_Speed_Profile_from_Track_Atlas_DMI_Control_Pkg_Sub_func.h"
 #include "DMI_Speed_and_CPS_for_Planning_Area_DMI_Control_Pkg_Sub_func.h"
+#include "MinDis_GP_DMI_Control_Pkg_Sub_func.h"
 #include "Set_DMI_IDENTIFIER_DMI_Control_Pkg_Sub_func.h"
 #include "CalculateNumber_DMI_Control_Pkg_Sub_func_Keyboard.h"
 #include "CalculateNumber_iterator_DMI_Control_Pkg_Sub_func_Keyboard.h"
@@ -28,7 +29,6 @@
 #include "TrainDataInfo_Adapter_DMI_Control_Pkg_Sub_func_TrainData.h"
 #include "DigitSpeedManager_DMI_Control_Pkg_Sub_func_Speed.h"
 #include "Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.h"
-#include "NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.h"
 #include "LevelAdapter_DMI_Control_Pkg_Utils.h"
 #include "CheckElem_iterator_DMI_Control_Pkg_Utils.h"
 #include "LevelListAdapter_DMI_Control_Pkg_Utils.h"
@@ -41,7 +41,9 @@
 #include "CheckDeskStatus_DMI_Control_Pkg_Sub_func.h"
 #include "DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget.h"
 #include "TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages.h"
+#include "NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.h"
 #include "AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.h"
+#include "ModCount_DMI_Control_Pkg_Sub_func_TextMessages.h"
 #include "FlashingIconsOperator_DMI_Control_Pkg_Utils.h"
 
 /* =====================  no input structure  ====================== */
@@ -119,19 +121,22 @@ typedef struct {
   array_real_1 /* DMI_Control_Pkg::DMI_Controller::D_PASP_IndicatorMarker_toDisplay */ D_PASP_IndicatorMarker_toDisplay;
   array_real_4 /* DMI_Control_Pkg::DMI_Controller::D_PASP_Speeds_toDisplay */ D_PASP_Speeds_toDisplay;
   array_real_4 /* DMI_Control_Pkg::DMI_Controller::D_PASP_Distances_toDisplay */ D_PASP_Distances_toDisplay;
-  array_bool_12 /* DMI_Control_Pkg::DMI_Controller::D_GradientVisible_toDisplay */ D_GradientVisible_toDisplay;
-  array_real_12 /* DMI_Control_Pkg::DMI_Controller::D_GradientEndInterpolated_toDisplay */ D_GradientEndInterpolated_toDisplay;
-  array_real_12 /* DMI_Control_Pkg::DMI_Controller::D_GradientStartInterpolated_toDisplay */ D_GradientStartInterpolated_toDisplay;
+  array_bool_32 /* DMI_Control_Pkg::DMI_Controller::D_GradientVisible_toDisplay */ D_GradientVisible_toDisplay;
+  array_real_32 /* DMI_Control_Pkg::DMI_Controller::D_GradientEndInterpolated_toDisplay */ D_GradientEndInterpolated_toDisplay;
+  array_real_32 /* DMI_Control_Pkg::DMI_Controller::D_GradientStartInterpolated_toDisplay */ D_GradientStartInterpolated_toDisplay;
   tScale /* DMI_Control_Pkg::DMI_Controller::D_Scale_toDisplay */ D_Scale_toDisplay;
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::PlanningAreaVisibility_toDisplay */ PlanningAreaVisibility_toDisplay;
-  array_real_12 /* DMI_Control_Pkg::DMI_Controller::D_GradientsValue_toDisplay */ D_GradientsValue_toDisplay;
+  array_real_32 /* DMI_Control_Pkg::DMI_Controller::D_GradientsValue_toDisplay */ D_GradientsValue_toDisplay;
+  kcg_int /* DMI_Control_Pkg::DMI_Controller::ScrollDownEnableTypeIndex */ ScrollDownEnableTypeIndex;
+  kcg_int /* DMI_Control_Pkg::DMI_Controller::ScrollUpEnableTypeIndex */ ScrollUpEnableTypeIndex;
   DMI_to_EVC_Message_int_T_API_DMI_Pkg /* DMI_Control_Pkg::DMI_Controller::Output83 */ Output83;
+  array_real_4 /* DMI_Control_Pkg::DMI_Controller::TimeArray */ TimeArray;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
+  kcg_bool init9;
   kcg_bool init8;
   kcg_bool init7;
   kcg_bool init6;
-  kcg_bool init5;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   SSM_ST_HandshakeSM_CabinSM_DeskIsOpen /* DMI_Control_Pkg::DMI_Controller::CabinSM::DeskIsOpen::HandshakeSM */ HandshakeSM_state_nxt_CabinSM_DeskIsOpen;
@@ -189,11 +194,13 @@ typedef struct {
   kcg_bool /* DMI_Control_Pkg::DMI_Controller::_L170 */ _L170;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_CheckDeskStatus_DMI_Control_Pkg_Sub_func /* CheckDeskStatus */ Context_CheckDeskStatus;
-  outC_DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget /* 7 */ _4_Context_7;
+  outC_DistanceToTargetManager_DMI_Control_Pkg_Sub_func_DistanceToTarget /* 7 */ _5_Context_7;
   outC_DMI_status_DMI_Control_Pkg_Sub_func /* 7 */ Context_7;
+  outC_ModCount_DMI_Control_Pkg_Sub_func_TextMessages /* 1 */ _4_Context_1[4];
   outC_TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages /* 4 */ _3_Context_4;
   outC_D_behavior /* 4 */ Context_4;
   outC_AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages /* 2 */ _2_Context_2;
+  outC_NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages /* 1 */ Context_1;
   outC_FlashingIconsOperator_DMI_Control_Pkg_Utils /* 2 */ _1_Context_2;
   outC_StatusPlanningArea_DMI_Control_Pkg_Sub_func /* 3 */ Context_3;
   outC_HourGlassAnimation_DMI_Control_Pkg_Sub_func /* 2 */ Context_2;
@@ -229,6 +236,8 @@ extern void DMI_Controller_DMI_Control_Pkg(
   /* DMI_Control_Pkg::DMI_Controller::HidePlanningArea_fromDisplay */kcg_bool HidePlanningArea_fromDisplay,
   /* DMI_Control_Pkg::DMI_Controller::ShowPlanningArea_fromDisplay */kcg_bool ShowPlanningArea_fromDisplay,
   /* DMI_Control_Pkg::DMI_Controller::EVC_to_DMI */EVC_to_DMI_Message_int_T_API_DMI_Pkg *EVC_to_DMI,
+  /* DMI_Control_Pkg::DMI_Controller::ScrollUp_fromDisplay */kcg_bool ScrollUp_fromDisplay,
+  /* DMI_Control_Pkg::DMI_Controller::ScrollDown_fromDisplay */kcg_bool ScrollDown_fromDisplay,
   outC_DMI_Controller_DMI_Control_Pkg *outC);
 
 extern void DMI_Controller_reset_DMI_Control_Pkg(
@@ -237,6 +246,6 @@ extern void DMI_Controller_reset_DMI_Control_Pkg(
 #endif /* _DMI_Controller_DMI_Control_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Controller_DMI_Control_Pkg.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

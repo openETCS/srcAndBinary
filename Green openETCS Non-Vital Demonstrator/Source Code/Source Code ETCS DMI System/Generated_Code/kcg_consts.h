@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:56
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -20,7 +20,10 @@ extern const Message_Train_Interface_to_EVC_T_TIU_Types_Pkg emptyTIUInfo_TIU_Typ
 extern const tScale illegalScalesIndex;
 
 /* numberOfObjects */
-#define numberOfObjects 12
+#define numberOfObjects 32
+
+/* cPIM */
+#define cPIM PIM_DMI_Types_Pkg
 
 /* Scales */
 extern const array_real_9_6 Scales;
@@ -155,13 +158,16 @@ extern const array_real_4 cD_PASP_Speeds_DMI_Control_Pkg;
 extern const array_real_4 cD_PASP_Distances_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cD_GradientVisible */
-extern const array_bool_12 cD_GradientVisible_DMI_Control_Pkg;
+extern const array_bool_32 cD_GradientVisible_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cD_GradientStartInterpolated */
-extern const array_real_12 cD_GradientStartInterpolated_DMI_Control_Pkg;
+extern const array_real_32 cD_GradientStartInterpolated_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cD_tScale */
 extern const tScale cD_tScale_DMI_Control_Pkg;
+
+/* DMI_Control_Pkg::Sub_func::Constant2 */
+extern const GP_DMI_Control_Pkg_Sub_func Constant2_DMI_Control_Pkg_Sub_func;
 
 /* DMI_Control_Pkg::cLevelSymbol_IconGroup */
 #define cLevelSymbol_IconGroup_DMI_Control_Pkg 1
@@ -271,44 +277,50 @@ extern const Array_DMI_List_Entry_Request cDMI_List_Entry_Request_DMI_Control_Pk
 /* DMI_Control_Pkg::MAX_SPEEDPROFILES */
 #define MAX_SPEEDPROFILES_DMI_Control_Pkg 32
 
+/* DMI_Control_Pkg::cArray_mm_leer */
+extern const array_real_10 cArray_mm_leer_DMI_Control_Pkg;
+
 /* DMI_Control_Pkg::cListMsgStructure */
-extern const array__30249 cListMsgStructure_DMI_Control_Pkg;
+extern const array__31763 cListMsgStructure_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cMsgStructQueue */
-extern const array__30249 cMsgStructQueue_DMI_Control_Pkg;
+extern const array__31763 cMsgStructQueue_DMI_Control_Pkg;
+
+/* DMI_Control_Pkg::cArray_hh_leer */
+extern const array_real_10 cArray_hh_leer_DMI_Control_Pkg;
+
+/* DMI_Control_Pkg::cMsgStructQueueMax */
+extern const array__31757 cMsgStructQueueMax_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cMsgStructure */
 extern const MsgStructure cMsgStructure_DMI_Control_Pkg;
 
-/* DMI_Control_Pkg::cPlainText_single_fix */
-extern const array_char_30 cPlainText_single_fix_DMI_Control_Pkg;
+/* DMI_Control_Pkg::cMsgStructure_fix */
+extern const MsgStructure cMsgStructure_fix_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cPlainText_fix */
 extern const array_char_30_5 cPlainText_fix_DMI_Control_Pkg;
 
-/* DMI_Control_Pkg::cMsgStructure_fix */
-extern const MsgStructure cMsgStructure_fix_DMI_Control_Pkg;
-
 /* DMI_Control_Pkg::cPlainText_single */
 extern const array_char_30 cPlainText_single_DMI_Control_Pkg;
 
-/* DMI_Control_Pkg::cArrayOfIndex */
-extern const array_int_5 cArrayOfIndex_DMI_Control_Pkg;
+/* DMI_Control_Pkg::cDIM_MSGQueueMax */
+#define cDIM_MSGQueueMax_DMI_Control_Pkg 10
 
-/* DMI_Control_Pkg::cArray_hh_leer */
-extern const array_real_5 cArray_hh_leer_DMI_Control_Pkg;
+/* DMI_Control_Pkg::cArray_hh_leer5 */
+extern const array_real_5 cArray_hh_leer5_DMI_Control_Pkg;
 
-/* DMI_Control_Pkg::cArray_mm_leer */
-extern const array_real_5 cArray_mm_leer_DMI_Control_Pkg;
+/* DMI_Control_Pkg::cArray_mm_leer5 */
+extern const array_real_5 cArray_mm_leer5_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cPlainText */
 extern const array_char_30_5 cPlainText_DMI_Control_Pkg;
 
-/* DMI_Control_Pkg::Num_Q_TextMsg */
-#define Num_Q_TextMsg_DMI_Control_Pkg 27
-
 /* DMI_Control_Pkg::ArrayEnum_Q_text */
 extern const Array_DMI_Q_Text ArrayEnum_Q_text_DMI_Control_Pkg;
+
+/* DMI_Control_Pkg::Num_Q_TextMsg */
+#define Num_Q_TextMsg_DMI_Control_Pkg 27
 
 /* DMI_Control_Pkg::cIntervalFlashingTimeMsg */
 #define cIntervalFlashingTimeMsg_DMI_Control_Pkg 10
@@ -324,9 +336,6 @@ extern const DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg cMsg_important1_DMI_
 
 /* DMI_Control_Pkg::cMsg_leer */
 extern const DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg cMsg_leer_DMI_Control_Pkg;
-
-/* DMI_Control_Pkg::cMsg_important2 */
-extern const DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg cMsg_important2_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cMsg_important3 */
 extern const DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg cMsg_important3_DMI_Control_Pkg;
@@ -1703,10 +1712,10 @@ extern const array_int_9 InitText1_DMI_Control_Pkg;
 extern const DMI_Icon_Ack_T_DMI_Messages_DMI_to_EVC_Pkg cDMI_Icons_Ack_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cD_GradientsValue */
-extern const array_real_12 cD_GradientsValue_DMI_Control_Pkg;
+extern const array_real_32 cD_GradientsValue_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::MAX_GRADIENTS */
-#define MAX_GRADIENTS_DMI_Control_Pkg 12
+#define MAX_GRADIENTS_DMI_Control_Pkg 32
 
 /* API_DMI_Pkg::cMessage_EVC_to_DMI_size */
 #define cMessage_EVC_to_DMI_size_API_DMI_Pkg 999
@@ -1726,6 +1735,6 @@ extern const TIU_Input_msg_API_TIU_Pkg cEMPTY_TIU2DMI_EnvSim_Internal;
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:56
 *************************************************************$ */
 

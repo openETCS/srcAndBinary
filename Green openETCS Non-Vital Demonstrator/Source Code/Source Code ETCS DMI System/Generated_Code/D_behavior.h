@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 #ifndef _D_behavior_H_
 #define _D_behavior_H_
@@ -17,9 +17,9 @@
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   tScale /* D_behavior::Scale */ Scale;
-  array_real_12 /* D_behavior::GradientStartInterpolated */ GradientStartInterpolated;
-  array_real_12 /* D_behavior::GradientEndInterpolated */ GradientEndInterpolated;
-  array_bool_12 /* D_behavior::GradientVisible */ GradientVisible;
+  array_real_32 /* D_behavior::GradientStartInterpolated */ GradientStartInterpolated;
+  array_real_32 /* D_behavior::GradientEndInterpolated */ GradientEndInterpolated;
+  array_bool_32 /* D_behavior::GradientVisible */ GradientVisible;
   array_real_4 /* D_behavior::PASP_Distances */ PASP_Distances;
   array_real_4 /* D_behavior::PASP_Speeds */ PASP_Speeds;
   array_real_10 /* D_behavior::SPDI_SpeedChangePosition */ SPDI_SpeedChangePosition;
@@ -42,11 +42,13 @@ extern void D_behavior(
   /* D_behavior::OverD9 */kcg_bool OverD9,
   /* D_behavior::OverD12 */kcg_bool OverD12,
   /* D_behavior::TrainPosition */kcg_real TrainPosition,
-  /* D_behavior::GradientsStart */array_real_12 *GradientsStart,
-  /* D_behavior::GradientsEnd */array_real_12 *GradientsEnd,
+  /* D_behavior::GradientsStart */array_real_32 *GradientsStart,
+  /* D_behavior::GradientsEnd */array_real_32 *GradientsEnd,
   /* D_behavior::PASP_SpeedPoints */tSpeedPoints *PASP_SpeedPoints,
   /* D_behavior::CPS */kcg_real CPS,
   /* D_behavior::Indicationlocation */kcg_int Indicationlocation,
+  /* D_behavior::sup_status */M_SUPERVISION_STATUS_DMI_Types_Pkg sup_status,
+  /* D_behavior::isValid */kcg_bool isValid,
   outC_D_behavior *outC);
 
 extern void D_behavior_reset(outC_D_behavior *outC);
@@ -54,6 +56,6 @@ extern void D_behavior_reset(outC_D_behavior *outC);
 #endif /* _D_behavior_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** D_behavior.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 #ifndef _FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -14,16 +14,16 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  array__30249 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::queue */ queue;
-  array_real_5 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::hh_array */ hh_array;
-  array_real_5 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::mm_array */ mm_array;
+  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::queue */ queue;
+  array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::hh_array */ hh_array;
+  array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::mm_array */ mm_array;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  array__30249 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::queue */ rem_queue;
+  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_Normal::queue */ rem_queue;
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_InsertTime_iterator_DMI_Control_Pkg_Sub_func_TextMessages /* 1 */ Context_1[5];
+  outC_InsertTime_iterator_DMI_Control_Pkg_Sub_func_TextMessages /* 1 */ Context_1[10];
   /* ----------------- no clocks of observable data ------------------ */
 } outC_FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages;
 
@@ -43,6 +43,6 @@ extern void FIFO_Insert_Op_Normal_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FIFO_Insert_Op_Normal_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

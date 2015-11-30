@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 #ifndef _CAST_int_to_Icon_group_DATA_Variables_H_
 #define _CAST_int_to_Icon_group_DATA_Variables_H_
@@ -17,6 +17,6 @@ extern Icon_group_T_DMI_Types_Pkg CAST_int_to_Icon_group_DATA_Variables(
 #endif /* _CAST_int_to_Icon_group_DATA_Variables_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_Icon_group_DATA_Variables.h
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

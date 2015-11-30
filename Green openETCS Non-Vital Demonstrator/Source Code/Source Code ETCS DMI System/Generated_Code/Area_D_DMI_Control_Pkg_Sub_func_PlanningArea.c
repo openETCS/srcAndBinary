@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -16,11 +16,11 @@ void Area_D_DMI_Control_Pkg_Sub_func_PlanningArea(
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::inCeilingPermittedSpeed */kcg_real inCeilingPermittedSpeed,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::inSpeedProfile_Distance */array_real_32 *inSpeedProfile_Distance,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::inSpeedProfile_Speed */array_real_32 *inSpeedProfile_Speed,
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsStart */array_real_12 *GradientsStart,
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsEnd */array_real_12 *GradientsEnd,
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsStart */array_real_32 *GradientsStart,
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsEnd */array_real_32 *GradientsEnd,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::PlaningAreaSpeedProfile */array_real_10_2 *PlaningAreaSpeedProfile,
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::CeilingPermittedSpeed */kcg_real *CeilingPermittedSpeed,
-  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsValue */array_real_12 *GradientsValue)
+  /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::GradientsValue */array_real_32 *GradientsValue)
 {
   /* DMI_Control_Pkg::Sub_func::PlanningArea::Area_D::_L14 */ array_real_10 _L14;
   
@@ -46,6 +46,6 @@ void Area_D_DMI_Control_Pkg_Sub_func_PlanningArea(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Area_D_DMI_Control_Pkg_Sub_func_PlanningArea.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-12T10:31:59
+** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -52,7 +52,7 @@ void TxtMsgSimulator_DMI_Control_Pkg_Sub_func_TextMessages(
       kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
         &outC->txt,
         (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
-          &cMsg_important2_DMI_Control_Pkg);
+          &cMsg_important1_DMI_Control_Pkg);
       break;
     case SSM_st_State4_SM1 :
       if (MousePressed) {
@@ -162,7 +162,26 @@ void TxtMsgSimulator_DMI_Control_Pkg_Sub_func_TextMessages(
           &cMsg_auxi3_DMI_Control_Pkg);
       break;
     case SSM_st_State7_SM1 :
-      outC->SM1_state_nxt = SSM_st_State7_SM1;
+      if (MousePressed) {
+        outC->SM1_state_nxt = SSM_st_insert6_SM1;
+      }
+      else {
+        outC->SM1_state_nxt = SSM_st_State7_SM1;
+      }
+      kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
+        &outC->txt,
+        (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
+          &cMsg_leer_DMI_Control_Pkg);
+      break;
+    case SSM_st_insert6_SM1 :
+      outC->SM1_state_nxt = SSM_st_State9_SM1;
+      kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
+        &outC->txt,
+        (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
+          &cMsg_important1_DMI_Control_Pkg);
+      break;
+    case SSM_st_State9_SM1 :
+      outC->SM1_state_nxt = SSM_st_State9_SM1;
       kcg_copy_DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg(
         &outC->txt,
         (DMI_Text_Message_T_DMI_Messages_EVC_to_DMI_Pkg *)
@@ -174,6 +193,6 @@ void TxtMsgSimulator_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TxtMsgSimulator_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-12T10:31:59
+** Generation date: 2015-11-30T15:42:57
 *************************************************************$ */
 
