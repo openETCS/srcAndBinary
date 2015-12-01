@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -47,6 +47,6 @@ void FIFO_delete_time_Ack_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FIFO_delete_time_Ack_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

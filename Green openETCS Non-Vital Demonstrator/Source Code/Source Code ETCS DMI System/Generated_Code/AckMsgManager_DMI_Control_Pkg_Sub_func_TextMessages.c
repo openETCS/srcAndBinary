@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,7 +17,7 @@ void AckMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager */
 void AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::Queue */array__31763 *Queue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::Queue */array__31749 *Queue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::SystemTime */kcg_int SystemTime,
   /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::array_hh_local */array_real_5 *array_hh_local,
   /* DMI_Control_Pkg::Sub_func::TextMessages::AckMsgManager::array_mm_local */array_real_5 *array_mm_local,
@@ -146,6 +146,6 @@ void AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** AckMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

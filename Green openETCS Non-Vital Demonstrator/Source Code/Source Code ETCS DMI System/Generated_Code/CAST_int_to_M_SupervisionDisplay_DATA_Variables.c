@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -60,6 +60,6 @@ M_SupervisionDisplay_T_DMI_Types_Pkg CAST_int_to_M_SupervisionDisplay_DATA_Varia
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_M_SupervisionDisplay_DATA_Variables.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

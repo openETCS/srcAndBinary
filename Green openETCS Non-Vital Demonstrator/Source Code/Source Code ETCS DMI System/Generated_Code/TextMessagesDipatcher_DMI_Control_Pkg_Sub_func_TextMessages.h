@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -18,8 +18,8 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  array__31763 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckMsgQueue */ AckMsgQueue;
-  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::MsgQueue */ MsgQueue;
+  array__31749 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckMsgQueue */ AckMsgQueue;
+  array__31743 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::MsgQueue */ MsgQueue;
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::NumE */ NumE;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckisEmpty */ AckisEmpty;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::isEmpty */ isEmpty;
@@ -35,9 +35,9 @@ typedef struct {
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::numAckMsg */ numAckMsg;
   array_real_5 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::mm_local_array_ack */ mm_local_array_ack;
   array_real_5 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::hh_local_array_ack */ hh_local_array_ack;
-  array__31763 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_AckMsgQueue */ Local_AckMsgQueue;
+  array__31749 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_AckMsgQueue */ Local_AckMsgQueue;
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::numNormalMsg */ numNormalMsg;
-  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_NormaliMsgQueue */ Local_NormaliMsgQueue;
+  array__31743 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_NormaliMsgQueue */ Local_NormaliMsgQueue;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_ack_empty */ Local_ack_empty;
   array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::mm_local_array */ mm_local_array;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_isEmpty */ Local_isEmpty;
@@ -64,6 +64,6 @@ extern void TextMessagesDipatcher_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

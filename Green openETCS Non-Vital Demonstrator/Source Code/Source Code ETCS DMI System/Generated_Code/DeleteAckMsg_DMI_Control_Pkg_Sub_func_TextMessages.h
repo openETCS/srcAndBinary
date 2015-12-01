@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _DeleteAckMsg_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _DeleteAckMsg_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -14,13 +14,13 @@
 
 /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg */
 extern void DeleteAckMsg_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::localQueue */array__31763 *localQueue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::localQueue */array__31749 *localQueue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::Delete */kcg_bool Delete,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::hh_array */array_real_5 *hh_array,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::mm_array */array_real_5 *mm_array,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::local_num_ack */kcg_int local_num_ack,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::local_ack_empty */kcg_bool local_ack_empty,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::queue */array__31763 *queue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::queue */array__31749 *queue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::NumE */kcg_int *NumE,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::new_mm */array_real_5 *new_mm,
   /* DMI_Control_Pkg::Sub_func::TextMessages::DeleteAckMsg::new_hh */array_real_5 *new_hh,
@@ -29,6 +29,6 @@ extern void DeleteAckMsg_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _DeleteAckMsg_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DeleteAckMsg_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

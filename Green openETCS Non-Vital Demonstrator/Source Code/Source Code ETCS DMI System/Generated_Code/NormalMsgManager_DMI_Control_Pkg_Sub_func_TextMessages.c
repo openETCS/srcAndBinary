@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,7 +18,7 @@ void NormalMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager */
 void NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::Queue */array__31757 *Queue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::Queue */array__31743 *Queue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::hh_array */array_real_10 *hh_array,
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::mm_array */array_real_10 *mm_array,
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::numE */kcg_int numE,
@@ -26,14 +26,14 @@ void NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::scrollDown */kcg_bool scrollDown,
   outC_NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages *outC)
 {
-  array__31757 tmp5;
-  array__31757 tmp4;
+  array__31743 tmp5;
+  array__31743 tmp4;
   kcg_int tmp3;
   kcg_bool tmp2;
   array_real_10 tmp1;
   array_real_10 tmp;
   kcg_int i;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::_L21 */ array__31757 _L21;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::_L21 */ array__31743 _L21;
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::_L217 */ array_int_10 _L217;
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::_L229 */ array_real_10 _L229;
   
@@ -46,11 +46,11 @@ void NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
   for (i = 0; i < 10; i++) {
     kcg_copy_MsgStructure(&_L21[i], &(*Queue)[9 - i]);
   }
-  kcg_copy_array__31757(
+  kcg_copy_array__31743(
     &tmp5,
-    (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
+    (array__31743 *) &cMsgStructQueueMax_DMI_Control_Pkg);
   for (i = 0; i < 10; i++) {
-    kcg_copy_array__31757(&tmp4, &tmp5);
+    kcg_copy_array__31743(&tmp4, &tmp5);
     /* 1 */
     SortMsgTopDown_DMI_Control_Pkg_Sub_func_TextMessages(
       i,
@@ -121,6 +121,6 @@ void NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -20,7 +20,7 @@ typedef struct {
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::isFull */ isFull;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::isEmpty */ isEmpty;
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::NumE */ NumE;
-  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::queue */ queue;
+  array__31743 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::queue */ queue;
   array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::mm_array */ mm_array;
   array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::hh_array */ hh_array;
   /* -----------------------  no local probes  ----------------------- */
@@ -29,8 +29,8 @@ typedef struct {
   /* ----------------------- local memories  ------------------------- */
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::NumImp */ NumImp;
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::NumAuxi */ NumAuxi;
-  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::impQueue */ impQueue;
-  array__31757 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::auxiQueue */ auxiQueue;
+  array__31743 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::impQueue */ impQueue;
+  array__31743 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::auxiQueue */ auxiQueue;
   array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::Local_mm_array_imp */ Local_mm_array_imp;
   array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::Local_hh_array_imp */ Local_hh_array_imp;
   array_real_10 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::Local_hh_array_auxi */ Local_hh_array_auxi;
@@ -59,6 +59,6 @@ extern void MSGQueue_normalMSG_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

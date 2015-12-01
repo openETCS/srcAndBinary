@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _MSGQueue_AcklMSG_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _MSGQueue_AcklMSG_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -14,7 +14,7 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  array__31763 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_AcklMSG::queue */ queue;
+  array__31749 /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_AcklMSG::queue */ queue;
   kcg_int /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_AcklMSG::NumE */ NumE;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_AcklMSG::AckisFull */ AckisFull;
   kcg_bool /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_AcklMSG::AckisEmpty */ AckisEmpty;
@@ -44,6 +44,6 @@ extern void MSGQueue_AcklMSG_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _MSGQueue_AcklMSG_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MSGQueue_AcklMSG_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

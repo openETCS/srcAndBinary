@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest_H_
 #define _WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest_H_
@@ -20,6 +20,6 @@ extern void WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest(
 #endif /* _WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** WindowReqToMask_DMI_Control_Pkg_Sub_func_EntryRequest.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

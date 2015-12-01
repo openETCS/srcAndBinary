@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:56
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -354,7 +354,7 @@ const array_real_10 cArray_mm_leer_DMI_Control_Pkg = { - 1.0, - 1.0, - 1.0,
   - 1.0, - 1.0, - 1.0, - 1.0, - 1.0, - 1.0, - 1.0 };
 
 /* DMI_Control_Pkg::cListMsgStructure */
-const array__31763 cListMsgStructure_DMI_Control_Pkg = { { kcg_false, {
+const array__31749 cListMsgStructure_DMI_Control_Pkg = { { kcg_false, {
       kcg_false, 0, 0, balise_read_error_DMI_Types_Pkg, 0, { ' ', ' ', ' ', ' ',
         ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
         ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -462,7 +462,7 @@ const array__31763 cListMsgStructure_DMI_Control_Pkg = { { kcg_false, {
       Q_TEXTCONFIRM_No_confirmation_required } } };
 
 /* DMI_Control_Pkg::cMsgStructQueue */
-const array__31763 cMsgStructQueue_DMI_Control_Pkg = { { kcg_false, { kcg_false,
+const array__31749 cMsgStructQueue_DMI_Control_Pkg = { { kcg_false, { kcg_false,
       0, 0, balise_read_error_DMI_Types_Pkg, 0, { ' ', ' ', ' ', ' ', ' ', ' ',
         ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
         ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -574,7 +574,7 @@ const array_real_10 cArray_hh_leer_DMI_Control_Pkg = { - 1.0, - 1.0, - 1.0,
   - 1.0, - 1.0, - 1.0, - 1.0, - 1.0, - 1.0, - 1.0 };
 
 /* DMI_Control_Pkg::cMsgStructQueueMax */
-const array__31757 cMsgStructQueueMax_DMI_Control_Pkg = { { kcg_false, {
+const array__31743 cMsgStructQueueMax_DMI_Control_Pkg = { { kcg_false, {
       kcg_false, 0, 0, balise_read_error_DMI_Types_Pkg, 0, { ' ', ' ', ' ', ' ',
         ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
         ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -1381,6 +1381,6 @@ const TIU_Input_msg_API_TIU_Pkg cEMPTY_TIU2DMI_EnvSim_Internal = { kcg_false, {
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.c
-** Generation date: 2015-11-30T15:42:56
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

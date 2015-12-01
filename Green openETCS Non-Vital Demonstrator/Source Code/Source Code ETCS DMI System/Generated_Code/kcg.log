@@ -1,10 +1,10 @@
 $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: kcg613.exe -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone/config.txt
-** Generation date: 2015-11-30T15:42:50
+** Generation date: 2015-12-01T12:07:36
 *************************************************************$
 $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:50
+** Generation date: 2015-12-01T12:07:36
 *************************************************************$
 *** Code Generation Warning (WAR_604): Renaming interface identifier
   at file S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone/scade_model_without_unused.scade, line 1372, character 30
@@ -39,9 +39,9 @@ $*************** KCG Version 6.1.3 (build i6) ****************
 5 warnings were found
 $*************** KCG Version 6.1.3 (build i6) ****************
 ** s2c.log
-** Generation date: 2015-11-30T15:42:59
+** Generation date: 2015-12-01T12:07:45
 *************************************************************$
 $*************** KCG Version 6.1.3 (build i6) ****************
 ** S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg.log
-** Generation date: 2015-11-30T15:42:59
+** Generation date: 2015-12-01T12:07:45
 *************************************************************$

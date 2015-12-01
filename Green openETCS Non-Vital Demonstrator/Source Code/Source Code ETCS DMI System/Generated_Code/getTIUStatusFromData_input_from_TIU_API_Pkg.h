@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:56
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _getTIUStatusFromData_input_from_TIU_API_Pkg_H_
 #define _getTIUStatusFromData_input_from_TIU_API_Pkg_H_
@@ -18,6 +18,6 @@ extern void getTIUStatusFromData_input_from_TIU_API_Pkg(
 #endif /* _getTIUStatusFromData_input_from_TIU_API_Pkg_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** getTIUStatusFromData_input_from_TIU_API_Pkg.h
-** Generation date: 2015-11-30T15:42:56
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

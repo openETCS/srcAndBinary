@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -44,8 +44,8 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::Local_hh_array_auxi */ array_real_10 last_Local_hh_array_auxi;
   /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::Local_hh_array_imp */ array_real_10 last_Local_hh_array_imp;
   /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::Local_mm_array_imp */ array_real_10 last_Local_mm_array_imp;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::auxiQueue */ array__31757 last_auxiQueue;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::impQueue */ array__31757 last_impQueue;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::auxiQueue */ array__31743 last_auxiQueue;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::impQueue */ array__31743 last_impQueue;
   /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::StatusQueue_IfBlock */ kcg_bool StatusQueue_IfBlock_clock;
   /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::ins */ kcg_bool ins;
   /* DMI_Control_Pkg::Sub_func::TextMessages::MSGQueue_normalMSG::_L13 */ kcg_bool _L13;
@@ -83,12 +83,12 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
     kcg_copy_array_real_10(
       &last_Local_mm_array_imp,
       (array_real_10 *) &cArray_mm_leer_DMI_Control_Pkg);
-    kcg_copy_array__31757(
+    kcg_copy_array__31743(
       &last_auxiQueue,
-      (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
-    kcg_copy_array__31757(
+      (array__31743 *) &cMsgStructQueueMax_DMI_Control_Pkg);
+    kcg_copy_array__31743(
       &last_impQueue,
-      (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
+      (array__31743 *) &cMsgStructQueueMax_DMI_Control_Pkg);
     tmp1 = 0;
   }
   else {
@@ -100,8 +100,8 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
       &outC->Local_hh_array_auxi);
     kcg_copy_array_real_10(&last_Local_hh_array_imp, &outC->Local_hh_array_imp);
     kcg_copy_array_real_10(&last_Local_mm_array_imp, &outC->Local_mm_array_imp);
-    kcg_copy_array__31757(&last_auxiQueue, &outC->auxiQueue);
-    kcg_copy_array__31757(&last_impQueue, &outC->impQueue);
+    kcg_copy_array__31743(&last_auxiQueue, &outC->auxiQueue);
+    kcg_copy_array__31743(&last_impQueue, &outC->impQueue);
     _L13 = outC->isFull;
     tmp1 = outC->NumAuxi;
   }
@@ -148,8 +148,8 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
         (*localTime)[3],
         _L13,
         &outC->Context_25);
-      kcg_copy_array__31757(&outC->impQueue, &outC->Context_25.queue);
-      kcg_copy_array__31757(&outC->auxiQueue, &last_auxiQueue);
+      kcg_copy_array__31743(&outC->impQueue, &outC->Context_25.queue);
+      kcg_copy_array__31743(&outC->auxiQueue, &last_auxiQueue);
       kcg_copy_array_real_10(
         &outC->Local_mm_array_imp,
         &outC->Context_25.mm_array);
@@ -172,8 +172,8 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
         (*localTime)[3],
         _L13,
         &outC->Context_24);
-      kcg_copy_array__31757(&outC->impQueue, &last_impQueue);
-      kcg_copy_array__31757(&outC->auxiQueue, &outC->Context_24.queue);
+      kcg_copy_array__31743(&outC->impQueue, &last_impQueue);
+      kcg_copy_array__31743(&outC->auxiQueue, &outC->Context_24.queue);
       kcg_copy_array_real_10(
         &outC->Local_mm_array_imp,
         &last_Local_mm_array_imp);
@@ -209,9 +209,9 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
   }
   else {
     if (outC->init) {
-      kcg_copy_array__31757(
+      kcg_copy_array__31743(
         &outC->queue,
-        (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
+        (array__31743 *) &cMsgStructQueueMax_DMI_Control_Pkg);
       kcg_copy_array_real_10(
         &outC->mm_array,
         (array_real_10 *) &cArray_mm_leer_DMI_Control_Pkg);
@@ -219,8 +219,8 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
         &outC->hh_array,
         (array_real_10 *) &cArray_hh_leer_DMI_Control_Pkg);
     }
-    kcg_copy_array__31757(&outC->impQueue, &last_impQueue);
-    kcg_copy_array__31757(&outC->auxiQueue, &last_auxiQueue);
+    kcg_copy_array__31743(&outC->impQueue, &last_impQueue);
+    kcg_copy_array__31743(&outC->auxiQueue, &last_auxiQueue);
     kcg_copy_array_real_10(&outC->Local_mm_array_imp, &last_Local_mm_array_imp);
     kcg_copy_array_real_10(&outC->Local_hh_array_imp, &last_Local_hh_array_imp);
     kcg_copy_array_real_10(
@@ -260,6 +260,6 @@ void MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MSGQueue_normalMSG_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

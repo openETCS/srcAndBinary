@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -33,9 +33,9 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_isEmpty */ kcg_bool last_Local_isEmpty;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::mm_local_array */ array_real_10 last_mm_local_array;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_ack_empty */ kcg_bool last_Local_ack_empty;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_NormaliMsgQueue */ array__31757 last_Local_NormaliMsgQueue;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_NormaliMsgQueue */ array__31743 last_Local_NormaliMsgQueue;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::numNormalMsg */ kcg_int last_numNormalMsg;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_AckMsgQueue */ array__31763 last_Local_AckMsgQueue;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::Local_AckMsgQueue */ array__31749 last_Local_AckMsgQueue;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::hh_local_array_ack */ array_real_5 last_hh_local_array_ack;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::mm_local_array_ack */ array_real_5 last_mm_local_array_ack;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::numAckMsg */ kcg_int last_numAckMsg;
@@ -46,8 +46,8 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::NumAckMsg */ kcg_int last_NumAckMsg;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckisEmpty */ kcg_bool last_AckisEmpty;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::NumE */ kcg_int last_NumE;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::MsgQueue */ array__31757 last_MsgQueue;
-  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckMsgQueue */ array__31763 last_AckMsgQueue;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::MsgQueue */ array__31743 last_MsgQueue;
+  /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckMsgQueue */ array__31749 last_AckMsgQueue;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AuxiMsg */ kcg_bool AuxiMsg;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::AckMsg */ kcg_bool AckMsg;
   /* DMI_Control_Pkg::Sub_func::TextMessages::TextMessagesDipatcher::ImportantMsg */ kcg_bool ImportantMsg;
@@ -65,13 +65,13 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
     kcg_copy_array_real_10(
       &last_mm_local_array,
       (array_real_10 *) &cArray_mm_leer_DMI_Control_Pkg);
-    kcg_copy_array__31757(
+    kcg_copy_array__31743(
       &last_Local_NormaliMsgQueue,
-      (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
+      (array__31743 *) &cMsgStructQueueMax_DMI_Control_Pkg);
     last_numNormalMsg = 0;
-    kcg_copy_array__31763(
+    kcg_copy_array__31749(
       &last_Local_AckMsgQueue,
-      (array__31763 *) &cMsgStructQueue_DMI_Control_Pkg);
+      (array__31749 *) &cMsgStructQueue_DMI_Control_Pkg);
     kcg_copy_array_real_5(
       &last_hh_local_array_ack,
       (array_real_5 *) &cArray_hh_leer5_DMI_Control_Pkg);
@@ -93,23 +93,23 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
       (array_real_10 *) &cArray_hh_leer_DMI_Control_Pkg);
     last_NumAckMsg = 0;
     last_NumE = 0;
-    kcg_copy_array__31757(
+    kcg_copy_array__31743(
       &last_MsgQueue,
-      (array__31757 *) &cMsgStructQueueMax_DMI_Control_Pkg);
-    kcg_copy_array__31763(
+      (array__31743 *) &cMsgStructQueueMax_DMI_Control_Pkg);
+    kcg_copy_array__31749(
       &last_AckMsgQueue,
-      (array__31763 *) &cMsgStructQueue_DMI_Control_Pkg);
+      (array__31749 *) &cMsgStructQueue_DMI_Control_Pkg);
   }
   else {
     kcg_copy_array_real_10(&last_hh_local_array, &outC->hh_local_array);
     last_Local_isEmpty = outC->Local_isEmpty;
     kcg_copy_array_real_10(&last_mm_local_array, &outC->mm_local_array);
     last_Local_ack_empty = outC->Local_ack_empty;
-    kcg_copy_array__31757(
+    kcg_copy_array__31743(
       &last_Local_NormaliMsgQueue,
       &outC->Local_NormaliMsgQueue);
     last_numNormalMsg = outC->numNormalMsg;
-    kcg_copy_array__31763(&last_Local_AckMsgQueue, &outC->Local_AckMsgQueue);
+    kcg_copy_array__31749(&last_Local_AckMsgQueue, &outC->Local_AckMsgQueue);
     kcg_copy_array_real_5(&last_hh_local_array_ack, &outC->hh_local_array_ack);
     kcg_copy_array_real_5(&last_mm_local_array_ack, &outC->mm_local_array_ack);
     last_numAckMsg = outC->numAckMsg;
@@ -121,8 +121,8 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
     _L14 = outC->isEmpty;
     last_AckisEmpty = outC->AckisEmpty;
     last_NumE = outC->NumE;
-    kcg_copy_array__31757(&last_MsgQueue, &outC->MsgQueue);
-    kcg_copy_array__31763(&last_AckMsgQueue, &outC->AckMsgQueue);
+    kcg_copy_array__31743(&last_MsgQueue, &outC->MsgQueue);
+    kcg_copy_array__31749(&last_AckMsgQueue, &outC->AckMsgQueue);
   }
   /* 1 */
   countDownTimer_MoRC_Pck_Utils(
@@ -145,8 +145,8 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
       last_numAckMsg,
       LocalTime,
       &outC->Context_3);
-    kcg_copy_array__31763(&outC->AckMsgQueue, &last_AckMsgQueue);
-    kcg_copy_array__31757(&outC->MsgQueue, &last_MsgQueue);
+    kcg_copy_array__31749(&outC->AckMsgQueue, &last_AckMsgQueue);
+    kcg_copy_array__31743(&outC->MsgQueue, &last_MsgQueue);
     outC->NumE = last_NumE;
     outC->AckisEmpty = last_AckisEmpty;
     outC->isEmpty = _L14;
@@ -158,9 +158,9 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
     outC->numAckMsg = outC->Context_3.NumE;
     kcg_copy_array_real_5(&outC->mm_local_array_ack, &outC->Context_3.mm_array);
     kcg_copy_array_real_5(&outC->hh_local_array_ack, &outC->Context_3.hh_array);
-    kcg_copy_array__31763(&outC->Local_AckMsgQueue, &outC->Context_3.queue);
+    kcg_copy_array__31749(&outC->Local_AckMsgQueue, &outC->Context_3.queue);
     outC->numNormalMsg = last_numNormalMsg;
-    kcg_copy_array__31757(
+    kcg_copy_array__31743(
       &outC->Local_NormaliMsgQueue,
       &last_Local_NormaliMsgQueue);
     outC->Local_ack_empty = outC->Context_3.AckisEmpty;
@@ -178,8 +178,8 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
         last_numNormalMsg,
         LocalTime,
         &outC->Context_1);
-      kcg_copy_array__31763(&outC->AckMsgQueue, &last_AckMsgQueue);
-      kcg_copy_array__31757(&outC->MsgQueue, &last_MsgQueue);
+      kcg_copy_array__31749(&outC->AckMsgQueue, &last_AckMsgQueue);
+      kcg_copy_array__31743(&outC->MsgQueue, &last_MsgQueue);
       outC->NumE = last_NumE;
       outC->AckisEmpty = last_AckisEmpty;
       outC->isEmpty = _L14;
@@ -195,9 +195,9 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
       kcg_copy_array_real_5(
         &outC->hh_local_array_ack,
         &last_hh_local_array_ack);
-      kcg_copy_array__31763(&outC->Local_AckMsgQueue, &last_Local_AckMsgQueue);
+      kcg_copy_array__31749(&outC->Local_AckMsgQueue, &last_Local_AckMsgQueue);
       outC->numNormalMsg = outC->Context_1.NumE;
-      kcg_copy_array__31757(
+      kcg_copy_array__31743(
         &outC->Local_NormaliMsgQueue,
         &outC->Context_1.queue);
       outC->Local_ack_empty = last_Local_ack_empty;
@@ -233,8 +233,8 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
         &outC->mm_local_array_ack,
         &outC->hh_local_array_ack,
         &outC->Local_ack_empty);
-      kcg_copy_array__31763(&outC->AckMsgQueue, &outC->Local_AckMsgQueue);
-      kcg_copy_array__31757(&outC->MsgQueue, &outC->Local_NormaliMsgQueue);
+      kcg_copy_array__31749(&outC->AckMsgQueue, &outC->Local_AckMsgQueue);
+      kcg_copy_array__31743(&outC->MsgQueue, &outC->Local_NormaliMsgQueue);
       outC->NumE = outC->numNormalMsg;
       outC->AckisEmpty = outC->Local_ack_empty;
       outC->isEmpty = outC->Local_isEmpty;
@@ -249,6 +249,6 @@ void TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TextMessagesDipatcher_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

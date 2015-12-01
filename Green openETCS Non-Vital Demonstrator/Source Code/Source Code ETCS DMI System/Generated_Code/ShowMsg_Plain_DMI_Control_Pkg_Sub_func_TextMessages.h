@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _ShowMsg_Plain_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _ShowMsg_Plain_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -15,7 +15,7 @@
 
 /* DMI_Control_Pkg::Sub_func::TextMessages::ShowMsg_Plain */
 extern void ShowMsg_Plain_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::ShowMsg_Plain::Msgarray */array__31757 *Msgarray,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::ShowMsg_Plain::Msgarray */array__31743 *Msgarray,
   /* DMI_Control_Pkg::Sub_func::TextMessages::ShowMsg_Plain::scrollLevel */kcg_int scrollLevel,
   /* DMI_Control_Pkg::Sub_func::TextMessages::ShowMsg_Plain::PlainText */array_char_30_5 *PlainText,
   /* DMI_Control_Pkg::Sub_func::TextMessages::ShowMsg_Plain::isMoreThanFive */kcg_bool *isMoreThanFive,
@@ -24,6 +24,6 @@ extern void ShowMsg_Plain_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _ShowMsg_Plain_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ShowMsg_Plain_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages_H_
 #define _NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages_H_
@@ -37,7 +37,7 @@ typedef struct {
 /* ===========  node initialization and cycle functions  =========== */
 /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager */
 extern void NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages(
-  /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::Queue */array__31757 *Queue,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::Queue */array__31743 *Queue,
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::hh_array */array_real_10 *hh_array,
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::mm_array */array_real_10 *mm_array,
   /* DMI_Control_Pkg::Sub_func::TextMessages::NormalMsgManager::numE */kcg_int numE,
@@ -51,6 +51,6 @@ extern void NormalMsgManager_reset_DMI_Control_Pkg_Sub_func_TextMessages(
 #endif /* _NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** NormalMsgManager_DMI_Control_Pkg_Sub_func_TextMessages.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

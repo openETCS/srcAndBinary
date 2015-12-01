@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -29,21 +29,21 @@ void FIFO_Insert_Op_ACK_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_ACK::isFull */kcg_bool isFull,
   outC_FIFO_Insert_Op_ACK_DMI_Control_Pkg_Sub_func_TextMessages *outC)
 {
-  array__31763 tmp;
+  array__31749 tmp;
   kcg_int i;
   /* DMI_Control_Pkg::Sub_func::TextMessages::FIFO_Insert_Op_ACK::_L22 */ kcg_int _L22;
   
   if (outC->init) {
     outC->init = kcg_false;
-    kcg_copy_array__31763(
+    kcg_copy_array__31749(
       &outC->queue,
-      (array__31763 *) &cMsgStructQueue_DMI_Control_Pkg);
+      (array__31749 *) &cMsgStructQueue_DMI_Control_Pkg);
   }
   else {
-    kcg_copy_array__31763(&outC->queue, &outC->rem_queue);
+    kcg_copy_array__31749(&outC->queue, &outC->rem_queue);
   }
   for (i = 0; i < 5; i++) {
-    kcg_copy_array__31763(&tmp, &outC->queue);
+    kcg_copy_array__31749(&tmp, &outC->queue);
     /* 1 */
     InsertStructMSGFIFO_iterator_ack_DMI_Control_Pkg_Sub_func_TextMessages(
       i,
@@ -76,11 +76,11 @@ void FIFO_Insert_Op_ACK_DMI_Control_Pkg_Sub_func_TextMessages(
   }
 #endif /* KCG_MAPW_CPY */
   
-  kcg_copy_array__31763(&outC->rem_queue, &outC->queue);
+  kcg_copy_array__31749(&outC->rem_queue, &outC->queue);
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** FIFO_Insert_Op_ACK_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

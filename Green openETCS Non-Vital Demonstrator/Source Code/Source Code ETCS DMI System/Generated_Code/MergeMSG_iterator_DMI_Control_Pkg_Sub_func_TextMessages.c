@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,11 +10,11 @@
 /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator */
 void MergeMSG_iterator_DMI_Control_Pkg_Sub_func_TextMessages(
   /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::index */kcg_int index,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::acc */array__31757 *acc,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::ImpmsgArray */array__31757 *ImpmsgArray,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::acc */array__31743 *acc,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::ImpmsgArray */array__31743 *ImpmsgArray,
   /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::numAuxi */kcg_int numAuxi,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::auximsgArray */array__31757 *auximsgArray,
-  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::OutputArray */array__31757 *OutputArray)
+  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::auximsgArray */array__31743 *auximsgArray,
+  /* DMI_Control_Pkg::Sub_func::TextMessages::MergeMSG_iterator::OutputArray */array__31743 *OutputArray)
 {
   MsgStructure tmp1;
   MsgStructure tmp;
@@ -29,11 +29,11 @@ void MergeMSG_iterator_DMI_Control_Pkg_Sub_func_TextMessages(
   }
   if (!kcg_comp_MsgStructure(
       &tmp1,
-      (struct__31740 *) &cMsgStructure_DMI_Control_Pkg)) {
-    kcg_copy_array__31757(OutputArray, acc);
+      (struct__31726 *) &cMsgStructure_DMI_Control_Pkg)) {
+    kcg_copy_array__31743(OutputArray, acc);
   }
   else {
-    kcg_copy_array__31757(OutputArray, acc);
+    kcg_copy_array__31743(OutputArray, acc);
     if ((0 <= index - numAuxi) & (index - numAuxi < 10)) {
       kcg_copy_MsgStructure(&tmp, &(*ImpmsgArray)[index - numAuxi]);
     }
@@ -50,6 +50,6 @@ void MergeMSG_iterator_DMI_Control_Pkg_Sub_func_TextMessages(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** MergeMSG_iterator_DMI_Control_Pkg_Sub_func_TextMessages.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

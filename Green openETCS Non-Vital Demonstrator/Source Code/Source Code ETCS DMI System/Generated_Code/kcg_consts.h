@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:56
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -281,16 +281,16 @@ extern const Array_DMI_List_Entry_Request cDMI_List_Entry_Request_DMI_Control_Pk
 extern const array_real_10 cArray_mm_leer_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cListMsgStructure */
-extern const array__31763 cListMsgStructure_DMI_Control_Pkg;
+extern const array__31749 cListMsgStructure_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cMsgStructQueue */
-extern const array__31763 cMsgStructQueue_DMI_Control_Pkg;
+extern const array__31749 cMsgStructQueue_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cArray_hh_leer */
 extern const array_real_10 cArray_hh_leer_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cMsgStructQueueMax */
-extern const array__31757 cMsgStructQueueMax_DMI_Control_Pkg;
+extern const array__31743 cMsgStructQueueMax_DMI_Control_Pkg;
 
 /* DMI_Control_Pkg::cMsgStructure */
 extern const MsgStructure cMsgStructure_DMI_Control_Pkg;
@@ -1735,6 +1735,6 @@ extern const TIU_Input_msg_API_TIU_Pkg cEMPTY_TIU2DMI_EnvSim_Internal;
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-30T15:42:56
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

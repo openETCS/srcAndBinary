@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -12,7 +12,7 @@ void CAST_int_to_DMI_trackCondition_DATA_Variables(
   /* DATA::Variables::CAST_int_to_DMI_trackCondition::dmi_trackCondition_int */DMI_trackCondition_int_array_T *dmi_trackCondition_int,
   /* DATA::Variables::CAST_int_to_DMI_trackCondition::dmi_trackCondition_ct */DMI_trackCondition_T_DMI_Types_Pkg *dmi_trackCondition_ct)
 {
-  array__31527 tmp;
+  array__31513 tmp;
   kcg_int i;
   
   (*dmi_trackCondition_ct).nIter = (*dmi_trackCondition_int)[0];
@@ -30,6 +30,6 @@ void CAST_int_to_DMI_trackCondition_DATA_Variables(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** CAST_int_to_DMI_trackCondition_DATA_Variables.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

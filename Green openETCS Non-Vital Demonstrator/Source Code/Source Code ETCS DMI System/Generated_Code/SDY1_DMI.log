@@ -31,7 +31,7 @@ Operator D_behavior is invalid
 
 Generating code for specification...
 ScadeDisplayCGSimu.exe -outdir S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code -prefix SDY1_DMI_ "S:\model\Scade\System\DMI_Control\SCADE Display\DMI.sgfx" "S:\model\Scade\System\DMI_Control\SCADE Display\texture_table.stt" "S:\model\Scade\System\DMI_Control\SCADE Display\font_table.sft" "S:\model\Scade\System\DMI_Control\SCADE Display\DMI.sct" "S:\model\Scade\System\DMI_Control\SCADE Display\line_width_table.swt" "S:\model\Scade\System\DMI_Control\SCADE Display\line_stipple_table.sst"
-I0001: SCADE Display CG Simu Version 6.6 i23 (c) Esterel Technologies 2006-2015 started at 2015-11-30T15:43:11.
+I0001: SCADE Display CG Simu Version 6.6 i23 (c) Esterel Technologies 2006-2015 started at 2015-12-01T12:07:55.
 I0005: Command line: ScadeDisplayCGSimu.exe -outdir S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code -prefix SDY1_DMI_ "S:\model\Scade\System\DMI_Control\SCADE Display\DMI.sgfx" "S:\model\Scade\System\DMI_Control\SCADE Display\texture_table.stt" "S:\model\Scade\System\DMI_Control\SCADE Display\font_table.sft" "S:\model\Scade\System\DMI_Control\SCADE Display\DMI.sct" "S:\model\Scade\System\DMI_Control\SCADE Display\line_width_table.swt" "S:\model\Scade\System\DMI_Control\SCADE Display\line_stipple_table.sst"
 I0006: Generated file: S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code\SDY1_DMI_DistanceToTargetBar_1_draw.c
 I0006: Generated file: S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code\SDY1_DMI_DistanceToTargetBar_1_reset.c
@@ -253,7 +253,7 @@ I0006: Generated file: S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integ
 I0006: Generated file: S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code\SDY1_DMI_kcg_user_macros.h
 I0006: Generated file: S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code\SDY1_DMI_imported_functions.h
 I0006: Generated file: S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\SDY1_DMI\Code\ScadeDisplayCGSimu.log
-I0002: SCADE Display CG Simu finished with 0 error(s) at 2015-11-30T15:43:17.
+I0002: SCADE Display CG Simu finished with 0 error(s) at 2015-12-01T12:08:01.
 
 Generating interactivity code...
 SCADE Suite Project template for interactivity: none

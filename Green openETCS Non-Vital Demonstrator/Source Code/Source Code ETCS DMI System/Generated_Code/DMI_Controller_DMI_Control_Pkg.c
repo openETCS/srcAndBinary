@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -77,7 +77,7 @@ void DMI_Controller_DMI_Control_Pkg(
   /* DMI_Control_Pkg::DMI_Controller::ScrollDown_fromDisplay */kcg_bool ScrollDown_fromDisplay,
   outC_DMI_Controller_DMI_Control_Pkg *outC)
 {
-  struct__31442 tmp;
+  struct__31428 tmp;
   kcg_bool tmp16;
   kcg_bool tmp15;
   array_int_4 tmp14;
@@ -1704,6 +1704,19 @@ void DMI_Controller_DMI_Control_Pkg(
               break;
             
           }
+          switch (YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
+            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
+              traindataYesNoIndex_toDisplay = 1;
+              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
+              break;
+            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
+              traindataYesNoIndex_toDisplay = 2;
+              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
+                SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
+              break;
+            
+          }
           switch (RequestSM_state_sel_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
               if (tmp6) {
@@ -1792,19 +1805,6 @@ void DMI_Controller_DMI_Control_Pkg(
               0;
             outC->_L427_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive[11] =
               0;
-          }
-          switch (YesNoTrainDataValidationSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
-            case SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              traindataYesNoIndex_toDisplay = 1;
-              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_YES_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-              break;
-            case SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM :
-              traindataYesNoIndex_toDisplay = 2;
-              outC->YesNoTrainDataValidationSM_state_nxt_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive =
-                SSM_st_NO_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_YesNoTrainDataValidationSM;
-              break;
-            
           }
           switch (RequestSM_state_act_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive) {
             case SSM_st_LevelWindow_CabinSM_DeskIsOpen_HandshakeSM_CommunicationActive_RequestSM :
@@ -5778,6 +5778,6 @@ void DMI_Controller_DMI_Control_Pkg(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Controller_DMI_Control_Pkg.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

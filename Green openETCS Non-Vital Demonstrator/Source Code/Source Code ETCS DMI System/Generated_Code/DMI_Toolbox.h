@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 #ifndef _DMI_Toolbox_H_
 #define _DMI_Toolbox_H_
@@ -140,6 +140,6 @@ extern void DMI_reset_Toolbox(outC_DMI_Toolbox *outC);
 #endif /* _DMI_Toolbox_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** DMI_Toolbox.h
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 

@@ -1,5 +1,5 @@
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-30T15:41:46
+** Generation date: 2015-12-01T12:06:28
 ** Command: scade -code "S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\Testbench_Integration.etp" -root Testbench_Integration::RemoteDMI -conf TCP_DMI_Standalone -build -all
 *************************************************************$
 *** Generated Files Information (GENFIL): KCG- Generated files
@@ -945,6 +945,6 @@ $**************  SCADETOC Version R16 (build i21) **************
  ~Makefile
   at file S:\model\Scade\System\OBU_PreIntegrations\Testbench_Integration\TCP_DMI_Standalone\Makefile, line 0, character 0
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-11-30T15:44:05
+** Generation date: 2015-12-01T12:08:44
 ** sc2c.log
 *************************************************************$

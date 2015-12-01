@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config S:/model/Scade/System/OBU_PreIntegrations/Testbench_Integration/TCP_DMI_Standalone\kcg_s2c_config.txt
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,6 +24,6 @@ void NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** NextGradients_DMI_Control_Pkg_Sub_func_PlanningArea.c
-** Generation date: 2015-11-30T15:42:57
+** Generation date: 2015-12-01T12:07:43
 *************************************************************$ */
 
