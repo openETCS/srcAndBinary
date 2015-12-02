@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,7 +23,6 @@ void Build_Packet0_ProvidePositionReport_Pkg(
   (*packet0).NID_PACKET = 0;
   (*packet0).L_PACKET = 0;
   (*packet0).qscale = cQ_SCALE_ProvidePositionReport_Pkg;
-  (*packet0).NID_LRBG = (*trainPos).LRBG.nid_bg;
   (*packet0).dirlrbg = (*trainPos).trainOrientationToLRBG;
   (*packet0).dlrbg = (*trainPos).nominalOrReverseToLRBG;
   (*packet0).length = (*train2trackStatus).q_length;
@@ -38,6 +37,10 @@ void Build_Packet0_ProvidePositionReport_Pkg(
     trainPos,
     &_L14,
     &_L15);
+  (*packet0).NID_LRBG = /* 1 */
+    convert2LRBG_ProvidePositionReport_Pkg(
+      (*trainPos).LRBG.nid_c,
+      (*trainPos).LRBG.nid_bg);
   (*packet0).D_LRBG = /* scaleInternalType */
     scaleInternalType_ProvidePositionReport_Pkg(
       cQ_SCALE_ProvidePositionReport_Pkg,
@@ -58,6 +61,6 @@ void Build_Packet0_ProvidePositionReport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_Packet0_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-25T14:46:12
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

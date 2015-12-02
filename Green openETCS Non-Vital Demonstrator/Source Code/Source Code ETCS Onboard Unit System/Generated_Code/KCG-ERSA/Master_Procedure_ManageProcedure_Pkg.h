@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:08
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 #ifndef _Master_Procedure_ManageProcedure_Pkg_H_
 #define _Master_Procedure_ManageProcedure_Pkg_H_
@@ -29,8 +29,8 @@ typedef struct {
   kcg_bool init3;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  struct_120380 /* ManageProcedure_Pkg::Master_Procedure */ _2_fby_ck_fby;
-  struct_120380 /* ManageProcedure_Pkg::Master_Procedure */ fby_ck_fby;
+  struct_121589 /* ManageProcedure_Pkg::Master_Procedure */ _2_fby_ck_fby;
+  struct_121589 /* ManageProcedure_Pkg::Master_Procedure */ fby_ck_fby;
   SSM_ST_SM3_SM1_Awakness_of_Train /* ManageProcedure_Pkg::Master_Procedure::SM1::Awakness_of_Train::SM3 */ SM3_state_nxt_SM1_Awakness_of_Train;
   _38_SSM_ST_SM1 /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_state_nxt;
   kcg_bool /* ManageProcedure_Pkg::Master_Procedure::SM1 */ SM1_reset_nxt;
@@ -69,6 +69,6 @@ extern void Master_Procedure_init_ManageProcedure_Pkg(
 #endif /* _Master_Procedure_ManageProcedure_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Master_Procedure_ManageProcedure_Pkg.h
-** Generation date: 2015-11-25T14:46:08
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 

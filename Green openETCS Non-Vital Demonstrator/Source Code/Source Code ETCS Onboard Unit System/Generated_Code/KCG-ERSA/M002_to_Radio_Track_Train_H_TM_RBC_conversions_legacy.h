@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 #ifndef _M002_to_Radio_Track_Train_H_TM_RBC_conversions_legacy_H_
 #define _M002_to_Radio_Track_Train_H_TM_RBC_conversions_legacy_H_
@@ -20,6 +20,6 @@ extern void M002_to_Radio_Track_Train_H_TM_RBC_conversions_legacy(
 #endif /* _M002_to_Radio_Track_Train_H_TM_RBC_conversions_legacy_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** M002_to_Radio_Track_Train_H_TM_RBC_conversions_legacy.h
-** Generation date: 2015-11-25T14:46:10
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

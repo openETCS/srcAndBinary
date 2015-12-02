@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,9 +31,10 @@ void OutputManagement_Interfaces(
   /* Interfaces::OutputManagement::Service_Brake_Command */ kcg_bool *Service_Brake_Command,
   /* Interfaces::OutputManagement::newMode */ T_Mode_Level_And_Mode_Types_Pkg *newMode)
 {
+  /* Interfaces::OutputManagement */ kcg_bool tmp;
+  
   *newMode = current_Mode;
   *Service_Brake_Command = service_brake_Command;
-  *EB_Requested = EB_requested;
   /* 1 */
   Output_To_DMI_Interfaces(
     Ack_LS_Req_To_Driver,
@@ -55,10 +56,25 @@ void OutputManagement_Interfaces(
     MA_Req_to_RBC,
     Request_For_SH_To_RBC,
     Data_To_BG_Management);
+  switch (current_Mode) {
+    case TR_Level_And_Mode_Types_Pkg :
+      tmp = kcg_true;
+      break;
+    case SF_Level_And_Mode_Types_Pkg :
+      tmp = kcg_true;
+      break;
+    case NP_Level_And_Mode_Types_Pkg :
+      tmp = kcg_true;
+      break;
+    
+    default :
+      tmp = kcg_false;
+  }
+  *EB_Requested = tmp | EB_requested;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** OutputManagement_Interfaces.c
-** Generation date: 2015-11-25T14:46:12
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:08
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:25
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -716,7 +716,7 @@ extern const PT4_ErrorReporting_T_Packet_TrainTypes_Pkg emptyPacket4_ProvidePosi
 #define cxQ_EMERGENCYSTOP_ProvidePositionReport_Pkg Q_EMERGENCYSTOP_Conditional_Emergency_Stop_accepted_with_update_of_EOA
 
 /* ProvidePositionReport_Pkg::cTimeToElapse */
-#define cTimeToElapse_ProvidePositionReport_Pkg 10
+#define cTimeToElapse_ProvidePositionReport_Pkg 1000
 
 /* Packet_Types_Pkg::cIterPacket58 */
 #define cIterPacket58_Packet_Types_Pkg 2
@@ -900,6 +900,42 @@ extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_EVC_MEM_Suppor
 
 /* Id_Pkg::cp046_Conditional_Level_Transition_Order */
 #define cp046_Conditional_Level_Transition_Order_Id_Pkg 46
+
+/* TM::DEFAULT_P080_OBU_section */
+extern const P080_section_enum_T_TM DEFAULT_P080_OBU_section_TM;
+
+/* TM_conversions::INT_M_MAMODE_on_sight */
+#define INT_M_MAMODE_on_sight_TM_conversions 0
+
+/* TM_conversions::INT_M_MAMODE_limited_supervision */
+#define INT_M_MAMODE_limited_supervision_TM_conversions 2
+
+/* TM_conversions::INT_M_MAMODE_shunting */
+#define INT_M_MAMODE_shunting_TM_conversions 1
+
+/* TM_conversions::ENUM_M_MAMODE_on_sight */
+#define ENUM_M_MAMODE_on_sight_TM_conversions M_MAMODE_On_Sight
+
+/* TM_conversions::ENUM_M_MAMODE_shunting */
+#define ENUM_M_MAMODE_shunting_TM_conversions M_MAMODE_Shunting
+
+/* TM_conversions::ENUM_M_MAMODE_limited_supervision */
+#define ENUM_M_MAMODE_limited_supervision_TM_conversions M_MAMODE_Limited_Supervision
+
+/* TM_conversions::INT_Q_MAMODE_as_EOA */
+#define INT_Q_MAMODE_as_EOA_TM_conversions 0
+
+/* TM_conversions::INT_Q_MAMODE_as_SvL_and_EOA */
+#define INT_Q_MAMODE_as_SvL_and_EOA_TM_conversions 1
+
+/* TM_conversions::ENUM_Q_MAMODE_as_EOA */
+#define ENUM_Q_MAMODE_as_EOA_TM_conversions Q_MAMODE_as_the_EOA
+
+/* TM_conversions::ENUM_Q_MAMODE_as_SvL_and_EOA */
+#define ENUM_Q_MAMODE_as_SvL_and_EOA_TM_conversions Q_MAMODE_as_both_the_EOA_and_SvL
+
+/* TM_lib_internal::DIM_P080_n_sections */
+#define DIM_P080_n_sections_TM_lib_internal 6
 
 /* trainData_pkg::cNoBus */
 extern const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus cNoBus_trainData_pkg;
@@ -3820,6 +3856,6 @@ extern const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox;
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-11-25T14:46:08
+** Generation date: 2015-12-02T15:32:25
 *************************************************************$ */
 

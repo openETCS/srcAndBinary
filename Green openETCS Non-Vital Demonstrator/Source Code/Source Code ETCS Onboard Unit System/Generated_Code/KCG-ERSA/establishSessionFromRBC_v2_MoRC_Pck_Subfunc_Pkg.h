@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 #ifndef _establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -46,6 +46,6 @@ extern void establishSessionFromRBC_v2_init_MoRC_Pck_Subfunc_Pkg(
 #endif /* _establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** establishSessionFromRBC_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-11-25T14:46:10
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 

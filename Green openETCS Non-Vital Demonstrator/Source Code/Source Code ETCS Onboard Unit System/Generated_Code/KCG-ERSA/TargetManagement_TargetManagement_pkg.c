@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -120,6 +120,6 @@ void TargetManagement_TargetManagement_pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TargetManagement_TargetManagement_pkg.c
-** Generation date: 2015-11-25T14:46:11
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -34,6 +34,12 @@ void MEM_dataForLevelTransition_EVC_MEM_Support_Pkg(
       &(*actualMessage).packets.PacketHeaders,
       cp041_Level_Transition_Order_Id_Pkg);
   _L71 = positionNeeded | tmp1;
+  /* ck_p41Valid */ if (tmp1) {
+    _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pkg(actualMessage);
+  }
+  else {
+    _L116 = (*storedData).LRBG;
+  }
   /* 1 */ Read_P015_TM(&(*actualMessage).packets, &_L3, &_L4);
   /* 1 */ Read_P041_Legacy_TM_specific(&(*actualMessage).packets, &_L18);
   /* 1 */ Read_P021_TM(&(*actualMessage).packets, &_L20, &_L21);
@@ -41,14 +47,12 @@ void MEM_dataForLevelTransition_EVC_MEM_Support_Pkg(
     outstoredData,
     storedData);
   /* 2 */ if (tmp1) {
-    _L116 = /* 1 */ getLRBGFromMsg_xdebugSupport_Pkg(actualMessage);
     ntcRequested = /* 1 */ checkNTCPriority_xdebugSupport_Pkg(&_L18);
     kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg(
       &(*outstoredData).p41,
       &_L18);
   }
   else {
-    _L116 = (*storedData).LRBG;
     ntcRequested = kcg_false;
     /* 3 */ if (actualLevel == M_LEVEL_Level_0) {
       kcg_copy_P41_LevelTransistionOrders_T_Packet_Types_Pkg(
@@ -103,6 +107,6 @@ void MEM_dataForLevelTransition_EVC_MEM_Support_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MEM_dataForLevelTransition_EVC_MEM_Support_Pkg.c
-** Generation date: 2015-11-25T14:46:14
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 

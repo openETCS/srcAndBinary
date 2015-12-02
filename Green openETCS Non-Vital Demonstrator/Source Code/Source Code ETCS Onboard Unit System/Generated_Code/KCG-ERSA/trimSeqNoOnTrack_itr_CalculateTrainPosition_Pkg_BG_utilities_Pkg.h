@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 #ifndef _trimSeqNoOnTrack_itr_CalculateTrainPosition_Pkg_BG_utilities_Pkg_H_
 #define _trimSeqNoOnTrack_itr_CalculateTrainPosition_Pkg_BG_utilities_Pkg_H_
@@ -22,6 +22,6 @@ extern void trimSeqNoOnTrack_itr_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
 #endif /* _trimSeqNoOnTrack_itr_CalculateTrainPosition_Pkg_BG_utilities_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** trimSeqNoOnTrack_itr_CalculateTrainPosition_Pkg_BG_utilities_Pkg.h
-** Generation date: 2015-11-25T14:46:10
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 

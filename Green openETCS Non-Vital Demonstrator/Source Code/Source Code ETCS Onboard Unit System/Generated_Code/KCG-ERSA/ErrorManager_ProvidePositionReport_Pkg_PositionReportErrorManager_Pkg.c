@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,7 +18,7 @@ void ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg(
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::SafetyCriticalFailure */ kcg_bool SafetyCriticalFailure,
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::DoubleLinkingError */ kcg_bool DoubleLinkingError,
   /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::DoubleRepositioningError */ kcg_bool DoubleRepositioningError,
-  /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::errorVector */ array_119539 *errorVector)
+  /* ProvidePositionReport_Pkg::PositionReportErrorManager_Pkg::ErrorManager::errorVector */ array_120746 *errorVector)
 {
   (*errorVector)[0].present = BG_LinkingConsistencyError;
   (*errorVector)[0].errorType = M_ERROR_Balise_group_linking_consistency_error;
@@ -44,6 +44,6 @@ void ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ErrorManager_ProvidePositionReport_Pkg_PositionReportErrorManager_Pkg.c
-** Generation date: 2015-11-25T14:46:12
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

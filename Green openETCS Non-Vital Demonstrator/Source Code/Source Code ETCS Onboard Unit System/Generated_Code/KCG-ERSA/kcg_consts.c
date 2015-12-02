@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:07
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:24
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17239,6 +17239,10 @@ const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_EVC_MEM_Support_Pkg =
   { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0,
     0 } };
 
+/* TM::DEFAULT_P080_OBU_section */
+const P080_section_enum_T_TM DEFAULT_P080_OBU_section_TM = { kcg_false, 0,
+  M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA };
+
 /* trainData_pkg::cNoBus */
 const M_TrainTrackMessageBus_t_TM_TrainTrack_Bus cNoBus_trainData_pkg = { { {
       kcg_false, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -28403,6 +28407,6 @@ const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox = {
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.c
-** Generation date: 2015-11-25T14:46:07
+** Generation date: 2015-12-02T15:32:24
 *************************************************************$ */
 

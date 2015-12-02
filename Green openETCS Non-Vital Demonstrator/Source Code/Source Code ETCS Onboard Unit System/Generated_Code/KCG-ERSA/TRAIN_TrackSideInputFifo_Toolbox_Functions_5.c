@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:15
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -337,7 +337,7 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
         &outC->_L4_IfBlock1[entry],
         inData);
     }
-    kcg_copy_array_120937(&outC->buffer, &outC->_L4_IfBlock1);
+    kcg_copy_array_122160(&outC->buffer, &outC->_L4_IfBlock1);
     outC->_L20_IfBlock1 = (entry + 1) % 5;
     tmp1 = 1;
     outC->init1 = kcg_false;
@@ -402,6 +402,6 @@ void TRAIN_TrackSideInputFifo_Toolbox_Functions_5(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TRAIN_TrackSideInputFifo_Toolbox_Functions_5.c
-** Generation date: 2015-11-25T14:46:15
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 

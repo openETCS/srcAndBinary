@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -50,6 +50,6 @@ Icon_control_flag_T_DMI_Types_Pkg CAST_int_to_Icon_control_flag_DATA_Variables(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_Icon_control_flag_DATA_Variables.c
-** Generation date: 2015-11-25T14:46:14
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 

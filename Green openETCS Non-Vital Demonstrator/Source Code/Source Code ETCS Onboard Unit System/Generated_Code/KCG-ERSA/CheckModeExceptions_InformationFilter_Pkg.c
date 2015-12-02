@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -66,6 +66,6 @@ kcg_bool CheckModeExceptions_InformationFilter_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckModeExceptions_InformationFilter_Pkg.c
-** Generation date: 2015-11-25T14:46:12
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

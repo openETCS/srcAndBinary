@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -46,12 +46,15 @@ void flagsForLevelChange_InformationFilter_Pkg(
   outC_flagsForLevelChange_InformationFilter_Pkg *outC)
 {
   /* InformationFilter_Pkg::flagsForLevelChange::_L161 */ kcg_bool _L161;
+  /* InformationFilter_Pkg::flagsForLevelChange::_L167 */ kcg_bool _L167;
   
-  _L161 = (*actualMessage).valid | (*ModeLevel).newLevel;
+  _L167 = (*ModeLevel).newLevel | ((*ModeLevel).newMode & ((*ModeLevel).Mode ==
+        M_MODE_Trip));
+  _L161 = (*actualMessage).valid | _L167;
   /* ck__L161 */ if (_L161) {
     /* 1 */
     flagsFromMessages_InformationFilter_Pkg(
-      (*ModeLevel).newLevel,
+      _L167,
       actualMessage,
       inFilterEvents,
       &outC->Context_1);
@@ -77,6 +80,6 @@ void flagsForLevelChange_InformationFilter_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** flagsForLevelChange_InformationFilter_Pkg.c
-** Generation date: 2015-11-25T14:46:12
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

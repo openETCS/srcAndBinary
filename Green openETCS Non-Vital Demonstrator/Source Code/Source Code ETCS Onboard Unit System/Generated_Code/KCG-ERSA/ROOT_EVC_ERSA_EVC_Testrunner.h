@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 #ifndef _ROOT_EVC_ERSA_EVC_Testrunner_H_
 #define _ROOT_EVC_ERSA_EVC_Testrunner_H_
@@ -28,6 +28,7 @@ typedef struct {
   M_TrackTrain_Radio_T_TM_radio_messages /* ERSA_EVC_Testrunner::ROOT_EVC::Radio_message_header */ Radio_message_header;
   Packets_T_ERSA_EVC_Testrunner /* ERSA_EVC_Testrunner::ROOT_EVC::PacketStructure */ PacketStructure;
   CompressedPackets_T_Common_Types_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::CompressedPackets */ CompressedPackets;
+  mobileHWStatus_Type_MoRC_Pck /* ERSA_EVC_Testrunner::ROOT_EVC::API_mobileHWStatus */ API_mobileHWStatus;
   ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::API_persistentData */ API_persistentData;
 } inC_ROOT_EVC_ERSA_EVC_Testrunner;
 
@@ -48,11 +49,11 @@ typedef struct {
   M_MODE /* ERSA_EVC_Testrunner::ROOT_EVC::debugCurrentMode */ debugCurrentMode;
   M_LEVEL /* ERSA_EVC_Testrunner::ROOT_EVC::debugCurrentLevel */ debugCurrentLevel;
   EVC_to_DMI_Message_T_API_DMI_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::API_toDMI */ API_toDMI;
+  RadioManagement_T_API_RadioCommunication_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::API_RTM_mangement */ API_RTM_mangement;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  RadioManagement_T_API_RadioCommunication_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::API_RTM_management */ API_RTM_management;
   DMI_to_EVC_Message_int_T_API_DMI_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::TCP_fromDMI */ TCP_fromDMI;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_RemoteDMIBus_EnvSim /* 1 */ _3_Context_1;
@@ -81,6 +82,6 @@ extern void ROOT_EVC_init_ERSA_EVC_Testrunner(
 #endif /* _ROOT_EVC_ERSA_EVC_Testrunner_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.h
-** Generation date: 2015-11-25T14:46:10
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

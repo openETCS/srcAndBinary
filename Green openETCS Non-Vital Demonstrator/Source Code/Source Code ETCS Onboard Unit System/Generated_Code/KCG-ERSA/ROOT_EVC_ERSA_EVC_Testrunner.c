@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:15
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -18,9 +18,9 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
   for (i = 0; i < 311; i++) {
     outC->TCP_fromDMI[i] = 0;
   }
-  outC->API_RTM_management.valid = kcg_true;
-  outC->API_RTM_management.cmd = cmdr_not_relevant_API_RadioCommunication_Pkg;
-  outC->API_RTM_management.networkID = 0;
+  outC->API_RTM_mangement.valid = kcg_true;
+  outC->API_RTM_mangement.cmd = cmdr_not_relevant_API_RadioCommunication_Pkg;
+  outC->API_RTM_mangement.networkID = 0;
   outC->API_toDMI.present = kcg_true;
   outC->API_toDMI.dynamic.valid = kcg_true;
   outC->API_toDMI.dynamic.system_clock = 0;
@@ -318,7 +318,6 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   inC_ROOT_EVC_ERSA_EVC_Testrunner *inC,
   outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
 {
-  /* ERSA_EVC_Testrunner::ROOT_EVC */ RadioManagement_T_API_RadioCommunication_Pkg tmp3;
   /* ERSA_EVC_Testrunner::ROOT_EVC */ API_TrackSideInput_T_API_Msg_Pkg tmp2;
   /* ERSA_EVC_Testrunner::ROOT_EVC */ TelegramHeader_T_BG_Types_Pkg tmp1;
   /* ERSA_EVC_Testrunner::ROOT_EVC */ DMI_to_EVC_Message_int_T_API_DMI_Pkg tmp;
@@ -329,6 +328,49 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L31 */ CompressedRadioMessage_TM _L31;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L174 */ DMI_to_EVC_Message_int_T_API_DMI_Pkg _L174;
   
+  /* 1 */
+  API_Frontend_balises_prelim_TM_API(
+    &inC->Balise_telegram_header,
+    &inC->CompressedPackets,
+    &inC->PacketStructure.P001,
+    &inC->PacketStructure.P002,
+    &inC->PacketStructure.P003_baseline2,
+    &inC->PacketStructure.P005,
+    &inC->PacketStructure.P012,
+    &inC->PacketStructure.P015,
+    &inC->PacketStructure.P016,
+    &inC->PacketStructure.P021,
+    &inC->PacketStructure.P027_baseline2,
+    &inC->PacketStructure.P039_baseline2,
+    &inC->PacketStructure.P040,
+    &inC->PacketStructure.P041,
+    &inC->PacketStructure.P042,
+    &inC->PacketStructure.P045,
+    &inC->PacketStructure.P046,
+    &inC->PacketStructure.P057,
+    &inC->PacketStructure.P058,
+    &inC->PacketStructure.P064,
+    &inC->PacketStructure.P065,
+    &inC->PacketStructure.P066,
+    &inC->PacketStructure.P071,
+    &inC->PacketStructure.P072_baseline2,
+    &inC->PacketStructure.P080,
+    &inC->PacketStructure.P131,
+    &inC->PacketStructure.P132,
+    &inC->PacketStructure.P133,
+    &inC->PacketStructure.P134,
+    &inC->PacketStructure.P135,
+    &inC->PacketStructure.P136,
+    &inC->PacketStructure.P137,
+    &inC->PacketStructure.P138,
+    &inC->PacketStructure.P139,
+    &inC->PacketStructure.P140,
+    &inC->PacketStructure.P141,
+    &inC->PacketStructure.P143,
+    &inC->PacketStructure.P145,
+    &inC->PacketStructure.P254,
+    &inC->PacketStructure.P255,
+    &_L30);
   /* 1 */
   API_Frontend_radio_prelim_TM_API(
     &inC->Radio_message_header,
@@ -374,71 +416,22 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &_L31,
     &_L32,
     &_L33);
+  /* 1 */
+  RTM_ERSA_ERSA_EVC_Testrunner(
+    inC->API_SystemTime,
+    &_L32,
+    &_L33,
+    (RadioManagement_T_API_RadioCommunication_Pkg *) &cInitRTMManagement,
+    &outC->Context_1);
   /* last_init_ck_TCP_fromDMI */ if (outC->init) {
-    kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg(
-      &tmp3,
-      (RadioManagement_T_API_RadioCommunication_Pkg *) &cInitRTMManagement);
     outC->init = kcg_false;
     kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(
       &_L174,
       (DMI_to_EVC_Message_int_T_API_DMI_Pkg *) &cEmptyMessageFromTCPDMI);
   }
   else {
-    kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg(
-      &tmp3,
-      &outC->API_RTM_management);
     kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(&_L174, &outC->TCP_fromDMI);
   }
-  /* 1 */
-  RTM_ERSA_ERSA_EVC_Testrunner(
-    inC->API_SystemTime,
-    &_L32,
-    &_L33,
-    &tmp3,
-    &outC->Context_1);
-  /* 1 */
-  API_Frontend_balises_prelim_TM_API(
-    &inC->Balise_telegram_header,
-    &inC->CompressedPackets,
-    &inC->PacketStructure.P001,
-    &inC->PacketStructure.P002,
-    &inC->PacketStructure.P003_baseline2,
-    &inC->PacketStructure.P005,
-    &inC->PacketStructure.P012,
-    &inC->PacketStructure.P015,
-    &inC->PacketStructure.P016,
-    &inC->PacketStructure.P021,
-    &inC->PacketStructure.P027_baseline2,
-    &inC->PacketStructure.P039_baseline2,
-    &inC->PacketStructure.P040,
-    &inC->PacketStructure.P041,
-    &inC->PacketStructure.P042,
-    &inC->PacketStructure.P045,
-    &inC->PacketStructure.P046,
-    &inC->PacketStructure.P057,
-    &inC->PacketStructure.P058,
-    &inC->PacketStructure.P064,
-    &inC->PacketStructure.P065,
-    &inC->PacketStructure.P066,
-    &inC->PacketStructure.P071,
-    &inC->PacketStructure.P072_baseline2,
-    &inC->PacketStructure.P080,
-    &inC->PacketStructure.P131,
-    &inC->PacketStructure.P132,
-    &inC->PacketStructure.P133,
-    &inC->PacketStructure.P134,
-    &inC->PacketStructure.P135,
-    &inC->PacketStructure.P136,
-    &inC->PacketStructure.P137,
-    &inC->PacketStructure.P138,
-    &inC->PacketStructure.P139,
-    &inC->PacketStructure.P140,
-    &inC->PacketStructure.P141,
-    &inC->PacketStructure.P143,
-    &inC->PacketStructure.P145,
-    &inC->PacketStructure.P254,
-    &inC->PacketStructure.P255,
-    &_L30);
   /* 1 */ CASTLIB_BaliseHeaders_TM_conversions(&_L30.Header, &tmp1);
   /* 1 */
   BTM_Toolbox_TrainModules(
@@ -466,7 +459,7 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &outC->_1_Context_1.TrackMessageToEVC,
     &tmp,
     &inC->API_fromTIU,
-    &outC->Context_1.mobileHWStatus,
+    &inC->API_mobileHWStatus,
     &inC->API_persistentData,
     &outC->_2_Context_1);
   outC->resetOut = outC->_2_Context_1.resetOut;
@@ -474,7 +467,7 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &outC->API_toRBC,
     &outC->_2_Context_1.API_toRBC);
   kcg_copy_RadioManagement_T_API_RadioCommunication_Pkg(
-    &outC->API_RTM_management,
+    &outC->API_RTM_mangement,
     &outC->_2_Context_1.API_RTM_management);
   kcg_copy_EVC_to_DMI_Message_int_T_API_DMI_Pkg(
     &_L4,
@@ -502,6 +495,6 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.c
-** Generation date: 2015-11-25T14:46:15
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
@@ -10,6 +10,7 @@
 #include "patchEmergencyBrakeMsg_EVC_MEM_Support_Pkg.h"
 #include "MEM_MobileConnectionContext_EVC_MEM_Support_Pkg.h"
 #include "MEM_MobileRegistrationContext_EVC_MEM_Support_Pkg.h"
+#include "Procedure_TRIP_EVC_MEM_Support_Pkg.h"
 #include "ManageLevelAndMode.h"
 #include "TIU_OutputIntegration_output_to_TIU_API_Pkg.h"
 #include "manageDMI_Output_manage_DMI_Output_Pkg.h"
@@ -124,6 +125,6 @@ extern void EVC_init(outC_EVC *outC);
 #endif /* _EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.h
-** Generation date: 2015-11-25T14:46:10
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

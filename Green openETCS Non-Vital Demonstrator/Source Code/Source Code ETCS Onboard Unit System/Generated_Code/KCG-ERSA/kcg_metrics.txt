@@ -1,6 +1,6 @@
 $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:48
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:33:05
 *************************************************************$
 Data structures
   Structures
@@ -21,9 +21,9 @@ Program size
     Max number of nesting levels of parenthesized expression in a full expression: 17
   Identifiers
     Max number of identifiers with block scope declared in one block: 53
-    Max number of macro identifiers simultaneously defined in one preprocessing translation unit: 3270
-    Max number of extern identifiers in one translation unit: 2555
+    Max number of macro identifiers simultaneously defined in one preprocessing translation unit: 3287
+    Max number of extern identifiers in one translation unit: 2562
 $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_metrics.txt
-** Generation date: 2015-11-25T14:46:48
+** Generation date: 2015-12-02T15:33:05
 *************************************************************$

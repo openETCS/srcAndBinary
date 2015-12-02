@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:10
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 #ifndef _getMobileRegStatus_EVC_MEM_Support_Pkg_H_
 #define _getMobileRegStatus_EVC_MEM_Support_Pkg_H_
@@ -19,6 +19,6 @@ extern mobileRegistrationStatus_T_RCM_Types_Pkg getMobileRegStatus_EVC_MEM_Suppo
 #endif /* _getMobileRegStatus_EVC_MEM_Support_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getMobileRegStatus_EVC_MEM_Support_Pkg.h
-** Generation date: 2015-11-25T14:46:10
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -1051,7 +1051,10 @@ void EVC(
     (kcg_bool)
       (outC->_4_Context_2.Service_Brake_Command |
         outC->Context_2.ApplyServiceBrake),
-    outC->_4_Context_2.EB_Requested,
+    /* 1 */
+    Procedure_TRIP_EVC_MEM_Support_Pkg(
+      &outC->ML_ModeAndLevel,
+      outC->_4_Context_2.EB_Requested),
     &outC->_5_Context_2);
   kcg_copy_speedSupervisionForDMI_T_DMI_Types_Pkg(
     &outC->DMI_sdmToDMI,
@@ -1311,6 +1314,6 @@ void EVC(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.c
-** Generation date: 2015-11-25T14:46:14
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 

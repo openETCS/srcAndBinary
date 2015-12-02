@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:11
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17,9 +17,9 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
   *Cond = (MRSP_TargetManagement_types == (*Targets)[0].targetType) &
     ((*Targets)[0].distance <= d_safe_max_front);
   /* 1 */ if (*Cond) {
-    kcg_copy_array_119934(
+    kcg_copy_array_121140(
       &(*TargetsReduced)[0],
-      (array_119934 *) &(*Targets)[1]);
+      (array_121140 *) &(*Targets)[1]);
     kcg_copy_Target_real_T_TargetManagement_types(
       &(&(*TargetsReduced)[109])[0],
       (Target_real_T_TargetManagement_types *)
@@ -34,6 +34,6 @@ void removeOverpassedMRSPint_TargetManagement_pkg_internalOperators(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** removeOverpassedMRSPint_TargetManagement_pkg_internalOperators.c
-** Generation date: 2015-11-25T14:46:11
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

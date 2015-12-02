@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:12
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -131,8 +131,8 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::ProvidePositionReport::t_train */ T_TRAIN t_train,
   outC_ProvidePositionReport_ProvidePositionReport_Pkg *outC)
 {
-  /* ProvidePositionReport_Pkg::ProvidePositionReport */ struct_119500 mk_struct;
-  /* ProvidePositionReport_Pkg::ProvidePositionReport */ array_119539 tmp6;
+  /* ProvidePositionReport_Pkg::ProvidePositionReport */ struct_120707 mk_struct;
+  /* ProvidePositionReport_Pkg::ProvidePositionReport */ array_120746 tmp6;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */ Radio_TrainTrack_Header_T_Radio_Types_Pkg tmp5;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */ outPackets_T_Common_Types_Pkg tmp4;
   /* ProvidePositionReport_Pkg::ProvidePositionReport */ PT0_PositionReport_T_Packet_TrainTypes_Pkg tmp3;
@@ -268,6 +268,6 @@ void ProvidePositionReport_ProvidePositionReport_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ProvidePositionReport_ProvidePositionReport_Pkg.c
-** Generation date: 2015-11-25T14:46:12
+** Generation date: 2015-12-02T15:32:27
 *************************************************************$ */
 

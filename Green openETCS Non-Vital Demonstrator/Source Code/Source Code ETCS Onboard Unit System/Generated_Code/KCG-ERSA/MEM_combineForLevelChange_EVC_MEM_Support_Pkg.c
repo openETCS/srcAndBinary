@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -215,6 +215,7 @@ void MEM_combineForLevelChange_EVC_MEM_Support_Pkg(
   /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
   outC_MEM_combineForLevelChange_EVC_MEM_Support_Pkg *outC)
 {
+  /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::IfBlock1::else */ kcg_bool else_clock_IfBlock1;
   /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::LRBGpositionNeeded */ kcg_bool last_LRBGpositionNeeded;
   /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::infoForLevelTransition */ dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg last_infoForLevelTransition;
   
@@ -260,18 +261,22 @@ void MEM_combineForLevelChange_EVC_MEM_Support_Pkg(
       &outC->infoForLevelTransition,
       &outC->LRBGpositionNeeded);
   }
-  else /* ck_anon_activ */ if ((*ModeLevel).newLevel) {
-    outC->LRBGpositionNeeded = kcg_false;
-    kcg_copy_dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg(
-      &outC->infoForLevelTransition,
-      (dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg *)
-        &cNoML_EVC_MEM_Support_Pkg);
-  }
   else {
-    kcg_copy_dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg(
-      &outC->infoForLevelTransition,
-      &last_infoForLevelTransition);
-    outC->LRBGpositionNeeded = last_LRBGpositionNeeded;
+    else_clock_IfBlock1 = (*ModeLevel).newLevel | ((*ModeLevel).newMode &
+        ((*ModeLevel).Mode == M_MODE_Trip));
+    /* ck_anon_activ */ if (else_clock_IfBlock1) {
+      outC->LRBGpositionNeeded = kcg_false;
+      kcg_copy_dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg(
+        &outC->infoForLevelTransition,
+        (dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg *)
+          &cNoML_EVC_MEM_Support_Pkg);
+    }
+    else {
+      kcg_copy_dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg(
+        &outC->infoForLevelTransition,
+        &last_infoForLevelTransition);
+      outC->LRBGpositionNeeded = last_LRBGpositionNeeded;
+    }
   }
   kcg_copy_P46_ConditionalLevelTransitionOrders_T_Packet_Types_Pkg(
     &outC->Data_From_Track_Packets_at_ML.P_46,
@@ -318,6 +323,6 @@ void MEM_combineForLevelChange_EVC_MEM_Support_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MEM_combineForLevelChange_EVC_MEM_Support_Pkg.c
-** Generation date: 2015-11-25T14:46:14
+** Generation date: 2015-12-02T15:32:29
 *************************************************************$ */
 

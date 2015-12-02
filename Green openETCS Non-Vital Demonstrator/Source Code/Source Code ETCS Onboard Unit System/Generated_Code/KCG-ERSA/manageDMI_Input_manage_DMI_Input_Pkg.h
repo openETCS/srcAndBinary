@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:08
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 #ifndef _manageDMI_Input_manage_DMI_Input_Pkg_H_
 #define _manageDMI_Input_manage_DMI_Input_Pkg_H_
@@ -66,6 +66,6 @@ extern void manageDMI_Input_init_manage_DMI_Input_Pkg(
 #endif /* _manageDMI_Input_manage_DMI_Input_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Input_manage_DMI_Input_Pkg.h
-** Generation date: 2015-11-25T14:46:08
+** Generation date: 2015-12-02T15:32:26
 *************************************************************$ */
 

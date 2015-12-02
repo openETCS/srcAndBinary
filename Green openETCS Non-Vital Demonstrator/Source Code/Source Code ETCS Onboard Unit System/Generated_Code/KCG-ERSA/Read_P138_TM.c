@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:13
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -30,6 +30,6 @@ void Read_P138_TM(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Read_P138_TM.c
-** Generation date: 2015-11-25T14:46:13
+** Generation date: 2015-12-02T15:32:28
 *************************************************************$ */
 

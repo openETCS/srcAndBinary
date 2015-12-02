@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
-** Command: kcg64.exe -config S:/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-11-25T14:46:14
+** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
+** Generation date: 2015-12-02T15:32:28
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -48,6 +48,6 @@ void radioStatusRouter_Handover_Pkg_handoverUtils_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** radioStatusRouter_Handover_Pkg_handoverUtils_Pkg.c
-** Generation date: 2015-11-25T14:46:14
+** Generation date: 2015-12-02T15:32:28
 *************************************************************$ */
 
