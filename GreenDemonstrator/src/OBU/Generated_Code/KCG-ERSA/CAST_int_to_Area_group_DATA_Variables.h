@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _CAST_int_to_Area_group_DATA_Variables_H_
 #define _CAST_int_to_Area_group_DATA_Variables_H_
@@ -19,6 +19,6 @@ extern Area_group_T_DMI_Types_Pkg CAST_int_to_Area_group_DATA_Variables(
 #endif /* _CAST_int_to_Area_group_DATA_Variables_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_int_to_Area_group_DATA_Variables.h
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

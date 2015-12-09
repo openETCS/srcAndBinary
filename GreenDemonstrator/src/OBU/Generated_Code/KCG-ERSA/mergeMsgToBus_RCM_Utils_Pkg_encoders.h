@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_
 #define _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_
@@ -50,6 +50,6 @@ extern void mergeMsgToBus_init_RCM_Utils_Pkg_encoders(
 #endif /* _mergeMsgToBus_RCM_Utils_Pkg_encoders_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mergeMsgToBus_RCM_Utils_Pkg_encoders.h
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

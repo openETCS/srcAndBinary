@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -140,31 +140,32 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
   outC_RTM_ERSA_ERSA_EVC_Testrunner *outC)
 {
   kcg_int i;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement::Registering */ kcg_bool br_2_guard_GSM_R_MobileManagement_Registering;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement::Registered */ kcg_bool br_2_guard_GSM_R_MobileManagement_Registered;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement::Registered */ kcg_bool br_1_guard_GSM_R_MobileManagement_Registered;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement::Connecting */ kcg_bool br_2_guard_GSM_R_MobileManagement_Connecting;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement::Connected */ kcg_bool br_2_guard_GSM_R_MobileManagement_Connected;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else */ kcg_bool _13_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else */ kcg_bool _11_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else */ kcg_bool _9_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else */ kcg_bool _7_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else */ kcg_bool _5_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _3_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _1_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _2_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else */ kcg_bool _4_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else */ kcg_bool _6_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else */ kcg_bool _8_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else */ kcg_bool _10_else_clock_IfBlock1;
-  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else */ kcg_bool _12_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else */ kcg_bool _18_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else */ kcg_bool _16_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else */ kcg_bool _14_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else */ kcg_bool _12_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else */ kcg_bool _10_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _8_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _6_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _4_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _3_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _1_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _2_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _5_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else::else::else */ kcg_bool _7_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else::else::else */ kcg_bool _9_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else::else::else */ kcg_bool _11_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else::else::else */ kcg_bool _13_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else::else::else */ kcg_bool _15_else_clock_IfBlock1;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1::else::else */ kcg_bool _17_else_clock_IfBlock1;
   /* ERSA_EVC_Testrunner::RTM_ERSA::connectionEstablished */ kcg_bool last_connectionEstablished;
   /* ERSA_EVC_Testrunner::RTM_ERSA::registrationFinished */ kcg_bool last_registrationFinished;
   /* ERSA_EVC_Testrunner::RTM_ERSA::IfBlock1 */ kcg_bool IfBlock1_clock;
   /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement */ SSM_ST_GSM_R_MobileManagement GSM_R_MobileManagement_state_sel;
   /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement */ SSM_ST_GSM_R_MobileManagement GSM_R_MobileManagement_state_act;
   /* ERSA_EVC_Testrunner::RTM_ERSA::GSM_R_MobileManagement */ kcg_bool GSM_R_MobileManagement_reset_act;
+  /* ERSA_EVC_Testrunner::RTM_ERSA::_L30 */ kcg_bool _L30;
   
   outC->TrackMessage.systemTimeMsgReceived = systemTime;
   outC->TrackMessage.msg_type = msrc_Euroradio_Common_Types_Pkg;
@@ -186,9 +187,116 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
     last_connectionEstablished = outC->connectionEstablished;
     last_registrationFinished = outC->registrationFinished;
   }
-  IfBlock1_clock = (*RadioHeader).nid_message != 0;
-  outC->TrackMessage.valid = IfBlock1_clock;
-  outC->TrackMessage.rtm_msg.present = IfBlock1_clock;
+  /* sel_GSM_R_MobileManagement */ switch (GSM_R_MobileManagement_state_sel) {
+    case SSM_st_Connected_GSM_R_MobileManagement :
+      _L30 = (*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
+          cmdr_disconnection_request_API_RadioCommunication_Pkg);
+      IfBlock1_clock = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd ==
+          cmdr_reset_connection_API_RadioCommunication_Pkg);
+      if (_L30) {
+        GSM_R_MobileManagement_state_act =
+          SSM_st_Registered_GSM_R_MobileManagement;
+        GSM_R_MobileManagement_reset_act = kcg_true;
+      }
+      else {
+        if (IfBlock1_clock) {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Not_registered_GSM_R_MobileManagement;
+        }
+        else {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Connected_GSM_R_MobileManagement;
+        }
+        GSM_R_MobileManagement_reset_act = IfBlock1_clock;
+      }
+      break;
+    case SSM_st_Connecting_GSM_R_MobileManagement :
+      else_clock_IfBlock1 = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd ==
+          cmdr_reset_connection_API_RadioCommunication_Pkg);
+      if (last_connectionEstablished) {
+        GSM_R_MobileManagement_state_act =
+          SSM_st_Connected_GSM_R_MobileManagement;
+        GSM_R_MobileManagement_reset_act = kcg_true;
+      }
+      else {
+        if (else_clock_IfBlock1) {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Not_registered_GSM_R_MobileManagement;
+        }
+        else {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Connecting_GSM_R_MobileManagement;
+        }
+        GSM_R_MobileManagement_reset_act = else_clock_IfBlock1;
+      }
+      break;
+    case SSM_st_Registered_GSM_R_MobileManagement :
+      _1_else_clock_IfBlock1 = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd ==
+          cmdr_connection_request_API_RadioCommunication_Pkg);
+      _2_else_clock_IfBlock1 = ((*RadioManagementMessage).valid &
+          ((*RadioManagementMessage).cmd ==
+            cmdr_reset_connection_API_RadioCommunication_Pkg)) |
+        ((*RadioManagementMessage).cmd ==
+          cmdr_networkUnregister_API_RadioCommunication_Pkg);
+      if (_1_else_clock_IfBlock1) {
+        GSM_R_MobileManagement_state_act =
+          SSM_st_Connecting_GSM_R_MobileManagement;
+        GSM_R_MobileManagement_reset_act = kcg_true;
+      }
+      else {
+        if (_2_else_clock_IfBlock1) {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Not_registered_GSM_R_MobileManagement;
+        }
+        else {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Registered_GSM_R_MobileManagement;
+        }
+        GSM_R_MobileManagement_reset_act = _2_else_clock_IfBlock1;
+      }
+      break;
+    case SSM_st_Registering_GSM_R_MobileManagement :
+      _3_else_clock_IfBlock1 = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd ==
+          cmdr_reset_connection_API_RadioCommunication_Pkg);
+      if (last_registrationFinished) {
+        GSM_R_MobileManagement_state_act =
+          SSM_st_Registered_GSM_R_MobileManagement;
+        GSM_R_MobileManagement_reset_act = kcg_true;
+      }
+      else {
+        if (_3_else_clock_IfBlock1) {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Not_registered_GSM_R_MobileManagement;
+        }
+        else {
+          GSM_R_MobileManagement_state_act =
+            SSM_st_Registering_GSM_R_MobileManagement;
+        }
+        GSM_R_MobileManagement_reset_act = _3_else_clock_IfBlock1;
+      }
+      break;
+    case SSM_st_Not_registered_GSM_R_MobileManagement :
+      GSM_R_MobileManagement_reset_act = (*RadioManagementMessage).valid &
+        ((*RadioManagementMessage).cmd ==
+          cmdr_networkRegister_API_RadioCommunication_Pkg);
+      if (GSM_R_MobileManagement_reset_act) {
+        GSM_R_MobileManagement_state_act =
+          SSM_st_Registering_GSM_R_MobileManagement;
+      }
+      else {
+        GSM_R_MobileManagement_state_act =
+          SSM_st_Not_registered_GSM_R_MobileManagement;
+      }
+      break;
+    
+  }
+  _L30 = (*RadioHeader).nid_message != 0;
+  outC->TrackMessage.valid = _L30;
+  outC->TrackMessage.rtm_msg.present = _L30;
   outC->TrackMessage.rtm_msg.apiConsistencyError = kcg_false;
   kcg_copy_Radio_TrackTrain_Header_T_Radio_Types_Pkg(
     &outC->TrackMessage.rtm_msg.Radio_Common_Header,
@@ -210,8 +318,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
     outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
   }
   else {
-    _13_else_clock_IfBlock1 = (*RadioHeader).nid_message == 3;
-    /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
+    _18_else_clock_IfBlock1 = (*RadioHeader).nid_message == 3;
+    /* ck_anon_activ */ if (_18_else_clock_IfBlock1) {
       outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference = kcg_false;
       outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
       outC->TrackMessage.rtm_msg.Radio_MetaData.q_scale = kcg_false;
@@ -223,8 +331,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
       outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
     }
     else {
-      _12_else_clock_IfBlock1 = (*RadioHeader).nid_message == 6;
-      /* ck_anon_activ */ if (_12_else_clock_IfBlock1) {
+      _17_else_clock_IfBlock1 = (*RadioHeader).nid_message == 6;
+      /* ck_anon_activ */ if (_17_else_clock_IfBlock1) {
         outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference = kcg_false;
         outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
         outC->TrackMessage.rtm_msg.Radio_MetaData.q_scale = kcg_false;
@@ -236,8 +344,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
         outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
       }
       else {
-        _11_else_clock_IfBlock1 = (*RadioHeader).nid_message == 8;
-        /* ck_anon_activ */ if (_11_else_clock_IfBlock1) {
+        _16_else_clock_IfBlock1 = (*RadioHeader).nid_message == 8;
+        /* ck_anon_activ */ if (_16_else_clock_IfBlock1) {
           outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
             kcg_true;
           outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
@@ -250,8 +358,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
           outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
         }
         else {
-          _10_else_clock_IfBlock1 = (*RadioHeader).nid_message == 9;
-          /* ck_anon_activ */ if (_10_else_clock_IfBlock1) {
+          _15_else_clock_IfBlock1 = (*RadioHeader).nid_message == 9;
+          /* ck_anon_activ */ if (_15_else_clock_IfBlock1) {
             outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
               kcg_false;
             outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_false;
@@ -265,8 +373,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
             outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
           }
           else {
-            _9_else_clock_IfBlock1 = (*RadioHeader).nid_message == 15;
-            /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
+            _14_else_clock_IfBlock1 = (*RadioHeader).nid_message == 15;
+            /* ck_anon_activ */ if (_14_else_clock_IfBlock1) {
               outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                 kcg_false;
               outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_true;
@@ -280,8 +388,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
               outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
             }
             else {
-              _8_else_clock_IfBlock1 = (*RadioHeader).nid_message == 16;
-              /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
+              _13_else_clock_IfBlock1 = (*RadioHeader).nid_message == 16;
+              /* ck_anon_activ */ if (_13_else_clock_IfBlock1) {
                 outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                   kcg_false;
                 outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_true;
@@ -295,8 +403,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                 outC->TrackMessage.rtm_msg.Radio_MetaData.m_version = kcg_false;
               }
               else {
-                _7_else_clock_IfBlock1 = (*RadioHeader).nid_message == 18;
-                /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
+                _12_else_clock_IfBlock1 = (*RadioHeader).nid_message == 18;
+                /* ck_anon_activ */ if (_12_else_clock_IfBlock1) {
                   outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                     kcg_false;
                   outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em = kcg_true;
@@ -312,8 +420,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                     kcg_false;
                 }
                 else {
-                  _6_else_clock_IfBlock1 = (*RadioHeader).nid_message == 24;
-                  /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
+                  _11_else_clock_IfBlock1 = (*RadioHeader).nid_message == 24;
+                  /* ck_anon_activ */ if (_11_else_clock_IfBlock1) {
                     outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                       kcg_false;
                     outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -331,8 +439,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                       kcg_false;
                   }
                   else {
-                    _5_else_clock_IfBlock1 = (*RadioHeader).nid_message == 27;
-                    /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
+                    _10_else_clock_IfBlock1 = (*RadioHeader).nid_message == 27;
+                    /* ck_anon_activ */ if (_10_else_clock_IfBlock1) {
                       outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                         kcg_true;
                       outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -353,8 +461,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                         kcg_false;
                     }
                     else {
-                      _4_else_clock_IfBlock1 = (*RadioHeader).nid_message == 28;
-                      /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
+                      _9_else_clock_IfBlock1 = (*RadioHeader).nid_message == 28;
+                      /* ck_anon_activ */ if (_9_else_clock_IfBlock1) {
                         outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                           kcg_true;
                         outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -375,9 +483,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                           kcg_false;
                       }
                       else {
-                        _3_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
+                        _8_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
                           32;
-                        /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
+                        /* ck_anon_activ */ if (_8_else_clock_IfBlock1) {
                           outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                             kcg_false;
                           outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -398,9 +506,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                             kcg_true;
                         }
                         else {
-                          _2_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
+                          _7_else_clock_IfBlock1 = (*RadioHeader).nid_message ==
                             33;
-                          /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
+                          /* ck_anon_activ */ if (_7_else_clock_IfBlock1) {
                             outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                               kcg_false;
                             outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -421,9 +529,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                               kcg_false;
                           }
                           else {
-                            _1_else_clock_IfBlock1 =
+                            _6_else_clock_IfBlock1 =
                               (*RadioHeader).nid_message == 34;
-                            /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
+                            /* ck_anon_activ */ if (_6_else_clock_IfBlock1) {
                               outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                 kcg_false;
                               outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -444,9 +552,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                 kcg_false;
                             }
                             else {
-                              else_clock_IfBlock1 =
+                              _5_else_clock_IfBlock1 =
                                 (*RadioHeader).nid_message == 37;
-                              /* ck_anon_activ */ if (else_clock_IfBlock1) {
+                              /* ck_anon_activ */ if (_5_else_clock_IfBlock1) {
                                 outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                   kcg_false;
                                 outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -467,9 +575,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                   kcg_false;
                               }
                               else {
-                                GSM_R_MobileManagement_reset_act =
+                                _4_else_clock_IfBlock1 =
                                   (*RadioHeader).nid_message == 38;
-                                /* ck_anon_activ */ if (GSM_R_MobileManagement_reset_act) {
+                                /* ck_anon_activ */ if (_4_else_clock_IfBlock1) {
                                   outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                     kcg_false;
                                   outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -490,9 +598,8 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                     kcg_false;
                                 }
                                 else {
-                                  br_2_guard_GSM_R_MobileManagement_Registering =
-                                    (*RadioHeader).nid_message == 39;
-                                  /* ck_anon_activ */ if (br_2_guard_GSM_R_MobileManagement_Registering) {
+                                  _L30 = (*RadioHeader).nid_message == 39;
+                                  /* ck_anon_activ */ if (_L30) {
                                     outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                       kcg_false;
                                     outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -513,9 +620,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                       kcg_false;
                                   }
                                   else {
-                                    br_2_guard_GSM_R_MobileManagement_Registered =
+                                    _3_else_clock_IfBlock1 =
                                       (*RadioHeader).nid_message == 40;
-                                    /* ck_anon_activ */ if (br_2_guard_GSM_R_MobileManagement_Registered) {
+                                    /* ck_anon_activ */ if (_3_else_clock_IfBlock1) {
                                       outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                         kcg_false;
                                       outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -536,9 +643,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                         kcg_false;
                                     }
                                     else {
-                                      br_1_guard_GSM_R_MobileManagement_Registered =
+                                      _2_else_clock_IfBlock1 =
                                         (*RadioHeader).nid_message == 41;
-                                      /* ck_anon_activ */ if (br_1_guard_GSM_R_MobileManagement_Registered) {
+                                      /* ck_anon_activ */ if (_2_else_clock_IfBlock1) {
                                         outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                           kcg_false;
                                         outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -559,9 +666,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                           kcg_false;
                                       }
                                       else {
-                                        br_2_guard_GSM_R_MobileManagement_Connecting =
+                                        _1_else_clock_IfBlock1 =
                                           (*RadioHeader).nid_message == 43;
-                                        /* ck_anon_activ */ if (br_2_guard_GSM_R_MobileManagement_Connecting) {
+                                        /* ck_anon_activ */ if (_1_else_clock_IfBlock1) {
                                           outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                             kcg_false;
                                           outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -582,9 +689,9 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
                                             kcg_false;
                                         }
                                         else {
-                                          br_2_guard_GSM_R_MobileManagement_Connected =
+                                          else_clock_IfBlock1 =
                                             (*RadioHeader).nid_message == 45;
-                                          /* ck_anon_activ */ if (br_2_guard_GSM_R_MobileManagement_Connected) {
+                                          /* ck_anon_activ */ if (else_clock_IfBlock1) {
                                             outC->TrackMessage.rtm_msg.Radio_MetaData.t_train_reference =
                                               kcg_false;
                                             outC->TrackMessage.rtm_msg.Radio_MetaData.nid_em =
@@ -643,118 +750,6 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
         }
       }
     }
-  }
-  /* sel_GSM_R_MobileManagement */ switch (GSM_R_MobileManagement_state_sel) {
-    case SSM_st_Connected_GSM_R_MobileManagement :
-      IfBlock1_clock = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd ==
-          cmdr_disconnection_request_API_RadioCommunication_Pkg);
-      br_2_guard_GSM_R_MobileManagement_Connected =
-        (*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
-          cmdr_reset_connection_API_RadioCommunication_Pkg);
-      if (IfBlock1_clock) {
-        GSM_R_MobileManagement_state_act =
-          SSM_st_Registered_GSM_R_MobileManagement;
-        GSM_R_MobileManagement_reset_act = kcg_true;
-      }
-      else {
-        if (br_2_guard_GSM_R_MobileManagement_Connected) {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Not_registered_GSM_R_MobileManagement;
-        }
-        else {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Connected_GSM_R_MobileManagement;
-        }
-        GSM_R_MobileManagement_reset_act =
-          br_2_guard_GSM_R_MobileManagement_Connected;
-      }
-      break;
-    case SSM_st_Connecting_GSM_R_MobileManagement :
-      br_2_guard_GSM_R_MobileManagement_Connecting =
-        (*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
-          cmdr_reset_connection_API_RadioCommunication_Pkg);
-      if (last_connectionEstablished) {
-        GSM_R_MobileManagement_state_act =
-          SSM_st_Connected_GSM_R_MobileManagement;
-        GSM_R_MobileManagement_reset_act = kcg_true;
-      }
-      else {
-        if (br_2_guard_GSM_R_MobileManagement_Connecting) {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Not_registered_GSM_R_MobileManagement;
-        }
-        else {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Connecting_GSM_R_MobileManagement;
-        }
-        GSM_R_MobileManagement_reset_act =
-          br_2_guard_GSM_R_MobileManagement_Connecting;
-      }
-      break;
-    case SSM_st_Registered_GSM_R_MobileManagement :
-      br_1_guard_GSM_R_MobileManagement_Registered =
-        (*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
-          cmdr_connection_request_API_RadioCommunication_Pkg);
-      br_2_guard_GSM_R_MobileManagement_Registered =
-        ((*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
-            cmdr_reset_connection_API_RadioCommunication_Pkg)) |
-        ((*RadioManagementMessage).cmd ==
-          cmdr_networkUnregister_API_RadioCommunication_Pkg);
-      if (br_1_guard_GSM_R_MobileManagement_Registered) {
-        GSM_R_MobileManagement_state_act =
-          SSM_st_Connecting_GSM_R_MobileManagement;
-        GSM_R_MobileManagement_reset_act = kcg_true;
-      }
-      else {
-        if (br_2_guard_GSM_R_MobileManagement_Registered) {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Not_registered_GSM_R_MobileManagement;
-        }
-        else {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Registered_GSM_R_MobileManagement;
-        }
-        GSM_R_MobileManagement_reset_act =
-          br_2_guard_GSM_R_MobileManagement_Registered;
-      }
-      break;
-    case SSM_st_Registering_GSM_R_MobileManagement :
-      br_2_guard_GSM_R_MobileManagement_Registering =
-        (*RadioManagementMessage).valid & ((*RadioManagementMessage).cmd ==
-          cmdr_reset_connection_API_RadioCommunication_Pkg);
-      if (last_registrationFinished) {
-        GSM_R_MobileManagement_state_act =
-          SSM_st_Registered_GSM_R_MobileManagement;
-        GSM_R_MobileManagement_reset_act = kcg_true;
-      }
-      else {
-        if (br_2_guard_GSM_R_MobileManagement_Registering) {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Not_registered_GSM_R_MobileManagement;
-        }
-        else {
-          GSM_R_MobileManagement_state_act =
-            SSM_st_Registering_GSM_R_MobileManagement;
-        }
-        GSM_R_MobileManagement_reset_act =
-          br_2_guard_GSM_R_MobileManagement_Registering;
-      }
-      break;
-    case SSM_st_Not_registered_GSM_R_MobileManagement :
-      GSM_R_MobileManagement_reset_act = (*RadioManagementMessage).valid &
-        ((*RadioManagementMessage).cmd ==
-          cmdr_networkRegister_API_RadioCommunication_Pkg);
-      if (GSM_R_MobileManagement_reset_act) {
-        GSM_R_MobileManagement_state_act =
-          SSM_st_Registering_GSM_R_MobileManagement;
-      }
-      else {
-        GSM_R_MobileManagement_state_act =
-          SSM_st_Not_registered_GSM_R_MobileManagement;
-      }
-      break;
-    
   }
   /* act_GSM_R_MobileManagement */ switch (GSM_R_MobileManagement_state_act) {
     case SSM_st_Connected_GSM_R_MobileManagement :
@@ -840,6 +835,6 @@ void RTM_ERSA_ERSA_EVC_Testrunner(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** RTM_ERSA_ERSA_EVC_Testrunner.c
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 

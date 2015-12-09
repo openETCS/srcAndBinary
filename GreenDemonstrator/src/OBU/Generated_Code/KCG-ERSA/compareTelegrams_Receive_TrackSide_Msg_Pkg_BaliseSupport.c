@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,6 +31,6 @@ kcg_bool compareTelegrams_Receive_TrackSide_Msg_Pkg_BaliseSupport(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** compareTelegrams_Receive_TrackSide_Msg_Pkg_BaliseSupport.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

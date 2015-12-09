@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal_H_
 #define _FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal_H_
@@ -24,6 +24,6 @@ extern void FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal(
 #endif /* _FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FindStartOfNewSpeedProfileAbs_LOOP_TA_Lib_internal.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

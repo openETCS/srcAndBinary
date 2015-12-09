@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _ToTrip_Conditions_H_
 #define _ToTrip_Conditions_H_
@@ -65,6 +65,6 @@ extern void ToTrip_init_Conditions(outC_ToTrip_Conditions *outC);
 #endif /* _ToTrip_Conditions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ToTrip_Conditions.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

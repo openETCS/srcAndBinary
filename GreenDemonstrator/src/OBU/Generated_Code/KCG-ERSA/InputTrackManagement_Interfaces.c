@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -37,11 +37,11 @@ void InputTrackManagement_Interfaces(
   *MA_SSP_Gradient_Available = (*Data_From_Track).MA_SSP_Gradient_Available;
   kcg_copy_T_Mode_Profile_Level_And_Mode_Types_Pkg(
     Mode_Profile_On_Board,
-    &(*Data_From_Track).Mode_Profile_On_Board[1]);
+    &(*Data_From_Track).Mode_Profile_On_Board[0]);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputTrackManagement_Interfaces.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

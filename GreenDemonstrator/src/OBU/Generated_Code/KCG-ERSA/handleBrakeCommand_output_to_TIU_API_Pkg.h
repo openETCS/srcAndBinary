@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:25
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _handleBrakeCommand_output_to_TIU_API_Pkg_H_
 #define _handleBrakeCommand_output_to_TIU_API_Pkg_H_
@@ -43,6 +43,6 @@ extern void handleBrakeCommand_init_output_to_TIU_API_Pkg(
 #endif /* _handleBrakeCommand_output_to_TIU_API_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** handleBrakeCommand_output_to_TIU_API_Pkg.h
-** Generation date: 2015-12-02T15:32:25
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

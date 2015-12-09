@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -218,6 +218,8 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
       notInt2Int_modeInterplay_RSM = (last_status !=
           Indication_Supervision_SDM_Types_Pkg) & t2_modeInterplay_RSM &
         (last_status != Intervention_Supervision_SDM_Types_Pkg);
+      outC->triggeredTCO = kcg_false;
+      outC->revokedTCO = kcg_false;
       /* sel_RSM */ switch (RSM_state_sel_modeInterplay_RSM) {
         case SSM_st_InterventionStatus_modeInterplay_RSM_RSM :
           outC->triggeredSupervisionStatus =
@@ -330,8 +332,6 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
           break;
         
       }
-      outC->triggeredTCO = kcg_false;
-      outC->revokedTCO = kcg_false;
       outC->modeInterplay_state_nxt = SSM_st_RSM_modeInterplay;
       /* act_RSM */ switch (RSM_state_act_modeInterplay_RSM) {
         case SSM_st_InterventionStatus_modeInterplay_RSM_RSM :
@@ -1181,6 +1181,6 @@ void CmdTrainSupervisionStatus_SDM_Commands_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CmdTrainSupervisionStatus_SDM_Commands_Pkg.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

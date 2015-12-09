@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,6 +24,6 @@ kcg_bool validate_q_sleepsession_v2_MoRC_Pck_Subfunc_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** validate_q_sleepsession_v2_MoRC_Pck_Subfunc_Pkg.c
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 

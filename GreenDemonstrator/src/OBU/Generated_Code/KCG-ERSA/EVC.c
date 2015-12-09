@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -962,6 +962,7 @@ void EVC(
     &_L993,
     &outC->CALC_TrainPosition,
     &outC->TIU_trainProperties,
+    &outC->_3_Context_2.NV_raw_out,
     &outC->Context_1);
   /* ck_EVC_cabIsOpen */ if (_L1754) {
     /* 3 */ if (outC->init) {
@@ -1314,6 +1315,6 @@ void EVC(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.c
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 

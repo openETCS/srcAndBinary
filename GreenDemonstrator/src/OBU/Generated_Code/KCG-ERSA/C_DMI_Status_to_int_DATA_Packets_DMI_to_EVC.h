@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _C_DMI_Status_to_int_DATA_Packets_DMI_to_EVC_H_
 #define _C_DMI_Status_to_int_DATA_Packets_DMI_to_EVC_H_
@@ -22,6 +22,6 @@ extern void C_DMI_Status_to_int_DATA_Packets_DMI_to_EVC(
 #endif /* _C_DMI_Status_to_int_DATA_Packets_DMI_to_EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_DMI_Status_to_int_DATA_Packets_DMI_to_EVC.h
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

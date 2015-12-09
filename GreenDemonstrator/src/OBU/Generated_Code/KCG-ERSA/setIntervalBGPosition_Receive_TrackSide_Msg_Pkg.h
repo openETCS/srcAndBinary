@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _setIntervalBGPosition_Receive_TrackSide_Msg_Pkg_H_
 #define _setIntervalBGPosition_Receive_TrackSide_Msg_Pkg_H_
@@ -21,6 +21,6 @@ extern void setIntervalBGPosition_Receive_TrackSide_Msg_Pkg(
 #endif /* _setIntervalBGPosition_Receive_TrackSide_Msg_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** setIntervalBGPosition_Receive_TrackSide_Msg_Pkg.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

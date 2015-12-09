@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -50,6 +50,6 @@ Icon_control_flag_INT_T_DATA CAST_Icon_control_flag_to_int_DATA_Variables(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Icon_control_flag_to_int_DATA_Variables.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

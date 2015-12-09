@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _CompareSectionTimer_TA_MA_Request_H_
 #define _CompareSectionTimer_TA_MA_Request_H_
@@ -20,6 +20,6 @@ extern T_internal_Type_Obu_BasicTypes_Pkg CompareSectionTimer_TA_MA_Request(
 #endif /* _CompareSectionTimer_TA_MA_Request_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CompareSectionTimer_TA_MA_Request.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

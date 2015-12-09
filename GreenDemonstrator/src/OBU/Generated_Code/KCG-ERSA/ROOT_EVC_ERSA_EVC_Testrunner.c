@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,6 +15,15 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
   outC->resetOut = kcg_true;
   outC->EVC_ready = kcg_true;
   outC->init = kcg_true;
+  outC->storedPersistentData.valid = kcg_true;
+  outC->storedPersistentData.lastActiveLevel = M_LEVEL_Level_0;
+  outC->storedPersistentData.lastActiveNTC = 0;
+  outC->storedPersistentData.availableLevelsList.number = 0;
+  for (i = 0; i < 32; i++) {
+    outC->storedPersistentData.availableLevelsList.levelList[i].level =
+      M_LEVEL_Level_0;
+    outC->storedPersistentData.availableLevelsList.levelList[i].nid_stm = 0;
+  }
   for (i = 0; i < 311; i++) {
     outC->TCP_fromDMI[i] = 0;
   }
@@ -327,6 +336,7 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L32 */ CompressedPackets_T_Common_Types_Pkg _L32;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L31 */ CompressedRadioMessage_TM _L31;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L174 */ DMI_to_EVC_Message_int_T_API_DMI_Pkg _L174;
+  /* ERSA_EVC_Testrunner::ROOT_EVC::_L180 */ ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg _L180;
   
   /* 1 */
   API_Frontend_balises_prelim_TM_API(
@@ -423,14 +433,21 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &_L33,
     (RadioManagement_T_API_RadioCommunication_Pkg *) &cInitRTMManagement,
     &outC->Context_1);
-  /* last_init_ck_TCP_fromDMI */ if (outC->init) {
+  /* last_init_ck_storedPersistentData */ if (outC->init) {
     outC->init = kcg_false;
     kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(
       &_L174,
       (DMI_to_EVC_Message_int_T_API_DMI_Pkg *) &cEmptyMessageFromTCPDMI);
+    kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
+      &_L180,
+      (ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg *)
+        &cEmptyPersistentData_ERSA_EVC_Testrunner);
   }
   else {
     kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(&_L174, &outC->TCP_fromDMI);
+    kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
+      &_L180,
+      &outC->storedPersistentData);
   }
   /* 1 */ CASTLIB_BaliseHeaders_TM_conversions(&_L30.Header, &tmp1);
   /* 1 */
@@ -460,7 +477,7 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &tmp,
     &inC->API_fromTIU,
     &inC->API_mobileHWStatus,
-    &inC->API_persistentData,
+    &_L180,
     &outC->_2_Context_1);
   outC->resetOut = outC->_2_Context_1.resetOut;
   kcg_copy_M_TrainTrack_Message_T_TM_radio_messages(
@@ -491,10 +508,20 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   kcg_copy_DMI_to_EVC_Message_int_T_API_DMI_Pkg(
     &outC->TCP_fromDMI,
     &outC->_3_Context_1.dmiToEVC);
+  /* 2 */ if (inC->API_persistentData.valid) {
+    kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
+      &outC->storedPersistentData,
+      &inC->API_persistentData);
+  }
+  else {
+    kcg_copy_ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg(
+      &outC->storedPersistentData,
+      &_L180);
+  }
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.c
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 

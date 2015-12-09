@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:24
+** Generation date: 2015-12-09T10:03:47
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -17159,15 +17159,12 @@ const dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg cNoML_EVC_MEM_Suppo
       0 }, { kcg_false, Q_DIR_Reverse, M_LEVELTR_Level_0, 0 }, { kcg_false,
       Q_DIR_Reverse, M_LEVELTR_Level_0, 0 }, { kcg_false, Q_DIR_Reverse,
       M_LEVELTR_Level_0, 0 }, { kcg_false, Q_DIR_Reverse, M_LEVELTR_Level_0,
-      0 } }, kcg_false, kcg_false, kcg_false, kcg_false, 0, 0 };
-
-/* EVC_MEM_Support_Pkg::Default_P80_legacy */
-const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_EVC_MEM_Support_Pkg = {
-  { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0,
-    0, Q_MAMODE_as_the_EOA }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale,
-    0, M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA }, { kcg_false,
-    Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0, 0,
-    Q_MAMODE_as_the_EOA } };
+      0 } }, { { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+      M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA }, { kcg_false,
+      Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0, 0,
+      Q_MAMODE_as_the_EOA }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0,
+      M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA } }, kcg_false, kcg_false,
+  kcg_false, kcg_false, 0, 0 };
 
 /* EVC_MEM_Support_Pkg::Default_P135_legacy */
 const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_EVC_MEM_Support_Pkg = {
@@ -17228,6 +17225,14 @@ const P12_Level1MovementAuthorities_T_Packet_Types_Pkg Default_P12_legacy_EVC_ME
 const P41_LevelTransitionOrder_T_Packet_Types_Pkg cNoP41Element_xdebugSupport_Pkg = {
   kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0, 0 };
 
+/* EVC_MEM_Support_Pkg::Default_P80_legacy */
+const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_EVC_MEM_Support_Pkg = {
+  { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0,
+    0, Q_MAMODE_as_the_EOA }, { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale,
+    0, M_MAMODE_On_Sight, 0, 0, 0, Q_MAMODE_as_the_EOA }, { kcg_false,
+    Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0, 0,
+    Q_MAMODE_as_the_EOA } };
+
 /* EVC_MEM_Support_Pkg::cNoP41 */
 const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_EVC_MEM_Support_Pkg = {
   { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0, 0 },
@@ -17238,6 +17243,11 @@ const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_EVC_MEM_Support_Pkg =
   { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0, 0 },
   { kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_LEVELTR_Level_0, 0,
     0 } };
+
+/* EVC_MEM_Support_Pkg::Default_P80_element */
+const P80_ModeProfile_T_Packet_Types_Pkg Default_P80_element_EVC_MEM_Support_Pkg = {
+  kcg_false, Q_DIR_Reverse, Q_SCALE_10_cm_scale, 0, M_MAMODE_On_Sight, 0, 0, 0,
+  Q_MAMODE_as_the_EOA };
 
 /* TM::DEFAULT_P080_OBU_section */
 const P080_section_enum_T_TM DEFAULT_P080_OBU_section_TM = { kcg_false, 0,
@@ -27913,6 +27923,21 @@ const CompressedPacketData_T_Common_Types_Pkg DEFAULT_CompressedPackets_TM = {
 const MetadataElement_T_Common_Types_Pkg DEFAULT_PHeader_TM = { 0,
   Q_DIR_Reverse, kcg_false, 0, 0 };
 
+/* ERSA_EVC_Testrunner::cEmptyPersistentData */
+const ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg cEmptyPersistentData_ERSA_EVC_Testrunner = {
+  kcg_false, M_LEVEL_Level_0, 0, { 0, { { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, { M_LEVEL_Level_0, 0 }, {
+        M_LEVEL_Level_0, 0 } } } };
+
 /* MoRC_Pck::cMobileHWStatus_notRegistered */
 const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_notRegistered_MoRC_Pck = {
   kcg_true, mhwc_notRegistered_MoRC_Pck, kcg_false, kcg_false };
@@ -28407,6 +28432,6 @@ const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox = {
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.c
-** Generation date: 2015-12-02T15:32:24
+** Generation date: 2015-12-09T10:03:47
 *************************************************************$ */
 

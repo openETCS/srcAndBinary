@@ -1,11 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _Input_ModeProfiles_InputManagement_H_
 #define _Input_ModeProfiles_InputManagement_H_
 
 #include "kcg_types.h"
+#include "scaledDistance_2_distance_InputManagement.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -21,6 +22,6 @@ extern void Input_ModeProfiles_InputManagement(
 #endif /* _Input_ModeProfiles_InputManagement_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Input_ModeProfiles_InputManagement.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

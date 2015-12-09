@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -45,11 +45,11 @@ void BufferOutput_read_write1_TM_lib_internal(
           &EMPTY_TrainTrackMessage_TM_lib_internal);
     }
   }
-  kcg_copy_array_121136(&(*Buffer_Out)[1], (array_121136 *) &(*Buffer_In)[0]);
+  kcg_copy_array_121485(&(*Buffer_Out)[1], (array_121485 *) &(*Buffer_In)[0]);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** BufferOutput_read_write1_TM_lib_internal.c
-** Generation date: 2015-12-02T15:32:29
+** Generation date: 2015-12-09T10:03:51
 *************************************************************$ */
 

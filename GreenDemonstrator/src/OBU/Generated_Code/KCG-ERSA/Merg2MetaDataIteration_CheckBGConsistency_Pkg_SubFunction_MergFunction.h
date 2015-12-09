@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
 #define _Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_
@@ -22,6 +22,6 @@ extern void Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFuncti
 #endif /* _Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Merg2MetaDataIteration_CheckBGConsistency_Pkg_SubFunction_MergFunction.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

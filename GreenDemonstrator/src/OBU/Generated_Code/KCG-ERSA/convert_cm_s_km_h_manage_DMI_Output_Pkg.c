@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,6 +24,6 @@ V_internal_Type_Obu_BasicTypes_Pkg convert_cm_s_km_h_manage_DMI_Output_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** convert_cm_s_km_h_manage_DMI_Output_Pkg.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -34,6 +34,6 @@ L_internal_Type_Obu_BasicTypes_Pkg Normalize_Distance_d_internal_t_TA_Lib_intern
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Normalize_Distance_d_internal_t_TA_Lib_internal.c
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

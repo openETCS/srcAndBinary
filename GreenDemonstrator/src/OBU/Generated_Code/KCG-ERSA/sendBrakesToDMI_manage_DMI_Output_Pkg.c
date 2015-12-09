@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -58,8 +58,9 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
     tmp = outC->rem_brakeCommand.m_emergencybrake_cm;
   }
   changeBrakeCommand = (*brakeCommand).m_emergencybrake_cm != tmp;
-  applyBrake = changeBrakeCommand & (apply_brake_TIU_Types_Pkg ==
-      (*brakeCommand).m_emergencybrake_cm) & (*brakeCommand).valid;
+  applyBrake = changeBrakeCommand & ((apply_brake_TIU_Types_Pkg ==
+        (*brakeCommand).m_servicebrake_cm) | (apply_brake_TIU_Types_Pkg ==
+        (*brakeCommand).m_emergencybrake_cm)) & (*brakeCommand).valid;
   /* ck_applyBrake */ if (applyBrake) {
     kcg_copy_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg(
       &outC->dmi_iconRequest,
@@ -68,9 +69,9 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
     outC->dmi_iconRequest.system_clock = inSystemTime;
   }
   else {
-    else_clock_IfBlock1 = (*brakeCommand).valid &
-      ((*brakeCommand).m_emergencybrake_cm == release_brake_TIU_Types_Pkg) &
-      changeBrakeCommand;
+    else_clock_IfBlock1 = (*brakeCommand).valid & changeBrakeCommand &
+      (((*brakeCommand).m_emergencybrake_cm == release_brake_TIU_Types_Pkg) |
+        (release_brake_TIU_Types_Pkg == (*brakeCommand).m_servicebrake_cm));
     /* ck_anon_activ */ if (else_clock_IfBlock1) {
       kcg_copy_DMI_Icons_T_DMI_Messages_EVC_to_DMI_Pkg(
         &outC->dmi_iconRequest,
@@ -90,6 +91,6 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendBrakesToDMI_manage_DMI_Output_Pkg.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -34,6 +34,6 @@ void SSP_Normalize_Profile_TA_SSP_new(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SSP_Normalize_Profile_TA_SSP_new.c
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

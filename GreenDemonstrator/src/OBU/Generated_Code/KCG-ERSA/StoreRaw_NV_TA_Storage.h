@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _StoreRaw_NV_TA_Storage_H_
 #define _StoreRaw_NV_TA_Storage_H_
@@ -44,6 +44,6 @@ extern void StoreRaw_NV_init_TA_Storage(outC_StoreRaw_NV_TA_Storage *outC);
 #endif /* _StoreRaw_NV_TA_Storage_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** StoreRaw_NV_TA_Storage.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

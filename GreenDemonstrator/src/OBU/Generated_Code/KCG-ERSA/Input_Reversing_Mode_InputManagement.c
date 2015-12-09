@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -15,14 +15,23 @@ void Input_Reversing_Mode_InputManagement(
   /* InputManagement::Input_Reversing_Mode::Reversing_Data */ T_Reversing_Data_Level_And_Mode_Types_Pkg *Reversing_Data)
 {
   (*Reversing_Data).Available = (*P_138).valid & (*P_139).valid;
-  (*Reversing_Data).Dist_Start = (*P_138).d_startreverse + referenceLocation;
-  (*Reversing_Data).Length = (*P_138).l_reversearea;
-  (*Reversing_Data).Dist_Run = referenceLocation + (*P_139).d_reverse;
   (*Reversing_Data).Speed = (*P_139).v_reverse;
+  (*Reversing_Data).Dist_Start = /* 1 */
+    scaledDistance_2_distance_InputManagement(
+      (*P_138).q_scale,
+      (*P_138).d_startreverse) + referenceLocation;
+  (*Reversing_Data).Length = /* 3 */
+    scaledDistance_2_distance_InputManagement(
+      (*P_138).q_scale,
+      (*P_138).l_reversearea);
+  (*Reversing_Data).Dist_Run = referenceLocation + /* 2 */
+    scaledDistance_2_distance_InputManagement(
+      (*P_139).q_scale,
+      (*P_139).d_reverse);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Input_Reversing_Mode_InputManagement.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

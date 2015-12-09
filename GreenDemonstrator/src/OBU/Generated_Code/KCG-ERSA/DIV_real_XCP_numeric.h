@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _DIV_real_XCP_numeric_H_
 #define _DIV_real_XCP_numeric_H_
@@ -23,6 +23,6 @@ extern void DIV_real_XCP_numeric(
 #endif /* _DIV_real_XCP_numeric_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** DIV_real_XCP_numeric.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

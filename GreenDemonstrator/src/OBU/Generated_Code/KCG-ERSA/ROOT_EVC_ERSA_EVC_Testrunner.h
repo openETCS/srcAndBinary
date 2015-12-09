@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _ROOT_EVC_ERSA_EVC_Testrunner_H_
 #define _ROOT_EVC_ERSA_EVC_Testrunner_H_
@@ -55,6 +55,7 @@ typedef struct {
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   DMI_to_EVC_Message_int_T_API_DMI_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::TCP_fromDMI */ TCP_fromDMI;
+  ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::storedPersistentData */ storedPersistentData;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_RemoteDMIBus_EnvSim /* 1 */ _3_Context_1;
   outC_EVC /* 1 */ _2_Context_1;
@@ -82,6 +83,6 @@ extern void ROOT_EVC_init_ERSA_EVC_Testrunner(
 #endif /* _ROOT_EVC_ERSA_EVC_Testrunner_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.h
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

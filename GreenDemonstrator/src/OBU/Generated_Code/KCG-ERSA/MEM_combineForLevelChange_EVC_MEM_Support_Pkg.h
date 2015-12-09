@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _MEM_combineForLevelChange_EVC_MEM_Support_Pkg_H_
 #define _MEM_combineForLevelChange_EVC_MEM_Support_Pkg_H_
@@ -39,6 +39,7 @@ extern void MEM_combineForLevelChange_EVC_MEM_Support_Pkg(
   /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::ModeLevel */ T_Mode_Level_Level_And_Mode_Types_Pkg *ModeLevel,
   /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::trainPosition */ trainPosition_T_TrainPosition_Types_Pck *trainPosition,
   /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::trainProperties */ trainProperties_T_TrainPosition_Types_Pck *trainProperties,
+  /* EVC_MEM_Support_Pkg::MEM_combineForLevelChange::nationalValues */ P003_OBU_T_TM *nationalValues,
   outC_MEM_combineForLevelChange_EVC_MEM_Support_Pkg *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
@@ -54,6 +55,6 @@ extern void MEM_combineForLevelChange_init_EVC_MEM_Support_Pkg(
 #endif /* _MEM_combineForLevelChange_EVC_MEM_Support_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MEM_combineForLevelChange_EVC_MEM_Support_Pkg.h
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _SwitchModes_H_
 #define _SwitchModes_H_
@@ -102,6 +102,6 @@ extern void SwitchModes_init(outC_SwitchModes *outC);
 #endif /* _SwitchModes_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SwitchModes.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 #ifndef _EVC_H_
 #define _EVC_H_
@@ -125,6 +125,6 @@ extern void EVC_init(outC_EVC *outC);
 #endif /* _EVC_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EVC.h
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:49
 *************************************************************$ */
 

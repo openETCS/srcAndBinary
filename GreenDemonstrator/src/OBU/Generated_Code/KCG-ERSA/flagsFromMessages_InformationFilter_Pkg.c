@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -55,7 +55,6 @@ void flagsFromMessages_InformationFilter_Pkg(
   /* InformationFilter_Pkg::flagsFromMessages */ kcg_bool tmp2;
   /* InformationFilter_Pkg::flagsFromMessages */ P27_InternationalStaticSpeedProfile_T_Packet_Types_Pkg tmp1;
   /* InformationFilter_Pkg::flagsFromMessages */ kcg_bool tmp;
-  /* InformationFilter_Pkg::flagsFromMessages::_L225 */ kcg_bool _L225;
   /* InformationFilter_Pkg::flagsFromMessages::_L208 */ kcg_bool _L208;
   /* InformationFilter_Pkg::flagsFromMessages::_L184 */ P021_OBU_T_TM _L184;
   /* InformationFilter_Pkg::flagsFromMessages::_L183 */ kcg_bool _L183;
@@ -65,8 +64,8 @@ void flagsFromMessages_InformationFilter_Pkg(
   /* InformationFilter_Pkg::flagsFromMessages::_L177 */ kcg_bool _L177;
   /* InformationFilter_Pkg::flagsFromMessages::p41 */ P041_OBU_T_TM p41;
   
-  /* 1 */ Read_P041_TM(&(*actualMessage).packets, &tmp, &p41);
-  /* ck_p41valid */ if (tmp) {
+  /* 1 */ Read_P041_TM(&(*actualMessage).packets, &_L177, &p41);
+  /* ck_p41valid */ if (_L177) {
     outC->L2L3_transitionPending = (M_LEVELTR_Level_2 ==
         p41.sections[0].m_leveltr) | (p41.sections[0].m_leveltr ==
         M_LEVELTR_Level_3);
@@ -94,7 +93,6 @@ void flagsFromMessages_InformationFilter_Pkg(
   /* 1 */ Read_P015_TM(&(*actualMessage).packets, &_L181, &_L182);
   /* 1 */ Read_P021_TM(&(*actualMessage).packets, &_L183, &_L184);
   _L208 = !doReset;
-  _L225 = !tmp;
   /* last_init_ck_p27valid */ if (outC->init) {
     tmp4 = kcg_false;
     tmp3 = kcg_false;
@@ -108,20 +106,20 @@ void flagsFromMessages_InformationFilter_Pkg(
     tmp2 = outC->p21valid;
     tmp = outC->p27valid;
   }
-  outC->p12valid = _L208 & (_L177 | (_L225 & tmp4));
+  outC->p12valid = _L208 & (_L177 | tmp4);
   outC->IF_toML.P12_received = outC->NTC_transitionPending | outC->p12valid;
-  outC->p15valid = _L208 & (_L181 | (_L225 & tmp3));
+  outC->p15valid = _L208 & (_L181 | tmp3);
   outC->IF_toML.P15_received = outC->p15valid;
-  outC->p21valid = _L208 & (_L183 | (_L225 & tmp2));
+  outC->p21valid = _L208 & (_L183 | tmp2);
   outC->IF_toML.P21_received = outC->p21valid;
   /* 1 */
   Read_P027V1_Legacy_for_ML_TM_specific(&(*actualMessage).packets, &tmp1);
-  outC->p27valid = _L208 & (tmp1.valid | (_L225 & tmp));
+  outC->p27valid = _L208 & (tmp1.valid | tmp);
   outC->IF_toML.P27_received = outC->p27valid;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** flagsFromMessages_InformationFilter_Pkg.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

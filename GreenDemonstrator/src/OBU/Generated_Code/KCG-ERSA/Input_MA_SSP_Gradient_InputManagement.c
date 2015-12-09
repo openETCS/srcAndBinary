@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,6 +26,6 @@ void Input_MA_SSP_Gradient_InputManagement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Input_MA_SSP_Gradient_InputManagement.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

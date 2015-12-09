@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,6 +19,6 @@ kcg_int C_P011_fs_struct_to_array_ntc_TM_TrainToTrack_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P011_fs_struct_to_array_ntc_TM_TrainToTrack_lib_internal.c
-** Generation date: 2015-12-02T15:32:27
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

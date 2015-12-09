@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:25
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -146,7 +146,7 @@ extern const DMI_Train_Data_T_DMI_Messages_Bothways_Pkg cDefaultTrainData_manage
 extern const DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg cDefaultDynamic_manage_DMI_Output_Pkg;
 
 /* manage_DMI_Output_Pkg::ctimeInterval */
-#define ctimeInterval_manage_DMI_Output_Pkg 300
+#define ctimeInterval_manage_DMI_Output_Pkg 30
 
 /* manage_DMI_Output_Pkg::cOutputStatus */
 extern const dmiOutputs_T_manage_DMI_Output_Pkg cOutputStatus_manage_DMI_Output_Pkg;
@@ -877,9 +877,6 @@ extern const LocWithInAcc_T_Obu_BasicTypes_Pkg cLocationAccuracyDefault;
 /* EVC_MEM_Support_Pkg::cNoML */
 extern const dataCollectionForLevelTransition_T_EVC_MEM_Support_Pkg cNoML_EVC_MEM_Support_Pkg;
 
-/* EVC_MEM_Support_Pkg::Default_P80_legacy */
-extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_EVC_MEM_Support_Pkg;
-
 /* EVC_MEM_Support_Pkg::Default_P135_legacy */
 extern const P135_StopShuntingOnDeskOpening_T_Packet_Types_Pkg Default_P135_legacy_EVC_MEM_Support_Pkg;
 
@@ -889,17 +886,23 @@ extern const P63_ListofBalisesinSRAuthority_T_Packet_Types_Pkg Default_P63_legac
 /* EVC_MEM_Support_Pkg::Default_P12_legacy */
 extern const P12_Level1MovementAuthorities_T_Packet_Types_Pkg Default_P12_legacy_EVC_MEM_Support_Pkg;
 
-/* xdebugSupport_Pkg::cNoP41Element */
-extern const P41_LevelTransitionOrder_T_Packet_Types_Pkg cNoP41Element_xdebugSupport_Pkg;
-
-/* EVC_MEM_Support_Pkg::cNoP41 */
-extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_EVC_MEM_Support_Pkg;
-
 /* Id_Pkg::cp041_Level_Transition_Order */
 #define cp041_Level_Transition_Order_Id_Pkg 41
 
 /* Id_Pkg::cp046_Conditional_Level_Transition_Order */
 #define cp046_Conditional_Level_Transition_Order_Id_Pkg 46
+
+/* xdebugSupport_Pkg::cNoP41Element */
+extern const P41_LevelTransitionOrder_T_Packet_Types_Pkg cNoP41Element_xdebugSupport_Pkg;
+
+/* EVC_MEM_Support_Pkg::Default_P80_legacy */
+extern const P80_ModeProfiles_T_Packet_Types_Pkg Default_P80_legacy_EVC_MEM_Support_Pkg;
+
+/* EVC_MEM_Support_Pkg::cNoP41 */
+extern const P41_LevelTransistionOrders_T_Packet_Types_Pkg cNoP41_EVC_MEM_Support_Pkg;
+
+/* EVC_MEM_Support_Pkg::Default_P80_element */
+extern const P80_ModeProfile_T_Packet_Types_Pkg Default_P80_element_EVC_MEM_Support_Pkg;
 
 /* TM::DEFAULT_P080_OBU_section */
 extern const P080_section_enum_T_TM DEFAULT_P080_OBU_section_TM;
@@ -2052,6 +2055,9 @@ extern const CompressedPacketData_T_Common_Types_Pkg DEFAULT_CompressedPackets_T
 
 /* TM::DEFAULT_PHeader */
 extern const MetadataElement_T_Common_Types_Pkg DEFAULT_PHeader_TM;
+
+/* ERSA_EVC_Testrunner::cEmptyPersistentData */
+extern const ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg cEmptyPersistentData_ERSA_EVC_Testrunner;
 
 /* MoRC_Pck::cMobileHWStatus_notRegistered */
 extern const mobileHWStatus_Type_MoRC_Pck cMobileHWStatus_notRegistered_MoRC_Pck;
@@ -3856,6 +3862,6 @@ extern const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox;
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-12-02T15:32:25
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 

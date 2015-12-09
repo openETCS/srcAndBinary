@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -51,6 +51,6 @@ void MRSP_reduction_TA_Export(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** MRSP_reduction_TA_Export.c
-** Generation date: 2015-12-02T15:32:28
+** Generation date: 2015-12-09T10:03:50
 *************************************************************$ */
 

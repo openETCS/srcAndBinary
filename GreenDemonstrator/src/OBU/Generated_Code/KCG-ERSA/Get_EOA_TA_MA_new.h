@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 #ifndef _Get_EOA_TA_MA_new_H_
 #define _Get_EOA_TA_MA_new_H_
@@ -20,6 +20,6 @@ extern L_internal_Type_Obu_BasicTypes_Pkg Get_EOA_TA_MA_new(
 #endif /* _Get_EOA_TA_MA_new_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Get_EOA_TA_MA_new.h
-** Generation date: 2015-12-02T15:32:26
+** Generation date: 2015-12-09T10:03:48
 *************************************************************$ */
 
