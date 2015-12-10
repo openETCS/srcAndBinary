@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
 #define _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_
@@ -28,7 +28,6 @@ typedef struct {
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   positionedBG_T_TrainPosition_Types_Pck /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L3 */ _L3;
-  kcg_int /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L2 */ _L2;
   LocWithInAcc_T_Obu_BasicTypes_Pkg /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::position */ rem_position;
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_FallingEdge_digital /* 1 */ Context_1;
@@ -56,6 +55,6 @@ extern void linkedBG_missed_init_CalculateTrainPosition_Pkg_Linking_Pkg(
 #endif /* _linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _nextIndex_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _nextIndex_CalcBrakingCurves_Pkg_internalOperators_H_
@@ -21,6 +21,6 @@ extern kcg_int nextIndex_CalcBrakingCurves_Pkg_internalOperators(
 #endif /* _nextIndex_CalcBrakingCurves_Pkg_internalOperators_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** nextIndex_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:51
+** Generation date: 2015-12-10T15:16:03
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -31,6 +31,6 @@ void C_P046_flatten_sections_TM_lib_internal(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P046_flatten_sections_TM_lib_internal.c
-** Generation date: 2015-12-09T10:03:51
+** Generation date: 2015-12-10T15:16:03
 *************************************************************$ */
 

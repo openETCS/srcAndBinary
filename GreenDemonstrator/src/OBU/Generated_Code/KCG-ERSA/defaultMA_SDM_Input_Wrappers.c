@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,6 +26,6 @@ void defaultMA_SDM_Input_Wrappers(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** defaultMA_SDM_Input_Wrappers.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

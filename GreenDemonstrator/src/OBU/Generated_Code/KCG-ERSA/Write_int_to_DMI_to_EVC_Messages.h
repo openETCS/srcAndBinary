@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _Write_int_to_DMI_to_EVC_Messages_H_
 #define _Write_int_to_DMI_to_EVC_Messages_H_
@@ -21,6 +21,6 @@ extern void Write_int_to_DMI_to_EVC_Messages(
 #endif /* _Write_int_to_DMI_to_EVC_Messages_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Write_int_to_DMI_to_EVC_Messages.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

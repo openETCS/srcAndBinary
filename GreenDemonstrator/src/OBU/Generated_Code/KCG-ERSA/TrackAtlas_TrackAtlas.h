@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _TrackAtlas_TrackAtlas_H_
 #define _TrackAtlas_TrackAtlas_H_
@@ -67,6 +67,6 @@ extern void TrackAtlas_init_TrackAtlas(outC_TrackAtlas_TrackAtlas *outC);
 #endif /* _TrackAtlas_TrackAtlas_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TrackAtlas_TrackAtlas.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

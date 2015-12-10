@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -118,6 +118,9 @@ void manageDMI_Output_manage_DMI_Output_Pkg(
     inMovementAuthority,
     inMoRC_status,
     inNTC,
+    (kcg_bool)
+      ((*dmi_trackDescription).MRSP_updated |
+        (*dmi_trackDescription).Gradient_profile_updated),
     &outC->Context_1);
   /* 1 */
   copyTrackDescription_manage_DMI_Output_Pkg(
@@ -184,6 +187,6 @@ void manageDMI_Output_manage_DMI_Output_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageDMI_Output_manage_DMI_Output_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

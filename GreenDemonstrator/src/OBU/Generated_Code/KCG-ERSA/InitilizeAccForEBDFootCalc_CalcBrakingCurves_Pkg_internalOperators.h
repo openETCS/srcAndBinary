@@ -1,12 +1,14 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators_H_
 #define _InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators_H_
 
 #include "kcg_types.h"
 #include "dV_ebi_for_V_SDM_Types_Pkg.h"
+#include "TransformV_realToV_odo_SDM_Types_Pkg.h"
+#include "TransformV_odoToV_real_SDM_Types_Pkg.h"
 #include "getDistanceStepFromDistance_CalcBrakingCurves_Pkg_Step_Function_operators.h"
 #include "getSpeedStepFromSpeed_CalcBrakingCurves_Pkg_Step_Function_operators.h"
 #include "makeEmptyParabolaCurve_CalcBrakingCurves_types.h"
@@ -25,6 +27,6 @@ extern void InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators(
 #endif /* _InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

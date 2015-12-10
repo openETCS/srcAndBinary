@@ -1,9 +1,9 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
-#ifndef _LowerOrHold_SDM_Commands_Pkg_H_
-#define _LowerOrHold_SDM_Commands_Pkg_H_
+#ifndef _LowerOrHold_TargetLimits_Pkg_H_
+#define _LowerOrHold_TargetLimits_Pkg_H_
 
 #include "kcg_types.h"
 
@@ -14,36 +14,36 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  V_odometry_Type_Obu_BasicTypes_Pkg /* SDM_Commands_Pkg::LowerOrHold::vo */ vo;
+  V_odometry_Type_Obu_BasicTypes_Pkg /* TargetLimits_Pkg::LowerOrHold::vo */ vo;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  Target_T_TargetManagement_types /* SDM_Commands_Pkg::LowerOrHold::mrdt */ rem_mrdt;
+  V_odometry_Type_Obu_BasicTypes_Pkg /* TargetLimits_Pkg::LowerOrHold::vi */ rem_vi;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
-} outC_LowerOrHold_SDM_Commands_Pkg;
+} outC_LowerOrHold_TargetLimits_Pkg;
 
 /* ===========  node initialization and cycle functions  =========== */
-/* SDM_Commands_Pkg::LowerOrHold */
-extern void LowerOrHold_SDM_Commands_Pkg(
-  /* SDM_Commands_Pkg::LowerOrHold::vi */ V_odometry_Type_Obu_BasicTypes_Pkg vi,
-  /* SDM_Commands_Pkg::LowerOrHold::mrdt */ Target_T_TargetManagement_types *mrdt,
-  outC_LowerOrHold_SDM_Commands_Pkg *outC);
+/* TargetLimits_Pkg::LowerOrHold */
+extern void LowerOrHold_TargetLimits_Pkg(
+  /* TargetLimits_Pkg::LowerOrHold::vi */ V_odometry_Type_Obu_BasicTypes_Pkg vi,
+  /* TargetLimits_Pkg::LowerOrHold::enable */ kcg_bool enable,
+  outC_LowerOrHold_TargetLimits_Pkg *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void LowerOrHold_reset_SDM_Commands_Pkg(
-  outC_LowerOrHold_SDM_Commands_Pkg *outC);
+extern void LowerOrHold_reset_TargetLimits_Pkg(
+  outC_LowerOrHold_TargetLimits_Pkg *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void LowerOrHold_init_SDM_Commands_Pkg(
-  outC_LowerOrHold_SDM_Commands_Pkg *outC);
+extern void LowerOrHold_init_TargetLimits_Pkg(
+  outC_LowerOrHold_TargetLimits_Pkg *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
-#endif /* _LowerOrHold_SDM_Commands_Pkg_H_ */
+#endif /* _LowerOrHold_TargetLimits_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
-** LowerOrHold_SDM_Commands_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** LowerOrHold_TargetLimits_Pkg.h
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

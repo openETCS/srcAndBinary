@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _Procedure_LimitedSupervision_Procedures_H_
 #define _Procedure_LimitedSupervision_Procedures_H_
@@ -53,6 +53,6 @@ extern void Procedure_LimitedSupervision_init_Procedures(
 #endif /* _Procedure_LimitedSupervision_Procedures_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Procedure_LimitedSupervision_Procedures.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

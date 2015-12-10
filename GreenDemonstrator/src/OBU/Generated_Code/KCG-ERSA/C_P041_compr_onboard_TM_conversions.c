@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -77,6 +77,6 @@ void C_P041_compr_onboard_TM_conversions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P041_compr_onboard_TM_conversions.c
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

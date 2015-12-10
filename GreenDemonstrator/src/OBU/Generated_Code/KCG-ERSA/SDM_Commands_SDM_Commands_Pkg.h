@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _SDM_Commands_SDM_Commands_Pkg_H_
 #define _SDM_Commands_SDM_Commands_Pkg_H_
@@ -8,9 +8,9 @@
 #include "kcg_types.h"
 #include "CalcDriverOutput_SDM_Commands_Pkg.h"
 #include "CalcModeTransOutput_SDM_Commands_Pkg.h"
+#include "CalcDMI_output_SDM_Commands_Pkg.h"
 #include "CmdTrainSupervisionStatus_SDM_Commands_Pkg.h"
 #include "MergeMLRequests_SDM_Commands_Pkg.h"
-#include "CalcDMI_output_SDM_Commands_Pkg.h"
 #include "CalcBrakeCmd_SDM_Commands_Pkg.h"
 
 /* =====================  no input structure  ====================== */
@@ -29,8 +29,7 @@ typedef struct {
   /* -----------------  no initialization variables  ----------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_CalcBrakeCmd_SDM_Commands_Pkg /* 1 */ _2_Context_1;
-  outC_CalcDMI_output_SDM_Commands_Pkg /* 1 */ _1_Context_1;
+  outC_CalcBrakeCmd_SDM_Commands_Pkg /* 1 */ _1_Context_1;
   outC_MergeMLRequests_SDM_Commands_Pkg /* 4 */ Context_4;
   outC_MergeMLRequests_SDM_Commands_Pkg /* 2 */ Context_2;
   outC_CmdTrainSupervisionStatus_SDM_Commands_Pkg /* 1 */ Context_1;
@@ -65,6 +64,6 @@ extern void SDM_Commands_init_SDM_Commands_Pkg(
 #endif /* _SDM_Commands_SDM_Commands_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_Commands_SDM_Commands_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

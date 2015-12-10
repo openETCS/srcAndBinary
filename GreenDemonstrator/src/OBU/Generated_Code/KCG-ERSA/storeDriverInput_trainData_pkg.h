@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _storeDriverInput_trainData_pkg_H_
 #define _storeDriverInput_trainData_pkg_H_
@@ -24,6 +24,6 @@ extern void storeDriverInput_trainData_pkg(
 #endif /* _storeDriverInput_trainData_pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** storeDriverInput_trainData_pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

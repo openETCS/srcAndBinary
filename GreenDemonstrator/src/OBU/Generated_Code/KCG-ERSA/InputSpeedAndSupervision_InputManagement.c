@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -28,6 +28,6 @@ void InputSpeedAndSupervision_InputManagement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputSpeedAndSupervision_InputManagement.c
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 

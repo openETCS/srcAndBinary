@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -26,7 +26,6 @@ void Build_Packet0_ProvidePositionReport_Pkg(
   (*packet0).dirlrbg = (*trainPos).trainOrientationToLRBG;
   (*packet0).dlrbg = (*trainPos).nominalOrReverseToLRBG;
   (*packet0).length = (*train2trackStatus).q_length;
-  (*packet0).V_TRAIN = (*odometry).speed.v_upper;
   (*packet0).dirtrain = (*trainPos).trainRunningDirectionToLRBG;
   (*packet0).mode = (*modeLevelStatus).currMode;
   (*packet0).level = (*modeLevelStatus).currLevel;
@@ -57,10 +56,12 @@ void Build_Packet0_ProvidePositionReport_Pkg(
     scaleInternalType_ProvidePositionReport_Pkg(
       cQ_SCALE_ProvidePositionReport_Pkg,
       _L14);
+  (*packet0).V_TRAIN = /* 1 */
+    vOdometry2Extern_RadioSupport_Pkg((*odometry).speed.v_upper);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_Packet0_ProvidePositionReport_Pkg.c
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 

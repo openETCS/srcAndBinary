@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg_H_
 #define _connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg_H_
@@ -24,6 +24,6 @@ extern void connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg(
 #endif /* _connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** connectingToTheRBC_v2_MoRC_Pck_Subfunc_Pkg.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

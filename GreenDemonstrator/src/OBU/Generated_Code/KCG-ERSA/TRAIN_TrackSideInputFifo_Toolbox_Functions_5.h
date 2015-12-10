@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 #ifndef _TRAIN_TrackSideInputFifo_Toolbox_Functions_5_H_
 #define _TRAIN_TrackSideInputFifo_Toolbox_Functions_5_H_
@@ -23,8 +23,8 @@ typedef struct {
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
   kcg_int /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L20 */ _L20_IfBlock1;
-  array_122516 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L4 */ _L4_IfBlock1;
-  array_122516 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::buffer */ buffer;
+  array_122510 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::IfBlock1::then::_L4 */ _L4_IfBlock1;
+  array_122510 /* Toolbox::Functions::TRAIN_TrackSideInputFifo::buffer */ buffer;
   kcg_int /* Toolbox::Functions::TRAIN_TrackSideInputFifo::_L32 */ _L32;
   kcg_int /* Toolbox::Functions::TRAIN_TrackSideInputFifo::_L50 */ _L50;
   /* -------------------- no sub nodes' contexts  -------------------- */
@@ -52,6 +52,6 @@ extern void TRAIN_TrackSideInputFifo_init_Toolbox_Functions_5(
 #endif /* _TRAIN_TrackSideInputFifo_Toolbox_Functions_5_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TRAIN_TrackSideInputFifo_Toolbox_Functions_5.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

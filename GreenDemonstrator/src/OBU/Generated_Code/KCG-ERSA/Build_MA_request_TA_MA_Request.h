@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _Build_MA_request_TA_MA_Request_H_
 #define _Build_MA_request_TA_MA_Request_H_
@@ -50,6 +50,6 @@ extern void Build_MA_request_init_TA_MA_Request(
 #endif /* _Build_MA_request_TA_MA_Request_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_MA_request_TA_MA_Request.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

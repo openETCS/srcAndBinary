@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -72,7 +72,7 @@ T_Mode_Level_And_Mode_Types_Pkg From_OS_PriorityManagement(
       else {
         else_clock_IfBlock1 = Condition31 | Condition32;
         /* ck_anon_activ */ if (else_clock_IfBlock1) {
-          FromOS_To_NewMode = OS_Level_And_Mode_Types_Pkg;
+          FromOS_To_NewMode = FS_Level_And_Mode_Types_Pkg;
         }
         else /* ck_anon_activ */ if (Condition21) {
           FromOS_To_NewMode = UN_Level_And_Mode_Types_Pkg;
@@ -91,6 +91,6 @@ T_Mode_Level_And_Mode_Types_Pkg From_OS_PriorityManagement(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** From_OS_PriorityManagement.c
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 

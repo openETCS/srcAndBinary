@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -59,6 +59,7 @@ void SpeedSupervision_Integration_init_SpeedSupervision_Integration_Pkg(
   outC->sdmToDMI.distanceIndicationPoint = 0;
   /* 1 */ ProbeSDM_init_EnvSim(&outC->_4_Context_1);
   /* 1 */ SDM_Commands_init_SDM_Commands_Pkg(&outC->_3_Context_1);
+  /* 4 */ SDMLimitLocations_init_TargetLimits_Pkg(&outC->Context_4);
   /* 1 */
   CalcBrakingCurves_integration_init_CalcBrakingCurves_Pkg(&outC->_2_Context_1);
   /* 1 */ AGradient_init_SDM_GradientAcceleration_Pkg(&outC->_1_Context_1);
@@ -74,6 +75,7 @@ void SpeedSupervision_Integration_reset_SpeedSupervision_Integration_Pkg(
 {
   /* 1 */ ProbeSDM_reset_EnvSim(&outC->_4_Context_1);
   /* 1 */ SDM_Commands_reset_SDM_Commands_Pkg(&outC->_3_Context_1);
+  /* 4 */ SDMLimitLocations_reset_TargetLimits_Pkg(&outC->Context_4);
   /* 1 */
   CalcBrakingCurves_integration_reset_CalcBrakingCurves_Pkg(
     &outC->_2_Context_1);
@@ -97,16 +99,8 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
 {
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration */ ASafe_T_CalcBrakingCurves_types tmp1;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration */ ASafe_T_CalcBrakingCurves_types tmp;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::targetCollection */ TargetCollection_T_TargetManagement_types targetCollection;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::Trainlocations_internal */ TrainLocations_real_T_SDM_Types_Pkg Trainlocations_internal;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::MRSP_internal */ MRSP_internal_T_TargetManagement_types MRSP_internal;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::MA_internal */ MA_section_real_T_TargetManagement_types MA_internal;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::trainData_extras */ trainData_internal_t_SDM_Types_Pkg trainData_extras;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::T_b */ t_Brake_t_SDMModelPkg T_b;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::CurveCollection */ CurveCollection_T_CalcBrakingCurves_types CurveCollection;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L114 */ kcg_bool _L114;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L112 */ SDM_Locations_T_SDM_Types_Pkg _L112;
-  /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L111 */ Speeds_T_SDM_Types_Pkg _L111;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L187 */ ASafe_T_CalcBrakingCurves_types _L187;
   /* SpeedSupervision_Integration_Pkg::SpeedSupervision_Integration::_L190 */ A_gradient_t_SDM_GradientAcceleration_types _L190;
   
@@ -120,35 +114,23 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
     dataFromTrackAtlas,
     &outC->Context_1);
   trainData_extras.offsetAntennaL1 = outC->Context_1.offsetAntennaL1;
-  kcg_copy_MRSP_internal_T_TargetManagement_types(
-    &MRSP_internal,
-    &outC->Context_1.mrsp_out);
-  kcg_copy_MA_section_real_T_TargetManagement_types(
-    &MA_internal,
-    &outC->Context_1.ma_out);
-  kcg_copy_TrainLocations_real_T_SDM_Types_Pkg(
-    &Trainlocations_internal,
-    &outC->Context_1.trainLocations);
   /* 2 */
   TargetManagement_TargetManagement_pkg(
-    &MRSP_internal,
+    &outC->Context_1.mrsp_out,
     outC->Context_1.mrsp_update_out,
-    &MA_internal,
+    &outC->Context_1.ma_out,
     outC->Context_1.ma_update_out,
-    &Trainlocations_internal,
+    &outC->Context_1.trainLocations,
     &outC->Context_2);
-  kcg_copy_TargetCollection_T_TargetManagement_types(
-    &targetCollection,
-    &outC->Context_2.targetCollection);
   /* 1 */
   ABrakeFactory_SDMModelPkg(trainData, NationalValues, &T_b, &tmp, &_L187);
   /* 1 */
   AGradient_SDM_GradientAcceleration_Pkg(
-    &Trainlocations_internal,
+    &outC->Context_1.trainLocations,
     &outC->Context_1.gp_out,
     outC->Context_1.gp_update_out,
     trainData,
-    &targetCollection,
+    &outC->Context_2.targetCollection,
     &outC->_1_Context_1);
   kcg_copy_A_gradient_t_SDM_GradientAcceleration_types(
     &_L190,
@@ -157,14 +139,11 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
   /* 1 */ addGradient_SDMModelPkg(&_L187, &_L190, &tmp);
   /* 1 */
   CalcBrakingCurves_integration_CalcBrakingCurves_Pkg(
-    &Trainlocations_internal,
-    &targetCollection,
+    &outC->Context_1.trainLocations,
+    &outC->Context_2.targetCollection,
     &tmp1,
     &tmp,
     &outC->_2_Context_1);
-  kcg_copy_CurveCollection_T_CalcBrakingCurves_types(
-    &CurveCollection,
-    &outC->_2_Context_1.curveCollection);
   switch ((*NationalValues).q_nvsbfbperm) {
     case Q_NVSBFBPERM_Yes :
       trainData_extras.isSB_FBAvailable = kcg_true;
@@ -175,27 +154,27 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
   }
   /* 4 */
   SDMLimitLocations_TargetLimits_Pkg(
-    &MRSP_internal,
+    &outC->Context_1.mrsp_out,
     odometry,
-    &Trainlocations_internal,
-    &targetCollection,
-    &CurveCollection,
-    &MA_internal,
+    &outC->Context_1.trainLocations,
+    &outC->Context_2.targetCollection,
+    &outC->_2_Context_1.curveCollection,
+    &outC->Context_1.ma_out,
     &T_b,
     NationalValues,
     &trainData_extras,
-    &_L111,
-    &_L112,
+    &outC->Context_4);
+  kcg_copy_Target_T_TargetManagement_types(
     &outC->target,
-    &_L114);
+    &outC->Context_4.MostRestrictiveDisplayedTarget);
   /* 1 */
   SDM_Commands_SDM_Commands_Pkg(
-    &targetCollection,
+    &outC->Context_2.targetCollection,
     TrainPosition,
-    &_L111,
-    &_L112,
+    &outC->Context_4.speeds,
+    &outC->Context_4.locations,
     &outC->target,
-    _L114,
+    outC->Context_4.FLOIisSBI1,
     Service_brake_requested_by_modes_and_levels,
     (kcg_bool)
       (Emergency_brake_requested_by_modes_and_levels | /* 1 */
@@ -221,14 +200,14 @@ void SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg(
     &outC->_3_Context_1.brakeCmd);
   /* 1 */
   ProbeSDM_EnvSim(
-    &targetCollection,
-    &CurveCollection,
+    &outC->Context_2.targetCollection,
+    &outC->_2_Context_1.curveCollection,
     &outC->target,
     &outC->_4_Context_1);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

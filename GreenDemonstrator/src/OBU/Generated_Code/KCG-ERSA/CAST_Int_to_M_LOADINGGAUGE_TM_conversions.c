@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -58,6 +58,6 @@ M_LOADINGGAUGE CAST_Int_to_M_LOADINGGAUGE_TM_conversions(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_Int_to_M_LOADINGGAUGE_TM_conversions.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

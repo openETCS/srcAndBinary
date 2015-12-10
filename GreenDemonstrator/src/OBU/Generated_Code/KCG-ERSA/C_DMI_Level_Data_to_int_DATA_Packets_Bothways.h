@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 #ifndef _C_DMI_Level_Data_to_int_DATA_Packets_Bothways_H_
 #define _C_DMI_Level_Data_to_int_DATA_Packets_Bothways_H_
@@ -22,6 +22,6 @@ extern void C_DMI_Level_Data_to_int_DATA_Packets_Bothways(
 #endif /* _C_DMI_Level_Data_to_int_DATA_Packets_Bothways_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_DMI_Level_Data_to_int_DATA_Packets_Bothways.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

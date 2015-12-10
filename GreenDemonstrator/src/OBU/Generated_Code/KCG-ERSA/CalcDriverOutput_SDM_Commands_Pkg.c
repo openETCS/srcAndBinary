@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -27,84 +27,57 @@ void CalcDriverOutput_SDM_Commands_Pkg(
   /* SDM_Commands_Pkg::CalcDriverOutput::targetDistance */ L_internal_Type_Obu_BasicTypes_Pkg *targetDistance,
   /* SDM_Commands_Pkg::CalcDriverOutput::valid_targetDistance */ kcg_bool *valid_targetDistance)
 {
-  /* SDM_Commands_Pkg::CalcDriverOutput::WhenBlock1::RSM::_L5 */ kcg_bool _L5_WhenBlock1_RSM;
   /* SDM_Commands_Pkg::CalcDriverOutput::WhenBlock1::TSM::_L3 */ kcg_bool _L3_WhenBlock1_TSM;
-  /* SDM_Commands_Pkg::CalcDriverOutput::owi */ kcg_bool owi;
   
   /* ck_sdmType */ switch (sdmType) {
-    case CSM_SDM_Types_Pkg :
+    case No_SDM_Type_SDM_Types_Pkg :
       *valid_v_mrdt = kcg_false;
+      *valid_v_release = kcg_false;
+      *valid_v_permitted = kcg_false;
+      *valid_v_est = kcg_false;
+      *v_mrdt = 0;
+      break;
+    case RSM_SDM_Types_Pkg :
+      *valid_v_release = (Indication_Supervision_SDM_Types_Pkg ==
+          supVisStatus) | (supVisStatus ==
+          Intervention_Supervision_SDM_Types_Pkg);
+      *valid_v_mrdt = *valid_v_release;
+      *valid_v_permitted = kcg_false;
+      *valid_v_est = *valid_v_release;
+      *v_mrdt = (*speeds).v_p_mrdt;
       break;
     case TSM_SDM_Types_Pkg :
       _L3_WhenBlock1_TSM = Undefined_Supervision_SDM_Types_Pkg != supVisStatus;
       *valid_v_mrdt = _L3_WhenBlock1_TSM;
-      break;
-    case RSM_SDM_Types_Pkg :
-      _L5_WhenBlock1_RSM = (Indication_Supervision_SDM_Types_Pkg ==
-          supVisStatus) | (supVisStatus ==
-          Intervention_Supervision_SDM_Types_Pkg);
-      *valid_v_mrdt = _L5_WhenBlock1_RSM;
-      break;
-    case No_SDM_Type_SDM_Types_Pkg :
-      *valid_v_mrdt = kcg_false;
-      break;
-    
-  }
-  *valid_targetDistance = *valid_v_mrdt;
-  owi = (Overspeed_Supervision_SDM_Types_Pkg == supVisStatus) | (supVisStatus ==
-      Warning_Supervision_SDM_Types_Pkg) | (supVisStatus ==
-      Intervention_Supervision_SDM_Types_Pkg);
-  *v_est = (*speeds).V_est;
-  *v_release = (*speeds).V_release;
-  /* ck_sdmType */ switch (sdmType) {
-    case CSM_SDM_Types_Pkg :
-      *valid_v_release = kcg_false;
-      *valid_v_permitted = kcg_true;
-      *valid_v_est = kcg_true;
-      *v_permitted = (*speeds).V_MRSP;
-      *v_mrdt = 0;
-      *v_floi = (*speeds).v_FLOI_dmi;
-      *valid_v_floi = owi;
-      *targetDistance = 0;
-      break;
-    case TSM_SDM_Types_Pkg :
       *valid_v_est = _L3_WhenBlock1_TSM;
-      *v_permitted = (*speeds).v_p_dmi;
       *valid_v_permitted = _L3_WhenBlock1_TSM;
       *valid_v_release = _L3_WhenBlock1_TSM & ((SvL_TargetManagement_types ==
             (*mrdt).targetType) | ((*mrdt).targetType ==
             EoA_TargetManagement_types));
       *v_mrdt = (*speeds).V_target;
-      *v_floi = (*speeds).v_FLOI_dmi;
-      *valid_v_floi = owi;
-      *targetDistance = (*locations).d_target;
       break;
-    case RSM_SDM_Types_Pkg :
-      *valid_v_floi = kcg_false;
-      *valid_v_permitted = kcg_false;
-      *valid_v_est = _L5_WhenBlock1_RSM;
-      *v_permitted = 0;
-      *valid_v_release = _L5_WhenBlock1_RSM;
-      *v_mrdt = (*speeds).v_p_mrdt;
-      *v_floi = 0;
-      *targetDistance = (*locations).d_target;
-      break;
-    case No_SDM_Type_SDM_Types_Pkg :
-      *valid_v_floi = kcg_false;
+    case CSM_SDM_Types_Pkg :
+      *valid_v_mrdt = kcg_false;
       *valid_v_release = kcg_false;
-      *valid_v_permitted = kcg_false;
-      *valid_v_est = kcg_false;
-      *v_permitted = 0;
+      *valid_v_permitted = kcg_true;
+      *valid_v_est = kcg_true;
       *v_mrdt = 0;
-      *v_floi = 0;
-      *targetDistance = 0;
       break;
     
   }
+  *valid_targetDistance = *valid_v_mrdt;
+  *valid_v_floi = (Overspeed_Supervision_SDM_Types_Pkg == supVisStatus) |
+    (supVisStatus == Warning_Supervision_SDM_Types_Pkg) | (supVisStatus ==
+      Intervention_Supervision_SDM_Types_Pkg);
+  *v_est = (*speeds).V_est;
+  *v_release = (*speeds).V_release;
+  *v_permitted = (*speeds).v_p_dmi;
+  *v_floi = (*speeds).v_FLOI_dmi;
+  *targetDistance = (*locations).d_target;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CalcDriverOutput_SDM_Commands_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

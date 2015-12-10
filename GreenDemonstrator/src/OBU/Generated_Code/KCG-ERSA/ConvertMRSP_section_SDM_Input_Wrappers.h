@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _ConvertMRSP_section_SDM_Input_Wrappers_H_
 #define _ConvertMRSP_section_SDM_Input_Wrappers_H_
@@ -22,6 +22,6 @@ extern void ConvertMRSP_section_SDM_Input_Wrappers(
 #endif /* _ConvertMRSP_section_SDM_Input_Wrappers_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ConvertMRSP_section_SDM_Input_Wrappers.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

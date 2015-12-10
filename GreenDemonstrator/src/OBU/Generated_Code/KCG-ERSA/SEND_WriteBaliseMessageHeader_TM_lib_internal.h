@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _SEND_WriteBaliseMessageHeader_TM_lib_internal_H_
 #define _SEND_WriteBaliseMessageHeader_TM_lib_internal_H_
@@ -24,6 +24,6 @@ extern void SEND_WriteBaliseMessageHeader_TM_lib_internal(
 #endif /* _SEND_WriteBaliseMessageHeader_TM_lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SEND_WriteBaliseMessageHeader_TM_lib_internal.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

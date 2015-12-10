@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _mapMoRCtoRadio_CS_manage_DMI_Output_Pkg_H_
 #define _mapMoRCtoRadio_CS_manage_DMI_Output_Pkg_H_
@@ -19,6 +19,6 @@ extern connectionStatusRadioUnit_T_API_RadioCommunication_Pkg mapMoRCtoRadio_CS_
 #endif /* _mapMoRCtoRadio_CS_manage_DMI_Output_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** mapMoRCtoRadio_CS_manage_DMI_Output_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -144,6 +144,9 @@ extern const DMI_Train_Data_T_DMI_Messages_Bothways_Pkg cDefaultTrainData_manage
 
 /* manage_DMI_Output_Pkg::cDefaultDynamic */
 extern const DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg cDefaultDynamic_manage_DMI_Output_Pkg;
+
+/* manage_DMI_Output_Pkg::cInitModeLevel */
+extern const T_Mode_Level_Level_And_Mode_Types_Pkg cInitModeLevel_manage_DMI_Output_Pkg;
 
 /* manage_DMI_Output_Pkg::ctimeInterval */
 #define ctimeInterval_manage_DMI_Output_Pkg 30
@@ -290,40 +293,40 @@ extern const MRSP_internal_section_T_TargetManagement_types emptyMRSPSection_Tar
 extern const Target_real_T_TargetManagement_types emptyTarget_TargetManagement_pkg;
 
 /* SDM_Types_Pkg::V_ebi_min */
-#define V_ebi_min_SDM_Types_Pkg 30.555555556
+#define V_ebi_min_SDM_Types_Pkg 3056
 
 /* SDM_Types_Pkg::dV_ebi_min */
-#define dV_ebi_min_SDM_Types_Pkg 2.083333333
+#define dV_ebi_min_SDM_Types_Pkg 208
 
 /* SDM_Types_Pkg::dV_ebi_max */
-#define dV_ebi_max_SDM_Types_Pkg 4.166666667
+#define dV_ebi_max_SDM_Types_Pkg 417
 
 /* SDM_Types_Pkg::V_ebi_max */
-#define V_ebi_max_SDM_Types_Pkg 58.333333333
+#define V_ebi_max_SDM_Types_Pkg 5833
 
 /* SDM_Types_Pkg::V_warning_min */
-#define V_warning_min_SDM_Types_Pkg 30.555555556
+#define V_warning_min_SDM_Types_Pkg 3056
 
 /* SDM_Types_Pkg::dV_warning_min */
-#define dV_warning_min_SDM_Types_Pkg 1.111111111
+#define dV_warning_min_SDM_Types_Pkg 111
 
 /* SDM_Types_Pkg::dV_warning_max */
-#define dV_warning_max_SDM_Types_Pkg 1.388888889
+#define dV_warning_max_SDM_Types_Pkg 139
 
 /* SDM_Types_Pkg::V_warning_max */
-#define V_warning_max_SDM_Types_Pkg 38.888888889
+#define V_warning_max_SDM_Types_Pkg 3889
 
 /* SDM_Types_Pkg::V_sbi_min */
-#define V_sbi_min_SDM_Types_Pkg 30.555555556
+#define V_sbi_min_SDM_Types_Pkg 3056
 
 /* SDM_Types_Pkg::dV_sbi_min */
-#define dV_sbi_min_SDM_Types_Pkg 1.527777778
+#define dV_sbi_min_SDM_Types_Pkg 153
 
 /* SDM_Types_Pkg::dV_sbi_max */
-#define dV_sbi_max_SDM_Types_Pkg 2.777777778
+#define dV_sbi_max_SDM_Types_Pkg 278
 
 /* SDM_Types_Pkg::V_sbi_max */
-#define V_sbi_max_SDM_Types_Pkg 58.333333333
+#define V_sbi_max_SDM_Types_Pkg 5833
 
 /* SDM_Types_Pkg::T_preindication */
 #define T_preindication_SDM_Types_Pkg 7.0
@@ -856,6 +859,12 @@ extern const M_TrainTrackRadioOutputBuffer_t_TM_lib_internal DEFAULT_output_buff
 /* Id_Pkg::co132_MA_Request */
 #define co132_MA_Request_Id_Pkg 132
 
+/* Id_Pkg::co136_Train_Position_Report */
+#define co136_Train_Position_Report_Id_Pkg 136
+
+/* RadioSupport_Pkg::cEmptyMsg */
+extern const M_TrainTrack_Message_T_TM_radio_messages cEmptyMsg_RadioSupport_Pkg;
+
 /* TIU_Types_Pkg::emptyTIUInfo */
 extern const Message_Train_Interface_to_EVC_T_TIU_Types_Pkg emptyTIUInfo_TIU_Types_Pkg;
 
@@ -1089,12 +1098,6 @@ extern const trainDataStatus_T_trainData_Types_pkg cNoStates_trainData_Types_pkg
 
 /* trainData_Types_pkg::cEmptyTrainData */
 extern const trainData_T_TIU_Types_Pkg cEmptyTrainData_trainData_Types_pkg;
-
-/* RadioSupport_Pkg::cEmptyMsg */
-extern const M_TrainTrack_Message_T_TM_radio_messages cEmptyMsg_RadioSupport_Pkg;
-
-/* Id_Pkg::co136_Train_Position_Report */
-#define co136_Train_Position_Report_Id_Pkg 136
 
 /* TrackAtlas::Mode_NTC */
 #define Mode_NTC_TrackAtlas M_MODE_National_System
@@ -2055,6 +2058,12 @@ extern const CompressedPacketData_T_Common_Types_Pkg DEFAULT_CompressedPackets_T
 
 /* TM::DEFAULT_PHeader */
 extern const MetadataElement_T_Common_Types_Pkg DEFAULT_PHeader_TM;
+
+/* ERSA_EVC_Testrunner::cRadioMessage */
+extern const CompressedRadioMessage_TM cRadioMessage_ERSA_EVC_Testrunner;
+
+/* ERSA_EVC_Testrunner::cTrainTrackMessage */
+extern const M_TrainTrack_Message_T_TM_radio_messages cTrainTrackMessage_ERSA_EVC_Testrunner;
 
 /* ERSA_EVC_Testrunner::cEmptyPersistentData */
 extern const ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg cEmptyPersistentData_ERSA_EVC_Testrunner;
@@ -3862,6 +3871,6 @@ extern const API_RadioMsgHeader_T_API_Msg_Pkg cEmptyRadioMsgHeader_Toolbox;
 #endif /* _KCG_CONSTS_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** kcg_consts.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _InputSpeedAndSupervision_Interfaces_H_
 #define _InputSpeedAndSupervision_Interfaces_H_
@@ -25,6 +25,6 @@ extern void InputSpeedAndSupervision_Interfaces(
 #endif /* _InputSpeedAndSupervision_Interfaces_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InputSpeedAndSupervision_Interfaces.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

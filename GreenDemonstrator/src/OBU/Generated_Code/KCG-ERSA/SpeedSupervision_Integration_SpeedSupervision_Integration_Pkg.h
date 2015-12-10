@@ -1,19 +1,19 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg_H_
 #define _SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg_H_
 
 #include "kcg_types.h"
 #include "SimpleValidityCheck_SDM_Input_Wrappers.h"
-#include "SDMLimitLocations_TargetLimits_Pkg.h"
 #include "ABrakeFactory_SDMModelPkg.h"
 #include "addGradient_SDMModelPkg.h"
 #include "SDM_Commands_SDM_Commands_Pkg.h"
 #include "SDM_InputWrapper_SDM_Input_Wrappers.h"
 #include "CalcBrakingCurves_integration_CalcBrakingCurves_Pkg.h"
 #include "TargetManagement_TargetManagement_pkg.h"
+#include "SDMLimitLocations_TargetLimits_Pkg.h"
 #include "AGradient_SDM_GradientAcceleration_Pkg.h"
 #include "ProbeSDM_EnvSim.h"
 
@@ -36,6 +36,7 @@ typedef struct {
   /* ---------------------  sub nodes' contexts  --------------------- */
   outC_ProbeSDM_EnvSim /* 1 */ _4_Context_1;
   outC_SDM_Commands_SDM_Commands_Pkg /* 1 */ _3_Context_1;
+  outC_SDMLimitLocations_TargetLimits_Pkg /* 4 */ Context_4;
   outC_CalcBrakingCurves_integration_CalcBrakingCurves_Pkg /* 1 */ _2_Context_1;
   outC_AGradient_SDM_GradientAcceleration_Pkg /* 1 */ _1_Context_1;
   outC_TargetManagement_TargetManagement_pkg /* 2 */ Context_2;
@@ -69,6 +70,6 @@ extern void SpeedSupervision_Integration_init_SpeedSupervision_Integration_Pkg(
 #endif /* _SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SpeedSupervision_Integration_SpeedSupervision_Integration_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

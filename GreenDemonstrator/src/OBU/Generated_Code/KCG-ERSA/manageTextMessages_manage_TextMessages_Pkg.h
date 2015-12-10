@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _manageTextMessages_manage_TextMessages_Pkg_H_
 #define _manageTextMessages_manage_TextMessages_Pkg_H_
@@ -27,6 +27,6 @@ extern void manageTextMessages_manage_TextMessages_Pkg(
 #endif /* _manageTextMessages_manage_TextMessages_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** manageTextMessages_manage_TextMessages_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

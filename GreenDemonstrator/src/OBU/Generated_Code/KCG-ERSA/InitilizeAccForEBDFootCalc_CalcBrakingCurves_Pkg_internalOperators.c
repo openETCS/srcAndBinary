@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -24,7 +24,12 @@ void InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators(
     &(*aSafe).distance_definition,
     &_L9,
     &(*BCACCForEBDFoot).distanceIndex);
-  _L15 = /* 2 */ dV_ebi_for_V_SDM_Types_Pkg((*target).speed) + (*target).speed;
+  _L15 = /* 1 */
+    TransformV_odoToV_real_SDM_Types_Pkg(
+      /* 2 */
+      dV_ebi_for_V_SDM_Types_Pkg(
+        /* 1 */ TransformV_realToV_odo_SDM_Types_Pkg((*target).speed))) +
+    (*target).speed;
   (*BCACCForEBDFoot).speed = _L15;
   /* 3 */
   getSpeedStepFromSpeed_CalcBrakingCurves_Pkg_Step_Function_operators(
@@ -38,6 +43,6 @@ void InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

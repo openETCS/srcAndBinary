@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 #ifndef _API_Frontend_balises_prelim_TM_API_H_
 #define _API_Frontend_balises_prelim_TM_API_H_
@@ -60,6 +60,6 @@ extern void API_Frontend_balises_prelim_TM_API(
 #endif /* _API_Frontend_balises_prelim_TM_API_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** API_Frontend_balises_prelim_TM_API.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

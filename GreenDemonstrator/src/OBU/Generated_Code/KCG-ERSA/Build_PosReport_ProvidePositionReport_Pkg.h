@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _Build_PosReport_ProvidePositionReport_Pkg_H_
 #define _Build_PosReport_ProvidePositionReport_Pkg_H_
@@ -18,7 +18,7 @@ extern void Build_PosReport_ProvidePositionReport_Pkg(
   /* ProvidePositionReport_Pkg::Build_PosReport::trainProps */ trainProperties_T_TrainPosition_Types_Pck *trainProps,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *in_packet0,
   /* ProvidePositionReport_Pkg::Build_PosReport::in_packet1 */ PT1_PositionReport_2BG_T_Packet_TrainTypes_Pkg *in_packet1,
-  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */ array_121100 *errorVector,
+  /* ProvidePositionReport_Pkg::Build_PosReport::errorVector */ array_121114 *errorVector,
   /* ProvidePositionReport_Pkg::Build_PosReport::t_train */ T_TRAIN t_train,
   /* ProvidePositionReport_Pkg::Build_PosReport::posRepHeader */ Radio_TrainTrack_Header_T_Radio_Types_Pkg *posRepHeader,
   /* ProvidePositionReport_Pkg::Build_PosReport::packet0 */ PT0_PositionReport_T_Packet_TrainTypes_Pkg *packet0,
@@ -29,6 +29,6 @@ extern void Build_PosReport_ProvidePositionReport_Pkg(
 #endif /* _Build_PosReport_ProvidePositionReport_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Build_PosReport_ProvidePositionReport_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

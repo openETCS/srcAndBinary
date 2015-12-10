@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -52,8 +52,7 @@ void SDM_Commands_init_SDM_Commands_Pkg(
   outC->sdmToDMI.sup_status = CSM_DMI_Types_Pkg;
   outC->sdmToDMI.supervisionDisplay = supDis_normal_DMI_Types_Pkg;
   outC->sdmToDMI.distanceIndicationPoint = 0;
-  /* 1 */ CalcBrakeCmd_init_SDM_Commands_Pkg(&outC->_2_Context_1);
-  /* 1 */ CalcDMI_output_init_SDM_Commands_Pkg(&outC->_1_Context_1);
+  /* 1 */ CalcBrakeCmd_init_SDM_Commands_Pkg(&outC->_1_Context_1);
   /* 4 */ MergeMLRequests_init_SDM_Commands_Pkg(&outC->Context_4);
   /* 2 */ MergeMLRequests_init_SDM_Commands_Pkg(&outC->Context_2);
   /* 1 */ CmdTrainSupervisionStatus_init_SDM_Commands_Pkg(&outC->Context_1);
@@ -65,8 +64,7 @@ void SDM_Commands_init_SDM_Commands_Pkg(
 void SDM_Commands_reset_SDM_Commands_Pkg(
   outC_SDM_Commands_SDM_Commands_Pkg *outC)
 {
-  /* 1 */ CalcBrakeCmd_reset_SDM_Commands_Pkg(&outC->_2_Context_1);
-  /* 1 */ CalcDMI_output_reset_SDM_Commands_Pkg(&outC->_1_Context_1);
+  /* 1 */ CalcBrakeCmd_reset_SDM_Commands_Pkg(&outC->_1_Context_1);
   /* 4 */ MergeMLRequests_reset_SDM_Commands_Pkg(&outC->Context_4);
   /* 2 */ MergeMLRequests_reset_SDM_Commands_Pkg(&outC->Context_2);
   /* 1 */ CmdTrainSupervisionStatus_reset_SDM_Commands_Pkg(&outC->Context_1);
@@ -182,25 +180,21 @@ void SDM_Commands_SDM_Commands_Pkg(
     &outC->sdmCmd,
     locations,
     trainLocations,
-    mrdt,
-    &outC->_1_Context_1);
-  kcg_copy_speedSupervisionForDMI_T_DMI_Types_Pkg(
-    &outC->sdmToDMI,
-    &outC->_1_Context_1.sdmToDMI);
+    &outC->sdmToDMI);
   /* 1 */
   CalcBrakeCmd_SDM_Commands_Pkg(
     &outC->sdmCmd,
     speeds,
     NationalValues,
     TrainData_int,
-    &outC->_2_Context_1);
+    &outC->_1_Context_1);
   kcg_copy_Brake_command_T_TIU_Types_Pkg(
     &outC->brakeCmd,
-    &outC->_2_Context_1.brakeCmd);
+    &outC->_1_Context_1.brakeCmd);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** SDM_Commands_SDM_Commands_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

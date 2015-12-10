@@ -1,5 +1,5 @@
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-12-09T10:02:25
+** Generation date: 2015-12-10T15:14:34
 ** Command: scade -code "R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\Demonstrators.etp" -root ERSA_EVC_Testrunner::ROOT_EVC -conf ERSA_Testrunner_CodeGeneration
 *************************************************************$
 *** Generated Files Information (GENFIL): KCG- Generated files
@@ -9,6 +9,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\kcg_metrics.txt, line 0, character 0
  ~ROOT_EVC_ERSA_EVC_Testrunner.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\ROOT_EVC_ERSA_EVC_Testrunner.c, line 0, character 0
+ ~ProbeTracksideInput_EnvSim.dc
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\ProbeTracksideInput_EnvSim.dc, line 0, character 0
  ~RemoteDMIBus_EnvSim.dc
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\RemoteDMIBus_EnvSim.dc, line 0, character 0
  ~CASTLIB_BaliseHeaders_TM_conversions.c
@@ -1671,6 +1673,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\op_cond_3_4_2_3_3_ProvidePositionReport_Pkg.c, line 0, character 0
  ~Build_Packet0_ProvidePositionReport_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\Build_Packet0_ProvidePositionReport_Pkg.c, line 0, character 0
+ ~vOdometry2Extern_RadioSupport_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\vOdometry2Extern_RadioSupport_Pkg.c, line 0, character 0
  ~convert2LRBG_ProvidePositionReport_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\convert2LRBG_ProvidePositionReport_Pkg.c, line 0, character 0
  ~scaleInternalType_ProvidePositionReport_Pkg.c
@@ -2305,8 +2309,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\T_BrakeBasic_SDMConversionModelPkg.c, line 0, character 0
  ~SDMLimitLocations_TargetLimits_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\SDMLimitLocations_TargetLimits_Pkg.c, line 0, character 0
- ~TransformV_realToV_odo_SDM_Types_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_realToV_odo_SDM_Types_Pkg.c, line 0, character 0
+ ~LowerOrHold_TargetLimits_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\LowerOrHold_TargetLimits_Pkg.c, line 0, character 0
  ~getMRSFromMRSP_SDM_Types_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\getMRSFromMRSP_SDM_Types_Pkg.c, line 0, character 0
  ~d_P_target_TargetLimits_Pkg.c
@@ -2329,8 +2333,6 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\surplusTractionDeltas_TargetLimits_Pkg.c, line 0, character 0
  ~TransformT_intToT_real_SDM_Types_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformT_intToT_real_SDM_Types_Pkg.c, line 0, character 0
- ~TransformV_odoToV_real_SDM_Types_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_odoToV_real_SDM_Types_Pkg.c, line 0, character 0
  ~TransformA_intToA_real_SDM_Types_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformA_intToA_real_SDM_Types_Pkg.c, line 0, character 0
  ~calcBec_TargetLimits_Pkg.c
@@ -2401,6 +2403,10 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CalculateEBDFootForMRSPorLOA_CalcBrakingCurves_Pkg_internalOperators.c, line 0, character 0
  ~InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.c, line 0, character 0
+ ~TransformV_odoToV_real_SDM_Types_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_odoToV_real_SDM_Types_Pkg.c, line 0, character 0
+ ~TransformV_realToV_odo_SDM_Types_Pkg.c
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_realToV_odo_SDM_Types_Pkg.c, line 0, character 0
  ~makeEmptyParabolaCurve_CalcBrakingCurves_types.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\makeEmptyParabolaCurve_CalcBrakingCurves_types.c, line 0, character 0
  ~dV_ebi_for_V_SDM_Types_Pkg.c
@@ -2461,8 +2467,6 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CalcBrakeCmd_SDM_Commands_Pkg.c, line 0, character 0
  ~CalcDMI_output_SDM_Commands_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CalcDMI_output_SDM_Commands_Pkg.c, line 0, character 0
- ~LowerOrHold_SDM_Commands_Pkg.c
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\LowerOrHold_SDM_Commands_Pkg.c, line 0, character 0
  ~MergeMLRequests_SDM_Commands_Pkg.c
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\MergeMLRequests_SDM_Commands_Pkg.c, line 0, character 0
  ~CalcModeTransOutput_SDM_Commands_Pkg.c
@@ -2697,6 +2701,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\getTIUStatusFromCommand_output_to_TIU_API_Pkg.c, line 0, character 0
  ~ROOT_EVC_ERSA_EVC_Testrunner.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\ROOT_EVC_ERSA_EVC_Testrunner.h, line 0, character 0
+ ~ProbeTracksideInput_EnvSim.dh
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\ProbeTracksideInput_EnvSim.dh, line 0, character 0
  ~RemoteDMIBus_EnvSim.dh
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\RemoteDMIBus_EnvSim.dh, line 0, character 0
  ~CASTLIB_BaliseHeaders_TM_conversions.h
@@ -4359,6 +4365,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\op_cond_3_4_2_3_3_ProvidePositionReport_Pkg.h, line 0, character 0
  ~Build_Packet0_ProvidePositionReport_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\Build_Packet0_ProvidePositionReport_Pkg.h, line 0, character 0
+ ~vOdometry2Extern_RadioSupport_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\vOdometry2Extern_RadioSupport_Pkg.h, line 0, character 0
  ~convert2LRBG_ProvidePositionReport_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\convert2LRBG_ProvidePositionReport_Pkg.h, line 0, character 0
  ~scaleInternalType_ProvidePositionReport_Pkg.h
@@ -4993,8 +5001,8 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\T_BrakeBasic_SDMConversionModelPkg.h, line 0, character 0
  ~SDMLimitLocations_TargetLimits_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\SDMLimitLocations_TargetLimits_Pkg.h, line 0, character 0
- ~TransformV_realToV_odo_SDM_Types_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_realToV_odo_SDM_Types_Pkg.h, line 0, character 0
+ ~LowerOrHold_TargetLimits_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\LowerOrHold_TargetLimits_Pkg.h, line 0, character 0
  ~getMRSFromMRSP_SDM_Types_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\getMRSFromMRSP_SDM_Types_Pkg.h, line 0, character 0
  ~d_P_target_TargetLimits_Pkg.h
@@ -5017,8 +5025,6 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\surplusTractionDeltas_TargetLimits_Pkg.h, line 0, character 0
  ~TransformT_intToT_real_SDM_Types_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformT_intToT_real_SDM_Types_Pkg.h, line 0, character 0
- ~TransformV_odoToV_real_SDM_Types_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_odoToV_real_SDM_Types_Pkg.h, line 0, character 0
  ~TransformA_intToA_real_SDM_Types_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformA_intToA_real_SDM_Types_Pkg.h, line 0, character 0
  ~calcBec_TargetLimits_Pkg.h
@@ -5089,6 +5095,10 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CalculateEBDFootForMRSPorLOA_CalcBrakingCurves_Pkg_internalOperators.h, line 0, character 0
  ~InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\InitilizeAccForEBDFootCalc_CalcBrakingCurves_Pkg_internalOperators.h, line 0, character 0
+ ~TransformV_odoToV_real_SDM_Types_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_odoToV_real_SDM_Types_Pkg.h, line 0, character 0
+ ~TransformV_realToV_odo_SDM_Types_Pkg.h
+  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\TransformV_realToV_odo_SDM_Types_Pkg.h, line 0, character 0
  ~makeEmptyParabolaCurve_CalcBrakingCurves_types.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\makeEmptyParabolaCurve_CalcBrakingCurves_types.h, line 0, character 0
  ~dV_ebi_for_V_SDM_Types_Pkg.h
@@ -5149,8 +5159,6 @@ $**************  SCADETOC Version R16 (build i21) **************
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CalcBrakeCmd_SDM_Commands_Pkg.h, line 0, character 0
  ~CalcDMI_output_SDM_Commands_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\CalcDMI_output_SDM_Commands_Pkg.h, line 0, character 0
- ~LowerOrHold_SDM_Commands_Pkg.h
-  at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\LowerOrHold_SDM_Commands_Pkg.h, line 0, character 0
  ~MergeMLRequests_SDM_Commands_Pkg.h
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\MergeMLRequests_SDM_Commands_Pkg.h, line 0, character 0
  ~CalcModeTransOutput_SDM_Commands_Pkg.h
@@ -5407,6 +5415,6 @@ $**************  SCADETOC Version R16 (build i21) **************
  ~sc2c_integration_files.txt
   at file R:\Repositories\modeling\model\Scade\System\OBU_PreIntegrations\Demonstrators\ERSA_EVC_Testrunner\sc2c_integration_files.txt, line 0, character 0
 $**************  SCADETOC Version R16 (build i21) **************
-** Generation date: 2015-12-09T10:04:34
+** Generation date: 2015-12-10T15:16:44
 ** sc2c.log
 *************************************************************$

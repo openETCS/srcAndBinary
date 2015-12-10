@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -45,19 +45,24 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
   /* manage_DMI_Output_Pkg::sendBrakesToDMI::inSystemTime */ T_internal_Type_Obu_BasicTypes_Pkg inSystemTime,
   outC_sendBrakesToDMI_manage_DMI_Output_Pkg *outC)
 {
-  /* manage_DMI_Output_Pkg::sendBrakesToDMI */ M_brake_signal_command_T_TIU_Types_Pkg tmp;
+  /* manage_DMI_Output_Pkg::sendBrakesToDMI */ Brake_command_T_TIU_Types_Pkg tmp;
   /* manage_DMI_Output_Pkg::sendBrakesToDMI::IfBlock1::else */ kcg_bool else_clock_IfBlock1;
   /* manage_DMI_Output_Pkg::sendBrakesToDMI::applyBrake */ kcg_bool applyBrake;
   /* manage_DMI_Output_Pkg::sendBrakesToDMI::changeBrakeCommand */ kcg_bool changeBrakeCommand;
   
-  /* last_init_ck_loc_brakeCommand */ if (outC->init) {
+  /* last_init_ck_brakeCommand */ if (outC->init) {
     outC->init = kcg_false;
-    tmp = cInitBrakeCommand_manage_DMI_Output_Pkg.m_emergencybrake_cm;
+    kcg_copy_Brake_command_T_TIU_Types_Pkg(
+      &tmp,
+      (Brake_command_T_TIU_Types_Pkg *)
+        &cInitBrakeCommand_manage_DMI_Output_Pkg);
   }
   else {
-    tmp = outC->rem_brakeCommand.m_emergencybrake_cm;
+    kcg_copy_Brake_command_T_TIU_Types_Pkg(&tmp, &outC->rem_brakeCommand);
   }
-  changeBrakeCommand = (*brakeCommand).m_emergencybrake_cm != tmp;
+  changeBrakeCommand = !kcg_comp_Brake_command_T_TIU_Types_Pkg(
+      brakeCommand,
+      &tmp);
   applyBrake = changeBrakeCommand & ((apply_brake_TIU_Types_Pkg ==
         (*brakeCommand).m_servicebrake_cm) | (apply_brake_TIU_Types_Pkg ==
         (*brakeCommand).m_emergencybrake_cm)) & (*brakeCommand).valid;
@@ -91,6 +96,6 @@ void sendBrakesToDMI_manage_DMI_Output_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** sendBrakesToDMI_manage_DMI_Output_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

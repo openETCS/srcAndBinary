@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 #ifndef _ROOT_EVC_ERSA_EVC_Testrunner_H_
 #define _ROOT_EVC_ERSA_EVC_Testrunner_H_
@@ -15,6 +15,7 @@
 #include "EVC.h"
 #include "RTM_ERSA_ERSA_EVC_Testrunner.h"
 #include "RemoteDMIBus_EnvSim.h"
+#include "ProbeTracksideInput_EnvSim.h"
 #include "EVC_InputBuffer_Toolbox_Functions.h"
 
 /* ========================  input structure  ====================== */
@@ -57,6 +58,7 @@ typedef struct {
   DMI_to_EVC_Message_int_T_API_DMI_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::TCP_fromDMI */ TCP_fromDMI;
   ps_dataForStartOfMission_T_API_PersistanceStorage_Pkg /* ERSA_EVC_Testrunner::ROOT_EVC::storedPersistentData */ storedPersistentData;
   /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_ProbeTracksideInput_EnvSim /* 2 */ Context_2;
   outC_RemoteDMIBus_EnvSim /* 1 */ _3_Context_1;
   outC_EVC /* 1 */ _2_Context_1;
   outC_EVC_InputBuffer_Toolbox_Functions /* 1 */ _1_Context_1;
@@ -83,6 +85,6 @@ extern void ROOT_EVC_init_ERSA_EVC_Testrunner(
 #endif /* _ROOT_EVC_ERSA_EVC_Testrunner_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

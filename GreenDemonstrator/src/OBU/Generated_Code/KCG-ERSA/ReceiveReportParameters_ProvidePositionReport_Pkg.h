@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _ReceiveReportParameters_ProvidePositionReport_Pkg_H_
 #define _ReceiveReportParameters_ProvidePositionReport_Pkg_H_
@@ -47,6 +47,6 @@ extern void ReceiveReportParameters_init_ProvidePositionReport_Pkg(
 #endif /* _ReceiveReportParameters_ProvidePositionReport_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ReceiveReportParameters_ProvidePositionReport_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -13,12 +13,12 @@ V_TRAIN vIntern2Extern_RadioSupport_Pkg(
 {
   /* RadioSupport_Pkg::vIntern2Extern::v_SRS */ V_TRAIN v_SRS;
   
-  v_SRS = v_intern * 36 / 200;
+  v_SRS = v_intern * 36 / 5000;
   return v_SRS;
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** vIntern2Extern_RadioSupport_Pkg.c
-** Generation date: 2015-12-09T10:03:50
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 

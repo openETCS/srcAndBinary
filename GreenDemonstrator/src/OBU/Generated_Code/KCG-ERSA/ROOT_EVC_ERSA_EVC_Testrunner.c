@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:51
+** Generation date: 2015-12-10T15:16:03
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -303,6 +303,7 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
   for (i = 0; i < 50; i++) {
     outC->API_toRBC.OptionalPackets[i] = 0;
   }
+  /* 2 */ ProbeTracksideInput_init_EnvSim(&outC->Context_2);
   /* 1 */ RemoteDMIBus_init_EnvSim(&outC->_3_Context_1);
   /* 1 */ EVC_init(&outC->_2_Context_1);
   /* 1 */ EVC_InputBuffer_init_Toolbox_Functions(&outC->_1_Context_1);
@@ -315,6 +316,7 @@ void ROOT_EVC_init_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
 void ROOT_EVC_reset_ERSA_EVC_Testrunner(outC_ROOT_EVC_ERSA_EVC_Testrunner *outC)
 {
   outC->init = kcg_true;
+  /* 2 */ ProbeTracksideInput_reset_EnvSim(&outC->Context_2);
   /* 1 */ RemoteDMIBus_reset_EnvSim(&outC->_3_Context_1);
   /* 1 */ EVC_reset(&outC->_2_Context_1);
   /* 1 */ EVC_InputBuffer_reset_Toolbox_Functions(&outC->_1_Context_1);
@@ -330,8 +332,8 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
   /* ERSA_EVC_Testrunner::ROOT_EVC */ API_TrackSideInput_T_API_Msg_Pkg tmp2;
   /* ERSA_EVC_Testrunner::ROOT_EVC */ TelegramHeader_T_BG_Types_Pkg tmp1;
   /* ERSA_EVC_Testrunner::ROOT_EVC */ DMI_to_EVC_Message_int_T_API_DMI_Pkg tmp;
+  /* ERSA_EVC_Testrunner::ROOT_EVC::CompressedBaliseMessage */ CompressedBaliseMessage_TM CompressedBaliseMessage;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L4 */ EVC_to_DMI_Message_int_T_API_DMI_Pkg _L4;
-  /* ERSA_EVC_Testrunner::ROOT_EVC::_L30 */ CompressedBaliseMessage_TM _L30;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L33 */ Radio_TrackTrain_Header_T_Radio_Types_Pkg _L33;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L32 */ CompressedPackets_T_Common_Types_Pkg _L32;
   /* ERSA_EVC_Testrunner::ROOT_EVC::_L31 */ CompressedRadioMessage_TM _L31;
@@ -380,7 +382,7 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
     &inC->PacketStructure.P145,
     &inC->PacketStructure.P254,
     &inC->PacketStructure.P255,
-    &_L30);
+    &CompressedBaliseMessage);
   /* 1 */
   API_Frontend_radio_prelim_TM_API(
     &inC->Radio_message_header,
@@ -449,12 +451,13 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
       &_L180,
       &outC->storedPersistentData);
   }
-  /* 1 */ CASTLIB_BaliseHeaders_TM_conversions(&_L30.Header, &tmp1);
+  /* 1 */
+  CASTLIB_BaliseHeaders_TM_conversions(&CompressedBaliseMessage.Header, &tmp1);
   /* 1 */
   BTM_Toolbox_TrainModules(
     inC->API_SystemTime,
     &inC->API_Odometry,
-    &_L30.Messages,
+    &CompressedBaliseMessage.Messages,
     &tmp1,
     &tmp2);
   /* 1 */
@@ -518,10 +521,18 @@ void ROOT_EVC_ERSA_EVC_Testrunner(
       &outC->storedPersistentData,
       &_L180);
   }
+  /* 2 */
+  ProbeTracksideInput_EnvSim(
+    (kcg_real) inC->API_Odometry.odo.o_nominal,
+    &CompressedBaliseMessage,
+    (CompressedRadioMessage_TM *) &cRadioMessage_ERSA_EVC_Testrunner,
+    (M_TrainTrack_Message_T_TM_radio_messages *)
+      &cTrainTrackMessage_ERSA_EVC_Testrunner,
+    &outC->Context_2);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ROOT_EVC_ERSA_EVC_Testrunner.c
-** Generation date: 2015-12-09T10:03:51
+** Generation date: 2015-12-10T15:16:03
 *************************************************************$ */
 

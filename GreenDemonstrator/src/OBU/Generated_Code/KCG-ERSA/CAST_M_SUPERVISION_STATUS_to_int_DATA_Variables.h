@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables_H_
 #define _CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables_H_
@@ -19,6 +19,6 @@ extern M_SUPERVISION_STATUS_INT_T_DATA CAST_M_SUPERVISION_STATUS_to_int_DATA_Var
 #endif /* _CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_M_SUPERVISION_STATUS_to_int_DATA_Variables.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

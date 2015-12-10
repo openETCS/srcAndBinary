@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _EitherEdge_digital_H_
 #define _EitherEdge_digital_H_
@@ -41,6 +41,6 @@ extern void EitherEdge_init_digital(outC_EitherEdge_digital *outC);
 #endif /* _EitherEdge_digital_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** EitherEdge_digital.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

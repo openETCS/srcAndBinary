@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _getAFromAsafeByIndex_CalcBrakingCurves_Pkg_Step_Function_operators_H_
 #define _getAFromAsafeByIndex_CalcBrakingCurves_Pkg_Step_Function_operators_H_
@@ -21,6 +21,6 @@ extern A_internal_real_Type_SDM_Types_Pkg getAFromAsafeByIndex_CalcBrakingCurves
 #endif /* _getAFromAsafeByIndex_CalcBrakingCurves_Pkg_Step_Function_operators_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getAFromAsafeByIndex_CalcBrakingCurves_Pkg_Step_Function_operators.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

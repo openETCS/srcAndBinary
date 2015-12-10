@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _ManageModes_H_
 #define _ManageModes_H_
@@ -65,6 +65,6 @@ extern void ManageModes_init(outC_ManageModes *outC);
 #endif /* _ManageModes_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** ManageModes.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

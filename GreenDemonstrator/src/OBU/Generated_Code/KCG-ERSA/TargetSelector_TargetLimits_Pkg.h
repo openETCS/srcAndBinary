@@ -1,11 +1,12 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _TargetSelector_TargetLimits_Pkg_H_
 #define _TargetSelector_TargetLimits_Pkg_H_
 
 #include "kcg_types.h"
+#include "TransformV_realToV_odo_SDM_Types_Pkg.h"
 #include "TransformL_realToL_int_SDM_Types_Pkg.h"
 #include "TransformV_realToV_int_SDM_Types_Pkg.h"
 #include "selectLEValid_TargetLimits_Pkg.h"
@@ -32,7 +33,7 @@ extern void TargetSelector_TargetLimits_Pkg(
   /* TargetLimits_Pkg::TargetSelector::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
   /* TargetLimits_Pkg::TargetSelector::GUICurveEnabled */ kcg_bool *GUICurveEnabled,
   /* TargetLimits_Pkg::TargetSelector::V_Target */ V_internal_real_Type_SDM_Types_Pkg *V_Target,
-  /* TargetLimits_Pkg::TargetSelector::V_P_MRDT */ V_internal_real_Type_SDM_Types_Pkg *V_P_MRDT,
+  /* TargetLimits_Pkg::TargetSelector::V_P_MRDT */ V_odometry_Type_Obu_BasicTypes_Pkg *V_P_MRDT,
   /* TargetLimits_Pkg::TargetSelector::D_EOA */ L_internal_real_Type_SDM_Types_Pkg *D_EOA,
   /* TargetLimits_Pkg::TargetSelector::D_SvL */ L_internal_real_Type_SDM_Types_Pkg *D_SvL,
   /* TargetLimits_Pkg::TargetSelector::v_est */ V_internal_real_Type_SDM_Types_Pkg *v_est,
@@ -42,11 +43,12 @@ extern void TargetSelector_TargetLimits_Pkg(
   /* TargetLimits_Pkg::TargetSelector::D_SBI2 */ L_internal_real_Type_SDM_Types_Pkg *D_SBI2,
   /* TargetLimits_Pkg::TargetSelector::valid_D_SBI2 */ kcg_bool *valid_D_SBI2,
   /* TargetLimits_Pkg::TargetSelector::D_estfront */ L_internal_real_Type_SDM_Types_Pkg *D_estfront,
-  /* TargetLimits_Pkg::TargetSelector::D_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg *D_maxsafefront);
+  /* TargetLimits_Pkg::TargetSelector::D_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg *D_maxsafefront,
+  /* TargetLimits_Pkg::TargetSelector::freshMRDT */ kcg_bool *freshMRDT);
 
 #endif /* _TargetSelector_TargetLimits_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TargetSelector_TargetLimits_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

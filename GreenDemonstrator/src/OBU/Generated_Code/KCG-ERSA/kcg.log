@@ -1,11 +1,16 @@
 $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:24
+** Generation date: 2015-12-10T15:15:36
 *************************************************************$
-No warning was found
+*** Type Warning (WAR_151): Internal state expected
+  at file R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade, line 261785, character 0
+  at path SDM_Commands_Pkg::CalcDMI_output/
+ Node CalcDMI_output has no internal state
+ (it should probably be declared as a function)
+1 warning was found
 No error was found
 No failure occurred
 $**************** KCG Version 6.4 (build i21) ****************
 ** R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner\kcg.log
-** Generation date: 2015-12-09T10:04:33
+** Generation date: 2015-12-10T15:16:44
 *************************************************************$

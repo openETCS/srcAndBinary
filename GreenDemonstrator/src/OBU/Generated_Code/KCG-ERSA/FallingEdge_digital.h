@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _FallingEdge_digital_H_
 #define _FallingEdge_digital_H_
@@ -41,6 +41,6 @@ extern void FallingEdge_init_digital(outC_FallingEdge_digital *outC);
 #endif /* _FallingEdge_digital_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** FallingEdge_digital.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

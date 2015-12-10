@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _CheckCompleteness_CheckBGConsistency_Pkg_H_
 #define _CheckCompleteness_CheckBGConsistency_Pkg_H_
@@ -25,6 +25,6 @@ extern void CheckCompleteness_CheckBGConsistency_Pkg(
 #endif /* _CheckCompleteness_CheckBGConsistency_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckCompleteness_CheckBGConsistency_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

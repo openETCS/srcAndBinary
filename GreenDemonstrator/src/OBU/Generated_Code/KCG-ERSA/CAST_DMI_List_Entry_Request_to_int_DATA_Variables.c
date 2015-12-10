@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -155,6 +155,6 @@ DMI_List_Entry_Request_INT_T_DATA CAST_DMI_List_Entry_Request_to_int_DATA_Variab
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CAST_DMI_List_Entry_Request_to_int_DATA_Variables.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

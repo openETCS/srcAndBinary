@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _Supervision_T_Cycloc_ProvidePositionReport_Pkg_H_
 #define _Supervision_T_Cycloc_ProvidePositionReport_Pkg_H_
@@ -45,6 +45,6 @@ extern void Supervision_T_Cycloc_init_ProvidePositionReport_Pkg(
 #endif /* _Supervision_T_Cycloc_ProvidePositionReport_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Supervision_T_Cycloc_ProvidePositionReport_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:51
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,7 +19,6 @@ void linkedBG_missed_init_CalculateTrainPosition_Pkg_Linking_Pkg(
   outC->rem_position.nominal = 0;
   outC->rem_position.d_min = 0;
   outC->rem_position.d_max = 0;
-  outC->_L2 = 0;
   outC->_L3.valid = kcg_true;
   outC->_L3.nid_c = 0;
   outC->_L3.nid_bg = 0;
@@ -307,26 +306,26 @@ void linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg(
 {
   /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed */ LocWithInAcc_T_Obu_BasicTypes_Pkg tmp1;
   /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed */ LocWithInAcc_T_Obu_BasicTypes_Pkg tmp;
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L2 */ kcg_int _L2;
   /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L1 */ kcg_bool _L1;
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L10 */ positionedBG_T_TrainPosition_Types_Pck _L10;
   /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L52 */ LocWithInAcc_T_Obu_BasicTypes_Pkg _L52;
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L69 */ kcg_bool _L69;
-  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L67 */ kcg_int _L67;
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L73 */ kcg_bool _L73;
+  /* CalculateTrainPosition_Pkg::Linking_Pkg::linkedBG_missed::_L72 */ kcg_bool _L72;
   
   /* last_init_ck_position */ if (outC->init) {
     outC->init = kcg_false;
     kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
-      &outC->BG,
+      &_L10,
       (positionedBG_T_TrainPosition_Types_Pck *)
         &cNoPositionedBG_CalculateTrainPosition_Pkg);
-    outC->indexOfBG = cNoValidIndex_CalculateTrainPosition_Pkg;
     kcg_copy_LocWithInAcc_T_Obu_BasicTypes_Pkg(
       &_L52,
       (LocWithInAcc_T_Obu_BasicTypes_Pkg *)
         &cLocWithInAcc_0_Obu_BasicTypes_Pkg);
   }
   else {
-    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(&outC->BG, &outC->_L3);
-    outC->indexOfBG = outC->_L2;
+    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(&_L10, &outC->_L3);
     kcg_copy_LocWithInAcc_T_Obu_BasicTypes_Pkg(&_L52, &outC->rem_position);
   }
   /* 2 */ sub_2_distances_BasicLocationFunctions_Pkg(position, &_L52, &tmp1);
@@ -347,28 +346,39 @@ void linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg(
     BGs_in,
     enable,
     &_L1,
-    &outC->_L2,
+    &_L2,
     &outC->_L3);
+  /* 2 */
+  indexOfBG_by_id_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
+    &_L10,
+    BGs_in,
+    _L10.valid,
+    &outC->indexOfBG,
+    &_L72,
+    &_L73);
+  if ((0 <= outC->indexOfBG) & (outC->indexOfBG < 41)) {
+    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
+      &outC->BG,
+      &(*BGs_in)[outC->indexOfBG]);
+  }
+  else {
+    kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
+      &outC->BG,
+      (positionedBG_T_TrainPosition_Types_Pck *)
+        &cNoPositionedBG_CalculateTrainPosition_Pkg);
+  }
   /* 1 */ FallingEdge_digital(_L1, &outC->Context_1);
   outC->missed = ((/* 1 */
         positionedBGs_ids_notEqual_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
           &outC->_L3,
-          &outC->BG) & _L1) | outC->Context_1.FE_Output) & (outC->BG.q_link ==
-      Q_LINK_Linked) & !outC->BG.infoFromPassing.valid;
+          &_L10) & _L1) | outC->Context_1.FE_Output) & (outC->BG.q_link ==
+      Q_LINK_Linked) & !outC->BG.infoFromPassing.valid & _L72;
   outC->BG.missed = outC->missed;
-  /* 1 */
-  indexOfBG_by_id_CalculateTrainPosition_Pkg_BG_utilities_Pkg(
-    &outC->BG,
-    BGs_in,
-    outC->missed,
-    &_L67,
-    &_L1,
-    &_L69);
-  /* 1 */ if (_L1 & outC->missed) {
+  /* 1 */ if (outC->missed) {
     kcg_copy_positionedBGs_T_TrainPosition_Types_Pck(&outC->BGs_out, BGs_in);
-    if ((0 <= _L67) & (_L67 < 41)) {
+    if ((0 <= outC->indexOfBG) & (outC->indexOfBG < 41)) {
       kcg_copy_positionedBG_T_TrainPosition_Types_Pck(
-        &outC->BGs_out[_L67],
+        &outC->BGs_out[outC->indexOfBG],
         &outC->BG);
     }
   }
@@ -380,6 +390,6 @@ void linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg(
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** linkedBG_missed_CalculateTrainPosition_Pkg_Linking_Pkg.c
-** Generation date: 2015-12-09T10:03:51
+** Generation date: 2015-12-10T15:16:02
 *************************************************************$ */
 

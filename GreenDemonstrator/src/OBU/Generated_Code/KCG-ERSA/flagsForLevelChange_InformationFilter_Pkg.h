@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _flagsForLevelChange_InformationFilter_Pkg_H_
 #define _flagsForLevelChange_InformationFilter_Pkg_H_
@@ -47,6 +47,6 @@ extern void flagsForLevelChange_init_InformationFilter_Pkg(
 #endif /* _flagsForLevelChange_InformationFilter_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** flagsForLevelChange_InformationFilter_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

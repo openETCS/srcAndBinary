@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _C_P005_extract_el_section_TM_lib_internal_H_
 #define _C_P005_extract_el_section_TM_lib_internal_H_
@@ -21,6 +21,6 @@ extern kcg_int C_P005_extract_el_section_TM_lib_internal(
 #endif /* _C_P005_extract_el_section_TM_lib_internal_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** C_P005_extract_el_section_TM_lib_internal.h
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _DetermineValidFlags_InformationFilter_Pkg_SecondFilter_H_
 #define _DetermineValidFlags_InformationFilter_Pkg_SecondFilter_H_
@@ -21,6 +21,6 @@ extern void DetermineValidFlags_InformationFilter_Pkg_SecondFilter(
 #endif /* _DetermineValidFlags_InformationFilter_Pkg_SecondFilter_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** DetermineValidFlags_InformationFilter_Pkg_SecondFilter.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

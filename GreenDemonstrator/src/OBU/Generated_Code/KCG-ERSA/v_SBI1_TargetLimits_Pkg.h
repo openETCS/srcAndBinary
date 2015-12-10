@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _v_SBI1_TargetLimits_Pkg_H_
 #define _v_SBI1_TargetLimits_Pkg_H_
@@ -30,6 +30,6 @@ extern void v_SBI1_TargetLimits_Pkg(
 #endif /* _v_SBI1_TargetLimits_Pkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** v_SBI1_TargetLimits_Pkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

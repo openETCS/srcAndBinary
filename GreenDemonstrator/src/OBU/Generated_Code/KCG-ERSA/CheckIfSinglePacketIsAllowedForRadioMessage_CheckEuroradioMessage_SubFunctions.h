@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _CheckIfSinglePacketIsAllowedForRadioMessage_CheckEuroradioMessage_SubFunctions_H_
 #define _CheckIfSinglePacketIsAllowedForRadioMessage_CheckEuroradioMessage_SubFunctions_H_
@@ -23,6 +23,6 @@ extern kcg_bool CheckIfSinglePacketIsAllowedForRadioMessage_CheckEuroradioMessag
 #endif /* _CheckIfSinglePacketIsAllowedForRadioMessage_CheckEuroradioMessage_SubFunctions_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** CheckIfSinglePacketIsAllowedForRadioMessage_CheckEuroradioMessage_SubFunctions.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 

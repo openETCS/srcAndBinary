@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -22,7 +22,7 @@ void TargetSelector_TargetLimits_Pkg(
   /* TargetLimits_Pkg::TargetSelector::GUIcurve */ ParabolaCurve_T_CalcBrakingCurves_types *GUIcurve,
   /* TargetLimits_Pkg::TargetSelector::GUICurveEnabled */ kcg_bool *GUICurveEnabled,
   /* TargetLimits_Pkg::TargetSelector::V_Target */ V_internal_real_Type_SDM_Types_Pkg *V_Target,
-  /* TargetLimits_Pkg::TargetSelector::V_P_MRDT */ V_internal_real_Type_SDM_Types_Pkg *V_P_MRDT,
+  /* TargetLimits_Pkg::TargetSelector::V_P_MRDT */ V_odometry_Type_Obu_BasicTypes_Pkg *V_P_MRDT,
   /* TargetLimits_Pkg::TargetSelector::D_EOA */ L_internal_real_Type_SDM_Types_Pkg *D_EOA,
   /* TargetLimits_Pkg::TargetSelector::D_SvL */ L_internal_real_Type_SDM_Types_Pkg *D_SvL,
   /* TargetLimits_Pkg::TargetSelector::v_est */ V_internal_real_Type_SDM_Types_Pkg *v_est,
@@ -32,7 +32,8 @@ void TargetSelector_TargetLimits_Pkg(
   /* TargetLimits_Pkg::TargetSelector::D_SBI2 */ L_internal_real_Type_SDM_Types_Pkg *D_SBI2,
   /* TargetLimits_Pkg::TargetSelector::valid_D_SBI2 */ kcg_bool *valid_D_SBI2,
   /* TargetLimits_Pkg::TargetSelector::D_estfront */ L_internal_real_Type_SDM_Types_Pkg *D_estfront,
-  /* TargetLimits_Pkg::TargetSelector::D_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg *D_maxsafefront)
+  /* TargetLimits_Pkg::TargetSelector::D_maxsafefront */ L_internal_real_Type_SDM_Types_Pkg *D_maxsafefront,
+  /* TargetLimits_Pkg::TargetSelector::freshMRDT */ kcg_bool *freshMRDT)
 {
   /* TargetLimits_Pkg::TargetSelector */ TargetIteratorAkku_TargetLimits_Pkg acc;
   kcg_int i;
@@ -44,8 +45,10 @@ void TargetSelector_TargetLimits_Pkg(
   /* TargetLimits_Pkg::TargetSelector::_L157 */ Target_real_T_TargetManagement_types _L157;
   /* TargetLimits_Pkg::TargetSelector::_L261 */ kcg_bool _L261;
   /* TargetLimits_Pkg::TargetSelector::_L262 */ kcg_bool _L262;
+  /* TargetLimits_Pkg::TargetSelector::_L263 */ kcg_real _L263;
   /* TargetLimits_Pkg::TargetSelector::_L282 */ Target_real_T_TargetManagement_types _L282;
   
+  *freshMRDT = kcg_true;
   _L29.ttype = invalid_TargetManagement_types;
   _L29.bec.v = 0.0;
   _L29.bec.d = 0.0;
@@ -168,7 +171,7 @@ void TargetSelector_TargetLimits_Pkg(
     tmp,
     &_L261,
     &_L262,
-    V_P_MRDT);
+    &_L263);
   /* 1 */ if (_L261) {
     kcg_copy_Target_real_T_TargetManagement_types(&_L282, &_L157);
   }
@@ -180,15 +183,16 @@ void TargetSelector_TargetLimits_Pkg(
   (*MostRestrictiveDisplayedTarget).targetType = _L282.targetType;
   (*MostRestrictiveDisplayedTarget).valid = invalid_TargetManagement_types !=
     _L282.targetType;
-  *V_Target = _L282.speed;
   (*MostRestrictiveDisplayedTarget).distance = /* 1 */
     TransformL_realToL_int_SDM_Types_Pkg(_L282.distance);
   (*MostRestrictiveDisplayedTarget).speed = /* 1 */
-    TransformV_realToV_int_SDM_Types_Pkg(*V_Target);
+    TransformV_realToV_int_SDM_Types_Pkg(_L282.speed);
+  *V_Target = _L157.speed;
+  *V_P_MRDT = /* 1 */ TransformV_realToV_odo_SDM_Types_Pkg(_L263);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** TargetSelector_TargetLimits_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

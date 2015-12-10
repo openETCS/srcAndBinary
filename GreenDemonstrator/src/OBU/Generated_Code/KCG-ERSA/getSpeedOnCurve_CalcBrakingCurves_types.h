@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 #ifndef _getSpeedOnCurve_CalcBrakingCurves_types_H_
 #define _getSpeedOnCurve_CalcBrakingCurves_types_H_
@@ -23,6 +23,6 @@ extern void getSpeedOnCurve_CalcBrakingCurves_types(
 #endif /* _getSpeedOnCurve_CalcBrakingCurves_types_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** getSpeedOnCurve_CalcBrakingCurves_types.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:15:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -11,6 +11,12 @@
 void cyclicReportToDMI_init_manage_DMI_Output_Pkg(
   outC_cyclicReportToDMI_manage_DMI_Output_Pkg *outC)
 {
+  outC->init = kcg_true;
+  outC->rem_inModeAndLevel.compatibleModeAndLevel = kcg_true;
+  outC->rem_inModeAndLevel.level = M_LEVEL_Level_0;
+  outC->rem_inModeAndLevel.newLevel = kcg_true;
+  outC->rem_inModeAndLevel.Mode = M_MODE_Full_Supervision;
+  outC->rem_inModeAndLevel.newMode = kcg_true;
   outC->packetDynamic.valid = kcg_true;
   outC->packetDynamic.system_clock = 0;
   outC->packetDynamic.v_train = 0;
@@ -45,6 +51,7 @@ void cyclicReportToDMI_init_manage_DMI_Output_Pkg(
 void cyclicReportToDMI_reset_manage_DMI_Output_Pkg(
   outC_cyclicReportToDMI_manage_DMI_Output_Pkg *outC)
 {
+  outC->init = kcg_true;
   /* 1 */ isSendingNeeded_reset_manage_DMI_Output_Pkg(&outC->Context_1);
 }
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
@@ -61,17 +68,31 @@ void cyclicReportToDMI_manage_DMI_Output_Pkg(
   /* manage_DMI_Output_Pkg::cyclicReportToDMI::inMovementAuthority */ movementAuthorityForDMI_T_DMI_Types_Pkg *inMovementAuthority,
   /* manage_DMI_Output_Pkg::cyclicReportToDMI::inMoRC_status */ morcStatus_T_RCM_Session_Types_Pkg *inMoRC_status,
   /* manage_DMI_Output_Pkg::cyclicReportToDMI::inNTC */ NID_NTC inNTC,
+  /* manage_DMI_Output_Pkg::cyclicReportToDMI::forceSend */ kcg_bool forceSend,
   outC_cyclicReportToDMI_manage_DMI_Output_Pkg *outC)
 {
   /* manage_DMI_Output_Pkg::cyclicReportToDMI::doSendingDynamc */ kcg_bool doSendingDynamc;
+  /* manage_DMI_Output_Pkg::cyclicReportToDMI::_L13 */ T_Mode_Level_Level_And_Mode_Types_Pkg _L13;
   
+  /* last_init_ck_inModeAndLevel */ if (outC->init) {
+    outC->init = kcg_false;
+    kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
+      &_L13,
+      (T_Mode_Level_Level_And_Mode_Types_Pkg *)
+        &cInitModeLevel_manage_DMI_Output_Pkg);
+  }
+  else {
+    kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
+      &_L13,
+      &outC->rem_inModeAndLevel);
+  }
   /* 1 */
   isSendingNeeded_manage_DMI_Output_Pkg(
     inSystemTime,
     incurrentDMIStatus,
     &outC->Context_1);
-  doSendingDynamc = outC->Context_1.sendingNeeded | (*inModeAndLevel).newLevel |
-    (*inModeAndLevel).newMode;
+  doSendingDynamc = outC->Context_1.sendingNeeded | _L13.newLevel |
+    _L13.newMode | forceSend;
   /* ck_doSendingDynamc */ if (doSendingDynamc) {
     /* 2 */
     sendDynamic_manage_DMI_Output_Pkg(
@@ -92,10 +113,13 @@ void cyclicReportToDMI_manage_DMI_Output_Pkg(
       (DMI_Dynamic_T_DMI_Messages_EVC_to_DMI_Pkg *)
         &cDefaultDynamic_manage_DMI_Output_Pkg);
   }
+  kcg_copy_T_Mode_Level_Level_And_Mode_Types_Pkg(
+    &outC->rem_inModeAndLevel,
+    inModeAndLevel);
 }
 
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** cyclicReportToDMI_manage_DMI_Output_Pkg.c
-** Generation date: 2015-12-09T10:03:49
+** Generation date: 2015-12-10T15:16:01
 *************************************************************$ */
 

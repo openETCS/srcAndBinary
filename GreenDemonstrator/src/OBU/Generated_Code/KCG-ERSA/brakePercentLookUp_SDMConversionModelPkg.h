@@ -1,6 +1,6 @@
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** Command: kcg64.exe -config R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/config.txt
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 #ifndef _brakePercentLookUp_SDMConversionModelPkg_H_
 #define _brakePercentLookUp_SDMConversionModelPkg_H_
@@ -20,6 +20,6 @@ extern void brakePercentLookUp_SDMConversionModelPkg(
 #endif /* _brakePercentLookUp_SDMConversionModelPkg_H_ */
 /* $**************** KCG Version 6.4 (build i21) ****************
 ** brakePercentLookUp_SDMConversionModelPkg.h
-** Generation date: 2015-12-09T10:03:48
+** Generation date: 2015-12-10T15:16:00
 *************************************************************$ */
 
