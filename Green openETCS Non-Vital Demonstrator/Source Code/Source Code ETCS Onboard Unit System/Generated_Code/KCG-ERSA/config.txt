@@ -1,3 +1,0 @@
--target_dir "R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner" -target C -O 3 -name_length 200 -significance_length 200 -user_config "./user_macros.h" 
--node ERSA_EVC_Testrunner::ROOT_EVC
-"R:/Repositories/modeling/model/Scade/System/OBU_PreIntegrations/Demonstrators/ERSA_EVC_Testrunner/scade_model_without_unused.scade"
